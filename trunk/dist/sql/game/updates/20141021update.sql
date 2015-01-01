@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='299_GatherIngredientsForPie' WHERE name='Q00299_GatherIngredientsForPie';

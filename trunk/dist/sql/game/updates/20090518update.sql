@@ -1,1 +1,0 @@
-ALTER TABLE character_recipebook ADD `classIndex` TINYINT NOT NULL DEFAULT 0 AFTER id;

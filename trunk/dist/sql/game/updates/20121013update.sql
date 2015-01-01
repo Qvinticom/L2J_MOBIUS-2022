@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00024_InhabitantsOfTheForestOfTheDead' WHERE name='24_InhabitantsOfTheForrestOfTheDead';

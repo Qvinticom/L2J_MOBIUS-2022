@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00383_TreasureHunt' WHERE name='383_SearchingForTreasure'; 

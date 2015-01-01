@@ -1,1 +1,0 @@
-ALTER TABLE `heroes` ADD COLUMN `claimed` ENUM('true','false') NOT NULL DEFAULT 'false' AFTER `played`;

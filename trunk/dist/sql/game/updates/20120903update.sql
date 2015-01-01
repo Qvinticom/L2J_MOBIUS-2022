@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00652_AnAgedExAdventurer' WHERE name='652_AnAgedExAdventurer';

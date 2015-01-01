@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS `character_norestart_zone_time`;

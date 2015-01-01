@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00038_DragonFangs' WHERE name='38_DragonFangs';

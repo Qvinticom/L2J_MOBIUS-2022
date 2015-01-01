@@ -1,1 +1,0 @@
-ALTER TABLE `castle` MODIFY `treasury` BIGINT NOT NULL DEFAULT 0;

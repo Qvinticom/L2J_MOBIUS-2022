@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00356_DigUpTheSeaOfSpores' WHERE name='356_DigUpTheSeaOfSpores';

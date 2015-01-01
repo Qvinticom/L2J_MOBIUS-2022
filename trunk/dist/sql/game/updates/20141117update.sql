@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00345_MethodToRaiseTheDead' WHERE name='345_MethodToRaiseTheDead';

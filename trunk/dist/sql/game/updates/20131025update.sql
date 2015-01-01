@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00365_DevilsLegacy' WHERE name='365_DevilsLegacy';

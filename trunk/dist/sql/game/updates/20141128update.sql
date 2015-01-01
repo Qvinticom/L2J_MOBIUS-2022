@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00120_PavelsLastResearch' WHERE name='120_PavelsResearch'; 

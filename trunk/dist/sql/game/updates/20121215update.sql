@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00192_SevenSignsSeriesOfDoubt' WHERE name='Q00192_SevenSignSeriesOfDoubt';

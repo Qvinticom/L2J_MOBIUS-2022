@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00266_PleasOfPixies' WHERE name='266_PleaOfPixies';

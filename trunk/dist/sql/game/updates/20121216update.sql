@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00688_DefeatTheElrokianRaiders' WHERE name='688_DefeatTheElrokianRaiders';

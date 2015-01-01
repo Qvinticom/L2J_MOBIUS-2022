@@ -1,2 +1,0 @@
-UPDATE character_quests SET name='Q00644_GraveRobberAnnihilation' WHERE name='644_GraveRobberAnnihilation';
-UPDATE character_quests SET name='Q00638_SeekersOfTheHolyGrail' WHERE name='638_SeekersOfTheHolyGrail';

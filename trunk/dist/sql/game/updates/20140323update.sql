@@ -1,1 +1,0 @@
-DROP TABLE hellbound_spawnlist;

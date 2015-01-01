@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00643_RiseAndFallOfTheElrokiTribe' WHERE name='643_RiseandFalloftheElrokiTribe';

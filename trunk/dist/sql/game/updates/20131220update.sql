@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00621_EggDelivery' WHERE name='621_EggDelivery';

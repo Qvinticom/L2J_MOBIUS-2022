@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00354_ConquestOfAlligatorIsland' WHERE name='354_ConquestOfAlligatorIsland';

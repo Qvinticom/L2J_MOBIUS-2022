@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00128_PailakaSongOfIceAndFire' WHERE name='128_PailakaSongOfIceAndFire';

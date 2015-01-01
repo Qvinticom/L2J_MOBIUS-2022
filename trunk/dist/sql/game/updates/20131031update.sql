@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00619_RelicsOfTheOldEmpire' WHERE name='619_RelicsOfTheOldEmpire';

@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00194_SevenSignsMammonsContract' WHERE name='194_SevenSignContractOfMammon';

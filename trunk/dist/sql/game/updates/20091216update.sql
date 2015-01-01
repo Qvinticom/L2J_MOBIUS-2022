@@ -1,1 +1,0 @@
-UPDATE `items` SET `loc` = 'WAREHOUSE' WHERE `loc` = 'FREIGHT';

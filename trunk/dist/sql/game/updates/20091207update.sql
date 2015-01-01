@@ -1,1 +1,0 @@
-ALTER TABLE `characters` ADD `title_color` MEDIUMINT UNSIGNED NOT NULL DEFAULT '16777079' AFTER `title`;

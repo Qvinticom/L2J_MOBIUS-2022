@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00116_BeyondTheHillsOfWinter' WHERE name='116_BeyondTheHillsOfWinter';

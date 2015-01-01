@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='660_AidingtheFloranVillage' WHERE name='Q00660_AidingTheFloranVillage';

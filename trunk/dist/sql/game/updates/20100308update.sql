@@ -1,1 +1,0 @@
-ALTER TABLE `characters` ADD `language` VARCHAR(2) DEFAULT NULL AFTER `createTime`;

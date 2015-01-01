@@ -1,1 +1,0 @@
-UPDATE character_quests SET name='Q00501_ProofOfClanAlliance' WHERE name='501_ProofOfClanAlliance';
