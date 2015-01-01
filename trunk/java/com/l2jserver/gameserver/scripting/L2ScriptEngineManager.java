@@ -43,7 +43,6 @@ import javax.script.SimpleScriptContext;
 import javolution.util.FastMap;
 
 import com.l2jserver.Config;
-import com.l2jserver.script.jython.JythonScriptEngine;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -353,51 +352,21 @@ public final class L2ScriptEngineManager
 			InputStreamReader isr = new InputStreamReader(fis);
 			BufferedReader reader = new BufferedReader(isr))
 		{
-			if ((engine instanceof Compilable) && ATTEMPT_COMPILATION)
+			ScriptContext context = new SimpleScriptContext();
+			context.setAttribute("mainClass", getClassForFile(file).replace('/', '.').replace('\\', '.'), ScriptContext.ENGINE_SCOPE);
+			context.setAttribute(ScriptEngine.FILENAME, relativeName, ScriptContext.ENGINE_SCOPE);
+			context.setAttribute("classpath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
+			context.setAttribute("sourcepath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
+			setCurrentLoadingScript(file);
+			try
 			{
-				ScriptContext context = new SimpleScriptContext();
-				context.setAttribute("mainClass", getClassForFile(file).replace('/', '.').replace('\\', '.'), ScriptContext.ENGINE_SCOPE);
-				context.setAttribute(ScriptEngine.FILENAME, relativeName, ScriptContext.ENGINE_SCOPE);
-				context.setAttribute("classpath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
-				context.setAttribute("sourcepath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
-				context.setAttribute(JythonScriptEngine.JYTHON_ENGINE_INSTANCE, engine, ScriptContext.ENGINE_SCOPE);
-				
-				setCurrentLoadingScript(file);
-				ScriptContext ctx = engine.getContext();
-				try
-				{
-					engine.setContext(context);
-					Compilable eng = (Compilable) engine;
-					CompiledScript cs = eng.compile(reader);
-					cs.eval(context);
-				}
-				finally
-				{
-					engine.setContext(ctx);
-					setCurrentLoadingScript(null);
-					context.removeAttribute(ScriptEngine.FILENAME, ScriptContext.ENGINE_SCOPE);
-					context.removeAttribute("mainClass", ScriptContext.ENGINE_SCOPE);
-				}
+				engine.eval(reader, context);
 			}
-			else
+			finally
 			{
-				ScriptContext context = new SimpleScriptContext();
-				context.setAttribute("mainClass", getClassForFile(file).replace('/', '.').replace('\\', '.'), ScriptContext.ENGINE_SCOPE);
-				context.setAttribute(ScriptEngine.FILENAME, relativeName, ScriptContext.ENGINE_SCOPE);
-				context.setAttribute("classpath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
-				context.setAttribute("sourcepath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
-				setCurrentLoadingScript(file);
-				try
-				{
-					engine.eval(reader, context);
-				}
-				finally
-				{
-					setCurrentLoadingScript(null);
-					engine.getContext().removeAttribute(ScriptEngine.FILENAME, ScriptContext.ENGINE_SCOPE);
-					engine.getContext().removeAttribute("mainClass", ScriptContext.ENGINE_SCOPE);
-				}
-				
+				setCurrentLoadingScript(null);
+				engine.getContext().removeAttribute(ScriptEngine.FILENAME, ScriptContext.ENGINE_SCOPE);
+				engine.getContext().removeAttribute("mainClass", ScriptContext.ENGINE_SCOPE);
 			}
 		}
 		catch (IOException e)

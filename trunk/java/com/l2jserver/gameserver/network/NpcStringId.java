@@ -25169,7 +25169,7 @@ public final class NpcStringId
 	@ClientString(id = 1801265, message = "Kyaaah...")
 	public static NpcStringId KYAAAH;
 	
-	@ClientString(id = 1801266, message = "Small fry! I will show you true madness!‎ Hahaha!!")
+	@ClientString(id = 1801266, message = "Small fry! I will show you true madness! Hahaha!!")
 	public static NpcStringId SMALL_FRY_I_WILL_SHOW_YOU_TRUE_MADNESS_HAHAHA;
 	
 	@ClientString(id = 1801267, message = "Hehehe! Prepare! My madness will swallow you up!")
