@@ -116,25 +116,22 @@ public final class Fishing extends AbstractEffect
 			return;
 		}
 		
-		if (!player.isGM())
+		if (player.isInBoat())
 		{
-			if (player.isInBoat())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHEN_TRANSFORMED_OR_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
-				return;
-			}
-			
-			if (player.isInCraftMode() || player.isInStoreMode())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_WORKSHOP_OR_PRIVATE_STORE);
-				return;
-			}
-			
-			if (player.isInsideZone(ZoneId.WATER))
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
-				return;
-			}
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHEN_TRANSFORMED_OR_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
+			return;
+		}
+		
+		if (player.isInCraftMode() || player.isInStoreMode())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_WORKSHOP_OR_PRIVATE_STORE);
+			return;
+		}
+		
+		if (player.isInsideZone(ZoneId.WATER))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
+			return;
 		}
 		
 		// calculate a position in front of the player with a random distance
@@ -203,15 +200,8 @@ public final class Fishing extends AbstractEffect
 			
 			if (baitZ == Integer.MIN_VALUE)
 			{
-				if (player.isGM())
-				{
-					baitZ = player.getZ();
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
-					return;
-				}
+				player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+				return;
 			}
 		}
 		
