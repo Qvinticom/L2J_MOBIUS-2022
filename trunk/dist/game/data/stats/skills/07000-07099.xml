@@ -260,14 +260,13 @@
 	<skill id="7029" levels="4" name="Super Haste">
 		<!-- GM Skill -->
 		<table name="#amount"> 1 1 1 2 </table>
-		<table name="#mAtkSpd"> 2 3 3 2 </table>
-		<table name="#pAtk"> 1 1 10000 1 </table>
-		<table name="#pAtkSpd"> 2 3 3 2 </table>
-		<table name="#reuse"> 0.01 0.01 0.01 1 </table>
-		<table name="#runSpd"> 2 3 3 1 </table>
+		<table name="#mAtkSpd"> 2 3 4 5 </table>
+		<table name="#pAtk"> 1250 2500 5000 10000 </table>
+		<table name="#pAtkSpd"> 2 3 4 5 </table>
+		<table name="#reuse"> 0.01 0.01 0.01 0.01 </table>
+		<table name="#runSpd"> 2 3 4 5 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="abnormalTime" val="39600" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill7029" />
 		<set name="magicLvl" val="1" />
