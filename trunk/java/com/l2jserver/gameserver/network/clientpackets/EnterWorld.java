@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import java.util.Base64;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -448,11 +446,6 @@ public class EnterWorld extends L2GameClientPacket
 		
 		activeChar.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		
-		activeChar.sendMessage(getText("VGhpcyBTZXJ2ZXIgdXNlcyBMMkosIGEgUHJvamVjdCBmb3VuZGVkIGJ5IEwyQ2hlZg=="));
-		activeChar.sendMessage(getText("YW5kIGRldmVsb3BlZCBieSBMMkogVGVhbSBhdCB3d3cubDJqc2VydmVyLmNvbQ=="));
-		activeChar.sendMessage(getText("Q29weXJpZ2h0IDIwMDQtMjAxNA=="));
-		activeChar.sendMessage(getText("VGhhbmsgeW91IGZvciAxMCB5ZWFycyE="));
-		
 		AnnouncementsTable.getInstance().showAnnouncements(activeChar);
 		
 		if (showClanNotice)
@@ -676,15 +669,6 @@ public class EnterWorld extends L2GameClientPacket
 				apprentice.sendPacket(msg);
 			}
 		}
-	}
-	
-	/**
-	 * @param string
-	 * @return
-	 */
-	private String getText(String string)
-	{
-		return new String(Base64.getDecoder().decode(string));
 	}
 	
 	@Override
