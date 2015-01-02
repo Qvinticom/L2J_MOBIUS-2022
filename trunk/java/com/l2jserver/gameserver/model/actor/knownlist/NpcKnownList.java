@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
+import com.l2jserver.gameserver.network.serverpackets.MoveToLocation;
 
 public class NpcKnownList extends CharKnownList
 {
@@ -53,6 +54,12 @@ public class NpcKnownList extends CharKnownList
 		if (getActiveObject().isNpc() && (object instanceof L2Character))
 		{
 			final L2Npc npc = (L2Npc) getActiveObject();
+			
+			// Npc Walkers broadcast position fix.
+			if (object.isPlayer() && npc.isMoving())
+			{
+				((L2Character) object).broadcastPacket(new MoveToLocation(npc));
+			}
 			
 			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee(npc, (L2Character) object, object.isSummon()), npc);
