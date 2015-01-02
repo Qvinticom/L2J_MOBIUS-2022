@@ -1,11 +1,12 @@
 @echo off
-title Game Server Console
+title Mobius - Game Server Console
 
 :start
-echo Starting L2J Game Server.
+echo Starting Game Server.
 echo.
 
-java -Djava.util.logging.manager=com.l2jserver.util.L2LogManager -Dpython.cachedir=../cachedir -Xms1024m -Xmx1536m -jar l2jserver.jar
+REM java -Djava.util.logging.manager=com.l2jserver.util.L2LogManager -Dpython.cachedir=../cachedir -Xms1024m -Xmx1536m -jar l2jserver.jar
+java -version:1.8 -server -Djava.util.logging.manager=com.l2jserver.util.L2LogManager -Dpython.cachedir=../cachedir -XX:+AggressiveOpts -Xnoclassgc -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseParNewGC -XX:SurvivorRatio=8 -Xmx4g -Xms2g -Xmn1g -jar l2jserver.jar
 
 REM NOTE: If you have a powerful machine, you could modify/add some extra parameters for performance, like:
 REM -Xms1536m

@@ -1,11 +1,12 @@
 @echo off
-title Login Server Console
+title Mobius - Login Server Console
 
 :start
-echo Starting L2J Login Server.
+echo Starting Login Server.
 echo.
 
-java -Xms128m -Xmx256m -jar l2jlogin.jar
+REM java -Xms128m -Xmx256m -jar l2jlogin.jar
+java -version:1.8 -server -Xms128m -Xmx256m -jar l2jlogin.jar
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
