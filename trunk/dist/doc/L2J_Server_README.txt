@@ -54,7 +54,7 @@ participate on development by submitting the code.
 II. LEGAL
 ====================
 
-Copyright (C) 2004-2014 L2J Server
+Copyright (C) 2004-2015 L2J Server
 
 This file is part of L2J Server.
 
@@ -88,14 +88,14 @@ III. REQUIREMENTS
 ====================
 
 OS:
-Any OS having Java JDK 1.7 installed and properly configured!
+Any OS having Java JDK 1.8 installed and properly configured!
     We recommend using SUN JDK available at java.sun.com
 
 Hardware: 
 Decent CPU & RAM
 
 Software:
-Java JDK 1.7
+Java JDK 1.8
 MySql
 Datapack
 

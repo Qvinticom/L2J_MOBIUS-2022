@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2014 L2J Server
+ * Copyright (C) 2004-2015 L2J Server
  * 
  * This file is part of L2J Server.
  * 
@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.enums.HtmlActionScope;
 
 /**
  * NpcQuestHtmlMessage server packet implementation.
- * @author FBIagent
+ * @author HorridoJoho
  */
 public final class NpcQuestHtmlMessage extends AbstractHtmlPacket
 {
