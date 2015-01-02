@@ -108,6 +108,7 @@ import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
+import com.l2jserver.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
 import com.l2jserver.gameserver.instancemanager.FourSepulchersManager;
@@ -360,6 +361,11 @@ public class GameServer
 		if (Config.L2JMOD_ALLOW_WEDDING)
 		{
 			CoupleManager.getInstance();
+		}
+		
+		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
+		{
+			FishingChampionshipManager.getInstance();
 		}
 		
 		TaskManager.getInstance();

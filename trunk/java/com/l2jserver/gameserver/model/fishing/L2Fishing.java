@@ -22,6 +22,7 @@ import java.util.concurrent.Future;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.FishingMonstersData;
+import com.l2jserver.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.AbstractScript;
@@ -49,6 +50,7 @@ public class L2Fishing implements Runnable
 	private int _fishCurHp;
 	private final double _regenHp;
 	private final boolean _isUpperGrade;
+	private final int _lureId;
 	
 	@Override
 	public void run()
@@ -76,7 +78,7 @@ public class L2Fishing implements Runnable
 		}
 	}
 	
-	public L2Fishing(L2PcInstance Fisher, L2Fish fish, boolean isNoob, boolean isUpperGrade)
+	public L2Fishing(L2PcInstance Fisher, L2Fish fish, boolean isNoob, boolean isUpperGrade, int lureId)
 	{
 		_fisher = Fisher;
 		_fishMaxHp = fish.getFishHp();
@@ -85,6 +87,7 @@ public class L2Fishing implements Runnable
 		_fishId = fish.getItemId();
 		_time = fish.getCombatDuration();
 		_isUpperGrade = isUpperGrade;
+		_lureId = lureId;
 		final int lureType;
 		if (isUpperGrade)
 		{
@@ -160,6 +163,7 @@ public class L2Fishing implements Runnable
 				{
 					_fisher.sendPacket(SystemMessageId.YOU_CAUGHT_SOMETHING);
 					_fisher.addItem("Fishing", _fishId, 1, null, true);
+					FishingChampionshipManager.getInstance().newFish(_fisher, _lureId);
 				}
 			}
 		}

@@ -11938,7 +11938,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public void startFishCombat(boolean isNoob, boolean isUpperGrade)
 	{
-		_fishCombat = new L2Fishing(this, _fish, isNoob, isUpperGrade);
+		_fishCombat = new L2Fishing(this, _fish, isNoob, isUpperGrade, _lure.getId());
 	}
 	
 	public void endFishing(boolean win)

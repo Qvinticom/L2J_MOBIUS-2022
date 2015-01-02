@@ -610,6 +610,13 @@ public final class Config
 	public static float ALT_LOTTERY_4_NUMBER_RATE;
 	public static float ALT_LOTTERY_3_NUMBER_RATE;
 	public static long ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
+	public static boolean ALT_FISH_CHAMPIONSHIP_ENABLED;
+	public static int ALT_FISH_CHAMPIONSHIP_REWARD_ITEM;
+	public static int ALT_FISH_CHAMPIONSHIP_REWARD_1;
+	public static int ALT_FISH_CHAMPIONSHIP_REWARD_2;
+	public static int ALT_FISH_CHAMPIONSHIP_REWARD_3;
+	public static int ALT_FISH_CHAMPIONSHIP_REWARD_4;
+	public static int ALT_FISH_CHAMPIONSHIP_REWARD_5;
 	public static boolean ALT_ITEM_AUCTION_ENABLED;
 	public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
 	public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
@@ -1930,6 +1937,13 @@ public final class Config
 			ALT_LOTTERY_4_NUMBER_RATE = General.getFloat("AltLottery4NumberRate", 0.2f);
 			ALT_LOTTERY_3_NUMBER_RATE = General.getFloat("AltLottery3NumberRate", 0.2f);
 			ALT_LOTTERY_2_AND_1_NUMBER_PRIZE = General.getLong("AltLottery2and1NumberPrize", 200);
+			ALT_FISH_CHAMPIONSHIP_ENABLED = General.getBoolean("AltFishChampionshipEnabled", true);
+			ALT_FISH_CHAMPIONSHIP_REWARD_ITEM = General.getInt("AltFishChampionshipRewardItemId", 57);
+			ALT_FISH_CHAMPIONSHIP_REWARD_1 = General.getInt("AltFishChampionshipReward1", 800000);
+			ALT_FISH_CHAMPIONSHIP_REWARD_2 = General.getInt("AltFishChampionshipReward2", 500000);
+			ALT_FISH_CHAMPIONSHIP_REWARD_3 = General.getInt("AltFishChampionshipReward3", 300000);
+			ALT_FISH_CHAMPIONSHIP_REWARD_4 = General.getInt("AltFishChampionshipReward4", 200000);
+			ALT_FISH_CHAMPIONSHIP_REWARD_5 = General.getInt("AltFishChampionshipReward5", 100000);
 			ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
 			ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
 			ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;

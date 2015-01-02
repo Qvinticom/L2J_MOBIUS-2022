@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.datatables.OfflineTradersTable;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jserver.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ItemAuctionManager;
@@ -540,6 +541,13 @@ public class Shutdown extends Thread
 		// Save all global variables data
 		GlobalVariablesManager.getInstance().storeMe();
 		_log.info("Global Variables Manager: Variables saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		
+		// Save Fishing tournament data
+		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
+		{
+			FishingChampionshipManager.getInstance().shutdown();
+			_log.info("Fishing Championship data has been saved.");
+		}
 		
 		// Save items on ground before closing
 		if (Config.SAVE_DROPPED_ITEM)
