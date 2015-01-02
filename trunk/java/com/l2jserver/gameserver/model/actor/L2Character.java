@@ -1755,6 +1755,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		
+		// Prevent monsters buffing players.
+		if (isMonster() && !target.isMonster() && !skill.isBad() && skill.getName().contains("NPC"))
+		{
+			setTarget(this);
+			return;
+		}
+		
 		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureSkillUse(this, skill, simultaneously, target, targets), this, TerminateReturn.class);
 		if ((term != null) && term.terminate())
 		{
