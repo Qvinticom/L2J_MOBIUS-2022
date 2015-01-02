@@ -116,6 +116,13 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 			return;
 		}
 		
+		if (!player.canOpenPrivateStore())
+		{
+			player.sendPacket(new PrivateStoreManageListBuy(player));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		TradeList tradeList = player.getBuyList();
 		tradeList.clear();
 		

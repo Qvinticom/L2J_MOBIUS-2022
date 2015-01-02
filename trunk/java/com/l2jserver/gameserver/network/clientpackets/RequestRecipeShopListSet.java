@@ -101,6 +101,12 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 			return;
 		}
 		
+		if (!player.canOpenPrivateStore())
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
 		List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		

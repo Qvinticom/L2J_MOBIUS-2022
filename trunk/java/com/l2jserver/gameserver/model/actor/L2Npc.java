@@ -1939,4 +1939,10 @@ public class L2Npc extends L2Character
 			_summonedNpcs.clear();
 		}
 	}
+	
+	@Override
+	public int getMinShopDistance()
+	{
+		return Config.SHOP_MIN_RANGE_FROM_NPC;
+	}
 }

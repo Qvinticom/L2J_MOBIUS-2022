@@ -111,6 +111,13 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 			return;
 		}
 		
+		if (!player.canOpenPrivateStore())
+		{
+			player.sendPacket(new PrivateStoreManageListSell(player, _packageSale));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		// Check maximum number of allowed slots for pvt shops
 		if (_items.length > player.getPrivateSellStoreLimit())
 		{

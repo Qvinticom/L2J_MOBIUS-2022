@@ -4712,7 +4712,25 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean canOpenPrivateStore()
 	{
+		if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0))
+		{
+			for (L2Character cha : getKnownList().getKnownCharacters())
+			{
+				if (Util.checkIfInRange(cha.getMinShopDistance(), this, cha, true))
+				{
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
+					return false;
+				}
+			}
+		}
+		
 		return !isAlikeDead() && !isInOlympiadMode() && !isMounted() && !isInsideZone(ZoneId.NO_STORE) && !isCastingNow();
+	}
+	
+	@Override
+	public int getMinShopDistance()
+	{
+		return (isSitting()) ? Config.SHOP_MIN_RANGE_FROM_PLAYER : 0;
 	}
 	
 	public void tryOpenPrivateBuyStore()

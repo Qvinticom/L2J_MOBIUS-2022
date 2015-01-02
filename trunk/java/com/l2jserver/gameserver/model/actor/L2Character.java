@@ -7073,4 +7073,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		return getTemplate().getRace();
 	}
+	
+	public int getMinShopDistance()
+	{
+		return 0;
+	}
 }

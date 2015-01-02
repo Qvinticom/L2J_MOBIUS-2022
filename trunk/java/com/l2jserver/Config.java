@@ -812,6 +812,8 @@ public final class Config
 	public static int MOB_MIN_SPAWN_RANGE;
 	public static int MOB_MAX_SPAWN_RANGE;
 	public static List<Integer> MOBS_LIST_NOT_RANDOM;
+	public static int SHOP_MIN_RANGE_FROM_NPC;
+	public static int SHOP_MIN_RANGE_FROM_PLAYER;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2593,6 +2595,9 @@ public final class Config
 					MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
 				}
 			}
+			
+			SHOP_MIN_RANGE_FROM_PLAYER = CustomSettings.getInt("ShopMinRangeFromPlayer", 50);
+			SHOP_MIN_RANGE_FROM_NPC = CustomSettings.getInt("ShopMinRangeFromNpc", 100);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
