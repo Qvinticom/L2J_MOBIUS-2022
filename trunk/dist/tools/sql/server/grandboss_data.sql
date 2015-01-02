@@ -41,5 +41,4 @@ INSERT IGNORE INTO `grandboss_data` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`
 -- 
 -- Dr. Chaos
 -- 
-DELETE FROM spawnlist WHERE (npc_templateid = 32033);
 INSERT IGNORE INTO grandboss_data VALUES (25512, 96320, -110912, -3328, 8191, 0, 0, 0, 0);

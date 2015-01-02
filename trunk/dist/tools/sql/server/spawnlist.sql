@@ -42996,3 +42996,8 @@ INSERT INTO `spawnlist` VALUES
 ('24_18', 1, 31031, 144056, 22996, -2144, 0, 0, 0, 60, 0, 0, 0), -- Broadcasting Tower
 ('24_18', 1, 31756, 147728, 27408, -2198, 0, 0, 16500, 60, 0, 0, 0), -- Mr. Cat
 ('24_18', 1, 31757, 147761, 27408, -2198, 0, 0, 16500, 60, 0, 0, 0); -- Miss Queen
+
+-- 
+-- Dr. Chaos
+-- 
+DELETE FROM spawnlist WHERE (npc_templateid = 32033);
