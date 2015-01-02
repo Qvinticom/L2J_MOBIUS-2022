@@ -191,6 +191,62 @@ public final class CharacterCreate extends L2GameClientPacket
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
 			}
+			
+			// Custom Feature: Disallow a race to be created.
+			// Example: Humans can not be created if AllowHuman = False in Custom.properties
+			switch (template.getRace())
+			{
+				case HUMAN:
+					if (!Config.ALLOW_HUMAN)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				case ELF:
+					if (!Config.ALLOW_ELF)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				case DARK_ELF:
+					if (!Config.ALLOW_DARKELF)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				case ORC:
+					if (!Config.ALLOW_ORC)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				case DWARF:
+					if (!Config.ALLOW_DWARF)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				case KAMAEL:
+					if (!Config.ALLOW_KAMAEL)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				case ERTHEIA:
+					if (!Config.ALLOW_ERTHEIA)
+					{
+						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+			}
+			
 			final PcAppearance app = new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0);
 			newChar = L2PcInstance.create(template, getClient().getAccountName(), _name, app);
 		}

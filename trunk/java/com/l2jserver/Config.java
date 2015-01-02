@@ -790,6 +790,13 @@ public final class Config
 	public static Map<Integer, Integer> L2JMOD_DUALBOX_CHECK_WHITELIST;
 	public static boolean L2JMOD_ALLOW_CHANGE_PASSWORD;
 	public static boolean L2JMOD_OLD_DROP_BEHAVIOR;
+	public static boolean ALLOW_HUMAN;
+	public static boolean ALLOW_ELF;
+	public static boolean ALLOW_DARKELF;
+	public static boolean ALLOW_ORC;
+	public static boolean ALLOW_DWARF;
+	public static boolean ALLOW_KAMAEL;
+	public static boolean ALLOW_ERTHEIA;
 	public static boolean CUSTOM_STARTING_LOC;
 	public static int CUSTOM_STARTING_LOC_X;
 	public static int CUSTOM_STARTING_LOC_Y;
@@ -2542,6 +2549,14 @@ public final class Config
 				}
 			}
 			L2JMOD_ALLOW_CHANGE_PASSWORD = CustomSettings.getBoolean("AllowChangePassword", false);
+			
+			ALLOW_HUMAN = CustomSettings.getBoolean("AllowHuman", true);
+			ALLOW_ELF = CustomSettings.getBoolean("AllowElf", true);
+			ALLOW_DARKELF = CustomSettings.getBoolean("AllowDarkElf", true);
+			ALLOW_ORC = CustomSettings.getBoolean("AllowOrc", true);
+			ALLOW_DWARF = CustomSettings.getBoolean("AllowDwarf", true);
+			ALLOW_KAMAEL = CustomSettings.getBoolean("AllowKamael", true);
+			ALLOW_ERTHEIA = CustomSettings.getBoolean("AllowErtheia", true);
 			
 			CUSTOM_STARTING_LOC = CustomSettings.getBoolean("CustomStartingLocation", false);
 			CUSTOM_STARTING_LOC_X = CustomSettings.getInt("CustomStartingLocX", 50821);
