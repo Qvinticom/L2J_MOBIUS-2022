@@ -214,9 +214,10 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27407" level="80" type="L2Npc" name="Solina Lay Brother">
+	<npc id="27407" level="80" type="L2Monster" name="Solina Lay Brother">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
+		<equipment rhand="8212" /> <!--Monster Only (Solina Brother Mace)-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -229,9 +230,29 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="4336" level="2" />	<!--Dark Attack Weak Point-->
+			<skill id="4410" level="11" />	<!--Average P. Atk.-->
+			<skill id="4411" level="16" />	<!--Very Strong M. Atk.-->
+			<skill id="4412" level="11" />	<!--Average P. Def.-->
+			<skill id="4413" level="11" />	<!--Average M. Def.-->
+			<skill id="4414" level="2" />	<!--Standard Type-->
+			<skill id="4415" level="5" />	<!--Blunt Weapons-->
+			<skill id="4416" level="8" />	<!--Angels-->
+			<skill id="4417" level="17" />	<!--Angels-->
+			<skill id="4423" level="3" />	<!--Sacred Attacks-->
+			<skill id="4563" level="9" />	<!--NPC Solar Flare - Magic-->
+			<skill id="4613" level="1" />	<!--NPC Clan Heal-->
+			<skill id="4789" level="9" />	<!--NPC High Level-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="27408" level="80" type="L2Npc" name="Savior Solina">
@@ -254,7 +275,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27409" level="80" type="L2Npc" name="Solina Knight Captain">
+	<npc id="27409" level="80" type="L2Monster" name="Solina Knight Captain">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -269,14 +290,20 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="27410" level="80" type="L2Npc" name="Solina Knights">
+	<npc id="27410" level="80" type="L2Monster" name="Solina Knights">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
+		<equipment rhand="8211" lhand="8210" /> <!--Monster Only (Monk Warrior Shield)-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -289,9 +316,14 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="27411" level="80" type="L2Npc" name="Divinity Manager">
@@ -314,9 +346,10 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27412" level="80" type="L2Npc" name="Divinity Supervisor">
+	<npc id="27412" level="80" type="L2Monster" name="Divinity Supervisor">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
+		<equipment rhand="8221" /> <!--Monster Only (Grail Apostle Spear)-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -329,12 +362,17 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="27413" level="80" type="L2Npc" name="Divinity Fighter">
+	<npc id="27413" level="80" type="L2Monster" name="Divinity Fighter">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -349,12 +387,17 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="27414" level="80" type="L2Npc" name="Divinity Magus">
+	<npc id="27414" level="80" type="L2Monster" name="Divinity Magus">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -369,9 +412,19 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6320" level="1" />	<!--Summon Sacred Magic Force-->
+			<skill id="6321" level="1" />	<!--Divine Flash-->
+			<skill id="6322" level="1" />	<!--Divine Impact-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="27415" level="80" type="L2Monster" name="Guide Solina">
@@ -415,9 +468,10 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27417" level="80" type="L2Npc" name="Mutant Archer">
+	<npc id="27417" level="80" type="L2Monster" name="Mutant Archer">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
+		<equipment rhand="274" /> <!--Reinforced Bow-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -430,14 +484,24 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6709" level="1" />	<!--Multi Shot-->
+			<skill id="4088" level="1" />	<!--Bleed-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="27418" level="80" type="L2Npc" name="Mutant Warrior">
+	<npc id="27418" level="80" type="L2Monster" name="Mutant Warrior">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
+		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -450,9 +514,18 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6262" level="1" />	<!--EMP Power-->
+			<skill id="6515" level="20" />	<!--NPC dark attack-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="27419" level="80" type="L2Npc" name="Divinity Watcher">

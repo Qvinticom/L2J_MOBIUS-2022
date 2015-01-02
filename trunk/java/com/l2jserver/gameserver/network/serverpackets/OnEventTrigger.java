@@ -34,6 +34,12 @@ public class OnEventTrigger extends L2GameServerPacket
 		_enabled = enabled ? 1 : 0;
 	}
 	
+	public OnEventTrigger(int id, boolean enabled)
+	{
+		_emitterId = id;
+		_enabled = enabled ? 1 : 0;
+	}
+	
 	@Override
 	protected final void writeImpl()
 	{

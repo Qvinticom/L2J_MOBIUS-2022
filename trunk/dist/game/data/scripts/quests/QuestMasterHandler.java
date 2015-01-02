@@ -287,6 +287,8 @@ import quests.Q10291_FireDragonDestroyer.Q10291_FireDragonDestroyer;
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
+import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
+import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
@@ -576,6 +578,8 @@ public class QuestMasterHandler
 		Q10292_SevenSignsGirlOfDoubt.class,
 		Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class,
 		Q10294_SevenSignsToTheMonasteryOfSilence.class,
+		Q10295_SevenSignsSolinasTomb.class,
+		Q10296_SevenSignsPowerOfTheSeal.class,
 		Q10320_LetsGoToTheCentralSquare.class,
 		Q10321_QualificationsOfTheSeeker.class,
 		Q10322_SearchingForTheMysteriousPower.class,

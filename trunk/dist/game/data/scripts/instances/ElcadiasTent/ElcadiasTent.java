@@ -21,6 +21,7 @@ package instances.ElcadiasTent;
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
+import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -66,10 +67,12 @@ public final class ElcadiasTent extends AbstractNpcAI
 			final QuestState GirlOfDoubt = talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
 			final QuestState ForbiddenBook = talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
 			final QuestState Monastery = talker.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+			final QuestState Power = talker.getQuestState(Q10296_SevenSignsPowerOfTheSeal.class.getSimpleName());
 			if (((GirlOfDoubt != null) && GirlOfDoubt.isStarted()) //
 				|| ((GirlOfDoubt != null) && GirlOfDoubt.isCompleted() && (ForbiddenBook == null)) //
 				|| ((ForbiddenBook != null) && ForbiddenBook.isStarted()) //
-				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)))
+				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)) //
+				|| ((Power != null) && Power.isStarted()))
 			{
 				enterInstance(talker, "ElcadiasTent.xml", START_LOC);
 			}

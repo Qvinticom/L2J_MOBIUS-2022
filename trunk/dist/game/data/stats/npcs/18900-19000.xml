@@ -2069,7 +2069,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18949" level="80" type="L2Npc" name="Etis van Etina" title="Head of the Embryo">
+	<npc id="18949" level="80" type="L2Monster" name="Etis van Etina" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2084,12 +2084,47 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6599" level="12" />	<!--NPC earth attack-->
+			<skill id="6705" level="1" />	<!--Stun-->
+			<skill id="6262" level="1" />	<!--EMP Power-->
+		</skill_list>
+		<collision>
+			<radius normal="25" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="18950" level="80" type="L2Monster" name="Etis van Etina's Phantom">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
+			<vitals hp="2444" mp="2444.0" />
+			<attack physical="500" magical="500" attackSpeed="278" range="40" />
+			<defence physical="500" magical="500" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18950" level="80" type="L2Npc" name="Etis van Etina's Phantom">
+	<npc id="18951" level="80" type="L2Monster" name="Etis van Etina's Phantom">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2104,12 +2139,17 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18951" level="80" type="L2Npc" name="Etis van Etina's Phantom">
+	<npc id="18952" level="80" type="L2Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2124,12 +2164,23 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6494" level="28" />	<!--NPC holy attack-->
+			<skill id="6705" level="1" />	<!--Stun-->
+			<skill id="6710" level="1" />	<!--Etis Haste-->
+			<skill id="6711" level="1" />	<!--Etis Power Up-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18952" level="80" type="L2Npc" name="Solina's Guardian">
+	<npc id="18953" level="80" type="L2Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2144,12 +2195,23 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6494" level="28" />	<!--NPC holy attack-->
+			<skill id="6705" level="1" />	<!--Stun-->
+			<skill id="6710" level="1" />	<!--Etis Haste-->
+			<skill id="6711" level="1" />	<!--Etis Power Up-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18953" level="80" type="L2Npc" name="Solina's Guardian">
+	<npc id="18954" level="80" type="L2Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2164,12 +2226,23 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6494" level="28" />	<!--NPC holy attack-->
+			<skill id="6705" level="1" />	<!--Stun-->
+			<skill id="6710" level="1" />	<!--Etis Haste-->
+			<skill id="6711" level="1" />	<!--Etis Power Up-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18954" level="80" type="L2Npc" name="Solina's Guardian">
+	<npc id="18955" level="80" type="L2Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2184,12 +2257,23 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6494" level="28" />	<!--NPC holy attack-->
+			<skill id="6705" level="1" />	<!--Stun-->
+			<skill id="6710" level="1" />	<!--Etis Haste-->
+			<skill id="6711" level="1" />	<!--Etis Power Up-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18955" level="80" type="L2Npc" name="Solina's Guardian">
+	<npc id="18956" level="80" type="L2Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2204,12 +2288,22 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6709" level="1" />	<!--Multi Shot-->
+			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" />	<!--Decrease Speed-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18956" level="80" type="L2Npc" name="Guardian of the Tomb">
+	<npc id="18957" level="80" type="L2Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2224,12 +2318,22 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6709" level="1" />	<!--Multi Shot-->
+			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" />	<!--Decrease Speed-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18957" level="80" type="L2Npc" name="Guardian of the Tomb">
+	<npc id="18958" level="80" type="L2Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2244,12 +2348,22 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6709" level="1" />	<!--Multi Shot-->
+			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" />	<!--Decrease Speed-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
+			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18958" level="80" type="L2Npc" name="Guardian of the Tomb">
+	<npc id="18959" level="80" type="L2Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2264,29 +2378,19 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>SSQ</clan>
+			</clan_list>
+		</ai>
+		<skill_list>
+			<skill id="6709" level="1" />	<!--Multi Shot-->
+			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" />	<!--Decrease Speed-->
+		</skill_list>
 		<collision>
 			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="18959" level="80" type="L2Npc" name="Guardian of the Tomb">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<height normal="42" />
 		</collision>
 	</npc>
 	<npc id="18960" level="80" type="L2Npc" name="Drake Lord">
