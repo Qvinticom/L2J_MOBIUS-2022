@@ -240,4 +240,61 @@
 		<node X="-114536" Y="257336" />
 		<node X="-114520" Y="257496" />
 	</zone>
+	<!-- Pailaka Injured Dragon. No exit zones for mob walls -->
+	<zone name="Pailaka Injured Dragon 1" id="200001" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="117769" Y="-46202" />
+		<node X="117828" Y="-46590" />
+		<node X="121923" Y="-46364" />
+		<node X="121763" Y="-44674" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 2" id="200002" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="115970" Y="-45694" />
+		<node X="115620" Y="-46220" />
+		<node X="115593" Y="-46683" />
+		<node X="116477" Y="-47716" />
+		<node X="115839" Y="-46610" />
+		<node X="115819" Y="-46203" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 3" id="200003" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="116346" Y="-49927" />
+		<node X="115202" Y="-50560" />
+		<node X="115330" Y="-50608" />
+		<node X="116347" Y="-50083" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 4" id="200004" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="117275" Y="-51185" />
+		<node X="116018" Y="-51776" />
+		<node X="116278" Y="-52213" />
+		<node X="117526" Y="-51052" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 5" id="200005" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="111137" Y="-43445" />
+		<node X="111187" Y="-44394" />
+		<node X="111392" Y="-44275" />
+		<node X="111355" Y="-43370" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 6" id="200006" type="ScriptZone" shape="NPoly" minZ="-3000" maxZ="-1500">
+		<node X="108768" Y="-45613" />
+		<node X="109882" Y="-47555" />
+		<node X="110229" Y="-47049" />
+		<node X="108917" Y="-45580" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 7" id="200007" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="115979" Y="-55112" />
+		<node X="115753" Y="-56598" />
+		<node X="116242" Y="-56532" />
+		<node X="116211" Y="-55042" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 8" id="200008" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
+		<node X="108467" Y="-40835" />
+		<node X="108533" Y="-41590" />
+		<node X="108666" Y="-41584" />
+		<node X="108623" Y="-40839" />
+	</zone>
+	<zone name="Pailaka Injured Dragon 9" id="200009" type="ScriptZone" shape="NPoly" minZ="-2500" maxZ="-1500">
+		<node X="110456" Y="-39399" />
+		<node X="109835" Y="-39410" />
+		<node X="109830" Y="-39550" />
+		<node X="110457" Y="-39540" />
+	</zone>
 </list>
