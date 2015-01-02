@@ -19,11 +19,13 @@
 package ai.individual;
 
 import java.util.List;
+import java.util.concurrent.ScheduledFuture;
 
 import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.Location;
@@ -79,9 +81,10 @@ public final class QueenAnt extends AbstractNpcAI
 	private static SkillHolder HEAL1 = new SkillHolder(4020, 1);
 	private static SkillHolder HEAL2 = new SkillHolder(4024, 1);
 	
-	private L2MonsterInstance _queen = null;
+	L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
 	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
+	ScheduledFuture<?> _task = null;
 	
 	private QueenAnt()
 	{
@@ -114,18 +117,13 @@ public final class QueenAnt extends AbstractNpcAI
 		}
 		else
 		{
-			int loc_x = info.getInt("loc_x");
-			int loc_y = info.getInt("loc_y");
-			int loc_z = info.getInt("loc_z");
+			int loc_x = QUEEN_X;
+			int loc_y = QUEEN_Y;
+			int loc_z = QUEEN_Z;
 			int heading = info.getInt("heading");
 			int hp = info.getInt("currentHP");
 			int mp = info.getInt("currentMP");
-			if (!_zone.isInsideZone(loc_x, loc_y, loc_z))
-			{
-				loc_x = QUEEN_X;
-				loc_y = QUEEN_Y;
-				loc_z = QUEEN_Z;
-			}
+			
 			L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
 			queen.setCurrentHpMp(hp, mp);
 			spawnBoss(queen);
@@ -244,6 +242,9 @@ public final class QueenAnt extends AbstractNpcAI
 			case GUARD:
 				mob.setIsRaidMinion(true);
 				break;
+			case QUEEN:
+				_task = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				break;
 		}
 		
 		return super.onSpawn(npc);
@@ -347,6 +348,11 @@ public final class QueenAnt extends AbstractNpcAI
 			_larva.deleteMe();
 			_larva = null;
 			_queen = null;
+			if (_task != null)
+			{
+				_task.cancel(false);
+				_task = null;
+			}
 		}
 		else if ((_queen != null) && !_queen.isAlikeDead())
 		{
@@ -369,6 +375,32 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	private class QueenAntTask implements Runnable
+	{
+		public QueenAntTask()
+		{
+			// Constructor stub
+		}
+		
+		@Override
+		public void run()
+		{
+			if ((_queen == null) || _queen.isDead())
+			{
+				_task.cancel(false);
+				_task = null;
+			}
+			else
+			{
+				if (_queen.calculateDistance(QUEEN_X, QUEEN_Y, QUEEN_Z, false, false) > 2000.)
+				{
+					_queen.clearAggroList();
+					_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
+				}
+			}
+		}
 	}
 	
 	public static void main(String[] args)
