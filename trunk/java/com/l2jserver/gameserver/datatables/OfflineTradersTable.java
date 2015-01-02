@@ -45,7 +45,9 @@ public class OfflineTradersTable
 	private static final String SAVE_OFFLINE_STATUS = "INSERT INTO character_offline_trade (`charId`,`time`,`type`,`title`) VALUES (?,?,?,?)";
 	private static final String SAVE_ITEMS = "INSERT INTO character_offline_trade_items (`charId`,`item`,`count`,`price`) VALUES (?,?,?,?)";
 	private static final String CLEAR_OFFLINE_TABLE = "DELETE FROM character_offline_trade";
+	private static final String CLEAR_OFFLINE_TABLE_PLAYER = "DELETE FROM character_offline_trade WHERE `charId`=?";
 	private static final String CLEAR_OFFLINE_TABLE_ITEMS = "DELETE FROM character_offline_trade_items";
+	private static final String CLEAR_OFFLINE_TABLE_ITEMS_PLAYER = "DELETE FROM character_offline_trade_items WHERE `charId`=?";
 	private static final String LOAD_OFFLINE_STATUS = "SELECT * FROM character_offline_trade";
 	private static final String LOAD_OFFLINE_ITEMS = "SELECT * FROM character_offline_trade_items WHERE charId = ?";
 	
@@ -253,15 +255,118 @@ public class OfflineTradersTable
 			
 			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + nTraders + " offline trader(s)");
 			
-			try (Statement stm1 = con.createStatement())
+			if (!Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 			{
-				stm1.execute(CLEAR_OFFLINE_TABLE);
-				stm1.execute(CLEAR_OFFLINE_TABLE_ITEMS);
+				try (Statement stm1 = con.createStatement())
+				{
+					stm1.execute(CLEAR_OFFLINE_TABLE);
+					stm1.execute(CLEAR_OFFLINE_TABLE_ITEMS);
+				}
 			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while loading offline traders: ", e);
+		}
+	}
+	
+	public static synchronized void onTransaction(L2PcInstance trader, boolean finished, boolean firstCall)
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
+			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER);
+			PreparedStatement stm3 = con.prepareStatement(SAVE_ITEMS);
+			PreparedStatement stm4 = con.prepareStatement(SAVE_OFFLINE_STATUS))
+		{
+			String title = null;
+			
+			stm1.setInt(1, trader.getObjectId()); // Char Id
+			stm1.execute();
+			stm1.close();
+			
+			// Trade is done - clear info
+			if (finished)
+			{
+				stm2.setInt(1, trader.getObjectId()); // Char Id
+				stm2.execute();
+				stm2.close();
+			}
+			else
+			{
+				try
+				{
+					if ((trader.getClient() == null) || trader.getClient().isDetached())
+					{
+						switch (trader.getPrivateStoreType())
+						{
+							case BUY:
+								if (firstCall)
+								{
+									title = trader.getBuyList().getTitle();
+								}
+								for (TradeItem i : trader.getBuyList().getItems())
+								{
+									stm3.setInt(1, trader.getObjectId());
+									stm3.setInt(2, i.getItem().getId());
+									stm3.setLong(3, i.getCount());
+									stm3.setLong(4, i.getPrice());
+									stm3.executeUpdate();
+									stm3.clearParameters();
+								}
+								break;
+							case SELL:
+							case PACKAGE_SELL:
+								if (firstCall)
+								{
+									title = trader.getSellList().getTitle();
+								}
+								for (TradeItem i : trader.getSellList().getItems())
+								{
+									stm3.setInt(1, trader.getObjectId());
+									stm3.setInt(2, i.getObjectId());
+									stm3.setLong(3, i.getCount());
+									stm3.setLong(4, i.getPrice());
+									stm3.executeUpdate();
+									stm3.clearParameters();
+								}
+								break;
+							case MANUFACTURE:
+								if (firstCall)
+								{
+									title = trader.getStoreName();
+								}
+								for (L2ManufactureItem i : trader.getManufactureItems().values())
+								{
+									stm3.setInt(1, trader.getObjectId());
+									stm3.setInt(2, i.getRecipeId());
+									stm3.setLong(3, 0);
+									stm3.setLong(4, i.getCost());
+									stm3.executeUpdate();
+									stm3.clearParameters();
+								}
+						}
+						stm3.close();
+						if (firstCall)
+						{
+							stm4.setInt(1, trader.getObjectId()); // Char Id
+							stm4.setLong(2, trader.getOfflineStartTime());
+							stm4.setInt(3, trader.getPrivateStoreType().getId()); // store type
+							stm4.setString(4, title);
+							stm4.executeUpdate();
+							stm4.clearParameters();
+							stm4.close();
+						}
+					}
+				}
+				catch (Exception e)
+				{
+					LOGGER.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline trader: " + trader.getObjectId() + " " + e, e);
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline traders: " + e, e);
 		}
 	}
 	

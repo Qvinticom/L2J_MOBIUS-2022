@@ -22,6 +22,7 @@ import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 import javolution.util.FastSet;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.OfflineTradersTable;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.ItemRequest;
 import com.l2jserver.gameserver.model.L2Object;
@@ -151,6 +152,12 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 				_log.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
 			}
 			return;
+		}
+		
+		// Update offline trade record, if realtime saving is enabled
+		if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached()))
+		{
+			OfflineTradersTable.onTransaction(storePlayer, storeList.getItemCount() == 0, false);
 		}
 		
 		if (storeList.getItemCount() == 0)

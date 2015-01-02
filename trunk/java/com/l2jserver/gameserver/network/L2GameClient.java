@@ -44,6 +44,7 @@ import com.l2jserver.gameserver.LoginServerThread.SessionKey;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.datatables.OfflineTradersTable;
 import com.l2jserver.gameserver.datatables.SecondaryAuthData;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
 import com.l2jserver.gameserver.model.CharSelectInfoPackage;
@@ -802,6 +803,12 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 						if (getActiveChar().getOfflineStartTime() == 0)
 						{
 							getActiveChar().setOfflineStartTime(System.currentTimeMillis());
+						}
+						
+						// Store trade on exit, if realtime saving is enabled.
+						if (Config.STORE_OFFLINE_TRADE_IN_REALTIME)
+						{
+							OfflineTradersTable.onTransaction(getActiveChar(), false, true);
 						}
 						
 						final LogRecord record = new LogRecord(Level.INFO, "Entering offline mode");

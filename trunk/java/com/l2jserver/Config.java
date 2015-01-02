@@ -767,6 +767,7 @@ public final class Config
 	public static boolean OFFLINE_SET_NAME_COLOR;
 	public static int OFFLINE_NAME_COLOR;
 	public static boolean OFFLINE_FAME;
+	public static boolean STORE_OFFLINE_TRADE_IN_REALTIME;
 	public static boolean L2JMOD_ENABLE_MANA_POTIONS_SUPPORT;
 	public static boolean L2JMOD_DISPLAY_SERVER_TIME;
 	public static boolean WELCOME_MESSAGE_ENABLED;
@@ -2478,6 +2479,7 @@ public final class Config
 			RESTORE_OFFLINERS = CustomSettings.getBoolean("RestoreOffliners", false);
 			OFFLINE_MAX_DAYS = CustomSettings.getInt("OfflineMaxDays", 10);
 			OFFLINE_DISCONNECT_FINISHED = CustomSettings.getBoolean("OfflineDisconnectFinished", true);
+			STORE_OFFLINE_TRADE_IN_REALTIME = CustomSettings.getBoolean("StoreOfflineTradeInRealtime", true);
 			
 			L2JMOD_ENABLE_MANA_POTIONS_SUPPORT = CustomSettings.getBoolean("EnableManaPotionSupport", false);
 			

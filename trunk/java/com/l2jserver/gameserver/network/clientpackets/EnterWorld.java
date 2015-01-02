@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.AnnouncementsTable;
 import com.l2jserver.gameserver.datatables.BeautyShopData;
+import com.l2jserver.gameserver.datatables.OfflineTradersTable;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
@@ -573,6 +574,11 @@ public class EnterWorld extends L2GameClientPacket
 		if (!activeChar.getPremiumItemList().isEmpty())
 		{
 			activeChar.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
+		}
+		
+		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.STORE_OFFLINE_TRADE_IN_REALTIME)
+		{
+			OfflineTradersTable.onTransaction(activeChar, true, false);
 		}
 		
 		activeChar.broadcastUserInfo();
