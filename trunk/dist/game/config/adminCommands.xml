@@ -589,6 +589,9 @@
 	<admin command="admin_scan" accessLevel="100" />
 	<admin command="admin_deleteNpcByObjectId" accessLevel="100" confirmDlg="true" />
 
+	<!-- ADMIN SERVERINFO -->
+	<admin command="admin_serverinfo" accessLevel="100" />
+
 	<!-- VOICE COMMANDS -->
 	<admin command="banchat" accessLevel="100" />
 	<admin command="debug" accessLevel="100" />

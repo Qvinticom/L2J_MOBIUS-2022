@@ -35,6 +35,7 @@ import javolution.util.FastMap;
 import javolution.util.FastSet;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -447,6 +448,100 @@ public class ThreadPoolManager
 		{
 			/* shutdown, ignore */
 		}
+	}
+	
+	public StatsSet getStats(String category)
+	{
+		final StatsSet StatsSet = new StatsSet();
+		
+		switch (category)
+		{
+			case "EFFECTS":
+			{
+				StatsSet.set("ActiveThreads", _effectsScheduledThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _effectsScheduledThreadPool.getCorePoolSize());
+				StatsSet.set("PoolSize", _effectsScheduledThreadPool.getPoolSize());
+				StatsSet.set("MaximumPoolSize", _effectsScheduledThreadPool.getMaximumPoolSize());
+				StatsSet.set("CompletedTasks", (int) _effectsScheduledThreadPool.getCompletedTaskCount());
+				StatsSet.set("ScheduledTasks", _effectsScheduledThreadPool.getQueue().size());
+				break;
+			}
+			case "GENERAL":
+			{
+				StatsSet.set("ActiveThreads", _generalScheduledThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSizes", _generalScheduledThreadPool.getCorePoolSize());
+				StatsSet.set("PoolSizes", _generalScheduledThreadPool.getPoolSize());
+				StatsSet.set("MaximumPoolSizes", _generalScheduledThreadPool.getMaximumPoolSize());
+				StatsSet.set("CompletedTasks", (int) _generalScheduledThreadPool.getCompletedTaskCount());
+				StatsSet.set("ScheduledTasks", _generalScheduledThreadPool.getQueue().size());
+				break;
+			}
+			case "AI":
+			{
+				StatsSet.set("ActiveThreads", _aiScheduledThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _aiScheduledThreadPool.getCorePoolSize());
+				StatsSet.set("PoolSize", _aiScheduledThreadPool.getPoolSize());
+				StatsSet.set("MaximumPoolSize", _aiScheduledThreadPool.getMaximumPoolSize());
+				StatsSet.set("CompletedTasks", (int) _aiScheduledThreadPool.getCompletedTaskCount());
+				StatsSet.set("ScheduledTasks", _aiScheduledThreadPool.getQueue().size());
+				break;
+			}
+			case "EVENT":
+			{
+				StatsSet.set("ActiveThreads", _eventScheduledThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _eventScheduledThreadPool.getCorePoolSize());
+				StatsSet.set("PoolSize", _eventScheduledThreadPool.getPoolSize());
+				StatsSet.set("MaximumPoolSize", _eventScheduledThreadPool.getMaximumPoolSize());
+				StatsSet.set("CompletedTasks", (int) _eventScheduledThreadPool.getCompletedTaskCount());
+				StatsSet.set("ScheduledTasks", _eventScheduledThreadPool.getQueue().size());
+				break;
+			}
+			case "PACKETS":
+			{
+				StatsSet.set("ActiveThreads", _generalPacketsThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _generalPacketsThreadPool.getCorePoolSize());
+				StatsSet.set("MaximumPoolSize", _generalPacketsThreadPool.getMaximumPoolSize());
+				StatsSet.set("LargestPoolSize", _generalPacketsThreadPool.getLargestPoolSize());
+				StatsSet.set("PoolSize", _generalPacketsThreadPool.getPoolSize());
+				StatsSet.set("CompletedTasks", (int) _generalPacketsThreadPool.getCompletedTaskCount());
+				StatsSet.set("QueuedTasks", _generalPacketsThreadPool.getQueue().size());
+				break;
+			}
+			case "IOPACKETS":
+			{
+				StatsSet.set("ActiveThreads", _ioPacketsThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _ioPacketsThreadPool.getCorePoolSize());
+				StatsSet.set("MaximumPoolSize", _ioPacketsThreadPool.getMaximumPoolSize());
+				StatsSet.set("LargestPoolSize", _ioPacketsThreadPool.getLargestPoolSize());
+				StatsSet.set("PoolSize", _ioPacketsThreadPool.getPoolSize());
+				StatsSet.set("CompletedTasks", (int) _ioPacketsThreadPool.getCompletedTaskCount());
+				StatsSet.set("QueuedTasks", _ioPacketsThreadPool.getQueue().size());
+				break;
+			}
+			case "GENERAL_TASKS":
+			{
+				StatsSet.set("ActiveThreads", _generalThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _generalThreadPool.getCorePoolSize());
+				StatsSet.set("MaximumPoolSize", _generalThreadPool.getMaximumPoolSize());
+				StatsSet.set("LargestPoolSize", _generalThreadPool.getLargestPoolSize());
+				StatsSet.set("PoolSize", _generalThreadPool.getPoolSize());
+				StatsSet.set("CompletedTasks", (int) _generalThreadPool.getCompletedTaskCount());
+				StatsSet.set("QueuedTasks", _generalThreadPool.getQueue().size());
+				break;
+			}
+			case "EVENT_TASKS":
+			{
+				StatsSet.set("ActiveThreads", _eventThreadPool.getActiveCount());
+				StatsSet.set("getCorePoolSize", _eventThreadPool.getCorePoolSize());
+				StatsSet.set("MaximumPoolSize", _eventThreadPool.getMaximumPoolSize());
+				StatsSet.set("LargestPoolSize", _eventThreadPool.getLargestPoolSize());
+				StatsSet.set("PoolSize", _eventThreadPool.getPoolSize());
+				StatsSet.set("CompletedTasks", (int) _eventThreadPool.getCompletedTaskCount());
+				StatsSet.set("QueuedTasks", _eventThreadPool.getQueue().size());
+				break;
+			}
+		}
+		return StatsSet;
 	}
 	
 	public String[] getStats()
