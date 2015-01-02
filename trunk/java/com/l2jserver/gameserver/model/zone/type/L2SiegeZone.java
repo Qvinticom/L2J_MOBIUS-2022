@@ -182,6 +182,16 @@ public class L2SiegeZone extends L2ZoneType
 					plyer.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
 					plyer.enteredNoLanding(DISMOUNT_DELAY);
 				}
+				
+				if (!Config.ALLOW_MOUNTS_DURING_SIEGE && (plyer.isMounted()))
+				{
+					plyer.dismount();
+				}
+				
+				if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.isTransformed() && plyer.getTransformation().isRiding())
+				{
+					plyer.untransform();
+				}
 			}
 		}
 	}

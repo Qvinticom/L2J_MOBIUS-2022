@@ -4815,6 +4815,11 @@ public final class L2PcInstance extends L2Playable
 	
 	public void transform(Transform transformation)
 	{
+		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && transformation.isRiding() && isInsideZone(ZoneId.SIEGE))
+		{
+			return;
+		}
+		
 		if (_transformation != null)
 		{
 			// You already polymorphed and cannot polymorph again.
@@ -6395,6 +6400,11 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean mount(L2Summon pet)
 	{
+		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneId.SIEGE))
+		{
+			return false;
+		}
+		
 		if (!disarmWeapons() || !disarmShield() || isTransformed())
 		{
 			return false;
