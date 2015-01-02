@@ -801,6 +801,10 @@ public final class Config
 	public static int CUSTOM_STARTING_LOC_X;
 	public static int CUSTOM_STARTING_LOC_Y;
 	public static int CUSTOM_STARTING_LOC_Z;
+	public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
+	public static int MOB_MIN_SPAWN_RANGE;
+	public static int MOB_MAX_SPAWN_RANGE;
+	public static List<Integer> MOBS_LIST_NOT_RANDOM;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2562,6 +2566,19 @@ public final class Config
 			CUSTOM_STARTING_LOC_X = CustomSettings.getInt("CustomStartingLocX", 50821);
 			CUSTOM_STARTING_LOC_Y = CustomSettings.getInt("CustomStartingLocY", 186527);
 			CUSTOM_STARTING_LOC_Z = CustomSettings.getInt("CustomStartingLocZ", -3625);
+			
+			ENABLE_RANDOM_MONSTER_SPAWNS = CustomSettings.getBoolean("EnableRandomMonsterSpawns", false);
+			MOB_MAX_SPAWN_RANGE = CustomSettings.getInt("MaxSpawnMobRange", 150);
+			MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
+			if (ENABLE_RANDOM_MONSTER_SPAWNS)
+			{
+				String[] mobsIds = CustomSettings.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
+				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
+				for (String id : mobsIds)
+				{
+					MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
+				}
+			}
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

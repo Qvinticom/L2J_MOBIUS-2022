@@ -589,10 +589,29 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		else
 		{
-			// The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
+			// The L2NpcInstance is spawned at a random position
 			newlocx = getX();
 			newlocy = getY();
 			newlocz = getZ();
+			
+			// If random spawn system is enabled
+			if (Config.ENABLE_RANDOM_MONSTER_SPAWNS)
+			{
+				final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+				final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+				
+				boolean isQuestMonster = false;
+				if ((mob.getTitle() != null) && mob.getTitle().contains("Quest"))
+				{
+					isQuestMonster = true;
+				}
+				
+				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && (Config.GEODATA > 0) && GeoData.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
+				{
+					newlocx = randX;
+					newlocy = randY;
+				}
+			}
 		}
 		
 		// don't correct z of flying npc's
