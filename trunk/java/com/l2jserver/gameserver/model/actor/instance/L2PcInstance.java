@@ -13523,6 +13523,9 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(sm);
 		}
 		
+		// Prevent falling in game graphics.
+		sendPacket(new ValidateLocation(this));
+		
 		setFalling();
 		
 		return false;
