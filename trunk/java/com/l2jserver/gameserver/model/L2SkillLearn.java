@@ -19,7 +19,9 @@
 package com.l2jserver.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.Race;
@@ -48,6 +50,7 @@ public final class L2SkillLearn
 	private final List<SubClassData> _subClassLvlNumber = new ArrayList<>();
 	private final boolean _learnedByNpc;
 	private final boolean _learnedByFS;
+	private final Set<Integer> _removeSkills = new HashSet<>();
 	
 	public class SubClassData
 	{
@@ -270,6 +273,16 @@ public final class L2SkillLearn
 	public boolean isLearnedByFS()
 	{
 		return _learnedByFS;
+	}
+	
+	public void addRemoveSkills(int skillId)
+	{
+		_removeSkills.add(skillId);
+	}
+	
+	public Set<Integer> getRemoveSkills()
+	{
+		return _removeSkills;
 	}
 	
 	/**

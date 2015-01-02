@@ -205,10 +205,7 @@ public class CharInfo extends L2GameServerPacket
 		writeC(_activeChar.getPrivateStoreType().getId()); // Confirmed
 		
 		writeH(_activeChar.getCubics().size()); // Confirmed
-		for (int cubicId : _activeChar.getCubics().keySet())
-		{
-			writeH(cubicId); // Confirmed
-		}
+		_activeChar.getCubics().keySet().forEach(this::writeH);
 		
 		writeC(_activeChar.isInPartyMatchRoom() ? 0x01 : 0x00); // Confirmed
 		

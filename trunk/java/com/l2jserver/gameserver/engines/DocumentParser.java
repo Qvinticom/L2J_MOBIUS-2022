@@ -146,12 +146,7 @@ public interface DocumentParser
 	 */
 	default boolean parseDatapackDirectory(String path, boolean recursive)
 	{
-		File dir = new File(path);
-		if (!dir.exists())
-		{
-			dir = new File(Config.DATAPACK_ROOT, path);
-		}
-		return parseDirectory(dir, recursive);
+		return parseDirectory(new File(Config.DATAPACK_ROOT, path), recursive);
 	}
 	
 	/**

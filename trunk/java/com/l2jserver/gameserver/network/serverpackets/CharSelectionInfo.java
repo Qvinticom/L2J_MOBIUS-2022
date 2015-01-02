@@ -154,14 +154,6 @@ public class CharSelectionInfo extends L2GameServerPacket
 				writeD(charInfoPackage.getPaperdollItemId(slot));
 			}
 			
-			writeD(0x00); // Brooch
-			writeD(0x00); // Jewel 1
-			writeD(0x00); // Jewel 2
-			writeD(0x00); // Jewel 3
-			writeD(0x00); // Jewel 4
-			writeD(0x00); // Jewel 5
-			writeD(0x00); // Jewel 6
-			
 			writeD(0x00); // rhand item visual id
 			writeD(0x00); // lhand item visual id
 			writeD(0x00); // gloves item visual id

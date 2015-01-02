@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 
 /**
  * @author Gnacik, UnAfraid
@@ -28,15 +27,9 @@ public class OnEventTrigger extends L2GameServerPacket
 	private final int _emitterId;
 	private final int _enabled;
 	
-	public OnEventTrigger(L2DoorInstance door, boolean enabled)
+	public OnEventTrigger(int emitterId, boolean enabled)
 	{
-		_emitterId = door.getEmitter();
-		_enabled = enabled ? 1 : 0;
-	}
-	
-	public OnEventTrigger(int id, boolean enabled)
-	{
-		_emitterId = id;
+		_emitterId = emitterId;
 		_enabled = enabled ? 1 : 0;
 	}
 	

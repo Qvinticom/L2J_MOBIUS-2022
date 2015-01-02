@@ -820,6 +820,36 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	private static final class BroochListener implements PaperdollListener
+	{
+		private static BroochListener instance = new BroochListener();
+		
+		public static BroochListener getInstance()
+		{
+			return instance;
+		}
+		
+		@Override
+		public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory)
+		{
+			if (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH)
+			{
+				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL1);
+				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL2);
+				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL3);
+				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL4);
+				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL5);
+				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL6);
+			}
+		}
+		
+		// Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
+		@Override
+		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
+		{
+		}
+	}
+	
 	/**
 	 * Constructor of the inventory
 	 */
@@ -834,6 +864,7 @@ public abstract class Inventory extends ItemContainer
 			addPaperdollListener(BowCrossRodListener.getInstance());
 			addPaperdollListener(ItemSkillsListener.getInstance());
 			addPaperdollListener(BraceletListener.getInstance());
+			addPaperdollListener(BroochListener.getInstance());
 		}
 		
 		// common
@@ -1026,6 +1057,10 @@ public abstract class Inventory extends ItemContainer
 				return PAPERDOLL_DECO1; // return first we deal with it later
 			case L2Item.SLOT_BELT:
 				return PAPERDOLL_BELT;
+			case L2Item.SLOT_BROOCH:
+				return PAPERDOLL_BROOCH;
+			case L2Item.SLOT_BROOCH_JEWEL:
+				return PAPERDOLL_BROOCH_JEWEL1;
 		}
 		return -1;
 	}
@@ -1257,6 +1292,17 @@ public abstract class Inventory extends ItemContainer
 			case PAPERDOLL_BELT:
 				slot = L2Item.SLOT_BELT;
 				break;
+			case PAPERDOLL_BROOCH:
+				slot = L2Item.SLOT_BROOCH;
+				break;
+			case PAPERDOLL_BROOCH_JEWEL1:
+			case PAPERDOLL_BROOCH_JEWEL2:
+			case PAPERDOLL_BROOCH_JEWEL3:
+			case PAPERDOLL_BROOCH_JEWEL4:
+			case PAPERDOLL_BROOCH_JEWEL5:
+			case PAPERDOLL_BROOCH_JEWEL6:
+				slot = L2Item.SLOT_BROOCH_JEWEL;
+				break;
 		}
 		return slot;
 	}
@@ -1399,6 +1445,12 @@ public abstract class Inventory extends ItemContainer
 				break;
 			case L2Item.SLOT_BELT:
 				pdollSlot = PAPERDOLL_BELT;
+				break;
+			case L2Item.SLOT_BROOCH:
+				pdollSlot = PAPERDOLL_BROOCH;
+				break;
+			case L2Item.SLOT_BROOCH_JEWEL:
+				pdollSlot = PAPERDOLL_BROOCH_JEWEL1;
 				break;
 			default:
 				_log.info("Unhandled slot type: " + slot);
@@ -1633,6 +1685,12 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_GLOVES, null);
 				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
+			case L2Item.SLOT_BROOCH:
+				setPaperdollItem(PAPERDOLL_BROOCH, item);
+				break;
+			case L2Item.SLOT_BROOCH_JEWEL:
+				equipBroochJewel(item);
+				break;
 			default:
 				_log.warning("Unknown body slot " + targetSlot + " for Item ID:" + item.getId());
 		}
@@ -1805,6 +1863,46 @@ public abstract class Inventory extends ItemContainer
 		
 		// no free slots - put on first
 		setPaperdollItem(PAPERDOLL_DECO1, item);
+	}
+	
+	public int getBroochJewelSlots()
+	{
+		return getOwner().getActingPlayer().getStat().getBroochJewelSlots();
+	}
+	
+	private void equipBroochJewel(L2ItemInstance item)
+	{
+		if (getBroochJewelSlots() == 0)
+		{
+			return;
+		}
+		
+		// find same (or incompatible) brooch jewel type
+		for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++)
+		{
+			if (_paperdoll[i] != null)
+			{
+				if (getPaperdollItemId(i) == item.getId())
+				{
+					// overwtite
+					setPaperdollItem(i, item);
+					return;
+				}
+			}
+		}
+		
+		// no free slot found - put on first free
+		for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++)
+		{
+			if (_paperdoll[i] == null)
+			{
+				setPaperdollItem(i, item);
+				return;
+			}
+		}
+		
+		// no free slots - put on first
+		setPaperdollItem(PAPERDOLL_BROOCH_JEWEL1, item);
 	}
 	
 	public boolean canEquipCloak()

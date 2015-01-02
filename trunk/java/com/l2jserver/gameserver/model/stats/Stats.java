@@ -195,7 +195,10 @@ public enum Stats
 	REDUCE_DEATH_PENALTY_BY_RAID("reduceDeathPenaltyByRaid"),
 	
 	// Fishing
-	FISHING_EXPERTISE("fishingExpertise");
+	FISHING_EXPERTISE("fishingExpertise"),
+	
+	// Brooches
+	BROOCH_JEWELS("broochJewels");
 	
 	public static final int NUM_STATS = values().length;
 	

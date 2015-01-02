@@ -29,6 +29,7 @@ import java.util.logging.Level;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.itemcontainer.Mail;
@@ -106,7 +107,7 @@ public class TaskBirthday extends Task
 						text = text.replace("$s1", String.valueOf(age));
 					}
 					
-					Message msg = new Message(playerId, Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, Message.SendBySystem.ALEGRIA);
+					Message msg = new Message(playerId, Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
 					
 					Mail attachments = msg.createAttachments();
 					attachments.addItem("Birthday", Config.ALT_BIRTHDAY_GIFT, 1, null, null);

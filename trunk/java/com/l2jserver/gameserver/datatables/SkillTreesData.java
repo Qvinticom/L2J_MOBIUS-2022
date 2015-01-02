@@ -235,6 +235,9 @@ public final class SkillTreesData implements DocumentParser
 										case "subClassConditions":
 											skillLearn.addSubclassConditions(parseInteger(attrs, "slot"), parseInteger(attrs, "lvl"));
 											break;
+										case "removeSkill":
+											skillLearn.addRemoveSkills(parseInteger(attrs, "id"));
+											break;
 									}
 								}
 								

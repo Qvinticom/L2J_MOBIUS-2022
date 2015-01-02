@@ -519,6 +519,17 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 					}
 				}
 				
+				if (!s.getRemoveSkills().isEmpty())
+				{
+					s.getRemoveSkills().forEach(sk ->
+					{
+						if (player.getSkillLevel(sk) > 0)
+						{
+							player.removeSkill(sk, true);
+						}
+					});
+				}
+				
 				// If the player has SP and all required items then consume SP.
 				if (levelUpSp > 0)
 				{

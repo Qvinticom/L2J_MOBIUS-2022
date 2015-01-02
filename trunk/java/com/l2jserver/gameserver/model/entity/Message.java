@@ -26,9 +26,11 @@ import java.util.concurrent.ScheduledFuture;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.itemcontainer.Mail;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -52,7 +54,7 @@ public class Message
 	private String _receiverName = null;
 	private final String _subject, _content;
 	private boolean _unread, _returned;
-	private int _sendBySystem;
+	private MailType _messageType;
 	private boolean _deletedBySender;
 	private boolean _deletedByReceiver;
 	private final long _reqAdena;
@@ -60,13 +62,9 @@ public class Message
 	private Mail _attachments = null;
 	private ScheduledFuture<?> _unloadTask = null;
 	
-	public enum SendBySystem
-	{
-		PLAYER,
-		NEWS,
-		NONE,
-		ALEGRIA
-	}
+	private int _itemId;
+	private int _enchantLvl;
+	private final int[] _elementals = new int[6];
 	
 	/*
 	 * Constructor for restoring from DB.
@@ -84,8 +82,15 @@ public class Message
 		_unread = rset.getBoolean("isUnread");
 		_deletedBySender = rset.getBoolean("isDeletedBySender");
 		_deletedByReceiver = rset.getBoolean("isDeletedByReceiver");
-		_sendBySystem = rset.getInt("sendBySystem");
+		_messageType = MailType.values()[rset.getInt("sendBySystem")];
 		_returned = rset.getBoolean("isReturned");
+		_itemId = rset.getInt("itemId");
+		_enchantLvl = rset.getInt("enchantLvl");
+		final String[] elemDef = rset.getString("elementals").split(";");
+		for (int i = 0; i < 6; i++)
+		{
+			_elementals[i] = Integer.parseInt(elemDef[i]);
+		}
 	}
 	
 	/*
@@ -109,7 +114,7 @@ public class Message
 	/*
 	 * This constructor used for System Mails
 	 */
-	public Message(int receiverId, String subject, String content, SendBySystem sendBySystem)
+	public Message(int receiverId, String subject, String content, MailType sendBySystem)
 	{
 		_messageId = IdFactory.getInstance().getNextId();
 		_senderId = -1;
@@ -122,8 +127,27 @@ public class Message
 		_unread = true;
 		_deletedBySender = true;
 		_deletedByReceiver = false;
-		_sendBySystem = sendBySystem.ordinal();
+		_messageType = sendBySystem;
 		_returned = false;
+	}
+	
+	/*
+	 * This constructor is used for creating new System message
+	 */
+	public Message(int senderId, int receiverId, String subject, String content, MailType sendBySystem)
+	{
+		_messageId = IdFactory.getInstance().getNextId();
+		_senderId = senderId;
+		_receiverId = receiverId;
+		_subject = subject;
+		_content = content;
+		_expiration = System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_hasAttachments = false;
+		_unread = true;
+		_deletedBySender = true;
+		_deletedByReceiver = false;
+		_reqAdena = 0;
+		_messageType = sendBySystem;
 	}
 	
 	/*
@@ -140,7 +164,7 @@ public class Message
 		_unread = true;
 		_deletedBySender = true;
 		_deletedByReceiver = false;
-		_sendBySystem = SendBySystem.NONE.ordinal();
+		_messageType = MailType.REGULAR;
 		_returned = true;
 		_reqAdena = 0;
 		_hasAttachments = true;
@@ -150,9 +174,47 @@ public class Message
 		_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 	}
 	
+	public Message(int receiverId, L2ItemInstance item, MailType mailType)
+	{
+		_messageId = IdFactory.getInstance().getNextId();
+		_senderId = -1;
+		_receiverId = receiverId;
+		_subject = "";
+		_content = item.getName();
+		_expiration = System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_unread = true;
+		_deletedBySender = true;
+		_messageType = mailType;
+		_returned = false;
+		_reqAdena = 0;
+		
+		if (mailType == MailType.COMMISSION_ITEM_SOLD)
+		{
+			_hasAttachments = false;
+			_itemId = item.getId();
+			_enchantLvl = item.getEnchantLevel();
+			if (item.isArmor())
+			{
+				for (int i = 0; i < 6; i++)
+				{
+					_elementals[i] = item.getElementDefAttr((byte) i);
+				}
+			}
+			else if (item.isWeapon() && (item.getAttackElementType() >= 0))
+			{
+				_elementals[item.getAttackElementType()] = item.getAttackElementPower();
+			}
+		}
+		else if (mailType == MailType.COMMISSION_ITEM_RETURNED)
+		{
+			final Mail attachement = createAttachments();
+			attachement.addItem("CommissionReturnItem", item, null, null);
+		}
+	}
+	
 	public static final PreparedStatement getStatement(Message msg, Connection con) throws SQLException
 	{
-		PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned, itemId, enchantLvl, elementals) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		
 		stmt.setInt(1, msg._messageId);
 		stmt.setInt(2, msg._senderId);
@@ -165,8 +227,11 @@ public class Message
 		stmt.setString(9, String.valueOf(msg._unread));
 		stmt.setString(10, String.valueOf(msg._deletedBySender));
 		stmt.setString(11, String.valueOf(msg._deletedByReceiver));
-		stmt.setString(12, String.valueOf(msg._sendBySystem));
+		stmt.setInt(12, msg._messageType.ordinal());
 		stmt.setString(13, String.valueOf(msg._returned));
+		stmt.setInt(14, msg._itemId);
+		stmt.setInt(15, msg._enchantLvl);
+		stmt.setString(16, msg._elementals[0] + ";" + msg._elementals[1] + ";" + msg._elementals[2] + ";" + msg._elementals[3] + ";" + msg._elementals[4] + ";" + msg._elementals[5]);
 		
 		return stmt;
 	}
@@ -188,17 +253,26 @@ public class Message
 	
 	public final String getSenderName()
 	{
-		if (_senderName == null)
+		switch (_messageType)
 		{
-			if (_sendBySystem != 0)
+			case REGULAR:
 			{
-				return "****";
+				_senderName = CharNameTable.getInstance().getNameById(_senderId);
+				break;
 			}
-			
-			_senderName = CharNameTable.getInstance().getNameById(_senderId);
-			if (_senderName == null)
+			case PRIME_SHOP_GIFT: // Not in client, tbd
 			{
-				_senderName = "";
+				break;
+			}
+			case NEWS_INFORMER: // Handled by Sysstring in client
+			case NPC: // Handled by NpcName in client
+			case BIRTHDAY: // Handled by Sysstring in client
+			case COMMISSION_ITEM_SOLD: // Handled by Sysstring in client
+			case COMMISSION_ITEM_RETURNED: // Handled by Sysstring in client
+			case MENTOR_NPC: // Handled in client
+			default:
+			{
+				break;
 			}
 		}
 		return _senderName;
@@ -298,9 +372,9 @@ public class Message
 		}
 	}
 	
-	public final int getSendBySystem()
+	public final MailType getMailType()
 	{
-		return _sendBySystem;
+		return _messageType;
 	}
 	
 	public final boolean isReturned()
@@ -337,6 +411,21 @@ public class Message
 	public final boolean hasAttachments()
 	{
 		return _hasAttachments;
+	}
+	
+	public int getItemId()
+	{
+		return _itemId;
+	}
+	
+	public int getEnchantLvl()
+	{
+		return _enchantLvl;
+	}
+	
+	public int[] getElementals()
+	{
+		return _elementals;
 	}
 	
 	public final synchronized void removeAttachments()

@@ -52,6 +52,7 @@ public class ExReplySentPost extends AbstractItemPacket
 	{
 		writeC(0xFE);
 		writeH(0xAE);
+		writeD(0x00); // GOD
 		writeD(_msg.getId());
 		writeD(_msg.isLocked() ? 1 : 0);
 		writeS(_msg.getReceiverName());
@@ -66,12 +67,13 @@ public class ExReplySentPost extends AbstractItemPacket
 				writeItem(item);
 				writeD(item.getObjectId());
 			}
-			writeQ(_msg.getReqAdena());
-			writeD(_msg.getSendBySystem());
 		}
 		else
 		{
 			writeD(0x00);
 		}
+		writeQ(_msg.getReqAdena());
+		writeD(_msg.hasAttachments() ? 0x01 : 0x00);
+		writeD(_msg.isReturned() ? 0x01 : 00);
 	}
 }

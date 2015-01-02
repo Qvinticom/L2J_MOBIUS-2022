@@ -913,4 +913,13 @@ public class PcStat extends PlayableStat
 		
 		return bonus;
 	}
+	
+	/**
+	 * Gets the maximum brooch jewel count.
+	 * @return the maximum brooch jewel count
+	 */
+	public int getBroochJewelSlots()
+	{
+		return (int) calcStat(Stats.BROOCH_JEWELS, 0);
+	}
 }

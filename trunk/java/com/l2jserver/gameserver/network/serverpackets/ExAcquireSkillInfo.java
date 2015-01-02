@@ -19,7 +19,6 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -37,7 +36,7 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 	private final int _spCost;
 	private final int _minLevel;
 	private final List<ItemHolder> _itemReq = new ArrayList<>();
-	private final List<Integer> _skillRem;
+	private final List<Integer> _skillRem = new ArrayList<>();
 	
 	/**
 	 * Special constructor for Alternate Skill Learning system.<br>
@@ -53,7 +52,7 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 		_spCost = sp;
 		_minLevel = skillLearn.getGetLevel();
 		_itemReq.addAll(skillLearn.getRequiredItems());
-		_skillRem = Collections.emptyList();
+		_skillRem.addAll(skillLearn.getRemoveSkills());
 	}
 	
 	@Override

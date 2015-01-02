@@ -476,7 +476,7 @@ public class L2DoorInstance extends L2Character
 		OnEventTrigger oe = null;
 		if (getEmitter() > 0)
 		{
-			oe = new OnEventTrigger(this, getOpen());
+			oe = new OnEventTrigger(getEmitter(), getOpen());
 		}
 		
 		for (L2PcInstance player : knownPlayers)
@@ -708,7 +708,7 @@ public class L2DoorInstance extends L2Character
 		{
 			if (getEmitter() > 0)
 			{
-				activeChar.sendPacket(new OnEventTrigger(this, getOpen()));
+				activeChar.sendPacket(new OnEventTrigger(getEmitter(), getOpen()));
 			}
 			
 			activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));

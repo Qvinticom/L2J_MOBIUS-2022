@@ -131,7 +131,7 @@ public final class L2TeleporterInstance extends L2Npc
 					}
 					if (shouldPayFee(player, loc))
 					{
-						finalName += " - " + loc.getFeeCount() + " " + getItemName(loc.getFeeId(), true);
+						finalName += " - " + calculateFee(player, type, loc) + " " + getItemName(loc.getFeeId(), true);
 					}
 					sb.append("<button align=left icon=" + (!questLocations.contains(loc.getNpcStringId()) ? "teleport" : "quest") + " action=\"bypass -h npc_" + getObjectId() + "_teleport " + type.ordinal() + " " + id + "\" msg=\"811;" + confirmDesc + "\">" + finalName + "</button>");
 				});
@@ -192,7 +192,7 @@ public final class L2TeleporterInstance extends L2Npc
 				{
 					player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
 				}
-				else if (shouldPayFee(player, loc) && !player.destroyItemByItemId("Teleport", loc.getFeeId(), loc.getFeeCount(), this, true))
+				else if (shouldPayFee(player, loc) && !player.destroyItemByItemId("Teleport", loc.getFeeId(), calculateFee(player, type, loc), this, true))
 				{
 					if (loc.getFeeId() == Inventory.ADENA_ID)
 					{
@@ -215,6 +215,35 @@ public final class L2TeleporterInstance extends L2Npc
 				break;
 			}
 		}
+	}
+	
+	/**
+	 * For characters below level 77 teleport service is free.<br>
+	 * From 8.00 pm to 00.00 from Monday till Tuesday for all characters there's a 50% discount on teleportation services
+	 * @param player
+	 * @param type
+	 * @param loc
+	 * @return
+	 */
+	private long calculateFee(L2PcInstance player, TeleportType type, TeleportLocation loc)
+	{
+		if (player.getLevel() < 77)
+		{
+			return 0;
+		}
+		
+		if (type == TeleportType.NORMAL)
+		{
+			final Calendar cal = Calendar.getInstance();
+			final int hour = cal.get(Calendar.HOUR_OF_DAY);
+			final int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+			if ((hour >= 20) && ((dayOfWeek >= Calendar.MONDAY) && (dayOfWeek <= Calendar.TUESDAY)))
+			{
+				return loc.getFeeCount() / 2;
+			}
+		}
+		
+		return loc.getFeeCount();
 	}
 	
 	protected boolean shouldPayFee(L2PcInstance player, TeleportLocation loc)

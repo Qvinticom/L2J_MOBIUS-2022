@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -46,7 +47,10 @@ public final class TradeStart extends AbstractItemPacket
 			{
 				_mask |= 0x02;
 			}
-			// TODO : if mentor, _mask |= 0x04;
+			if ((MentorManager.getInstance().getMentee(player.getObjectId(), _partner.getObjectId()) != null) || (MentorManager.getInstance().getMentee(_partner.getObjectId(), player.getObjectId()) != null))
+			{
+				_mask |= 0x04;
+			}
 			if ((player.getAllyId() > 0) && (player.getAllyId() == _partner.getAllyId()))
 			{
 				_mask |= 0x08;

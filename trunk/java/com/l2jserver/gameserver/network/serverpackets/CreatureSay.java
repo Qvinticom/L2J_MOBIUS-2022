@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -59,7 +60,10 @@ public final class CreatureSay extends L2GameServerPacket
 		{
 			_mask |= 0x02;
 		}
-		// TODO : if mentor, _mask |= 0x04;
+		if ((MentorManager.getInstance().getMentee(receiver.getObjectId(), sender.getObjectId()) != null) || (MentorManager.getInstance().getMentee(sender.getObjectId(), receiver.getObjectId()) != null))
+		{
+			_mask |= 0x04;
+		}
 		if ((receiver.getAllyId() > 0) && (receiver.getAllyId() == sender.getAllyId()))
 		{
 			_mask |= 0x08;

@@ -64,7 +64,15 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 		Inventory.PAPERDOLL_DECO4,
 		Inventory.PAPERDOLL_DECO5,
 		Inventory.PAPERDOLL_DECO6,
-		Inventory.PAPERDOLL_BELT
+		Inventory.PAPERDOLL_BELT,
+		Inventory.PAPERDOLL_BROOCH,
+		Inventory.PAPERDOLL_BROOCH_JEWEL1,
+		Inventory.PAPERDOLL_BROOCH_JEWEL2,
+		Inventory.PAPERDOLL_BROOCH_JEWEL3,
+		Inventory.PAPERDOLL_BROOCH_JEWEL4,
+		Inventory.PAPERDOLL_BROOCH_JEWEL5,
+		Inventory.PAPERDOLL_BROOCH_JEWEL6
+	
 	};
 	
 	private static final int[] PAPERDOLL_ORDER_AUGMENT = new int[]

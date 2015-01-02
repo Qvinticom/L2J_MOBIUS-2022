@@ -101,6 +101,9 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public static final int SLOT_L_BRACELET = 0x200000;
 	public static final int SLOT_DECO = 0x400000;
 	public static final int SLOT_BELT = 0x10000000;
+	public static final int SLOT_BROOCH = 0x20000000;
+	public static final int SLOT_BROOCH_JEWEL = 0x40000000;
+	
 	public static final int SLOT_WOLF = -100;
 	public static final int SLOT_HATCHLING = -101;
 	public static final int SLOT_STRIDER = -102;

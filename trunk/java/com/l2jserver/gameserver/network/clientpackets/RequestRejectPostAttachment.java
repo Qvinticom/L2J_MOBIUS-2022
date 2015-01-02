@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -81,7 +82,7 @@ public final class RequestRejectPostAttachment extends L2GameClientPacket
 			return;
 		}
 		
-		if (!msg.hasAttachments() || (msg.getSendBySystem() != 0))
+		if (!msg.hasAttachments() || (msg.getMailType() != MailType.REGULAR))
 		{
 			return;
 		}

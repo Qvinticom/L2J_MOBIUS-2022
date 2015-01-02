@@ -18,9 +18,11 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * @author Migi, DS
@@ -52,6 +54,23 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 	{
 		writeC(0xFE);
 		writeH(0xAC);
+		writeD(_msg.getMailType().ordinal()); // GOD
+		if (_msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)
+		{
+			writeD(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
+			writeD(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
+		}
+		else if (_msg.getMailType() == MailType.COMMISSION_ITEM_SOLD)
+		{
+			writeD(_msg.getItemId());
+			writeD(_msg.getEnchantLvl());
+			for (int i = 0; i < 6; i++)
+			{
+				writeD(_msg.getElementals()[i]);
+			}
+			writeD(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
+			writeD(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
+		}
 		writeD(_msg.getId());
 		writeD(_msg.isLocked() ? 1 : 0);
 		writeD(0x00); // Unknown
@@ -75,6 +94,6 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 		
 		writeQ(_msg.getReqAdena());
 		writeD(_msg.hasAttachments() ? 1 : 0);
-		writeD(_msg.getSendBySystem());
+		writeD(_msg.isReturned() ? 1 : 0);
 	}
 }

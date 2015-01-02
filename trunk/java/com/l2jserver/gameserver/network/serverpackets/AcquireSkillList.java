@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.Collections;
 import java.util.List;
 
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -32,28 +31,25 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
  */
 public class AcquireSkillList extends L2GameServerPacket
 {
-	final L2PcInstance _activeChar;
+	final List<L2SkillLearn> _learnable;
 	
 	public AcquireSkillList(L2PcInstance activeChar)
 	{
-		_activeChar = activeChar;
+		_learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
-		final List<L2SkillLearn> learnable = SkillTreesData.getInstance().getAvailableSkills(_activeChar, _activeChar.getClassId(), false, false);
-		List<Integer> re = Collections.emptyList();
-		
 		writeC(0x90);
-		writeH(learnable.size());
-		for (L2SkillLearn skill : learnable)
+		writeH(_learnable.size());
+		for (L2SkillLearn skill : _learnable)
 		{
 			writeD(skill.getSkillId());
 			writeH(skill.getSkillLevel());
 			writeQ(skill.getLevelUpSp());
 			writeC(skill.getGetLevel());
-			writeC(0x00); // Dual Class Level Required
+			writeC(skill.getGetLevel()); // Dual Class Level Required
 			writeC(skill.getRequiredItems().size());
 			for (ItemHolder item : skill.getRequiredItems())
 			{
@@ -61,8 +57,8 @@ public class AcquireSkillList extends L2GameServerPacket
 				writeQ(item.getCount());
 			}
 			
-			writeC(re.size());
-			for (int skillId : re)
+			writeC(skill.getRemoveSkills().size());
+			for (int skillId : skill.getRemoveSkills())
 			{
 				writeD(skillId);
 				writeH(SkillData.getInstance().getMaxLevel(skillId));
