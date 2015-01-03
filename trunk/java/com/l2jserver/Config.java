@@ -816,6 +816,7 @@ public final class Config
 	public static List<Integer> MOBS_LIST_NOT_RANDOM;
 	public static int SHOP_MIN_RANGE_FROM_NPC;
 	public static int SHOP_MIN_RANGE_FROM_PLAYER;
+	public static boolean FREE_JUMPS_FOR_ALL;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2602,6 +2603,8 @@ public final class Config
 			
 			SHOP_MIN_RANGE_FROM_PLAYER = CustomSettings.getInt("ShopMinRangeFromPlayer", 50);
 			SHOP_MIN_RANGE_FROM_NPC = CustomSettings.getInt("ShopMinRangeFromNpc", 100);
+			
+			FREE_JUMPS_FOR_ALL = CustomSettings.getBoolean("FreeJumpsForAll", false);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

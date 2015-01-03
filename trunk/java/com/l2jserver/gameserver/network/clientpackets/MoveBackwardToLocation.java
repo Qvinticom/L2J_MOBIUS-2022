@@ -22,10 +22,13 @@ import java.nio.BufferUnderflowException;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.instancemanager.JumpManager;
+import com.l2jserver.gameserver.instancemanager.JumpManager.JumpWay;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.ExFlyMove;
 import com.l2jserver.gameserver.network.serverpackets.StopMove;
 import com.l2jserver.gameserver.util.Util;
 
@@ -101,6 +104,26 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		
 		if (activeChar.getTeleMode() > 0)
 		{
+			// Sayune
+			if ((activeChar.getTeleMode() == 3) || (activeChar.getTeleMode() == 4))
+			{
+				if (activeChar.getTeleMode() == 3)
+				{
+					activeChar.setTeleMode(0);
+				}
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				activeChar.stopMove(null, false);
+				activeChar.abortAttack();
+				activeChar.abortCast();
+				activeChar.setTarget(null);
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+				JumpWay jw = JumpManager.getInstance().new JumpWay();
+				jw.add(JumpManager.getInstance().new JumpNode(_targetX, _targetY, _targetZ, -1));
+				activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), -1, jw));
+				activeChar.setXYZ(_targetX, _targetY, _targetZ);
+				return;
+			}
+			
 			if (activeChar.getTeleMode() == 1)
 			{
 				activeChar.setTeleMode(0);

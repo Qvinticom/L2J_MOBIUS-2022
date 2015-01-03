@@ -1302,7 +1302,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// @ msg = new RequestExEscapeScene();
 								break;
 							case 0x91:
-								// msg = new RequestFlyMove();
+								msg = new RequestFlyMove();
 								break;
 							case 0x92:
 								// msg = new RequestSurrenderPledgeWarEX(); (chS)
@@ -1392,7 +1392,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new RequestFirstPlayStart();
 								break;
 							case 0xAD:
-								// msg = new RequestFlyMoveStart();
+								msg = new RequestFlyMoveStart();
 								break;
 							case 0xAE:
 							case 0xAF:

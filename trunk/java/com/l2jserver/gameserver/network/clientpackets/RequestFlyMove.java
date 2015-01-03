@@ -16,41 +16,42 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.model.zone;
+package com.l2jserver.gameserver.network.clientpackets;
+
+import com.l2jserver.gameserver.instancemanager.JumpManager;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Zone Ids.
- * @author Zoey76
+ * Format: (ch)d
+ * @author mrTJO
  */
-public enum ZoneId
+public final class RequestFlyMove extends L2GameClientPacket
 {
-	PVP,
-	PEACE,
-	SIEGE,
-	MOTHER_TREE,
-	CLAN_HALL,
-	LANDING,
-	NO_LANDING,
-	WATER,
-	JAIL,
-	MONSTER_TRACK,
-	CASTLE,
-	SWAMP,
-	NO_SUMMON_FRIEND,
-	FORT,
-	NO_STORE,
-	TOWN,
-	SCRIPT,
-	HQ,
-	DANGER_AREA,
-	ALTERED,
-	NO_BOOKMARK,
-	NO_ITEM_DROP,
-	NO_RESTART,
-	JUMP;
+	private static final String _C__D0_94_REQUESTFLYMOVE = "[C] D0:94 RequestFlyMove";
+	int _nextPoint;
 	
-	public static int getZoneCount()
+	@Override
+	protected void readImpl()
 	{
-		return values().length;
+		_nextPoint = readD();
+	}
+	
+	@Override
+	protected void runImpl()
+	{
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		JumpManager.getInstance().NextJump(activeChar, _nextPoint);
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _C__D0_94_REQUESTFLYMOVE;
 	}
 }

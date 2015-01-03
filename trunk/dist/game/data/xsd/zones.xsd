@@ -54,6 +54,7 @@
 												<xs:enumeration value="taxById" />
 												<xs:enumeration value="territoryId" />
 												<xs:enumeration value="townId" />
+												<xs:enumeration value="trackId" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -126,6 +127,7 @@
 									<xs:enumeration value="FortZone" />
 									<xs:enumeration value="HqZone" />
 									<xs:enumeration value="JailZone" />
+									<xs:enumeration value="JumpZone" />
 									<xs:enumeration value="LandingZone" />
 									<xs:enumeration value="MotherTreeZone" />
 									<xs:enumeration value="NoDropItemZone" />

@@ -900,6 +900,8 @@ public final class L2PcInstance extends L2Playable
 	
 	private boolean _hasCharmOfCourage = false;
 	
+	private int _jumpTrackId = 0;
+	
 	/**
 	 * Create a new L2PcInstance and add it in the characters table of the database.<br>
 	 * <B><U> Actions</U> :</B>
@@ -14418,5 +14420,24 @@ public final class L2PcInstance extends L2Playable
 	public void setAbilityPointsUsed(int points)
 	{
 		getVariables().set("ABILITY_POINTS_USED", points);
+	}
+	
+	public boolean isAwaken()
+	{
+		if (((getActiveClass() >= 139) && (getActiveClass() <= 181)) || (getActiveClass() >= 188))
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public int getJumpTrackId()
+	{
+		return _jumpTrackId;
+	}
+	
+	public void setJumpTrackId(int jumpTrackId)
+	{
+		_jumpTrackId = jumpTrackId;
 	}
 }

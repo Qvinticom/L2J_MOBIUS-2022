@@ -118,6 +118,7 @@ import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
+import com.l2jserver.gameserver.instancemanager.JumpManager;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
@@ -307,6 +308,7 @@ public class GameServer
 		BoatManager.getInstance();
 		AirShipManager.getInstance();
 		ShuttleData.getInstance();
+		JumpManager.getInstance();
 		GraciaSeedsManager.getInstance();
 		
 		try

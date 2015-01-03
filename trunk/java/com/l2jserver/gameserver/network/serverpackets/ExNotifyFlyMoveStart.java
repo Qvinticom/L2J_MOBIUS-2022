@@ -16,41 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.model.zone;
+package com.l2jserver.gameserver.network.serverpackets;
 
 /**
- * Zone Ids.
- * @author Zoey76
+ * @author mrTJO
  */
-public enum ZoneId
+public final class ExNotifyFlyMoveStart extends L2GameServerPacket
 {
-	PVP,
-	PEACE,
-	SIEGE,
-	MOTHER_TREE,
-	CLAN_HALL,
-	LANDING,
-	NO_LANDING,
-	WATER,
-	JAIL,
-	MONSTER_TRACK,
-	CASTLE,
-	SWAMP,
-	NO_SUMMON_FRIEND,
-	FORT,
-	NO_STORE,
-	TOWN,
-	SCRIPT,
-	HQ,
-	DANGER_AREA,
-	ALTERED,
-	NO_BOOKMARK,
-	NO_ITEM_DROP,
-	NO_RESTART,
-	JUMP;
-	
-	public static int getZoneCount()
+	public ExNotifyFlyMoveStart()
 	{
-		return values().length;
+	}
+	
+	@Override
+	protected void writeImpl()
+	{
+		writeC(0xFE);
+		writeH(0x110);
 	}
 }
