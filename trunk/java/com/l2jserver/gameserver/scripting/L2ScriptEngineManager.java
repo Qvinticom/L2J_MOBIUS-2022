@@ -132,23 +132,6 @@ public final class L2ScriptEngineManager
 				_log.log(Level.WARNING, "Failed initializing factory: " + e.getMessage(), e);
 			}
 		}
-		
-		preConfigure();
-	}
-	
-	private void preConfigure()
-	{
-		// Jython sys.path
-		String dataPackDirForwardSlashes = SCRIPT_FOLDER.getPath().replaceAll("\\\\", "/");
-		String configScript = "import sys;sys.path.insert(0,'" + dataPackDirForwardSlashes + "');";
-		try
-		{
-			eval("jython", configScript);
-		}
-		catch (ScriptException e)
-		{
-			_log.severe("Failed preconfiguring jython: " + e.getMessage());
-		}
 	}
 	
 	private ScriptEngine getEngineByName(String name)
