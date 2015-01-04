@@ -1269,7 +1269,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1343,7 +1343,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33579" level="85" type="L2Npc" name="Graman" title="Pet Manager">
+	<npc id="33579" level="85" type="L2PetManager" name="Graman" title="Pet Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

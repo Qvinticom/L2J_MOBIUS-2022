@@ -1027,3 +1027,6 @@ INSERT INTO `teleport` VALUES
 ('Monastic Fortress -> Den of Evil',20178,68693,-110438,-1946,500,0,57), -- retail
 ('Monastic Fortress -> Ice Merchant Cabin',20179,113903,-108752,-860,500,0,57), -- retail
 ('Monastic Fortress -> Shyeed\'s Cavern',20180,76911,-55295,-5824,500,0,57); -- retail
+
+INSERT INTO `teleport` VALUES ('Reliquary of the Giants', 3334401, -114562, 227307, -2864, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Reliquary of the Giants -> Talking Island', 3320501, -112529, 256741, -1456, 0, 0, 57);
