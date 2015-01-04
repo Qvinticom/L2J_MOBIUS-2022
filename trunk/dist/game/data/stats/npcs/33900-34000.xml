@@ -578,8 +578,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33934" level="85" type="L2Npc" name="Denya" title="Armor Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33934" level="85" type="L2Merchant" name="Denya" title="Armor Merchant">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -595,8 +595,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33935" level="85" type="L2Npc" name="Evna" title="Weapon Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33935" level="85" type="L2Merchant" name="Evna" title="Weapon Merchant">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -612,8 +612,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33936" level="85" type="L2Npc" name="Pelu" title="Grocer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33936" level="85" type="L2Merchant" name="Pelu" title="Grocer">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -629,8 +629,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33937" level="85" type="L2Npc" name="Ceri" title="Accessory Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33937" level="85" type="L2Merchant" name="Ceri" title="Accessory Merchant">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -782,8 +782,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33946" level="85" type="L2Npc" name="Adventure Guildsman" title="PC Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33946" level="85" type="L2Adventurer" name="Adventure Guildsman" title="PC Manager">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -799,10 +799,9 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33947" level="85" type="L2Npc" name="Grakon" title="Warehouse Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="33947" level="85" type="L2Warehouse" name="Grakon" title="Warehouse Keeper">
+		<!-- Confirmed Ertheia -->
+		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
@@ -816,8 +815,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33948" level="85" type="L2Npc" name="Astiel" title="Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33948" level="85" type="L2Teleporter" name="Astiel" title="Gatekeeper">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1394,8 +1393,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33982" level="85" type="L2Npc" name="Tahlia" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33982" level="85" type="L2Guard" name="Tahlia" title="Guard">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1411,8 +1410,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33983" level="85" type="L2Npc" name="Lenoa" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33983" level="85" type="L2Guard" name="Lenoa" title="Guard">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1428,8 +1427,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33984" level="85" type="L2Npc" name="Nairu" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33984" level="85" type="L2Guard" name="Nairu" title="Guard">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1445,8 +1444,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33985" level="85" type="L2Npc" name="Namee" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33985" level="85" type="L2Guard" name="Namee" title="Guard">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1666,8 +1665,8 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33998" level="85" type="L2Npc" name="Momet" title="Blacksmith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33998" level="85" type="L2Trainer" name="Momet" title="Blacksmith">
+		<!-- Confirmed Ertheia -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
