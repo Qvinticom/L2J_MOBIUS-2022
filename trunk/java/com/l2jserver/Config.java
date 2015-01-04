@@ -817,6 +817,7 @@ public final class Config
 	public static int SHOP_MIN_RANGE_FROM_NPC;
 	public static int SHOP_MIN_RANGE_FROM_PLAYER;
 	public static boolean FREE_JUMPS_FOR_ALL;
+	public static boolean CUSTOM_CB_ENABLED;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2605,6 +2606,8 @@ public final class Config
 			SHOP_MIN_RANGE_FROM_NPC = CustomSettings.getInt("ShopMinRangeFromNpc", 100);
 			
 			FREE_JUMPS_FOR_ALL = CustomSettings.getBoolean("FreeJumpsForAll", false);
+			
+			CUSTOM_CB_ENABLED = CustomSettings.getBoolean("CustomCommunityBoard", false);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

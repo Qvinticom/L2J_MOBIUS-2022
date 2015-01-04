@@ -22,9 +22,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -41,7 +43,8 @@ public final class HomeBoard implements IParseBoardHandler
 	private static final String[] COMMANDS =
 	{
 		"_bbshome",
-		"_bbstop"
+		"_bbstop",
+		"_bbsmultisell"
 	};
 	
 	@Override
@@ -53,11 +56,12 @@ public final class HomeBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
+		final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 		if (command.equals("_bbshome") || command.equals("_bbstop"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
 			
-			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/home.html");
+			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + "home.html");
 			html = html.replaceAll("%fav_count%", String.valueOf(getFavoriteCount(activeChar)));
 			html = html.replaceAll("%region_count%", String.valueOf(getRegionCount(activeChar)));
 			html = html.replaceAll("%clan_count%", String.valueOf(getClansCount()));
@@ -68,9 +72,15 @@ public final class HomeBoard implements IParseBoardHandler
 			final String path = command.replace("_bbstop;", "");
 			if ((path.length() > 0) && path.endsWith(".html"))
 			{
-				final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + path);
+				final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + path);
 				CommunityBoardHandler.separateAndSend(html, activeChar);
 			}
+		}
+		else if (command.startsWith("_bbsmultisell") && Config.CUSTOM_CB_ENABLED)
+		{
+			final int multisell = Integer.valueOf(command.replace("_bbsmultisell;", ""));
+			MultisellData.getInstance().separateAndSend(multisell, activeChar, null, false);
+			return false;
 		}
 		return true;
 	}
