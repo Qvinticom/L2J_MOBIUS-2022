@@ -42997,7 +42997,9 @@ INSERT INTO `spawnlist` VALUES
 ('24_18', 1, 31756, 147728, 27408, -2198, 0, 0, 16500, 60, 0, 0, 0), -- Mr. Cat
 ('24_18', 1, 31757, 147761, 27408, -2198, 0, 0, 16500, 60, 0, 0, 0); -- Miss Queen
 
--- 
 -- Dr. Chaos
--- 
 DELETE FROM spawnlist WHERE (npc_templateid = 32033);
+
+-- Faeron NPC correct Z value
+UPDATE spawnlist SET locz=-3289 WHERE npc_templateid=33937;
+UPDATE spawnlist SET locz=-3360 WHERE npc_templateid=33943;
