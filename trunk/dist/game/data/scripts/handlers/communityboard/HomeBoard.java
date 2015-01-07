@@ -27,6 +27,7 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -44,7 +45,9 @@ public final class HomeBoard implements IParseBoardHandler
 	{
 		"_bbshome",
 		"_bbstop",
-		"_bbsmultisell"
+		"_bbsmultisell",
+		"_bbsteleport",
+		"_bbsbuff"
 	};
 	
 	@Override
@@ -56,9 +59,9 @@ public final class HomeBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
-		final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 		if (command.equals("_bbshome") || command.equals("_bbstop"))
 		{
+			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
 			
 			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + "home.html");
@@ -69,6 +72,7 @@ public final class HomeBoard implements IParseBoardHandler
 		}
 		else if (command.startsWith("_bbstop;"))
 		{
+			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 			final String path = command.replace("_bbstop;", "");
 			if ((path.length() > 0) && path.endsWith(".html"))
 			{
@@ -76,11 +80,39 @@ public final class HomeBoard implements IParseBoardHandler
 				CommunityBoardHandler.separateAndSend(html, activeChar);
 			}
 		}
-		else if (command.startsWith("_bbsmultisell") && Config.CUSTOM_CB_ENABLED)
+		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsmultisell"))
 		{
 			final int multisell = Integer.valueOf(command.replace("_bbsmultisell;", ""));
 			MultisellData.getInstance().separateAndSend(multisell, activeChar, null, false);
-			return false;
+		}
+		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsteleport"))
+		{
+			final String fullBypass = command.replace("_bbsteleport;", "");
+			final String[] teleportBypass = fullBypass.split(":");
+			final int x = Integer.parseInt(teleportBypass[0]);
+			final int y = Integer.parseInt(teleportBypass[1]);
+			final int z = Integer.parseInt(teleportBypass[2]);
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_TELEPORT_PRICE)
+			{
+				activeChar.sendMessage("Not enough currency!");
+				return false;
+			}
+			activeChar.getInventory().destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, activeChar);
+			activeChar.teleToLocation(x, y, z, 0);
+		}
+		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsbuff"))
+		{
+			final String fullBypass = command.replace("_bbsbuff;", "");
+			final String[] buffBypass = fullBypass.split(":");
+			final int buffId = Integer.parseInt(buffBypass[0]);
+			final int buffLevel = Integer.parseInt(buffBypass[1]);
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_BUFF_PRICE)
+			{
+				activeChar.sendMessage("Not enough currency!");
+				return false;
+			}
+			activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, activeChar);
+			SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar, activeChar);
 		}
 		return true;
 	}

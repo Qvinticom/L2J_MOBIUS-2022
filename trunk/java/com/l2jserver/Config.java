@@ -818,6 +818,9 @@ public final class Config
 	public static int SHOP_MIN_RANGE_FROM_PLAYER;
 	public static boolean FREE_JUMPS_FOR_ALL;
 	public static boolean CUSTOM_CB_ENABLED;
+	public static int COMMUNITYBOARD_CURRENCY;
+	public static int COMMUNITYBOARD_TELEPORT_PRICE;
+	public static int COMMUNITYBOARD_BUFF_PRICE;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2608,6 +2611,9 @@ public final class Config
 			FREE_JUMPS_FOR_ALL = CustomSettings.getBoolean("FreeJumpsForAll", false);
 			
 			CUSTOM_CB_ENABLED = CustomSettings.getBoolean("CustomCommunityBoard", false);
+			COMMUNITYBOARD_CURRENCY = CustomSettings.getInt("CommunityCurrencyId", 57);
+			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
+			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
