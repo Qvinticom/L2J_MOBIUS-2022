@@ -815,5 +815,53 @@
 		<node X="-27464" Y="255192"/>
 		<node X="-27720" Y="254296"/>
 		<node X="-28616" Y="253608"/>			
-	</zone>				
+	</zone>
+	<zone name="tamiel_hug" type="PeaceZone" shape="Cylinder" minZ="200" maxZ="1000" rad="2000">
+		<node X="214800" Y="80360"/>
+	</zone>	
+	<zone name="arcan_city_center" type="PeaceZone" shape="Cylinder" minZ="-2000" maxZ="-200" rad="4500">
+		<node X="207096" Y="88696" />
+	</zone>
+	<zone name="arcan_city_enter" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-200">
+		<node X="202840" Y="87656"/>
+		<node X="203032" Y="87512"/>
+		<node X="202120" Y="86136"/>
+		<node X="201928" Y="86280"/>
+	</zone>		
+	<zone name="arcan_city_enter_circle" type="PeaceZone" shape="Cylinder" minZ="-1500" maxZ="-500" rad="1000">
+		<node X="201832" Y="85928" />
+	</zone>
+	<zone name="arcan_city_east_1" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-800">
+		<node X="208296" Y="84600"/>
+		<node X="208184" Y="84360"/>
+		<node X="209464" Y="83576"/>
+		<node X="209512" Y="83656"/>
+	</zone>	
+	<zone name="arcan_city_west_1" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-800">
+		<node X="207576" Y="84408"/>
+		<node X="207752" Y="84264"/>
+		<node X="206888" Y="83064"/>
+		<node X="206728" Y="83112"/>
+	</zone>
+	<zone name="arcan_city_shuttle_1_circle" type="PeaceZone" shape="Cylinder" minZ="-1900" maxZ="-700" rad="700">
+		<node X="206580" Y="82700" />
+	</zone>
+	<zone name="arcan_city_shuttle_2_circle" type="PeaceZone" shape="Cylinder" minZ="-1900" maxZ="-700" rad="700">
+		<node X="209885" Y="83357" />
+	</zone>	
+	<zone name="arcan_city_area_east" type="PeaceZone" shape="NPoly" minZ="-500" maxZ="-50">
+		<node X="211160" Y="82648"/>
+		<node X="210312" Y="83112"/>
+		<node X="210168" Y="83048"/>
+		<node X="211032" Y="82456"/>
+	</zone>	
+	<zone name="arcan_city_area_east_circle" type="PeaceZone" shape="Cylinder" minZ="-500" maxZ="-50" rad="1000">
+		<node X="211368" Y="82360" />
+	</zone>	
+	<zone name="arcan_city_area_west" type="PeaceZone" shape="NPoly" minZ="-500" maxZ="-50">
+		<node X="205864" Y="81432"/>
+		<node X="206440" Y="82296"/>
+		<node X="206328" Y="82296"/>
+		<node X="205672" Y="81560"/>
+	</zone>	
 </list>
