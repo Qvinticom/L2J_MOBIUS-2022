@@ -86,10 +86,14 @@ public class Message
 		_returned = rset.getBoolean("isReturned");
 		_itemId = rset.getInt("itemId");
 		_enchantLvl = rset.getInt("enchantLvl");
-		final String[] elemDef = rset.getString("elementals").split(";");
-		for (int i = 0; i < 6; i++)
+		final String elemental = rset.getString("elementals");
+		if (elemental != null)
 		{
-			_elementals[i] = Integer.parseInt(elemDef[i]);
+			final String[] elemDef = elemental.split(";");
+			for (int i = 0; i < 6; i++)
+			{
+				_elementals[i] = Integer.parseInt(elemDef[i]);
+			}
 		}
 	}
 	

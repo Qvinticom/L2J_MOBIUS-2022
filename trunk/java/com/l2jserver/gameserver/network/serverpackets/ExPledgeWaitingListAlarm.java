@@ -23,6 +23,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExPledgeWaitingListAlarm extends L2GameServerPacket
 {
+	public static final ExPledgeWaitingListAlarm STATIC_PACKET = new ExPledgeWaitingListAlarm();
+	
 	@Override
 	protected void writeImpl()
 	{

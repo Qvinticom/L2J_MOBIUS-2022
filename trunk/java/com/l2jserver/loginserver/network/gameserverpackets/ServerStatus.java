@@ -32,16 +32,6 @@ public class ServerStatus extends BaseRecievePacket
 {
 	protected static Logger _log = Logger.getLogger(ServerStatus.class.getName());
 	
-	public static final String[] STATUS_STRING =
-	{
-		"Auto",
-		"Good",
-		"Normal",
-		"Full",
-		"Down",
-		"Gm Only"
-	};
-	
 	public static final int SERVER_LIST_STATUS = 0x01;
 	public static final int SERVER_TYPE = 0x02;
 	public static final int SERVER_LIST_SQUARE_BRACKET = 0x03;

@@ -34,7 +34,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import javolution.io.UTF8StreamReader;
@@ -185,17 +184,17 @@ public final class GameServerTable
 	 * @param gsi the game server information DTO
 	 * @return true, if successful
 	 */
-	public boolean registerWithFirstAvaliableId(GameServerInfo gsi)
+	public boolean registerWithFirstAvailableId(GameServerInfo gsi)
 	{
 		// avoid two servers registering with the same "free" id
 		synchronized (_gameServerTable)
 		{
-			for (Entry<Integer, String> entry : _serverNames.entrySet())
+			for (Integer serverId : _serverNames.keySet())
 			{
-				if (!_gameServerTable.containsKey(entry.getKey()))
+				if (!_gameServerTable.containsKey(serverId))
 				{
-					_gameServerTable.put(entry.getKey(), gsi);
-					gsi.setId(entry.getKey());
+					_gameServerTable.put(serverId, gsi);
+					gsi.setId(serverId);
 					return true;
 				}
 			}
@@ -217,7 +216,6 @@ public final class GameServerTable
 			if (!_gameServerTable.containsKey(id))
 			{
 				_gameServerTable.put(id, gsi);
-				gsi.setId(id);
 				return true;
 			}
 		}
@@ -381,6 +379,12 @@ public final class GameServerTable
 			return _hexId;
 		}
 		
+		public String getName()
+		{
+			// this value can't be stored in a private variable because the ID can be changed by setId()
+			return GameServerTable.getInstance().getServerNameById(_id);
+		}
+		
 		/**
 		 * Sets the authed.
 		 * @param isAuthed the new authed
@@ -433,6 +437,20 @@ public final class GameServerTable
 		public int getStatus()
 		{
 			return _status;
+		}
+		
+		public String getStatusName()
+		{
+			switch (_status)
+			{
+				case 0: return "Auto";
+				case 1: return "Good";
+				case 2: return "Normal";
+				case 3: return "Full";
+				case 4: return "Down";
+				case 5: return "GM Only";
+				default: return "Unknown";
+			}
 		}
 		
 		/**

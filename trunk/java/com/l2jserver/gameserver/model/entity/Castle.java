@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,8 +34,11 @@ import javolution.util.FastMap;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.datatables.CastleData;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
@@ -43,31 +47,40 @@ import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.TowerSpawn;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ArtefactInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.holders.CastleSpawnHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.model.skills.CommonSkill;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2CastleZone;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceTeleportZone;
 import com.l2jserver.gameserver.model.zone.type.L2SiegeZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExCastleState;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 
 public final class Castle extends AbstractResidence
 {
 	protected static final Logger _log = Logger.getLogger(Castle.class.getName());
 	
 	private final List<L2DoorInstance> _doors = new ArrayList<>();
+	private final List<L2Npc> _sideNpcs = new ArrayList<>();
 	private int _ownerId = 0;
 	private Siege _siege = null;
 	private Calendar _siegeDate;
 	private boolean _isTimeRegistrationOver = true; // true if Castle Lords set the time, or 24h is elapsed after the siege
 	private Calendar _siegeTimeRegistrationEndDate; // last siege end date + 1 day
-	private int _taxPercent = 0;
-	private double _taxRate = 0;
+	private CastleSide _castleSide = null;
+	private double _taxRate;
 	private long _treasury = 0;
 	private boolean _showNpcCrest = false;
 	private L2SiegeZone _zone = null;
@@ -231,11 +244,9 @@ public final class Castle extends AbstractResidence
 	{
 		super(castleId);
 		load();
-		/*
-		 * if (getResidenceId() == 7 || castleId == 9) // Goddard and Schuttgart _nbArtifact = 2;
-		 */
 		_function = new FastMap<>();
 		initResidenceZone();
+		spawnSideNpcs();
 		if (getOwnerId() != 0)
 		{
 			loadFunctions();
@@ -257,15 +268,17 @@ public final class Castle extends AbstractResidence
 		return null;
 	}
 	
-	public synchronized void engrave(L2Clan clan, L2Object target)
+	public synchronized void engrave(L2Clan clan, L2Object target, CastleSide side)
 	{
 		if (!_artefacts.contains(target))
 		{
 			return;
 		}
+		setSide(side);
 		setOwner(clan);
 		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_S2);
 		msg.addString(clan.getName());
+		msg.addString(getName());
 		getSiege().announceToPlayer(msg, true);
 	}
 	
@@ -282,34 +295,42 @@ public final class Castle extends AbstractResidence
 			return;
 		}
 		
-		if (getName().equalsIgnoreCase("Schuttgart") || getName().equalsIgnoreCase("Goddard"))
+		switch (getName().toLowerCase())
 		{
-			Castle rune = CastleManager.getInstance().getCastle("rune");
-			if (rune != null)
+			case "schuttgart":
+			case "goddard":
 			{
-				long runeTax = (long) (amount * rune.getTaxRate());
-				if (rune.getOwnerId() > 0)
+				final Castle rune = CastleManager.getInstance().getCastle("rune");
+				if (rune != null)
 				{
-					rune.addToTreasury(runeTax);
+					final long runeTax = (long) (amount * rune.getTaxRate());
+					if (rune.getOwnerId() > 0)
+					{
+						rune.addToTreasury(runeTax);
+					}
+					amount -= runeTax;
 				}
-				amount -= runeTax;
+				break;
+			}
+			case "dion":
+			case "giran":
+			case "gludio":
+			case "innadril":
+			case "oren":
+			{
+				final Castle aden = CastleManager.getInstance().getCastle("aden");
+				if (aden != null)
+				{
+					final long adenTax = (long) (amount * aden.getTaxRate()); // Find out what Aden gets from the current castle instance's income
+					if (aden.getOwnerId() > 0)
+					{
+						aden.addToTreasury(adenTax); // Only bother to really add the tax to the treasury if not npc owned
+					}
+					amount -= adenTax; // Subtract Aden's income from current castle instance's income
+				}
+				break;
 			}
 		}
-		if (!getName().equalsIgnoreCase("aden") && !getName().equalsIgnoreCase("Rune") && !getName().equalsIgnoreCase("Schuttgart") && !getName().equalsIgnoreCase("Goddard")) // If current castle instance is not Aden, Rune, Goddard or Schuttgart.
-		{
-			Castle aden = CastleManager.getInstance().getCastle("aden");
-			if (aden != null)
-			{
-				long adenTax = (long) (amount * aden.getTaxRate()); // Find out what Aden gets from the current castle instance's income
-				if (aden.getOwnerId() > 0)
-				{
-					aden.addToTreasury(adenTax); // Only bother to really add the tax to the treasury if not npc owned
-				}
-				
-				amount -= adenTax; // Subtract Aden's income from current castle instance's income
-			}
-		}
-		
 		addToTreasuryNoTax(amount);
 	}
 	
@@ -513,6 +534,7 @@ public final class Castle extends AbstractResidence
 				{
 					removeResidentialSkills(member);
 					member.sendSkillList();
+					member.broadcastUserInfo();
 				}
 			}
 		}
@@ -559,6 +581,7 @@ public final class Castle extends AbstractResidence
 			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 		}
 		
+		setSide(CastleSide.NEUTRAL);
 		updateOwnerInDB(null);
 		if (getSiege().isInProgress())
 		{
@@ -570,24 +593,6 @@ public final class Castle extends AbstractResidence
 			removeFunction(fc);
 		}
 		_function.clear();
-	}
-	
-	public void setTaxPercent(int taxPercent)
-	{
-		_taxPercent = taxPercent;
-		_taxRate = _taxPercent / 100.0;
-		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE castle SET taxPercent = ? WHERE id = ?"))
-		{
-			ps.setInt(1, taxPercent);
-			ps.setInt(2, getResidenceId());
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, e.getMessage(), e);
-		}
 	}
 	
 	/**
@@ -642,7 +647,8 @@ public final class Castle extends AbstractResidence
 					_siegeTimeRegistrationEndDate.setTimeInMillis(rs.getLong("regTimeEnd"));
 					_isTimeRegistrationOver = rs.getBoolean("regTimeOver");
 					
-					_taxPercent = rs.getInt("taxPercent");
+					_castleSide = Enum.valueOf(CastleSide.class, rs.getString("side"));
+					
 					_treasury = rs.getLong("treasury");
 					
 					_showNpcCrest = rs.getBoolean("showNpcCrest");
@@ -650,8 +656,8 @@ public final class Castle extends AbstractResidence
 					_ticketBuyCount = rs.getInt("ticketBuyCount");
 				}
 			}
-			_taxRate = _taxPercent / 100.0;
 			
+			setTaxRate(getTaxPercent() / 100);
 			ps2.setInt(1, getResidenceId());
 			try (ResultSet rs = ps2.executeQuery())
 			{
@@ -945,7 +951,25 @@ public final class Castle extends AbstractResidence
 	
 	public final int getTaxPercent()
 	{
-		return _taxPercent;
+		final int taxPercent;
+		switch (getSide())
+		{
+			case LIGHT:
+				taxPercent = Config.CASTLE_TAX_LIGHT;
+				break;
+			case DARK:
+				taxPercent = Config.CASTLE_TAX_DARK;
+				break;
+			default:
+				taxPercent = Config.CASTLE_TAX_NEUTRAL;
+				break;
+		}
+		return taxPercent;
+	}
+	
+	public void setTaxRate(double taxRate)
+	{
+		_taxRate = taxRate;
 	}
 	
 	public final double getTaxRate()
@@ -1122,9 +1146,90 @@ public final class Castle extends AbstractResidence
 		}
 	}
 	
-	// TODO: Implement me
-	public int getState()
+	@Override
+	public void giveResidentialSkills(L2PcInstance player)
 	{
-		return 1;
+		super.giveResidentialSkills(player);
+		final Skill skill = getSide() == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill();
+		player.addSkill(skill);
+	}
+	
+	@Override
+	public void removeResidentialSkills(L2PcInstance player)
+	{
+		super.removeResidentialSkills(player);
+		player.removeSkill(CommonSkill.ABILITY_OF_DARKNESS.getId());
+		player.removeSkill(CommonSkill.ABILITY_OF_LIGHT.getId());
+	}
+	
+	public void spawnSideNpcs()
+	{
+		_sideNpcs.stream().filter(Objects::nonNull).forEach(L2Npc::deleteMe);
+		_sideNpcs.clear();
+		
+		for (CastleSpawnHolder holder : getSideSpawns())
+		{
+			if (holder != null)
+			{
+				final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(holder.getNpcId());
+				if (npcTemplate == null)
+				{
+					_log.warning(Castle.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + holder.getNpcId());
+					return;
+				}
+				
+				L2Spawn spawn;
+				try
+				{
+					spawn = new L2Spawn(npcTemplate);
+				}
+				catch (Exception e)
+				{
+					_log.warning(Castle.class.getSimpleName() + ": " + e.getMessage());
+					return;
+				}
+				spawn.setX(holder.getX());
+				spawn.setY(holder.getY());
+				spawn.setZ(holder.getZ());
+				spawn.setHeading(holder.getHeading());
+				final L2Npc npc = spawn.doSpawn(false);
+				npc.broadcastInfo();
+				_sideNpcs.add(npc);
+			}
+		}
+	}
+	
+	public List<CastleSpawnHolder> getSideSpawns()
+	{
+		return CastleData.getInstance().getSpawnsForSide(getResidenceId(), getSide());
+	}
+	
+	public void setSide(CastleSide side)
+	{
+		if (_castleSide == side)
+		{
+			return;
+		}
+		
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE castle SET side = ? WHERE id = ?"))
+		{
+			ps.setString(1, side.toString());
+			ps.setInt(2, getResidenceId());
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		_castleSide = side;
+		setTaxRate(getTaxPercent() / 100);
+		Broadcast.toAllOnlinePlayers(new ExCastleState(this));
+		spawnSideNpcs();
+	}
+	
+	public CastleSide getSide()
+	{
+		return _castleSide;
 	}
 }

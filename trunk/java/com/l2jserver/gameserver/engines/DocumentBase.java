@@ -37,6 +37,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.Race;
@@ -87,6 +88,7 @@ import com.l2jserver.gameserver.model.conditions.ConditionPlayerInvSize;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerIsClanLeader;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerIsHero;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerIsInCombat;
+import com.l2jserver.gameserver.model.conditions.ConditionPlayerIsOnSide;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerLandingZone;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerLevel;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerLevelRange;
@@ -925,6 +927,11 @@ public abstract class DocumentBase
 				case "incombat":
 				{
 					cond = joinAnd(cond, new ConditionPlayerIsInCombat(Boolean.parseBoolean(a.getNodeValue())));
+					break;
+				}
+				case "isonside":
+				{
+					cond = joinAnd(cond, new ConditionPlayerIsOnSide(Enum.valueOf(CastleSide.class, a.getNodeValue())));
 					break;
 				}
 			}

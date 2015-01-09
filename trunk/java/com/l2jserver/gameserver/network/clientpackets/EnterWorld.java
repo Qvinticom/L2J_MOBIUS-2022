@@ -71,6 +71,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp
 import com.l2jserver.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jserver.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
+import com.l2jserver.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jserver.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -80,6 +81,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jserver.gameserver.network.serverpackets.HennaInfo;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -358,8 +360,12 @@ public class EnterWorld extends L2GameClientPacket
 			final L2Clan clan = activeChar.getClan();
 			clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(activeChar));
 			sendPacket(new PledgeShowMemberListAll(clan));
-			activeChar.sendPacket(new ExPledgeCount(clan));
+			clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 			activeChar.sendPacket(new PledgeSkillList(clan));
+		}
+		else
+		{
+			activeChar.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
 		}
 		
 		activeChar.broadcastUserInfo();
@@ -594,6 +600,7 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 	}
 	
 	/**

@@ -27,11 +27,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.loginserver.GameServerTable;
+import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
 import com.l2jserver.loginserver.L2LoginServer;
 import com.l2jserver.loginserver.LoginController;
 
@@ -209,8 +211,29 @@ public class LoginStatusThread extends Thread
 				}
 				else if (_usrCommand.equals("status"))
 				{
-					// TODO enhance the output
-					_print.println("Registered Server Count: " + GameServerTable.getInstance().getRegisteredGameServers().size());
+					final Map<Integer, GameServerInfo> gslist = GameServerTable.getInstance().getRegisteredGameServers();
+					
+					if (gslist.isEmpty())
+					{
+						_print.println("Registered Servers: 0");
+					}
+					else
+					{
+						_print.println("=== Registered Servers ===");
+						_print.println("ID\tName\tStatus\tPlayers online");
+						
+						gslist.forEach((id, gsinfo) ->
+						{
+							_print.print(id);
+							_print.print("\t");
+							_print.print(gsinfo.getName());
+							_print.print("\t");
+							_print.print(gsinfo.getStatusName());
+							_print.print("\t");
+							_print.print(gsinfo.getCurrentPlayerCount());
+							_print.println();
+						});
+					}
 				}
 				else if (_usrCommand.startsWith("unblock"))
 				{

@@ -37,11 +37,13 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x96);
+		writeD(0x00);
 		writeS(_activeChar.getName());
 		writeD(_clan.getId());
 		writeD(0x00);
 		writeS(_clan.getName());
 		writeS(_clan.getLeaderName());
+		
 		writeD(_clan.getCrestId()); // -> no, it's no longer used (nuocnam) fix by game
 		writeD(_clan.getLevel());
 		writeD(_clan.getCastleId());
@@ -51,14 +53,14 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		writeD(_clan.getReputationScore());
 		writeD(0x00);
 		writeD(0x00);
-		
+		writeD(0x00);
 		writeD(_clan.getAllyId()); // c2
 		writeS(_clan.getAllyName()); // c2
 		writeD(_clan.getAllyCrestId()); // c2
 		writeD(_clan.isAtWar() ? 1 : 0); // c3
 		writeD(0x00); // T3 Unknown
-		writeD(_clan.getMembers().length);
 		
+		writeD(_clan.getMembers().size());
 		for (L2ClanMember member : _clan.getMembers())
 		{
 			if (member != null)

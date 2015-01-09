@@ -21,9 +21,9 @@ package com.l2jserver.gameserver.util;
 import java.awt.Color;
 
 import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.geoengine.Direction;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExServerPrimitive;
+import com.l2jserver.geodriver.Cell;
 
 /**
  * @author HorridoJoho
@@ -93,9 +93,9 @@ public final class GeoUtils
 		player.sendPacket(prim);
 	}
 	
-	private static Color getDirectionColor(int x, int y, int z, Direction dir)
+	private static Color getDirectionColor(int x, int y, int z, int nswe)
 	{
-		if (GeoData.getInstance().canEnterNeighbors(x, y, z, dir))
+		if (GeoData.getInstance().checkNearestNswe(x, y, z, nswe, 100))
 		{
 			return Color.GREEN;
 		}
@@ -146,27 +146,27 @@ public final class GeoUtils
 				int z = gd.getNearestZ(gx, gy, player.getZ());
 				
 				// north arrow
-				Color col = getDirectionColor(gx, gy, z, Direction.NORTH);
+				Color col = getDirectionColor(gx, gy, z, Cell.NSWE_NORTH);
 				exsp.addLine(col, x - 1, y - 7, z, x + 1, y - 7, z);
 				exsp.addLine(col, x - 2, y - 6, z, x + 2, y - 6, z);
 				exsp.addLine(col, x - 3, y - 5, z, x + 3, y - 5, z);
 				exsp.addLine(col, x - 4, y - 4, z, x + 4, y - 4, z);
 				
 				// east arrow
-				col = getDirectionColor(gx, gy, z, Direction.EAST);
+				col = getDirectionColor(gx, gy, z, Cell.NSWE_EAST);
 				exsp.addLine(col, x + 7, y - 1, z, x + 7, y + 1, z);
 				exsp.addLine(col, x + 6, y - 2, z, x + 6, y + 2, z);
 				exsp.addLine(col, x + 5, y - 3, z, x + 5, y + 3, z);
 				exsp.addLine(col, x + 4, y - 4, z, x + 4, y + 4, z);
 				
 				// south arrow
-				col = getDirectionColor(gx, gy, z, Direction.SOUTH);
+				col = getDirectionColor(gx, gy, z, Cell.NSWE_SOUTH);
 				exsp.addLine(col, x - 1, y + 7, z, x + 1, y + 7, z);
 				exsp.addLine(col, x - 2, y + 6, z, x + 2, y + 6, z);
 				exsp.addLine(col, x - 3, y + 5, z, x + 3, y + 5, z);
 				exsp.addLine(col, x - 4, y + 4, z, x + 4, y + 4, z);
 				
-				col = getDirectionColor(gx, gy, z, Direction.WEST);
+				col = getDirectionColor(gx, gy, z, Cell.NSWE_WEST);
 				exsp.addLine(col, x - 7, y - 1, z, x - 7, y + 1, z);
 				exsp.addLine(col, x - 6, y - 2, z, x - 6, y + 2, z);
 				exsp.addLine(col, x - 5, y - 3, z, x - 5, y + 3, z);
@@ -180,7 +180,7 @@ public final class GeoUtils
 	}
 	
 	/**
-	 * difference between x values: never abover 1<br>
+	 * difference between x values: never above 1<br>
 	 * difference between y values: never above 1
 	 * @param lastX
 	 * @param lastY
@@ -188,36 +188,36 @@ public final class GeoUtils
 	 * @param y
 	 * @return
 	 */
-	public static Direction computeDirection(int lastX, int lastY, int x, int y)
+	public static int computeNswe(int lastX, int lastY, int x, int y)
 	{
 		if (x > lastX) // east
 		{
 			if (y > lastY)
 			{
-				return Direction.SOUTH_EAST;
+				return Cell.NSWE_SOUTH_EAST;// Direction.SOUTH_EAST;
 			}
 			else if (y < lastY)
 			{
-				return Direction.NORTH_EAST;
+				return Cell.NSWE_NORTH_EAST;// Direction.NORTH_EAST;
 			}
 			else
 			{
-				return Direction.EAST;
+				return Cell.NSWE_EAST;// Direction.EAST;
 			}
 		}
 		else if (x < lastX) // west
 		{
 			if (y > lastY)
 			{
-				return Direction.SOUTH_WEST;
+				return Cell.NSWE_SOUTH_WEST;// Direction.SOUTH_WEST;
 			}
 			else if (y < lastY)
 			{
-				return Direction.NORTH_WEST;
+				return Cell.NSWE_NORTH_WEST;// Direction.NORTH_WEST;
 			}
 			else
 			{
-				return Direction.WEST;
+				return Cell.NSWE_WEST;// Direction.WEST;
 			}
 		}
 		else
@@ -225,15 +225,15 @@ public final class GeoUtils
 		{
 			if (y > lastY)
 			{
-				return Direction.SOUTH;
+				return Cell.NSWE_SOUTH;// Direction.SOUTH;
 			}
 			else if (y < lastY)
 			{
-				return Direction.NORTH;
+				return Cell.NSWE_NORTH;// Direction.NORTH;
 			}
 			else
 			{
-				return null;// error, should never happen, TODO: Logging
+				throw new RuntimeException();
 			}
 		}
 	}

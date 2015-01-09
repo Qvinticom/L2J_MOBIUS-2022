@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2ClassMasterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.transform.TransformTemplate;
-import com.l2jserver.gameserver.model.entity.RecoBonus;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -40,6 +39,7 @@ import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ExAcquireAPSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExVitalityPointInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -57,8 +57,6 @@ public class PcStat extends PlayableStat
 	private int _oldMaxHp; // stats watch
 	private int _oldMaxMp; // stats watch
 	private int _oldMaxCp; // stats watch
-	private float _vitalityPoints = 1;
-	private byte _vitalityLevel = 0;
 	private long _startingXp;
 	/** Player's maximum cubic count. */
 	private int _maxCubicCount = 1;
@@ -66,17 +64,9 @@ public class PcStat extends PlayableStat
 	private final AtomicInteger _talismanSlots = new AtomicInteger();
 	private boolean _cloakSlot = false;
 	
-	public static final int VITALITY_LEVELS[] =
-	{
-		240,
-		2000,
-		13000,
-		17000,
-		20000
-	};
-	
-	public static final int MAX_VITALITY_POINTS = VITALITY_LEVELS[4];
+	public static final int MAX_VITALITY_POINTS = 140000;
 	public static final int MIN_VITALITY_POINTS = 1;
+	public static String VITALITY_VARIABLE = "vitality_points";
 	
 	public PcStat(L2PcInstance activeChar)
 	{
@@ -316,13 +306,16 @@ public class PcStat extends PlayableStat
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		// Send acquirable skill list
 		getActiveChar().sendPacket(new AcquireSkillList(getActiveChar()));
-		getActiveChar().sendPacket(new ExBrExtraUserInfo(getActiveChar()));
 		getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
 		if (getActiveChar().isInParty())
 		{
 			final PartySmallWindowUpdate partyWindow = new PartySmallWindowUpdate(getActiveChar(), false);
 			partyWindow.addUpdateType(PartySmallWindowUpdateType.LEVEL);
 			getActiveChar().getParty().broadcastToPartyMembers(getActiveChar(), partyWindow);
+		}
+		if ((getLevel() == 99) && getActiveChar().isNoble())
+		{
+			getActiveChar().sendPacket(new ExAcquireAPSkillList(getActiveChar()));
 		}
 		
 		return levelIncreased;
@@ -655,60 +648,17 @@ public class PcStat extends PlayableStat
 		return val;
 	}
 	
-	private void updateVitalityLevel(boolean quiet)
-	{
-		final byte level;
-		
-		if (_vitalityPoints <= VITALITY_LEVELS[0])
-		{
-			level = 0;
-		}
-		else if (_vitalityPoints <= VITALITY_LEVELS[1])
-		{
-			level = 1;
-		}
-		else if (_vitalityPoints <= VITALITY_LEVELS[2])
-		{
-			level = 2;
-		}
-		else if (_vitalityPoints <= VITALITY_LEVELS[3])
-		{
-			level = 3;
-		}
-		else
-		{
-			level = 4;
-		}
-		
-		if (!quiet && (level != _vitalityLevel))
-		{
-			if (level < _vitalityLevel)
-			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
-			}
-			else
-			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
-			}
-			if (level == 0)
-			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED);
-			}
-			else if (level == 4)
-			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
-			}
-		}
-		
-		_vitalityLevel = level;
-	}
-	
 	/*
 	 * Return current vitality points in integer format
 	 */
 	public int getVitalityPoints()
 	{
-		return (int) _vitalityPoints;
+		return getActiveChar().getAccountVariables().getInt(VITALITY_VARIABLE, Config.STARTING_VITALITY_POINTS);
+	}
+	
+	public void setVitalityPoints(int points)
+	{
+		getActiveChar().getAccountVariables().set(VITALITY_VARIABLE, points);
 	}
 	
 	/*
@@ -717,13 +667,31 @@ public class PcStat extends PlayableStat
 	public void setVitalityPoints(int points, boolean quiet)
 	{
 		points = Math.min(Math.max(points, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
-		if (points == _vitalityPoints)
+		if (points == getVitalityPoints())
 		{
 			return;
 		}
 		
-		_vitalityPoints = points;
-		updateVitalityLevel(quiet);
+		if (points < getVitalityPoints())
+		{
+			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
+		}
+		else
+		{
+			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
+		}
+		
+		setVitalityPoints(points);
+		
+		if (points == 0)
+		{
+			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED);
+		}
+		else if (points == MAX_VITALITY_POINTS)
+		{
+			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
+		}
+		
 		final L2PcInstance player = getActiveChar();
 		player.sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
 		if (player.isInParty())
@@ -734,7 +702,7 @@ public class PcStat extends PlayableStat
 		}
 	}
 	
-	public synchronized void updateVitalityPoints(float points, boolean useRates, boolean quiet)
+	public synchronized void updateVitalityPoints(int points, boolean useRates, boolean quiet)
 	{
 		if ((points == 0) || !Config.ENABLE_VITALITY)
 		{
@@ -776,72 +744,34 @@ public class PcStat extends PlayableStat
 		
 		if (points > 0)
 		{
-			points = Math.min(_vitalityPoints + points, MAX_VITALITY_POINTS);
+			points = Math.min(getVitalityPoints() + points, MAX_VITALITY_POINTS);
 		}
 		else
 		{
-			points = Math.max(_vitalityPoints + points, MIN_VITALITY_POINTS);
+			points = Math.max(getVitalityPoints() + points, MIN_VITALITY_POINTS);
 		}
 		
-		if (Math.abs(points - _vitalityPoints) <= 1e-6)
+		if (Math.abs(points - getVitalityPoints()) <= 1e-6)
 		{
 			return;
 		}
 		
-		_vitalityPoints = points;
-		updateVitalityLevel(quiet);
+		setVitalityPoints(points);
 	}
 	
 	public double getVitalityMultiplier()
 	{
-		double vitality = 1.0;
-		
-		if (Config.ENABLE_VITALITY)
-		{
-			switch (getVitalityLevel())
-			{
-				case 1:
-					vitality = Config.RATE_VITALITY_LEVEL_1;
-					break;
-				case 2:
-					vitality = Config.RATE_VITALITY_LEVEL_2;
-					break;
-				case 3:
-					vitality = Config.RATE_VITALITY_LEVEL_3;
-					break;
-				case 4:
-					vitality = Config.RATE_VITALITY_LEVEL_4;
-					break;
-			}
-		}
-		
-		return vitality;
-	}
-	
-	/**
-	 * @return the _vitalityLevel
-	 */
-	public byte getVitalityLevel()
-	{
-		return _vitalityLevel;
+		return Config.ENABLE_VITALITY ? Config.RATE_VITALITY_EXP_MULTIPLIER : 1;
 	}
 	
 	public double getExpBonusMultiplier()
 	{
 		double bonus = 1.0;
 		double vitality = 1.0;
-		double nevits = 1.0;
-		double hunting = 1.0;
 		double bonusExp = 1.0;
 		
 		// Bonus from Vitality System
 		vitality = getVitalityMultiplier();
-		
-		// Bonus from Nevit's Blessing
-		nevits = RecoBonus.getRecoMultiplier(getActiveChar());
-		
-		// Bonus from Nevit's Hunting
-		// TODO: Nevit's hunting bonus
 		
 		// Bonus exp from skills
 		bonusExp = 1 + (calcStat(Stats.BONUS_EXP, 0, null, null) / 100);
@@ -850,14 +780,7 @@ public class PcStat extends PlayableStat
 		{
 			bonus += (vitality - 1);
 		}
-		if (nevits > 1.0)
-		{
-			bonus += (nevits - 1);
-		}
-		if (hunting > 1.0)
-		{
-			bonus += (hunting - 1);
-		}
+		
 		if (bonusExp > 1)
 		{
 			bonus += (bonusExp - 1);
@@ -874,18 +797,10 @@ public class PcStat extends PlayableStat
 	{
 		double bonus = 1.0;
 		double vitality = 1.0;
-		double nevits = 1.0;
-		double hunting = 1.0;
 		double bonusSp = 1.0;
 		
 		// Bonus from Vitality System
 		vitality = getVitalityMultiplier();
-		
-		// Bonus from Nevit's Blessing
-		nevits = RecoBonus.getRecoMultiplier(getActiveChar());
-		
-		// Bonus from Nevit's Hunting
-		// TODO: Nevit's hunting bonus
 		
 		// Bonus sp from skills
 		bonusSp = 1 + (calcStat(Stats.BONUS_SP, 0, null, null) / 100);
@@ -894,14 +809,7 @@ public class PcStat extends PlayableStat
 		{
 			bonus += (vitality - 1);
 		}
-		if (nevits > 1.0)
-		{
-			bonus += (nevits - 1);
-		}
-		if (hunting > 1.0)
-		{
-			bonus += (hunting - 1);
-		}
+		
 		if (bonusSp > 1)
 		{
 			bonus += (bonusSp - 1);

@@ -108,7 +108,7 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 	}
 	
 	@Override
-	public float getVitalityPoints(int damage)
+	public int getVitalityPoints(int damage)
 	{
 		return -super.getVitalityPoints(damage) / 100;
 	}

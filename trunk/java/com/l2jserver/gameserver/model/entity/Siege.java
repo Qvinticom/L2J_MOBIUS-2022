@@ -38,6 +38,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SiegeScheduleData;
+import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.enums.SiegeTeleportWhoType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
@@ -47,7 +48,6 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2SiegeClan;
-import com.l2jserver.gameserver.model.L2SiegeClan.SiegeClanType;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.SiegeScheduleDate;
@@ -299,6 +299,11 @@ public class Siege implements Siegable
 					continue;
 				}
 				
+				for (L2PcInstance member : clan.getOnlineMembers(0))
+				{
+					member.checkItemRestriction();
+				}
+				
 				clan.clearSiegeKills();
 				clan.clearSiegeDeaths();
 			}
@@ -309,6 +314,11 @@ public class Siege implements Siegable
 				if (clan == null)
 				{
 					continue;
+				}
+				
+				for (L2PcInstance member : clan.getOnlineMembers(0))
+				{
+					member.checkItemRestriction();
 				}
 				
 				clan.clearSiegeKills();

@@ -342,9 +342,9 @@ public abstract class L2Vehicle extends L2Character
 	}
 	
 	@Override
-	public boolean updatePosition(int gameTicks)
+	public boolean updatePosition()
 	{
-		final boolean result = super.updatePosition(gameTicks);
+		final boolean result = super.updatePosition();
 		
 		for (L2PcInstance player : _passengers)
 		{

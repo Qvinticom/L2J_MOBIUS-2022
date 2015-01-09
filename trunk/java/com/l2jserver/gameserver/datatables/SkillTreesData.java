@@ -23,6 +23,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -35,6 +36,7 @@ import org.w3c.dom.Node;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.SubclassType;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.L2SkillLearn.SubClassData;
@@ -78,6 +80,7 @@ public final class SkillTreesData implements DocumentParser
 	private static final Map<ClassId, Map<Integer, L2SkillLearn>> _classSkillTrees = new HashMap<>();
 	private static final Map<ClassId, Map<Integer, L2SkillLearn>> _transferSkillTrees = new HashMap<>();
 	private static final Map<Race, Map<Integer, L2SkillLearn>> _raceSkillTree = new HashMap<>();
+	private static final Map<SubclassType, Map<Integer, L2SkillLearn>> _revelationSkillTree = new HashMap<>();
 	// Skill Hash Code, L2SkillLearn
 	private static final Map<Integer, L2SkillLearn> _collectSkillTree = new HashMap<>();
 	private static final Map<Integer, L2SkillLearn> _fishingSkillTree = new HashMap<>();
@@ -133,6 +136,7 @@ public final class SkillTreesData implements DocumentParser
 		_gameMasterSkillTree.clear();
 		_gameMasterAuraSkillTree.clear();
 		_raceSkillTree.clear();
+		_revelationSkillTree.clear();
 		
 		// Load files.
 		parseDatapackDirectory("data/skillTrees/", false);
@@ -156,6 +160,7 @@ public final class SkillTreesData implements DocumentParser
 		Node attr;
 		String type = null;
 		Race race = null;
+		SubclassType subType = null;
 		int cId = -1;
 		int parentClassId = -1;
 		ClassId classId = null;
@@ -170,6 +175,7 @@ public final class SkillTreesData implements DocumentParser
 						final Map<Integer, L2SkillLearn> classSkillTree = new HashMap<>();
 						final Map<Integer, L2SkillLearn> transferSkillTree = new HashMap<>();
 						final Map<Integer, L2SkillLearn> raceSkillTree = new HashMap<>();
+						final Map<Integer, L2SkillLearn> revelationSkillTree = new HashMap<>();
 						
 						type = d.getAttributes().getNamedItem("type").getNodeValue();
 						attr = d.getAttributes().getNamedItem("classId");
@@ -187,6 +193,12 @@ public final class SkillTreesData implements DocumentParser
 						if (attr != null)
 						{
 							race = parseEnum(attr, Race.class);
+						}
+						
+						attr = d.getAttributes().getNamedItem("subType");
+						if (attr != null)
+						{
+							subType = parseEnum(attr, SubclassType.class);
 						}
 						
 						attr = d.getAttributes().getNamedItem("parentClassId");
@@ -269,6 +281,11 @@ public final class SkillTreesData implements DocumentParser
 									case "raceSkillTree":
 									{
 										raceSkillTree.put(skillHashCode, skillLearn);
+										break;
+									}
+									case "revelationSkillTree":
+									{
+										revelationSkillTree.put(skillHashCode, skillLearn);
 										break;
 									}
 									case "fishingSkillTree":
@@ -363,6 +380,17 @@ public final class SkillTreesData implements DocumentParser
 							else
 							{
 								_raceSkillTree.get(race).putAll(raceSkillTree);
+							}
+						}
+						else if (type.equals("revelationSkillTree") && (subType != null))
+						{
+							if (!_revelationSkillTree.containsKey(subType))
+							{
+								_revelationSkillTree.put(subType, revelationSkillTree);
+							}
+							else
+							{
+								_revelationSkillTree.get(subType).putAll(revelationSkillTree);
 							}
 						}
 					}
@@ -576,7 +604,7 @@ public final class SkillTreesData implements DocumentParser
 		final Map<Integer, L2SkillLearn> skills = getCompleteClassSkillTree(classId);
 		for (L2SkillLearn skill : skills.values())
 		{
-			if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || skill.isLearnedByFS())
+			if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || skill.isLearnedByFS() || (skill.getGetLevel() > player.getLevel()))
 			{
 				continue;
 			}
@@ -585,7 +613,7 @@ public final class SkillTreesData implements DocumentParser
 			{
 				return true;
 			}
-			else if (skill.getSkillLevel() == 1)
+			else if ((oldSkill == null) && (skill.getSkillLevel() == 1))
 			{
 				return true;
 			}
@@ -617,7 +645,7 @@ public final class SkillTreesData implements DocumentParser
 	 */
 	private List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder)
 	{
-		final List<L2SkillLearn> result = new ArrayList<>();
+		final List<L2SkillLearn> result = new LinkedList<>();
 		final Map<Integer, L2SkillLearn> skills = getCompleteClassSkillTree(classId);
 		
 		if (skills.isEmpty())
@@ -756,6 +784,29 @@ public final class SkillTreesData implements DocumentParser
 				{
 					result.add(skill);
 				}
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * Gets the available revelation skills
+	 * @param player the player requesting the revelation skills
+	 * @param type the player current subclass type
+	 * @return all the available revelation skills for a given {@code player}
+	 */
+	public List<L2SkillLearn> getAvailableRevelationSkills(L2PcInstance player, SubclassType type)
+	{
+		final List<L2SkillLearn> result = new ArrayList<>();
+		Map<Integer, L2SkillLearn> revelationSkills = _revelationSkillTree.get(type);
+		
+		for (L2SkillLearn skill : revelationSkills.values())
+		{
+			final Skill oldSkill = player.getSkills().get(skill.getSkillId());
+			
+			if (oldSkill == null)
+			{
+				result.add(skill);
 			}
 		}
 		return result;
@@ -1057,6 +1108,12 @@ public final class SkillTreesData implements DocumentParser
 			case COLLECT:
 				sl = getCollectSkill(id, lvl);
 				break;
+			case REVELATION:
+				sl = getRevelationSkill(SubclassType.BASECLASS, id, lvl);
+				break;
+			case REVELATION_DUALCLASS:
+				sl = getRevelationSkill(SubclassType.DUALCLASS, id, lvl);
+				break;
 			case ALCHEMY:
 				sl = getAlchemySkill(id, lvl);
 				break;
@@ -1215,6 +1272,18 @@ public final class SkillTreesData implements DocumentParser
 	}
 	
 	/**
+	 * Gets the revelation skill.
+	 * @param type the subclass type
+	 * @param id the revelation skill Id
+	 * @param lvl the revelation skill level
+	 * @return the revelation skill from the Revelation Skill Tree for a given {@code id} and {@code lvl}
+	 */
+	public L2SkillLearn getRevelationSkill(SubclassType type, int id, int lvl)
+	{
+		return _revelationSkillTree.get(type).get(SkillData.getSkillHashCode(id, lvl));
+	}
+	
+	/**
 	 * Gets the minimum level for new skill.
 	 * @param player the player that requires the minimum level
 	 * @param skillTree the skill tree to search the minimum get level
@@ -1241,6 +1310,40 @@ public final class SkillTreesData implements DocumentParser
 			}
 		}
 		return minLevel;
+	}
+	
+	public List<L2SkillLearn> getNextAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	{
+		final Map<Integer, L2SkillLearn> completeClassSkillTree = getCompleteClassSkillTree(classId);
+		final List<L2SkillLearn> result = new LinkedList<>();
+		if (completeClassSkillTree.isEmpty())
+		{
+			return result;
+		}
+		final int minLevelForNewSkill = getMinLevelForNewSkill(player, completeClassSkillTree);
+		
+		if (minLevelForNewSkill > 0)
+		{
+			for (L2SkillLearn skill : completeClassSkillTree.values())
+			{
+				if (((includeAutoGet && skill.isAutoGet()) || skill.isLearnedByNpc() || (includeByFs && skill.isLearnedByFS())) && (minLevelForNewSkill == skill.getGetLevel()))
+				{
+					final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
+					if (oldSkill != null)
+					{
+						if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
+						{
+							result.add(skill);
+						}
+					}
+					else if (skill.getSkillLevel() == 1)
+					{
+						result.add(skill);
+					}
+				}
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -1517,6 +1620,12 @@ public final class SkillTreesData implements DocumentParser
 			raceSkillTreeCount += raceSkillTree.size();
 		}
 		
+		int revelationSkillTreeCount = 0;
+		for (Map<Integer, L2SkillLearn> revelationSkillTree : _revelationSkillTree.values())
+		{
+			revelationSkillTreeCount += revelationSkillTree.size();
+		}
+		
 		int dwarvenOnlyFishingSkillCount = 0;
 		for (L2SkillLearn fishSkill : _fishingSkillTree.values())
 		{
@@ -1551,6 +1660,7 @@ public final class SkillTreesData implements DocumentParser
 		LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
 		LOGGER.info(className + ": Loaded " + _abilitySkillTree.size() + " Ability Skills.");
 		LOGGER.info(className + ": Loaded " + _alchemySkillTree.size() + " Alchemy Skills.");
+		LOGGER.info(className + ": Loaded " + revelationSkillTreeCount + " Revelation Skills.");
 		
 		final int commonSkills = _commonSkillTree.size();
 		if (commonSkills > 0)

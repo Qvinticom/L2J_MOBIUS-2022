@@ -39,6 +39,7 @@
 					<xs:enumeration value="is_sellable" />
 					<xs:enumeration value="is_stackable" />
 					<xs:enumeration value="is_tradable" />
+					<xs:enumeration value="is_infinite" />
 					<xs:enumeration value="isAttackWeapon" />
 					<xs:enumeration value="isForceEquip" />
 					<xs:enumeration value="item_skill" />
@@ -79,6 +80,16 @@
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
+		<xs:attribute name="isOnSide" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="NEUTRAL" />
+					<xs:enumeration value="LIGHT" />
+					<xs:enumeration value="DARK" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="isClanLeader" type="xs:boolean" />
 		<xs:attribute name="clanHall" type="xs:normalizedString" />
 		<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
 		<xs:attribute name="cloakStatus" type="xs:boolean" />

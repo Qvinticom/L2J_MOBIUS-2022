@@ -813,7 +813,7 @@ public class L2Party extends AbstractPlayerGroup
 			sqLevelSum += (member.getLevel() * member.getLevel());
 		}
 		
-		final float vitalityPoints = (target.getVitalityPoints(partyDmg) * Config.RATE_PARTY_XP) / validMembers.size();
+		final int vitalityPoints = (int) ((target.getVitalityPoints(partyDmg) * Config.RATE_PARTY_XP) / validMembers.size());
 		final boolean useVitalityRate = target.useVitalityRate();
 		
 		for (L2PcInstance member : rewardedMembers)

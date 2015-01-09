@@ -18,28 +18,50 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.gameserver.network.serverpackets.ExPledgeCrestLarge;
+import com.l2jserver.gameserver.datatables.CrestTable;
+import com.l2jserver.gameserver.model.L2Crest;
+import com.l2jserver.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
- * Fomat : chd c: (id) 0xD0 h: (subid) 0x10 d: the crest id This is a trigger
- * @author -Wooden-
+ * @author -Wooden-, Sdw
  */
 public final class RequestExPledgeCrestLarge extends L2GameClientPacket
 {
 	private static final String _C__D0_10_REQUESTEXPLEDGECRESTLARGE = "[C] D0:10 RequestExPledgeCrestLarge";
 	
 	private int _crestId;
+	private int _clanId;
 	
 	@Override
 	protected void readImpl()
 	{
 		_crestId = readD();
+		_clanId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		sendPacket(new ExPledgeCrestLarge(_crestId));
+		final L2Crest crest = CrestTable.getInstance().getCrest(_crestId);
+		final byte[] data = crest != null ? crest.getData() : null;
+		if (data != null)
+		{
+			for (int i = 0; i <= 4; i++)
+			{
+				if (i < 4)
+				{
+					final byte[] fullChunk = new byte[14336];
+					System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
+					sendPacket(new ExPledgeEmblem(_crestId, fullChunk, _clanId, i, 14336));
+				}
+				else
+				{
+					final byte[] lastChunk = new byte[8320];
+					System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
+					sendPacket(new ExPledgeEmblem(_crestId, lastChunk, _clanId, i, 8320));
+				}
+			}
+		}
 	}
 	
 	@Override

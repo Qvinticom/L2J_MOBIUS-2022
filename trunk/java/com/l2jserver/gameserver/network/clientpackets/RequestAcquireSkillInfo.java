@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2SkillLearn;
@@ -142,6 +143,24 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 			case ALCHEMY:
 			{
 				if (activeChar.getRace() != Race.ERTHEIA)
+				{
+					return;
+				}
+				sendPacket(new AcquireSkillInfo(_skillType, s));
+				break;
+			}
+			case REVELATION:
+			{
+				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.AWAKEN_GROUP))
+				{
+					return;
+				}
+				sendPacket(new AcquireSkillInfo(_skillType, s));
+				break;
+			}
+			case REVELATION_DUALCLASS:
+			{
+				if (!activeChar.isSubClassActive() || !activeChar.isDualClassActive())
 				{
 					return;
 				}

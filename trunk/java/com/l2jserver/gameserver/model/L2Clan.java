@@ -516,9 +516,9 @@ public class L2Clan implements IIdentifiable, INamable
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeft(exMember, this));
 	}
 	
-	public L2ClanMember[] getMembers()
+	public Collection<L2ClanMember> getMembers()
 	{
-		return _members.values().toArray(new L2ClanMember[_members.size()]);
+		return _members.values();
 	}
 	
 	public int getMembersCount()

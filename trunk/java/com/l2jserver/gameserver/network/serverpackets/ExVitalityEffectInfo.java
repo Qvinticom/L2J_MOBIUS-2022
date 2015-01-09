@@ -18,7 +18,11 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.stat.PcStat;
+import com.l2jserver.gameserver.model.variables.AccountVariables;
+import com.l2jserver.gameserver.network.L2GameClient;
 
 /**
  * @author Sdw
@@ -32,6 +36,12 @@ public class ExVitalityEffectInfo extends L2GameServerPacket
 		_points = cha.getVitalityPoints();
 	}
 	
+	public ExVitalityEffectInfo(L2GameClient client)
+	{
+		final AccountVariables vars = new AccountVariables(client.getAccountName());
+		_points = vars.getInt(PcStat.VITALITY_VARIABLE, Config.STARTING_VITALITY_POINTS);
+	}
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -39,7 +49,7 @@ public class ExVitalityEffectInfo extends L2GameServerPacket
 		writeH(0x118);
 		
 		writeD(_points);
-		writeD(0x00); // Vitality Bonus
+		writeD((int) (Config.RATE_VITALITY_EXP_MULTIPLIER * 100)); // Vitality Bonus
 		writeH(0x05); // How much vitality items remaining for use
 		writeH(0x05); // Max number of items for use
 	}

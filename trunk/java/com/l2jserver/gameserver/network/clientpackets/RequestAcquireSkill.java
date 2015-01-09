@@ -23,6 +23,7 @@ import java.util.List;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.UserInfoType;
@@ -72,6 +73,18 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 		"EmergentAbility70-",
 		"ClassAbility75-",
 		"ClassAbility80-"
+	};
+	
+	private static final String[] REVELATION_VAR_NAMES =
+	{
+		"RevelationSkill1",
+		"RevelationSkill2"
+	};
+	
+	private static final String[] DUALCLASS_REVELATION_VAR_NAMES =
+	{
+		"DualclassRevelationSkill1",
+		"DualclassRevelationSkill2"
 	};
 	
 	private int _id;
@@ -412,6 +425,91 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 					}
 				}
 				
+				break;
+			}
+			case REVELATION:
+			{
+				if (activeChar.isSubClassActive())
+				{
+					activeChar.sendPacket(SystemMessageId.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE_PLEASE_TRY_AGAIN_AFTER_CHANGING_TO_THE_MAIN_CLASS);
+					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while Sub-Class is active!", IllegalActionPunishmentType.NONE);
+					return;
+				}
+				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.AWAKEN_GROUP))
+				{
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while not being level 85 or awaken!", IllegalActionPunishmentType.NONE);
+					return;
+				}
+				
+				int count = 0;
+				
+				for (String varName : REVELATION_VAR_NAMES)
+				{
+					if (activeChar.getVariables().getInt(varName, 0) > 0)
+					{
+						count++;
+					}
+				}
+				
+				if (count >= 2)
+				{
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while having already learned 2 skills!", IllegalActionPunishmentType.NONE);
+					return;
+				}
+				
+				if (checkPlayerSkill(activeChar, trainer, s))
+				{
+					final String varName = count == 0 ? REVELATION_VAR_NAMES[0] : REVELATION_VAR_NAMES[1];
+					
+					activeChar.getVariables().set(varName, skill.getId());
+					
+					giveSkill(activeChar, trainer, skill);
+				}
+				break;
+			}
+			case REVELATION_DUALCLASS:
+			{
+				if (activeChar.isSubClassActive() && !activeChar.isDualClassActive())
+				{
+					activeChar.sendPacket(SystemMessageId.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE_PLEASE_TRY_AGAIN_AFTER_CHANGING_TO_THE_MAIN_CLASS);
+					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while Sub-Class is active!", IllegalActionPunishmentType.NONE);
+					return;
+				}
+				
+				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.AWAKEN_GROUP))
+				{
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while not being level 85 or awaken!", IllegalActionPunishmentType.NONE);
+					return;
+				}
+				
+				int count = 0;
+				
+				for (String varName : DUALCLASS_REVELATION_VAR_NAMES)
+				{
+					if (activeChar.getVariables().getInt(varName, 0) > 0)
+					{
+						count++;
+					}
+				}
+				
+				if (count >= 2)
+				{
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while having already learned 2 skills!", IllegalActionPunishmentType.NONE);
+					return;
+				}
+				
+				if (checkPlayerSkill(activeChar, trainer, s))
+				{
+					final String varName = count == 0 ? DUALCLASS_REVELATION_VAR_NAMES[0] : DUALCLASS_REVELATION_VAR_NAMES[1];
+					
+					activeChar.getVariables().set(varName, skill.getId());
+					
+					giveSkill(activeChar, trainer, skill);
+				}
 				break;
 			}
 			default:

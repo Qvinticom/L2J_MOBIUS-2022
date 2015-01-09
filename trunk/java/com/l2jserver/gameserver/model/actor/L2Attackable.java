@@ -1640,7 +1640,7 @@ public class L2Attackable extends L2Npc
 	/*
 	 * Return vitality points decrease (if positive) or increase (if negative) based on damage. Maximum for damage = maxHp.
 	 */
-	public float getVitalityPoints(int damage)
+	public int getVitalityPoints(int damage)
 	{
 		// sanity check
 		if (damage <= 0)
@@ -1655,7 +1655,7 @@ public class L2Attackable extends L2Npc
 		}
 		
 		// negative value - vitality will be consumed
-		return -Math.min(damage, getMaxHp()) / divider;
+		return (int) (-Math.min(damage, getMaxHp()) / divider);
 	}
 	
 	/*

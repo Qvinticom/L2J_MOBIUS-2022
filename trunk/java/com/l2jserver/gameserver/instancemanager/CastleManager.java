@@ -200,18 +200,6 @@ public final class CastleManager implements InstanceListManager
 		return hasOwnedCastle;
 	}
 	
-	public final void validateTaxes(int sealStrifeOwner)
-	{
-		final int maxTax = 15;
-		for (Castle castle : _castles)
-		{
-			if (castle.getTaxPercent() > maxTax)
-			{
-				castle.setTaxPercent(maxTax);
-			}
-		}
-	}
-	
 	public int getCirclet()
 	{
 		return getCircletByCastleId(1);

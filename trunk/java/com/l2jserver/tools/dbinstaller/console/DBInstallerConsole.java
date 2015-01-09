@@ -24,8 +24,8 @@ import java.util.prefs.Preferences;
 
 import com.l2jserver.tools.dbinstaller.DBOutputInterface;
 import com.l2jserver.tools.dbinstaller.RunTasks;
+import com.l2jserver.tools.dbinstaller.util.CloseShieldedInputStream;
 import com.l2jserver.tools.dbinstaller.util.mysql.MySqlConnect;
-import com.l2jserver.util.CloseShieldedInputStream;
 
 /**
  * @author mrTJO

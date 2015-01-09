@@ -18,8 +18,6 @@
  */
 package com.l2jserver;
 
-import info.tak11.subnet.Subnet;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -38,7 +36,9 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
@@ -52,6 +52,7 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -59,6 +60,7 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.util.FloodProtectorConfig;
@@ -107,6 +109,7 @@ public final class Config
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
 	public static final String EMAIL_CONFIG_FILE = "./config/Email.properties";
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
+	public static final String GEODATA_FILE = "./config/GeoData.properties";
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
@@ -338,6 +341,9 @@ public final class Config
 	public static int CS_SUPPORT1_FEE;
 	public static int CS_SUPPORT2_FEE;
 	public static List<Integer> SIEGE_HOUR_LIST;
+	public static int CASTLE_TAX_NEUTRAL;
+	public static int CASTLE_TAX_LIGHT;
+	public static int CASTLE_TAX_DARK;
 	public static int OUTER_DOOR_UPGRADE_PRICE2;
 	public static int OUTER_DOOR_UPGRADE_PRICE3;
 	public static int OUTER_DOOR_UPGRADE_PRICE5;
@@ -512,24 +518,10 @@ public final class Config
 	public static int MAX_NPC_ANIMATION;
 	public static int MIN_MONSTER_ANIMATION;
 	public static int MAX_MONSTER_ANIMATION;
-	public static int COORD_SYNCHRONIZE;
 	public static boolean ENABLE_FALLING_DAMAGE;
 	public static boolean GRIDS_ALWAYS_ON;
 	public static int GRID_NEIGHBOR_TURNON_TIME;
 	public static int GRID_NEIGHBOR_TURNOFF_TIME;
-	public static int GEODATA;
-	public static String GEODATA_DRIVER;
-	public static File PATHNODE_DIR;
-	public static boolean GEODATA_CELLFINDING;
-	public static String PATHFIND_BUFFERS;
-	public static float LOW_WEIGHT;
-	public static float MEDIUM_WEIGHT;
-	public static float HIGH_WEIGHT;
-	public static boolean ADVANCED_DIAGONAL_STRATEGY;
-	public static float DIAGONAL_WEIGHT;
-	public static int MAX_POSTFILTER_PASSES;
-	public static boolean DEBUG_PATH;
-	public static boolean FORCE_GEODATA;
 	public static boolean MOVE_BASED_KNOWNLIST;
 	public static long KNOWNLIST_UPDATE_INTERVAL;
 	public static int PEACE_ZONE_MODE;
@@ -560,6 +552,10 @@ public final class Config
 	public static boolean USE_SAY_FILTER;
 	public static String CHAT_FILTER_CHARS;
 	public static int[] BAN_CHAT_CHANNELS;
+	public static int WORLD_CHAT_MIN_LEVEL;
+	public static int WORLD_CHAT_POINTS_PER_DAY;
+	public static Duration WORLD_CHAT_INTERVAL;
+	public static String WORLD_CHAT_RESET_TIME;
 	public static int ALT_OLY_START_TIME;
 	public static int ALT_OLY_MIN;
 	public static int ALT_OLY_MAX_BUFFS;
@@ -1001,18 +997,15 @@ public final class Config
 	// Vitality Settings
 	// --------------------------------------------------
 	public static boolean ENABLE_VITALITY;
-	public static boolean RECOVER_VITALITY_ON_RECONNECT;
-	public static boolean ENABLE_DROP_VITALITY_HERBS;
-	public static float RATE_VITALITY_LEVEL_1;
-	public static float RATE_VITALITY_LEVEL_2;
-	public static float RATE_VITALITY_LEVEL_3;
-	public static float RATE_VITALITY_LEVEL_4;
+	public static int STARTING_VITALITY_POINTS;
+	
+	public static int ALT_VITALITY_DATE_RESET;
+	public static String ALT_VITALITY_HOUR_RESET;
+	
+	public static float RATE_VITALITY_EXP_MULTIPLIER;
 	public static float RATE_DROP_VITALITY_HERBS;
-	public static float RATE_RECOVERY_VITALITY_PEACE_ZONE;
 	public static float RATE_VITALITY_LOST;
 	public static float RATE_VITALITY_GAIN;
-	public static float RATE_RECOVERY_ON_RECONNECT;
-	public static int STARTING_VITALITY_POINTS;
 	
 	// --------------------------------------------------
 	// No classification assigned to the following yet
@@ -1136,6 +1129,24 @@ public final class Config
 	public static boolean CHS_ENABLE_FAME;
 	public static int CHS_FAME_AMOUNT;
 	public static int CHS_FAME_FREQUENCY;
+	
+	// GeoData Settings
+	public static int GEODATA;
+	public static File PATHNODE_DIR;
+	public static boolean GEODATA_CELLFINDING;
+	public static String PATHFIND_BUFFERS;
+	public static float LOW_WEIGHT;
+	public static float MEDIUM_WEIGHT;
+	public static float HIGH_WEIGHT;
+	public static boolean ADVANCED_DIAGONAL_STRATEGY;
+	public static float DIAGONAL_WEIGHT;
+	public static int MAX_POSTFILTER_PASSES;
+	public static boolean DEBUG_PATH;
+	public static boolean FORCE_GEODATA;
+	public static int COORD_SYNCHRONIZE;
+	public static Path GEODATA_PATH;
+	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
+	public static Map<String, Boolean> GEODATA_REGIONS;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -1292,6 +1303,9 @@ public final class Config
 					SIEGE_HOUR_LIST.add(Integer.parseInt(hour));
 				}
 			}
+			CASTLE_TAX_NEUTRAL = Feature.getInt("TaxForNeutralSide", 15);
+			CASTLE_TAX_LIGHT = Feature.getInt("TaxForLightSide", 0);
+			CASTLE_TAX_DARK = Feature.getInt("TaxForDarkSide", 30);
 			CS_TELE_FEE_RATIO = Feature.getLong("CastleTeleportFunctionFeeRatio", 604800000);
 			CS_TELE1_FEE = Feature.getInt("CastleTeleportFunctionFeeLvl1", 1000);
 			CS_TELE2_FEE = Feature.getInt("CastleTeleportFunctionFeeLvl2", 10000);
@@ -1528,8 +1542,14 @@ public final class Config
 			FEE_DELETE_TRANSFER_SKILLS = Character.getInt("FeeDeleteTransferSkills", 10000000);
 			FEE_DELETE_SUBCLASS_SKILLS = Character.getInt("FeeDeleteSubClassSkills", 10000000);
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
-			RECOVER_VITALITY_ON_RECONNECT = Character.getBoolean("RecoverVitalityOnReconnect", true);
-			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 20000);
+			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
+			ALT_VITALITY_DATE_RESET = Character.getInt("AltVitalityDateReset", 4);
+			if ((ALT_VITALITY_DATE_RESET < 1) || (ALT_VITALITY_DATE_RESET > 7))
+			{
+				_log.log(Level.WARNING, "Wrong value specified for AltVitalityDateReset: " + ALT_VITALITY_DATE_RESET);
+				ALT_VITALITY_DATE_RESET = 3;
+			}
+			ALT_VITALITY_HOUR_RESET = Character.getString("AltVitalityHourReset", "06:30:00");
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 3.5);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 3.5);
 			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 250);
@@ -1867,32 +1887,6 @@ public final class Config
 			GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
 			GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
 			GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
-			GEODATA = General.getInt("GeoData", 0);
-			GEODATA_DRIVER = General.getString("GeoDataDriver", "com.l2jserver.gameserver.geoengine.NullDriver");
-			try
-			{
-				PATHNODE_DIR = new File(General.getString("PathnodeDirectory", "data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
-			}
-			catch (IOException e)
-			{
-				_log.log(Level.WARNING, "Error setting pathnode directory!", e);
-				PATHNODE_DIR = new File("data/pathnode");
-			}
-			GEODATA_CELLFINDING = General.getBoolean("CellPathFinding", false);
-			PATHFIND_BUFFERS = General.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-			LOW_WEIGHT = General.getFloat("LowWeight", 0.5f);
-			MEDIUM_WEIGHT = General.getFloat("MediumWeight", 2);
-			HIGH_WEIGHT = General.getFloat("HighWeight", 3);
-			ADVANCED_DIAGONAL_STRATEGY = General.getBoolean("AdvancedDiagonalStrategy", true);
-			DIAGONAL_WEIGHT = General.getFloat("DiagonalWeight", 0.707f);
-			MAX_POSTFILTER_PASSES = General.getInt("MaxPostfilterPasses", 3);
-			DEBUG_PATH = General.getBoolean("DebugPath", false);
-			FORCE_GEODATA = General.getBoolean("ForceGeodata", true);
-			COORD_SYNCHRONIZE = General.getInt("CoordSynchronize", -1);
-			
-			String str = General.getString("EnableFallingDamage", "auto");
-			ENABLE_FALLING_DAMAGE = "auto".equalsIgnoreCase(str) ? GEODATA > 0 : Boolean.parseBoolean(str);
-			
 			PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
 			DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
 			DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
@@ -1934,6 +1928,10 @@ public final class Config
 			{
 				_log.log(Level.WARNING, nfe.getMessage(), nfe);
 			}
+			WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 95);
+			WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
+			WORLD_CHAT_INTERVAL = General.getDuration("WorldChatInterval", "20secs", Duration.ofSeconds(20));
+			WORLD_CHAT_RESET_TIME = General.getString("WorldChatResetTime", "06:30:00");
 			ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
 			ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
 			ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
@@ -2137,14 +2135,9 @@ public final class Config
 			RATE_HB_TRUST_INCREASE = RatesSettings.getFloat("RateHellboundTrustIncrease", 1);
 			RATE_HB_TRUST_DECREASE = RatesSettings.getFloat("RateHellboundTrustDecrease", 1);
 			
-			RATE_VITALITY_LEVEL_1 = RatesSettings.getFloat("RateVitalityLevel1", 1.5f);
-			RATE_VITALITY_LEVEL_2 = RatesSettings.getFloat("RateVitalityLevel2", 2);
-			RATE_VITALITY_LEVEL_3 = RatesSettings.getFloat("RateVitalityLevel3", 2.5f);
-			RATE_VITALITY_LEVEL_4 = RatesSettings.getFloat("RateVitalityLevel4", 3);
-			RATE_RECOVERY_VITALITY_PEACE_ZONE = RatesSettings.getFloat("RateRecoveryPeaceZone", 1);
+			RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 2);
 			RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
 			RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
-			RATE_RECOVERY_ON_RECONNECT = RatesSettings.getFloat("RateRecoveryOnReconnect", 4);
 			RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
 			if (RATE_KARMA_LOST == -1)
 			{
@@ -2778,6 +2771,49 @@ public final class Config
 			CHS_ENABLE_FAME = ClanHallSiege.getBoolean("EnableFame", false);
 			CHS_FAME_AMOUNT = ClanHallSiege.getInt("FameAmount", 0);
 			CHS_FAME_FREQUENCY = ClanHallSiege.getInt("FameFrequency", 0);
+			
+			final PropertiesParser geoData = new PropertiesParser(GEODATA_FILE);
+			
+			GEODATA = geoData.getInt("GeoData", 0);
+			
+			try
+			{
+				PATHNODE_DIR = new File(geoData.getString("PathnodeDirectory", "data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
+			}
+			catch (IOException e)
+			{
+				_log.log(Level.WARNING, "Error setting pathnode directory!", e);
+				PATHNODE_DIR = new File("data/pathnode");
+			}
+			
+			GEODATA_CELLFINDING = geoData.getBoolean("CellPathFinding", false);
+			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
+			LOW_WEIGHT = geoData.getFloat("LowWeight", 0.5f);
+			MEDIUM_WEIGHT = geoData.getFloat("MediumWeight", 2);
+			HIGH_WEIGHT = geoData.getFloat("HighWeight", 3);
+			ADVANCED_DIAGONAL_STRATEGY = geoData.getBoolean("AdvancedDiagonalStrategy", true);
+			DIAGONAL_WEIGHT = geoData.getFloat("DiagonalWeight", 0.707f);
+			MAX_POSTFILTER_PASSES = geoData.getInt("MaxPostfilterPasses", 3);
+			DEBUG_PATH = geoData.getBoolean("DebugPath", false);
+			FORCE_GEODATA = geoData.getBoolean("ForceGeoData", true);
+			COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
+			GEODATA_PATH = Paths.get(geoData.getString("GeoDataPath", "./data/geodata"));
+			TRY_LOAD_UNSPECIFIED_REGIONS = geoData.getBoolean("TryLoadUnspecifiedRegions", true);
+			GEODATA_REGIONS = new HashMap<>();
+			for (int regionX = L2World.TILE_X_MIN; regionX <= L2World.TILE_X_MAX; regionX++)
+			{
+				for (int regionY = L2World.TILE_Y_MIN; regionY <= L2World.TILE_Y_MAX; regionY++)
+				{
+					String key = regionX + "_" + regionY;
+					if (geoData.containskey(regionX + "_" + regionY))
+					{
+						GEODATA_REGIONS.put(key, geoData.getBoolean(key, false));
+					}
+				}
+			}
+			
+			String str = General.getString("EnableFallingDamage", "auto");
+			ENABLE_FALLING_DAMAGE = "auto".equalsIgnoreCase(str) ? GEODATA > 0 : Boolean.parseBoolean(str);
 		}
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{
@@ -2931,29 +2967,14 @@ public final class Config
 			case "ratehellboundtrustdecrease":
 				RATE_HB_TRUST_DECREASE = Float.parseFloat(pValue);
 				break;
-			case "ratevitalitylevel1":
-				RATE_VITALITY_LEVEL_1 = Float.parseFloat(pValue);
-				break;
-			case "ratevitalitylevel2":
-				RATE_VITALITY_LEVEL_2 = Float.parseFloat(pValue);
-				break;
-			case "ratevitalitylevel3":
-				RATE_VITALITY_LEVEL_3 = Float.parseFloat(pValue);
-				break;
-			case "ratevitalitylevel4":
-				RATE_VITALITY_LEVEL_4 = Float.parseFloat(pValue);
-				break;
-			case "raterecoverypeacezone":
-				RATE_RECOVERY_VITALITY_PEACE_ZONE = Float.parseFloat(pValue);
+			case "ratevitalityexpmultiplier":
+				RATE_VITALITY_EXP_MULTIPLIER = Float.parseFloat(pValue);
 				break;
 			case "ratevitalitylost":
 				RATE_VITALITY_LOST = Float.parseFloat(pValue);
 				break;
 			case "ratevitalitygain":
 				RATE_VITALITY_GAIN = Float.parseFloat(pValue);
-				break;
-			case "raterecoveryonreconnect":
-				RATE_RECOVERY_ON_RECONNECT = Float.parseFloat(pValue);
 				break;
 			case "ratekarmaexplost":
 				RATE_KARMA_EXP_LOST = Float.parseFloat(pValue);
@@ -4041,7 +4062,6 @@ public final class Config
 			{
 				Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
 				
-				Subnet sub = new Subnet();
 				while (niList.hasMoreElements())
 				{
 					NetworkInterface ni = niList.nextElement();
@@ -4063,14 +4083,18 @@ public final class Config
 							continue;
 						}
 						
-						sub.setIPAddress(ia.getAddress().getHostAddress());
-						sub.setMaskedBits(ia.getNetworkPrefixLength());
-						String subnet = sub.getSubnetAddress() + '/' + sub.getMaskedBits();
+						final String hostAddress = ia.getAddress().getHostAddress();
+						final int subnetPrefixLength = ia.getNetworkPrefixLength();
+						final int subnetMaskInt = IntStream.rangeClosed(1, subnetPrefixLength).reduce((r, e) -> (r << 1) + 1).orElse(0) << (32 - subnetPrefixLength);
+						final int hostAddressInt = Arrays.stream(hostAddress.split("\\.")).mapToInt(Integer::parseInt).reduce((r, e) -> (r << 8) + e).orElse(0);
+						final int subnetAddressInt = hostAddressInt & subnetMaskInt;
+						final String subnetAddress = ((subnetAddressInt >> 24) & 0xFF) + "." + ((subnetAddressInt >> 16) & 0xFF) + "." + ((subnetAddressInt >> 8) & 0xFF) + "." + (subnetAddressInt & 0xFF);
+						final String subnet = subnetAddress + '/' + subnetPrefixLength;
 						if (!_subnets.contains(subnet) && !subnet.equals("0.0.0.0/0"))
 						{
 							_subnets.add(subnet);
-							_hosts.add(sub.getIPAddress());
-							LOGGER.log(Level.INFO, "Network Config: Adding new subnet: " + subnet + " address: " + sub.getIPAddress());
+							_hosts.add(hostAddress);
+							LOGGER.log(Level.INFO, "Network Config: Adding new subnet: " + subnet + " address: " + hostAddress);
 						}
 					}
 				}

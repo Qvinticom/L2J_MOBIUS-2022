@@ -4201,10 +4201,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * the L2Character position is automatically set to the destination position even if the movement is not finished.<br>
 	 * <FONT COLOR=#FF0000><B><U>Caution</U>: The current Z position is obtained FROM THE CLIENT by the Client->Server ValidatePosition Packet.<br>
 	 * But x and y positions must be calculated to avoid that players try to modify their movement speed.</B></FONT>
-	 * @param gameTicks Nb of ticks since the server start
 	 * @return True if the movement is finished
 	 */
-	public boolean updatePosition(int gameTicks)
+	public boolean updatePosition()
 	{
 		// Get movement data
 		MoveData m = _move;
@@ -4227,6 +4226,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			m._xAccurate = getX();
 			m._yAccurate = getY();
 		}
+		
+		int gameTicks = GameTimeController.getInstance().getGameTicks();
 		
 		// Check if the position has already been calculated
 		if (m._moveTimestamp == gameTicks)
@@ -4317,7 +4318,29 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Set the timer of last position update to now
 		m._moveTimestamp = gameTicks;
 		
-		return (distFraction > 1);
+		if (distFraction > 1)
+		{
+			ThreadPoolManager.getInstance().executeAi(() ->
+			{
+				try
+				{
+					if (Config.MOVE_BASED_KNOWNLIST)
+					{
+						getKnownList().findObjects();
+					}
+					
+					getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
+				}
+				catch (final Throwable e)
+				{
+					_log.log(Level.WARNING, "", e);
+				}
+			});
+			
+			return true;
+		}
+		
+		return false;
 	}
 	
 	public void revalidateZone(boolean force)

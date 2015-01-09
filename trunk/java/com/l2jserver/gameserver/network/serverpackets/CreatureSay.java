@@ -90,6 +90,14 @@ public final class CreatureSay extends L2GameServerPacket
 		_text = text;
 	}
 	
+	public CreatureSay(L2PcInstance player, int messageType, String text)
+	{
+		_objectId = player.getObjectId();
+		_textType = messageType;
+		_charName = player.getAppearance().getVisibleName();
+		_text = text;
+	}
+	
 	public CreatureSay(int objectId, int messageType, int charId, NpcStringId npcString)
 	{
 		_objectId = objectId;

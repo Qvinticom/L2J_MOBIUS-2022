@@ -295,6 +295,7 @@ import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
 import quests.Q10323_TrainLikeItsReal.Q10323_TrainLikeItsReal;
 import quests.Q10324_FindingMagisterGallint.Q10324_FindingMagisterGallint;
+import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
@@ -303,6 +304,12 @@ import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
 import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 import quests.Q10734_DoOrDie.Q10734_DoOrDie;
+import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
+import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
+import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
+import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
+import quests.Q10739_SupplyAndDemand.Q10739_SupplyAndDemand;
+import quests.Q10740_NeverForget.Q10740_NeverForget;
 
 /**
  * @author NosBit
@@ -587,6 +594,7 @@ public class QuestMasterHandler
 		Q10322_SearchingForTheMysteriousPower.class,
 		Q10323_TrainLikeItsReal.class,
 		Q10324_FindingMagisterGallint.class,
+		Q10338_SeizeYourDestiny.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
@@ -594,7 +602,13 @@ public class QuestMasterHandler
 		Q10505_JewelOfValakas.class,
 		Q10732_AForeignLand.class,
 		Q10733_TheTestForSurvival.class,
-		Q10734_DoOrDie.class
+		Q10734_DoOrDie.class,
+		Q10735_ASpecialPower.class,
+		Q10736_ASpecialPower.class,
+		Q10737_GrakonsWarehouse.class,
+		Q10738_AnInnerBeauty.class,
+		Q10739_SupplyAndDemand.class,
+		Q10740_NeverForget.class
 	};
 	
 	public static void main(String[] args)

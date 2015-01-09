@@ -22,6 +22,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -73,6 +74,7 @@ public final class RequestWithdrawalPledge extends L2GameClientPacket
 		
 		// Remove the Player From the Member list
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(activeChar.getName()));
+		clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 		
 		activeChar.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_CLAN);
 		activeChar.sendPacket(SystemMessageId.AFTER_LEAVING_OR_HAVING_BEEN_DISMISSED_FROM_A_CLAN_YOU_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN);

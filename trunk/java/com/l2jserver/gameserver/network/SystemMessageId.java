@@ -9508,7 +9508,7 @@ public final class SystemMessageId
 	@ClientString(id = 3306, message = "You are declaring Clan War against $s1. If you withdraw from the war, your clan will lose 5,000 Reputation points. Proceed?")
 	public static SystemMessageId YOU_ARE_DECLARING_CLAN_WAR_AGAINST_S1_IF_YOU_WITHDRAW_FROM_THE_WAR_YOUR_CLAN_WILL_LOSE_5_000_REPUTATION_POINTS_PROCEED;
 	
-	@ClientString(id = 3307, message = "$s1 will be deleted from Friend List.nDo you want to continue?  ")
+	@ClientString(id = 3307, message = "$s1 will be deleted from Friend List.nDo you want to continue?")
 	public static SystemMessageId S1_WILL_BE_DELETED_FROM_FRIEND_LIST_NDO_YOU_WANT_TO_CONTINUE;
 	
 	@ClientString(id = 3308, message = "No character is selected to add to the list. Please select a character.")

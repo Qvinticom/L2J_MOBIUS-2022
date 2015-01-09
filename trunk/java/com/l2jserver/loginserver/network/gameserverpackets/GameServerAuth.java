@@ -129,7 +129,7 @@ public class GameServerAuth extends BaseRecievePacket
 				if (Config.ACCEPT_NEW_GAMESERVER && _acceptAlternativeId)
 				{
 					gsi = new GameServerInfo(id, hexId, _server);
-					if (gameServerTable.registerWithFirstAvaliableId(gsi))
+					if (gameServerTable.registerWithFirstAvailableId(gsi))
 					{
 						_server.attachGameServerInfo(gsi, _port, _hosts, _maxPlayers);
 						gameServerTable.registerServerOnDB(gsi);

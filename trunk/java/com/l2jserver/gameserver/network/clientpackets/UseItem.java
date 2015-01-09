@@ -308,6 +308,16 @@ public final class UseItem extends L2GameClientPacket
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;
 					}
+					break;
+				}
+				case L2Item.SLOT_BROOCH_JEWEL:
+				{
+					if (!item.isEquipped() && (activeChar.getInventory().getBroochJewelSlots() == 0))
+					{
+						activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
+						return;
+					}
+					break;
 				}
 			}
 			

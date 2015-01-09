@@ -22,6 +22,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -241,5 +242,35 @@ public final class PropertiesParser
 			_log.warning("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be enum value of \"" + clazz.getSimpleName() + "\" using default value: " + defaultValue);
 			return defaultValue;
 		}
+	}
+	
+	/**
+	 * @param durationPattern
+	 * @param defaultValue
+	 * @return {@link Duration} object by the durationPattern specified, {@code null} in case of malformed pattern.
+	 */
+	public Duration getDuration(String durationPattern, String defaultValue)
+	{
+		return getDuration(durationPattern, defaultValue, null);
+	}
+	
+	/**
+	 * @param durationPattern
+	 * @param defaultValue
+	 * @param defaultDuration
+	 * @return {@link Duration} object by the durationPattern specified, the defaultDuration in case of malformed pattern.
+	 */
+	public Duration getDuration(String durationPattern, String defaultValue, Duration defaultDuration)
+	{
+		final String value = getString(durationPattern, defaultValue);
+		try
+		{
+			return TimeUtil.parseDuration(value);
+		}
+		catch (IllegalStateException e)
+		{
+			_log.warning("[" + _file.getName() + "] Invalid value specified for key: " + durationPattern + " specified value: " + value + " should be time patttern using default value: " + defaultValue);
+		}
+		return defaultDuration;
 	}
 }

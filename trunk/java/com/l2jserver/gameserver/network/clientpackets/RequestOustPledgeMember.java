@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -46,7 +47,7 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -94,6 +95,7 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 		
 		// Remove the Player From the Member list
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(_target));
+		clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 		
 		if (member.isOnline())
 		{

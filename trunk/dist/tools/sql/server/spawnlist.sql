@@ -9522,8 +9522,6 @@ INSERT INTO `spawnlist` VALUES
 ("gludio_blacksmith", 1, 35098, -17644, 109616, -2656, 0, 0, 33000, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("gludio_warehouse", 1, 35099, -18130, 110020, -2656, 0, 0, 49152, 60, 0, 0, 0),
--- Sayres
-("gludio_chamberlain_etc", 1, 35100, -18212, 108827, -2472, 0, 0, 16384, 60, 0, 0, 0),
 -- Grad
 ("Wyvern_Manager", 1, 35101, -17952, 108142, -2032, 0, 0, -16384, 60, 0, 0, 0),
 -- Greenspan
@@ -12318,8 +12316,6 @@ INSERT INTO `spawnlist` VALUES
 ("rune_blacksmith", 1, 35507, 12872, -48752, -1088, 0, 0, 33000, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("rune_warehouse", 1, 35508, 12864, -49184, -1088, 0, 0, 39746, 60, 0, 0, 0),
--- Frederick
-("rune_chamberlain_etc", 1, 35509, 10211, -49084, -307, 0, 0, 36736, 60, 0, 0, 0),
 -- Titus
 ("rune_chamberlain_etc", 1, 35510, 12318, -47703, 1296, 0, 0, 22879, 60, 0, 0, 0),
 -- Gompus
@@ -14932,8 +14928,6 @@ INSERT INTO `spawnlist` VALUES
 ("dion_blacksmith", 1, 35140, 21649, 160199, -2850, 0, 0, 61379, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("dion_warehouse", 1, 35141, 22100, 159781, -2877, 0, 0, 6134, 60, 0, 0, 0),
--- Crosby
-("dion_chamberlain_etc", 1, 35142, 22172, 160923, -2666, 0, 0, 49152, 60, 0, 0, 0),
 -- Hodler
 ("Wyvern_Manager", 1, 35143, 21912, 161608, -2226, 0, 0, 0, 60, 0, 0, 0),
 -- Mercenary Manager Sanford
@@ -20837,8 +20831,6 @@ INSERT INTO `spawnlist` VALUES
 ("schuttgart_blacksmith", 1, 35553, 77056, -152960, -904, 0, 0, 16500, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("schuttgart_warehouse", 1, 35554, 78080, -152976, -904, 0, 0, 16500, 60, 0, 0, 0),
--- August
-("schuttgart_chmberlain_etc", 1, 35555, 77488, -153360, -384, 0, 0, 16500, 60, 0, 0, 0),
 -- Gallic
 ("schuttgart_chmberlain_etc", 1, 35556, 77502, -153296, 1224, 0, 0, 16500, 60, 0, 0, 0),
 -- Kendrew
@@ -23701,8 +23693,6 @@ INSERT INTO `spawnlist` VALUES
 ("oren_warehouse", 1, 35224, 82464, 37592, -2450, 0, 0, 44984, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("oren_blacksmith", 1, 35225, 82043, 37132, -2450, 0, 0, 65001, 60, 0, 0, 0),
--- Brasseur
-("oren_chamberlain_etc", 1, 35226, 83171, 37092, -2266, 0, 0, 32768, 60, 0, 0, 0),
 -- Finrod
 ("Wyvern_Manager", 1, 35227, 83853, 37192, -1835, 0, 0, 49000, 60, 0, 0, 0),
 -- Morrison
@@ -27053,127 +27043,10 @@ INSERT INTO `spawnlist` VALUES
 ("schuttgart01_qm2312_0", 1, 27200, 125124, -174219, -1062, 0, 0, 0, 180, 0, 0, 0),
 ("schuttgart01_qm2312_0", 1, 27200, 125526, -174219, -1062, 0, 0, 0, 180, 0, 0, 0),
 ("schuttgart01_qm2312_0", 1, 27200, 125326, -173863, -1062, 0, 0, 0, 180, 0, 0, 0),
--- Reep
-("Dwarf_Village_Npc", 1, 30516, 115741, -181645, -1320, 0, 0, 8192, 60, 0, 0, 0),
--- Shari
-("Dwarf_Village_Npc", 1, 30517, 116192, -181072, -1336, 0, 0, 40960, 60, 0, 0, 0),
--- Garita
-("Dwarf_Village_Npc", 1, 30518, 115900, -177316, -880, 0, 0, 50000, 60, 0, 0, 0),
--- Mion
-("Dwarf_Village_Npc", 1, 30519, 116268, -177524, -880, 0, 0, 32768, 60, 0, 0, 0),
--- Reed
-("Dwarf_Village_Npc", 1, 30520, 115205, -180024, -872, 0, 0, 32768, 60, 0, 0, 0),
--- Murdoc
-("Dwarf_Village_Npc", 1, 30521, 114716, -180018, -872, 0, 0, 0, 60, 0, 0, 0),
--- Airy
-("Dwarf_Village_Npc", 1, 30522, 114832, -179520, -856, 0, 0, 49152, 60, 0, 0, 0),
--- Gouph
-("Dwarf_Village_Npc", 1, 30523, 115717, -183488, -1472, 0, 0, 8192, 60, 0, 0, 0),
--- Pippi
-("Dwarf_Village_Npc", 1, 30524, 115618, -183265, -1472, 0, 0, 55000, 60, 0, 0, 0),
--- Bronk
-("Dwarf_Village_Npc", 1, 30525, 115468, -182446, -1440, 0, 0, 32768, 60, 0, 0, 0),
--- Brunon
-("Dwarf_Village_Npc", 1, 30526, 115315, -182155, -1440, 0, 0, 49152, 60, 0, 0, 0),
--- Silvera
-("Dwarf_Village_Npc", 1, 30527, 115271, -182692, -1440, 0, 0, 4096, 60, 0, 0, 0),
--- Laferon
-("Dwarf_Village_Npc", 1, 30528, 108593, -174041, -408, 0, 0, 38500, 60, 0, 0, 0),
--- Maron
-("Dwarf_Village_Npc", 1, 30529, 112265, -173366, -608, 0, 0, 47000, 60, 0, 0, 0),
--- Newbie Helper
-("Dwarf_Village_Npc", 1, 30530, 108567, -173994, -408, 0, 0, 38000, 60, 0, 0, 0),
--- Lockirin
-("Dwarf_Village_Npc", 1, 30531, 116226, -178529, -944, 0, 0, 32768, 60, 0, 0, 0),
--- Spiron
-("Dwarf_Village_Npc", 1, 30532, 116190, -178441, -944, 0, 0, 40960, 60, 0, 0, 0),
--- Balanki
-("Dwarf_Village_Npc", 1, 30533, 116016, -178615, -944, 0, 0, 8192, 60, 0, 0, 0),
--- Keef
-("Dwarf_Village_Npc", 1, 30534, 116190, -178615, -944, 0, 0, 24576, 60, 0, 0, 0),
--- Filaur
-("Dwarf_Village_Npc", 1, 30535, 116103, -178407, -944, 0, 0, 49152, 60, 0, 0, 0),
--- Arin
-("Dwarf_Village_Npc", 1, 30536, 116103, -178653, -944, 0, 0, 16384, 60, 0, 0, 0),
--- Daichir
-("Dwarf_Village_Npc", 1, 30537, 114348, -178537, -808, 0, 0, 0, 60, 0, 0, 0),
--- Zimenf
-("Dwarf_Village_Npc", 1, 30538, 114426, -178672, -808, 0, 0, 8192, 60, 0, 0, 0),
--- Chichirin
-("Dwarf_Village_Npc", 1, 30539, 114409, -178415, -808, 0, 0, 57344, 60, 0, 0, 0),
--- Teleport Device
-("Dwarf_Village_Npc", 1, 30540, 115072, -178176, -880, 0, 0, 0, 60, 0, 0, 0),
--- Paion
-("Dwarf_Village_Npc", 1, 30541, 117847, -182339, -1528, 0, 0, 0, 60, 0, 0, 0),
--- Runant
-("Dwarf_Village_Npc", 1, 30542, 116617, -184308, -1560, 0, 0, 49152, 60, 0, 0, 0),
--- Ethan
-("Dwarf_Village_Npc", 1, 30543, 117826, -182576, -1528, 0, 0, 0, 60, 0, 0, 0),
--- Cromwell
-("Dwarf_Village_Npc", 1, 30544, 116378, -184308, -1568, 0, 0, 49152, 60, 0, 0, 0),
--- Proton
-("Dwarf_Village_Npc", 1, 30545, 115183, -176728, -784, 0, 0, 20480, 60, 0, 0, 0),
--- Dinkey
-("Dwarf_Village_Npc", 1, 30546, 114969, -176752, -784, 0, 0, 15384, 60, 0, 0, 0),
--- Tardyon
-("Dwarf_Village_Npc", 1, 30547, 117366, -178725, -1112, 0, 0, 0, 60, 0, 0, 0),
--- Nathan
-("Dwarf_Village_Npc", 1, 30548, 117378, -178914, -1120, 0, 0, 0, 60, 0, 0, 0),
--- Gauri Twinklerock
-("Dwarf_Village_Npc", 1, 30550, 115563, -182923, -1448, 0, 0, 8192, 60, 0, 0, 0),
--- Maryse Redbonnet
-("Dwarf_Village_Npc", 1, 30553, 116852, -183595, -1568, 0, 0, 32768, 60, 0, 0, 0),
--- Bolter
-("Dwarf_Village_Npc", 1, 30554, 112656, -174864, -608, 0, 0, 8192, 60, 0, 0, 0),
 -- Torocco
 ("Dwarf_Village_Npc", 1, 30555, 114866, -180328, -881, 0, 0, 16384, 60, 0, 0, 0),
--- Newbie Helper
-("Dwarf_Village_Npc", 1, 30601, 115632, -177996, -896, 0, 0, 32768, 60, 0, 0, 0),
--- Gerald
-("Dwarf_Village_Npc", 1, 30650, 114990, -177294, -856, 0, 0, 0, 60, 0, 0, 0),
--- Dorf
-("Dwarf_Village_Npc", 1, 30651, 116164, -184029, -1488, 0, 0, 8192, 60, 0, 0, 0),
 -- Nyakuri
 ("schuttgart03_npc2312_007", 1, 30670, 125832, -180002, -1773, 0, 0, 57344, 60, 0, 0, 0),
--- Croto
-("Dwarf_Village_Npc", 1, 30671, 117061, -181867, -1408, 0, 0, 36864, 60, 0, 0, 0),
--- Lottery Ticket Seller
-("Dwarf_Village_Npc", 1, 30993, 115075, -178133, -880, 0, 0, 1000, 60, 0, 0, 0),
--- Broadcasting Tower
-("Dwarf_Village_Npc", 1, 31031, 116080, -182448, -1475, 0, 0, 16384, 5, 0, 0, 0),
--- Defender
-("Dwarf_Village_Npc", 1, 31035, 108710, -173054, -552, 0, 0, 52136, 60, 0, 0, 0),
-("Dwarf_Village_Npc", 1, 31035, 115670, -175332, -976, 0, 0, 44851, 60, 0, 0, 0),
-("Dwarf_Village_Npc", 1, 31035, 121191, -181095, -1888, 0, 0, 44955, 60, 0, 0, 0),
-("Dwarf_Village_Npc", 1, 31035, 121571, -180964, -1848, 0, 0, 11039, 60, 0, 0, 0),
-("Dwarf_Village_Npc", 1, 31035, 121750, -195804, -3576, 0, 0, 29769, 60, 0, 0, 0),
-("Dwarf_Village_Npc", 1, 31035, 130172, -188772, -3344, 0, 0, 54115, 60, 0, 0, 0),
--- Tate
-("Dwarf_Village", 1, 31362, 115820, -181568, -1338, 0, 0, 0, 60, 0, 0, 0),
--- Rogin
-("Dwarf_Village", 1, 31363, 115756, -183472, -1477, 0, 0, 0, 60, 0, 0, 0),
--- Ropfi
-("Dwarf_Village_Npc", 1, 31566, 116272, -177248, -880, 0, 0, 40000, 60, 0, 0, 0),
--- Grand Olympiad Manager
-("Dwarf_Village_Npc", 1, 31688, 115488, -179616, -888, 0, 0, 0, 60, 0, 0, 0),
--- Mr. Cat
-("Dwarven Village", 1, 31756, 116224, -181728, -1373, 0, 0, 0, 60, 0, 0, 0),
-("Dwarven Village", 1, 31756, 114880, -178144, -827, 0, 0, 0, 60, 0, 0, 0),
--- Miss Queen
-("Dwarven Village", 1, 31757, 116218, -181793, -1379, 0, 0, 0, 60, 0, 0, 0),
-("Dwarven Village", 1, 31757, 114880, -178196, -827, 0, 0, 0, 60, 0, 0, 0),
--- Monument of Heroes
-("Dwarf_Village_Npc", 1, 31772, 115488, -179664, -888, 0, 0, 0, 60, 0, 0, 0),
--- Adventure Guildsman
-("Dwarf_Village_Npc", 1, 31782, 115627, -177970, -896, 0, 0, 40000, 60, 0, 0, 0),
--- Adventure Guildsman
-("Dwarf_Village_Npc", 1, 31783, 116640, -183952, -1560, 0, 0, 39000, 60, 0, 0, 0),
--- Dimensional Merchant
-("Dwarf_Village_Npc", 1, 32478, 115020, -179728, -880, 0, 0, 0, 60, 0, 0, 0),
--- Inventor Maru
-("Dwarf_Village_Npc", 1, 32486, 117057, -183091, -1520, 0, 0, 28672, 60, 0, 0, 0),
--- Manor Manager
-("Dwarf_Village_Npc", 1, 35644, 116176, -181600, -1360, 0, 0, 0, 60, 0, 0, 0),
 
 -- [23_13]
 
@@ -31027,8 +30900,6 @@ INSERT INTO `spawnlist` VALUES
 ("giran_blacksmith", 1, 35182, 116494, 145516, -2723, 0, 0, 58824, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("giran_warehouse", 1, 35183, 115910, 145101, -2723, 0, 0, 1353, 60, 0, 0, 0),
--- Saul
-("giran_chamberlain_etc", 1, 35184, 117095, 144997, -2539, 0, 0, 32768, 60, 0, 0, 0),
 -- Bryce
 ("Wyvern_Manager", 1, 35185, 117780, 145257, -2099, 0, 0, 49000, 60, 0, 0, 0),
 -- Arvid
@@ -31804,8 +31675,6 @@ INSERT INTO `spawnlist` VALUES
 ("innadril_blacksmith", 1, 35314, 115649, 249072, -973, 0, 0, 868, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("innadril_warehouse", 1, 35315, 116015, 248558, -946, 0, 0, 18052, 60, 0, 0, 0),
--- Neurath
-("innadrile_chamberlain_etc", 1, 35316, 116123, 249702, -762, 0, 0, 49152, 60, 0, 0, 0),
 -- Tate
 ("Wyvern_Manager", 1, 35317, 115863, 250387, -322, 0, 0, 0, 60, 0, 0, 0),
 -- Solinus
@@ -33791,8 +33660,6 @@ INSERT INTO `spawnlist` VALUES
 ("goddard_blacksmith", 1, 35361, 146992, -48896, -2640, 0, 0, 16000, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("goddard_warehouse", 1, 35362, 147952, -48912, -2640, 0, 0, 16000, 60, 0, 0, 0),
--- Alfred
-("godard03_npc2416_01", 1, 35363, 147408, -49296, -2120, 0, 0, 16500, 60, 0, 0, 0),
 -- Hadley
 ("Wyvern_Manager", 1, 35364, 147470, -49083, -503, 0, 0, 16500, 60, 0, 0, 0),
 -- Rowell
@@ -34655,8 +34522,6 @@ INSERT INTO `spawnlist` VALUES
 ("aden_blacksmith", 1, 35272, 147908, 5595, -884, 0, 0, 48126, 60, 0, 0, 0),
 -- Warehouse Keeper
 ("aden_warehouse", 1, 35273, 147056, 5595, -884, 0, 0, 58383, 60, 0, 0, 0),
--- Logan
-("aden_chamberlain_etc", 1, 35274, 147412, 3355, -46, 0, 0, 16389, 60, 0, 0, 0),
 -- Kruger
 ("Wyvern_Manager", 1, 35275, 147449, 1899, 216, 0, 0, 49000, 60, 0, 0, 0),
 -- Eldon
@@ -42813,6 +42678,10 @@ INSERT INTO `spawnlist` VALUES
 -- New Dark Elf Village
 ('20_18', 1, 30992, 9656, 15578, -4568, 0, 0, 6000, 60, 0, 0, 0), -- Lottery Ticket Seller
 ('20_18', 1, 30134, 11171, 15932, -4584, 0, 0, 0, 60, 0, 0, 0), -- Teleport Device
+-- New Dwarven Village
+('23_12', 1, 30993, 115075, -178133, -912, 0, 0, 1000, 60, 0, 0, 0), -- Lottery Ticket Seller
+('23_12', 1, 30540, 115441, -178117, -928, 0, 0, 0, 60, 0, 0, 0), -- Teleport Device
+('23_12', 1, 33788, 117309, -180137, -1152, 0, 0, 20656, 60, 0, 0, 0), -- Deserted Dwarven House
 -- New Town of Oren
 ('22_19', 1, 30197, 81102, 53053, -1560, 0, 0, 49152, 60, 0, 0, 0), -- Hector
 ('22_19', 1, 32482, 80913, 53053, -1560, 0, 0, 49152, 60, 0, 0, 0), -- Emdrere

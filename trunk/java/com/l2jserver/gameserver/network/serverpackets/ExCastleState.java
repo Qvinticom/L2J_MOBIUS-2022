@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.model.entity.Castle;
 
 /**
@@ -26,12 +27,12 @@ import com.l2jserver.gameserver.model.entity.Castle;
 public class ExCastleState extends L2GameServerPacket
 {
 	private final int _castleId;
-	private final int _state;
+	private final CastleSide _castleSide;
 	
 	public ExCastleState(Castle castle)
 	{
 		_castleId = castle.getResidenceId();
-		_state = castle.getState();
+		_castleSide = castle.getSide();
 	}
 	
 	@Override
@@ -40,6 +41,6 @@ public class ExCastleState extends L2GameServerPacket
 		writeC(0xFE);
 		writeH(0x12D);
 		writeD(_castleId);
-		writeD(_state);
+		writeD(_castleSide.ordinal());
 	}
 }

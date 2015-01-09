@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Clan.SubPledge;
 import com.l2jserver.gameserver.model.L2ClanMember;
@@ -27,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class PledgeShowMemberListAll extends L2GameServerPacket
 {
 	private final L2Clan _clan;
-	private final L2ClanMember[] _members;
+	private final Collection<L2ClanMember> _members;
 	private int _pledgeType;
 	
 	public PledgeShowMemberListAll(L2Clan clan)

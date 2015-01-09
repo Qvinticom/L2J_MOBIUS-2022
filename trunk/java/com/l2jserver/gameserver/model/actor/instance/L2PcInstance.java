@@ -40,7 +40,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -81,6 +80,7 @@ import com.l2jserver.gameserver.datatables.PlayerXpPercentLostData;
 import com.l2jserver.gameserver.datatables.RecipeData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.HtmlActionScope;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
@@ -168,7 +168,6 @@ import com.l2jserver.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.LookingForFishTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.PetFeedTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.PvPFlagTask;
-import com.l2jserver.gameserver.model.actor.tasks.player.RecoBonusTaskEnd;
 import com.l2jserver.gameserver.model.actor.tasks.player.RecoGiveTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.RentPetTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.ResetChargesTask;
@@ -176,7 +175,6 @@ import com.l2jserver.gameserver.model.actor.tasks.player.ResetSoulsTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.SitDownTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.StandUpTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.TeleportWatchdogTask;
-import com.l2jserver.gameserver.model.actor.tasks.player.VitalityTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.WarnUserTakeBreakTask;
 import com.l2jserver.gameserver.model.actor.tasks.player.WaterTask;
 import com.l2jserver.gameserver.model.actor.templates.L2PcTemplate;
@@ -262,6 +260,7 @@ import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
+import com.l2jserver.gameserver.network.serverpackets.ExAcquireAPSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
@@ -272,6 +271,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jserver.gameserver.network.serverpackets.ExGetOnAirShip;
 import com.l2jserver.gameserver.network.serverpackets.ExMagicAttackInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExOlympiadMode;
+import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import com.l2jserver.gameserver.network.serverpackets.ExSetCompassZoneCode;
 import com.l2jserver.gameserver.network.serverpackets.ExStartScenePlayer;
@@ -370,9 +370,9 @@ public final class L2PcInstance extends L2Playable
 	private static final String DELETE_TP_BOOKMARK = "DELETE FROM character_tpbookmark WHERE charId=? AND Id=?";
 	
 	// Character Subclass SQL String Definitions:
-	private static final String RESTORE_CHAR_SUBCLASSES = "SELECT class_id,exp,sp,level,class_index FROM character_subclasses WHERE charId=? ORDER BY class_index ASC";
-	private static final String ADD_CHAR_SUBCLASS = "INSERT INTO character_subclasses (charId,class_id,exp,sp,level,class_index) VALUES (?,?,?,?,?,?)";
-	private static final String UPDATE_CHAR_SUBCLASS = "UPDATE character_subclasses SET exp=?,sp=?,level=?,class_id=? WHERE charId=? AND class_index =?";
+	private static final String RESTORE_CHAR_SUBCLASSES = "SELECT class_id,exp,sp,level,class_index,dual_class FROM character_subclasses WHERE charId=? ORDER BY class_index ASC";
+	private static final String ADD_CHAR_SUBCLASS = "INSERT INTO character_subclasses (charId,class_id,exp,sp,level,class_index,dual_class) VALUES (?,?,?,?,?,?,?)";
+	private static final String UPDATE_CHAR_SUBCLASS = "UPDATE character_subclasses SET exp=?,sp=?,level=?,class_id=?,dual_class=? WHERE charId=? AND class_index =?";
 	private static final String DELETE_CHAR_SUBCLASS = "DELETE FROM character_subclasses WHERE charId=? AND class_index=?";
 	
 	// Character Henna SQL String Definitions:
@@ -396,6 +396,8 @@ public final class L2PcInstance extends L2Playable
 	public static final int ID_NONE = -1;
 	
 	public static final int REQUEST_TIMEOUT = 15;
+	
+	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
 	
 	private final List<IEventListener> _eventListeners = new FastList<IEventListener>().shared();
 	
@@ -488,9 +490,6 @@ public final class L2PcInstance extends L2Playable
 	private int _fame;
 	private ScheduledFuture<?> _fameTask;
 	
-	/** Vitality recovery task */
-	private ScheduledFuture<?> _vitalityTask;
-	
 	private volatile ScheduledFuture<?> _teleportWatchdog;
 	
 	/** The Siege state of the L2PcInstance */
@@ -568,8 +567,6 @@ public final class L2PcInstance extends L2Playable
 	private int _recomHave; // how much I was recommended by others
 	/** The number of recommendation that the L2PcInstance can give */
 	private int _recomLeft; // how many recommendations I can give to others
-	/** Recommendation Bonus task **/
-	private ScheduledFuture<?> _recoBonusTask;
 	/** Recommendation task **/
 	private ScheduledFuture<?> _recoGiveTask;
 	/** Recommendation Two Hours bonus **/
@@ -1119,8 +1116,6 @@ public final class L2PcInstance extends L2Playable
 		
 		// Create a L2Radar object
 		_radar = new L2Radar(this);
-		
-		startVitalityTask();
 	}
 	
 	@Override
@@ -5556,6 +5551,10 @@ public final class L2PcInstance extends L2Playable
 					increasePvpKills(target);
 				}
 			}
+			else if (targetPlayer.isOnDarkSide()) // Member's of Dark side can be killed without any penalty
+			{
+				increasePvpKills(target);
+			}
 			else if (targetPlayer.getPvpFlag() == 0) // Target player doesn't have karma
 			{
 				increasePkKillsAndKarma(target);
@@ -5768,8 +5767,6 @@ public final class L2PcInstance extends L2Playable
 		stopSoulTask();
 		stopChargeTask();
 		stopFameTask();
-		stopVitalityTask();
-		stopRecoBonusTask();
 		stopRecoGiveTask();
 	}
 	
@@ -6173,7 +6170,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	protected void reduceArrowCount(boolean bolts)
 	{
-		L2ItemInstance arrows = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final L2ItemInstance arrows = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		
 		if (arrows == null)
 		{
@@ -6187,6 +6184,12 @@ public final class L2PcInstance extends L2Playable
 				_arrowItem = null;
 			}
 			sendPacket(new ItemList(this, false));
+			return;
+		}
+		
+		// Infinite quiver doesn't decreases arrows upon use
+		if (arrows.isEtcItem() && arrows.getEtcItem().isInfinite())
+		{
 			return;
 		}
 		
@@ -7017,8 +7020,6 @@ public final class L2PcInstance extends L2Playable
 					
 					CursedWeaponsManager.getInstance().checkPlayer(player);
 					
-					player.setVitalityPoints(rset.getInt("vitality_points"), true);
-					
 					// Set the x,y,z position of the L2PcInstance and make it invisible
 					player.setXYZInvisible(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
 					
@@ -7113,6 +7114,9 @@ public final class L2PcInstance extends L2Playable
 				final long masks = player.getVariables().getLong(COND_OVERRIDE_KEY, PcCondOverride.getAllExceptionsMask());
 				player.setOverrideCond(masks);
 			}
+			
+			player.loadRecommendations();
+			player.startRecoGiveTask();
 		}
 		catch (Exception e)
 		{
@@ -7194,8 +7198,9 @@ public final class L2PcInstance extends L2Playable
 					subClass.setClassId(rset.getInt("class_id"));
 					subClass.setLevel(rset.getByte("level"));
 					subClass.setExp(rset.getLong("exp"));
-					subClass.setSp(rset.getInt("sp"));
+					subClass.setSp(rset.getLong("sp"));
 					subClass.setClassIndex(rset.getInt("class_index"));
+					subClass.setIsDualClass(rset.getBoolean("dual_class"));
 					
 					// Enforce the correct indexing of _subClasses against their class indexes.
 					player.getSubClasses().put(subClass.getClassIndex(), subClass);
@@ -7470,7 +7475,7 @@ public final class L2PcInstance extends L2Playable
 			statement.setString(45, getName());
 			statement.setLong(46, 0); // unset
 			statement.setInt(47, getBookMarkSlot());
-			statement.setInt(48, getVitalityPoints());
+			statement.setInt(48, 0); // unset
 			statement.setString(49, getLang());
 			statement.setInt(50, getObjectId());
 			
@@ -7500,7 +7505,7 @@ public final class L2PcInstance extends L2Playable
 				statement.setInt(4, subClass.getClassId());
 				statement.setInt(5, getObjectId());
 				statement.setInt(6, subClass.getClassIndex());
-				
+				statement.setBoolean(7, subClass.isDualClass());
 				statement.execute();
 				statement.clearParameters();
 			}
@@ -9772,6 +9777,42 @@ public final class L2PcInstance extends L2Playable
 		return _blockList;
 	}
 	
+	/**
+	 * @param player
+	 * @return returns {@code true} if player is current player cannot accepting messages from the target player, {@code false} otherwise
+	 */
+	public boolean isBlocking(L2PcInstance player)
+	{
+		return _blockList.isBlockAll() || _blockList.isInBlockList(player);
+	}
+	
+	/**
+	 * @param player
+	 * @return returns {@code true} if player is current player can accepting messages from the target player, {@code false} otherwise
+	 */
+	public boolean isNotBlocking(L2PcInstance player)
+	{
+		return !_blockList.isBlockAll() && !_blockList.isInBlockList(player);
+	}
+	
+	/**
+	 * @param player
+	 * @return returns {@code true} if player is target player cannot accepting messages from the current player, {@code false} otherwise
+	 */
+	public boolean isBlocked(L2PcInstance player)
+	{
+		return player.getBlockList().isBlockAll() || player.getBlockList().isInBlockList(this);
+	}
+	
+	/**
+	 * @param player
+	 * @return returns {@code true} if player is target player can accepting messages from the current player, {@code false} otherwise
+	 */
+	public boolean isNotBlocked(L2PcInstance player)
+	{
+		return !player.getBlockList().isBlockAll() && !player.getBlockList().isInBlockList(this);
+	}
+	
 	public void setHero(boolean hero)
 	{
 		if (hero && (_baseClass == _activeClass))
@@ -9956,6 +9997,10 @@ public final class L2PcInstance extends L2Playable
 		_noble = val;
 		
 		sendSkillList();
+		if (val && (getLevel() == 99))
+		{
+			sendPacket(new ExAcquireAPSkillList(this));
+		}
 	}
 	
 	public void setLvlJoinedAcademy(int lvl)
@@ -10092,7 +10137,8 @@ public final class L2PcInstance extends L2Playable
 				statement.setLong(3, newClass.getExp());
 				statement.setLong(4, newClass.getSp());
 				statement.setInt(5, newClass.getLevel());
-				statement.setInt(6, newClass.getClassIndex()); // <-- Added
+				statement.setInt(6, newClass.getClassIndex());
+				statement.setBoolean(7, newClass.isDualClass());
 				statement.execute();
 			}
 			catch (Exception e)
@@ -10201,6 +10247,24 @@ public final class L2PcInstance extends L2Playable
 	public boolean isSubClassActive()
 	{
 		return _classIndex > 0;
+	}
+	
+	public void setDualClass(int classIndex)
+	{
+		if (isSubClassActive())
+		{
+			getSubClasses().get(_classIndex).setIsDualClass(true);
+		}
+	}
+	
+	public boolean isDualClassActive()
+	{
+		return isSubClassActive() && getSubClasses().get(_classIndex).isDualClass();
+	}
+	
+	public boolean hasDualClass()
+	{
+		return getSubClasses().values().stream().anyMatch(SubClass::isDualClass);
 	}
 	
 	public Map<Integer, SubClass> getSubClasses()
@@ -11567,6 +11631,7 @@ public final class L2PcInstance extends L2Playable
 		if (getClanId() > 0)
 		{
 			getClan().broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
+			getClan().broadcastToOnlineMembers(new ExPledgeCount(getClan()));
 			// ClanTable.getInstance().getClan(getClanId()).broadcastToOnlineMembers(new PledgeShowMemberListAdd(this));
 		}
 		
@@ -12240,23 +12305,6 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public void startVitalityTask()
-	{
-		if (Config.ENABLE_VITALITY && (_vitalityTask == null))
-		{
-			_vitalityTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new VitalityTask(this), 1000, 60000);
-		}
-	}
-	
-	public void stopVitalityTask()
-	{
-		if (_vitalityTask != null)
-		{
-			_vitalityTask.cancel(false);
-			_vitalityTask = null;
-		}
-	}
-	
 	public int getPowerGrade()
 	{
 		return _powerGrade;
@@ -12541,20 +12589,12 @@ public final class L2PcInstance extends L2Playable
 		return getStat().getVitalityPoints();
 	}
 	
-	/**
-	 * @return Vitality Level
-	 */
-	public int getVitalityLevel()
-	{
-		return getStat().getVitalityLevel();
-	}
-	
 	public void setVitalityPoints(int points, boolean quiet)
 	{
 		getStat().setVitalityPoints(points, quiet);
 	}
 	
-	public void updateVitalityPoints(float points, boolean useRates, boolean quiet)
+	public void updateVitalityPoints(int points, boolean useRates, boolean quiet)
 	{
 		getStat().updateVitalityPoints(points, useRates, quiet);
 	}
@@ -13889,11 +13929,9 @@ public final class L2PcInstance extends L2Playable
 	
 	/**
 	 * Load L2PcInstance Recommendations data.
-	 * @return
 	 */
-	private long loadRecommendations()
+	private void loadRecommendations()
 	{
-		long _time_left = 0;
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT rec_have,rec_left,time_left FROM character_reco_bonus WHERE charId=? LIMIT 1"))
 		{
@@ -13904,11 +13942,6 @@ public final class L2PcInstance extends L2Playable
 				{
 					setRecomHave(rset.getInt("rec_have"));
 					setRecomLeft(rset.getInt("rec_left"));
-					_time_left = rset.getLong("time_left");
-				}
-				else
-				{
-					_time_left = 3600000;
 				}
 			}
 		}
@@ -13916,7 +13949,6 @@ public final class L2PcInstance extends L2Playable
 		{
 			_log.log(Level.SEVERE, "Could not restore Recommendations for player: " + getObjectId(), e);
 		}
-		return _time_left;
 	}
 	
 	/**
@@ -13924,23 +13956,17 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void storeRecommendations()
 	{
-		long recoTaskEnd = 0;
-		if (_recoBonusTask != null)
-		{
-			recoTaskEnd = Math.max(0, _recoBonusTask.getDelay(TimeUnit.MILLISECONDS));
-		}
-		
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO character_reco_bonus (charId,rec_have,rec_left,time_left) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE rec_have=?, rec_left=?, time_left=?"))
 		{
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, getRecomHave());
 			statement.setInt(3, getRecomLeft());
-			statement.setLong(4, recoTaskEnd);
+			statement.setLong(4, 0);
 			// Update part
 			statement.setInt(5, getRecomHave());
 			statement.setInt(6, getRecomLeft());
-			statement.setLong(7, recoTaskEnd);
+			statement.setLong(7, 0);
 			statement.execute();
 		}
 		catch (Exception e)
@@ -13949,37 +13975,13 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public void checkRecoBonusTask()
+	public void startRecoGiveTask()
 	{
-		// Load data
-		long taskTime = loadRecommendations();
-		
-		if (taskTime > 0)
-		{
-			// Add 20 recos on first login
-			if (taskTime == 3600000)
-			{
-				setRecomLeft(getRecomLeft() + 20);
-			}
-			
-			// If player have some timeleft, start bonus task
-			_recoBonusTask = ThreadPoolManager.getInstance().scheduleGeneral(new RecoBonusTaskEnd(this), taskTime);
-		}
-		
 		// Create task to give new recommendations
 		_recoGiveTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new RecoGiveTask(this), 7200000, 3600000);
 		
 		// Store new data
 		storeRecommendations();
-	}
-	
-	public void stopRecoBonusTask()
-	{
-		if (_recoBonusTask != null)
-		{
-			_recoBonusTask.cancel(false);
-			_recoBonusTask = null;
-		}
 	}
 	
 	public void stopRecoGiveTask()
@@ -13999,22 +14001,6 @@ public final class L2PcInstance extends L2Playable
 	public void setRecoTwoHoursGiven(boolean val)
 	{
 		_recoTwoHoursGiven = val;
-	}
-	
-	public int getRecomBonusTime()
-	{
-		if (_recoBonusTask != null)
-		{
-			return (int) Math.max(0, _recoBonusTask.getDelay(TimeUnit.SECONDS));
-		}
-		
-		return 0;
-	}
-	
-	public int getRecomBonusType()
-	{
-		// Maintain = 1
-		return 0;
 	}
 	
 	public void setLastPetitionGmName(String gmName)
@@ -14342,6 +14328,25 @@ public final class L2PcInstance extends L2Playable
 		
 	}
 	
+	public boolean isAwaken()
+	{
+		if (((getActiveClass() >= 139) && (getActiveClass() <= 181)) || (getActiveClass() >= 188))
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public int getJumpTrackId()
+	{
+		return _jumpTrackId;
+	}
+	
+	public void setJumpTrackId(int jumpTrackId)
+	{
+		_jumpTrackId = jumpTrackId;
+	}
+	
 	/**
 	 * @param target the target
 	 * @return {@code true} if this player got war with the target, {@code false} otherwise.
@@ -14362,82 +14367,149 @@ public final class L2PcInstance extends L2Playable
 		return false;
 	}
 	
+	/**
+	 * Sets the beauty shop hair
+	 * @param hairId
+	 */
 	public void setVisualHair(int hairId)
 	{
 		getVariables().set("visualHairId", hairId);
 	}
 	
+	/**
+	 * Sets the beauty shop hair color
+	 * @param colorId
+	 */
 	public void setVisualHairColor(int colorId)
 	{
 		getVariables().set("visualHairColorId", colorId);
 	}
 	
+	/**
+	 * Sets the beauty shop modified face
+	 * @param faceId
+	 */
 	public void setVisualFace(int faceId)
 	{
 		getVariables().set("visualFaceId", faceId);
 	}
 	
+	/**
+	 * @return the beauty shop hair, or his normal if not changed.
+	 */
 	public int getVisualHair()
 	{
 		return getVariables().getInt("visualHairId", getAppearance().getHairStyle());
 	}
 	
+	/**
+	 * @return the beauty shop hair color, or his normal if not changed.
+	 */
 	public int getVisualHairColor()
 	{
 		return getVariables().getInt("visualHairColorId", getAppearance().getHairColor());
 	}
 	
+	/**
+	 * @return the beauty shop modified face, or his normal if not changed.
+	 */
 	public int getVisualFace()
 	{
 		return getVariables().getInt("visualFaceId", getAppearance().getFace());
 	}
 	
+	/**
+	 * @return {@code true} if player has mentees, {@code false} otherwise
+	 */
 	public boolean isMentor()
 	{
 		return MentorManager.getInstance().isMentor(getObjectId());
 	}
 	
+	/**
+	 * @return {@code true} if player has mentor, {@code false} otherwise
+	 */
 	public boolean isMentee()
 	{
 		return MentorManager.getInstance().isMentee(getObjectId());
 	}
 	
+	/**
+	 * @return the amount of ability points player can spend on learning skills.
+	 */
 	public int getAbilityPoints()
 	{
 		return getVariables().getInt("ABILITY_POINTS", 0);
 	}
 	
+	/**
+	 * Sets the amount of ability points player can spend on learning skills.
+	 * @param points
+	 */
 	public void setAbilityPoints(int points)
 	{
 		getVariables().set("ABILITY_POINTS", points);
 	}
 	
+	/**
+	 * @return how much ability points player has spend on learning skills.
+	 */
 	public int getAbilityPointsUsed()
 	{
 		return getVariables().getInt("ABILITY_POINTS_USED", 0);
 	}
 	
+	/**
+	 * Sets how much ability points player has spend on learning skills.
+	 * @param points
+	 */
 	public void setAbilityPointsUsed(int points)
 	{
 		getVariables().set("ABILITY_POINTS_USED", points);
 	}
 	
-	public boolean isAwaken()
+	/**
+	 * @return The amount of times player can use world chat
+	 */
+	public int getWorldChatPoints()
 	{
-		if (((getActiveClass() >= 139) && (getActiveClass() <= 181)) || (getActiveClass() >= 188))
+		return getVariables().getInt(WORLD_CHAT_VARIABLE_NAME, 1);
+	}
+	
+	/**
+	 * Sets the amount of times player can use world chat
+	 * @param points
+	 */
+	public void setWorldChatPoints(int points)
+	{
+		getVariables().set(WORLD_CHAT_VARIABLE_NAME, points);
+	}
+	
+	/**
+	 * @return Side of the player.
+	 */
+	public CastleSide getPlayerSide()
+	{
+		if ((getClan() == null) || (getClan().getCastleId() == 0))
 		{
-			return true;
+			return CastleSide.NEUTRAL;
 		}
-		return false;
+		return CastleManager.getInstance().getCastleById(getClan().getCastleId()).getSide();
 	}
 	
-	public int getJumpTrackId()
+	/**
+	 * @return {@code true} if player is on Dark side, {@code false} otherwise.
+	 */
+	public boolean isOnDarkSide()
 	{
-		return _jumpTrackId;
+		return getPlayerSide() == CastleSide.DARK;
 	}
 	
-	public void setJumpTrackId(int jumpTrackId)
+	/**
+	 * @return {@code true} if player is on Light side, {@code false} otherwise.
+	 */
+	public boolean isOnLightSide()
 	{
-		_jumpTrackId = jumpTrackId;
+		return getPlayerSide() == CastleSide.LIGHT;
 	}
 }

@@ -35,22 +35,7 @@ public final class SubClass
 	private long _sp = 0;
 	private byte _level = Config.BASE_SUBCLASS_LEVEL;
 	private int _classIndex = 1;
-	
-	public SubClass(int classId, long exp, int sp, byte level, int classIndex)
-	{
-		_class = PlayerClass.values()[classId];
-		_exp = exp;
-		_sp = sp;
-		_level = level;
-		_classIndex = classIndex;
-	}
-	
-	public SubClass(int classId, int classIndex)
-	{
-		// Used for defining a sub class using default values for XP, SP and player level.
-		_class = PlayerClass.values()[classId];
-		_classIndex = classIndex;
-	}
+	private boolean _dualClass = false;
 	
 	public SubClass()
 	{
@@ -117,9 +102,19 @@ public final class SubClass
 		_classIndex = classIndex;
 	}
 	
+	public boolean isDualClass()
+	{
+		return _dualClass;
+	}
+	
+	public void setIsDualClass(boolean dualClass)
+	{
+		_dualClass = dualClass;
+	}
+	
 	public void setLevel(byte levelValue)
 	{
-		if (levelValue > _maxLevel)
+		if (!_dualClass && (levelValue > _maxLevel))
 		{
 			levelValue = _maxLevel;
 		}
@@ -133,7 +128,7 @@ public final class SubClass
 	
 	public void incLevel()
 	{
-		if (getLevel() == _maxLevel)
+		if (!_dualClass && (getLevel() == _maxLevel))
 		{
 			return;
 		}

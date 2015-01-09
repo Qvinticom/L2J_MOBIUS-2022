@@ -143,7 +143,7 @@ public class BlockList
 		return _blockList.contains(targetId);
 	}
 	
-	private boolean isBlockAll()
+	public boolean isBlockAll()
 	{
 		return _owner.getMessageRefusal();
 	}

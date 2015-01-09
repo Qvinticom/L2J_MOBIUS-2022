@@ -22,6 +22,7 @@ import java.util.List;
 
 import javolution.util.FastList;
 
+import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 
 public class L2SiegeClan
@@ -30,14 +31,6 @@ public class L2SiegeClan
 	private List<L2Npc> _flag = new FastList<>();
 	private int _numFlagsAdded = 0;
 	private SiegeClanType _type;
-	
-	public enum SiegeClanType
-	{
-		OWNER,
-		DEFENDER,
-		ATTACKER,
-		DEFENDER_PENDING
-	}
 	
 	public L2SiegeClan(int clanId, SiegeClanType type)
 	{

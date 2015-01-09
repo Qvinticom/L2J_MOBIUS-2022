@@ -109,8 +109,8 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getPAtkSpd());
 		
 		writeD(_activeChar.getMDef(null, null));
-		writeD(0x00); // magic evasion
-		writeD(0x00); // magic accuracy
+		writeD(_activeChar.getMagicEvasionRate(null));
+		writeD(_activeChar.getMagicAccuracy());
 		writeD(_activeChar.getMCriticalHit(null, null));
 		
 		writeD(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name

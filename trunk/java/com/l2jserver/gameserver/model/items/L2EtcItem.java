@@ -36,6 +36,7 @@ public final class L2EtcItem extends L2Item
 	private EtcItemType _type;
 	private final boolean _isBlessed;
 	private final List<L2ExtractableProduct> _extractableItems;
+	private final boolean _isInfinite;
 	
 	/**
 	 * Constructor for EtcItem.
@@ -117,6 +118,8 @@ public final class L2EtcItem extends L2Item
 		{
 			_extractableItems = null;
 		}
+		
+		_isInfinite = set.getBoolean("is_infinite", false);
 	}
 	
 	/**
@@ -159,5 +162,13 @@ public final class L2EtcItem extends L2Item
 	public List<L2ExtractableProduct> getExtractableItems()
 	{
 		return _extractableItems;
+	}
+	
+	/**
+	 * @return true if item is infinite
+	 */
+	public boolean isInfinite()
+	{
+		return _isInfinite;
 	}
 }

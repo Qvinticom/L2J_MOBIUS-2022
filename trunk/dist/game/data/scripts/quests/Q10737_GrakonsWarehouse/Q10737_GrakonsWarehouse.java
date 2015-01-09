@@ -22,88 +22,79 @@ import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Krash
+ * @author Sdw
  */
 public class Q10737_GrakonsWarehouse extends Quest
 {
-	// Npcs
-	private static final int Grakon = 33947;
-	private static final int Katalin = 33943;
-	private static final int Ayanthe = 33942;
-	// Items
-	private static final int Apprentice_Support_Box = 39520;
-	private static final int Apprentice_Adventurer_Staff = 7816;
-	private static final int Apprentice_Adventurer_Fists = 7819;
-	
-	// Level Check
+	// NPC's
+	private static final int KATALIN = 33943;
+	private static final int AYANTHE = 33942;
+	private static final int GRAKON = 33947;
+	// Misc
 	private static final int MIN_LEVEL = 5;
 	private static final int MAX_LEVEL = 20;
+	// Items
+	private static final ItemHolder APPRENTICE_SUPPORT_BOX = new ItemHolder(39520, 1);
+	private static final ItemHolder APPRENTICE_ADVENTURER_STAFF = new ItemHolder(7816, 1);
+	private static final ItemHolder APPRENTICE_ADVENTURER_FISTS = new ItemHolder(7819, 1);
 	
 	public Q10737_GrakonsWarehouse()
 	{
 		super(10737, Q10737_GrakonsWarehouse.class.getSimpleName(), "Grakon's Warehouse");
-		addStartNpc(Katalin, Ayanthe);
-		addTalkId(Katalin, Ayanthe, Grakon);
-		registerQuestItems(Apprentice_Support_Box);
-		addCondMinLevel(MIN_LEVEL, "");
-		addCondMaxLevel(MAX_LEVEL, "");
-		addCondRace(Race.ERTHEIA, "");
+		addStartNpc(KATALIN, AYANTHE);
+		addTalkId(KATALIN, AYANTHE, GRAKON);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.htm");
+		addCondRace(Race.ERTHEIA, "fixme.htm");
+		registerQuestItems(APPRENTICE_SUPPORT_BOX.getId());
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		String htmltext = null;
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "33942-03.htm":
 			case "33943-03.htm":
 			{
 				qs.startQuest();
-				qs.setCond(1);
-				qs.giveItems(Apprentice_Support_Box, 1);
+				giveItems(player, APPRENTICE_SUPPORT_BOX);
 				htmltext = event;
 				break;
 			}
-			
 			case "33947-04.htm":
-			{
-				if (qs.isCond(1))
-				{
-					giveAdena(player, 11000, true);
-					addExpAndSp(player, 2650, 0);
-					qs.giveItems(Apprentice_Adventurer_Fists, 1);
-					qs.exitQuest(false, true);
-					htmltext = event;
-				}
-				break;
-			}
-			
 			case "33947-08.htm":
 			{
-				if (qs.isCond(1))
+				if (qs.isStarted())
 				{
 					giveAdena(player, 11000, true);
-					addExpAndSp(player, 2650, 0);
-					qs.giveItems(Apprentice_Adventurer_Staff, 1);
+					addExpAndSp(player, 2625, 0);
+					if (player.getClassId() == ClassId.ERTHEIA_FIGHTER)
+					{
+						giveItems(player, APPRENTICE_ADVENTURER_FISTS);
+					}
+					else if (player.getClassId() == ClassId.ERTHEIA_WIZARD)
+					{
+						giveItems(player, APPRENTICE_ADVENTURER_STAFF);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
 			}
-			
-			case "33943-02.htm":
 			case "33942-02.htm":
+			case "33943-02.htm":
 			case "33947-02.htm":
 			case "33947-03.htm":
 			case "33947-06.htm":
@@ -113,7 +104,6 @@ public class Q10737_GrakonsWarehouse extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -123,48 +113,29 @@ public class Q10737_GrakonsWarehouse extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
+		if (qs.isCompleted())
+		{
+			htmltext = getAlreadyCompletedMsg(player);
+		}
+		
 		switch (npc.getId())
 		{
-			case Katalin:
-				if (qs.isCond(0) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getClassId() == ClassId.ERTHEIA_FIGHTER))
+			case KATALIN:
+			case AYANTHE:
+			{
+				if (qs.isCreated())
 				{
-					htmltext = "33943-01.htm";
+					htmltext = npc.getId() + "-01.htm";
 				}
-				else
+				else if (qs.isStarted())
 				{
-					htmltext = "33943-noLevel.htm";
-				}
-				if (qs.isCond(1))
-				{
-					htmltext = "33943-03.htm";
-				}
-				if ((player.getLevel() < MIN_LEVEL) && (player.getLevel() > MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
-				{
-					htmltext = "33943-noLevel.htm";
+					htmltext = npc.getId() + "-03.htm";
 				}
 				break;
-			
-			case Ayanthe:
-				if (qs.isCond(0) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getClassId() == ClassId.ERTHEIA_WIZARD))
-				{
-					htmltext = "33942-01.htm";
-				}
-				else
-				{
-					htmltext = "33942-noLevel.htm";
-				}
-				if (qs.isCond(1))
-				{
-					htmltext = "33942-03.htm";
-				}
-				if ((player.getLevel() < MIN_LEVEL) && (player.getLevel() > MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
-				{
-					htmltext = "33942-noLevel.htm";
-				}
-				break;
-			
-			case Grakon:
-				if (qs.isCond(1) && qs.hasQuestItems(Apprentice_Support_Box))
+			}
+			case GRAKON:
+			{
+				if (qs.isStarted())
 				{
 					if (player.getClassId() == ClassId.ERTHEIA_FIGHTER)
 					{
@@ -176,6 +147,7 @@ public class Q10737_GrakonsWarehouse extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

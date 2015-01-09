@@ -20,6 +20,8 @@ package com.l2jserver.gameserver.datatables;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
@@ -27,6 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.engines.DocumentEngine;
+import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
@@ -150,21 +153,23 @@ public final class SkillData
 	 * @param hasCastle
 	 * @return an array with siege skills. If addNoble == true, will add also Advanced headquarters.
 	 */
-	public Skill[] getSiegeSkills(boolean addNoble, boolean hasCastle)
+	public List<Skill> getSiegeSkills(boolean addNoble, boolean hasCastle)
 	{
-		Skill[] temp = new Skill[2 + (addNoble ? 1 : 0) + (hasCastle ? 2 : 0)];
-		int i = 0;
-		temp[i++] = _skills.get(SkillData.getSkillHashCode(246, 1));
-		temp[i++] = _skills.get(SkillData.getSkillHashCode(247, 1));
+		final List<Skill> temp = new LinkedList<>();
+		
+		temp.add(_skills.get(SkillData.getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
+		temp.add(_skills.get(SkillData.getSkillHashCode(CommonSkill.IMPRIT_OF_DARKNESS.getId(), 1)));
+		
+		temp.add(_skills.get(SkillData.getSkillHashCode(247, 1))); // Build Headquarters
 		
 		if (addNoble)
 		{
-			temp[i++] = _skills.get(SkillData.getSkillHashCode(326, 1));
+			temp.add(_skills.get(SkillData.getSkillHashCode(326, 1))); // Build Advanced Headquarters
 		}
 		if (hasCastle)
 		{
-			temp[i++] = _skills.get(SkillData.getSkillHashCode(844, 1));
-			temp[i++] = _skills.get(SkillData.getSkillHashCode(845, 1));
+			temp.add(_skills.get(SkillData.getSkillHashCode(844, 1))); // Outpost Construction
+			temp.add(_skills.get(SkillData.getSkillHashCode(845, 1))); // Outpost Demolition
 		}
 		return temp;
 	}

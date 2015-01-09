@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.JoinPledge;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListAdd;
@@ -77,7 +78,7 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 			}
 			
 			RequestJoinPledge requestPacket = (RequestJoinPledge) requestor.getRequest().getRequestPacket();
-			L2Clan clan = requestor.getClan();
+			final L2Clan clan = requestor.getClan();
 			// we must double check this cause during response time conditions can be changed, i.e. another player could join clan
 			if (clan.checkClanJoinCondition(requestor, activeChar, requestPacket.getPledgeType()))
 			{
@@ -102,18 +103,19 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 				sm.addString(activeChar.getName());
 				clan.broadcastToOnlineMembers(sm);
 				
-				if (activeChar.getClan().getCastleId() > 0)
+				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
+					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
 				}
-				if (activeChar.getClan().getFortId() > 0)
+				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
+					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
 				}
 				activeChar.sendSkillList();
 				
 				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(activeChar), activeChar);
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
+				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 				
 				// this activates the clan tab on the new member
 				activeChar.sendPacket(new PledgeShowMemberListAll(clan));

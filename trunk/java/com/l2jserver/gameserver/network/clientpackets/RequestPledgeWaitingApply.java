@@ -76,7 +76,7 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 			
 			if (clanLeader != null)
 			{
-				clanLeader.sendPacket(new ExPledgeWaitingListAlarm());
+				clanLeader.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
 			}
 		}
 		else

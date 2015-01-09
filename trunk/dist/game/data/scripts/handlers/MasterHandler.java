@@ -18,28 +18,6 @@
  */
 package handlers;
 
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.ActionHandler;
-import com.l2jserver.gameserver.handler.ActionShiftHandler;
-import com.l2jserver.gameserver.handler.AdminCommandHandler;
-import com.l2jserver.gameserver.handler.BypassHandler;
-import com.l2jserver.gameserver.handler.ChatHandler;
-import com.l2jserver.gameserver.handler.CommunityBoardHandler;
-import com.l2jserver.gameserver.handler.IHandler;
-import com.l2jserver.gameserver.handler.ItemHandler;
-import com.l2jserver.gameserver.handler.PunishmentHandler;
-import com.l2jserver.gameserver.handler.TargetHandler;
-import com.l2jserver.gameserver.handler.TelnetHandler;
-import com.l2jserver.gameserver.handler.UserCommandHandler;
-import com.l2jserver.gameserver.handler.VoicedCommandHandler;
-
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
 import handlers.actionhandlers.L2DoorInstanceAction;
@@ -62,8 +40,10 @@ import handlers.admincommandhandlers.AdminBBS;
 import handlers.admincommandhandlers.AdminBuffs;
 import handlers.admincommandhandlers.AdminCHSiege;
 import handlers.admincommandhandlers.AdminCamera;
+import handlers.admincommandhandlers.AdminCastle;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
 import handlers.admincommandhandlers.AdminClan;
+import handlers.admincommandhandlers.AdminClanHall;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
 import handlers.admincommandhandlers.AdminDebug;
@@ -115,7 +95,6 @@ import handlers.admincommandhandlers.AdminScan;
 import handlers.admincommandhandlers.AdminShop;
 import handlers.admincommandhandlers.AdminShowQuests;
 import handlers.admincommandhandlers.AdminShutdown;
-import handlers.admincommandhandlers.AdminSiege;
 import handlers.admincommandhandlers.AdminSkill;
 import handlers.admincommandhandlers.AdminSpawn;
 import handlers.admincommandhandlers.AdminSummon;
@@ -168,6 +147,7 @@ import handlers.chathandlers.ChatPetition;
 import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTell;
 import handlers.chathandlers.ChatTrade;
+import handlers.chathandlers.ChatWorld;
 import handlers.communityboard.ClanBoard;
 import handlers.communityboard.FavoriteBoard;
 import handlers.communityboard.FriendsBoard;
@@ -272,6 +252,28 @@ import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.StatsVCmd;
 import handlers.voicedcommandhandlers.Wedding;
 
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.ActionHandler;
+import com.l2jserver.gameserver.handler.ActionShiftHandler;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.BypassHandler;
+import com.l2jserver.gameserver.handler.ChatHandler;
+import com.l2jserver.gameserver.handler.CommunityBoardHandler;
+import com.l2jserver.gameserver.handler.IHandler;
+import com.l2jserver.gameserver.handler.ItemHandler;
+import com.l2jserver.gameserver.handler.PunishmentHandler;
+import com.l2jserver.gameserver.handler.TargetHandler;
+import com.l2jserver.gameserver.handler.TelnetHandler;
+import com.l2jserver.gameserver.handler.UserCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
+
 /**
  * Master handler.
  * @author UnAfraid
@@ -330,6 +332,7 @@ public class MasterHandler
 			AdminChangeAccessLevel.class,
 			AdminCHSiege.class,
 			AdminClan.class,
+			AdminCastle.class,
 			AdminPcCondOverride.class,
 			AdminCreateItem.class,
 			AdminCursedWeapons.class,
@@ -381,7 +384,7 @@ public class MasterHandler
 			AdminShop.class,
 			AdminShowQuests.class,
 			AdminShutdown.class,
-			AdminSiege.class,
+			AdminClanHall.class,
 			AdminSkill.class,
 			AdminSpawn.class,
 			AdminSummon.class,
@@ -440,6 +443,7 @@ public class MasterHandler
 			ChatShout.class,
 			ChatTell.class,
 			ChatTrade.class,
+			ChatWorld.class,
 		},
 		{
 			// Community Board

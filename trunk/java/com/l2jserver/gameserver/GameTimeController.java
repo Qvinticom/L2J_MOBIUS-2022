@@ -19,14 +19,11 @@
 package com.l2jserver.gameserver;
 
 import java.util.Calendar;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javolution.util.FastMap;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.ai.L2CharacterAI;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 
@@ -49,7 +46,7 @@ public final class GameTimeController extends Thread
 	
 	private static GameTimeController _instance;
 	
-	private final FastMap<Integer, L2Character> _movingObjects = new FastMap<Integer, L2Character>().shared();
+	private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
 	private GameTimeController()
@@ -113,7 +110,7 @@ public final class GameTimeController extends Thread
 			return;
 		}
 		
-		_movingObjects.putIfAbsent(cha.getObjectId(), cha);
+		_movingObjects.add(cha);
 	}
 	
 	/**
@@ -129,43 +126,7 @@ public final class GameTimeController extends Thread
 	 */
 	private final void moveObjects()
 	{
-		for (FastMap.Entry<Integer, L2Character> e = _movingObjects.head(), tail = _movingObjects.tail(); (e = e.getNext()) != tail;)
-		{
-			final L2Character character = e.getValue();
-			
-			if (character.updatePosition(getGameTicks()))
-			{
-				// Destination reached. Remove from map and execute arrive event.
-				_movingObjects.remove(e.getKey());
-				fireCharacterArrived(character);
-			}
-		}
-	}
-	
-	private final void fireCharacterArrived(final L2Character character)
-	{
-		final L2CharacterAI ai = character.getAI();
-		if (ai == null)
-		{
-			return;
-		}
-		
-		ThreadPoolManager.getInstance().executeAi(() ->
-		{
-			try
-			{
-				if (Config.MOVE_BASED_KNOWNLIST)
-				{
-					character.getKnownList().findObjects();
-				}
-				
-				ai.notifyEvent(CtrlEvent.EVT_ARRIVED);
-			}
-			catch (final Throwable e)
-			{
-				_log.log(Level.WARNING, "", e);
-			}
-		});
+		_movingObjects.removeIf(L2Character::updatePosition);
 	}
 	
 	public final void stopTimer()

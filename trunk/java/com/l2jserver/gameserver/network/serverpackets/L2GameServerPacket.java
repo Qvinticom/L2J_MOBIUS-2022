@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 
 import org.mmocore.network.SendablePacket;
 
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 import com.l2jserver.gameserver.model.interfaces.IUpdateTypeComponent;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
@@ -178,8 +179,23 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 	
 	protected abstract void writeImpl();
 	
+	/**
+	 * @param masks
+	 * @param type
+	 * @return {@code true} if the mask contains the current update component type
+	 */
 	protected static boolean containsMask(int masks, IUpdateTypeComponent type)
 	{
 		return (masks & type.getMask()) == type.getMask();
+	}
+	
+	/**
+	 * Sends this packet to the target player, useful for lambda operations like <br>
+	 * {@code L2World.getInstance().getPlayers().forEach(packet::sendTo)}
+	 * @param player
+	 */
+	public void sendTo(L2PcInstance player)
+	{
+		player.sendPacket(this);
 	}
 }

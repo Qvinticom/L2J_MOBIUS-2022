@@ -18,6 +18,9 @@
  */
 package com.l2jserver.gameserver.model.base;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 
@@ -265,6 +268,9 @@ public enum ClassId implements IIdentifiable
 	/** The parent ClassId or null if this class is a root */
 	private final ClassId _parent;
 	
+	/** List of available Class for next transfer **/
+	private final Set<ClassId> _nextClassIds = new HashSet<>(1);
+	
 	/**
 	 * Class constructor.
 	 * @param pId the class Id.
@@ -279,6 +285,11 @@ public enum ClassId implements IIdentifiable
 		_isSummoner = false;
 		_race = race;
 		_parent = pParent;
+		
+		if (_parent != null)
+		{
+			_parent.addNextClassId(this);
+		}
 	}
 	
 	/**
@@ -296,6 +307,11 @@ public enum ClassId implements IIdentifiable
 		_isSummoner = pIsSummoner;
 		_race = race;
 		_parent = pParent;
+		
+		if (_parent != null)
+		{
+			_parent.addNextClassId(this);
+		}
 	}
 	
 	/**
@@ -382,6 +398,14 @@ public enum ClassId implements IIdentifiable
 		return _parent;
 	}
 	
+	/**
+	 * @return list of possible class transfer for this class
+	 */
+	public Set<ClassId> getNextClassIds()
+	{
+		return _nextClassIds;
+	}
+	
 	public static ClassId getClassId(int cId)
 	{
 		try
@@ -392,5 +416,10 @@ public enum ClassId implements IIdentifiable
 		{
 			return null;
 		}
+	}
+	
+	private final void addNextClassId(ClassId cId)
+	{
+		_nextClassIds.add(cId);
 	}
 }

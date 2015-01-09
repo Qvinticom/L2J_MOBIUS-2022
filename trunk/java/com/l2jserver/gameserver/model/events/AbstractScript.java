@@ -125,6 +125,7 @@ import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -2106,6 +2107,7 @@ public abstract class AbstractScript extends ManagedScript
 		}
 		// send packets
 		player.sendPacket(new ExUserInfoInvenWeight(player));
+		player.sendPacket(new ExAdenaInvenCount(player));
 	}
 	
 	/**

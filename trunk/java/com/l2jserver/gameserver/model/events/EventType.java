@@ -49,6 +49,7 @@ import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAtt
 import com.l2jserver.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerAugment;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerBypass;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerChangeToAwakenedClass;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerChat;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerDelete;
@@ -216,6 +217,7 @@ public enum EventType
 	ON_PLAYER_LOGOUT(OnPlayerLogout.class, void.class),
 	ON_PLAYER_PK_CHANGED(OnPlayerPKChanged.class, void.class),
 	ON_PLAYER_PROFESSION_CHANGE(OnPlayerProfessionChange.class, void.class),
+	ON_PLAYER_CHANGE_TO_AWAKENED_CLASS(OnPlayerChangeToAwakenedClass.class, void.class),
 	ON_PLAYER_PVP_CHANGED(OnPlayerPvPChanged.class, void.class),
 	ON_PLAYER_PVP_KILL(OnPlayerPvPKill.class, void.class),
 	ON_PLAYER_RESTORE(OnPlayerRestore.class, void.class),
