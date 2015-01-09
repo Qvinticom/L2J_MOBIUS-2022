@@ -83,7 +83,7 @@ public final class HomeBoard implements IParseBoardHandler
 		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsmultisell"))
 		{
 			final String fullBypass = command.replace("_bbsmultisell;", "");
-			final String[] buypassOptions = fullBypass.split(":");
+			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
@@ -93,7 +93,7 @@ public final class HomeBoard implements IParseBoardHandler
 		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsteleport"))
 		{
 			final String fullBypass = command.replace("_bbsteleport;", "");
-			final String[] buypassOptions = fullBypass.split(":");
+			final String[] buypassOptions = fullBypass.split(",");
 			final int x = Integer.parseInt(buypassOptions[0]);
 			final int y = Integer.parseInt(buypassOptions[1]);
 			final int z = Integer.parseInt(buypassOptions[2]);
@@ -111,7 +111,7 @@ public final class HomeBoard implements IParseBoardHandler
 		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsbuff"))
 		{
 			final String fullBypass = command.replace("_bbsbuff;", "");
-			final String[] buypassOptions = fullBypass.split(":");
+			final String[] buypassOptions = fullBypass.split(",");
 			final int buffId = Integer.parseInt(buypassOptions[0]);
 			final int buffLevel = Integer.parseInt(buypassOptions[1]);
 			final String page = buypassOptions[2];
