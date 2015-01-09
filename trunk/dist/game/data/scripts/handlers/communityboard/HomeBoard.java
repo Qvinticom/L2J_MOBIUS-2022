@@ -82,16 +82,22 @@ public final class HomeBoard implements IParseBoardHandler
 		}
 		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsmultisell"))
 		{
-			final int multisell = Integer.valueOf(command.replace("_bbsmultisell;", ""));
-			MultisellData.getInstance().separateAndSend(multisell, activeChar, null, false);
+			final String fullBypass = command.replace("_bbsmultisell;", "");
+			final String[] buypassOptions = fullBypass.split(":");
+			final int multisellId = Integer.parseInt(buypassOptions[0]);
+			final String page = buypassOptions[1];
+			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
+			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsteleport"))
 		{
 			final String fullBypass = command.replace("_bbsteleport;", "");
-			final String[] teleportBypass = fullBypass.split(":");
-			final int x = Integer.parseInt(teleportBypass[0]);
-			final int y = Integer.parseInt(teleportBypass[1]);
-			final int z = Integer.parseInt(teleportBypass[2]);
+			final String[] buypassOptions = fullBypass.split(":");
+			final int x = Integer.parseInt(buypassOptions[0]);
+			final int y = Integer.parseInt(buypassOptions[1]);
+			final int z = Integer.parseInt(buypassOptions[2]);
+			final String page = buypassOptions[3];
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_TELEPORT_PRICE)
 			{
 				activeChar.sendMessage("Not enough currency!");
@@ -99,20 +105,27 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			activeChar.getInventory().destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, activeChar);
 			activeChar.teleToLocation(x, y, z, 0);
+			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsbuff"))
 		{
 			final String fullBypass = command.replace("_bbsbuff;", "");
-			final String[] buffBypass = fullBypass.split(":");
-			final int buffId = Integer.parseInt(buffBypass[0]);
-			final int buffLevel = Integer.parseInt(buffBypass[1]);
+			final String[] buypassOptions = fullBypass.split(":");
+			final int buffId = Integer.parseInt(buypassOptions[0]);
+			final int buffLevel = Integer.parseInt(buypassOptions[1]);
+			final String page = buypassOptions[2];
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_BUFF_PRICE)
 			{
 				activeChar.sendMessage("Not enough currency!");
-				return false;
 			}
-			activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, activeChar);
-			SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar, activeChar);
+			else
+			{
+				activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, activeChar);
+				SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar, activeChar);
+			}
+			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		return true;
 	}
