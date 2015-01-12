@@ -980,14 +980,17 @@ public abstract class L2Summon extends L2Playable
 	 */
 	public void doAttack()
 	{
-		if (getOwner() != null)
+		final L2PcInstance owner = getOwner();
+		final L2Object target = getOwner().getTarget();
+		
+		if ((owner != null) && (target != null))
 		{
-			final L2Object target = getOwner().getTarget();
-			if (target != null)
+			if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((owner.isGood() && target.getActingPlayer().isGood()) || (owner.isEvil() && target.getActingPlayer().isEvil())))
 			{
-				setTarget(target);
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				return;
 			}
+			setTarget(target);
+			getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
 	}
 	

@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -71,6 +72,14 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
+			player.setActiveRequester(null);
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && ((player.isEvil() && partner.isGood()) || (player.isGood() && partner.isEvil())))
+		{
+			player.sendPacket(new TradeDone(0));
+			player.sendMessage("You cannot trade with different team members.");
 			player.setActiveRequester(null);
 			return;
 		}

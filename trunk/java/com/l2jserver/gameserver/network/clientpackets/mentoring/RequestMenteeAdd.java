@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets.mentoring;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -50,6 +51,12 @@ public class RequestMenteeAdd extends L2GameClientPacket
 		final L2PcInstance mentee = L2World.getInstance().getPlayer(_target);
 		if (mentee == null)
 		{
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && ((mentor.isEvil() && mentee.isGood()) || (mentor.isGood() && mentee.isEvil())))
+		{
+			mentor.sendMessage("You cannot mentor a member of the opposing faction.");
 			return;
 		}
 		

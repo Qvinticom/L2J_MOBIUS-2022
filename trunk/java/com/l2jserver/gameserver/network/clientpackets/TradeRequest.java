@@ -190,6 +190,12 @@ public final class TradeRequest extends L2GameClientPacket
 			return;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED && ((player.isEvil() && partner.isGood()) || (player.isGood() && partner.isEvil())))
+		{
+			player.sendMessage("You cannot trade with different team members.");
+			return;
+		}
+		
 		player.onTransactionRequest(partner);
 		partner.sendPacket(new SendTradeRequest(player.getObjectId()));
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);

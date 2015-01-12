@@ -82,6 +82,11 @@ public final class RequestDuelStart extends L2GameClientPacket
 			activeChar.sendPacket(msg);
 			return;
 		}
+		else if (Config.FACTION_SYSTEM_ENABLED && ((activeChar.isEvil() && targetChar.isGood()) || (activeChar.isGood() && targetChar.isEvil())))
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
+			return;
+		}
 		
 		// Duel is a party duel
 		if (_partyDuel == 1)

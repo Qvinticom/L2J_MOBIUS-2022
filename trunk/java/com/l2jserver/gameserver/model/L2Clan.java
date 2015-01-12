@@ -2258,6 +2258,11 @@ public class L2Clan implements IIdentifiable, INamable
 			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return false;
 		}
+		if (Config.FACTION_SYSTEM_ENABLED && ((activeChar.isGood() && target.isEvil()) || (activeChar.isEvil() && target.isGood())))
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			return false;
+		}
 		if (activeChar.getObjectId() == target.getObjectId())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
@@ -2333,6 +2338,11 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 		}
 		if (target == null)
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			return false;
+		}
+		if (Config.FACTION_SYSTEM_ENABLED && ((activeChar.isGood() && target.isEvil()) || (activeChar.isEvil() && target.isGood())))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return false;

@@ -72,6 +72,10 @@ public final class L2World
 	
 	/** Map containing all the players in game. */
 	private final Map<Integer, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
+	/** Map containing all the Good players in game. */
+	private final static Map<Integer, L2PcInstance> _allGoodPlayers = new ConcurrentHashMap<>();
+	/** Map containing all the Evil players in game. */
+	private final static Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
 	private final Map<Integer, L2Object> _allObjects = new ConcurrentHashMap<>();
 	/** Map used for debug. */
@@ -165,6 +169,16 @@ public final class L2World
 		return _allPlayers.values();
 	}
 	
+	public Collection<L2PcInstance> getAllGoodPlayers()
+	{
+		return _allGoodPlayers.values();
+	}
+	
+	public Collection<L2PcInstance> getAllEvilPlayers()
+	{
+		return _allEvilPlayers.values();
+	}
+	
 	/**
 	 * Gets all players sorted by the given comparator.
 	 * @param comparator the comparator
@@ -184,6 +198,16 @@ public final class L2World
 	public int getAllPlayersCount()
 	{
 		return _allPlayers.size();
+	}
+	
+	public int getAllgoodPlayersCount()
+	{
+		return _allGoodPlayers.size();
+	}
+	
+	public int getAllevilPlayersCount()
+	{
+		return _allEvilPlayers.size();
 	}
 	
 	/**
@@ -315,6 +339,23 @@ public final class L2World
 	public void addPlayerToWorld(L2PcInstance player)
 	{
 		_allPlayers.put(player.getObjectId(), player);
+		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			addFactionPlayerToWorld(player);
+		}
+	}
+	
+	public static void addFactionPlayerToWorld(L2PcInstance player)
+	{
+		if (player.isGood())
+		{
+			_allGoodPlayers.put(player.getObjectId(), player);
+		}
+		else if (player.isEvil())
+		{
+			_allEvilPlayers.put(player.getObjectId(), player);
+		}
 	}
 	
 	/**
@@ -324,6 +365,18 @@ public final class L2World
 	public void removeFromAllPlayers(L2PcInstance player)
 	{
 		_allPlayers.remove(player.getObjectId());
+		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			if (player.isGood())
+			{
+				_allGoodPlayers.remove(player.getObjectId());
+			}
+			else if (player.isEvil())
+			{
+				_allEvilPlayers.remove(player.getObjectId());
+			}
+		}
 	}
 	
 	/**

@@ -61,6 +61,7 @@ import org.w3c.dom.Node;
 import com.l2jserver.gameserver.engines.DocumentParser;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.util.FloodProtectorConfig;
@@ -817,6 +818,16 @@ public final class Config
 	public static int COMMUNITYBOARD_CURRENCY;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
+	public static boolean FACTION_SYSTEM_ENABLED;
+	public static Location FACTION_STARTING_LOCATION;
+	public static int FACTION_MANAGER_NPCID;
+	public static Location FACTION_MANAGER_LOCATION;
+	public static Location FACTION_GOOD_BASE_LOCATION;
+	public static Location FACTION_EVIL_BASE_LOCATION;
+	public static String FACTION_GOOD_TEAM_NAME;
+	public static String FACTION_EVIL_TEAM_NAME;
+	public static int FACTION_GOOD_NAME_COLOR;
+	public static int FACTION_EVIL_NAME_COLOR;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2607,6 +2618,22 @@ public final class Config
 			COMMUNITYBOARD_CURRENCY = CustomSettings.getInt("CommunityCurrencyId", 57);
 			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
+			
+			String[] tempString;
+			FACTION_SYSTEM_ENABLED = Boolean.valueOf(CustomSettings.getBoolean("EnableFactionSystem", false));
+			tempString = CustomSettings.getString("StartingLocation", "85332,16199,-1252").split(",");
+			FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
+			FACTION_MANAGER_NPCID = CustomSettings.getInt("FactionManagerNpcId", 109);
+			tempString = CustomSettings.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
+			FACTION_MANAGER_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]), tempString[3] != null ? Integer.parseInt(tempString[3]) : 0);
+			tempString = CustomSettings.getString("GoodBaseLocation", "45306,48878,-3058").split(",");
+			FACTION_GOOD_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
+			tempString = CustomSettings.getString("EvilBaseLocation", "-44037,-113283,-237").split(",");
+			FACTION_EVIL_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
+			FACTION_GOOD_TEAM_NAME = CustomSettings.getString("GoodTeamName", "Good");
+			FACTION_EVIL_TEAM_NAME = CustomSettings.getString("EvilTeamName", "Evil");
+			FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("GoodNameColor", "00FF00"));
+			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("EvilNameColor", "0000FF"));
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

@@ -139,6 +139,15 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			return;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			if ((storePlayer.isEvil() && player.isGood()) || (storePlayer.isGood() && player.isEvil()))
+			{
+				player.sendMessage("You cant sell on different faction members.");
+				return;
+			}
+		}
+		
 		// Update offline trade record, if realtime saving is enabled
 		if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached()))
 		{

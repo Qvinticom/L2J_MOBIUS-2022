@@ -61,3 +61,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `clanid` (`clanid`),
   KEY `online` (`online`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Faction System
+ALTER TABLE `characters` ADD `faction` TINYINT UNSIGNED NOT NULL DEFAULT 0;

@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.PartyMatchRoom;
 import com.l2jserver.gameserver.model.PartyMatchRoomList;
@@ -65,6 +66,13 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 		{
 			// Partner hasn't been found, cancel the invitation
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
+			player.setActiveRequester(null);
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && ((player.isEvil() && partner.isGood()) || (player.isGood() && partner.isEvil())))
+		{
+			player.sendMessage("You cannot party with different team members.");
 			player.setActiveRequester(null);
 			return;
 		}

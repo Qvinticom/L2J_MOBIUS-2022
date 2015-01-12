@@ -1219,6 +1219,11 @@ public final class Skill implements IIdentifiable
 						return false;
 					}
 				}
+				
+				if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((player.isGood() && targetPlayer.isGood()) || (player.isEvil() && targetPlayer.isEvil())))
+				{
+					return false;
+				}
 			}
 		}
 		else

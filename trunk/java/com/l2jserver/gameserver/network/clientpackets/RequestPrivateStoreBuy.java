@@ -120,6 +120,15 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			if ((storePlayer.isEvil() && player.isGood()) || (storePlayer.isGood() && player.isEvil()))
+			{
+				player.sendMessage("You cant buy from different faction members.");
+				return;
+			}
+		}
+		
 		TradeList storeList = storePlayer.getSellList();
 		if (storeList == null)
 		{

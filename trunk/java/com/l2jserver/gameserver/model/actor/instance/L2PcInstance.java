@@ -360,7 +360,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character Character SQL String Definitions:
 	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=? WHERE charId=?";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,faction=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Teleport Bookmark:
@@ -421,6 +421,11 @@ public final class L2PcInstance extends L2Playable
 		@Override
 		public void doAttack(L2Character target)
 		{
+			if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((isGood() && target.getActingPlayer().isGood()) || (isEvil() && target.getActingPlayer().isEvil())))
+			{
+				return;
+			}
+			
 			super.doAttack(target);
 			
 			// cancel the recent fake-death protection instantly if the player attacks or casts spells
@@ -594,6 +599,10 @@ public final class L2PcInstance extends L2Playable
 	
 	private boolean _noble = false;
 	private boolean _hero = false;
+	
+	/** Faction System */
+	private boolean _isGood = false;
+	private boolean _isEvil = false;
 	
 	/** The L2FolkInstance corresponding to the last Folk which one the player talked. */
 	private L2Npc _lastFolkNpc = null;
@@ -5534,6 +5543,17 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
+			if (Config.FACTION_SYSTEM_ENABLED && ((isGood() && targetPlayer.isEvil()) || (isEvil() && targetPlayer.isGood())))
+			{
+				increasePvpKills(target);
+				return;
+			}
+			
+			if (Config.FACTION_SYSTEM_ENABLED && ((isGood() && targetPlayer.isGood()) || (isEvil() && targetPlayer.isEvil())))
+			{
+				increasePkKillsAndKarma(target);
+			}
+			
 			// Target player doesn't have pvp flag set
 			// check about wars
 			if ((targetPlayer.getClan() != null) && (getClan() != null) && getClan().isAtWarWith(targetPlayer.getClanId()) && targetPlayer.getClan().isAtWarWith(getClanId()) && (targetPlayer.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (getPledgeType() != L2Clan.SUBUNIT_ACADEMY))
@@ -5593,8 +5613,11 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		// Calculate new karma. (calculate karma before incrase pk count!)
-		setKarma(getKarma() + Formulas.calculateKarmaGain(getPkKills(), target.isSummon()));
+		if (!Config.FACTION_SYSTEM_ENABLED)
+		{
+			// Calculate new karma. (calculate karma before incrase pk count!)
+			setKarma(getKarma() + Formulas.calculateKarmaGain(getPkKills(), target.isSummon()));
+		}
 		
 		// PK Points are increased only if you kill a player.
 		if (target.isPlayer())
@@ -5628,6 +5651,11 @@ public final class L2PcInstance extends L2Playable
 		L2PcInstance player_target = target.getActingPlayer();
 		
 		if (player_target == null)
+		{
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((isGood() && player_target.isEvil()) || (isEvil() && player_target.isGood())))
 		{
 			return;
 		}
@@ -6908,6 +6936,19 @@ public final class L2PcInstance extends L2Playable
 					player.setNewbie(rset.getInt("newbie"));
 					player.setNoble(rset.getInt("nobless") == 1);
 					
+					if (Config.FACTION_SYSTEM_ENABLED)
+					{
+						final int factionId = rset.getInt("faction");
+						if (factionId == 1)
+						{
+							player.setGood();
+						}
+						if (factionId == 2)
+						{
+							player.setEvil();
+						}
+					}
+					
 					player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 					if (player.getClanJoinExpiryTime() < System.currentTimeMillis())
 					{
@@ -7477,7 +7518,19 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(47, getBookMarkSlot());
 			statement.setInt(48, 0); // unset
 			statement.setString(49, getLang());
-			statement.setInt(50, getObjectId());
+			
+			int factionId = 0;
+			if (isGood())
+			{
+				factionId = 1;
+			}
+			if (isEvil())
+			{
+				factionId = 2;
+			}
+			statement.setInt(50, factionId);
+			
+			statement.setInt(51, getObjectId());
 			
 			statement.execute();
 		}
@@ -8434,6 +8487,11 @@ public final class L2PcInstance extends L2Playable
 			{
 				return true;
 			}
+			
+			if (Config.FACTION_SYSTEM_ENABLED && ((isGood() && attackerPlayer.isEvil()) || (isEvil() && attackerPlayer.isGood())))
+			{
+				return true;
+			}
 		}
 		else if (attacker instanceof L2DefenderInstance)
 		{
@@ -8652,6 +8710,18 @@ public final class L2PcInstance extends L2Playable
 		
 		// Check the validity of the target
 		if (target == null)
+		{
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
+		}
+		
+		if ((Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && skill.isBad()) && ((isGood() && target.getActingPlayer().isGood()) || (isEvil() && target.getActingPlayer().isEvil())))
+		{
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
+		}
+		
+		if ((Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && !skill.isBad()) && ((isGood() && target.getActingPlayer().isEvil()) || (isEvil() && target.getActingPlayer().isGood())))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -14345,6 +14415,26 @@ public final class L2PcInstance extends L2Playable
 	public void setJumpTrackId(int jumpTrackId)
 	{
 		_jumpTrackId = jumpTrackId;
+	}
+	
+	public boolean isGood()
+	{
+		return _isGood;
+	}
+	
+	public boolean isEvil()
+	{
+		return _isEvil;
+	}
+	
+	public void setGood()
+	{
+		_isGood = true;
+	}
+	
+	public void setEvil()
+	{
+		_isEvil = true;
 	}
 	
 	/**

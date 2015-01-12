@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets.friend;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -98,6 +99,11 @@ public final class RequestFriendInvite extends L2GameClientPacket
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(_name);
 			activeChar.sendPacket(sm);
+			return;
+		}
+		if (Config.FACTION_SYSTEM_ENABLED && ((friend.isEvil() && activeChar.isGood()) || (friend.isGood() && activeChar.isEvil())))
+		{
+			activeChar.sendMessage("You cannot have a friend of the opposing faction.");
 			return;
 		}
 		// Friend request sent.
