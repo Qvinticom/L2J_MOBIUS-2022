@@ -80,7 +80,7 @@ public final class HomeBoard implements IParseBoardHandler
 				CommunityBoardHandler.separateAndSend(html, activeChar);
 			}
 		}
-		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsmultisell"))
+		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbsmultisell"))
 		{
 			final String fullBypass = command.replace("_bbsmultisell;", "");
 			final String[] buypassOptions = fullBypass.split(",");
@@ -90,7 +90,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
-		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsteleport"))
+		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_TELEPORTS && command.startsWith("_bbsteleport"))
 		{
 			final String fullBypass = command.replace("_bbsteleport;", "");
 			final String[] buypassOptions = fullBypass.split(",");
@@ -108,7 +108,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
-		else if (Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsbuff"))
+		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
 		{
 			final String fullBypass = command.replace("_bbsbuff;", "");
 			final String[] buypassOptions = fullBypass.split(",");

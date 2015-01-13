@@ -816,6 +816,9 @@ public final class Config
 	public static boolean FREE_JUMPS_FOR_ALL;
 	public static boolean CUSTOM_CB_ENABLED;
 	public static int COMMUNITYBOARD_CURRENCY;
+	public static boolean COMMUNITYBOARD_ENABLE_MULTISELLS;
+	public static boolean COMMUNITYBOARD_ENABLE_TELEPORTS;
+	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
 	public static boolean FACTION_SYSTEM_ENABLED;
@@ -2616,6 +2619,9 @@ public final class Config
 			
 			CUSTOM_CB_ENABLED = CustomSettings.getBoolean("CustomCommunityBoard", false);
 			COMMUNITYBOARD_CURRENCY = CustomSettings.getInt("CommunityCurrencyId", 57);
+			COMMUNITYBOARD_ENABLE_MULTISELLS = CustomSettings.getBoolean("CommunityEnableMultisells", true);
+			COMMUNITYBOARD_ENABLE_TELEPORTS = CustomSettings.getBoolean("CommunityEnableTeleports", true);
+			COMMUNITYBOARD_ENABLE_BUFFS = CustomSettings.getBoolean("CommunityEnableBuffs", true);
 			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
 			
