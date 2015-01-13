@@ -579,7 +579,7 @@
 		</collision>
 	</npc>
 	<npc id="33934" level="85" type="L2Merchant" name="Denya" title="Armor Merchant">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -596,7 +596,7 @@
 		</collision>
 	</npc>
 	<npc id="33935" level="85" type="L2Merchant" name="Evna" title="Weapon Merchant">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -613,7 +613,7 @@
 		</collision>
 	</npc>
 	<npc id="33936" level="85" type="L2Merchant" name="Pelu" title="Grocer">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -630,7 +630,7 @@
 		</collision>
 	</npc>
 	<npc id="33937" level="85" type="L2Merchant" name="Ceri" title="Accessory Merchant">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -783,7 +783,7 @@
 		</collision>
 	</npc>
 	<npc id="33946" level="85" type="L2Adventurer" name="Adventure Guildsman" title="PC Manager">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -800,8 +800,9 @@
 		</collision>
 	</npc>
 	<npc id="33947" level="85" type="L2Warehouse" name="Grakon" title="Warehouse Keeper">
-		<!-- Confirmed Ertheia -->
-		<sex>MALE</sex>
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
@@ -816,7 +817,7 @@
 		</collision>
 	</npc>
 	<npc id="33948" level="85" type="L2Teleporter" name="Astiel" title="Gatekeeper">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1394,11 +1395,13 @@
 		</collision>
 	</npc>
 	<npc id="33982" level="85" type="L2Guard" name="Tahlia" title="Guard">
-		<!-- Confirmed Ertheia -->
+		<!-- TODO: Confirm me -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1411,11 +1414,13 @@
 		</collision>
 	</npc>
 	<npc id="33983" level="85" type="L2Guard" name="Lenoa" title="Guard">
-		<!-- Confirmed Ertheia -->
+		<!-- TODO: Confirm me -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1428,11 +1433,16 @@
 		</collision>
 	</npc>
 	<npc id="33984" level="85" type="L2Guard" name="Nairu" title="Guard">
-		<!-- Confirmed Ertheia -->
+		<!-- TODO: Confirm me -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1445,11 +1455,16 @@
 		</collision>
 	</npc>
 	<npc id="33985" level="85" type="L2Guard" name="Namee" title="Guard">
-		<!-- Confirmed Ertheia -->
+		<!-- TODO: Confirm me -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1666,7 +1681,7 @@
 		</collision>
 	</npc>
 	<npc id="33998" level="85" type="L2Trainer" name="Momet" title="Blacksmith">
-		<!-- Confirmed Ertheia -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

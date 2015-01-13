@@ -51,7 +51,6 @@ import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -1071,7 +1070,6 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			{
 				leaderPlayer.setPledgeClass(L2ClanMember.calculatePledgeClass(leaderPlayer));
 				leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-				leaderPlayer.sendPacket(new ExBrExtraUserInfo(leaderPlayer));
 			}
 		}
 	}
@@ -1158,7 +1156,6 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		{
 			leaderPlayer.setPledgeClass(L2ClanMember.calculatePledgeClass(leaderPlayer));
 			leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-			leaderPlayer.sendPacket(new ExBrExtraUserInfo(leaderPlayer));
 		}
 		
 		clan.broadcastClanStatus();

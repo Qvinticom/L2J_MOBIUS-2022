@@ -61,6 +61,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		"admin_show_teleport",
 		"admin_teleport_to_character",
 		"admin_teleportto",
+		"admin_teleport",
 		"admin_move_to",
 		"admin_teleport_character",
 		"admin_recall",
@@ -182,6 +183,23 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+			}
+		}
+		else if (command.startsWith("admin_teleport"))
+		{
+			try
+			{
+				final StringTokenizer st = new StringTokenizer(command, " ");
+				st.nextToken();
+				final int x = (int) Float.parseFloat(st.nextToken());
+				final int y = (int) Float.parseFloat(st.nextToken());
+				final int z = (int) Float.parseFloat(st.nextToken());
+				
+				activeChar.teleToLocation(x, y, z);
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Wrong coordinates!");
 			}
 		}
 		else if (command.startsWith("admin_recall "))

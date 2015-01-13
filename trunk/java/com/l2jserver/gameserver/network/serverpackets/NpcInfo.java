@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.instancemanager.TownManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
@@ -42,7 +43,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		(byte) 0x0C,
 		(byte) 0x0C,
 		(byte) 0x00,
-		(byte) 0x04
+		(byte) 0x00
 	};
 	
 	private int _initSize = 0;
@@ -54,10 +55,12 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 	private int _allyId = 0;
 	private int _clanId = 0;
 	private int _statusMask = 0;
+	private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	
 	public NpcInfo(L2Npc npc)
 	{
 		_npc = npc;
+		_abnormalVisualEffects = npc.getCurrentAbnormalVisualEffects();
 		
 		if (npc.getTemplate().getDisplayId() != npc.getTemplate().getId())
 		{
@@ -131,7 +134,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.NAME);
 		}
 		
-		if (!npc.getAbnormalVisualEffectsList().isEmpty())
+		if (!_abnormalVisualEffects.isEmpty())
 		{
 			addComponentType(NpcInfoType.ABNORMALS);
 		}
@@ -182,8 +185,10 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			_statusMask |= 0x08;
 		}
 		
-		// Add one byte.
-		_blockSize++;
+		if (_statusMask != 0)
+		{
+			addComponentType(NpcInfoType.VISUAL_STATE);
+		}
 	}
 	
 	@Override
@@ -382,15 +387,17 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			writeD(_allyCrest);
 		}
 		
-		writeC(_statusMask);
+		if (containsMask(NpcInfoType.VISUAL_STATE))
+		{
+			writeC(_statusMask);
+		}
 		
 		if (containsMask(NpcInfoType.ABNORMALS))
 		{
-			final Set<Integer> visualEffects = _npc.getAbnormalVisualEffectsList();
-			writeH(visualEffects.size());
-			for (int visualEffect : visualEffects)
+			writeH(_abnormalVisualEffects.size());
+			for (AbnormalVisualEffect abnormalVisualEffect : _abnormalVisualEffects)
 			{
-				writeH(visualEffect);
+				writeH(abnormalVisualEffect.getClientId());
 			}
 		}
 	}

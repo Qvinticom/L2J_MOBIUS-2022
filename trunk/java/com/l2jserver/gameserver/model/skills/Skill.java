@@ -115,11 +115,7 @@ public final class Skill implements IIdentifiable
 	/** Abnormal time: global effect duration time. */
 	private final int _abnormalTime;
 	/** Abnormal visual effect: the visual effect displayed ingame. */
-	private AbnormalVisualEffect[] _abnormalVisualEffects = null;
-	/** Abnormal visual effect special: the visual effect displayed ingame. */
-	private AbnormalVisualEffect[] _abnormalVisualEffectsSpecial = null;
-	/** Abnormal visual effect event: the visual effect displayed ingame. */
-	private AbnormalVisualEffect[] _abnormalVisualEffectsEvent = null;
+	private Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	/** If {@code true} this skill's effect should stay after death. */
 	private final boolean _stayAfterDeath;
 	/** If {@code true} this skill's effect should stay after class-subclass change. */
@@ -536,9 +532,9 @@ public final class Skill implements IIdentifiable
 	 * Gets the skill abnormal visual effect.
 	 * @return the abnormal visual effect
 	 */
-	public AbnormalVisualEffect[] getAbnormalVisualEffects()
+	public Set<AbnormalVisualEffect> getAbnormalVisualEffects()
 	{
-		return _abnormalVisualEffects;
+		return (_abnormalVisualEffects != null) ? _abnormalVisualEffects : Collections.emptySet();
 	}
 	
 	/**
@@ -547,43 +543,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean hasAbnormalVisualEffects()
 	{
-		return (_abnormalVisualEffects != null) && (_abnormalVisualEffects.length > 0);
-	}
-	
-	/**
-	 * Gets the skill special abnormal visual effect.
-	 * @return the abnormal visual effect
-	 */
-	public AbnormalVisualEffect[] getAbnormalVisualEffectsSpecial()
-	{
-		return _abnormalVisualEffectsSpecial;
-	}
-	
-	/**
-	 * Verify if the skill has special abnormal visual effects.
-	 * @return {@code true} if the skill has special abnormal visual effects, {@code false} otherwise
-	 */
-	public boolean hasAbnormalVisualEffectsSpecial()
-	{
-		return (_abnormalVisualEffectsSpecial != null) && (_abnormalVisualEffectsSpecial.length > 0);
-	}
-	
-	/**
-	 * Gets the skill event abnormal visual effect.
-	 * @return the abnormal visual effect
-	 */
-	public AbnormalVisualEffect[] getAbnormalVisualEffectsEvent()
-	{
-		return _abnormalVisualEffectsEvent;
-	}
-	
-	/**
-	 * Verify if the skill has event abnormal visual effects.
-	 * @return {@code true} if the skill has event abnormal visual effects, {@code false} otherwise
-	 */
-	public boolean hasAbnormalVisualEffectsEvent()
-	{
-		return (_abnormalVisualEffectsEvent != null) && (_abnormalVisualEffectsEvent.length > 0);
+		return (_abnormalVisualEffects != null) && !_abnormalVisualEffects.isEmpty();
 	}
 	
 	/**
@@ -1728,55 +1688,23 @@ public final class Skill implements IIdentifiable
 		if (abnormalVisualEffects != null)
 		{
 			final String[] data = abnormalVisualEffects.split(";");
-			List<AbnormalVisualEffect> avesEvent = null;
-			List<AbnormalVisualEffect> avesSpecial = null;
-			List<AbnormalVisualEffect> aves = null;
-			for (String ave2 : data)
+			final Set<AbnormalVisualEffect> aves = new HashSet<>(1);
+			for (String aveString : data)
 			{
-				final AbnormalVisualEffect ave = AbnormalVisualEffect.valueOf(ave2);
+				final AbnormalVisualEffect ave = AbnormalVisualEffect.findByName(aveString);
 				if (ave != null)
 				{
-					if (ave.isEvent())
-					{
-						if (avesEvent == null)
-						{
-							avesEvent = new ArrayList<>(1);
-						}
-						avesEvent.add(ave);
-						continue;
-					}
-					
-					if (ave.isSpecial())
-					{
-						if (avesSpecial == null)
-						{
-							avesSpecial = new ArrayList<>(1);
-						}
-						avesSpecial.add(ave);
-						continue;
-					}
-					
-					if (aves == null)
-					{
-						aves = new ArrayList<>(1);
-					}
 					aves.add(ave);
+				}
+				else
+				{
+					_log.warning("Invalid AbnormalVisualEffect(" + aveString + ") found for Skill(" + this + ")");
 				}
 			}
 			
-			if (avesEvent != null)
+			if (!aves.isEmpty())
 			{
-				_abnormalVisualEffectsEvent = avesEvent.toArray(new AbnormalVisualEffect[avesEvent.size()]);
-			}
-			
-			if (avesSpecial != null)
-			{
-				_abnormalVisualEffectsSpecial = avesSpecial.toArray(new AbnormalVisualEffect[avesSpecial.size()]);
-			}
-			
-			if (aves != null)
-			{
-				_abnormalVisualEffects = aves.toArray(new AbnormalVisualEffect[aves.size()]);
+				_abnormalVisualEffects = aves;
 			}
 		}
 	}

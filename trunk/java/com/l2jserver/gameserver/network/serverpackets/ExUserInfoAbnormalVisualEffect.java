@@ -18,7 +18,10 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.Set;
+
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 
 /**
  * @author Sdw
@@ -40,11 +43,12 @@ public class ExUserInfoAbnormalVisualEffect extends L2GameServerPacket
 		
 		writeD(_activeChar.getObjectId());
 		writeD(_activeChar.getTransformationId());
-		writeD(_activeChar.getAbnormalVisualEffectsList().size());
 		
-		for (int abnormalVisualEffectId : _activeChar.getAbnormalVisualEffectsList())
+		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getCurrentAbnormalVisualEffects();
+		writeD(abnormalVisualEffects.size());
+		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
 		{
-			writeH(abnormalVisualEffectId);
+			writeH(abnormalVisualEffect.getClientId());
 		}
 	}
 }

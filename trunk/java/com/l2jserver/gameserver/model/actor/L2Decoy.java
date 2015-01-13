@@ -52,7 +52,7 @@ public abstract class L2Decoy extends L2Character
 	}
 	
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
 		

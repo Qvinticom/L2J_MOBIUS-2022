@@ -550,7 +550,7 @@ public class L2Npc extends L2Character
 	 * Send a packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance.
 	 */
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 		// Send a Server->Client packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
@@ -1391,26 +1391,26 @@ public class L2Npc extends L2Character
 	public void setLHandId(int newWeaponId)
 	{
 		_currentLHandId = newWeaponId;
-		updateAbnormalEffect();
+		broadcastInfo();
 	}
 	
 	public void setRHandId(int newWeaponId)
 	{
 		_currentRHandId = newWeaponId;
-		updateAbnormalEffect();
+		broadcastInfo();
 	}
 	
 	public void setLRHandId(int newLWeaponId, int newRWeaponId)
 	{
 		_currentRHandId = newRWeaponId;
 		_currentLHandId = newLWeaponId;
-		updateAbnormalEffect();
+		broadcastInfo();
 	}
 	
 	public void setEnchant(int newEnchantValue)
 	{
 		_currentEnchant = newEnchantValue;
-		updateAbnormalEffect();
+		broadcastInfo();
 	}
 	
 	public boolean isShowName()

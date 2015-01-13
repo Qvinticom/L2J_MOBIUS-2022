@@ -23,6 +23,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExRemoveEnchantSupportItemResult extends L2GameServerPacket
 {
+	public static final ExRemoveEnchantSupportItemResult STATIC_PACKET = new ExRemoveEnchantSupportItemResult();
+	
 	public ExRemoveEnchantSupportItemResult()
 	{
 	}

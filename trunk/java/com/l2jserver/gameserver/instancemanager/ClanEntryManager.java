@@ -382,7 +382,7 @@ public class ClanEntryManager
 	
 	public long getClanLockTime(int playerId)
 	{
-		return _clanLocked.get(playerId) == null ? 0 : _playerLocked.get(playerId).getDelay(TimeUnit.MINUTES);
+		return _clanLocked.get(playerId) == null ? 0 : _clanLocked.get(playerId).getDelay(TimeUnit.MINUTES);
 	}
 	
 	private static void lockPlayer(int playerId)

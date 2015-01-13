@@ -314,7 +314,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides delayed (Depending on {@link com.l2jserver.gameserver.model.actor.L2Attackable#getOnKillDelay()}) callback operation when L2Attackable dies from a player.
+	 * Provides callback operation when L2Attackable dies from a player.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -325,7 +325,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides delayed (Depending on {@link com.l2jserver.gameserver.model.actor.L2Attackable#getOnKillDelay()}) callback operation when L2Attackable dies from a player.
+	 * Provides callback operation when L2Attackable dies from a player.
 	 * @param callback
 	 * @param npcIds
 	 * @return

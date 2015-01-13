@@ -58,7 +58,6 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
@@ -2087,7 +2086,6 @@ public class L2Clan implements IIdentifiable, INamable
 						{
 							cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
 							cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
-							cm.getPlayerInstance().sendPacket(new ExBrExtraUserInfo(cm.getPlayerInstance()));
 						}
 					}
 				}
@@ -2507,7 +2505,6 @@ public class L2Clan implements IIdentifiable, INamable
 		updateClanInDB();
 		
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
 		
 		// TODO: Need correct message id
 		player.sendMessage("Alliance " + allyName + " has been created.");

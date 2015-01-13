@@ -62,7 +62,6 @@ import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFin
 import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeOwnerChange;
 import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.RelationChanged;
 import com.l2jserver.gameserver.network.serverpackets.SiegeInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -611,7 +610,6 @@ public class Siege implements Siegable
 					}
 				}
 				member.sendPacket(new UserInfo(member));
-				member.sendPacket(new ExBrExtraUserInfo(member));
 				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					if (player == null)
@@ -660,7 +658,6 @@ public class Siege implements Siegable
 					}
 				}
 				member.sendPacket(new UserInfo(member));
-				member.sendPacket(new ExBrExtraUserInfo(member));
 				
 				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
 				{

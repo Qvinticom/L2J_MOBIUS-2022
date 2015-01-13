@@ -18,12 +18,9 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
 public abstract class AbstractNpcInfo extends L2GameServerPacket
@@ -125,7 +122,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 			writeD(_trap.getPvpFlag());
 			writeD(_trap.getKarma());
 			
-			writeD(_trap.isInvisible() ? _trap.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _trap.getAbnormalVisualEffects());
+			writeD(0); // was AVE and was adding stealth
 			writeD(0x00); // clan id
 			writeD(0x00); // crest id
 			writeD(0000); // C2
@@ -178,16 +175,6 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			boolean gmSeeInvis = false;
-			if (isInvisible())
-			{
-				final L2PcInstance activeChar = getClient().getActiveChar();
-				if ((activeChar != null) && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS))
-				{
-					gmSeeInvis = true;
-				}
-			}
-			
 			writeC(0x0c);
 			writeD(_summon.getObjectId());
 			writeD(_idTemplate + 1000000); // npctype id
@@ -228,7 +215,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 			writeD(_summon.getPvpFlag());
 			writeD(_summon.getKarma());
 			
-			writeD(gmSeeInvis ? _summon.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _summon.getAbnormalVisualEffects());
+			writeD(0); // was AVE and was adding stealth
 			
 			writeD(0x00); // clan id
 			writeD(0x00); // crest id
@@ -246,7 +233,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 			writeD(_form); // CT1.5 Pet form and skills
 			writeC(0x01);
 			writeC(0x01);
-			writeD(_summon.getAbnormalVisualEffectSpecial());
+			// writeD(_summon.getAbnormalVisualEffectSpecial());
 		}
 	}
 }

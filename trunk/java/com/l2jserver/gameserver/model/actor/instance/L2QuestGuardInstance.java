@@ -65,7 +65,7 @@ public final class L2QuestGuardInstance extends L2GuardInstance
 		if (killer instanceof L2Attackable)
 		{
 			// Delayed notification
-			EventDispatcher.getInstance().notifyEventAsyncDelayed(new OnAttackableKill(null, this, false), this, _onKillDelay);
+			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(null, this, false), this);
 		}
 		return true;
 	}

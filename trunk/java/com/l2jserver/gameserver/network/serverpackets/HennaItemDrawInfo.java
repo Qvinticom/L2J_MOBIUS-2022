@@ -57,10 +57,10 @@ public class HennaItemDrawInfo extends L2GameServerPacket
 		writeC(_activeChar.getDEX() + _henna.getStatDEX()); // equip DEX
 		writeD(_activeChar.getWIT()); // current WIT
 		writeC(_activeChar.getWIT() + _henna.getStatWIT()); // equip WIT
-		writeD(0x00); // current LUC
-		writeC(0x00); // equip LUC
-		writeD(0x00); // current CHA
-		writeC(0x00); // equip CHA
+		writeD(_activeChar.getLUC()); // current LUC
+		writeC(_activeChar.getLUC() + _henna.getStatLUC()); // equip LUC
+		writeD(_activeChar.getCHA()); // current CHA
+		writeC(_activeChar.getCHA() + _henna.getStatCHA()); // equip CHA
 		writeD(0x00); // TODO: Find me!
 	}
 }

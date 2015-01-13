@@ -39,6 +39,8 @@ public class L2Henna
 	private final int _int;
 	private final int _men;
 	private final int _wit;
+	private final int _luc;
+	private final int _cha;
 	private final int _wear_fee;
 	private final int _wear_count;
 	private final int _cancel_fee;
@@ -56,6 +58,8 @@ public class L2Henna
 		_int = set.getInt("int");
 		_men = set.getInt("men");
 		_wit = set.getInt("wit");
+		_luc = set.getInt("luc");
+		_cha = set.getInt("cha");
 		_wear_fee = set.getInt("wear_fee");
 		_wear_count = set.getInt("wear_count");
 		_cancel_fee = set.getInt("cancel_fee");
@@ -133,6 +137,22 @@ public class L2Henna
 	public int getStatWIT()
 	{
 		return _wit;
+	}
+	
+	/**
+	 * @return the LUC stat.
+	 */
+	public int getStatLUC()
+	{
+		return _luc;
+	}
+	
+	/**
+	 * @return the CHA stat.
+	 */
+	public int getStatCHA()
+	{
+		return _cha;
 	}
 	
 	/**

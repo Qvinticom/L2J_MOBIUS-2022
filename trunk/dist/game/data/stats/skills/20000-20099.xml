@@ -10,7 +10,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="20002" levels="1" name="Dragon Blow">
+	<skill id="20002" levels="1" name="Dragon Kick">
 		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="55" />
@@ -112,6 +112,5 @@
 		<set name="icon" val="icon.skill19009" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
 	</skill>
 </list>

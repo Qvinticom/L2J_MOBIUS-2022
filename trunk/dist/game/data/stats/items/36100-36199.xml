@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36100" name="Star Agathion - Chic Jaebum" additionalName="" type="Armor">
 		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
@@ -118,7 +119,7 @@
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="price" val="5000000" />
+		<set name="price" val="10000000" />
 		<for>
 			<add stat="pDef" val="50.0" />
 			<add stat="mDef" val="40.0" />
@@ -401,42 +402,42 @@
 		<!-- Teleports you to the Fog of Blood Region. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="75000" />
+		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36171" name="Scroll of Escape: Isle of Souls Harbor" additionalName="" type="EtcItem">
 		<!-- Teleports you to the Isle of Souls Harbor. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="75000" />
+		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36172" name="Scroll of Escape: Ruins of Ye Sagira" additionalName="" type="EtcItem">
 		<!-- Teleports you to Hadel at the Ruins of Ye Sagira. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="75000" />
+		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36173" name="Scroll of Escape: Guillotine Fortress" additionalName="" type="EtcItem">
 		<!-- Teleports you to Guillotine Fortress. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="75000" />
+		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36174" name="Scroll of Escape: Parnassus" additionalName="" type="EtcItem">
 		<!-- Teleports you to Parnassus. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="75000" />
+		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36175" name="Scroll of Escape: Seal of Shilen" additionalName="" type="EtcItem">
 		<!-- Teleports you to the Seal of Shilen. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
-		<set name="price" val="75000" />
+		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36176" name="2012 World Olympiad Hero's Accessory" additionalName="Sigel Knight" type="Armor">

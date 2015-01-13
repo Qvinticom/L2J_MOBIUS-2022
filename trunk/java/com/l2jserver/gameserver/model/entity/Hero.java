@@ -53,7 +53,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -975,7 +974,6 @@ public class Hero
 		player.setHero(true);
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 20016)); // Hero Animation
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
 		player.broadcastUserInfo();
 		// Set Gained hero and reload data
 		setHeroGained(player.getObjectId());

@@ -51,7 +51,6 @@ import com.l2jserver.gameserver.model.L2WorldRegion;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.TeleportWhereType;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
@@ -564,7 +563,7 @@ public final class Instance
 						List<L2Spawn> manualSpawn = new ArrayList<>();
 						for (Node d = group.getFirstChild(); d != null; d = d.getNextSibling())
 						{
-							int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
+							int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0;
 							Boolean allowRandomWalk = null;
 							if ("spawn".equalsIgnoreCase(d.getNodeName()))
 							{
@@ -575,10 +574,6 @@ public final class Instance
 								z = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
 								heading = Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue());
 								respawn = Integer.parseInt(d.getAttributes().getNamedItem("respawn").getNodeValue());
-								if (d.getAttributes().getNamedItem("onKillDelay") != null)
-								{
-									delay = Integer.parseInt(d.getAttributes().getNamedItem("onKillDelay").getNodeValue());
-								}
 								if (d.getAttributes().getNamedItem("respawnRandom") != null)
 								{
 									respawnRandom = Integer.parseInt(d.getAttributes().getNamedItem("respawnRandom").getNodeValue());
@@ -616,11 +611,7 @@ public final class Instance
 									}
 									if (spawnGroup.equals("general"))
 									{
-										L2Npc spawned = spawnDat.doSpawn();
-										if ((delay >= 0) && (spawned instanceof L2Attackable))
-										{
-											((L2Attackable) spawned).setOnKillDelay(delay);
-										}
+										spawnDat.doSpawn();
 									}
 									else
 									{

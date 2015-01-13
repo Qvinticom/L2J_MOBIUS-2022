@@ -18,9 +18,12 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.Set;
+
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 
 public class PetInfo extends L2GameServerPacket
 {
@@ -160,10 +163,11 @@ public class PetInfo extends L2GameServerPacket
 		writeC(0x00); // Used Summon Points
 		writeC(0x00); // Maximum Summon Points
 		
-		writeH(_summon.getAbnormalVisualEffectsList().size()); // Confirmed
-		for (int abnormalId : _summon.getAbnormalVisualEffectsList())
+		final Set<AbnormalVisualEffect> aves = _summon.getCurrentAbnormalVisualEffects();
+		writeH(aves.size()); // Confirmed
+		for (AbnormalVisualEffect ave : aves)
 		{
-			writeH(abnormalId); // Confirmed
+			writeH(ave.getClientId()); // Confirmed
 		}
 		
 		writeC(0x00); // TODO: Find me

@@ -230,7 +230,7 @@ public final class L2StaticObjectInstance extends L2Character
 	}
 	
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 	}
 	

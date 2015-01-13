@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14100" type="Armor" name="Teddy Girl Agathion Bracelet (event) - 7-day limited period">
+	<item id="14100" type="Armor" name="Agathion - Teddy Girl (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14101" type="Armor" name="Sudden Agathion (Event) - 7-day limited period">
+	<item id="14101" type="Armor" name="Agathion - Angry Devil (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -30,7 +30,7 @@
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14102" type="Armor" name="Shiny Agathion (Event) - 7-day limited period">
+	<item id="14102" type="Armor" name="Agathion - Shiny (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -45,7 +45,7 @@
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14103" type="Armor" name="Sobbing Agathion (Event) - 7-day limited period">
+	<item id="14103" type="Armor" name="Agathion - Sobbing (Event)">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -60,14 +60,13 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14104" type="Armor" name="Shadow Item - Collection Agathion Summon Bracelet">
+	<item id="14104" type="Armor" name="Shadow Item: Agathion - Essence Collector">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="price" val="200000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -82,8 +81,8 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2240" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="1493" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="46668000" />
@@ -103,8 +102,8 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1680" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="1120" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="35000000" />
@@ -121,8 +120,8 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1680" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="1120" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="35000000" />
@@ -143,8 +142,8 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1400" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="933" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="29168000" />
@@ -158,13 +157,13 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14109" type="Armor" name="Sealed Vesper Gauntlet">
+	<item id="14109" type="Armor" name="Sealed Vesper Gauntlets">
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="560" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="373" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
@@ -183,8 +182,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="560" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="373" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
@@ -203,8 +202,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="588" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="392" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
@@ -225,8 +224,8 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="700" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="21876000" />
@@ -242,8 +241,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="560" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="373" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
@@ -259,8 +258,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="560" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="373" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
@@ -277,8 +276,8 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="700" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="21876000" />
@@ -298,8 +297,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="560" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="373" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
@@ -318,8 +317,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="560" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="373" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
@@ -333,7 +332,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14118" type="Weapon" name="Vesper Cutter - Haste">
+	<item id="14118" type="Weapon" name="Vesper Cutter">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -342,8 +341,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -362,7 +361,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14119" type="Weapon" name="Vesper Cutter - Health">
+	<item id="14119" type="Weapon" name="Vesper Cutter">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -371,8 +370,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -391,7 +390,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14120" type="Weapon" name="Vesper Cutter - Focus">
+	<item id="14120" type="Weapon" name="Vesper Cutter">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -400,8 +399,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -420,7 +419,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14121" type="Weapon" name="Vesper Slasher - Haste">
+	<item id="14121" type="Weapon" name="Vesper Slasher">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -429,8 +428,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -449,7 +448,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14122" type="Weapon" name="Vesper Slasher - Health">
+	<item id="14122" type="Weapon" name="Vesper Slasher">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -458,8 +457,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -478,7 +477,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14123" type="Weapon" name="Vesper Slasher - Focus">
+	<item id="14123" type="Weapon" name="Vesper Slasher">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -487,8 +486,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -507,7 +506,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14124" type="Weapon" name="Vesper Buster - Mana Up">
+	<item id="14124" type="Weapon" name="Vesper Buster">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -516,8 +515,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -536,7 +535,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14125" type="Weapon" name="Vesper Buster - Acumen">
+	<item id="14125" type="Weapon" name="Vesper Buster">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -545,8 +544,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -565,7 +564,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14126" type="Weapon" name="Vesper Buster - Magic Hold">
+	<item id="14126" type="Weapon" name="Vesper Buster">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -574,8 +573,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -596,7 +595,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14127" type="Weapon" name="Vesper Shaper - Critical Damage">
+	<item id="14127" type="Weapon" name="Vesper Shaper">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -605,8 +604,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -625,7 +624,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14128" type="Weapon" name="Vesper Shaper - HP Drain">
+	<item id="14128" type="Weapon" name="Vesper Shaper">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -634,8 +633,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -654,7 +653,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14129" type="Weapon" name="Vesper Shaper - Haste">
+	<item id="14129" type="Weapon" name="Vesper Shaper">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -663,8 +662,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -683,7 +682,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14130" type="Weapon" name="Vesper Fighter - Focus">
+	<item id="14130" type="Weapon" name="Vesper Fighter">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -692,8 +691,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="143356000" />
@@ -712,7 +711,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14131" type="Weapon" name="Vesper Fighter - Health">
+	<item id="14131" type="Weapon" name="Vesper Fighter">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -721,8 +720,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="143356000" />
@@ -741,7 +740,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14132" type="Weapon" name="Vesper Fighter - Critical Stun">
+	<item id="14132" type="Weapon" name="Vesper Fighter">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -750,8 +749,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="143356000" />
@@ -772,7 +771,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14133" type="Weapon" name="Vesper Stormer - Health">
+	<item id="14133" type="Weapon" name="Vesper Stormer">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -781,8 +780,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="143356000" />
@@ -801,7 +800,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14134" type="Weapon" name="Vesper Stormer - Guidance">
+	<item id="14134" type="Weapon" name="Vesper Stormer">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -810,8 +809,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="143356000" />
@@ -830,7 +829,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14135" type="Weapon" name="Vesper Stormer - Haste">
+	<item id="14135" type="Weapon" name="Vesper Stormer">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -839,8 +838,8 @@
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="143356000" />
@@ -859,7 +858,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14136" type="Weapon" name="Vesper Avenger - HP Drain">
+	<item id="14136" type="Weapon" name="Vesper Avenger">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -868,8 +867,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -888,7 +887,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14137" type="Weapon" name="Vesper Avenger - Health">
+	<item id="14137" type="Weapon" name="Vesper Avenger">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -897,8 +896,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -917,7 +916,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14138" type="Weapon" name="Vesper Avenger - HP Regeneration">
+	<item id="14138" type="Weapon" name="Vesper Avenger">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -926,8 +925,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -946,7 +945,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14139" type="Weapon" name="Vesper Retributer - HP Regeneration">
+	<item id="14139" type="Weapon" name="Vesper Retributer">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -955,8 +954,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -975,7 +974,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14140" type="Weapon" name="Vesper Retributer - Health">
+	<item id="14140" type="Weapon" name="Vesper Retributer">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -984,8 +983,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1004,7 +1003,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14141" type="Weapon" name="Vesper Retributer - HP Drain">
+	<item id="14141" type="Weapon" name="Vesper Retributer">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1013,8 +1012,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="143356000" />
@@ -1033,7 +1032,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14142" type="Weapon" name="Vesper Caster - Acumen">
+	<item id="14142" type="Weapon" name="Vesper Caster">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1042,8 +1041,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="143356000" />
@@ -1063,7 +1062,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14143" type="Weapon" name="Vesper Caster - MP Regeneration">
+	<item id="14143" type="Weapon" name="Vesper Caster">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1072,8 +1071,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="143356000" />
@@ -1093,7 +1092,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14144" type="Weapon" name="Vesper Caster - Mana Up">
+	<item id="14144" type="Weapon" name="Vesper Caster">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1102,8 +1101,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="143356000" />
@@ -1123,7 +1122,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14145" type="Weapon" name="Vesper Singer - Empower">
+	<item id="14145" type="Weapon" name="Vesper Singer">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1132,8 +1131,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="143356000" />
@@ -1153,7 +1152,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14146" type="Weapon" name="Vesper Singer - MP Regeneration">
+	<item id="14146" type="Weapon" name="Vesper Singer">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1162,8 +1161,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="143356000" />
@@ -1183,7 +1182,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14147" type="Weapon" name="Vesper Singer - Magic Hold">
+	<item id="14147" type="Weapon" name="Vesper Singer">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1192,8 +1191,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="143356000" />
@@ -1215,7 +1214,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14148" type="Weapon" name="Vesper Thrower - Cheap Shot">
+	<item id="14148" type="Weapon" name="Vesper Thrower">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1224,8 +1223,8 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -1247,7 +1246,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14149" type="Weapon" name="Vesper Thrower - Focus">
+	<item id="14149" type="Weapon" name="Vesper Thrower">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1256,8 +1255,8 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -1279,7 +1278,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14150" type="Weapon" name="Vesper Thrower - Critical Slow">
+	<item id="14150" type="Weapon" name="Vesper Thrower">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1288,8 +1287,8 @@
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="143356000" />
@@ -1313,7 +1312,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14151" type="Weapon" name="Vesper Pincer - Haste">
+	<item id="14151" type="Weapon" name="Vesper Pincer">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1322,8 +1321,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="143356000" />
@@ -1347,7 +1346,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14152" type="Weapon" name="Vesper Pincer - Health">
+	<item id="14152" type="Weapon" name="Vesper Pincer">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1356,8 +1355,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="143356000" />
@@ -1381,7 +1380,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14153" type="Weapon" name="Vesper Pincer - Focus">
+	<item id="14153" type="Weapon" name="Vesper Pincer">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1390,8 +1389,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="143356000" />
@@ -1415,7 +1414,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14154" type="Weapon" name="Vesper Shooter - Cheap Shot">
+	<item id="14154" type="Weapon" name="Vesper Shooter">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1424,8 +1423,8 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="143356000" />
@@ -1449,7 +1448,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14155" type="Weapon" name="Vesper Shooter - Focus">
+	<item id="14155" type="Weapon" name="Vesper Shooter">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1458,8 +1457,8 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="143356000" />
@@ -1483,7 +1482,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14156" type="Weapon" name="Vesper Shooter - Critical Slow">
+	<item id="14156" type="Weapon" name="Vesper Shooter">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1492,8 +1491,8 @@
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="143356000" />
@@ -1519,7 +1518,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14157" type="Weapon" name="Vesper Nagan - Haste">
+	<item id="14157" type="Weapon" name="Vesper Nagan">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1528,8 +1527,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="143356000" />
@@ -1552,7 +1551,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14158" type="Weapon" name="Vesper Nagan - Health">
+	<item id="14158" type="Weapon" name="Vesper Nagan">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1561,8 +1560,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="143356000" />
@@ -1585,7 +1584,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14159" type="Weapon" name="Vesper Nagan - Focus">
+	<item id="14159" type="Weapon" name="Vesper Nagan">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1594,8 +1593,8 @@
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="7050" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="143356000" />
@@ -1623,8 +1622,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="370" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="246" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7713000" />
@@ -1639,8 +1638,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="494" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="329" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="10284000" />
@@ -1655,8 +1654,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="247" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="164" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="5142000" />
@@ -1671,8 +1670,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="547" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="364" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="11394000" />
@@ -1688,8 +1687,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="729" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="486" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="15192000" />
@@ -1705,8 +1704,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="365" />
-		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="243" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="7596000" />
@@ -1717,7 +1716,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14166" type="EtcItem" name="Life Stone - Level 84">
+	<item id="14166" type="EtcItem" name="Life Stone - Lv. 84">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1728,7 +1727,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14167" type="EtcItem" name="Mid-Grade Life Stone - Level 84">
+	<item id="14167" type="EtcItem" name="Mid-grade Life Stone - Lv. 84">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1739,29 +1738,29 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14168" type="EtcItem" name="High-Grade Life Stone - Level 84">
+	<item id="14168" type="EtcItem" name="High-grade Life Stone - Lv. 84">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="1658000" />
+		<set name="price" val="829000" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113">
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14169" type="EtcItem" name="Top-Grade Life Stone - Level 84">
+	<item id="14169" type="EtcItem" name="Top-grade Life Stone - Lv. 84">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="8292000" />
+		<set name="price" val="4146000" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113">
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14170" type="EtcItem" name="Forgotten Scroll - Seed of Revenge">
+	<item id="14170" type="EtcItem" name="Forgotten Scroll: Seed of Revenge">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1771,7 +1770,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2803-1" />
 	</item>
-	<item id="14171" type="EtcItem" name="Forgotten Scroll - Hell Scream">
+	<item id="14171" type="EtcItem" name="Forgotten Scroll: Hell Scream">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1781,7 +1780,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2804-1" />
 	</item>
-	<item id="14172" type="EtcItem" name="Forgotten Scroll - Spirit of Phoenix">
+	<item id="14172" type="EtcItem" name="Forgotten Scroll: Spirit of the Phoenix">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1801,7 +1800,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2806-1" />
 	</item>
-	<item id="14174" type="EtcItem" name="Forgotten Scroll - Pain of Shillien">
+	<item id="14174" type="EtcItem" name="Forgotten Scroll: Pain of Shilen">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1811,7 +1810,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2807-1" />
 	</item>
-	<item id="14175" type="EtcItem" name="Forgotten Scroll - Exciting Adventure">
+	<item id="14175" type="EtcItem" name="Forgotten Scroll: Exciting Adventure">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1821,7 +1820,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2808-1" />
 	</item>
-	<item id="14176" type="EtcItem" name="Forgotten Scroll - Wind Riding">
+	<item id="14176" type="EtcItem" name="Forgotten Scroll: Wind Riding">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1831,7 +1830,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2809-1" />
 	</item>
-	<item id="14177" type="EtcItem" name="Forgotten Scroll - Ghost Walking">
+	<item id="14177" type="EtcItem" name="Forgotten Scroll: Ghost Walking">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1841,7 +1840,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2810-1" />
 	</item>
-	<item id="14178" type="EtcItem" name="Forgotten Scroll - Flame Hawk">
+	<item id="14178" type="EtcItem" name="Forgotten Scroll: Flame Hawk">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1851,7 +1850,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2811-1" />
 	</item>
-	<item id="14179" type="EtcItem" name="Forgotten Scroll - Arrow Rain">
+	<item id="14179" type="EtcItem" name="Forgotten Scroll: Arrow Rain">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1861,7 +1860,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2812-1" />
 	</item>
-	<item id="14180" type="EtcItem" name="Forgotten Scroll - Ghost Piercing">
+	<item id="14180" type="EtcItem" name="Forgotten Scroll: Ghost Piercing">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1871,7 +1870,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2813-1" />
 	</item>
-	<item id="14181" type="EtcItem" name="Forgotten Scroll - Dread Pool">
+	<item id="14181" type="EtcItem" name="Forgotten Scroll: Dread Pool">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1881,7 +1880,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2814-1" />
 	</item>
-	<item id="14182" type="EtcItem" name="Forgotten Scroll - Force of Destruction">
+	<item id="14182" type="EtcItem" name="Forgotten Scroll: Force of Destruction">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1891,7 +1890,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2815-1" />
 	</item>
-	<item id="14183" type="EtcItem" name="Forgotten Scroll - Demolition Impact">
+	<item id="14183" type="EtcItem" name="Forgotten Scroll: Demolition Impact">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1901,7 +1900,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2816-1" />
 	</item>
-	<item id="14184" type="EtcItem" name="Forgotten Scroll - Golem Armor">
+	<item id="14184" type="EtcItem" name="Forgotten Scroll: Golem Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1911,7 +1910,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2817-1" />
 	</item>
-	<item id="14185" type="EtcItem" name="Forgotten Scroll - Wild Shot">
+	<item id="14185" type="EtcItem" name="Forgotten Scroll: Wild Shot">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1921,7 +1920,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2818-1" />
 	</item>
-	<item id="14186" type="EtcItem" name="Forgotten Scroll - Lightning Shock">
+	<item id="14186" type="EtcItem" name="Forgotten Scroll: Lightning Shock">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1931,7 +1930,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2819-1" />
 	</item>
-	<item id="14187" type="EtcItem" name="Forgotten Scroll - Flame Armor">
+	<item id="14187" type="EtcItem" name="Forgotten Scroll: Flame Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1941,7 +1940,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2820-1" />
 	</item>
-	<item id="14188" type="EtcItem" name="Forgotten Scroll - Frost Armor">
+	<item id="14188" type="EtcItem" name="Forgotten Scroll: Frost Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1951,7 +1950,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2821-1" />
 	</item>
-	<item id="14189" type="EtcItem" name="Forgotten Scroll - Hurricane Armor">
+	<item id="14189" type="EtcItem" name="Forgotten Scroll: Hurricane Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1961,7 +1960,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2822-1" />
 	</item>
-	<item id="14190" type="EtcItem" name="Forgotten Scroll - Vampiric Mist">
+	<item id="14190" type="EtcItem" name="Forgotten Scroll: Vampiric Mist">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1971,7 +1970,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2823-1" />
 	</item>
-	<item id="14191" type="EtcItem" name="Forgotten Scroll - Meteor">
+	<item id="14191" type="EtcItem" name="Forgotten Scroll: Meteor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1981,7 +1980,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2824-1" />
 	</item>
-	<item id="14192" type="EtcItem" name="Forgotten Scroll - Star Fall">
+	<item id="14192" type="EtcItem" name="Forgotten Scroll: Star Fall">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1991,7 +1990,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2825-1" />
 	</item>
-	<item id="14193" type="EtcItem" name="Forgotten Scroll - Sublime Self Sacrifice">
+	<item id="14193" type="EtcItem" name="Forgotten Scroll: Sublime Self-sacrifice">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2001,7 +2000,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2826-1" />
 	</item>
-	<item id="14194" type="EtcItem" name="Forgotten Scroll - Blessing of Eva">
+	<item id="14194" type="EtcItem" name="Forgotten Scroll: Blessing of Eva">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2011,7 +2010,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2827-1" />
 	</item>
-	<item id="14195" type="EtcItem" name="Forgotten Scroll - Lord of Vampire">
+	<item id="14195" type="EtcItem" name="Forgotten Scroll: Lord of Vampires">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2021,12 +2020,11 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2828-1" />
 	</item>
-	<item id="14196" type="EtcItem" name="Forgotten Scroll - Thorn Root">
+	<item id="14196" type="EtcItem" name="Forgotten Scroll: Thorn Root">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
-		<set name="price" val="120000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2034,7 +2032,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2829-1" />
 	</item>
-	<item id="14197" type="EtcItem" name="Forgotten Scroll - Seal of Limit">
+	<item id="14197" type="EtcItem" name="Forgotten Scroll: Seal of Limit">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2044,7 +2042,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2830-1" />
 	</item>
-	<item id="14198" type="EtcItem" name="Forgotten Scroll - Song of Purification">
+	<item id="14198" type="EtcItem" name="Forgotten Scroll: Song of Purification">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2054,7 +2052,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2652-1" />
 	</item>
-	<item id="14199" type="EtcItem" name="Forgotten Scroll - Dance of Berserker">
+	<item id="14199" type="EtcItem" name="Forgotten Scroll: Dance of Berserker">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

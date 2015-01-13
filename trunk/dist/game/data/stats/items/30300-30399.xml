@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30300" name="Superior Giant's Codex - Oblivion" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed to restore a previous enchantment after Awakening. -->
@@ -48,7 +49,7 @@
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="758" />
 		<set name="weight" val="440" />
-		<set name="price" val="17782500" />
+		<set name="price" val="35565000" />
 		<for>
 			<add stat="pDef" val="25.0" />
 			<enchant stat="pDef" val="0" />
@@ -61,7 +62,7 @@
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="75" />
 		<set name="weight" val="150" />
-		<set name="price" val="1778000" />
+		<set name="price" val="3556000" />
 	</item>
 	<item id="30309" name="R99 (Rare) Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
@@ -70,7 +71,7 @@
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1517" />
 		<set name="weight" val="130" />
-		<set name="price" val="35565500" />
+		<set name="price" val="71131000" />
 		<for>
 			<add stat="pDef" val="50.0" />
 			<enchant stat="pDef" val="0" />
@@ -589,41 +590,107 @@
 	<item id="30357" name="Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
-		<set name="weight" val="5" />
-		<set name="price" val="8750" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="17500" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2287-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30358" name="Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i00" />
-		<set name="weight" val="5" />
-		<set name="price" val="9400" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="18800" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2288-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30359" name="Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i01" />
-		<set name="weight" val="5" />
-		<set name="price" val="3500" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="7000" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="7" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2289-7" />
 	</item>
 	<item id="30360" name="Superior Elixir of Life (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i02" />
-		<set name="weight" val="5" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2860-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30361" name="Superior Elixir of Mind (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i00" />
-		<set name="weight" val="5" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="300000" />
+		<set name="shared_reuse_group" val="6" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2861-7" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="30362" name="Superior Elixir of CP (R-grade)" additionalName="" type="EtcItem">
 		<!-- Recovers CP. Only characters below level 85 can use on themselves. Cooldown is 2 min. -->
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.etc_super_potion_i01" />
-		<set name="weight" val="5" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="7" />
+		<set name="weight" val="5" />
+		<set name="handler" val="Elixir" />
+		<set name="item_skill" val="2862-7" />
 	</item>
 	<item id="30363" name="Soul Crystal" additionalName="" type="EtcItem">
 		<!-- Soul Crystal -->
@@ -634,7 +701,7 @@
 		<!-- Life Stone -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="weight" val="2" />
-		<set name="price" val="2500" />
+		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30365" name="Headgear" additionalName="" type="Armor">
@@ -684,7 +751,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="85" />
 		<set name="weight" val="130" />
-		<set name="price" val="1998500" />
+		<set name="price" val="3997000" />
 		<for>
 			<add stat="pDef" val="38.0" />
 			<enchant stat="pDef" val="0" />
@@ -698,7 +765,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="42" />
 		<set name="weight" val="440" />
-		<set name="price" val="999000" />
+		<set name="price" val="1998000" />
 		<for>
 			<add stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />
@@ -712,7 +779,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="75" />
 		<set name="weight" val="150" />
-		<set name="price" val="1778000" />
+		<set name="price" val="3556000" />
 	</item>
 	<item id="30371" name="Box Containing Magic Power" additionalName="" type="EtcItem">
 		<!-- Box filled with M. Atk. It contains a useful item. -->
@@ -754,7 +821,6 @@
 	</item>
 	<item id="30375" name="Infinite Orichalcum Quiver" additionalName="Additional Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
-		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
@@ -764,7 +830,6 @@
 	</item>
 	<item id="30376" name="Infinite Orichalcum Quiver" additionalName="Critical Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
-		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
@@ -774,7 +839,6 @@
 	</item>
 	<item id="30377" name="Infinite Orichalcum Quiver" additionalName="Bleed Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
-		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
@@ -784,7 +848,6 @@
 	</item>
 	<item id="30378" name="Infinite Orichalcum Bolt Container" additionalName="Additional Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
-		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
@@ -794,7 +857,6 @@
 	</item>
 	<item id="30379" name="Infinite Orichalcum Bolt Container" additionalName="Critical Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
-		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
@@ -804,7 +866,6 @@
 	</item>
 	<item id="30380" name="Infinite Orichalcum Bolt Container" additionalName="Bleed Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
-		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />

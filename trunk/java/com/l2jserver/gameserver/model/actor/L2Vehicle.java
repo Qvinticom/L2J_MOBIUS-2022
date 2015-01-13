@@ -466,7 +466,7 @@ public abstract class L2Vehicle extends L2Character
 	}
 	
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 	}
 	

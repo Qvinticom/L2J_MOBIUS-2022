@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6900" levels="1" name="84 level Raid Boss">
+	<skill id="6900" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6901" levels="1" name="84 level Raid Boss">
+	<skill id="6901" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6902" levels="1" name="84 level Raid Boss">
+	<skill id="6902" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6903" levels="1" name="84 level Raid Boss">
+	<skill id="6903" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6904" levels="1" name="84 level Raid Boss">
+	<skill id="6904" levels="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6905" levels="1" name="85 level Raid Boss">
+	<skill id="6905" levels="1" name="Raid Boss (Lv. 85)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6906" levels="1" name="85 level Raid Boss">
+	<skill id="6906" levels="1" name="Raid Boss (Lv. 85)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6907" levels="1" name="85 level Raid Boss">
+	<skill id="6907" levels="1" name="Raid Boss (Lv. 85)">
 		<!-- High Five Skill -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
@@ -107,12 +107,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6914" levels="10" name="NPC Haste">
+	<skill id="6914" levels="10" name="Haste">
 		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6915" levels="10" name="npc Acumen">
+	<skill id="6915" levels="10" name="Acumen">
 		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -159,7 +159,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6921" levels="1" name="Penetration Attack">
+	<skill id="6921" levels="1" name="Penetrating Attack">
 		<!-- P. Def. is decreased momentarily. -->
 		<set name="abnormalTime" val="30" />
 		<set name="activateRate" val="80" />
@@ -178,7 +178,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6923" levels="3" name="Adventurer's Empower">
 		<!-- AUTO GENERATED SKILL -->
@@ -188,7 +187,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6924" levels="3" name="Adventurer's Shield">
 		<!-- AUTO GENERATED SKILL -->
@@ -198,7 +196,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6925" levels="2" name="Adventurer's Magic Barrier">
 		<!-- AUTO GENERATED SKILL -->
@@ -208,7 +205,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6926" levels="6" name="Adventurer's Blessed Body">
 		<!-- AUTO GENERATED SKILL -->
@@ -218,7 +214,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6927" levels="6" name="Adventurer's Blessed Soul">
 		<!-- AUTO GENERATED SKILL -->
@@ -228,7 +223,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6928" levels="3" name="Adventurer's Focus">
 		<!-- AUTO GENERATED SKILL -->
@@ -238,7 +232,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6929" levels="2" name="Adventurer's Wild Magic">
 		<!-- AUTO GENERATED SKILL -->
@@ -248,7 +241,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6930" levels="2" name="Adventurer's Haste">
 		<!-- AUTO GENERATED SKILL -->
@@ -258,7 +250,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6931" levels="3" name="Adventurer's Acumen">
 		<!-- AUTO GENERATED SKILL -->
@@ -268,7 +259,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6932" levels="4" name="Adventurer's Vampiric Rage">
 		<!-- AUTO GENERATED SKILL -->
@@ -278,7 +268,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6933" levels="2" name="Adventurer's Berserker Spirit">
 		<!-- AUTO GENERATED SKILL -->
@@ -288,7 +277,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6934" levels="3" name="Adventurer's Death Whisper">
 		<!-- AUTO GENERATED SKILL -->
@@ -298,7 +286,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="6935" levels="2" name="Adventurer's Wind Walk">
 		<!-- AUTO GENERATED SKILL -->
@@ -308,6 +295,5 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="false" />
 	</skill>
 </list>

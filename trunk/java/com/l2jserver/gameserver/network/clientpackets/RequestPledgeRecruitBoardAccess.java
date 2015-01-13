@@ -80,9 +80,9 @@ public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 				ClanEntryManager.getInstance().removeFromClanList(clan.getId());
 				break;
 			}
-			case 1: // update
+			case 1: // add
 			{
-				if (ClanEntryManager.getInstance().updateClanList(clan.getId(), pledgeRecruitInfo))
+				if (ClanEntryManager.getInstance().addToClanList(clan.getId(), pledgeRecruitInfo))
 				{
 					activeChar.sendPacket(SystemMessageId.ENTRY_APPLICATION_COMPLETE_USE_ENTRY_APPLICATION_INFO_TO_CHECK_OR_CANCEL_YOUR_APPLICATION_APPLICATION_IS_AUTOMATICALLY_CANCELLED_AFTER_30_DAYS_IF_YOU_CANCEL_APPLICATION_YOU_CANNOT_APPLY_AGAIN_FOR_5_MINUTES);
 				}
@@ -94,9 +94,9 @@ public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 				}
 				break;
 			}
-			case 2: // add
+			case 2: // update
 			{
-				if (ClanEntryManager.getInstance().addToClanList(clan.getId(), pledgeRecruitInfo))
+				if (ClanEntryManager.getInstance().updateClanList(clan.getId(), pledgeRecruitInfo))
 				{
 					activeChar.sendPacket(SystemMessageId.ENTRY_APPLICATION_COMPLETE_USE_ENTRY_APPLICATION_INFO_TO_CHECK_OR_CANCEL_YOUR_APPLICATION_APPLICATION_IS_AUTOMATICALLY_CANCELLED_AFTER_30_DAYS_IF_YOU_CANCEL_APPLICATION_YOU_CANNOT_APPLY_AGAIN_FOR_5_MINUTES);
 				}

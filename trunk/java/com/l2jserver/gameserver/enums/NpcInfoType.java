@@ -66,7 +66,8 @@ public enum NpcInfoType implements IUpdateTypeComponent
 	PVP_FLAG(0x21, 1),
 	NAME_COLOR(0x22, 4),
 	CLAN(0x23, (5 * 4)),
-	ABNORMALS(0x24, 0);
+	ABNORMALS(0x24, 0),
+	VISUAL_STATE(0x25, 1);
 	
 	private final int _mask;
 	private final int _blockLength;

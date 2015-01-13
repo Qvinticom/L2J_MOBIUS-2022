@@ -174,8 +174,6 @@
 	<admin command="admin_effect" accessLevel="100" />
 	<admin command="admin_effect_menu" accessLevel="100" />
 	<admin command="admin_ave_abnormal" accessLevel="100" />
-	<admin command="admin_ave_special" accessLevel="100" />
-	<admin command="admin_ave_event" accessLevel="100" />
 	<admin command="admin_play_sounds" accessLevel="100" />
 	<admin command="admin_play_sound" accessLevel="100" />
 	<admin command="admin_atmosphere" accessLevel="100" />
@@ -526,6 +524,7 @@
 	<admin command="admin_show_teleport" accessLevel="100" />
 	<admin command="admin_teleport_to_character" accessLevel="100" />
 	<admin command="admin_teleportto" accessLevel="100" />
+	<admin command="admin_teleport" accessLevel="100" />
 	<admin command="admin_move_to" accessLevel="100" />
 	<admin command="admin_teleport_character" accessLevel="100" />
 	<admin command="admin_recall" accessLevel="100" />

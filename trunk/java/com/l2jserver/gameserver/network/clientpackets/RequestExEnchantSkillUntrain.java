@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 import com.l2jserver.gameserver.network.serverpackets.ExEnchantSkillResult;
@@ -174,7 +173,6 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		}
 		
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
 		
 		if (_skillLvl > 100)
 		{

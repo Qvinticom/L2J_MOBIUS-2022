@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -63,7 +64,7 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 			skill = activeChar.getCustomSkill(_magicId);
 			if (skill == null)
 			{
-				if (SkillTreesData.getInstance().isSubClassChangeSkill(_magicId, 1))
+				if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) || SkillTreesData.getInstance().isSubClassChangeSkill(_magicId, 1))
 				{
 					skill = SkillData.getInstance().getSkill(_magicId, 1);
 				}

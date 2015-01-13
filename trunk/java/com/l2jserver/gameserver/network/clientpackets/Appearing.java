@@ -19,7 +19,6 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
 /**
@@ -55,7 +54,6 @@ public final class Appearing extends L2GameClientPacket
 		}
 		
 		sendPacket(new UserInfo(activeChar));
-		sendPacket(new ExBrExtraUserInfo(activeChar));
 	}
 	
 	@Override

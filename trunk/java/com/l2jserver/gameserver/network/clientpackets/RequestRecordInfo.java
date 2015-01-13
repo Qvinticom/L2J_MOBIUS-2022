@@ -23,7 +23,6 @@ import java.util.Collection;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.SpawnItem;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
@@ -47,7 +46,6 @@ public class RequestRecordInfo extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new UserInfo(activeChar));
-		activeChar.sendPacket(new ExBrExtraUserInfo(activeChar));
 		
 		Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
 		for (L2Object object : objs)

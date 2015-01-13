@@ -25,8 +25,10 @@ import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -35,6 +37,8 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
@@ -251,14 +255,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private SkillChannelized _channelized = null;
 	
-	/** Map 32 bits, containing all abnormal visual effects in progress. */
-	private int _abnormalVisualEffects;
-	/** Map 32 bits, containing all special abnormal visual effects in progress. */
-	private int _abnormalVisualEffectsSpecial;
-	/** Map 32 bits, containing all event abnormal visual effects in progress. */
-	private int _abnormalVisualEffectsEvent;
-	/** Set containg all event abnormal visual effects ID in progress */
-	private final Set<Integer> _abnormalVisualEffectsList = Collections.newSetFromMap(new ConcurrentHashMap<Integer, Boolean>());
+	private volatile Set<AbnormalVisualEffect> _abnormalVisualEffects;
+	private volatile Set<AbnormalVisualEffect> _currentAbnormalVisualEffects;
 	
 	/** Movement data of this L2Character */
 	protected MoveData _move;
@@ -3132,116 +3130,87 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Gets the abnormal visual effects affecting this character.
-	 * @return a map of 32 bits containing all abnormal visual effects in progress for this character
+	 * Resets the abnormal visual effects recalculating all of them that are applied from skills and sending packet for updating them on client if a change is found.
 	 */
-	public int getAbnormalVisualEffects()
+	public void resetCurrentAbnormalVisualEffects()
 	{
-		return _abnormalVisualEffects;
+		final Collection<BuffInfo> passives = getEffectList().hasPassives() ? new ArrayList<>(getEffectList().getPassives().values()) : null;
+		//@formatter:off
+		final Set<AbnormalVisualEffect> abnormalVisualEffects =  Stream.concat(getEffectList().getEffects().stream(), passives != null ? passives.stream() : Stream.empty())
+			.filter(Objects::nonNull)
+			.map(BuffInfo::getSkill)
+			.filter(Skill::hasAbnormalVisualEffects)
+			.flatMap(s -> s.getAbnormalVisualEffects().stream())
+			.collect(Collectors.toCollection(HashSet::new));
+		//@formatter:on
+		
+		if (_abnormalVisualEffects != null)
+		{
+			abnormalVisualEffects.addAll(_abnormalVisualEffects);
+		}
+		
+		if ((_currentAbnormalVisualEffects == null) || !_currentAbnormalVisualEffects.equals(abnormalVisualEffects))
+		{
+			_currentAbnormalVisualEffects = abnormalVisualEffects;
+			updateAbnormalVisualEffects();
+		}
 	}
 	
 	/**
-	 * Gets the special abnormal visual effects affecting this character.
-	 * @return a map of 32 bits containing all special effect in progress for this character
+	 * Gets the currently applied abnormal visual effects.
+	 * @return the abnormal visual effects
 	 */
-	public int getAbnormalVisualEffectSpecial()
+	public Set<AbnormalVisualEffect> getCurrentAbnormalVisualEffects()
 	{
-		return _abnormalVisualEffectsSpecial;
+		return _currentAbnormalVisualEffects != null ? _currentAbnormalVisualEffects : Collections.emptySet();
 	}
 	
 	/**
-	 * Gets the event abnormal visual effects affecting this character.
-	 * @return a map of 32 bits containing all event abnormal visual effects in progress for this character
-	 */
-	public int getAbnormalVisualEffectEvent()
-	{
-		return _abnormalVisualEffectsEvent;
-	}
-	
-	/**
-	 * Gets the event abnormal visual effects affecting this character.
-	 * @return a sets containing all event abnormal visual effects ID in progress for this character
-	 */
-	public Set<Integer> getAbnormalVisualEffectsList()
-	{
-		return _abnormalVisualEffectsList;
-	}
-	
-	/**
-	 * Verify if this creature is affected by the given abnormal visual effect.
+	 * Checks if the creature has the abnormal visual effect.
 	 * @param ave the abnormal visual effect
-	 * @return {@code true} if the creature is affected by the abnormal visual effect, {@code false} otherwise
+	 * @return {@code true} if the creature has the abnormal visual effect, {@code false} otherwise
 	 */
 	public boolean hasAbnormalVisualEffect(AbnormalVisualEffect ave)
 	{
-		if (ave.isEvent())
-		{
-			return (getAbnormalVisualEffectEvent() & ave.getMask()) == ave.getMask();
-		}
-		
-		if (ave.isSpecial())
-		{
-			return (getAbnormalVisualEffectSpecial() & ave.getMask()) == ave.getMask();
-		}
-		
-		return (getAbnormalVisualEffects() & ave.getMask()) == ave.getMask();
+		return (_abnormalVisualEffects != null) && _abnormalVisualEffects.contains(ave);
 	}
 	
 	/**
-	 * Adds the abnormal visual effect flags in the binary mask and send Server->Client UserInfo/CharInfo packet.
-	 * @param update if {@code true} update packets will be sent
+	 * Adds the abnormal visual and sends packet for updating them in client.
 	 * @param aves the abnormal visual effects
 	 */
-	public final void startAbnormalVisualEffect(boolean update, AbnormalVisualEffect... aves)
+	public final void startAbnormalVisualEffect(AbnormalVisualEffect... aves)
 	{
 		for (AbnormalVisualEffect ave : aves)
 		{
-			if (ave.isEvent())
+			if (_abnormalVisualEffects == null)
 			{
-				_abnormalVisualEffectsEvent |= ave.getMask();
+				synchronized (this)
+				{
+					if (_abnormalVisualEffects == null)
+					{
+						_abnormalVisualEffects = Collections.newSetFromMap(new ConcurrentHashMap<>());
+					}
+				}
 			}
-			else if (ave.isSpecial())
-			{
-				_abnormalVisualEffectsSpecial |= ave.getMask();
-			}
-			else
-			{
-				_abnormalVisualEffects |= ave.getMask();
-			}
-			_abnormalVisualEffectsList.add(ave.ordinal());
+			_abnormalVisualEffects.add(ave);
 		}
-		if (update)
-		{
-			updateAbnormalEffect();
-		}
+		resetCurrentAbnormalVisualEffects();
 	}
 	
 	/**
-	 * Removes the abnormal visual effect flags from the binary mask and send Server->Client UserInfo/CharInfo packet.
-	 * @param update if {@code true} update packets will be sent
+	 * Removes the abnormal visual and sends packet for updating them in client.
 	 * @param aves the abnormal visual effects
 	 */
-	public final void stopAbnormalVisualEffect(boolean update, AbnormalVisualEffect... aves)
+	public final void stopAbnormalVisualEffect(AbnormalVisualEffect... aves)
 	{
-		for (AbnormalVisualEffect ave : aves)
+		if (_abnormalVisualEffects != null)
 		{
-			if (ave.isEvent())
+			for (AbnormalVisualEffect ave : aves)
 			{
-				_abnormalVisualEffectsEvent &= ~ave.getMask();
+				_abnormalVisualEffects.remove(ave);
 			}
-			else if (ave.isSpecial())
-			{
-				_abnormalVisualEffectsSpecial &= ~ave.getMask();
-			}
-			else
-			{
-				_abnormalVisualEffects &= ~ave.getMask();
-			}
-			_abnormalVisualEffectsList.remove(ave.ordinal());
-		}
-		if (update)
-		{
-			updateAbnormalEffect();
+			resetCurrentAbnormalVisualEffects();
 		}
 	}
 	
@@ -3284,7 +3253,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
-		updateAbnormalEffect();
 	}
 	
 	public final void startParalyze()
@@ -3403,7 +3371,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
-		updateAbnormalEffect();
 	}
 	
 	/**
@@ -3436,10 +3403,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
-		updateAbnormalEffect();
+		updateAbnormalVisualEffects();
 	}
 	
-	public abstract void updateAbnormalEffect();
+	public abstract void updateAbnormalVisualEffects();
 	
 	/**
 	 * Update active skills in progress (In Use and Not In Use because stacked) icons on client.<br>

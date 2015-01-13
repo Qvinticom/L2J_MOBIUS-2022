@@ -657,12 +657,12 @@ public final class SkillTreesData implements DocumentParser
 		
 		for (L2SkillLearn skill : skills.values())
 		{
-			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()))
+			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()))
 			{
 				continue;
 			}
 			
-			if (((includeAutoGet && skill.isAutoGet()) || skill.isLearnedByNpc() || (includeByFs && skill.isLearnedByFS())) && (player.getLevel() >= skill.getGetLevel()))
+			if (player.getLevel() >= skill.getGetLevel())
 			{
 				final Skill oldSkill = holder.getKnownSkill(skill.getSkillId());
 				if (oldSkill != null)
@@ -1300,7 +1300,7 @@ public final class SkillTreesData implements DocumentParser
 		{
 			for (L2SkillLearn s : skillTree.values())
 			{
-				if (s.isLearnedByNpc() && (player.getLevel() < s.getGetLevel()))
+				if (player.getLevel() < s.getGetLevel())
 				{
 					if ((minLevel == 0) || (minLevel > s.getGetLevel()))
 					{
@@ -1326,7 +1326,11 @@ public final class SkillTreesData implements DocumentParser
 		{
 			for (L2SkillLearn skill : completeClassSkillTree.values())
 			{
-				if (((includeAutoGet && skill.isAutoGet()) || skill.isLearnedByNpc() || (includeByFs && skill.isLearnedByFS())) && (minLevelForNewSkill == skill.getGetLevel()))
+				if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()))
+				{
+					continue;
+				}
+				if (minLevelForNewSkill == skill.getGetLevel())
 				{
 					final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
 					if (oldSkill != null)

@@ -263,7 +263,6 @@ import com.l2jserver.gameserver.network.serverpackets.ExAbnormalStatusUpdateFrom
 import com.l2jserver.gameserver.network.serverpackets.ExAcquireAPSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExAutoSoulShot;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExFishingEnd;
 import com.l2jserver.gameserver.network.serverpackets.ExFishingStart;
@@ -630,6 +629,8 @@ public final class L2PcInstance extends L2Playable
 	private int _hennaMEN;
 	private int _hennaWIT;
 	private int _hennaCON;
+	private int _hennaLUC;
+	private int _hennaCHA;
 	
 	/** The L2Summon of the L2PcInstance */
 	private L2Summon _summon = null;
@@ -1717,7 +1718,6 @@ public final class L2PcInstance extends L2Playable
 		UserInfo ui = new UserInfo(this, false);
 		ui.addComponentType(UserInfoType.SOCIAL);
 		sendPacket(ui);
-		sendPacket(new ExBrExtraUserInfo(this));
 		
 		// If this player has a pet update the pets pvp flag as well
 		if (hasSummon())
@@ -2088,7 +2088,6 @@ public final class L2PcInstance extends L2Playable
 				}
 				sendPacket(new EtcStatusUpdate(this));
 				broadcastPacket(new CharInfo(this));
-				broadcastPacket(new ExBrExtraUserInfo(this));
 			}
 		}
 	}
@@ -5597,7 +5596,6 @@ public final class L2PcInstance extends L2Playable
 			UserInfo ui = new UserInfo(this, false);
 			ui.addComponentType(UserInfoType.SOCIAL);
 			sendPacket(ui);
-			sendPacket(new ExBrExtraUserInfo(this));
 		}
 	}
 	
@@ -5629,7 +5627,6 @@ public final class L2PcInstance extends L2Playable
 		UserInfo ui = new UserInfo(this, false);
 		ui.addComponentType(UserInfoType.SOCIAL);
 		sendPacket(ui);
-		sendPacket(new ExBrExtraUserInfo(this));
 	}
 	
 	public void updatePvPStatus()
@@ -6746,7 +6743,6 @@ public final class L2PcInstance extends L2Playable
 		if (broadcastType == 1)
 		{
 			sendPacket(new UserInfo(this));
-			sendPacket(new ExBrExtraUserInfo(this));
 		}
 		if (broadcastType == 2)
 		{
@@ -6763,7 +6759,6 @@ public final class L2PcInstance extends L2Playable
 		StatusUpdate su = new StatusUpdate(this);
 		su.addAttribute(StatusUpdate.PVP_FLAG, getKarma());
 		sendPacket(su);
-		sendPacket(new ExBrExtraUserInfo(this));
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
@@ -8187,7 +8182,6 @@ public final class L2PcInstance extends L2Playable
 		UserInfo ui = new UserInfo(this, false);
 		ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 		sendPacket(ui);
-		sendPacket(new ExBrExtraUserInfo(this));
 		// Add the recovered dyes to the player's inventory and notify them.
 		getInventory().addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
 		reduceAdena("Henna", henna.getCancelFee(), this, false);
@@ -8240,7 +8234,6 @@ public final class L2PcInstance extends L2Playable
 				UserInfo ui = new UserInfo(this, false);
 				ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 				sendPacket(ui);
-				sendPacket(new ExBrExtraUserInfo(this));
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
@@ -8261,6 +8254,8 @@ public final class L2PcInstance extends L2Playable
 		_hennaMEN = 0;
 		_hennaWIT = 0;
 		_hennaDEX = 0;
+		_hennaLUC = 0;
+		_hennaCHA = 0;
 		
 		for (L2Henna h : _henna)
 		{
@@ -8275,6 +8270,8 @@ public final class L2PcInstance extends L2Playable
 			_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
 			_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
 			_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
+			_hennaLUC += ((_hennaLUC + h.getStatLUC()) > 5) ? 5 - _hennaLUC : h.getStatLUC();
+			_hennaCHA += ((_hennaCHA + h.getStatCHA()) > 5) ? 5 - _hennaCHA : h.getStatCHA();
 		}
 	}
 	
@@ -8360,6 +8357,22 @@ public final class L2PcInstance extends L2Playable
 	public int getHennaStatDEX()
 	{
 		return _hennaDEX;
+	}
+	
+	/**
+	 * @return the LUC Henna modifier of this L2PcInstance.
+	 */
+	public int getHennaStatLUC()
+	{
+		return _hennaLUC;
+	}
+	
+	/**
+	 * @return the CHA Henna modifier of this L2PcInstance.
+	 */
+	public int getHennaStatCHA()
+	{
+		return _hennaCHA;
 	}
 	
 	/**
@@ -9311,7 +9324,7 @@ public final class L2PcInstance extends L2Playable
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</B></FONT>
 	 */
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 		sendPacket(new ExUserInfoAbnormalVisualEffect(this));
 		broadcastPacket(new CharInfo(this));
@@ -10067,7 +10080,7 @@ public final class L2PcInstance extends L2Playable
 		_noble = val;
 		
 		sendSkillList();
-		if (val && (getLevel() == 99))
+		if (val && (getLevel() == ExperienceTable.getInstance().getMaxLevel()))
 		{
 			sendPacket(new ExAcquireAPSkillList(this));
 		}
@@ -10558,7 +10571,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskWarnUserTakeBreak == null)
 		{
-			_taskWarnUserTakeBreak = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new WarnUserTakeBreakTask(this), 7200000, 7200000);
+			_taskWarnUserTakeBreak = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
 		}
 	}
 	
@@ -13210,7 +13223,6 @@ public final class L2PcInstance extends L2Playable
 			setXYZ(getBoat().getLocation());
 			
 			activeChar.sendPacket(new CharInfo(this));
-			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			int relation1 = getRelation(activeChar);
 			int relation2 = activeChar.getRelation(this);
 			Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());
@@ -13237,7 +13249,6 @@ public final class L2PcInstance extends L2Playable
 		{
 			setXYZ(getAirShip().getLocation());
 			activeChar.sendPacket(new CharInfo(this));
-			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			int relation1 = getRelation(activeChar);
 			int relation2 = activeChar.getRelation(this);
 			Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());
@@ -13263,7 +13274,6 @@ public final class L2PcInstance extends L2Playable
 		else
 		{
 			activeChar.sendPacket(new CharInfo(this));
-			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			int relation1 = getRelation(activeChar);
 			int relation2 = activeChar.getRelation(this);
 			Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());

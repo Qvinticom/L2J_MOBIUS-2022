@@ -214,7 +214,7 @@ public abstract class L2Summon extends L2Playable
 	}
 	
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{

@@ -29,16 +29,14 @@ public class ExPledgeEmblem extends L2GameServerPacket
 	private final int _clanId;
 	private final byte[] _data;
 	private final int _chunkId;
-	private final int _chunkSize;
 	private static final int TOTAL_SIZE = 65664;
 	
-	public ExPledgeEmblem(int crestId, byte[] chunkedData, int clanId, int chunkId, int chunkSize)
+	public ExPledgeEmblem(int crestId, byte[] chunkedData, int clanId, int chunkId)
 	{
 		_crestId = crestId;
 		_data = chunkedData;
 		_clanId = clanId;
 		_chunkId = chunkId;
-		_chunkSize = chunkSize;
 	}
 	
 	@Override
@@ -51,7 +49,6 @@ public class ExPledgeEmblem extends L2GameServerPacket
 		writeD(_crestId);
 		writeD(_chunkId);
 		writeD(TOTAL_SIZE);
-		writeD(_chunkSize);
 		if (_data != null)
 		{
 			writeD(_data.length);

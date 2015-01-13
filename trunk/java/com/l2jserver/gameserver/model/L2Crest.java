@@ -115,13 +115,13 @@ public final class L2Crest implements IIdentifiable
 						{
 							final byte[] fullChunk = new byte[14336];
 							System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
-							activeChar.sendPacket(new ExPledgeEmblem(getId(), fullChunk, 0, i, 14336));
+							activeChar.sendPacket(new ExPledgeEmblem(getId(), fullChunk, 0, i));
 						}
 						else
 						{
 							final byte[] lastChunk = new byte[8320];
 							System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
-							activeChar.sendPacket(new ExPledgeEmblem(getId(), lastChunk, 0, i, 8320));
+							activeChar.sendPacket(new ExPledgeEmblem(getId(), lastChunk, 0, i));
 						}
 					}
 				}

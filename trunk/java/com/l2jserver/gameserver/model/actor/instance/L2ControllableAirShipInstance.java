@@ -189,7 +189,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 				return false;
 			}
 		}
-		updateAbnormalEffect();
+		updateAbnormalVisualEffects();
 		return true;
 	}
 	
@@ -314,7 +314,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 				}
 				
 				setFuel(fuel);
-				updateAbnormalEffect();
+				updateAbnormalVisualEffects();
 			}
 		}
 	}

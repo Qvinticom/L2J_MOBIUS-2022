@@ -18,24 +18,39 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
 public class EnchantResult extends L2GameServerPacket
 {
+	public static int SUCCESS = 0;
+	public static int FAIL = 1;
+	public static int ERROR = 2;
+	public static int BLESSED_FAIL = 3;
+	public static int NO_CRYSTAL = 4;
+	public static int SAFE_FAIL = 5;
 	private final int _result;
 	private final int _crystal;
 	private final int _count;
 	private final int _enchantLevel;
+	private final int[] _enchantOptions;
 	
-	public EnchantResult(int result, int crystal, int count)
-	{
-		this(result, crystal, count, 0);
-	}
-	
-	public EnchantResult(int result, int crystal, int count, int enchantLevel)
+	public EnchantResult(int result, int crystal, int count, int enchantLevel, int[] options)
 	{
 		_result = result;
 		_crystal = crystal;
 		_count = count;
 		_enchantLevel = enchantLevel;
+		_enchantOptions = options;
+	}
+	
+	public EnchantResult(int result, int crystal, int count)
+	{
+		this(result, crystal, count, 0, L2ItemInstance.DEFAULT_ENCHANT_OPTIONS);
+	}
+	
+	public EnchantResult(int result, L2ItemInstance item)
+	{
+		this(result, 0, 0, 0, item.getEnchantOptions());
 	}
 	
 	@Override
@@ -46,8 +61,9 @@ public class EnchantResult extends L2GameServerPacket
 		writeD(_crystal);
 		writeQ(_count);
 		writeD(_enchantLevel);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
+		for (int option : _enchantOptions)
+		{
+			writeH(option);
+		}
 	}
 }

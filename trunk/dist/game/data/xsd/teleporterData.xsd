@@ -15,7 +15,7 @@
 												<xs:attribute type="xs:int" name="npcStringId" use="optional" />
 												<xs:attribute type="xs:int" name="x" use="required" />
 												<xs:attribute type="xs:int" name="y" use="required" />
-												<xs:attribute type="xs:int" name="z" use="required" />
+												<xs:attribute type="xs:short" name="z" use="required" />
 												<xs:attribute type="xs:int" name="feeId" use="optional" />
 												<xs:attribute type="xs:int" name="feeCount" use="optional" />
 											</xs:complexType>
@@ -33,7 +33,7 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute type="xs:int" name="id" />
+						<xs:attribute type="xs:integer" name="id" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

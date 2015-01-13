@@ -18,12 +18,15 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.Set;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Decoy;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
 public class CharInfo extends L2GameServerPacket
@@ -252,10 +255,11 @@ public class CharInfo extends L2GameServerPacket
 		writeD((int) Math.round(_activeChar.getCurrentMp())); // Confirmed
 		
 		writeC(0x00); // TODO: Find me!
-		writeD(_activeChar.getAbnormalVisualEffectsList().size()); // Confirmed
-		for (int abnormalId : _activeChar.getAbnormalVisualEffectsList())
+		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getCurrentAbnormalVisualEffects();
+		writeD(abnormalVisualEffects.size()); // Confirmed
+		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
 		{
-			writeH(abnormalId); // Confirmed
+			writeH(abnormalVisualEffect.getClientId()); // Confirmed
 		}
 		writeC(0x00); // TODO: Find me!
 		writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory

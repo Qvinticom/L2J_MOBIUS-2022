@@ -51,7 +51,7 @@ public class RequestExRemoveEnchantSupportItem extends L2GameClientPacket
 		
 		if ((supportItem == null) || (supportItem.getCount() < 1))
 		{
-			activeChar.sendPacket(new ExRemoveEnchantSupportItemResult());
+			activeChar.sendPacket(ExRemoveEnchantSupportItemResult.STATIC_PACKET);
 		}
 	}
 	

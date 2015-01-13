@@ -178,7 +178,7 @@ public class L2AirShipInstance extends L2Vehicle
 	}
 	
 	@Override
-	public void updateAbnormalEffect()
+	public void updateAbnormalVisualEffects()
 	{
 		broadcastPacket(new ExAirShipInfo(this));
 	}
