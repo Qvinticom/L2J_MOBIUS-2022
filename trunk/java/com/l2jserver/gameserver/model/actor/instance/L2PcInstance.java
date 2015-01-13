@@ -111,6 +111,7 @@ import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
+import com.l2jserver.gameserver.instancemanager.PremiumManager;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
@@ -362,6 +363,9 @@ public final class L2PcInstance extends L2Playable
 	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,faction=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
+	// Character Premium System String Definitions:
+	private static final String RESTORE_PREMIUMSERVICE = "SELECT premium_service,enddate FROM account_premium WHERE account_name=?";
+	
 	// Character Teleport Bookmark:
 	private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
 	private static final String UPDATE_TP_BOOKMARK = "UPDATE character_tpbookmark SET icon=?,tag=?,name=? where charId=? AND Id=?";
@@ -598,6 +602,9 @@ public final class L2PcInstance extends L2Playable
 	
 	private boolean _noble = false;
 	private boolean _hero = false;
+	
+	/** Premium System */
+	private boolean _premiumStatus = false;
 	
 	/** Faction System */
 	private boolean _isGood = false;
@@ -6912,6 +6919,7 @@ public final class L2PcInstance extends L2Playable
 					
 					player = new L2PcInstance(objectId, template, rset.getString("account_name"), app);
 					player.setName(rset.getString("char_name"));
+					restorePremiumSystemData(player, rset.getString("account_name"));
 					player._lastAccess = rset.getLong("lastAccess");
 					
 					player.getStat().setExp(rset.getLong("exp"));
@@ -14081,6 +14089,58 @@ public final class L2PcInstance extends L2Playable
 	public void setRecoTwoHoursGiven(boolean val)
 	{
 		_recoTwoHoursGiven = val;
+	}
+	
+	public void setPremiumStatus(boolean premiumStatus)
+	{
+		_premiumStatus = premiumStatus;
+	}
+	
+	public boolean hasPremiumStatus()
+	{
+		return _premiumStatus;
+	}
+	
+	private static void restorePremiumSystemData(L2PcInstance player, String account)
+	{
+		boolean success = false;
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		{
+			PreparedStatement statement = con.prepareStatement(RESTORE_PREMIUMSERVICE);
+			statement.setString(1, account);
+			ResultSet rset = statement.executeQuery();
+			while (rset.next())
+			{
+				success = true;
+				if (Config.PREMIUM_SYSTEM_ENABLED)
+				{
+					if (rset.getLong("enddate") <= System.currentTimeMillis())
+					{
+						PremiumManager.getInstance().removePremiumStatus(account);
+						player.setPremiumStatus(false);
+					}
+					else
+					{
+						player.setPremiumStatus(rset.getBoolean("premium_service"));
+					}
+				}
+				else
+				{
+					player.setPremiumStatus(false);
+				}
+			}
+			statement.close();
+		}
+		catch (Exception e)
+		{
+			_log.warning("Premium System: Could not restore premium system data for " + account + "." + e);
+			e.printStackTrace();
+		}
+		if (success == false)
+		{
+			PremiumManager.getInstance().removePremiumStatus(player.getAccountName());
+			player.setPremiumStatus(false);
+		}
 	}
 	
 	public void setLastPetitionGmName(String gmName)

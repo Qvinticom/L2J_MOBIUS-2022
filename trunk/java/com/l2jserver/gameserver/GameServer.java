@@ -124,6 +124,7 @@ import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
 import com.l2jserver.gameserver.instancemanager.PetitionManager;
+import com.l2jserver.gameserver.instancemanager.PremiumManager;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossPointsManager;
@@ -256,6 +257,11 @@ public class GameServer
 		CharSummonTable.getInstance().init();
 		BeautyShopData.getInstance();
 		MentorManager.getInstance();
+		if (Config.PREMIUM_SYSTEM_ENABLED)
+		{
+			_log.info("PremiumManager: Premium system is enabled.");
+			PremiumManager.getInstance();
+		}
 		
 		printSection("Clans");
 		ClanTable.getInstance();

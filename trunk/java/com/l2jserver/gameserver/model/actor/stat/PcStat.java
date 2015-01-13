@@ -131,6 +131,12 @@ public class PcStat extends PlayableStat
 		addToExp *= bonusExp;
 		addToSp *= bonusSp;
 		
+		if (activeChar.hasPremiumStatus())
+		{
+			addToExp *= Config.PREMIUM_RATE_XP;
+			addToSp *= Config.PREMIUM_RATE_SP;
+		}
+		
 		float ratioTakenByPlayer = 0;
 		
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now

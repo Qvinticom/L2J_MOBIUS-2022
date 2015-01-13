@@ -831,6 +831,14 @@ public final class Config
 	public static String FACTION_EVIL_TEAM_NAME;
 	public static int FACTION_GOOD_NAME_COLOR;
 	public static int FACTION_EVIL_NAME_COLOR;
+	public static boolean PREMIUM_SYSTEM_ENABLED;
+	public static float PREMIUM_RATE_XP;
+	public static float PREMIUM_RATE_SP;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_ITEMS_ID;
+	public static float PREMIUM_RATE_DROP_CHANCE;
+	public static float PREMIUM_RATE_DROP_AMMOUNT;
+	public static float PREMIUM_RATE_SPOIL_CHANCE;
+	public static float PREMIUM_RATE_SPOIL_AMMOUNT;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2640,6 +2648,14 @@ public final class Config
 			FACTION_EVIL_TEAM_NAME = CustomSettings.getString("EvilTeamName", "Evil");
 			FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("GoodNameColor", "00FF00"));
 			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("EvilNameColor", "0000FF"));
+			
+			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
+			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);
+			PREMIUM_RATE_SP = CustomSettings.getFloat("PremiumRateSp", 2);
+			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 2);
+			PREMIUM_RATE_DROP_AMMOUNT = CustomSettings.getFloat("PremiumRateDropAmmount", 1);
+			PREMIUM_RATE_SPOIL_CHANCE = CustomSettings.getFloat("PremiumRateSpoilChance", 2);
+			PREMIUM_RATE_SPOIL_AMMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmmount", 1);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

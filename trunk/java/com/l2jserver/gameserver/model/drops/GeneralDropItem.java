@@ -54,12 +54,12 @@ public class GeneralDropItem implements IDropItem
 		_chance = chance;
 	}
 	
-	protected double getGlobalChanceMultiplier()
+	protected double getGlobalChanceMultiplier(boolean isPremium)
 	{
 		return 1.;
 	}
 	
-	protected double getGlobalAmountMultiplier()
+	protected double getGlobalAmountMultiplier(boolean isPremium)
 	{
 		return 1.;
 	}
@@ -87,7 +87,7 @@ public class GeneralDropItem implements IDropItem
 			else
 			{
 				// drop type specific amount multiplier
-				multiplier *= getGlobalAmountMultiplier();
+				multiplier *= getGlobalAmountMultiplier(killer.getActingPlayer().hasPremiumStatus());
 			}
 		}
 		
@@ -183,7 +183,7 @@ public class GeneralDropItem implements IDropItem
 			}
 			else
 			{
-				multiplier *= getGlobalChanceMultiplier();
+				multiplier *= getGlobalChanceMultiplier(killer.getActingPlayer().hasPremiumStatus());
 			}
 		}
 		

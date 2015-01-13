@@ -41,9 +41,9 @@ public class CorpseDropItem extends GeneralDropItem
 	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalAmountMultiplier()
 	 */
 	@Override
-	protected double getGlobalAmountMultiplier()
+	protected double getGlobalAmountMultiplier(boolean isPremium)
 	{
-		return Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER;
+		return isPremium ? Config.PREMIUM_RATE_SPOIL_AMMOUNT * Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER : Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER;
 	}
 	
 	/*
@@ -51,8 +51,8 @@ public class CorpseDropItem extends GeneralDropItem
 	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalChanceMultiplier()
 	 */
 	@Override
-	protected double getGlobalChanceMultiplier()
+	protected double getGlobalChanceMultiplier(boolean isPremium)
 	{
-		return Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
+		return isPremium ? Config.PREMIUM_RATE_SPOIL_CHANCE * Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER : Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
 	}
 }

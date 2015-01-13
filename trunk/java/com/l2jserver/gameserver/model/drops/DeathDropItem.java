@@ -41,9 +41,9 @@ public class DeathDropItem extends GeneralDropItem
 	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalAmountMultiplier()
 	 */
 	@Override
-	protected double getGlobalAmountMultiplier()
+	protected double getGlobalAmountMultiplier(boolean isPremium)
 	{
-		return Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+		return isPremium ? Config.PREMIUM_RATE_DROP_AMMOUNT * Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER : Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
 	}
 	
 	/*
@@ -51,8 +51,8 @@ public class DeathDropItem extends GeneralDropItem
 	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalChanceMultiplier()
 	 */
 	@Override
-	protected double getGlobalChanceMultiplier()
+	protected double getGlobalChanceMultiplier(boolean isPremium)
 	{
-		return Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
+		return isPremium ? Config.PREMIUM_RATE_DROP_CHANCE * Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER : Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
 	}
 }

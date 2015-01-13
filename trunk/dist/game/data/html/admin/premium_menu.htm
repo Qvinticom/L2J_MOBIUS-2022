@@ -1,0 +1,15 @@
+<html><title>Premium Service Menu</title><body>
+<center>
+<br>
+<font color="LEVEL">Premium Service Menu</font><br>
+<br>
+Enter Account Name:<br>
+<edit var="acc_name" width=200>
+<br><button value="Add 1 month Premium" action="bypass -h admin_premium_add1 $acc_name" width=200 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+<button value="Add 2 months Premium" action="bypass -h admin_premium_add2 $acc_name" width=200 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+<button value="Add 3 months Premium" action="bypass -h admin_premium_add3 $acc_name" width=200 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+<br>
+<button value="View Premium Info" action="bypass -h admin_premium_info $acc_name" width=200 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+<button value="Remove Premium" action="bypass -h admin_premium_remove $acc_name" width=200 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+</center>
+</body></html>
