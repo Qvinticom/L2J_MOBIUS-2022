@@ -6939,17 +6939,14 @@ public final class L2PcInstance extends L2Playable
 					player.setNewbie(rset.getInt("newbie"));
 					player.setNoble(rset.getInt("nobless") == 1);
 					
-					if (Config.FACTION_SYSTEM_ENABLED)
+					final int factionId = rset.getInt("faction");
+					if (factionId == 1)
 					{
-						final int factionId = rset.getInt("faction");
-						if (factionId == 1)
-						{
-							player.setGood();
-						}
-						if (factionId == 2)
-						{
-							player.setEvil();
-						}
+						player.setGood();
+					}
+					if (factionId == 2)
+					{
+						player.setEvil();
 					}
 					
 					player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
