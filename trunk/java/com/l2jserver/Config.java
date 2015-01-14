@@ -836,9 +836,11 @@ public final class Config
 	public static float PREMIUM_RATE_SP;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_ITEMS_ID;
 	public static float PREMIUM_RATE_DROP_CHANCE;
-	public static float PREMIUM_RATE_DROP_AMMOUNT;
+	public static float PREMIUM_RATE_DROP_AMOUNT;
 	public static float PREMIUM_RATE_SPOIL_CHANCE;
-	public static float PREMIUM_RATE_SPOIL_AMMOUNT;
+	public static float PREMIUM_RATE_SPOIL_AMOUNT;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2653,9 +2655,63 @@ public final class Config
 			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);
 			PREMIUM_RATE_SP = CustomSettings.getFloat("PremiumRateSp", 2);
 			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 2);
-			PREMIUM_RATE_DROP_AMMOUNT = CustomSettings.getFloat("PremiumRateDropAmmount", 1);
+			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 1);
 			PREMIUM_RATE_SPOIL_CHANCE = CustomSettings.getFloat("PremiumRateSpoilChance", 2);
-			PREMIUM_RATE_SPOIL_AMMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmmount", 1);
+			PREMIUM_RATE_SPOIL_AMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmount", 1);
+			String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumRateDropChanceByItemId", "").split(";");
+			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
+			if (!premiumDropChanceMultiplier[0].isEmpty())
+			{
+				for (String item : premiumDropChanceMultiplier)
+				{
+					String[] itemSplit = item.split(",");
+					if (itemSplit.length != 2)
+					{
+						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+					}
+					else
+					{
+						try
+						{
+							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+						}
+						catch (NumberFormatException nfe)
+						{
+							if (!item.isEmpty())
+							{
+								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+							}
+						}
+					}
+				}
+			}
+			String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumRateDropAmountByItemId", "").split(";");
+			PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
+			if (!premiumDropAmountMultiplier[0].isEmpty())
+			{
+				for (String item : premiumDropAmountMultiplier)
+				{
+					String[] itemSplit = item.split(",");
+					if (itemSplit.length != 2)
+					{
+						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+					}
+					else
+					{
+						try
+						{
+							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+						}
+						catch (NumberFormatException nfe)
+						{
+							if (!item.isEmpty())
+							{
+								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+							}
+						}
+					}
+				}
+			}
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

@@ -43,7 +43,7 @@ public class DeathDropItem extends GeneralDropItem
 	@Override
 	protected double getGlobalAmountMultiplier(boolean isPremium)
 	{
-		return isPremium ? Config.PREMIUM_RATE_DROP_AMMOUNT * Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER : Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+		return isPremium ? Config.PREMIUM_RATE_DROP_AMOUNT * Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER : Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
 	}
 	
 	/*

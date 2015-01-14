@@ -43,7 +43,7 @@ public class CorpseDropItem extends GeneralDropItem
 	@Override
 	protected double getGlobalAmountMultiplier(boolean isPremium)
 	{
-		return isPremium ? Config.PREMIUM_RATE_SPOIL_AMMOUNT * Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER : Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER;
+		return isPremium ? Config.PREMIUM_RATE_SPOIL_AMOUNT * Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER : Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER;
 	}
 	
 	/*

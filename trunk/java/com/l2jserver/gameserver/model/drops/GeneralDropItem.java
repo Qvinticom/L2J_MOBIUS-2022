@@ -69,7 +69,29 @@ public class GeneralDropItem implements IDropItem
 		double multiplier = 1;
 		
 		// individual drop amount
-		Float individualDropAmountMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(getItemId());
+		Float individualDropAmountMultiplier = null;
+		if (killer.getActingPlayer().hasPremiumStatus())
+		{
+			final Float normalMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(getItemId());
+			final Float premiumMultiplier = Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(getItemId());
+			if ((normalMultiplier != null) && (premiumMultiplier != null))
+			{
+				individualDropAmountMultiplier = normalMultiplier * premiumMultiplier;
+			}
+			else if (normalMultiplier != null)
+			{
+				individualDropAmountMultiplier = normalMultiplier;
+			}
+			else if (premiumMultiplier != null)
+			{
+				individualDropAmountMultiplier = premiumMultiplier;
+			}
+		}
+		else
+		{
+			individualDropAmountMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(getItemId());
+		}
+		
 		if (individualDropAmountMultiplier != null)
 		{
 			// individual amount list multiplier
@@ -169,7 +191,29 @@ public class GeneralDropItem implements IDropItem
 		double multiplier = 1;
 		
 		// individual drop chance
-		Float individualDropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(getItemId());
+		Float individualDropChanceMultiplier = null;
+		if (killer.getActingPlayer().hasPremiumStatus())
+		{
+			final Float normalMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(getItemId());
+			final Float premiumMultiplier = Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(getItemId());
+			if ((normalMultiplier != null) && (premiumMultiplier != null))
+			{
+				individualDropChanceMultiplier = normalMultiplier * premiumMultiplier;
+			}
+			else if (normalMultiplier != null)
+			{
+				individualDropChanceMultiplier = normalMultiplier;
+			}
+			else if (premiumMultiplier != null)
+			{
+				individualDropChanceMultiplier = premiumMultiplier;
+			}
+		}
+		else
+		{
+			individualDropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(getItemId());
+		}
+		
 		if (individualDropChanceMultiplier != null)
 		{
 			multiplier *= individualDropChanceMultiplier;
