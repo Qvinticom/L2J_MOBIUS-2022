@@ -84,6 +84,11 @@ public class ChatTell implements IChatHandler
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT && ((activeChar.isGood() && receiver.isEvil()) || (activeChar.isEvil() && receiver.isGood())))
+			{
+				activeChar.sendMessage("Player belongs to the opposing faction.");
+				return;
+			}
 			if (!BlockList.isBlocked(receiver, activeChar))
 			{
 				// Allow reciever to send PMs to this char, which is in silence mode.

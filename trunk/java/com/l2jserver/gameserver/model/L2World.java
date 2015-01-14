@@ -200,12 +200,12 @@ public final class L2World
 		return _allPlayers.size();
 	}
 	
-	public int getAllgoodPlayersCount()
+	public int getAllGoodPlayersCount()
 	{
 		return _allGoodPlayers.size();
 	}
 	
-	public int getAllevilPlayersCount()
+	public int getAllEvilPlayersCount()
 	{
 		return _allEvilPlayers.size();
 	}

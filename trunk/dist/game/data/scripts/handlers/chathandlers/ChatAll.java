@@ -105,12 +105,34 @@ public class ChatAll implements IChatHandler
 			else
 			{
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
+				CreatureSay csRandom = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
 					if ((player != null) && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
 					{
-						player.sendPacket(cs);
+						if (Config.FACTION_SYSTEM_ENABLED)
+						{
+							if (Config.FACTION_SPECIFIC_CHAT)
+							{
+								if ((activeChar.isGood() && player.isEvil()) || (activeChar.isEvil() && player.isGood()))
+								{
+									player.sendPacket(csRandom);
+								}
+								else
+								{
+									player.sendPacket(cs);
+								}
+							}
+							else
+							{
+								player.sendPacket(cs);
+							}
+						}
+						else
+						{
+							player.sendPacket(cs);
+						}
 					}
 				}
 				

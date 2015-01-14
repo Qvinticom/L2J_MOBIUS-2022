@@ -79,7 +79,24 @@ public class ChatWorld implements IChatHandler
 					final Duration timeDiff = Duration.between(instant, now);
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_S1_SEC_UNTIL_YOU_ARE_ABLE_TO_USE_WORLD_CHAT);
 					msg.addInt((int) timeDiff.getSeconds());
-					activeChar.sendPacket(msg);
+					if (Config.FACTION_SYSTEM_ENABLED)
+					{
+						if (Config.FACTION_SPECIFIC_CHAT)
+						{
+							if ((activeChar.isGood() && activeChar.isGood()) || (activeChar.isEvil() && activeChar.isEvil()))
+							{
+								activeChar.sendPacket(msg);
+							}
+						}
+						else
+						{
+							activeChar.sendPacket(msg);
+						}
+					}
+					else
+					{
+						activeChar.sendPacket(msg);
+					}
 					return;
 				}
 			}
@@ -88,7 +105,24 @@ public class ChatWorld implements IChatHandler
 			L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 			
 			activeChar.setWorldChatPoints(activeChar.getWorldChatPoints() - 1);
-			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				if (Config.FACTION_SPECIFIC_CHAT)
+				{
+					if ((activeChar.isGood() && activeChar.isGood()) || (activeChar.isEvil() && activeChar.isEvil()))
+					{
+						activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+					}
+				}
+				else
+				{
+					activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+				}
+			}
+			else
+			{
+				activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+			}
 			if (Config.WORLD_CHAT_INTERVAL.getSeconds() > 0)
 			{
 				REUSE.put(activeChar.getObjectId(), now.plus(Config.WORLD_CHAT_INTERVAL));

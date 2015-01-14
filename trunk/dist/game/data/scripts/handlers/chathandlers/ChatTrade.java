@@ -60,7 +60,24 @@ public class ChatTrade implements IChatHandler
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()))
 				{
-					player.sendPacket(cs);
+					if (Config.FACTION_SYSTEM_ENABLED)
+					{
+						if (Config.FACTION_SPECIFIC_CHAT)
+						{
+							if ((activeChar.isGood() && player.isGood()) || (activeChar.isEvil() && player.isEvil()))
+							{
+								player.sendPacket(cs);
+							}
+						}
+						else
+						{
+							player.sendPacket(cs);
+						}
+					}
+					else
+					{
+						player.sendPacket(cs);
+					}
 				}
 			}
 		}
@@ -76,7 +93,24 @@ public class ChatTrade implements IChatHandler
 			{
 				if (!BlockList.isBlocked(player, activeChar))
 				{
-					player.sendPacket(cs);
+					if (Config.FACTION_SYSTEM_ENABLED)
+					{
+						if (Config.FACTION_SPECIFIC_CHAT)
+						{
+							if ((activeChar.isGood() && player.isGood()) || (activeChar.isEvil() && player.isEvil()))
+							{
+								player.sendPacket(cs);
+							}
+						}
+						else
+						{
+							player.sendPacket(cs);
+						}
+					}
+					else
+					{
+						player.sendPacket(cs);
+					}
 				}
 			}
 		}
