@@ -8733,16 +8733,14 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		if ((Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && skill.isBad()) && ((isGood() && target.getActingPlayer().isGood()) || (isEvil() && target.getActingPlayer().isEvil())))
+		// Faction System Guards
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && (target instanceof L2GuardInstance))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
-		}
-		
-		if ((Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && !skill.isBad()) && ((isGood() && target.getActingPlayer().isEvil()) || (isEvil() && target.getActingPlayer().isGood())))
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
+			if (skill.isBad() && ((isGood() && ((L2Npc) target).getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME)) || (isEvil() && ((L2Npc) target).getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME))))
+			{
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
+			}
 		}
 		
 		// skills can be used on Walls and Doors only during siege
@@ -9162,6 +9160,16 @@ public final class L2PcInstance extends L2Playable
 					}
 					return false;
 				}
+			}
+			
+			// Faction System
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				if ((isGood() && target.getActingPlayer().isGood()) || (isEvil() && target.getActingPlayer().isEvil()))
+				{
+					return false;
+				}
+				return true;
 			}
 			
 			// On retail, it is impossible to debuff a "peaceful" player.

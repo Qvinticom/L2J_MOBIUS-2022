@@ -46,9 +46,11 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -1183,6 +1185,18 @@ public final class Skill implements IIdentifiable
 				if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((player.isGood() && targetPlayer.isGood()) || (player.isEvil() && targetPlayer.isEvil())))
 				{
 					return false;
+				}
+				
+				if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && (target instanceof L2GuardInstance))
+				{
+					if (player.isGood() && ((L2Npc) target).getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))
+					{
+						return false;
+					}
+					if (player.isEvil() && ((L2Npc) target).getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME))
+					{
+						return false;
+					}
 				}
 			}
 		}

@@ -59,6 +59,21 @@ public class GuardKnownList extends AttackableKnownList
 					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 				}
 			}
+			
+			// Faction system
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((object.getActingPlayer().isGood() && getActiveChar().getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (object.getActingPlayer().isEvil() && getActiveChar().getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+			{
+				if (Config.DEBUG)
+				{
+					_log.fine(getActiveChar().getObjectId() + ": Enemy faction " + object.getObjectId() + " entered scan range");
+				}
+				
+				// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
+				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
+				{
+					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
+				}
+			}
 		}
 		else if ((Config.GUARD_ATTACK_AGGRO_MOB && getActiveChar().isInActiveRegion()) && object.isMonster())
 		{

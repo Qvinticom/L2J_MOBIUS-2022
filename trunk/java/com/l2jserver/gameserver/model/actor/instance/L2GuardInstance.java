@@ -73,11 +73,15 @@ public class L2GuardInstance extends L2Attackable
 	}
 	
 	/**
-	 * Return True if hte attacker is a L2MonsterInstance.
+	 * Return True if the attacker is a L2MonsterInstance.
 	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && attacker.isPlayer() && ((attacker.getActingPlayer().isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (attacker.getActingPlayer().isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+		{
+			return true;
+		}
 		return attacker instanceof L2MonsterInstance;
 	}
 	
@@ -149,6 +153,13 @@ public class L2GuardInstance extends L2Attackable
 		if (!canTarget(player))
 		{
 			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+		{
+			interact = false;
+			// TODO: Fix normal targeting
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}
 		
 		// Check if the L2PcInstance already target the L2GuardInstance

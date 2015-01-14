@@ -209,6 +209,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// Check if the actor is a L2GuardInstance
 		if (me instanceof L2GuardInstance)
 		{
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && (player != null) && ((player.isGood() && me.getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && me.getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+			{
+				return GeoData.getInstance().canSeeTarget(me, player);
+			}
 			// Check if the L2PcInstance target has karma (=PK)
 			if ((player != null) && (player.getKarma() > 0))
 			{

@@ -1212,7 +1212,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31033" level="80" type="L2Guard" name="Sentinel">
+	<npc id="31033" level="99" type="L2Guard" name="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -1223,7 +1223,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="13290.11306877694" hpRegen="8.5" mp="11674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -1248,7 +1248,11 @@
 			<skill id="4416" level="15" /> <!--Elves -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>GOOD</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -1338,7 +1342,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="31036" level="80" type="L2Guard" name="Centurion">
+	<npc id="31036" level="99" type="L2Guard" name="Centurion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -1349,7 +1353,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="273" /> <!-- rhand: Composite Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="13290.11306877694" hpRegen="8.5" mp="11674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -1374,7 +1378,11 @@
 			<skill id="4416" level="17" /> <!--Orcs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>EVIL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="27" />
