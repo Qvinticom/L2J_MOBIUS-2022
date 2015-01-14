@@ -14497,10 +14497,12 @@ public final class L2PcInstance extends L2Playable
 	public void setGood()
 	{
 		_isGood = true;
+		_isEvil = false;
 	}
 	
 	public void setEvil()
 	{
+		_isGood = false;
 		_isEvil = true;
 	}
 	
