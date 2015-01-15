@@ -74,6 +74,10 @@ public class FactionManager extends AbstractNpcAI
 					player.sendPacket(packet);
 					return htmltext;
 				}
+				if (Config.FACTION_AUTO_NOBLESS)
+				{
+					player.setNoble(true);
+				}
 				player.setGood();
 				player.getAppearance().setNameColor(Config.FACTION_GOOD_NAME_COLOR);
 				player.getAppearance().setTitleColor(Config.FACTION_GOOD_NAME_COLOR);
@@ -96,6 +100,10 @@ public class FactionManager extends AbstractNpcAI
 					packet.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
 					player.sendPacket(packet);
 					return htmltext;
+				}
+				if (Config.FACTION_AUTO_NOBLESS)
+				{
+					player.setNoble(true);
 				}
 				player.setEvil();
 				player.getAppearance().setNameColor(Config.FACTION_EVIL_NAME_COLOR);
