@@ -834,6 +834,8 @@ public final class Config
 	public static boolean FACTION_GUARDS_ENABLED;
 	public static boolean FACTION_RESPAWN_AT_BASE;
 	public static boolean FACTION_SPECIFIC_CHAT;
+	public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
+	public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -2655,7 +2657,9 @@ public final class Config
 			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("EvilNameColor", "0000FF"));
 			FACTION_GUARDS_ENABLED = CustomSettings.getBoolean("EnableFactionGuards", true);
 			FACTION_RESPAWN_AT_BASE = CustomSettings.getBoolean("RespawnAtFactionBase", true);
-			FACTION_SPECIFIC_CHAT = Boolean.valueOf(CustomSettings.getBoolean("EnableFactionChat", true));
+			FACTION_SPECIFIC_CHAT = CustomSettings.getBoolean("EnableFactionChat", true);
+			FACTION_BALANCE_ONLINE_PLAYERS = CustomSettings.getBoolean("BalanceOnlinePlayers", true);
+			FACTION_BALANCE_PLAYER_EXCEED_LIMIT = CustomSettings.getInt("BalancePlayerExceedLimit", 20);
 			
 			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
 			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);

@@ -132,6 +132,11 @@ public abstract class AbstractHtmlPacket extends L2GameServerPacket
 	public final void runImpl()
 	{
 		L2PcInstance player = getClient().getActiveChar();
+		if (player == null)
+		{
+			return;
+		}
+		
 		player.clearHtmlActions(getScope());
 		
 		if (_disabledValidation)

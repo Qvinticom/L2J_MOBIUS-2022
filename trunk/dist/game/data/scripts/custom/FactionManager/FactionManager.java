@@ -63,6 +63,17 @@ public class FactionManager extends AbstractNpcAI
 		{
 			case "selectGoodFaction":
 			{
+				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+				{
+					String htmltext = null;
+					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+					packet.setHtml(getHtm(player.getHtmlPrefix(), "onlinelimit.html"));
+					packet.replace("%name%", player.getName());
+					packet.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
+					packet.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
+					player.sendPacket(packet);
+					return htmltext;
+				}
 				player.setGood();
 				player.getAppearance().setNameColor(Config.FACTION_GOOD_NAME_COLOR);
 				player.getAppearance().setTitleColor(Config.FACTION_GOOD_NAME_COLOR);
@@ -75,6 +86,17 @@ public class FactionManager extends AbstractNpcAI
 			}
 			case "selectEvilFaction":
 			{
+				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+				{
+					String htmltext = null;
+					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+					packet.setHtml(getHtm(player.getHtmlPrefix(), "onlinelimit.html"));
+					packet.replace("%name%", player.getName());
+					packet.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
+					packet.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
+					player.sendPacket(packet);
+					return htmltext;
+				}
 				player.setEvil();
 				player.getAppearance().setNameColor(Config.FACTION_EVIL_NAME_COLOR);
 				player.getAppearance().setTitleColor(Config.FACTION_EVIL_NAME_COLOR);

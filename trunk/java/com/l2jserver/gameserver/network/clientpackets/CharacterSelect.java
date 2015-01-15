@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.datatables.SecondaryAuthData;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.model.CharSelectInfoPackage;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.Containers;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
@@ -124,6 +125,28 @@ public class CharacterSelect extends L2GameClientPacket
 						msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
 						client.sendPacket(msg);
 						return;
+					}
+					
+					if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
+					{
+						if (info.isGood() && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+						{
+							final NpcHtmlMessage msg = new NpcHtmlMessage();
+							msg.setFile(info.getHtmlPrefix(), "data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
+							msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
+							client.sendPacket(msg);
+							return;
+						}
+						if (info.isEvil() && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+						{
+							final NpcHtmlMessage msg = new NpcHtmlMessage();
+							msg.setFile(info.getHtmlPrefix(), "data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
+							msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
+							client.sendPacket(msg);
+							return;
+						}
 					}
 					
 					// The L2PcInstance must be created here, so that it can be attached to the L2GameClient
