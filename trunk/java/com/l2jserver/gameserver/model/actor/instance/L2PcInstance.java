@@ -251,6 +251,7 @@ import com.l2jserver.gameserver.model.variables.AccountVariables;
 import com.l2jserver.gameserver.model.variables.PlayerVariables;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.model.zone.type.L2BattalionZone;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -5598,6 +5599,8 @@ public final class L2PcInstance extends L2Playable
 		if ((target instanceof L2PcInstance) && AntiFeedManager.getInstance().check(this, target))
 		{
 			setPvpKills(getPvpKills() + 1);
+			
+			L2BattalionZone.givereward(this);
 			
 			// Send a Server->Client UserInfo packet to attacker with its Karma and PK Counter
 			UserInfo ui = new UserInfo(this, false);

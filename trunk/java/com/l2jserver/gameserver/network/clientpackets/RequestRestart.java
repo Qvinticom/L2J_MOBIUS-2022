@@ -26,6 +26,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.L2GameClient.GameClientState;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -86,6 +87,13 @@ public final class RequestRestart extends L2GameClientPacket
 			}
 			
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
+			sendPacket(RestartResponse.valueOf(false));
+			return;
+		}
+		
+		if (player.isInsideZone(ZoneId.BATTALION) && !Config.BTZ_RESTART_ZONE)
+		{
+			player.sendMessage("You cannot restart while inside a Battalion zone.");
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}

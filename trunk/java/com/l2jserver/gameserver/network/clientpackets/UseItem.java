@@ -42,6 +42,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.ArmorType;
 import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.model.zone.type.L2BattalionZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -124,6 +126,12 @@ public final class UseItem extends L2GameClientPacket
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
+			return;
+		}
+		
+		if (activeChar.isInsideZone(ZoneId.BATTALION) && !L2BattalionZone.checkItem(item))
+		{
+			getClient().getActiveChar().sendMessage("You cannot use " + item.getName() + " inside this zone.");
 			return;
 		}
 		

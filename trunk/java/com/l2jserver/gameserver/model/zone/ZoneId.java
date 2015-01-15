@@ -47,7 +47,8 @@ public enum ZoneId
 	NO_BOOKMARK,
 	NO_ITEM_DROP,
 	NO_RESTART,
-	JUMP;
+	JUMP,
+	BATTALION;
 	
 	public static int getZoneCount()
 	{

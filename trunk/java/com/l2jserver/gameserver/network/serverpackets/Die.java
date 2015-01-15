@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
@@ -31,6 +32,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
  * @author UnAfraid, Nos
@@ -79,6 +81,16 @@ public class Die extends L2GameServerPacket
 			_toOutpost = ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty()) || ((hall != null) && hall.getSiege().checkIsAttacker(clan));
 			_useFeather = activeChar.getAccessLevel().allowFixedRes();
 			_toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
+		}
+		
+		if (activeChar.isInsideZone(ZoneId.BATTALION) && !Config.BTZ_REVIVE)
+		{
+			_toVillage = false;
+			_toClanHall = false;
+			_toCastle = false;
+			_toOutpost = false;
+			_useFeather = false;
+			_toFortress = false;
 		}
 		
 		_isSweepable = activeChar.isAttackable() && activeChar.isSweepActive();

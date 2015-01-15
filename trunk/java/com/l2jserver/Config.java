@@ -847,6 +847,24 @@ public final class Config
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
+	public static boolean BTZ_PVP_ENABLED;
+	public static int[][] BTZ_SPAWN_LOCATIONS;
+	public static int BTZ_REVIVE_DELAY;
+	public static boolean BTZ_REVIVE;
+	public static boolean BTZ_GIVE_NOBLES;
+	public static List<String> BTZ_ITEMS = new ArrayList<>();
+	public static List<String> BTZ_CLASSES = new ArrayList<>();
+	public static List<String> BTZ_GRADES = new ArrayList<>();
+	public static int BTZ_RADIUS;
+	public static int BTZ_ENCHANT;
+	public static boolean BTZ_RESTART_ZONE;
+	public static boolean BTZ_STORE_ZONE;
+	public static boolean BTZ_LOGOUT_ZONE;
+	public static boolean BTZ_REVIVE_NOBLESS;
+	public static boolean BTZ_REVIVE_HEAL;
+	public static boolean BTZ_REMOVE_BUFFS;
+	public static boolean BTZ_REMOVE_PETS;
+	public static List<int[]> BTZ_REWARDS;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2725,6 +2743,71 @@ public final class Config
 				}
 			}
 			
+			BTZ_PVP_ENABLED = CustomSettings.getBoolean("BTZEnablePvP", false);
+			BTZ_SPAWN_LOCATIONS = parseZonesList(CustomSettings.getString("BTZSpawnLoc", "150111,144740,-12248"));
+			BTZ_REVIVE_DELAY = CustomSettings.getInt("BTZReviveDelay", 10);
+			if (BTZ_REVIVE_DELAY != 0)
+			{
+				BTZ_REVIVE = true;
+			}
+			BTZ_GIVE_NOBLES = CustomSettings.getBoolean("BTZGiveNoblesse", false);
+			tempString = CustomSettings.getString("BTZItems", "").split(",");
+			if (tempString.length != 0)
+			{
+				for (String i : tempString)
+				{
+					BTZ_ITEMS.add(i);
+				}
+			}
+			tempString = CustomSettings.getString("BTZGrades", "").split(",");
+			if (tempString.length != 0)
+			{
+				for (String i : tempString)
+				{
+					if (i.equals("D") || i.equals("C") || i.equals("B") || i.equals("A") || i.equals("S") || i.equals("S80") || i.equals("S84") || i.equals("R") || i.equals("R95") || i.equals("R99"))
+					{
+						BTZ_GRADES.add(i);
+					}
+				}
+			}
+			tempString = CustomSettings.getString("BTZClasses", "").split(",");
+			if (tempString.length != 0)
+			{
+				for (String i : tempString)
+				{
+					BTZ_CLASSES.add(i);
+				}
+			}
+			BTZ_RADIUS = CustomSettings.getInt("BTZRespawnRadius", 500);
+			BTZ_ENCHANT = CustomSettings.getInt("BTZEnchant", 0);
+			BTZ_REMOVE_BUFFS = CustomSettings.getBoolean("BTZRemoveBuffs", false);
+			BTZ_REMOVE_PETS = CustomSettings.getBoolean("BTZRemovePets", false);
+			BTZ_RESTART_ZONE = CustomSettings.getBoolean("BTZRestartZone", false);
+			BTZ_STORE_ZONE = CustomSettings.getBoolean("BTZStoreZone", false);
+			BTZ_LOGOUT_ZONE = CustomSettings.getBoolean("BTZLogoutZone", false);
+			BTZ_REVIVE_NOBLESS = CustomSettings.getBoolean("BTZReviveNoblesse", false);
+			BTZ_REVIVE_HEAL = CustomSettings.getBoolean("BTZReviveHeal", false);
+			BTZ_REWARDS = new ArrayList<>();
+			tempString = CustomSettings.getString("BTZRewards", "57,100000").split(";");
+			for (String reward : tempString)
+			{
+				String[] rewardSplit = reward.split(",");
+				if (rewardSplit.length == 2)
+				{
+					try
+					{
+						BTZ_REWARDS.add(new int[]
+						{
+							Integer.parseInt(rewardSplit[0]),
+							Integer.parseInt(rewardSplit[1])
+						});
+					}
+					catch (NumberFormatException nfe)
+					{
+					}
+				}
+			}
+			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
 			
@@ -4089,6 +4172,55 @@ public final class Config
 				continue;
 			}
 			result[i++] = tmp;
+		}
+		return result;
+	}
+	
+	private static int[][] parseZonesList(String line)
+	{
+		final String[] propertySplit = line.split(";");
+		if (propertySplit.length == 0)
+		{
+			return null;
+		}
+		
+		int i = 0;
+		String[] valueSplit;
+		final int[][] result = new int[propertySplit.length][];
+		for (String value : propertySplit)
+		{
+			valueSplit = value.split(",");
+			if (valueSplit.length != 3)
+			{
+				return null;
+			}
+			
+			result[i] = new int[3];
+			try
+			{
+				result[i][0] = Integer.parseInt(valueSplit[0]);
+			}
+			catch (NumberFormatException e)
+			{
+				return null;
+			}
+			try
+			{
+				result[i][1] = Integer.parseInt(valueSplit[1]);
+			}
+			catch (NumberFormatException e)
+			{
+				return null;
+			}
+			try
+			{
+				result[i][2] = Integer.parseInt(valueSplit[2]);
+			}
+			catch (NumberFormatException e)
+			{
+				return null;
+			}
+			i++;
 		}
 		return result;
 	}

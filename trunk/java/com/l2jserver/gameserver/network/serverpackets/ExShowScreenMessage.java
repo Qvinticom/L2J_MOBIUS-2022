@@ -75,6 +75,30 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	}
 	
 	/**
+	 * Display a String on the screen for a given time.
+	 * @param text the text to display
+	 * @param time the display time
+	 * @param position the position on the screen
+	 * @param showEffect upper effect (false - disabled, true - enabled) - _position must be 2 (center) otherwise no effect
+	 */
+	
+	public ExShowScreenMessage(String text, int time, boolean showEffect, int position)
+	{
+		_type = 2;
+		_sysMessageId = -1;
+		_unk1 = 0;
+		_unk2 = 0;
+		_unk3 = 0;
+		_fade = false;
+		_position = TOP_CENTER;
+		_text = text;
+		_time = time;
+		_size = 0;
+		_effect = showEffect;
+		_npcString = -1;
+	}
+	
+	/**
 	 * Display a NPC String on the screen for a given position and time.
 	 * @param npcString the NPC String Id
 	 * @param position the position on the screen
