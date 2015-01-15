@@ -260,7 +260,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		writeH(_blockSize);
 		if (containsMask(NpcInfoType.ID))
 		{
-			writeD(_npc.getId() + 1000000);
+			writeD(_npc.getTemplate().getDisplayId() + 1000000);
 		}
 		if (containsMask(NpcInfoType.POSITION))
 		{
