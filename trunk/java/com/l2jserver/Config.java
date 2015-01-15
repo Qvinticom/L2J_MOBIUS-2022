@@ -832,6 +832,7 @@ public final class Config
 	public static int FACTION_GOOD_NAME_COLOR;
 	public static int FACTION_EVIL_NAME_COLOR;
 	public static boolean FACTION_GUARDS_ENABLED;
+	public static boolean FACTION_RESPAWN_AT_BASE;
 	public static boolean FACTION_SPECIFIC_CHAT;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
@@ -2653,6 +2654,7 @@ public final class Config
 			FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("GoodNameColor", "00FF00"));
 			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("EvilNameColor", "0000FF"));
 			FACTION_GUARDS_ENABLED = CustomSettings.getBoolean("EnableFactionGuards", true);
+			FACTION_RESPAWN_AT_BASE = CustomSettings.getBoolean("RespawnAtFactionBase", true);
 			FACTION_SPECIFIC_CHAT = Boolean.valueOf(CustomSettings.getBoolean("EnableFactionChat", true));
 			
 			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
