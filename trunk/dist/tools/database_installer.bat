@@ -75,7 +75,7 @@ set DO_INSTALL=Y
 set /P DO_INSTALL=Install game server [Y/n]
 if "%DO_INSTALL%"=="N" goto end
 if "%DO_INSTALL%"=="n" goto end
-set INSTALL_MODE=server
+set INSTALL_MODE=game
 goto prepare 
 :nomysql
 cls

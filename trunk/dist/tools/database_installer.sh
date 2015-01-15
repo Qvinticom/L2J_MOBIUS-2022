@@ -247,7 +247,7 @@ else
 echo "Upgrading gameserver content"
 fi
 
-for gs in $(ls ./sql/server/*.sql);do
+for gs in $(ls ./sql/game/*.sql);do
 	echo "Installing GameServer table : $gs"
 	$MYG < $gs
 done
