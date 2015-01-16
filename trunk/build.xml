@@ -157,6 +157,7 @@
 				<attribute name="Main-Class" value="com.l2jserver.tools.configurator.ConfigUserInterface" />
 			</manifest>
 		</jar>
+		<!--
 		<jar destfile="${build.dist.tools}/Database_Installer_GS.jar" level="9">
 			<fileset dir="${build.bin}">
 				<include name="**/dbinstaller/**" />
@@ -189,6 +190,7 @@
 				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherLS" />
 			</manifest>
 		</jar>
+		-->
 	</target>
 
 	<target name="build" depends="jar" description="Create the Zip file.">
