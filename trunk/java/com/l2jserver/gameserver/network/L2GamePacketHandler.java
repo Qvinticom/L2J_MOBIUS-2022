@@ -1341,31 +1341,31 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new RequestInzonePartyInfoHistory();
 								break;
 							case 0x98:
-								// msg = new RequestCommissionRegistrableItemList();
+								msg = new RequestCommissionRegistrableItemList();
 								break;
 							case 0x99:
-								// msg = new RequestCommissionInfo();
+								msg = new RequestCommissionInfo();
 								break;
 							case 0x9A:
-								// msg = new RequestCommissionRegister();
+								msg = new RequestCommissionRegister();
 								break;
 							case 0x9B:
-								// msg = new RequestCommissionCancel();
+								msg = new RequestCommissionCancel();
 								break;
 							case 0x9C:
-								// msg = new RequestCommissionDelete();
+								msg = new RequestCommissionDelete();
 								break;
 							case 0x9D:
-								// msg = new RequestCommissionList();
+								msg = new RequestCommissionList();
 								break;
 							case 0x9E:
-								// msg = new RequestCommissionBuyInfo();
+								msg = new RequestCommissionBuyInfo();
 								break;
 							case 0x9F:
-								// msg = new RequestCommissionBuyItem();
+								msg = new RequestCommissionBuyItem();
 								break;
 							case 0xA0:
-								// msg = new RequestCommissionRegisteredItem();
+								msg = new RequestCommissionRegisteredItem();
 								break;
 							case 0xA1:
 								// msg = new RequestCallToChangeClass();

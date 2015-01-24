@@ -22,8 +22,8 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
+import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -98,9 +98,9 @@ public class AdminClanHall implements IAdminCommandHandler
 							if (!clanhall.isSiegableHall())
 							{
 								ClanHallManager.getInstance().setOwner(clanhall.getId(), clan);
-								if (AuctionManager.getInstance().getAuction(clanhall.getId()) != null)
+								if (ClanHallAuctionManager.getInstance().getAuction(clanhall.getId()) != null)
 								{
-									AuctionManager.getInstance().getAuction(clanhall.getId()).deleteAuctionFromDB();
+									ClanHallAuctionManager.getInstance().getAuction(clanhall.getId()).deleteAuctionFromDB();
 								}
 							}
 							else
@@ -116,7 +116,7 @@ public class AdminClanHall implements IAdminCommandHandler
 								if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
 								{
 									ClanHallManager.getInstance().setFree(clanhall.getId());
-									AuctionManager.getInstance().initNPC(clanhall.getId());
+									ClanHallAuctionManager.getInstance().initNPC(clanhall.getId());
 								}
 								else
 								{

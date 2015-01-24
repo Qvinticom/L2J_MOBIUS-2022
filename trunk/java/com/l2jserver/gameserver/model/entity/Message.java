@@ -61,6 +61,8 @@ public class Message
 	private boolean _hasAttachments;
 	private Mail _attachments = null;
 	private ScheduledFuture<?> _unloadTask = null;
+	private int _systemMessage1 = 0;
+	private int _systemMessage2 = 0;
 	
 	private int _itemId;
 	private int _enchantLvl;
@@ -95,6 +97,8 @@ public class Message
 				_elementals[i] = Integer.parseInt(elemDef[i]);
 			}
 		}
+		_systemMessage1 = rset.getInt("systemMessage1");
+		_systemMessage2 = rset.getInt("systemMessage2");
 	}
 	
 	/*
@@ -113,6 +117,28 @@ public class Message
 		_deletedBySender = false;
 		_deletedByReceiver = false;
 		_reqAdena = reqAdena;
+	}
+	
+	/*
+	 * This constructor used for System Mails
+	 */
+	public Message(int receiverId, String subject, String content, int systemMessage1, int systemMessage2, MailType sendBySystem)
+	{
+		_messageId = IdFactory.getInstance().getNextId();
+		_senderId = -1;
+		_receiverId = receiverId;
+		_subject = subject;
+		_content = content;
+		_expiration = System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_reqAdena = 0;
+		_hasAttachments = false;
+		_unread = true;
+		_deletedBySender = true;
+		_deletedByReceiver = false;
+		_messageType = sendBySystem;
+		_returned = false;
+		_systemMessage1 = systemMessage1;
+		_systemMessage2 = systemMessage2;
 	}
 	
 	/*
@@ -209,7 +235,7 @@ public class Message
 				_elementals[item.getAttackElementType()] = item.getAttackElementPower();
 			}
 		}
-		else if (mailType == MailType.COMMISSION_ITEM_RETURNED)
+		else if (mailType == MailType.SYSTEM)
 		{
 			final Mail attachement = createAttachments();
 			attachement.addItem("CommissionReturnItem", item, null, null);
@@ -218,7 +244,7 @@ public class Message
 	
 	public static final PreparedStatement getStatement(Message msg, Connection con) throws SQLException
 	{
-		PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned, itemId, enchantLvl, elementals) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned, itemId, enchantLvl, elementals, systemMessage1, systemMessage2) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		
 		stmt.setInt(1, msg._messageId);
 		stmt.setInt(2, msg._senderId);
@@ -236,6 +262,8 @@ public class Message
 		stmt.setInt(14, msg._itemId);
 		stmt.setInt(15, msg._enchantLvl);
 		stmt.setString(16, msg._elementals[0] + ";" + msg._elementals[1] + ";" + msg._elementals[2] + ";" + msg._elementals[3] + ";" + msg._elementals[4] + ";" + msg._elementals[5]);
+		stmt.setInt(17, msg._systemMessage1);
+		stmt.setInt(18, msg._systemMessage2);
 		
 		return stmt;
 	}
@@ -272,7 +300,7 @@ public class Message
 			case NPC: // Handled by NpcName in client
 			case BIRTHDAY: // Handled by Sysstring in client
 			case COMMISSION_ITEM_SOLD: // Handled by Sysstring in client
-			case COMMISSION_ITEM_RETURNED: // Handled by Sysstring in client
+			case SYSTEM: // Handled by Sysstring in client
 			case MENTOR_NPC: // Handled in client
 			default:
 			{
@@ -323,6 +351,16 @@ public class Message
 	public final boolean isUnread()
 	{
 		return _unread;
+	}
+	
+	public final int getSystemMessage1()
+	{
+		return _systemMessage1;
+	}
+	
+	public final int getSystemMessage2()
+	{
+		return _systemMessage2;
 	}
 	
 	public final void markAsRead()

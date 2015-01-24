@@ -45,6 +45,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
+import com.l2jserver.gameserver.network.serverpackets.ExShowCommission;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.GMAudit;
 import com.l2jserver.gameserver.util.Util;
@@ -67,7 +68,8 @@ public final class RequestBypassToServer extends L2GameClientPacket
 		"_diary",
 		"_olympiad?command",
 		"menu_select",
-		"manor_menu_select"
+		"manor_menu_select",
+		"showAuction"
 	};
 	
 	// S
@@ -284,6 +286,15 @@ public final class RequestBypassToServer extends L2GameClientPacket
 					final boolean time = split[2].split("=")[1].equals("1");
 					EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(activeChar, lastNpc, ask, state, time), lastNpc);
 				}
+			}
+			else if (_command.startsWith("showAuction"))
+			{
+				L2PcInstance player = getClient().getActiveChar();
+				if (player == null)
+				{
+					return;
+				}
+				player.sendPacket(new ExShowCommission());
 			}
 			else
 			{

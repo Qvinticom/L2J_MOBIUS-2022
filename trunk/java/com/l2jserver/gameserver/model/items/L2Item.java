@@ -125,6 +125,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final int _time;
 	private final int _autoDestroyTime;
 	private final int _bodyPart;
+	private final String _bodyPartName;
 	private final int _referencePrice;
 	private final int _crystalCount;
 	private final boolean _sellable;
@@ -177,6 +178,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_time = set.getInt("time", -1);
 		_autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
 		_bodyPart = ItemTable._slots.get(set.getString("bodypart", "none"));
+		_bodyPartName = set.getString("bodypart", "none");
 		_referencePrice = set.getInt("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);
@@ -937,6 +939,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public String getIcon()
 	{
 		return _icon;
+	}
+	
+	/**
+	 * @return body part name
+	 */
+	public String getBodyPartName()
+	{
+		return _bodyPartName;
 	}
 	
 	public int getDefaultEnchantLevel()

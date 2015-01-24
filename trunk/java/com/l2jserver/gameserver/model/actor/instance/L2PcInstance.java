@@ -218,6 +218,7 @@ import com.l2jserver.gameserver.model.interfaces.IEventListener;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
+import com.l2jserver.gameserver.model.itemcontainer.PcAuction;
 import com.l2jserver.gameserver.model.itemcontainer.PcFreight;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.itemcontainer.PcRefund;
@@ -375,9 +376,9 @@ public final class L2PcInstance extends L2Playable
 	private static final String DELETE_TP_BOOKMARK = "DELETE FROM character_tpbookmark WHERE charId=? AND Id=?";
 	
 	// Character Subclass SQL String Definitions:
-	private static final String RESTORE_CHAR_SUBCLASSES = "SELECT class_id,exp,sp,level,class_index,dual_class FROM character_subclasses WHERE charId=? ORDER BY class_index ASC";
+	private static final String RESTORE_CHAR_SUBCLASSES = "SELECT class_id,exp,sp,vitality_points,level,class_index,dual_class FROM character_subclasses WHERE charId=? ORDER BY class_index ASC";
 	private static final String ADD_CHAR_SUBCLASS = "INSERT INTO character_subclasses (charId,class_id,exp,sp,level,class_index,dual_class) VALUES (?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHAR_SUBCLASS = "UPDATE character_subclasses SET exp=?,sp=?,level=?,class_id=?,dual_class=? WHERE charId=? AND class_index =?";
+	private static final String UPDATE_CHAR_SUBCLASS = "UPDATE character_subclasses SET exp=?,sp=?,vitality_points=?,level=?,class_id=?,dual_class=? WHERE charId=? AND class_index =?";
 	private static final String DELETE_CHAR_SUBCLASS = "DELETE FROM character_subclasses WHERE charId=? AND class_index=?";
 	
 	// Character Henna SQL String Definitions:
@@ -583,6 +584,7 @@ public final class L2PcInstance extends L2Playable
 	protected boolean _recoTwoHoursGiven = false;
 	
 	private final PcInventory _inventory = new PcInventory(this);
+	private final PcAuction _auctionInventory = new PcAuction(this);
 	private final PcFreight _freight = new PcFreight(this);
 	private PcWarehouse _warehouse;
 	private PcRefund _refund;
@@ -2884,6 +2886,11 @@ public final class L2PcInstance extends L2Playable
 	public PcInventory getInventory()
 	{
 		return _inventory;
+	}
+	
+	public PcAuction getAuctionInventory()
+	{
+		return _auctionInventory;
 	}
 	
 	/**
@@ -7195,6 +7202,8 @@ public final class L2PcInstance extends L2Playable
 					// Set Teleport Bookmark Slot
 					player.setBookMarkSlot(rset.getInt("BookmarkSlot"));
 					
+					player._vitPoints = rset.getInt("vitality_points");
+					
 					// character creation Time
 					player.getCreateDate().setTime(rset.getDate("createDate"));
 					
@@ -7378,6 +7387,7 @@ public final class L2PcInstance extends L2Playable
 					subClass.setLevel(rset.getByte("level"));
 					subClass.setExp(rset.getLong("exp"));
 					subClass.setSp(rset.getLong("sp"));
+					subClass.setVitalityPoints(rset.getInt("vitality_points"));
 					subClass.setClassIndex(rset.getInt("class_index"));
 					
 					// Enforce the correct indexing of _subClasses against their class indexes.
@@ -7653,7 +7663,7 @@ public final class L2PcInstance extends L2Playable
 			statement.setString(45, getName());
 			statement.setLong(46, 0); // unset
 			statement.setInt(47, getBookMarkSlot());
-			statement.setInt(48, 0); // unset
+			statement.setInt(48, _vitPoints); // unset
 			statement.setString(49, getLang());
 			
 			int factionId = 0;
@@ -7691,11 +7701,12 @@ public final class L2PcInstance extends L2Playable
 			{
 				statement.setLong(1, subClass.getExp());
 				statement.setLong(2, subClass.getSp());
-				statement.setInt(3, subClass.getLevel());
-				statement.setInt(4, subClass.getClassId());
-				statement.setBoolean(5, subClass.isDualClass());
-				statement.setInt(6, getObjectId());
-				statement.setInt(7, subClass.getClassIndex());
+				statement.setInt(3, subClass.getVitalityPoints());
+				statement.setInt(4, subClass.getLevel());
+				statement.setInt(5, subClass.getClassId());
+				statement.setBoolean(6, subClass.isDualClass());
+				statement.setInt(7, getObjectId());
+				statement.setInt(8, subClass.getClassIndex());
 				statement.execute();
 				statement.clearParameters();
 			}
@@ -12861,11 +12872,6 @@ public final class L2PcInstance extends L2Playable
 		return _agathionId;
 	}
 	
-	public int getVitalityPoints()
-	{
-		return getStat().getVitalityPoints();
-	}
-	
 	public void setVitalityPoints(int points, boolean quiet)
 	{
 		getStat().setVitalityPoints(points, quiet);
@@ -14858,4 +14864,29 @@ public final class L2PcInstance extends L2Playable
 	{
 		return getServitors().values().stream().mapToInt(L2Summon::getSummonPoints).sum();
 	}
+	
+	int _vitPoints = 140000;
+	
+	/*
+	 * Return current vitality points in integer format
+	 */
+	public int getVitalityPoints()
+	{
+		if (getClassId().getId() == getBaseClass())
+		{
+			return _vitPoints;
+		}
+		return getSubClasses().get(getClassIndex()).getVitalityPoints();
+	}
+	
+	public void setVitalityPoints(int points)
+	{
+		if (getClassId().getId() == getBaseClass())
+		{
+			_vitPoints = points;
+			return;
+		}
+		getSubClasses().get(getClassIndex()).setVitalityPoints(points);
+	}
+	
 }

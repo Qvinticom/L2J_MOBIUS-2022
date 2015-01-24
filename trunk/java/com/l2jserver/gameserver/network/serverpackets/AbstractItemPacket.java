@@ -18,7 +18,9 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.enums.ItemListType;
+import com.l2jserver.gameserver.instancemanager.AuctionManager.Auctions;
 import com.l2jserver.gameserver.model.ItemInfo;
 import com.l2jserver.gameserver.model.TradeItem;
 import com.l2jserver.gameserver.model.buylist.Product;
@@ -115,6 +117,28 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeD(0x00); // Item remodel visual ID
 		}
+	}
+	
+	public void writeAuctionItem(Auctions auction)
+	{
+		writeQ(auction.getAuctionId()); // Auction id
+		writeQ(auction.getPrice()); // Price
+		writeD(auction.getCategory()); // Category
+		writeD(auction.getDuration()); // Duration / maybe in days???
+		writeD((int) auction.getFinishTime()); // Time when this item will vanish from auction (in seconds)(example (currentTime+60=after 1 minute))
+		writeS(CharNameTable.getInstance().getNameById(auction.getPlayerID())); // Name
+		writeD(0);
+		ItemInfo it = new ItemInfo(auction.getItem());
+		writeD(auction.getItem().getId()); // Item ID
+		writeQ(auction.getItem().getCount()); // Count
+		writeH(auction.getItem().getItem().getType2()); // item.getItem().getType2()
+		writeD(auction.getItem().getItem().getBodyPart()); // item.getItem().getBodyPart()
+		writeH(auction.getItem().getCustomType2()); // item.getCustomType2()
+		writeH(0x00); // ???
+		writeD(auction.getItem().getEnchantLevel());
+		writeItemElemental(it);
+		writeItemEnchantEffect(it);
+		writeD(0x00); // Item remodel visual ID
 	}
 	
 	protected static final int calculateMask(ItemInfo item)

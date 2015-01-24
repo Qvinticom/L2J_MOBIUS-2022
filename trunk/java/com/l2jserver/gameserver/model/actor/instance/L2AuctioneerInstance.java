@@ -30,7 +30,7 @@ import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
+import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.ClanPrivilege;
@@ -172,7 +172,7 @@ public final class L2AuctioneerInstance extends L2Npc
 					}
 					
 					String filename = "data/html/auction/AgitAuctionInfo.htm";
-					Auction a = AuctionManager.getInstance().getAuction(auctionId);
+					Auction a = ClanHallAuctionManager.getInstance().getAuction(auctionId);
 					
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile(player.getHtmlPrefix(), filename);
@@ -224,7 +224,7 @@ public final class L2AuctioneerInstance extends L2Npc
 							bid = Math.min(Long.parseLong(st.nextToken()), MAX_ADENA);
 						}
 						
-						AuctionManager.getInstance().getAuction(auctionId).setBid(player, bid);
+						ClanHallAuctionManager.getInstance().getAuction(auctionId).setBid(player, bid);
 					}
 					catch (Exception e)
 					{
@@ -260,10 +260,10 @@ public final class L2AuctioneerInstance extends L2Npc
 				{
 					String filename = "data/html/auction/AgitBid1.htm";
 					
-					long minimumBid = AuctionManager.getInstance().getAuction(Integer.parseInt(val)).getHighestBidderMaxBid();
+					long minimumBid = ClanHallAuctionManager.getInstance().getAuction(Integer.parseInt(val)).getHighestBidderMaxBid();
 					if (minimumBid == 0)
 					{
-						minimumBid = AuctionManager.getInstance().getAuction(Integer.parseInt(val)).getStartingBid();
+						minimumBid = ClanHallAuctionManager.getInstance().getAuction(Integer.parseInt(val)).getStartingBid();
 					}
 					
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -283,7 +283,7 @@ public final class L2AuctioneerInstance extends L2Npc
 			}
 			else if (actualCommand.equalsIgnoreCase("list"))
 			{
-				List<Auction> auctions = AuctionManager.getInstance().getAuctions();
+				List<Auction> auctions = ClanHallAuctionManager.getInstance().getAuctions();
 				SimpleDateFormat format = new SimpleDateFormat("yy/MM/dd");
 				/** Limit for make new page, prevent client crash **/
 				int limit = 15;
@@ -394,7 +394,7 @@ public final class L2AuctioneerInstance extends L2Npc
 				}
 				
 				String biders = "";
-				Map<Integer, Bidder> bidders = AuctionManager.getInstance().getAuction(auctionId).getBidders();
+				Map<Integer, Bidder> bidders = ClanHallAuctionManager.getInstance().getAuction(auctionId).getBidders();
 				for (Bidder b : bidders.values())
 				{
 					biders += "<tr>" + "<td>" + b.getClanName() + "</td><td>" + b.getName() + "</td><td>" + b.getTimeBid().get(Calendar.YEAR) + "/" + (b.getTimeBid().get(Calendar.MONTH) + 1) + "/" + b.getTimeBid().get(Calendar.DATE) + "</td><td>" + b.getBid() + "</td>" + "</tr>";
@@ -418,7 +418,7 @@ public final class L2AuctioneerInstance extends L2Npc
 					String filename = "data/html/auction/AgitBidInfo.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile(player.getHtmlPrefix(), filename);
-					Auction a = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
+					Auction a = ClanHallAuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
 					if (a != null)
 					{
 						html.replace("%AGIT_NAME%", a.getItemName());
@@ -443,13 +443,13 @@ public final class L2AuctioneerInstance extends L2Npc
 					player.sendPacket(html);
 					return;
 				}
-				else if ((player.getClan() != null) && (AuctionManager.getInstance().getAuction(player.getClan().getHideoutId()) != null))
+				else if ((player.getClan() != null) && (ClanHallAuctionManager.getInstance().getAuction(player.getClan().getHideoutId()) != null))
 				{
 					SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 					String filename = "data/html/auction/AgitSaleInfo.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile(player.getHtmlPrefix(), filename);
-					Auction a = AuctionManager.getInstance().getAuction(player.getClan().getHideoutId());
+					Auction a = ClanHallAuctionManager.getInstance().getAuction(player.getClan().getHideoutId());
 					if (a != null)
 					{
 						html.replace("%AGIT_NAME%", a.getItemName());
@@ -513,7 +513,7 @@ public final class L2AuctioneerInstance extends L2Npc
 			}
 			else if (actualCommand.equalsIgnoreCase("cancelBid"))
 			{
-				long bid = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt()).getBidders().get(player.getClanId()).getBid();
+				long bid = ClanHallAuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt()).getBidders().get(player.getClanId()).getBid();
 				String filename = "data/html/auction/AgitBidCancel.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), filename);
@@ -526,9 +526,9 @@ public final class L2AuctioneerInstance extends L2Npc
 			}
 			else if (actualCommand.equalsIgnoreCase("doCancelBid"))
 			{
-				if (AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt()) != null)
+				if (ClanHallAuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt()) != null)
 				{
-					AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt()).cancelBid(player.getClanId());
+					ClanHallAuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt()).cancelBid(player.getClanId());
 					player.sendPacket(SystemMessageId.YOU_HAVE_CANCELED_YOUR_BID);
 				}
 				return;
@@ -555,9 +555,9 @@ public final class L2AuctioneerInstance extends L2Npc
 			}
 			else if (actualCommand.equalsIgnoreCase("doCancelAuction"))
 			{
-				if (AuctionManager.getInstance().getAuction(player.getClan().getHideoutId()) != null)
+				if (ClanHallAuctionManager.getInstance().getAuction(player.getClan().getHideoutId()) != null)
 				{
-					AuctionManager.getInstance().getAuction(player.getClan().getHideoutId()).cancelAuction();
+					ClanHallAuctionManager.getInstance().getAuction(player.getClan().getHideoutId()).cancelAuction();
 					player.sendMessage("Your auction has been canceled");
 				}
 				return;
@@ -611,7 +611,7 @@ public final class L2AuctioneerInstance extends L2Npc
 					String filename = "data/html/auction/AgitBid2.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile(player.getHtmlPrefix(), filename);
-					Auction a = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
+					Auction a = ClanHallAuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
 					if (a != null)
 					{
 						html.replace("%AGIT_AUCTION_BID%", String.valueOf(a.getBidders().get(player.getClanId()).getBid()));

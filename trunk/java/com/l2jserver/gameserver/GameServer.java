@@ -103,6 +103,7 @@ import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.ClanEntryManager;
+import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
@@ -239,6 +240,7 @@ public class GameServer
 		FishingMonstersData.getInstance();
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
+		AuctionManager.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
@@ -266,7 +268,7 @@ public class GameServer
 		ClanTable.getInstance();
 		CHSiegeManager.getInstance();
 		ClanHallManager.getInstance();
-		AuctionManager.getInstance();
+		ClanHallAuctionManager.getInstance();
 		ClanEntryManager.getInstance();
 		
 		printSection("Geodata");

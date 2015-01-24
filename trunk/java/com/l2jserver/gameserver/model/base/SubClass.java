@@ -35,6 +35,8 @@ public final class SubClass
 	private long _sp = 0;
 	private byte _level = Config.BASE_SUBCLASS_LEVEL;
 	private int _classIndex = 1;
+	
+	private int _vitalityPoints = 140000;
 	private boolean _dualClass = false;
 	
 	public SubClass()
@@ -66,6 +68,11 @@ public final class SubClass
 	public byte getLevel()
 	{
 		return _level;
+	}
+	
+	public int getVitalityPoints()
+	{
+		return _vitalityPoints;
 	}
 	
 	/**
@@ -124,6 +131,11 @@ public final class SubClass
 		}
 		
 		_level = levelValue;
+	}
+	
+	public void setVitalityPoints(int vit)
+	{
+		_vitalityPoints = vit;
 	}
 	
 	public void incLevel()

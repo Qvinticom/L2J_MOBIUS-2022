@@ -656,30 +656,17 @@ public class PcStat extends PlayableStat
 	}
 	
 	/*
-	 * Return current vitality points in integer format
-	 */
-	public int getVitalityPoints()
-	{
-		return getActiveChar().getAccountVariables().getInt(VITALITY_VARIABLE, Config.STARTING_VITALITY_POINTS);
-	}
-	
-	public void setVitalityPoints(int points)
-	{
-		getActiveChar().getAccountVariables().set(VITALITY_VARIABLE, points);
-	}
-	
-	/*
 	 * Set current vitality points to this value if quiet = true - does not send system messages
 	 */
 	public void setVitalityPoints(int points, boolean quiet)
 	{
 		points = Math.min(Math.max(points, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
-		if (points == getVitalityPoints())
+		if (points == getActiveChar().getVitalityPoints())
 		{
 			return;
 		}
 		
-		if (points < getVitalityPoints())
+		if (points < getActiveChar().getVitalityPoints())
 		{
 			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
 		}
@@ -688,7 +675,7 @@ public class PcStat extends PlayableStat
 			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
 		}
 		
-		setVitalityPoints(points);
+		getActiveChar().setVitalityPoints(points);
 		
 		if (points == 0)
 		{
@@ -700,7 +687,7 @@ public class PcStat extends PlayableStat
 		}
 		
 		final L2PcInstance player = getActiveChar();
-		player.sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
+		player.sendPacket(new ExVitalityPointInfo(getActiveChar().getVitalityPoints()));
 		if (player.isInParty())
 		{
 			final PartySmallWindowUpdate partyWindow = new PartySmallWindowUpdate(player, false);
@@ -751,19 +738,19 @@ public class PcStat extends PlayableStat
 		
 		if (points > 0)
 		{
-			points = Math.min(getVitalityPoints() + points, MAX_VITALITY_POINTS);
+			points = Math.min(getActiveChar().getVitalityPoints() + points, MAX_VITALITY_POINTS);
 		}
 		else
 		{
-			points = Math.max(getVitalityPoints() + points, MIN_VITALITY_POINTS);
+			points = Math.max(getActiveChar().getVitalityPoints() + points, MIN_VITALITY_POINTS);
 		}
 		
-		if (Math.abs(points - getVitalityPoints()) <= 1e-6)
+		if (Math.abs(points - getActiveChar().getVitalityPoints()) <= 1e-6)
 		{
 			return;
 		}
 		
-		setVitalityPoints(points);
+		getActiveChar().setVitalityPoints(points);
 	}
 	
 	public double getVitalityMultiplier()

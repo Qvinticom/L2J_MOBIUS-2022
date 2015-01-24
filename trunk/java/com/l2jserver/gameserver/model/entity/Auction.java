@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.enums.AuctionItemType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
+import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2World;
@@ -421,7 +421,7 @@ public class Auction
 	/** Remove auctions */
 	public void deleteAuctionFromDB()
 	{
-		AuctionManager.getInstance().getAuctions().remove(this);
+		ClanHallAuctionManager.getInstance().getAuctions().remove(this);
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM auction WHERE itemId=?"))
 		{
@@ -449,8 +449,8 @@ public class Auction
 				/**
 				 * If seller haven't sell ClanHall, auction removed, THIS MUST BE CONFIRMED
 				 */
-				int aucId = AuctionManager.getInstance().getAuctionIndex(_id);
-				AuctionManager.getInstance().getAuctions().remove(aucId);
+				int aucId = ClanHallAuctionManager.getInstance().getAuctionIndex(_id);
+				ClanHallAuctionManager.getInstance().getAuctions().remove(aucId);
 				return;
 			}
 			if (_sellerId > 0)
@@ -506,7 +506,7 @@ public class Auction
 	/** Confirm an auction */
 	public void confirmAuction()
 	{
-		AuctionManager.getInstance().getAuctions().add(this);
+		ClanHallAuctionManager.getInstance().getAuctions().add(this);
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"))
 		{

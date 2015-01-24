@@ -53,9 +53,9 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 				{
 					writeD(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
 				}
-				else if (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)
+				else if (msg.getMailType() == MailType.SYSTEM)
 				{
-					writeD(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
+					writeD(msg.getSystemMessage1());
 				}
 				writeD(msg.getId());
 				writeS(msg.getSubject());
@@ -63,7 +63,7 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 				writeD(msg.isLocked() ? 0x01 : 0x00);
 				writeD(msg.getExpirationSeconds());
 				writeD(msg.isUnread() ? 0x01 : 0x00);
-				writeD(((msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) || (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)) ? 0 : 1);
+				writeD(((msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) || (msg.getMailType() == MailType.SYSTEM)) ? 0 : 1);
 				writeD(msg.hasAttachments() ? 0x01 : 0x00);
 				writeD(msg.isReturned() ? 0x01 : 0x00);
 				writeD(0x00); // SysString in some case it seems

@@ -100,10 +100,10 @@ public final class ClanHallManager
 				}
 				_freeClanHall.put(id, ch);
 				
-				Auction auc = AuctionManager.getInstance().getAuction(id);
+				Auction auc = ClanHallAuctionManager.getInstance().getAuction(id);
 				if ((auc == null) && (lease > 0))
 				{
-					AuctionManager.getInstance().initNPC(id);
+					ClanHallAuctionManager.getInstance().initNPC(id);
 				}
 			}
 			_log.info(getClass().getSimpleName() + ": Loaded: " + getClanHalls().size() + " clan halls");

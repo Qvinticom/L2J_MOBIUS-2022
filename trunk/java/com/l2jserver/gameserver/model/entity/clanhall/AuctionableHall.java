@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
+import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -181,7 +181,7 @@ public final class AuctionableHall extends ClanHall
 					{
 						if (ClanHallManager.getInstance().loaded())
 						{
-							AuctionManager.getInstance().initNPC(getId());
+							ClanHallAuctionManager.getInstance().initNPC(getId());
 							ClanHallManager.getInstance().setFree(getId());
 							Clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
 						}

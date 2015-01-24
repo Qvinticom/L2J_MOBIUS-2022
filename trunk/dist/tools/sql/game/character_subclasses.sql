@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
   `class_id` int(2) NOT NULL DEFAULT 0,
   `exp` bigint(20) NOT NULL DEFAULT 0,
   `sp` bigint(10) NOT NULL DEFAULT 0,
+  `vitality_points` int(10) NOT NULL DEFAULT '140000',
   `level` int(2) NOT NULL DEFAULT 40,
   `class_index` int(1) NOT NULL DEFAULT 0,
   `dual_class` BOOLEAN NOT NULL DEFAULT FALSE,

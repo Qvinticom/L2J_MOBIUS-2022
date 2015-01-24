@@ -16,5 +16,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `itemId` INT(11) NOT NULL DEFAULT '0',
   `enchantLvl` INT(3) NOT NULL DEFAULT '0',
   `elementals` VARCHAR(25),
+  `systemMessage1` INT(10) NOT NULL DEFAULT '-1',
+  `systemMessage2` INT(10) NOT NULL DEFAULT '-1',
   PRIMARY KEY (`messageId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

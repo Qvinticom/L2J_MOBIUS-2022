@@ -35,8 +35,8 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jserver.gameserver.enums.UserInfoType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
+import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
@@ -246,7 +246,7 @@ public class ClanTable
 			}
 		}
 		
-		Auction auction = AuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
+		Auction auction = ClanHallAuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
 		if (auction != null)
 		{
 			auction.cancelBid(clan.getId());
