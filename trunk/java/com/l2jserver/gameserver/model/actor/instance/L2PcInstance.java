@@ -12789,6 +12789,16 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
+	public void setShilensBreathDebuffLevel(int level)
+	{
+		if (level > 0)
+		{
+			final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), level);
+			skill.applyEffects(this, this);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(level));
+		}
+	}
+	
 	@Override
 	public L2PcInstance getActingPlayer()
 	{
