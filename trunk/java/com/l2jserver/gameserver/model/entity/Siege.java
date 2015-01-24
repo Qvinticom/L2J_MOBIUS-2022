@@ -23,6 +23,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -35,9 +36,9 @@ import javolution.util.FastList;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.SiegeScheduleData;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.SiegeScheduleData;
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.enums.SiegeTeleportWhoType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
@@ -54,6 +55,7 @@ import com.l2jserver.gameserver.model.SiegeScheduleDate;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.TowerSpawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2ControlTowerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FlameTowerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -610,17 +612,35 @@ public class Siege implements Siegable
 					}
 				}
 				member.sendPacket(new UserInfo(member));
-				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
+				final Collection<L2PcInstance> plrs = member.getKnownList().getKnownPlayers().values();
+				
+				for (L2PcInstance player : plrs)
 				{
-					if (player == null)
+					if ((player == null) || !member.isVisibleFor(player))
 					{
 						continue;
 					}
 					
-					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
-					if (member.hasSummon())
+					final int relation = member.getRelation(player);
+					Integer oldrelation = member.getKnownList().getKnownRelations().get(player.getObjectId());
+					if ((oldrelation == null) || (oldrelation != relation))
 					{
-						player.sendPacket(new RelationChanged(member.getSummon(), member.getRelation(player), member.isAutoAttackable(player)));
+						final RelationChanged rc = new RelationChanged();
+						rc.addRelation(member, relation, member.isAutoAttackable(player));
+						if (member.hasSummon())
+						{
+							final L2Summon pet = member.getPet();
+							if (pet != null)
+							{
+								rc.addRelation(pet, relation, member.isAutoAttackable(player));
+							}
+							if (member.hasServitors())
+							{
+								member.getServitors().values().forEach(s -> rc.addRelation(s, relation, member.isAutoAttackable(player)));
+							}
+						}
+						player.sendPacket(rc);
+						member.getKnownList().getKnownRelations().put(player.getObjectId(), relation);
 					}
 				}
 			}
@@ -659,16 +679,35 @@ public class Siege implements Siegable
 				}
 				member.sendPacket(new UserInfo(member));
 				
-				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
+				final Collection<L2PcInstance> plrs = member.getKnownList().getKnownPlayers().values();
+				
+				for (L2PcInstance player : plrs)
 				{
-					if (player == null)
+					if ((player == null) || !member.isVisibleFor(player))
 					{
 						continue;
 					}
-					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
-					if (member.hasSummon())
+					
+					final int relation = member.getRelation(player);
+					Integer oldrelation = member.getKnownList().getKnownRelations().get(player.getObjectId());
+					if ((oldrelation == null) || (oldrelation != relation))
 					{
-						player.sendPacket(new RelationChanged(member.getSummon(), member.getRelation(player), member.isAutoAttackable(player)));
+						final RelationChanged rc = new RelationChanged();
+						rc.addRelation(member, relation, member.isAutoAttackable(player));
+						if (member.hasSummon())
+						{
+							final L2Summon pet = member.getPet();
+							if (pet != null)
+							{
+								rc.addRelation(pet, relation, member.isAutoAttackable(player));
+							}
+							if (member.hasServitors())
+							{
+								member.getServitors().values().forEach(s -> rc.addRelation(s, relation, member.isAutoAttackable(player)));
+							}
+						}
+						player.sendPacket(rc);
+						member.getKnownList().getKnownRelations().put(player.getObjectId(), relation);
 					}
 				}
 			}

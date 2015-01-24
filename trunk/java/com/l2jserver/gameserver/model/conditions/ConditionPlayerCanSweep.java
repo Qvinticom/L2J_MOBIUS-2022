@@ -68,7 +68,7 @@ public class ConditionPlayerCanSweep extends Condition
 							target = (L2Attackable) objTarget;
 							if (target.isDead())
 							{
-								if (target.isSpoil())
+								if (target.isSpoiled())
 								{
 									canSweep = target.checkSpoilOwner(sweeper, true);
 									canSweep &= !target.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true);

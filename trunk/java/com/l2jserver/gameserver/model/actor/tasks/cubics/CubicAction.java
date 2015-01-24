@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
@@ -72,10 +73,13 @@ public final class CubicAction implements Runnable
 			{
 				if (_cubic.getOwner().hasSummon())
 				{
-					if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_cubic.getOwner().getSummon()))
+					for (L2Summon servitor : _cubic.getOwner().getServitors().values())
 					{
-						_cubic.stopAction();
-						return;
+						if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(servitor))
+						{
+							_cubic.stopAction();
+							return;
+						}
 					}
 				}
 				else

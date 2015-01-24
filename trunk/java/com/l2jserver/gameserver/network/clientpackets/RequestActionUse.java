@@ -25,10 +25,10 @@ import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2SummonAI;
 import com.l2jserver.gameserver.ai.NextAction;
+import com.l2jserver.gameserver.data.sql.impl.SummonSkillsTable;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.datatables.BotReportTable;
-import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SummonSkillsTable;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
@@ -134,7 +134,8 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 		}
 		
-		final L2Summon summon = activeChar.getSummon();
+		final L2Summon pet = activeChar.getPet();
+		final L2Summon servitor = activeChar.getAnyServitor();
 		final L2Object target = activeChar.getTarget();
 		switch (_actionId)
 		{
@@ -167,48 +168,48 @@ public final class RequestActionUse extends L2GameClientPacket
 				activeChar.tryOpenPrivateSellStore(false);
 				break;
 			case 15: // Change Movement Mode (Pets)
-				if (validateSummon(summon, true))
+				if (validateSummon(pet, true))
 				{
-					((L2SummonAI) summon.getAI()).notifyFollowStatusChange();
+					((L2SummonAI) pet.getAI()).notifyFollowStatusChange();
 				}
 				break;
 			case 16: // Attack (Pets)
-				if (validateSummon(summon, true))
+				if (validateSummon(pet, true))
 				{
-					if (summon.canAttack(_ctrlPressed))
+					if (pet.canAttack(_ctrlPressed))
 					{
-						summon.doAttack();
+						pet.doAttack();
 					}
 				}
 				break;
 			case 17: // Stop (Pets)
-				if (validateSummon(summon, true))
+				if (validateSummon(pet, true))
 				{
-					summon.cancelAction();
+					pet.cancelAction();
 				}
 				break;
 			case 19: // Unsummon Pet
 				
-				if (!validateSummon(summon, true))
+				if (!validateSummon(pet, true))
 				{
 					break;
 				}
 				
-				if (summon.isDead())
+				if (pet.isDead())
 				{
 					sendPacket(SystemMessageId.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM);
 					break;
 				}
 				
-				if (summon.isAttackingNow() || summon.isInCombat() || summon.isMovementDisabled())
+				if (pet.isAttackingNow() || pet.isInCombat() || pet.isMovementDisabled())
 				{
 					sendPacket(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
 					break;
 				}
 				
-				if (summon.isHungry())
+				if (pet.isHungry())
 				{
-					if (summon.isPet() && !((L2PetInstance) summon).getPetData().getFood().isEmpty())
+					if (!((L2PetInstance) pet).getPetData().getFood().isEmpty())
 					{
 						sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
 					}
@@ -219,27 +220,27 @@ public final class RequestActionUse extends L2GameClientPacket
 					break;
 				}
 				
-				summon.unSummon(activeChar);
+				pet.unSummon(activeChar);
 				break;
 			case 21: // Change Movement Mode (Servitors)
-				if (validateSummon(summon, false))
+				if (validateSummon(servitor, false))
 				{
-					((L2SummonAI) summon.getAI()).notifyFollowStatusChange();
+					((L2SummonAI) servitor.getAI()).notifyFollowStatusChange();
 				}
 				break;
 			case 22: // Attack (Servitors)
-				if (validateSummon(summon, false))
+				if (validateSummon(servitor, false))
 				{
-					if (summon.canAttack(_ctrlPressed))
+					if (servitor.canAttack(_ctrlPressed))
 					{
-						summon.doAttack();
+						servitor.doAttack();
 					}
 				}
 				break;
 			case 23: // Stop (Servitors)
-				if (validateSummon(summon, false))
+				if (validateSummon(servitor, false))
 				{
-					summon.cancelAction();
+					servitor.cancelAction();
 				}
 				break;
 			case 28: // Private Store - Buy
@@ -270,13 +271,13 @@ public final class RequestActionUse extends L2GameClientPacket
 				sendPacket(new RecipeShopManageList(activeChar, true));
 				break;
 			case 38: // Mount/Dismount
-				activeChar.mountPlayer(summon);
+				activeChar.mountPlayer(pet);
 				break;
 			case 39: // Soulless - Parasite Burst
 				useSkill(4138, false);
 				break;
 			case 41: // Wild Hog Cannon - Attack
-				if (validateSummon(summon, false))
+				if (validateSummon(servitor, false))
 				{
 					if ((target != null) && (target.isDoor() || (target instanceof L2SiegeFlagInstance)))
 					{
@@ -329,33 +330,33 @@ public final class RequestActionUse extends L2GameClientPacket
 				sendPacket(new RecipeShopManageList(activeChar, false));
 				break;
 			case 52: // Unsummon Servitor
-				if (validateSummon(summon, false))
+				if (validateSummon(servitor, false))
 				{
-					if (summon.isAttackingNow() || summon.isInCombat())
+					if (servitor.isAttackingNow() || servitor.isInCombat())
 					{
 						sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
 						break;
 					}
-					summon.unSummon(activeChar);
+					servitor.unSummon(activeChar);
 				}
 				break;
 			case 53: // Move to target (Servitors)
-				if (validateSummon(summon, false))
+				if (validateSummon(servitor, false))
 				{
-					if ((target != null) && (summon != target) && !summon.isMovementDisabled())
+					if ((target != null) && (servitor != target) && !servitor.isMovementDisabled())
 					{
-						summon.setFollowStatus(false);
-						summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
+						servitor.setFollowStatus(false);
+						servitor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 					}
 				}
 				break;
 			case 54: // Move to target (Pets)
-				if (validateSummon(summon, true))
+				if (validateSummon(pet, true))
 				{
-					if ((target != null) && (summon != target) && !summon.isMovementDisabled())
+					if ((target != null) && (pet != target) && !pet.isMovementDisabled())
 					{
-						summon.setFollowStatus(false);
-						summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
+						pet.setFollowStatus(false);
+						pet.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 					}
 				}
 				break;
@@ -447,9 +448,9 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				break;
 			case 1001: // Sin Eater - Ultimate Bombastic Buster
-				if (validateSummon(summon, true) && (summon.getId() == SIN_EATER_ID))
+				if (validateSummon(pet, true) && (pet.getId() == SIN_EATER_ID))
 				{
-					summon.broadcastPacket(new NpcSay(summon.getObjectId(), Say2.NPC_ALL, summon.getId(), NPC_STRINGS[Rnd.get(NPC_STRINGS.length)]));
+					pet.broadcastPacket(new NpcSay(pet.getObjectId(), Say2.NPC_ALL, pet.getId(), NPC_STRINGS[Rnd.get(NPC_STRINGS.length)]));
 				}
 				break;
 			case 1003: // Wind Hatchling/Strider - Wild Stun
@@ -663,9 +664,9 @@ public final class RequestActionUse extends L2GameClientPacket
 				useSkill(6044, false);
 				break;
 			case 1084: // Switch State
-				if (summon instanceof L2BabyPetInstance)
+				if (pet instanceof L2BabyPetInstance)
 				{
-					useSkill(6054, true);
+					useSkill(SWITCH_STANCE_ID, true);
 				}
 				break;
 			case 1086: // Panther Cancel
@@ -706,6 +707,172 @@ public final class RequestActionUse extends L2GameClientPacket
 				break;
 			case 1098: // Elite Maguen - Maguen Party Return
 				useSkill(6684, true);
+				break;
+			case 1099: // All servitor attack
+				activeChar.getServitors().values().forEach(s ->
+				{
+					if (validateSummon(s, false))
+					{
+						if (s.canAttack(_ctrlPressed))
+						{
+							s.doAttack();
+						}
+					}
+				});
+				break;
+			case 1100: // All servitor move to
+				activeChar.getServitors().values().forEach(s ->
+				{
+					if (validateSummon(s, false))
+					{
+						if ((target != null) && (s != target) && !s.isMovementDisabled())
+						{
+							s.setFollowStatus(false);
+							s.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
+						}
+					}
+				});
+				break;
+			case 1101: // All servitor stop
+				activeChar.getServitors().values().forEach(summon ->
+				{
+					if (validateSummon(summon, false))
+					{
+						summon.cancelAction();
+					}
+				});
+				break;
+			case 1102: // Unsummon all servitors
+				boolean canUnsummon = true;
+				OUT: for (L2Summon s : activeChar.getServitors().values())
+				{
+					if (validateSummon(s, false))
+					{
+						if (s.isAttackingNow() || s.isInCombat())
+						{
+							sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
+							canUnsummon = false;
+							break OUT;
+						}
+						s.unSummon(activeChar);
+					}
+				}
+				if (canUnsummon)
+				{
+					activeChar.getServitors().values().stream().forEach(s ->
+					{
+						s.unSummon(activeChar);
+					});
+				}
+				break;
+			case 1103: // seems to be passive mode
+				break;
+			case 1104: // seems to be defend mode
+				break;
+			case 1106: // Cute Bear - Bear Claw
+				useServitorsSkill(11278);
+				break;
+			case 1107: // Cute Bear - Bear Tumbling
+				useServitorsSkill(11279);
+				break;
+			case 1108: // Saber Tooth Cougar- Cougar Bite
+				useServitorsSkill(11280);
+				break;
+			case 1109: // Saber Tooth Cougar - Cougar Pounce
+				useServitorsSkill(11281);
+				break;
+			case 1110: // Grim Reaper - Reaper Touch
+				useServitorsSkill(11282);
+				break;
+			case 1111: // Grim Reaper - Reaper Power
+				useServitorsSkill(11283);
+				break;
+			case 1113: // Golden Lion - Lion Roar
+				useSkill(10051, false);
+				break;
+			case 1114: // Golden Lion - Lion Claw
+				useSkill(10052, false);
+				break;
+			case 1115: // Golden Lion - Lion Dash
+				useSkill(10053, false);
+				break;
+			case 1116: // Golden Lion - Lion Flame
+				useSkill(10054, false);
+				break;
+			case 1117: // Thunder Hawk - Thunder Flight
+				useSkill(10794, false);
+				break;
+			case 1118: // Thunder Hawk - Thunder Purity
+				useSkill(10795, false);
+				break;
+			case 1120: // Thunder Hawk - Thunder Feather Blast
+				useSkill(10797, false);
+				break;
+			case 1121: // Thunder Hawk - Thunder Sharp Claw
+				useSkill(10798, false);
+				break;
+			case 1122: // Tree of Life - Blessing of Tree
+				useServitorsSkill(11806);
+				break;
+			case 1124: // Wynn Kai the Cat - Feline Aggression
+				useServitorsSkill(11323);
+				break;
+			case 1125: // Wynn Kai the Cat - Feline Stun
+				useServitorsSkill(11324);
+				break;
+			case 1126: // Wynn Feline King - Feline Bite
+				useServitorsSkill(11325);
+				break;
+			case 1127: // Wynn Feline King - Feline Pounce
+				useServitorsSkill(11326);
+				break;
+			case 1128: // Wynn Feline Queen - Feline Touch
+				useServitorsSkill(11327);
+				break;
+			case 1129: // Wynn Feline Queen - Feline Power
+				useServitorsSkill(11328);
+				break;
+			case 1130: // Wynn Merrow - Unicorn's Aggression
+				useServitorsSkill(11332);
+				break;
+			case 1131: // Wynn Merrow - Unicorn's Stun
+				useServitorsSkill(11333);
+				break;
+			case 1132: // Wynn Magnus - Unicorn's Bite
+				useServitorsSkill(11334);
+				break;
+			case 1133: // Wynn Magnus - Unicorn's Pounce
+				useServitorsSkill(11335);
+				break;
+			case 1134: // Wynn Seraphim - Unicorn's Touch
+				useServitorsSkill(11336);
+				break;
+			case 1135: // Wynn Seraphim - Unicorn's Power
+				useServitorsSkill(11337);
+				break;
+			case 1136: // Wynn Nightshade - Phantom Aggression
+				useServitorsSkill(11341);
+				break;
+			case 1137: // Wynn Nightshade - Phantom Stun
+				useServitorsSkill(11342);
+				break;
+			case 1138: // Wynn Spectral Lord - Phantom Bite
+				useServitorsSkill(11343);
+				break;
+			case 1139: // Wynn Spectral Lord - Phantom Pounce
+				useServitorsSkill(11344);
+				break;
+			case 1140: // Wynn Soulless - Phantom Touch
+				useServitorsSkill(11345);
+				break;
+			case 1141: // Wynn Soulless - Phantom Power
+				useServitorsSkill(11346);
+				break;
+			case 1142: // Blood Panther - Panther Roar
+				useServitorsSkill(10087);
+				break;
+			case 1143: // Blood Panther - Panther Rush
+				useServitorsSkill(10088);
 				break;
 			case 5000: // Baby Rudolph - Reindeer Scratch
 				useSkill(23155, true);
@@ -866,45 +1033,57 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Summon summon = activeChar.getSummon();
-		if (!validateSummon(summon, pet))
+		if (pet)
 		{
-			return;
-		}
-		
-		if (summon instanceof L2BabyPetInstance)
-		{
-			if (!((L2BabyPetInstance) summon).isInSupportMode())
+			final L2Summon summon = activeChar.getPet();
+			if (!validateSummon(summon, pet))
 			{
-				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
 				return;
 			}
-		}
-		
-		int lvl = 0;
-		if (summon.isPet())
-		{
+			
+			if (summon instanceof L2BabyPetInstance)
+			{
+				if (!((L2BabyPetInstance) summon).isInSupportMode())
+				{
+					sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+					return;
+				}
+			}
+			
 			if ((summon.getLevel() - activeChar.getLevel()) > 20)
 			{
 				sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
 				return;
 			}
-			lvl = PetDataTable.getInstance().getPetData(summon.getId()).getAvailableLevel(skillId, summon.getLevel());
+			
+			final int lvl = PetDataTable.getInstance().getPetData(summon.getId()).getAvailableLevel(skillId, summon.getLevel());
+			
+			if (lvl > 0)
+			{
+				summon.setTarget(target);
+				summon.useMagic(SkillData.getInstance().getSkill(skillId, lvl), _ctrlPressed, _shiftPressed);
+			}
+			
+			if (skillId == SWITCH_STANCE_ID)
+			{
+				summon.switchMode();
+			}
 		}
 		else
 		{
-			lvl = SummonSkillsTable.getInstance().getAvailableLevel(summon, skillId);
-		}
-		
-		if (lvl > 0)
-		{
-			summon.setTarget(target);
-			summon.useMagic(SkillData.getInstance().getSkill(skillId, lvl), _ctrlPressed, _shiftPressed);
-		}
-		
-		if (skillId == SWITCH_STANCE_ID)
-		{
-			summon.switchMode();
+			final L2Summon servitor = activeChar.getAnyServitor();
+			if (!validateSummon(servitor, pet))
+			{
+				return;
+			}
+			
+			final int lvl = SummonSkillsTable.getInstance().getAvailableLevel(servitor, skillId);
+			
+			if (lvl > 0)
+			{
+				servitor.setTarget(target);
+				servitor.useMagic(SkillData.getInstance().getSkill(skillId, lvl), _ctrlPressed, _shiftPressed);
+			}
 		}
 	}
 	
@@ -923,6 +1102,36 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		
 		useSkill(skillId, activeChar.getTarget(), pet);
+	}
+	
+	/**
+	 * Cast a skill for all active summon.<br>
+	 * Target is retrieved from owner's target
+	 * @param skillId the skill Id to use
+	 */
+	private void useServitorsSkill(int skillId)
+	{
+		final L2PcInstance activeChar = getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		activeChar.getServitors().values().forEach(servitor ->
+		{
+			if (!validateSummon(servitor, false))
+			{
+				return;
+			}
+			
+			final int lvl = SummonSkillsTable.getInstance().getAvailableLevel(servitor, skillId);
+			
+			if (lvl > 0)
+			{
+				servitor.setTarget(activeChar.getTarget());
+				servitor.useMagic(SkillData.getInstance().getSkill(skillId, lvl), _ctrlPressed, _shiftPressed);
+			}
+		});
 	}
 	
 	/**

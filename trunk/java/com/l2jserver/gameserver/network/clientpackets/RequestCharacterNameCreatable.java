@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import com.l2jserver.gameserver.util.Util;
 

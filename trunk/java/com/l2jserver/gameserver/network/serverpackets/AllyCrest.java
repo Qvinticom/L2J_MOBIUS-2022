@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.CrestTable;
+import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 import com.l2jserver.gameserver.model.L2Crest;
 
 public class AllyCrest extends L2GameServerPacket

@@ -63,7 +63,7 @@ public final class RequestPetGetItem extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) getClient().getActiveChar().getSummon();
+		final L2PetInstance pet = (L2PetInstance) getClient().getActiveChar().getPet();
 		if (pet.isDead() || pet.isOutOfControl())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);

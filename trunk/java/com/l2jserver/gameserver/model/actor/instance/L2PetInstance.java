@@ -32,12 +32,12 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.CharSummonTable;
+import com.l2jserver.gameserver.data.sql.impl.CharSummonTable;
+import com.l2jserver.gameserver.data.sql.impl.SummonEffectsTable;
+import com.l2jserver.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SummonEffectsTable;
-import com.l2jserver.gameserver.datatables.SummonEffectsTable.SummonEffect;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.enums.PartyDistributionType;
@@ -135,7 +135,8 @@ public class L2PetInstance extends L2Summon
 		{
 			try
 			{
-				if ((getOwner() == null) || !getOwner().hasSummon() || (getOwner().getSummon().getObjectId() != getObjectId()))
+				final L2Summon pet = getOwner().getPet();
+				if ((getOwner() == null) || (pet == null) || (pet.getObjectId() != getObjectId()))
 				{
 					stopFeed();
 					return;
@@ -1162,7 +1163,7 @@ public class L2PetInstance extends L2Summon
 		// stop feeding task if its active
 		
 		stopFeed();
-		if (!isDead() && (getOwner().getSummon() == this))
+		if (!isDead() && (getOwner().getPet() == this))
 		{
 			_feedTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FeedTask(), 10000, 10000);
 		}

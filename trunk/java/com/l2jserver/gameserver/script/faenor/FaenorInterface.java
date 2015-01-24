@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.script.faenor;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.datatables.AnnouncementsTable;
+import com.l2jserver.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jserver.gameserver.datatables.EventDroplist;
 import com.l2jserver.gameserver.model.announce.EventAnnouncement;
 import com.l2jserver.gameserver.script.DateRange;

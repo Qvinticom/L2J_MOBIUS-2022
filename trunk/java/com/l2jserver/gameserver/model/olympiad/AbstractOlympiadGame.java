@@ -236,15 +236,18 @@ public abstract class AbstractOlympiadGame
 			// Remove Summon's Buffs
 			if (player.hasSummon())
 			{
-				final L2Summon summon = player.getSummon();
-				summon.stopAllEffectsExceptThoseThatLastThroughDeath();
-				summon.abortAttack();
-				summon.abortCast();
-				
-				if (summon.isPet())
+				final L2Summon pet = player.getPet();
+				if (pet != null)
 				{
-					summon.unSummon(player);
+					pet.unSummon(player);
 				}
+				
+				player.getServitors().values().forEach(s ->
+				{
+					s.stopAllEffectsExceptThoseThatLastThroughDeath();
+					s.abortAttack();
+					s.abortCast();
+				});
 			}
 			
 			// stop any cubic that has been given by other player.
@@ -319,15 +322,24 @@ public abstract class AbstractOlympiadGame
 			{
 				player.setAgathionId(0);
 			}
-			final L2Summon summon = player.getSummon();
-			if ((summon != null) && !summon.isDead())
+			final L2Summon pet = player.getPet();
+			if ((pet != null) && !pet.isDead())
 			{
-				summon.setTarget(null);
-				summon.abortAttack();
-				summon.abortCast();
-				summon.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				summon.stopAllEffectsExceptThoseThatLastThroughDeath();
+				pet.setTarget(null);
+				pet.abortAttack();
+				pet.abortCast();
+				pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				pet.stopAllEffectsExceptThoseThatLastThroughDeath();
 			}
+			
+			player.getServitors().values().stream().filter(s -> !s.isDead()).forEach(s ->
+			{
+				s.setTarget(null);
+				s.abortAttack();
+				s.abortCast();
+				s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				s.stopAllEffectsExceptThoseThatLastThroughDeath();
+			});
 			
 			player.setCurrentCp(player.getMaxCp());
 			player.setCurrentHp(player.getMaxHp());

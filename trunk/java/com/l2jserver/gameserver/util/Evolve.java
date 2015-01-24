@@ -26,16 +26,18 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -56,12 +58,13 @@ public final class Evolve
 			return false;
 		}
 		
-		if (!player.hasPet())
+		final L2Summon pet = player.getPet();
+		if (pet == null)
 		{
 			return false;
 		}
 		
-		final L2PetInstance currentPet = (L2PetInstance) player.getSummon();
+		final L2PetInstance currentPet = (L2PetInstance) pet;
 		if (currentPet.isAlikeDead())
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use death pet exploit!", Config.DEFAULT_PUNISH);
@@ -239,6 +242,7 @@ public final class Evolve
 		player.sendPacket(iu);
 		
 		player.sendPacket(new ExUserInfoInvenWeight(player));
+		player.sendPacket(new ExAdenaInvenCount(player));
 		
 		player.broadcastUserInfo();
 		

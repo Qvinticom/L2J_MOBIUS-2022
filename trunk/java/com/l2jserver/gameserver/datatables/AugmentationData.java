@@ -33,6 +33,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.data.xml.impl.OptionData;
 import com.l2jserver.gameserver.model.L2Augmentation;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.L2Item;
@@ -42,11 +43,12 @@ import com.l2jserver.gameserver.network.clientpackets.AbstractRefinePacket;
 import com.l2jserver.util.Rnd;
 
 /**
- * This class manages the augmentation data and can also create new augmentations.
+ * Loads augmentation bonuses and skills.
  * @author durgus, Gigiikun, Sandro, UnAfraid
  */
 public class AugmentationData
 {
+	// Zoey76: TODO: Implement using IXmlReader.
 	private static final Logger LOGGER = Logger.getLogger(AugmentationData.class.getName());
 	
 	// stats
@@ -974,7 +976,7 @@ public class AugmentationData
 		{
 			// second augmentation (skill)
 			stat34 = base + Rnd.get(skillsLength);
-			op = OptionsData.getInstance().getOptions(stat34);
+			op = OptionData.getInstance().getOptions(stat34);
 		}
 		
 		if ((op == null) || (!op.hasActiveSkill() && !op.hasPassiveSkill() && !op.hasActivationSkills()))

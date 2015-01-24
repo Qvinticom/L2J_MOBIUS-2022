@@ -47,6 +47,8 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	private int _originX;
 	private int _originY;
 	private int _originZ;
+	
+	@SuppressWarnings("unused")
 	private int _moveMovement;
 	
 	@Override
@@ -133,23 +135,15 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			return;
 		}
 		
-		// Disable keyboard movement when geodata is not enabled and player is not flying.
-		if ((_moveMovement == 0) && (Config.GEODATA < 1) && !activeChar.isFlying())
+		double dx = _targetX - activeChar.getX();
+		double dy = _targetY - activeChar.getY();
+		// Can't move if character is confused, or trying to move a huge distance
+		if (activeChar.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
-		else
-		{
-			double dx = _targetX - activeChar.getX();
-			double dy = _targetY - activeChar.getY();
-			// Can't move if character is confused, or trying to move a huge distance
-			if (activeChar.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
-			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
-		}
+		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
 	}
 	
 	@Override

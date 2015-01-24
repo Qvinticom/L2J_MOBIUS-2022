@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets.mentoring;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.model.L2Mentee;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

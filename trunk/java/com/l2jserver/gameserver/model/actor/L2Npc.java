@@ -91,6 +91,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExChangeNpcState;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcInfo;
+import com.l2jserver.gameserver.network.serverpackets.NpcInfoAbnormalVisualEffect;
 import com.l2jserver.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
@@ -566,7 +567,7 @@ public class L2Npc extends L2Character
 			}
 			else
 			{
-				player.sendPacket(new NpcInfo(this));
+				player.sendPacket(new NpcInfoAbnormalVisualEffect(this));
 			}
 		}
 	}
@@ -1721,6 +1722,17 @@ public class L2Npc extends L2Character
 				EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (L2Npc) obj, reference), obj);
 			}
 		}
+	}
+	
+	/**
+	 * Sends an event to a given object.
+	 * @param eventName the event name
+	 * @param receiver the receiver
+	 * @param reference the reference
+	 */
+	public void sendScriptEvent(String eventName, L2Object receiver, L2Object reference)
+	{
+		EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (L2Npc) receiver, reference), receiver);
 	}
 	
 	/**

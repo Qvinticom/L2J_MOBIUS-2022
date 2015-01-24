@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.stats.functions;
 
-import com.l2jserver.gameserver.datatables.EnchantItemHPBonusData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;

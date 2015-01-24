@@ -23,7 +23,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.EnchantItemData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.enums.UserInfoType;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.EnchantResult;
+import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
@@ -430,7 +431,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 			
 			activeChar.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
 			activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.sendPacket(new ExAdenaInvenCount(activeChar));
 		}
 	}
 	

@@ -23,9 +23,9 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.NpcBufferTable;
-import com.l2jserver.gameserver.datatables.NpcBufferTable.NpcBufferData;
+import com.l2jserver.gameserver.data.sql.impl.NpcBufferTable;
+import com.l2jserver.gameserver.data.sql.impl.NpcBufferTable.NpcBufferData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -279,12 +279,17 @@ public class OlympiadManagerLink implements IBypassHandler
 						
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
 						skill.applyEffects(activeChar, activeChar);
-						final L2Summon summon = activeChar.getSummon();
-						if (summon != null)
+						final L2Summon pet = activeChar.getPet();
+						if (pet != null)
 						{
-							target.broadcastPacket(new MagicSkillUse(target, summon, skill.getId(), skill.getLevel(), 0, 0));
-							skill.applyEffects(summon, summon);
+							target.broadcastPacket(new MagicSkillUse(target, pet, skill.getId(), skill.getLevel(), 0, 0));
+							skill.applyEffects(pet, pet);
 						}
+						activeChar.getServitors().values().forEach(s ->
+						{
+							target.broadcastPacket(new MagicSkillUse(target, s, skill.getId(), skill.getLevel(), 0, 0));
+							skill.applyEffects(s, s);
+						});
 					}
 				}
 				

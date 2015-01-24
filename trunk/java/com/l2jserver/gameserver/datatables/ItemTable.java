@@ -34,6 +34,7 @@ import javolution.util.FastMap;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import com.l2jserver.gameserver.engines.DocumentEngine;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.idfactory.IdFactory;
@@ -296,24 +297,6 @@ public class ItemTable
 	public L2ItemInstance createItem(String process, int itemId, int count, L2PcInstance actor)
 	{
 		return createItem(process, itemId, count, actor, null);
-	}
-	
-	/**
-	 * Returns a dummy item.<br>
-	 * <U><I>Concept :</I></U><BR>
-	 * Dummy item is created by setting the ID of the object in the world at null value
-	 * @param itemId : int designating the item
-	 * @return L2ItemInstance designating the dummy item created
-	 */
-	public L2ItemInstance createDummyItem(int itemId)
-	{
-		L2Item item = getTemplate(itemId);
-		if (item == null)
-		{
-			return null;
-		}
-		L2ItemInstance temp = new L2ItemInstance(0, item);
-		return temp;
 	}
 	
 	/**

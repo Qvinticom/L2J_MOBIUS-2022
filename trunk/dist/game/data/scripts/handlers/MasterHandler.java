@@ -59,7 +59,6 @@ import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFightCalculator;
 import handlers.admincommandhandlers.AdminFortSiege;
-import handlers.admincommandhandlers.AdminGeoEditor;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
@@ -210,6 +209,7 @@ import handlers.targethandlers.FrontAura;
 import handlers.targethandlers.Ground;
 import handlers.targethandlers.Holy;
 import handlers.targethandlers.One;
+import handlers.targethandlers.OneFriendly;
 import handlers.targethandlers.OwnerPet;
 import handlers.targethandlers.Party;
 import handlers.targethandlers.PartyClan;
@@ -353,7 +353,6 @@ public class MasterHandler
 			AdminFightCalculator.class,
 			AdminFortSiege.class,
 			AdminGeodata.class,
-			AdminGeoEditor.class,
 			AdminGm.class,
 			AdminGmChat.class,
 			AdminGraciaSeeds.class,
@@ -553,6 +552,7 @@ public class MasterHandler
 			Ground.class,
 			Holy.class,
 			One.class,
+			OneFriendly.class,
 			OwnerPet.class,
 			Party.class,
 			PartyClan.class,

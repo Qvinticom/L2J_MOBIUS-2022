@@ -21,8 +21,8 @@ package features.SkillTransfer;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ClassListData;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -42,11 +42,11 @@ public final class SkillTransfer extends AbstractNpcAI
 	private static final ItemHolder[] PORMANDERS =
 	{
 		// Cardinal (97)
-		new ItemHolder(15307, 1),
+		new ItemHolder(15307, 7),
 		// Eva's Saint (105)
-		new ItemHolder(15308, 1),
+		new ItemHolder(15308, 7),
 		// Shillen Saint (112)
-		new ItemHolder(15309, 4)
+		new ItemHolder(15309, 7)
 	};
 	
 	private SkillTransfer()

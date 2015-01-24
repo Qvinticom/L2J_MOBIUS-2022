@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.knownlist.ObjectKnownList;
 import com.l2jserver.gameserver.model.actor.poly.ObjectPoly;
@@ -834,10 +835,12 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 					sendInstanceUpdate(newI, false);
 				}
 			}
-			if (player.hasSummon())
+			final L2Summon pet = player.getPet();
+			if (pet != null)
 			{
-				player.getSummon().setInstanceId(instanceId);
+				pet.setInstanceId(instanceId);
 			}
+			player.getServitors().values().forEach(s -> s.setInstanceId(instanceId));
 		}
 		else if (isNpc())
 		{

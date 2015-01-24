@@ -21,8 +21,8 @@ package com.l2jserver.gameserver.network.clientpackets;
 import java.util.List;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.enums.Race;
@@ -309,6 +309,16 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 				if (checkPlayerSkill(activeChar, trainer, s))
 				{
 					giveSkill(activeChar, trainer, skill);
+				}
+				
+				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(activeChar);
+				if (skills.isEmpty())
+				{
+					activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+				}
+				else
+				{
+					activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.TRANSFER));
 				}
 				break;
 			}
@@ -619,11 +629,15 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 				
 				if (!s.getRemoveSkills().isEmpty())
 				{
-					s.getRemoveSkills().forEach(sk ->
+					s.getRemoveSkills().forEach(skillId ->
 					{
-						if (player.getSkillLevel(sk) > 0)
+						if (player.getSkillLevel(skillId) > 0)
 						{
-							player.removeSkill(sk, true);
+							final Skill skillToRemove = player.getKnownSkill(skillId);
+							if (skillToRemove != null)
+							{
+								player.removeSkill(skillToRemove, true);
+							}
 						}
 					});
 				}

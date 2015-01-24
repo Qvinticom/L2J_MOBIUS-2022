@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -78,9 +79,15 @@ public class RequestDispel extends L2GameClientPacket
 		}
 		else
 		{
-			if (activeChar.hasSummon() && (activeChar.getSummon().getObjectId() == _objectId))
+			final L2Summon pet = activeChar.getPet();
+			if ((pet != null) && (pet.getObjectId() == _objectId))
 			{
-				activeChar.getSummon().stopSkillEffects(true, _skillId);
+				pet.stopSkillEffects(true, _skillId);
+			}
+			
+			if (activeChar.hasServitor(_objectId))
+			{
+				activeChar.removeServitor(_objectId);
 			}
 		}
 	}

@@ -32,6 +32,7 @@ import quests.Q00018_MeetingWithTheGoldenRam.Q00018_MeetingWithTheGoldenRam;
 import quests.Q00019_GoToThePastureland.Q00019_GoToThePastureland;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import quests.Q00021_HiddenTruth.Q00021_HiddenTruth;
+import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 import quests.Q00026_TiredOfWaiting.Q00026_TiredOfWaiting;
 import quests.Q00027_ChestCaughtWithABaitOfWind.Q00027_ChestCaughtWithABaitOfWind;
@@ -242,6 +243,7 @@ import quests.Q00651_RunawayYouth.Q00651_RunawayYouth;
 import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00653_WildMaiden.Q00653_WildMaiden;
 import quests.Q00654_JourneyToASettlement.Q00654_JourneyToASettlement;
+import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.Q00659_IdRatherBeCollectingFairyBreath.Q00659_IdRatherBeCollectingFairyBreath;
 import quests.Q00660_AidingTheFloranVillage.Q00660_AidingTheFloranVillage;
 import quests.Q00661_MakingTheHarvestGroundsSafe.Q00661_MakingTheHarvestGroundsSafe;
@@ -311,6 +313,10 @@ import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
 import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
 import quests.Q10739_SupplyAndDemand.Q10739_SupplyAndDemand;
 import quests.Q10740_NeverForget.Q10740_NeverForget;
+import quests.Q10741_ADraughtForTheCold.Q10741_ADraughtForTheCold;
+import quests.Q10742_AFurryFriend.Q10742_AFurryFriend;
+import quests.Q10743_StrangeFungus.Q10743_StrangeFungus;
+import quests.Q10744_StrongerThanSteel.Q10744_StrongerThanSteel;
 
 /**
  * @author NosBit
@@ -332,6 +338,7 @@ public class QuestMasterHandler
 		Q00019_GoToThePastureland.class,
 		Q00020_BringUpWithLove.class,
 		Q00021_HiddenTruth.class,
+		Q00023_LidiasHeart.class,
 		Q00024_InhabitantsOfTheForestOfTheDead.class,
 		Q00026_TiredOfWaiting.class,
 		Q00027_ChestCaughtWithABaitOfWind.class,
@@ -542,6 +549,7 @@ public class QuestMasterHandler
 		Q00652_AnAgedExAdventurer.class,
 		Q00653_WildMaiden.class,
 		Q00654_JourneyToASettlement.class,
+		Q00655_AGrandPlanForTamingWildBeasts.class,
 		Q00659_IdRatherBeCollectingFairyBreath.class,
 		Q00660_AidingTheFloranVillage.class,
 		Q00661_MakingTheHarvestGroundsSafe.class,
@@ -610,7 +618,11 @@ public class QuestMasterHandler
 		Q10737_GrakonsWarehouse.class,
 		Q10738_AnInnerBeauty.class,
 		Q10739_SupplyAndDemand.class,
-		Q10740_NeverForget.class
+		Q10740_NeverForget.class,
+		Q10741_ADraughtForTheCold.class,
+		Q10742_AFurryFriend.class,
+		Q10743_StrangeFungus.class,
+		Q10744_StrongerThanSteel.class
 	};
 	
 	public static void main(String[] args)

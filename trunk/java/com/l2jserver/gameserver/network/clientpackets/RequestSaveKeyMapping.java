@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.UIData;
+import com.l2jserver.gameserver.data.xml.impl.UIData;
 import com.l2jserver.gameserver.model.ActionKey;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.L2GameClient.GameClientState;

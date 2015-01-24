@@ -22,7 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2ShuttleInstance;
 
@@ -43,8 +43,8 @@ public class L2ShuttleEngine implements Runnable
 	public L2ShuttleEngine(L2ShuttleData data, L2ShuttleInstance shuttle)
 	{
 		_shuttle = shuttle;
-		_door1 = DoorTable.getInstance().getDoor(data.getDoors().get(0));
-		_door2 = DoorTable.getInstance().getDoor(data.getDoors().get(1));
+		_door1 = DoorData.getInstance().getDoor(data.getDoors().get(0));
+		_door2 = DoorData.getInstance().getDoor(data.getDoors().get(1));
 	}
 	
 	// TODO: Rework me..

@@ -18,7 +18,7 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -58,7 +58,7 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		if (activeChar.hasSummon() || activeChar.isMounted())
+		if (activeChar.hasPet() || activeChar.isMounted())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return false;

@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.engines.DocumentParser;
+import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.instancemanager.MailManager;
@@ -62,21 +62,18 @@ import com.l2jserver.gameserver.util.Util;
  * Mentor Guide.
  * @author Gnacik, UnAfraid
  */
-public class MentorGuide extends AbstractNpcAI implements DocumentParser
+public class MentorGuide extends AbstractNpcAI implements IXmlReader
 {
 	// NPCs
 	private static final int MENTOR_GUIDE = 33587;
 	
-	// ITEMs
+	// Items
 	private static final int MENTEE_CERT = 33800;
 	private static final int MENTEE_MARK = 33804;
 	private static final int MENTEE_HEADPHONE = 34759;
 	private static final int DIPLOMA = 33805;
 	
-	// Misc
-	private static final int MAX_LEVEL = 85;
-	
-	// SKILLs
+	// Skills
 	private final static SkillHolder[] MENTEE_BUFFS =
 	{
 		new SkillHolder(9227, 1), // Mentor's Poem of Horn
@@ -95,19 +92,21 @@ public class MentorGuide extends AbstractNpcAI implements DocumentParser
 	
 	private static final SkillHolder MENTEE_MENTOR_SUMMON = new SkillHolder(9379, 1); // Mentee's Mentor Summon
 	
+	// Misc
+	private static final int MAX_LEVEL = 85;
 	private static final String LEVEL_UP_TITLE = "Mentee coin from Mentee leveling";
 	private static final String LEVEL_UP_BODY = "Your mentee %s has reached level %d, so you are receiving some Mentee Coin. After Mentee Coin has successfully been removed and placed into your inventory please be sure to delete this letter. If your mailbox is full when any future letters are sent to you cannot be delivered and you will not receive these items.";
-	
 	private static final String MENTEE_ADDED_TITLE = "Congratulations on becoming a mentee.";
 	private static final String MENTEE_ADDED_BODY = "Greetings. This is the Mentor Guide.\n\nYou will experience a world of unlimited adventures with your mentor, Exciting, isn't it?\n\nWhen you graduate from mentee status (upon awakening at level 85), you will receive a Mentee Certificate. If you bring it to me, I will give you a Diploma that you can exchange for R-grade equipment.";
-	
+	private static final String MENTEE_GRADUATE_TITLE = "Congratulations on your graduation";
+	private static final String MENTEE_GRADUATE_BODY = "Greetings! This is the Mentor Guide.\nCongratulations!  Did you enjoy the time with a mentor? Here is a Mentee Certificate for graduating.\n\nFind me in town, and I'll give you a Diploma if you show me your Mentee Certificatee. You'll also get a small graduation gift!\n\nNow, on to your next Adventure!";
 	static final Map<Integer, Integer> MENTEE_COINS = new HashMap<>();
 	
 	@Override
 	public void load()
 	{
 		parseDatapackFile("config/MentorCoins.xml");
-		LOGGER.log(Level.INFO, MentorGuide.class.getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
 	}
 	
 	@Override
@@ -137,6 +136,8 @@ public class MentorGuide extends AbstractNpcAI implements DocumentParser
 		addFirstTalkId(MENTOR_GUIDE);
 		addStartNpc(MENTOR_GUIDE);
 		addTalkId(MENTOR_GUIDE);
+		
+		load();
 	}
 	
 	@Override
@@ -420,8 +421,7 @@ public class MentorGuide extends AbstractNpcAI implements DocumentParser
 			
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
 			
-			// TODO: Find correct message!
-			sendMail(player, MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_CERT, 1);
+			sendMail(player, MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
 		}
 	}
 	

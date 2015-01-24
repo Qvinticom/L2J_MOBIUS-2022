@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.datatables.OptionsData;
+import com.l2jserver.gameserver.data.xml.impl.OptionData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.options.Options;
 
@@ -57,7 +57,7 @@ public final class L2Augmentation
 			
 			for (int stat : stats)
 			{
-				Options op = OptionsData.getInstance().getOptions(stat);
+				Options op = OptionData.getInstance().getOptions(stat);
 				if (op != null)
 				{
 					_options.add(op);

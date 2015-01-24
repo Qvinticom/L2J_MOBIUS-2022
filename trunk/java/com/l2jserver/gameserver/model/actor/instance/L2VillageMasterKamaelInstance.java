@@ -18,58 +18,15 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.base.PlayerClass;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 public final class L2VillageMasterKamaelInstance extends L2VillageMasterInstance
 {
 	public L2VillageMasterKamaelInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);
-	}
-	
-	@Override
-	protected final String getSubClassMenu(Race race)
-	{
-		if (Config.ALT_GAME_SUBCLASS_EVERYWHERE || (race == Race.KAMAEL))
-		{
-			return "data/html/villagemaster/SubClass.htm";
-		}
-		
-		return "data/html/villagemaster/SubClass_NoKamael.htm";
-	}
-	
-	@Override
-	protected final String getSubClassFail()
-	{
-		return "data/html/villagemaster/SubClass_Fail_Kamael.htm";
-	}
-	
-	@Override
-	protected final boolean checkQuests(L2PcInstance player)
-	{
-		// Noble players can add subbclasses without quests
-		if (player.isNoble())
-		{
-			return true;
-		}
-		
-		QuestState qs = player.getQuestState("234_FatesWhisper");
-		if ((qs == null) || !qs.isCompleted())
-		{
-			return false;
-		}
-		
-		qs = player.getQuestState("236_SeedsOfChaos");
-		if ((qs == null) || !qs.isCompleted())
-		{
-			return false;
-		}
-		
-		return true;
 	}
 	
 	@Override

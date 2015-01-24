@@ -22,8 +22,8 @@ import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.BlockList;
@@ -213,7 +213,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		}
 		
 		final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
-		final L2AccessLevel accessLevel = AdminTable.getInstance().getAccessLevel(level);
+		final L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 		
 		if (accessLevel.isGm() && !activeChar.getAccessLevel().isGm())
 		{

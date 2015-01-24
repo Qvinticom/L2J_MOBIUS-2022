@@ -9,4 +9,5 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO announcements (`type`, `author`, `content`) VALUES (0, 'Mobius', 'Powered by www.l2jmobius.com');
+INSERT INTO announcements (`type`, `author`, `content`) VALUES 
+(0, 'Mobius', 'Powered by www.l2jmobius.com');

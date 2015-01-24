@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.engines.DocumentParser;
+import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.instancemanager.tasks.StartMovingTask;
 import com.l2jserver.gameserver.model.L2NpcWalkerNode;
 import com.l2jserver.gameserver.model.L2WalkRoute;
@@ -50,7 +50,7 @@ import com.l2jserver.gameserver.util.Broadcast;
  * This class manages walking monsters.
  * @author GKR
  */
-public final class WalkingManager implements DocumentParser
+public final class WalkingManager implements IXmlReader
 {
 	// Repeat style:
 	// 0 - go back

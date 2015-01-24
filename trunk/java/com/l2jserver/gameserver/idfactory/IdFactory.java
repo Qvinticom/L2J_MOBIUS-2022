@@ -107,7 +107,8 @@ public abstract class IdFactory
 		"SELECT ally_id     FROM clan_data             WHERE ally_id >= ?     AND ally_id < ?",
 		"SELECT leader_id   FROM clan_data             WHERE leader_id >= ?   AND leader_id < ?",
 		"SELECT item_obj_id FROM pets                  WHERE item_obj_id >= ? AND item_obj_id < ?",
-		"SELECT object_id   FROM itemsonground        WHERE object_id >= ?   AND object_id < ?"
+		"SELECT object_id   FROM itemsonground        WHERE object_id >= ?   AND object_id < ?",
+		"SELECT summonId	FROM characters_summons	WHERE summonId >= ?	AND summonId < ?"
 	};
 	
 	//@formatter:off

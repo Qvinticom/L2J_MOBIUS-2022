@@ -22,8 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.HitConditionBonus;
-import com.l2jserver.gameserver.datatables.KarmaData;
+import com.l2jserver.gameserver.data.xml.impl.HitConditionBonusData;
+import com.l2jserver.gameserver.data.xml.impl.KarmaData;
 import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
@@ -1155,7 +1155,7 @@ public final class Formulas
 		int chance = (80 + (2 * (attacker.getAccuracy() - target.getEvasionRate(attacker)))) * 10;
 		
 		// Get additional bonus from the conditions when you are attacking
-		chance *= HitConditionBonus.getInstance().getConditionBonus(attacker, target);
+		chance *= HitConditionBonusData.getInstance().getConditionBonus(attacker, target);
 		
 		chance = Math.max(chance, 200);
 		chance = Math.min(chance, 980);

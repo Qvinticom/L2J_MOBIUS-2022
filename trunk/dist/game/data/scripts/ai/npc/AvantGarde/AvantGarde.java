@@ -23,9 +23,9 @@ import java.util.List;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -48,7 +48,7 @@ import custom.Validators.SubClassSkills;
  * Transformation skill learning and transformation scroll sell.
  * @author Zoey76
  */
-public class AvantGarde extends AbstractNpcAI
+public final class AvantGarde extends AbstractNpcAI
 {
 	// NPC
 	private static final int AVANT_GARDE = 32323;

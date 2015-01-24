@@ -1642,16 +1642,12 @@ public final class CrystalCaverns extends Quest
 		int _y = effector.getY() - (int) (offset * sin);
 		int _z = effected.getZ();
 		
-		if (Config.GEODATA > 0)
-		{
-			Location destiny = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
-			_x = destiny.getX();
-			_y = destiny.getY();
-		}
-		effected.broadcastPacket(new FlyToLocation(effected, _x, _y, _z, FlyType.THROW_UP));
+		Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
+		
+		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		
 		// maybe is need force set X,Y,Z
-		effected.setXYZ(_x, _y, _z);
+		effected.setXYZ(destination);
 		effected.broadcastPacket(new ValidateLocation(effected));
 	}
 	
@@ -1714,7 +1710,7 @@ public final class CrystalCaverns extends Quest
 		player.breakAttack();
 		player.breakCast();
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		L2Summon pet = player.getSummon();
+		L2Summon pet = player.getPet();
 		if (pet != null)
 		{
 			pet.setTarget(null);
@@ -1724,6 +1720,15 @@ public final class CrystalCaverns extends Quest
 			pet.breakCast();
 			pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
+		player.getServitors().values().forEach(s ->
+		{
+			s.setTarget(null);
+			s.abortAttack();
+			s.abortCast();
+			s.breakAttack();
+			s.breakCast();
+			s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		});
 	}
 	
 	protected void runOracle(CCWorld world)
@@ -2256,10 +2261,14 @@ public final class CrystalCaverns extends Quest
 				{
 					p.setIsParalyzed(false);
 					Throw(npc, p);
-					if (p.getSummon() != null)
+					if (p.getPet() != null)
 					{
-						Throw(npc, p.getSummon());
+						Throw(npc, p.getPet());
 					}
+					p.getServitors().values().forEach(s ->
+					{
+						Throw(npc, s);
+					});
 				}
 				world._raidStatus = 0;
 				for (L2Npc mob : world._animationMobs)
@@ -2925,12 +2934,17 @@ public final class CrystalCaverns extends Quest
 					int x = (int) (radius * Math.cos((i * 2 * Math.PI) / members));
 					int y = (int) (radius * Math.sin((i++ * 2 * Math.PI) / members));
 					p.teleToLocation(new Location(153571 + x, 142075 + y, -12737));
-					L2Summon pet = p.getSummon();
+					L2Summon pet = p.getPet();
 					if (pet != null)
 					{
 						pet.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
 						pet.broadcastPacket(new ValidateLocation(pet));
 					}
+					p.getServitors().values().forEach(s ->
+					{
+						s.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
+						s.broadcastPacket(new ValidateLocation(s));
+					});
 					p.setIsParalyzed(true);
 					p.broadcastPacket(new ValidateLocation(p));
 				}

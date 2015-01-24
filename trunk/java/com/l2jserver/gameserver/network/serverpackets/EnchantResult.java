@@ -50,7 +50,7 @@ public class EnchantResult extends L2GameServerPacket
 	
 	public EnchantResult(int result, L2ItemInstance item)
 	{
-		this(result, 0, 0, 0, item.getEnchantOptions());
+		this(result, 0, 0, item.getEnchantLevel(), item.getEnchantOptions());
 	}
 	
 	@Override

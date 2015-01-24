@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model.base;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ExperienceTable;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
 
 /**
  * Character Sub-Class Definition <BR>
@@ -28,10 +28,10 @@ import com.l2jserver.gameserver.datatables.ExperienceTable;
  */
 public final class SubClass
 {
-	private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < ExperienceTable.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceTable.getInstance().getMaxLevel() - 1);
+	private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
 	
 	private PlayerClass _class;
-	private long _exp = ExperienceTable.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
+	private long _exp = ExperienceData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
 	private long _sp = 0;
 	private byte _level = Config.BASE_SUBCLASS_LEVEL;
 	private int _classIndex = 1;
@@ -84,9 +84,9 @@ public final class SubClass
 	
 	public void setExp(long expValue)
 	{
-		if (expValue > (ExperienceTable.getInstance().getExpForLevel(_maxLevel + 1) - 1))
+		if (!_dualClass && (expValue > (ExperienceData.getInstance().getExpForLevel(_maxLevel + 1) - 1)))
 		{
-			expValue = ExperienceTable.getInstance().getExpForLevel(_maxLevel + 1) - 1;
+			expValue = ExperienceData.getInstance().getExpForLevel(_maxLevel + 1) - 1;
 		}
 		
 		_exp = expValue;
@@ -134,7 +134,7 @@ public final class SubClass
 		}
 		
 		_level++;
-		setExp(ExperienceTable.getInstance().getExpForLevel(getLevel()));
+		setExp(ExperienceData.getInstance().getExpForLevel(getLevel()));
 	}
 	
 	public void decLevel()
@@ -145,6 +145,6 @@ public final class SubClass
 		}
 		
 		_level--;
-		setExp(ExperienceTable.getInstance().getExpForLevel(getLevel()));
+		setExp(ExperienceData.getInstance().getExpForLevel(getLevel()));
 	}
 }

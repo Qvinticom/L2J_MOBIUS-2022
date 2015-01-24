@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
@@ -75,7 +76,7 @@ public final class Broadcast
 	 */
 	public static void toKnownPlayers(L2Character character, L2GameServerPacket mov)
 	{
-		Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
 			if (player == null)
@@ -85,17 +86,28 @@ public final class Broadcast
 			try
 			{
 				player.sendPacket(mov);
-				if ((mov instanceof CharInfo) && (character instanceof L2PcInstance))
+				if ((mov instanceof CharInfo) && (character.isPlayer()))
 				{
 					int relation = ((L2PcInstance) character).getRelation(player);
 					Integer oldrelation = character.getKnownList().getKnownRelations().get(player.getObjectId());
 					if ((oldrelation != null) && (oldrelation != relation))
 					{
-						player.sendPacket(new RelationChanged((L2PcInstance) character, relation, character.isAutoAttackable(player)));
+						final RelationChanged rc = new RelationChanged();
+						rc.addRelation((L2PcInstance) character, relation, character.isAutoAttackable(player));
 						if (character.hasSummon())
 						{
-							player.sendPacket(new RelationChanged(character.getSummon(), relation, character.isAutoAttackable(player)));
+							final L2Summon pet = character.getPet();
+							if (pet != null)
+							{
+								rc.addRelation(pet, relation, character.isAutoAttackable(player));
+							}
+							if (character.hasServitors())
+							{
+								character.getServitors().values().forEach(s -> rc.addRelation(s, relation, character.isAutoAttackable(player)));
+							}
 						}
+						player.sendPacket(rc);
+						character.getKnownList().getKnownRelations().put(player.getObjectId(), relation);
 					}
 				}
 			}

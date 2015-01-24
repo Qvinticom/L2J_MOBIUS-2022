@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.clan.entry;
 
-import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.model.L2Clan;
 
 /**

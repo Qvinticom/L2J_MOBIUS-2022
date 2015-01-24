@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.gameserver.datatables.SecondaryAuthData;
+import com.l2jserver.gameserver.data.xml.impl.SecondaryAuthData;
 
 /**
  * Format: (ch)S S: numerical password

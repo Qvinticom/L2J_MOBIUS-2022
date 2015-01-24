@@ -41,11 +41,11 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.FortUpdater;
 import com.l2jserver.gameserver.FortUpdater.UpdaterType;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.StaticObjectData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.datatables.StaticObjects;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
@@ -729,7 +729,7 @@ public final class Fort extends AbstractResidence
 	// This method loads fort door data from database
 	private void loadDoor()
 	{
-		for (L2DoorInstance door : DoorTable.getInstance().getDoors())
+		for (L2DoorInstance door : DoorData.getInstance().getDoors())
 		{
 			if ((door.getFort() != null) && (door.getFort().getResidenceId() == getResidenceId()))
 			{
@@ -740,7 +740,7 @@ public final class Fort extends AbstractResidence
 	
 	private void loadFlagPoles()
 	{
-		for (L2StaticObjectInstance obj : StaticObjects.getInstance().getStaticObjects())
+		for (L2StaticObjectInstance obj : StaticObjectData.getInstance().getStaticObjects())
 		{
 			if ((obj.getType() == 3) && obj.getName().startsWith(getName()))
 			{

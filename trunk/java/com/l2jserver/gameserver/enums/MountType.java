@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.enums;
 
-import com.l2jserver.gameserver.datatables.CategoryData;
+import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 
 /**
  * @author UnAfraid

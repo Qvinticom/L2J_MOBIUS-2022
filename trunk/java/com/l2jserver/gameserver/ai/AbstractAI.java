@@ -690,7 +690,12 @@ public abstract class AbstractAI implements Ctrl
 		{
 			if (_actor.isPlayer() && _actor.hasSummon())
 			{
-				_actor.getSummon().broadcastPacket(new AutoAttackStart(_actor.getSummon().getObjectId()));
+				final L2Summon pet = _actor.getPet();
+				if (pet != null)
+				{
+					pet.broadcastPacket(new AutoAttackStart(pet.getObjectId()));
+				}
+				_actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStart(s.getObjectId())));
 			}
 			// Send a Server->Client packet AutoAttackStart to the actor and all L2PcInstance in its _knownPlayers
 			_actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId()));

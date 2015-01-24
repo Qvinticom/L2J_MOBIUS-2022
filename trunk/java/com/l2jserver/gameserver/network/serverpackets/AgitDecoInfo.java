@@ -97,8 +97,7 @@ public class AgitDecoInfo extends L2GameServerPacket
 		{
 			writeC(0);
 		}
-		else if (((_clanHall.getGrade() == 0) && (function.getLvl() < 25)) || ((_clanHall.getGrade() == 1) && (function.getLvl() < 30)) || ((_clanHall.getGrade() == 2) && (function
-			.getLvl() < 40)) || ((_clanHall.getGrade() == 3) && (function.getLvl() < 50)))
+		else if (((_clanHall.getGrade() == 0) && (function.getLvl() < 25)) || ((_clanHall.getGrade() == 1) && (function.getLvl() < 30)) || ((_clanHall.getGrade() == 2) && (function.getLvl() < 40)) || ((_clanHall.getGrade() == 3) && (function.getLvl() < 50)))
 		{
 			writeC(1);
 		}
@@ -156,8 +155,7 @@ public class AgitDecoInfo extends L2GameServerPacket
 			writeC(0);
 			writeC(0);
 		}
-		else if (((_clanHall.getGrade() == 0) && (function.getLvl() < 2)) || ((_clanHall.getGrade() == 1) && (function.getLvl() < 4)) || ((_clanHall.getGrade() == 2) && (function
-			.getLvl() < 5)) || ((_clanHall.getGrade() == 3) && (function.getLvl() < 8)))
+		else if (((_clanHall.getGrade() == 0) && (function.getLvl() < 2)) || ((_clanHall.getGrade() == 1) && (function.getLvl() < 4)) || ((_clanHall.getGrade() == 2) && (function.getLvl() < 5)) || ((_clanHall.getGrade() == 3) && (function.getLvl() < 8)))
 		{
 			writeC(1);
 			writeC(1);

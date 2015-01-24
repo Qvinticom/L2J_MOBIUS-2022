@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.model.actor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
@@ -89,8 +90,7 @@ public class L2Attackable extends L2Npc
 	private int _seederObjId = 0;
 	private ItemHolder _harvestItem;
 	// Spoil
-	private boolean _isSpoil = false;
-	private int _isSpoiledBy = 0;
+	private int _spoilerObjectId;
 	private ItemHolder[] _sweepItems;
 	// Over-hit
 	private boolean _overhit;
@@ -473,7 +473,14 @@ public class L2Attackable extends L2Npc
 					
 					// Penalty applied to the attacker's XP
 					// If this attacker have servitor, get Exp Penalty applied for the servitor.
-					final float penalty = attacker.hasServitor() ? ((L2ServitorInstance) attacker.getSummon()).getExpMultiplier() : 1;
+					float penalty = 1;
+					
+					Optional<L2Summon> summon = attacker.getServitors().values().stream().filter(s -> ((L2ServitorInstance) s).getExpMultiplier() > 1).findFirst();
+					if (summon.isPresent())
+					{
+						penalty = ((L2ServitorInstance) summon.get()).getExpMultiplier();
+						
+					}
 					
 					// If there's NO party in progress
 					if (attackerParty == null)
@@ -992,7 +999,7 @@ public class L2Attackable extends L2Npc
 		
 		CursedWeaponsManager.getInstance().checkDrop(this, player);
 		
-		if (isSpoil())
+		if (isSpoiled())
 		{
 			List<ItemHolder> sweepItems = npcTemplate.calculateDrops(DropListScope.CORPSE, this, player);
 			if ((sweepItems != null) && !sweepItems.isEmpty())
@@ -1162,7 +1169,7 @@ public class L2Attackable extends L2Npc
 		{
 			for (ItemHolder item : _sweepItems)
 			{
-				lootItems.add(ItemTable.getInstance().createDummyItem(item.getId()).getItem());
+				lootItems.add(ItemTable.getInstance().getTemplate(item.getId()));
 			}
 		}
 		return lootItems;
@@ -1215,7 +1222,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean checkSpoilOwner(L2PcInstance sweeper, boolean sendMessage)
 	{
-		if ((sweeper.getObjectId() != getIsSpoiledBy()) && !sweeper.isInLooterParty(getIsSpoiledBy()))
+		if ((sweeper.getObjectId() != getSpoilerObjectId()) && !sweeper.isInLooterParty(getSpoilerObjectId()))
 		{
 			if (sendMessage)
 			{
@@ -1425,7 +1432,7 @@ public class L2Attackable extends L2Npc
 	{
 		super.onSpawn();
 		// Clear mob spoil, seed
-		setSpoil(false);
+		setSpoilerObjectId(0);
 		// Clear all aggro char from list
 		clearAggroList();
 		// Clear Harvester reward
@@ -1453,30 +1460,30 @@ public class L2Attackable extends L2Npc
 	}
 	
 	/**
-	 * @return True if this L2NpcInstance has drops that can be sweeped.
+	 * Checks if its spoiled.
+	 * @return {@code true} if its spoiled, {@code false} otherwise
 	 */
-	public boolean isSpoil()
+	public boolean isSpoiled()
 	{
-		return _isSpoil;
+		return _spoilerObjectId != 0;
 	}
 	
 	/**
-	 * Set the spoil state of this L2NpcInstance.
-	 * @param isSpoil
+	 * Gets the spoiler object ID.
+	 * @return the spoiler object ID if its spoiled, 0 otherwise
 	 */
-	public void setSpoil(boolean isSpoil)
+	public final int getSpoilerObjectId()
 	{
-		_isSpoil = isSpoil;
+		return _spoilerObjectId;
 	}
 	
-	public final int getIsSpoiledBy()
+	/**
+	 * Sets the spoiler object ID.
+	 * @param spoilerObjectId spoilerObjectId the spoiler object ID
+	 */
+	public final void setSpoilerObjectId(int spoilerObjectId)
 	{
-		return _isSpoiledBy;
-	}
-	
-	public final void setIsSpoiledBy(int value)
-	{
-		_isSpoiledBy = value;
+		_spoilerObjectId = spoilerObjectId;
 	}
 	
 	/**

@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.gameserver.datatables.CrestTable;
+import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 import com.l2jserver.gameserver.model.L2Crest;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeEmblem;
 

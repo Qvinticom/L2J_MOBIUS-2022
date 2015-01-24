@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.Config;
+
 public final class KeyPacket extends L2GameServerPacket
 {
 	private final byte[] _key;
@@ -39,8 +41,9 @@ public final class KeyPacket extends L2GameServerPacket
 			writeC(_key[i]); // key
 		}
 		writeD(0x01);
-		writeD(0x01); // server id
+		writeD(Config.SERVER_ID); // server id
 		writeC(0x01);
 		writeD(0x00); // obfuscation key
+		writeC((Config.SERVER_LIST_TYPE & 0x400) == 0x400 ? 0x01 : 0x00); // isClassic
 	}
 }

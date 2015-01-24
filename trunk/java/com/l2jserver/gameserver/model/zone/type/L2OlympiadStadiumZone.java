@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2OlympiadManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -193,9 +194,10 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 				else
 				{
 					// check for pet
-					if (player.hasPet())
+					final L2Summon pet = player.getPet();
+					if (pet != null)
 					{
-						player.getSummon().unSummon(player);
+						pet.unSummon(player);
 					}
 				}
 			}
@@ -278,10 +280,10 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 		{
 			if (_player != null)
 			{
-				if (_player.hasSummon())
+				_player.getServitors().values().forEach(s ->
 				{
-					_player.getSummon().unSummon(_player);
-				}
+					s.unSummon(_player);
+				});
 				
 				_player.teleToLocation(TeleportWhereType.TOWN);
 				_player.setInstanceId(0);

@@ -23,9 +23,9 @@ import java.util.Arrays;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -607,7 +607,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				
 				case TYPE_DOOR_NAME:
 				{
-					final L2DoorInstance door = DoorTable.getInstance().getDoor(param.getIntValue());
+					final L2DoorInstance door = DoorData.getInstance().getDoor(param.getIntValue());
 					params[i] = door == null ? "Unknown" : door.getName();
 					break;
 				}

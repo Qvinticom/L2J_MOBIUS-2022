@@ -18,13 +18,14 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
-import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * @author UnAfraid
@@ -35,8 +36,8 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 	private final int _level;
 	private final int _spCost;
 	private final int _minLevel;
-	private final List<ItemHolder> _itemReq = new ArrayList<>();
-	private final List<Integer> _skillRem = new ArrayList<>();
+	private final List<ItemHolder> _itemReq;
+	private final List<Skill> _skillRem;
 	
 	/**
 	 * Special constructor for Alternate Skill Learning system.<br>
@@ -51,8 +52,8 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 		_level = skillLearn.getSkillLevel();
 		_spCost = sp;
 		_minLevel = skillLearn.getGetLevel();
-		_itemReq.addAll(skillLearn.getRequiredItems());
-		_skillRem.addAll(skillLearn.getRemoveSkills());
+		_itemReq = skillLearn.getRequiredItems();
+		_skillRem = skillLearn.getRemoveSkills().stream().map(player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
 	}
 	
 	@Override
@@ -65,7 +66,7 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 		writeD(_level);
 		writeQ(_spCost);
 		writeH(_minLevel);
-		writeH(0x00); // TODO: Find me !
+		writeH(0x00); // Dual Class Level Required
 		writeD(_itemReq.size());
 		for (ItemHolder holder : _itemReq)
 		{
@@ -74,10 +75,10 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 		}
 		
 		writeD(_skillRem.size());
-		for (int skillId : _skillRem)
+		for (Skill skill : _skillRem)
 		{
-			writeD(skillId);
-			writeD(SkillData.getInstance().getMaxLevel(skillId));
+			writeD(skill.getId());
+			writeD(skill.getLevel());
 		}
 	}
 }

@@ -58,7 +58,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.engines.DocumentParser;
+import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
@@ -156,7 +156,6 @@ public final class Config
 	public static boolean DIVINE_SP_BOOK_NEEDED;
 	public static boolean ALT_GAME_SKILL_LEARN;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
-	public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
 	public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 	public static int FEE_DELETE_TRANSFER_SKILLS;
 	public static int FEE_DELETE_SUBCLASS_SKILLS;
@@ -174,6 +173,7 @@ public final class Config
 	public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
 	public static byte MAX_SUBCLASS;
 	public static byte BASE_SUBCLASS_LEVEL;
+	public static byte BASE_DUALCLASS_LEVEL;
 	public static byte MAX_SUBCLASS_LEVEL;
 	public static int MAX_PVTSTORESELL_SLOTS_DWARF;
 	public static int MAX_PVTSTORESELL_SLOTS_OTHER;
@@ -468,7 +468,6 @@ public final class Config
 	public static boolean HTML_ACTION_CACHE_DEBUG;
 	public static boolean PACKET_HANDLER_DEBUG;
 	public static boolean DEVELOPER;
-	public static boolean ACCEPT_GEOEDITOR_CONN;
 	public static boolean ALT_DEV_NO_HANDLERS;
 	public static boolean ALT_DEV_NO_QUESTS;
 	public static boolean ALT_DEV_NO_SPAWNS;
@@ -1179,9 +1178,8 @@ public final class Config
 	public static int CHS_FAME_FREQUENCY;
 	
 	// GeoData Settings
-	public static int GEODATA;
+	public static int PATHFINDING;
 	public static File PATHNODE_DIR;
-	public static boolean GEODATA_CELLFINDING;
 	public static String PATHFIND_BUFFERS;
 	public static float LOW_WEIGHT;
 	public static float MEDIUM_WEIGHT;
@@ -1583,7 +1581,6 @@ public final class Config
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
 			ALT_GAME_SKILL_LEARN = Character.getBoolean("AltGameSkillLearn", false);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
-			ALT_GAME_SUBCLASS_EVERYWHERE = Character.getBoolean("AltSubclassEverywhere", false);
 			RESTORE_SERVITOR_ON_RECONNECT = Character.getBoolean("RestoreServitorOnReconnect", true);
 			RESTORE_PET_ON_RECONNECT = Character.getBoolean("RestorePetOnReconnect", true);
 			ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
@@ -1600,7 +1597,7 @@ public final class Config
 			ALT_VITALITY_HOUR_RESET = Character.getString("AltVitalityHourReset", "06:30:00");
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 3.5);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 3.5);
-			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 250);
+			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);
 			MAX_PCRIT_RATE = Character.getInt("MaxPCritRate", 500);
 			MAX_MCRIT_RATE = Character.getInt("MaxMCritRate", 200);
 			MAX_PATK_SPEED = Character.getInt("MaxPAtkSpeed", 1500);
@@ -1608,8 +1605,9 @@ public final class Config
 			MAX_EVASION = Character.getInt("MaxEvasion", 250);
 			MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
 			MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
-			MAX_SUBCLASS = Character.getByte("MaxSubclass", (byte) 3);
+			MAX_SUBCLASS = (byte) Math.min(3, Character.getByte("MaxSubclass", (byte) 3));
 			BASE_SUBCLASS_LEVEL = Character.getByte("BaseSubclassLevel", (byte) 40);
+			BASE_DUALCLASS_LEVEL = Character.getByte("BaseDualclassLevel", (byte) 85);
 			MAX_SUBCLASS_LEVEL = Character.getByte("MaxSubclassLevel", (byte) 80);
 			MAX_PVTSTORESELL_SLOTS_DWARF = Character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
 			MAX_PVTSTORESELL_SLOTS_OTHER = Character.getInt("MaxPvtStoreSellSlotsOther", 3);
@@ -1867,7 +1865,6 @@ public final class Config
 			HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
 			PACKET_HANDLER_DEBUG = General.getBoolean("PacketHandlerDebug", false);
 			DEVELOPER = General.getBoolean("Developer", false);
-			ACCEPT_GEOEDITOR_CONN = General.getBoolean("AcceptGeoeditorConn", false);
 			ALT_DEV_NO_HANDLERS = General.getBoolean("AltDevNoHandlers", false) || Boolean.getBoolean("nohandlers");
 			ALT_DEV_NO_QUESTS = General.getBoolean("AltDevNoQuests", false) || Boolean.getBoolean("noquests");
 			ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
@@ -2078,6 +2075,7 @@ public final class Config
 			BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
+			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 			
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
@@ -2974,8 +2972,6 @@ public final class Config
 			
 			final PropertiesParser geoData = new PropertiesParser(GEODATA_FILE);
 			
-			GEODATA = geoData.getInt("GeoData", 0);
-			
 			try
 			{
 				PATHNODE_DIR = new File(geoData.getString("PathnodeDirectory", "data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
@@ -2986,7 +2982,7 @@ public final class Config
 				PATHNODE_DIR = new File("data/pathnode");
 			}
 			
-			GEODATA_CELLFINDING = geoData.getBoolean("CellPathFinding", false);
+			PATHFINDING = geoData.getInt("PathFinding", 0);
 			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
 			LOW_WEIGHT = geoData.getFloat("LowWeight", 0.5f);
 			MEDIUM_WEIGHT = geoData.getFloat("MediumWeight", 2);
@@ -3011,9 +3007,6 @@ public final class Config
 					}
 				}
 			}
-			
-			String str = General.getString("EnableFallingDamage", "auto");
-			ENABLE_FALLING_DAMAGE = "auto".equalsIgnoreCase(str) ? GEODATA > 0 : Boolean.parseBoolean(str);
 		}
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{
@@ -3701,9 +3694,6 @@ public final class Config
 			case "altsubclasswithoutquests":
 				ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Boolean.parseBoolean(pValue);
 				break;
-			case "altsubclasseverywhere":
-				ALT_GAME_SUBCLASS_EVERYWHERE = Boolean.parseBoolean(pValue);
-				break;
 			case "altmemberscanwithdrawfromclanwh":
 				ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Boolean.parseBoolean(pValue);
 				break;
@@ -3992,37 +3982,44 @@ public final class Config
 	
 	public static int getServerTypeId(String[] serverTypes)
 	{
-		int tType = 0;
+		int serverType = 0;
 		for (String cType : serverTypes)
 		{
 			switch (cType.trim().toLowerCase())
 			{
-				case "Normal":
-					tType |= 0x01;
+				case "normal":
+					serverType |= 0x01;
 					break;
-				case "Relax":
-					tType |= 0x02;
+				case "relax":
+					serverType |= 0x02;
 					break;
-				case "Test":
-					tType |= 0x04;
+				case "test":
+					serverType |= 0x04;
 					break;
-				case "NoLabel":
-					tType |= 0x08;
+				case "broad":
+					serverType |= 0x08;
 					break;
-				case "Restricted":
-					tType |= 0x10;
+				case "restricted":
+					serverType |= 0x10;
 					break;
-				case "Event":
-					tType |= 0x20;
+				case "event":
+					serverType |= 0x20;
 					break;
-				case "Free":
-					tType |= 0x40;
+				case "free":
+					serverType |= 0x40;
 					break;
-				default:
+				case "world":
+					serverType |= 0x100;
+					break;
+				case "new":
+					serverType |= 0x200;
+					break;
+				case "classic":
+					serverType |= 0x400;
 					break;
 			}
 		}
-		return tType;
+		return serverType;
 	}
 	
 	public static final class ClassMasterSettings
@@ -4225,7 +4222,7 @@ public final class Config
 		return result;
 	}
 	
-	private static class IPConfigData implements DocumentParser
+	private static class IPConfigData implements IXmlReader
 	{
 		private static final List<String> _subnets = new ArrayList<>(5);
 		private static final List<String> _hosts = new ArrayList<>(5);

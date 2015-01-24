@@ -26,8 +26,8 @@ import java.util.logging.Logger;
 import javolution.util.FastMap;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.RecipeData;
 import com.l2jserver.gameserver.enums.StatType;
 import com.l2jserver.gameserver.model.L2ManufactureItem;
 import com.l2jserver.gameserver.model.L2RecipeInstance;

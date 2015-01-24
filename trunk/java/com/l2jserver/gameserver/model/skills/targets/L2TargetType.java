@@ -46,6 +46,7 @@ public enum L2TargetType
 	HOLY,
 	NONE,
 	ONE,
+	ONE_FRIENDLY,
 	OWNER_PET,
 	PARTY,
 	PARTY_CLAN,

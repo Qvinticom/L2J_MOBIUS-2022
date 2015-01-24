@@ -33,10 +33,10 @@ import javolution.util.FastList;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.CharSummonTable;
+import com.l2jserver.gameserver.data.sql.impl.CharSummonTable;
+import com.l2jserver.gameserver.data.sql.impl.SummonEffectsTable;
+import com.l2jserver.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SummonEffectsTable;
-import com.l2jserver.gameserver.datatables.SummonEffectsTable.SummonEffect;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -188,7 +188,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			_summonLifeTask.cancel(false);
 		}
 		
-		CharSummonTable.getInstance().removeServitor(getOwner());
+		CharSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
 		return true;
 		
 	}
@@ -465,7 +465,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		
 		if (!_restoreSummon)
 		{
-			CharSummonTable.getInstance().removeServitor(owner);
+			CharSummonTable.getInstance().removeServitor(owner, getObjectId());
 		}
 	}
 	

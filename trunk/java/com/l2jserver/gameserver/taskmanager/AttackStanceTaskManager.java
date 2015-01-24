@@ -27,6 +27,7 @@ import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.AutoAttackStop;
@@ -129,7 +130,12 @@ public class AttackStanceTaskManager
 							actor.getAI().setAutoAttacking(false);
 							if (actor.isPlayer() && actor.hasSummon())
 							{
-								actor.getSummon().broadcastPacket(new AutoAttackStop(actor.getSummon().getObjectId()));
+								final L2Summon pet = actor.getPet();
+								if (pet != null)
+								{
+									pet.broadcastPacket(new AutoAttackStop(pet.getObjectId()));
+								}
+								actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStop(s.getObjectId())));
 							}
 						}
 						iter.remove();

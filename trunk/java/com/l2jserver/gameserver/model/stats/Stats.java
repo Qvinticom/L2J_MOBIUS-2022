@@ -198,7 +198,10 @@ public enum Stats
 	FISHING_EXPERTISE("fishingExpertise"),
 	
 	// Brooches
-	BROOCH_JEWELS("broochJewels");
+	BROOCH_JEWELS("broochJewels"),
+	
+	// Summon Points
+	MAX_SUMMON_POINTS("summonPoints");
 	
 	public static final int NUM_STATS = values().length;
 	

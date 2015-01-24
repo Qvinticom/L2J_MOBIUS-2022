@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets.friend;
 
-import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 

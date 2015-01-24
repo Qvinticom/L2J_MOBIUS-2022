@@ -50,7 +50,7 @@ public final class L2SkillLearn
 	private final List<SubClassData> _subClassLvlNumber = new ArrayList<>();
 	private final boolean _learnedByNpc;
 	private final boolean _learnedByFS;
-	private final Set<Integer> _removeSkills = new HashSet<>();
+	private final Set<Integer> _removeSkills = new HashSet<>(1);
 	
 	public class SubClassData
 	{

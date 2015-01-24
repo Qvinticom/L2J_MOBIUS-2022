@@ -63,7 +63,7 @@ public final class DecayTaskManager
 			delay = Config.DEFAULT_CORPSE_TIME;
 		}
 		
-		if ((character instanceof L2Attackable) && (((L2Attackable) character).isSpoil() || ((L2Attackable) character).isSeeded()))
+		if ((character instanceof L2Attackable) && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded()))
 		{
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}

@@ -32,7 +32,7 @@ public abstract class PathFinding
 {
 	public static PathFinding getInstance()
 	{
-		if (!Config.GEODATA_CELLFINDING)
+		if (Config.PATHFINDING == 1)
 		{
 			// Higher Memory Usage, Smaller Cpu Usage
 			return GeoPathFinding.getInstance();

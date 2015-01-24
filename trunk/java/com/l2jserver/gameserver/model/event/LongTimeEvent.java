@@ -33,10 +33,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.AnnouncementsTable;
+import com.l2jserver.gameserver.data.sql.impl.AnnouncementsTable;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.EventDroplist;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.NpcData;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.announce.EventAnnouncement;
 import com.l2jserver.gameserver.model.drops.GeneralDropItem;

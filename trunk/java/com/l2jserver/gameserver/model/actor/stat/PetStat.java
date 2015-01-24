@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model.actor.stat;
 
-import com.l2jserver.gameserver.datatables.ExperienceTable;
-import com.l2jserver.gameserver.datatables.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -215,6 +215,6 @@ public class PetStat extends SummonStat
 	@Override
 	public int getMaxLevel()
 	{
-		return ExperienceTable.getInstance().getMaxPetLevel();
+		return ExperienceData.getInstance().getMaxPetLevel();
 	}
 }

@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 public final class PartySmallWindowAll extends L2GameServerPacket
@@ -59,19 +60,32 @@ public final class PartySmallWindowAll extends L2GameServerPacket
 				writeH(member.getClassId().getId());
 				writeC(0x01); // Unk
 				writeH(member.getRace().ordinal());
-				writeD(member.hasSummon() ? 0x01 : 0x00); // Summon size, one only atm
-				if (member.hasSummon())
+				final L2Summon pet = member.getPet();
+				writeD(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
+				if (pet != null)
 				{
-					writeD(member.getSummon().getObjectId());
-					writeD(member.getSummon().getId() + 1000000);
-					writeC(member.getSummon().getSummonType());
-					writeS(member.getSummon().getName());
-					writeD((int) member.getSummon().getCurrentHp());
-					writeD(member.getSummon().getMaxHp());
-					writeD((int) member.getSummon().getCurrentMp());
-					writeD(member.getSummon().getMaxMp());
-					writeC(member.getSummon().getLevel());
+					writeD(pet.getObjectId());
+					writeD(pet.getId() + 1000000);
+					writeC(pet.getSummonType());
+					writeS(pet.getName());
+					writeD((int) pet.getCurrentHp());
+					writeD(pet.getMaxHp());
+					writeD((int) pet.getCurrentMp());
+					writeD(pet.getMaxMp());
+					writeC(pet.getLevel());
 				}
+				member.getServitors().values().forEach(s ->
+				{
+					writeD(s.getObjectId());
+					writeD(s.getId() + 1000000);
+					writeC(s.getSummonType());
+					writeS(s.getName());
+					writeD((int) s.getCurrentHp());
+					writeD(s.getMaxHp());
+					writeD((int) s.getCurrentMp());
+					writeD(s.getMaxMp());
+					writeC(s.getLevel());
+				});
 			}
 		}
 	}

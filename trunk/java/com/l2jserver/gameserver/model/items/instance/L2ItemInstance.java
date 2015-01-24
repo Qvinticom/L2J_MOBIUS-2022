@@ -37,9 +37,9 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.EnchantItemOptionsData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemOptionsData;
+import com.l2jserver.gameserver.data.xml.impl.OptionData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.OptionsData;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.enums.ShotType;
@@ -54,6 +54,7 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.L2WorldRegion;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.knownlist.NullKnownList;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
@@ -75,6 +76,7 @@ import com.l2jserver.gameserver.model.options.Options;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.DropItem;
+import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.GetItem;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -848,10 +850,12 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isAvailable(L2PcInstance player, boolean allowAdena, boolean allowNonTradeable)
 	{
+		final L2Summon pet = player.getPet();
+		
 		return ((!isEquipped()) // Not equipped
 			&& (getItem().getType2() != L2Item.TYPE2_QUEST) // Not Quest Item
 			&& ((getItem().getType2() != L2Item.TYPE2_MONEY) || (getItem().getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
-			&& (!player.hasSummon() || (getObjectId() != player.getSummon().getControlObjectId())) // Not Control item of currently summoned pet
+			&& ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
 			&& (player.getActiveEnchantItemId() != getObjectId()) // Not momentarily used enchant scroll
 			&& (player.getActiveEnchantSupportItemId() != getObjectId()) // Not momentarily used enchant support item
 			&& (player.getActiveEnchantAttrItemId() != getObjectId()) // Not momentarily used enchant attribute item
@@ -1354,6 +1358,7 @@ public final class L2ItemInstance extends L2Object
 					player.sendPacket(iu);
 					
 					player.sendPacket(new ExUserInfoInvenWeight(player));
+					player.sendPacket(new ExAdenaInvenCount(player));
 					
 				}
 				else
@@ -1552,7 +1557,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			assert _itm.getWorldRegion() == null;
 			
-			if ((Config.GEODATA > 0) && (_dropper != null))
+			if (_dropper != null)
 			{
 				Location dropDest = GeoData.getInstance().moveCheck(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, _dropper.getInstanceId());
 				_x = dropDest.getX();
@@ -1851,6 +1856,7 @@ public final class L2ItemInstance extends L2Object
 				player.sendPacket(iu);
 				
 				player.sendPacket(new ExUserInfoInvenWeight(player));
+				player.sendPacket(new ExAdenaInvenCount(player));
 				
 			}
 			else
@@ -2190,7 +2196,7 @@ public final class L2ItemInstance extends L2Object
 		
 		for (int id : getEnchantOptions())
 		{
-			final Options options = OptionsData.getInstance().getOptions(id);
+			final Options options = OptionData.getInstance().getOptions(id);
 			if (options != null)
 			{
 				options.apply(player);

@@ -40,7 +40,7 @@ import org.w3c.dom.Node;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.engines.DocumentParser;
+import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.ManorMode;
 import com.l2jserver.gameserver.model.CropProcure;
 import com.l2jserver.gameserver.model.L2Clan;
@@ -58,7 +58,7 @@ import com.l2jserver.util.Rnd;
  * Castle manor system.
  * @author malyelfik
  */
-public final class CastleManorManager implements DocumentParser, IStorable
+public final class CastleManorManager implements IXmlReader, IStorable
 {
 	// SQL queries
 	private static final String INSERT_PRODUCT = "INSERT INTO castle_manor_production VALUES (?, ?, ?, ?, ?, ?)";

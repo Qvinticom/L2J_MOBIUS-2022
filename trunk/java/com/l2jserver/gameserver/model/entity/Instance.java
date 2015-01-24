@@ -41,8 +41,8 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -538,7 +538,7 @@ public final class Instance
 					{
 						doorId = Integer.parseInt(d.getAttributes().getNamedItem("doorId").getNodeValue());
 						StatsSet set = new StatsSet();
-						set.add(DoorTable.getInstance().getDoorTemplate(doorId));
+						set.add(DoorData.getInstance().getDoorTemplate(doorId));
 						for (Node bean = d.getFirstChild(); bean != null; bean = bean.getNextSibling())
 						{
 							if ("set".equalsIgnoreCase(bean.getNodeName()))

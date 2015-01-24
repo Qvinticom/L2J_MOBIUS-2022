@@ -23,7 +23,7 @@ import java.util.concurrent.Future;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -354,7 +354,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 	public void openNextDoor(int npcId)
 	{
 		int doorId = FourSepulchersManager.getInstance().getHallGateKeepers().get(npcId);
-		DoorTable _doorTable = DoorTable.getInstance();
+		DoorData _doorTable = DoorData.getInstance();
 		_doorTable.getDoor(doorId).openMe();
 		
 		if (_closeTask != null)
@@ -371,7 +371,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 	
 	private static class CloseNextDoor implements Runnable
 	{
-		final DoorTable _DoorTable = DoorTable.getInstance();
+		final DoorData _DoorTable = DoorData.getInstance();
 		
 		private final int _DoorId;
 		

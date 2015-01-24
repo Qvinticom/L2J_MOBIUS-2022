@@ -26,12 +26,9 @@ import static com.l2jserver.gameserver.model.base.ClassType.Fighter;
 import static com.l2jserver.gameserver.model.base.ClassType.Mystic;
 import static com.l2jserver.gameserver.model.base.ClassType.Priest;
 
-import java.util.EnumMap;
 import java.util.EnumSet;
-import java.util.Set;
 
 import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * @author luisantonioa
@@ -208,20 +205,20 @@ public enum PlayerClass
 	sigelHellKnight(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
 	sigelEvasTemplar(Race.ELF, Fighter, ClassLevel.AWAKEN),
 	sigelShilenTemplar(Race.DARK_ELF, Fighter, ClassLevel.AWAKEN),
-	tyrDuelist(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
-	tyrDreadnought(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
-	tyrTitan(Race.ORC, Fighter, ClassLevel.AWAKEN),
-	tyrGrandKhavatari(Race.ORC, Fighter, ClassLevel.AWAKEN),
-	tyrMaestro(Race.DWARF, Fighter, ClassLevel.AWAKEN),
-	tyrDoombringer(Race.KAMAEL, Fighter, ClassLevel.AWAKEN),
+	tyrrDuelist(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
+	tyrrDreadnought(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
+	tyrrTitan(Race.ORC, Fighter, ClassLevel.AWAKEN),
+	tyrrGrandKhavatari(Race.ORC, Fighter, ClassLevel.AWAKEN),
+	tyrrMaestro(Race.DWARF, Fighter, ClassLevel.AWAKEN),
+	tyrrDoombringer(Race.KAMAEL, Fighter, ClassLevel.AWAKEN),
 	othellAdventurer(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
 	othellWindRider(Race.ELF, Fighter, ClassLevel.AWAKEN),
 	othellGhostHunter(Race.DARK_ELF, Fighter, ClassLevel.AWAKEN),
 	othellFortuneSeeker(Race.DWARF, Fighter, ClassLevel.AWAKEN),
-	yrSagittarius(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
-	yrMoonlightSentinel(Race.ELF, Fighter, ClassLevel.AWAKEN),
-	yrGhostSentinel(Race.DARK_ELF, Fighter, ClassLevel.AWAKEN),
-	yrTrickster(Race.KAMAEL, Fighter, ClassLevel.AWAKEN),
+	yulSagittarius(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
+	yulMoonlightSentinel(Race.ELF, Fighter, ClassLevel.AWAKEN),
+	yulGhostSentinel(Race.DARK_ELF, Fighter, ClassLevel.AWAKEN),
+	yulTrickster(Race.KAMAEL, Fighter, ClassLevel.AWAKEN),
 	feohArchmage(Race.HUMAN, Mystic, ClassLevel.AWAKEN),
 	feohSoultaker(Race.HUMAN, Mystic, ClassLevel.AWAKEN),
 	feohMysticMuse(Race.ELF, Mystic, ClassLevel.AWAKEN),
@@ -235,9 +232,9 @@ public enum PlayerClass
 	wynnArcanaLord(Race.HUMAN, Mystic, ClassLevel.AWAKEN),
 	wynnElementalMaster(Race.ELF, Mystic, ClassLevel.AWAKEN),
 	wynnSpectralMaster(Race.DARK_ELF, Mystic, ClassLevel.AWAKEN),
-	eolhCardinal(Race.HUMAN, Priest, ClassLevel.AWAKEN),
-	eolhEvaSaint(Race.ELF, Priest, ClassLevel.AWAKEN),
-	eolhShillienSaint(Race.DARK_ELF, Priest, ClassLevel.AWAKEN),
+	aeoreCardinal(Race.HUMAN, Priest, ClassLevel.AWAKEN),
+	aeoreEvaSaint(Race.ELF, Priest, ClassLevel.AWAKEN),
+	aeoreShillienSaint(Race.DARK_ELF, Priest, ClassLevel.AWAKEN),
 	
 	ertheiaFighter(Race.ERTHEIA, Fighter, ClassLevel.FIRST),
 	ertheiaWizzard(Race.ERTHEIA, Mystic, ClassLevel.FIRST),
@@ -255,95 +252,11 @@ public enum PlayerClass
 	private ClassLevel _level;
 	private ClassType _type;
 	
-	private static final Set<PlayerClass> mainSubclassSet;
-	private static final Set<PlayerClass> neverSubclassed = EnumSet.of(Overlord, Warsmith);
-	
-	private static final Set<PlayerClass> subclasseSet1 = EnumSet.of(DarkAvenger, Paladin, TempleKnight, ShillienKnight);
-	private static final Set<PlayerClass> subclasseSet2 = EnumSet.of(TreasureHunter, AbyssWalker, Plainswalker);
-	private static final Set<PlayerClass> subclasseSet3 = EnumSet.of(Hawkeye, SilverRanger, PhantomRanger);
-	private static final Set<PlayerClass> subclasseSet4 = EnumSet.of(Warlock, ElementalSummoner, PhantomSummoner);
-	private static final Set<PlayerClass> subclasseSet5 = EnumSet.of(Sorceror, Spellsinger, Spellhowler);
-	
-	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
-	
-	static
-	{
-		Set<PlayerClass> subclasses = getSet(null, THIRD);
-		subclasses.removeAll(neverSubclassed);
-		
-		mainSubclassSet = subclasses;
-		
-		subclassSetMap.put(DarkAvenger, subclasseSet1);
-		subclassSetMap.put(Paladin, subclasseSet1);
-		subclassSetMap.put(TempleKnight, subclasseSet1);
-		subclassSetMap.put(ShillienKnight, subclasseSet1);
-		
-		subclassSetMap.put(TreasureHunter, subclasseSet2);
-		subclassSetMap.put(AbyssWalker, subclasseSet2);
-		subclassSetMap.put(Plainswalker, subclasseSet2);
-		
-		subclassSetMap.put(Hawkeye, subclasseSet3);
-		subclassSetMap.put(SilverRanger, subclasseSet3);
-		subclassSetMap.put(PhantomRanger, subclasseSet3);
-		
-		subclassSetMap.put(Warlock, subclasseSet4);
-		subclassSetMap.put(ElementalSummoner, subclasseSet4);
-		subclassSetMap.put(PhantomSummoner, subclasseSet4);
-		
-		subclassSetMap.put(Sorceror, subclasseSet5);
-		subclassSetMap.put(Spellsinger, subclasseSet5);
-		subclassSetMap.put(Spellhowler, subclasseSet5);
-	}
-	
 	private PlayerClass(Race race, ClassType pType, ClassLevel pLevel)
 	{
 		_race = race;
 		_level = pLevel;
 		_type = pType;
-	}
-	
-	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
-	{
-		Set<PlayerClass> subclasses = null;
-		
-		if (_level == THIRD)
-		{
-			subclasses = EnumSet.copyOf(mainSubclassSet);
-			
-			subclasses.remove(this);
-			
-			subclasses.removeAll(getSet(Race.ERTHEIA, THIRD));
-			
-			if (player.getRace() == Race.KAMAEL)
-			{
-				if (player.getAppearance().getSex())
-				{
-					subclasses.remove(femaleSoulbreaker);
-				}
-				else
-				{
-					subclasses.remove(maleSoulbreaker);
-				}
-				
-				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
-				{
-					subclasses.remove(inspector);
-				}
-			}
-			else
-			{
-				// Only Kamael can take Kamael classes as subclasses.
-				subclasses.removeAll(getSet(Race.KAMAEL, THIRD));
-			}
-			
-			Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
-			
-			if (unavailableClasses != null)
-			{
-				subclasses.removeAll(unavailableClasses);
-			}
-		}
-		return subclasses;
 	}
 	
 	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)

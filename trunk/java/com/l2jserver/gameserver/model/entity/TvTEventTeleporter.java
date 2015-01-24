@@ -68,12 +68,14 @@ public class TvTEventTeleporter implements Runnable
 			return;
 		}
 		
-		L2Summon summon = _playerInstance.getSummon();
+		L2Summon summon = _playerInstance.getPet();
 		
 		if (summon != null)
 		{
 			summon.unSummon(_playerInstance);
 		}
+		
+		_playerInstance.getServitors().values().forEach(s -> s.unSummon(_playerInstance));
 		
 		if ((Config.TVT_EVENT_EFFECTS_REMOVAL == 0) || ((Config.TVT_EVENT_EFFECTS_REMOVAL == 1) && ((_playerInstance.getTeam() == Team.NONE) || (_playerInstance.isInDuel() && (_playerInstance.getDuelState() != Duel.DUELSTATE_INTERRUPTED)))))
 		{

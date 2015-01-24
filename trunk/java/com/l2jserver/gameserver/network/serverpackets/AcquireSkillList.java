@@ -19,22 +19,26 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * @author Sdw
  */
 public class AcquireSkillList extends L2GameServerPacket
 {
+	final L2PcInstance _activeChar;
 	final List<L2SkillLearn> _learnable;
 	
 	public AcquireSkillList(L2PcInstance activeChar)
 	{
+		_activeChar = activeChar;
 		_learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
 		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, false));
 	}
@@ -58,11 +62,13 @@ public class AcquireSkillList extends L2GameServerPacket
 				writeQ(item.getCount());
 			}
 			
-			writeC(skill.getRemoveSkills().size());
-			for (int skillId : skill.getRemoveSkills())
+			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_activeChar::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
+			
+			writeC(skillRem.size());
+			for (Skill skillRemove : skillRem)
 			{
-				writeD(skillId);
-				writeH(SkillData.getInstance().getMaxLevel(skillId));
+				writeD(skillRemove.getId());
+				writeH(skillRemove.getLevel());
 			}
 		}
 	}

@@ -2980,7 +2980,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void addCondIsNotSubClassActive(String html)
 	{
-		getStartConditions().put(p -> !p.isSubClassActive(), html);
+		getStartConditions().put(p -> !p.isSubClassActive() && !p.isDualClassActive(), html);
 	}
 	
 	/**
@@ -2991,5 +2991,15 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void addCondInCategory(CategoryType categoryType, String html)
 	{
 		getStartConditions().put(p -> p.isInCategory(categoryType), html);
+	}
+	
+	/**
+	 * Adds a clan level start condition to the quest.
+	 * @param clanLevel the clan level
+	 * @param html the HTML to display if the condition is not met
+	 */
+	public void addCondClanLevel(int clanLevel, String html)
+	{
+		getStartConditions().put(p -> (p.getClan() != null) && (p.getClan().getLevel() > clanLevel), html);
 	}
 }

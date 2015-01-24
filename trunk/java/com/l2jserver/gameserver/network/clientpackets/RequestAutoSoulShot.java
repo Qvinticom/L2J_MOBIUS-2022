@@ -18,22 +18,21 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.ActionType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
- * @version $Revision: 1.0.0.0 $ $Date: 2005/07/11 15:29:30 $
+ * @author Unknown, UnAfraid
  */
 public final class RequestAutoSoulShot extends L2GameClientPacket
 {
-	private static final String _C__D0_0D_REQUESTAUTOSOULSHOT = "[C] D0:0D RequestAutoSoulShot";
-	
 	// format cd
 	private int _itemId;
 	private int _type; // 1 = on : 0 = off;
@@ -56,11 +55,6 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 		
 		if ((activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null) && !activeChar.isDead())
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("AutoSoulShot:" + _itemId);
-			}
-			
 			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
 			if (item == null)
 			{
@@ -75,85 +69,105 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 					return;
 				}
 				
-				// Fishingshots are not automatic on retail
-				if ((_itemId < 6535) || (_itemId > 6540))
+				if (isSummonShot(item.getItem()))
 				{
-					// Attempt to charge first shot on activation
-					if ((_itemId == 6645) || (_itemId == 6646) || (_itemId == 6647) || (_itemId == 20332) || (_itemId == 20333) || (_itemId == 20334))
+					if (activeChar.hasSummon())
 					{
-						if (activeChar.hasSummon())
+						final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT;
+						final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT;
+						if (isSoulshot)
 						{
-							if (item.getEtcItem().getHandlerName().equals("BeastSoulShot"))
+							int soulshotCount = 0;
+							final L2Summon pet = activeChar.getPet();
+							if (pet != null)
 							{
-								if (activeChar.getSummon().getSoulShotsPerHit() > item.getCount())
-								{
-									activeChar.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
-									return;
-								}
+								soulshotCount += pet.getSoulShotsPerHit();
 							}
-							else
+							for (L2Summon servitor : activeChar.getServitors().values())
 							{
-								if (activeChar.getSummon().getSpiritShotsPerHit() > item.getCount())
-								{
-									activeChar.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
-									return;
-								}
+								soulshotCount += servitor.getSoulShotsPerHit();
 							}
-							activeChar.addAutoSoulShot(_itemId);
-							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
-							
-							// start the auto soulshot use
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-							sm.addItemName(item);
-							activeChar.sendPacket(sm);
-							
-							activeChar.rechargeShots(true, true);
-							activeChar.getSummon().rechargeShots(true, true);
-							
+							if (soulshotCount > item.getCount())
+							{
+								activeChar.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								return;
+							}
 						}
-						else
+						else if (isSpiritshot)
 						{
-							activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
-						}
-					}
-					else
-					{
-						if ((activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem()) && (item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getItemGradeSPlus()))
-						{
-							activeChar.addAutoSoulShot(_itemId);
-							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
-						}
-						else
-						{
-							if (((_itemId >= 2509) && (_itemId <= 2514)) || ((_itemId >= 3947) && (_itemId <= 3952)) || (_itemId == 5790) || ((_itemId >= 22072) && (_itemId <= 22081)))
+							int spiritshotCount = 0;
+							final L2Summon pet = activeChar.getPet();
+							if (pet != null)
 							{
-								activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
+								spiritshotCount += pet.getSpiritShotsPerHit();
 							}
-							else
+							for (L2Summon servitor : activeChar.getServitors().values())
 							{
-								activeChar.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
+								spiritshotCount += servitor.getSpiritShotsPerHit();
 							}
-							
-							activeChar.addAutoSoulShot(_itemId);
-							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+							if (spiritshotCount > item.getCount())
+							{
+								activeChar.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								return;
+							}
 						}
 						
-						// start the auto soulshot use
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+						// Activate shots
+						activeChar.addAutoSoulShot(_itemId);
+						activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+						
+						// Send message
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 						sm.addItemName(item);
 						activeChar.sendPacket(sm);
 						
-						activeChar.rechargeShots(true, true);
+						// Recharge summon's shots
+						final L2Summon pet = activeChar.getPet();
+						if (pet != null)
+						{
+							pet.rechargeShots(isSoulshot, isSpiritshot);
+						}
+						activeChar.getServitors().values().forEach(s ->
+						{
+							s.rechargeShots(isSoulshot, isSpiritshot);
+						});
 					}
+					else
+					{
+						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
+					}
+				}
+				else if (isPlayerShot(item.getItem()))
+				{
+					final boolean isSoulshot = (item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT) || (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT);
+					final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
+					if ((activeChar.getActiveWeaponItem() == activeChar.getFistsWeaponItem()) || (item.getItem().getCrystalType() != activeChar.getActiveWeaponItem().getItemGradeSPlus()))
+					{
+						activeChar.sendPacket(isSoulshot ? SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE : SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
+						return;
+					}
+					
+					// Activate shots
+					activeChar.addAutoSoulShot(_itemId);
+					activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+					
+					// Send message
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+					sm.addItemName(item);
+					activeChar.sendPacket(sm);
+					
+					// Recharge player's shots
+					activeChar.rechargeShots(isSoulshot, isSpiritshot);
 				}
 			}
 			else if (_type == 0)
 			{
+				// Cancel auto shots
 				activeChar.removeAutoSoulShot(_itemId);
 				activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
 				
-				// cancel the auto soulshot use
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+				// Send message
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addItemName(item);
 				activeChar.sendPacket(sm);
 			}
@@ -161,14 +175,39 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
-		return _C__D0_0D_REQUESTAUTOSOULSHOT;
-	}
-	
-	@Override
 	protected boolean triggersOnActionRequest()
 	{
 		return false;
+	}
+	
+	public static boolean isPlayerShot(L2Item item)
+	{
+		switch (item.getDefaultAction())
+		{
+			case SPIRITSHOT:
+			case SOULSHOT:
+			case FISHINGSHOT:
+				return true;
+			default:
+				return false;
+		}
+	}
+	
+	public static boolean isSummonShot(L2Item item)
+	{
+		switch (item.getDefaultAction())
+		{
+			case SUMMON_SPIRITSHOT:
+			case SUMMON_SOULSHOT:
+				return true;
+			default:
+				return false;
+		}
+	}
+	
+	@Override
+	public String getType()
+	{
+		return getClass().getSimpleName();
 	}
 }

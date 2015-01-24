@@ -19,9 +19,7 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
-import com.l2jserver.gameserver.model.zone.ZoneId;
 
 public abstract class AbstractNpcInfo extends L2GameServerPacket
 {
@@ -140,100 +138,6 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 			writeC(0x01);
 			writeC(0x01);
 			writeD(0x00);
-		}
-	}
-	
-	/**
-	 * Packet for summons.
-	 */
-	public static class SummonInfo extends AbstractNpcInfo
-	{
-		private final L2Summon _summon;
-		private final int _form;
-		private final int _val;
-		
-		public SummonInfo(L2Summon cha, L2Character attacker, int val)
-		{
-			super(cha);
-			_summon = cha;
-			_val = val;
-			_form = cha.getFormId();
-			
-			_isAttackable = cha.isAutoAttackable(attacker);
-			_rhand = cha.getWeapon();
-			_lhand = 0;
-			_chest = cha.getArmor();
-			_enchantEffect = cha.getTemplate().getWeaponEnchant();
-			_name = cha.getName();
-			_title = (cha.getOwner() != null) && cha.getOwner().isOnline() ? cha.getOwner().getName() : "";
-			_idTemplate = cha.getTemplate().getDisplayId();
-			_collisionHeight = cha.getTemplate().getfCollisionHeight();
-			_collisionRadius = cha.getTemplate().getfCollisionRadius();
-			setInvisible(cha.isInvisible());
-		}
-		
-		@Override
-		protected void writeImpl()
-		{
-			writeC(0x0c);
-			writeD(_summon.getObjectId());
-			writeD(_idTemplate + 1000000); // npctype id
-			writeD(_isAttackable ? 1 : 0);
-			writeD(_x);
-			writeD(_y);
-			writeD(_z);
-			writeD(_heading);
-			writeD(0x00);
-			writeD(_mAtkSpd);
-			writeD(_pAtkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_swimRunSpd);
-			writeD(_swimWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeF(_moveMultiplier);
-			writeF(_summon.getAttackSpeedMultiplier());
-			writeF(_collisionRadius);
-			writeF(_collisionHeight);
-			writeD(_rhand); // right hand weapon
-			writeD(_chest);
-			writeD(_lhand); // left hand weapon
-			writeC(0x01); // name above char 1=true ... ??
-			writeC(0x01); // always running 1=running 0=walking
-			writeC(_summon.isInCombat() ? 1 : 0);
-			writeC(_summon.isAlikeDead() ? 1 : 0);
-			writeC(_val); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-			writeD(-1); // High Five NPCString ID
-			writeS(_name);
-			writeD(-1); // High Five NPCString ID
-			writeS(_title);
-			writeD(0x01);// Title color 0=client default
-			
-			writeD(_summon.getPvpFlag());
-			writeD(_summon.getKarma());
-			
-			writeD(0); // was AVE and was adding stealth
-			
-			writeD(0x00); // clan id
-			writeD(0x00); // crest id
-			writeD(0x00); // C2
-			writeD(0x00); // C2
-			writeC(_summon.isInsideZone(ZoneId.WATER) ? 1 : _summon.isFlying() ? 2 : 0); // C2
-			
-			writeC(_summon.getTeam().getId());
-			
-			writeF(_collisionRadius);
-			writeF(_collisionHeight);
-			writeD(_enchantEffect); // C4
-			writeD(0x00); // C6
-			writeD(0x00);
-			writeD(_form); // CT1.5 Pet form and skills
-			writeC(0x01);
-			writeC(0x01);
-			// writeD(_summon.getAbnormalVisualEffectSpecial());
 		}
 	}
 }

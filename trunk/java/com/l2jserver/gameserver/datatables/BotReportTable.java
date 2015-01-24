@@ -53,6 +53,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class BotReportTable
 {
+	// Zoey76: TODO: Split XML parsing from SQL operations, use IXmlReader instead of SAXParser.
 	private static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());
 	
 	private static final int COLUMN_BOT_ID = 1;

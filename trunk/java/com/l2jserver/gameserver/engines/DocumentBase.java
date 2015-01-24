@@ -61,7 +61,8 @@ import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanCreateBase;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanEscape;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanRefuelAirship;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanResurrect;
-import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanSummon;
+import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanSummonPet;
+import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanSummonServitor;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanSummonSiegeGolem;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanSweep;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerCanSwitchSubclass;
@@ -79,6 +80,7 @@ import com.l2jserver.gameserver.model.conditions.ConditionPlayerGrade;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasCastle;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasClanHall;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasFort;
+import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasFreeSummonPoints;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasPet;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHp;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerImmobile;
@@ -847,9 +849,19 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerCanResurrect(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
-				case "cansummon":
+				case "cansummonpet":
 				{
-					cond = joinAnd(cond, new ConditionPlayerCanSummon(Boolean.parseBoolean(a.getNodeValue())));
+					cond = joinAnd(cond, new ConditionPlayerCanSummonPet(Boolean.parseBoolean(a.getNodeValue())));
+					break;
+				}
+				case "cansummonservitor":
+				{
+					cond = joinAnd(cond, new ConditionPlayerCanSummonServitor(Boolean.parseBoolean(a.getNodeValue())));
+					break;
+				}
+				case "hasfreesummonpoints":
+				{
+					cond = joinAnd(cond, new ConditionPlayerHasFreeSummonPoints(Integer.parseInt(a.getNodeValue())));
 					break;
 				}
 				case "cansummonsiegegolem":

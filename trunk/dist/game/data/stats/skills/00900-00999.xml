@@ -336,7 +336,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+		    <and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="0" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -1067,7 +1070,7 @@
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.05" />
 				<mul stat="mAtkSpd" val="1.05" />
-				<mul stat="mCritRate" val="0.05" />
+				<mul stat="mCritRate" val="1.05" />
 				<mul stat="MagicalMpConsumeRate" val="0.95" />
 			</effect>
 		</for>

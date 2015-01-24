@@ -299,9 +299,14 @@ public class L2Party extends AbstractPlayerGroup
 		// sends pets/summons of party members
 		for (L2PcInstance pMember : getMembers())
 		{
-			if ((pMember != null) && pMember.hasSummon())
+			if (pMember != null)
 			{
-				player.sendPacket(new ExPartyPetWindowAdd(pMember.getSummon()));
+				final L2Summon pet = pMember.getPet();
+				if (pet != null)
+				{
+					player.sendPacket(new ExPartyPetWindowAdd(pet));
+				}
+				pMember.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowAdd(s)));
 			}
 		}
 		
@@ -319,10 +324,13 @@ public class L2Party extends AbstractPlayerGroup
 		// broadcastToPartyMembers(player, new PartyMemberPosition(this));
 		
 		// if member has pet/summon add it to other as well
-		if (player.hasSummon())
+		final L2Summon pet = player.getPet();
+		if (pet != null)
 		{
-			broadcastPacket(new ExPartyPetWindowAdd(player.getSummon()));
+			broadcastPacket(new ExPartyPetWindowAdd(pet));
 		}
+		
+		player.getServitors().values().forEach(s -> broadcastPacket(new ExPartyPetWindowAdd(s)));
 		
 		// add player to party, adjust party level
 		getMembers().add(player);
@@ -338,12 +346,13 @@ public class L2Party extends AbstractPlayerGroup
 			if (member != null)
 			{
 				member.updateEffectIcons(true); // update party icons only
-				summon = member.getSummon();
+				summon = member.getPet();
 				member.broadcastUserInfo();
 				if (summon != null)
 				{
 					summon.updateEffectIcons();
 				}
+				member.getServitors().values().forEach(L2Summon::updateEffectIcons);
 			}
 		}
 		
@@ -519,10 +528,12 @@ public class L2Party extends AbstractPlayerGroup
 			player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
 			player.setParty(null);
 			broadcastPacket(new PartySmallWindowDelete(player));
-			if (player.hasSummon())
+			final L2Summon pet = player.getPet();
+			if (pet != null)
 			{
-				broadcastPacket(new ExPartyPetWindowDelete(player.getSummon()));
+				broadcastPacket(new ExPartyPetWindowDelete(pet));
 			}
+			player.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowDelete(s)));
 			
 			// Close the CCInfoWindow
 			if (isInCommandChannel())
@@ -827,7 +838,13 @@ public class L2Party extends AbstractPlayerGroup
 			if (validMembers.contains(member))
 			{
 				// The servitor penalty
-				final float penalty = member.hasServitor() ? ((L2ServitorInstance) member.getSummon()).getExpMultiplier() : 1;
+				float penalty = 1;
+				
+				final L2Summon summon = member.getServitors().values().stream().filter(s -> ((L2ServitorInstance) s).getExpMultiplier() > 1).findFirst().orElse(null);
+				if (summon != null)
+				{
+					penalty = ((L2ServitorInstance) summon).getExpMultiplier();
+				}
 				
 				final double sqLevel = member.getLevel() * member.getLevel();
 				final double preCalculation = (sqLevel / sqLevelSum) * penalty;

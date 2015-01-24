@@ -28,10 +28,10 @@ import java.util.stream.Stream;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.TeleportersData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.TeleportLocationTable;
-import com.l2jserver.gameserver.datatables.TeleportersData;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;

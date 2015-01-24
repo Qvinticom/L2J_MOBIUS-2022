@@ -22,6 +22,7 @@ import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.UserInfoType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -36,6 +37,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerChang
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExChangeToAwakenedClass;
 import com.l2jserver.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -238,45 +240,47 @@ public final class AwakeningMaster extends AbstractNpcAI
 			
 			int socialId = 21; // Sigel
 			int itemId = ABELIUS_POWER; // Sigel
-			if (player.isInCategory(CategoryType.TYRR_CANDIDATE))
+			if (player.isInCategory(CategoryType.TYRR_GROUP))
 			{
 				socialId = 22;
 				itemId = SAPYROS_POWER;
 			}
-			else if (player.isInCategory(CategoryType.OTHELL_CANDIDATE))
+			else if (player.isInCategory(CategoryType.OTHELL_GROUP))
 			{
 				socialId = 23;
 				itemId = ASHAGEN_POWER;
 			}
-			else if (player.isInCategory(CategoryType.YUL_CANDIDATE))
+			else if (player.isInCategory(CategoryType.YUL_GROUP))
 			{
 				socialId = 24;
 				itemId = CRANIGG_POWER;
 			}
-			else if (player.isInCategory(CategoryType.FEOH_CANDIDATE))
+			else if (player.isInCategory(CategoryType.FEOH_GROUP))
 			{
 				socialId = 25;
 				itemId = SOLTKREIG_POWER;
 			}
-			else if (player.isInCategory(CategoryType.ISS_CANDIDATE))
+			else if (player.isInCategory(CategoryType.ISS_GROUP))
 			{
 				socialId = 26;
 				itemId = NAVIAROPE_POWER;
 			}
-			else if (player.isInCategory(CategoryType.WYNN_CANDIDATE))
+			else if (player.isInCategory(CategoryType.WYNN_GROUP))
 			{
 				socialId = 27;
 				itemId = LEISTER_POWER;
 			}
-			else if (player.isInCategory(CategoryType.AEORE_CANDIDATE))
+			else if (player.isInCategory(CategoryType.AEORE_GROUP))
 			{
 				socialId = 28;
 				itemId = LAKCIS_POWER;
 			}
 			player.broadcastPacket(new SocialAction(player.getObjectId(), socialId));
-			player.addItem("Awakening", itemId, 1, player, true);
+			giveItems(player, itemId, 1);
 			
-			// TODO: Remove skill which does not level up later are removed
+			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+			player.sendPacket(new AcquireSkillList(player));
+			player.sendSkillList();
 		}
 		
 		ThreadPoolManager.getInstance().scheduleGeneral(() ->

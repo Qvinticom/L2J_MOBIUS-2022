@@ -23,7 +23,7 @@ import java.util.logging.Level;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.PlayerAction;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
@@ -39,6 +39,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -65,6 +66,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 		"_match",
 		"_diary",
 		"_olympiad?command",
+		"menu_select",
 		"manor_menu_select"
 	};
 	
@@ -143,14 +145,14 @@ public final class RequestBypassToServer extends L2GameClientPacket
 					return;
 				}
 				
-				if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel()))
+				if (!AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 				{
 					activeChar.sendMessage("You don't have the access rights to use this command!");
 					_log.warning("Character " + activeChar.getName() + " tried to use admin command " + command + ", without proper access level!");
 					return;
 				}
 				
-				if (AdminTable.getInstance().requireConfirm(command))
+				if (AdminData.getInstance().requireConfirm(command))
 				{
 					activeChar.setAdminConfirmCmd(_command);
 					ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S13);
@@ -258,6 +260,17 @@ public final class RequestBypassToServer extends L2GameClientPacket
 				if (handler != null)
 				{
 					handler.useBypass("arenachange " + (arenaId - 1), activeChar, null);
+				}
+			}
+			else if (_command.startsWith("menu_select"))
+			{
+				final L2Npc lastNpc = activeChar.getLastFolkNPC();
+				if ((lastNpc != null) && lastNpc.canInteract(activeChar))
+				{
+					final String[] split = _command.substring(_command.indexOf("?") + 1).split("&");
+					final int ask = Integer.parseInt(split[0].split("=")[1]);
+					final int reply = Integer.parseInt(split[1].split("=")[1]);
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcMenuSelect(activeChar, lastNpc, ask, reply), lastNpc);
 				}
 			}
 			else if (_command.startsWith("manor_menu_select"))

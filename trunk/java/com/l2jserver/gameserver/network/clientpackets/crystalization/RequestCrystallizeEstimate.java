@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ItemCrystalizationData;
+import com.l2jserver.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.CrystalizationData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

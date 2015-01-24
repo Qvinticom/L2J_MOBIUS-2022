@@ -21,9 +21,9 @@ package com.l2jserver.gameserver.model.actor.stat;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ExperienceTable;
-import com.l2jserver.gameserver.datatables.PetDataTable;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -264,6 +264,6 @@ public class PlayableStat extends CharStat
 	
 	public int getMaxLevel()
 	{
-		return ExperienceTable.getInstance().getMaxLevel();
+		return ExperienceData.getInstance().getMaxLevel();
 	}
 }

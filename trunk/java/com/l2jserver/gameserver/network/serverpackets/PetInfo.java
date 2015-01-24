@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class PetInfo extends L2GameServerPacket
 {
@@ -38,6 +39,7 @@ public class PetInfo extends L2GameServerPacket
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
 	private int _maxFed, _curFed;
+	private int _statusMask = 0;
 	
 	public PetInfo(L2Summon summon, int val)
 	{
@@ -61,6 +63,19 @@ public class PetInfo extends L2GameServerPacket
 			final L2ServitorInstance sum = (L2ServitorInstance) _summon;
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
+		}
+		
+		if (summon.isRunning())
+		{
+			_statusMask |= 0x04;
+		}
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(summon))
+		{
+			_statusMask |= 0x08;
+		}
+		if (summon.isDead())
+		{
+			_statusMask |= 0x10;
 		}
 	}
 	
@@ -98,7 +113,7 @@ public class PetInfo extends L2GameServerPacket
 		writeD(_summon.getArmor()); // body armor
 		writeD(0x00); // left hand weapon
 		
-		writeC(_summon.isShowSummonAnimation() ? 2 : _val); // 0=teleported 1=default 2=summoned
+		writeC(_summon.isShowSummonAnimation() ? 0x02 : _val); // 0=teleported 1=default 2=summoned
 		writeD(-1); // High Five NPCString ID
 		if (_summon.isPet())
 		{
@@ -111,8 +126,8 @@ public class PetInfo extends L2GameServerPacket
 		writeD(-1); // High Five NPCString ID
 		writeS(_summon.getTitle()); // owner name
 		
-		writeC(_summon.getPvpFlag()); // ?
-		writeD(_summon.getKarma());
+		writeC(_summon.getPvpFlag()); // confirmed
+		writeD(_summon.getKarma()); // confirmed
 		
 		writeD(_curFed); // how fed it is
 		writeD(_maxFed); // max fed it can be
@@ -160,8 +175,8 @@ public class PetInfo extends L2GameServerPacket
 		writeD(0x00); // TODO: Find me
 		writeD(_summon.getFormId()); // Transformation ID - Confirmed
 		
-		writeC(0x00); // Used Summon Points
-		writeC(0x00); // Maximum Summon Points
+		writeC(_summon.getOwner().getSummonPoints()); // Used Summon Points
+		writeC(_summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
 		
 		final Set<AbnormalVisualEffect> aves = _summon.getCurrentAbnormalVisualEffects();
 		writeH(aves.size()); // Confirmed
@@ -170,6 +185,6 @@ public class PetInfo extends L2GameServerPacket
 			writeH(ave.getClientId()); // Confirmed
 		}
 		
-		writeC(0x00); // TODO: Find me
+		writeC(_statusMask);
 	}
 }

@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.actor.instance;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.model.L2Clan;

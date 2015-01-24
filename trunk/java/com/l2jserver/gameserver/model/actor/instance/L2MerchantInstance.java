@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import com.l2jserver.gameserver.datatables.BuyListData;
+import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable;
 import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable.MerchantPriceConfig;
 import com.l2jserver.gameserver.enums.InstanceType;

@@ -27,6 +27,7 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.model.PcCondOverride;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -148,9 +149,10 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		if (itemToRemove.getItem().isPetItem())
 		{
-			if (activeChar.hasSummon() && (activeChar.getSummon().getControlObjectId() == _objectId))
+			final L2Summon pet = activeChar.getPet();
+			if ((pet != null) && (pet.getControlObjectId() == _objectId))
 			{
-				activeChar.getSummon().unSummon(activeChar);
+				pet.unSummon(activeChar);
 			}
 			
 			try (Connection con = L2DatabaseFactory.getInstance().getConnection();

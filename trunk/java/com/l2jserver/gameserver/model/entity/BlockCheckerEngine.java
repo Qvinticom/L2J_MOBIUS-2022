@@ -28,7 +28,7 @@ import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.enums.Team;
@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
@@ -388,11 +389,12 @@ public final class BlockCheckerEngine
 					player.setTeam(Team.BLUE);
 				}
 				player.stopAllEffects();
-				
-				if (player.hasSummon())
+				final L2Summon pet = player.getPet();
+				if (pet != null)
 				{
-					player.getSummon().unSummon(player);
+					pet.unSummon(player);
 				}
+				player.getServitors().values().forEach(s -> s.unSummon(player));
 				
 				// Give the player start up effects
 				// Freeze

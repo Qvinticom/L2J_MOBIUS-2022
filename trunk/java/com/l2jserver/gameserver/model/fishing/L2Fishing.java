@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.fishing;
 import java.util.concurrent.Future;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.FishingMonstersData;
+import com.l2jserver.gameserver.data.xml.impl.FishingMonstersData;
 import com.l2jserver.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

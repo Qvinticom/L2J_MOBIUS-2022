@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model;
 
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 
 /**
  * @author HorridoJoho
@@ -222,7 +222,7 @@ public class L2AccessLevel
 				return false;
 			}
 			
-			_childsAccessLevel = AdminTable.getInstance().getAccessLevel(_child);
+			_childsAccessLevel = AdminData.getInstance().getAccessLevel(_child);
 		}
 		return ((_childsAccessLevel.getLevel() == accessLevel.getLevel()) || _childsAccessLevel.hasChildAccess(accessLevel));
 	}

@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.taskmanager.tasks;
 import java.util.Calendar;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.taskmanager.Task;

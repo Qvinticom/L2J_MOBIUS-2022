@@ -18,8 +18,8 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.datatables.ExperienceTable;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -42,6 +42,7 @@ public final class Summon extends AbstractEffect
 	private final ItemHolder _consumeItem;
 	private final int _lifeTime;
 	private final int _consumeItemInterval;
+	private final int _summonPoints;
 	
 	public Summon(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -57,6 +58,7 @@ public final class Summon extends AbstractEffect
 		_consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
 		_consumeItemInterval = params.getInt("consumeItemInterval", 0);
 		_lifeTime = params.getInt("lifeTime", 3600) * 1000;
+		_summonPoints = params.getInt("summonPoints", 0);
 	}
 	
 	@Override
@@ -68,7 +70,7 @@ public final class Summon extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isPlayer() || info.getEffected().hasSummon())
+		if (!info.getEffected().isPlayer())
 		{
 			return;
 		}
@@ -86,22 +88,30 @@ public final class Summon extends AbstractEffect
 		summon.setItemConsume(_consumeItem);
 		summon.setItemConsumeInterval(consumeItemInterval);
 		
-		if (summon.getLevel() >= ExperienceTable.getInstance().getMaxPetLevel())
+		if (summon.getLevel() >= ExperienceData.getInstance().getMaxPetLevel())
 		{
-			summon.getStat().setExp(ExperienceTable.getInstance().getExpForLevel(ExperienceTable.getInstance().getMaxPetLevel() - 1));
-			_log.warning(Summon.class.getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceTable.getInstance().getMaxPetLevel() + ". Please rectify.");
+			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(ExperienceData.getInstance().getMaxPetLevel() - 1));
+			_log.warning(Summon.class.getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceData.getInstance().getMaxPetLevel() + ". Please rectify.");
 		}
 		else
 		{
-			summon.getStat().setExp(ExperienceTable.getInstance().getExpForLevel(summon.getLevel() % ExperienceTable.getInstance().getMaxPetLevel()));
+			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxPetLevel()));
 		}
 		
 		summon.setCurrentHp(summon.getMaxHp());
 		summon.setCurrentMp(summon.getMaxMp());
 		summon.setHeading(player.getHeading());
+		summon.setSummonPoints(_summonPoints);
 		
-		player.setPet(summon);
-		
+		if (summon.isPet())
+		{
+			player.setPet(summon);
+		}
+		else
+		{
+			player.addServitor(summon);
+		}
+		summon.setShowSummonAnimation(true);
 		summon.setRunning();
 		summon.spawnMe();
 	}

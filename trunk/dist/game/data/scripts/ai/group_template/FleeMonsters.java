@@ -20,7 +20,6 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.Location;
@@ -67,22 +66,14 @@ public final class FleeMonsters extends AbstractNpcAI
 		npc.disableCoreAI(true);
 		npc.setRunning();
 		
-		final L2Summon summon = isSummon ? attacker.getSummon() : null;
+		final L2Summon summon = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : null;
 		final ILocational attackerLoc = summon == null ? attacker : summon;
 		final double radians = Math.toRadians(Util.calculateAngleFrom(attackerLoc, npc));
 		final int posX = (int) (npc.getX() + (FLEE_DISTANCE * Math.cos(radians)));
 		final int posY = (int) (npc.getY() + (FLEE_DISTANCE * Math.sin(radians)));
 		final int posZ = npc.getZ();
 		
-		final Location destination;
-		if (Config.GEODATA > 0)
-		{
-			destination = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, attacker.getInstanceId());
-		}
-		else
-		{
-			destination = new Location(posX, posY, posZ);
-		}
+		final Location destination = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, attacker.getInstanceId());
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

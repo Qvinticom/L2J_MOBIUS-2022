@@ -400,11 +400,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			player.abortAttack();
 			player.abortCast();
 			player.stopMove(null);
-			if (player.hasSummon())
+			if (player.hasPet())
 			{
-				player.getSummon().abortAttack();
-				player.getSummon().abortCast();
-				player.getSummon().stopMove(null);
+				player.getPet().abortAttack();
+				player.getPet().abortCast();
+				player.getPet().stopMove(null);
 			}
 			return null;
 		}
@@ -963,7 +963,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	// Checks if the summon or pet that the player has can be used.
 	private final void checkMaxSummonLevel(L2PcInstance player)
 	{
-		final L2Summon pet = player.getSummon();
+		final L2Summon pet = player.getPet();
 		if (pet instanceof L2PetInstance)
 		{
 			if (pet.getLevel() > MAX_SUMMON_LEVEL)

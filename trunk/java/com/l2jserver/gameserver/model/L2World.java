@@ -29,8 +29,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
@@ -161,7 +161,7 @@ public final class L2World
 	
 	public List<L2PcInstance> getAllGMs()
 	{
-		return AdminTable.getInstance().getAllGms(true);
+		return AdminData.getInstance().getAllGms(true);
 	}
 	
 	public Collection<L2PcInstance> getPlayers()

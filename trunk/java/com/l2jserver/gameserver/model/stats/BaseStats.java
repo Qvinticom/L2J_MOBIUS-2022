@@ -46,7 +46,7 @@ public enum BaseStats
 		@Override
 		public double calcBonus(L2Character actor)
 		{
-			return Math.pow(1.005, actor.getDEX() - 23);
+			return Math.pow(1.004558949443461, actor.getDEX() - 19.27356040917275);
 		}
 	},
 	WIT // Updated and better Formula to match Ertheia
@@ -54,7 +54,7 @@ public enum BaseStats
 		@Override
 		public double calcBonus(L2Character actor)
 		{
-			return Math.pow(1.015, actor.getWIT() - 90);
+			return Math.pow(1.013832042738272, actor.getWIT() - 64.57078483041223);
 		}
 	},
 	CON // Updated and better Formula to match Ertheia
@@ -62,7 +62,7 @@ public enum BaseStats
 		@Override
 		public double calcBonus(L2Character actor)
 		{
-			return Math.pow(1.012, actor.getCON() - 35); // maybe - 36
+			return Math.pow(1.011685289099497, actor.getCON() - 34.80273839854561);
 		}
 	},
 	MEN // Updated and better Formula to match Ertheia
@@ -70,7 +70,7 @@ public enum BaseStats
 		@Override
 		public double calcBonus(L2Character actor)
 		{
-			return Math.pow(1.004, actor.getMEN() + 30);
+			return Math.pow(1.003687502032154, actor.getMEN() + 30.4505503162);
 		}
 	},
 	CHA // Addition for Ertheia

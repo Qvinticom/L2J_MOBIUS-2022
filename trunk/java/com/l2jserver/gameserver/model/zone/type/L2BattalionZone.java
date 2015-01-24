@@ -175,7 +175,7 @@ public class L2BattalionZone extends L2ZoneRespawn
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
 			if (Config.BTZ_REMOVE_PETS)
 			{
-				L2Summon pet = player.getSummon();
+				L2Summon pet = player.getPet();
 				if (pet != null)
 				{
 					pet.stopAllEffectsExceptThoseThatLastThroughDeath();
@@ -187,7 +187,7 @@ public class L2BattalionZone extends L2ZoneRespawn
 		{
 			if (Config.BTZ_REMOVE_PETS)
 			{
-				L2Summon pet = player.getSummon();
+				L2Summon pet = player.getPet();
 				if (pet != null)
 				{
 					pet.unSummon(player);
@@ -213,7 +213,7 @@ public class L2BattalionZone extends L2ZoneRespawn
 			{
 				final PcInventory inv = player.getInventory();
 				
-				if (ItemTable.getInstance().createDummyItem(reward[0]).isStackable())
+				if (ItemTable.getInstance().getTemplate(reward[0]).isStackable())
 				{
 					inv.addItem("L2MultiFunctionZone ", reward[0], reward[1], player, player);
 					

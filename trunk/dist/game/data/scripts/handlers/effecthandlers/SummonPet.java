@@ -20,8 +20,8 @@ package handlers.effecthandlers;
 
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -69,7 +69,7 @@ public final class SummonPet extends AbstractEffect
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		
-		if ((player.hasSummon() || player.isMounted()))
+		if (player.hasPet() || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return;

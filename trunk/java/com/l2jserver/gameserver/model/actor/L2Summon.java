@@ -22,7 +22,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2CharacterAI;
 import com.l2jserver.gameserver.ai.L2SummonAI;
-import com.l2jserver.gameserver.datatables.ExperienceTable;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.Race;
@@ -53,17 +53,18 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo.SummonInfo;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowDelete;
 import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowUpdate;
+import com.l2jserver.gameserver.network.serverpackets.ExPetInfo;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.PetDelete;
 import com.l2jserver.gameserver.network.serverpackets.PetInfo;
 import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 import com.l2jserver.gameserver.network.serverpackets.PetStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.RelationChanged;
+import com.l2jserver.gameserver.network.serverpackets.SummonInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.TeleportToLocation;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
@@ -78,6 +79,7 @@ public abstract class L2Summon extends L2Playable
 	private boolean _previousFollowStatus = true;
 	protected boolean _restoreSummon = true;
 	private int _shotsMask = 0;
+	private int _summonPoints = 0;
 	
 	// @formatter:off
 	private static final int[] PASSIVE_SUMMONS =
@@ -218,7 +220,14 @@ public abstract class L2Summon extends L2Playable
 	{
 		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
-			player.sendPacket(new SummonInfo(this, player, 1));
+			if (isPet())
+			{
+				player.sendPacket(new ExPetInfo(this, player, 1));
+			}
+			else
+			{
+				player.sendPacket(new SummonInfo(this, player, 1));
+			}
 		}
 	}
 	
@@ -232,20 +241,20 @@ public abstract class L2Summon extends L2Playable
 	
 	public long getExpForThisLevel()
 	{
-		if (getLevel() >= ExperienceTable.getInstance().getMaxPetLevel())
+		if (getLevel() >= ExperienceData.getInstance().getMaxPetLevel())
 		{
 			return 0;
 		}
-		return ExperienceTable.getInstance().getExpForLevel(getLevel());
+		return ExperienceData.getInstance().getExpForLevel(getLevel());
 	}
 	
 	public long getExpForNextLevel()
 	{
-		if (getLevel() >= (ExperienceTable.getInstance().getMaxPetLevel() - 1))
+		if (getLevel() >= (ExperienceData.getInstance().getMaxPetLevel() - 1))
 		{
 			return 0;
 		}
-		return ExperienceTable.getInstance().getExpForLevel(getLevel() + 1);
+		return ExperienceData.getInstance().getExpForLevel(getLevel() + 1);
 	}
 	
 	@Override
@@ -435,7 +444,14 @@ public abstract class L2Summon extends L2Playable
 			storeEffect(true);
 			if (owner != null)
 			{
-				owner.setPet(null);
+				if (isPet())
+				{
+					owner.setPet(null);
+				}
+				else
+				{
+					owner.removeServitor(getObjectId());
+				}
 			}
 			
 			// Stop AI tasks
@@ -898,7 +914,15 @@ public abstract class L2Summon extends L2Playable
 			{
 				continue;
 			}
-			player.sendPacket(new SummonInfo(this, player, val));
+			if (isPet())
+			{
+				player.sendPacket(new ExPetInfo(this, player, val));
+			}
+			else
+			{
+				player.sendPacket(new SummonInfo(this, player, val));
+			}
+			
 		}
 	}
 	
@@ -923,7 +947,7 @@ public abstract class L2Summon extends L2Playable
 		// Check if the L2PcInstance is the owner of the Pet
 		if (activeChar == getOwner())
 		{
-			activeChar.sendPacket(new PetInfo(this, 0));
+			activeChar.sendPacket(new PetInfo(this, 1));
 			// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 			updateEffectIcons(true);
 			if (isPet())
@@ -933,7 +957,14 @@ public abstract class L2Summon extends L2Playable
 		}
 		else
 		{
-			activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
+			if (isPet())
+			{
+				activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
+			}
+			else
+			{
+				activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
+			}
 		}
 	}
 	
@@ -1112,12 +1143,6 @@ public abstract class L2Summon extends L2Playable
 	}
 	
 	@Override
-	public L2Summon getSummon()
-	{
-		return this;
-	}
-	
-	@Override
 	public boolean isChargedShot(ShotType type)
 	{
 		return (_shotsMask & type.getMask()) == type.getMask();
@@ -1231,5 +1256,15 @@ public abstract class L2Summon extends L2Playable
 			}
 		}
 		return formId;
+	}
+	
+	public void setSummonPoints(int summonPoints)
+	{
+		_summonPoints = summonPoints;
+	}
+	
+	public int getSummonPoints()
+	{
+		return _summonPoints;
 	}
 }

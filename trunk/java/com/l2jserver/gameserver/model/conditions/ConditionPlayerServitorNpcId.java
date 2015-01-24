@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.model.conditions;
 import java.util.List;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.skills.Skill;
 
@@ -54,6 +55,17 @@ public class ConditionPlayerServitorNpcId extends Condition
 		{
 			return false;
 		}
-		return (_npcIds == null) || _npcIds.contains(effector.getActingPlayer().getSummon().getId());
+		if (_npcIds == null)
+		{
+			return true;
+		}
+		for (L2Summon summon : effector.getServitors().values())
+		{
+			if (_npcIds.contains(summon.getId()))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }

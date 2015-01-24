@@ -56,7 +56,7 @@ public final class RequestPetUseItem extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) activeChar.getSummon();
+		final L2PetInstance pet = (L2PetInstance) activeChar.getPet();
 		final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{

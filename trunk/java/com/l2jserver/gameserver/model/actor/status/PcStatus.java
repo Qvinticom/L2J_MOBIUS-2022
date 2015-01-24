@@ -147,8 +147,8 @@ public class PcStatus extends PlayableStatus
 			}
 			
 			// Check and calculate transfered damage
-			final L2Summon summon = getActiveChar().getSummon();
-			if (getActiveChar().hasServitor() && Util.checkIfInRange(1000, getActiveChar(), summon, true))
+			final L2Summon summon = getActiveChar().getAnyServitor();
+			if ((summon != null) && Util.checkIfInRange(1000, getActiveChar(), summon, true))
 			{
 				tDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 				
@@ -248,10 +248,10 @@ public class PcStatus extends PlayableStatus
 				smsg.addInt(fullValue);
 				getActiveChar().sendPacket(smsg);
 				
-				if (tDmg > 0)
+				if ((tDmg > 0) && (summon != null))
 				{
 					smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
-					smsg.addString(getActiveChar().getSummon().getName());
+					smsg.addString(summon.getName());
 					smsg.addCharName(attacker);
 					smsg.addInt(tDmg);
 					getActiveChar().sendPacket(smsg);
@@ -303,10 +303,12 @@ public class PcStatus extends PlayableStatus
 				stopHpMpRegeneration();
 				getActiveChar().setIsDead(true);
 				getActiveChar().setIsPendingRevive(true);
-				if (getActiveChar().hasSummon())
+				final L2Summon pet = getActiveChar().getPet();
+				if (pet != null)
 				{
-					getActiveChar().getSummon().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
+					pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
 				}
+				getActiveChar().getServitors().values().forEach(s -> s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null));
 				return;
 			}
 			

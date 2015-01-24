@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
 
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command
@@ -41,7 +41,7 @@ public final class RequestGmList extends L2GameClientPacket
 		{
 			return;
 		}
-		AdminTable.getInstance().sendListToPlayer(getClient().getActiveChar());
+		AdminData.getInstance().sendListToPlayer(getClient().getActiveChar());
 	}
 	
 	@Override

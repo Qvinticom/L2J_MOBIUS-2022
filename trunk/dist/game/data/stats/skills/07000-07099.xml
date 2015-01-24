@@ -292,7 +292,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<player canSummonPet="true" />
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -313,7 +313,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<player canSummonPet="true" />
 		</cond>
 		<for>
 			<effect name="Summon">
@@ -334,7 +334,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-			<player canSummon="true" />
+			<player canSummonPet="true" />
 		</cond>
 		<for>
 			<effect name="Summon">

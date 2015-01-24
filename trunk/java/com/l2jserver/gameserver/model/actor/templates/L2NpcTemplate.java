@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.AISkillScope;
 import com.l2jserver.gameserver.enums.AIType;
 import com.l2jserver.gameserver.enums.Race;

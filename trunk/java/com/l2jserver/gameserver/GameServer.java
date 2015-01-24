@@ -38,62 +38,61 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.Server;
 import com.l2jserver.UPnPService;
 import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.datatables.AbilityPointsData;
-import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.AnnouncementsTable;
-import com.l2jserver.gameserver.datatables.ArmorSetsData;
+import com.l2jserver.gameserver.data.sql.impl.AnnouncementsTable;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
+import com.l2jserver.gameserver.data.sql.impl.CharSummonTable;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.data.sql.impl.CrestTable;
+import com.l2jserver.gameserver.data.sql.impl.NpcBufferTable;
+import com.l2jserver.gameserver.data.sql.impl.OfflineTradersTable;
+import com.l2jserver.gameserver.data.sql.impl.SummonSkillsTable;
+import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jserver.gameserver.data.xml.impl.AbilityPointsData;
+import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.data.xml.impl.ArmorSetsData;
+import com.l2jserver.gameserver.data.xml.impl.BeautyShopData;
+import com.l2jserver.gameserver.data.xml.impl.BuyListData;
+import com.l2jserver.gameserver.data.xml.impl.CategoryData;
+import com.l2jserver.gameserver.data.xml.impl.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemHPBonusData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantItemOptionsData;
+import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+import com.l2jserver.gameserver.data.xml.impl.FishData;
+import com.l2jserver.gameserver.data.xml.impl.FishingMonstersData;
+import com.l2jserver.gameserver.data.xml.impl.FishingRodsData;
+import com.l2jserver.gameserver.data.xml.impl.HennaData;
+import com.l2jserver.gameserver.data.xml.impl.HitConditionBonusData;
+import com.l2jserver.gameserver.data.xml.impl.InitialEquipmentData;
+import com.l2jserver.gameserver.data.xml.impl.InitialShortcutData;
+import com.l2jserver.gameserver.data.xml.impl.ItemCrystalizationData;
+import com.l2jserver.gameserver.data.xml.impl.KarmaData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.OptionData;
+import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
+import com.l2jserver.gameserver.data.xml.impl.PlayerTemplateData;
+import com.l2jserver.gameserver.data.xml.impl.PlayerXpPercentLostData;
+import com.l2jserver.gameserver.data.xml.impl.RecipeData;
+import com.l2jserver.gameserver.data.xml.impl.SecondaryAuthData;
+import com.l2jserver.gameserver.data.xml.impl.ShuttleData;
+import com.l2jserver.gameserver.data.xml.impl.SiegeScheduleData;
+import com.l2jserver.gameserver.data.xml.impl.SkillLearnData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.StaticObjectData;
+import com.l2jserver.gameserver.data.xml.impl.TeleportersData;
+import com.l2jserver.gameserver.data.xml.impl.TransformData;
+import com.l2jserver.gameserver.data.xml.impl.UIData;
 import com.l2jserver.gameserver.datatables.AugmentationData;
-import com.l2jserver.gameserver.datatables.BeautyShopData;
 import com.l2jserver.gameserver.datatables.BotReportTable;
-import com.l2jserver.gameserver.datatables.BuyListData;
-import com.l2jserver.gameserver.datatables.CategoryData;
-import com.l2jserver.gameserver.datatables.CharNameTable;
-import com.l2jserver.gameserver.datatables.CharSummonTable;
-import com.l2jserver.gameserver.datatables.CharTemplateTable;
-import com.l2jserver.gameserver.datatables.ClanTable;
-import com.l2jserver.gameserver.datatables.ClassListData;
-import com.l2jserver.gameserver.datatables.CrestTable;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.EnchantItemData;
-import com.l2jserver.gameserver.datatables.EnchantItemGroupsData;
-import com.l2jserver.gameserver.datatables.EnchantItemHPBonusData;
-import com.l2jserver.gameserver.datatables.EnchantItemOptionsData;
-import com.l2jserver.gameserver.datatables.EnchantSkillGroupsData;
 import com.l2jserver.gameserver.datatables.EventDroplist;
-import com.l2jserver.gameserver.datatables.ExperienceTable;
-import com.l2jserver.gameserver.datatables.FishData;
-import com.l2jserver.gameserver.datatables.FishingMonstersData;
-import com.l2jserver.gameserver.datatables.FishingRodsData;
-import com.l2jserver.gameserver.datatables.HennaData;
-import com.l2jserver.gameserver.datatables.HitConditionBonus;
-import com.l2jserver.gameserver.datatables.InitialEquipmentData;
-import com.l2jserver.gameserver.datatables.InitialShortcutData;
-import com.l2jserver.gameserver.datatables.ItemCrystalizationData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.KarmaData;
 import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable;
-import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.NpcBufferTable;
-import com.l2jserver.gameserver.datatables.NpcData;
-import com.l2jserver.gameserver.datatables.OfflineTradersTable;
-import com.l2jserver.gameserver.datatables.OptionsData;
-import com.l2jserver.gameserver.datatables.PetDataTable;
-import com.l2jserver.gameserver.datatables.PlayerXpPercentLostData;
-import com.l2jserver.gameserver.datatables.RecipeData;
-import com.l2jserver.gameserver.datatables.SecondaryAuthData;
-import com.l2jserver.gameserver.datatables.ShuttleData;
-import com.l2jserver.gameserver.datatables.SiegeScheduleData;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SkillLearnData;
-import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.datatables.StaticObjects;
-import com.l2jserver.gameserver.datatables.SummonSkillsTable;
-import com.l2jserver.gameserver.datatables.TeleportLocationTable;
-import com.l2jserver.gameserver.datatables.TeleportersData;
-import com.l2jserver.gameserver.datatables.TransformData;
-import com.l2jserver.gameserver.datatables.UIData;
-import com.l2jserver.gameserver.geoeditorcon.GeoEditorListener;
 import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
@@ -229,7 +228,7 @@ public class GameServer
 		EnchantItemData.getInstance();
 		EnchantItemOptionsData.getInstance();
 		ItemCrystalizationData.getInstance();
-		OptionsData.getInstance();
+		OptionData.getInstance();
 		EnchantItemHPBonusData.getInstance();
 		MerchantPriceConfigTable.getInstance().loadInstances();
 		BuyListData.getInstance();
@@ -245,13 +244,13 @@ public class GameServer
 		ClassListData.getInstance();
 		InitialEquipmentData.getInstance();
 		InitialShortcutData.getInstance();
-		ExperienceTable.getInstance();
+		ExperienceData.getInstance();
 		PlayerXpPercentLostData.getInstance();
 		KarmaData.getInstance();
-		HitConditionBonus.getInstance();
-		CharTemplateTable.getInstance();
+		HitConditionBonusData.getInstance();
+		PlayerTemplateData.getInstance();
 		CharNameTable.getInstance();
-		AdminTable.getInstance();
+		AdminData.getInstance();
 		RaidBossPointsManager.getInstance();
 		PetDataTable.getInstance();
 		CharSummonTable.getInstance().init();
@@ -272,7 +271,8 @@ public class GameServer
 		
 		printSection("Geodata");
 		GeoData.getInstance();
-		if (Config.GEODATA == 2)
+		
+		if (Config.PATHFINDING > 0)
 		{
 			PathFinding.getInstance();
 		}
@@ -281,9 +281,9 @@ public class GameServer
 		SkillLearnData.getInstance();
 		NpcData.getInstance();
 		WalkingManager.getInstance();
-		StaticObjects.getInstance();
+		StaticObjectData.getInstance();
 		ZoneManager.getInstance();
-		DoorTable.getInstance();
+		DoorData.getInstance();
 		ItemAuctionManager.getInstance();
 		CastleManager.getInstance().loadInstances();
 		NpcBufferTable.getInstance();
@@ -383,11 +383,6 @@ public class GameServer
 		if (Config.ALLOW_MAIL)
 		{
 			MailManager.getInstance();
-		}
-		
-		if (Config.ACCEPT_GEOEDITOR_CONN)
-		{
-			GeoEditorListener.getInstance();
 		}
 		
 		PunishmentManager.getInstance();
