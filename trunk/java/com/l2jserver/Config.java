@@ -1102,6 +1102,10 @@ public final class Config
 	public static boolean RETAIL_LIKE_AUGMENTATION_ACCESSORY;
 	public static int[] AUGMENTATION_BLACKLIST;
 	public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
+	public static int SECOND_LEVEL_UPGRADE_CHANCE;
+	public static int THIRD_LEVEL_UPGRADE_CHANCE;
+	public static int FOURTH_LEVEL_UPGRADE_CHANCE;
+	public static int FITH_LEVEL_UPGRADE_CHANCE;
 	public static double HP_REGEN_MULTIPLIER;
 	public static double MP_REGEN_MULTIPLIER;
 	public static double CP_REGEN_MULTIPLIER;
@@ -1689,6 +1693,12 @@ public final class Config
 			
 			Arrays.sort(AUGMENTATION_BLACKLIST);
 			ALT_ALLOW_AUGMENT_PVP_ITEMS = Character.getBoolean("AltAllowAugmentPvPItems", false);
+			
+			SECOND_LEVEL_UPGRADE_CHANCE = Character.getInt("SecondLevelUpgradeChance", 90);
+			THIRD_LEVEL_UPGRADE_CHANCE = Character.getInt("ThirdLevelUpgradeChance", 80);
+			FOURTH_LEVEL_UPGRADE_CHANCE = Character.getInt("FourthLevelUpgradeChance", 60);
+			FITH_LEVEL_UPGRADE_CHANCE = Character.getInt("FithLevelUpgradeChance", 70);
+			
 			ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
 			ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
 			ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Character.getBoolean("AltKarmaPlayerCanTeleport", true);

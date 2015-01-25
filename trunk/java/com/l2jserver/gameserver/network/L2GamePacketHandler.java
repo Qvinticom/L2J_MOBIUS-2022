@@ -1599,22 +1599,22 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new NotifyTrainingRoomEnd();
 								break;
 							case 0xF4:
-								// msg = new RequestNewEnchantPushOne();
+								msg = new RequestNewEnchantPushOne();
 								break;
 							case 0xF5:
-								// msg = new RequestNewEnchantRemoveOne();
+								msg = new RequestNewEnchantRemoveOne();
 								break;
 							case 0xF6:
-								// msg = new RequestNewEnchantPushTwo();
+								msg = new RequestNewEnchantPushTwo();
 								break;
 							case 0xF7:
-								// msg = new RequestNewEnchantRemoveTwo();
+								msg = new RequestNewEnchantRemoveTwo();
 								break;
 							case 0xF8:
-								// nsg = new RequestNewEnchantClose();
+								msg = new RequestNewEnchantClose();
 								break;
 							case 0xF9:
-								// msg = new RequestNewEnchantTry();
+								msg = new RequestNewEnchantTry();
 								break;
 							case 0xFE:
 								// msg = new ExSendSelectedQuestZoneID();

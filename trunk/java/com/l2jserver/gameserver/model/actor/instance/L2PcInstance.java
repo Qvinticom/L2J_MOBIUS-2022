@@ -15064,4 +15064,27 @@ public final class L2PcInstance extends L2Playable
 		}
 		_vitPoints = points;
 	}
+	
+	int _firstCompoundOID = -1;
+	int _secondCompoundOID = -1;
+	
+	public int getFirstCompoundOID()
+	{
+		return _firstCompoundOID;
+	}
+	
+	public void setFirstCompoundOID(int firstCompoundOID)
+	{
+		_firstCompoundOID = firstCompoundOID;
+	}
+	
+	public int getSecondCompoundOID()
+	{
+		return _secondCompoundOID;
+	}
+	
+	public void setSecondCompoundOID(int secondCompoundOID)
+	{
+		_secondCompoundOID = secondCompoundOID;
+	}
 }
