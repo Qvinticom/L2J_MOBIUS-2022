@@ -665,6 +665,8 @@ public final class Config
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
+	public static boolean NEED_SEIZE_YOUR_DESTINY_FOR_AWAKEN;
+	public static boolean NEED_SCROLL_OF_AFTERLIFE_FOR_AWAKEN;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -1080,6 +1082,7 @@ public final class Config
 	public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
 	public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
 	public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
+	public static int CHANGE_CHANCE_ELEMENT;
 	public static int[] ENCHANT_BLACKLIST;
 	public static int AUGMENTATION_NG_SKILL_CHANCE;
 	public static int AUGMENTATION_NG_GLOW_CHANCE;
@@ -1629,6 +1632,7 @@ public final class Config
 			ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
 			ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);
 			ENCHANT_CHANCE_ELEMENT_ENERGY = Character.getDouble("EnchantChanceElementEnergy", 10);
+			CHANGE_CHANCE_ELEMENT = Character.getInt("ChangeChanceElement", 60);
 			String[] notenchantable = Character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
 			ENCHANT_BLACKLIST = new int[notenchantable.length];
 			for (int i = 0; i < notenchantable.length; i++)
@@ -1807,6 +1811,8 @@ public final class Config
 			PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 16);
 			ABILITY_POINTS_RESET_ADENA = Character.getLong("AbilityPointsResetAdena", 10_000_000);
+			NEED_SEIZE_YOUR_DESTINY_FOR_AWAKEN = Character.getBoolean("NeedSeizeYourDestinyForAwaken", true);
+			NEED_SCROLL_OF_AFTERLIFE_FOR_AWAKEN = Character.getBoolean("NeedScrollOfAfterlifeForAwaken", true);
 			
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);

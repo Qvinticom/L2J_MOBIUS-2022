@@ -197,7 +197,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		event.getMentor().sendPacket(new ExMentorList(event.getMentor()));
 		
 		// Add the mentee skill
-		event.getMentee().addSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
+		event.getMentee().addSkill(MENTEE_MENTOR_SUMMON.getSkill(), false);
 		
 		// Send mail with the headphone
 		sendMail(event.getMentee(), MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_HEADPHONE, 1);

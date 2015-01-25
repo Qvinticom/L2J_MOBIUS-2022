@@ -16,6 +16,7 @@
 		<!-- Double-click to change the attribute of an S(S80) grade weapon that cannot be bound. Can be used when an S-grade weapon with a bestowed attribute exists in the inventory. Cannot be exchanged, dropped, sold in shops, or used in a private store. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ChangeAttribute" />
 	</item>
 	<item id="33503" name="Hero's Blessed Buff Scroll" additionalName="" type="EtcItem">
 		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate + 20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->

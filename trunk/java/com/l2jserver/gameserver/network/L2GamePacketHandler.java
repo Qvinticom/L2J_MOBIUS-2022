@@ -1401,13 +1401,13 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new RequestHardWareInfo(); (SddddddSddddddddddSS)
 								break;
 							case 0xB0:
-								// msg = new SendChangeAttributeTargetItem();
+								msg = new SendChangeAttributeTargetItem();
 								break;
 							case 0xB1:
-								// msg = new RequestChangeAttributeItem();
+								msg = new RequestChangeAttributeItem();
 								break;
 							case 0xB2:
-								// msg = new RequestChangeAttributeCancel();
+								msg = new RequestChangeAttributeCancel();
 								break;
 							case 0xB3:
 								// msg = new RequestBR_PresentBuyProduct();

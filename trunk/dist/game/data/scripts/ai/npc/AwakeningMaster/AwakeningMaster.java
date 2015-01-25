@@ -21,6 +21,7 @@ package ai.npc.AwakeningMaster;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
@@ -85,13 +86,14 @@ public final class AwakeningMaster extends AbstractNpcAI
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
 			case "awakening":
 			{
 				final QuestState st2 = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
-				if (st.hasQuestItems(SCROLL_OF_AFTERLIFE) && (player.getLevel() > 84) && (!player.isSubClassActive() || player.isDualClassActive()) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (st2 != null) && st2.isCompleted())
+				if ((!Config.NEED_SCROLL_OF_AFTERLIFE_FOR_AWAKEN || st.hasQuestItems(SCROLL_OF_AFTERLIFE)) && (player.getLevel() > 84) && (!player.isSubClassActive() || player.isDualClassActive()) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (!Config.NEED_SEIZE_YOUR_DESTINY_FOR_AWAKEN || ((st2 != null) && st2.isCompleted())))
 				{
 					switch (npc.getId())
 					{
@@ -192,11 +194,14 @@ public final class AwakeningMaster extends AbstractNpcAI
 			return;
 		}
 		
-		final QuestState st = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
-		
-		if ((st == null) || !st.isCompleted())
+		if (Config.NEED_SEIZE_YOUR_DESTINY_FOR_AWAKEN)
 		{
-			return;
+			final QuestState st = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
+			
+			if ((st == null) || !st.isCompleted())
+			{
+				return;
+			}
 		}
 		
 		if (player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()))
@@ -217,15 +222,18 @@ public final class AwakeningMaster extends AbstractNpcAI
 			return;
 		}
 		
-		final L2ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
-		if (item == null)
+		if (Config.NEED_SCROLL_OF_AFTERLIFE_FOR_AWAKEN)
 		{
-			return;
-		}
-		
-		if (!player.destroyItem("Awakening", item, player, true))
-		{
-			return;
+			final L2ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
+			if (item == null)
+			{
+				return;
+			}
+			
+			if (!player.destroyItem("Awakening", item, player, true))
+			{
+				return;
+			}
 		}
 		
 		for (ClassId newClass : player.getClassId().getNextClassIds())
@@ -238,44 +246,36 @@ public final class AwakeningMaster extends AbstractNpcAI
 			player.sendPacket(ui);
 			player.broadcastInfo();
 			
-			int socialId = 21; // Sigel
 			int itemId = ABELIUS_POWER; // Sigel
 			if (player.isInCategory(CategoryType.TYRR_GROUP))
 			{
-				socialId = 22;
 				itemId = SAPYROS_POWER;
 			}
 			else if (player.isInCategory(CategoryType.OTHELL_GROUP))
 			{
-				socialId = 23;
 				itemId = ASHAGEN_POWER;
 			}
 			else if (player.isInCategory(CategoryType.YUL_GROUP))
 			{
-				socialId = 24;
 				itemId = CRANIGG_POWER;
 			}
 			else if (player.isInCategory(CategoryType.FEOH_GROUP))
 			{
-				socialId = 25;
 				itemId = SOLTKREIG_POWER;
 			}
 			else if (player.isInCategory(CategoryType.ISS_GROUP))
 			{
-				socialId = 26;
 				itemId = NAVIAROPE_POWER;
 			}
 			else if (player.isInCategory(CategoryType.WYNN_GROUP))
 			{
-				socialId = 27;
 				itemId = LEISTER_POWER;
 			}
 			else if (player.isInCategory(CategoryType.AEORE_GROUP))
 			{
-				socialId = 28;
 				itemId = LAKCIS_POWER;
 			}
-			player.broadcastPacket(new SocialAction(player.getObjectId(), socialId));
+			player.broadcastPacket(new SocialAction(player.getObjectId(), 20));
 			giveItems(player, itemId, 1);
 			
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);

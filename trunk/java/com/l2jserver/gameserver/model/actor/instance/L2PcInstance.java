@@ -15044,7 +15044,11 @@ public final class L2PcInstance extends L2Playable
 		{
 			return _vitPoints;
 		}
-		return getSubClasses().get(getClassIndex()).getVitalityPoints();
+		if (getSubClasses().containsKey(getClassIndex()))
+		{
+			return getSubClasses().get(getClassIndex()).getVitalityPoints();
+		}
+		return _vitPoints;
 	}
 	
 	public void setVitalityPoints(int points)
@@ -15054,6 +15058,10 @@ public final class L2PcInstance extends L2Playable
 			_vitPoints = points;
 			return;
 		}
-		getSubClasses().get(getClassIndex()).setVitalityPoints(points);
+		if (getSubClasses().containsKey(getClassIndex()))
+		{
+			getSubClasses().get(getClassIndex()).setVitalityPoints(points);
+		}
+		_vitPoints = points;
 	}
 }

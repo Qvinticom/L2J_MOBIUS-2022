@@ -1153,6 +1153,36 @@ public final class L2ItemInstance extends L2Object
 		}
 	}
 	
+	public void changeAttribute(byte element, int value)
+	{
+		if (_elementals == null)
+		{
+			_elementals = new Elementals[1];
+			_elementals[0] = new Elementals(element, value);
+		}
+		else
+		{
+			Elementals elm = getElemental(element);
+			if (elm != null)
+			{
+				elm.setValue(value);
+			}
+			else
+			{
+				_elementals = new Elementals[1];
+				_elementals[0] = new Elementals(element, value);
+			}
+		}
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		{
+			updateItemElements(con);
+		}
+		catch (SQLException e)
+		{
+			_log.log(Level.SEVERE, "Could not update elementals for item: " + this + " from DB:", e);
+		}
+	}
+	
 	/**
 	 * Add elemental attribute to item and save to db
 	 * @param element
