@@ -21,7 +21,7 @@
 		http://www.gnu.org/copyleft/gpl.html
 	</description>
 
-	<property name="build" location="build" />
+	<property name="build" location="../build" />
 	<property name="build.bin" location="${build}/bin" />
 	<property name="build.dist" location="${build}/dist" />
 	<property name="build.dist.doc" location="${build.dist}/doc" />
