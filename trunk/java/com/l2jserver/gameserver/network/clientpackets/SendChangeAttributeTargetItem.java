@@ -48,7 +48,7 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 		{
 			return;
 		}
-		player.sendPacket(new ExChangeAttributeInfo(_elementOID, _itemOID, item.getAttackElementType()));
+		player.sendPacket(new ExChangeAttributeInfo(_elementOID, item.getAttackElementType()));
 	}
 	
 	@Override

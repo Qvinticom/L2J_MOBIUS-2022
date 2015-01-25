@@ -72,7 +72,6 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 		{
 			return null;
 		}
-		
 		int opcode = buf.get() & 0xFF;
 		
 		ReceivablePacket<L2GameClient> msg = null;
@@ -1561,13 +1560,13 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new RequestCardReward();
 								break;
 							case 0xE6:
-								// msg = new RequestDivideAdenaStart();
+								msg = new RequestDivideAdenaStart();
 								break;
 							case 0xE7:
-								// msg = new RequestDivideAdenaCancel();
+								msg = new RequestDivideAdenaCancel();
 								break;
 							case 0xE8:
-								// msg = new RequestDivideAdena();
+								msg = new RequestDivideAdena();
 								break;
 							case 0xE9:
 								msg = new RequestAcquireAbilityList();
