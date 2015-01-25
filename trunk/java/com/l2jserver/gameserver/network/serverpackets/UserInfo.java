@@ -46,6 +46,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	private final double _moveMultiplier;
 	private int _enchantLevel = 0;
 	private int _armorEnchant = 0;
+	private String _title;
 	
 	private final byte[] _masks = new byte[]
 	{
@@ -76,6 +77,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		_enchantLevel = cha.getInventory().getWeaponEnchant();
 		_armorEnchant = cha.getInventory().getArmorMinEnchant();
 		
+		_title = cha.getTitle();
+		if (cha.isGM() && cha.isInvisible())
+		{
+			_title += "[Invisible]";
+		}
+		
 		if (addAll)
 		{
 			addComponentType(UserInfoType.values());
@@ -105,7 +112,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			}
 			case CLAN:
 			{
-				_initSize += type.getBlockLength() + (_activeChar.getTitle().length() * 2);
+				_initSize += type.getBlockLength() + (_title.length() * 2);
 				break;
 			}
 			default:
@@ -276,8 +283,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.CLAN))
 		{
-			writeH(32 + (_activeChar.getTitle().length() * 2));
-			writeString(_activeChar.getTitle());
+			writeH(32 + (_title.length() * 2));
+			writeString(_title);
 			writeH(_activeChar.getPledgeType());
 			writeD(_activeChar.getClanId());
 			writeD(_activeChar.getClanCrestLargeId());
