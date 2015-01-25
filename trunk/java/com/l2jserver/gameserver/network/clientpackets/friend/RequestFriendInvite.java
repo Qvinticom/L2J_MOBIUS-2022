@@ -86,7 +86,7 @@ public final class RequestFriendInvite extends L2GameClientPacket
 		}
 		
 		// Target already in friend list.
-		if (activeChar.getFriendList().contains(friend.getObjectId()))
+		if (activeChar.getFriendList().containsKey(friend.getObjectId()))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(_name);

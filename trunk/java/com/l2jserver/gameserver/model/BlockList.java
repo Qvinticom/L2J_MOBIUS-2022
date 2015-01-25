@@ -21,20 +21,19 @@ package com.l2jserver.gameserver.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.BlockListPacket;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.friend.BlockListPacket;
 
 /**
  * This class ...
@@ -43,10 +42,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public class BlockList
 {
 	private static Logger _log = Logger.getLogger(BlockList.class.getName());
-	private static Map<Integer, List<Integer>> _offlineList = new FastMap<Integer, List<Integer>>().shared();
+	private static Map<Integer, HashMap<Integer, String>> _offlineList = new HashMap<>();
 	
 	private final L2PcInstance _owner;
-	private List<Integer> _blockList;
+	private HashMap<Integer, String> _blockList;
+	private final ArrayList<Integer> _updateMemos = new ArrayList<>();
 	
 	public BlockList(L2PcInstance owner)
 	{
@@ -60,14 +60,50 @@ public class BlockList
 	
 	private void addToBlockList(int target)
 	{
-		_blockList.add(target);
+		_blockList.put(target, "");
 		updateInDB(target, true);
 	}
 	
 	private void removeFromBlockList(int target)
 	{
 		_blockList.remove(Integer.valueOf(target));
+		if (_updateMemos.contains(target))
+		{
+			_updateMemos.remove(Integer.valueOf(target));
+		}
 		updateInDB(target, false);
+	}
+	
+	public void setBlockMemo(int target, String memo)
+	{
+		if (_blockList.containsKey(target))
+		{
+			_blockList.put(target, memo);
+			_updateMemos.add(target);
+		}
+	}
+	
+	public void updateBlockMemos()
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		{
+			for (int target : _updateMemos)
+			{
+				try (PreparedStatement statement = con.prepareStatement("UPDATE character_friends SET memo=? WHERE charId=? AND friendId=? AND relation=1"))
+				{
+					statement.setString(1, _blockList.get(target));
+					statement.setInt(2, _owner.getObjectId());
+					statement.setInt(3, target);
+					statement.execute();
+				}
+			}
+		}
+		catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		_blockList.clear();
 	}
 	
 	public void playerLogout()
@@ -75,11 +111,11 @@ public class BlockList
 		_offlineList.put(_owner.getObjectId(), _blockList);
 	}
 	
-	private static List<Integer> loadList(int ObjId)
+	private static HashMap<Integer, String> loadList(int ObjId)
 	{
-		List<Integer> list = new ArrayList<>();
+		HashMap<Integer, String> list = new HashMap<>();
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=? AND relation=1"))
+			PreparedStatement statement = con.prepareStatement("SELECT friendId, memo FROM character_friends WHERE charId=? AND relation=1"))
 		{
 			statement.setInt(1, ObjId);
 			try (ResultSet rset = statement.executeQuery())
@@ -92,7 +128,8 @@ public class BlockList
 					{
 						continue;
 					}
-					list.add(friendId);
+					String memo = rset.getString("memo");
+					list.put(friendId, memo);
 				}
 			}
 		}
@@ -135,12 +172,12 @@ public class BlockList
 	
 	public boolean isInBlockList(L2PcInstance target)
 	{
-		return _blockList.contains(target.getObjectId());
+		return _blockList.containsKey(target.getObjectId());
 	}
 	
 	public boolean isInBlockList(int targetId)
 	{
-		return _blockList.contains(targetId);
+		return _blockList.containsKey(targetId);
 	}
 	
 	public boolean isBlockAll()
@@ -165,7 +202,7 @@ public class BlockList
 		_owner.setMessageRefusal(state);
 	}
 	
-	private List<Integer> getBlockList()
+	public HashMap<Integer, String> getBlockList()
 	{
 		return _blockList;
 	}
@@ -179,7 +216,7 @@ public class BlockList
 		
 		String charName = CharNameTable.getInstance().getNameById(targetId);
 		
-		if (listOwner.getFriendList().contains(targetId))
+		if (listOwner.getFriendList().containsKey(targetId))
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(charName);
@@ -187,7 +224,7 @@ public class BlockList
 			return;
 		}
 		
-		if (listOwner.getBlockList().getBlockList().contains(targetId))
+		if (listOwner.getBlockList().getBlockList().containsKey(targetId))
 		{
 			listOwner.sendMessage("Already in ignore list.");
 			return;
@@ -220,7 +257,7 @@ public class BlockList
 		
 		String charName = CharNameTable.getInstance().getNameById(targetId);
 		
-		if (!listOwner.getBlockList().getBlockList().contains(targetId))
+		if (!listOwner.getBlockList().getBlockList().containsKey(targetId))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			listOwner.sendPacket(sm);
@@ -251,7 +288,7 @@ public class BlockList
 	
 	public static void sendListToOwner(L2PcInstance listOwner)
 	{
-		listOwner.sendPacket(new BlockListPacket(listOwner.getBlockList().getBlockList()));
+		listOwner.sendPacket(new BlockListPacket(listOwner));
 	}
 	
 	/**
@@ -270,6 +307,6 @@ public class BlockList
 		{
 			_offlineList.put(ownerId, loadList(ownerId));
 		}
-		return _offlineList.get(ownerId).contains(targetId);
+		return _offlineList.get(ownerId).containsKey(targetId);
 	}
 }

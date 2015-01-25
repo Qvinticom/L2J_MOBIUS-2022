@@ -63,7 +63,7 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 		}
 		
 		final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(_reciever);
-		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId()))
+		if ((targetPlayer == null) || !targetPlayer.getFriendList().containsKey(activeChar.getObjectId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			return;

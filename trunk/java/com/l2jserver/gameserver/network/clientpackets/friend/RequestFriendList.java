@@ -55,7 +55,7 @@ public final class RequestFriendList extends L2GameClientPacket
 		activeChar.sendPacket(SystemMessageId.FRIENDS_LIST);
 		
 		L2PcInstance friend = null;
-		for (int id : activeChar.getFriendList())
+		for (int id : activeChar.getFriendList().keySet())
 		{
 			// int friendId = rset.getInt("friendId");
 			String friendName = CharNameTable.getInstance().getNameById(id);

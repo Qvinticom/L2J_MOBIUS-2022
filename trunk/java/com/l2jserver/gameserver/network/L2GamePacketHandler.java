@@ -37,6 +37,8 @@ import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendDel;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendList;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestSendFriendMsg;
+import com.l2jserver.gameserver.network.clientpackets.friend.RequestUpdateBlockMemo;
+import com.l2jserver.gameserver.network.clientpackets.friend.RequestUpdateFriendMemo;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMenteeAdd;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
@@ -1302,7 +1304,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// @ msg = new RequestExEscapeScene();
 								break;
 							case 0x91:
-								// msg = new RequestFlyMove();
+								msg = new RequestFlyMove();
 								break;
 							case 0x92:
 								// msg = new RequestSurrenderPledgeWarEX(); (chS)
@@ -1332,10 +1334,10 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestFriendDetailInfo();
 								break;
 							case 0x95:
-								// msg = new RequestUpdateFriendMemo();
+								msg = new RequestUpdateFriendMemo();
 								break;
 							case 0x96:
-								// msg = new RequestUpdateBlockMemo();
+								msg = new RequestUpdateBlockMemo();
 								break;
 							case 0x97:
 								// msg = new RequestInzonePartyInfoHistory();
@@ -1392,7 +1394,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new RequestFirstPlayStart();
 								break;
 							case 0xAD:
-								// msg = new RequestFlyMoveStart();
+								msg = new RequestFlyMoveStart();
 								break;
 							case 0xAE:
 							case 0xAF:

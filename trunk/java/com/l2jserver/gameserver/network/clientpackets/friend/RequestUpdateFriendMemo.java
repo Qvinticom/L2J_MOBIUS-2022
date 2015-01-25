@@ -16,33 +16,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
-
-import java.util.List;
+package com.l2jserver.gameserver.network.clientpackets.friend;
 
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 
-/**
- * @author Sdw
- */
-public class BlockListPacket extends L2GameServerPacket
+public final class RequestUpdateFriendMemo extends L2GameClientPacket
 {
-	private final List<Integer> _playersId;
+	private static final String _C__D0_95_REQUESTUPDATEFRIENDMEMO = "[C] D0:95 RequestUpdateFriendMemo";
+	String cName;
+	String memo;
 	
-	public BlockListPacket(List<Integer> playersId)
+	@Override
+	protected void readImpl()
 	{
-		_playersId = playersId;
+		cName = readS();
+		memo = readS();
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected void runImpl()
 	{
-		writeC(0xD5);
-		writeD(_playersId.size());
-		for (int playerId : _playersId)
-		{
-			writeS(CharNameTable.getInstance().getNameById(playerId));
-			writeS(""); // memo ?
-		}
+		L2PcInstance player = getClient().getActiveChar();
+		int id = CharNameTable.getInstance().getIdByName(cName);
+		player.getFriend(id).setMemo(memo);
+		player.updateMemo(id);
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _C__D0_95_REQUESTUPDATEFRIENDMEMO;
 	}
 }

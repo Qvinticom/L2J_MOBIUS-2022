@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.friend.FriendAddRequestResult;
+import com.l2jserver.gameserver.network.serverpackets.friend.FriendList;
 
 public final class RequestAnswerFriendInvite extends L2GameClientPacket
 {
@@ -70,17 +71,19 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 					msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
 					msg.addString(player.getName());
 					requestor.sendPacket(msg);
-					requestor.getFriendList().add(player.getObjectId());
+					requestor.addFriend(player);
 					
 					// has joined as friend.
 					msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_AS_A_FRIEND);
 					msg.addString(requestor.getName());
 					player.sendPacket(msg);
-					player.getFriendList().add(requestor.getObjectId());
+					player.addFriend(requestor);
 					
 					// Send notifications for both player in order to show them online
 					player.sendPacket(new FriendAddRequestResult(requestor, 1));
 					requestor.sendPacket(new FriendAddRequestResult(player, 1));
+					player.sendPacket(new FriendList(player));
+					requestor.sendPacket(new FriendList(requestor));
 				}
 				catch (Exception e)
 				{

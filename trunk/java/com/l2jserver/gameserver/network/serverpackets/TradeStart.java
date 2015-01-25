@@ -39,7 +39,7 @@ public final class TradeStart extends AbstractItemPacket
 		
 		if (_partner != null)
 		{
-			if (player.getFriendList().contains(_partner.getObjectId()))
+			if (player.getFriendList().containsKey(_partner.getObjectId()))
 			{
 				_mask |= 0x01;
 			}

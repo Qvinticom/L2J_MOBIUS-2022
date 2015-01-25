@@ -20,8 +20,9 @@ package com.l2jserver.gameserver.network.serverpackets.friend;
 
 import java.util.Calendar;
 
-import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Friend;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
@@ -45,42 +46,47 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 		writeH(0xEC);
 		
 		writeD(_player.getObjectId());
+		Friend friend = _player.getFriend(CharNameTable.getInstance().getIdByName(_name));
 		
-		L2PcInstance friend = L2World.getInstance().getPlayer(_name);
-		if (friend == null)
+		L2PcInstance player = friend.getFriend();
+		if (player == null)
 		{
 			writeS(_name);
-			writeD(0);
-			writeD(0);
-			writeH(0);
-			writeH(0);
-			writeD(0);
-			writeD(0);
-			writeS("");
-			writeD(0);
-			writeD(0);
-			writeS("");
-			writeD(0);
-			writeS(""); // memo
+			writeD(0x00);
+			writeD(0x00);
+			writeH(friend.getLevel());
+			writeH(friend.getClassId());
+			writeD(friend.getClanId());
+			writeD(friend.getClanCrestId());
+			writeS(friend.getClanName());
+			writeD(friend.getAllyId());
+			writeD(friend.getAllyCrestId());
+			writeS(friend.getAllyName());
+			Calendar createDate = Calendar.getInstance();
+			createDate.setTimeInMillis(friend.getCreateDate());
+			writeC(createDate.get(Calendar.MONTH) + 1);
+			writeC(createDate.get(Calendar.DAY_OF_MONTH));
+			writeD((int) ((System.currentTimeMillis() - friend.getLastLogin()) / 1000));
+			writeS(friend.getMemo()); // memo
 		}
 		else
 		{
-			writeS(friend.getName());
-			writeD(friend.isOnlineInt());
-			writeD(friend.getObjectId());
-			writeH(friend.getLevel());
-			writeH(friend.getClassIndex());
-			writeD(friend.getClanId());
-			writeD(friend.getClanCrestId());
-			writeS(friend.getClan() != null ? friend.getClan().getName() : "");
-			writeD(friend.getAllyId());
-			writeD(friend.getAllyCrestId());
-			writeS(friend.getClan() != null ? friend.getClan().getAllyName() : "");
-			Calendar createDate = friend.getCreateDate();
-			writeC(createDate.get(Calendar.MONTH));
+			writeS(player.getName());
+			writeD(player.isOnlineInt());
+			writeD(player.getObjectId());
+			writeH(player.getLevel());
+			writeH(player.getClassId().getId());
+			writeD(player.getClanId());
+			writeD(player.getClanCrestId());
+			writeS(player.getClan() != null ? player.getClan().getName() : "");
+			writeD(player.getAllyId());
+			writeD(player.getAllyCrestId());
+			writeS(player.getClan() != null ? player.getClan().getAllyName() : "");
+			Calendar createDate = player.getCreateDate();
+			writeC(createDate.get(Calendar.MONTH) + 1);
 			writeC(createDate.get(Calendar.DAY_OF_MONTH));
-			writeD(friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - friend.getLastAccess()) / 1000);
-			writeS(""); // memo
+			writeD(player.isOnline() ? -1 : (int) ((System.currentTimeMillis() - player.getLastAccess()) / 1000));
+			writeS(friend.getMemo()); // memo
 		}
 	}
 }

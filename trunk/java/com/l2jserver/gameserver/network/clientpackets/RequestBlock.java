@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.friend.BlockListPacket;
 
 public final class RequestBlock extends L2GameClientPacket
 {
@@ -91,6 +92,7 @@ public final class RequestBlock extends L2GameClientPacket
 				{
 					BlockList.removeFromBlockList(activeChar, targetId);
 				}
+				activeChar.sendPacket(new BlockListPacket(activeChar));
 				break;
 			case BLOCKLIST:
 				BlockList.sendListToOwner(activeChar);

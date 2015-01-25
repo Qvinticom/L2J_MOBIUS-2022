@@ -190,6 +190,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.Duel;
 import com.l2jserver.gameserver.model.entity.Fort;
+import com.l2jserver.gameserver.model.entity.Friend;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.entity.L2Event;
@@ -7580,6 +7581,8 @@ public final class L2PcInstance extends L2Playable
 		{
 			storeUISettings();
 		}
+		getBlockList().updateBlockMemos();
+		updateMemos();
 		
 		final PlayerVariables vars = getScript(PlayerVariables.class);
 		if (vars != null)
@@ -11530,6 +11533,16 @@ public final class L2PcInstance extends L2Playable
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
 		
+		for (Friend friend : _friendList.values())
+		{
+			L2PcInstance player = friend.getFriend();
+			if (player == null)
+			{
+				continue;
+			}
+			player.putFriendDetailInfo(this);
+		}
+		
 		try
 		{
 			for (L2ZoneType zone : ZoneManager.getInstance().getZones(this))
@@ -13593,18 +13606,66 @@ public final class L2PcInstance extends L2Playable
 	/**
 	 * list of character friends
 	 */
-	private final List<Integer> _friendList = new FastList<>();
+	private final HashMap<Integer, Friend> _friendList = new HashMap<>();
+	private final ArrayList<Integer> _updateMemos = new ArrayList<>();
 	
-	public List<Integer> getFriendList()
+	public HashMap<Integer, Friend> getFriendList()
 	{
 		return _friendList;
+	}
+	
+	public Friend getFriend(int friendOID)
+	{
+		if (getFriendList().containsKey(friendOID))
+		{
+			return getFriendList().get(friendOID);
+		}
+		return null;
+	}
+	
+	public void updateMemo(int friendOID)
+	{
+		if (!_updateMemos.contains(friendOID))
+		{
+			_updateMemos.add(friendOID);
+		}
+	}
+	
+	public void updateMemos()
+	{
+		final String sqlQuery = "UPDATE character_friends SET memo=? WHERE charId=? AND friendId=? AND relation=0";
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		{
+			for (int target : _updateMemos)
+			{
+				try (PreparedStatement statement = con.prepareStatement(sqlQuery))
+				{
+					Friend friend = _friendList.get(target);
+					statement.setString(1, friend.getMemo());
+					statement.setInt(2, getObjectId());
+					statement.setInt(3, target);
+					statement.executeUpdate();
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Error found in " + getName() + "'s FriendList: " + e.getMessage(), e);
+		}
+		_updateMemos.clear();
+	}
+	
+	public void addFriend(L2PcInstance player)
+	{
+		_friendList.put(player.getObjectId(), new Friend(0, player.getObjectId(), ""));
+		putFriendDetailInfo(player);
 	}
 	
 	public void restoreFriendList()
 	{
 		_friendList.clear();
 		
-		final String sqlQuery = "SELECT friendId FROM character_friends WHERE charId=? AND relation=0";
+		final String sqlQuery = "SELECT friendId, memo FROM character_friends WHERE charId=? AND relation=0";
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(sqlQuery))
 		{
@@ -13618,7 +13679,9 @@ public final class L2PcInstance extends L2Playable
 					{
 						continue;
 					}
-					_friendList.add(friendId);
+					String memo = rset.getString("memo");
+					_friendList.put(friendId, new Friend(0, friendId, memo));
+					putFriendDetailInfo(friendId);
 				}
 			}
 		}
@@ -13628,10 +13691,105 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
+	public void putFriendDetailInfo(L2PcInstance player)
+	{
+		Friend friend = _friendList.get(player.getObjectId());
+		friend.setLevel(player.getLevel());
+		friend.setClassId(player.getClassId().getId());
+		if (player.getClan() != null)
+		{
+			friend.setClanId(player.getClan().getId());
+			friend.setClanName(player.getClan().getName());
+			friend.setClanCrestId(player.getClan().getCrestId());
+			friend.setAllyId(player.getClan().getAllyId());
+			friend.setAllyName(player.getClan().getAllyName());
+			friend.setAllyCrestId(player.getClan().getAllyCrestId());
+		}
+		friend.setLastLogin(System.currentTimeMillis());
+		friend.setCreateDate(player.getCreateDate().getTimeInMillis());
+	}
+	
+	public void putFriendDetailInfo(int friendId)
+	{
+		Friend friend = _friendList.get(friendId);
+		int bClassId = 0;
+		
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE charId=?");)
+		{
+			statement.setInt(1, friendId);
+			ResultSet rset = statement.executeQuery();
+			while (rset.next())
+			{
+				friend.setLevel(rset.getByte("level"));
+				friend.setClassId(rset.getInt("classid"));
+				bClassId = (rset.getInt("base_class"));
+				friend.setClanId(rset.getInt("clanid"));
+				friend.setLastLogin(rset.getLong("lastAccess"));
+				friend.setCreateDate(rset.getLong("createDate"));
+			}
+			statement.execute();
+			
+			rset.close();
+		}
+		catch (Exception e)
+		{
+			System.out.println("Failed loading character. " + e);
+			e.printStackTrace();
+		}
+		if (friend.getClassId() != bClassId)
+		{
+			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement("SELECT level FROM character_subclasses WHERE charId=? AND class_id=?");)
+			{
+				statement.setInt(1, friendId);
+				statement.setInt(2, friend.getClassId());
+				ResultSet rset = statement.executeQuery();
+				
+				while (rset.next())
+				{
+					friend.setLevel(rset.getByte("level"));
+				}
+				
+				statement.execute();
+				rset.close();
+			}
+			catch (Exception e)
+			{
+				System.out.println("Failed loading character_subclasses. " + e);
+				e.printStackTrace();
+			}
+		}
+		if (friend.getClanId() != 0)
+		{
+			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM clan_data WHERE clan_id=?");)
+			{
+				statement.setInt(1, friend.getClanId());
+				ResultSet rset = statement.executeQuery();
+				while (rset.next())
+				{
+					friend.setClanName(rset.getString("clan_name"));
+					friend.setClanCrestId(rset.getInt("crest_id"));
+					friend.setAllyId(rset.getInt("ally_id"));
+					friend.setAllyName(rset.getString("ally_name"));
+					friend.setAllyCrestId(rset.getInt("ally_crest_id"));
+				}
+				statement.execute();
+				rset.close();
+			}
+			catch (Exception e)
+			{
+				System.out.println("Failed loading clan_data. " + e);
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public void notifyFriends(int type)
 	{
 		L2FriendStatus pkt = new L2FriendStatus(this, type);
-		for (int id : _friendList)
+		for (int id : _friendList.keySet())
 		{
 			L2PcInstance friend = L2World.getInstance().getPlayer(id);
 			if (friend != null)
@@ -14898,5 +15056,4 @@ public final class L2PcInstance extends L2Playable
 		}
 		getSubClasses().get(getClassIndex()).setVitalityPoints(points);
 	}
-	
 }

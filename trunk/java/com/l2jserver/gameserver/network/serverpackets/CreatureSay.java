@@ -52,7 +52,7 @@ public final class CreatureSay extends L2GameServerPacket
 		_charLevel = sender.getLevel();
 		_textType = messageType;
 		_text = text;
-		if (receiver.getFriendList().contains(sender.getObjectId()))
+		if (receiver.getFriendList().containsKey(sender.getObjectId()))
 		{
 			_mask |= 0x01;
 		}
