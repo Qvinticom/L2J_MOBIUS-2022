@@ -23,8 +23,6 @@ import java.util.logging.Logger;
 
 import javax.script.ScriptContext;
 
-import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
-
 public class Expression
 {
 	protected static final Logger _log = Logger.getLogger(Expression.class.getName());
@@ -33,32 +31,6 @@ public class Expression
 	private final String _lang;
 	@SuppressWarnings("unused")
 	private final String _code;
-	
-	public static Object eval(String lang, String code)
-	{
-		try
-		{
-			return L2ScriptEngineManager.getInstance().eval(lang, code);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "", e);
-			return null;
-		}
-	}
-	
-	public static Object eval(ScriptContext context, String lang, String code)
-	{
-		try
-		{
-			return L2ScriptEngineManager.getInstance().eval(lang, code, context);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "", e);
-			return null;
-		}
-	}
 	
 	public static Expression create(ScriptContext context, String lang, String code)
 	{

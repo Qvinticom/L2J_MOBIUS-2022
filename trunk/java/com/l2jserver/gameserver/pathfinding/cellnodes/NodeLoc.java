@@ -18,9 +18,9 @@
  */
 package com.l2jserver.gameserver.pathfinding.cellnodes;
 
+import com.l2jserver.commons.geodriver.Cell;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
-import com.l2jserver.geodriver.Cell;
 
 /**
  * @author -Nemesiss-, HorridoJoho

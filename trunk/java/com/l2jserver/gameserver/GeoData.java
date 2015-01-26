@@ -24,6 +24,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.commons.geodriver.Cell;
+import com.l2jserver.commons.geodriver.GeoDriver;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -32,8 +34,6 @@ import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.util.GeoUtils;
 import com.l2jserver.gameserver.util.LinePointIterator;
 import com.l2jserver.gameserver.util.LinePointIterator3D;
-import com.l2jserver.geodriver.Cell;
-import com.l2jserver.geodriver.GeoDriver;
 
 /**
  * @author -Nemesiss-, HorridoJoho

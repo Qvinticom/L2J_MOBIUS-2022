@@ -26,11 +26,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.mmocore.network.MMOClient;
-import org.mmocore.network.MMOConnection;
-import org.mmocore.network.SendablePacket;
-
 import com.l2jserver.Config;
+import com.l2jserver.commons.mmocore.MMOClient;
+import com.l2jserver.commons.mmocore.MMOConnection;
+import com.l2jserver.commons.mmocore.SendablePacket;
 import com.l2jserver.loginserver.LoginController;
 import com.l2jserver.loginserver.SessionKey;
 import com.l2jserver.loginserver.network.serverpackets.L2LoginServerPacket;

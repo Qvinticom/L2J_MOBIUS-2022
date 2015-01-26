@@ -25,6 +25,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -40,9 +41,8 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import javax.script.SimpleScriptContext;
 
-import javolution.util.FastMap;
-
 import com.l2jserver.Config;
+import com.l2jserver.commons.javaengine.JavaScriptEngineFactory;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -59,8 +59,7 @@ public final class L2ScriptEngineManager
 		return SingletonHolder._instance;
 	}
 	
-	private final Map<String, ScriptEngine> _nameEngines = new FastMap<>();
-	private final Map<String, ScriptEngine> _extEngines = new FastMap<>();
+	private final Map<String, ScriptEngine> _extEngines = new HashMap<>();
 	private final List<ScriptManager<?>> _scriptManagers = new LinkedList<>();
 	
 	private File _currentLoadingScript;
@@ -87,56 +86,10 @@ public final class L2ScriptEngineManager
 	protected L2ScriptEngineManager()
 	{
 		ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
-		List<ScriptEngineFactory> factories = scriptEngineManager.getEngineFactories();
-		
-		for (ScriptEngineFactory factory : factories)
-		{
-			try
-			{
-				ScriptEngine engine = factory.getScriptEngine();
-				boolean reg = false;
-				for (String name : factory.getNames())
-				{
-					ScriptEngine existentEngine = _nameEngines.get(name);
-					
-					if (existentEngine != null)
-					{
-						double engineVer = Double.parseDouble(factory.getEngineVersion());
-						double existentEngVer = Double.parseDouble(existentEngine.getFactory().getEngineVersion());
-						
-						if (engineVer <= existentEngVer)
-						{
-							continue;
-						}
-					}
-					
-					reg = true;
-					_nameEngines.put(name, engine);
-				}
-				
-				if (reg)
-				{
-					_log.info("Script Engine: " + factory.getEngineName() + " " + factory.getEngineVersion() + " - Language: " + factory.getLanguageName() + " - Language Version: " + factory.getLanguageVersion());
-				}
-				
-				for (String ext : factory.getExtensions())
-				{
-					if (!ext.equals("java") || factory.getLanguageName().equals("java"))
-					{
-						_extEngines.put(ext, engine);
-					}
-				}
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Failed initializing factory: " + e.getMessage(), e);
-			}
-		}
-	}
-	
-	private ScriptEngine getEngineByName(String name)
-	{
-		return _nameEngines.get(name);
+		ScriptEngineFactory factory = new JavaScriptEngineFactory();
+		scriptEngineManager.registerEngineExtension("java", factory);
+		_extEngines.put("java", factory.getScriptEngine());
+		_log.info("Script Engine: " + factory.getEngineName() + " " + factory.getEngineVersion() + " - Language: " + factory.getLanguageName() + " - Language Version: " + factory.getLanguageVersion());
 	}
 	
 	private ScriptEngine getEngineByExtension(String ext)
@@ -303,16 +256,6 @@ public final class L2ScriptEngineManager
 		executeScript(engine, file);
 	}
 	
-	public void executeScript(String engineName, File file) throws ScriptException
-	{
-		ScriptEngine engine = getEngineByName(engineName);
-		if (engine == null)
-		{
-			throw new ScriptException("No engine registered with name (" + engineName + ")");
-		}
-		executeScript(engine, file);
-	}
-	
 	public void executeScript(ScriptEngine engine, File file) throws ScriptException
 	{
 		if (VERBOSE_LOADING)
@@ -375,16 +318,6 @@ public final class L2ScriptEngineManager
 		return engine.getContext();
 	}
 	
-	public ScriptContext getScriptContext(String engineName)
-	{
-		ScriptEngine engine = getEngineByName(engineName);
-		if (engine == null)
-		{
-			throw new IllegalStateException("No engine registered with name (" + engineName + ")");
-		}
-		return getScriptContext(engine);
-	}
-	
 	public Object eval(ScriptEngine engine, String script, ScriptContext context) throws ScriptException
 	{
 		if ((engine instanceof Compilable) && ATTEMPT_COMPILATION)
@@ -394,21 +327,6 @@ public final class L2ScriptEngineManager
 			return context != null ? cs.eval(context) : cs.eval();
 		}
 		return context != null ? engine.eval(script, context) : engine.eval(script);
-	}
-	
-	public Object eval(String engineName, String script) throws ScriptException
-	{
-		return eval(engineName, script, null);
-	}
-	
-	public Object eval(String engineName, String script, ScriptContext context) throws ScriptException
-	{
-		ScriptEngine engine = getEngineByName(engineName);
-		if (engine == null)
-		{
-			throw new ScriptException("No engine registered with name (" + engineName + ")");
-		}
-		return eval(engine, script, context);
 	}
 	
 	public Object eval(ScriptEngine engine, String script) throws ScriptException
@@ -454,7 +372,6 @@ public final class L2ScriptEngineManager
 	public List<ScriptManager<?>> getScriptManagers()
 	{
 		return _scriptManagers;
-		
 	}
 	
 	/**

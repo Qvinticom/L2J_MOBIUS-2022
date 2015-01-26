@@ -21,13 +21,12 @@ package com.l2jserver.gameserver.network;
 import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
-import org.mmocore.network.IClientFactory;
-import org.mmocore.network.IMMOExecutor;
-import org.mmocore.network.IPacketHandler;
-import org.mmocore.network.MMOConnection;
-import org.mmocore.network.ReceivablePacket;
-
 import com.l2jserver.Config;
+import com.l2jserver.commons.mmocore.IClientFactory;
+import com.l2jserver.commons.mmocore.IMMOExecutor;
+import com.l2jserver.commons.mmocore.IPacketHandler;
+import com.l2jserver.commons.mmocore.MMOConnection;
+import com.l2jserver.commons.mmocore.ReceivablePacket;
 import com.l2jserver.gameserver.network.L2GameClient.GameClientState;
 import com.l2jserver.gameserver.network.clientpackets.*;
 import com.l2jserver.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
