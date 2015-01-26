@@ -25,6 +25,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
+import com.l2jserver.gameserver.instancemanager.FactionManager;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2AccessLevel;
@@ -246,6 +247,12 @@ public final class RequestSendPost extends L2GameClientPacket
 		if (MailManager.getInstance().getInboxSize(receiverId) >= INBOX_SIZE)
 		{
 			activeChar.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && (FactionManager.getInstance().getFactionByCharId(activeChar.getObjectId()) != FactionManager.getInstance().getFactionByCharId(receiverId)))
+		{
+			activeChar.sendMessage("You cannot send mails to the opposing faction.");
 			return;
 		}
 		

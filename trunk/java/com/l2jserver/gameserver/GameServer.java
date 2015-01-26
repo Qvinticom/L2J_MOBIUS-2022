@@ -107,6 +107,7 @@ import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
+import com.l2jserver.gameserver.instancemanager.FactionManager;
 import com.l2jserver.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
@@ -257,6 +258,11 @@ public class GameServer
 		CharSummonTable.getInstance().init();
 		BeautyShopData.getInstance();
 		MentorManager.getInstance();
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			_log.info("FactionTable: Faction system is enabled.");
+			FactionManager.getInstance();
+		}
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{
 			_log.info("PremiumManager: Premium system is enabled.");
