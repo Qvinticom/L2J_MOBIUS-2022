@@ -170,6 +170,7 @@ import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
+import handlers.itemhandlers.ItemAppearance;
 import handlers.itemhandlers.ItemSkills;
 import handlers.itemhandlers.ItemSkillsTemplate;
 import handlers.itemhandlers.ManaPotion;
@@ -474,6 +475,7 @@ public class MasterHandler
 			ExtractableItems.class,
 			FishShots.class,
 			Harvester.class,
+			ItemAppearance.class,
 			ItemSkills.class,
 			ItemSkillsTemplate.class,
 			ManaPotion.class,

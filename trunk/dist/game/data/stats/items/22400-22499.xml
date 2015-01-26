@@ -20,6 +20,7 @@
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemAppearance" />
 	</item>
 	<item id="22404" name="Weapon Appearance Stone (A-grade)" additionalName="" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->

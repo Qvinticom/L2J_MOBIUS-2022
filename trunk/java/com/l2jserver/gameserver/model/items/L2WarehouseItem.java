@@ -64,6 +64,9 @@ public class L2WarehouseItem
 	
 	private final int _time;
 	
+	private final int _appearanceId;
+	private final long _appearanceTime;
+	
 	public L2WarehouseItem(L2ItemInstance item)
 	{
 		_item = item.getItem();
@@ -94,6 +97,8 @@ public class L2WarehouseItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
+		_appearanceId = item.getAppearanceId();
+		_appearanceTime = item.getAppearanceTime();
 	}
 	
 	/**
@@ -295,5 +300,15 @@ public class L2WarehouseItem
 	public String toString()
 	{
 		return _item.toString();
+	}
+	
+	public int getAppearanceId()
+	{
+		return _appearanceId;
+	}
+	
+	public long getAppearanceTime()
+	{
+		return _appearanceTime;
 	}
 }

@@ -21,8 +21,10 @@ package com.l2jserver.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.data.xml.impl.AppearanceStonesData;
 import com.l2jserver.gameserver.model.L2ExtractableProduct;
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.entity.AppearanceStone;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.util.StringUtil;
@@ -37,6 +39,7 @@ public final class L2EtcItem extends L2Item
 	private final boolean _isBlessed;
 	private final List<L2ExtractableProduct> _extractableItems;
 	private final boolean _isInfinite;
+	private final AppearanceStone _appearanceStone;
 	
 	/**
 	 * Constructor for EtcItem.
@@ -120,6 +123,7 @@ public final class L2EtcItem extends L2Item
 		}
 		
 		_isInfinite = set.getBoolean("is_infinite", false);
+		_appearanceStone = (_handler != null) && _handler.equalsIgnoreCase("ItemAppearance") ? AppearanceStonesData.getInstance().getStone(getId()) : null;
 	}
 	
 	/**
@@ -170,5 +174,11 @@ public final class L2EtcItem extends L2Item
 	public boolean isInfinite()
 	{
 		return _isInfinite;
+	}
+	
+	@Override
+	public AppearanceStone getAppearanceStone()
+	{
+		return _appearanceStone;
 	}
 }

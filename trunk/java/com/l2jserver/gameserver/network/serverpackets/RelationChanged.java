@@ -92,7 +92,7 @@ public final class RelationChanged extends L2GameServerPacket
 		r._objId = activeChar.getObjectId();
 		r._relation = relation;
 		r._autoAttackable = autoattackable ? 1 : 0;
-		r._karma = 1 - activeChar.getKarma();
+		r._karma = activeChar.getKarma();
 		r._pvpFlag = activeChar.getPvpFlag();
 		_multi.add(r);
 	}

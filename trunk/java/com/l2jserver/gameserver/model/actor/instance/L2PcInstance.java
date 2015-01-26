@@ -4850,6 +4850,15 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
+			if ((getPrivateStoreType() != PrivateStoreType.NONE) && !isAlikeDead())
+			{
+				setPrivateStoreType(PrivateStoreType.NONE);
+				if (isSitting())
+				{
+					standUp();
+				}
+				return;
+			}
 			if (isInsideZone(ZoneId.NO_STORE))
 			{
 				sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
@@ -15086,5 +15095,40 @@ public final class L2PcInstance extends L2Playable
 	public void setSecondCompoundOID(int secondCompoundOID)
 	{
 		_secondCompoundOID = secondCompoundOID;
+	}
+	
+	L2ItemInstance _usingAStone = null;
+	
+	public L2ItemInstance getUsingAppearanceStone()
+	{
+		return _usingAStone;
+	}
+	
+	public void setUsingAppearanceStone(L2ItemInstance stone)
+	{
+		_usingAStone = stone;
+	}
+	
+	L2ItemInstance _appearanceItem = null;
+	L2ItemInstance _targetAppearanceItem = null;
+	
+	public L2ItemInstance getAppearanceItem()
+	{
+		return _appearanceItem;
+	}
+	
+	public void setAppearanceItem(L2ItemInstance item)
+	{
+		_appearanceItem = item;
+	}
+	
+	public L2ItemInstance getTargetAppearanceItem()
+	{
+		return _targetAppearanceItem;
+	}
+	
+	public void setTargetAppearanceItem(L2ItemInstance item)
+	{
+		_targetAppearanceItem = item;
 	}
 }

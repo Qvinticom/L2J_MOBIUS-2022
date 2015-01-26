@@ -203,7 +203,15 @@ public class OfflineTradersTable
 								case BUY:
 									while (items.next())
 									{
-										if (player.getBuyList().addItemByItemId(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
+										if (player.getBuyList().addItemByItemId(items.getInt(2), items.getLong(3), items.getLong(4), 0, 0, 0, new int[]
+										{
+											0,
+											0,
+											0,
+											0,
+											0,
+											0
+										}, 0) == null)
 										{
 											throw new NullPointerException();
 										}

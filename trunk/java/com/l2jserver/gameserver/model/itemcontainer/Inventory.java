@@ -1112,6 +1112,12 @@ public abstract class Inventory extends ItemContainer
 		return ((item != null) && (item.getAugmentation() != null)) ? item.getAugmentation().getAugmentationId() : 0;
 	}
 	
+	public int getPaperdollVisualId(int slot)
+	{
+		final L2ItemInstance item = _paperdoll[slot];
+		return (item != null) ? item.getAppearanceId() : 0;
+	}
+	
 	/**
 	 * Returns the objectID associated to the item in the paperdoll slot
 	 * @param slot : int pointing out the slot
@@ -1778,7 +1784,7 @@ public abstract class Inventory extends ItemContainer
 	public void restore()
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
+			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time, appearance_id, appearance_time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
 		{
 			statement.setInt(1, getOwnerId());
 			statement.setString(2, getBaseLocation().name());

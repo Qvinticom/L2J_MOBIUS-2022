@@ -48,6 +48,7 @@ import com.l2jserver.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jserver.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.data.xml.impl.AppearanceStonesData;
 import com.l2jserver.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jserver.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
@@ -224,6 +225,7 @@ public class GameServer
 		SummonSkillsTable.getInstance();
 		
 		printSection("Items");
+		AppearanceStonesData.getInstance();
 		ItemTable.getInstance();
 		EnchantItemGroupsData.getInstance();
 		EnchantItemData.getInstance();

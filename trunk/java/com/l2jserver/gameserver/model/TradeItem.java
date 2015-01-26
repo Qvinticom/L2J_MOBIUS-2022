@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public class TradeItem
 {
+	private L2ItemInstance _itemInstance;
 	private int _objectId;
 	private final L2Item _item;
 	private final int _location;
@@ -44,9 +45,17 @@ public class TradeItem
 		0
 	};
 	private final int[] _enchantOptions;
+	private final boolean _isAugmented;
+	private final L2Augmentation _augmentation;
+	private final int _mana;
+	private final boolean _isTimeLimited;
+	private final int _time;
+	private final int _appearanceId;
+	private final long _appearanceTime;
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
+		_itemInstance = item;
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -62,10 +71,18 @@ public class TradeItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
+		_isAugmented = item.isAugmented();
+		_augmentation = item.getAugmentation();
+		_mana = item.getMana();
+		_isTimeLimited = item.isTimeLimitedItem();
+		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+		_appearanceId = item.getAppearanceId();
+		_appearanceTime = item.getAppearanceTime();
 	}
 	
-	public TradeItem(L2Item item, long count, long price)
+	public TradeItem(L2Item item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
 	{
+		_itemInstance = null;
 		_objectId = 0;
 		_item = item;
 		_location = 0;
@@ -75,13 +92,25 @@ public class TradeItem
 		_count = count;
 		_storeCount = count;
 		_price = price;
-		_elemAtkType = Elementals.NONE;
-		_elemAtkPower = 0;
+		_elemAtkType = (byte) attackAttribute;
+		_elemAtkPower = attackAttributeValue;
+		for (byte i = 0; i < 6; i++)
+		{
+			_elemDefAttr[i] = defenseAttributes[i];
+		}
 		_enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
+		_isAugmented = false;
+		_augmentation = null;
+		_mana = -1;
+		_isTimeLimited = false;
+		_time = -9999;
+		_appearanceId = appearanceId;
+		_appearanceTime = -1;
 	}
 	
-	public TradeItem(TradeItem item, long count, long price)
+	public TradeItem(TradeItem item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
 	{
+		_itemInstance = item.getItemInstance();
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -98,6 +127,23 @@ public class TradeItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
+		_isAugmented = item.isAugmented();
+		_augmentation = item.getAugmentation();
+		_mana = item.getMana();
+		_isTimeLimited = item.isTimeLimitedItem();
+		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+		_appearanceId = item.getAppearanceId();
+		_appearanceTime = item.getAppearanceTime();
+	}
+	
+	public L2ItemInstance getItemInstance()
+	{
+		return _itemInstance;
+	}
+	
+	public void setItemInstance(L2ItemInstance it)
+	{
+		_itemInstance = it;
 	}
 	
 	public void setObjectId(int objectId)
@@ -183,5 +229,40 @@ public class TradeItem
 	public int[] getEnchantOptions()
 	{
 		return _enchantOptions;
+	}
+	
+	public boolean isAugmented()
+	{
+		return _isAugmented;
+	}
+	
+	public L2Augmentation getAugmentation()
+	{
+		return _augmentation;
+	}
+	
+	public int getMana()
+	{
+		return _mana;
+	}
+	
+	public boolean isTimeLimitedItem()
+	{
+		return _isTimeLimited;
+	}
+	
+	public int getAppearanceId()
+	{
+		return _appearanceId;
+	}
+	
+	public long getAppearanceTime()
+	{
+		return _appearanceTime;
+	}
+	
+	public int getRemainingTime()
+	{
+		return _time;
 	}
 }

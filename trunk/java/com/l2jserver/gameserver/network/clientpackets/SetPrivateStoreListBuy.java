@@ -24,6 +24,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.TradeList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -47,6 +48,11 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
+		L2PcInstance player = getClient().getActiveChar();
+		if (player == null)
+		{
+			return;
+		}
 		int count = readD();
 		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
@@ -57,9 +63,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		for (int i = 0; i < count; i++)
 		{
 			int itemId = readD();
-			
-			readH(); // TODO analyse this
-			readH(); // TODO analyse this
+			int enchantLevel = readD();
 			
 			long cnt = readQ();
 			long price = readQ();
@@ -69,12 +73,37 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 				_items = null;
 				return;
 			}
-			readD(); // Unk
-			readD(); // Unk
-			readD(); // Unk
-			readD(); // Unk
-			
-			_items[i] = new Item(itemId, cnt, price);
+			int attackAttribute = readH(); // Attack Attribute Type
+			int attackAttributeValue = readH(); // Attack Attribute Value
+			int defenseAttributes[] = new int[6];
+			for (int h = 0; h < 6; h++)
+			{
+				defenseAttributes[i] = readH(); // Defense attributes
+			}
+			int appearanceId = readD(); // Appearance ID
+			boolean canUse = false;
+			for (L2ItemInstance item : player.getInventory().getItemsByItemId(itemId))
+			{
+				if ((enchantLevel == item.getEnchantLevel()) && (attackAttribute == item.getAttackElementType()) && (attackAttributeValue == item.getAttackElementPower()) && (appearanceId == item.getAppearanceId()) && (item.getElementDefAttr((byte) 0) == defenseAttributes[0]) && (item.getElementDefAttr((byte) 1) == defenseAttributes[1]) && (item.getElementDefAttr((byte) 2) == defenseAttributes[2]) && (item.getElementDefAttr((byte) 3) == defenseAttributes[3]) && (item.getElementDefAttr((byte) 4) == defenseAttributes[4]) && (item.getElementDefAttr((byte) 5) == defenseAttributes[5]))
+				{
+					canUse = true;
+					break;
+				}
+			}
+			if (!canUse)
+			{
+				enchantLevel = 0;
+				attackAttribute = -1;
+				attackAttributeValue = 0;
+				defenseAttributes[0] = 0;
+				defenseAttributes[1] = 0;
+				defenseAttributes[2] = 0;
+				defenseAttributes[3] = 0;
+				defenseAttributes[4] = 0;
+				defenseAttributes[5] = 0;
+				appearanceId = 0;
+			}
+			_items[i] = new Item(itemId, cnt, price, enchantLevel, attackAttribute, attackAttributeValue, defenseAttributes, appearanceId);
 		}
 	}
 	
@@ -170,12 +199,22 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		private final int _itemId;
 		private final long _count;
 		private final long _price;
+		private final int _enchantLevel;
+		private final int _attackAttribute;
+		private final int _attackAttributeValue;
+		private final int _defenseAttributes[];
+		private final int _appearanceId;
 		
-		public Item(int id, long num, long pri)
+		public Item(int itemId, long cnt, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
 		{
-			_itemId = id;
-			_count = num;
-			_price = pri;
+			_itemId = itemId;
+			_count = cnt;
+			_price = price;
+			_enchantLevel = enchantLevel;
+			_attackAttribute = attackAttribute;
+			_attackAttributeValue = attackAttributeValue;
+			_defenseAttributes = defenseAttributes;
+			_appearanceId = appearanceId;
 		}
 		
 		public boolean addToTradeList(TradeList list)
@@ -185,7 +224,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 				return false;
 			}
 			
-			list.addItemByItemId(_itemId, _count, _price);
+			list.addItemByItemId(_itemId, _count, _price, _enchantLevel, _attackAttribute, _attackAttributeValue, _defenseAttributes, _appearanceId);
 			return true;
 		}
 		

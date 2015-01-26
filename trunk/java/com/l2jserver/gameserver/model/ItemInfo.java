@@ -76,6 +76,9 @@ public class ItemInfo
 	
 	private int[] _option;
 	
+	private int _appearanceId;
+	private long _appearanceTime;
+	
 	/**
 	 * Get all information from L2ItemInstance to generate ItemInfo.
 	 * @param item
@@ -148,6 +151,8 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
+		_appearanceId = item.getAppearanceId();
+		_appearanceTime = item.getAppearanceTime();
 	}
 	
 	public ItemInfo(L2ItemInstance item, int change)
@@ -173,7 +178,14 @@ public class ItemInfo
 		_enchant = item.getEnchant();
 		
 		// Get the augmentation boni
-		_augmentation = 0;
+		if (item.isAugmented())
+		{
+			_augmentation = item.getAugmentation().getAugmentationId();
+		}
+		else
+		{
+			_augmentation = 0;
+		}
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -189,9 +201,8 @@ public class ItemInfo
 		_change = 0;
 		
 		// Get shadow item mana
-		_mana = -1;
-		_time = -9999;
-		
+		_mana = item.getMana();
+		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_location = item.getLocationSlot();
 		
 		_elemAtkType = item.getAttackElementType();
@@ -200,8 +211,9 @@ public class ItemInfo
 		{
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
-		
 		_option = item.getEnchantOptions();
+		_appearanceId = item.getAppearanceId();
+		_appearanceTime = item.getAppearanceTime();
 	}
 	
 	public ItemInfo(Product item)
@@ -291,6 +303,8 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
+		_appearanceId = item.getAppearanceId();
+		_appearanceTime = item.getAppearanceTime();
 	}
 	
 	public int getObjectId()
@@ -376,5 +390,15 @@ public class ItemInfo
 	public int[] getEnchantOptions()
 	{
 		return _option;
+	}
+	
+	public int getAppearanceId()
+	{
+		return _appearanceId;
+	}
+	
+	public long getAppearanceTime()
+	{
+		return _appearanceTime;
 	}
 }

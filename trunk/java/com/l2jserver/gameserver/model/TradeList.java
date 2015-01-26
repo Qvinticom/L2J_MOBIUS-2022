@@ -126,7 +126,12 @@ public class TradeList
 		FastList<TradeItem> list = FastList.newInstance();
 		for (TradeItem item : _items)
 		{
-			item = new TradeItem(item, item.getCount(), item.getPrice());
+			int el[] = new int[6];
+			for (int i = 0; i < 6; i++)
+			{
+				el[i] = item.getElementDefAttr((byte) i);
+			}
+			item = new TradeItem(item, item.getCount(), item.getPrice(), item.getEnchant(), item.getAttackElementType(), item.getAttackElementPower(), el, item.getAppearanceId());
 			inventory.adjustAvailableItem(item);
 			list.add(item);
 		}
@@ -273,9 +278,14 @@ public class TradeList
 	 * @param itemId
 	 * @param count
 	 * @param price
+	 * @param enchantLevel
+	 * @param attackAttribute
+	 * @param attackAttributeValue
+	 * @param defenseAttributes
+	 * @param appearanceId
 	 * @return
 	 */
-	public synchronized TradeItem addItemByItemId(int itemId, long count, long price)
+	public synchronized TradeItem addItemByItemId(int itemId, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
 	{
 		if (isLocked())
 		{
@@ -307,7 +317,7 @@ public class TradeList
 			return null;
 		}
 		
-		TradeItem titem = new TradeItem(item, count, price);
+		TradeItem titem = new TradeItem(item, count, price, enchantLevel, attackAttribute, attackAttributeValue, defenseAttributes, appearanceId);
 		_items.add(titem);
 		
 		// If Player has already confirmed this trade, invalidate the confirmation

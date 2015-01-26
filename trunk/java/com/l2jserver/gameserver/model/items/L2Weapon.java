@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.conditions.ConditionGameChance;
+import com.l2jserver.gameserver.model.entity.AppearanceStone;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -448,5 +449,11 @@ public final class L2Weapon extends L2Item
 			sm.addSkillName(onMagicSkill);
 			caster.sendPacket(sm);
 		}
+	}
+	
+	@Override
+	public AppearanceStone getAppearanceStone()
+	{
+		return null;
 	}
 }

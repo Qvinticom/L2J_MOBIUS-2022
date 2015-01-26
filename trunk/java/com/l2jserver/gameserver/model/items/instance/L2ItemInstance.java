@@ -170,6 +170,9 @@ public final class L2ItemInstance extends L2Object
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
 	
+	private int _appearanceId = 0;
+	private long _appearanceTime = -1;
+	
 	/**
 	 * Constructor of the L2ItemInstance from the objectId and the itemId.
 	 * @param objectId : int designating the ID of the object in the world
@@ -1499,8 +1502,8 @@ public final class L2ItemInstance extends L2Object
 	public static L2ItemInstance restoreFromDb(int ownerId, ResultSet rs)
 	{
 		L2ItemInstance inst = null;
-		int objectId, item_id, loc_data, enchant_level, custom_type1, custom_type2, manaLeft;
-		long time, count;
+		int objectId, item_id, loc_data, enchant_level, custom_type1, custom_type2, manaLeft, appearance_id;
+		long time, count, appearance_time;
 		ItemLocation loc;
 		try
 		{
@@ -1514,6 +1517,8 @@ public final class L2ItemInstance extends L2Object
 			custom_type2 = rs.getInt("custom_type2");
 			manaLeft = rs.getInt("mana_left");
 			time = rs.getLong("time");
+			appearance_id = rs.getInt("appearance_id");
+			appearance_time = rs.getLong("appearance_time");
 		}
 		catch (Exception e)
 		{
@@ -1540,6 +1545,8 @@ public final class L2ItemInstance extends L2Object
 		// Setup life time for shadow weapons
 		inst._mana = manaLeft;
 		inst._time = time;
+		inst._appearanceId = appearance_id;
+		inst._appearanceTime = appearance_time;
 		
 		// load augmentation and elemental enchant
 		if (inst.isEquipable())
@@ -1658,7 +1665,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? " + "WHERE object_id = ?"))
+			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=?,appearance_id=?,appearance_time=? " + "WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
 			ps.setLong(2, getCount());
@@ -1669,7 +1676,9 @@ public final class L2ItemInstance extends L2Object
 			ps.setInt(7, getCustomType2());
 			ps.setInt(8, getMana());
 			ps.setLong(9, getTime());
-			ps.setInt(10, getObjectId());
+			ps.setInt(10, getAppearanceId());
+			ps.setLong(11, getAppearanceTime());
+			ps.setInt(12, getObjectId());
 			ps.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;
@@ -2251,5 +2260,27 @@ public final class L2ItemInstance extends L2Object
 			_lifeTimeTask.cancel(false);
 			_lifeTimeTask = null;
 		}
+	}
+	
+	public int getAppearanceId()
+	{
+		return _appearanceId;
+	}
+	
+	public void setAppearanceId(int appearanceId)
+	{
+		_storedInDb = false;
+		_appearanceId = appearanceId;
+	}
+	
+	public long getAppearanceTime()
+	{
+		_storedInDb = false;
+		return _appearanceTime;
+	}
+	
+	public void setAppearanceTime(long appearanceTime)
+	{
+		_appearanceTime = appearanceTime;
 	}
 }
