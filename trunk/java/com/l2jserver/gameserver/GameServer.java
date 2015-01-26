@@ -260,7 +260,6 @@ public class GameServer
 		MentorManager.getInstance();
 		if (Config.FACTION_SYSTEM_ENABLED)
 		{
-			_log.info("FactionTable: Faction system is enabled.");
 			FactionManager.getInstance();
 		}
 		if (Config.PREMIUM_SYSTEM_ENABLED)

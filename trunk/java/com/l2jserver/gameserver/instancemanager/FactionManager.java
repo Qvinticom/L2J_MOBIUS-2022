@@ -62,7 +62,7 @@ public class FactionManager
 		{
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not load character faction information: " + e.getMessage(), e);
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _playerFactions.size() + " char faction values.");
+		_log.info(getClass().getSimpleName() + ": Loaded " + _playerFactions.size() + " character faction values.");
 	}
 	
 	public final int getFactionByCharId(int id)
