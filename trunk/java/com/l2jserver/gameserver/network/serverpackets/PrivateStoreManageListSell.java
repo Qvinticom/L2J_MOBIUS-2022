@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+
 import com.l2jserver.gameserver.model.TradeItem;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -28,6 +30,7 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 	private final boolean _packageSale;
 	private final TradeItem[] _itemList;
 	private final TradeItem[] _sellList;
+	ArrayList<Integer> _sellListIds = new ArrayList<>();
 	
 	public PrivateStoreManageListSell(L2PcInstance player, boolean isPackageSale)
 	{
@@ -37,6 +40,10 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 		_packageSale = isPackageSale;
 		_itemList = player.getInventory().getAvailableItems(player.getSellList());
 		_sellList = player.getSellList().getItems();
+		for (TradeItem it : _sellList)
+		{
+			_sellListIds.add(it.getObjectId());
+		}
 	}
 	
 	@Override
@@ -49,9 +56,13 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 		writeQ(_playerAdena);
 		
 		// section2
-		writeD(_itemList.length); // for potential sells
+		writeD(_itemList.length - _sellListIds.size()); // for potential sells
 		for (TradeItem item : _itemList)
 		{
+			if (_sellListIds.contains(item.getObjectId()))
+			{
+				continue;
+			}
 			writeItem(item);
 			writeQ(item.getItem().getReferencePrice() * 2);
 		}

@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model.entity;
 
+import java.util.ArrayList;
+
 /**
  * @author Erlandas
  */
@@ -44,17 +46,26 @@ public class AppearanceStone
 	int _itemId;
 	StoneType _type;
 	AppearanceItemType _itemType;
-	int _maxGrade;
+	ArrayList<Integer> _grades;
 	long _price;
 	int _targetItem;
 	long _timeForAppearance;
+	int _maxGrade;
 	
-	public AppearanceStone(int itemId, StoneType type, AppearanceItemType itemType, int maxGrade, long price, int targetItem, long timeForAppearance)
+	public AppearanceStone(int itemId, StoneType type, AppearanceItemType itemType, ArrayList<Integer> grades, long price, int targetItem, long timeForAppearance)
 	{
 		_itemId = itemId;
 		_type = type;
 		_itemType = itemType;
-		_maxGrade = maxGrade;
+		_grades = grades;
+		_maxGrade = grades.get(0);
+		for (int gr : _grades)
+		{
+			if (_maxGrade < gr)
+			{
+				_maxGrade = gr;
+			}
+		}
 		_price = price;
 		_targetItem = targetItem;
 		_timeForAppearance = timeForAppearance;
@@ -73,6 +84,11 @@ public class AppearanceStone
 	public AppearanceItemType getItemType()
 	{
 		return _itemType;
+	}
+	
+	public ArrayList<Integer> getGrades()
+	{
+		return _grades;
 	}
 	
 	public int getMaxGrade()

@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
 
@@ -66,16 +67,22 @@ public final class AppearanceStonesData implements IXmlReader
 						int itemId = parseInteger(attrs, "id");
 						String type = parseString(attrs, "type");
 						String itemType = parseString(attrs, "itemType");
-						String grade = parseString(attrs, "maxGrade");
+						String grades[] = parseString(attrs, "grades", "none").split(";");
 						long price = parseLong(attrs, "price", 0l);
 						int targetItem = parseInteger(attrs, "targetItem", 0);
 						long timeForAppearance = parseLong(attrs, "time", 0l);
-						CrystalType cType = CrystalType.valueOf(grade.toUpperCase());
+						ArrayList<Integer> gradesIds = new ArrayList<>();
+						CrystalType cType;
+						for (String gr : grades)
+						{
+							cType = CrystalType.valueOf(gr.toUpperCase());
+							gradesIds.add(cType.getId());
+						}
 						type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
 						itemType = itemType.substring(0, 1).toUpperCase() + itemType.substring(1).toLowerCase();
 						StoneType sType = StoneType.valueOf(type);
 						AppearanceItemType iType = AppearanceItemType.valueOf(itemType);
-						_stones.put(itemId, new AppearanceStone(itemId, sType, iType, cType.getId(), price, targetItem, timeForAppearance));
+						_stones.put(itemId, new AppearanceStone(itemId, sType, iType, gradesIds, price, targetItem, timeForAppearance));
 					}
 				}
 			}

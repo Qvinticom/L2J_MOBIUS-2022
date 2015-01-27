@@ -58,7 +58,7 @@ public final class RequestExTryToPut_Shape_Shifting_EnchantSupportItem extends L
 			player.sendPacket(new ExPut_Shape_Shifting_Target_Item_Result(0));
 			return;
 		}
-		if (stone.getEtcItem().getAppearanceStone().getMaxGrade() < targetItem.getItem().getCrystalType().getId())
+		if (stone.getEtcItem().getAppearanceStone().getGrades().contains(targetItem.getItem().getCrystalType().getId()))
 		{
 			player.sendPacket(new ExPut_Shape_Shifting_Target_Item_Result(0));
 			return;
