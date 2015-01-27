@@ -1006,7 +1006,6 @@ public final class Config
 	// --------------------------------------------------
 	// Server Settings
 	// --------------------------------------------------
-	public static boolean ENABLE_UPNP;
 	public static int PORT_GAME;
 	public static int PORT_LOGIN;
 	public static String LOGIN_BIND_ADDRESS;
@@ -1212,7 +1211,6 @@ public final class Config
 			
 			final PropertiesParser serverSettings = new PropertiesParser(CONFIGURATION_FILE);
 			
-			ENABLE_UPNP = serverSettings.getBoolean("EnableUPnP", true);
 			GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "*");
 			PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
 			
@@ -3012,7 +3010,6 @@ public final class Config
 		{
 			final PropertiesParser ServerSettings = new PropertiesParser(LOGIN_CONFIGURATION_FILE);
 			
-			ENABLE_UPNP = ServerSettings.getBoolean("EnableUPnP", true);
 			GAME_SERVER_LOGIN_HOST = ServerSettings.getString("LoginHostname", "127.0.0.1");
 			GAME_SERVER_LOGIN_PORT = ServerSettings.getInt("LoginPort", 9013);
 			

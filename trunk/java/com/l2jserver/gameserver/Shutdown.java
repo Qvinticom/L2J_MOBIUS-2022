@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.UPnPService;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jserver.gameserver.datatables.BotReportTable;
@@ -188,16 +187,6 @@ public class Shutdown extends Thread
 		{
 			TimeCounter tc = new TimeCounter();
 			TimeCounter tc1 = new TimeCounter();
-			
-			try
-			{
-				UPnPService.getInstance().removeAllPorts();
-				_log.info("UPnP Service: All ports mappings deleted (" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
-			}
-			catch (Throwable t)
-			{
-				_log.log(Level.WARNING, "Error while removing UPnP port mappings: ", t);
-			}
 			
 			try
 			{

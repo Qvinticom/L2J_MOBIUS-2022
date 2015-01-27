@@ -33,7 +33,6 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.Server;
-import com.l2jserver.UPnPService;
 import com.l2jserver.commons.mmocore.SelectorConfig;
 import com.l2jserver.commons.mmocore.SelectorThread;
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -463,9 +462,6 @@ public class GameServer
 		
 		_log.log(Level.INFO, getClass().getSimpleName() + ": Maximum numbers of connected players: " + Config.MAXIMUM_ONLINE_USERS);
 		_log.log(Level.INFO, getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
-		
-		printSection("UPnP");
-		UPnPService.getInstance();
 	}
 	
 	public static void main(String[] args) throws Exception

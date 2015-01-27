@@ -35,7 +35,6 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.Server;
-import com.l2jserver.UPnPService;
 import com.l2jserver.commons.mmocore.SelectorConfig;
 import com.l2jserver.commons.mmocore.SelectorThread;
 import com.l2jserver.loginserver.network.L2LoginClient;
@@ -189,8 +188,6 @@ public final class L2LoginServer
 			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
-		
-		UPnPService.getInstance();
 	}
 	
 	public Status getStatusServer()
