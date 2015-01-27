@@ -7,6 +7,12 @@
 	<item id="33801" name="Mentoring Guidebook" additionalName="" type="EtcItem">
 		<!-- Guidebook containing details about mentoring. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="0" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="33802" name="Mentee Certificate Pack" additionalName="" type="EtcItem">
 		<!-- Dimensional Item Pack\nContains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->

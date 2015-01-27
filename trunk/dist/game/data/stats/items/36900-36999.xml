@@ -315,7 +315,12 @@
 	<item id="36950" name="Toma's Living Guide" additionalName="" type="EtcItem">
 		<!-- Lineage II Living Guide written by Master Toma with great efforts. -->
 		<set name="icon" val="icon.etc_letter_in_bottle_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="36951" name="9th Anniversary Instrument" additionalName="" type="Weapon">
 		<!-- Instrument to commemorate the 9th anniversary of Lineage II. You can play great music with it. -->
