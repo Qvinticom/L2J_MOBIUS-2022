@@ -27,6 +27,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
@@ -34,6 +35,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -608,8 +610,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 		String res = null;
 		try
 		{
+			//@formatter:off
+			final Set<Quest> startingQuests = npc.getListeners(EventType.ON_NPC_QUEST_START).stream()
+				.map(AbstractEventListener::getOwner)
+				.filter(Quest.class::isInstance)
+				.map(Quest.class::cast)
+				.distinct()
+				.collect(Collectors.toSet());
+			//@formatter:on
+			
 			final String startConditionHtml = getStartConditionHtml(player);
-			if (!player.hasQuestState(_name) && (startConditionHtml != null))
+			if (startingQuests.contains(this) && (startConditionHtml != null))
 			{
 				res = startConditionHtml;
 			}

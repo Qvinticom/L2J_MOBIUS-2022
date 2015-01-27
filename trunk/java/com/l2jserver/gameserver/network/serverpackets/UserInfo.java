@@ -80,7 +80,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		_title = cha.getTitle();
 		if (cha.isGM() && cha.isInvisible())
 		{
-			_title += "[Invisible]";
+			_title = "[Invisible]";
 		}
 		
 		if (addAll)

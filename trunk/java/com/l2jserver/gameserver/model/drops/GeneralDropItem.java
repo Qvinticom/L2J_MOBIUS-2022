@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model.drops;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -231,13 +231,10 @@ public class GeneralDropItem implements IDropItem
 			}
 		}
 		
-		// global champions chance multiplier, there is no such option yet
-		// @formatter:off
-		/*if (victim.isChampion())
+		if (victim.isChampion())
 		{
-			multiplier *= getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS_CHANCE : Config.L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE;
-		}*/
-		// @formatter:on
+			multiplier *= Config.L2JMOD_CHAMPION_REWARDS;
+		}
 		
 		return (getChance() * multiplier);
 	}
@@ -247,7 +244,7 @@ public class GeneralDropItem implements IDropItem
 	 * @see com.l2jserver.gameserver.model.drop.IDropItem#calculateDrops(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.actor.L2Character)
 	 */
 	@Override
-	public List<ItemHolder> calculateDrops(L2Character victim, L2Character killer)
+	public Collection<ItemHolder> calculateDrops(L2Character victim, L2Character killer)
 	{
 		final int levelDifference = victim.getLevel() - killer.getLevel();
 		final double levelGapChanceToDrop;
@@ -266,48 +263,25 @@ public class GeneralDropItem implements IDropItem
 			return null;
 		}
 		
-		final List<ItemHolder> items = new ArrayList<>(1);
-		
-		if (Config.L2JMOD_OLD_DROP_BEHAVIOR)
+		final double chance = getChance(victim, killer);
+		int successes;
+		if (!Config.L2JMOD_OLD_DROP_BEHAVIOR)
 		{
-			double chance = getChance(victim, killer);
-			if (Config.L2JMOD_CHAMPION_ENABLE && victim.isChampion() && (getItemId() != Inventory.ADENA_ID))
-			{
-				chance *= Config.L2JMOD_CHAMPION_REWARDS;
-			}
-			
-			long amount = 0;
-			
-			if (chance > 100)
-			{
-				int chanceOveflow = (int) (chance / 100);
-				chance = chance % 100;
-				while (chanceOveflow > 0)
-				{
-					amount += Rnd.get(getMin(victim, killer), getMax(victim, killer));
-					chanceOveflow--;
-				}
-			}
-			
-			if (chance > (Rnd.nextDouble() * 100))
-			{
-				amount += Rnd.get(getMin(victim, killer), getMax(victim, killer));
-			}
-			
-			if (amount > 0)
-			{
-				items.add(new ItemHolder(getItemId(), amount));
-			}
+			successes = chance > (Rnd.nextDouble() * 100) ? 1 : 0;
 		}
 		else
 		{
-			if (getChance(victim, killer) > (Rnd.nextDouble() * 100))
-			{
-				final long amount = Rnd.get(getMin(victim, killer), getMax(victim, killer));
-				items.add(new ItemHolder(getItemId(), amount));
-			}
+			successes = (int) (chance / 100);
+			successes += (chance % 100) > (Rnd.nextDouble() * 100) ? 1 : 0;
 		}
 		
-		return items;
+		if (successes > 0)
+		{
+			final Collection<ItemHolder> items = new ArrayList<>(1);
+			items.add(new ItemHolder(getItemId(), Rnd.get(getMin(victim, killer), getMax(victim, killer)) * successes));
+			return items;
+		}
+		
+		return null;
 	}
 }

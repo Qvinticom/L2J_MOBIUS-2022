@@ -322,7 +322,9 @@ public final class UseItem extends L2GameClientPacket
 				{
 					if (!item.isEquipped() && (activeChar.getInventory().getBroochJewelSlots() == 0))
 					{
-						activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
+						sm.addItemName(item);
+						activeChar.sendPacket(sm);
 						return;
 					}
 					break;

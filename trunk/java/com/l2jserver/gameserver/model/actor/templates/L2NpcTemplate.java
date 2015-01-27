@@ -19,7 +19,9 @@
 package com.l2jserver.gameserver.model.actor.templates;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -552,7 +554,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		return dropLists != null ? dropLists.get(dropListScope) : null;
 	}
 	
-	public List<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer)
+	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer)
 	{
 		List<IDropItem> dropList = getDropList(dropListScope);
 		if (dropList == null)
@@ -560,10 +562,10 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 			return null;
 		}
 		
-		List<ItemHolder> calculatedDrops = null;
+		Collection<ItemHolder> calculatedDrops = null;
 		for (IDropItem dropItem : dropList)
 		{
-			List<ItemHolder> drops = dropItem.calculateDrops(victim, killer);
+			final Collection<ItemHolder> drops = dropItem.calculateDrops(victim, killer);
 			if ((drops == null) || drops.isEmpty())
 			{
 				continue;
@@ -571,7 +573,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 			
 			if (calculatedDrops == null)
 			{
-				calculatedDrops = new ArrayList<>(drops.size());
+				calculatedDrops = new LinkedList<>();
 			}
 			
 			calculatedDrops.addAll(drops);

@@ -2773,4 +2773,34 @@ public abstract class AbstractScript extends ManagedScript
 	{
 		player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
 	}
+	
+	/**
+	 * @param player
+	 * @param x
+	 * @param y
+	 * @param z
+	 */
+	public static void addRadar(L2PcInstance player, int x, int y, int z)
+	{
+		player.getRadar().addMarker(x, y, z);
+	}
+	
+	/**
+	 * @param player
+	 * @param x
+	 * @param y
+	 * @param z
+	 */
+	public void removeRadar(L2PcInstance player, int x, int y, int z)
+	{
+		player.getRadar().removeMarker(x, y, z);
+	}
+	
+	/**
+	 * @param player
+	 */
+	public void clearRadar(L2PcInstance player)
+	{
+		player.getRadar().removeAllMarkers();
+	}
 }

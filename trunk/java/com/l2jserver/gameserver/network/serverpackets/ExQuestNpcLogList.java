@@ -21,13 +21,15 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 /**
  * @author UnAfraid
  */
 public class ExQuestNpcLogList extends L2GameServerPacket
 {
 	private final int _questId;
-	private final List<NpcHolder> _npcs = new ArrayList<>();
+	private final List<Holder> _npcLogList = new ArrayList<>();
 	
 	public ExQuestNpcLogList(int questId)
 	{
@@ -36,12 +38,12 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	
 	public void addNpc(int npcId, int count)
 	{
-		_npcs.add(new NpcHolder(npcId, 0, count));
+		_npcLogList.add(new Holder(npcId, false, count));
 	}
 	
-	public void addNpc(int npcId, int unknown, int count)
+	public void addNpcString(NpcStringId npcStringId, int count)
 	{
-		_npcs.add(new NpcHolder(npcId, unknown, count));
+		_npcLogList.add(new Holder(npcStringId.getId(), true, count));
 	}
 	
 	@Override
@@ -50,36 +52,36 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		writeC(0xFE);
 		writeH(0xC6);
 		writeD(_questId);
-		writeC(_npcs.size());
-		for (NpcHolder holder : _npcs)
+		writeC(_npcLogList.size());
+		for (Holder holder : _npcLogList)
 		{
-			writeD((holder.getNpcId() + 1000000));
-			writeC(holder.getUnknown());
+			writeD((holder.getId()));
+			writeC(holder.isNpcString() ? 0x01 : 0x00);
 			writeD(holder.getCount());
 		}
 	}
 	
-	private class NpcHolder
+	private class Holder
 	{
-		private final int _npcId;
-		private final int _unknown;
+		private final int _id;
+		private final boolean _isNpcString;
 		private final int _count;
 		
-		public NpcHolder(int npcId, int unknown, int count)
+		public Holder(int id, boolean isNpcString, int count)
 		{
-			_npcId = npcId;
-			_unknown = unknown;
+			_id = id;
+			_isNpcString = isNpcString;
 			_count = count;
 		}
 		
-		public int getNpcId()
+		public int getId()
 		{
-			return _npcId;
+			return _id;
 		}
 		
-		public int getUnknown()
+		public boolean isNpcString()
 		{
-			return _unknown;
+			return _isNpcString;
 		}
 		
 		public int getCount()

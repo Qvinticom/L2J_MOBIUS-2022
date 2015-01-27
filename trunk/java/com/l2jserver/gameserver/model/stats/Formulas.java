@@ -1608,13 +1608,34 @@ public final class Formulas
 			return false;
 		}
 		
-		double val = actor.getStat().calcStat(Stats.SKILL_MASTERY, 1, null, null);
-		if (actor.isPlayer())
+		final int val = (int) actor.getStat().calcStat(Stats.SKILL_CRITICAL, 0, null, null);
+		
+		if (val == 0)
 		{
-			val *= (actor.getActingPlayer().isMageClass() ? BaseStats.INT : BaseStats.STR).calcBonus(actor);
+			return false;
 		}
 		
-		return Rnd.get(100) < val;
+		if (actor.isPlayer())
+		{
+			double initVal = 0;
+			switch (val)
+			{
+				case 1:
+				{
+					initVal = (BaseStats.STR).calcBonus(actor);
+					break;
+				}
+				case 4:
+				{
+					initVal = (BaseStats.INT).calcBonus(actor);
+					break;
+				}
+			}
+			initVal *= actor.getStat().calcStat(Stats.SKILL_CRITICAL_PROBABILITY, 1, null, null);
+			return (Rnd.get(100) < initVal);
+		}
+		
+		return false;
 	}
 	
 	/**

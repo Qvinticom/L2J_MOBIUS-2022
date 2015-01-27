@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.drops;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -32,7 +32,7 @@ public interface IDropItem
 	 * Calculates drops of this drop item.
 	 * @param victim the victim
 	 * @param killer the killer
-	 * @return {@code null} or empty list if there are no drops, a list containing all items to drop otherwise
+	 * @return {@code null} or empty collection if there are no drops, a collection containing all items to drop otherwise
 	 */
-	public List<ItemHolder> calculateDrops(L2Character victim, L2Character killer);
+	public Collection<ItemHolder> calculateDrops(L2Character victim, L2Character killer);
 }

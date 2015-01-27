@@ -14455,6 +14455,10 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean hasPremiumStatus()
 	{
+		if (!Config.PREMIUM_SYSTEM_ENABLED)
+		{
+			return false;
+		}
 		return _premiumStatus;
 	}
 	

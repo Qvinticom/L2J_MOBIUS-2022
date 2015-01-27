@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.model.drops;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -104,9 +105,9 @@ public class GroupedGeneralDropItem implements IDropItem
 	 * @see com.l2jserver.gameserver.model.drop.IDropItem#calculateDrops(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.actor.L2Character)
 	 */
 	@Override
-	public List<ItemHolder> calculateDrops(L2Character victim, L2Character killer)
+	public Collection<ItemHolder> calculateDrops(L2Character victim, L2Character killer)
 	{
-		int levelDifference = victim.getLevel() - killer.getLevel();
+		final int levelDifference = victim.getLevel() - killer.getLevel();
 		double chanceModifier;
 		if (victim instanceof L2RaidBossInstance)
 		{
@@ -124,61 +125,29 @@ public class GroupedGeneralDropItem implements IDropItem
 			}
 		}
 		
-		if ((getChance(victim, killer) * chanceModifier) > (Rnd.nextDouble() * 100))
+		final double chance = getChance(victim, killer) * chanceModifier;
+		int successes;
+		if (!Config.L2JMOD_OLD_DROP_BEHAVIOR)
 		{
-			final List<ItemHolder> items = new ArrayList<>(1);
-			long amount = 0;
-			double totalChance = 0;
-			double random = (Rnd.nextDouble() * 100);
-			double chance = 0;
-			
-			if (Config.L2JMOD_OLD_DROP_BEHAVIOR)
+			successes = chance > (Rnd.nextDouble() * 100) ? 1 : 0;
+		}
+		else
+		{
+			successes = (int) (chance / 100);
+			successes += (chance % 100) > (Rnd.nextDouble() * 100) ? 1 : 0;
+		}
+		
+		double totalChance = 0;
+		final double random = (Rnd.nextDouble() * 100);
+		for (GeneralDropItem item : getItems())
+		{
+			// Grouped item chance rates should not be modified.
+			totalChance += item.getChance();
+			if (totalChance > random)
 			{
-				for (GeneralDropItem item : getItems())
-				{
-					// Grouped item chance rates should not be modified.
-					totalChance += item.getChance();
-					
-					if (totalChance > 100)
-					{
-						int chanceOverflow = (int) (totalChance / 100);
-						chance = totalChance % 100;
-						while (chanceOverflow > 0)
-						{
-							amount += Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer));
-							chanceOverflow--;
-						}
-					}
-					else
-					{
-						chance = totalChance;
-					}
-					
-					if (chance > random)
-					{
-						amount += Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer));
-					}
-					
-					if (amount > 0)
-					{
-						items.add(new ItemHolder(item.getItemId(), amount));
-						return items;
-					}
-				}
-			}
-			else
-			{
-				for (GeneralDropItem item : getItems())
-				{
-					// Grouped item chance rates should not be modified.
-					totalChance += item.getChance();
-					if (totalChance > random)
-					{
-						amount = Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer));
-						items.add(new ItemHolder(item.getItemId(), amount));
-						return items;
-					}
-				}
+				final Collection<ItemHolder> items = new ArrayList<>(1);
+				items.add(new ItemHolder(item.getItemId(), Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer)) * successes));
+				return items;
 			}
 		}
 		

@@ -85,7 +85,7 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 					MentorManager.getInstance().addMentor(mentor.getObjectId(), mentee.getObjectId());
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentee);
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
 					
 					mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addCharName(mentee));
 					mentor.sendPacket(new ExMentorList(mentor));
