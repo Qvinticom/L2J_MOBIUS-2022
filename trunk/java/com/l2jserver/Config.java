@@ -108,7 +108,6 @@ public final class Config
 	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.properties";
 	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.properties";
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-	public static final String EMAIL_CONFIG_FILE = "./config/Email.properties";
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
 	public static final String GEODATA_FILE = "./config/GeoData.properties";
 	// --------------------------------------------------
@@ -1160,21 +1159,6 @@ public final class Config
 	
 	// chatfilter
 	public static List<String> FILTER_LIST;
-	
-	// Email
-	public static String EMAIL_SERVERINFO_NAME;
-	public static String EMAIL_SERVERINFO_ADDRESS;
-	public static boolean EMAIL_SYS_ENABLED;
-	public static String EMAIL_SYS_HOST;
-	public static int EMAIL_SYS_PORT;
-	public static boolean EMAIL_SYS_SMTP_AUTH;
-	public static String EMAIL_SYS_FACTORY;
-	public static boolean EMAIL_SYS_FACTORY_CALLBACK;
-	public static String EMAIL_SYS_USERNAME;
-	public static String EMAIL_SYS_PASSWORD;
-	public static String EMAIL_SYS_ADDRESS;
-	public static String EMAIL_SYS_SELECTQUERY;
-	public static String EMAIL_SYS_DBFIELD;
 	
 	// Conquerable Halls Settings
 	public static int CHS_CLAN_MINLEVEL;
@@ -3086,24 +3070,6 @@ public final class Config
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
 			
 			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
-			
-			// Email
-			final PropertiesParser emailSettings = new PropertiesParser(EMAIL_CONFIG_FILE);
-			
-			EMAIL_SERVERINFO_NAME = emailSettings.getString("ServerInfoName", "Unconfigured L2J Server");
-			EMAIL_SERVERINFO_ADDRESS = emailSettings.getString("ServerInfoAddress", "info@myl2jserver.com");
-			
-			EMAIL_SYS_ENABLED = emailSettings.getBoolean("EmailSystemEnabled", false);
-			EMAIL_SYS_HOST = emailSettings.getString("SmtpServerHost", "smtp.gmail.com");
-			EMAIL_SYS_PORT = emailSettings.getInt("SmtpServerPort", 465);
-			EMAIL_SYS_SMTP_AUTH = emailSettings.getBoolean("SmtpAuthRequired", true);
-			EMAIL_SYS_FACTORY = emailSettings.getString("SmtpFactory", "javax.net.ssl.SSLSocketFactory");
-			EMAIL_SYS_FACTORY_CALLBACK = emailSettings.getBoolean("SmtpFactoryCallback", false);
-			EMAIL_SYS_USERNAME = emailSettings.getString("SmtpUsername", "user@gmail.com");
-			EMAIL_SYS_PASSWORD = emailSettings.getString("SmtpPassword", "password");
-			EMAIL_SYS_ADDRESS = emailSettings.getString("EmailSystemAddress", "noreply@myl2jserver.com");
-			EMAIL_SYS_SELECTQUERY = emailSettings.getString("EmailDBSelectQuery", "SELECT value FROM account_data WHERE account_name=? AND var='email_addr'");
-			EMAIL_SYS_DBFIELD = emailSettings.getString("EmailDBField", "value");
 		}
 		else
 		{

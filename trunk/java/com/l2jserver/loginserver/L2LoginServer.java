@@ -38,7 +38,6 @@ import com.l2jserver.Server;
 import com.l2jserver.UPnPService;
 import com.l2jserver.commons.mmocore.SelectorConfig;
 import com.l2jserver.commons.mmocore.SelectorThread;
-import com.l2jserver.loginserver.mail.MailSystem;
 import com.l2jserver.loginserver.network.L2LoginClient;
 import com.l2jserver.loginserver.network.L2LoginPacketHandler;
 import com.l2jserver.status.Status;
@@ -118,11 +117,6 @@ public final class L2LoginServer
 		GameServerTable.getInstance();
 		
 		loadBanFile();
-		
-		if (Config.EMAIL_SYS_ENABLED)
-		{
-			MailSystem.getInstance();
-		}
 		
 		InetAddress bindAddress = null;
 		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
