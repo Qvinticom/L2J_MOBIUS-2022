@@ -94,31 +94,6 @@
 				<attribute name="Main-Class" value="com.l2jserver.loginserver.L2LoginServer" />
 			</manifest>
 		</jar>
-		<jar destfile="${build.dist.login}/L2J_Configurator.jar" level="9">
-			<fileset dir="${build.bin}">
-				<include name="**/configurator/**" />
-				<include name="**/i18n/**" />
-				<include name="**/images/**" />
-				<exclude name="**/accountmanager/**" />
-				<exclude name="**/dbinstaller/**" />
-				<exclude name="**/gameserver/**" />
-				<exclude name="**/gsregistering/**" />
-				<exclude name="**/log/**" />
-				<exclude name="**/loginserver/**" />
-				<exclude name="**/status/**" />
-				<exclude name="**/util/**" />
-				<exclude name="**/Config/**" />
-				<exclude name="**/L2DatabaseFactory/**" />
-				<exclude name="**/Server/**" />
-			</fileset>
-			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
-				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Implementation-URL" value="http://www.l2jserver.com/" />
-				<attribute name="Main-Class" value="com.l2jserver.tools.configurator.ConfigUserInterface" />
-			</manifest>
-		</jar>
 		<jar destfile="${build.dist.game}/l2jserver.jar" level="9">
 			<fileset dir="${build.bin}">
 				<exclude name="**/dbinstaller/**" />
@@ -134,65 +109,6 @@
 				<attribute name="Main-Class" value="com.l2jserver.gameserver.GameServer" />
 			</manifest>
 		</jar>
-		<jar destfile="${build.dist.game}/L2J_Configurator.jar" level="9">
-			<fileset dir="${build.bin}">
-				<include name="**/configurator/**" />
-				<include name="**/i18n/**" />
-				<include name="**/images/**" />
-				<exclude name="**/accountmanager/**" />
-				<exclude name="**/dbinstaller/**" />
-				<exclude name="**/gameserver/**" />
-				<exclude name="**/gsregistering/**" />
-				<exclude name="**/log/**" />
-				<exclude name="**/loginserver/**" />
-				<exclude name="**/status/**" />
-				<exclude name="**/util/**" />
-				<exclude name="**/Config/**" />
-				<exclude name="**/L2DatabaseFactory/**" />
-				<exclude name="**/Server/**" />
-			</fileset>
-			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
-				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Implementation-URL" value="http://www.l2jserver.com/" />
-				<attribute name="Main-Class" value="com.l2jserver.tools.configurator.ConfigUserInterface" />
-			</manifest>
-		</jar>
-		<!--
-		<jar destfile="${build.dist.tools}/Database_Installer_GS.jar" level="9">
-			<fileset dir="${build.bin}">
-				<include name="**/dbinstaller/**" />
-				<include name="**/images/**" />
-				<include name="**/util/**" />
-				<include name="**/SQLFilter**" />
-				<exclude name="**/LauncherLS*" />
-			</fileset>
-			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
-				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Implementation-URL" value="http://www.l2jserver.com/" />
-				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherGS" />
-			</manifest>
-		</jar>
-		<jar destfile="${build.dist.tools}/Database_Installer_LS.jar" level="9">
-			<fileset dir="${build.bin}">
-				<include name="**/dbinstaller/**" />
-				<include name="**/images/**" />
-				<include name="**/util/**" />
-				<include name="**/SQLFilter**" />
-				<exclude name="**/LauncherGS*" />
-			</fileset>
-			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
-				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Implementation-URL" value="http://www.l2jserver.com/" />
-				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherLS" />
-			</manifest>
-		</jar>
-		-->
 	</target>
 
 	<target name="build" depends="jar" description="Create the Zip file.">
