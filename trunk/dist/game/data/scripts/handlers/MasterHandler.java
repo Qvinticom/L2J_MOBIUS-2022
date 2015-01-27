@@ -168,6 +168,7 @@ import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
 import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
+import handlers.itemhandlers.FatedSupportBox;
 import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
 import handlers.itemhandlers.ItemAppearance;
@@ -473,6 +474,7 @@ public class MasterHandler
 			EnchantScrolls.class,
 			EventItem.class,
 			ExtractableItems.class,
+			FatedSupportBox.class,
 			FishShots.class,
 			Harvester.class,
 			ItemAppearance.class,
