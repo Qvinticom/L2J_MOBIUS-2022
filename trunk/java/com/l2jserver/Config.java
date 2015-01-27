@@ -1771,7 +1771,7 @@ public final class Config
 			MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
 			ALT_GAME_FREE_TELEPORT = Character.getBoolean("AltFreeTeleporting", false);
-			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 7);
+			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
 			ALT_GAME_EXPONENT_XP = Character.getFloat("AltGameExponentXp", 0);
 			ALT_GAME_EXPONENT_SP = Character.getFloat("AltGameExponentSp", 0);
 			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive");
