@@ -212,7 +212,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="0" />
-		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="handler" val="FatedSupportBox" />
 	</item>
 	<item id="37315" name="Fated Support Box: Fighter (C-grade)" additionalName="" type="EtcItem">

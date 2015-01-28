@@ -451,22 +451,50 @@
 	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="12074,1,1,100;12075,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Salamander Skin Mail, Salamander Skin Boots, Ogre Power Gauntlets, Plate Helmet -->
 	</item>
 	<item id="40263" name="Faeron Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="12071,1,1,100;12079,1,1,100;12082,1,1,100;12083,1,1,100" /> <!-- Common Item: Assault Boots, Plate Helmet, Sage's Worm Gloves, Sage's Rags -->
 	</item>
 	<item id="40264" name="Emissary's Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="11691,1,1,100;12311,2,2,100;12312,1,1,100;12313,2,2,100;1463,1500,1500,100" /> <!-- Common Item: Bich'Hwa; 2x Red Crescent; Necklace of Devotion; 2x Ring of Devotion; 1500 Soulshots (D-Grade) -->
 	</item>
 	<item id="40265" name="Emissary's Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="11693,1,1,100;12311,2,2,100;12312,1,1,100;12313,2,2,100;2510,500,500,100" /> <!-- Common Item: Goat Head Staff; 2x Red Crescent; Necklace of Devotion; 2x Ring of Devotion; 500 Spiritshots (D-Grade) -->
 	</item>
 	<item id="40266" name="Navari's Support Box" additionalName="Marauder" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
