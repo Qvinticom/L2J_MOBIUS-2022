@@ -227,7 +227,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11853,1,1,100;12143,1,1,100;12144,1,1,100;12142,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Samurai Long Sword, Full Plate Shield, Full Plate Armor, Full Plate Boots, Ogre Power Gauntlets, Plate Helmet -->
+		<set name="capsuled_items" val="11853,1,1,100;12143,1,1,100;12144,1,1,100;12142,1,1,100;12141,1,1,100;12145,1,1,100" /> <!-- Common Item: Samurai Long Sword, Full Plate Shield, Full Plate Armor, Full Plate Boots, Full Plate Gauntlets, Full Plate Helmet -->
 	</item>
 	<item id="37316" name="Fated Support Box: Wizard (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for wizard-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -239,7 +239,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11855,1,1,100;12071,1,1,100;12079,1,1,100;12082,1,1,100;12083,1,1,100" /> <!-- Common Item: Demon's Staff, Assault Boots, Plate Helmet, Sage's Worm Gloves, Sage's Rags -->
+		<set name="capsuled_items" val="11855,1,1,100;12097,1,1,100;12098,1,1,100;12099,1,1,100;12100,1,1,100;12145,1,1,100" /> <!-- Common Item: Demon's Staff, Karmian Gloves, Karmian Boots, Karmian Tunic, Karmian Stockings, Full Plate Helmet -->
 	</item>
 	<item id="37317" name="Fated Support Box: Warrior (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for warrior-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -251,7 +251,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11843,1,1,100;11841,1,1,100;12144,1,1,100;12142,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Berserker Blade, Dual Raid Sword, Full Plate Armor, Full Plate Boots, Ogre Power Gauntlets, Plate Helmet -->
+		<set name="capsuled_items" val="11843,1,1,100;11841,1,1,100;12144,1,1,100;12142,1,1,100;12141,1,1,100;12145,1,1,100" /> <!-- Common Item: Berserker Blade, Dual Raid Sword, Full Plate Armor, Full Plate Boots, Full Plate Gauntlets, Full Plate Helmet -->
 	</item>
 	<item id="37318" name="Fated Support Box: Rogue (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for rogue-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -263,7 +263,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11863,1,1,100;11857,1,1,100;12074,1,1,100;12075,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Crystal Dagger, Eminence Bow, Salamander Skin Mail, Salamander Skin Boots, Ogre Power Gauntlets, Plate Helmet -->
+		<set name="capsuled_items" val="11863,1,1,100;11857,1,1,100;12135,1,1,100;12136,1,1,100;12137,1,1,100;12145,1,1,100" /> <!-- Common Item: Crystal Dagger, Eminence Bow, Drake Leather Armor, Drake Leather Boots, Drake Leather Gloves, Full Plate Helmet -->
 	</item>
 	<item id="37319" name="Fated Support Box: Kamael (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for Kamael-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -275,7 +275,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11753,1,1,100;11754,1,1,100;11758,1,1,100;12074,1,1,100;12075,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Soldat Estoc, Schlager, Arbalest, Salamander Skin Mail, Salamander Skin Boots, Ogre Power Gauntlets, Plate Helmet -->
+		<set name="capsuled_items" val="11753,1,1,100;11754,1,1,100;11758,1,1,100;12135,1,1,100;12136,1,1,100;12137,1,1,100;12145,1,1,100" /> <!-- Common Item: Soldat Estoc, Schlager, Arbalest, Drake Leather Armor, Drake Leather Boots, Drake Leather Gloves, Full Plate Helmet -->
 	</item>
 	<item id="37320" name="Fated Support Box: Orc Fighter (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for orc-fighter-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -287,7 +287,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11843,1,1,100;11839,1,1,100;12074,1,1,100;12144,1,1,100;12142,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Berserker Blade, Great Pata, Salamander Skin Mail, Full Plate Armor, Full Plate Boots, Ogre Power Gauntlets, Plate Helmet -->
+		<set name="capsuled_items" val="11843,1,1,100;11839,1,1,100;12135,1,1,100;12144,1,1,100;12142,1,1,100;12141,1,1,100;12145,1,1,100" /> <!-- Common Item: Berserker Blade, Great Pata, Drake Leather Armor, Full Plate Armor, Full Plate Boots, Full Plate Gauntlets, Full Plate Helmet -->
 	</item>
 	<item id="37321" name="Fated Support Box: Orc Wizard (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for orc-wizard-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -299,7 +299,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="11855,1,1,100;11857,1,1,100;12074,1,1,100;12075,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item: Demon's Staff, Salamander Skin Mail, Salamander Skin Boots, Ogre Power Gauntlets, Plate Helmet -->
+		<set name="capsuled_items" val="11855,1,1,100;12135,1,1,100;12136,1,1,100;12137,1,1,100;12145,1,1,100" /> <!-- Common Item: Demon's Staff, Drake Leather Armor, Drake Leather Boots, Drake Leather Gloves, Full Plate Helmet -->
 	</item>
 	<item id="37322" name="Fated Support Box: Fighter (B-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive B-grade equipment items necessary for fighter-type characters. Can be used by characters Lv. 52 - 84. -->
