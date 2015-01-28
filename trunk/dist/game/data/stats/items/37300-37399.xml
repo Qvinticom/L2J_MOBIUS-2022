@@ -219,6 +219,7 @@
 	</item>
 	<item id="37315" name="Fated Support Box: Fighter (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for fighter-type characters. Can be used by characters Lv. 40 - 84. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -254,6 +255,7 @@
 	</item>
 	<item id="37318" name="Fated Support Box: Rogue (C-grade)" additionalName="" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for rogue-type characters. Can be used by characters Lv. 40 - 84. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
