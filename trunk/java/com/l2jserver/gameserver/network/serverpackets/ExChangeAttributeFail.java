@@ -19,9 +19,7 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExChangeAttributeFail extends L2GameServerPacket
 {
-	public ExChangeAttributeFail()
-	{
-	}
+	public static final ExChangeAttributeFail STATIC_PACKET = new ExChangeAttributeFail();
 	
 	@Override
 	protected void writeImpl()

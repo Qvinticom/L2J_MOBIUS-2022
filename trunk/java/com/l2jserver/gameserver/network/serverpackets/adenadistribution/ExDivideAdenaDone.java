@@ -16,43 +16,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets;
+package com.l2jserver.gameserver.network.serverpackets.adenadistribution;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExDivideAdenaCancel;
+import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * @author Erlandys
  */
-public class RequestDivideAdenaCancel extends L2GameClientPacket
+public class ExDivideAdenaDone extends L2GameServerPacket
 {
-	int _cancel;
+	private final int _friendsCount;
+	private final long _count;
+	private final long _dividedCount;
+	private final String _name;
 	
-	@Override
-	protected void readImpl()
+	public ExDivideAdenaDone(int friendsCount, long count, long dividedCount, String name)
 	{
-		_cancel = readC();
+		_friendsCount = friendsCount;
+		_count = count;
+		_dividedCount = dividedCount;
+		_name = name;
 	}
 	
 	@Override
-	protected void runImpl()
+	protected final void writeImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		if (_cancel == 0)
-		{
-			activeChar.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
-			activeChar.sendPacket(new ExDivideAdenaCancel());
-		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
+		writeC(0xFE);
+		writeH(0x15D);
+		writeC(0x01); // Always 1
+		writeC(0x00); // Always 0
+		writeD(_friendsCount); // Friends count
+		writeQ(_dividedCount); // Divided count
+		writeQ(_count); // Whole count
+		writeS(_name); // Giver name
 	}
 }

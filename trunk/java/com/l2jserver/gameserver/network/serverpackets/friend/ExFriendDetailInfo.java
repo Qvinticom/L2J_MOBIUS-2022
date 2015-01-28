@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public class ExFriendDetailInfo extends L2GameServerPacket
 {
-	final L2PcInstance _player;
-	final String _name;
+	private final L2PcInstance _player;
+	private final String _name;
 	
 	public ExFriendDetailInfo(L2PcInstance player, String name)
 	{
@@ -46,7 +46,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 		writeH(0xEC);
 		
 		writeD(_player.getObjectId());
-		Friend friend = _player.getFriend(CharNameTable.getInstance().getIdByName(_name));
+		final Friend friend = _player.getFriend(CharNameTable.getInstance().getIdByName(_name));
 		
 		L2PcInstance player = friend.getFriend();
 		if (player == null)

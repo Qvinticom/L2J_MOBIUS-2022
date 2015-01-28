@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public class L2FriendList extends L2GameServerPacket
 {
-	Collection<Friend> _friends;
+	private final Collection<Friend> _friends;
 	
 	public L2FriendList(L2PcInstance player)
 	{

@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.adenadistribution;
+
+import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * @author Erlandys
  */
 public class ExDivideAdenaStart extends L2GameServerPacket
 {
-	public ExDivideAdenaStart()
-	{
-	}
+	public static final ExDivideAdenaStart STATIC_PACKET = new ExDivideAdenaStart();
 	
 	@Override
 	protected final void writeImpl()

@@ -41,15 +41,15 @@ public final class RequestShape_Shifting_Item extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
-		L2ItemInstance stone = player.getUsingAppearanceStone();
-		L2ItemInstance item = player.getAppearanceItem();
-		L2ItemInstance targetItem = player.getTargetAppearanceItem();
-		boolean needTargetItem = (stone != null) && (stone.getEtcItem().getAppearanceStone() != null) && (stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.Blessed) || stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.Normal)) ? true : false;
+		final L2ItemInstance stone = player.getUsingAppearanceStone();
+		final L2ItemInstance item = player.getAppearanceItem();
+		final L2ItemInstance targetItem = player.getTargetAppearanceItem();
+		final boolean needTargetItem = (stone != null) && (stone.getEtcItem().getAppearanceStone() != null) && (stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.Blessed) || stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.Normal)) ? true : false;
 		player.setUsingAppearanceStone(null);
 		player.setAppearanceItem(null);
 		player.setTargetAppearanceItem(null);
@@ -57,12 +57,12 @@ public final class RequestShape_Shifting_Item extends L2GameClientPacket
 		{
 			return;
 		}
-		AppearanceStone st = stone.getEtcItem().getAppearanceStone();
+		final AppearanceStone st = stone.getEtcItem().getAppearanceStone();
 		if (st == null)
 		{
 			return;
 		}
-		long cost = st.getPrice();
+		final long cost = st.getPrice();
 		if (cost > player.getAdena())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);

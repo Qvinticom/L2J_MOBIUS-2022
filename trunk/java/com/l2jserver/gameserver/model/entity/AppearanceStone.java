@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.entity;
 import java.util.ArrayList;
 
 /**
- * @author Erlandas
+ * @author Erlandys
  */
 public class AppearanceStone
 {
@@ -43,14 +43,14 @@ public class AppearanceStone
 		All
 	}
 	
-	int _itemId;
-	StoneType _type;
-	AppearanceItemType _itemType;
-	ArrayList<Integer> _grades;
-	long _price;
-	int _targetItem;
-	long _timeForAppearance;
-	int _maxGrade;
+	private final int _itemId;
+	private final StoneType _type;
+	private final AppearanceItemType _itemType;
+	private final ArrayList<Integer> _grades;
+	private final long _price;
+	private final int _targetItem;
+	private final long _timeForAppearance;
+	private int _maxGrade;
 	
 	public AppearanceStone(int itemId, StoneType type, AppearanceItemType itemType, ArrayList<Integer> grades, long price, int targetItem, long timeForAppearance)
 	{

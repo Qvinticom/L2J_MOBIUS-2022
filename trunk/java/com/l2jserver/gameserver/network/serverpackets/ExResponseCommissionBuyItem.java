@@ -14,19 +14,12 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-
 /**
  * @author Erlandys
  */
 public class ExResponseCommissionBuyItem extends L2GameServerPacket
 {
-	L2PcInstance player;
-	
-	public ExResponseCommissionBuyItem(L2PcInstance _player)
-	{
-		player = _player;
-	}
+	public static final ExResponseCommissionBuyItem STATIC_PACKET = new ExResponseCommissionBuyItem();
 	
 	@Override
 	protected void writeImpl()

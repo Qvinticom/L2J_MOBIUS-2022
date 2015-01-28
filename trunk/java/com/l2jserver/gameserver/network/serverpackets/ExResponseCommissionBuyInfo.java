@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class ExResponseCommissionBuyInfo extends L2GameServerPacket
 {
-	Auctions _auction;
+	private final Auctions _auction;
 	
 	public ExResponseCommissionBuyInfo(Auctions auction)
 	{
@@ -37,7 +37,7 @@ public class ExResponseCommissionBuyInfo extends L2GameServerPacket
 		
 		writeD(0x01); // Unknown
 		
-		L2ItemInstance item = _auction.getItem();
+		final L2ItemInstance item = _auction.getItem();
 		
 		writeQ(_auction.getPrice());
 		writeD(_auction.getCategory());

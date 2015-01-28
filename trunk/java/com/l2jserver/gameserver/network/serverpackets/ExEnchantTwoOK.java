@@ -20,9 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 public class ExEnchantTwoOK extends L2GameServerPacket
 {
-	public ExEnchantTwoOK()
-	{
-	}
+	public static final ExEnchantTwoOK STATIC_PACKET = new ExEnchantTwoOK();
 	
 	@Override
 	protected final void writeImpl()

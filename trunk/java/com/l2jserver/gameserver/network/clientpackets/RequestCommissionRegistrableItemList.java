@@ -32,7 +32,7 @@ public final class RequestCommissionRegistrableItemList extends L2GameClientPack
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;

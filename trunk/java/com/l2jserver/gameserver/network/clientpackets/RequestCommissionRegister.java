@@ -33,11 +33,11 @@ public final class RequestCommissionRegister extends L2GameClientPacket
 {
 	private static final String _C__D0_9D_REQUESTCOMMISSIONREGISTER = "[C] D0:9D RequestCommissionRegister";
 	
-	int _itemOID;
-	String _itemName;
-	long _price;
-	long _count;
-	int _duration;
+	private int _itemOID;
+	private String _itemName;
+	private long _price;
+	private long _count;
+	private int _duration;
 	
 	@Override
 	protected void readImpl()
@@ -53,7 +53,7 @@ public final class RequestCommissionRegister extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -80,6 +80,7 @@ public final class RequestCommissionRegister extends L2GameClientPacket
 				timeToAdd = 604800000;
 				destroyPrice *= 0.0007;
 		}
+		
 		if (destroyPrice < 1000)
 		{
 			destroyPrice = 1000;
@@ -106,8 +107,8 @@ public final class RequestCommissionRegister extends L2GameClientPacket
 			return;
 		}
 		
-		int itemID = player.getInventory().getItemByObjectId(_itemOID).getId();
-		L2Item item = ItemTable.getInstance().getTemplate(itemID);
+		final int itemID = player.getInventory().getItemByObjectId(_itemOID).getId();
+		final L2Item item = ItemTable.getInstance().getTemplate(itemID);
 		
 		if (((player.getAuctionInventory().getSize() >= 10) && !player.isGM()) || ((player.getAuctionInventory().getSize() >= 99999) && player.isGM()) || !item.isTradeable() || !item.isSellable())
 		{
@@ -116,10 +117,10 @@ public final class RequestCommissionRegister extends L2GameClientPacket
 			return;
 		}
 		
-		int category = am.getCategoryByItem(player.getInventory().getItemByObjectId(_itemOID));
+		final int category = am.getCategoryByItem(player.getInventory().getItemByObjectId(_itemOID));
 		player.getInventory().destroyItemByItemId("CreateAuction", 57, destroyPrice, null, null);
 		player.getInventory().transferItem("CreateAuction", _itemOID, _count, player.getAuctionInventory(), player, null);
-		long finishTime = (System.currentTimeMillis() + timeToAdd) / 1000;
+		final long finishTime = (System.currentTimeMillis() + timeToAdd) / 1000;
 		
 		int auctionID = IdFactory.getInstance().getNextId();
 		if (player.getAuctionInventory().getItemByObjectId(_itemOID) == null)

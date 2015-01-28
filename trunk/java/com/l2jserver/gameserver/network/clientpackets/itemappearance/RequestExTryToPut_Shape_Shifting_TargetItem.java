@@ -39,17 +39,17 @@ public final class RequestExTryToPut_Shape_Shifting_TargetItem extends L2GameCli
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
-		L2ItemInstance item = player.getInventory().getItemByObjectId(_itemId);
+		final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemId);
 		if (item == null)
 		{
 			return;
 		}
-		L2ItemInstance stone = player.getUsingAppearanceStone();
+		final L2ItemInstance stone = player.getUsingAppearanceStone();
 		if ((stone == null) || (stone.getEtcItem().getAppearanceStone() == null))
 		{
 			return;
@@ -60,7 +60,7 @@ public final class RequestExTryToPut_Shape_Shifting_TargetItem extends L2GameCli
 			player.sendPacket(new ExPut_Shape_Shifting_Extraction_Item_Result(0));
 			return;
 		}
-		boolean isSameType = ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Armor) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Weapon) && item.isWeapon()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Accessory) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.All));
+		final boolean isSameType = ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Armor) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Weapon) && item.isWeapon()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Accessory) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.All));
 		if (!isSameType)
 		{
 			player.sendPacket(new ExPut_Shape_Shifting_Extraction_Item_Result(0));

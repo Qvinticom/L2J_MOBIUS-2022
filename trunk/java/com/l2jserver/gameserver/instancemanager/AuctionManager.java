@@ -1,27 +1,30 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2015 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.instancemanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.enums.MailType;
@@ -36,10 +39,10 @@ public class AuctionManager
 {
 	Connection con = null;
 	private static final Logger _log = Logger.getLogger(AuctionManager.class.getName());
-	FastList<Auctions> auctions;
-	HashMap<String, Integer> categoryType;
-	HashMap<Integer, Integer> categoryConvert;
-	HashMap<Integer, Integer> massCategoryConvert;
+	private static ArrayList<Auctions> auctions;
+	private static HashMap<String, Integer> categoryType;
+	private static HashMap<Integer, Integer> categoryConvert;
+	private static HashMap<Integer, Integer> massCategoryConvert;
 	
 	public AuctionManager()
 	{
@@ -56,14 +59,20 @@ public class AuctionManager
 	
 	private void load()
 	{
-		auctions = new FastList<>();
-		int auctionID = 0, sellerID = 0, count = 0, category = 0, duration = 0, itemOID = 0, itemID = 0;
-		long price = 0, finishTime = 0;
+		auctions = new ArrayList<>();
+		int auctionID = 0;
+		int sellerID = 0;
+		int count = 0;
+		int category = 0;
+		int duration = 0;
+		int itemOID = 0;
+		int itemID = 0;
+		long price = 0;
+		long finishTime = 0;
 		String itemName = "";
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM auctions_info");)
 		{
-			
 			ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
@@ -469,29 +478,26 @@ public class AuctionManager
 		};
 		int i = 0;
 		int IDS[] = null;
-		if (id == 61)
+		switch (id)
 		{
-			IDS = ids[1];
-		}
-		else if (id == 62)
-		{
-			IDS = ids[2];
-		}
-		else if (id == 63)
-		{
-			IDS = ids[3];
-		}
-		else if (id == 64)
-		{
-			IDS = ids[4];
-		}
-		else if (id == 65)
-		{
-			IDS = ids[5];
-		}
-		else if (id == 1)
-		{
-			IDS = ids[0];
+			case 61:
+				IDS = ids[1];
+				break;
+			case 62:
+				IDS = ids[2];
+				break;
+			case 63:
+				IDS = ids[3];
+				break;
+			case 64:
+				IDS = ids[4];
+				break;
+			case 65:
+				IDS = ids[5];
+				break;
+			case 1:
+				IDS = ids[0];
+				break;
 		}
 		
 		if ((((id > 60) && (id < 66)) || (id == 1)) && (IDS != null))
@@ -891,16 +897,22 @@ public class AuctionManager
 		return 59;
 	}
 	
-	public FastList<Auctions> getAuctions()
+	public ArrayList<Auctions> getAuctions()
 	{
 		return auctions;
 	}
 	
 	public class Auctions
 	{
-		int auctionID, itemOID, duration, playerID, category;
+		int auctionID;
+		int itemOID;
+		int duration;
+		int playerID;
+		int category;
 		L2ItemInstance item;
-		long price, count, finishTime;
+		long price;
+		long count;
+		long finishTime;
 		String itemName;
 		
 		public Auctions(int _auctionID, String _itemName, int _itemOID, L2ItemInstance _item, long _price, long _count, int _duration, int _playerID, long _finishTime, int _category)

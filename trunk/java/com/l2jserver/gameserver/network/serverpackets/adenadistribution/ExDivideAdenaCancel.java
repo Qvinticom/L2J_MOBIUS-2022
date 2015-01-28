@@ -16,35 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.adenadistribution;
+
+import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * @author Erlandys
  */
-public class ExDivideAdenaDone extends L2GameServerPacket
+public class ExDivideAdenaCancel extends L2GameServerPacket
 {
-	int _friendsCount;
-	long _count, _dividedCount;
-	String _name;
-	
-	public ExDivideAdenaDone(int friendsCount, long count, long dividedCount, String name)
-	{
-		_friendsCount = friendsCount;
-		_count = count;
-		_dividedCount = dividedCount;
-		_name = name;
-	}
+	public static final ExDivideAdenaCancel STATIC_PACKET = new ExDivideAdenaCancel();
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0x15D);
-		writeC(0x01); // Always 1
-		writeC(0x00); // Always 0
-		writeD(_friendsCount); // Friends count
-		writeQ(_dividedCount); // Divided count
-		writeQ(_count); // Whole count
-		writeS(_name); // Giver name
+		writeH(0x15C);
 	}
 }

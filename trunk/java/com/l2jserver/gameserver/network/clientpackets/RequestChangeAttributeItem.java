@@ -33,10 +33,11 @@ import com.l2jserver.util.Rnd;
  */
 public class RequestChangeAttributeItem extends L2GameClientPacket
 {
-	
 	private static final String _C__D0_B7_SENDCHANGEATTRIBUTETARGETITEM = "[C] D0:B7 SendChangeAttributeTargetItem";
 	
-	private int _attributeOID, _itemOID, _newAttributeID;
+	private int _attributeOID;
+	private int _itemOID;
+	private int _newAttributeID;
 	
 	@Override
 	protected void readImpl()
@@ -49,7 +50,7 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;

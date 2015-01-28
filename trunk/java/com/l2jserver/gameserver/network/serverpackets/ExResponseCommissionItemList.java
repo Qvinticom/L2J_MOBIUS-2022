@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class ExResponseCommissionItemList extends AbstractItemPacket
 {
-	L2PcInstance _player;
+	private final L2PcInstance _player;
 	
 	public ExResponseCommissionItemList(L2PcInstance player)
 	{

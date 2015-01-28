@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 public final class RequestUpdateFriendMemo extends L2GameClientPacket
 {
 	private static final String _C__D0_95_REQUESTUPDATEFRIENDMEMO = "[C] D0:95 RequestUpdateFriendMemo";
-	String cName;
-	String memo;
+	private String cName;
+	private String memo;
 	
 	@Override
 	protected void readImpl()
@@ -38,8 +38,8 @@ public final class RequestUpdateFriendMemo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
-		int id = CharNameTable.getInstance().getIdByName(cName);
+		final L2PcInstance player = getClient().getActiveChar();
+		final int id = CharNameTable.getInstance().getIdByName(cName);
 		player.getFriend(id).setMemo(memo);
 		player.updateMemo(id);
 	}

@@ -19,7 +19,7 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExResponseCommissionDelete extends L2GameServerPacket
 {
-	boolean success;
+	private final boolean success;
 	
 	public ExResponseCommissionDelete(boolean _success)
 	{

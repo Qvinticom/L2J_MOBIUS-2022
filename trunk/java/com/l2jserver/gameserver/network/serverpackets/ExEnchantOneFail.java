@@ -20,9 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 public class ExEnchantOneFail extends L2GameServerPacket
 {
-	public ExEnchantOneFail()
-	{
-	}
+	public static final ExEnchantOneFail STATIC_PACKET = new ExEnchantOneFail();
 	
 	@Override
 	protected final void writeImpl()

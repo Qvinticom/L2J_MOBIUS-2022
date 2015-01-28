@@ -584,6 +584,8 @@ public final class L2PcInstance extends L2Playable
 	/** Recommendation Two Hours bonus **/
 	protected boolean _recoTwoHoursGiven = false;
 	
+	private int _vitalityPoints = 140000;
+	
 	private final PcInventory _inventory = new PcInventory(this);
 	private final PcAuction _auctionInventory = new PcAuction(this);
 	private final PcFreight _freight = new PcFreight(this);
@@ -7212,7 +7214,7 @@ public final class L2PcInstance extends L2Playable
 					// Set Teleport Bookmark Slot
 					player.setBookMarkSlot(rset.getInt("BookmarkSlot"));
 					
-					player._vitPoints = rset.getInt("vitality_points");
+					player._vitalityPoints = rset.getInt("vitality_points");
 					
 					// character creation Time
 					player.getCreateDate().setTime(rset.getDate("createDate"));
@@ -7675,7 +7677,7 @@ public final class L2PcInstance extends L2Playable
 			statement.setString(45, getName());
 			statement.setLong(46, 0); // unset
 			statement.setInt(47, getBookMarkSlot());
-			statement.setInt(48, _vitPoints); // unset
+			statement.setInt(48, _vitalityPoints); // unset
 			statement.setString(49, getLang());
 			
 			int factionId = 0;
@@ -15046,8 +15048,6 @@ public final class L2PcInstance extends L2Playable
 		return getServitors().values().stream().mapToInt(L2Summon::getSummonPoints).sum();
 	}
 	
-	int _vitPoints = 140000;
-	
 	/*
 	 * Return current vitality points in integer format
 	 */
@@ -15055,27 +15055,27 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (getClassId().getId() == getBaseClass())
 		{
-			return _vitPoints;
+			return _vitalityPoints;
 		}
 		if (getSubClasses().containsKey(getClassIndex()))
 		{
 			return getSubClasses().get(getClassIndex()).getVitalityPoints();
 		}
-		return _vitPoints;
+		return _vitalityPoints;
 	}
 	
 	public void setVitalityPoints(int points)
 	{
 		if (getClassId().getId() == getBaseClass())
 		{
-			_vitPoints = points;
+			_vitalityPoints = points;
 			return;
 		}
 		if (getSubClasses().containsKey(getClassIndex()))
 		{
 			getSubClasses().get(getClassIndex()).setVitalityPoints(points);
 		}
-		_vitPoints = points;
+		_vitalityPoints = points;
 	}
 	
 	int _firstCompoundOID = -1;

@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RequestChangeAttributeCancel extends L2GameClientPacket
 {
-	
 	private static final String _C__D0_B7_SENDCHANGEATTRIBUTETARGETITEM = "[C] D0:B7 RequestChangeAttributeCancel";
 	
 	@Override
@@ -32,7 +31,7 @@ public class RequestChangeAttributeCancel extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;

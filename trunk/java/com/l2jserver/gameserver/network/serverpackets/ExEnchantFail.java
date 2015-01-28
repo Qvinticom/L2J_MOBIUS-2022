@@ -20,7 +20,8 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 public class ExEnchantFail extends L2GameServerPacket
 {
-	int _itemId1, _itemId2;
+	private final int _itemId1;
+	private final int _itemId2;
 	
 	public ExEnchantFail(int itemId1, int itemId2)
 	{

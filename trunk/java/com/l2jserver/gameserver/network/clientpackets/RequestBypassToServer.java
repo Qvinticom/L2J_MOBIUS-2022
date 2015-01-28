@@ -287,7 +287,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 					EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(activeChar, lastNpc, ask, state, time), lastNpc);
 				}
 			}
-			else if (_command.startsWith("showAuction"))
+			else if (_command.equals("showAuction"))
 			{
 				L2PcInstance player = getClient().getActiveChar();
 				if (player == null)

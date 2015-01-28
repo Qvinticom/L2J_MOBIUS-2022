@@ -40,19 +40,19 @@ public final class RequestExTryToPut_Shape_Shifting_EnchantSupportItem extends L
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2ItemInstance stone = player.getUsingAppearanceStone();
+		final L2ItemInstance stone = player.getUsingAppearanceStone();
 		if ((stone == null) || (stone.getEtcItem().getAppearanceStone() == null))
 		{
 			player.sendPacket(new ExPut_Shape_Shifting_Target_Item_Result(0));
 			return;
 		}
-		L2ItemInstance targetItem = player.getInventory().getItemByObjectId(_itemOID);
+		final L2ItemInstance targetItem = player.getInventory().getItemByObjectId(_itemOID);
 		if (targetItem == null)
 		{
 			player.sendPacket(new ExPut_Shape_Shifting_Target_Item_Result(0));
@@ -63,7 +63,7 @@ public final class RequestExTryToPut_Shape_Shifting_EnchantSupportItem extends L
 			player.sendPacket(new ExPut_Shape_Shifting_Target_Item_Result(0));
 			return;
 		}
-		L2ItemInstance item = player.getAppearanceItem();
+		final L2ItemInstance item = player.getAppearanceItem();
 		if (item == null)
 		{
 			player.sendPacket(new ExPut_Shape_Shifting_Target_Item_Result(0));

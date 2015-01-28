@@ -23,10 +23,9 @@ import com.l2jserver.gameserver.network.serverpackets.ExChangeAttributeInfo;
  */
 public class SendChangeAttributeTargetItem extends L2GameClientPacket
 {
-	
 	private static final String _C__D0_B0_SENDCHANGEATTRIBUTETARGETITEM = "[C] D0:B0 SendChangeAttributeTargetItem";
-	int _elementOID;
-	int _itemOID;
+	private int _elementOID;
+	private int _itemOID;
 	
 	@Override
 	protected void readImpl()
@@ -38,12 +37,12 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
-		L2ItemInstance item = player.getInventory().getItemByObjectId(_itemOID);
+		final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemOID);
 		if (item == null)
 		{
 			return;

@@ -40,13 +40,13 @@ public final class RequestNewEnchantTry extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		L2ItemInstance firstItem = activeChar.getInventory().getItemByObjectId(activeChar.getFirstCompoundOID());
-		L2ItemInstance secondItem = activeChar.getInventory().getItemByObjectId(activeChar.getSecondCompoundOID());
+		final L2ItemInstance firstItem = activeChar.getInventory().getItemByObjectId(activeChar.getFirstCompoundOID());
+		final L2ItemInstance secondItem = activeChar.getInventory().getItemByObjectId(activeChar.getSecondCompoundOID());
 		if ((firstItem == null) || (secondItem == null))
 		{
 			return;

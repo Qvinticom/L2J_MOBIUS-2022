@@ -31,7 +31,7 @@ public final class RequestNewEnchantPushOne extends L2GameClientPacket
 {
 	private static final String _C__D0_F4_REQUESTNEWENCHANTPUSHONE = "[C] D0:F4 RequestNewEnchantPushOne";
 	
-	int _itemId;
+	private int _itemId;
 	
 	@Override
 	protected void readImpl()
@@ -42,18 +42,18 @@ public final class RequestNewEnchantPushOne extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemId);
+		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemId);
 		if (item == null)
 		{
 			return;
 		}
-		int secondCompoundOID = activeChar.getSecondCompoundOID();
-		L2ItemInstance secondItem = activeChar.getInventory().getItemByObjectId(secondCompoundOID);
+		final int secondCompoundOID = activeChar.getSecondCompoundOID();
+		final L2ItemInstance secondItem = activeChar.getInventory().getItemByObjectId(secondCompoundOID);
 		if ((item.getItem().getBodyPart() != L2Item.SLOT_BROOCH_JEWEL) || ((secondItem != null) && ((secondItem.getObjectId() == item.getObjectId()) || (secondItem.getId() != item.getId()))) || ((item.getId() == 38931) || ((item.getId() % 10) == 4) || ((item.getId() % 10) == 9)))
 		{
 			activeChar.sendPacket(new ExEnchantOneFail());

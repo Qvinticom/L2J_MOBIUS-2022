@@ -27,7 +27,8 @@ public final class RequestNewEnchantRemoveTwo extends L2GameClientPacket
 {
 	private static final String _C__D0_F7_REQUESTNEWENCHANTREMOVETWO = "[C] D0:F7 RequestNewEnchantRemoveTwo";
 	
-	int _itemId;
+	@SuppressWarnings("unused")
+	private int _itemId;
 	
 	@Override
 	protected void readImpl()
@@ -38,7 +39,7 @@ public final class RequestNewEnchantRemoveTwo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;

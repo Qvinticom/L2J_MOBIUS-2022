@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public class ExPut_Shape_Shifting_Extraction_Item_Result extends L2GameServerPacket
 {
-	int _type;
-	long _price = 0;
+	private final int _type;
+	private long _price = 0;
 	
 	public ExPut_Shape_Shifting_Extraction_Item_Result(int type)
 	{

@@ -16,11 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets;
+package com.l2jserver.gameserver.network.clientpackets.adenadistribution;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExDivideAdenaStart;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaStart;
 
 /**
  * @author Erlandys
@@ -30,7 +31,6 @@ public class RequestDivideAdenaStart extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		
 	}
 	
 	@Override

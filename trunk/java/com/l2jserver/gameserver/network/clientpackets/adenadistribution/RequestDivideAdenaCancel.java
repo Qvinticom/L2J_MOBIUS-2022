@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets;
+package com.l2jserver.gameserver.network.clientpackets.adenadistribution;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExDivideAdenaDone;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
 
 /**
  * @author Erlandys
  */
-public class RequestDivideAdena extends L2GameClientPacket
+public class RequestDivideAdenaCancel extends L2GameClientPacket
 {
-	long _count;
+	private int _cancel;
 	
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		_count = readQ();
+		_cancel = readC();
 	}
 	
 	@Override
@@ -44,20 +44,11 @@ public class RequestDivideAdena extends L2GameClientPacket
 		{
 			return;
 		}
-		long count = activeChar.getAdena();
-		if (_count > count)
+		if (_cancel == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA);
-			return;
+			activeChar.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
+			activeChar.sendPacket(new ExDivideAdenaCancel());
 		}
-		int membersCount = activeChar.getParty().getMemberCount();
-		long dividedCount = (long) Math.floor(_count / membersCount);
-		activeChar.reduceAdena("AdenaDistribution", membersCount * dividedCount, null, false);
-		for (L2PcInstance player : activeChar.getParty().getMembers())
-		{
-			player.addAdena("AdenaDistribution", dividedCount, null, player.getObjectId() != activeChar.getObjectId());
-		}
-		activeChar.sendPacket(new ExDivideAdenaDone(membersCount, _count, dividedCount, activeChar.getName()));
 	}
 	
 	@Override

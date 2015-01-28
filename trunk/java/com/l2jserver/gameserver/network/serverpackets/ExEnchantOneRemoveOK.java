@@ -20,9 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 public class ExEnchantOneRemoveOK extends L2GameServerPacket
 {
-	public ExEnchantOneRemoveOK()
-	{
-	}
+	public static final ExEnchantOneRemoveOK STATIC_PACKET = new ExEnchantOneRemoveOK();
 	
 	@Override
 	protected final void writeImpl()

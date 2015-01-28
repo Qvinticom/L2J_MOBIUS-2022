@@ -19,7 +19,7 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExResponseCommissionRegister extends L2GameServerPacket
 {
-	boolean success;
+	private final boolean success;
 	
 	public ExResponseCommissionRegister(boolean _success)
 	{
