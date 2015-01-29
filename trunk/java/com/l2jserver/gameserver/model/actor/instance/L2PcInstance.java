@@ -14173,11 +14173,11 @@ public final class L2PcInstance extends L2Playable
 		
 	}
 	
-	public void setPcBangPoints(final int i)
+	public void setPcBangPoints(final int count)
 	{
-		if (i < 200000)
+		if (count < 200000)
 		{
-			_pcBangPoints = i;
+			_pcBangPoints = count;
 		}
 		else
 		{

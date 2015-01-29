@@ -79,6 +79,7 @@ import handlers.admincommandhandlers.AdminMenu;
 import handlers.admincommandhandlers.AdminMessages;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
+import handlers.admincommandhandlers.AdminPCBangPoints;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
 import handlers.admincommandhandlers.AdminPcCondOverride;
@@ -375,6 +376,7 @@ public class MasterHandler
 			AdminMobGroup.class,
 			AdminMonsterRace.class,
 			AdminPathNode.class,
+			AdminPCBangPoints.class,
 			AdminPetition.class,
 			AdminPForge.class,
 			AdminPledge.class,

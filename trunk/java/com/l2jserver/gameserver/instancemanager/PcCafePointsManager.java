@@ -30,6 +30,10 @@ public class PcCafePointsManager
 {
 	private static PcCafePointsManager _instance;
 	
+	public PcCafePointsManager()
+	{
+	}
+	
 	public static PcCafePointsManager getInstance()
 	{
 		if (_instance == null)
@@ -37,10 +41,6 @@ public class PcCafePointsManager
 			_instance = new PcCafePointsManager();
 		}
 		return _instance;
-	}
-	
-	public PcCafePointsManager()
-	{
 	}
 	
 	public void givePcCafePoint(final L2PcInstance player, final long givedexp)
@@ -74,8 +74,6 @@ public class PcCafePointsManager
 			_points = Rnd.get(_points / 2, _points);
 		}
 		
-		@SuppressWarnings("unused")
-		boolean doublepoint = false;
 		SystemMessage sm = null;
 		if (_points > 0)
 		{
@@ -83,7 +81,6 @@ public class PcCafePointsManager
 			{
 				_points *= 2;
 				sm = SystemMessage.getSystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PC_POINT_S);
-				doublepoint = true;
 			}
 			else
 			{
