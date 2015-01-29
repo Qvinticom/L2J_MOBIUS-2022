@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
 import com.l2jserver.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jserver.gameserver.data.xml.impl.TeleportersData;
 import com.l2jserver.gameserver.data.xml.impl.TransformData;
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -256,6 +257,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					ItemCrystalizationData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
+					break;
+				}
+				case "itemmall":
+				{
+					PrimeShopData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded L2 Store data.");
 					break;
 				}
 				case "ability":

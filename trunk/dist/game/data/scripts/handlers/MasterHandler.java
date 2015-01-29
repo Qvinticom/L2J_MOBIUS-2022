@@ -59,6 +59,7 @@ import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFightCalculator;
 import handlers.admincommandhandlers.AdminFortSiege;
+import handlers.admincommandhandlers.AdminGamePoints;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
@@ -353,6 +354,7 @@ public class MasterHandler
 			AdminExpSp.class,
 			AdminFightCalculator.class,
 			AdminFortSiege.class,
+			AdminGamePoints.class,
 			AdminGeodata.class,
 			AdminGm.class,
 			AdminGmChat.class,
