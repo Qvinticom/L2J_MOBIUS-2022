@@ -112,6 +112,22 @@ public final class GlobalVariablesManager extends AbstractVariables
 		return true;
 	}
 	
+	@Override
+	public boolean deleteMe()
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			Statement del = con.createStatement())
+		{
+			del.execute(DELETE_QUERY);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
+			return false;
+		}
+		return true;
+	}
+	
 	/**
 	 * Gets the single instance of {@code GlobalVariablesManager}.
 	 * @return single instance of {@code GlobalVariablesManager}

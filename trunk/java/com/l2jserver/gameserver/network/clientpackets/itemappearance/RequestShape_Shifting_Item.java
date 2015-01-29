@@ -49,7 +49,7 @@ public final class RequestShape_Shifting_Item extends L2GameClientPacket
 		final L2ItemInstance stone = player.getUsingAppearanceStone();
 		final L2ItemInstance item = player.getAppearanceItem();
 		final L2ItemInstance targetItem = player.getTargetAppearanceItem();
-		final boolean needTargetItem = (stone != null) && (stone.getEtcItem().getAppearanceStone() != null) && (stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.Blessed) || stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.Normal)) ? true : false;
+		final boolean needTargetItem = (stone != null) && (stone.getEtcItem().getAppearanceStone() != null) && (stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.BLESSED) || stone.getEtcItem().getAppearanceStone().getType().equals(StoneType.NORMAL)) ? true : false;
 		player.setUsingAppearanceStone(null);
 		player.setAppearanceItem(null);
 		player.setTargetAppearanceItem(null);
@@ -72,14 +72,14 @@ public final class RequestShape_Shifting_Item extends L2GameClientPacket
 		int time = -1;
 		switch (st.getType())
 		{
-			case Normal:
+			case NORMAL:
 				targetItemId = targetItem.getId();
 				player.destroyItem("AppearanceStone", targetItem, null, true);
 				break;
-			case Blessed:
+			case BLESSED:
 				targetItemId = targetItem.getId();
 				break;
-			case Fixed:
+			case FIXED:
 				targetItemId = st.getTargetItem();
 				time = (int) st.getTimeForAppearance();
 				break;

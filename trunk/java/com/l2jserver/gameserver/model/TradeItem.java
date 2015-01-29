@@ -50,8 +50,8 @@ public class TradeItem
 	private final int _mana;
 	private final boolean _isTimeLimited;
 	private final int _time;
-	private final int _appearanceId;
-	private final long _appearanceTime;
+	private final int _visualId;
+	private final long _visualExpiration;
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
@@ -76,8 +76,8 @@ public class TradeItem
 		_mana = item.getMana();
 		_isTimeLimited = item.isTimeLimitedItem();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
-		_appearanceId = item.getAppearanceId();
-		_appearanceTime = item.getAppearanceTime();
+		_visualId = item.getVisualId();
+		_visualExpiration = item.getAppearanceTime();
 	}
 	
 	public TradeItem(L2Item item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
@@ -104,8 +104,8 @@ public class TradeItem
 		_mana = -1;
 		_isTimeLimited = false;
 		_time = -9999;
-		_appearanceId = appearanceId;
-		_appearanceTime = -1;
+		_visualId = appearanceId;
+		_visualExpiration = -1;
 	}
 	
 	public TradeItem(TradeItem item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
@@ -132,8 +132,8 @@ public class TradeItem
 		_mana = item.getMana();
 		_isTimeLimited = item.isTimeLimitedItem();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
-		_appearanceId = item.getAppearanceId();
-		_appearanceTime = item.getAppearanceTime();
+		_visualId = item.getVisualId();
+		_visualExpiration = item.getVisualExpiration();
 	}
 	
 	public L2ItemInstance getItemInstance()
@@ -251,14 +251,14 @@ public class TradeItem
 		return _isTimeLimited;
 	}
 	
-	public int getAppearanceId()
+	public int getVisualId()
 	{
-		return _appearanceId;
+		return _visualId;
 	}
 	
-	public long getAppearanceTime()
+	public long getVisualExpiration()
 	{
-		return _appearanceTime;
+		return _visualExpiration;
 	}
 	
 	public int getRemainingTime()

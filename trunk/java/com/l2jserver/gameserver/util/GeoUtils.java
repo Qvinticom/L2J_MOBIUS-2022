@@ -95,7 +95,7 @@ public final class GeoUtils
 	
 	private static Color getDirectionColor(int x, int y, int z, int nswe)
 	{
-		if (GeoData.getInstance().checkNearestNswe(x, y, z, nswe, 100))
+		if (GeoData.getInstance().checkNearestNswe(x, y, z, nswe))
 		{
 			return Color.GREEN;
 		}

@@ -236,7 +236,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 					if (powerSource != null)
 					{
 						powerSource.setTarget(player);
-						startQuestTimer("cast_light_heal", 1, powerSource, player);
+						startQuestTimer("cast_light_heal", 3000, powerSource, player);
 					}
 				}
 				break;
@@ -373,7 +373,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 				
-				if (world.isStatus(3))
+				if ((npc != null) && (world != null) && (world.isStatus(3) || world.isStatus(4)))
 				{
 					if (npc.calculateDistance(player, true, false) < LIGHT_HEAL.getSkill().getCastRange())
 					{
@@ -381,15 +381,11 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 					}
 					startQuestTimer("cast_light_heal", 3000, npc, player);
 				}
-				else
-				{
-					npc.deleteMe();
-				}
 				break;
 			}
 			case "fail_instance":
 			{
-				player.getKnownList().getKnownCharacters().forEach(L2Character::deleteMe);
+				InstanceManager.getInstance().getInstance(player.getInstanceId()).removeSpawnedNpcs();
 				player.showQuestMovie(FAILED_ENDING);
 				startQuestTimer("exit", 13500, npc, player);
 				break;
@@ -435,7 +431,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 						if (world.enabledSeal == 2)
 						{
 							cancelQuestTimer("fail_instance", null, player);
-							player.getKnownList().getKnownCharacters().forEach(L2Character::deleteMe);
+							InstanceManager.getInstance().getInstance(world.getInstanceId()).removeSpawnedNpcs();
 							player.showQuestMovie(SUCCES_ENDING);
 							startQuestTimer("spawn_hermuncus", 25050, npc, player);
 						}
@@ -709,8 +705,8 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 			}
 			else if (npc.getId() == HARNAKS_WRAITH)
 			{
-				cancelQuestTimer("fail_instance", npc, killer);
-				killer.getKnownList().getKnownCharacters().forEach(L2Character::deleteMe);
+				cancelQuestTimer("fail_instance", null, killer);
+				InstanceManager.getInstance().getInstance(world.getInstanceId()).removeSpawnedNpcs();
 				killer.showQuestMovie(SUCCES_ENDING);
 				startQuestTimer("spawn_hermuncus", 25050, npc, killer);
 			}
@@ -798,6 +794,7 @@ public class HarnakUndergroundRuins extends AbstractNpcAI
 						player.sendPacket(new ExSendUIEvent(player, false, false, 60, 0, NpcStringId.REMAINING_TIME));
 						showOnScreenMsg(player, NpcStringId.NO_THE_SEAL_CONTROLS_HAVE_BEEN_EXPOSED_GUARDS_PROTECT_THE_SEAL_CONTROLS, ExShowScreenMessage.TOP_CENTER, 10000);
 						startQuestTimer("spawn_npc4", 1, npc, player);
+						cancelQuestTimer("fail_instance", null, player);
 						startQuestTimer("fail_instance", 60000, null, player);
 					}
 				}

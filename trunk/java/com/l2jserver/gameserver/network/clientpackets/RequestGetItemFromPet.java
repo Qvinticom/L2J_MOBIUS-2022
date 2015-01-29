@@ -60,12 +60,12 @@ public final class RequestGetItemFromPet extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) player.getPet();
 		if (player.getActiveEnchantItemId() != L2PcInstance.ID_NONE)
 		{
 			return;
 		}
 		
+		final L2PetInstance pet = (L2PetInstance) player.getPet();
 		final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{

@@ -83,7 +83,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 				writeD(inventory.getPaperdollObjectId(slot.getSlot()));
 				writeD(inventory.getPaperdollItemId(slot.getSlot()));
 				writeD(inventory.getPaperdollAugmentationId(slot.getSlot()));
-				writeD(inventory.getPaperdollVisualId(slot.getSlot()));
+				writeD(inventory.getPaperdollItemVisualId(slot.getSlot()));
 			}
 		}
 	}

@@ -47,7 +47,7 @@ import com.l2jserver.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jserver.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
-import com.l2jserver.gameserver.data.xml.impl.AppearanceStonesData;
+import com.l2jserver.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jserver.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jserver.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
@@ -75,6 +75,7 @@ import com.l2jserver.gameserver.data.xml.impl.OptionData;
 import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jserver.gameserver.data.xml.impl.PlayerXpPercentLostData;
+import com.l2jserver.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jserver.gameserver.data.xml.impl.ShuttleData;
@@ -224,7 +225,6 @@ public class GameServer
 		SummonSkillsTable.getInstance();
 		
 		printSection("Items");
-		AppearanceStonesData.getInstance();
 		ItemTable.getInstance();
 		EnchantItemGroupsData.getInstance();
 		EnchantItemData.getInstance();
@@ -242,6 +242,8 @@ public class GameServer
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
 		AuctionManager.getInstance();
+		PrimeShopData.getInstance();
+		AppearanceItemData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();

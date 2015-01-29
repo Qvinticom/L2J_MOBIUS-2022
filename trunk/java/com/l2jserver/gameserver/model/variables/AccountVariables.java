@@ -118,4 +118,27 @@ public class AccountVariables extends AbstractVariables
 		}
 		return true;
 	}
+	
+	@Override
+	public boolean deleteMe()
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		{
+			// Clear previous entries.
+			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
+			{
+				st.setString(1, _accountName);
+				st.execute();
+			}
+			
+			// Clear all entries
+			getSet().clear();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _accountName, e);
+			return false;
+		}
+		return true;
+	}
 }

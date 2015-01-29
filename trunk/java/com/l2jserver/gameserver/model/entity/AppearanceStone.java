@@ -27,20 +27,20 @@ public class AppearanceStone
 {
 	public enum StoneType
 	{
-		None,
-		Normal,
-		Blessed,
-		Fixed,
-		Restore
+		NONE,
+		NORMAL,
+		BLESSED,
+		FIXED,
+		RESTORE
 	}
 	
 	public enum AppearanceItemType
 	{
-		None,
-		Weapon,
-		Armor,
-		Accessory,
-		All
+		NONE,
+		WEAPON,
+		ARMOR,
+		ACCESSORY,
+		ALL
 	}
 	
 	private final int _itemId;

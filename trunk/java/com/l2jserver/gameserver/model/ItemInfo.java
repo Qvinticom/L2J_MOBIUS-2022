@@ -76,8 +76,8 @@ public class ItemInfo
 	
 	private int[] _option;
 	
-	private int _appearanceId;
-	private long _appearanceTime;
+	private int _visualId;
+	private long _visualExpiration;
 	
 	/**
 	 * Get all information from L2ItemInstance to generate ItemInfo.
@@ -151,8 +151,8 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		_appearanceId = item.getAppearanceId();
-		_appearanceTime = item.getAppearanceTime();
+		_visualId = item.getVisualId();
+		_visualExpiration = item.getAppearanceTime();
 	}
 	
 	public ItemInfo(L2ItemInstance item, int change)
@@ -212,8 +212,8 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		_appearanceId = item.getAppearanceId();
-		_appearanceTime = item.getAppearanceTime();
+		_visualId = item.getVisualId();
+		_visualExpiration = item.getVisualExpiration();
 	}
 	
 	public ItemInfo(Product item)
@@ -303,8 +303,8 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		_appearanceId = item.getAppearanceId();
-		_appearanceTime = item.getAppearanceTime();
+		_visualId = item.getAppearanceId();
+		_visualExpiration = item.getAppearanceTime();
 	}
 	
 	public int getObjectId()
@@ -392,13 +392,13 @@ public class ItemInfo
 		return _option;
 	}
 	
-	public int getAppearanceId()
+	public int getVisualId()
 	{
-		return _appearanceId;
+		return _visualId;
 	}
 	
-	public long getAppearanceTime()
+	public long getVisualExpiration()
 	{
-		return _appearanceTime;
+		return _visualExpiration;
 	}
 }

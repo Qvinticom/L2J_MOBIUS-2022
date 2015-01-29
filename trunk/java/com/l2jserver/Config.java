@@ -976,34 +976,6 @@ public final class Config
 	public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 	
 	// --------------------------------------------------
-	// Seven Signs Settings
-	// --------------------------------------------------
-	public static boolean ALT_GAME_CASTLE_DAWN;
-	public static boolean ALT_GAME_CASTLE_DUSK;
-	public static boolean ALT_GAME_REQUIRE_CLAN_CASTLE;
-	public static int ALT_FESTIVAL_MIN_PLAYER;
-	public static int ALT_MAXIMUM_PLAYER_CONTRIB;
-	public static long ALT_FESTIVAL_MANAGER_START;
-	public static long ALT_FESTIVAL_LENGTH;
-	public static long ALT_FESTIVAL_CYCLE_LENGTH;
-	public static long ALT_FESTIVAL_FIRST_SPAWN;
-	public static long ALT_FESTIVAL_FIRST_SWARM;
-	public static long ALT_FESTIVAL_SECOND_SPAWN;
-	public static long ALT_FESTIVAL_SECOND_SWARM;
-	public static long ALT_FESTIVAL_CHEST_SPAWN;
-	public static double ALT_SIEGE_DAWN_GATES_PDEF_MULT;
-	public static double ALT_SIEGE_DUSK_GATES_PDEF_MULT;
-	public static double ALT_SIEGE_DAWN_GATES_MDEF_MULT;
-	public static double ALT_SIEGE_DUSK_GATES_MDEF_MULT;
-	public static boolean ALT_STRICT_SEVENSIGNS;
-	public static boolean ALT_SEVENSIGNS_LAZY_UPDATE;
-	public static int SSQ_DAWN_TICKET_QUANTITY;
-	public static int SSQ_DAWN_TICKET_PRICE;
-	public static int SSQ_DAWN_TICKET_BUNDLE;
-	public static int SSQ_MANORS_AGREEMENT_ID;
-	public static int SSQ_JOIN_DAWN_ADENA_FEE;
-	
-	// --------------------------------------------------
 	// Server Settings
 	// --------------------------------------------------
 	public static int PORT_GAME;
@@ -1257,7 +1229,7 @@ public final class Config
 			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
 			MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 100);
 			
-			String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "267;268;271;273").split(";");
+			String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "603;606;607").split(";");
 			PROTOCOL_LIST = new ArrayList<>(protocols.length);
 			for (String protocol : protocols)
 			{
@@ -1391,32 +1363,6 @@ public final class Config
 			FS_MAX_SUPPLY_LEVEL = Feature.getInt("FortressMaxSupplyLevel", 6);
 			FS_FEE_FOR_CASTLE = Feature.getInt("FortressFeeForCastle", 25000);
 			FS_MAX_OWN_TIME = Feature.getInt("FortressMaximumOwnTime", 168);
-			
-			ALT_GAME_CASTLE_DAWN = Feature.getBoolean("AltCastleForDawn", true);
-			ALT_GAME_CASTLE_DUSK = Feature.getBoolean("AltCastleForDusk", true);
-			ALT_GAME_REQUIRE_CLAN_CASTLE = Feature.getBoolean("AltRequireClanCastle", false);
-			ALT_FESTIVAL_MIN_PLAYER = Feature.getInt("AltFestivalMinPlayer", 5);
-			ALT_MAXIMUM_PLAYER_CONTRIB = Feature.getInt("AltMaxPlayerContrib", 1000000);
-			ALT_FESTIVAL_MANAGER_START = Feature.getLong("AltFestivalManagerStart", 120000);
-			ALT_FESTIVAL_LENGTH = Feature.getLong("AltFestivalLength", 1080000);
-			ALT_FESTIVAL_CYCLE_LENGTH = Feature.getLong("AltFestivalCycleLength", 2280000);
-			ALT_FESTIVAL_FIRST_SPAWN = Feature.getLong("AltFestivalFirstSpawn", 120000);
-			ALT_FESTIVAL_FIRST_SWARM = Feature.getLong("AltFestivalFirstSwarm", 300000);
-			ALT_FESTIVAL_SECOND_SPAWN = Feature.getLong("AltFestivalSecondSpawn", 540000);
-			ALT_FESTIVAL_SECOND_SWARM = Feature.getLong("AltFestivalSecondSwarm", 720000);
-			ALT_FESTIVAL_CHEST_SPAWN = Feature.getLong("AltFestivalChestSpawn", 900000);
-			ALT_SIEGE_DAWN_GATES_PDEF_MULT = Feature.getDouble("AltDawnGatesPdefMult", 1.1);
-			ALT_SIEGE_DUSK_GATES_PDEF_MULT = Feature.getDouble("AltDuskGatesPdefMult", 0.8);
-			ALT_SIEGE_DAWN_GATES_MDEF_MULT = Feature.getDouble("AltDawnGatesMdefMult", 1.1);
-			ALT_SIEGE_DUSK_GATES_MDEF_MULT = Feature.getDouble("AltDuskGatesMdefMult", 0.8);
-			ALT_STRICT_SEVENSIGNS = Feature.getBoolean("StrictSevenSigns", true);
-			ALT_SEVENSIGNS_LAZY_UPDATE = Feature.getBoolean("AltSevenSignsLazyUpdate", true);
-			
-			SSQ_DAWN_TICKET_QUANTITY = Feature.getInt("SevenSignsDawnTicketQuantity", 300);
-			SSQ_DAWN_TICKET_PRICE = Feature.getInt("SevenSignsDawnTicketPrice", 1000);
-			SSQ_DAWN_TICKET_BUNDLE = Feature.getInt("SevenSignsDawnTicketBundle", 10);
-			SSQ_MANORS_AGREEMENT_ID = Feature.getInt("SevenSignsManorsAgreementId", 6388);
-			SSQ_JOIN_DAWN_ADENA_FEE = Feature.getInt("SevenSignsJoinDawnFee", 50000);
 			
 			TAKE_FORT_POINTS = Feature.getInt("TakeFortPoints", 200);
 			LOOSE_FORT_POINTS = Feature.getInt("LooseFortPoints", 0);
@@ -3657,15 +3603,6 @@ public final class Config
 				break;
 			case "castlezonefameaquirepoints":
 				CASTLE_ZONE_FAME_AQUIRE_POINTS = Integer.parseInt(pValue);
-				break;
-			case "altcastlefordawn":
-				ALT_GAME_CASTLE_DAWN = Boolean.parseBoolean(pValue);
-				break;
-			case "altcastlefordusk":
-				ALT_GAME_CASTLE_DUSK = Boolean.parseBoolean(pValue);
-				break;
-			case "altrequireclancastle":
-				ALT_GAME_REQUIRE_CLAN_CASTLE = Boolean.parseBoolean(pValue);
 				break;
 			case "altfreeteleporting":
 				ALT_GAME_FREE_TELEPORT = Boolean.parseBoolean(pValue);

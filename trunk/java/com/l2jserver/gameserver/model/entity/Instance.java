@@ -25,6 +25,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
@@ -369,6 +370,12 @@ public final class Instance
 		}
 		_npcs.clear();
 		_manualSpawn.clear();
+	}
+	
+	public void removeSpawnedNpcs()
+	{
+		_npcs.stream().filter(Objects::nonNull).forEach(L2Npc::deleteMe);
+		_npcs.clear();
 	}
 	
 	public void removeDoors()

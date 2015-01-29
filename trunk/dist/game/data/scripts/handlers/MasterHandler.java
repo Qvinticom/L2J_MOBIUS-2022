@@ -155,6 +155,7 @@ import handlers.communityboard.HomepageBoard;
 import handlers.communityboard.MailBoard;
 import handlers.communityboard.MemoBoard;
 import handlers.communityboard.RegionBoard;
+import handlers.itemhandlers.Appearance;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
@@ -171,7 +172,6 @@ import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FatedSupportBox;
 import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
-import handlers.itemhandlers.ItemAppearance;
 import handlers.itemhandlers.ItemSkills;
 import handlers.itemhandlers.ItemSkillsTemplate;
 import handlers.itemhandlers.ManaPotion;
@@ -461,6 +461,7 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
+			Appearance.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
 			BlessedSpiritShot.class,
@@ -477,7 +478,6 @@ public class MasterHandler
 			FatedSupportBox.class,
 			FishShots.class,
 			Harvester.class,
-			ItemAppearance.class,
 			ItemSkills.class,
 			ItemSkillsTemplate.class,
 			ManaPotion.class,

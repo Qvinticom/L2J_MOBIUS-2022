@@ -84,7 +84,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 			boolean canUse = false;
 			for (L2ItemInstance item : player.getInventory().getItemsByItemId(itemId))
 			{
-				if ((enchantLevel == item.getEnchantLevel()) && (attackAttribute == item.getAttackElementType()) && (attackAttributeValue == item.getAttackElementPower()) && (appearanceId == item.getAppearanceId()) && (item.getElementDefAttr((byte) 0) == defenseAttributes[0]) && (item.getElementDefAttr((byte) 1) == defenseAttributes[1]) && (item.getElementDefAttr((byte) 2) == defenseAttributes[2]) && (item.getElementDefAttr((byte) 3) == defenseAttributes[3]) && (item.getElementDefAttr((byte) 4) == defenseAttributes[4]) && (item.getElementDefAttr((byte) 5) == defenseAttributes[5]))
+				if ((enchantLevel == item.getEnchantLevel()) && (attackAttribute == item.getAttackElementType()) && (attackAttributeValue == item.getAttackElementPower()) && (appearanceId == item.getVisualId()) && (item.getElementDefAttr((byte) 0) == defenseAttributes[0]) && (item.getElementDefAttr((byte) 1) == defenseAttributes[1]) && (item.getElementDefAttr((byte) 2) == defenseAttributes[2]) && (item.getElementDefAttr((byte) 3) == defenseAttributes[3]) && (item.getElementDefAttr((byte) 4) == defenseAttributes[4]) && (item.getElementDefAttr((byte) 5) == defenseAttributes[5]))
 				{
 					canUse = true;
 					break;

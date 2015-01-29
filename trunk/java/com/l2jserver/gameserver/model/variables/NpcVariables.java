@@ -44,4 +44,10 @@ public class NpcVariables extends AbstractVariables
 	{
 		return true;
 	}
+	
+	@Override
+	public boolean deleteMe()
+	{
+		return true;
+	}
 }

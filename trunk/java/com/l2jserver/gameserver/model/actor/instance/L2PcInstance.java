@@ -41,6 +41,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -765,6 +766,12 @@ public final class L2PcInstance extends L2Playable
 	private int _activeEnchantSupportItemId = ID_NONE;
 	private int _activeEnchantAttrItemId = ID_NONE;
 	private long _activeEnchantTimestamp = 0;
+	
+	private int _firstCompoundOID = -1;
+	private int _secondCompoundOID = -1;
+	private L2ItemInstance _usingAStone = null;
+	private L2ItemInstance _appearanceItem = null;
+	private L2ItemInstance _targetAppearanceItem = null;
 	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
@@ -13614,6 +13621,13 @@ public final class L2PcInstance extends L2Playable
 		return -1;
 	}
 	
+	public int getBirthdays()
+	{
+		long time = (System.currentTimeMillis() - getCreateDate().getTimeInMillis()) / 1000;
+		time /= TimeUnit.DAYS.toMillis(365);
+		return (int) time;
+	}
+	
 	/**
 	 * list of character friends
 	 */
@@ -15078,9 +15092,6 @@ public final class L2PcInstance extends L2Playable
 		_vitalityPoints = points;
 	}
 	
-	int _firstCompoundOID = -1;
-	int _secondCompoundOID = -1;
-	
 	public int getFirstCompoundOID()
 	{
 		return _firstCompoundOID;
@@ -15101,8 +15112,6 @@ public final class L2PcInstance extends L2Playable
 		_secondCompoundOID = secondCompoundOID;
 	}
 	
-	L2ItemInstance _usingAStone = null;
-	
 	public L2ItemInstance getUsingAppearanceStone()
 	{
 		return _usingAStone;
@@ -15112,9 +15121,6 @@ public final class L2PcInstance extends L2Playable
 	{
 		_usingAStone = stone;
 	}
-	
-	L2ItemInstance _appearanceItem = null;
-	L2ItemInstance _targetAppearanceItem = null;
 	
 	public L2ItemInstance getAppearanceItem()
 	{
@@ -15134,5 +15140,22 @@ public final class L2PcInstance extends L2Playable
 	public void setTargetAppearanceItem(L2ItemInstance item)
 	{
 		_targetAppearanceItem = item;
+	}
+	
+	/**
+	 * @return the prime shop points of the player.
+	 */
+	public int getPrimePoints()
+	{
+		return getAccountVariables().getInt("PrimePoints", 0);
+	}
+	
+	/**
+	 * Sets prime shop for current player.
+	 * @param points
+	 */
+	public void setPrimePoints(int points)
+	{
+		getAccountVariables().set("PrimePoints", points);
 	}
 }

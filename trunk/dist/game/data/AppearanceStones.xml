@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/AppearanceStones.xsd">
-	<stone id="22403" type="normal" itemType="weapon" grades="s;s80;s84" price="800000" />
+	<!-- Weapon Appearance Stones -->
+	<!-- Normal -->
+	<stone id="22402" targetType="WEAPON" type="NORMAL" grades="R;R95;R99" cost="800000" /> <!-- Weapon Appearance Stone (R-grade) -->
+	<stone id="22403" targetType="WEAPON" type="NORMAL" grades="S;S80" cost="800000" /> <!-- Weapon Appearance Stone (S-grade) -->
+	<stone id="22404" targetType="WEAPON" type="NORMAL" grades="A" cost="800000" /> <!-- Weapon Appearance Stone (A-grade) -->
+	<stone id="22405" targetType="WEAPON" type="NORMAL" grades="B" cost="800000" /> <!-- Weapon Appearance Stone (B-grade) -->
+	<stone id="22406" targetType="WEAPON" type="NORMAL" grades="C" cost="800000" /> <!-- Weapon Appearance Stone (C-grade) -->
+	<stone id="22407" targetType="WEAPON" type="NORMAL" grades="D" cost="800000" /> <!-- Weapon Appearance Stone (D-grade) -->
+
+	<!-- Blessed -->
+	<stone id="22408" targetType="WEAPON" type="BLESSED" grades="R;R95;R99" cost="800000" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
+	<stone id="22409" targetType="WEAPON" type="BLESSED" grades="S;S80" cost="800000" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
+	<stone id="22410" targetType="WEAPON" type="BLESSED" grades="A" cost="800000" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
+	<stone id="22411" targetType="WEAPON" type="BLESSED" grades="B" cost="800000" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
+	<stone id="22412" targetType="WEAPON" type="BLESSED" grades="C" cost="800000" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
+	<stone id="22413" targetType="WEAPON" type="BLESSED" grades="D" cost="800000" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
+
+	<!-- Restore -->
+	<stone id="22414" targetType="WEAPON" type="RESTORE" grades="R;R95;R99" cost="800000" /> <!-- Weapon Restoration Stone (R-grade) -->
+	<stone id="22415" targetType="WEAPON" type="RESTORE" grades="S;S80" cost="800000" /> <!-- Weapon Restoration Stone (S-grade) -->
+	<stone id="22416" targetType="WEAPON" type="RESTORE" grades="A" cost="800000" /> <!-- Weapon Restoration Stone (A-grade) -->
+	<stone id="22417" targetType="WEAPON" type="RESTORE" grades="B" cost="800000" /> <!-- Weapon Restoration Stone (B-grade) -->
+	<stone id="22418" targetType="WEAPON" type="RESTORE" grades="C" cost="800000" /> <!-- Weapon Restoration Stone (C-grade) -->
+	<stone id="22419" targetType="WEAPON" type="RESTORE" grades="D" cost="800000" /> <!-- Weapon Restoration Stone (D-grade) -->
+
+	<!-- Armor Appearance Stones -->
+	<!-- Normal -->
+	<stone id="22682" targetType="ARMOR" type="NORMAL" grades="R;R95;R99" cost="125000" /> <!-- Armor Appearance Stone (R-grade) -->
+	<stone id="22683" targetType="ARMOR" type="NORMAL" grades="S;S80" cost="125000" /> <!-- Armor Appearance Stone (S-grade) -->
+	<stone id="22684" targetType="ARMOR" type="NORMAL" grades="A" cost="125000" /> <!-- Armor Appearance Stone (A-grade) -->
+	<stone id="22685" targetType="ARMOR" type="NORMAL" grades="B" cost="125000" /> <!-- Armor Appearance Stone (B-grade) -->
+	<stone id="22686" targetType="ARMOR" type="NORMAL" grades="C" cost="125000" /> <!-- Armor Appearance Stone (C-grade) -->
+	<stone id="22687" targetType="ARMOR" type="NORMAL" grades="D" cost="125000" /> <!-- Armor Appearance Stone (D-grade) -->
+
+	<!-- Blessed -->
+	<stone id="22688" targetType="ARMOR" type="BLESSED" grades="R;R95;R99" /> <!-- Blessed Armor Appearance Stone (R-grade) -->
+	<stone id="22689" targetType="ARMOR" type="BLESSED" grades="S;S80" /> <!--Blessed Armor Appearance Stone (S-grade) -->
+	<stone id="22690" targetType="ARMOR" type="BLESSED" grades="A" /> <!-- Blessed Armor Appearance Stone (A-grade) -->
+	<stone id="22691" targetType="ARMOR" type="BLESSED" grades="B" /> <!-- Blessed Armor Appearance Stone (B-grade) -->
+	<stone id="22692" targetType="ARMOR" type="BLESSED" grades="C" /> <!-- Blessed Armor Appearance Stone (C-grade) -->
+	<stone id="22693" targetType="ARMOR" type="BLESSED" grades="D" /> <!-- Blessed Armor Appearance Stone (D-grade) -->
+
+	<!-- Restore -->
+	<stone id="22694" targetType="ARMOR" type="RESTORE" grades="R;R95;R99" /> <!-- Armor Restoration Stone (R-grade) -->
+	<stone id="22695" targetType="ARMOR" type="RESTORE" grades="S;S80" /> <!-- Armor Restoration Stone (S-grade) -->
+	<stone id="22696" targetType="ARMOR" type="RESTORE" grades="A" /> <!-- Armor Restoration Stone (A-grade) -->
+	<stone id="22697" targetType="ARMOR" type="RESTORE" grades="B" /> <!-- Armor Restoration Stone (B-grade) -->
+	<stone id="22698" targetType="ARMOR" type="RESTORE" grades="C" /> <!-- Armor Restoration Stone (C-grade) -->
+	<stone id="22699" targetType="ARMOR" type="RESTORE" grades="D" /> <!-- Armor Restoration Stone (D-grade) -->
 </list>

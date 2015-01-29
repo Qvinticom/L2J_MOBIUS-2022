@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PartyDistributionType;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2Party;
@@ -179,23 +178,12 @@ public final class RequestJoinParty extends L2GameClientPacket
 			// in case a leader change has happened, use party's mode
 			target.sendPacket(new AskJoinParty(requestor.getName(), party.getDistributionType()));
 			party.setPendingInvitation(true);
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("sent out a party invitation to:" + target.getName());
-			}
-			
 		}
 		else
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
-			
-			if (Config.DEBUG)
-			{
-				_log.warning(requestor.getName() + " already received a party invitation");
-			}
 		}
 	}
 	
@@ -218,21 +206,10 @@ public final class RequestJoinParty extends L2GameClientPacket
 			requestor.onTransactionRequest(target);
 			target.sendPacket(new AskJoinParty(requestor.getName(), partyDistributionType));
 			requestor.getParty().setPendingInvitation(true);
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("sent out a party invitation to:" + target.getName());
-			}
-			
 		}
 		else
 		{
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
-			
-			if (Config.DEBUG)
-			{
-				_log.warning(requestor.getName() + " already received a party invitation");
-			}
 		}
 	}
 	

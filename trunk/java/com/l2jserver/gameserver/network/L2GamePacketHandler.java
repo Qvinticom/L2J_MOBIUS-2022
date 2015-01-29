@@ -50,6 +50,11 @@ import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMenteeAdd
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMentorCancel;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMentorList;
+import com.l2jserver.gameserver.network.clientpackets.primeshop.RequestBRBuyProduct;
+import com.l2jserver.gameserver.network.clientpackets.primeshop.RequestBRGamePoint;
+import com.l2jserver.gameserver.network.clientpackets.primeshop.RequestBRProductInfo;
+import com.l2jserver.gameserver.network.clientpackets.primeshop.RequestBRProductList;
+import com.l2jserver.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
 import com.l2jserver.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import com.l2jserver.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import com.l2jserver.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -1276,19 +1281,19 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestExOlympiadMatchListRefresh(); // RequestOlympiadMatchList
 								break;
 							case 0x86:
-								// msg = new RequestBRGamePoint();
+								msg = new RequestBRGamePoint();
 								break;
 							case 0x87:
-								// msg = new RequestBRProductList();
+								msg = new RequestBRProductList();
 								break;
 							case 0x88:
-								// msg = new RequestBRProductInfo();
+								msg = new RequestBRProductInfo();
 								break;
 							case 0x89:
-								// msg = new RequestBRBuyProduct();
+								msg = new RequestBRBuyProduct();
 								break;
 							case 0x8A:
-								// msg = new RequestBRRecentProductList();
+								msg = new RequestBRRecentProductList();
 								break;
 							case 0x8B:
 								// @ msg = new RequestBR_MiniGameLoadScores();

@@ -30,12 +30,13 @@ public class ChangeAttribute implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
 		{
+			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		if (activeChar.isCastingNow())
 		{
 			return false;

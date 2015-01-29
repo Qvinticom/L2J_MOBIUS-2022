@@ -145,15 +145,10 @@ public class CharInfo extends L2GameServerPacket
 		
 		writeC(_armorEnchant);
 		
-		writeD(0x00); // rhand item visual id
-		writeD(0x00); // lhand item visual id
-		writeD(0x00); // lrhand item visual id
-		writeD(0x00); // gloves item visual id
-		writeD(0x00); // chest item visual id
-		writeD(0x00); // legs item visual id
-		writeD(0x00); // feet item visual id
-		writeD(0x00); // hair item visual id
-		writeD(0x00); // hair 2 item visual id
+		for (int slot : getPaperdollOrderVisualId())
+		{
+			writeD(_activeChar.getInventory().getPaperdollItemVisualId(slot));
+		}
 		
 		writeC(_activeChar.getPvpFlag());
 		writeD(_activeChar.getKarma());

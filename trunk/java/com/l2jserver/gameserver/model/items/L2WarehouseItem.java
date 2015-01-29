@@ -97,7 +97,7 @@ public class L2WarehouseItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_appearanceId = item.getAppearanceId();
+		_appearanceId = item.getVisualId();
 		_appearanceTime = item.getAppearanceTime();
 	}
 	

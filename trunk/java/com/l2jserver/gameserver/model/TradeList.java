@@ -131,7 +131,7 @@ public class TradeList
 			{
 				el[i] = item.getElementDefAttr((byte) i);
 			}
-			item = new TradeItem(item, item.getCount(), item.getPrice(), item.getEnchant(), item.getAttackElementType(), item.getAttackElementPower(), el, item.getAppearanceId());
+			item = new TradeItem(item, item.getCount(), item.getPrice(), item.getEnchant(), item.getAttackElementType(), item.getAttackElementPower(), el, item.getVisualId());
 			inventory.adjustAvailableItem(item);
 			list.add(item);
 		}

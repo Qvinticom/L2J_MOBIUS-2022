@@ -22,6 +22,7 @@ import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
@@ -409,9 +410,34 @@ public class ItemTable
 		return _armors.keySet();
 	}
 	
+	public Collection<L2Armor> getAllArmors()
+	{
+		return _armors.values();
+	}
+	
 	public Set<Integer> getAllWeaponsId()
 	{
 		return _weapons.keySet();
+	}
+	
+	public Collection<L2Weapon> getAllWeapons()
+	{
+		return _weapons.values();
+	}
+	
+	public Set<Integer> getAllEtcItemsId()
+	{
+		return _etcItems.keySet();
+	}
+	
+	public Collection<L2EtcItem> getAllEtcItems()
+	{
+		return _etcItems.values();
+	}
+	
+	public L2Item[] getAllItems()
+	{
+		return _allTemplates;
 	}
 	
 	public int getArraySize()

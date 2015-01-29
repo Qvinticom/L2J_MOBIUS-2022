@@ -60,7 +60,7 @@ public final class RequestExTryToPut_Shape_Shifting_TargetItem extends L2GameCli
 			player.sendPacket(new ExPut_Shape_Shifting_Extraction_Item_Result(0));
 			return;
 		}
-		final boolean isSameType = ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Armor) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Weapon) && item.isWeapon()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.Accessory) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.All));
+		final boolean isSameType = ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.ARMOR) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.WEAPON) && item.isWeapon()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.ACCESSORY) && item.isArmor()) || ((stone.getEtcItem().getAppearanceStone().getItemType() == AppearanceItemType.ALL));
 		if (!isSameType)
 		{
 			player.sendPacket(new ExPut_Shape_Shifting_Extraction_Item_Result(0));

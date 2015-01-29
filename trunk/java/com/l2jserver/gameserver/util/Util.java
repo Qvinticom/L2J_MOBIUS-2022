@@ -28,6 +28,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import javolution.text.TextBuilder;
@@ -1031,5 +1032,18 @@ public final class Util
 			}
 		}
 		return false;
+	}
+	
+	public static int parseNextInt(StringTokenizer st, int defaultVal)
+	{
+		try
+		{
+			String value = st.nextToken().trim();
+			return Integer.parseInt(value);
+		}
+		catch (Exception e)
+		{
+			return defaultVal;
+		}
 	}
 }

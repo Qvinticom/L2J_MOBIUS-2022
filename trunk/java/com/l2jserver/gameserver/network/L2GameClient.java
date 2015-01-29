@@ -276,6 +276,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			return;
 		}
+		
 		getConnection().sendPacket(gsp);
 		gsp.runImpl();
 	}

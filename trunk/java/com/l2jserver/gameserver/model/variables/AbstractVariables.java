@@ -23,13 +23,14 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.interfaces.IDeletable;
 import com.l2jserver.gameserver.model.interfaces.IRestorable;
 import com.l2jserver.gameserver.model.interfaces.IStorable;
 
 /**
  * @author UnAfraid
  */
-public abstract class AbstractVariables extends StatsSet implements IRestorable, IStorable
+public abstract class AbstractVariables extends StatsSet implements IRestorable, IStorable, IDeletable
 {
 	private final AtomicBoolean _hasChanges = new AtomicBoolean(false);
 	
@@ -81,6 +82,21 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	public final void set(String name, String value)
 	{
 		_hasChanges.compareAndSet(false, true);
+		super.set(name, value);
+	}
+	
+	/**
+	 * Put's entry to the variables and marks as changed if required (<i>Useful when restoring to do not save them again</i>).
+	 * @param name
+	 * @param value
+	 * @param markAsChanged
+	 */
+	public final void set(String name, String value, boolean markAsChanged)
+	{
+		if (markAsChanged)
+		{
+			_hasChanges.compareAndSet(false, true);
+		}
 		super.set(name, value);
 	}
 	

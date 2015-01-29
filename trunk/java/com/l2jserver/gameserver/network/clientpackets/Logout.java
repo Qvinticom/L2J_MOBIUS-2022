@@ -56,10 +56,6 @@ public final class Logout extends L2GameClientPacket
 		
 		if ((player.getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (player.getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("Player " + player.getName() + " tried to logout while enchanting.");
-			}
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -84,11 +80,6 @@ public final class Logout extends L2GameClientPacket
 			if (player.isGM() && Config.GM_RESTART_FIGHTING)
 			{
 				return;
-			}
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("Player " + player.getName() + " tried to logout while fighting.");
 			}
 			
 			player.sendPacket(SystemMessageId.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT);

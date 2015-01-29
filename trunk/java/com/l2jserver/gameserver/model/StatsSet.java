@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,6 +31,7 @@ import javolution.util.FastMap;
 import com.l2jserver.gameserver.model.holders.MinionHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.interfaces.IParserAdvUtils;
+import com.l2jserver.util.TimeUtil;
 
 /**
  * This class is meant to hold a set of (key,value) pairs.<br>
@@ -507,6 +509,28 @@ public class StatsSet implements IParserAdvUtils
 			return defaultValue;
 		}
 		return String.valueOf(val);
+	}
+	
+	@Override
+	public Duration getDuration(String key)
+	{
+		Object val = _set.get(key);
+		if (val == null)
+		{
+			throw new IllegalArgumentException("String value required, but not specified");
+		}
+		return TimeUtil.parseDuration(String.valueOf(val));
+	}
+	
+	@Override
+	public Duration getDuration(String key, Duration defaultValue)
+	{
+		Object val = _set.get(key);
+		if (val == null)
+		{
+			return defaultValue;
+		}
+		return TimeUtil.parseDuration(String.valueOf(val));
 	}
 	
 	@Override

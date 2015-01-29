@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jserver.gameserver.data.xml.impl.AppearanceStonesData;
+import com.l2jserver.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jserver.gameserver.model.L2ExtractableProduct;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.entity.AppearanceStone;
@@ -123,7 +123,7 @@ public final class L2EtcItem extends L2Item
 		}
 		
 		_isInfinite = set.getBoolean("is_infinite", false);
-		_appearanceStone = (_handler != null) && _handler.equalsIgnoreCase("ItemAppearance") ? AppearanceStonesData.getInstance().getStone(getId()) : null;
+		_appearanceStone = (_handler != null) && _handler.equals("Appearance") ? AppearanceItemData.getInstance().getStone(getId()) : null;
 	}
 	
 	/**

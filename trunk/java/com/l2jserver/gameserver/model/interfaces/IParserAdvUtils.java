@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model.interfaces;
 
+import java.time.Duration;
+
 /**
  * More advanced interface for parsers.<br>
  * Allows usage of get methods without fall back value.<br>
@@ -41,6 +43,8 @@ public interface IParserAdvUtils extends IParserUtils
 	public double getDouble(String key);
 	
 	public String getString(String key);
+	
+	public Duration getDuration(String key);
 	
 	public <T extends Enum<T>> T getEnum(String key, Class<T> clazz);
 	

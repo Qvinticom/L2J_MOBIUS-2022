@@ -121,6 +121,29 @@ public class PlayerVariables extends AbstractVariables
 		return true;
 	}
 	
+	@Override
+	public boolean deleteMe()
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		{
+			// Clear previous entries.
+			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
+			{
+				st.setInt(1, _objectId);
+				st.execute();
+			}
+			
+			// Clear all entries
+			getSet().clear();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + getPlayer(), e);
+			return false;
+		}
+		return true;
+	}
+	
 	public L2PcInstance getPlayer()
 	{
 		return L2World.getInstance().getPlayer(_objectId);

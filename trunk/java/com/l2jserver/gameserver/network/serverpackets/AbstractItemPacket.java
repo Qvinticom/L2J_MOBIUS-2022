@@ -71,8 +71,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	
 	protected void writeTradeItem(TradeItem item)
 	{
-		// final int mask = calculateMask(item);
-		// writeC(mask);
 		writeH(item.getItem().getType1());
 		writeD(item.getObjectId()); // ObjectId
 		writeD(item.getItem().getDisplayId()); // ItemId
@@ -117,7 +115,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 		if (containsMask(mask, ItemListType.VISUAL_ID))
 		{
-			writeD(item.getAppearanceId()); // Item remodel visual ID
+			writeD(item.getVisualId()); // Item remodel visual ID
 		}
 	}
 	
@@ -179,11 +177,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			}
 		}
 		
-		if (item.getAppearanceId() > 0)
+		if (item.getVisualId() > 0)
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
-		
 		return mask;
 	}
 	

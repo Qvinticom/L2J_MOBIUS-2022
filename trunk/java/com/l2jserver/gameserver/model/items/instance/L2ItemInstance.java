@@ -1676,7 +1676,7 @@ public final class L2ItemInstance extends L2Object
 			ps.setInt(7, getCustomType2());
 			ps.setInt(8, getMana());
 			ps.setLong(9, getTime());
-			ps.setInt(10, getAppearanceId());
+			ps.setInt(10, getVisualId());
 			ps.setLong(11, getAppearanceTime());
 			ps.setInt(12, getObjectId());
 			ps.executeUpdate();
@@ -2262,7 +2262,7 @@ public final class L2ItemInstance extends L2Object
 		}
 	}
 	
-	public int getAppearanceId()
+	public int getVisualId()
 	{
 		return _appearanceId;
 	}
