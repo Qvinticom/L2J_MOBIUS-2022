@@ -38,6 +38,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.PartyDistributionType;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
+import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -857,6 +858,7 @@ public class L2Party extends AbstractPlayerGroup
 				if (addexp > 0)
 				{
 					member.updateVitalityPoints(vitalityPoints, true, false);
+					PcCafePointsManager.getInstance().givePcCafePoint((member), addexp);
 				}
 			}
 			else

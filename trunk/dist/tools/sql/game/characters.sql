@@ -53,14 +53,13 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `death_penalty_level` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `bookmarkslot` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `vitality_points` int(10) NOT NULL DEFAULT '140000',
+  `pccafe_points` int(6) DEFAULT NULL,
   `createDate` date NOT NULL DEFAULT '0000-00-00',
   `language` VARCHAR(2) DEFAULT NULL,
+  `faction` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`),
   KEY `account_name` (`account_name`),
   KEY `char_name` (`char_name`),
   KEY `clanid` (`clanid`),
   KEY `online` (`online`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Faction System
-ALTER TABLE `characters` ADD `faction` TINYINT UNSIGNED NOT NULL DEFAULT 0;

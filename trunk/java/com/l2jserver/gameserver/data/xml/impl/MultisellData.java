@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.model.multisell.Ingredient;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.gameserver.model.multisell.PreparedListContainer;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jserver.gameserver.network.serverpackets.MultiSellList;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
@@ -281,6 +282,13 @@ public final class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
+			case PC_BANG_POINTS:
+				if (player.getPcBangPoints() < amount)
+				{
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
+					break;
+				}
+				return true;
 			case CLAN_REPUTATION:
 				if (player.getClan() == null)
 				{
@@ -313,6 +321,14 @@ public final class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
+			case PC_BANG_POINTS: // PcBang points
+				final int cost = player.getPcBangPoints() - (int) (amount);
+				player.setPcBangPoints(cost);
+				SystemMessage smsgpc = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT);
+				smsgpc.addLong((int) amount);
+				player.sendPacket(smsgpc);
+				player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), (int) amount, 1));
+				return true;
 			case CLAN_REPUTATION:
 				player.getClan().takeReputationScore((int) amount, true);
 				SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
@@ -375,6 +391,7 @@ public final class MultisellData implements IXmlReader
 	{
 		switch (ing.getItemId())
 		{
+			case PC_BANG_POINTS:
 			case CLAN_REPUTATION:
 			case FAME:
 				return true;

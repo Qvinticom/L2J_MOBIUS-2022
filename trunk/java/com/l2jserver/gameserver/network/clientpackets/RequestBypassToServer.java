@@ -24,6 +24,7 @@ import java.util.logging.Level;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.PlayerAction;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
@@ -69,7 +70,8 @@ public final class RequestBypassToServer extends L2GameClientPacket
 		"_olympiad?command",
 		"menu_select",
 		"manor_menu_select",
-		"showAuction"
+		"showAuction",
+		"pccafe"
 	};
 	
 	// S
@@ -289,12 +291,22 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (_command.equals("showAuction"))
 			{
-				L2PcInstance player = getClient().getActiveChar();
+				final L2PcInstance player = getClient().getActiveChar();
 				if (player == null)
 				{
 					return;
 				}
 				player.sendPacket(new ExShowCommission());
+			}
+			else if (_command.startsWith("pccafe"))
+			{
+				final L2PcInstance player = getClient().getActiveChar();
+				if ((player == null) || !Config.PC_BANG_ENABLED)
+				{
+					return;
+				}
+				final int multisellId = Integer.parseInt(_command.substring(10).trim());
+				MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 			}
 			else
 			{

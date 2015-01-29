@@ -365,7 +365,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character Character SQL String Definitions:
 	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,faction=? WHERE charId=?";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,pccafe_points=?,language=?,faction=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Premium System String Definitions:
@@ -404,6 +404,8 @@ public final class L2PcInstance extends L2Playable
 	public static final int ID_NONE = -1;
 	
 	public static final int REQUEST_TIMEOUT = 15;
+	
+	private int _pcBangPoints = 0;
 	
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
 	
@@ -7223,6 +7225,8 @@ public final class L2PcInstance extends L2Playable
 					
 					player._vitalityPoints = rset.getInt("vitality_points");
 					
+					player.setPcBangPoints(rset.getInt("pccafe_points"));
+					
 					// character creation Time
 					player.getCreateDate().setTime(rset.getDate("createDate"));
 					
@@ -7685,7 +7689,8 @@ public final class L2PcInstance extends L2Playable
 			statement.setLong(46, 0); // unset
 			statement.setInt(47, getBookMarkSlot());
 			statement.setInt(48, _vitalityPoints); // unset
-			statement.setString(49, getLang());
+			statement.setInt(49, getPcBangPoints());
+			statement.setString(50, getLang());
 			
 			int factionId = 0;
 			if (isGood())
@@ -7696,10 +7701,9 @@ public final class L2PcInstance extends L2Playable
 			{
 				factionId = 2;
 			}
-			statement.setInt(50, factionId);
+			statement.setInt(51, factionId);
 			
-			statement.setInt(51, getObjectId());
-			
+			statement.setInt(52, getObjectId());
 			statement.execute();
 		}
 		catch (Exception e)
@@ -14161,6 +14165,24 @@ public final class L2PcInstance extends L2Playable
 	public void setOfflineStartTime(long time)
 	{
 		_offlineShopStart = time;
+	}
+	
+	public int getPcBangPoints()
+	{
+		return _pcBangPoints;
+		
+	}
+	
+	public void setPcBangPoints(final int i)
+	{
+		if (i < 200000)
+		{
+			_pcBangPoints = i;
+		}
+		else
+		{
+			_pcBangPoints = 200000;
+		}
 	}
 	
 	/**

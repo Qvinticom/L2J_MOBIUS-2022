@@ -1601,7 +1601,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestAbilityWndClose();
 								break;
 							case 0xF0:
-								// msg = ExPCCafeRequestOpenWindowWithoutNPC();
+								msg = new ExPCCafeRequestOpenWindowWithoutNPC();
 								break;
 							case 0xF2:
 								// msg = new RequestLuckyGamePlay();

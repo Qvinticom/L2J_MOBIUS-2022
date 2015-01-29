@@ -70,6 +70,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jserver.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import com.l2jserver.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jserver.gameserver.network.serverpackets.ExNotifyPremiumItem;
+import com.l2jserver.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -436,6 +437,18 @@ public class EnterWorld extends L2GameClientPacket
 		if (activeChar.isCursedWeaponEquipped())
 		{
 			CursedWeaponsManager.getInstance().getCursedWeapon(activeChar.getCursedWeaponEquippedId()).cursedOnLogin();
+		}
+		
+		if (Config.PC_BANG_ENABLED)
+		{
+			if (activeChar.getPcBangPoints() > 0)
+			{
+				activeChar.sendPacket(new ExPCCafePointInfo(activeChar.getPcBangPoints(), 0, 1));
+			}
+			else
+			{
+				activeChar.sendPacket(new ExPCCafePointInfo());
+			}
 		}
 		
 		activeChar.updateEffectIcons();
