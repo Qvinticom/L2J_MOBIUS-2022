@@ -223,14 +223,17 @@ public class Parade extends AbstractNpcAI
 				for (Iterator<L2Npc> it = spawns.iterator(); it.hasNext();)
 				{
 					L2Npc actor = it.next();
-					if (actor.calculateDistance(actor.getXdestination(), actor.getYdestination(), 0, false, true) < (100 * 100))
+					if (actor != null)
 					{
-						actor.deleteMe();
-						it.remove();
-					}
-					else if (!actor.isMoving())
-					{
-						actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(actor.getXdestination(), actor.getYdestination(), actor.getZdestination(), actor.getHeading()));
+						if (actor.calculateDistance(actor.getXdestination(), actor.getYdestination(), 0, false, true) < (100 * 100))
+						{
+							actor.deleteMe();
+							it.remove();
+						}
+						else if (!actor.isMoving())
+						{
+							actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(actor.getXdestination(), actor.getYdestination(), actor.getZdestination(), actor.getHeading()));
+						}
 					}
 				}
 				if (spawns.size() == 0)
