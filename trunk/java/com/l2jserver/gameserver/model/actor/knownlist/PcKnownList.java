@@ -181,10 +181,18 @@ public class PcKnownList extends PlayableKnownList
 		{
 			return 2900;
 		}
-		if (knownlistSize <= 70)
+		
+		// if (knownlistSize <= 70)
+		// {
+		// return 2300;
+		// }
+		// return 1700; // Siege, TOI, city
+		
+		if (knownlistSize > 300)
 		{
-			return 2300;
+			return 1700; // Siege, etc
 		}
-		return 1700; // Siege, TOI, city
+		
+		return 2500; // Retail seems to have a larger value than this.
 	}
 }
