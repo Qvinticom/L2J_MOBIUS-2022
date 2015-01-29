@@ -672,9 +672,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1400" />
 		<set name="price" val="528" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />

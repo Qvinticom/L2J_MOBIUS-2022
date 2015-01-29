@@ -54,7 +54,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player cloakStatus="true" />
 			</and>
 		</cond>
@@ -152,7 +151,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="ROGUE_CLOACK" />
 				<player cloakStatus="true" />
 			</and>
@@ -192,7 +190,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="2453">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="MAGE_CLOACK" />
 				<player cloakStatus="true" />
 			</and>

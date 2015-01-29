@@ -455,8 +455,10 @@
 	</item>
 	<item id="40061" name="Apprentice's Staff" additionalName="" type="Weapon">
 		<set name="icon" val="icon.weapon_willow_staff_i00" />
+		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1080" />
+		<set name="weapon_type" val="BLUNT" />
 		<for>
 			<add stat="pAtk" val="6.0" />
 			<add stat="mAtk" val="8.0" />

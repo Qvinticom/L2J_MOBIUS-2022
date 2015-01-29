@@ -193,7 +193,6 @@
 		<set name="price" val="1980" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player castle="-1" />
 			</and>
 		</cond>

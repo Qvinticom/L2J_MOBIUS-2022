@@ -27,9 +27,6 @@
 		<set name="weight" val="560" />
 		<set name="price" val="2032000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="73" />
 			<enchant stat="pDef" val="0" />
@@ -1178,9 +1175,6 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1170" />
 		<set name="price" val="3355000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -1199,9 +1193,6 @@
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8310-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="13" />

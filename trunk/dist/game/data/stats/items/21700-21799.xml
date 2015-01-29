@@ -1017,9 +1017,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="205" />
 		</for>
@@ -1037,9 +1034,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="128" />
 		</for>
@@ -1104,9 +1098,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -1207,9 +1198,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="166" />
 			<add stat="maxMp" val="866" />
@@ -1299,9 +1287,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="226" />
 		</for>
@@ -1319,9 +1304,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="141" />
 		</for>
@@ -1386,9 +1368,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />

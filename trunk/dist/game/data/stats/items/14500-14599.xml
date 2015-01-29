@@ -662,9 +662,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
@@ -701,9 +698,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="125" />
 			<add stat="maxMp" val="637" />
@@ -723,9 +717,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
@@ -762,9 +753,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="125" />
 			<add stat="maxMp" val="637" />
@@ -2028,7 +2016,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2051,7 +2038,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2074,7 +2060,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2159,7 +2144,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2183,7 +2167,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
@@ -2206,7 +2189,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>

@@ -29,9 +29,6 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="61" />
 		</for>
@@ -44,9 +41,6 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="214" />
 		</for>
@@ -58,9 +52,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1370" />
 		<set name="price" val="6404000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -74,9 +65,6 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="61" />
 		</for>
@@ -88,9 +76,6 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="92" />
 		</for>
@@ -103,9 +88,6 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="107" />
 			<add stat="maxMp" val="592" />
@@ -118,9 +100,6 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="92" />
 		</for>
@@ -133,9 +112,6 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="67" />
 			<add stat="maxMp" val="370" />

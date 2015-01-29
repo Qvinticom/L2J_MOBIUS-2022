@@ -13,9 +13,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8481-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="101" />
 			<enchant stat="pDef" val="0" />
@@ -52,9 +49,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8489-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="101" />
 			<enchant stat="pDef" val="0" />
@@ -74,9 +68,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8436-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
@@ -115,9 +106,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8447-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="125" />
 			<add stat="maxMp" val="637" />
@@ -138,9 +126,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8482-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="156" />
 			<enchant stat="pDef" val="0" />
@@ -179,9 +164,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8490-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="78" />
 			<add stat="maxMp" val="415" />
@@ -201,9 +183,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8483-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -240,9 +219,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8491-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -261,9 +237,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8484-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -300,9 +273,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8492-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -543,9 +513,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="139" />
 			<add stat="maxMp" val="665" />
@@ -579,9 +546,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="46" />
 		</for>
@@ -598,9 +562,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="46" />
 		</for>
@@ -618,9 +579,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -640,9 +598,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="127" />
 			<add stat="maxMp" val="561" />
@@ -676,9 +631,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="41" />
 		</for>
@@ -695,9 +647,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="41" />
 		</for>
@@ -715,9 +664,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -737,9 +683,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="60" />
 			<add stat="maxMp" val="225" />
@@ -758,9 +701,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="37" />
 			<add stat="maxMp" val="141" />
@@ -811,9 +751,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="52" />
 			<add stat="maxMp" val="169" />
@@ -832,9 +769,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="32" />
 			<add stat="maxMp" val="105" />
@@ -983,9 +917,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="44" />
 		</for>
@@ -1018,9 +949,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="44" />
 		</for>
@@ -1054,9 +982,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="270" />
 		</for>
@@ -1074,9 +999,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />

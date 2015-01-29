@@ -264,6 +264,25 @@ public final class UseItem extends L2GameClientPacket
 						
 						switch (activeChar.getRace())
 						{
+							case ERTHEIA:
+							{
+								switch (wpn.getItemType())
+								{
+									case SWORD:
+									case DAGGER:
+									case BOW:
+									case POLE:
+									case NONE:
+									case DUAL:
+									case RAPIER:
+									case ANCIENTSWORD:
+									case CROSSBOW:
+									case DUALDAGGER:
+										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+										return;
+								}
+								break;
+							}
 							case KAMAEL:
 							{
 								switch (wpn.getItemType())
@@ -302,7 +321,7 @@ public final class UseItem extends L2GameClientPacket
 				case L2Item.SLOT_FULL_ARMOR:
 				case L2Item.SLOT_LEGS:
 				{
-					if ((activeChar.getRace() == Race.KAMAEL) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.MAGIC)))
+					if ((activeChar.getRace() == Race.ERTHEIA) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
 					{
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;

@@ -198,9 +198,6 @@
 		<set name="weight" val="1400" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="51" />
 		</for>
@@ -215,9 +212,6 @@
 		<set name="weight" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="51" />
 		</for>
@@ -232,9 +226,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="51" />
 			<add stat="maxMp" val="96" />
@@ -264,9 +255,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="51" />
 			<add stat="maxMp" val="142" />
@@ -282,9 +270,6 @@
 		<set name="weight" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="32" />
 		</for>
@@ -299,9 +284,6 @@
 		<set name="weight" val="600" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="32" />
 		</for>
@@ -316,9 +298,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="32" />
 			<add stat="maxMp" val="60" />
@@ -348,9 +327,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="32" />
 			<add stat="maxMp" val="79" />

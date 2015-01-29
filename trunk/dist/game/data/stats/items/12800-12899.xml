@@ -276,9 +276,6 @@
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="13" />
@@ -297,9 +294,6 @@
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="15" />
@@ -318,9 +312,6 @@
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="17" />

@@ -155,9 +155,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1370" />
 		<set name="price" val="6404000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -171,9 +168,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1390" />
 		<set name="price" val="6404000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -193,9 +187,6 @@
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8311-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="15" />
@@ -214,9 +205,6 @@
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="15" />
@@ -235,9 +223,6 @@
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="13" />
@@ -332,7 +317,6 @@
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>

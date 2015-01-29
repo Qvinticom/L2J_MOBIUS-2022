@@ -33,9 +33,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="166" />
 			<add stat="maxMp" val="866" />
@@ -56,9 +53,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="226" />
 			<enchant stat="pDef" val="0" />
@@ -80,7 +74,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
@@ -105,7 +98,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
@@ -130,7 +122,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
@@ -155,7 +146,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="BARD" />
 			</and>
 		</cond>
@@ -241,9 +231,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="113" />
 			<add stat="maxMp" val="592" />
@@ -266,7 +253,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
@@ -292,7 +278,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
@@ -318,7 +303,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
@@ -344,7 +328,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>
@@ -370,7 +353,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
@@ -459,9 +441,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="226" />
 			<enchant stat="pDef" val="0" />
@@ -483,7 +462,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="SHIELD_MASTER" />
 			</and>
 		</cond>
@@ -508,7 +486,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="WEAPON_MASTER" />
 			</and>
 		</cond>
@@ -533,7 +510,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="FORCE_MASTER" />
 			</and>
 		</cond>
@@ -558,7 +534,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="BARD" />
 			</and>
 		</cond>
@@ -644,9 +619,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="113" />
 			<add stat="maxMp" val="592" />
@@ -669,7 +641,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="HEAL_MASTER" />
 			</and>
 		</cond>
@@ -695,7 +666,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="BUFF_MASTER" />
 			</and>
 		</cond>
@@ -721,7 +691,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="SUMMON_MASTER" />
 			</and>
 		</cond>
@@ -747,7 +716,6 @@
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player categoryType="WIZARD_MASTER" />
 			</and>
 		</cond>

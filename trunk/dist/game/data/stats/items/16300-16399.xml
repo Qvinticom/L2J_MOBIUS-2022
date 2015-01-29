@@ -13,9 +13,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8432-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -34,9 +31,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8422-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -73,9 +67,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8433-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -93,9 +84,6 @@
 		<set name="price" val="8839000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8423-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -116,9 +104,6 @@
 		<set name="price" val="8839000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8434-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="16" />
@@ -138,9 +123,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8435-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="101" />
 			<enchant stat="pDef" val="0" />
@@ -177,9 +159,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8446-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="101" />
 			<enchant stat="pDef" val="0" />
@@ -199,9 +178,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8436-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
@@ -240,9 +216,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8447-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="125" />
 			<add stat="maxMp" val="637" />
@@ -263,9 +236,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8437-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="156" />
 			<enchant stat="pDef" val="0" />
@@ -304,9 +274,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8448-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="78" />
 			<add stat="maxMp" val="415" />
@@ -326,9 +293,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8438-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -365,9 +329,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8449-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -386,9 +347,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8439-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -425,9 +383,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8450-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -445,9 +400,6 @@
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8440-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -468,9 +420,6 @@
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8451-1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="17" />
@@ -489,9 +438,6 @@
 		<set name="price" val="12627000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="96" />
 			<enchant stat="pDef" val="0" />
@@ -526,9 +472,6 @@
 		<set name="price" val="12627000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="96" />
 			<enchant stat="pDef" val="0" />
@@ -547,9 +490,6 @@
 		<set name="price" val="33673000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="225" />
 			<enchant stat="pDef" val="0" />
@@ -586,9 +526,6 @@
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="112" />
 			<add stat="maxMp" val="614" />
@@ -608,9 +545,6 @@
 		<set name="price" val="21046000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="141" />
 			<enchant stat="pDef" val="0" />
@@ -647,9 +581,6 @@
 		<set name="price" val="15784000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="70" />
 			<add stat="maxMp" val="392" />
@@ -668,9 +599,6 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -705,9 +633,6 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -725,9 +650,6 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -762,9 +684,6 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="64" />
 			<enchant stat="pDef" val="0" />
@@ -781,9 +700,6 @@
 		<set name="weight" val="1190" />
 		<set name="price" val="8839000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -803,9 +719,6 @@
 		<set name="weight" val="920" />
 		<set name="price" val="8839000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="16" />
@@ -824,9 +737,6 @@
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="101" />
 			<enchant stat="pDef" val="0" />
@@ -861,9 +771,6 @@
 		<set name="price" val="17500000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="101" />
 			<enchant stat="pDef" val="0" />
@@ -882,9 +789,6 @@
 		<set name="price" val="46668000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
@@ -921,9 +825,6 @@
 		<set name="price" val="35000000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="125" />
 			<add stat="maxMp" val="637" />
@@ -943,9 +844,6 @@
 		<set name="price" val="29168000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="148" />
 			<enchant stat="pDef" val="0" />
@@ -982,9 +880,6 @@
 		<set name="price" val="21876000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="74" />
 			<add stat="maxMp" val="415" />
@@ -1003,9 +898,6 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -1040,9 +932,6 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -1060,9 +949,6 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -1097,9 +983,6 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -1116,9 +999,6 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -1138,9 +1018,6 @@
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="17" />
