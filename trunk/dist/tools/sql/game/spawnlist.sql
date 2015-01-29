@@ -42368,3 +42368,6 @@ DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-107986' AND loc
 DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-107744' AND locy='246844' AND locz='-3352');
 DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-107587' AND locy='246822' AND locz='-3368');
 DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-106766' AND locy='247338' AND locz='-3392');
+
+-- Remove old Altar Npcs
+DELETE FROM spawnlist WHERE npc_templateid in(4324, 4325, 4327, 4328);
