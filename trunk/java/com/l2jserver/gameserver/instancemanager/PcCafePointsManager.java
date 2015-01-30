@@ -26,24 +26,13 @@ import com.l2jserver.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
-public class PcCafePointsManager
+public final class PcCafePointsManager
 {
-	private static PcCafePointsManager _instance;
-	
 	public PcCafePointsManager()
 	{
 	}
 	
-	public static PcCafePointsManager getInstance()
-	{
-		if (_instance == null)
-		{
-			_instance = new PcCafePointsManager();
-		}
-		return _instance;
-	}
-	
-	public void givePcCafePoint(final L2PcInstance player, final long givedexp)
+	public void givePcCafePoint(final L2PcInstance player, final long exp)
 	{
 		if (!Config.PC_BANG_ENABLED)
 		{
@@ -55,45 +44,59 @@ public class PcCafePointsManager
 			return;
 		}
 		
-		if (player.getPcBangPoints() >= Config.MAX_PC_BANG_POINTS)
+		if (player.getPcBangPoints() >= Config.PC_BANG_MAX_POINTS)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_THE_MAXIMUM_NUMBER_OF_PC_POINTS);
-			player.sendPacket(sm);
+			final SystemMessage message = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_THE_MAXIMUM_NUMBER_OF_PC_POINTS);
+			player.sendPacket(message);
 			return;
 		}
-		int _points = (int) (givedexp * 0.0001 * Config.PC_BANG_POINT_RATE);
 		
-		// TODO: Mage class balance?
-		// if ((player.getActiveClass() == ClassId.ARCHMAGE.getId()) || (player.getActiveClass() == ClassId.SOULTAKER.getId()) || (player.getActiveClass() == ClassId.STORM_SCREAMER.getId()) || (player.getActiveClass() == ClassId.MYSTIC_MUSE.getId()))
-		// {
-		// _points /= 2;
-		// }
+		int points = (int) (exp * 0.0001 * Config.PC_BANG_POINT_RATE);
 		
-		if (Config.RANDOM_PC_BANG_POINT)
+		if (Config.PC_BANG_RANDOM_POINT)
 		{
-			_points = Rnd.get(_points / 2, _points);
+			points = Rnd.get(points / 2, points);
 		}
 		
-		SystemMessage sm = null;
-		if (_points > 0)
+		if ((points == 0) && (exp > 0) && Config.PC_BANG_REWARD_LOW_EXP_KILLS && (Rnd.get(100) < Config.PC_BANG_LOW_EXP_KILLS_CHANCE))
 		{
-			if (Config.ENABLE_DOUBLE_PC_BANG_POINTS && (Rnd.get(100) < Config.DOUBLE_PC_BANG_POINTS_CHANCE))
+			points = 1; // minimum points
+		}
+		
+		SystemMessage message = null;
+		if (points > 0)
+		{
+			if (Config.PC_BANG_ENABLE_DOUBLE_POINTS && (Rnd.get(100) < Config.PC_BANG_DOUBLE_POINTS_CHANCE))
 			{
-				_points *= 2;
-				sm = SystemMessage.getSystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PC_POINT_S);
+				points *= 2;
+				message = SystemMessage.getSystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PC_POINT_S);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_EARNED_S1_PC_POINT_S2);
+				message = SystemMessage.getSystemMessage(SystemMessageId.YOU_EARNED_S1_PC_POINT_S2);
 			}
-			if ((player.getPcBangPoints() + _points) > Config.MAX_PC_BANG_POINTS)
+			if ((player.getPcBangPoints() + points) > Config.PC_BANG_MAX_POINTS)
 			{
-				_points = Config.MAX_PC_BANG_POINTS - player.getPcBangPoints();
+				points = Config.PC_BANG_MAX_POINTS - player.getPcBangPoints();
 			}
-			sm.addLong(_points);
-			player.sendPacket(sm);
-			player.setPcBangPoints(player.getPcBangPoints() + _points);
-			player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), _points, 1));
+			message.addLong(points);
+			player.sendPacket(message);
+			player.setPcBangPoints(player.getPcBangPoints() + points);
+			player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), points, 1));
 		}
+	}
+	
+	/**
+	 * Gets the single instance of {@code PcCafePointsManager}.
+	 * @return single instance of {@code PcCafePointsManager}
+	 */
+	public static final PcCafePointsManager getInstance()
+	{
+		return SingletonHolder._instance;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final PcCafePointsManager _instance = new PcCafePointsManager();
 	}
 }

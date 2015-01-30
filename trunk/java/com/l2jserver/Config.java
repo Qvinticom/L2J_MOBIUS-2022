@@ -866,11 +866,13 @@ public final class Config
 	public static boolean BTZ_REMOVE_PETS;
 	public static List<int[]> BTZ_REWARDS;
 	public static boolean PC_BANG_ENABLED;
-	public static int MAX_PC_BANG_POINTS;
-	public static boolean ENABLE_DOUBLE_PC_BANG_POINTS;
-	public static int DOUBLE_PC_BANG_POINTS_CHANCE;
+	public static int PC_BANG_MAX_POINTS;
+	public static boolean PC_BANG_ENABLE_DOUBLE_POINTS;
+	public static int PC_BANG_DOUBLE_POINTS_CHANCE;
 	public static double PC_BANG_POINT_RATE;
-	public static boolean RANDOM_PC_BANG_POINT;
+	public static boolean PC_BANG_RANDOM_POINT;
+	public static boolean PC_BANG_REWARD_LOW_EXP_KILLS;
+	public static int PC_BANG_LOW_EXP_KILLS_CHANCE;
 	
 	// --------------------------------------------------
 	// NPC Settings
@@ -2757,21 +2759,32 @@ public final class Config
 			}
 			
 			PC_BANG_ENABLED = CustomSettings.getBoolean("Enabled", false);
-			MAX_PC_BANG_POINTS = CustomSettings.getInt("MaxPcBangPoints", 200000);
-			if (MAX_PC_BANG_POINTS < 0)
+			PC_BANG_MAX_POINTS = CustomSettings.getInt("MaxPcBangPoints", 200000);
+			if (PC_BANG_MAX_POINTS < 0)
 			{
-				MAX_PC_BANG_POINTS = 0;
+				PC_BANG_MAX_POINTS = 0;
 			}
-			ENABLE_DOUBLE_PC_BANG_POINTS = CustomSettings.getBoolean("DoublingAcquisitionPoints", false);
-			DOUBLE_PC_BANG_POINTS_CHANCE = CustomSettings.getInt("DoublingAcquisitionPointsChance", 1);
-			if ((DOUBLE_PC_BANG_POINTS_CHANCE < 0) || (DOUBLE_PC_BANG_POINTS_CHANCE > 100))
+			PC_BANG_ENABLE_DOUBLE_POINTS = CustomSettings.getBoolean("DoublingAcquisitionPoints", false);
+			PC_BANG_DOUBLE_POINTS_CHANCE = CustomSettings.getInt("DoublingAcquisitionPointsChance", 1);
+			if ((PC_BANG_DOUBLE_POINTS_CHANCE < 0) || (PC_BANG_DOUBLE_POINTS_CHANCE > 100))
 			{
-				DOUBLE_PC_BANG_POINTS_CHANCE = 1;
+				PC_BANG_DOUBLE_POINTS_CHANCE = 1;
 			}
 			PC_BANG_POINT_RATE = CustomSettings.getDouble("AcquisitionPointsRate", 1.0);
+			PC_BANG_RANDOM_POINT = CustomSettings.getBoolean("AcquisitionPointsRandom", false);
 			if (PC_BANG_POINT_RATE < 0)
 			{
 				PC_BANG_POINT_RATE = 1;
+			}
+			PC_BANG_REWARD_LOW_EXP_KILLS = CustomSettings.getBoolean("RewardLowExpKills", true);
+			PC_BANG_LOW_EXP_KILLS_CHANCE = CustomSettings.getInt("RewardLowExpKillsChance", 50);
+			if (PC_BANG_LOW_EXP_KILLS_CHANCE < 0)
+			{
+				PC_BANG_LOW_EXP_KILLS_CHANCE = 0;
+			}
+			if (PC_BANG_LOW_EXP_KILLS_CHANCE > 100)
+			{
+				PC_BANG_LOW_EXP_KILLS_CHANCE = 100;
 			}
 			
 			// Load PvP L2Properties file (if exists)
