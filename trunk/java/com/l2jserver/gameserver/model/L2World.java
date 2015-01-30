@@ -52,7 +52,7 @@ public final class L2World
 	/** Map dimensions */
 	public static final int TILE_X_MIN = 11;
 	public static final int TILE_Y_MIN = 10;
-	public static final int TILE_X_MAX = 26;
+	public static final int TILE_X_MAX = 28;
 	public static final int TILE_Y_MAX = 26;
 	public static final int TILE_ZERO_COORD_X = 20;
 	public static final int TILE_ZERO_COORD_Y = 18;
