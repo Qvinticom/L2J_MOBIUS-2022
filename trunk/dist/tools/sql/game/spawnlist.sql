@@ -42371,3 +42371,22 @@ DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-106766' AND loc
 
 -- Remove old Altar Npcs
 DELETE FROM spawnlist WHERE npc_templateid in(4324, 4325, 4327, 4328);
+
+-- TI NPC Walkers
+INSERT INTO `spawnlist` VALUES ('Eleve', '1', '33246', '-114726', '260124', '-1187', '0', '0', '16782', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Karonf', '1', '33242', '-114158', '259444', '-1179', '0', '0', '57343', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Devno', '1', '33241', '-115084', '258935', '-1187', '0', '0', '57343', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('OldManAndBoy', '1', '33578', '-113894', '257318', '-1131', '0', '0', '58997', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Hera', '1', '33208', '-114263', '257326', '-1131', '0', '0', '58070', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Rubentis', '1', '33120', '-114593', '255032', '-1523', '0', '0', '38155', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Morgan', '1', '33121', '-113572', '256084', '-1499', '0', '0', '50129', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('GuardBigRoute', '1', '33022', '-114156', '257380', '-1131', '0', '0', '16833', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('MountedGuard1', '1', '33105', '-116482', '255429', '-1419', '0', '0', '2480', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('MountedGuard2', '1', '33105', '-112806', '254632', '-1523', '0', '0', '5906', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('MountedGuard3', '1', '33105', '-114105', '255727', '-1507', '0', '0', '26463', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Ruks', '1', '33207', '-114339', '252666', '-1539', '0', '0', '49947', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Marsha', '1', '33109', '-115061', '253417', '-1491', '0', '0', '49316', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Nevou', '1', '33101', '-113919', '252997', '-1491', '0', '0', '41698', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Darrygun', '1', '33110', '-113713', '253148', '-1502', '0', '0', '7724', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Rinne', '1', '33234', '-112382', '257002', '-1459', '0', '0', '5717', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Soros', '1', '33218', '-107788', '248821', '-3211', '0', '0', '5717', '0', '0', '0', '0');

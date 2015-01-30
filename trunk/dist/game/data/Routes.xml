@@ -1236,4 +1236,183 @@
 		<point string="" X="96506" Y="69958" Z="-3851" delay="0" run="false" />
 		<point string="" X="94265" Y="68391" Z="-3851" delay="0" run="false" />
 	</route>
+	<!-- Eleve -->
+	<route name="ti_eleve" repeat="true" repeatStyle="random">
+		<target id="33246" spawnX="-114726" spawnY="260124" spawnZ="-1187" />
+		<point npcStringId="1032338" X="-114726" Y="260124" Z="-1187" delay="20" run="false" />
+		<point npcStringId="1032339" X="-114949" Y="259602" Z="-1192" delay="21" run="false" />
+		<point npcStringId="1032338" X="-114590" Y="259439" Z="-1184" delay="22" run="false" />
+		<point npcStringId="1032339" X="-114392" Y="259657" Z="-1184" delay="23" run="false" />
+	</route>
+	<!-- Devno -->
+	<route name="ti_devno" repeat="true" repeatStyle="random">
+		<target id="33241" spawnX="-115084" spawnY="258935" spawnZ="-1187" />
+		<point npcStringId="1032334" X="-115084" Y="258935" Z="-1187" delay="25" run="false" />
+		<point npcStringId="1032335" X="-114635" Y="258694" Z="-1204" delay="26" run="false" />
+		<point npcStringId="1032334" X="-114477" Y="258910" Z="-1203" delay="27" run="false" />
+		<point npcStringId="1032335" X="-114702" Y="259081" Z="-1203" delay="28" run="false" />
+	</route>
+	<!-- Karonf -->
+	<route name="ti_karonf" repeat="true" repeatStyle="random">
+		<target id="33242" spawnX="-114158" spawnY="259444" spawnZ="-1179" />
+		<point npcStringId="1032336" X="-114158" Y="259444" Z="-1179" delay="30" run="false" />
+		<point npcStringId="1032337" X="-113827" Y="259636" Z="-1192" delay="31" run="false" />
+		<point npcStringId="1032336" X="-113770" Y="259234" Z="-1192" delay="32" run="false" />
+		<point npcStringId="1032337" X="-114058" Y="259161" Z="-1192" delay="33" run="false" />
+	</route>
+	<!-- Old Man and Boy -->
+	<route name="ti_old_man_and_boy" repeat="true" repeatStyle="back">
+		<target id="33578" spawnX="-113894" spawnY="257318" spawnZ="-1131" />
+		<point X="-113894" Y="257318" Z="-1131" delay="0" run="false" />
+		<point X="-114610" Y="257224" Z="-1136" delay="0" run="false" />
+		<point X="-114945" Y="257806" Z="-1136" delay="0" run="false" />
+		<point X="-115340" Y="257813" Z="-1136" delay="0" run="false" />
+		<point X="-115797" Y="257815" Z="-1287" delay="0" run="false" />
+		<point X="-116467" Y="257813" Z="-1518" delay="0" run="false" />
+		<point X="-116501" Y="257668" Z="-1518" delay="0" run="false" />
+		<point X="-116686" Y="256789" Z="-1496" delay="0" run="false" />
+		<point X="-116664" Y="255591" Z="-1424" delay="0" run="false" />
+	</route>
+	<!-- Hera -->
+	<route name="ti_hera" repeat="true" repeatStyle="back">
+		<target id="33208" spawnX="-114263" spawnY="257326" spawnZ="-1131" />
+		<point X="-114263" Y="257326" Z="-1131" delay="0" run="false" />
+		<point X="-114817" Y="257033" Z="-1136" delay="0" run="false" />
+		<point X="-114775" Y="256787" Z="-1230" delay="0" run="false" />
+		<point npcStringId="1811285" X="-114403" Y="256573" Z="-1280" delay="0" run="false" />
+		<point npcStringId="1811286" X="-114158" Y="255072" Z="-1528" delay="0" run="false" />
+	</route>
+	<!-- Rubentis -->
+	<route name="ti_female_human_red_dress" repeat="true" repeatStyle="random">
+		<target id="33120" spawnX="-114593" spawnY="255032" spawnZ="-1523" />
+		<point X="-114593" Y="255032" Z="-1523" delay="5" run="false" />
+		<point X="-114880" Y="255331" Z="-1504" delay="10" run="false" />
+		<point npcStringId="1032329" X="-115211" Y="255148" Z="-1495" delay="27" run="false" />
+		<point X="-114778" Y="255547" Z="-1512" delay="12" run="false" />
+	</route>
+	<!-- Morgan -->
+	<route name="ti_morgan" repeat="true" repeatStyle="random">
+		<target id="33121" spawnX="-113572" spawnY="256084" spawnZ="-1499" />
+		<point npcStringId="1032331" X="-113572" Y="256084" Z="-1499" delay="27" run="false" />
+		<point X="-114130" Y="255838" Z="-1512" delay="5" run="false" />
+		<point npcStringId="1032332" X="-114092" Y="255456" Z="-1512" delay="10" run="false" />
+		<point X="-113919" Y="255679" Z="-1504" delay="12" run="false" />
+	</route>
+	<!-- Guard Big Route -->
+	<route name="ti_guard_big_route" repeat="true" repeatStyle="back">
+		<target id="33022" spawnX="-114156" spawnY="257380" spawnZ="-1131" />
+		<point X="-114156" Y="257380" Z="-1131" delay="0" run="false" />
+		<point X="-113918" Y="257763" Z="-1136" delay="0" run="false" />
+		<point X="-113357" Y="257799" Z="-1136" delay="0" run="false" />
+		<point X="-112948" Y="257798" Z="-1280" delay="0" run="false" />
+		<point X="-112363" Y="257808" Z="-1512" delay="0" run="false" />
+		<point X="-112279" Y="257634" Z="-1496" delay="0" run="false" />
+		<point X="-112586" Y="257348" Z="-1496" delay="0" run="false" />
+		<point X="-112740" Y="256699" Z="-1483" delay="0" run="false" />
+		<point X="-113465" Y="256511" Z="-1495" delay="0" run="false" />
+		<point X="-113646" Y="256287" Z="-1495" delay="0" run="false" />
+		<point X="-113792" Y="255994" Z="-1504" delay="0" run="false" />
+		<point X="-114078" Y="255747" Z="-1516" delay="0" run="false" />
+		<point X="-114537" Y="255719" Z="-1516" delay="0" run="false" />
+		<point X="-114988" Y="256099" Z="-1512" delay="0" run="false" />
+		<point X="-115564" Y="256654" Z="-1512" delay="0" run="false" />
+		<point X="-116067" Y="256791" Z="-1512" delay="0" run="false" />
+		<point X="-116600" Y="257784" Z="-1522" delay="0" run="false" />
+		<point X="-115384" Y="257799" Z="-1136" delay="0" run="false" />
+		<point X="-114904" Y="257620" Z="-1136" delay="0" run="false" />
+		<point X="-114569" Y="257317" Z="-1136" delay="0" run="false" />
+	</route>
+	<!-- Mounted Guard 1 -->
+	<route name="ti_mounted_guard_1" repeat="true" repeatStyle="back">
+		<target id="33105" spawnX="-116482" spawnY="255429" spawnZ="-1419" />
+		<point X="-116482" Y="255429" Z="-1419" delay="0" run="false" />
+		<point X="-115792" Y="254802" Z="-1516" delay="0" run="false" />
+		<point X="-115244" Y="254739" Z="-1525" delay="0" run="false" />
+		<point X="-114521" Y="255281" Z="-1512" delay="0" run="false" />
+		<point X="-114160" Y="255298" Z="-1512" delay="0" run="false" />
+		<point X="-113802" Y="254816" Z="-1523" delay="0" run="false" />
+		<point X="-112836" Y="254778" Z="-1520" delay="0" run="false" />
+	</route>
+	<!-- Mounted Guard 2 -->
+	<route name="ti_mounted_guard_2" repeat="true" repeatStyle="back">
+		<target id="33105" spawnX="-112806" spawnY="254632" spawnZ="-1523" />
+		<point X="-112806" Y="254632" Z="-1523" delay="0" run="true" />
+		<point X="-113589" Y="254662" Z="-1504" delay="0" run="true" />
+		<point X="-113974" Y="254157" Z="-1512" delay="0" run="true" />
+		<point X="-114563" Y="254139" Z="-1528" delay="0" run="true" />
+		<point X="-114875" Y="254633" Z="-1520" delay="0" run="true" />
+		<point X="-115809" Y="254681" Z="-1504" delay="0" run="true" />
+		<point X="-116665" Y="255225" Z="-1424" delay="0" run="true" />
+	</route>
+	<!-- Mounted Guard 3 -->
+	<route name="ti_mounted_guard_3" repeat="true" repeatStyle="back">
+		<target id="33105" spawnX="-114105" spawnY="255727" spawnZ="-1507" />
+		<point X="-114105" Y="255727" Z="-1507" delay="0" run="false" />
+		<point X="-113994" Y="254981" Z="-1512" delay="0" run="false" />
+		<point X="-114057" Y="253907" Z="-1520" delay="0" run="false" />
+		<point X="-114108" Y="252603" Z="-1544" delay="0" run="false" />
+	</route>
+	<!-- Ruks -->
+	<route name="ti_ruks" repeat="true" repeatStyle="back">
+		<target id="33207" spawnX="-114339" spawnY="252666" spawnZ="-1539" />
+		<point npcStringId="1811289" X="-114339" Y="252666" Z="-1539" delay="0" run="false" />
+		<point X="-114565" Y="253384" Z="-1528" delay="0" run="false" />
+		<point npcStringId="1811290" X="-114688" Y="254723" Z="-1528" delay="0" run="false" />
+		<point npcStringId="1811289" X="-115647" Y="254736" Z="-1512" delay="0" run="false" />
+		<point npcStringId="1811290" X="-116732" Y="255384" Z="-1424" delay="0" run="false" />
+		<point X="-117035" Y="255507" Z="-1295" delay="0" run="false" />
+		<point npcStringId="1811289" X="-117883" Y="255884" Z="-1320" delay="0" run="false" />
+	</route>
+	<!-- Marsha -->
+	<route name="ti_marsha" repeat="true" repeatStyle="random">
+		<target id="33109" spawnX="-115061" spawnY="253417" spawnZ="-1491" />
+		<point X="-115061" Y="253417" Z="-1491" delay="30" run="false" />
+		<point npcStringId="1032313" X="-114589" Y="253277" Z="-1528" delay="10" run="false" />
+		<point npcStringId="1032314" X="-114885" Y="253331" Z="-1496" delay="10" run="false" />
+		<point X="-114956" Y="253145" Z="-1504" delay="10" run="false" />
+	</route>
+	<!-- Nevou -->
+	<route name="ti_nevou" repeat="true" repeatStyle="back">
+		<target id="33101" spawnX="-113919" spawnY="252997" spawnZ="-1491" />
+		<point npcStringId="1811257" X="-113919" Y="252997" Z="-1491" delay="0" run="false" />
+		<point X="-114227" Y="252877" Z="-1536" delay="5" run="false" />
+		<point npcStringId="1811258" X="-114498" Y="252915" Z="-1536" delay="5" run="false" />
+		<point npcStringId="1811257" X="-115451" Y="253267" Z="-1496" delay="0" run="false" />
+		<point X="-115928" Y="253265" Z="-1504" delay="0" run="false" />
+		<point npcStringId="1811258" X="-116097" Y="253369" Z="-1504" delay="0" run="false" />
+	</route>
+	<!-- Darrygun -->
+	<route name="ti_darrygun" repeat="true" repeatStyle="random">
+		<target id="33110" spawnX="-113713" spawnY="253148" spawnZ="-1502" />
+		<point npcStringId="1032315" X="-113713" Y="253148" Z="-1502" delay="5" run="false" />
+		<point X="-114170" Y="252754" Z="-1536" delay="10" run="false" />
+		<point X="-114253" Y="253237" Z="-1528" delay="15" run="false" />
+		<point npcStringId="1032316" X="-113946" Y="252872" Z="-1504" delay="20" run="false" />
+	</route>
+	<!-- Rinne (TODO: Walk with Allada - add talk) -->
+	<route name="ti_rinne" repeat="true" repeatStyle="back">
+		<target id="33234" spawnX="-112382" spawnY="257002" spawnZ="-1459" />
+		<point X="-112382" Y="257002" Z="-1459" delay="0" run="false" />
+		<point X="-113562" Y="256390" Z="-1496" delay="0" run="false" />
+		<point X="-114750" Y="255188" Z="-1512" delay="0" run="false" />
+		<point X="-114467" Y="251325" Z="-1688" delay="0" run="false" />
+		<point X="-113974" Y="250267" Z="-1816" delay="0" run="false" />
+		<point X="-113492" Y="249844" Z="-1816" delay="0" run="false" />
+	</route>
+	<!-- Soros (TODO: Walk with Remons - add talk ) -->
+	<route name="ti_soros" repeat="true" repeatStyle="back">
+		<target id="33218" spawnX="-107788" spawnY="248821" spawnZ="-3211" />
+		<point X="-107788" Y="248821" Z="-3211" delay="0" run="false" />
+		<point X="-108956" Y="247016" Z="-3136" delay="0" run="false" />
+		<point X="-109684" Y="246942" Z="-2968" delay="0" run="false" />
+		<point X="-109778" Y="247969" Z="-2752" delay="0" run="false" />
+		<point X="-110055" Y="248396" Z="-2696" delay="0" run="false" />
+		<point X="-110885" Y="249153" Z="-2512" delay="0" run="false" />
+		<point X="-111986" Y="249539" Z="-2280" delay="0" run="false" />
+		<point X="-112376" Y="250403" Z="-2064" delay="0" run="false" />
+		<point X="-112838" Y="250478" Z="-1960" delay="0" run="false" />
+		<point X="-113173" Y="250443" Z="-1912" delay="0" run="false" />
+		<point X="-114371" Y="250846" Z="-1760" delay="0" run="false" />
+		<point X="-114289" Y="252353" Z="-1560" delay="0" run="false" />
+	</route>
 </routes>

@@ -120,7 +120,6 @@
 		</collision>
 	</npc>
 	<npc id="33207" level="85" type="L2Npc" name="Ruks" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -130,14 +129,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33208" level="85" type="L2Npc" name="Hera" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -147,7 +145,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -307,7 +305,6 @@
 		</collision>
 	</npc>
 	<npc id="33218" level="85" type="L2Npc" name="Soros" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -317,7 +314,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -341,7 +338,6 @@
 		</collision>
 	</npc>
 	<npc id="33220" level="85" type="L2Npc" name="Allada" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -351,7 +347,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -579,7 +575,6 @@
 		</collision>
 	</npc>
 	<npc id="33234" level="85" type="L2Npc" name="Rinne" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -589,7 +584,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
