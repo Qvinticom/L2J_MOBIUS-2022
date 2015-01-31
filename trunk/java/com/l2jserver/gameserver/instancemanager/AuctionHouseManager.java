@@ -468,7 +468,6 @@ public class AuctionHouseManager
 	public int getCategoryByItem(L2ItemInstance item)
 	{
 		final String itemName = item.getName().toLowerCase();
-		final int itemId = item.getId();
 		
 		if (item.isWeapon())
 		{
@@ -703,11 +702,6 @@ public class AuctionHouseManager
 			{
 				return 44; // Recipe
 			}
-			// TODO: Add all materials
-			if ((itemId > 1863) && (itemId < 2130))
-			{
-				return 45; // Major Crafting Ingredients
-			}
 			if (itemName.contains("life stone"))
 			{
 				return 46; // Life Stone
@@ -755,6 +749,10 @@ public class AuctionHouseManager
 			if (itemName.contains("dye") && (itemName.contains("str") || itemName.contains("dex") || itemName.contains("con") || itemName.contains("int") || itemName.contains("wit") || itemName.contains("men") || itemName.contains("luc") || itemName.contains("cha")))
 			{
 				return 57; // Dye
+			}
+			if (itemName.contains("ingredient") || itemName.contains("piece") || itemName.contains("edge") || itemName.contains("beads") || itemName.contains("stave") || itemName.contains("design") || itemName.contains("fragment") || itemName.contains("blade") || itemName.contains("head") || itemName.contains("part") || itemName.contains("gem") || itemName.contains("shaft") || itemName.contains("stone") || itemName.contains("fabric") || itemName.contains("pattern") || itemName.contains("lining"))
+			{
+				return 45; // Major Crafting Ingredients
 			}
 		}
 		
