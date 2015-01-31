@@ -23,6 +23,7 @@
 							<xs:element name="ingredient" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="enchantmentLevel" type="xs:integer" />
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="maintainIngredient" type="xs:boolean" />
 								</xs:complexType>
@@ -30,6 +31,7 @@
 							<xs:element name="production" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="enchantmentLevel" type="xs:integer" />
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="chance" type="xs:integer" use="optional" />
 								</xs:complexType>
