@@ -31,7 +31,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Admin PC Points manage admin commands.
+ * Admin PC Points manage admin commands.<br>
+ * Based on AdminPrimePoints by St3eT.
  */
 public final class AdminPCBangPoints implements IAdminCommandHandler
 {
