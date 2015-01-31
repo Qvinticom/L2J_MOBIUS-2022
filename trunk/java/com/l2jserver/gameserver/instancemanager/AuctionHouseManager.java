@@ -341,7 +341,7 @@ public class AuctionHouseManager
 	public void deleteItemFromPlayer(int playerID, int itemOID)
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND object_id=? AND loc='AUCTION'");)
+			PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND object_id=? AND loc='AUCTION_HOUSE'");)
 		{
 			statement.setInt(1, playerID);
 			statement.setInt(2, itemOID);
@@ -478,26 +478,29 @@ public class AuctionHouseManager
 		};
 		int i = 0;
 		int IDS[] = null;
-		switch (id)
+		if (id == 61)
 		{
-			case 61:
-				IDS = ids[1];
-				break;
-			case 62:
-				IDS = ids[2];
-				break;
-			case 63:
-				IDS = ids[3];
-				break;
-			case 64:
-				IDS = ids[4];
-				break;
-			case 65:
-				IDS = ids[5];
-				break;
-			case 1:
-				IDS = ids[0];
-				break;
+			IDS = ids[1];
+		}
+		else if (id == 62)
+		{
+			IDS = ids[2];
+		}
+		else if (id == 63)
+		{
+			IDS = ids[3];
+		}
+		else if (id == 64)
+		{
+			IDS = ids[4];
+		}
+		else if (id == 65)
+		{
+			IDS = ids[5];
+		}
+		else if (id == 1)
+		{
+			IDS = ids[0];
 		}
 		
 		if ((((id > 60) && (id < 66)) || (id == 1)) && (IDS != null))
