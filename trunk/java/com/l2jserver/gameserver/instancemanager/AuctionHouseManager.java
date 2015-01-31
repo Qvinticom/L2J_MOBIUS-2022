@@ -610,7 +610,6 @@ public class AuctionHouseManager
 					return 28; // Cloak
 				}
 			}
-			return 59;
 		}
 		else if (item.isEtcItem())
 		{
