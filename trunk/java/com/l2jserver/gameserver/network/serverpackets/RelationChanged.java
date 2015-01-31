@@ -85,7 +85,7 @@ public final class RelationChanged extends L2GameServerPacket
 	{
 		if (activeChar.isInvisible())
 		{
-			_log.severe("Cannot add insivisble character to multi relation packet");
+			_log.severe("Cannot add invisible character to multi relation packet.");
 			return;
 		}
 		Relation r = new Relation();

@@ -12,19 +12,20 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets;
+package com.l2jserver.gameserver.network.clientpackets.auctionhouse;
 
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
+import com.l2jserver.gameserver.instancemanager.AuctionHouseManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionItemList;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionList;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionRegister;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionInfo;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionItemList;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionList;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionRegister;
 
 /**
  * @author Erlandys
@@ -59,7 +60,7 @@ public final class RequestCommissionRegister extends L2GameClientPacket
 			return;
 		}
 		long destroyPrice = _price;
-		AuctionManager am = AuctionManager.getInstance();
+		AuctionHouseManager am = AuctionHouseManager.getInstance();
 		am.checkForAuctionsDeletion();
 		long timeToAdd = 0;
 		switch (_duration)

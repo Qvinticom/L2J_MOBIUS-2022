@@ -21,23 +21,22 @@ package handlers.admincommandhandlers;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Admin PC Points manage admin commands.
+ * Admin Prime Points manage admin commands.
+ * @author St3eT
  */
-public final class AdminPCBangPoints implements IAdminCommandHandler
+public final class AdminPrimePoints implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_pcbangpoints",
+		"admin_primepoints",
 	};
 	
 	@Override
@@ -46,7 +45,7 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
 		
-		if (actualCommand.equals("admin_pcbangpoints"))
+		if (actualCommand.equals("admin_primepoints"))
 		{
 			if (st.hasMoreTokens())
 			{
@@ -74,57 +73,43 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 				{
 					case "set":
 					{
-						if (value > Config.PC_BANG_MAX_POINTS)
-						{
-							showMenuHtml(activeChar);
-							activeChar.sendMessage("You cannot set more than " + Config.PC_BANG_MAX_POINTS + " PC points!");
-							return false;
-						}
-						if (value < 0)
-						{
-							value = 0;
-						}
-						
-						target.setPcBangPoints(value);
-						target.sendMessage("Admin set your PC point(s) to " + value + "!");
-						activeChar.sendMessage("You set " + value + " PC point(s) to player " + target.getName());
-						target.sendPacket(new ExPCCafePointInfo(value, value, 1));
+						target.setPrimePoints(value);
+						target.sendMessage("Admin set your NCoin(s) to " + value + "!");
+						activeChar.sendMessage("You set " + value + " NCoin(s) to player " + target.getName());
 						break;
 					}
 					case "increase":
 					{
-						if (target.getPcBangPoints() == Config.PC_BANG_MAX_POINTS)
+						if (target.getPrimePoints() == Integer.MAX_VALUE)
 						{
 							showMenuHtml(activeChar);
-							activeChar.sendMessage(target.getName() + " already have max count of PC points!");
+							activeChar.sendMessage(target.getName() + " already have max count of NCoins!");
 							return false;
 						}
 						
-						int pcBangCount = Math.min((target.getPcBangPoints() + value), Config.PC_BANG_MAX_POINTS);
-						if (pcBangCount < 0)
+						int primeCount = Math.min((target.getPrimePoints() + value), Integer.MAX_VALUE);
+						if (primeCount < 0)
 						{
-							pcBangCount = Config.PC_BANG_MAX_POINTS;
+							primeCount = Integer.MAX_VALUE;
 						}
-						target.setPcBangPoints(pcBangCount);
-						target.sendMessage("Admin increased your PC point(s) by " + value + "!");
-						activeChar.sendMessage("You increased PC point(s) of " + target.getName() + " by " + value);
-						target.sendPacket(new ExPCCafePointInfo(pcBangCount, value, 1));
+						target.setPrimePoints(primeCount);
+						target.sendMessage("Admin increased your NCoin(s) by " + value + "!");
+						activeChar.sendMessage("You increased NCoin(s) of " + target.getName() + " by " + value);
 						break;
 					}
 					case "decrease":
 					{
-						if (target.getPcBangPoints() == 0)
+						if (target.getPrimePoints() == 0)
 						{
 							showMenuHtml(activeChar);
-							activeChar.sendMessage(target.getName() + " already have min count of PC points!");
+							activeChar.sendMessage(target.getName() + " already have min count of NCoins!");
 							return false;
 						}
 						
-						final int pcBangCount = Math.max(target.getPcBangPoints() - value, 0);
-						target.setPcBangPoints(pcBangCount);
-						target.sendMessage("Admin decreased your PC point(s) by " + value + "!");
-						activeChar.sendMessage("You decreased PC point(s) of " + target.getName() + " by " + value);
-						target.sendPacket(new ExPCCafePointInfo(pcBangCount, value, 1));
+						final int primeCount = Math.max(target.getPrimePoints() - value, 0);
+						target.setPrimePoints(primeCount);
+						target.sendMessage("Admin decreased your NCoin(s) by " + value + "!");
+						activeChar.sendMessage("You decreased NCoin(s) of " + target.getName() + " by " + value);
 						break;
 					}
 					case "rewardOnline":
@@ -142,12 +127,12 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 						if (range <= 0)
 						{
 							final int count = increaseForAll(L2World.getInstance().getPlayers(), value);
-							activeChar.sendMessage("You increased PC point(s) of all online players (" + count + ") by " + value + ".");
+							activeChar.sendMessage("You increased NCoin(s) of all online players (" + count + ") by " + value + ".");
 						}
 						else if (range > 0)
 						{
 							final int count = increaseForAll(activeChar.getKnownList().getKnownPlayers().values(), value);
-							activeChar.sendMessage("You increased PC point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
+							activeChar.sendMessage("You increased NCoin(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;
 					}
@@ -169,19 +154,18 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 		{
 			if ((temp != null) && (temp.isOnlineInt() == 1))
 			{
-				if (temp.getPcBangPoints() == Integer.MAX_VALUE)
+				if (temp.getPrimePoints() == Integer.MAX_VALUE)
 				{
 					continue;
 				}
 				
-				int pcBangCount = Math.min((temp.getPcBangPoints() + value), Integer.MAX_VALUE);
-				if (pcBangCount < 0)
+				int primeCount = Math.min((temp.getPrimePoints() + value), Integer.MAX_VALUE);
+				if (primeCount < 0)
 				{
-					pcBangCount = Integer.MAX_VALUE;
+					primeCount = Integer.MAX_VALUE;
 				}
-				temp.setPcBangPoints(pcBangCount);
-				temp.sendMessage("Admin increased your PC point(s) by " + value + "!");
-				temp.sendPacket(new ExPCCafePointInfo(pcBangCount, value, 1));
+				temp.setPrimePoints(primeCount);
+				temp.sendMessage("Admin increased your NCoin(s) by " + value + "!");
 				counter++;
 			}
 		}
@@ -197,8 +181,8 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
 		final L2PcInstance target = getTarget(activeChar);
-		final int points = target.getPcBangPoints();
-		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/pcbang.htm"));
+		final int points = target.getPrimePoints();
+		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/primepoints.htm"));
 		html.replace("%points%", Util.formatAdena(points));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);

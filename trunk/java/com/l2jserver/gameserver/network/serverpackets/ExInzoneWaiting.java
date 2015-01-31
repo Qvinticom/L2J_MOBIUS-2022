@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.TimeUnit;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -49,8 +50,9 @@ public class ExInzoneWaiting extends L2GameServerPacket
 		writeD(_instanceTimes.size());
 		for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
 		{
+			final long instanceTime = TimeUnit.MILLISECONDS.toMinutes(entry.getValue() - System.currentTimeMillis());
 			writeD(entry.getKey());
-			writeD((int) (entry.getValue() / 1000));
+			writeD((int) instanceTime);
 		}
 	}
 }

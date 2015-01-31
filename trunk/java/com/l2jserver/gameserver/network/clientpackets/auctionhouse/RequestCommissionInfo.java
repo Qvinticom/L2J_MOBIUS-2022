@@ -12,21 +12,25 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets;
+package com.l2jserver.gameserver.network.clientpackets.auctionhouse;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionItemList;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionInfo;
 
 /**
  * @author Erlandys
  */
-public final class RequestCommissionRegistrableItemList extends L2GameClientPacket
+public final class RequestCommissionInfo extends L2GameClientPacket
 {
-	private static final String _C__D0_9B_REQUESTCOMMISSIONREGISTRABLEITEMLIST = "[C] D0:9B RequestCommissionRegistrableItemList";
+	private static final String _C__D0_9C_REQUESTCOMMISSIONINFO = "[C] D0:9C RequestCommissionInfo";
+	
+	private int _itemOID;
 	
 	@Override
 	protected void readImpl()
 	{
+		_itemOID = readD();
 	}
 	
 	@Override
@@ -37,12 +41,12 @@ public final class RequestCommissionRegistrableItemList extends L2GameClientPack
 		{
 			return;
 		}
-		player.sendPacket(new ExResponseCommissionItemList(player));
+		player.sendPacket(new ExResponseCommissionInfo(player, _itemOID, true));
 	}
 	
 	@Override
 	public String getType()
 	{
-		return _C__D0_9B_REQUESTCOMMISSIONREGISTRABLEITEMLIST;
+		return _C__D0_9C_REQUESTCOMMISSIONINFO;
 	}
 }

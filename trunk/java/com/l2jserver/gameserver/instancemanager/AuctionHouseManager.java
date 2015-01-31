@@ -35,16 +35,16 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author Erlandys
  */
-public class AuctionManager
+public class AuctionHouseManager
 {
 	Connection con = null;
-	private static final Logger _log = Logger.getLogger(AuctionManager.class.getName());
+	private static final Logger _log = Logger.getLogger(AuctionHouseManager.class.getName());
 	private static ArrayList<Auctions> auctions;
 	private static HashMap<String, Integer> categoryType;
 	private static HashMap<Integer, Integer> categoryConvert;
 	private static HashMap<Integer, Integer> massCategoryConvert;
 	
-	public AuctionManager()
+	public AuctionHouseManager()
 	{
 		_log.info(getClass().getSimpleName() + ": Initializing");
 		loadCategories();
@@ -980,13 +980,13 @@ public class AuctionManager
 		}
 	}
 	
-	public static final AuctionManager getInstance()
+	public static final AuctionHouseManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AuctionManager _instance = new AuctionManager();
+		protected static final AuctionHouseManager _instance = new AuctionHouseManager();
 	}
 }

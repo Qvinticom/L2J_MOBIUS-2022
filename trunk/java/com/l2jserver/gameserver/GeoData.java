@@ -191,9 +191,16 @@ public class GeoData
 	 */
 	public int getSpawnHeight(int x, int y, int z)
 	{
-		// + 30, defend against defective geodata and invalid spawn z
-		int nearestZ = getNearestZ(getGeoX(x), getGeoY(y), z + 30); // was z + 100
-		return Math.abs(nearestZ - z) <= SPAWN_Z_DELTA_LIMIT ? nearestZ : z;
+		final int geoX = getGeoX(x);
+		final int geoY = getGeoY(y);
+		
+		if (!hasGeoPos(geoX, geoY))
+		{
+			return z;
+		}
+		
+		int nextLowerZ = getNextLowerZ(geoX, geoY, z + 100);
+		return Math.abs(nextLowerZ - z) <= SPAWN_Z_DELTA_LIMIT ? nextLowerZ : z;
 	}
 	
 	/**

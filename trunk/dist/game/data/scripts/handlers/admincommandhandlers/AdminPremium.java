@@ -20,9 +20,12 @@ package handlers.admincommandhandlers;
 
 import java.text.SimpleDateFormat;
 
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.PremiumManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author Mobius
@@ -55,7 +58,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Error.");
+				activeChar.sendMessage("Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_add2"))
@@ -67,7 +70,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Error.");
+				activeChar.sendMessage("Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_add3"))
@@ -79,7 +82,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Error.");
+				activeChar.sendMessage("Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_info"))
@@ -91,7 +94,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Error.");
+				activeChar.sendMessage("Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_remove"))
@@ -103,14 +106,24 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Error.");
+				activeChar.sendMessage("Please enter a valid account name.");
 			}
 		}
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
+		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/premium_menu.htm"));
+		activeChar.sendPacket(html);
 		return true;
 	}
 	
 	private void addPremiumStatus(L2PcInstance admin, int months, String accountName)
 	{
+		if (!Config.PREMIUM_SYSTEM_ENABLED)
+		{
+			admin.sendMessage("Premium system is disabled.");
+			return;
+		}
+		
 		// TODO: Add check if account exists XD
 		PremiumManager.getInstance().updatePremiumData(months, accountName);
 		final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");

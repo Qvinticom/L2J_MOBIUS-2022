@@ -12,24 +12,33 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.clientpackets.auctionhouse;
 
-/**
- * @author Erlandys
- */
-public class ExResponseCommissionDelete extends L2GameServerPacket
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+
+public final class RequestCommissionCancel extends L2GameClientPacket
 {
-	private final boolean success;
+	private static final String _C__D0_A3_REQUESTCOMMISSIONCANCEL = "[C] D0:A3 RequestCommissionCancel";
 	
-	public ExResponseCommissionDelete(boolean _success)
+	@Override
+	protected void readImpl()
 	{
-		success = _success;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected void runImpl()
 	{
-		writeC(0xd3);
-		writeD(success ? 0x01 : 0x00);
+		L2PcInstance player = getClient().getActiveChar();
+		if (player == null)
+		{
+			return;
+		}
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _C__D0_A3_REQUESTCOMMISSIONCANCEL;
 	}
 }

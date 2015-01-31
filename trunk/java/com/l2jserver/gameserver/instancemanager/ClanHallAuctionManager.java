@@ -30,7 +30,7 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.entity.Auction;
 
 /**
- * Zoey76: TODO: Rewrite it and unharcode it.
+ * Zoey76: TODO: Rewrite it and unhardcode it.
  */
 public final class ClanHallAuctionManager
 {

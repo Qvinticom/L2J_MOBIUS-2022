@@ -19,7 +19,6 @@
 package com.l2jserver.gameserver.data.xml.impl;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +27,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -36,11 +34,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jserver.gameserver.model.primeshop.PrimeShopItem;
-import com.l2jserver.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
-import com.l2jserver.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
-import com.l2jserver.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 import com.l2jserver.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author Gnacik, UnAfraid
@@ -123,109 +117,6 @@ public class PrimeShopData implements IXmlReader
 		}
 	}
 	
-	public void buyItem(L2PcInstance player, int brId, int count)
-	{
-		if (validatePlayer(brId, count, player))
-		{
-			final PrimeShopGroup item = _primeItems.get(brId);
-			for (PrimeShopItem itm : item.getItems())
-			{
-				player.addItem("PrimeShop", itm.getId(), itm.getCount() * count, player, true);
-			}
-			final int points = player.getPrimePoints() - (item.getPrice() * count);
-			
-			player.setPrimePoints(points);
-			
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
-			player.sendPacket(new ExBRGamePoint(player));
-		}
-	}
-	
-	/**
-	 * @param brId
-	 * @param count
-	 * @param player
-	 * @return
-	 */
-	private boolean validatePlayer(int brId, int count, L2PcInstance player)
-	{
-		if ((count < 1) && (count > 99))
-		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
-			return false;
-		}
-		
-		final PrimeShopGroup item = _primeItems.get(brId);
-		final long currentTime = System.currentTimeMillis() / 1000;
-		
-		if (item == null)
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
-			return false;
-		}
-		else if ((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel()))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
-			return false;
-		}
-		else if ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel()))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
-			return false;
-		}
-		else if ((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays()))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
-			return false;
-		}
-		else if ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays()))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
-			return false;
-		}
-		else if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0)
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.NOT_DAY_OF_WEEK));
-			return false;
-		}
-		else if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.BEFORE_SALE_DATE));
-			return false;
-		}
-		else if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
-			return false;
-		}
-		
-		final int weight = item.getWeight() * count;
-		final long slots = item.getCount() * count;
-		
-		if (player.getPrimePoints() < (item.getPrice() * count))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-			return false;
-		}
-		else if (player.getInventory().validateWeight(weight))
-		{
-			if (!player.getInventory().validateCapacity(slots))
-			{
-				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
-				return false;
-			}
-		}
-		else
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
-			return false;
-		}
-		
-		return true;
-	}
-	
 	public void showProductInfo(L2PcInstance player, int brId)
 	{
 		final PrimeShopGroup item = _primeItems.get(brId);
@@ -236,6 +127,11 @@ public class PrimeShopData implements IXmlReader
 		}
 		
 		player.sendPacket(new ExBRProductInfo(item));
+	}
+	
+	public PrimeShopGroup getItem(int brId)
+	{
+		return _primeItems.get(brId);
 	}
 	
 	public Map<Integer, PrimeShopGroup> getPrimeItems()

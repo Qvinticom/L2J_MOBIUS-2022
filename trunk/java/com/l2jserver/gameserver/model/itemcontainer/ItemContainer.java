@@ -433,6 +433,76 @@ public abstract class ItemContainer
 	}
 	
 	/**
+	 * Detaches the item from this item container so it can be used as a single instance.
+	 * @param process string Identifier of process triggering this action
+	 * @param item the item instance to be detached
+	 * @param count the count of items to be detached
+	 * @param newLocation the new item location
+	 * @param actor Player requesting the item detach
+	 * @param reference Object Object referencing current action like NPC selling item or previous item in transformation
+	 * @return the detached item instance if operation completes successfully, {@code null} if the item does not exist in this container anymore or item count is not available
+	 */
+	public L2ItemInstance detachItem(String process, L2ItemInstance item, long count, ItemLocation newLocation, L2PcInstance actor, Object reference)
+	{
+		if (item == null)
+		{
+			return null;
+		}
+		
+		synchronized (item)
+		{
+			if (!_items.contains(item))
+			{
+				return null;
+			}
+			
+			if (count > item.getCount())
+			{
+				return null;
+			}
+			
+			if (count == item.getCount())
+			{
+				removeItem(item);
+			}
+			else
+			{
+				item.changeCount(process, -count, actor, reference);
+				item.updateDatabase(true);
+				item = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
+				item.setOwnerId(getOwnerId());
+			}
+			item.setItemLocation(newLocation);
+			item.updateDatabase(true);
+		}
+		
+		refreshWeight();
+		
+		return item;
+	}
+	
+	/**
+	 * Detaches the item from this item container so it can be used as a single instance.
+	 * @param process string Identifier of process triggering this action
+	 * @param itemObjectId the item object id to be detached
+	 * @param count the count of items to be detached
+	 * @param newLocation the new item location
+	 * @param actor Player requesting the item detach
+	 * @param reference Object Object referencing current action like NPC selling item or previous item in transformation
+	 * @return the detached item instance if operation completes successfully, {@code null} if the item does not exist in this container anymore or item count is not available
+	 */
+	public L2ItemInstance detachItem(String process, int itemObjectId, long count, ItemLocation newLocation, L2PcInstance actor, Object reference)
+	{
+		final L2ItemInstance itemInstance = getItemByObjectId(itemObjectId);
+		if (itemInstance == null)
+		{
+			return null;
+		}
+		
+		return detachItem(process, itemInstance, count, newLocation, actor, reference);
+	}
+	
+	/**
 	 * Destroy item from inventory and updates database
 	 * @param process : String Identifier of process triggering this action
 	 * @param item : L2ItemInstance to be destroyed

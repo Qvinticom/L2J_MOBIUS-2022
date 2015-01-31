@@ -259,7 +259,7 @@ public class AdminReload implements IAdminCommandHandler
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
 					break;
 				}
-				case "itemmall":
+				case "primeshop":
 				{
 					PrimeShopData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded L2 Store data.");

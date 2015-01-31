@@ -59,7 +59,6 @@ import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFightCalculator;
 import handlers.admincommandhandlers.AdminFortSiege;
-import handlers.admincommandhandlers.AdminGamePoints;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
@@ -87,6 +86,7 @@ import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
 import handlers.admincommandhandlers.AdminPremium;
+import handlers.admincommandhandlers.AdminPrimePoints;
 import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
 import handlers.admincommandhandlers.AdminReload;
@@ -355,7 +355,6 @@ public class MasterHandler
 			AdminExpSp.class,
 			AdminFightCalculator.class,
 			AdminFortSiege.class,
-			AdminGamePoints.class,
 			AdminGeodata.class,
 			AdminGm.class,
 			AdminGmChat.class,
@@ -382,6 +381,7 @@ public class MasterHandler
 			AdminPledge.class,
 			AdminPolymorph.class,
 			AdminPremium.class,
+			AdminPrimePoints.class,
 			AdminPunishment.class,
 			AdminQuest.class,
 			AdminReload.class,

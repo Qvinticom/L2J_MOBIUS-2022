@@ -12,15 +12,16 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets;
+package com.l2jserver.gameserver.network.clientpackets.auctionhouse;
 
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
-import com.l2jserver.gameserver.instancemanager.AuctionManager.Auctions;
+import com.l2jserver.gameserver.instancemanager.AuctionHouseManager;
+import com.l2jserver.gameserver.instancemanager.AuctionHouseManager.Auctions;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionDelete;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionItemList;
-import com.l2jserver.gameserver.network.serverpackets.ExResponseCommissionList;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionDelete;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionItemList;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExResponseCommissionList;
 
 /**
  * @author Erlandys
@@ -49,7 +50,7 @@ public final class RequestCommissionDelete extends L2GameClientPacket
 		{
 			return;
 		}
-		AuctionManager am = AuctionManager.getInstance();
+		AuctionHouseManager am = AuctionHouseManager.getInstance();
 		am.checkForAuctionsDeletion();
 		Auctions auction = am.getAuctionById(_auctionID);
 		if (auction != null)

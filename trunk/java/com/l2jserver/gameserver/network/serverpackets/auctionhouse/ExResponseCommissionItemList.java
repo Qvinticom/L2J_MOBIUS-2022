@@ -12,10 +12,11 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.auctionhouse;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.serverpackets.AbstractItemPacket;
 
 /**
  * @author Erlandys

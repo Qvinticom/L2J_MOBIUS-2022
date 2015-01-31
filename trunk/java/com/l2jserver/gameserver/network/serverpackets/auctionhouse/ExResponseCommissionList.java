@@ -12,12 +12,13 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.auctionhouse;
 
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
-import com.l2jserver.gameserver.instancemanager.AuctionManager.Auctions;
+import com.l2jserver.gameserver.instancemanager.AuctionHouseManager;
+import com.l2jserver.gameserver.instancemanager.AuctionHouseManager.Auctions;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.serverpackets.AbstractItemPacket;
 
 /**
  * @author Erlandys
@@ -31,7 +32,7 @@ public class ExResponseCommissionList extends AbstractItemPacket
 	int _grade;
 	String _search;
 	boolean _yourAuction;
-	AuctionManager _am;
+	AuctionHouseManager _am;
 	int _yourAuctionsSize = 0;
 	int _categories[][] =
 	{
@@ -115,14 +116,14 @@ public class ExResponseCommissionList extends AbstractItemPacket
 		_grade = grade;
 		_search = searchName;
 		_yourAuction = false;
-		_am = AuctionManager.getInstance();
+		_am = AuctionHouseManager.getInstance();
 	}
 	
 	public ExResponseCommissionList(L2PcInstance player)
 	{
 		_player = player;
 		_yourAuction = true;
-		_am = AuctionManager.getInstance();
+		_am = AuctionHouseManager.getInstance();
 		for (Auctions auction : _am.getAuctions())
 		{
 			if (auction.getPlayerID() == player.getObjectId())

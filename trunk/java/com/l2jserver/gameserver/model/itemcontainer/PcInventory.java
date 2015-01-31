@@ -679,6 +679,22 @@ public class PcInventory extends Inventory
 		return item;
 	}
 	
+	@Override
+	public L2ItemInstance detachItem(String process, L2ItemInstance item, long count, ItemLocation newLocation, L2PcInstance actor, Object reference)
+	{
+		item = super.detachItem(process, item, count, newLocation, actor, reference);
+		
+		if ((item != null) && (actor != null))
+		{
+			actor.sendPacket(new ItemList(actor, false));
+			
+			// Update current load as well
+			actor.sendPacket(new ExUserInfoInvenWeight(actor));
+		}
+		
+		return item;
+	}
+	
 	/**
 	 * Destroy item from inventory and checks _adena and _ancientAdena
 	 * @param process : String Identifier of process triggering this action

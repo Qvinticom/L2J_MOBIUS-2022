@@ -46,8 +46,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
-import com.l2jserver.gameserver.network.serverpackets.ExShowCommission;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.auctionhouse.ExShowCommission;
 import com.l2jserver.gameserver.util.GMAudit;
 import com.l2jserver.gameserver.util.Util;
 

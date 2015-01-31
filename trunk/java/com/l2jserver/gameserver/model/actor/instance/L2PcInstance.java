@@ -775,6 +775,8 @@ public final class L2PcInstance extends L2Playable
 	private L2ItemInstance _appearanceItem = null;
 	private L2ItemInstance _targetAppearanceItem = null;
 	
+	private boolean _usingPrimeShop = false;
+	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
 	private final Map<Integer, L2CubicInstance> _cubics = new ConcurrentSkipListMap<>();
@@ -15164,12 +15166,22 @@ public final class L2PcInstance extends L2Playable
 		_targetAppearanceItem = item;
 	}
 	
+	public void setUsingPrimeShop(boolean isUsing)
+	{
+		_usingPrimeShop = isUsing;
+	}
+	
+	public boolean isUsingPrimeShop()
+	{
+		return _usingPrimeShop;
+	}
+	
 	/**
 	 * @return the prime shop points of the player.
 	 */
 	public int getPrimePoints()
 	{
-		return getAccountVariables().getInt("PrimePoints", 0);
+		return getAccountVariables().getInt("PRIME_POINTS", 0);
 	}
 	
 	/**
@@ -15178,6 +15190,9 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void setPrimePoints(int points)
 	{
-		getAccountVariables().set("PrimePoints", points);
+		// Immediate store upon change
+		final AccountVariables vars = getAccountVariables();
+		vars.set("PRIME_POINTS", points);
+		vars.storeMe();
 	}
 }

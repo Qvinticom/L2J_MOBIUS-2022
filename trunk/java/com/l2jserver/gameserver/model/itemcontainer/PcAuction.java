@@ -44,7 +44,7 @@ public class PcAuction extends ItemContainer
 	@Override
 	public ItemLocation getBaseLocation()
 	{
-		return ItemLocation.AUCTION;
+		return ItemLocation.AUCTION_HOUSE;
 	}
 	
 	@Override

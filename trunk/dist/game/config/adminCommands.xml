@@ -265,21 +265,6 @@
 	<admin command="admin_setfort" accessLevel="100" />
 	<admin command="admin_removefort" accessLevel="100" />
 
-	<!-- ADMIN L2 STORE AND NCOINS -->
-	<admin command="admin_add_game_points" accessLevel="100" />
-	<admin command="admin_count_game_points" accessLevel="100" />
-	<admin command="admin_gamepoints" accessLevel="100" />
-	<admin command="admin_set_game_points" accessLevel="100" />
-	<admin command="admin_subtract_game_points" accessLevel="100" />
-	<admin command="admin_reload_itemmall" accessLevel="100" />
-
-	<!-- ADMIN PCBANG -->
-	<admin command="admin_add_bang_points" accessLevel="100" />
-	<admin command="admin_count_bang_points" accessLevel="100" />
-	<admin command="admin_bangpoints" accessLevel="100" />
-	<admin command="admin_set_bang_points" accessLevel="100" />
-	<admin command="admin_subtract_bang_points" accessLevel="100" />
-
 	<!-- ADMIN GEODATA -->
 	<admin command="admin_geo_pos" accessLevel="100" />
 	<admin command="admin_geo_spawn_pos" accessLevel="100" />
@@ -433,6 +418,12 @@
 	<admin command="admin_transform" accessLevel="100" />
 	<admin command="admin_untransform" accessLevel="100" />
 	<admin command="admin_transform_menu" accessLevel="100" />
+
+	<!-- ADMIN PC POINTS -->
+	<admin command="admin_pcbangpoints" accessLevel="100" />
+
+	<!-- ADMIN PRIME POINTS -->
+	<admin command="admin_primepoints" accessLevel="100" />
 
 	<!-- PREMIUM SYSTEM -->
 	<admin command="admin_premium_menu" accessLevel="100" />
