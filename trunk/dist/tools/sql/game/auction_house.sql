@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `auctions_info` (
+CREATE TABLE IF NOT EXISTS `auction_house` (
   `auctionID` int(11) NOT NULL DEFAULT '0',
   `sellerID` int(11) NOT NULL DEFAULT '0',
   `itemName` varchar(50) DEFAULT NULL,

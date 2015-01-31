@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.model.entity.Message;
+import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -40,19 +41,15 @@ public class AuctionHouseManager
 	Connection con = null;
 	private static final Logger _log = Logger.getLogger(AuctionHouseManager.class.getName());
 	private static ArrayList<Auctions> auctions;
-	private static HashMap<String, Integer> categoryType;
-	private static HashMap<Integer, Integer> categoryConvert;
-	private static HashMap<Integer, Integer> massCategoryConvert;
+	private static HashMap<Integer, Integer> convertedCategories;
+	private static HashMap<Integer, Integer> mainCategories;
 	
 	public AuctionHouseManager()
 	{
-		_log.info(getClass().getSimpleName() + ": Initializing");
-		loadCategories();
-		_log.info(getClass().getSimpleName() + ": Loaded " + categoryType.size() + " Auction Categories.");
+		_log.info(getClass().getSimpleName() + ": Initializing.");
 		loadCategoryConverter();
-		_log.info(getClass().getSimpleName() + ": Loaded " + categoryConvert.size() + " Converts for Auction Categories.");
-		loadMassCategoryConverter();
-		_log.info(getClass().getSimpleName() + ": Loaded " + massCategoryConvert.size() + " Auction Sections.");
+		loadMainCategoriesConverter();
+		_log.info(getClass().getSimpleName() + ": Loaded " + mainCategories.size() + " Auction Sections.");
 		load();
 		_log.info(getClass().getSimpleName() + ": Loaded " + auctions.size() + " Auctions.");
 	}
@@ -71,7 +68,7 @@ public class AuctionHouseManager
 		long finishTime = 0;
 		String itemName = "";
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM auctions_info");)
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM auction_house");)
 		{
 			ResultSet rset = statement.executeQuery();
 			while (rset.next())
@@ -103,7 +100,7 @@ public class AuctionHouseManager
 	public void insertAuction(Auctions auction)
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO auctions_info (auctionID, sellerID, itemName, itemOID, price, count, category, duration, finishTime, itemID) values (?,?,?,?,?,?,?,?,?,?)");)
+			PreparedStatement statement = con.prepareStatement("INSERT INTO auction_house (auctionID, sellerID, itemName, itemOID, price, count, category, duration, finishTime, itemID) values (?,?,?,?,?,?,?,?,?,?)");)
 		{
 			statement.setInt(1, auction.getAuctionId());
 			statement.setInt(2, auction.getPlayerID());
@@ -127,7 +124,7 @@ public class AuctionHouseManager
 	public void removeAuction(int auctionID)
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM auctions_info WHERE auctionID=?");)
+			PreparedStatement statement = con.prepareStatement("DELETE FROM auction_house WHERE auctionID=?");)
 		{
 			
 			statement.setInt(1, auctionID);
@@ -140,182 +137,99 @@ public class AuctionHouseManager
 		}
 	}
 	
-	private void loadCategories()
-	{
-		categoryType = new HashMap<>();
-		
-		categoryType.put("sword10", 1); /* 1-H Sword */
-		categoryType.put("sword11", 2); /* 1-H Magic Sword */
-		categoryType.put("dagger40", 3); /* Dagger */
-		categoryType.put("rapier20480", 4); /* Rapier */
-		categoryType.put("big sword10485760", 5); /* 2-H Sword */
-		categoryType.put("ancient40960", 6); /* 2-H Sword */
-		categoryType.put("dual sword640", 7); /* Dual Swords */
-		categoryType.put("dual dagger655360", 8); /* Dual Daggers */
-		categoryType.put("blunt20", 9); /* 1-H Blunt */
-		categoryType.put("blunt21", 10); /* 1-H Magic Blunt */
-		categoryType.put("big blunt5242880", 11); /* 2-H Blunt */
-		categoryType.put("big blunt5242881", 12); /* 2-H Magic Blunt */
-		categoryType.put("dual blunt2621440", 13); /* Dual Blunt */
-		categoryType.put("bow80", 14); /* Bow */
-		categoryType.put("crossbow81920", 15); /* Crossbow */
-		categoryType.put("dual fist5120", 16); /* Fists */
-		categoryType.put("pole160", 17); /* Pole */
-		categoryType.put("etc1281", 18); /* Etc */
-		categoryType.put("fist2560", 18); /* Fist */
-		categoryType.put("rod10240", 18); /* Rod */
-		categoryType.put("flag163840", 18); /* Flag */
-		categoryType.put("ownthing327680", 18); /* Ownthing */
-		
-		categoryType.put("head2097152", 19); /* Helmet */
-		categoryType.put("chest8388608", 20); /* Chest */
-		categoryType.put("legs8388608", 21); /* Leggings */
-		categoryType.put("onepiece8388608", 22); /* Full Body */
-		categoryType.put("gloves2097152", 23); /* Gloves */
-		categoryType.put("feet2097152", 24); /* Boots */
-		categoryType.put("lhand67108864", 25); /* Shield */
-		categoryType.put("lhand33554432", 26); /* Sigil */
-		categoryType.put("underwear2097152", 27); /* Shirt */
-		categoryType.put("back2097152", 28); /* Cloak */
-		
-		categoryType.put("rfinger;lfinger2097152", 29); /* Rings */
-		categoryType.put("rear;lear2097152", 30); /* Earrings */
-		categoryType.put("neck2097152", 31); /* Necklace */
-		categoryType.put("waist4194304", 32); /* Belt */
-		categoryType.put("rbracelet2097152", 33); /* Bracelet */
-		categoryType.put("hair22097152", 34); /* Hair1 */
-		categoryType.put("hair2097152", 34); /* Hair2 */
-		categoryType.put("hairall2097152", 34); /* Hair All */
-		
-		categoryType.put("potion", 35); /* Potion */
-		categoryType.put("elixir", 35); /* Elixir */
-		categoryType.put("scrl_enchant_wp", 36); /* Weapon Enchant */
-		categoryType.put("bless_scrl_enchant_wp", 36); /* Blessed Weapon enchant */
-		categoryType.put("scrl_inc_enchant_prop_wp", 36); /* Inc Weapon Enchant */
-		categoryType.put("ancient_crystal_enchant_wp", 36); /* Ancient Crystal Weapon Enchant */
-		categoryType.put("scrl_enchant_am", 37); /* Armor Enchant */
-		categoryType.put("bless_scrl_enchant_am", 37); /* Blessed Armor Enchant */
-		categoryType.put("scrl_inc_enchant_prop_am", 37); /* Inc Armor Enchant */
-		categoryType.put("ancient_crystal_enchant_am", 37); /* Crystal Enchant */
-		categoryType.put("scroll", 38); /* Scroll: Other */
-		
-		/* 39/40 Categories - SoulShot/Spiritshot... */
-		/* 41 Category - Pet Weapons, Armors and Etc Items... */
-		
-		categoryType.put("pet_collar", 42); /* Pets */
-		
-		/* 44 Category - All Grade Crystals. */
-		
-		categoryType.put("recipe", 44); /* Recipe */
-		
-		/* 46 Category - Crafting main ingredients (all parts, not stem or other materials) */
-		/* 47 Category - Life Stones */
-		
-		categoryType.put("scrl_enchant_attr", 48); /* Scroll Attr */
-		
-		/* 49/50 Categories - Weapon/Armor Enchant Stones TODO: need to create this */
-		/* 51 Category - Spellbooks */
-		/* 52 Category - Gemstones */
-		/* 53 Category - Pins */
-		/* 54 Category - Rune Clip */
-		/* 55 Category - Magic Ornament */
-		
-		categoryType.put("dye", 57); /* Dyes */
-	}
-	
 	private void loadCategoryConverter()
 	{
-		categoryConvert = new HashMap<>();
+		convertedCategories = new HashMap<>();
 		
-		categoryConvert.put(4294967, 1);
-		categoryConvert.put(8589934, 2);
-		categoryConvert.put(12884901, 3);
-		categoryConvert.put(17179869, 4);
-		categoryConvert.put(21474836, 5);
-		categoryConvert.put(25769803, 6);
-		categoryConvert.put(30064771, 7);
-		categoryConvert.put(34359738, 8);
-		categoryConvert.put(38654705, 9);
-		categoryConvert.put(42949672, 10);
-		categoryConvert.put(47244640, 11);
-		categoryConvert.put(51539607, 12);
-		categoryConvert.put(55834574, 13);
-		categoryConvert.put(60129542, 14);
-		categoryConvert.put(64424509, 15);
-		categoryConvert.put(68719476, 16);
-		categoryConvert.put(73014444, 17);
-		categoryConvert.put(77309411, 18);
+		convertedCategories.put(4294967, 1);
+		convertedCategories.put(8589934, 2);
+		convertedCategories.put(12884901, 3);
+		convertedCategories.put(17179869, 4);
+		convertedCategories.put(21474836, 5);
+		convertedCategories.put(25769803, 6);
+		convertedCategories.put(30064771, 7);
+		convertedCategories.put(34359738, 8);
+		convertedCategories.put(38654705, 9);
+		convertedCategories.put(42949672, 10);
+		convertedCategories.put(47244640, 11);
+		convertedCategories.put(51539607, 12);
+		convertedCategories.put(55834574, 13);
+		convertedCategories.put(60129542, 14);
+		convertedCategories.put(64424509, 15);
+		convertedCategories.put(68719476, 16);
+		convertedCategories.put(73014444, 17);
+		convertedCategories.put(77309411, 18);
 		
-		categoryConvert.put(81604378, 19);
-		categoryConvert.put(85899345, 20);
-		categoryConvert.put(90194313, 21);
-		categoryConvert.put(94489280, 22);
-		categoryConvert.put(98784247, 23);
-		categoryConvert.put(103079215, 24);
-		categoryConvert.put(107374182, 25);
-		categoryConvert.put(111669149, 26);
-		categoryConvert.put(115964116, 27);
-		categoryConvert.put(120259084, 28);
-		categoryConvert.put(124554051, 29);
-		categoryConvert.put(128849018, 30);
-		categoryConvert.put(133143986, 31);
-		categoryConvert.put(137438953, 32);
-		categoryConvert.put(141733920, 33);
-		categoryConvert.put(146028888, 34);
+		convertedCategories.put(81604378, 19);
+		convertedCategories.put(85899345, 20);
+		convertedCategories.put(90194313, 21);
+		convertedCategories.put(94489280, 22);
+		convertedCategories.put(98784247, 23);
+		convertedCategories.put(103079215, 24);
+		convertedCategories.put(107374182, 25);
+		convertedCategories.put(111669149, 26);
+		convertedCategories.put(115964116, 27);
+		convertedCategories.put(120259084, 28);
+		convertedCategories.put(124554051, 29);
+		convertedCategories.put(128849018, 30);
+		convertedCategories.put(133143986, 31);
+		convertedCategories.put(137438953, 32);
+		convertedCategories.put(141733920, 33);
+		convertedCategories.put(146028888, 34);
 		
-		categoryConvert.put(150323855, 35);
-		categoryConvert.put(154618822, 36);
-		categoryConvert.put(158913789, 37);
-		categoryConvert.put(163208757, 38);
-		categoryConvert.put(167503724, 39);
-		categoryConvert.put(171798691, 40);
+		convertedCategories.put(150323855, 35);
+		convertedCategories.put(154618822, 36);
+		convertedCategories.put(158913789, 37);
+		convertedCategories.put(163208757, 38);
+		convertedCategories.put(167503724, 39);
+		convertedCategories.put(171798691, 40);
 		
-		categoryConvert.put(180388626, 41);
-		categoryConvert.put(184683593, 42);
+		convertedCategories.put(180388626, 41);
+		convertedCategories.put(184683593, 42);
 		
-		categoryConvert.put(188978561, 43);
-		categoryConvert.put(193273528, 44);
-		categoryConvert.put(197568495, 45);
-		categoryConvert.put(201863462, 46);
-		categoryConvert.put(206158430, 47);
-		categoryConvert.put(210453397, 48);
-		categoryConvert.put(214748364, 49);
-		categoryConvert.put(219043332, 50);
-		categoryConvert.put(223338299, 51);
-		categoryConvert.put(227633266, 52);
-		categoryConvert.put(231928233, 53);
-		categoryConvert.put(236223201, 54);
-		categoryConvert.put(240518168, 55);
-		categoryConvert.put(244813135, 56);
-		categoryConvert.put(249108103, 57);
-		categoryConvert.put(253403070, 58);
+		convertedCategories.put(188978561, 43);
+		convertedCategories.put(193273528, 44);
+		convertedCategories.put(197568495, 45);
+		convertedCategories.put(201863462, 46);
+		convertedCategories.put(206158430, 47);
+		convertedCategories.put(210453397, 48);
+		convertedCategories.put(214748364, 49);
+		convertedCategories.put(219043332, 50);
+		convertedCategories.put(223338299, 51);
+		convertedCategories.put(227633266, 52);
+		convertedCategories.put(231928233, 53);
+		convertedCategories.put(236223201, 54);
+		convertedCategories.put(240518168, 55);
+		convertedCategories.put(244813135, 56);
+		convertedCategories.put(249108103, 57);
+		convertedCategories.put(253403070, 58);
 	}
 	
-	private void loadMassCategoryConverter()
+	private void loadMainCategoriesConverter()
 	{
-		massCategoryConvert = new HashMap<>();
+		mainCategories = new HashMap<>();
 		
-		massCategoryConvert.put(4294967, 61);
-		massCategoryConvert.put(8589934, 62);
-		massCategoryConvert.put(12884901, 63);
-		massCategoryConvert.put(17179869, 64);
-		massCategoryConvert.put(21474836, 65);
+		mainCategories.put(4294967, 61);
+		mainCategories.put(8589934, 62);
+		mainCategories.put(12884901, 63);
+		mainCategories.put(17179869, 64);
+		mainCategories.put(21474836, 65);
 	}
 	
-	public int convertCategory(int category)
+	public int getClientCategory(int category)
 	{
-		if (categoryConvert.get(category) != null)
+		if (convertedCategories.get(category) != null)
 		{
-			return categoryConvert.get(category);
+			return convertedCategories.get(category);
 		}
 		return -1;
 	}
 	
-	public int convertMassCategory(int category)
+	public int getMainClientCategory(int category)
 	{
-		if (massCategoryConvert.get(category) != null)
+		if (mainCategories.get(category) != null)
 		{
-			return massCategoryConvert.get(category);
+			return mainCategories.get(category);
 		}
 		return -1;
 	}
@@ -401,195 +315,6 @@ public class AuctionHouseManager
 		return null;
 	}
 	
-	public int getAuctionsSizeById(int id, int grade, String search)
-	{
-		int ids[][] =
-		{
-			{
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17,
-				18
-			},
-			{
-				19,
-				20,
-				21,
-				22,
-				23,
-				24,
-				25,
-				26,
-				27,
-				28
-			},
-			{
-				29,
-				30,
-				31,
-				32,
-				33,
-				34
-			},
-			{
-				35,
-				36,
-				37,
-				38,
-				39,
-				40
-			},
-			{
-				41,
-				42
-			},
-			{
-				43,
-				44,
-				45,
-				46,
-				47,
-				48,
-				49,
-				50,
-				51,
-				52,
-				53,
-				54,
-				55,
-				56,
-				57,
-				58
-			}
-		};
-		int i = 0;
-		int IDS[] = null;
-		if (id == 61)
-		{
-			IDS = ids[1];
-		}
-		else if (id == 62)
-		{
-			IDS = ids[2];
-		}
-		else if (id == 63)
-		{
-			IDS = ids[3];
-		}
-		else if (id == 64)
-		{
-			IDS = ids[4];
-		}
-		else if (id == 65)
-		{
-			IDS = ids[5];
-		}
-		else if (id == 1)
-		{
-			IDS = ids[0];
-		}
-		
-		if ((((id > 60) && (id < 66)) || (id == 1)) && (IDS != null))
-		{
-			for (int ID : IDS)
-			{
-				for (Auctions auction : auctions)
-				{
-					if ((grade == -1) && search.equals(""))
-					{
-						if (auction.getCategory() == ID)
-						{
-							i++;
-						}
-					}
-					else
-					{
-						if (grade != -1)
-						{
-							if (search.equals(""))
-							{
-								if ((auction.getCategory() == ID) && (grade == auction.getItem().getItem().getCrystalType().getId()))
-								{
-									i++;
-								}
-							}
-							if (!search.equals(""))
-							{
-								if ((auction.getCategory() == ID) && (grade == auction.getItem().getItem().getCrystalType().getId()) && auction.getItem().getName().contains(search))
-								{
-									i++;
-								}
-							}
-						}
-						else if (!search.equals(""))
-						{
-							if ((auction.getCategory() == ID) && auction.getItem().getName().contains(search))
-							{
-								i++;
-							}
-						}
-					}
-				}
-			}
-		}
-		else
-		{
-			for (Auctions auction : auctions)
-			{
-				if ((grade == -1) && search.equals(""))
-				{
-					if (auction.getCategory() == id)
-					{
-						i++;
-					}
-				}
-				else
-				{
-					if (grade != -1)
-					{
-						if (search.equals(""))
-						{
-							if ((auction.getCategory() == id) && (grade == auction.getItem().getItem().getCrystalType().getId()))
-							{
-								i++;
-							}
-						}
-						if (!search.equals(""))
-						{
-							if ((auction.getCategory() == id) && (grade == auction.getItem().getItem().getCrystalType().getId()) && auction.getItem().getName().contains(search))
-							{
-								i++;
-							}
-						}
-					}
-					else if (!search.equals(""))
-					{
-						if ((auction.getCategory() == id) && auction.getItem().getName().contains(search))
-						{
-							i++;
-						}
-					}
-				}
-			}
-		}
-		
-		return i;
-	}
-	
 	public int getAuctionsSizeById(int grade, String search)
 	{
 		int i = 0;
@@ -617,76 +342,14 @@ public class AuctionHouseManager
 	{
 		int ids[][] =
 		{
-			{
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17,
-				18
-			},
-			{
-				19,
-				20,
-				21,
-				22,
-				23,
-				24,
-				25,
-				26,
-				27,
-				28
-			},
-			{
-				29,
-				30,
-				31,
-				32,
-				33,
-				34
-			},
-			{
-				35,
-				36,
-				37,
-				38,
-				39,
-				40
-			},
-			{
-				41,
-				42
-			},
-			{
-				43,
-				44,
-				45,
-				46,
-				47,
-				48,
-				49,
-				50,
-				51,
-				52,
-				53,
-				54,
-				55,
-				56,
-				57,
-				58
-			}
+			//@formatter:off
+			{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18},
+			{19, 20, 21, 22, 23, 24, 25, 26, 27, 28},
+			{29, 30, 31, 32, 33, 34},
+			{35, 36, 37, 38, 39, 40},
+			{41, 42},
+			{43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58}
+			//@formatter:on
 		};
 		int i = 0;
 		int IDS[] = null;
@@ -804,100 +467,299 @@ public class AuctionHouseManager
 	
 	public int getCategoryByItem(L2ItemInstance item)
 	{
-		if (item.isArmor())
+		final String itemName = item.getName().toLowerCase();
+		final int itemId = item.getId();
+		
+		if (item.isWeapon())
 		{
 			if (item.getItem().isPetItem())
 			{
-				return 41;
+				return 41; // Pet Equipment
 			}
-			if (categoryType.get(item.getArmorItem().getBodyPartName().toLowerCase() + "" + item.getArmorItem().getItemType().mask()) != null)
+			
+			switch (item.getWeaponItem().getItemType())
 			{
-				return categoryType.get(item.getArmorItem().getBodyPartName().toLowerCase() + "" + item.getArmorItem().getItemType().mask());
+				case SWORD:
+				{
+					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
+					{
+						return 5; // 2-H Sword
+					}
+					
+					if (item.getWeaponItem().isMagicWeapon())
+					{
+						return 2; // 1-H Magic Sword
+					}
+					
+					return 1; // 1-H Sword
+				}
+				case DAGGER:
+				{
+					return 3; // Dagger
+				}
+				case RAPIER:
+				{
+					return 4; // Rapier
+				}
+				case ANCIENTSWORD:
+				{
+					return 6; // Ancient
+				}
+				case DUAL:
+				{
+					return 7; // Dual Swords
+				}
+				case DUALDAGGER:
+				{
+					return 8; // Dual Daggers
+				}
+				case BLUNT:
+				{
+					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
+					{
+						if (item.getWeaponItem().isMagicWeapon())
+						{
+							return 12; // 2-H Magic Blunt
+						}
+						
+						return 11; // 2-H Blunt
+					}
+					
+					if (item.getWeaponItem().isMagicWeapon())
+					{
+						return 10; // 1-H Magic Blunt
+					}
+					
+					return 9; // 1-H Blunt
+				}
+				case DUALBLUNT:
+				{
+					return 13; // Dual Blunt
+				}
+				case BOW:
+				{
+					return 14; // Bow
+				}
+				case CROSSBOW:
+				{
+					return 15; // Crossbow
+				}
+				case DUALFIST:
+				{
+					return 16; // Fist Weapon
+				}
+				case POLE:
+				{
+					return 17; // Spear
+				}
+				default:
+				{
+					return 18; // Other Weapon
+				}
 			}
 		}
-		else if (item.isWeapon())
+		else if (item.isArmor())
 		{
 			if (item.getItem().isPetItem())
 			{
-				return 41;
+				return 41; // Pet Equipment
 			}
-			if (categoryType.get(item.getWeaponItem().getItemType().toString().toLowerCase() + "" + item.getWeaponItem().getItemType().mask() + "" + (item.getWeaponItem().isMagicWeapon() ? 1 : 0)) != null)
+			
+			switch (item.getArmorItem().getBodyPart())
 			{
-				return categoryType.get(item.getWeaponItem().getItemType().toString().toLowerCase() + "" + item.getWeaponItem().getItemType().mask() + "" + (item.getWeaponItem().isMagicWeapon() ? 1 : 0));
+				case L2Item.SLOT_HEAD:
+				{
+					return 19; // Helmet
+				}
+				case L2Item.SLOT_CHEST:
+				{
+					return 20; // Armor Top
+				}
+				case L2Item.SLOT_LEGS:
+				{
+					return 21; // Armor Pants
+				}
+				case L2Item.SLOT_FULL_ARMOR:
+				case L2Item.SLOT_ALLDRESS:
+				{
+					return 22; // Full Body
+				}
+				case L2Item.SLOT_GLOVES:
+				{
+					return 23; // Gloves
+				}
+				case L2Item.SLOT_FEET:
+				{
+					return 24; // Feet
+				}
+				case L2Item.SLOT_L_HAND:
+				{
+					if (itemName.contains("sigil"))
+					{
+						return 26; // Sigil
+					}
+					
+					return 25; // Shield
+				}
+				case L2Item.SLOT_UNDERWEAR:
+				{
+					return 27; // Underwear
+				}
+				case L2Item.SLOT_BACK:
+				{
+					return 28; // Cloak
+				}
 			}
+			return 59;
 		}
 		else if (item.isEtcItem())
 		{
-			if (item.getItem().isPetItem())
+			// Accessory
+			switch (item.getEtcItem().getBodyPart())
 			{
-				return 41;
+				case L2Item.SLOT_R_FINGER:
+				case L2Item.SLOT_L_FINGER:
+				case L2Item.SLOT_LR_FINGER:
+				{
+					return 29; // Ring
+				}
+				case L2Item.SLOT_R_EAR:
+				case L2Item.SLOT_L_EAR:
+				case L2Item.SLOT_LR_EAR:
+				{
+					return 30; // Earring
+				}
+				case L2Item.SLOT_NECK:
+				{
+					return 31; // Necklace
+				}
+				case L2Item.SLOT_BELT:
+				{
+					return 32; // Belt
+				}
+				case L2Item.SLOT_R_BRACELET:
+				case L2Item.SLOT_L_BRACELET:
+				{
+					return 33; // Bracelet
+				}
+				case L2Item.SLOT_HAIR:
+				case L2Item.SLOT_HAIR2:
+				case L2Item.SLOT_HAIRALL:
+				{
+					return 34; // Hair Accessory
+				}
 			}
+			
+			// Supplies
+			if (item.getEtcItem().isPotion() || item.getEtcItem().isElixir())
+			{
+				return 35; // Potion
+			}
+			
 			if (item.getEtcItem().getHandlerName() != null)
 			{
-				if (item.getEtcItem().getHandlerName().toLowerCase().contains("petfood"))
+				switch (item.getEtcItem().getHandlerName())
 				{
-					return 41;
+					case "EnchantScrolls":
+					{
+						if (itemName.contains("weapon"))
+						{
+							return 36; // Scroll: Enchant Weapon
+						}
+						
+						if (itemName.contains("armor"))
+						{
+							return 37; // Scroll: Enchant Armor
+						}
+					}
+					case "SoulShots":
+					{
+						return 39; // Soulshot
+					}
+					case "SpiritShot":
+					{
+						return 40; // SpiritShot
+					}
+					case "PetFood":
+					case "BeastSoulShot":
+					case "BeastSpiritShot":
+					case "SummonItems":
+					{
+						return 42; // Pet Supplies
+					}
 				}
 			}
-			if (((item.getId() > 1457) && (item.getId() < 1462)) || (item.getId() == 17371))
+			
+			if (itemName.contains("scroll"))
 			{
-				return 43;
+				return 38; // Scroll: Other
 			}
-			if (item.getName().toLowerCase().contains("life stone"))
+			
+			// Misc
+			if (itemName.contains("crystal") && itemName.contains("-grade"))
 			{
-				return 46;
+				return 43; // Crystal
 			}
-			if (item.getName().toLowerCase().contains("spellbook") || item.getName().toLowerCase().contains("forgotten scroll"))
+			if (itemName.contains("recipe"))
 			{
-				return 51;
+				return 44; // Recipe
 			}
-			if (((item.getId() > 2129) && (item.getId() < 2135)) || (item.getId() == 19440))
+			// TODO: Add all materials
+			if ((itemId > 1863) && (itemId < 2130))
 			{
-				return 52;
+				return 45; // Major Crafting Ingredients
 			}
-			if (item.getName().toLowerCase().contains("magic pouch ("))
+			if (itemName.contains("life stone"))
 			{
-				return 53;
+				return 46; // Life Stone
 			}
-			if (item.getName().toLowerCase().contains("magic pin ("))
+			if (itemName.contains("soul crystal"))
 			{
-				return 54;
+				return 47; // Soul Crystal
 			}
-			if (item.getName().toLowerCase().contains("magic rune clip ("))
+			if (itemName.contains("stone") && (itemName.contains("fire") || itemName.contains("water") || itemName.contains("earth") || itemName.contains("wind") || itemName.contains("dark") || itemName.contains("holy")))
 			{
-				return 55;
+				return 48; // Attribute Stone
 			}
-			if (item.getName().toLowerCase().contains("magic ornament ("))
+			if (itemName.contains("weapon") && itemName.contains("enchant") && itemName.contains("stone"))
 			{
-				return 56;
+				return 49; // Weapon Enchant Stone
 			}
-			if (item.getEtcItem().getDefaultAction() != null)
+			if (itemName.contains("armor") && itemName.contains("enchant") && itemName.contains("stone"))
 			{
-				if (item.getEtcItem().getDefaultAction().toString().toLowerCase().contains("spiritshot"))
-				{
-					return 40;
-				}
-				else if (item.getEtcItem().getDefaultAction().toString().toLowerCase().contains("soulshot"))
-				{
-					return 39;
-				}
+				return 50; // Armor Enchant Stone
 			}
-			if (item.getName().toLowerCase().contains("soul crystal"))
+			if (itemName.contains("spellbook") || itemName.contains("forgotten scroll"))
 			{
-				return 47;
+				return 51; // Spellbook
 			}
-			if (item.getName().toLowerCase().contains("ingredient") || item.getName().toLowerCase().contains("piece") || item.getName().toLowerCase().contains("edge") || item.getName().toLowerCase().contains("beads") || item.getName().toLowerCase().contains("stave") || item.getName().toLowerCase().contains("design") || item.getName().toLowerCase().contains("fragment") || item.getName().toLowerCase().contains("blade") || item.getName().toLowerCase().contains("head") || item.getName().toLowerCase().contains("part") || item.getName().toLowerCase().contains("gem") || item.getName().toLowerCase().contains("shaft") || item.getName().toLowerCase().contains("stone") || item.getName().toLowerCase().contains("fabric") || item.getName().toLowerCase().contains("pattern") || item.getName().toLowerCase().contains("lining"))
+			if (itemName.contains("gemstone") && itemName.contains("-grade"))
 			{
-				return 45;
+				return 52; // Gemstone
 			}
-			if (categoryType.containsKey(item.getEtcItem().getItemType().toString().toLowerCase()))
+			if (itemName.contains("magic pouch"))
 			{
-				return categoryType.get(item.getEtcItem().getItemType().toString().toLowerCase());
+				return 53; // Pouch
 			}
-			return 58;
+			if (itemName.contains("magic pin"))
+			{
+				return 54; // Pin
+			}
+			if (itemName.contains("magic rune clip"))
+			{
+				return 55; // Magic Rune Clip
+			}
+			if (itemName.contains("magic ornament"))
+			{
+				return 56; // Magic Ornament
+			}
+			if (itemName.contains("dye") && (itemName.contains("str") || itemName.contains("dex") || itemName.contains("con") || itemName.contains("int") || itemName.contains("wit") || itemName.contains("men") || itemName.contains("luc") || itemName.contains("cha")))
+			{
+				return 57; // Dye
+			}
 		}
 		
-		return 59;
+		return 58; // Other Item
 	}
 	
 	public ArrayList<Auctions> getAuctions()

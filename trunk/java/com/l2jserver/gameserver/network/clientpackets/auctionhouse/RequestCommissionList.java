@@ -62,11 +62,11 @@ public final class RequestCommissionList extends L2GameClientPacket
 		
 		if ((_category != 101) && (_category != 100) && ((_category % 10000) != 7297) && ((_category % 10000) != 4593) && ((_category % 10000) != 1889) && ((_category % 10000) != 9185) && ((_category % 10000) != 6481))
 		{
-			_category = am.convertCategory((int) (_category / 1000));
+			_category = am.getClientCategory((int) (_category / 1000));
 		}
 		else if ((_category != 101) && (_category != 100))
 		{
-			_category = am.convertMassCategory((int) (_category / 1000));
+			_category = am.getMainClientCategory((int) (_category / 1000));
 		}
 		
 		if (((_category > 60) && (_category < 66)) || (_category == 101))
