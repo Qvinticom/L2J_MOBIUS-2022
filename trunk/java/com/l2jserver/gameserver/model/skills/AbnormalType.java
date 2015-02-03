@@ -355,7 +355,17 @@ public enum AbnormalType
 	WEAPON_MASTERY,
 	WILL,
 	WIND_DOT,
-	WP_CHANGE_EVENT;
+	WP_CHANGE_EVENT,
+	HARMONY, // Knight/Warrior/Wizard Harmony Buffs (GoD)
+	MELODY_HORN,
+	MELODY_DRUM,
+	MELODY_PIPE,
+	MELODY_GUITAR,
+	MELODY_HARP,
+	MELODY_LUTE,
+	PREV_SONATA,
+	DARING_SONATA,
+	REF_SONATA;
 	
 	/**
 	 * Get the enumerate for the given String.
