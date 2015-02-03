@@ -49,7 +49,7 @@ public class TaskDailyWorldChatPointReset extends Task
 			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?"))
 		{
 			ps.setInt(1, Config.WORLD_CHAT_POINTS_PER_DAY);
-			ps.setString(1, L2PcInstance.WORLD_CHAT_VARIABLE_NAME);
+			ps.setString(2, L2PcInstance.WORLD_CHAT_VARIABLE_NAME);
 			ps.executeUpdate();
 		}
 		catch (Exception e)
