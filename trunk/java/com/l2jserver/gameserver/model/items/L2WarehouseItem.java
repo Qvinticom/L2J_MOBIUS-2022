@@ -77,7 +77,7 @@ public class L2WarehouseItem
 		_enchant = item.getEnchantLevel();
 		_customType1 = item.getCustomType1();
 		_customType2 = item.getCustomType2();
-		_grade = item.getItem().getItemGrade();
+		_grade = item.getItem().getCrystalType();
 		if (item.isAugmented())
 		{
 			_isAugmented = true;

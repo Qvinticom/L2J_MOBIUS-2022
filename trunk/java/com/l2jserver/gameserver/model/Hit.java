@@ -41,11 +41,6 @@ public class Hit
 			addMask(AttackType.MISSED);
 			return;
 		}
-		else if (target.isInvul() || (shld > 0))
-		{
-			addMask(AttackType.BLOCKED);
-			return;
-		}
 		
 		if (crit)
 		{
@@ -55,6 +50,11 @@ public class Hit
 		if (soulshot)
 		{
 			addMask(AttackType.SHOT_USED);
+		}
+		
+		if (target.isInvul() || (shld > 0))
+		{
+			addMask(AttackType.BLOCKED);
 		}
 	}
 	

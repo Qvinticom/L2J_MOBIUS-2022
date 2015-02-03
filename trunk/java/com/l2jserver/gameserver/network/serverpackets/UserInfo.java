@@ -324,7 +324,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeC(_activeChar.getInventory().getTalismanSlots()); // Confirmed
 			writeC(_activeChar.getInventory().getBroochJewelSlots()); // Confirmed
 			writeC(_activeChar.getTeam().getId()); // Confirmed
-			writeC(0x00); // Red dotted ring on the floor
+			writeC(0x00); // (1 = Red, 2 = White, 3 = White Pink) dotted ring on the floor
 			writeC(0x00);
 			writeC(0x00);
 			writeC(0x00);

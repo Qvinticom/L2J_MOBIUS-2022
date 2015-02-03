@@ -1090,7 +1090,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
 			final int timeToHit = timeAtk / 2;
 			_attackEndTime = System.currentTimeMillis() + timeAtk;
-			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGradeSPlus().getId() : 0;
+			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGrade().ordinal() : 0;
 			// Create a Server->Client packet Attack
 			Attack attack = new Attack(this, target, wasSSCharged, ssGrade);
 			
@@ -2628,7 +2628,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (_ai == null)
 				{
-					_ai = initAI();
+					return _ai = initAI();
 				}
 			}
 		}

@@ -80,7 +80,7 @@ public class FuncEnchant extends AbstractFunction
 		
 		if (getStat() == Stats.MAGIC_ATTACK)
 		{
-			switch (item.getItem().getItemGradeSPlus())
+			switch (item.getItem().getCrystalTypePlus())
 			{
 				case S:
 					// M. Atk. increases by 4 for all weapons.
@@ -107,7 +107,7 @@ public class FuncEnchant extends AbstractFunction
 		if (item.isWeapon())
 		{
 			final WeaponType type = (WeaponType) item.getItemType();
-			switch (item.getItem().getItemGradeSPlus())
+			switch (item.getItem().getCrystalTypePlus())
 			{
 				case S:
 					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)

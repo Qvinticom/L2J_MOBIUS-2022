@@ -227,7 +227,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			return false;
 		}
 		
-		final CrystalType grade = item.getItem().getItemGrade();
+		final CrystalType grade = item.getItem().getCrystalType();
 		final LifeStone ls = _lifeStones.get(refinerItem.getId());
 		
 		// Check for item id

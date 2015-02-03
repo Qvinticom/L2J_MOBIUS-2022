@@ -82,7 +82,7 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		}
 		
-		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getItemGrade(), ls.getGrade()))
+		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getCrystalType(), ls.getGrade()))
 		{
 			activeChar.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
 			return;

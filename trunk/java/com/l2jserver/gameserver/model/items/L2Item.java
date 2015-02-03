@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.enums.ItemGrade;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -389,6 +390,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	}
 	
 	/**
+	 * @return return General item grade (No S80, S84, R95, R99)
+	 */
+	public ItemGrade getItemGrade()
+	{
+		return ItemGrade.valueOf(_crystalType);
+	}
+	
+	/**
 	 * Return the type of crystal if item is crystallizable
 	 * @return CrystalType
 	 */
@@ -407,30 +416,21 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	}
 	
 	/**
-	 * Returns the grade of the item.<BR>
-	 * <BR>
-	 * <U><I>Concept :</I></U><BR>
-	 * In fact, this function returns the type of crystal of the item.
-	 * @return CrystalType
-	 */
-	public final CrystalType getItemGrade()
-	{
-		return getCrystalType();
-	}
-	
-	/**
-	 * For grades S80 and S84 return S
+	 * For grades S80 and S84 return S, R95, and R99 return R
 	 * @return the grade of the item.
 	 */
-	public final CrystalType getItemGradeSPlus()
+	public final CrystalType getCrystalTypePlus()
 	{
-		switch (getItemGrade())
+		switch (_crystalType)
 		{
 			case S80:
 			case S84:
 				return CrystalType.S;
+			case R95:
+			case R99:
+				return CrystalType.R;
 			default:
-				return getItemGrade();
+				return _crystalType;
 		}
 	}
 	

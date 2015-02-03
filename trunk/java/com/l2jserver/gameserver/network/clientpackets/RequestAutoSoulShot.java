@@ -141,7 +141,7 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 				{
 					final boolean isSoulshot = (item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT) || (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT);
 					final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
-					if ((activeChar.getActiveWeaponItem() == activeChar.getFistsWeaponItem()) || (item.getItem().getCrystalType() != activeChar.getActiveWeaponItem().getItemGradeSPlus()))
+					if ((activeChar.getActiveWeaponItem() == activeChar.getFistsWeaponItem()) || (item.getItem().getCrystalType() != activeChar.getActiveWeaponItem().getCrystalTypePlus()))
 					{
 						activeChar.sendPacket(isSoulshot ? SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON : SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 						return;
