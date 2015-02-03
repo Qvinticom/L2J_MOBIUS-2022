@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.model.entity;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -44,6 +45,8 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.enums.InstanceReenterType;
+import com.l2jserver.gameserver.enums.InstanceRemoveBuffType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -58,6 +61,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2DoorTemplate;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.holders.InstanceReenterTimeHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -92,6 +96,12 @@ public final class Instance
 	private boolean _showTimer = false;
 	private boolean _isTimerIncrease = true;
 	private String _timerText = "";
+	// Instance reset data
+	private InstanceReenterType _type = InstanceReenterType.NONE;
+	private final List<InstanceReenterTimeHolder> _resetData = new ArrayList<>();
+	// Instance remove buffs data
+	private InstanceRemoveBuffType _removeBuffType = InstanceRemoveBuffType.NONE;
+	private final List<Integer> _exceptionList = new ArrayList<>();
 	
 	protected ScheduledFuture<?> _checkTimeUpTask = null;
 	protected final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new FastMap<>();
@@ -653,6 +663,78 @@ public final class Instance
 					_spawnLoc = null;
 				}
 			}
+			else if ("reenter".equalsIgnoreCase(n.getNodeName()))
+			{
+				a = n.getAttributes().getNamedItem("additionStyle");
+				if (a != null)
+				{
+					_type = InstanceReenterType.valueOf(a.getNodeValue());
+				}
+				
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+				{
+					long time = -1;
+					DayOfWeek day = null;
+					int hour = -1;
+					int minute = -1;
+					
+					if ("reset".equalsIgnoreCase(d.getNodeName()))
+					{
+						a = d.getAttributes().getNamedItem("time");
+						if (a != null)
+						{
+							time = Long.parseLong(a.getNodeValue());
+							
+							if (time > 0)
+							{
+								_resetData.add(new InstanceReenterTimeHolder(time));
+								break;
+							}
+						}
+						else if (time == -1)
+						{
+							a = d.getAttributes().getNamedItem("day");
+							if (a != null)
+							{
+								day = DayOfWeek.valueOf(a.getNodeValue().toUpperCase());
+							}
+							
+							a = d.getAttributes().getNamedItem("hour");
+							if (a != null)
+							{
+								hour = Integer.parseInt(a.getNodeValue());
+							}
+							
+							a = d.getAttributes().getNamedItem("minute");
+							if (a != null)
+							{
+								minute = Integer.parseInt(a.getNodeValue());
+							}
+							_resetData.add(new InstanceReenterTimeHolder(day, hour, minute));
+						}
+					}
+				}
+			}
+			else if ("removeBuffs".equalsIgnoreCase(n.getNodeName()))
+			{
+				a = n.getAttributes().getNamedItem("type");
+				if (a != null)
+				{
+					_removeBuffType = InstanceRemoveBuffType.valueOf(a.getNodeValue().toUpperCase());
+				}
+				
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+				{
+					if ("skill".equalsIgnoreCase(d.getNodeName()))
+					{
+						a = d.getAttributes().getNamedItem("id");
+						if (a != null)
+						{
+							_exceptionList.add(Integer.parseInt(a.getNodeValue()));
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -829,5 +911,35 @@ public final class Instance
 		{
 			InstanceManager.getInstance().destroyInstance(getId());
 		}
+	}
+	
+	public InstanceReenterType getReenterType()
+	{
+		return _type;
+	}
+	
+	public void setReenterType(InstanceReenterType type)
+	{
+		_type = type;
+	}
+	
+	public List<InstanceReenterTimeHolder> getReenterData()
+	{
+		return _resetData;
+	}
+	
+	public boolean isRemoveBuffEnabled()
+	{
+		return getRemoveBuffType() != InstanceRemoveBuffType.NONE;
+	}
+	
+	public InstanceRemoveBuffType getRemoveBuffType()
+	{
+		return _removeBuffType;
+	}
+	
+	public List<Integer> getBuffExceptionList()
+	{
+		return _exceptionList;
 	}
 }

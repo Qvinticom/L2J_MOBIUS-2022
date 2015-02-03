@@ -70,6 +70,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPKi
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerRestore;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSelect;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSubChange;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerTransform;
@@ -228,6 +229,7 @@ public enum EventType
 	ON_PLAYER_SUMMON_SPAWN(OnPlayerSummonSpawn.class, void.class),
 	ON_PLAYER_SUMMON_TALK(OnPlayerSummonTalk.class, void.class),
 	ON_PLAYER_TRANSFORM(OnPlayerTransform.class, void.class),
+	ON_PLAYER_SUB_CHANGE(OnPlayerSubChange.class, void.class),
 	
 	// Trap events
 	ON_TRAP_ACTION(OnTrapAction.class, void.class),

@@ -41,6 +41,12 @@ import com.l2jserver.gameserver.network.clientpackets.auctionhouse.RequestCommis
 import com.l2jserver.gameserver.network.clientpackets.auctionhouse.RequestCommissionRegister;
 import com.l2jserver.gameserver.network.clientpackets.auctionhouse.RequestCommissionRegisteredItem;
 import com.l2jserver.gameserver.network.clientpackets.auctionhouse.RequestCommissionRegistrableItemList;
+import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantClose;
+import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantPushOne;
+import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantPushTwo;
+import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantRemoveOne;
+import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantRemoveTwo;
+import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantTry;
 import com.l2jserver.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import com.l2jserver.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestAnswerFriendInvite;
@@ -1158,7 +1164,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new RequestAskMemberShip();
 								break;
 							case 0x7a:
-								// @TODO: RequestAddExpandQuestAlarm
+								msg = new RequestAddExpandQuestAlarm();
 								break;
 							case 0x7b:
 								msg = new RequestVoteNew();

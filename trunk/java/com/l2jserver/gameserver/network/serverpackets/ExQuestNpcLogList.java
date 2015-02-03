@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.model.holders.NpcLogListHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
@@ -29,7 +30,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
 public class ExQuestNpcLogList extends L2GameServerPacket
 {
 	private final int _questId;
-	private final List<Holder> _npcLogList = new ArrayList<>();
+	private final List<NpcLogListHolder> _npcLogList = new ArrayList<>();
 	
 	public ExQuestNpcLogList(int questId)
 	{
@@ -38,12 +39,17 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	
 	public void addNpc(int npcId, int count)
 	{
-		_npcLogList.add(new Holder(npcId, false, count));
+		_npcLogList.add(new NpcLogListHolder(npcId, false, count));
 	}
 	
 	public void addNpcString(NpcStringId npcStringId, int count)
 	{
-		_npcLogList.add(new Holder(npcStringId.getId(), true, count));
+		_npcLogList.add(new NpcLogListHolder(npcStringId.getId(), true, count));
+	}
+	
+	public void add(NpcLogListHolder holder)
+	{
+		_npcLogList.add(holder);
 	}
 	
 	@Override
@@ -53,40 +59,11 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		writeH(0xC6);
 		writeD(_questId);
 		writeC(_npcLogList.size());
-		for (Holder holder : _npcLogList)
+		for (NpcLogListHolder holder : _npcLogList)
 		{
 			writeD((holder.getId()));
 			writeC(holder.isNpcString() ? 0x01 : 0x00);
 			writeD(holder.getCount());
-		}
-	}
-	
-	private class Holder
-	{
-		private final int _id;
-		private final boolean _isNpcString;
-		private final int _count;
-		
-		public Holder(int id, boolean isNpcString, int count)
-		{
-			_id = id;
-			_isNpcString = isNpcString;
-			_count = count;
-		}
-		
-		public int getId()
-		{
-			return _id;
-		}
-		
-		public boolean isNpcString()
-		{
-			return _isNpcString;
-		}
-		
-		public int getCount()
-		{
-			return _count;
 		}
 	}
 }

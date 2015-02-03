@@ -209,7 +209,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		}
 	}
 	
-	private MonasteryOfSilence2()
+	public MonasteryOfSilence2()
 	{
 		super(MonasteryOfSilence2.class.getSimpleName(), "instances");
 		addStartNpc(OddGlobe);

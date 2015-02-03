@@ -24,6 +24,7 @@ import java.util.List;
 public final class SkillList extends L2GameServerPacket
 {
 	private final List<Skill> _skills = new ArrayList<>();
+	private int _lastLearnedSkillId = 0;
 	
 	static class Skill
 	{
@@ -48,6 +49,11 @@ public final class SkillList extends L2GameServerPacket
 		_skills.add(new Skill(id, level, passive, disabled, enchanted));
 	}
 	
+	public void setLastLearnedSkillId(int lastLearnedSkillId)
+	{
+		_lastLearnedSkillId = lastLearnedSkillId;
+	}
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -63,6 +69,6 @@ public final class SkillList extends L2GameServerPacket
 			writeC(temp.disabled ? 1 : 0); // iSkillDisabled
 			writeC(temp.enchanted ? 1 : 0); // CanEnchant
 		}
-		writeD(0x00); // TODO: Find me!
+		writeD(_lastLearnedSkillId);
 	}
 }

@@ -142,7 +142,7 @@ public class L2Npc extends L2Character
 	
 	private int _soulshotamount = 0;
 	private int _spiritshotamount = 0;
-	private int _displayEffect = 0;
+	private int _state = 0;
 	
 	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
@@ -1531,18 +1531,23 @@ public class L2Npc extends L2Character
 		return getTemplate().getAIType();
 	}
 	
-	public void setDisplayEffect(int val)
+	public void setState(int state)
 	{
-		if (val != _displayEffect)
+		if (state != _state)
 		{
-			_displayEffect = val;
-			broadcastPacket(new ExChangeNpcState(getObjectId(), val));
+			_state = state;
+			broadcastPacket(new ExChangeNpcState(getObjectId(), state));
 		}
 	}
 	
-	public int getDisplayEffect()
+	public boolean isState(int state)
 	{
-		return _displayEffect;
+		return _state == state;
+	}
+	
+	public int getState()
+	{
+		return _state;
 	}
 	
 	public int getColorEffect()

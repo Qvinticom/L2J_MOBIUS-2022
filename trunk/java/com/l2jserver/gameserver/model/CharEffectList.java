@@ -1517,23 +1517,6 @@ public final class CharEffectList
 				game.getZone().broadcastPacketToObservers(os);
 			}
 		}
-		
-		final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(_owner);
-		
-		// Go through the StatusListener
-		// Send the Server->Client packet StatusUpdate with current HP and MP
-		for (L2Character temp : _owner.getStatus().getStatusListener())
-		{
-			if ((temp != null) && temp.isPlayer())
-			{
-				temp.sendPacket(upd);
-			}
-		}
-		
-		if (_owner.isPlayer() && (_owner.getTarget() == _owner))
-		{
-			_owner.sendPacket(upd);
-		}
 	}
 	
 	private void addIcon(BuffInfo info, AbnormalStatusUpdate asu, PartySpelled ps, PartySpelled psSummon, ExOlympiadSpelledInfo os, boolean isSummon)
@@ -1575,7 +1558,28 @@ public final class CharEffectList
 		if (update)
 		{
 			updateEffectIcons();
+			sendAbnormalStatusUpdateFromTarget();
 			computeEffectFlags();
+		}
+	}
+	
+	private void sendAbnormalStatusUpdateFromTarget()
+	{
+		final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(_owner);
+		
+		// Go through the StatusListener
+		// Send the Server->Client packet StatusUpdate with current HP and MP
+		// @formatter:off
+		_owner.getStatus().getStatusListener().stream()
+			.filter(Objects::nonNull)
+			.filter(L2Object::isPlayer)
+			.map(L2Character::getActingPlayer)
+			.forEach(upd::sendTo);
+		// @formatter:on
+		
+		if (_owner.isPlayer() && (_owner.getTarget() == _owner))
+		{
+			_owner.sendPacket(upd);
 		}
 	}
 	

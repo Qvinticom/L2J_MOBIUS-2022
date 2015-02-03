@@ -23,13 +23,15 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class Ex2ndPasswordAck extends L2GameServerPacket
 {
-	int _response;
+	private final int _status;
+	private final int _response;
 	
 	public static int SUCCESS = 0x00;
 	public static int WRONG_PATTERN = 0x01;
 	
-	public Ex2ndPasswordAck(int response)
+	public Ex2ndPasswordAck(int status, int response)
 	{
+		_status = status;
 		_response = response;
 	}
 	
@@ -38,7 +40,7 @@ public class Ex2ndPasswordAck extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x107);
-		writeC(0x00);
+		writeC(_status);
 		writeD(_response == WRONG_PATTERN ? 0x01 : 0x00);
 		writeD(0x00);
 	}

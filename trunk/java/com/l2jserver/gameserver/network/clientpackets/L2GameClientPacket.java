@@ -118,7 +118,10 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 	/**
 	 * @return A String with this packet name for debugging purposes
 	 */
-	public abstract String getType();
+	public String getType()
+	{
+		return getClass().getSimpleName();
+	}
 	
 	/**
 	 * Overridden with true value on some packets that should disable spawn protection (RequestItemList and UseItem only)

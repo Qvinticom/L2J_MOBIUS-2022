@@ -208,6 +208,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPKCha
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPChanged;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSubChange;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerTransform;
 import com.l2jserver.gameserver.model.events.impl.character.player.mentoring.OnPlayerMenteeStatus;
 import com.l2jserver.gameserver.model.events.impl.character.player.mentoring.OnPlayerMentorStatus;
@@ -2725,14 +2726,6 @@ public final class L2PcInstance extends L2Playable
 		Skill skill;
 		for (L2SkillLearn s : autoGetSkills)
 		{
-			final int maxLvl = SkillData.getInstance().getMaxLevel(s.getSkillId());
-			final int hashCode = SkillData.getSkillHashCode(s.getSkillId(), maxLvl);
-			
-			if (SkillTreesData.getInstance().isCurrentClassSkillNoParent(getClassId(), hashCode) || SkillTreesData.getInstance().isRemoveSkill(getClassId(), s.getSkillId()))
-			{
-				continue;
-			}
-			
 			skill = st.getSkill(s.getSkillId(), s.getSkillLevel());
 			if (skill != null)
 			{
@@ -3149,6 +3142,8 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(new ItemList(this, false));
 			}
 			
+			sendPacket(new ExAdenaInvenCount(this));
+			
 			if (sendMessage)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
@@ -3367,7 +3362,6 @@ public final class L2PcInstance extends L2Playable
 			
 			// Update current load as well
 			sendPacket(new ExUserInfoInvenWeight(this));
-			sendPacket(new ExAdenaInvenCount(this));
 			
 			// If over capacity, drop the item
 			if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !_inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != L2ItemInstance.MODIFIED)))
@@ -10336,6 +10330,11 @@ public final class L2PcInstance extends L2Playable
 	
 	public void sendSkillList()
 	{
+		sendSkillList(0);
+	}
+	
+	public void sendSkillList(int lastLearnedSkillId)
+	{
 		boolean isDisabled = false;
 		SkillList sl = new SkillList();
 		
@@ -10754,6 +10753,8 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(new SkillCoolTime(this));
 			sendPacket(new ExStorageMaxCount(this));
 			sendPacket(new ExSubjobInfo(this));
+			
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
 			return true;
 		}
 		finally

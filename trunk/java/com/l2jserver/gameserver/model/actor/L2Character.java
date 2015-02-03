@@ -783,6 +783,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), randomOffset);
 	}
 	
+	public void teleToLocation(ILocational loc, int instanceId, int randomOffset)
+	{
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instanceId, randomOffset);
+	}
+	
 	public void teleToLocation(ILocational loc, boolean randomOffset)
 	{
 		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);

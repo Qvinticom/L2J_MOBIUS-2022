@@ -21,7 +21,6 @@ package ai.npc.AwakeningMaster;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.CategoryType;
@@ -86,14 +85,13 @@ public final class AwakeningMaster extends AbstractNpcAI
 		{
 			return null;
 		}
-		
 		String htmltext = null;
 		switch (event)
 		{
 			case "awakening":
 			{
 				final QuestState st2 = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
-				if ((!Config.NEED_SCROLL_OF_AFTERLIFE_FOR_AWAKEN || st.hasQuestItems(SCROLL_OF_AFTERLIFE)) && (player.getLevel() > 84) && (!player.isSubClassActive() || player.isDualClassActive()) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (!Config.NEED_SEIZE_YOUR_DESTINY_FOR_AWAKEN || ((st2 != null) && st2.isCompleted())))
+				if (st.hasQuestItems(SCROLL_OF_AFTERLIFE) && (player.getLevel() > 84) && (!player.isSubClassActive() || player.isDualClassActive()) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (st2 != null) && st2.isCompleted())
 				{
 					switch (npc.getId())
 					{
@@ -194,14 +192,11 @@ public final class AwakeningMaster extends AbstractNpcAI
 			return;
 		}
 		
-		if (Config.NEED_SEIZE_YOUR_DESTINY_FOR_AWAKEN)
+		final QuestState st = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
+		
+		if ((st == null) || !st.isCompleted())
 		{
-			final QuestState st = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
-			
-			if ((st == null) || !st.isCompleted())
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()))
@@ -222,23 +217,28 @@ public final class AwakeningMaster extends AbstractNpcAI
 			return;
 		}
 		
-		if (Config.NEED_SCROLL_OF_AFTERLIFE_FOR_AWAKEN)
+		final L2ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
+		if (item == null)
 		{
-			final L2ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
-			if (item == null)
-			{
-				return;
-			}
-			
-			if (!player.destroyItem("Awakening", item, player, true))
-			{
-				return;
-			}
+			return;
+		}
+		
+		if (!player.destroyItem("Awakening", item, player, true))
+		{
+			return;
 		}
 		
 		for (ClassId newClass : player.getClassId().getNextClassIds())
 		{
 			player.setClassId(newClass.getId());
+			if (player.isDualClassActive())
+			{
+				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
+			}
+			else
+			{
+				player.setBaseClass(player.getActiveClass());
+			}
 			player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
 			final UserInfo ui = new UserInfo(player, false);
 			ui.addComponentType(UserInfoType.BASIC_INFO);

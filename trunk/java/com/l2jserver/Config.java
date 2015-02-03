@@ -100,7 +100,6 @@ public final class Config
 	public static final String CONFIGURATION_FILE = "./config/Server.properties";
 	public static final String IP_CONFIG_FILE = "./config/ipconfig.xml";
 	public static final String SIEGE_CONFIGURATION_FILE = "./config/Siege.properties";
-	public static final String TW_CONFIGURATION_FILE = "./config/TerritoryWar.properties";
 	public static final String TELNET_FILE = "./config/Telnet.properties";
 	public static final String FLOOD_PROTECTOR_FILE = "./config/FloodProtector.properties";
 	public static final String MMO_CONFIG_FILE = "./config/MMO.properties";
@@ -158,6 +157,7 @@ public final class Config
 	public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 	public static int FEE_DELETE_TRANSFER_SKILLS;
 	public static int FEE_DELETE_SUBCLASS_SKILLS;
+	public static int FEE_DELETE_DUALCLASS_SKILLS;
 	public static boolean RESTORE_SERVITOR_ON_RECONNECT;
 	public static boolean RESTORE_PET_ON_RECONNECT;
 	public static double MAX_BONUS_EXP;
@@ -245,9 +245,6 @@ public final class Config
 	public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
 	public static boolean OFFSET_ON_TELEPORT_ENABLED;
 	public static int MAX_OFFSET_ON_TELEPORT;
-	public static boolean RESTORE_PLAYER_INSTANCE;
-	public static boolean ALLOW_SUMMON_TO_INSTANCE;
-	public static int EJECT_DEAD_PLAYER_TIME;
 	public static boolean PETITIONING_ALLOWED;
 	public static int MAX_PETITIONS_PER_PLAYER;
 	public static int MAX_PETITIONS_PENDING;
@@ -464,6 +461,7 @@ public final class Config
 	public static boolean SKILL_CHECK_REMOVE;
 	public static boolean SKILL_CHECK_GM;
 	public static boolean DEBUG;
+	public static boolean DEBUG_INSTANCES;
 	public static boolean HTML_ACTION_CACHE_DEBUG;
 	public static boolean PACKET_HANDLER_DEBUG;
 	public static boolean DEVELOPER;
@@ -535,6 +533,10 @@ public final class Config
 	public static boolean ALLOW_WEAR;
 	public static int WEAR_DELAY;
 	public static int WEAR_PRICE;
+	public static int INSTANCE_FINISH_TIME;
+	public static boolean RESTORE_PLAYER_INSTANCE;
+	public static boolean ALLOW_SUMMON_IN_INSTANCE;
+	public static int EJECT_DEAD_PLAYER_TIME;
 	public static boolean ALLOW_LOTTERY;
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
@@ -1529,6 +1531,7 @@ public final class Config
 			ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
 			FEE_DELETE_TRANSFER_SKILLS = Character.getInt("FeeDeleteTransferSkills", 10000000);
 			FEE_DELETE_SUBCLASS_SKILLS = Character.getInt("FeeDeleteSubClassSkills", 10000000);
+			FEE_DELETE_DUALCLASS_SKILLS = Character.getInt("FeeDeleteDualClassSkills", 20000000);
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
 			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
 			ALT_VITALITY_DATE_RESET = Character.getInt("AltVitalityDateReset", 4);
@@ -1718,9 +1721,6 @@ public final class Config
 			RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);
 			OFFSET_ON_TELEPORT_ENABLED = Character.getBoolean("OffsetOnTeleportEnabled", true);
 			MAX_OFFSET_ON_TELEPORT = Character.getInt("MaxOffsetOnTeleport", 50);
-			RESTORE_PLAYER_INSTANCE = Character.getBoolean("RestorePlayerInstance", false);
-			ALLOW_SUMMON_TO_INSTANCE = Character.getBoolean("AllowSummonToInstance", true);
-			EJECT_DEAD_PLAYER_TIME = 1000 * Character.getInt("EjectDeadPlayerTime", 60);
 			PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
 			MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
@@ -1814,6 +1814,7 @@ public final class Config
 			SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
 			SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
 			DEBUG = General.getBoolean("Debug", false);
+			DEBUG_INSTANCES = General.getBoolean("InstanceDebug", false);
 			HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
 			PACKET_HANDLER_DEBUG = General.getBoolean("PacketHandlerDebug", false);
 			DEVELOPER = General.getBoolean("Developer", false);
@@ -1896,6 +1897,10 @@ public final class Config
 			ALLOW_WEAR = General.getBoolean("AllowWear", true);
 			WEAR_DELAY = General.getInt("WearDelay", 5);
 			WEAR_PRICE = General.getInt("WearPrice", 10);
+			INSTANCE_FINISH_TIME = 1000 * General.getInt("DefaultFinishTime", 300);
+			RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
+			ALLOW_SUMMON_IN_INSTANCE = General.getBoolean("AllowSummonInInstance", false);
+			EJECT_DEAD_PLAYER_TIME = 1000 * General.getInt("EjectDeadPlayerTime", 60);
 			ALLOW_LOTTERY = General.getBoolean("AllowLottery", true);
 			ALLOW_RACE = General.getBoolean("AllowRace", true);
 			ALLOW_WATER = General.getBoolean("AllowWater", true);
@@ -3292,6 +3297,18 @@ public final class Config
 			case "wearprice":
 				WEAR_PRICE = Integer.parseInt(pValue);
 				break;
+			case "defaultfinishtime":
+				INSTANCE_FINISH_TIME = Integer.parseInt(pValue);
+				break;
+			case "restoreplayerinstance":
+				RESTORE_PLAYER_INSTANCE = Boolean.parseBoolean(pValue);
+				break;
+			case "allowsummonininstance":
+				ALLOW_SUMMON_IN_INSTANCE = Boolean.parseBoolean(pValue);
+				break;
+			case "ejectdeadplayertime":
+				EJECT_DEAD_PLAYER_TIME = Integer.parseInt(pValue);
+				break;
 			case "allowwater":
 				ALLOW_WATER = Boolean.parseBoolean(pValue);
 				break;
@@ -3465,12 +3482,6 @@ public final class Config
 				break;
 			case "playerfakedeathupprotection":
 				PLAYER_FAKEDEATH_UP_PROTECTION = Integer.parseInt(pValue);
-				break;
-			case "restoreplayerinstance":
-				RESTORE_PLAYER_INSTANCE = Boolean.parseBoolean(pValue);
-				break;
-			case "allowsummontoinstance":
-				ALLOW_SUMMON_TO_INSTANCE = Boolean.parseBoolean(pValue);
 				break;
 			case "partyxpcutoffmethod":
 				PARTY_XP_CUTOFF_METHOD = pValue;

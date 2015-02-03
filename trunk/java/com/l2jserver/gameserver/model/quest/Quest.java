@@ -23,6 +23,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +59,7 @@ import com.l2jserver.gameserver.model.events.AbstractScript;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
+import com.l2jserver.gameserver.model.holders.NpcLogListHolder;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -66,6 +68,7 @@ import com.l2jserver.gameserver.model.olympiad.Participant;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import com.l2jserver.gameserver.scripting.ScriptManager;
@@ -2820,6 +2823,23 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public boolean isCustomQuest()
 	{
 		return _isCustom;
+	}
+	
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		return Collections.emptySet();
+	}
+	
+	public void sendNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState qs = activeChar.getQuestState(getName());
+		
+		if (qs != null)
+		{
+			final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
+			getNpcLogList(activeChar).forEach(packet::add);
+			activeChar.sendPacket(packet);
+		}
 	}
 	
 	/**

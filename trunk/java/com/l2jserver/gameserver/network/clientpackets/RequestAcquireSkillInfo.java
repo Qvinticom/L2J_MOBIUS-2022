@@ -112,6 +112,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 			case SUBCLASS:
 			case COLLECT:
 			case TRANSFER:
+			case DUALCLASS:
 			{
 				sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;

@@ -50,7 +50,7 @@ public class ExInzoneWaiting extends L2GameServerPacket
 		writeD(_instanceTimes.size());
 		for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
 		{
-			final long instanceTime = TimeUnit.MILLISECONDS.toMinutes(entry.getValue() - System.currentTimeMillis());
+			final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
 			writeD(entry.getKey());
 			writeD((int) instanceTime);
 		}

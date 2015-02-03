@@ -47,38 +47,9 @@ public final class L2SkillLearn
 	private SocialClass _socialClass;
 	private final boolean _residenceSkill;
 	private final List<Integer> _residenceIds = new ArrayList<>();
-	private final List<SubClassData> _subClassLvlNumber = new ArrayList<>();
 	private final boolean _learnedByNpc;
 	private final boolean _learnedByFS;
 	private final Set<Integer> _removeSkills = new HashSet<>(1);
-	
-	public class SubClassData
-	{
-		private final int slot;
-		private final int lvl;
-		
-		public SubClassData(int pSlot, int pLvl)
-		{
-			slot = pSlot;
-			lvl = pLvl;
-		}
-		
-		/**
-		 * @return the sub-class slot.
-		 */
-		public int getSlot()
-		{
-			return slot;
-		}
-		
-		/**
-		 * @return the required sub-class level.
-		 */
-		public int getLvl()
-		{
-			return lvl;
-		}
-	}
 	
 	/**
 	 * Constructor for L2SkillLearn.
@@ -239,24 +210,6 @@ public final class L2SkillLearn
 	public void addResidenceId(Integer id)
 	{
 		_residenceIds.add(id);
-	}
-	
-	/**
-	 * @return a list with Sub-Class conditions, amount of subclasses and level.
-	 */
-	public List<SubClassData> getSubClassConditions()
-	{
-		return _subClassLvlNumber;
-	}
-	
-	/**
-	 * Adds a required residence Id.
-	 * @param slot the sub-class slot.
-	 * @param lvl the required sub-class level.
-	 */
-	public void addSubclassConditions(int slot, int lvl)
-	{
-		_subClassLvlNumber.add(new SubClassData(slot, lvl));
 	}
 	
 	/**

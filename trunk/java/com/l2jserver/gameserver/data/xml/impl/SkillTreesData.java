@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -42,13 +43,11 @@ import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.SubclassType;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2SkillLearn;
-import com.l2jserver.gameserver.model.L2SkillLearn.SubClassData;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.AcquireSkillType;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.base.SocialClass;
-import com.l2jserver.gameserver.model.base.SubClass;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.holders.PlayerSkillHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -95,6 +94,7 @@ public final class SkillTreesData implements IXmlReader
 	private static final Map<Integer, L2SkillLearn> _subClassChangeSkillTree = new HashMap<>();
 	private static final Map<Integer, L2SkillLearn> _abilitySkillTree = new HashMap<>();
 	private static final Map<Integer, L2SkillLearn> _alchemySkillTree = new HashMap<>();
+	private static final Map<Integer, L2SkillLearn> _dualClassSkillTree = new HashMap<>();
 	// Other skill trees
 	private static final Map<Integer, L2SkillLearn> _nobleSkillTree = new HashMap<>();
 	private static final Map<Integer, L2SkillLearn> _heroSkillTree = new HashMap<>();
@@ -142,6 +142,7 @@ public final class SkillTreesData implements IXmlReader
 		_gameMasterAuraSkillTree.clear();
 		_raceSkillTree.clear();
 		_revelationSkillTree.clear();
+		_dualClassSkillTree.clear();
 		
 		// Load files.
 		parseDatapackDirectory("data/skillTrees/", false);
@@ -249,9 +250,6 @@ public final class SkillTreesData implements IXmlReader
 										case "socialClass":
 											skillLearn.setSocialClass(Enum.valueOf(SocialClass.class, b.getTextContent()));
 											break;
-										case "subClassConditions":
-											skillLearn.addSubclassConditions(parseInteger(attrs, "slot"), parseInteger(attrs, "lvl"));
-											break;
 										case "removeSkill":
 											final int removeSkillId = parseInteger(attrs, "id");
 											skillLearn.addRemoveSkills(removeSkillId);
@@ -353,6 +351,11 @@ public final class SkillTreesData implements IXmlReader
 									case "subClassChangeSkillTree":
 									{
 										_subClassChangeSkillTree.put(skillHashCode, skillLearn);
+										break;
+									}
+									case "dualClassSkillTree":
+									{
+										_dualClassSkillTree.put(skillHashCode, skillLearn);
 										break;
 									}
 									default:
@@ -729,13 +732,17 @@ public final class SkillTreesData implements IXmlReader
 		}
 		
 		final Race race = player.getRace();
+		final boolean isAwaken = player.isInCategory(CategoryType.AWAKEN_GROUP);
 		
 		// Race skills
-		for (L2SkillLearn skill : getRaceSkillTree(race))
+		if (isAwaken)
 		{
-			if (player.getKnownSkill(skill.getSkillId()) == null)
+			for (L2SkillLearn skill : getRaceSkillTree(race))
 			{
-				result.add(skill);
+				if (player.getKnownSkill(skill.getSkillId()) == null)
+				{
+					result.add(skill);
+				}
 			}
 		}
 		
@@ -746,9 +753,12 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
+			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
+			final int hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
+			
 			if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel()))
 			{
-				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
+				final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
 				if (oldSkill != null)
 				{
 					if (oldSkill.getLevel() < skill.getSkillLevel())
@@ -756,7 +766,7 @@ public final class SkillTreesData implements IXmlReader
 						result.add(skill);
 					}
 				}
-				else
+				else if (!isAwaken || SkillTreesData.getInstance().isCurrentClassSkillNoParent(player.getClassId(), hashCode))
 				{
 					result.add(skill);
 				}
@@ -1033,30 +1043,32 @@ public final class SkillTreesData implements IXmlReader
 		final List<L2SkillLearn> result = new ArrayList<>();
 		for (L2SkillLearn skill : _subClassSkillTree.values())
 		{
-			if (player.getLevel() >= skill.getGetLevel())
+			final Skill oldSkill = player.getSkills().get(skill.getSkillId());
+			if (((oldSkill == null) && (skill.getSkillLevel() == 1)) || ((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1))))
 			{
-				List<SubClassData> subClassConds = null;
-				for (SubClass subClass : player.getSubClasses().values())
-				{
-					subClassConds = skill.getSubClassConditions();
-					if (!subClassConds.isEmpty() && (subClass.getClassIndex() <= subClassConds.size()) && (subClass.getClassIndex() == subClassConds.get(subClass.getClassIndex() - 1).getSlot()) && (subClassConds.get(subClass.getClassIndex() - 1).getLvl() <= subClass.getLevel()))
-					{
-						final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-						if (oldSkill != null)
-						{
-							if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
-							{
-								result.add(skill);
-							}
-						}
-						else if (skill.getSkillLevel() == 1)
-						{
-							result.add(skill);
-						}
-					}
-				}
+				result.add(skill);
 			}
 		}
+		return result;
+	}
+	
+	/**
+	 * Gets the available dual class skills.
+	 * @param player the dual-class skill learning player
+	 * @return all the available Dual-Class skills for a given {@code player} sorted by skill ID
+	 */
+	public List<L2SkillLearn> getAvailableDualClassSkills(L2PcInstance player)
+	{
+		final List<L2SkillLearn> result = new ArrayList<>();
+		for (L2SkillLearn skill : _dualClassSkillTree.values())
+		{
+			final Skill oldSkill = player.getSkills().get(skill.getSkillId());
+			if (((oldSkill == null) && (skill.getSkillLevel() == 1)) || ((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1))))
+			{
+				result.add(skill);
+			}
+		}
+		result.sort(Comparator.comparing(L2SkillLearn::getSkillId));
 		return result;
 	}
 	
@@ -1123,6 +1135,9 @@ public final class SkillTreesData implements IXmlReader
 				break;
 			case ALCHEMY:
 				sl = getAlchemySkill(id, lvl);
+				break;
+			case DUALCLASS:
+				sl = getDualClassSkill(id, lvl);
 				break;
 		}
 		return sl;
@@ -1250,6 +1265,17 @@ public final class SkillTreesData implements IXmlReader
 	public L2SkillLearn getSubClassSkill(int id, int lvl)
 	{
 		return _subClassSkillTree.get(SkillData.getSkillHashCode(id, lvl));
+	}
+	
+	/**
+	 * Gets the dual class skill.
+	 * @param id the dual-class skill Id
+	 * @param lvl the dual-class skill level
+	 * @return the dual-class skill from the Dual-Class Skill Tree for a given {@code id} and {@code lvl}
+	 */
+	public L2SkillLearn getDualClassSkill(int id, int lvl)
+	{
+		return _dualClassSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
 	
 	/**
@@ -1678,6 +1704,7 @@ public final class SkillTreesData implements IXmlReader
 		final String className = getClass().getSimpleName();
 		LOGGER.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " Class Skill Trees.");
 		LOGGER.info(className + ": Loaded " + _subClassSkillTree.size() + " Sub-Class Skills.");
+		LOGGER.info(className + ": Loaded " + _dualClassSkillTree.size() + " Dual-Class Skills.");
 		LOGGER.info(className + ": Loaded " + transferSkillTreeCount + " Transfer Skills for " + _transferSkillTrees.size() + " Transfer Skill Trees.");
 		LOGGER.info(className + ": Loaded " + raceSkillTreeCount + " Race skills for " + _raceSkillTree.size() + " Race Skill Trees.");
 		LOGGER.info(className + ": Loaded " + _fishingSkillTree.size() + " Fishing Skills, " + dwarvenOnlyFishingSkillCount + " Dwarven only Fishing Skills.");

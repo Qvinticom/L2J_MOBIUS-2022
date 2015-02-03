@@ -52,21 +52,21 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 			return;
 		}
 		
-		SecondaryPasswordAuth spa = getClient().getSecondaryAuth();
-		boolean exVal = false;
+		SecondaryPasswordAuth secondAuth = getClient().getSecondaryAuth();
+		boolean success = false;
 		
-		if ((_changePass == 0) && !spa.passwordExist())
+		if ((_changePass == 0) && !secondAuth.passwordExist())
 		{
-			exVal = spa.savePassword(_password);
+			success = secondAuth.savePassword(_password);
 		}
-		else if ((_changePass == 2) && spa.passwordExist())
+		else if ((_changePass == 2) && secondAuth.passwordExist())
 		{
-			exVal = spa.changePassword(_password, _newPassword);
+			success = secondAuth.changePassword(_password, _newPassword);
 		}
 		
-		if (exVal)
+		if (success)
 		{
-			getClient().sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.SUCCESS));
+			sendPacket(new Ex2ndPasswordAck(_changePass, Ex2ndPasswordAck.SUCCESS));
 		}
 	}
 	

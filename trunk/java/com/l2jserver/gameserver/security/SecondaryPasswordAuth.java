@@ -112,7 +112,7 @@ public class SecondaryPasswordAuth
 		
 		if (!validatePassword(password))
 		{
-			_activeClient.sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.WRONG_PATTERN));
+			_activeClient.sendPacket(new Ex2ndPasswordAck(0, Ex2ndPasswordAck.WRONG_PATTERN));
 			return false;
 		}
 		
@@ -170,7 +170,7 @@ public class SecondaryPasswordAuth
 		
 		if (!validatePassword(newPassword))
 		{
-			_activeClient.sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.WRONG_PATTERN));
+			_activeClient.sendPacket(new Ex2ndPasswordAck(2, Ex2ndPasswordAck.WRONG_PATTERN));
 			return false;
 		}
 		
