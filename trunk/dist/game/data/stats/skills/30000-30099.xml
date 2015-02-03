@@ -8,18 +8,63 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="0" />
 	</skill>
+	<!-- Level 1 : Attacks target with 6 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 2 : Attacks target with 14 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 3 : Attacks target with 19 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 4 : Attacks target with 25 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 5 : Attacks target with 32 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 6 : Attacks target with 36 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 7 : Attacks target with 41 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 8 : Attacks target with 46 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 9 : Attacks target with 50 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 10 : Attacks target with 55 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 11 : Attacks target with 60 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 12 : Attacks target with 64 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 13 : Attacks target with 69 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 14 : Attacks target with 72 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 15 : Attacks target with 75 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 16 : Attacks target with 77 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 17 : Attacks target with 79 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 18 : Attacks target with 171 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 19 : Attacks target with 179 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 20 : Attacks target with 187 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 21 : Attacks target with 195 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 22 : Attacks target with 203 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 23 : Attacks target with 211 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 24 : Attacks target with 219 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+	<!-- Level 25 : Attacks target with 227 Power added to M. Atk., and brands target with Storm Sign. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 	<skill id="30001" levels="25" name="Hydro Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 6 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
-		<table name="#mpConsumes"> 3 8 10 13 16 18 20 21 23 25 27 29 30 31 32 32 33 33 33 34 34 34 34 34 35 </table>
-		<set name="icon" val="icon.skill30001" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="80" />
-		<set name="hitTime" val="1000" />
+		<table name="#magicLevel"> 1 20 28 36 42 46 50 54 60 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 </table>
+		<table name="#power"> 6 14 19 25 32 36 41 46 50 55 60 64 69 72 75 77 79 171 179 187 195 203 211 219 227 </table>
+		<table name="#mpConsume"> 3 8 10 13 16 18 20 21 23 25 27 29 30 31 32 32 33 33 33 34 34 34 34 34 35 </table>
+		<set name="effectRange" val="80" />
+		<set name="effectPoint" val="-720" />
+		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill30001" />
 		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
+		<effect name="TriggerSkillByDamage">
+			<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+			<param minDamage="1" />
+			<param chance="100" />
+			<param skillId="30005" skillLevel="1" /> <!-- Storm Sign -->
+			<param targetType="ONE" />
+		</effect>
 	</skill>
 	<skill id="30002" levels="3" name="Storm Sign">
 		<!-- AUTO GENERATED SKILL -->
@@ -57,14 +102,19 @@
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<skill id="30005" levels="1" name="Storm Sign">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Def. - 50%, Speed - 100. -->
+	<!-- Level 4 : M. Def. - 50%, Speed - 100. -->
+	<skill id="30005" levels="4" name="Storm Sign">
 		<set name="icon" val="icon.skill30027" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="4" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" time="0">
+				<mul stat="mDef" val="0.5" />
+				<sub stat="runSpd" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30006" levels="8" name="Storm Rage">
 		<!-- AUTO GENERATED SKILL -->
@@ -93,17 +143,27 @@
 		<set name="coolTime" val="500" />
 		<set name="isMagic" val="1" />
 	</skill>
+	<!-- Level 1 : for 10 sec., blends into the wind and Speed + 70. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
+	<!-- Level 2 : for 10 sec., blends into the wind and Speed + 100. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
+	<!-- Level 3 : for 10 sec., blends into the wind and Speed + 100. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
+	<!-- Level 4 : for 10 sec., blends into the wind and Speed + 100. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
+	<!-- Level 5 : for 10 sec., blends into the wind and Speed + 100. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
 	<skill id="30008" levels="5" name="Wind Blend">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- for 10 sec., blends into the wind and Speed + 70. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
-		<table name="#mpConsumes"> 16 67 68 69 70 </table>
-		<table name="#reuseDelays"> 50000 50000 40000 30000 25000 </table>
+		<table name="#magicLevel">20 85 90 94 98</table>
+		<table name="#mpConsume"> 16 67 68 69 70 </table>
+		<table name="#reuseDelay"> 50000 50000 40000 30000 25000 </table>
 		<set name="icon" val="icon.skill30008" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="isMagic" val="1" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="30009" levels="10" name="Deceptive Blink">
 		<!-- AUTO GENERATED SKILL -->
@@ -335,27 +395,112 @@
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="0" />
 	</skill>
+	<!-- Level 1 : When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%. -->
+	<!-- Level 2 : When equipped with a blunt weapon, M. Atk. +17% and + 57, Casting Spd. + 5%. -->
+	<!-- Level 3 : When equipped with a blunt weapon, M. Atk. +17% and + 228, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 4 : When equipped with a blunt weapon, M. Atk. +17% and + 436, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 5 : When equipped with a blunt weapon, M. Atk. +17% and + 728, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 6 : When equipped with a blunt weapon, M. Atk. +17% and + 834, Casting Spd. + 15%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 7 : When equipped with a blunt weapon, M. Atk. +17% and + 942, Casting Spd. + 20%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 8 : When equipped with a blunt weapon, M. Atk. +40% and + 1050, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<!-- Level 9 : When equipped with a blunt weapon, M. Atk. +40% and + 1252, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<!-- Level 10 : When equipped with a blunt weapon, M. Atk. +40% and + 1454, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<!-- Level 11 : When equipped with a blunt weapon, M. Atk. +40% and + 1727, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
 	<skill id="30040" levels="11" name="Eminent Blunt Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%. -->
+		<table name="#magicLevel"> 5 20 40 52 64 76 80 85 90 95 99 </table>
+		<table name="#mAtkAdd"> 10 57 228 436 728 834 942 1050 1252 1454 1727 </table>
+		<table name="#mAtkMul"> 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.40 1.40 1.40 1.40 </table>
+		<table name="#mAtkSpd"> 1.05 1.05 1.10 1.10 1.10 1.15 1.20 1.30 1.30 1.30 1.30 </table>
+		<table name="#mCritRate"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 </table>
+		<table name="#mCritPower"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 </table>
 		<set name="icon" val="icon.skill30023" />
+		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="mAtk" val="#mAtkAdd">
+					<using kind="BLUNT" />
+				</add>
+				<mul stat="mAtk" val="#mAtkMul">
+					<using kind="BLUNT" />
+				</mul>
+				<mul stat="mAtkSpd" val="#mAtkSpd">
+					<using kind="BLUNT" />
+				</mul>
+				<mul stat="mCritRate" val="#mCritRate">
+					<using kind="BLUNT" />
+				</mul>
+				<mul stat="mCritPower" val="#mCritPower">
+					<using kind="BLUNT" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : When equipped with a robe, P. Def. +7. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 2 : When equipped with a robe, P. Def. +12, Magic Resistance + 5%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 3 : When equipped with a robe, P. Def. +27, Magic Resistance + 10%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 4 : When equipped with a robe, P. Def. +39, Magic Resistance + 15%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 5 : When equipped with a robe, P. Def. +55, Magic Resistance + 20%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 6 : When equipped with a robe, P. Def. +69, Magic Resistance + 25%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 7 : When equipped with a robe, P. Def. +77, M. Def. + 533, M. Def. + 3%, Magic Resistance + 30%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 8 : When equipped with a robe, P. Def. +1238, M. Def. + 1156, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 9 : When equipped with a robe, P. Def. +1347, M. Def. + 1258, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 10 : When equipped with a robe, P. Def. +1456, M. Def. + 1360, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 11 : When equipped with a robe, P. Def. +1601, M. Def. + 1496, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
 	<skill id="30041" levels="11" name="Eminent Robe Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When equipped with a robe, P. Def. +7. Shields and Sigils are not worn, as you move with the wind. -->
+		<table name="#magicLevel"> 5 20 40 44 64 76 80 85 90 95 99 </table>
+		<table name="#pDef"> 7 12 27 39 55 69 77 1238 1347 1456 1601 </table>
+		<table name="#mDef"> 1 1 1 1 1 1 1.03 1.05 1.05 1.05 1.05 </table>
+		<table name="#mDefAdd"> 0 0 0 0 0 0 533 1156 1258 1360 1496 </table>
+		<table name="#magicSuccRes"> 1 1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.35 1.35 1.35 </table>
 		<set name="icon" val="icon.skill30024" />
+		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pDef" val="#pDef">
+					<using kind="MAGIC" />
+				</add>
+				<add stat="mDef" val="#mDefAdd">
+					<using kind="MAGIC" />
+				</add>			
+				<mul stat="mDef" val="#mDef">
+					<using kind="MAGIC" />
+				</mul>
+				<mul stat="magicSuccRes" val="#magicSuccRes">
+					<using kind="MAGIC" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%. -->
+	<!-- Level 2 : Max. MP + 77, MP Recovery Bonus + 3, and M. Skill Cooldown - 15%. -->
+	<!-- Level 3 : Max. MP + 223, MP Recovery Bonus + 5, and M. Skill Cooldown - 20%, M. Skill MP Consumption - 5%. -->
+	<!-- Level 4 : Max. HP + 4891, Max. MP + 344, MP Recovery Bonus + 7, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<!-- Level 5 : Max. HP + 4891, Max. MP + 411, MP Recovery Bonus + 8, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<!-- Level 6 : Max. HP + 4891, Max. MP + 478, MP Recovery Bonus + 10, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<!-- Level 7 : Max. HP + 4891, Max. MP + 568, MP Recovery Bonus + 11, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
 	<skill id="30042" levels="7" name="Eminent Quick Recovery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%. -->
-		<table name="#icons"> icon.skill11004 icon.skill10504 icon.skill10504 icon.skill10504 icon.skill10504 icon.skill10504 icon.skill10504 </table>
-		<set name="icon" val="#icons" />
+		<table name="#magicLevel"> 20 40 76 85 90 95 99 </table>
+		<table name="#maxHp"> 0 0 0 4891 4891 4891 4891 </table>
+		<table name="#maxMp"> 33 77 223 344 411 478 568 </table>
+		<table name="#regMp"> 1 3 5 7 8 10 11 </table>
+		<table name="#mReuse"> 1.10 1.15 1.20 1.30 1.30 1.30 1.30 </table>
+		<table name="#MagicalMpConsumeRate"> 1 1 0.95 0.93 0.93 0.93 0.93 </table>
+		<set name="icon" val="icon.skill10504" />
+		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="#maxHp"/>
+				<mul stat="mReuse" val="#mReuse"/>
+				<add stat="regMp" val="#regMp"/>
+				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="30043" levels="2" name="Eminent Attribute Resistance">
 		<!-- AUTO GENERATED SKILL -->
