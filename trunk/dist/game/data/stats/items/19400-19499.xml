@@ -282,6 +282,9 @@
 	</item>
 	<item id="19440" name="Gemstone (R-grade)" additionalName="" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="price" val="300000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -346,16 +349,29 @@
 	<item id="19447" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases starting at + 4. All amounts are increased for Blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="150000000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9187-1" />
 	</item>
 	<item id="19448" name="Blessed Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories, especially starting at + 4. Can be enchanted safely to + 3. When enchanted + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
-		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="18000000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9196-1" />
 	</item>
 	<item id="19449" name="Giant's Bracelet" additionalName="" type="Armor">
 		<!-- Activates 5 Talisman slots when equipped. -->

@@ -1089,8 +1089,10 @@
 		</for>
 	</item>
 	<item id="17371" name="Crystal (R-grade)" additionalName="" type="EtcItem">
-		<!-- R-grade Crystal -->
 		<set name="icon" val="icon.crystal_r_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 	</item>
