@@ -1011,11 +1011,21 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13062" levels="5" name="Special Ability: Damage Up">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. Inflicts additional damage during PvP. -->
+		<table name="#Atk">288 332 377 415 468</table>
+		<table name="#Dmg">1.05 1.05 1.1 1.1 1.1</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="#Atk" />
+				<add stat="mAtk" val="#Atk" />
+				<mul stat="pvpPhysDmg" val="#Dmg" />
+				<mul stat="pvpPhysSkillsDmg" val="#Dmg" />
+				<mul stat="pvpMagicalDmg" val="#Dmg" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13063" levels="1" name="Cloak Slot Activation (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
