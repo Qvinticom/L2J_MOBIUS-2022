@@ -145,6 +145,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="477.0" />
@@ -153,6 +159,7 @@
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34510" name="Player Commendation - Apocalypse Retributer (Water)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -162,6 +169,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="477.0" />
@@ -170,6 +183,7 @@
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34511" name="Player Commendation - Apocalypse Retributer (Wind)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -179,6 +193,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="477.0" />
@@ -187,6 +207,7 @@
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34512" name="Player Commendation - Apocalypse Retributer (Fire)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -196,6 +217,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="477.0" />
@@ -204,6 +231,7 @@
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34513" name="Player Commendation - Apocalypse Retributer (Holy)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -213,6 +241,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="477.0" />
@@ -221,6 +255,7 @@
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34514" name="Player Commendation - Apocalypse Retributer (Dark)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -230,6 +265,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="477.0" />
@@ -238,6 +279,7 @@
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34515" name="Player Commendation - Apocalypse Buster (Earth)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -247,12 +289,19 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="392.0" />
 			<add stat="mAtk" val="285.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34516" name="Player Commendation - Apocalypse Buster (Water)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -262,12 +311,19 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="392.0" />
 			<add stat="mAtk" val="285.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34517" name="Player Commendation - Apocalypse Buster (Wind)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -277,12 +333,19 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="392.0" />
 			<add stat="mAtk" val="285.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34518" name="Player Commendation - Apocalypse Buster (Fire)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -292,12 +355,19 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="392.0" />
 			<add stat="mAtk" val="285.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34519" name="Player Commendation - Apocalypse Buster (Holy)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -307,12 +377,19 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="392.0" />
 			<add stat="mAtk" val="285.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34520" name="Player Commendation - Apocalypse Buster (Dark)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -322,12 +399,19 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="392.0" />
 			<add stat="mAtk" val="285.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34521" name="Player Commendation - Apocalypse Shaper (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -337,12 +421,18 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="428.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34522" name="Player Commendation - Apocalypse Shaper (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -352,12 +442,18 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="428.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34523" name="Player Commendation - Apocalypse Shaper (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -367,12 +463,18 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="428.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34524" name="Player Commendation - Apocalypse Shaper (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -382,12 +484,18 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="428.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34525" name="Player Commendation - Apocalypse Shaper (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -397,12 +505,18 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="428.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34526" name="Player Commendation - Apocalypse Shaper (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -412,12 +526,18 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="428.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="433.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34527" name="Player Commendation - Apocalypse Shooter (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -427,12 +547,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="158" />
 		<for>
 			<add stat="pAtk" val="866.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34528" name="Player Commendation - Apocalypse Shooter (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -442,12 +568,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="158" />
 		<for>
 			<add stat="pAtk" val="866.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34529" name="Player Commendation - Apocalypse Shooter (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -457,12 +589,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="158" />
 		<for>
 			<add stat="pAtk" val="866.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34530" name="Player Commendation - Apocalypse Shooter (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -472,12 +610,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="158" />
 		<for>
 			<add stat="pAtk" val="866.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34531" name="Player Commendation - Apocalypse Shooter (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -487,12 +631,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="158" />
 		<for>
 			<add stat="pAtk" val="866.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34532" name="Player Commendation - Apocalypse Shooter (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -502,12 +652,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="158" />
 		<for>
 			<add stat="pAtk" val="866.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34533" name="Player Commendation - Apocalypse Thrower (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -517,12 +673,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="963.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34534" name="Player Commendation - Apocalypse Thrower (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -532,12 +694,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="963.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34535" name="Player Commendation - Apocalypse Thrower (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -547,12 +715,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="963.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34536" name="Player Commendation - Apocalypse Thrower (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -562,12 +736,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="963.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34537" name="Player Commendation - Apocalypse Thrower (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -577,12 +757,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="963.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34538" name="Player Commendation - Apocalypse Thrower (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -592,12 +778,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="963.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="293.0" />
 			<add stat="rCrit" val="12.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34539" name="Player Commendation - Apocalypse Stormer (Earth)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
@@ -607,12 +799,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="5488-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="201" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34540" name="Player Commendation - Apocalypse Stormer (Water)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
@@ -622,12 +820,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="5488-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="201" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34541" name="Player Commendation - Apocalypse Stormer (Wind)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
@@ -637,12 +841,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="5488-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="201" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34542" name="Player Commendation - Apocalypse Stormer (Fire)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
@@ -652,12 +862,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="5488-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="201" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34543" name="Player Commendation - Apocalypse Stormer (Holy)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
@@ -667,12 +883,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="5488-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="201" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34544" name="Player Commendation - Apocalypse Stormer (Dark)" additionalName="Damage Up (PC-exclusive)" type="Weapon">
@@ -682,12 +904,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="5488-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="201" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34545" name="Player Commendation - Apocalypse Slasher (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -697,12 +925,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="595.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34546" name="Player Commendation - Apocalypse Slasher (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -712,12 +946,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="595.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34547" name="Player Commendation - Apocalypse Slasher (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -727,12 +967,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="595.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34548" name="Player Commendation - Apocalypse Slasher (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -742,12 +988,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="595.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34549" name="Player Commendation - Apocalypse Slasher (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -757,12 +1009,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="595.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34550" name="Player Commendation - Apocalypse Slasher (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -772,12 +1030,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="595.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34551" name="Player Commendation - Apocalypse Avenger (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -787,6 +1051,11 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="489.0" />
@@ -794,6 +1063,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34552" name="Player Commendation - Apocalypse Avenger (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -803,6 +1073,11 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="489.0" />
@@ -810,6 +1085,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34553" name="Player Commendation - Apocalypse Avenger (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -819,6 +1095,11 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="489.0" />
@@ -826,6 +1107,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34554" name="Player Commendation - Apocalypse Avenger (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -835,6 +1117,11 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="489.0" />
@@ -842,6 +1129,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34555" name="Player Commendation - Apocalypse Avenger (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -851,6 +1139,11 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="489.0" />
@@ -858,6 +1151,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34556" name="Player Commendation - Apocalypse Avenger (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -867,6 +1161,11 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="174" />
 		<for>
 			<add stat="pAtk" val="489.0" />
@@ -874,6 +1173,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34557" name="Player Commendation - Apocalypse Caster (Earth)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -883,6 +1183,12 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="392.0" />
@@ -890,6 +1196,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34558" name="Player Commendation - Apocalypse Caster (Water)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -899,6 +1206,12 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="392.0" />
@@ -906,6 +1219,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34559" name="Player Commendation - Apocalypse Caster (Wind)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -915,6 +1229,12 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="392.0" />
@@ -922,6 +1242,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34560" name="Player Commendation - Apocalypse Caster (Fire)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -931,6 +1252,12 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="392.0" />
@@ -938,6 +1265,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34561" name="Player Commendation - Apocalypse Caster (Holy)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -947,6 +1275,12 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="392.0" />
@@ -954,6 +1288,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34562" name="Player Commendation - Apocalypse Caster (Dark)" additionalName="Acumen (PC-exclusive)" type="Weapon">
@@ -963,6 +1298,12 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="3047-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="108" />
 		<for>
 			<add stat="pAtk" val="392.0" />
@@ -970,6 +1311,7 @@
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34563" name="Player Commendation - Apocalypse Cutter (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -979,12 +1321,17 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34564" name="Player Commendation - Apocalypse Cutter (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -994,12 +1341,17 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34565" name="Player Commendation - Apocalypse Cutter (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1009,12 +1361,17 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34566" name="Player Commendation - Apocalypse Cutter (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1024,12 +1381,17 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34567" name="Player Commendation - Apocalypse Cutter (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1039,12 +1401,17 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34568" name="Player Commendation - Apocalypse Cutter (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1054,12 +1421,17 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="152" />
 		<for>
 			<add stat="pAtk" val="489.0" />
 			<add stat="mAtk" val="226.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="rCrit" val="8.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34569" name="Player Commendation - Apocalypse Fighter (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1069,6 +1441,11 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="155" />
 		<for>
 			<add stat="pAtk" val="595.0" />
@@ -1076,6 +1453,7 @@
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="earthPower" val="250" />
 		</for>
 	</item>
 	<item id="34570" name="Player Commendation - Apocalypse Fighter (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1085,6 +1463,11 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="155" />
 		<for>
 			<add stat="pAtk" val="595.0" />
@@ -1092,6 +1475,7 @@
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34571" name="Player Commendation - Apocalypse Fighter (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1101,6 +1485,11 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="155" />
 		<for>
 			<add stat="pAtk" val="595.0" />
@@ -1108,6 +1497,7 @@
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34572" name="Player Commendation - Apocalypse Fighter (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1117,6 +1507,11 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="155" />
 		<for>
 			<add stat="pAtk" val="595.0" />
@@ -1124,6 +1519,7 @@
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="firePower" val="250" />
 		</for>
 	</item>
 	<item id="34573" name="Player Commendation - Apocalypse Fighter (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1133,6 +1529,11 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="155" />
 		<for>
 			<add stat="pAtk" val="595.0" />
@@ -1140,6 +1541,7 @@
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="34574" name="Player Commendation - Apocalypse Fighter (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
@@ -1149,6 +1551,11 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
+		<set name="item_skill" val="3567-1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="180" />
 		<set name="weight" val="155" />
 		<for>
 			<add stat="pAtk" val="595.0" />
@@ -1156,6 +1563,7 @@
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="rCrit" val="6.0" />
+			<add stat="darkPower" val="250" />
 		</for>
 	</item>
 	<item id="34575" name="Player Commendation - Scroll: Enchant Weapon (A-grade)" additionalName="PC-exclusive" type="EtcItem">
