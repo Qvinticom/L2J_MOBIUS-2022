@@ -62,18 +62,23 @@
 			<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 			<param minDamage="1" />
 			<param chance="100" />
-			<param skillId="30005" skillLevel="1" /> <!-- Storm Sign -->
+			<param skillId="30002" skillLevel="1" /> <!-- Storm Sign -->
 			<param targetType="ONE" />
 		</effect>
 	</skill>
 	<skill id="30002" levels="3" name="Storm Sign">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. - 30%, Speed - 70. -->
 		<set name="icon" val="icon.skill30027" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" time="10" val="0">
+				<mul stat="mDef" val="0.7"/>
+				<mul stat="runSpd" val="0.3"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="30003" levels="17" name="Hydro Flare">
 		<!-- AUTO GENERATED SKILL -->
@@ -110,7 +115,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" time="0">
+			<effect name="Debuff" time="1" val="0">
 				<mul stat="mDef" val="0.5" />
 				<sub stat="runSpd" val="100" />
 			</effect>
