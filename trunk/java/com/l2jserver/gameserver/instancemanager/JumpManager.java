@@ -52,7 +52,6 @@ public class JumpManager
 	
 	public class Track extends HashMap<Integer, JumpWay>
 	{
-		private static final long serialVersionUID = 1L;
 		public int x = 0;
 		public int y = 0;
 		public int z = 0;
@@ -60,7 +59,6 @@ public class JumpManager
 	
 	public class JumpWay extends ArrayList<JumpNode>
 	{
-		private static final long serialVersionUID = 1L;
 	}
 	
 	public class JumpNode

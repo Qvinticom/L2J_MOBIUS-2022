@@ -35,7 +35,6 @@ public final class Rnd
 	 */
 	public static final class NonAtomicRandom extends Random
 	{
-		private static final long serialVersionUID = 1L;
 		private volatile long _seed;
 		
 		public NonAtomicRandom()
@@ -254,7 +253,6 @@ public final class Rnd
 			}
 		}
 		
-		private static final long serialVersionUID = 1L;
 		private final ThreadLocal<Seed> _seedLocal;
 		
 		public ThreadLocalRandom()

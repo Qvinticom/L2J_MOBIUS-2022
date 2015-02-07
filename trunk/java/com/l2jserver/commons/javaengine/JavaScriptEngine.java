@@ -64,7 +64,6 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	// my implementation for CompiledScript
 	private static class JavaCompiledScript extends CompiledScript implements Serializable
 	{
-		private static final long serialVersionUID = 1L;
 		private final transient JavaScriptEngine _engine;
 		private transient Class<?> _class;
 		private final Map<String, byte[]> _classBytes;
