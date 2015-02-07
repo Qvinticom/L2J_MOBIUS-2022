@@ -35,6 +35,7 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
@@ -480,7 +481,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		return Config.CHS_FAME_FREQUENCY;
 	}
 	
-	public final void broadcastNpcSay(final L2Npc npc, final int type, final NpcStringId messageId)
+	public final void broadcastNpcSay(final L2Npc npc, final ChatType type, final NpcStringId messageId)
 	{
 		final NpcSay npcSay = new NpcSay(npc.getObjectId(), type, npc.getId(), messageId);
 		final int sourceRegion = MapRegionManager.getInstance().getMapRegionLocId(npc);

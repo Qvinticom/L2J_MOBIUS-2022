@@ -243,7 +243,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeD(_activeChar.getX());
 			writeD(_activeChar.getY());
 			writeD(_activeChar.getZ());
-			writeD(_activeChar.getHeading());
+			writeD(_activeChar.isInVehicle() ? _activeChar.getVehicle().getObjectId() : 0);
 		}
 		
 		if (containsMask(UserInfoType.SPEED))

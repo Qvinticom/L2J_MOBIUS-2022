@@ -30,6 +30,7 @@ import org.w3c.dom.Node;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.xml.IXmlReader;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.tasks.StartMovingTask;
 import com.l2jserver.gameserver.model.L2NpcWalkerNode;
 import com.l2jserver.gameserver.model.L2WalkRoute;
@@ -42,7 +43,6 @@ import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jserver.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Broadcast;
 
@@ -429,11 +429,11 @@ public final class WalkingManager implements IXmlReader
 					
 					if (node.getNpcString() != null)
 					{
-						Broadcast.toKnownPlayers(npc, new NpcSay(npc, Say2.NPC_ALL, node.getNpcString()));
+						Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getNpcString()));
 					}
 					else if (!node.getChatText().isEmpty())
 					{
-						Broadcast.toKnownPlayers(npc, new NpcSay(npc, Say2.NPC_ALL, node.getChatText()));
+						Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getChatText()));
 					}
 					
 					if (npc.isDebug())

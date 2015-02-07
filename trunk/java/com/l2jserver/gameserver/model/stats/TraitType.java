@@ -66,6 +66,8 @@ public enum TraitType
 	UNK_40(40, 3),
 	DUALDAGGER(41, 1),
 	DUALBLUNT(42, 1),
+	KNOCKBACK(43, 3),
+	KNOCKDOWN(44, 3),
 	NONE(43, 0);
 	
 	private final int _id;

@@ -35,8 +35,7 @@ import instances.FinalEmperialTomb.FinalEmperialTomb;
 import instances.HarnakUndergroundRuins.HarnakUndergroundRuins;
 import instances.HideoutOfTheDawn.HideoutOfTheDawn;
 import instances.IceQueensCastle.IceQueensCastle;
-import instances.IceQueensCastleHardBattle.IceQueensCastleHardBattle;
-import instances.IceQueensCastleNormalBattle.IceQueensCastleNormalBattle;
+import instances.IceQueensCastleBattle.IceQueensCastleBattle;
 import instances.JiniaGuildHideout1.JiniaGuildHideout1;
 import instances.JiniaGuildHideout2.JiniaGuildHideout2;
 import instances.JiniaGuildHideout3.JiniaGuildHideout3;
@@ -81,8 +80,7 @@ public final class InstanceLoader
 		ChamberOfDelusionTower.class,
 		ChamberOfDelusionWest.class,
 		IceQueensCastle.class,
-		IceQueensCastleHardBattle.class,
-		IceQueensCastleNormalBattle.class,
+		IceQueensCastleBattle.class,
 		JiniaGuildHideout1.class,
 		JiniaGuildHideout2.class,
 		JiniaGuildHideout3.class,

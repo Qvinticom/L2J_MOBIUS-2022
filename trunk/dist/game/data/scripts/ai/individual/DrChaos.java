@@ -21,13 +21,13 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
@@ -190,7 +190,7 @@ public class DrChaos extends AbstractNpcAI
 					// Make him speak.
 					if (_pissedOffTimer == 15)
 					{
-						broadcastNpcSay(npc, Say2.NPC_ALL, "How dare you trespass into my territory! Have you no fear?");
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, "How dare you trespass into my territory! Have you no fear?");
 					}
 					
 					// That was "too much" for that time.
@@ -251,7 +251,7 @@ public class DrChaos extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		cancelQuestTimer("golem_despawn", npc, null);
-		broadcastNpcSay(npc, Say2.NPC_ALL, "Urggh! You will pay dearly for this insult.");
+		broadcastNpcSay(npc, ChatType.NPC_GENERAL, "Urggh! You will pay dearly for this insult.");
 		
 		// "lock" Dr. Chaos for regular RB time (36H fixed +- 24H random)
 		long respawnTime = (36 + Rnd.get(-24, 24)) * 3600000;
@@ -290,7 +290,7 @@ public class DrChaos extends AbstractNpcAI
 			}
 			
 			// Make him speak.
-			broadcastNpcSay(npc, Say2.NPC_ALL, message);
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, message);
 		}
 		return null;
 	}
@@ -311,7 +311,7 @@ public class DrChaos extends AbstractNpcAI
 			
 			// Makes the NPC moves near the Strange Box speaking.
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96323, -110914, -3328, 0));
-			broadcastNpcSay(npc, Say2.NPC_ALL, "Fools! Why haven't you fled yet? Prepare to learn a lesson!");
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, "Fools! Why haven't you fled yet? Prepare to learn a lesson!");
 			
 			// Delayed animation timers.
 			startQuestTimer("1", 2000, npc, null, false); // 2 secs, time to launch dr.C anim 2. Cam 1 on.

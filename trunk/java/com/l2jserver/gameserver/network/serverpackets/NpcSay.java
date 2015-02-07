@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.network.NpcStringId;
 
@@ -30,7 +31,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
 public final class NpcSay extends L2GameServerPacket
 {
 	private final int _objectId;
-	private final int _textType;
+	private final ChatType _textType;
 	private final int _npcId;
 	private String _text;
 	private final int _npcString;
@@ -42,7 +43,7 @@ public final class NpcSay extends L2GameServerPacket
 	 * @param npcId
 	 * @param text
 	 */
-	public NpcSay(int objectId, int messageType, int npcId, String text)
+	public NpcSay(int objectId, ChatType messageType, int npcId, String text)
 	{
 		_objectId = objectId;
 		_textType = messageType;
@@ -51,7 +52,7 @@ public final class NpcSay extends L2GameServerPacket
 		_text = text;
 	}
 	
-	public NpcSay(L2Npc npc, int messageType, String text)
+	public NpcSay(L2Npc npc, ChatType messageType, String text)
 	{
 		_objectId = npc.getObjectId();
 		_textType = messageType;
@@ -60,7 +61,7 @@ public final class NpcSay extends L2GameServerPacket
 		_text = text;
 	}
 	
-	public NpcSay(int objectId, int messageType, int npcId, NpcStringId npcString)
+	public NpcSay(int objectId, ChatType messageType, int npcId, NpcStringId npcString)
 	{
 		_objectId = objectId;
 		_textType = messageType;
@@ -68,7 +69,7 @@ public final class NpcSay extends L2GameServerPacket
 		_npcString = npcString.getId();
 	}
 	
-	public NpcSay(L2Npc npc, int messageType, NpcStringId npcString)
+	public NpcSay(L2Npc npc, ChatType messageType, NpcStringId npcString)
 	{
 		_objectId = npc.getObjectId();
 		_textType = messageType;
@@ -119,7 +120,7 @@ public final class NpcSay extends L2GameServerPacket
 	{
 		writeC(0x30);
 		writeD(_objectId);
-		writeD(_textType);
+		writeD(_textType.getClientId());
 		writeD(_npcId);
 		writeD(_npcString);
 		if (_npcString == -1)

@@ -34,6 +34,7 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.FortTeleportWhoType;
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.instancemanager.FortManager;
@@ -57,7 +58,6 @@ import com.l2jserver.gameserver.model.events.impl.sieges.fort.OnFortSiegeFinish;
 import com.l2jserver.gameserver.model.events.impl.sieges.fort.OnFortSiegeStart;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -648,7 +648,7 @@ public class FortSiege implements Siegable
 						}
 						if (npcString != null)
 						{
-							instance.broadcastPacket(new NpcSay(instance.getObjectId(), Say2.NPC_SHOUT, instance.getId(), npcString));
+							instance.broadcastPacket(new NpcSay(instance.getObjectId(), ChatType.NPC_SHOUT, instance.getId(), npcString));
 						}
 					}
 				}

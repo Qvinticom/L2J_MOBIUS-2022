@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.enums.SubclassType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.SubClass;
@@ -31,18 +32,17 @@ import com.l2jserver.gameserver.model.base.SubClass;
 public class ExSubjobInfo extends L2GameServerPacket
 {
 	private final int _currClassId;
-	private final int _currClassIndex;
 	private final int _currRace;
+	private final int _type;
 	private final List<SubInfo> _subs;
 	
-	public ExSubjobInfo(L2PcInstance player)
+	public ExSubjobInfo(L2PcInstance player, SubclassInfoType type)
 	{
-		_subs = new ArrayList<>();
-		
 		_currClassId = player.getClassId().getId();
-		_currClassIndex = player.getClassIndex();
 		_currRace = player.getRace().ordinal();
+		_type = type.ordinal();
 		
+		_subs = new ArrayList<>();
 		_subs.add(0, new SubInfo(player));
 		
 		for (SubClass sub : player.getSubClasses().values())
@@ -100,7 +100,7 @@ public class ExSubjobInfo extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0xEA);
-		writeC(_currClassIndex);
+		writeC(_type);
 		writeD(_currClassId);
 		writeD(_currRace);
 		writeD(_subs.size());

@@ -43,9 +43,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -59,6 +61,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.data.xml.IXmlReader;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
@@ -524,6 +527,7 @@ public final class Config
 	public static int PEACE_ZONE_MODE;
 	public static String DEFAULT_GLOBAL_CHAT;
 	public static String DEFAULT_TRADE_CHAT;
+	public static int MINIMUM_CHAT_LEVEL;
 	public static boolean ALLOW_WAREHOUSE;
 	public static boolean WAREHOUSE_CACHE;
 	public static int WAREHOUSE_CACHE_TIME;
@@ -546,13 +550,12 @@ public final class Config
 	public static int BOAT_BROADCAST_RADIUS;
 	public static boolean ALLOW_CURSED_WEAPONS;
 	public static boolean ALLOW_MANOR;
-	public static boolean ALLOW_PET_WALKERS;
 	public static boolean SERVER_NEWS;
 	public static boolean ENABLE_COMMUNITY_BOARD;
 	public static String BBS_DEFAULT;
 	public static boolean USE_SAY_FILTER;
 	public static String CHAT_FILTER_CHARS;
-	public static int[] BAN_CHAT_CHANNELS;
+	public static Set<ChatType> BAN_CHAT_CHANNELS;
 	public static int WORLD_CHAT_MIN_LEVEL;
 	public static int WORLD_CHAT_POINTS_PER_DAY;
 	public static Duration WORLD_CHAT_INTERVAL;
@@ -1888,6 +1891,7 @@ public final class Config
 			PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
 			DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
 			DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
+			MINIMUM_CHAT_LEVEL = General.getInt("MinimumChatLevel", 0);
 			ALLOW_WAREHOUSE = General.getBoolean("AllowWarehouse", true);
 			WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
 			WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
@@ -1910,20 +1914,18 @@ public final class Config
 			ALLOW_BOAT = General.getBoolean("AllowBoat", true);
 			BOAT_BROADCAST_RADIUS = General.getInt("BoatBroadcastRadius", 20000);
 			ALLOW_CURSED_WEAPONS = General.getBoolean("AllowCursedWeapons", true);
-			ALLOW_PET_WALKERS = General.getBoolean("AllowPetWalkers", true);
 			SERVER_NEWS = General.getBoolean("ShowServerNews", false);
 			ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
 			BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
 			USE_SAY_FILTER = General.getBoolean("UseChatFilter", false);
 			CHAT_FILTER_CHARS = General.getString("ChatFilterChars", "^_^");
-			String[] propertySplit4 = General.getString("BanChatChannels", "0;1;8;17").trim().split(";");
-			BAN_CHAT_CHANNELS = new int[propertySplit4.length];
+			final String[] propertySplit4 = General.getString("BanChatChannels", "GENERAL;SHOUT;GLOBAL;TRADE;HERO_VOICE").trim().split(";");
+			BAN_CHAT_CHANNELS = new HashSet<>();
 			try
 			{
-				int i = 0;
 				for (String chatId : propertySplit4)
 				{
-					BAN_CHAT_CHANNELS[i++] = Integer.parseInt(chatId);
+					BAN_CHAT_CHANNELS.add(Enum.valueOf(ChatType.class, chatId));
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -3323,9 +3325,6 @@ public final class Config
 				break;
 			case "allowmanor":
 				ALLOW_MANOR = Boolean.parseBoolean(pValue);
-				break;
-			case "allowpetwalkers":
-				ALLOW_PET_WALKERS = Boolean.parseBoolean(pValue);
 				break;
 			case "enablecommunityboard":
 				ENABLE_COMMUNITY_BOARD = Boolean.parseBoolean(pValue);

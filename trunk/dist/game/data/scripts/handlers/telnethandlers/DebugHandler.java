@@ -209,6 +209,8 @@ public class DebugHandler implements ITelnetHandler
 					FastTable<Entry<Thread, StackTraceElement[]>> entries = new FastTable<>();
 					entries.setValueComparator(new FastComparator<Entry<Thread, StackTraceElement[]>>()
 					{
+						private static final long serialVersionUID = 1L;
+						
 						@Override
 						public boolean areEqual(Entry<Thread, StackTraceElement[]> e1, Entry<Thread, StackTraceElement[]> e2)
 						{

@@ -28,12 +28,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.announce.Announcement;
 import com.l2jserver.gameserver.model.announce.AnnouncementType;
 import com.l2jserver.gameserver.model.announce.AutoAnnouncement;
 import com.l2jserver.gameserver.model.announce.IAnnouncement;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 
 /**
@@ -112,7 +112,7 @@ public final class AnnouncementsTable
 		{
 			if (announce.isValid() && (announce.getType() == type))
 			{
-				player.sendPacket(new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), announce.getContent()));
+				player.sendPacket(new CreatureSay(0, ChatType.ANNOUNCEMENT, player.getName(), announce.getContent()));
 			}
 		}
 	}

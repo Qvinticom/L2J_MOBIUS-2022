@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,22 +32,22 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
 
 /**
+ * World chat handler.
  * @author UnAfraid
  */
-public class ChatWorld implements IChatHandler
+public final class ChatWorld implements IChatHandler
 {
 	private static final Map<Integer, Instant> REUSE = new ConcurrentHashMap<>();
 	
-	private static final int[] COMMANDS =
+	private static final ChatType[] CHAT_TYPES =
 	{
-		25
+		ChatType.GLOBAL,
 	};
 	
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
 		final Instant now = Instant.now();
 		if (!REUSE.isEmpty())
@@ -60,7 +61,7 @@ public class ChatWorld implements IChatHandler
 			msg.addInt(Config.WORLD_CHAT_MIN_LEVEL);
 			activeChar.sendPacket(msg);
 		}
-		else if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+		else if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 		}
@@ -79,50 +80,30 @@ public class ChatWorld implements IChatHandler
 					final Duration timeDiff = Duration.between(instant, now);
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_S1_SEC_UNTIL_YOU_ARE_ABLE_TO_USE_WORLD_CHAT);
 					msg.addInt((int) timeDiff.getSeconds());
-					if (Config.FACTION_SYSTEM_ENABLED)
-					{
-						if (Config.FACTION_SPECIFIC_CHAT)
-						{
-							if ((activeChar.isGood() && activeChar.isGood()) || (activeChar.isEvil() && activeChar.isEvil()))
-							{
-								activeChar.sendPacket(msg);
-							}
-						}
-						else
-						{
-							activeChar.sendPacket(msg);
-						}
-					}
-					else
-					{
-						activeChar.sendPacket(msg);
-					}
+					activeChar.sendPacket(msg);
 					return;
 				}
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar, type, text);
-			L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
-			
-			activeChar.setWorldChatPoints(activeChar.getWorldChatPoints() - 1);
-			if (Config.FACTION_SYSTEM_ENABLED)
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT)
 			{
-				if (Config.FACTION_SPECIFIC_CHAT)
+				if (activeChar.isGood())
 				{
-					if ((activeChar.isGood() && activeChar.isGood()) || (activeChar.isEvil() && activeChar.isEvil()))
-					{
-						activeChar.sendPacket(new ExWorldChatCnt(activeChar));
-					}
+					L2World.getInstance().getAllGoodPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 				}
-				else
+				if (activeChar.isEvil())
 				{
-					activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+					L2World.getInstance().getAllEvilPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 				}
 			}
 			else
 			{
-				activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+				L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 			}
+			
+			activeChar.setWorldChatPoints(activeChar.getWorldChatPoints() - 1);
+			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 			if (Config.WORLD_CHAT_INTERVAL.getSeconds() > 0)
 			{
 				REUSE.put(activeChar.getObjectId(), now.plus(Config.WORLD_CHAT_INTERVAL));
@@ -131,8 +112,8 @@ public class ChatWorld implements IChatHandler
 	}
 	
 	@Override
-	public int[] getChatTypeList()
+	public ChatType[] getChatTypeList()
 	{
-		return COMMANDS;
+		return CHAT_TYPES;
 	}
 }

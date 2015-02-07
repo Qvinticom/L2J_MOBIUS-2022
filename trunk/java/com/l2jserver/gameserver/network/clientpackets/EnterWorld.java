@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
@@ -73,6 +74,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import com.l2jserver.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
+import com.l2jserver.gameserver.network.serverpackets.ExRotation;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jserver.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -372,7 +374,7 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.broadcastUserInfo();
 		
 		// Send SubClass Info
-		activeChar.sendPacket(new ExSubjobInfo(activeChar));
+		activeChar.sendPacket(new ExSubjobInfo(activeChar, SubclassInfoType.NO_CHANGES));
 		
 		// Send Inventory Info
 		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
@@ -419,6 +421,7 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		
 		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		activeChar.sendPacket(new ExRotation(activeChar.getObjectId(), activeChar.getHeading()));
 		
 		activeChar.getInventory().applyItemSkills();
 		

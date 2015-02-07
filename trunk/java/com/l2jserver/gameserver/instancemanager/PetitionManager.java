@@ -26,11 +26,11 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.PetitionState;
 import com.l2jserver.gameserver.model.Petition;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -342,7 +342,7 @@ public final class PetitionManager
 			
 			if ((currPetition.getPetitioner() != null) && (currPetition.getPetitioner().getObjectId() == player.getObjectId()))
 			{
-				cs = new CreatureSay(player.getObjectId(), Say2.PETITION_PLAYER, player.getName(), messageText);
+				cs = new CreatureSay(player.getObjectId(), ChatType.PETITION_PLAYER, player.getName(), messageText);
 				currPetition.addLogMessage(cs);
 				
 				currPetition.sendResponderPacket(cs);
@@ -352,7 +352,7 @@ public final class PetitionManager
 			
 			if ((currPetition.getResponder() != null) && (currPetition.getResponder().getObjectId() == player.getObjectId()))
 			{
-				cs = new CreatureSay(player.getObjectId(), Say2.PETITION_GM, player.getName(), messageText);
+				cs = new CreatureSay(player.getObjectId(), ChatType.PETITION_GM, player.getName(), messageText);
 				currPetition.addLogMessage(cs);
 				
 				currPetition.sendResponderPacket(cs);
@@ -425,7 +425,7 @@ public final class PetitionManager
 		
 		// Notify all GMs that a new petition has been submitted.
 		final String msgContent = petitioner.getName() + " has submitted a new petition."; // (ID: " + newPetitionId + ").";
-		AdminData.getInstance().broadcastToGMs(new CreatureSay(petitioner.getObjectId(), Say2.HERO_VOICE, "Petition System", msgContent));
+		AdminData.getInstance().broadcastToGMs(new CreatureSay(petitioner.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
 		
 		return newPetitionId;
 	}

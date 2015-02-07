@@ -23,6 +23,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -45,63 +46,6 @@ public final class Say2 extends L2GameClientPacket
 {
 	private static final String _C__49_SAY2 = "[C] 49 Say2";
 	private static Logger _logChat = Logger.getLogger("chat");
-	
-	public static final int ALL = 0;
-	public static final int SHOUT = 1; // !
-	public static final int TELL = 2;
-	public static final int PARTY = 3; // #
-	public static final int CLAN = 4; // @
-	public static final int GM = 5;
-	public static final int PETITION_PLAYER = 6; // used for petition
-	public static final int PETITION_GM = 7; // * used for petition
-	public static final int TRADE = 8; // +
-	public static final int ALLIANCE = 9; // $
-	public static final int ANNOUNCEMENT = 10;
-	public static final int BOAT = 11;
-	public static final int L2FRIEND = 12;
-	public static final int MSNCHAT = 13;
-	public static final int PARTYMATCH_ROOM = 14;
-	public static final int PARTYROOM_COMMANDER = 15; // (Yellow)
-	public static final int PARTYROOM_ALL = 16; // (Red)
-	public static final int HERO_VOICE = 17;
-	public static final int CRITICAL_ANNOUNCE = 18;
-	public static final int SCREEN_ANNOUNCE = 19;
-	public static final int BATTLEFIELD = 20;
-	public static final int MPCC_ROOM = 21;
-	public static final int NPC_ALL = 22;
-	public static final int NPC_SHOUT = 23;
-	public static final int NPC_TELL = 24;
-	public static final int GLOBAL = 25;
-	
-	private static final String[] CHAT_NAMES =
-	{
-		"ALL",
-		"SHOUT",
-		"TELL",
-		"PARTY",
-		"CLAN",
-		"GM",
-		"PETITION_PLAYER",
-		"PETITION_GM",
-		"TRADE",
-		"ALLIANCE",
-		"ANNOUNCEMENT", // 10
-		"BOAT",
-		"L2FRIEND",
-		"MSNCHAT",
-		"PARTYMATCH_ROOM",
-		"PARTYROOM_COMMANDER",
-		"PARTYROOM_ALL",
-		"HERO_VOICE",
-		"CRITICAL_ANNOUNCE",
-		"SCREEN_ANNOUNCE",
-		"BATTLEFIELD",
-		"MPCC_ROOM",
-		"NPC_ALL",
-		"NPC_SHOUT",
-		"NEW_TELL",
-		"GLOBAL"
-	};
 	
 	private static final String[] WALKER_COMMAND_LIST =
 	{
@@ -151,7 +95,7 @@ public final class Say2 extends L2GameClientPacket
 	{
 		_text = readS();
 		_type = readD();
-		_target = (_type == TELL) ? readS() : null;
+		_target = (_type == ChatType.TELL.getClientId()) ? readS() : null;
 	}
 	
 	@Override
@@ -162,13 +106,14 @@ public final class Say2 extends L2GameClientPacket
 			_log.info("Say2: Msg Type = '" + _type + "' Text = '" + _text + "'.");
 		}
 		
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if ((_type < 0) || (_type >= CHAT_NAMES.length))
+		ChatType chatType = ChatType.findByClientId(_type);
+		if (chatType == null)
 		{
 			_log.warning("Say2: Invalid type: " + _type + " Player : " + activeChar.getName() + " text: " + String.valueOf(_text));
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -193,13 +138,13 @@ public final class Say2 extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.L2WALKER_PROTECTION && (_type == TELL) && checkBot(_text))
+		if (Config.L2WALKER_PROTECTION && (chatType == ChatType.TELL) && checkBot(_text))
 		{
 			Util.handleIllegalPlayerAction(activeChar, "Client Emulator Detect: Player " + activeChar.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if (activeChar.isCursedWeaponEquipped() && ((_type == TRADE) || (_type == SHOUT)))
+		if (activeChar.isCursedWeaponEquipped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT)))
 		{
 			activeChar.sendPacket(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON);
 			return;
@@ -213,12 +158,9 @@ public final class Say2 extends L2GameClientPacket
 			}
 			else
 			{
-				for (int chatId : Config.BAN_CHAT_CHANNELS)
+				if (Config.BAN_CHAT_CHANNELS.contains(chatType))
 				{
-					if (_type == chatId)
-					{
-						activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
-					}
+					activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 				}
 			}
 			return;
@@ -226,28 +168,28 @@ public final class Say2 extends L2GameClientPacket
 		
 		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT)
 		{
-			if ((_type == TELL) || (_type == SHOUT) || (_type == TRADE) || (_type == HERO_VOICE))
+			if ((chatType == ChatType.TELL) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE))
 			{
 				activeChar.sendMessage("You can not chat with players outside of the jail.");
 				return;
 			}
 		}
 		
-		if ((_type == PETITION_PLAYER) && activeChar.isGM())
+		if ((chatType == ChatType.PETITION_PLAYER) && activeChar.isGM())
 		{
-			_type = PETITION_GM;
+			chatType = ChatType.PETITION_GM;
 		}
 		
 		if (Config.LOG_CHAT)
 		{
-			LogRecord record = new LogRecord(Level.INFO, _text);
+			final LogRecord record = new LogRecord(Level.INFO, _text);
 			record.setLoggerName("chat");
 			
-			if (_type == TELL)
+			if (chatType == ChatType.TELL)
 			{
 				record.setParameters(new Object[]
 				{
-					CHAT_NAMES[_type],
+					chatType.name(),
 					"[" + activeChar.getName() + " to " + _target + "]"
 				});
 			}
@@ -255,7 +197,7 @@ public final class Say2 extends L2GameClientPacket
 			{
 				record.setParameters(new Object[]
 				{
-					CHAT_NAMES[_type],
+					chatType.name(),
 					"[" + activeChar.getName() + "]"
 				});
 			}
@@ -271,7 +213,7 @@ public final class Say2 extends L2GameClientPacket
 			}
 		}
 		
-		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, _type), ChatFilterReturn.class);
+		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);
 		if (filter != null)
 		{
 			_text = filter.getFilteredText();
@@ -283,10 +225,10 @@ public final class Say2 extends L2GameClientPacket
 			checkText();
 		}
 		
-		final IChatHandler handler = ChatHandler.getInstance().getHandler(_type);
+		final IChatHandler handler = ChatHandler.getInstance().getHandler(chatType);
 		if (handler != null)
 		{
-			handler.handleChat(_type, activeChar, _target, _text);
+			handler.handleChat(chatType, activeChar, _target, _text);
 		}
 		else
 		{
@@ -332,9 +274,9 @@ public final class Say2 extends L2GameClientPacket
 			{
 				result.append(_text.charAt(pos++));
 			}
-			int id = Integer.parseInt(result.toString());
-			L2Object item = L2World.getInstance().findObject(id);
-			if (item instanceof L2ItemInstance)
+			final int id = Integer.parseInt(result.toString());
+			final L2Object item = L2World.getInstance().findObject(id);
+			if (item.isItem())
 			{
 				if (owner.getInventory().getItemByObjectId(id) == null)
 				{

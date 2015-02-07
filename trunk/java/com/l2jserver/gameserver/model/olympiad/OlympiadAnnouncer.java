@@ -21,10 +21,10 @@ package com.l2jserver.gameserver.model.olympiad;
 import java.util.Set;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -79,7 +79,7 @@ public final class OlympiadAnnouncer implements Runnable
 					manager = spawn.getLastSpawn();
 					if (manager != null)
 					{
-						packet = new NpcSay(manager.getObjectId(), Say2.NPC_SHOUT, manager.getId(), npcString);
+						packet = new NpcSay(manager.getObjectId(), ChatType.NPC_SHOUT, manager.getId(), npcString);
 						packet.addStringParameter(arenaId);
 						manager.broadcastPacket(packet);
 					}

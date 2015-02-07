@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -29,7 +30,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public final class CreatureSay extends L2GameServerPacket
 {
 	private final int _objectId;
-	private final int _textType;
+	private final ChatType _textType;
 	private String _charName = null;
 	private int _charId = 0;
 	private String _text = null;
@@ -45,7 +46,7 @@ public final class CreatureSay extends L2GameServerPacket
 	 * @param messageType
 	 * @param text
 	 */
-	public CreatureSay(L2PcInstance sender, L2PcInstance receiver, String name, int messageType, String text)
+	public CreatureSay(L2PcInstance sender, L2PcInstance receiver, String name, ChatType messageType, String text)
 	{
 		_objectId = sender.getObjectId();
 		_charName = name;
@@ -82,7 +83,7 @@ public final class CreatureSay extends L2GameServerPacket
 	 * @param charName
 	 * @param text
 	 */
-	public CreatureSay(int objectId, int messageType, String charName, String text)
+	public CreatureSay(int objectId, ChatType messageType, String charName, String text)
 	{
 		_objectId = objectId;
 		_textType = messageType;
@@ -90,7 +91,7 @@ public final class CreatureSay extends L2GameServerPacket
 		_text = text;
 	}
 	
-	public CreatureSay(L2PcInstance player, int messageType, String text)
+	public CreatureSay(L2PcInstance player, ChatType messageType, String text)
 	{
 		_objectId = player.getObjectId();
 		_textType = messageType;
@@ -98,7 +99,7 @@ public final class CreatureSay extends L2GameServerPacket
 		_text = text;
 	}
 	
-	public CreatureSay(int objectId, int messageType, int charId, NpcStringId npcString)
+	public CreatureSay(int objectId, ChatType messageType, int charId, NpcStringId npcString)
 	{
 		_objectId = objectId;
 		_textType = messageType;
@@ -106,7 +107,7 @@ public final class CreatureSay extends L2GameServerPacket
 		_npcString = npcString.getId();
 	}
 	
-	public CreatureSay(int objectId, int messageType, String charName, NpcStringId npcString)
+	public CreatureSay(int objectId, ChatType messageType, String charName, NpcStringId npcString)
 	{
 		_objectId = objectId;
 		_textType = messageType;
@@ -114,7 +115,7 @@ public final class CreatureSay extends L2GameServerPacket
 		_npcString = npcString.getId();
 	}
 	
-	public CreatureSay(int objectId, int messageType, int charId, SystemMessageId sysString)
+	public CreatureSay(int objectId, ChatType messageType, int charId, SystemMessageId sysString)
 	{
 		_objectId = objectId;
 		_textType = messageType;
@@ -140,7 +141,7 @@ public final class CreatureSay extends L2GameServerPacket
 	{
 		writeC(0x4A);
 		writeD(_objectId);
-		writeD(_textType);
+		writeD(_textType.getClientId());
 		if (_charName != null)
 		{
 			writeS(_charName);
@@ -153,7 +154,7 @@ public final class CreatureSay extends L2GameServerPacket
 		if (_text != null)
 		{
 			writeS(_text);
-			if ((_charLevel > 0) && (_textType == 2))
+			if ((_charLevel > 0) && (_textType == ChatType.TELL))
 			{
 				writeC(_mask);
 				if ((_mask & 0x10) == 0)
@@ -174,7 +175,7 @@ public final class CreatureSay extends L2GameServerPacket
 	@Override
 	public final void runImpl()
 	{
-		L2PcInstance _pci = getClient().getActiveChar();
+		final L2PcInstance _pci = getClient().getActiveChar();
 		if (_pci != null)
 		{
 			_pci.broadcastSnoop(_textType, _charName, _text);

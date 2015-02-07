@@ -858,8 +858,7 @@ public final class CharEffectList
 	public void stopEffects(L2EffectType type)
 	{
 		boolean update = false;
-		final Consumer<BuffInfo> action = info ->
-		{
+		final Consumer<BuffInfo> action = info -> {
 			if (info.getEffects().stream().anyMatch(effect -> (effect != null) && (effect.getEffectType() == type)))
 			{
 				stopAndRemove(info);
@@ -1022,25 +1021,25 @@ public final class CharEffectList
 			{
 				if (hasBuffs())
 				{
-					getBuffs().values().stream().filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getBuffs()));
+					getBuffs().values().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getBuffs()));
 					update = true;
 				}
 				
 				if (hasTriggered())
 				{
-					getTriggered().values().stream().filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getTriggered()));
+					getTriggered().values().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getTriggered()));
 					update = true;
 				}
 				
 				if (hasDances())
 				{
-					getDances().values().stream().filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDances()));
+					getDances().values().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDances()));
 					update = true;
 				}
 				
 				if (hasToggles())
 				{
-					getToggles().values().stream().filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getToggles()));
+					getToggles().values().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getToggles()));
 					update = true;
 				}
 			}
@@ -1049,7 +1048,7 @@ public final class CharEffectList
 			{
 				if (hasDebuffs())
 				{
-					getDebuffs().values().stream().filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDebuffs()));
+					getDebuffs().values().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDebuffs()));
 					update = true;
 				}
 			}

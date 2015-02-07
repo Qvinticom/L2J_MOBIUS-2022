@@ -1236,30 +1236,6 @@
 		<point string="" X="96506" Y="69958" Z="-3851" delay="0" run="false" />
 		<point string="" X="94265" Y="68391" Z="-3851" delay="0" run="false" />
 	</route>
-	<!-- Eleve -->
-	<route name="ti_eleve" repeat="true" repeatStyle="random">
-		<target id="33246" spawnX="-114726" spawnY="260124" spawnZ="-1187" />
-		<point npcStringId="1032338" X="-114726" Y="260124" Z="-1187" delay="20" run="false" />
-		<point npcStringId="1032339" X="-114949" Y="259602" Z="-1192" delay="21" run="false" />
-		<point npcStringId="1032338" X="-114590" Y="259439" Z="-1184" delay="22" run="false" />
-		<point npcStringId="1032339" X="-114392" Y="259657" Z="-1184" delay="23" run="false" />
-	</route>
-	<!-- Devno -->
-	<route name="ti_devno" repeat="true" repeatStyle="random">
-		<target id="33241" spawnX="-115084" spawnY="258935" spawnZ="-1187" />
-		<point npcStringId="1032334" X="-115084" Y="258935" Z="-1187" delay="25" run="false" />
-		<point npcStringId="1032335" X="-114635" Y="258694" Z="-1204" delay="26" run="false" />
-		<point npcStringId="1032334" X="-114477" Y="258910" Z="-1203" delay="27" run="false" />
-		<point npcStringId="1032335" X="-114702" Y="259081" Z="-1203" delay="28" run="false" />
-	</route>
-	<!-- Karonf -->
-	<route name="ti_karonf" repeat="true" repeatStyle="random">
-		<target id="33242" spawnX="-114158" spawnY="259444" spawnZ="-1179" />
-		<point npcStringId="1032336" X="-114158" Y="259444" Z="-1179" delay="30" run="false" />
-		<point npcStringId="1032337" X="-113827" Y="259636" Z="-1192" delay="31" run="false" />
-		<point npcStringId="1032336" X="-113770" Y="259234" Z="-1192" delay="32" run="false" />
-		<point npcStringId="1032337" X="-114058" Y="259161" Z="-1192" delay="33" run="false" />
-	</route>
 	<!-- Old Man and Boy -->
 	<route name="ti_old_man_and_boy" repeat="true" repeatStyle="back">
 		<target id="33578" spawnX="-113894" spawnY="257318" spawnZ="-1131" />

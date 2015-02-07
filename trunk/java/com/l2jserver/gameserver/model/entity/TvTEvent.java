@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -54,7 +55,6 @@ import com.l2jserver.gameserver.model.events.impl.events.OnTvTEventStart;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
@@ -856,7 +856,7 @@ public class TvTEvent
 			
 			killerTeam.increasePoints();
 			
-			CreatureSay cs = new CreatureSay(killerPlayerInstance.getObjectId(), Say2.TELL, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
+			CreatureSay cs = new CreatureSay(killerPlayerInstance.getObjectId(), ChatType.TELL, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
 			
 			for (L2PcInstance playerInstance : _teams[killerTeamId].getParticipatedPlayers().values())
 			{

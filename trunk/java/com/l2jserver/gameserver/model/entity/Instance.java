@@ -45,6 +45,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.InstanceReenterType;
 import com.l2jserver.gameserver.enums.InstanceRemoveBuffType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
@@ -64,7 +65,6 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.InstanceReenterTimeHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -801,14 +801,14 @@ public final class Instance
 		{
 			timeLeft = remaining / 1000;
 			interval = 30000;
-			cs = new CreatureSay(0, Say2.ALLIANCE, "Notice", timeLeft + " seconds left.");
+			cs = new CreatureSay(0, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
 			remaining = remaining - 30000;
 		}
 		else
 		{
 			timeLeft = remaining / 1000;
 			interval = 10000;
-			cs = new CreatureSay(0, Say2.ALLIANCE, "Notice", timeLeft + " seconds left.");
+			cs = new CreatureSay(0, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
 			remaining = remaining - 10000;
 		}
 		if (cs != null)
@@ -857,8 +857,7 @@ public final class Instance
 	{
 		if ((player != null))
 		{
-			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() ->
-			{
+			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() -> {
 				if (player.isDead() && (player.getInstanceId() == getId()))
 				{
 					player.setInstanceId(0);

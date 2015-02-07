@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.model.actor.instance;
 import java.util.concurrent.Future;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -359,7 +360,7 @@ public class L2SepulcherMonsterInstance extends L2MonsterInstance
 				return;
 			}
 			
-			broadcastPacket(new NpcSay(getObjectId(), 0, getId(), "forgive me!!"));
+			broadcastPacket(new NpcSay(getObjectId(), ChatType.NPC_GENERAL, getId(), "forgive me!!"));
 		}
 	}
 	
@@ -386,7 +387,7 @@ public class L2SepulcherMonsterInstance extends L2MonsterInstance
 			}
 			
 			FourSepulchersManager.getInstance().spawnKeyBox(_activeChar);
-			broadcastPacket(new NpcSay(getObjectId(), 0, getId(), "Many thanks for rescue me."));
+			broadcastPacket(new NpcSay(getObjectId(), ChatType.NPC_GENERAL, getId(), "Many thanks for rescue me."));
 			if (_victimShout != null)
 			{
 				_victimShout.cancel(true);

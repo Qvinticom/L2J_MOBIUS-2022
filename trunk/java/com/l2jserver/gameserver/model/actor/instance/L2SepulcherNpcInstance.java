@@ -24,6 +24,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -34,7 +35,6 @@ import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -433,7 +433,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 			return;// wrong usage
 		}
 		
-		final CreatureSay creatureSay = new CreatureSay(0, Say2.NPC_SHOUT, getName(), msg);
+		final CreatureSay creatureSay = new CreatureSay(0, ChatType.NPC_SHOUT, getName(), msg);
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			if (Util.checkIfInRange(15000, player, this, true))
