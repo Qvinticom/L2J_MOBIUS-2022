@@ -24,10 +24,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -44,7 +43,7 @@ public final class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
-	private final List<L2ItemInstance> _items = new FastList<L2ItemInstance>().shared();
+	private final List<L2ItemInstance> _items = new CopyOnWriteArrayList<>();
 	
 	protected ItemsOnGroundManager()
 	{

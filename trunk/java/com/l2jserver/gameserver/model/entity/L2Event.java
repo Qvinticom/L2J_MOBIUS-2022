@@ -31,9 +31,6 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -61,12 +58,12 @@ public class L2Event
 	public static String _eventCreator = "";
 	public static String _eventInfo = "";
 	public static int _teamsNumber = 0;
-	public static final Map<Integer, String> _teamNames = new FastMap<>();
-	public static final List<L2PcInstance> _registeredPlayers = new FastList<>();
-	public static final Map<Integer, List<L2PcInstance>> _teams = new FastMap<>();
+	public static final Map<Integer, String> _teamNames = new HashMap<>();
+	public static final List<L2PcInstance> _registeredPlayers = new ArrayList<>();
+	public static final Map<Integer, List<L2PcInstance>> _teams = new HashMap<>();
 	public static int _npcId = 0;
-	// public static final List<L2Npc> _npcs = new FastList<L2Npc>();
-	private static final Map<L2PcInstance, PlayerEventHolder> _connectionLossData = new FastMap<>();
+	// public static final List<L2Npc> _npcs = new ArrayList<L2Npc>();
+	private static final Map<L2PcInstance, PlayerEventHolder> _connectionLossData = new HashMap<>();
 	
 	public enum EventState
 	{
@@ -385,7 +382,7 @@ public class L2Event
 				_eventInfo = br.readLine();
 			}
 			
-			List<L2PcInstance> temp = new FastList<>();
+			List<L2PcInstance> temp = new ArrayList<>();
 			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if (!player.isOnline())
@@ -443,7 +440,7 @@ public class L2Event
 			// Insert empty lists at _teams.
 			for (int i = 0; i < _teamsNumber; i++)
 			{
-				_teams.put(i + 1, new FastList<L2PcInstance>());
+				_teams.put(i + 1, new ArrayList<L2PcInstance>());
 			}
 			
 			int i = 0;

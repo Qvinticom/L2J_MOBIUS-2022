@@ -25,8 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastList;
-
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -208,7 +206,7 @@ public class CharKnownList extends ObjectKnownList
 	
 	public Collection<L2Character> getKnownCharacters()
 	{
-		FastList<L2Character> result = new FastList<>();
+		ArrayList<L2Character> result = new ArrayList<>();
 		
 		final Collection<L2Object> objs = getKnownObjects().values();
 		for (L2Object obj : objs)

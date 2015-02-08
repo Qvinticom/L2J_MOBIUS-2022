@@ -18,12 +18,11 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.L2CharacterAI;
@@ -612,7 +611,7 @@ public class L2DoorInstance extends L2Character
 	
 	public Collection<L2DefenderInstance> getKnownDefenders()
 	{
-		FastList<L2DefenderInstance> result = new FastList<>();
+		ArrayList<L2DefenderInstance> result = new ArrayList<>();
 		
 		Collection<L2Object> objs = getKnownList().getKnownObjects().values();
 		for (L2Object obj : objs)

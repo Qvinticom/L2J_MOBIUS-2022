@@ -24,15 +24,13 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
-
-import javolution.text.TextBuilder;
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -309,7 +307,7 @@ public final class Util
 	 */
 	public static String implodeString(Iterable<String> strArray, String strDelim)
 	{
-		final TextBuilder sbString = TextBuilder.newInstance();
+		final StringBuilder sbString = new StringBuilder();
 		
 		for (String strValue : strArray)
 		{
@@ -318,7 +316,6 @@ public final class Util
 		}
 		
 		String result = sbString.toString();
-		TextBuilder.recycle(sbString);
 		return result;
 	}
 	
@@ -715,7 +712,7 @@ public final class Util
 	public static void fillMultiEditContent(L2PcInstance activeChar, String text)
 	{
 		text = text.replaceAll("<br>", Config.EOL);
-		List<String> arg = new FastList<>();
+		List<String> arg = new ArrayList<>();
 		arg.add("0");
 		arg.add("0");
 		arg.add("0");

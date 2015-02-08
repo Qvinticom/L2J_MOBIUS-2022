@@ -19,11 +19,10 @@
 package com.l2jserver.gameserver.engines;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -40,8 +39,8 @@ public class DocumentEngine
 {
 	private static final Logger _log = Logger.getLogger(DocumentEngine.class.getName());
 	
-	private final List<File> _itemFiles = new FastList<>();
-	private final List<File> _skillFiles = new FastList<>();
+	private final List<File> _itemFiles = new ArrayList<>();
+	private final List<File> _skillFiles = new ArrayList<>();
 	
 	public static DocumentEngine getInstance()
 	{
@@ -114,7 +113,7 @@ public class DocumentEngine
 	 */
 	public List<L2Item> loadItems()
 	{
-		List<L2Item> list = new FastList<>();
+		List<L2Item> list = new ArrayList<>();
 		for (File f : _itemFiles)
 		{
 			DocumentItem document = new DocumentItem(f);

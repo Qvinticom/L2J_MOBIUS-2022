@@ -28,14 +28,13 @@ import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -53,8 +52,8 @@ import com.l2jserver.gameserver.util.Util;
 public class GeoPathFinding extends PathFinding
 {
 	private static Logger _log = Logger.getLogger(GeoPathFinding.class.getName());
-	private static Map<Short, ByteBuffer> _pathNodes = new FastMap<>();
-	private static Map<Short, IntBuffer> _pathNodesIndex = new FastMap<>();
+	private static Map<Short, ByteBuffer> _pathNodes = new HashMap<>();
+	private static Map<Short, IntBuffer> _pathNodesIndex = new HashMap<>();
 	
 	public static GeoPathFinding getInstance()
 	{
@@ -226,7 +225,7 @@ public class GeoPathFinding extends PathFinding
 		short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
 		ByteBuffer pn = _pathNodes.get(regoffset);
 		
-		List<AbstractNode> Neighbors = new FastList<>(8);
+		List<AbstractNode> Neighbors = new ArrayList<>(8);
 		GeoNode newNode;
 		short new_node_x, new_node_y;
 		

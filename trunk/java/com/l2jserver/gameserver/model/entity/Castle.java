@@ -23,13 +23,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -244,7 +243,7 @@ public final class Castle extends AbstractResidence
 	{
 		super(castleId);
 		load();
-		_function = new FastMap<>();
+		_function = new HashMap<>();
 		initResidenceZone();
 		spawnSideNpcs();
 		if (getOwnerId() != 0)

@@ -26,12 +26,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
-import javolution.util.FastSet;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -58,7 +57,7 @@ public final class SpawnTable implements IXmlReader
 	private static final String SELECT_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM spawnlist";
 	private static final String SELECT_CUSTOM_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM custom_spawnlist";
 	
-	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new FastMap<Integer, Set<L2Spawn>>().shared();
+	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
 	
 	private int _xmlSpawnCount = 0;
 	
@@ -463,7 +462,7 @@ public final class SpawnTable implements IXmlReader
 	{
 		if (!_spawnTable.containsKey(spawn.getId()))
 		{
-			_spawnTable.put(spawn.getId(), new FastSet<L2Spawn>().shared());
+			_spawnTable.put(spawn.getId(), new CopyOnWriteArraySet<L2Spawn>());
 		}
 		_spawnTable.get(spawn.getId()).add(spawn);
 	}

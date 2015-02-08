@@ -18,9 +18,9 @@
  */
 package ai.npc.Teleports.NewbieTravelToken;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
@@ -39,7 +39,7 @@ public final class NewbieTravelToken extends AbstractNpcAI
 	// Item
 	private static final int NEWBIE_TRAVEL_TOKEN = 8542;
 	// NPC Id - Teleport Location
-	private static final Map<Integer, Location> DATA = new FastMap<>();
+	private static final Map<Integer, Location> DATA = new HashMap<>();
 	
 	private NewbieTravelToken()
 	{

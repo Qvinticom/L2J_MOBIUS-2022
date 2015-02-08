@@ -19,8 +19,7 @@
 package com.l2jserver.gameserver;
 
 import java.util.List;
-
-import javolution.util.FastList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.ItemLocation;
@@ -30,7 +29,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public final class ItemsAutoDestroy
 {
-	private final List<L2ItemInstance> _items = new FastList<>();
+	private final List<L2ItemInstance> _items = new CopyOnWriteArrayList<>();
 	
 	protected ItemsAutoDestroy()
 	{

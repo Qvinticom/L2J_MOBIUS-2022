@@ -18,9 +18,10 @@
  */
 package gracia.AI;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -53,8 +54,8 @@ public class EnergySeeds extends AbstractNpcAI
 	private static final int RATE = 1;
 	private static final int RESPAWN = 480000;
 	private static final int RANDOM_RESPAWN_OFFSET = 180000;
-	private static Map<Integer, ESSpawn> _spawns = new FastMap<>();
-	protected static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
+	private static Map<Integer, ESSpawn> _spawns = new HashMap<>();
+	protected static Map<L2Npc, Integer> _spawnedNpcs = new ConcurrentHashMap<>();
 	
 	private static final int TEMPORARY_TELEPORTER = 32602;
 	// @formatter:off
@@ -711,8 +712,7 @@ public class EnergySeeds extends AbstractNpcAI
 		
 		public void scheduleRespawn(long waitTime)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(() ->
-			{
+			ThreadPoolManager.getInstance().scheduleGeneral(() -> {
 				// if the AI is inactive, do not spawn the NPC
 				if (isSeedActive(_seedId))
 				{

@@ -21,18 +21,17 @@ package instances.FinalEmperialTomb;
 import instances.AbstractInstance;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -86,7 +85,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	private class FETWorld extends InstanceWorld
 	{
 		protected Lock lock = new ReentrantLock();
-		protected FastList<L2Npc> npcList = new FastList<>();
+		protected CopyOnWriteArrayList<L2Npc> npcList = new CopyOnWriteArrayList<>();
 		protected int darkChoirPlayerCount = 0;
 		protected FrintezzaSong OnSong = null;
 		protected ScheduledFuture<?> songTask = null;
@@ -99,8 +98,8 @@ public final class FinalEmperialTomb extends AbstractInstance
 		protected L2Npc scarletDummy = null;
 		protected L2GrandBossInstance frintezza = null;
 		protected L2GrandBossInstance activeScarlet = null;
-		protected List<L2MonsterInstance> demons = new FastList<>();
-		protected Map<L2MonsterInstance, Integer> portraits = new FastMap<>();
+		protected List<L2MonsterInstance> demons = new ArrayList<>();
+		protected Map<L2MonsterInstance, Integer> portraits = new HashMap<>();
 		protected int scarlet_x = 0;
 		protected int scarlet_y = 0;
 		protected int scarlet_z = 0;
@@ -109,7 +108,6 @@ public final class FinalEmperialTomb extends AbstractInstance
 		
 		protected FETWorld()
 		{
-			npcList.shared();
 		}
 	}
 	
@@ -196,7 +194,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	private static final boolean debug = false;
 	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
 	private final Map<Integer, List<FETSpawn>> _spawnList = new HashMap<>();
-	private final List<Integer> _mustKillMobsId = new FastList<>();
+	private final List<Integer> _mustKillMobsId = new ArrayList<>();
 	protected static final int[] FIRST_ROOM_DOORS =
 	{
 		17130051,
@@ -303,7 +301,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
 								if (!_spawnList.containsKey(flag))
 								{
-									_spawnList.put(flag, new FastList<FETSpawn>());
+									_spawnList.put(flag, new ArrayList<FETSpawn>());
 								}
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
@@ -850,7 +848,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 					
 					if ((_world.frintezza != null) && !_world.frintezza.isDead() && (_world.activeScarlet != null) && !_world.activeScarlet.isDead())
 					{
-						List<L2Character> targetList = new FastList<>();
+						List<L2Character> targetList = new ArrayList<>();
 						if (skill.hasEffectType(L2EffectType.STUN) || skill.isDebuff())
 						{
 							for (int objId : _world.getAllowed())
@@ -867,8 +865,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 									{
 										targetList.add(pet);
 									}
-									player.getServitors().values().forEach(s ->
-									{
+									player.getServitors().values().forEach(s -> {
 										if (!s.isDead())
 										{
 											targetList.add(s);

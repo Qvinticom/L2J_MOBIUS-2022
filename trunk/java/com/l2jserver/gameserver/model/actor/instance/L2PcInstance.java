@@ -39,16 +39,14 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
-import javolution.util.FastSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -410,7 +408,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
 	
-	private final List<IEventListener> _eventListeners = new FastList<IEventListener>().shared();
+	private final List<IEventListener> _eventListeners = new CopyOnWriteArrayList<>();
 	
 	public class AIAccessor extends L2Character.AIAccessor
 	{
@@ -522,7 +520,7 @@ public final class L2PcInstance extends L2Playable
 	
 	private int _bookmarkslot = 0; // The Teleport Bookmark Slot
 	
-	private final Map<Integer, TeleportBookmark> _tpbookmarks = new FastMap<>();
+	private final Map<Integer, TeleportBookmark> _tpbookmarks = new HashMap<>();
 	
 	private boolean _canFeed;
 	private boolean _isInSiege;
@@ -563,11 +561,11 @@ public final class L2PcInstance extends L2Playable
 	private Transform _transformation;
 	
 	/** The table containing all L2RecipeList of the L2PcInstance */
-	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new FastMap<>();
-	private final Map<Integer, L2RecipeList> _commonRecipeBook = new FastMap<>();
+	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new HashMap<>();
+	private final Map<Integer, L2RecipeList> _commonRecipeBook = new HashMap<>();
 	
 	/** Premium Items */
-	private final Map<Integer, L2PremiumItem> _premiumItems = new FastMap<>();
+	private final Map<Integer, L2PremiumItem> _premiumItems = new HashMap<>();
 	
 	/** True if the L2PcInstance is sitting */
 	private boolean _waitTypeSitting;
@@ -625,7 +623,7 @@ public final class L2PcInstance extends L2Playable
 	private int _questNpcObject = 0;
 	
 	/** The table containing all Quests began by the L2PcInstance */
-	private final Map<String, QuestState> _quests = new FastMap<>();
+	private final Map<String, QuestState> _quests = new HashMap<>();
 	
 	/** The list containing all shortCuts of this player. */
 	private final ShortCuts _shortCuts = new ShortCuts(this);
@@ -633,8 +631,8 @@ public final class L2PcInstance extends L2Playable
 	/** The list containing all macros of this player. */
 	private final MacroList _macros = new MacroList(this);
 	
-	private final List<L2PcInstance> _snoopListener = new FastList<>();
-	private final List<L2PcInstance> _snoopedPlayer = new FastList<>();
+	private final List<L2PcInstance> _snoopListener = new ArrayList<>();
+	private final List<L2PcInstance> _snoopedPlayer = new ArrayList<>();
 	
 	// hennas
 	private final L2Henna[] _henna = new L2Henna[3];
@@ -753,7 +751,7 @@ public final class L2PcInstance extends L2Playable
 	/** The fists L2Weapon of the L2PcInstance (used when no weapon is equipped) */
 	private L2Weapon _fistsWeaponItem;
 	
-	private final Map<Integer, String> _chars = new FastMap<>();
+	private final Map<Integer, String> _chars = new HashMap<>();
 	
 	// private byte _updateKnownCounter = 0;
 	
@@ -779,7 +777,7 @@ public final class L2PcInstance extends L2Playable
 	/** Player's cubics. */
 	private final Map<Integer, L2CubicInstance> _cubics = new ConcurrentSkipListMap<>();
 	/** Active shots. */
-	protected FastSet<Integer> _activeSoulShots = new FastSet<Integer>().shared();
+	protected CopyOnWriteArraySet<Integer> _activeSoulShots = new CopyOnWriteArraySet<>();
 	
 	public final ReentrantLock soulShotLock = new ReentrantLock();
 	
@@ -1574,7 +1572,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (_notifyQuestOfDeathList == null)
 				{
-					_notifyQuestOfDeathList = new FastList<>();
+					_notifyQuestOfDeathList = new ArrayList<>();
 				}
 			}
 		}
@@ -5958,7 +5956,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_tamedBeast == null)
 		{
-			_tamedBeast = new FastList<>();
+			_tamedBeast = new ArrayList<>();
 		}
 		_tamedBeast.add(tamedBeast);
 	}
@@ -10539,7 +10537,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_subClasses == null)
 		{
-			_subClasses = new FastMap<>();
+			_subClasses = new HashMap<>();
 		}
 		
 		return _subClasses;
@@ -14601,7 +14599,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (_customSkills == null)
 			{
-				_customSkills = new FastMap<Integer, Skill>().shared();
+				_customSkills = new ConcurrentHashMap<>();
 			}
 			_customSkills.put(skill.getDisplayId(), skill);
 		}

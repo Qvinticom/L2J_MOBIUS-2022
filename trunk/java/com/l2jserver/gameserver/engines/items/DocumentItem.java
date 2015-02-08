@@ -21,10 +21,9 @@ package com.l2jserver.gameserver.engines.items;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
-
-import javolution.util.FastList;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -40,7 +39,7 @@ import com.l2jserver.gameserver.model.items.L2Item;
 public final class DocumentItem extends DocumentBase
 {
 	private Item _currentItem = null;
-	private final List<L2Item> _itemsInFile = new FastList<>();
+	private final List<L2Item> _itemsInFile = new ArrayList<>();
 	
 	/**
 	 * @param file

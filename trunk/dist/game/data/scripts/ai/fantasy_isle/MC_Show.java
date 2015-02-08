@@ -19,9 +19,9 @@
 package ai.fantasy_isle;
 
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -166,8 +166,8 @@ public class MC_Show extends AbstractNpcAI
 		}
 	}
 	
-	private static Map<String, ShoutInfo> talks = new FastMap<>();
-	private static Map<String, WalkInfo> walks = new FastMap<>();
+	private static Map<String, ShoutInfo> talks = new HashMap<>();
+	private static Map<String, WalkInfo> walks = new HashMap<>();
 	
 	private MC_Show()
 	{

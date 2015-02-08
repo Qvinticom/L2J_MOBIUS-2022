@@ -40,10 +40,6 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-import javolution.util.WeakFastSet;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GeoData;
@@ -220,7 +216,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** Table of Calculators containing all used calculator */
 	private Calculator[] _calculators;
 	/** Map containing all skills of this character. */
-	private final Map<Integer, Skill> _skills = new FastMap<Integer, Skill>().shared();
+	private final Map<Integer, Skill> _skills = new ConcurrentHashMap<>();
 	/** Map containing the skill reuse time stamps. */
 	private volatile Map<Integer, TimeStamp> _reuseTimeStampsSkills = null;
 	/** Map containing the item reuse time stamps. */
@@ -2699,7 +2695,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (_attackByList == null)
 				{
-					_attackByList = new WeakFastSet<>(true);
+					_attackByList = new HashSet<>();
 				}
 			}
 		}
@@ -4315,8 +4311,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (distFraction > 1)
 		{
-			ThreadPoolManager.getInstance().executeAi(() ->
-			{
+			ThreadPoolManager.getInstance().executeAi(() -> {
 				try
 				{
 					if (Config.MOVE_BASED_KNOWNLIST)
@@ -5605,7 +5600,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			int _skiprange = 0;
 			int _skipgeo = 0;
 			int _skippeace = 0;
-			List<L2Character> targetList = new FastList<>(targets.length);
+			List<L2Character> targetList = new ArrayList<>(targets.length);
 			for (L2Object target : targets)
 			{
 				if (target instanceof L2Character)

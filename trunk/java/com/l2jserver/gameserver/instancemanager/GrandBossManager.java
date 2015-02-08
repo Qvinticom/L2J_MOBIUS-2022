@@ -32,9 +32,6 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -62,13 +59,13 @@ public final class GrandBossManager implements IStorable
 	
 	protected static Logger _log = Logger.getLogger(GrandBossManager.class.getName());
 	
-	protected static Map<Integer, L2GrandBossInstance> _bosses = new FastMap<>();
+	protected static Map<Integer, L2GrandBossInstance> _bosses = new HashMap<>();
 	
 	protected static Map<Integer, StatsSet> _storedInfo = new HashMap<>();
 	
 	private final Map<Integer, Integer> _bossStatus = new HashMap<>();
 	
-	private final List<L2BossZone> _zones = new FastList<>();
+	private final List<L2BossZone> _zones = new ArrayList<>();
 	
 	protected GrandBossManager()
 	{

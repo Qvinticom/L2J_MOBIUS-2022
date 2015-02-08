@@ -23,10 +23,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -50,7 +49,7 @@ public final class MercTicketManager
 {
 	private static final Logger _log = Logger.getLogger(MercTicketManager.class.getName());
 	
-	private static final FastList<L2ItemInstance> _droppedTickets = new FastList<>();
+	private static final CopyOnWriteArrayList<L2ItemInstance> _droppedTickets = new CopyOnWriteArrayList<>();
 	
 	// TODO: move all these values into siege.properties
 	// max tickets per merc type = 10 + (castleid * 2)?
@@ -114,7 +113,6 @@ public final class MercTicketManager
 	
 	protected MercTicketManager()
 	{
-		_droppedTickets.shared();
 		load();
 	}
 	

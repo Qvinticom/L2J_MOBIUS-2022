@@ -21,11 +21,10 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.InstanceListManager;
@@ -159,7 +158,7 @@ public final class FortManager implements InstanceListManager
 	{
 		if (_forts == null)
 		{
-			_forts = new FastList<>();
+			_forts = new ArrayList<>();
 		}
 		return _forts;
 	}

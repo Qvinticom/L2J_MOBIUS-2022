@@ -18,10 +18,9 @@
  */
 package com.l2jserver.gameserver.datatables;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.script.DateRange;
 import com.l2jserver.gameserver.script.EventDrop;
@@ -37,7 +36,7 @@ public class EventDroplist
 	/**
 	 * The table containing all DataDrop object
 	 */
-	private static final List<DateDrop> _allNpcDateDrops = new FastList<>();
+	private static final List<DateDrop> _allNpcDateDrops = new ArrayList<>();
 	
 	public static class DateDrop
 	{
@@ -106,7 +105,7 @@ public class EventDroplist
 	 */
 	public List<DateDrop> getAllDrops()
 	{
-		final List<DateDrop> list = new FastList<>();
+		final List<DateDrop> list = new ArrayList<>();
 		final Date currentDate = new Date();
 		for (DateDrop drop : _allNpcDateDrops)
 		{

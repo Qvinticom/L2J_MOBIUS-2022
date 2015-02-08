@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -30,9 +31,6 @@ import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -124,9 +122,9 @@ public final class FourSepulchersManager
 	};
 	// @formatter:on
 	
-	protected Map<Integer, Boolean> _archonSpawned = new FastMap<>();
-	protected Map<Integer, Boolean> _hallInUse = new FastMap<>();
-	protected Map<Integer, L2PcInstance> _challengers = new FastMap<>();
+	protected Map<Integer, Boolean> _archonSpawned = new HashMap<>();
+	protected Map<Integer, Boolean> _hallInUse = new HashMap<>();
+	protected Map<Integer, L2PcInstance> _challengers = new HashMap<>();
 	protected Map<Integer, int[]> _startHallSpawns = new HashMap<>();
 	protected Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
 	protected Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
@@ -147,7 +145,7 @@ public final class FourSepulchersManager
 	protected List<L2Spawn> _managers;
 	protected List<L2Spawn> _dukeFinalSpawns;
 	protected List<L2Spawn> _emperorsGraveSpawns;
-	protected List<L2Npc> _allMobs = new FastList<>();
+	protected List<L2Npc> _allMobs = new ArrayList<>();
 	
 	private long _attackTimeEnd = 0;
 	private long _coolDownTimeEnd = 0;
@@ -276,7 +274,7 @@ public final class FourSepulchersManager
 	
 	protected void spawnManagers()
 	{
-		_managers = new FastList<>();
+		_managers = new ArrayList<>();
 		
 		int i = 31921;
 		for (L2Spawn spawnDat; i <= 31924; i++)
@@ -518,7 +516,7 @@ public final class FourSepulchersManager
 					ps2.setInt(2, 1);
 					try (ResultSet rs2 = ps2.executeQuery())
 					{
-						_physicalSpawns = new FastList<>();
+						_physicalSpawns = new ArrayList<>();
 						while (rs2.next())
 						{
 							template1 = NpcData.getInstance().getTemplate(rs2.getInt("npc_templateid"));
@@ -575,7 +573,7 @@ public final class FourSepulchersManager
 					ps2.setInt(2, 2);
 					try (ResultSet rset2 = ps2.executeQuery())
 					{
-						_magicalSpawns = new FastList<>();
+						_magicalSpawns = new ArrayList<>();
 						
 						while (rset2.next())
 						{
@@ -636,7 +634,7 @@ public final class FourSepulchersManager
 					{
 						ps2.clearParameters();
 						
-						_dukeFinalSpawns = new FastList<>();
+						_dukeFinalSpawns = new ArrayList<>();
 						
 						while (rset2.next())
 						{
@@ -695,7 +693,7 @@ public final class FourSepulchersManager
 					ps2.setInt(2, 6);
 					try (ResultSet rs2 = ps2.executeQuery())
 					{
-						_emperorsGraveSpawns = new FastList<>();
+						_emperorsGraveSpawns = new ArrayList<>();
 						
 						while (rs2.next())
 						{
@@ -1071,7 +1069,7 @@ public final class FourSepulchersManager
 		
 		if (Config.FS_PARTY_MEMBER_COUNT > 1)
 		{
-			List<L2PcInstance> members = new FastList<>();
+			List<L2PcInstance> members = new ArrayList<>();
 			for (L2PcInstance mem : player.getParty().getMembers())
 			{
 				if (!mem.isDead() && Util.checkIfInRange(700, player, mem, true))
@@ -1105,7 +1103,7 @@ public final class FourSepulchersManager
 		}
 		if ((Config.FS_PARTY_MEMBER_COUNT <= 1) && player.isInParty())
 		{
-			List<L2PcInstance> members = new FastList<>();
+			List<L2PcInstance> members = new ArrayList<>();
 			for (L2PcInstance mem : player.getParty().getMembers())
 			{
 				if (!mem.isDead() && Util.checkIfInRange(700, player, mem, true))
@@ -1184,7 +1182,7 @@ public final class FourSepulchersManager
 		}
 		
 		List<L2Spawn> monsterList;
-		List<L2SepulcherMonsterInstance> mobs = new FastList<>();
+		List<L2SepulcherMonsterInstance> mobs = new ArrayList<>();
 		L2Spawn keyBoxMobSpawn;
 		
 		if (Rnd.get(2) == 0)

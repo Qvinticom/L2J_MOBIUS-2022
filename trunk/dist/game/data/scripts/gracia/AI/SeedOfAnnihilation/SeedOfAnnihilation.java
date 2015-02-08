@@ -19,9 +19,9 @@
 package gracia.AI.SeedOfAnnihilation;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -41,7 +41,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class SeedOfAnnihilation extends AbstractNpcAI
 {
-	private static final Map<Integer, Location> _teleportZones = new FastMap<>();
+	private static final Map<Integer, Location> _teleportZones = new HashMap<>();
 	private static final int ANNIHILATION_FURNACE = 18928;
 	
 	// Strength, Agility, Wisdom

@@ -19,13 +19,12 @@
 package com.l2jserver.gameserver.model;
 
 import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -80,8 +79,9 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private boolean _doRespawn;
 	/** If true then spawn is custom */
 	private boolean _customSpawn;
-	private static List<SpawnListener> _spawnListeners = new FastList<>();
-	private final FastList<L2Npc> _spawnedNpcs = new FastList<>();
+	private static List<SpawnListener> _spawnListeners = new ArrayList<>();
+	private final ArrayList<L2Npc> _spawnedNpcs = new ArrayList<>();
+	private L2Npc _lastSpawn;
 	private Map<Integer, Location> _lastSpawnPoints;
 	private boolean _isNoRndWalk = false; // Is no random walk
 	
@@ -675,6 +675,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		notifyNpcSpawned(mob);
 		
 		_spawnedNpcs.add(mob);
+		_lastSpawn = mob;
 		if (_lastSpawnPoints != null)
 		{
 			_lastSpawnPoints.put(mob.getObjectId(), new Location(newlocx, newlocy, newlocz));
@@ -777,15 +778,10 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	
 	public L2Npc getLastSpawn()
 	{
-		if (!_spawnedNpcs.isEmpty())
-		{
-			return _spawnedNpcs.getLast();
-		}
-		
-		return null;
+		return _lastSpawn;
 	}
 	
-	public final FastList<L2Npc> getSpawnedNpcs()
+	public final ArrayList<L2Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
 	}

@@ -26,8 +26,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import javolution.text.TextBuilder;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameServer;
 import com.l2jserver.gameserver.GameTimeController;
@@ -103,7 +101,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 	
 	private String buildTheardInfo(String category)
 	{
-		final TextBuilder tb = new TextBuilder();
+		final StringBuilder tb = new StringBuilder();
 		
 		tb.append("<table width=\"270\" border=\"0\" bgcolor=\"444444\">");
 		for (Entry<String, Object> info : ThreadPoolManager.getInstance().getStats(category).getSet().entrySet())

@@ -78,7 +78,7 @@ import com.l2jserver.gameserver.model.skills.Skill;
  */
 public final class SkillTreesData implements IXmlReader
 {
-	// ClassId, FastMap of Skill Hash Code, L2SkillLearn
+	// ClassId, HashMap of Skill Hash Code, L2SkillLearn
 	private static final Map<ClassId, Map<Integer, L2SkillLearn>> _classSkillTrees = new HashMap<>();
 	private static final Map<ClassId, Map<Integer, L2SkillLearn>> _transferSkillTrees = new HashMap<>();
 	private static final Map<Race, Map<Integer, L2SkillLearn>> _raceSkillTree = new HashMap<>();

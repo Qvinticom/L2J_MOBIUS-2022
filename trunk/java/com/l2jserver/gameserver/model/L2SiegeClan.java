@@ -18,9 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -28,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 public class L2SiegeClan
 {
 	private int _clanId = 0;
-	private List<L2Npc> _flag = new FastList<>();
+	private List<L2Npc> _flag = new ArrayList<>();
 	private int _numFlagsAdded = 0;
 	private SiegeClanType _type;
 	
@@ -88,7 +87,7 @@ public class L2SiegeClan
 	{
 		if (_flag == null)
 		{
-			_flag = new FastList<>();
+			_flag = new ArrayList<>();
 		}
 		return _flag;
 	}

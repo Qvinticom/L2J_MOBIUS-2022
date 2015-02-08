@@ -20,11 +20,10 @@ package com.l2jserver.gameserver.model;
 
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -59,7 +58,7 @@ public class TradeList
 	
 	public TradeList(L2PcInstance owner)
 	{
-		_items = new FastList<>();
+		_items = new ArrayList<>();
 		_owner = owner;
 	}
 	
@@ -123,7 +122,7 @@ public class TradeList
 	 */
 	public TradeItem[] getAvailableItems(PcInventory inventory)
 	{
-		FastList<TradeItem> list = FastList.newInstance();
+		final ArrayList<TradeItem> list = new ArrayList<>();
 		for (TradeItem item : _items)
 		{
 			int el[] = new int[6];
@@ -135,8 +134,7 @@ public class TradeList
 			inventory.adjustAvailableItem(item);
 			list.add(item);
 		}
-		TradeItem[] result = list.toArray(new TradeItem[list.size()]);
-		FastList.recycle(list);
+		final TradeItem[] result = list.toArray(new TradeItem[list.size()]);
 		return result;
 	}
 	
@@ -685,7 +683,7 @@ public class TradeList
 	 * @param items
 	 * @return int: result of trading. 0 - ok, 1 - canceled (no adena), 2 - failed (item error)
 	 */
-	public synchronized int privateStoreBuy(L2PcInstance player, FastSet<ItemRequest> items)
+	public synchronized int privateStoreBuy(L2PcInstance player, HashSet<ItemRequest> items)
 	{
 		if (_locked)
 		{

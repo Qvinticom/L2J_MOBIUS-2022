@@ -18,12 +18,11 @@
  */
 package com.l2jserver.gameserver.model.actor;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -54,7 +53,7 @@ import com.l2jserver.gameserver.util.Util;
 public abstract class L2Vehicle extends L2Character
 {
 	protected int _dockId = 0;
-	protected final FastList<L2PcInstance> _passengers = new FastList<>();
+	protected final ArrayList<L2PcInstance> _passengers = new ArrayList<>();
 	protected Location _oustLoc = null;
 	private Runnable _engine = null;
 	

@@ -18,10 +18,9 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -166,7 +165,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		
 		long totalPrice = 0;
-		Map<Integer, Integer> itemList = new FastMap<>();
+		Map<Integer, Integer> itemList = new HashMap<>();
 		
 		for (int i = 0; i < _count; i++)
 		{

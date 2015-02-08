@@ -19,12 +19,11 @@
 package com.l2jserver.gameserver.instancemanager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -54,7 +53,7 @@ public final class DayNightSpawnManager
 	{
 		_dayCreatures = new ArrayList<>();
 		_nightCreatures = new ArrayList<>();
-		_bosses = new FastMap<>();
+		_bosses = new HashMap<>();
 	}
 	
 	public void addDayCreature(L2Spawn spawnDat)

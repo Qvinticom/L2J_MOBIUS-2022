@@ -18,9 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -33,7 +32,7 @@ public class PartyMatchWaitingList
 	
 	protected PartyMatchWaitingList()
 	{
-		_members = new FastList<>();
+		_members = new ArrayList<>();
 	}
 	
 	public void addPlayer(L2PcInstance player)

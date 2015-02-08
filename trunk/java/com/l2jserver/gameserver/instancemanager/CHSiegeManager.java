@@ -21,10 +21,9 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -46,7 +45,7 @@ public final class CHSiegeManager
 	private static final Logger _log = Logger.getLogger(CHSiegeManager.class.getName());
 	private static final String SQL_LOAD_HALLS = "SELECT * FROM siegable_clanhall";
 	
-	private final FastMap<Integer, SiegableHall> _siegableHalls = new FastMap<>();
+	private final HashMap<Integer, SiegableHall> _siegableHalls = new HashMap<>();
 	
 	protected CHSiegeManager()
 	{
@@ -87,7 +86,7 @@ public final class CHSiegeManager
 		}
 	}
 	
-	public FastMap<Integer, SiegableHall> getConquerableHalls()
+	public HashMap<Integer, SiegableHall> getConquerableHalls()
 	{
 		return _siegableHalls;
 	}

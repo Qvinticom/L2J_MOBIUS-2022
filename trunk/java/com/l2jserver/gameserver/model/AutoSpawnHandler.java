@@ -22,15 +22,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -75,8 +74,8 @@ public class AutoSpawnHandler
 	
 	protected AutoSpawnHandler()
 	{
-		_registeredSpawns = new FastMap<>();
-		_runningSpawns = new FastMap<>();
+		_registeredSpawns = new HashMap<>();
+		_runningSpawns = new HashMap<>();
 		
 		restoreSpawnData();
 	}
@@ -111,8 +110,8 @@ public class AutoSpawnHandler
 		}
 		
 		// create clean list
-		_registeredSpawns = new FastMap<>();
-		_runningSpawns = new FastMap<>();
+		_registeredSpawns = new HashMap<>();
+		_runningSpawns = new HashMap<>();
 		
 		// load
 		restoreSpawnData();
@@ -372,7 +371,7 @@ public class AutoSpawnHandler
 	
 	public Map<Integer, AutoSpawnInstance> getAutoSpawnInstances(int npcId)
 	{
-		Map<Integer, AutoSpawnInstance> spawnInstList = new FastMap<>();
+		Map<Integer, AutoSpawnInstance> spawnInstList = new HashMap<>();
 		
 		for (AutoSpawnInstance spawnInst : _registeredSpawns.values())
 		{
@@ -606,9 +605,9 @@ public class AutoSpawnHandler
 		
 		protected int _lastLocIndex = -1;
 		
-		private final List<L2Npc> _npcList = new FastList<>();
+		private final List<L2Npc> _npcList = new ArrayList<>();
 		
-		private final List<Location> _locList = new FastList<>();
+		private final List<Location> _locList = new ArrayList<>();
 		
 		private boolean _spawnActive;
 		
@@ -693,7 +692,7 @@ public class AutoSpawnHandler
 		
 		public L2Spawn[] getSpawns()
 		{
-			List<L2Spawn> npcSpawns = new FastList<>();
+			List<L2Spawn> npcSpawns = new ArrayList<>();
 			
 			for (L2Npc npcInst : _npcList)
 			{

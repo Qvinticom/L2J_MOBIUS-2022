@@ -18,9 +18,8 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import java.util.HashMap;
 import java.util.Map;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.idfactory.IdFactory;
@@ -34,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 public class BoatManager
 {
-	private final Map<Integer, L2BoatInstance> _boats = new FastMap<>();
+	private final Map<Integer, L2BoatInstance> _boats = new HashMap<>();
 	private final boolean[] _docksBusy = new boolean[3];
 	
 	public static final int TALKING_ISLAND = 1;

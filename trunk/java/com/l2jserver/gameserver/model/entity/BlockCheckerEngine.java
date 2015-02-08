@@ -18,13 +18,12 @@
  */
 package com.l2jserver.gameserver.model.entity;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -64,15 +63,15 @@ public final class BlockCheckerEngine
 	// The object which holds all basic members info
 	protected ArenaParticipantsHolder _holder;
 	// Maps to hold player of each team and his points
-	protected FastMap<L2PcInstance, Integer> _redTeamPoints = new FastMap<>();
-	protected FastMap<L2PcInstance, Integer> _blueTeamPoints = new FastMap<>();
+	protected HashMap<L2PcInstance, Integer> _redTeamPoints = new HashMap<>();
+	protected HashMap<L2PcInstance, Integer> _blueTeamPoints = new HashMap<>();
 	// The initial points of the event
 	protected int _redPoints = 15;
 	protected int _bluePoints = 15;
 	// Current used arena
 	protected int _arena = -1;
 	// All blocks
-	protected FastList<L2Spawn> _spawns = new FastList<>();
+	protected ArrayList<L2Spawn> _spawns = new ArrayList<>();
 	// Sets if the red team won the event at the end of this (used for packets)
 	protected boolean _isRedWinner;
 	// Time when the event starts. Used on packet sending
@@ -121,7 +120,7 @@ public final class BlockCheckerEngine
 	// Common z coordinate
 	private static final int _zCoord = -2405;
 	// List of dropped items in event (for later deletion)
-	protected FastList<L2ItemInstance> _drops = new FastList<>();
+	protected ArrayList<L2ItemInstance> _drops = new ArrayList<>();
 	// Default arena
 	private static final byte DEFAULT_ARENA = -1;
 	// Event is started
@@ -662,7 +661,7 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsWinner(boolean isRed)
 		{
-			FastMap<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			HashMap<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
 			
 			// Main give
 			for (Entry<L2PcInstance, Integer> points : tempPoints.entrySet())
@@ -719,7 +718,7 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsLooser(boolean isRed)
 		{
-			FastMap<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			HashMap<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
 			
 			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
 			{

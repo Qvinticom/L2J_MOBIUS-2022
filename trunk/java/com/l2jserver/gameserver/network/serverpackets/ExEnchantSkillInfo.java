@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
 
 import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jserver.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2EnchantSkillLearn;
 
 public final class ExEnchantSkillInfo extends L2GameServerPacket
 {
-	private final FastList<Integer> _routes; // skill lvls for each route
+	private final ArrayList<Integer> _routes; // skill lvls for each route
 	
 	private final int _id;
 	private final int _lvl;
@@ -34,7 +34,7 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket
 	
 	public ExEnchantSkillInfo(int id, int lvl)
 	{
-		_routes = new FastList<>();
+		_routes = new ArrayList<>();
 		_id = id;
 		_lvl = lvl;
 		

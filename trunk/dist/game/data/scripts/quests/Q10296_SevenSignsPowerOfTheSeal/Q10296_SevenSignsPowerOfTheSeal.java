@@ -51,12 +51,13 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
+		
+		String htmltext = event;
 		switch (event)
 		{
 			case "32792-04.html":
@@ -96,11 +97,12 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, true);
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		switch (npc.getId())
 		{
 			case ErissEvilThoughts:

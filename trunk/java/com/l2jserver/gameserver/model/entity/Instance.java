@@ -28,14 +28,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -82,8 +80,8 @@ public final class Instance
 	private int _ejectTime = Config.EJECT_DEAD_PLAYER_TIME;
 	/** Allow random walk for NPCs, global parameter. */
 	private boolean _allowRandomWalk = true;
-	private final List<Integer> _players = new FastList<Integer>().shared();
-	private final List<L2Npc> _npcs = new FastList<L2Npc>().shared();
+	private final List<Integer> _players = new CopyOnWriteArrayList<>();
+	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
 	private final Map<Integer, L2DoorInstance> _doors = new ConcurrentHashMap<>();
 	private final Map<String, List<L2Spawn>> _manualSpawn = new HashMap<>();
 	private Location _spawnLoc = null;
@@ -104,7 +102,7 @@ public final class Instance
 	private final List<Integer> _exceptionList = new ArrayList<>();
 	
 	protected ScheduledFuture<?> _checkTimeUpTask = null;
-	protected final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new FastMap<>();
+	protected final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new HashMap<>();
 	
 	public Instance(int id)
 	{

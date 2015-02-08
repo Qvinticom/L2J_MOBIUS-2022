@@ -19,9 +19,8 @@
 package com.l2jserver.gameserver.model;
 
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -50,7 +49,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	{
 		_commandLeader = leader;
 		L2Party party = leader.getParty();
-		_parties = new FastList<L2Party>().shared();
+		_parties = new CopyOnWriteArrayList<>();
 		_parties.add(party);
 		_channelLvl = party.getLevel();
 		party.setCommandChannel(this);
@@ -164,7 +163,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	@Override
 	public List<L2PcInstance> getMembers()
 	{
-		List<L2PcInstance> members = new FastList<L2PcInstance>().shared();
+		List<L2PcInstance> members = new CopyOnWriteArrayList<>();
 		for (L2Party party : getPartys())
 		{
 			members.addAll(party.getMembers());

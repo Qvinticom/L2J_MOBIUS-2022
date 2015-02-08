@@ -19,8 +19,6 @@
 package com.l2jserver.loginserver;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -36,9 +34,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import javolution.io.UTF8StreamReader;
-import javolution.xml.stream.XMLStreamConstants;
-import javolution.xml.stream.XMLStreamReaderImpl;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -81,29 +82,29 @@ public final class GameServerTable
 	 */
 	private void loadGameServerNames()
 	{
-		final File xml = new File(Config.DATAPACK_ROOT, "data/servername.xml");
-		try (InputStream in = new FileInputStream(xml);
-			UTF8StreamReader utf8 = new UTF8StreamReader())
+		final File file = new File(Config.DATAPACK_ROOT + "/data/servername.xml");
+		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+		try
 		{
-			final XMLStreamReaderImpl xpp = new XMLStreamReaderImpl();
-			xpp.setInput(utf8.setInput(in));
-			for (int e = xpp.getEventType(); e != XMLStreamConstants.END_DOCUMENT; e = xpp.next())
+			final DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+			final Document document = documentBuilder.parse(file);
+			final Node node = document.getFirstChild();
+			for (Node n = node.getFirstChild(); n != null; n = n.getNextSibling())
 			{
-				if (e == XMLStreamConstants.START_ELEMENT)
+				if (n.getNodeName().equals("server"))
 				{
-					if (xpp.getLocalName().toString().equals("server"))
-					{
-						Integer id = Integer.valueOf(xpp.getAttributeValue(null, "id").toString());
-						String name = xpp.getAttributeValue(null, "name").toString();
-						_serverNames.put(id, name);
-					}
+					NamedNodeMap attrs = n.getAttributes();
+					
+					int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
+					String name = attrs.getNamedItem("name").getNodeValue();
+					
+					_serverNames.put(id, name);
 				}
 			}
-			xpp.close();
 		}
 		catch (Exception e)
 		{
-			_log.info(getClass().getSimpleName() + ": Cannot load " + xml.getAbsolutePath() + "!");
+			_log.info(getClass().getSimpleName() + ": Cannot load servername.xml!");
 		}
 	}
 	
@@ -443,13 +444,20 @@ public final class GameServerTable
 		{
 			switch (_status)
 			{
-				case 0: return "Auto";
-				case 1: return "Good";
-				case 2: return "Normal";
-				case 3: return "Full";
-				case 4: return "Down";
-				case 5: return "GM Only";
-				default: return "Unknown";
+				case 0:
+					return "Auto";
+				case 1:
+					return "Good";
+				case 2:
+					return "Normal";
+				case 3:
+					return "Full";
+				case 4:
+					return "Down";
+				case 5:
+					return "GM Only";
+				default:
+					return "Unknown";
 			}
 		}
 		

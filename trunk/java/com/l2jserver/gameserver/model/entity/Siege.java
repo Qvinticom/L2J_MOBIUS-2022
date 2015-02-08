@@ -31,8 +31,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javolution.util.FastList;
-
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -223,9 +221,9 @@ public class Siege implements Siegable
 	}
 	
 	// must support Concurrent Modifications
-	private final List<L2SiegeClan> _attackerClans = new FastList<>();
-	private final List<L2SiegeClan> _defenderClans = new FastList<>();
-	private final List<L2SiegeClan> _defenderWaitingClans = new FastList<>();
+	private final List<L2SiegeClan> _attackerClans = new ArrayList<>();
+	private final List<L2SiegeClan> _defenderClans = new ArrayList<>();
+	private final List<L2SiegeClan> _defenderWaitingClans = new ArrayList<>();
 	
 	// Castle setting
 	private final List<L2ControlTowerInstance> _controlTowers = new ArrayList<>();

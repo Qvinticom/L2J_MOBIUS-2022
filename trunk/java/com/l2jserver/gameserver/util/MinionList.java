@@ -18,13 +18,12 @@
  */
 package com.l2jserver.gameserver.util;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -58,7 +57,7 @@ public class MinionList
 		}
 		
 		_master = pMaster;
-		_minionReferences = new FastList<L2MonsterInstance>().shared();
+		_minionReferences = new CopyOnWriteArrayList<>();
 	}
 	
 	/**
@@ -156,7 +155,7 @@ public class MinionList
 		// if master has spawn and can respawn - try to reuse minions
 		if ((_reusedMinionReferences == null) && (_master.getTemplate().getParameters().getSet().get("SummonPrivateRate") == null) && !_master.getTemplate().getParameters().getMinionList("Privates").isEmpty() && (_master.getSpawn() != null) && _master.getSpawn().isRespawnEnabled())
 		{
-			_reusedMinionReferences = new FastList<L2MonsterInstance>().shared();
+			_reusedMinionReferences = new CopyOnWriteArrayList<>();
 		}
 	}
 	
@@ -426,7 +425,7 @@ public class MinionList
 	
 	public final int lazyCountSpawnedMinionsGroups()
 	{
-		Set<Integer> seenGroups = new FastSet<>();
+		Set<Integer> seenGroups = new HashSet<>();
 		for (L2MonsterInstance minion : _minionReferences)
 		{
 			if (minion == null)

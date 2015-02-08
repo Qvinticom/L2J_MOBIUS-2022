@@ -20,10 +20,10 @@ package instances.DisciplesNecropolisPast;
 
 import instances.AbstractInstance;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastList;
 import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
 
 import com.l2jserver.gameserver.enums.ChatType;
@@ -47,8 +47,8 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 {
 	protected class DNPWorld extends InstanceWorld
 	{
-		protected final FastList<L2Npc> anakimGroup = new FastList<>();
-		protected final FastList<L2Npc> lilithGroup = new FastList<>();
+		protected final ArrayList<L2Npc> anakimGroup = new ArrayList<>();
+		protected final ArrayList<L2Npc> lilithGroup = new ArrayList<>();
 		protected int countKill = 0;
 	}
 	
@@ -180,7 +180,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		teleportPlayer(player, ENTER, world.getInstanceId());
 	}
 	
-	private void makeCast(L2Npc npc, FastList<L2Npc> targets)
+	private void makeCast(L2Npc npc, ArrayList<L2Npc> targets)
 	{
 		npc.setTarget(targets.get(getRandom(targets.size())));
 		if (SKILLS.containsKey(npc.getId()))

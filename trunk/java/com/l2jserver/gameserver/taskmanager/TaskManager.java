@@ -32,11 +32,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -62,7 +61,7 @@ public final class TaskManager
 	protected static final Logger _log = Logger.getLogger(TaskManager.class.getName());
 	
 	private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
-	protected final List<ExecutedTask> _currentTasks = new FastList<ExecutedTask>().shared();
+	protected final List<ExecutedTask> _currentTasks = new CopyOnWriteArrayList<>();
 	
 	protected static final String[] SQL_STATEMENTS =
 	{
@@ -204,8 +203,7 @@ public final class TaskManager
 	public void registerTask(Task task)
 	{
 		int key = task.getName().hashCode();
-		_tasks.computeIfAbsent(key, k ->
-		{
+		_tasks.computeIfAbsent(key, k -> {
 			task.initializate();
 			return task;
 		});

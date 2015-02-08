@@ -18,9 +18,9 @@
  */
 package ai.individual;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.enums.ChatType;
@@ -54,7 +54,7 @@ public final class SinWardens extends AbstractNpcAI
 		22438
 	};
 	
-	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
+	private final Map<Integer, Integer> killedMinionsCount = new HashMap<>();
 	
 	private SinWardens()
 	{

@@ -21,11 +21,10 @@ package com.l2jserver.gameserver.communitybbs.BB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.communitybbs.Manager.PostBBSManager;
@@ -60,7 +59,7 @@ public class Post
 	 */
 	public Post(String _PostOwner, int _PostOwnerID, long date, int tid, int _PostForumID, String txt)
 	{
-		_post = new FastList<>();
+		_post = new ArrayList<>();
 		CPost cp = new CPost();
 		cp.postId = 0;
 		cp.postOwner = _PostOwner;
@@ -96,7 +95,7 @@ public class Post
 	
 	public Post(Topic t)
 	{
-		_post = new FastList<>();
+		_post = new ArrayList<>();
 		load(t);
 	}
 	

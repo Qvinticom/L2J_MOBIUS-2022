@@ -26,11 +26,10 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -84,7 +83,7 @@ public class L2Party extends AbstractPlayerGroup
 	private static final Duration PARTY_POSITION_BROADCAST_INTERVAL = Duration.ofSeconds(12);
 	private static final Duration PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT = Duration.ofSeconds(15);
 	
-	private final FastList<L2PcInstance> _members;
+	private final CopyOnWriteArrayList<L2PcInstance> _members;
 	private boolean _pendingInvitation = false;
 	private long _pendingInviteTimeout;
 	private int _partyLvl = 0;
@@ -117,7 +116,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public L2Party(L2PcInstance leader, PartyDistributionType partyDistributionType)
 	{
-		_members = new FastList<L2PcInstance>().shared();
+		_members = new CopyOnWriteArrayList<>();
 		_members.add(leader);
 		_partyLvl = leader.getLevel();
 		_distributionType = partyDistributionType;
@@ -161,7 +160,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	private L2PcInstance getCheckedRandomMember(int itemId, L2Character target)
 	{
-		List<L2PcInstance> availableMembers = new FastList<>();
+		List<L2PcInstance> availableMembers = new ArrayList<>();
 		for (L2PcInstance member : getMembers())
 		{
 			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
@@ -365,8 +364,7 @@ public class L2Party extends AbstractPlayerGroup
 		
 		if (_positionBroadcastTask == null)
 		{
-			_positionBroadcastTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
-			{
+			_positionBroadcastTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> {
 				if (_positionPacket == null)
 				{
 					_positionPacket = new PartyMemberPosition(this);
@@ -432,8 +430,7 @@ public class L2Party extends AbstractPlayerGroup
 			{
 				// Otherwise, delete the old sign, and apply it to the new target
 				_tacticalSigns.replace(tacticalSignId, target);
-				getMembers().forEach(m ->
-				{
+				getMembers().forEach(m -> {
 					m.sendPacket(new ExTacticalSign(tacticalTarget, 0));
 					m.sendPacket(new ExTacticalSign(target, tacticalSignId));
 				});
@@ -774,7 +771,7 @@ public class L2Party extends AbstractPlayerGroup
 		
 		// Check the number of party members that must be rewarded
 		// (The party member must be in range to receive its reward)
-		List<L2PcInstance> ToReward = FastList.newInstance();
+		List<L2PcInstance> ToReward = new ArrayList<>();
 		for (L2PcInstance member : membersList)
 		{
 			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
@@ -797,8 +794,6 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			member.addAdena("Party", count, player, true);
 		}
-		
-		FastList.recycle((FastList<?>) ToReward);
 	}
 	
 	/**
@@ -1049,7 +1044,7 @@ public class L2Party extends AbstractPlayerGroup
 	{
 		try
 		{
-			return _members.getFirst();
+			return _members.get(0);
 		}
 		catch (NoSuchElementException e)
 		{

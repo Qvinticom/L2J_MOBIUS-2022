@@ -18,9 +18,9 @@
  */
 package ai.group_template;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWildBeasts;
 import ai.npc.AbstractNpcAI;
@@ -76,7 +76,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 	};
 	// @formatter:on
 	
-	private static final Map<Integer, Integer> MAD_COW_POLYMORPH = new FastMap<>();
+	private static final Map<Integer, Integer> MAD_COW_POLYMORPH = new HashMap<>();
 	static
 	{
 		MAD_COW_POLYMORPH.put(21824, 21468);
@@ -129,8 +129,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 		NpcStringId.ANIMALS_NEED_LOVE_TOO
 	};
 	
-	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
-	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
+	private static Map<Integer, Integer> _FeedInfo = new HashMap<>();
+	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new HashMap<>();
 	
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
@@ -138,7 +138,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 		private final int _growthLevel;
 		private final int _chance;
 		
-		private final Map<Integer, int[][]> _spiceToMob = new FastMap<>();
+		private final Map<Integer, int[][]> _spiceToMob = new HashMap<>();
 		
 		public GrowthCapableMob(int growthLevel, int chance)
 		{

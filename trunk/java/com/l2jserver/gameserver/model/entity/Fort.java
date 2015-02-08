@@ -33,9 +33,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.FortUpdater;
@@ -81,14 +78,14 @@ public final class Fort extends AbstractResidence
 	private int _state = 0;
 	private int _castleId = 0;
 	private int _supplyLvL = 0;
-	private final FastMap<Integer, FortFunction> _function;
+	private final HashMap<Integer, FortFunction> _function;
 	private final ScheduledFuture<?>[] _FortUpdater = new ScheduledFuture<?>[2];
 	
 	// Spawn Data
 	private boolean _isSuspiciousMerchantSpawned = false;
-	private final FastList<L2Spawn> _siegeNpcs = new FastList<>();
-	private final FastList<L2Spawn> _npcCommanders = new FastList<>();
-	private final FastList<L2Spawn> _specialEnvoys = new FastList<>();
+	private final ArrayList<L2Spawn> _siegeNpcs = new ArrayList<>();
+	private final ArrayList<L2Spawn> _npcCommanders = new ArrayList<>();
+	private final ArrayList<L2Spawn> _specialEnvoys = new ArrayList<>();
 	
 	private final Map<Integer, Integer> _envoyCastles = new HashMap<>(2);
 	private final Set<Integer> _availableCastles = new HashSet<>(1);
@@ -247,7 +244,7 @@ public final class Fort extends AbstractResidence
 		super(fortId);
 		load();
 		loadFlagPoles();
-		_function = new FastMap<>();
+		_function = new HashMap<>();
 		if (getOwnerClan() != null)
 		{
 			setVisibleFlag(true);

@@ -19,10 +19,9 @@
 package com.l2jserver.gameserver.taskmanager;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -43,7 +42,7 @@ public class KnownListUpdateTaskManager
 	// Do full update every FULL_UPDATE_TIMER * KNOWNLIST_UPDATE_INTERVAL
 	public static int _fullUpdateTimer = FULL_UPDATE_TIMER;
 	
-	protected static final FastSet<L2WorldRegion> _failedRegions = new FastSet<>(1);
+	protected static final HashSet<L2WorldRegion> _failedRegions = new HashSet<>(1);
 	
 	protected KnownListUpdateTaskManager()
 	{

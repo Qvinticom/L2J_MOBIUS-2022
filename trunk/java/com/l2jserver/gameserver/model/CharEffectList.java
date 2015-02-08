@@ -31,8 +31,6 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.logging.Logger;
 
-import javolution.util.FastMap;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -65,17 +63,17 @@ public final class CharEffectList
 {
 	private static final Logger _log = Logger.getLogger(CharEffectList.class.getName());
 	/** Map containing all effects from buffs for this effect list. */
-	private volatile FastMap<Integer, BuffInfo> _buffs;
+	private volatile ConcurrentHashMap<Integer, BuffInfo> _buffs;
 	/** Map containing all triggered skills for this effect list. */
-	private volatile FastMap<Integer, BuffInfo> _triggered;
+	private volatile ConcurrentHashMap<Integer, BuffInfo> _triggered;
 	/** Map containing all dances/songs for this effect list. */
-	private volatile FastMap<Integer, BuffInfo> _dances;
+	private volatile ConcurrentHashMap<Integer, BuffInfo> _dances;
 	/** Map containing all toggle for this effect list. */
-	private volatile FastMap<Integer, BuffInfo> _toggles;
+	private volatile ConcurrentHashMap<Integer, BuffInfo> _toggles;
 	/** Map containing all debuffs for this effect list. */
-	private volatile FastMap<Integer, BuffInfo> _debuffs;
+	private volatile ConcurrentHashMap<Integer, BuffInfo> _debuffs;
 	/** They bypass most of the actions, they are not included in most operations. */
-	private volatile FastMap<Integer, BuffInfo> _passives;
+	private volatile ConcurrentHashMap<Integer, BuffInfo> _passives;
 	/** Map containing the all stacked effect in progress for each abnormal type. */
 	private volatile Map<AbnormalType, BuffInfo> _stackedEffects;
 	/** Set containing all abnormal types that shouldn't be added to this creature effect list. */
@@ -118,8 +116,7 @@ public final class CharEffectList
 			{
 				if (_buffs == null)
 				{
-					_buffs = new FastMap<>();
-					_buffs.shared();
+					_buffs = new ConcurrentHashMap<>();
 				}
 			}
 		}
@@ -138,8 +135,7 @@ public final class CharEffectList
 			{
 				if (_triggered == null)
 				{
-					_triggered = new FastMap<>();
-					_triggered.shared();
+					_triggered = new ConcurrentHashMap<>();
 				}
 			}
 		}
@@ -158,8 +154,7 @@ public final class CharEffectList
 			{
 				if (_dances == null)
 				{
-					_dances = new FastMap<>();
-					_dances.shared();
+					_dances = new ConcurrentHashMap<>();
 				}
 			}
 		}
@@ -178,8 +173,7 @@ public final class CharEffectList
 			{
 				if (_toggles == null)
 				{
-					_toggles = new FastMap<>();
-					_toggles.shared();
+					_toggles = new ConcurrentHashMap<>();
 				}
 			}
 		}
@@ -198,8 +192,7 @@ public final class CharEffectList
 			{
 				if (_debuffs == null)
 				{
-					_debuffs = new FastMap<>();
-					_debuffs.shared();
+					_debuffs = new ConcurrentHashMap<>();
 				}
 			}
 		}
@@ -218,8 +211,7 @@ public final class CharEffectList
 			{
 				if (_passives == null)
 				{
-					_passives = new FastMap<>();
-					_passives.shared();
+					_passives = new ConcurrentHashMap<>();
 				}
 			}
 		}

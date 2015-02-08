@@ -18,10 +18,10 @@
  */
 package instances.MonasteryOfSilence2;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
 import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
 import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
@@ -196,11 +196,11 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		6717
 	};
 	
-	private final FastMap<Integer, InstanceHolder> instanceWorlds = new FastMap<>();
+	private final HashMap<Integer, InstanceHolder> instanceWorlds = new HashMap<>();
 	
 	public static class InstanceHolder
 	{
-		List<L2Npc> mobs = new FastList<>();
+		List<L2Npc> mobs = new ArrayList<>();
 	}
 	
 	private class MoSWorld2 extends InstanceWorld

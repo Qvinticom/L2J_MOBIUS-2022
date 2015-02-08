@@ -25,12 +25,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -43,7 +42,7 @@ public class RaidBossPointsManager
 {
 	private static final Logger _log = Logger.getLogger(RaidBossPointsManager.class.getName());
 	
-	private FastMap<Integer, Map<Integer, Integer>> _list;
+	private HashMap<Integer, Map<Integer, Integer>> _list;
 	
 	public RaidBossPointsManager()
 	{
@@ -52,7 +51,7 @@ public class RaidBossPointsManager
 	
 	private final void init()
 	{
-		_list = new FastMap<>();
+		_list = new HashMap<>();
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT `charId`,`boss_id`,`points` FROM `character_raid_points`"))
@@ -65,7 +64,7 @@ public class RaidBossPointsManager
 				Map<Integer, Integer> values = _list.get(charId);
 				if (values == null)
 				{
-					values = new FastMap<>();
+					values = new HashMap<>();
 				}
 				values.put(bossId, points);
 				_list.put(charId, values);
@@ -100,7 +99,7 @@ public class RaidBossPointsManager
 		Map<Integer, Integer> tmpPoint = _list.get(ownerId);
 		if (tmpPoint == null)
 		{
-			tmpPoint = new FastMap<>();
+			tmpPoint = new HashMap<>();
 			tmpPoint.put(bossId, points);
 			updatePointsInDB(player, bossId, points);
 		}
@@ -163,8 +162,8 @@ public class RaidBossPointsManager
 	
 	public Map<Integer, Integer> getRankList()
 	{
-		Map<Integer, Integer> tmpRanking = new FastMap<>();
-		Map<Integer, Integer> tmpPoints = new FastMap<>();
+		Map<Integer, Integer> tmpRanking = new HashMap<>();
+		Map<Integer, Integer> tmpPoints = new HashMap<>();
 		
 		for (int ownerId : _list.keySet())
 		{

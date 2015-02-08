@@ -19,10 +19,10 @@
 package ai.group_template;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javolution.util.FastMap;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 import ai.npc.AbstractNpcAI;
 
@@ -104,8 +104,8 @@ public final class BeastFarm extends AbstractNpcAI
 		18900
 	};
 	
-	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
-	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
+	private static Map<Integer, Integer> _FeedInfo = new HashMap<>();
+	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new HashMap<>();
 	private static List<TamedBeast> TAMED_BEAST_DATA = new ArrayList<>();
 	
 	private BeastFarm()
@@ -395,7 +395,7 @@ public final class BeastFarm extends AbstractNpcAI
 		private final int _chance;
 		private final int _growthLevel;
 		private final int _tameNpcId;
-		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<>();
+		private final Map<Integer, Integer> _skillSuccessNpcIdList = new HashMap<>();
 		
 		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
 		{

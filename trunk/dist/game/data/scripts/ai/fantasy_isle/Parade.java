@@ -19,10 +19,9 @@
 package ai.fantasy_isle;
 
 import java.text.SimpleDateFormat;
-import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GameTimeController;
@@ -118,16 +117,15 @@ public class Parade extends AbstractNpcAI
 	private final int[][] START5 = {{-57233, -53554, -2015, 57344},{-57290, -53610, -2015, 57344},{-57346, -53667, -2015, 57344}};
 	private final int[][] GOAL5  = {{-55338, -55435, -2015, 57344},{-55395, -55491, -2015, 57344},{-55451, -55547, -2015, 57344}};
 	
-	protected final int[][][] START = {START1, START2, START3, START4, START5};
-	protected final int[][][] GOAL  = {GOAL1, GOAL2, GOAL3, GOAL4, GOAL5};
+	final int[][][] START = {START1, START2, START3, START4, START5};
+	final int[][][] GOAL  = {GOAL1, GOAL2, GOAL3, GOAL4, GOAL5};
 	// @formatter:on
 	
-	protected ScheduledFuture<?> spawnTask;
-	protected ScheduledFuture<?> deleteTask;
-	protected ScheduledFuture<?> cleanTask;
-	
-	protected int npcIndex;
-	protected FastList<L2Npc> spawns;
+	int npcIndex;
+	CopyOnWriteArrayList<L2Npc> spawns;
+	ScheduledFuture<?> spawnTask;
+	ScheduledFuture<?> deleteTask;
+	ScheduledFuture<?> cleanTask;
 	
 	public Parade()
 	{
@@ -148,7 +146,7 @@ public class Parade extends AbstractNpcAI
 	protected void load()
 	{
 		npcIndex = 0;
-		spawns = new FastList<L2Npc>().shared();
+		spawns = new CopyOnWriteArrayList<>();
 	}
 	
 	protected void clean()
@@ -220,15 +218,14 @@ public class Parade extends AbstractNpcAI
 		{
 			if (spawns.size() > 0)
 			{
-				for (Iterator<L2Npc> it = spawns.iterator(); it.hasNext();)
+				for (L2Npc actor : spawns)
 				{
-					L2Npc actor = it.next();
 					if (actor != null)
 					{
 						if (actor.calculateDistance(actor.getXdestination(), actor.getYdestination(), 0, false, true) < (100 * 100))
 						{
 							actor.deleteMe();
-							it.remove();
+							spawns.remove(actor);
 						}
 						else if (!actor.isMoving())
 						{

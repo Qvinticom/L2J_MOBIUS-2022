@@ -446,10 +446,10 @@ public final class L2World
 			return null;
 		}
 		
-		// Create an FastList in order to contain all visible L2Object
+		// Create an ArrayList in order to contain all visible L2Object
 		List<L2Object> result = new ArrayList<>();
 		
-		// Go through the FastList of region
+		// Go through the ArrayList of region
 		for (L2WorldRegion regi : reg.getSurroundingRegions())
 		{
 			// Go through visible objects of the selected region
@@ -488,10 +488,10 @@ public final class L2World
 		
 		final int sqRadius = radius * radius;
 		
-		// Create an FastList in order to contain all visible L2Object
+		// Create an ArrayList in order to contain all visible L2Object
 		List<L2Object> result = new ArrayList<>();
 		
-		// Go through the FastList of region
+		// Go through the ArrayList of region
 		for (L2WorldRegion regi : object.getWorldRegion().getSurroundingRegions())
 		{
 			// Go through visible objects of the selected region
@@ -529,7 +529,7 @@ public final class L2World
 		
 		final int sqRadius = radius * radius;
 		
-		// Create an FastList in order to contain all visible L2Object
+		// Create an ArrayList in order to contain all visible L2Object
 		List<L2Object> result = new ArrayList<>();
 		
 		// Go through visible object of the selected region
@@ -567,10 +567,10 @@ public final class L2World
 			return null;
 		}
 		
-		// Create an FastList in order to contain all visible L2Object
+		// Create an ArrayList in order to contain all visible L2Object
 		List<L2Playable> result = new ArrayList<>();
 		
-		// Go through the FastList of region
+		// Go through the ArrayList of region
 		for (L2WorldRegion regi : reg.getSurroundingRegions())
 		{
 			// Create an Iterator to go through the visible L2Object of the L2WorldRegion

@@ -18,12 +18,11 @@
  */
 package com.l2jserver.gameserver.model.entity;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -83,7 +82,7 @@ public class Duel
 			_duelEndTime.add(Calendar.SECOND, 120);
 		}
 		
-		_playerConditions = new FastList<>();
+		_playerConditions = new ArrayList<>();
 		
 		setFinished(false);
 		
@@ -108,7 +107,7 @@ public class Duel
 		private double _cp;
 		private boolean _paDuel;
 		private int _x, _y, _z;
-		private FastList<Skill> _debuffs;
+		private ArrayList<Skill> _debuffs;
 		
 		public PlayerCondition(L2PcInstance player, boolean partyDuel)
 		{
@@ -160,7 +159,7 @@ public class Duel
 		{
 			if (_debuffs == null)
 			{
-				_debuffs = new FastList<>();
+				_debuffs = new ArrayList<>();
 			}
 			
 			_debuffs.add(debuff);

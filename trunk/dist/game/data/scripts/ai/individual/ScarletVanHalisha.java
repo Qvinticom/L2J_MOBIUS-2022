@@ -22,9 +22,9 @@ import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GeoData;
@@ -217,7 +217,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private L2Character getRandomTarget(L2Npc npc)
 	{
 		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-		FastList<L2Character> result = new FastList<>();
+		ArrayList<L2Character> result = new ArrayList<>();
 		{
 			for (L2Object obj : objs)
 			{

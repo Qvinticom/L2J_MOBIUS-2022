@@ -24,14 +24,13 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -54,8 +53,8 @@ public final class FortSiegeManager
 	private int _attackerMaxClans = 500; // Max number of clans
 	
 	// Fort Siege settings
-	private FastMap<Integer, FastList<FortSiegeSpawn>> _commanderSpawnList;
-	private FastMap<Integer, FastList<CombatFlag>> _flagList;
+	private HashMap<Integer, ArrayList<FortSiegeSpawn>> _commanderSpawnList;
+	private HashMap<Integer, ArrayList<CombatFlag>> _flagList;
 	private boolean _justToTerritory = true; // Changeable in fortsiege.properties
 	private int _flagMaxCount = 1; // Changeable in fortsiege.properties
 	private int _siegeClanMinLevel = 4; // Changeable in fortsiege.properties
@@ -138,13 +137,13 @@ public final class FortSiegeManager
 		_suspiciousMerchantRespawnDelay = Integer.decode(siegeSettings.getProperty("SuspiciousMerchantRespawnDelay", "180"));
 		
 		// Siege spawns settings
-		_commanderSpawnList = new FastMap<>();
-		_flagList = new FastMap<>();
+		_commanderSpawnList = new HashMap<>();
+		_flagList = new HashMap<>();
 		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
-			FastList<FortSiegeSpawn> _commanderSpawns = new FastList<>();
-			FastList<CombatFlag> _flagSpawns = new FastList<>();
+			ArrayList<FortSiegeSpawn> _commanderSpawns = new ArrayList<>();
+			ArrayList<CombatFlag> _flagSpawns = new ArrayList<>();
 			for (int i = 1; i < 5; i++)
 			{
 				final String _spawnParams = siegeSettings.getProperty(fort.getName().replace(" ", "") + "Commander" + i, "");
@@ -199,7 +198,7 @@ public final class FortSiegeManager
 		}
 	}
 	
-	public final FastList<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
+	public final ArrayList<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
 	{
 		if (_commanderSpawnList.containsKey(_fortId))
 		{
@@ -208,7 +207,7 @@ public final class FortSiegeManager
 		return null;
 	}
 	
-	public final FastList<CombatFlag> getFlagList(int _fortId)
+	public final ArrayList<CombatFlag> getFlagList(int _fortId)
 	{
 		if (_flagList.containsKey(_fortId))
 		{
@@ -273,7 +272,7 @@ public final class FortSiegeManager
 	{
 		if (_sieges == null)
 		{
-			_sieges = new FastList<>();
+			_sieges = new ArrayList<>();
 		}
 		return _sieges;
 	}
@@ -282,7 +281,7 @@ public final class FortSiegeManager
 	{
 		if (_sieges == null)
 		{
-			_sieges = new FastList<>();
+			_sieges = new ArrayList<>();
 		}
 		_sieges.add(fortSiege);
 	}
@@ -301,7 +300,7 @@ public final class FortSiegeManager
 		
 		final Fort fort = FortManager.getInstance().getFort(player);
 		
-		final FastList<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+		final ArrayList<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
 		for (CombatFlag cf : fcf)
 		{
 			if (cf.getCombatFlagInstance() == item)
@@ -349,7 +348,7 @@ public final class FortSiegeManager
 	{
 		final Fort fort = FortManager.getInstance().getFortById(fortId);
 		
-		final FastList<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+		final ArrayList<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
 		
 		for (CombatFlag cf : fcf)
 		{

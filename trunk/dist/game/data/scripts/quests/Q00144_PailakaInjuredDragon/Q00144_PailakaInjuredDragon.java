@@ -18,12 +18,11 @@
  */
 package quests.Q00144_PailakaInjuredDragon;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -66,7 +65,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	
 	// @formatter:off
 	// NO EXIT ZONES
-	private static final Map<Integer, int[]> NOEXIT_ZONES = new FastMap<>();
+	private static final Map<Integer, int[]> NOEXIT_ZONES = new HashMap<>();
 	static
 	{
 		NOEXIT_ZONES.put(200001, new int[]{123167, -45743, -3023});
@@ -204,7 +203,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		{4347,6}  // Blessed Body Lv6
 	};
 	
-	private static final FastList<PailakaDrop> DROPLIST = new FastList<>();
+	private static final ArrayList<PailakaDrop> DROPLIST = new ArrayList<>();
 	static
 	{
 		DROPLIST.add(new PailakaDrop(HEAL_POTION, 80));
@@ -257,10 +256,10 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
 		final int cond = qs.getCond();
@@ -420,10 +419,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg(player);
+		final QuestState qs = getQuestState(player, true);
 		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return htmltext;
 		}
 		
 		final int cond = qs.getCond();

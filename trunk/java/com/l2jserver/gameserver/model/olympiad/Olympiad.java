@@ -36,9 +36,6 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -60,7 +57,7 @@ public class Olympiad extends ListenersContainer
 	protected static final Logger _log = Logger.getLogger(Olympiad.class.getName());
 	protected static final Logger _logResults = Logger.getLogger("olympiad");
 	
-	private static final Map<Integer, StatsSet> _nobles = new FastMap<>();
+	private static final Map<Integer, StatsSet> _nobles = new HashMap<>();
 	protected static List<StatsSet> _heroesToBe;
 	private static final Map<Integer, Integer> _noblesRank = new HashMap<>();
 	
@@ -877,7 +874,7 @@ public class Olympiad extends ListenersContainer
 			}
 		}
 		
-		_heroesToBe = new FastList<>();
+		_heroesToBe = new ArrayList<>();
 		
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(OLYMPIAD_GET_HEROS))

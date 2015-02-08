@@ -27,10 +27,9 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.L2Mentee;
@@ -47,8 +46,8 @@ public class MentorManager
 {
 	private static final Logger _log = Logger.getLogger(MentorManager.class.getName());
 	
-	private final Map<Integer, Map<Integer, L2Mentee>> _menteeData = new FastMap<Integer, Map<Integer, L2Mentee>>().shared();
-	private final Map<Integer, L2Mentee> _mentors = new FastMap<Integer, L2Mentee>().shared();
+	private final Map<Integer, Map<Integer, L2Mentee>> _menteeData = new ConcurrentHashMap<>();
+	private final Map<Integer, L2Mentee> _mentors = new ConcurrentHashMap<>();
 	
 	protected MentorManager()
 	{
@@ -166,7 +165,7 @@ public class MentorManager
 	 */
 	public void addMentor(int mentorId, int menteeId)
 	{
-		_menteeData.computeIfAbsent(mentorId, map -> new FastMap<Integer, L2Mentee>().shared());
+		_menteeData.computeIfAbsent(mentorId, map -> new ConcurrentHashMap<>());
 		if (_menteeData.get(mentorId).containsKey(menteeId))
 		{
 			_menteeData.get(mentorId).get(menteeId).load(); // Just reloading data if is already there

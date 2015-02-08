@@ -22,11 +22,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -58,8 +56,8 @@ public final class L2WorldRegion
 	
 	public L2WorldRegion(int pTileX, int pTileY)
 	{
-		_allPlayable = new FastMap<Integer, L2Playable>().shared();
-		_visibleObjects = new FastMap<Integer, L2Object>().shared();
+		_allPlayable = new ConcurrentHashMap<>();
+		_visibleObjects = new ConcurrentHashMap<>();
 		_surroundingRegions = new ArrayList<>();
 		
 		_tileX = pTileX;
@@ -67,7 +65,7 @@ public final class L2WorldRegion
 		
 		// default a newly initialized region to inactive, unless always on is specified
 		_active = Config.GRIDS_ALWAYS_ON;
-		_zones = new FastList<>();
+		_zones = new ArrayList<>();
 	}
 	
 	public List<L2ZoneType> getZones()
@@ -456,7 +454,7 @@ public final class L2WorldRegion
 	}
 	
 	/**
-	 * @return the FastList _surroundingRegions containing all L2WorldRegion around the current L2WorldRegion
+	 * @return the ArrayList _surroundingRegions containing all L2WorldRegion around the current L2WorldRegion
 	 */
 	public List<L2WorldRegion> getSurroundingRegions()
 	{

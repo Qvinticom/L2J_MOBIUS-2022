@@ -19,11 +19,10 @@
 package com.l2jserver.gameserver.model.actor.status;
 
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -109,7 +108,7 @@ public class CharStatus
 	{
 		if (_StatusListener == null)
 		{
-			_StatusListener = new FastSet<L2Character>().shared();
+			_StatusListener = new CopyOnWriteArraySet<>();
 		}
 		return _StatusListener;
 	}

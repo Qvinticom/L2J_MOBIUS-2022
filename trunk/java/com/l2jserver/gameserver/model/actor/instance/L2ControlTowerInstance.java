@@ -18,10 +18,9 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -86,7 +85,7 @@ public class L2ControlTowerInstance extends L2Tower
 			{
 				if (_guards == null)
 				{
-					_guards = new FastList<>();
+					_guards = new ArrayList<>();
 				}
 			}
 		}

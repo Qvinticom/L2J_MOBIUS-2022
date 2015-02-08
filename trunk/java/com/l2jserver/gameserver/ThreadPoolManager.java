@@ -30,10 +30,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-import javolution.util.FastSet;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.util.StringUtil;
@@ -616,11 +612,6 @@ public class ThreadPoolManager
 			" |- PoolSize:        " + _eventThreadPool.getPoolSize(),
 			" |- CompletedTasks:  " + _eventThreadPool.getCompletedTaskCount(),
 			" |- QueuedTasks:     " + _eventThreadPool.getQueue().size(),
-			" | -------",
-			" + Javolution stats:",
-			" |- FastList:        " + FastList.report(),
-			" |- FastMap:        " + FastMap.report(),
-			" |- FastSet:        " + FastSet.report(),
 			" | -------"
 		};
 	}

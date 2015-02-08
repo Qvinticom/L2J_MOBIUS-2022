@@ -21,10 +21,9 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.L2World;
@@ -38,7 +37,7 @@ public final class CoupleManager
 {
 	private static final Logger _log = Logger.getLogger(CoupleManager.class.getName());
 	
-	private FastList<Couple> _couples;
+	private ArrayList<Couple> _couples;
 	
 	protected CoupleManager()
 	{
@@ -139,11 +138,11 @@ public final class CoupleManager
 		return -1;
 	}
 	
-	public final FastList<Couple> getCouples()
+	public final ArrayList<Couple> getCouples()
 	{
 		if (_couples == null)
 		{
-			_couples = new FastList<>();
+			_couples = new ArrayList<>();
 		}
 		return _couples;
 	}

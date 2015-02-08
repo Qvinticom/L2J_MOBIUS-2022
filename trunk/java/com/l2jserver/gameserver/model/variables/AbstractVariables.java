@@ -18,9 +18,8 @@
  */
 package com.l2jserver.gameserver.model.variables;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.interfaces.IDeletable;
@@ -36,7 +35,7 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	
 	public AbstractVariables()
 	{
-		super(new FastMap<String, Object>().shared());
+		super(new ConcurrentHashMap<String, Object>());
 	}
 	
 	/**

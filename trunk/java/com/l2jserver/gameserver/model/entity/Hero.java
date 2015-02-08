@@ -24,17 +24,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -77,14 +76,14 @@ public class Hero
 	// delete hero items
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
 	
-	private static final Map<Integer, StatsSet> _heroes = new FastMap<>();
-	private static final Map<Integer, StatsSet> _completeHeroes = new FastMap<>();
+	private static final Map<Integer, StatsSet> _heroes = new HashMap<>();
+	private static final Map<Integer, StatsSet> _completeHeroes = new HashMap<>();
 	
-	private static final Map<Integer, StatsSet> _herocounts = new FastMap<>();
-	private static final Map<Integer, List<StatsSet>> _herofights = new FastMap<>();
+	private static final Map<Integer, StatsSet> _herocounts = new HashMap<>();
+	private static final Map<Integer, List<StatsSet>> _herofights = new HashMap<>();
 	
-	private static final Map<Integer, List<StatsSet>> _herodiary = new FastMap<>();
-	private static final Map<Integer, String> _heroMessage = new FastMap<>();
+	private static final Map<Integer, List<StatsSet>> _herodiary = new HashMap<>();
+	private static final Map<Integer, String> _heroMessage = new HashMap<>();
 	
 	public static final String COUNT = "count";
 	public static final String PLAYED = "played";
@@ -235,7 +234,7 @@ public class Hero
 	
 	public void loadDiary(int charId)
 	{
-		final List<StatsSet> _diary = new FastList<>();
+		final List<StatsSet> _diary = new ArrayList<>();
 		int diaryentries = 0;
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
@@ -290,7 +289,7 @@ public class Hero
 	
 	public void loadFights(int charId)
 	{
-		final List<StatsSet> _fights = new FastList<>();
+		final List<StatsSet> _fights = new ArrayList<>();
 		StatsSet _herocountdata = new StatsSet();
 		Calendar _data = Calendar.getInstance();
 		_data.set(Calendar.DAY_OF_MONTH, 1);
@@ -464,7 +463,7 @@ public class Hero
 				
 				if (!_mainlist.isEmpty())
 				{
-					FastList<StatsSet> _list = FastList.newInstance();
+					final ArrayList<StatsSet> _list = new ArrayList<>();
 					_list.addAll(_mainlist);
 					Collections.reverse(_list);
 					
@@ -516,8 +515,6 @@ public class Hero
 					}
 					
 					DiaryReply.replace("%list%", fList.toString());
-					
-					FastList.recycle(_list);
 				}
 				else
 				{
@@ -671,7 +668,7 @@ public class Hero
 			return;
 		}
 		
-		Map<Integer, StatsSet> heroes = new FastMap<>();
+		Map<Integer, StatsSet> heroes = new HashMap<>();
 		
 		for (StatsSet hero : newHeroes)
 		{

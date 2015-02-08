@@ -19,14 +19,13 @@
 package com.l2jserver.gameserver.communitybbs.Manager;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.gameserver.communitybbs.BB.Forum;
 import com.l2jserver.gameserver.communitybbs.BB.Post;
@@ -43,8 +42,8 @@ public class TopicBBSManager extends BaseBBSManager
 	
 	protected TopicBBSManager()
 	{
-		_table = new FastList<>();
-		_maxId = new FastMap<Forum, Integer>().shared();
+		_table = new ArrayList<>();
+		_maxId = new ConcurrentHashMap<>();
 	}
 	
 	public void addTopic(Topic tt)

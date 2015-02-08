@@ -18,9 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2ControllableMobAI;
@@ -68,7 +67,7 @@ public final class MobGroup
 	{
 		if (_mobs == null)
 		{
-			_mobs = new FastList<>();
+			_mobs = new ArrayList<>();
 		}
 		
 		return _mobs;
@@ -370,7 +369,7 @@ public final class MobGroup
 	
 	protected void removeDead()
 	{
-		List<L2ControllableMobInstance> deadMobs = new FastList<>();
+		List<L2ControllableMobInstance> deadMobs = new ArrayList<>();
 		
 		for (L2ControllableMobInstance mobInst : getMobs())
 		{

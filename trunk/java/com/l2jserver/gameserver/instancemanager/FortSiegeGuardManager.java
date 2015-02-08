@@ -21,11 +21,10 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -38,7 +37,7 @@ public final class FortSiegeGuardManager
 	private static final Logger _log = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
 	private final Fort _fort;
-	private final FastMap<Integer, FastList<L2Spawn>> _siegeGuards = new FastMap<>();
+	private final HashMap<Integer, ArrayList<L2Spawn>> _siegeGuards = new HashMap<>();
 	
 	public FortSiegeGuardManager(Fort fort)
 	{
@@ -52,7 +51,7 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final FastList<L2Spawn> monsterList = getSiegeGuardSpawn().get(getFort().getResidenceId());
+			final ArrayList<L2Spawn> monsterList = getSiegeGuardSpawn().get(getFort().getResidenceId());
 			if (monsterList != null)
 			{
 				for (L2Spawn spawnDat : monsterList)
@@ -82,7 +81,7 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final FastList<L2Spawn> monsterList = getSiegeGuardSpawn().get(getFort().getResidenceId());
+			final ArrayList<L2Spawn> monsterList = getSiegeGuardSpawn().get(getFort().getResidenceId());
 			
 			if (monsterList != null)
 			{
@@ -115,7 +114,7 @@ public final class FortSiegeGuardManager
 			ps.setInt(1, fortId);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				FastList<L2Spawn> siegeGuardSpawns = new FastList<>();
+				ArrayList<L2Spawn> siegeGuardSpawns = new ArrayList<>();
 				while (rs.next())
 				{
 					L2NpcTemplate template = NpcData.getInstance().getTemplate(rs.getInt("npcId"));
@@ -151,7 +150,7 @@ public final class FortSiegeGuardManager
 		return _fort;
 	}
 	
-	public final FastMap<Integer, FastList<L2Spawn>> getSiegeGuardSpawn()
+	public final HashMap<Integer, ArrayList<L2Spawn>> getSiegeGuardSpawn()
 	{
 		return _siegeGuards;
 	}

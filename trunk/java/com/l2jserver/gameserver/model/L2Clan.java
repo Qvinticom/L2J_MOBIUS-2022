@@ -22,15 +22,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -110,7 +109,7 @@ public class L2Clan implements IIdentifiable, INamable
 	private String _name;
 	private int _clanId;
 	private L2ClanMember _leader;
-	private final Map<Integer, L2ClanMember> _members = new FastMap<>();
+	private final Map<Integer, L2ClanMember> _members = new HashMap<>();
 	
 	private String _allyName;
 	private int _allyId;
@@ -131,16 +130,16 @@ public class L2Clan implements IIdentifiable, INamable
 	private int _bloodOathCount;
 	
 	private final ItemContainer _warehouse = new ClanWarehouse(this);
-	private final List<Integer> _atWarWith = new FastList<>();
-	private final List<Integer> _atWarAttackers = new FastList<>();
+	private final List<Integer> _atWarWith = new ArrayList<>();
+	private final List<Integer> _atWarAttackers = new ArrayList<>();
 	
 	private Forum _forum;
 	
-	/** FastMap(Integer, L2Skill) containing all skills of the L2Clan */
-	private final Map<Integer, Skill> _skills = new FastMap<>();
-	private final Map<Integer, RankPrivs> _privs = new FastMap<>();
-	private final Map<Integer, SubPledge> _subPledges = new FastMap<>();
-	private final Map<Integer, Skill> _subPledgeSkills = new FastMap<>();
+	/** HashMap(Integer, L2Skill) containing all skills of the L2Clan */
+	private final Map<Integer, Skill> _skills = new HashMap<>();
+	private final Map<Integer, RankPrivs> _privs = new HashMap<>();
+	private final Map<Integer, SubPledge> _subPledges = new HashMap<>();
+	private final Map<Integer, Skill> _subPledgeSkills = new HashMap<>();
 	
 	private int _reputationScore = 0;
 	private int _rank = 0;
@@ -610,9 +609,9 @@ public class L2Clan implements IIdentifiable, INamable
 	 * @param exclude the object Id to exclude from list.
 	 * @return all online members excluding the one with object id {code exclude}.
 	 */
-	public FastList<L2PcInstance> getOnlineMembers(int exclude)
+	public ArrayList<L2PcInstance> getOnlineMembers(int exclude)
 	{
-		final FastList<L2PcInstance> onlineMembers = new FastList<>();
+		final ArrayList<L2PcInstance> onlineMembers = new ArrayList<>();
 		for (L2ClanMember temp : _members.values())
 		{
 			if ((temp != null) && temp.isOnline() && (temp.getObjectId() != exclude))
@@ -1712,7 +1711,7 @@ public class L2Clan implements IIdentifiable, INamable
 		private final int _id;
 		private String _subPledgeName;
 		private int _leaderId;
-		private final Map<Integer, Skill> _subPledgeSkills = new FastMap<>();
+		private final Map<Integer, Skill> _subPledgeSkills = new HashMap<>();
 		
 		public SubPledge(int id, String name, int leaderId)
 		{
@@ -2991,7 +2990,7 @@ public class L2Clan implements IIdentifiable, INamable
 	
 	public SubPledgeSkill[] getAllSubSkills()
 	{
-		FastList<SubPledgeSkill> list = FastList.newInstance();
+		final ArrayList<SubPledgeSkill> list = new ArrayList<>();
 		for (Skill skill : _subPledgeSkills.values())
 		{
 			list.add(new SubPledgeSkill(0, skill.getId(), skill.getLevel()));
@@ -3004,7 +3003,6 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 		}
 		SubPledgeSkill[] result = list.toArray(new SubPledgeSkill[list.size()]);
-		FastList.recycle(list);
 		return result;
 	}
 	

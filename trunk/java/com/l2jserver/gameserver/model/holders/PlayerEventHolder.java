@@ -18,9 +18,8 @@
  */
 package com.l2jserver.gameserver.model.holders;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.model.Location;
@@ -69,7 +68,7 @@ public final class PlayerEventHolder
 		_pvpKills = player.getPvpKills();
 		_pkKills = player.getPkKills();
 		_karma = player.getKarma();
-		_kills = new FastList<>();
+		_kills = new ArrayList<>();
 		_sitForced = sitForced;
 	}
 	

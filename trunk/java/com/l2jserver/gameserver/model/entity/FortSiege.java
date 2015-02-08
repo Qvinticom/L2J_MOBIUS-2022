@@ -21,13 +21,12 @@ package com.l2jserver.gameserver.model.entity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
@@ -227,10 +226,10 @@ public class FortSiege implements Siegable
 		}
 	}
 	
-	private final List<L2SiegeClan> _attackerClans = new FastList<>();
+	private final List<L2SiegeClan> _attackerClans = new ArrayList<>();
 	
 	// Fort setting
-	protected FastList<L2Spawn> _commanders = new FastList<>();
+	protected ArrayList<L2Spawn> _commanders = new ArrayList<>();
 	protected final Fort _fort;
 	private boolean _isInProgress = false;
 	private FortSiegeGuardManager _siegeGuardManager;
@@ -553,7 +552,7 @@ public class FortSiege implements Siegable
 	@Override
 	public List<L2PcInstance> getAttackersInZone()
 	{
-		List<L2PcInstance> players = new FastList<>();
+		List<L2PcInstance> players = new ArrayList<>();
 		L2Clan clan;
 		for (L2SiegeClan siegeclan : getAttackerClans())
 		{
@@ -587,7 +586,7 @@ public class FortSiege implements Siegable
 	 */
 	public List<L2PcInstance> getOwnersInZone()
 	{
-		List<L2PcInstance> players = new FastList<>();
+		List<L2PcInstance> players = new ArrayList<>();
 		L2Clan clan;
 		if (getFort().getOwnerClan() != null)
 		{
@@ -625,7 +624,7 @@ public class FortSiege implements Siegable
 			L2Spawn spawn = instance.getSpawn();
 			if (spawn != null)
 			{
-				FastList<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
+				ArrayList<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
 				for (FortSiegeSpawn spawn2 : commanders)
 				{
 					if (spawn2.getId() == spawn.getId())

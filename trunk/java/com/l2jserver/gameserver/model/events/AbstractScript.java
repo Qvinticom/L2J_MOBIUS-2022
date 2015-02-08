@@ -24,17 +24,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -143,7 +143,7 @@ public abstract class AbstractScript extends ManagedScript
 {
 	protected static final Logger _log = Logger.getLogger(AbstractScript.class.getName());
 	private final Map<ListenerRegisterType, Set<Integer>> _registeredIds = new ConcurrentHashMap<>();
-	private final List<AbstractEventListener> _listeners = new FastList<AbstractEventListener>().shared();
+	private final List<AbstractEventListener> _listeners = new CopyOnWriteArrayList<>();
 	
 	public AbstractScript()
 	{
@@ -291,7 +291,7 @@ public abstract class AbstractScript extends ManagedScript
 				{
 					if (!_registeredIds.containsKey(type))
 					{
-						_registeredIds.put(type, new FastSet<Integer>().shared());
+						_registeredIds.put(type, new CopyOnWriteArraySet<Integer>());
 					}
 					_registeredIds.get(type).addAll(ids);
 				}
@@ -1338,7 +1338,7 @@ public abstract class AbstractScript extends ManagedScript
 				
 				if (!_registeredIds.containsKey(registerType))
 				{
-					_registeredIds.put(registerType, new FastSet<Integer>().shared());
+					_registeredIds.put(registerType, new HashSet<Integer>());
 				}
 				_registeredIds.get(registerType).add(id);
 			}
@@ -1453,7 +1453,7 @@ public abstract class AbstractScript extends ManagedScript
 			}
 			if (!_registeredIds.containsKey(registerType))
 			{
-				_registeredIds.put(registerType, new FastSet<Integer>().shared());
+				_registeredIds.put(registerType, new HashSet<Integer>());
 			}
 			_registeredIds.get(registerType).addAll(ids);
 		}
@@ -2508,16 +2508,14 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			if (includeCommandChannel && player.getParty().isInCommandChannel())
 			{
-				player.getParty().getCommandChannel().forEachMember(member ->
-				{
+				player.getParty().getCommandChannel().forEachMember(member -> {
 					actionForEachPlayer(member, npc, isSummon);
 					return true;
 				});
 			}
 			else if (includeParty)
 			{
-				player.getParty().forEachMember(member ->
-				{
+				player.getParty().forEachMember(member -> {
 					actionForEachPlayer(member, npc, isSummon);
 					return true;
 				});

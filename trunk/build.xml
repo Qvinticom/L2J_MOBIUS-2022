@@ -90,7 +90,7 @@
 				<attribute name="Built-By" value="${user.name}" />
 				<attribute name="Built-Date" value="${time.stamp}" />
 				<attribute name="Implementation-URL" value="http://www.l2jserver.com/" />
-				<attribute name="Class-Path" value="../libs/c3p0-0.9.5.jar ../libs/javolution-5.5.1.jar ../libs/mysql-connector-java-5.1.34-bin.jar" />
+				<attribute name="Class-Path" value="../libs/c3p0-0.9.5.jar ../libs/mysql-connector-java-5.1.34-bin.jar" />
 				<attribute name="Main-Class" value="com.l2jserver.loginserver.L2LoginServer" />
 			</manifest>
 		</jar>

@@ -22,13 +22,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.InstanceListManager;
@@ -181,7 +180,7 @@ public final class CastleManager implements InstanceListManager
 	{
 		if (_castles == null)
 		{
-			_castles = new FastList<>();
+			_castles = new ArrayList<>();
 		}
 		return _castles;
 	}

@@ -19,7 +19,8 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
-import javolution.util.FastSet;
+
+import java.util.HashSet;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.sql.impl.OfflineTradersTable;
@@ -43,7 +44,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	
 	private int _storePlayerId;
-	private FastSet<ItemRequest> _items = null;
+	private HashSet<ItemRequest> _items = null;
 	
 	@Override
 	protected void readImpl()
@@ -54,7 +55,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 		{
 			return;
 		}
-		_items = new FastSet<>();
+		_items = new HashSet<>();
 		
 		for (int i = 0; i < count; i++)
 		{

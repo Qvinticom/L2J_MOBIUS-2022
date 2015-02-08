@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.engines;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -29,8 +30,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import javolution.util.FastMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -154,7 +153,7 @@ public abstract class DocumentBase
 	protected DocumentBase(File pFile)
 	{
 		_file = pFile;
-		_tables = new FastMap<>();
+		_tables = new HashMap<>();
 	}
 	
 	public Document parse()
@@ -185,7 +184,7 @@ public abstract class DocumentBase
 	
 	protected void resetTable()
 	{
-		_tables = new FastMap<>();
+		_tables = new HashMap<>();
 	}
 	
 	protected void setTable(String name, String[] table)

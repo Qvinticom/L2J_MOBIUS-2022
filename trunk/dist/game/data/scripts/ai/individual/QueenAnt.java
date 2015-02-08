@@ -18,10 +18,10 @@
  */
 package ai.individual;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -83,7 +83,7 @@ public final class QueenAnt extends AbstractNpcAI
 	
 	L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
-	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
+	private final List<L2MonsterInstance> _nurses = new ArrayList<>(5);
 	ScheduledFuture<?> _task = null;
 	
 	private QueenAnt()

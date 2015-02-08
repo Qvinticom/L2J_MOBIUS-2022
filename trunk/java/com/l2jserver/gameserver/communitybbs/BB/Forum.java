@@ -21,13 +21,12 @@ package com.l2jserver.gameserver.communitybbs.BB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -69,8 +68,8 @@ public class Forum
 	{
 		_forumId = Forumid;
 		_fParent = FParent;
-		_children = new FastList<>();
-		_topic = new FastMap<>();
+		_children = new ArrayList<>();
+		_topic = new HashMap<>();
 	}
 	
 	/**
@@ -89,8 +88,8 @@ public class Forum
 		_forumPerm = perm;
 		_fParent = parent;
 		_ownerID = OwnerID;
-		_children = new FastList<>();
-		_topic = new FastMap<>();
+		_children = new ArrayList<>();
+		_topic = new HashMap<>();
 		parent._children.add(this);
 		ForumsBBSManager.getInstance().addForum(this);
 		_loaded = true;

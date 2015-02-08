@@ -19,13 +19,12 @@
 package com.l2jserver.gameserver.script;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 
@@ -42,8 +41,8 @@ public class ScriptPackage
 	
 	public ScriptPackage(ZipFile pack)
 	{
-		_scriptFiles = new FastList<>();
-		_otherFiles = new FastList<>();
+		_scriptFiles = new ArrayList<>();
+		_otherFiles = new ArrayList<>();
 		_name = pack.getName();
 		addFiles(pack);
 	}

@@ -18,9 +18,9 @@
  */
 package ai.individual;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -72,7 +72,7 @@ public final class Orfen extends AbstractNpcAI
 	private static final int RIBA_IREN = 29018;
 	
 	private static boolean _IsTeleported;
-	private static List<L2Attackable> _Minions = new FastList<>();
+	private static List<L2Attackable> _Minions = new ArrayList<>();
 	private static L2BossZone ZONE;
 	
 	private static final byte ALIVE = 0;

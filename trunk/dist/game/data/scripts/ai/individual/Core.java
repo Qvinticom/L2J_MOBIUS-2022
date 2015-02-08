@@ -18,9 +18,9 @@
  */
 package ai.individual;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -56,7 +56,7 @@ public final class Core extends AbstractNpcAI
 	
 	private static boolean _FirstAttacked;
 	
-	private final List<L2Attackable> Minions = new FastList<>();
+	private final List<L2Attackable> Minions = new ArrayList<>();
 	
 	private Core()
 	{
