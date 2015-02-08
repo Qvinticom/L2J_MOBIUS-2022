@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -13,7 +13,7 @@
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<table name="#mpConsumes"> 56 0 0 </table>
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -25,7 +25,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -34,7 +34,7 @@
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<table name="#mpConsumes"> 57 0 0 </table>
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -46,21 +46,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="11805" levels="1" name="Not in Use">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1460" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11806" levels="4" name="Blessing of Tree">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers HP and removes bad abnormal statuses. -->
 		<set name="icon" val="icon.skill1258" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="7000" />
 		<set name="isMagic" val="1" />
@@ -68,7 +68,7 @@
 	<skill id="11807" levels="5" name="Miracle of Fairy">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill11807" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="isMagic" val="1" />
@@ -77,7 +77,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Affected by Elegance of Light. HP is decreased. -->
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="500" />
@@ -88,7 +88,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Affected by Elegance of Light. Increases HP. -->
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="500" />
@@ -98,7 +98,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can use the Mark of Resurrection for 30 seconds. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -106,7 +106,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can use the Mark of Resurrection and Mark of Total Resurrection for 30 seconds. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -114,7 +114,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestows the mark of resurrection that can completely resurrect party members from death for 10 minutes. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear. -->
 		<set name="icon" val="icon.skill1410" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="38" />
 		<set name="castRange" val="400" />
@@ -126,7 +126,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestows the mark of resurrection that can completely resurrect all party members from death for 10 minutes. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear. -->
 		<set name="icon" val="icon.skill1410" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="77" />
 		<set name="hitTime" val="4000" />
@@ -138,7 +138,7 @@
 		<!-- Inflicts damage on target with 124 Power added to M. Atk. Has a chance of pushing back target. -->
 		<table name="#mpConsumes"> 87 91 95 98 102 107 111 116 </table>
 		<set name="icon" val="icon.skill11814" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="400" />
@@ -153,7 +153,7 @@
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<table name="#mpConsumes"> 57 0 0 </table>
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -165,7 +165,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -174,7 +174,7 @@
 		<!-- Inflicts damage on nearby enemies with 102 Power added to M. Atk. and decreases aggression toward yourself. -->
 		<table name="#mpConsumes"> 282 288 300 312 325 337 351 365 </table>
 		<set name="icon" val="icon.skill11817" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="3780" />
@@ -186,7 +186,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Healing abilities are decreased as a price for summoning Lumi. -->
 		<set name="icon" val="icon.skill1100" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="8000" />
@@ -196,7 +196,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<set name="icon" val="icon.skill11819" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="91" />
 		<set name="hitTime" val="3500" />
@@ -207,7 +207,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, target's P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, M. Def. + 30%. -->
 		<set name="icon" val="icon.skill11820" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="17" />
 		<set name="castRange" val="600" />
@@ -220,7 +220,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, target's P. Critical Rate + 32%, P. Critical Damage + 35%, M. Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%. -->
 		<set name="icon" val="icon.skill11821" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="17" />
 		<set name="castRange" val="600" />
@@ -233,7 +233,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, target's Atk. Spd. + 34% and Casting Spd. + 31%. Bestows a 9% Vampiric Rage effect at a certain rate. -->
 		<set name="icon" val="icon.skill11822" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="17" />
 		<set name="castRange" val="600" />
@@ -246,7 +246,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, target's P. Accuracy + 5, P. and M. Evasion + 5, Speed + 34 and received Critical Damage - 30%. -->
 		<set name="icon" val="icon.skill11823" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="17" />
 		<set name="castRange" val="600" />
@@ -259,7 +259,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30. -->
 		<set name="icon" val="icon.skill11567" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="17" />
 		<set name="castRange" val="600" />
@@ -272,7 +272,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20. -->
 		<set name="icon" val="icon.skill11825" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="17" />
 		<set name="castRange" val="600" />
@@ -295,7 +295,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -309,7 +309,7 @@
 	<skill id="11827" levels="5" name="Fairy Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill11827" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
@@ -329,7 +329,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="458" />
 		<set name="mpInitialConsume" val="115" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA_FRIENDLY" />
@@ -345,7 +345,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M. Critical Rate - 20, Critical Damage during a normal attack - 20%, P. Atk. - 10%, P. Def. - 20%, Atk. Spd. - 20%, M. Atk. - 20%, M. Def. - 20%, Casting Spd. - 20%, Debuff Resistance - 10%, damage received from a critical attack - 30% and Speed - 15%. -->
 		<set name="icon" val="icon.skill11522" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="35" />
 		<set name="castRange" val="600" />
@@ -359,7 +359,7 @@
 		<!-- Banishes the enemy's servitor into another dimension. -->
 		<table name="#mpConsumes"> 373 377 380 383 384 387 390 393 </table>
 		<set name="icon" val="icon.skill1395" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -372,7 +372,7 @@
 		<!-- Casts Sleep on nearby enemies for 30 seconds. -->
 		<table name="#mpConsumes"> 52 52 54 60 62 66 </table>
 		<set name="icon" val="icon.skill1072" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="4000" />
@@ -384,7 +384,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lingering Celestial Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis. -->
 		<set name="icon" val="icon.skill11758" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -393,7 +393,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lingering Celestial Party Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis. -->
 		<set name="icon" val="icon.skill11759" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -402,7 +402,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Speed. -->
 		<set name="icon" val="icon.skill11770" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11836" levels="0" name="Summon Lumi Power Passive">
@@ -418,7 +418,7 @@
 		<table name="#mpConsumes"> </table>
 		<table name="#reuseDelays"> </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="#hpConsumes" />
 		<set name="mpConsume" val="#mpConsumes" />
@@ -436,7 +436,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mp"> 50 60 70 100 </table>
 		<set name="icon" val="icon.skill11850new" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="PARTY_CLAN" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -469,7 +469,7 @@
 		<set name="abnormalType" val="HEAL_EFFECT_UP" />
 		<set name="abnormalTime" val="1800" />
 		<set name="affectRange" val="1000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="icon" val="icon.skill11859" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -497,7 +497,7 @@
 		<set name="abnormalType" val="RECHARGE_UP" />
 		<set name="abnormalTime" val="1800" />
 		<set name="affectRange" val="1000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="icon" val="icon.skill11852new" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -517,7 +517,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Magic skill Cooldown - 5%. -->
 		<set name="icon" val="icon.skill0228" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11854" levels="4" name="Mass Mana Gain">
@@ -531,7 +531,7 @@
 		<set name="abnormalType" val="RECHARGE_UP" />
 		<set name="abnormalTime" val="1800" />
 		<set name="affectRange" val="1000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="icon" val="icon.skill11852new" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -551,14 +551,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 10%. M. Skill MP Consumption - 10%. -->
 		<set name="icon" val="icon.skill0945" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11856" levels="1" name="Mental Recharge">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores target's MP. -->
 		<set name="icon" val="icon.skill11856" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="66" />
 		<set name="castRange" val="600" />
@@ -571,7 +571,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Flag of Life, which restores the HP of those that click on it. -->
 		<set name="icon" val="icon.skill11774" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="185" />
 		<set name="castRange" val="600" />
@@ -584,7 +584,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 min., puts a barrier around a party member. The barrier blocks 5 times. -->
 		<set name="icon" val="icon.skill11754" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="43" />
 		<set name="castRange" val="600" />
@@ -598,7 +598,7 @@
 		<!-- Attacks target with 198 Power added to M. Atk. and recovers HP equivalent to 50% of damage inflicted. Consumes 1 Spirit Ore. -->
 		<table name="#mpConsumes"> 92 96 100 </table>
 		<set name="icon" val="icon.skill11859" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="900" />
@@ -611,7 +611,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 2490 Power added to M. Atk. If HP is full, CP is restored. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="50" />
 		<set name="castRange" val="600" />
@@ -624,7 +624,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., increases party member's Elemental Resistance by 30. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11861" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="82" />
 		<set name="castRange" val="900" />
@@ -637,7 +637,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., increases party member's resistance to melee weapons by 5%. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11862" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="82" />
 		<set name="castRange" val="900" />
@@ -650,7 +650,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., increases party member's resistance to ranged weapons by 5%. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11863" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="82" />
 		<set name="castRange" val="900" />

@@ -3,7 +3,7 @@
 	<skill id="3400" levels="1" name="Stat Enhancing Earring">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="AttackTrait">
@@ -13,7 +13,7 @@
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -23,7 +23,7 @@
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -33,7 +33,7 @@
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -50,7 +50,7 @@
 		<set name="activateRate" val="0" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -64,7 +64,7 @@
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -72,7 +72,7 @@
 	<skill id="3406" levels="1" name="Weight Loss Ring">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -90,7 +90,7 @@
 		<set name="activateRate" val="0" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -106,7 +106,7 @@
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -133,7 +133,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PC_BODY" />
@@ -156,7 +156,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="360000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -169,7 +169,7 @@
 	<skill id="3411" levels="1" name="Special Ability: Focus">
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -185,7 +185,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -200,7 +200,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -216,7 +216,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -232,7 +232,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -249,7 +249,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -265,7 +265,7 @@
 		<!-- Dynasty Shield Skill -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -279,7 +279,7 @@
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -295,14 +295,14 @@
 	<skill id="3419" levels="1" name="Magic Immunity">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3420" levels="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -320,7 +320,7 @@
 		<set name="icon" val="icon.skill0083" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -329,7 +329,7 @@
 		<set name="icon" val="icon.skill0083" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -339,7 +339,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -354,7 +354,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -369,7 +369,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -382,7 +382,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Rapier +4 Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -398,7 +398,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -433,7 +433,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -450,7 +450,7 @@
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -475,7 +475,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -497,7 +497,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -519,7 +519,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -541,7 +541,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -563,7 +563,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -585,7 +585,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -605,7 +605,7 @@
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="power" val="200" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
@@ -625,7 +625,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -648,7 +648,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -660,7 +660,7 @@
 	</skill>
 	<skill id="3439" levels="1" name="Silk Shirt">
 		<set name="magicLvl" val="49" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -670,7 +670,7 @@
 	</skill>
 	<skill id="3440" levels="1" name="Silk Shirt">
 		<set name="magicLvl" val="49" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -680,7 +680,7 @@
 	</skill>
 	<skill id="3441" levels="1" name="Silk Shirt">
 		<set name="magicLvl" val="49" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -690,7 +690,7 @@
 	</skill>
 	<skill id="3442" levels="1" name="Silk Shirt">
 		<set name="magicLvl" val="49" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -701,7 +701,7 @@
 	</skill>
 	<skill id="3443" levels="1" name="Silk Shirt">
 		<set name="magicLvl" val="49" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -712,7 +712,7 @@
 	</skill>
 	<skill id="3444" levels="1" name="Silk Shirt">
 		<set name="magicLvl" val="49" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -723,7 +723,7 @@
 	</skill>
 	<skill id="3445" levels="1" name="Thin Leather Shirt">
 		<set name="magicLvl" val="58" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -733,7 +733,7 @@
 	</skill>
 	<skill id="3446" levels="1" name="Thin Leather Shirt">
 		<set name="magicLvl" val="58" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -743,7 +743,7 @@
 	</skill>
 	<skill id="3447" levels="1" name="Thin Leather Shirt">
 		<set name="magicLvl" val="58" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -753,7 +753,7 @@
 	</skill>
 	<skill id="3448" levels="1" name="Thin Leather Shirt">
 		<set name="magicLvl" val="58" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -764,7 +764,7 @@
 	</skill>
 	<skill id="3449" levels="1" name="Thin Leather Shirt">
 		<set name="magicLvl" val="58" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -775,7 +775,7 @@
 	</skill>
 	<skill id="3450" levels="1" name="Thin Leather Shirt">
 		<set name="magicLvl" val="58" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -786,7 +786,7 @@
 	</skill>
 	<skill id="3451" levels="1" name="Scale Shirt">
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -796,7 +796,7 @@
 	</skill>
 	<skill id="3452" levels="1" name="Scale Shirt">
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -806,7 +806,7 @@
 	</skill>
 	<skill id="3453" levels="1" name="Scale Shirt">
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -816,7 +816,7 @@
 	</skill>
 	<skill id="3454" levels="1" name="Scale Shirt">
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -827,7 +827,7 @@
 	</skill>
 	<skill id="3455" levels="1" name="Scale Shirt">
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -838,7 +838,7 @@
 	</skill>
 	<skill id="3456" levels="1" name="Scale Shirt">
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -849,7 +849,7 @@
 	</skill>
 	<skill id="3457" levels="1" name="Mithril Shirt">
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -859,7 +859,7 @@
 	</skill>
 	<skill id="3458" levels="1" name="Mithril Shirt">
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -869,7 +869,7 @@
 	</skill>
 	<skill id="3459" levels="1" name="Mithril Shirt">
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -879,7 +879,7 @@
 	</skill>
 	<skill id="3460" levels="1" name="Mithril Shirt">
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -890,7 +890,7 @@
 	</skill>
 	<skill id="3461" levels="1" name="Mithril Shirt">
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -901,7 +901,7 @@
 	</skill>
 	<skill id="3462" levels="1" name="Mithril Shirt">
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -912,7 +912,7 @@
 	</skill>
 	<skill id="3463" levels="1" name="Striped Silk Shirt">
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -922,7 +922,7 @@
 	</skill>
 	<skill id="3464" levels="1" name="Striped Silk Shirt">
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -932,7 +932,7 @@
 	</skill>
 	<skill id="3465" levels="1" name="Striped Silk Shirt">
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -942,7 +942,7 @@
 	</skill>
 	<skill id="3466" levels="1" name="Striped Silk Shirt">
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -953,7 +953,7 @@
 	</skill>
 	<skill id="3467" levels="1" name="Striped Silk Shirt">
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -964,7 +964,7 @@
 	</skill>
 	<skill id="3468" levels="1" name="Striped Silk Shirt">
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -975,7 +975,7 @@
 	</skill>
 	<skill id="3469" levels="1" name="Thin Striped Leather Shirt">
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -985,7 +985,7 @@
 	</skill>
 	<skill id="3470" levels="1" name="Thin Striped Leather Shirt">
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -995,7 +995,7 @@
 	</skill>
 	<skill id="3471" levels="1" name="Thin Striped Leather Shirt">
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1005,7 +1005,7 @@
 	</skill>
 	<skill id="3472" levels="1" name="Thin Striped Leather Shirt">
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1016,7 +1016,7 @@
 	</skill>
 	<skill id="3473" levels="1" name="Thin Striped Leather Shirt">
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1027,7 +1027,7 @@
 	</skill>
 	<skill id="3474" levels="1" name="Thin Striped Leather Shirt">
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1038,7 +1038,7 @@
 	</skill>
 	<skill id="3475" levels="1" name="Striped Scale Shirt">
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1048,7 +1048,7 @@
 	</skill>
 	<skill id="3476" levels="1" name="Striped Scale Shirt">
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1058,7 +1058,7 @@
 	</skill>
 	<skill id="3477" levels="1" name="Striped Scale Shirt">
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1068,7 +1068,7 @@
 	</skill>
 	<skill id="3478" levels="1" name="Striped Scale Shirt">
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1079,7 +1079,7 @@
 	</skill>
 	<skill id="3479" levels="1" name="Striped Scale Shirt">
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1090,7 +1090,7 @@
 	</skill>
 	<skill id="3480" levels="1" name="Striped Scale Shirt">
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1101,7 +1101,7 @@
 	</skill>
 	<skill id="3481" levels="1" name="Striped Mithril Shirt">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1111,7 +1111,7 @@
 	</skill>
 	<skill id="3482" levels="1" name="Striped Mithril Shirt">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1121,7 +1121,7 @@
 	</skill>
 	<skill id="3483" levels="1" name="Striped Mithril Shirt">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1131,7 +1131,7 @@
 	</skill>
 	<skill id="3484" levels="1" name="Striped Mithril Shirt">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1142,7 +1142,7 @@
 	</skill>
 	<skill id="3485" levels="1" name="Striped Mithril Shirt">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1153,7 +1153,7 @@
 	</skill>
 	<skill id="3486" levels="1" name="Striped Mithril Shirt">
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1174,7 +1174,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="360000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1196,7 +1196,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="360000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1210,7 +1210,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1222,7 +1222,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1234,7 +1234,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1246,7 +1246,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1258,7 +1258,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1270,7 +1270,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1282,7 +1282,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1299,7 +1299,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1316,7 +1316,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1328,7 +1328,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0150" />
 		<set name="magicLvl" val="46" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1342,7 +1342,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>

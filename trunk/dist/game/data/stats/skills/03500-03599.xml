@@ -3,7 +3,7 @@
 	<skill id="3500" levels="1" name="Wooden Set">
 		<set name="icon" val="icon.armor_t06_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -15,7 +15,7 @@
 	<skill id="3501" levels="1" name="Devotion Set">
 		<set name="icon" val="icon.armor_t55_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -26,7 +26,7 @@
 	<skill id="3502" levels="1" name="Mithril Breastplate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -37,7 +37,7 @@
 	<skill id="3503" levels="1" name="Reinforced Leather Set">
 		<set name="icon" val="icon.armor_t13_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -48,7 +48,7 @@
 	<skill id="3504" levels="1" name="Tunic of Knowledge Set">
 		<set name="icon" val="icon.armor_t41_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -60,7 +60,7 @@
 	<skill id="3505" levels="1" name="Manticore Set">
 		<set name="icon" val="icon.armor_t42_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -71,7 +71,7 @@
 	<skill id="3506" levels="1" name="Brigandine Heavy Armor Set">
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -83,7 +83,7 @@
 	<skill id="3507" levels="1" name="Mithril Tunic Robe Set">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -94,7 +94,7 @@
 	<skill id="3508" levels="1" name="Reinforced Mithril Light Armor Set">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -105,7 +105,7 @@
 	<skill id="3509" levels="1" name="Chain Mail Heavy Armor Set">
 		<set name="icon" val="icon.armor_t48_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -117,7 +117,7 @@
 	<skill id="3510" levels="1" name="Karmian Tunic Robe Set">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -129,13 +129,13 @@
 	<skill id="3511" levels="1" name="Plated Leather Light Armor Set">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3512" levels="1" name="Compound Heavy Armor Set">
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -146,7 +146,7 @@
 	<skill id="3513" levels="1" name="Demon's Set">
 		<set name="icon" val="icon.armor_t54_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -157,7 +157,7 @@
 	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
 		<set name="icon" val="icon.armor_t63_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -168,7 +168,7 @@
 	<skill id="3515" levels="1" name="Drake Leather Set">
 		<set name="icon" val="icon.armor_t21_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -179,7 +179,7 @@
 	<skill id="3516" levels="1" name="Full Plate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -190,7 +190,7 @@
 	<skill id="3517" levels="1" name="Divine Set">
 		<set name="icon" val="icon.armor_t57_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -202,7 +202,7 @@
 	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -214,7 +214,7 @@
 	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -225,7 +225,7 @@
 	<skill id="3520" levels="1" name="Zubei's Leather Shirt Light Armor Set">
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -236,7 +236,7 @@
 	<skill id="3521" levels="1" name="Avadon Light Armor Set">
 		<set name="icon" val="icon.armor_t67_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -248,7 +248,7 @@
 	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -260,7 +260,7 @@
 	<skill id="3523" levels="1" name="Avadon Robe Set">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -272,7 +272,7 @@
 	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -284,7 +284,7 @@
 	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -296,7 +296,7 @@
 	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -308,7 +308,7 @@
 	<skill id="3527" levels="1" name="Leather Armor of Doom Set">
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -324,7 +324,7 @@
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -336,7 +336,7 @@
 	<skill id="3529" levels="1" name="Doom Robe Set">
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -349,7 +349,7 @@
 	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -363,7 +363,7 @@
 	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
 		<set name="icon" val="icon.armor_t77_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -379,7 +379,7 @@
 	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -394,7 +394,7 @@
 	<skill id="3533" levels="1" name="Tallum Light Armor Set">
 		<set name="icon" val="icon.armor_t78_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -410,7 +410,7 @@
 	<skill id="3534" levels="1" name="Tallum Robe Set">
 		<set name="icon" val="icon.armor_t79_u_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -426,7 +426,7 @@
 	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -443,7 +443,7 @@
 	<skill id="3536" levels="1" name="Heavy Armor of Nightmare Set">
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -458,7 +458,7 @@
 	<skill id="3537" levels="1" name="Majestic Plate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t83_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -473,7 +473,7 @@
 	<skill id="3538" levels="1" name="Light Armor of Nightmare Set">
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -489,7 +489,7 @@
 	<skill id="3539" levels="1" name="Majestic Leather Light Armor Set">
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -507,7 +507,7 @@
 	<skill id="3540" levels="1" name="Robe of Nightmare Set">
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -523,7 +523,7 @@
 	<skill id="3541" levels="1" name="Majestic Robe Set">
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -542,7 +542,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -554,7 +554,7 @@
 		<!-- Hoplon Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -566,7 +566,7 @@
 		<!-- Brigandine Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -578,7 +578,7 @@
 		<!-- Chain Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -590,7 +590,7 @@
 		<!-- Composite Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -602,7 +602,7 @@
 		<!-- Full Plate Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -614,7 +614,7 @@
 		<!-- Avadon Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -626,7 +626,7 @@
 		<!-- Doom Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -638,7 +638,7 @@
 		<!-- Dark Crystal Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -650,7 +650,7 @@
 		<!-- Shield of Nightmare Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -665,7 +665,7 @@
 		<table name="#magicLvl"> 64 64 72 72 </table>
 		<set name="icon" val="icon.skill0297" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -679,7 +679,7 @@
 	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -696,7 +696,7 @@
 		<!-- Imperial Crusader Shield Skill -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -708,7 +708,7 @@
 	<skill id="3555" levels="1" name="Draconic Leather Armor Set">
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -722,7 +722,7 @@
 	<skill id="3556" levels="1" name="Major Arcana Robe Set">
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -741,7 +741,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -767,7 +767,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -798,7 +798,7 @@
 		<table name="#traits"> 20 30 </table>
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -823,7 +823,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -842,7 +842,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -866,7 +866,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -888,7 +888,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -908,7 +908,7 @@
 		<table name="#pAtkSpd"> 1.07 1.1 1.11 </table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -925,7 +925,7 @@
 		<table name="#rCrit"> 80.6 107 123.5 129 129 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -942,7 +942,7 @@
 		<table name="#rCrit"> 84.3 111.5 133.3 134.4 134.4 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -959,7 +959,7 @@
 		<table name="#rCrit"> 88.1 116 133.9 139.9 139.9 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -976,7 +976,7 @@
 		<table name="#magicLvl"> 75 84 </table>
 		<set name="icon" val="icon.skill1268" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -993,7 +993,7 @@
 		<table name="#regHp"> 2.04 4.92 5.15 5.18 </table>
 		<set name="icon" val="icon.skill1044" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1008,7 +1008,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill1311" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1036,7 +1036,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1050,7 +1050,7 @@
 		<table name="#magicLvl"> 75 84 85 86 </table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1067,7 +1067,7 @@
 		<table name="#magicLvl"> 75 80 84 </table>
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1094,7 +1094,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1109,7 +1109,7 @@
 		<table name="#mAtk"> 60.09 151.09 166.54 176.53 </table>
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1126,7 +1126,7 @@
 		<table name="#regMp"> 0.54 1.95 2.04 2.05 </table>
 		<set name="icon" val="icon.skill1047" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1153,7 +1153,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
@@ -1165,7 +1165,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1193,7 +1193,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1206,7 +1206,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1226,7 +1226,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Infinity Axe Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1240,7 +1240,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1261,7 +1261,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1291,7 +1291,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1303,7 +1303,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1334,7 +1334,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1346,7 +1346,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1377,7 +1377,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1389,7 +1389,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1422,7 +1422,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1434,7 +1434,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1457,7 +1457,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Infinity Spear Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1471,7 +1471,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1497,7 +1497,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1509,7 +1509,7 @@
 	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1531,7 +1531,7 @@
 		<!-- Infinity Scepter Skill -->
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<!-- TODO: Remove this condition when proper target type is done -->
@@ -1550,7 +1550,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1570,7 +1570,7 @@
 		<!-- Infinity Rod Skill -->
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<!-- TODO: Remove this condition when proper target type is done -->
@@ -1589,7 +1589,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.skill0216" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

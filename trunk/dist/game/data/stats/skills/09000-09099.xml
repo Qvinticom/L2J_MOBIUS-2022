@@ -3,70 +3,70 @@
 	<skill id="9000" levels="1" name="Player Commendation - Scroll: Enchant Armor (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9001" levels="1" name="Player Commendation - Scroll: Enchant Armor (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9002" levels="1" name="Player Commendation - Scroll: Enchant Armor (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9003" levels="1" name="Player Commendation - Scroll: Enchant Armor (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9004" levels="1" name="Player Commendation - Scroll: Enchant Armor (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9005" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (D-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9006" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (C-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9007" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (B-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9008" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (A-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9009" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (S-grade)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -82,7 +82,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15364" /> <!-- Cool Pack -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -103,7 +103,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -121,7 +121,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -139,7 +139,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -157,7 +157,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -175,7 +175,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -193,7 +193,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -211,7 +211,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -229,7 +229,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -247,7 +247,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -265,7 +265,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -283,7 +283,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -308,7 +308,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -326,7 +326,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -344,7 +344,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -362,7 +362,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -380,7 +380,7 @@
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -401,7 +401,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15358" /> <!-- Player Commendation Instant Lottery Ticket -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -423,7 +423,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15365" /> <!-- Lucky Cool Pack -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -435,7 +435,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15366" /> <!-- Watermelon seed -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -452,7 +452,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15367" /> <!-- Honey Watermelon Seed -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -469,7 +469,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15368" /> <!-- Copied Watermelon Seed -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -486,7 +486,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15369" /> <!-- Copied Honey Watermelon Seed -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -501,7 +501,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15381" /> <!-- Event - Herdsman's Love Scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -510,7 +510,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15382" /> <!-- Event - Vitality Belt Enchant Scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -525,7 +525,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15379" /> <!-- Steamed Rice Cake -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -540,7 +540,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15372" /> <!-- Special July 7th Parcel -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -563,7 +563,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15376" /> <!-- Special July 7th Parcel (Event) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -582,7 +582,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15379" /> <!-- Steamed Rice Cake -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -598,7 +598,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15380" /> <!-- Steamed Rice Cake (Event) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -613,7 +613,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15426" /> <!-- Hero's Summon Point -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="604800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -629,7 +629,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15427" /> <!-- 6th Anniversary Party Cake -->
 		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -642,7 +642,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -664,7 +664,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -686,7 +686,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -708,7 +708,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -730,7 +730,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -752,7 +752,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -774,7 +774,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -797,7 +797,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15474" /> <!-- Golden Spice -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -814,7 +814,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15475" /> <!-- Crystal Spice -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -831,7 +831,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15476" /> <!-- Blessed Golden Spice -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -848,7 +848,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15477" /> <!-- Blessed Crystal Spice -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -865,7 +865,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15478" /> <!-- Golden Spice (S-Grade) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -882,7 +882,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15479" /> <!-- Crystal Spice (S-Grade) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -901,7 +901,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15482" /> <!-- Golden Spice Crate -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -926,7 +926,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15483" /> <!-- Crystal Spice Compressed Pack -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -948,7 +948,7 @@
 		<set name="affectRange" val="2000" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -974,7 +974,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15470" /> <!-- Black Frozen Core -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -997,7 +997,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
@@ -1008,7 +1008,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="9000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
@@ -1018,7 +1018,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15431" /> <!-- Event - Uldie Summon Scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -1028,7 +1028,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15432" /> <!-- Event - Belldandy Summon Scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -1038,7 +1038,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15433" /> <!-- Event - Skooldie Summon Scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -1053,7 +1053,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15434" /> <!-- Halloween Toy Chest -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1077,7 +1077,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15435" /> <!-- Shiny Halloween Toy Chest -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1101,7 +1101,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15437" /> <!-- Transformation Scroll Box -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1127,7 +1127,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15438" /> <!-- Vitality Maintaining Potion (10 minutes) -->
 		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1147,7 +1147,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15440" /> <!-- Vitality Maintaining Potion (30 Minutes) -->
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1163,7 +1163,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15439" /> <!-- 10,000 SP scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1183,7 +1183,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15461" /> <!-- Halloween Nectar Pumpkin -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1207,7 +1207,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15467" /> <!-- Halloween Nectar Pumpkin (Event) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1231,7 +1231,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15463" /> <!-- Small Halloween Pumpkin -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1256,7 +1256,7 @@
 		<set name="icon" val="icon.xel_mahun_vampiric_rage_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="40" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1270,7 +1270,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1290,7 +1290,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15507" /> <!-- Foul Fruit -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -1305,7 +1305,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15690" /> <!-- Secret Key -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="UNLOCKABLE" />
@@ -1328,7 +1328,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="15716" /> <!-- Packaged Book -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1350,7 +1350,7 @@
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1372,7 +1372,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="16408" /> <!-- Santa's Buff Scroll -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1407,7 +1407,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="16407" /> <!-- Santa's Stocking -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1428,7 +1428,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="16403" /> <!-- Christmas Cake -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1451,7 +1451,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="16404" /> <!-- White Christmas Wish Candle -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1468,7 +1468,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="16405" /> <!-- Christmas Cake (event) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1491,7 +1491,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="16406" /> <!-- White Christmas Wish Candle (event) -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1511,7 +1511,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17003" /> <!-- Santa Claus's Gift -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -1529,7 +1529,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1545,7 +1545,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17030" /> <!-- Forgotten Scroll - Create Item Lv 10 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1571,7 +1571,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17067" /> <!-- Event - Cupid's Fatigue Relief Potion -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -1583,7 +1583,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17068" /> <!-- Event - Cupid's Powerful Fatigue Relief Potion -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -1595,7 +1595,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17034" /> <!-- Forgotten Scroll - Fighter's Will - For Events -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1620,7 +1620,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17035" /> <!-- Forgotten Scroll - Archer's Will - For Events -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1646,7 +1646,7 @@
 		<set name="itemConsumeId" val="17036" /> <!-- Forgotten Scroll - Magician's Will - For Events -->
 		<set name="learnSkillId" val="945" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1671,7 +1671,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17037" /> <!-- Forgotten Scroll - Protection of Rune - For Events -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1696,7 +1696,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17038" /> <!-- Forgotten Scroll - Protection of Elemental - For Events -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1721,7 +1721,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17039" /> <!-- Forgotten Scroll - Protection of Alignment - For Events -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1746,7 +1746,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17062" /> <!-- Event - Scroll of Summon Baby White Tiger -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1762,7 +1762,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17064" /> <!-- Event - Scroll of Summon Baby White Tiger Captain -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1778,7 +1778,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17063" /> <!-- Event - Scroll of Summon Gloomy Baby White Tiger -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1794,7 +1794,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="17065" /> <!-- Event - Scroll of Summon Gloomy Baby White Tiger Captain -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>

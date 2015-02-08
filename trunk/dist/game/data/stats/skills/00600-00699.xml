@@ -4,7 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0380" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -16,7 +16,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0381" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -28,7 +28,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0382" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -40,7 +40,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0383" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -52,7 +52,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0384" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -65,7 +65,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0385" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -78,7 +78,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0386" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -90,7 +90,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0387" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -102,7 +102,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0388" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -114,7 +114,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0389" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -126,7 +126,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0390" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -143,7 +143,7 @@
 		<table name="#rCrit"> 0 15 15 </table>
 		<set name="icon" val="icon.skill1463" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -159,7 +159,7 @@
 		<table name="#sDef"> 1 1 1.06 </table>
 		<set name="icon" val="icon.skill1464" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -175,7 +175,7 @@
 		<table name="#runSpd"> 0 0 3 </table>
 		<set name="icon" val="icon.skill1465" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -190,7 +190,7 @@
 		<table name="#mDef"> 17 31.1 44 </table>
 		<set name="icon" val="icon.skill1466" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -204,7 +204,7 @@
 		<table name="#MpConsumeRate"> 1 1 0.95 </table>
 		<set name="icon" val="icon.skill1043" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -222,7 +222,7 @@
 		<table name="#mCritRate"> 0 0 0.01 </table>
 		<set name="icon" val="icon.skill1443" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -241,7 +241,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -265,7 +265,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -285,7 +285,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -310,7 +310,7 @@
 		<set name="itemConsumeId" val="1460" /> <!-- Crystal (B-Grade) -->
 		<set name="magicLvl" val="52" />
 		<set name="mpConsume" val="366" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -331,7 +331,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="43" />
 		<set name="mpConsume" val="38" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="150000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -362,7 +362,7 @@
 		<set name="icon" val="icon.skill0622" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="900000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -384,7 +384,7 @@
 		<set name="icon" val="icon.skill0470" />
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="67" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
@@ -402,7 +402,7 @@
 		<set name="icon" val="icon.skill0471" />
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="17" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -425,7 +425,7 @@
 		<set name="itemConsumeCount" val="10" />
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="magicLvl" val="46" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -455,7 +455,7 @@
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="icon" val="icon.skill0312" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -505,7 +505,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
@@ -544,7 +544,7 @@
 		<set name="magicLvl" val="32" />
 		<set name="mpConsume" val="20" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="simultaneousCast" val="true" />
@@ -562,7 +562,7 @@
 		<set name="icon" val="icon.skill0629" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
@@ -576,7 +576,7 @@
 		<set name="icon" val="icon.skill0027" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -598,7 +598,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0141" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -641,7 +641,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0142" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -664,7 +664,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0249" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -679,7 +679,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0146" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -692,7 +692,7 @@
 		<table name="#magicLvl"> 60 75 80 </table>
 		<set name="icon" val="icon.skill0635" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="636" levels="3" name="Not in Use">
@@ -700,7 +700,7 @@
 		<table name="#magicLvl"> 60 75 80 </table>
 		<set name="icon" val="icon.skill0636" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="637" levels="1" name="Master Ability: Attack">
@@ -708,7 +708,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="60" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -747,7 +747,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="60" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -760,7 +760,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1085" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -773,7 +773,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -786,7 +786,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -799,7 +799,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -812,7 +812,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -826,7 +826,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1087" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -839,7 +839,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0113" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -854,7 +854,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0285" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -867,7 +867,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0229" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -880,7 +880,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1307" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -893,7 +893,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0287" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -910,7 +910,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -927,7 +927,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0110" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
@@ -943,7 +943,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -960,7 +960,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1398" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -977,7 +977,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
@@ -1000,7 +1000,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1026,7 +1026,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1052,7 +1052,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1078,7 +1078,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1104,7 +1104,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1130,7 +1130,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1156,7 +1156,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1181,7 +1181,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1206,7 +1206,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1231,7 +1231,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1256,7 +1256,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1281,7 +1281,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1306,7 +1306,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1331,7 +1331,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1356,7 +1356,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1381,7 +1381,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1406,7 +1406,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1431,7 +1431,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1456,7 +1456,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="31" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -1481,7 +1481,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="112" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="2904" />
 		<set name="reuseDelay" val="3000" />
@@ -1500,7 +1500,7 @@
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="56" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="3000" />
@@ -1520,7 +1520,7 @@
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="80" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="4000" />
@@ -1539,7 +1539,7 @@
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="36" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="45000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -1560,7 +1560,7 @@
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -1596,7 +1596,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="51" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -1621,7 +1621,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="144" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="40000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -1648,7 +1648,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="76" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
 		<set name="power" val="1162" />
 		<set name="reuseDelay" val="3000" />
@@ -1678,7 +1678,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="114" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
 		<set name="power" val="775" />
 		<set name="reuseDelay" val="5000" />
@@ -1700,7 +1700,7 @@
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="36" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="900000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -1723,7 +1723,7 @@
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -1759,7 +1759,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="116" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="3000" />
@@ -1784,7 +1784,7 @@
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="159" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="6195" />
 		<set name="reuseDelay" val="3000" />
@@ -1812,7 +1812,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="80" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
 		<set name="power" val="1549" />
 		<set name="reuseDelay" val="3000" />
@@ -1837,7 +1837,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="72" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="6969" />
 		<set name="reuseDelay" val="3000" />
@@ -1862,7 +1862,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="73" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -1883,7 +1883,7 @@
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -1914,7 +1914,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="73" />
-		<set name="operateType" val="A3" />
+		<set name="operateType" val="ACTIVE_WITH_TRIGGER" />
 		<set name="power" val="102" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1939,7 +1939,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="90" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="128" />
 		<set name="reuseDelay" val="8000" />
@@ -1965,7 +1965,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="109" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="power" val="64" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1993,7 +1993,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="109" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -2022,7 +2022,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="73" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -2044,7 +2044,7 @@
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -2072,7 +2072,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="84" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -2091,7 +2091,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="189" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />

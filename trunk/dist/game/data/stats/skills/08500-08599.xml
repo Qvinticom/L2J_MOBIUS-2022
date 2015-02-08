@@ -4,7 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -16,7 +16,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -28,7 +28,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -40,7 +40,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -52,7 +52,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -64,7 +64,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -76,7 +76,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -88,7 +88,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -100,7 +100,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_talisman_event_i02" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -120,7 +120,7 @@
 		<set name="icon" val="icon.accessory_highangel_circlet_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -143,7 +143,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
@@ -155,22 +155,22 @@
 	</skill>
 	<skill id="8511" levels="1" name="Blessing of Victory">
 		<!-- Increases Speed by 2%. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8512" levels="1" name="National Representative Warrior's Tenacity">
 		<!-- "When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited National Representative Warrior's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8513" levels="1" name="Olympic Athlete's Spell of Blessing">
 		<!-- "When used, you can obtain at random a Blessed Scroll of Escape or a B~S grade Blessed Weapon/Armor Strengthening Scroll. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8514" levels="1" name="Olympic Athlete's Energy of Victory">
 		<!-- "When used, you can obtain at random one Nevit's Hourglass 1~4 hours and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8515" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
@@ -180,7 +180,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -196,7 +196,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -212,7 +212,7 @@
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -223,17 +223,17 @@
 	</skill>
 	<skill id="8518" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8519" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8520" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8521" levels="1" name="Release Agathion's Seal - Antharas">
@@ -241,7 +241,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -255,7 +255,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -269,7 +269,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -280,24 +280,24 @@
 	</skill>
 	<skill id="8524" levels="1" name="Hero's Holy Attack">
 		<!-- Divine attck is increased by 250. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8525" levels="1" name="Hero's Holy Attack">
 		<!-- Increases holy attack by 250. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8526" levels="1" name="Shiny Bracelet">
 		<!-- 3 Talisman can be equipped. -->
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8527" levels="1" name="Release Agathion's Seal - Magmeld Fairy">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 	</skill>
@@ -305,7 +305,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 	</skill>
@@ -313,70 +313,70 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15 and Poison Resistance by 10%. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8530" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, and poison attack rate by 10%. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8531" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, and Hold Resistance by 10%. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8532" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, and hold attack rate by 10%. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8533" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, and accuracy. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8534" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, accuracy, and Atk. Spd. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8535" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, accuracy, Atk. Spd., and Casting Spd. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8536" levels="1" name="Ring of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 15, Poison Resistance by 10%, poison attack rate by 10%, Hold Resistance by 10%, hold attack rate by 10%, accuracy, Atk. Spd., Casting Spd., and critical damage. -->
 		<set name="icon" val="icon.ring_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8537" levels="1" name="T-shirt of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 246. -->
 		<set name="icon" val="icon.tshirt_of_oman" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8538" levels="1" name="Vengeance">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Provokes nearby enemies to switch targets and attack through Power 7987. For 30 seconds, increases P. Def. by 5400, M. Def. by 4050, and Buff-canceling Attack Resistance by 50, and becomes unable to move. Requires a shield. -->
 		<set name="icon" val="icon.skill0368" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="35" />
 		<set name="hitTime" val="1000" />
@@ -386,7 +386,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Share Phoenix's spirit and yours. There is a chance that the Spirit of the Phoenix will expand when being attacked. Additional effects appear as it expands. Use requirements are complete through the ring's power. -->
 		<set name="icon" val="icon.skill0784" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="37" />
 		<set name="hitTime" val="2500" />
@@ -397,7 +397,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, increases party members' P. Def. by 3600 and M. Def. by 2700, and absorbs 90% of any damage received by a party member. -->
 		<set name="icon" val="icon.skill0528" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="43" />
 		<set name="hitTime" val="1000" />
@@ -407,7 +407,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- One sows a seed of wrath himself. There is a chance that the Seed of Wrath will grow when being attacked. P. Atk. increases with growth. -->
 		<set name="icon" val="icon.skill0761" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="37" />
 		<set name="hitTime" val="2500" />
@@ -418,7 +418,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores HP of party members by 50%. For 1 minute, increases Buff-canceling Attack Resistance by 100% and the power of received HP recovery magic by 30%. Restores 50 HP every second. Use requirements are complete through the ring's power. -->
 		<set name="icon" val="icon.skill0787" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="1253" />
 		<set name="castRange" val="40" />
@@ -429,7 +429,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shilen's pain becomes your own. Shilen's suffering wracks your body, having a chance to increase when you are being attacked. Additional effects appear with each increase. When Lv. 3 is achieved, you can then use the Spirit of Shilen. -->
 		<set name="icon" val="icon.skill0788" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="37" />
 		<set name="hitTime" val="2500" />
@@ -440,7 +440,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, a powerful spirit acts to increase a party member's Max MP by 20%, HP Recovery Bonus by 20%, magic damage's Critical Rate by 2, Critical Damages by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. Consumes 10 Spirit Ore. -->
 		<set name="icon" val="icon.skill1356" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="72" />
 		<set name="castRange" val="400" />
@@ -452,7 +452,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Petrifies oneself for 8 seconds to avoid incurring damage. -->
 		<set name="icon" val="icon.skill1540" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="600000" />
@@ -462,7 +462,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Maximizes magic efficiency by decreasing MP Consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per second. -->
 		<set name="icon" val="icon.skill0336" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="36" />
 	</skill>
@@ -470,7 +470,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, decreases all party members' physical/sing/dance skill use MP Consumption by 20% and physical/sing/dance skill reuse time by 10%. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<set name="icon" val="icon.skill0364" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
@@ -481,7 +481,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Provides an 80% chance of removing a party member's debuffs. And for the next 2 minutes, increases Debuff Resistance by 30% and increases the power of received HP recovery magic by 30%. -->
 		<set name="icon" val="icon.skill0914" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
@@ -492,7 +492,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases a party member's P. Def., M. Def. and Evasion, and increases their P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed for 2 minutes. -->
 		<set name="icon" val="icon.skill0915" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
@@ -503,7 +503,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for 30 seconds. Requires a dualsword. -->
 		<set name="icon" val="icon.skill0367" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="53" />
 		<set name="hitTime" val="2000" />
@@ -514,7 +514,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers all party members' HP by 20%, and for 5 minutes, receives help from a great spirit to increase Max HP by 20%, magic damage Critical Damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and Accuracy by 4. Decreases Speed by 20%. Consumes 40 Spirit Ore. -->
 		<set name="icon" val="icon.skill1363" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="284" />
 		<set name="hitTime" val="2500" />
@@ -525,7 +525,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks near the enemy with 4563 Power added to P. Atk., causes burns for 15 seconds, and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
 		<set name="icon" val="icon.skill0949" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="35" />
 		<set name="castRange" val="40" />
@@ -538,7 +538,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Maximizes magic efficiency by increasing M. Atk. by 30% and MP Consumption by 10%. Every second, 50 HP is consumed. -->
 		<set name="icon" val="icon.skill0337" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="36" />
 	</skill>
@@ -546,7 +546,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the target's vital points with 5773 Power added to P. Atk. Requires a dagger. Over-hit is possible. Half-kill. -->
 		<set name="icon" val="icon.skill0344" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="77" />
 		<set name="castRange" val="40" />
@@ -557,7 +557,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and decreases Speed by 80% for 10 seconds. Requires a dagger to be equipped. -->
 		<set name="icon" val="icon.skill0991" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="82" />
 		<set name="castRange" val="300" />
@@ -569,7 +569,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Feels extreme excitement during a melee. For 30 seconds, increases Speed by 20, Evasion by 15, vital point attack rate by 30%, physical skill Evasion Rate by 40%, and Buff-canceling Attack Resistance by 90. -->
 		<set name="icon" val="icon.skill0768" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="1000" />
@@ -579,7 +579,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Storms the battleground riding the Wind. For 30 seconds, increases Speed by 50, Evasion by 20, vital point attack rate by 20%, physical skill Evasion Rate by 75%, and Buff-canceling Attack Resistance by 80. -->
 		<set name="icon" val="icon.skill0769" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="1000" />
@@ -589,7 +589,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Infiltrates the battleground like a ghost.ﾠFor 30 seconds, increases Speed by 33, Evasion by 15, vital point attack rate by 40%, physical skill Evasion Rate by 60%, and Buff-canceling Attack Resistance by 90. -->
 		<set name="icon" val="icon.skill0770" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="1000" />
@@ -599,7 +599,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shoots an arrow at a vital spot. Attacks the enemy with 7698 Power added to P. Atk. Requires a bow. Over-hit, Half-Kill, and Critical are possible. -->
 		<set name="icon" val="icon.skill0343" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="153" />
 		<set name="castRange" val="900" />
@@ -610,7 +610,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shoots an arrow filled with the energy of the phoenix to attack the enemies with 6084 Power added to P. Atk. Requires a bow. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0771" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="164" />
 		<set name="castRange" val="900" />
@@ -622,7 +622,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Causes arrows to rain down from the sky to attack near the enemy with 4563 Power added to P. Atk. Requires a bow. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0772" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="164" />
 		<set name="castRange" val="600" />
@@ -634,7 +634,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shoots an arrow filled with the energy of a ghost to attack the enemies with 6388 Power added to P. Atk. Requires a bow. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0773" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="164" />
 		<set name="castRange" val="900" />
@@ -646,7 +646,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shoots an arrow to kill. Attacks the enemy with 24306 Power added to P. Atk. Over-hit possible. Critical hit possible. Requires a bow/crossbow to be equipped. -->
 		<set name="icon" val="icon.skill0990" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="165" />
 		<set name="castRange" val="900" />
@@ -658,7 +658,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rushes forward to attack the enemies in front with 4040 Power added to P. Atk. and inflicts Stun for 9 seconds. Use requirements are completed through the ring's power. -->
 		<set name="icon" val="icon.skill0793" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="83" />
 		<set name="castRange" val="600" />
@@ -670,7 +670,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fear spreads around the area. Decreases nearby enemies' Speed by 33%. Inflicts fear and causes them to flee for 8 seconds. -->
 		<set name="icon" val="icon.skill0774" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="87" />
 		<set name="hitTime" val="1000" />
@@ -681,7 +681,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wields a spear at neary by enemies with 4848 Power added to P. Atk. Requires a polearm. Over-hit and critical hit are possible. Ignores Shield Defense. Target may be canceled. -->
 		<set name="icon" val="icon.skill0347" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="340" />
 		<set name="mpConsume" val="78" />
@@ -692,7 +692,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immediately increases Momentum to its maximum Lv.. -->
 		<set name="icon" val="icon.skill0918" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="80" />
 		<set name="mpConsume" val="20" />
@@ -703,7 +703,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immediately increases Momentum to its maximum Lv.. -->
 		<set name="icon" val="icon.skill0919" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="80" />
 		<set name="mpConsume" val="20" />
@@ -714,7 +714,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the enemy with a devastating momentum burst. Requires a dualsword. Possible up to stage 7. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0345" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="50" />
 		<set name="mpConsume" val="5" />
@@ -725,7 +725,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the enemy with a devastating burst of energy of wind. Requires a fist weapon. Possible up to stage 7. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0346" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="50" />
 		<set name="mpConsume" val="5" />
@@ -736,7 +736,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Unleashes a stun of destruction to attack nearby enemies with 6084 Power added to P. Atk. Requires a two-handed sword/ blunt weapon. Over-hit and Critical are possible. -->
 		<set name="icon" val="icon.skill0777" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="164" />
 		<set name="castRange" val="40" />
@@ -747,7 +747,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the enemy with 3295 Power added to P. Atk. Stun the enemy for 9 seconds, and decrease their P. Def. by 30% and M. Def. by 30%. Requires a sword, blunt weapon, two-handed sword or two-handed blunt weapon. Over-hit and critical hit are possible. Ignores Shield Defense. -->
 		<set name="icon" val="icon.skill0362" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="338" />
 		<set name="mpConsume" val="35" />
@@ -761,7 +761,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to Lv. 40. Critical hit and over-hit are possible. -->
 		<set name="icon" val="icon.skill0939" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="25" />
 		<set name="mpConsume" val="5" />
@@ -772,7 +772,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks enemies in front using the mighty Sword of Creation with 6468 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Over-hit is possible. -->
 		<set name="icon" val="icon.skill0526" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="80" />
 		<set name="castRange" val="40" />
@@ -784,7 +784,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. For 30 seconds, decreases Speed by 20%, Atk. Spd. by 30%, and Casting Spd. by 30%. Consumes 12 MP every second. Over-hit is possible. -->
 		<set name="icon" val="icon.skill1512" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="105" />
 		<set name="castRange" val="900" />
@@ -797,7 +797,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Detonates an Soul Vortex to inflict non-attribute damage on the enemy with 195 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<set name="icon" val="icon.skill1513" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="108" />
 		<set name="castRange" val="900" />
@@ -809,7 +809,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fires bolt at random to attack enemies in front with 6084 Power added to P. Atk. Requires a crossbow. Over-hit and Critical are possible. Increases Power upon the consumption of up to 5 souls. -->
 		<set name="icon" val="icon.skill0790" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="123" />
 		<set name="castRange" val="900" />
@@ -821,7 +821,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks multiple enemies with 16667 Power added to P. Atk. Over-hit and Critical hit are possible. Requires a bow/crossbow. -->
 		<set name="icon" val="icon.skill0987" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="83" />
 		<set name="castRange" val="900" />
@@ -833,7 +833,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a dimensional vortex that inflicts Fire damage on the enemy, supplementing user's M. Atk. with 140 Power. For 30 seconds, decreases Speed by 10%, Atk. Spd. by 30%, Casting Spd. by 10%, and Fire Resistance by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<set name="icon" val="icon.skill1339" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="105" />
 		<set name="castRange" val="900" />
@@ -846,7 +846,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Detonates a Fire Vortex that inflicts Fire damage on the enemy with 195 Power added to user's M. Atk. -->
 		<set name="icon" val="icon.skill1451" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="108" />
 		<set name="castRange" val="900" />
@@ -858,7 +858,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Crashes down meteors to inflict continuous fire damage near the enemy with 117 Power added to M. Atk. -->
 		<set name="icon" val="icon.skill1467" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="72" />
 		<set name="castRange" val="600" />
@@ -870,7 +870,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with 139 Power added to M. Atk. Absorbs 25% as HP. For 30 seconds, decreases Accuracy by 6 and Dark Resistance by 30. Consumes 12 MP every second. -->
 		<set name="icon" val="icon.skill1343" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="105" />
 		<set name="castRange" val="900" />
@@ -883,7 +883,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a seal that casts a powerful curse that decreases all the abilities of nearby enemies. The seal's effect disappears upon leaving the area. Consumes 1 Magic Symbol. -->
 		<set name="icon" val="icon.skill1422" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="74" />
 		<set name="castRange" val="900" />
@@ -895,7 +895,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stirs up a vortex connecting to the dimension of Water and inflicts Water damage on the enemy with 140 Power added to M. Atk. For 30 seconds, decreases Speed by 30%, Atk. Spd. by 10%, Casting Spd. by 10%, and resistance against Water by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<set name="icon" val="icon.skill1340" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="105" />
 		<set name="castRange" val="900" />
@@ -908,7 +908,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Detonates an Ice Vortex that inflicts Water damage on the enemy with 195 Power added to user's M. Atk. -->
 		<set name="icon" val="icon.skill1453" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="108" />
 		<set name="castRange" val="900" />
@@ -920,7 +920,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Crashes down meteors to inflict continuous non-type damage near the enemy with 117 Power added to M. Atk. -->
 		<set name="icon" val="icon.skill1468" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="72" />
 		<set name="castRange" val="600" />
@@ -932,7 +932,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stirs up a vortex connecting to the dimension of Wind and inflicts Wind damage on the enemy with 140 Power added to M. Atk. For 30 seconds, decreases Speed by 10%, Atk. Spd. by 10%, Casting Spd. by 30%, and resistance against Wind by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<set name="icon" val="icon.skill1341" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="105" />
 		<set name="castRange" val="900" />
@@ -945,7 +945,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a powerful Wind Vortex that inflicts Wind damage on the enemy with 195 Power added to user's M. Atk. -->
 		<set name="icon" val="icon.skill1456" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="108" />
 		<set name="castRange" val="900" />
@@ -957,7 +957,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon the servitor Feline King. Requires 4 Spirit Ore and consumes 11 Spirit Ore at regular intervals up to 14 times. -->
 		<set name="icon" val="icon.skill1406" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="15000" />
@@ -968,7 +968,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, causes the servitor to be possessed with the spirit of an ancient hero, instantly recovering 20% of HP. Increases Max HP by 20%, Accuracy by 4, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, Critical Rate by 20%, Critical Damage by 20%, M. Def. by 20%, M. Atk. by 20%, Casting Spd. by 20%, and Debuff Resistance by 20. Decreases Speed by 20%. Consumes 20 Spirit Ore. -->
 		<set name="icon" val="icon.skill1349" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="72" />
 		<set name="castRange" val="400" />
@@ -980,7 +980,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons Magnus the Unicorn. Requires 4 Spirit Ore and additionally consumes 11 Spirit Ore up to 14 times. -->
 		<set name="icon" val="icon.skill1407" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="15000" />
@@ -991,7 +991,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon the servitor Spectral Lord. Requires 4 Spirit Ore and consumes 11 Spirit Ore at regular intervals up to 14 times. -->
 		<set name="icon" val="icon.skill1408" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="15000" />
@@ -1002,7 +1002,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily makes the servitor invincible. Consumes 5 Spirit Ore. -->
 		<set name="icon" val="icon.skill1496" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="73" />
 		<set name="castRange" val="400" />
@@ -1014,7 +1014,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels the target's debuffs. Consumes 1 Einhasad's Holy Water. -->
 		<set name="icon" val="icon.skill1409" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="59" />
 		<set name="castRange" val="600" />
@@ -1026,7 +1026,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, a powerful spirit acts to increase the damage caused by the targeted party member's magic damage by 2, MP Recovery Bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP Consumption for skill use by 5%. Consumes 10 Spirit Ore. -->
 		<set name="icon" val="icon.skill1355" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="72" />
 		<set name="castRange" val="400" />
@@ -1038,7 +1038,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, a powerful spirit acts to increase a party member's Max HP by 20%, rate of critical attack by 20%, magic damage's Critical Rate by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. Restores HP by using 5% of the damage inflicted upon the enemy with a certain probability. Consumes 10 Spirit Ore. -->
 		<set name="icon" val="icon.skill1357" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="72" />
 		<set name="castRange" val="400" />
@@ -1050,7 +1050,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases the Critical Rate of all party members' damage attack magic by 100% for 2 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<set name="icon" val="icon.skill0365" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
@@ -1061,7 +1061,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Weaves a mystical song that blocks all the enemy's physical and magical skills for 2 minutes. -->
 		<set name="icon" val="icon.skill0437" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="54" />
 		<set name="hitTime" val="2500" />
@@ -1072,7 +1072,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers the target and the 10 most injured allies around the target by 30% of their Max HP. The recovery amount decreases starting from the most injured person. Requires 4 Spirit Ore. -->
 		<set name="icon" val="icon.skill1553" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="194" />
 		<set name="castRange" val="900" />

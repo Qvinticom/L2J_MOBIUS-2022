@@ -4,7 +4,7 @@
 		<!-- Elemental Resistance + 10. -->
 		<set name="icon" val="icon.skill1901" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -19,7 +19,7 @@
 		<!-- Debuff Resistance + 1%. -->
 		<set name="icon" val="icon.skill1902" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -31,7 +31,7 @@
 		<!-- Increases HP Recovery bonus by 1 and MP Recovery bonus by 1. -->
 		<set name="icon" val="icon.skill1903" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -44,7 +44,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels all debuffs and renders immune for 10 seconds. -->
 		<set name="icon" val="icon.skill1904" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="600000" />
@@ -53,7 +53,7 @@
 		<!-- Increases Atk. Spd. by 4, Casting Spd. by 3, and Speed when not in combat by 13. -->
 		<set name="icon" val="icon.skill1905" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -69,7 +69,7 @@
 		<!-- Increases Water resistance by 20. -->
 		<set name="icon" val="icon.skill1906" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -81,7 +81,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., P. Evasion/ M. Evasion + 90, and Speed + 50. -->
 		<set name="icon" val="icon.skill1907" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="600000" />
@@ -90,7 +90,7 @@
 		<!-- P. Critical Rate + 10 and M. Critical Rate + 10. -->
 		<set name="icon" val="icon.skill1908" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -103,7 +103,7 @@
 		<!-- Increases P. Critical Damage and M. Critical Damage by 1%. -->
 		<set name="icon" val="icon.skill1909" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -116,7 +116,7 @@
 		<!-- STR and INT + 1 at night. -->
 		<set name="icon" val="icon.skill1910" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -133,7 +133,7 @@
 		<!-- Increases Wind resistance by 20. -->
 		<set name="icon" val="icon.skill1911" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -145,7 +145,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels all your debuffs. For 5 seconds, you cannot be targeted. -->
 		<set name="icon" val="icon.skill1912" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="600000" />
@@ -154,7 +154,7 @@
 		<!-- Absorbs 1% of the damage inflicted as HP. -->
 		<set name="icon" val="icon.skill1913" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -166,7 +166,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., P. Atk. + 10%, M. Atk. + 20%, Atk. Spd., + 10%, and Casting Spd. + 10%. P. Def. / M. Def. - 10%. -->
 		<set name="icon" val="icon.skill1914" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="600000" />
@@ -175,7 +175,7 @@
 		<!-- Increases Fire resistance by 20. -->
 		<set name="icon" val="icon.skill1915" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -187,7 +187,7 @@
 		<!-- HP/MP/CP + 1%. -->
 		<set name="icon" val="icon.skill1916" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -201,14 +201,14 @@
 		<!-- When receiving damage while HP is below 30%, becomes invincible for 5 seconds. 1 time every 5 minutes only. -->
 		<set name="icon" val="icon.skill1917" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1918" levels="2" name="Undying Will">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Becomes invincible. -->
 		<set name="icon" val="icon.skill1917" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="300000" />
@@ -217,7 +217,7 @@
 		<!-- Skill Cooldown - 1%. -->
 		<set name="icon" val="icon.skill1919" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -230,7 +230,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 sec., reflects 50% of received damage to attacker and recovers 460 HP every second. -->
 		<set name="icon" val="icon.skill1920" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="600000" />
@@ -239,7 +239,7 @@
 		<!-- Increases Earth resistance by 20. -->
 		<set name="icon" val="icon.skill1921" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -251,7 +251,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Knocks Down nearby enemies for 3 sec., and decreases their P. Def./ M. Def. by 50%. -->
 		<set name="icon" val="icon.skill1922" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="300000" />
@@ -261,7 +261,7 @@
 		<!-- Increases PvP damage by 1%. -->
 		<set name="icon" val="icon.skill1923" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -273,7 +273,7 @@
 		<!-- Increases Dark Attack Resistance by 20. -->
 		<set name="icon" val="icon.skill1924" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -285,7 +285,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 seconds, blocks debuff attacks 2 times. -->
 		<set name="icon" val="icon.skill1925" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="600000" />
@@ -294,7 +294,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, transforms into ultimate combat form. -->
 		<set name="icon" val="icon.skill1926" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="200" />
@@ -304,7 +304,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Sigel Force on entire party, which increases P Atk. by 1%. -->
 		<set name="icon" val="icon.icon_sigel" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -313,7 +313,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%. -->
 		<set name="icon" val="icon.icon_sigel_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -322,7 +322,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Tyrr Force on entire party, which increases P. Critical Rate by 1%. -->
 		<set name="icon" val="icon.icon_tir" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -331,7 +331,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Critical Rate + 1%. -->
 		<set name="icon" val="icon.icon_tir_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -340,7 +340,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
 		<set name="icon" val="icon.icon_othel" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -349,7 +349,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 1%. -->
 		<set name="icon" val="icon.icon_othel_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -358,7 +358,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
 		<set name="icon" val="icon.icon_yr" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -367,7 +367,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- MP Recovery Bonus + 50%. -->
 		<set name="icon" val="icon.icon_yr_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -376,7 +376,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
 		<set name="icon" val="icon.icon_feoh" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -385,7 +385,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casting Spd. + 1%. -->
 		<set name="icon" val="icon.icon_feoh_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -394,7 +394,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Wynn Force on entire party, which decreases P./M. Skill MP Consumption by 3%. -->
 		<set name="icon" val="icon.icon_wynn" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -403,7 +403,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M. Skill MP Consumption - 3%. -->
 		<set name="icon" val="icon.icon_wynn_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -412,7 +412,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
 		<set name="icon" val="icon.icon_eolh" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -421,7 +421,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 1%. -->
 		<set name="icon" val="icon.icon_eolh_01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -430,7 +430,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts consecutive attacks using a Demon's claws. -->
 		<set name="icon" val="icon.skill0539" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="1080" />
@@ -441,7 +441,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with spread wings. -->
 		<set name="icon" val="icon.skill0492" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="40" />
@@ -453,7 +453,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks with spread wings. Strikes all in target rush area. -->
 		<set name="icon" val="icon.skill0540" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="600" />
@@ -465,7 +465,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shoots a death arrow at the enemy. -->
 		<set name="icon" val="icon.skill1431" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="600" />
@@ -477,7 +477,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attack enemies at the front. -->
 		<set name="icon" val="icon.skill1471" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="40" />
@@ -489,63 +489,63 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sigel Momentum is not applied. -->
 		<set name="icon" val="icon.icon_sigel" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1947" levels="1" name="Block Tyrr Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Tyrr Momentum is not applied. -->
 		<set name="icon" val="icon.icon_tir" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1948" levels="1" name="Block Othell Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Othell Momentum is not applied. -->
 		<set name="icon" val="icon.icon_othel" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1949" levels="1" name="Block Yul Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Yul Momentum is not applied. -->
 		<set name="icon" val="icon.icon_yr" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1950" levels="1" name="Block Feoh Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Feoh Momentum is not applied. -->
 		<set name="icon" val="icon.icon_feoh" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1951" levels="1" name="Block Iss Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Iss Momentum is not applied. -->
 		<set name="icon" val="icon.icon_is" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1952" levels="1" name="Block Wynn Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wynn Momentum is not applied. -->
 		<set name="icon" val="icon.icon_wynn" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1953" levels="1" name="Block Aeore Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Aeore Momentum is not applied. -->
 		<set name="icon" val="icon.icon_eolh" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1954" levels="1" name="Flying Body Reinforcement">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into final flying combat form. -->
 		<set name="icon" val="icon.skill0840" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="200" />
@@ -555,7 +555,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases party members' P. Atk. by 1%, M. Atk. by 1%, P. Critical Rate by 1%, Atk. Spd. by 1%, and Casting Spd. by 1%. Decreases physical and magic skill Cooldown by 1%. Always includes Sigel and Aeore Force. When 4 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
 		<set name="icon" val="icon.skill1955" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
@@ -565,7 +565,7 @@
 		<table name="#pAtk"> 1.01 1.02 1.03 1.04 </table>
 		<table name="#mAtk"> 1.01 1.03 1.04 1.06 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0816" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -579,7 +579,7 @@
 		<!-- P. Def. + 1%, M. Def. + 1%. -->
 		<table name="#def"> 1.01 1.02 1.03 1.04 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0439" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -593,7 +593,7 @@
 		<!-- Atk. Spd. + 1%, Casting Spd. + 1%. -->
 		<table name="#atkSpd"> 1.01 1.02 1.03 1.04 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0817" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -607,7 +607,7 @@
 		<!-- P. Critical Rate/ M. Critical Rate + 10. -->
 		<table name="#critRate"> 10 20 30 40 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0814" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -621,7 +621,7 @@
 		<!-- P. Accuracy + 2, M. Accuracy + 2. -->
 		<table name="#acc"> 2 4 6 8 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -635,7 +635,7 @@
 		<!-- P. Evasion + 2, M. Evasion + 2. -->
 		<table name="#evas"> 2 4 6 8 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -650,7 +650,7 @@
 		<table name="#pAtk"> 1.03 1.06 1.09 1.12 </table>
 		<table name="#mAtk"> 1.04 1.09 1.13 1.18 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0816" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -664,7 +664,7 @@
 		<!-- P. Def. + 3%, M. Def. + 3%. -->
 		<table name="#def"> 1.03 1.06 1.09 1.12 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0439" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -678,7 +678,7 @@
 		<!-- Atk. Spd. + 3%, Casting Spd. + 3%. -->
 		<table name="#atkSpd"> 1.03 1.06 1.09 1.12 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0817" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -692,7 +692,7 @@
 		<!-- Max HP + 6%. -->
 		<table name="#maxHp"> 1.06 1.12 1.18 1.24 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -705,7 +705,7 @@
 		<!-- Max MP + 6%. -->
 		<table name="#maxMp"> 1.06 1.12 1.18 1.24 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -718,7 +718,7 @@
 		<!-- Max CP + 6%. -->
 		<table name="#maxCp"> 1.06 1.12 1.18 1.24 </table>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill1397" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -730,7 +730,7 @@
 	<skill id="1968" levels="1" name="Dual - HP Drain">
 		<!-- Has a chance of absorbing 5% of damage inflicted upon the enemy as HP when attacking. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.dual_hpsteal" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -743,13 +743,13 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of recovering your own MP when attacking or using a skill. -->
 		<set name="icon" val="icon.dual_mpsteal" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1970" levels="1" name="Dual - Specialized for P. Atk.">
 		<!-- P. Atk. + 9%, P. Def./ M. Def. - 9%. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.dual_atkup" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -763,7 +763,7 @@
 	<skill id="1971" levels="1" name="Dual - Specialized for M. Atk.">
 		<!-- M. Atk. + 13%, P. Def./ M. Def. - 9%. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.dual_defup" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -777,7 +777,7 @@
 	<skill id="1972" levels="1" name="Dual - Physical Trait Increase">
 		<!-- Increases success rate for physical attacks and physical defense by 20%. TODO: Verify -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill4084" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -790,7 +790,7 @@
 	<skill id="1973" levels="1" name="Dual - Mental Trait Increase">
 		<!-- Increases success rate for mental attacks and mental defense by 20%. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="icon" val="icon.skill4116" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -805,7 +805,7 @@
 	<skill id="1974" levels="1" name="Dual - Berserker's Rage">
 		<!-- Has a chance of P. Atk. + 27% when attacking. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.dual_t_atkup" />
 		<set name="excludedFromCheck" val="true" />
@@ -827,7 +827,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="icon" val="icon.dual_t_atkup" />
 		<set name="isMagic" val="4" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.27" />
@@ -837,7 +837,7 @@
 	<skill id="1976" levels="1" name="Dual - Master's Rage">
 		<!-- Has a chance of Skill Power + 27% during skill use. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.dual_t_skup" />
 		<set name="excludedFromCheck" val="true" />
@@ -856,9 +856,9 @@
 		<!-- Skill Power + 27% for 15 sec. -->
 		<set name="abnormalTime" val="15" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="icon" val="icon.dual_t_skup" />
 		<set name="isMagic" val="4" />
 		<set name="reuseDelay" val="20000" />
@@ -871,7 +871,7 @@
 	<skill id="1978" levels="1" name="Dual - Light of Protection">
 		<!-- Has a chance of P. Def./ M. Def. + 27% when attacked. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.dual_t_dmgdef" />
 		<set name="excludedFromCheck" val="true" />
@@ -894,7 +894,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="icon" val="icon.dual_t_dmgdef" />
 		<set name="isMagic" val="4" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="1.27" />
@@ -905,7 +905,7 @@
 	<skill id="1980" levels="1" name="Dual - Light of Blessing">
 		<!-- Has a chance of restoring HP when attacked. -->
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.dual_t_dmgheal" />
 		<set name="excludedFromCheck" val="true" />
@@ -927,7 +927,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="icon" val="icon.dual_t_dmgheal" />
 		<set name="isMagic" val="4" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<for>
 			<effect name="HealPercent">
 				<param power="25" />
@@ -938,7 +938,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks target's Physical Skills for 5 sec. Can only use on PCs. -->
 		<set name="icon" val="icon.dual_a_pblock" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -950,7 +950,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks target's Magical Skills for 5 sec. Can only use on PCs. -->
 		<set name="icon" val="icon.dual_a_mblock" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -962,7 +962,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases target and nearby enemies' Spd. by 90% for 5 sec. Can only use on PCs. -->
 		<set name="icon" val="icon.dual_a_spdown" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -974,7 +974,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Damage Reflect Resistance becomes 100% for 30 sec. -->
 		<set name="icon" val="icon.dual_a_refdmg" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -984,70 +984,70 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 463. Can be used when the main/ dual class is Level 85 or above. -->
 		<set name="icon" val="icon.skill0917" />
-		<set name="operateType" val="T" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1987" levels="1" name="Sigel Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe/ Light Armor. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1988" levels="1" name="Tyrr Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1989" levels="1" name="Yul Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe/ Heavy Armor. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1990" levels="1" name="Othell Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe/ Heavy Armor. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1991" levels="1" name="Feoh Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with Light Armor/ Heavy Armor. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1992" levels="1" name="Wynn Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with Heavy Armor. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1993" levels="1" name="Iss Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- No Penalty. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1994" levels="1" name="Aeore Armor Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with Heavy Armor. -->
 		<set name="icon" val="icon.skill6213_4" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1995" levels="1" name="Dual - MP Drain">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores MP. -->
 		<set name="icon" val="icon.dual_mpsteal" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="6000" />
 	</skill>
@@ -1055,7 +1055,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., blocks target from using escape items and skills. -->
 		<set name="icon" val="icon.skill1996" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1000" />
@@ -1067,7 +1067,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., blocks target from being resurrected by another character. -->
 		<set name="icon" val="icon.skill1997" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1000" />

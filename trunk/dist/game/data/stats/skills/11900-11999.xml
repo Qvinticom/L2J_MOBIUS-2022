@@ -3,14 +3,14 @@
 	<skill id="11997" levels="1" name="Healer - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0217" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11998" levels="1" name="Healer - Individual">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
 		<set name="icon" val="icon.skill1543" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="5000" />
@@ -20,7 +20,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful blow on target. -->
 		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="castRange" val="900" />

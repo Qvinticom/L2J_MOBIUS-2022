@@ -21,16 +21,16 @@ package com.l2jserver.gameserver.model.skills;
 /**
  * This enum class holds the skill operative types:
  * <ul>
- * <li>A1</li>
- * <li>A2</li>
- * <li>A3</li>
- * <li>A4</li>
- * <li>CA1</li>
- * <li>CA5</li>
- * <li>DA1</li>
- * <li>DA2</li>
- * <li>P</li>
- * <li>T</li>
+ * <li>ACTIVE_INSTANT</li>
+ * <li>ACTIVE_CONTINUOUS</li>
+ * <li>ACTIVE_WITH_TRIGGER</li>
+ * <li>SPECIAL_HERB</li>
+ * <li>CHANNELING_INSTANT</li>
+ * <li>CHANNELING_CONTINUOUS</li>
+ * <li>DIRECTIONAL_INSTANT</li>
+ * <li>DIRECTIONAL_CONTINUOUS</li>
+ * <li>PASSIVE</li>
+ * <li>TOGGLE</li>
  * </ul>
  * @author Zoey76
  */
@@ -39,52 +39,52 @@ public enum SkillOperateType
 	/**
 	 * Active Skill with "Instant Effect" (for example damage skills heal/pdam/mdam/cpdam skills).
 	 */
-	A1,
+	ACTIVE_INSTANT,
 	
 	/**
 	 * Active Skill with "Continuous effect + Instant effect" (for example buff/debuff or damage/heal over time skills).
 	 */
-	A2,
+	ACTIVE_CONTINUOUS,
 	
 	/**
 	 * Active Skill with "Instant effect + Continuous effect"
 	 */
-	A3,
+	ACTIVE_WITH_TRIGGER,
 	
 	/**
-	 * Active Skill with "Instant effect + ?" used for special event herb.
+	 * Active Skill with "Instant effect + ?" used for special event herb (itemId 20903, skillId 22158).
 	 */
-	A4,
+	SPECIAL_HERB,
 	
 	/**
 	 * Continuous Active Skill with "instant effect" (instant effect casted by ticks).
 	 */
-	CA1,
+	CHANNELING_INSTANT,
 	
 	/**
 	 * Continuous Active Skill with "continuous effect" (continuous effect casted by ticks).
 	 */
-	CA5,
+	CHANNELING_CONTINUOUS,
 	
 	/**
 	 * Directional Active Skill with "Charge/Rush instant effect".
 	 */
-	DA1,
+	DIRECTIONAL_INSTANT,
 	
 	/**
 	 * Directional Active Skill with "Charge/Rush Continuous effect".
 	 */
-	DA2,
+	DIRECTIONAL_CONTINUOUS,
 	
 	/**
 	 * Passive Skill.
 	 */
-	P,
+	PASSIVE,
 	
 	/**
 	 * Toggle Skill.
 	 */
-	T;
+	TOGGLE;
 	
 	/**
 	 * Verifies if the operative type correspond to an active skill.
@@ -94,14 +94,14 @@ public enum SkillOperateType
 	{
 		switch (this)
 		{
-			case A1:
-			case A2:
-			case A3:
-			case A4:
-			case CA1:
-			case CA5:
-			case DA1:
-			case DA2:
+			case ACTIVE_INSTANT:
+			case ACTIVE_CONTINUOUS:
+			case ACTIVE_WITH_TRIGGER:
+			case CHANNELING_INSTANT:
+			case CHANNELING_CONTINUOUS:
+			case DIRECTIONAL_INSTANT:
+			case DIRECTIONAL_CONTINUOUS:
+			case SPECIAL_HERB:
 				return true;
 			default:
 				return false;
@@ -116,9 +116,9 @@ public enum SkillOperateType
 	{
 		switch (this)
 		{
-			case A2:
-			case A4:
-			case DA2:
+			case ACTIVE_CONTINUOUS:
+			case DIRECTIONAL_CONTINUOUS:
+			case SPECIAL_HERB:
 				return true;
 			default:
 				return false;
@@ -131,7 +131,7 @@ public enum SkillOperateType
 	 */
 	public boolean isSelfContinuous()
 	{
-		return (this == A3);
+		return (this == ACTIVE_WITH_TRIGGER);
 	}
 	
 	/**
@@ -140,7 +140,7 @@ public enum SkillOperateType
 	 */
 	public boolean isPassive()
 	{
-		return (this == P);
+		return (this == PASSIVE);
 	}
 	
 	/**
@@ -149,7 +149,7 @@ public enum SkillOperateType
 	 */
 	public boolean isToggle()
 	{
-		return (this == T);
+		return (this == TOGGLE);
 	}
 	
 	/**
@@ -160,8 +160,8 @@ public enum SkillOperateType
 	{
 		switch (this)
 		{
-			case CA1:
-			case CA5:
+			case CHANNELING_INSTANT:
+			case CHANNELING_CONTINUOUS:
 				return true;
 			default:
 				return false;

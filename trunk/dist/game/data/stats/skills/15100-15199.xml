@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 6 hours, buffs and debuffs do not disappear but remain upon death. -->
 		<set name="icon" val="icon.skill1323" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" />
@@ -13,7 +13,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -24,7 +24,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals the target with 1519 power. If HP is full, CP is restored with the remaining power. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -35,7 +35,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals the target with 1557 power. If HP is full, CP is restored with the remaining power. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -46,7 +46,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilizes the enemy for 15 seconds. -->
 		<set name="icon" val="icon.skill11561" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="2500" />
@@ -59,7 +59,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Becomes invisible and decreases speed by 30%. -->
 		<set name="icon" val="icon.skill10784" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="360000" />
@@ -68,7 +68,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sacrifice yourself to attempt a Lethal Strike on the enemy. -->
 		<set name="icon" val="icon.skill10784" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="500" />
@@ -78,7 +78,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sacrifice. A state in which HP cannot be recovered. -->
 		<set name="icon" val="icon.skill4036" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -86,7 +86,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases your battle abilities. -->
 		<set name="icon" val="icon.skill10292" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="3600000" />
@@ -95,7 +95,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases sleep, bleed, shock, poison, and hold attack bonus by 30. -->
 		<set name="icon" val="icon.skill0335" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -105,7 +105,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage around you. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -114,7 +114,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage and hurls one person for a certain distance. -->
 		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -125,7 +125,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -135,7 +135,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -146,7 +146,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -156,7 +156,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage around you. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -166,7 +166,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, change one party member's silhouette into that of a pig. -->
 		<set name="icon" val="icon.skill11537" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="2500" />
@@ -178,7 +178,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Chooses 3 party members and kills them on the spot. -->
 		<set name="icon" val="icon.skill0223" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="5000" />
@@ -190,7 +190,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns all party members for 5 seconds. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -202,7 +202,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fully recovers your HP. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -212,7 +212,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Selects one party member at random and kills him/her on the spot. -->
 		<set name="icon" val="icon.skill0223" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -224,7 +224,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rage explodes at the death of your child. Uses Petra to greatly decrease HP and greatly increases HP Recovery Rate and P. Atk. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -234,7 +234,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Hurls the opponent with a Vernier Calipers in your hands. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1500" />
@@ -245,7 +245,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1500" />
@@ -256,7 +256,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1500" />
@@ -267,7 +267,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
 		<set name="icon" val="icon.skill0793" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="83" />
 		<set name="castRange" val="900" />
@@ -280,7 +280,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
 		<set name="icon" val="icon.skill0793" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="83" />
 		<set name="castRange" val="900" />
@@ -293,7 +293,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Continuously receives new weapons from the weapon stand to increase P. Atk. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -304,7 +304,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Continuously receives new armor from the armor stand to increase P. Def. -->
 		<set name="icon" val="icon.skill1040" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -315,7 +315,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -324,7 +324,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -333,7 +333,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -342,7 +342,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -351,7 +351,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -360,7 +360,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -369,7 +369,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -378,7 +378,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -387,7 +387,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -396,7 +396,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -405,7 +405,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -414,7 +414,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -423,7 +423,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -432,7 +432,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -441,7 +441,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -450,7 +450,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<set name="icon" val="icon.skill11065" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -459,21 +459,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP/HP/MP + 1000, Weight + 25600, Damage + 8%, Received Damage - 9%, Damage Reflect Resistance + 5%, Inventory Slot + 36, and all Attribute Resistance + 15. -->
 		<set name="icon" val="icon.skill0332" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15146" levels="1" name="Mysterious Belt">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP/HP/MP + 500, PvP Damage + 6%, Damage Reflect Resistance + 5%, and Received PvP Damage - 7%. -->
 		<set name="icon" val="icon.skill0332" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15147" levels="1" name="Overheat">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is overheated. Inflicts continuous damage on the target that harms you. -->
 		<set name="icon" val="icon.skill1492" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -483,7 +483,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is overheated. Inflicts a speed decreasing effect on the target that harms you. -->
 		<set name="icon" val="icon.skill0102" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -493,7 +493,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers your HP. -->
 		<set name="icon" val="icon.skill1216" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="120000" />
@@ -503,7 +503,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is protecting itself. Increases your P. Def. -->
 		<set name="icon" val="icon.skill1389" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="120000" />
@@ -513,7 +513,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is burning from overheating and HP is wearing away. -->
 		<set name="icon" val="icon.skill1492" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -524,7 +524,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed is decreased due to the machine's coolant leak. -->
 		<set name="icon" val="icon.skill0102" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -535,7 +535,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<set name="icon" val="icon.skill11507" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -543,7 +543,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<set name="icon" val="icon.skill11507" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -551,7 +551,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Petrify status. -->
 		<set name="icon" val="icon.skill1540" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="isDebuff" val="true" />
@@ -559,50 +559,50 @@
 	<skill id="15156" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15157" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15158" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15159" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15160" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15161" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15162" levels="1" name="Flower Planting">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15163" levels="1" name="Tauti Typhoon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -612,7 +612,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -622,7 +622,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cannot move due to shock. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -632,7 +632,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Throws forward toward the target who is holding Tauti to inflict damage and to knock down. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="100" />
@@ -643,7 +643,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="5000" />
@@ -654,7 +654,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pulls in all the PC's who are near Tauti. -->
 		<set name="icon" val="icon.skill10016" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="123" />
 		<set name="hitTime" val="500" />
@@ -665,7 +665,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP is cut down from the roar. HP is decreased by the energy of fire in the roar. -->
 		<set name="icon" val="icon.skill0102" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -676,7 +676,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. are increased. -->
 		<set name="icon" val="icon.skill1418" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="500" />
@@ -686,7 +686,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill where Tauti throws crossways and receives back again. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -695,7 +695,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
 		<set name="icon" val="icon.skill11276" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="200" />
 		<set name="isDebuff" val="true" />
@@ -704,7 +704,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
 		<set name="icon" val="icon.skill11276" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="200" />
 		<set name="isDebuff" val="true" />
@@ -712,7 +712,7 @@
 	<skill id="15174" levels="1" name="Petra Injection - Enhance HP Recovery">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="hitTime" val="15000" />
@@ -722,7 +722,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's HP Recovery. -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isDebuff" val="true" />
@@ -730,7 +730,7 @@
 	<skill id="15176" levels="1" name="Petra Injection - Enhance P. Def.">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="hitTime" val="15000" />
@@ -740,7 +740,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's P. Def. -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isDebuff" val="true" />
@@ -748,7 +748,7 @@
 	<skill id="15178" levels="1" name="Petra Injection - Enhance M. Def.">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="hitTime" val="15000" />
@@ -758,7 +758,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's M. Def. -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isDebuff" val="true" />
@@ -766,7 +766,7 @@
 	<skill id="15180" levels="1" name="Petra Injection - Enhance P. Atk.">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="hitTime" val="15000" />
@@ -776,7 +776,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's P. Atk. -->
 		<set name="icon" val="icon.skill1434" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isDebuff" val="true" />
@@ -785,7 +785,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Provokes nearby enemies into attacking you. -->
 		<set name="icon" val="icon.skill10027" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -796,7 +796,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Provokes nearby enemies into attacking you. -->
 		<set name="icon" val="icon.skill10027" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -807,7 +807,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Provokes nearby enemies into attacking you. -->
 		<set name="icon" val="icon.skill10027" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -818,7 +818,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
 		<set name="icon" val="icon.skill10012" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -829,7 +829,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
 		<set name="icon" val="icon.skill10012" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -840,7 +840,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
 		<set name="icon" val="icon.skill10012" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -851,7 +851,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 23391 power added to P. Atk. -->
 		<set name="icon" val="icon.skill10771" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -862,7 +862,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 27459 power added to P. Atk. -->
 		<set name="icon" val="icon.skill10771" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -873,7 +873,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 31527 power added to P. Atk. -->
 		<set name="icon" val="icon.skill10771" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -884,7 +884,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 22526 power added to P. Atk. -->
 		<set name="icon" val="icon.skill10772" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -895,7 +895,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 26448 power added to P. Atk. -->
 		<set name="icon" val="icon.skill10772" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -906,7 +906,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 30371 power added to P. Atk. -->
 		<set name="icon" val="icon.skill10772" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -917,7 +917,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
 		<set name="icon" val="icon.skill11296" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -930,7 +930,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
 		<set name="icon" val="icon.skill11296" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -943,7 +943,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
 		<set name="icon" val="icon.skill11296" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -956,7 +956,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -966,7 +966,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -976,7 +976,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />

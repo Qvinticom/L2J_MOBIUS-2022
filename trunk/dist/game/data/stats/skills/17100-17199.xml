@@ -4,27 +4,27 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Merchant ParaPara Cat. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17101" levels="1" name="Passion Treasure Chest">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17102" levels="1" name="Passion Gift Box">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17103" levels="1" name="Santa's Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 3 hr., you change into a Santa Outfit. All stats + 1. Buff remains even after death. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="10800000" />
@@ -34,7 +34,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleport to the Town of Aden. Usable only when Agathion's Seal is released. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -43,7 +43,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleport to the Town of Rune. Usable only when Agathion's Seal is released. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -52,7 +52,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleport to the Talking Island Village. Usable only when Agathion's Seal is released. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -61,7 +61,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Snowman's gift. Cannot receive again until it's expired. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -70,7 +70,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="4" />
@@ -78,13 +78,13 @@
 	<skill id="17109" levels="1" name="-">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17110" levels="1" name="Nectar">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="200" />
 		<set name="reuseDelay" val="2000" />
@@ -92,7 +92,7 @@
 	<skill id="17111" levels="1" name="Wintermelon Seed">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="10000" />
@@ -100,7 +100,7 @@
 	<skill id="17112" levels="1" name="Large Wintermelon Seed">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="10000" />
@@ -108,27 +108,27 @@
 	<skill id="17113" levels="1" name="Winter Holiday Gift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17114" levels="1" name="Promise Cube">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="-1000" />
 	</skill>
 	<skill id="17115" levels="1" name="Promise Cube Skill">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="-1000" />
 	</skill>
 	<skill id="17116" levels="1" name="Promise Cube Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17117" levels="2" name="Rune of Bountiful Growth">
@@ -136,14 +136,14 @@
 		<!-- Increases acquired XP and SP by 20%. -->
 		<table name="#icons"> icon.ev_charge_run br_cashtex.item.br_cash_rune_of_feather_i00 </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17118" levels="1" name="Emperor's Growth Scroll">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- XP/SP + 30% for 1 hour. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="4" />
@@ -151,35 +151,35 @@
 	<skill id="17119" levels="1" name="Emperor's Vitality Tonic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="17120" levels="1" name="Emperor's Vitality Tonic (Medium)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="17121" levels="1" name="Emperor's Vitality Tonic (Large)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="17122" levels="1" name="Returning Hero's Vitality Replenishing Juice">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="17123" levels="1" name="Snake's Blessing Effect (Paid)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -188,7 +188,7 @@
 		<!-- Happy 2013! You can obtain a card in 1 hr. There are 23 stages, so you can acquire up to 23 cards. Return to Snake for another buff when the buff wears out. (Note:) If you are dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
 		<table name="#castRanges"> 900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 </table>
 		<set name="icon" val="icon.card_event_everyday_gift" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="#castRanges" />
 		<set name="isMagic" val="4" />
@@ -196,7 +196,7 @@
 	<skill id="17125" levels="1" name="Snake's Blessing Effect (Free)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -205,7 +205,7 @@
 		<!-- Happy 2013! You can obtain a card in 1 hr. There are 23 stages, so you can acquire up to 23 cards. Return to Snake for another buff when the buff wears out. (Note:) If you are dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
 		<table name="#castRanges"> 900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 </table>
 		<set name="icon" val="icon.card_event_everyday_gift" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="#castRanges" />
 		<set name="isMagic" val="4" />
@@ -214,7 +214,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- CON +5, MEN +5, damage reflect + 20% for 30 minutes. -->
 		<set name="icon" val="icon.card_dragon_gold" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="4" />
@@ -223,7 +223,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR +5, INT +5, P. Def. + 10% for 30 minutes. -->
 		<set name="icon" val="icon.card_hero_red" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="4" />
@@ -232,7 +232,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR +5, INT +5, M. Def. + 10% for 30 minutes. -->
 		<set name="icon" val="icon.card_devil_black" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="4" />
@@ -241,7 +241,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR +5, INT +5, resistance to 6 attributes + 100 for 30 minutes. -->
 		<set name="icon" val="icon.card_angel_blue" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="4" />
@@ -249,148 +249,148 @@
 	<skill id="17131" levels="1" name="Treasure Chest">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17132" levels="1" name="Hair Accessory Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17133" levels="1" name="Pendant Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17134" levels="1" name="Enchant Scroll Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17135" levels="1" name="Attribute Stone Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17136" levels="1" name="Ingredient Box">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17137" levels="1" name="Hero's Treasure Chest">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17138" levels="1" name="Hero's Lucky Enchant Stone Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17139" levels="1" name="Hero's Giant Enchant Scroll Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17140" levels="1" name="Hero's Blessed Enchant Scroll Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17141" levels="1" name="Hero's Unbind Scroll Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17142" levels="1" name="Hero's Attribute Crystal Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17143" levels="1" name="PK Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17144" levels="1" name="Reputation Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17145" levels="1" name="Mysterious Shot Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17146" levels="1" name="Kaliel's Energy Box">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17147" levels="1" name="Soul Bottle Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17148" levels="1" name="Top-grade Life Stone Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17149" levels="1" name="Legendary Card Pouch: Dragon">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17150" levels="1" name="Legendary Card Pouch: Hero">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17151" levels="1" name="Legendary Card Pouch: Demon">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17152" levels="1" name="Mysterious Healthy Juice">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers your HP/CP by 30000. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 	</skill>
 	<skill id="17153" levels="1" name="Heavenly Recovery Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17154" levels="1" name="Love Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -399,7 +399,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -408,7 +408,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A deliciously dark flavor surrounds you.\nFor 2 hours, STR + 2, INT +2, and Attribute Resistance + 20. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="reuseDelay" val="10000" />
@@ -418,7 +418,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- An exhilarating thrill of sweet energy.\nFor 2 hours, STR + 2, INT + 2, DEX + 2, and WIT + 2. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="reuseDelay" val="10000" />
@@ -428,7 +428,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Activating shield of self-built perfection.\nFor 2 hours, STR + 2, INT + 2, CON + 2, and MEN + 2. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="reuseDelay" val="10000" />
@@ -438,7 +438,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
 		<set name="icon" val="icon.skill11540" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -449,7 +449,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 minutes. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="-2" />
 		<set name="hitTime" val="5000" />
@@ -459,7 +459,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
 		<set name="icon" val="icon.etc_whiteday_choco_long" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="4" />
@@ -468,7 +468,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
 		<set name="icon" val="icon.etc_whiteday_candy_long" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="4" />
@@ -477,7 +477,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
 		<set name="icon" val="icon.etc_whiteday_cookie_long" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="4" />
@@ -485,20 +485,20 @@
 	<skill id="17164" levels="1" name="Demonic Sword Zariche Appearance Stone">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17165" levels="1" name="Blood Sword Akamanah Appearance Stone">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17166" levels="1" name="GM's Blessing - Knight's Harmony">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
 		<set name="icon" val="icon.skill11523" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -506,7 +506,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, Speed + 8. -->
 		<set name="icon" val="icon.skill11524" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -514,7 +514,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Spd. + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. Also, M. Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
 		<set name="icon" val="icon.skill11525" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -522,7 +522,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases P. Atk. + 23%, P. Def. + 15%, M. Atk. + 91%, and M. Def. + 30%. -->
 		<set name="icon" val="icon.skill11517" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -530,7 +530,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage during a normal attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Decreases critical damage - 30%. Additionally increases Critical Damage during a normal attack when receiving more than a certain amount of damage while equipped with a melee weapon, bow, or crossbow. -->
 		<set name="icon" val="icon.skill11522" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -538,7 +538,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Max HP + 43%, Max MP + 43%, Max CP + 43%, and HP recovery bonus + 20%. -->
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -546,7 +546,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases P. Critical Rate + 38%, P. Critical Damage + 35%, and M. Critical Rate + 20. Decreases MP consumption for physical skills - 20% and magic skills - 10%. Decreases MP consumption for Iss Enchanter's enchant skills - 20%. -->
 		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -554,7 +554,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases P. Accuracy + 8, physical and magic evasion + 8, and speed + 37. Decreases received critical damage - 30%. -->
 		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -562,7 +562,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Atk. Spd. + 37% and Casting Spd. + 34%. Applies Vampiric Rage effect + 9% with a certain probability. -->
 		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -570,7 +570,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate. -->
 		<set name="icon" val="icon.skill11529" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -578,7 +578,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<set name="icon" val="icon.skill11530" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -586,7 +586,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<set name="icon" val="icon.skill11532" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
@@ -594,59 +594,59 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Makeshift Bat. -->
 		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17179" levels="1" name="Transformation Scroll: Lady Tow">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Lady Tow. -->
 		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17180" levels="1" name="Transformation Scroll: Angry Tow">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Angry Tow. -->
 		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17181" levels="1" name="Transformation Scroll: Sleepy Tow">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Sleepy Tow. -->
 		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17182" levels="1" name="Eva's Special Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.shirt_special_box_i00" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17183" levels="1" name="Pa'agrio's Special Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.shirt_special_box_i01" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17184" levels="1" name="Maphr's Special Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17185" levels="1" name="Sayha's Special Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17186" levels="1" name="Dandy's Cheers">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hours, increases P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 30, M. Atk. + 10%, Casting Spd. + 5%, M. Critical Rate + 20. MP consumption - 3%, Cooldown - 3%. Does not apply at the same time as the Dandy's Passion and Dandy's Faith buffs. Armor's appearance changes to that of the NC Dinos Uniform. -->
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i04" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -654,7 +654,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases acquired XP and SP by 30%. Does not apply at the same time as Scroll: Energy of Glory. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="isMagic" val="4" />
@@ -663,7 +663,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 30, M. Atk. + 10%, Casting Spd. + 5%, M. Critical Rate + 20. MP consumption - 3%, Cooldown - 3%. Does not apply at the same time as the Dandy's Cheer and Dandy's Faith buffs. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="isMagic" val="4" />
@@ -672,7 +672,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, decreases all received damage - 10%. Does not apply at the same time as Dandy's Cheer and Dandy's Faith buffs. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="isMagic" val="4" />
@@ -680,20 +680,20 @@
 	<skill id="17190" levels="1" name="Reinforced Soulshot (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17191" levels="1" name="Reinforced Soulshot (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17192" levels="1" name="Change Hair Accessory">
 		<!-- Change hair accessories. -->
 		<set name="icon" val="icon.skill0810" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="180000" /> <!-- 3 minutes -->
 		<set name="targetType" val="SELF" />
 		<for>
@@ -703,14 +703,14 @@
 	<skill id="17193" levels="1" name="Indomitable Hero's Olympiad Reward Box">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="17194" levels="1" name="Vitality Replenishing Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -718,35 +718,35 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, increases stun resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17196" levels="1" name="Potion of Protection: Hold">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, increases hold resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17197" levels="1" name="Potion of Protection: Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, increases bleed resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17198" levels="1" name="Potion of Protection: Paralyze">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, increases paralysis resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17199" levels="1" name="Potion of Protection: Mental">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, increases mental attack resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

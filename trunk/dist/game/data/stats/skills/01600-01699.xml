@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, awakens party members' destructive instincts to increase P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate by 50%, and Atk. Spd. and Casting Spd. by 20%. -->
 		<set name="icon" val="icon.skill1600" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="148" />
 		<set name="hitTime" val="2500" />
@@ -15,7 +15,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attempt to fish at the dock. Put on a fishing rod and bait. -->
 		<set name="icon" val="icon.skill1312" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 	</skill>
@@ -23,7 +23,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Loosen the fishing line when the fish is struggling. -->
 		<set name="icon" val="icon.skill1314" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="reuseDelay" val="2000" />
@@ -32,7 +32,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Tighten the fishing line when the fish is tired. -->
 		<set name="icon" val="icon.skill1313" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="reuseDelay" val="2000" />
@@ -41,14 +41,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Higher expertise gets you better fish. -->
 		<set name="icon" val="icon.skill1315" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1627" levels="1" name="Power Strike">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -58,7 +58,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 277440. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -68,7 +68,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. by 100%. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -77,7 +77,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Critical Rate/Damage by 100%. -->
 		<set name="icon" val="icon.skill1077" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -86,7 +86,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster absolute defense. P. Def. and M. Def. + 5000. -->
 		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
@@ -94,7 +94,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. + 20%. -->
 		<set name="icon" val="icon.skill1040" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -103,7 +103,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster heal. Power 1024. -->
 		<set name="icon" val="icon.skill1401" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="2000" />
@@ -113,7 +113,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 36675. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="10000" />
@@ -122,7 +122,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Damage blood siphon 100%. -->
 		<set name="icon" val="icon.skill1268" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -131,7 +131,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Petrify -->
 		<set name="icon" val="icon.skill1540" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -140,7 +140,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts stun on the enemy for 7 seconds. -->
 		<set name="icon" val="icon.skill0092" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1200" />
@@ -151,7 +151,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts stun on the enemy for 7 seconds. -->
 		<set name="icon" val="icon.skill0092" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1200" />
@@ -162,7 +162,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts stun on the enemy for 7 seconds. -->
 		<set name="icon" val="icon.skill0092" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -171,7 +171,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilizes the enemy for 15 seconds. -->
 		<set name="icon" val="icon.skill1201" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1200" />
@@ -183,7 +183,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilizes the enemy for 15 seconds. -->
 		<set name="icon" val="icon.skill1201" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1200" />
@@ -195,7 +195,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilizes the enemy for 15 seconds. -->
 		<set name="icon" val="icon.skill1201" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -205,7 +205,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Causes the enemy's body to go completely rigid for 15 seconds and causes paralysis for 10 seconds. -->
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="1200" />
@@ -217,7 +217,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Reflect damage 50% -->
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -226,7 +226,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Becomes invincible from debuffs for 30 seconds. Can only be used on party members. -->
 		<set name="icon" val="icon.skill1411" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -235,7 +235,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Mana burn. Power 110. Enchant Power: Increases the effect. -->
 		<set name="icon" val="icon.skill1398" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -244,7 +244,7 @@
 	<skill id="1647" levels="1" name="50% Instant Herb of Mana">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -253,7 +253,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Herb's effect increases MP Recovery. -->
 		<set name="icon" val="icon.etc_herb_red_i00" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -262,7 +262,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases MP recovery for 10 seconds. -->
 		<set name="icon" val="icon.skill4106" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -270,7 +270,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster absolute defense. Defense increased 50000. -->
 		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
@@ -278,14 +278,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Resistant to melee weapon attacks. -->
 		<set name="icon" val="icon.skill4071" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1652" levels="1" name="Strike">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 54355. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -295,7 +295,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 50937. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -305,7 +305,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 49414. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="2000" />
@@ -316,7 +316,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 50937. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
@@ -327,7 +327,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 54355. -->
 		<set name="icon" val="icon.skill1181" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2000" />
 	</skill>
@@ -335,7 +335,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 237492. -->
 		<set name="icon" val="icon.skill1181" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="5000" />
 	</skill>
@@ -343,7 +343,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 500000. -->
 		<set name="icon" val="icon.skill1181" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="5000" />
 	</skill>
@@ -351,7 +351,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 54355. -->
 		<set name="icon" val="icon.skill0245" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1080" />
@@ -362,7 +362,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 100000. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="1067" />
@@ -373,7 +373,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 54355. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -383,7 +383,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 296865. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -393,7 +393,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Triples Atk. Spd. for 1 minute. -->
 		<set name="icon" val="icon.skill1092" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="reuseDelay" val="2000" />
@@ -403,7 +403,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 6984. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="castRange" val="40" />
@@ -414,7 +414,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Mana burn. Power 110. Enchant Power: Increases the effect. -->
 		<set name="icon" val="icon.skill1398" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -424,7 +424,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels multiple enemy buffs. -->
 		<set name="icon" val="icon.skill1056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="castRange" val="600" />
@@ -437,7 +437,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 6984. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="2000" />
@@ -448,7 +448,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster Blood Siphon Range Attack -->
 		<set name="icon" val="icon.skill1668" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="500" />
@@ -459,7 +459,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sleep -->
 		<set name="icon" val="icon.skill1669" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="isMagic" val="1" />
@@ -469,7 +469,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- No magic use -->
 		<set name="icon" val="icon.skill1670" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -481,7 +481,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Disarms equipment. -->
 		<set name="icon" val="icon.skill01671" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="1000" />
@@ -493,14 +493,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blow -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1673" levels="1" name="Death">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- 1 HP after 15 seconds -->
 		<set name="icon" val="icon.skill1673" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -511,7 +511,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- hp1 -->
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -519,7 +519,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk., Critical rage/damage, and Atk. Spd. by 100%. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -528,7 +528,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Aftereffect of going insane. -->
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -536,7 +536,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 54355. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="300" />
@@ -545,7 +545,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Self-destruction after 5 seconds -->
 		<set name="icon" val="icon.skill1678" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -556,14 +556,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Self-destruction -->
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="1680" levels="1" name="Smokescreen">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -573,7 +573,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Atk. Spd. -->
 		<set name="icon" val="icon.skill1681" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="castRange" val="400" />
@@ -585,7 +585,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Look at me -->
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="700" />
@@ -597,7 +597,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 45844. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -607,7 +607,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -618,7 +618,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -629,7 +629,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -640,7 +640,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 50937. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -650,7 +650,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -661,7 +661,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -672,7 +672,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 60580. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="3000" />
@@ -683,7 +683,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster Rush -->
 		<set name="icon" val="icon.skill0493" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="3000" />
@@ -694,7 +694,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 50937. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
@@ -705,7 +705,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 49414. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
@@ -717,7 +717,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 49414. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
@@ -729,7 +729,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster attack! Power 49414. -->
 		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
@@ -741,7 +741,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- slowly -->
 		<set name="icon" val="icon.skill0354" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
@@ -751,7 +751,7 @@
 	<skill id="1697" levels="1" name="Prominence">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1230" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="castRange" val="900" />
@@ -762,7 +762,7 @@
 	<skill id="1698" levels="1" name="Rain of Fire">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1296" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="castRange" val="500" />
@@ -773,7 +773,7 @@
 	<skill id="1699" levels="1" name="Blink">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1448" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2" />
 		<set name="hitTime" val="300" />

@@ -4,14 +4,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Elements -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11101" levels="1" name="Elemental Destruction: Fire">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Body is destroyed. -->
 		<set name="icon" val="icon.skill11866" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -20,7 +20,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Body is destroyed. -->
 		<set name="icon" val="icon.skill11866" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -29,7 +29,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Body is destroyed. -->
 		<set name="icon" val="icon.skill11866" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -38,7 +38,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Body is destroyed. -->
 		<set name="icon" val="icon.skill11866" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -47,7 +47,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Body is destroyed. -->
 		<set name="icon" val="icon.skill11866" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -57,7 +57,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -72,7 +72,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -87,7 +87,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -102,7 +102,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -117,7 +117,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -132,7 +132,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -147,7 +147,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -161,7 +161,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -175,7 +175,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -189,7 +189,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -203,7 +203,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -217,7 +217,7 @@
 		<!-- Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -231,7 +231,7 @@
 		<!-- Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -245,7 +245,7 @@
 		<!-- Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -259,7 +259,7 @@
 		<!-- Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -273,7 +273,7 @@
 		<!-- Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -287,7 +287,7 @@
 		<!-- Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -301,7 +301,7 @@
 		<!-- Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
 		<table name="#mpConsumes"> 137 154 166 179 </table>
 		<set name="icon" val="icon.skill11865" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -314,14 +314,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 5%, Max MP, MP Recovery + 5%, and debuff resistance + 10%. -->
 		<set name="icon" val="icon.skill0945" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11125" levels="4" name="Superior Wizardry">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 10%. -->
 		<set name="icon" val="icon.skill0945" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11126" levels="3" name="Fire Destruction">
@@ -329,7 +329,7 @@
 		<!-- Inflicts 620 magical damage on target, and inflicts Fear. Over-hit. -->
 		<table name="#mpConsumes"> 768 873 993 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -344,7 +344,7 @@
 		<!-- Inflicts 713 magical damage on target. Over-hit. -->
 		<table name="#mpConsumes"> 768 873 993 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -358,7 +358,7 @@
 		<!-- Inflicts 620 magical damage on target, and decreases their Speed by 130. Over-hit. -->
 		<table name="#mpConsumes"> 768 873 993 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -373,7 +373,7 @@
 		<!-- Inflicts 620 magical damage on target, and inflicts Knock Back. Over-hit. -->
 		<table name="#mpConsumes"> 768 873 993 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -388,7 +388,7 @@
 		<!-- Inflicts 620 magical damage on target, and inflicts Hold. Over-hit. -->
 		<table name="#mpConsumes"> 768 873 993 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -403,7 +403,7 @@
 		<!-- For 10 sec., attacks target with 115 Power per second and recovers HP equivalent to 100% of damage inflicted. -->
 		<table name="#mpConsumes"> 68 72 84 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -416,7 +416,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., creates a shield of lightning and Paralyzes those that attack you. -->
 		<set name="icon" val="icon.skill1515" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="70" />
 		<set name="hitTime" val="1500" />
@@ -427,7 +427,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily stiffened. -->
 		<set name="icon" val="icon.skill1515" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="2000" />
@@ -437,7 +437,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<set name="icon" val="icon.skill11032" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -446,7 +446,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<set name="icon" val="icon.skill11032" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -455,7 +455,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 sec., decreases target's M. Def. by 50% and Attribute Resistance by 50. -->
 		<set name="icon" val="icon.skill11867" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="38" />
 		<set name="castRange" val="1100" />
@@ -469,14 +469,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk., Max MP, and MP Recovery Rate + 5%. -->
 		<set name="icon" val="icon.skill0945" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11152" levels="1" name="Sacrificial Soul">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sacrifice your servitor to become immune to debuffs for 3 sec. -->
 		<set name="icon" val="icon.skill1395" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="276" />
 		<set name="castRange" val="1100" />
@@ -489,7 +489,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pulls nearby enemies to the center. -->
 		<set name="icon" val="icon.skill1469" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -497,7 +497,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pulls nearby enemies to the center. -->
 		<set name="icon" val="icon.skill1469" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -505,14 +505,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Skill cooldown - 5%. -->
 		<set name="icon" val="icon.skill0945" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11177" levels="4" name="Aqua Crash">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
 		<set name="icon" val="icon.skill10879" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="37" />
 		<set name="castRange" val="1100" />
@@ -524,7 +524,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use Aqua Crash to decrease target's Speed. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="0" />
 	</skill>
@@ -532,7 +532,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily immobilized midair. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -541,7 +541,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily immobilized midair. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -550,7 +550,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily immobilized midair. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -559,7 +559,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily immobilized midair. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -568,42 +568,42 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 2 and Cooldown - 25% for magic skills. -->
 		<set name="icon" val="icon.skill11004" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11184" levels="1" name="Superior Arcane Lore">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 2 and increases Fire/Water/Wind/Earth Resistance by 20 and M. Def. by 5%. -->
 		<set name="icon" val="icon.skill10044" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11185" levels="1" name="Superior MP Boost">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 2 and increases Max MP by 313. -->
 		<set name="icon" val="icon.skill0213" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11186" levels="1" name="Superior Fast MP Recovery">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 2 and increases MP Recovery Bonus by 3.6. -->
 		<set name="icon" val="icon.skill0229" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11187" levels="1" name="Superior Clear Mind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 2, increases MP Recovery Bonus by 5.1 while standing and by 6.5 while walking. -->
 		<set name="icon" val="icon.skill11187" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11188" levels="5" name="Frozen">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The cold is creeping up from your feet. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -612,7 +612,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
 		<set name="icon" val="icon.skill10879" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="37" />
 		<set name="castRange" val="1100" />
@@ -624,42 +624,42 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11191" levels="1" name="Elemental Destruction: Water">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11192" levels="1" name="Elemental Destruction: Wind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11193" levels="1" name="Elemental Destruction: Earth">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11194" levels="1" name="Elemental Destruction: Double Casting">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Elements -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11195" levels="1" name="Aqua Crash - Freeze">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use Aqua Crash to freeze target. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="0" />
 	</skill>
@@ -667,7 +667,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Frozen. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -676,7 +676,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

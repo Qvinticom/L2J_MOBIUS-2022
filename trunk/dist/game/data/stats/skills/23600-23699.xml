@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 50%. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -14,7 +14,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. - 50%. -->
 		<set name="icon" val="icon.skill0115" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -25,7 +25,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., P. Def. and M. Def. x 2. -->
 		<set name="icon" val="icon.skill1040" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -35,7 +35,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Stun for 5 seconds. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="33" />
 		<set name="castRange" val="300" />
@@ -46,7 +46,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers HP by 2%. -->
 		<set name="icon" val="icon.skill1401" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="4000" />
@@ -57,7 +57,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Engages the target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. -->
 		<set name="icon" val="icon.skll10319" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="600" />
@@ -68,7 +68,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lights target and nearby enemies on fire, causing magic damage, and inflicts a damage of 1500 HP per second for 10sec. -->
 		<set name="icon" val="icon.skill4279_new" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="450" />
 		<set name="hitTime" val="1500" />
@@ -81,7 +81,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 5% HP. -->
 		<set name="icon" val="icon.skill1401" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="4000" />
@@ -92,7 +92,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores you from death to full health. Buffs/debuffs remain after death, except for Noblesse Blessing and Lucky Charm. Infernal/Lunatic Kamaloka only. -->
 		<set name="icon" val="icon.skill5873" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="600" />
@@ -102,7 +102,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pulls enemies around you to slow them down. -->
 		<set name="icon" val="icon.skill10016" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1500" />
@@ -114,7 +114,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sacrificed to your Bloody Katura. -->
 		<set name="icon" val="icon.skill0127" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="900" />
@@ -125,21 +125,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. is maximized. -->
 		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23612" levels="1" name="Elusive Robes">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. is maximized. -->
 		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23613" levels="3" name="Crackling Timber">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Crackling fire burns the enemy for 10sec. If stacked to Lv. 2 or above, an explosion adds more damage after the duration is up. -->
 		<set name="icon" val="icon.skill1101" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="48" />
 		<set name="castRange" val="300" />
@@ -152,7 +152,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lights the target and nearby enemies on fire for continuous HP damage for 10sec. -->
 		<set name="icon" val="icon.skill4279_new" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="300" />
 		<set name="isMagic" val="1" />
@@ -161,7 +161,7 @@
 	<skill id="23615" levels="1" name="Ready Burst">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1401" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -169,7 +169,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Freezes the air and slows the enemy's Speed by 50. If stacked to Lv. 2 or above, a burst of coldness adds more damage after the duration is up. -->
 		<set name="icon" val="icon.skill1184" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="9" />
 		<set name="castRange" val="300" />
@@ -182,7 +182,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Frozen solid for 7sec., rendering all action impossible. -->
 		<set name="icon" val="icon.skill6274" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -190,7 +190,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Katura's darkness seeps in to inflict Silence and magic damage for 7sec. If stacked to Lv. 2 or above, Soul Burn adds more damage after the duration is up. -->
 		<set name="icon" val="icon.skill1064" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="13" />
 		<set name="castRange" val="300" />
@@ -202,7 +202,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- An explosion inflicts Mana Burn on multiple targets. -->
 		<set name="icon" val="icon.skill1398" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="77" />
 		<set name="isMagic" val="1" />
@@ -210,7 +210,7 @@
 	<skill id="23621" levels="1" name="Ready Burst">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1401" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -218,7 +218,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The wrath of the earth inflicts Stun for 5sec. If stacked to Lv. 2 or above, a sweeping quake adds more damage after the duration is up. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="300" />
@@ -229,14 +229,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Knocked Back with nearby targets due to an earthquake. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 	</skill>
 	<skill id="23624" levels="1" name="Ready Burst">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1401" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -244,7 +244,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5min., entire party's M. Atk. + 50%. -->
 		<set name="icon" val="icon.skill0337" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isMagic" val="1" />
@@ -253,7 +253,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5min., entire party's M. Skill MP Consumption - 30%. -->
 		<set name="icon" val="icon.skill1397" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 	</skill>
@@ -261,7 +261,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5min., entire party's P. Atk. and Atk. Spd. + 25%. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isMagic" val="1" />
@@ -270,7 +270,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5min., entire party's HP + 50%. -->
 		<set name="icon" val="icon.skill1045" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2500" />
 		<set name="isMagic" val="1" />
@@ -279,7 +279,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Invincible against normal hits, buffs, and debuffs. HP fully restored. -->
 		<set name="icon" val="icon.skill1427" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="6000" />
 	</skill>
@@ -287,7 +287,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10sec., a powerful poison cloud inflicts Poison and inflicts damage of 3000 HP per second to nearby enemies and slows them. -->
 		<set name="icon" val="icon.skill1167" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
@@ -296,7 +296,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10sec., a dragon's power boosts Speed by 100%. Cooldown is 10min. -->
 		<set name="icon" val="icon.skill_transform_buff" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="600000" />
 		<set name="isMagic" val="1" />
@@ -305,7 +305,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30sec., P. Def. - 90% and restores MP by 134 per second. Effect removed when hit. Cooldown is 30min. -->
 		<set name="icon" val="icon.skill1430" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="1800000" />
@@ -315,14 +315,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Weight Limit + 9000, and Inventory Slots + 9. -->
 		<set name="icon" val="icon.skill0332" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23634" levels="1" name="Dimensional Weakening">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- for 7sec., P. Def. and M. Def. - 50%. -->
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -339,7 +339,7 @@
 		<table name="#mpConsumes"> </table>
 		<table name="#reuseDelays"> </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="#hpConsumes" />
 		<set name="mpConsume" val="#mpConsumes" />

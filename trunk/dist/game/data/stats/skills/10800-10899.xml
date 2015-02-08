@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 2 and Fire/Water/Wind/Earth Resistance + 20. -->
 		<set name="icon" val="icon.skill10044" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10801" levels="5" name="Bullseye">
@@ -12,7 +12,7 @@
 		<!-- Decreases target's Bow/Crossbow Resistance by 40% and M. Def. by 5%. -->
 		<table name="#mpConsumes"> 20 21 22 23 24 </table>
 		<set name="icon" val="icon.skill10801" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -24,7 +24,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases target's and nearby enemies' Bow/Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. -->
 		<set name="icon" val="icon.skill10782" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="93" />
 		<set name="castRange" val="1100" />
@@ -37,7 +37,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Boom! -->
 		<set name="icon" val="icon.skill0099" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -45,7 +45,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Boom! -->
 		<set name="icon" val="icon.skill0099" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -55,7 +55,7 @@
 		<table name="#castRanges"> 500 600 700 800 </table>
 		<table name="#mpConsumes"> 41 44 46 48 </table>
 		<set name="icon" val="icon.skill10805" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="#castRanges" />
@@ -68,7 +68,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases Speed, Atk. Spd. and Casting Spd. -->
 		<set name="icon" val="icon.skill0516" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -76,7 +76,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicted with Hold and unable to move. -->
 		<set name="icon" val="icon.skill0518" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -84,7 +84,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decoy's provocation. Cannot change target. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -93,7 +93,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Evasion + 15. Disappears after 4 strikes. -->
 		<set name="icon" val="icon.skill1087" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="4" />
@@ -103,7 +103,7 @@
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Atk. Spd. + 5%, and P. Def./M. Def. + 5%. -->
 		<table name="#mpConsumes"> 62 69 76 83 </table>
 		<set name="icon" val="icon.skill11870" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="1000" />
@@ -114,7 +114,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 5% when equipped with a bow or crossbow. -->
 		<set name="icon" val="icon.skill10811" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10812" levels="3" name="Sneak Shot">
@@ -122,7 +122,7 @@
 		<!-- Attacks distant target with 29176 Power added to P. Atk. Inflicts Stun when attacking from behind. Requires a bow/crossbow. Over-hit. Critical. -->
 		<table name="#mpConsumes"> 93 96 99 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -134,7 +134,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the enemy for 5 sec. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="reuseDelay" val="5000" />
@@ -145,7 +145,7 @@
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, chance of receiving an M. Critical Hit - 5%, and P. Skill Cooldown - 5%. -->
 		<table name="#mpConsumes"> 62 69 76 83 </table>
 		<set name="icon" val="icon.skill11871" />
-		<set name="operateType" val="A2" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="1000" />
@@ -156,7 +156,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 10. -->
 		<set name="icon" val="icon.skill10857" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10858" levels="3" name="Retreating Shot">
@@ -165,7 +165,7 @@
 		<table name="#castRanges"> 400 400 450 </table>
 		<table name="#mpConsumes"> 32 33 34 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="A1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="#castRanges" />
