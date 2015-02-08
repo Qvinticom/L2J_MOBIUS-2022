@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import com.l2jserver.commons.mmocore.IAcceptFilter;
+import commons.mmocore.IAcceptFilter;
 
 /**
  * IPv4 filter.

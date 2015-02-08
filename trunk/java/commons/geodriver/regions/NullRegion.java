@@ -16,16 +16,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.loginserver.network.serverpackets;
+package commons.geodriver.regions;
 
-import commons.mmocore.SendablePacket;
-
-import com.l2jserver.loginserver.network.L2LoginClient;
+import commons.geodriver.IRegion;
 
 /**
- * @author KenM
+ * @author HorridoJoho
  */
-public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
+public final class NullRegion implements IRegion
 {
+	public static final NullRegion INSTANCE = new NullRegion();
 	
+	@Override
+	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
+	{
+		return true;
+	}
+	
+	@Override
+	public int getNearestZ(int geoX, int geoY, int worldZ)
+	{
+		return worldZ;
+	}
+	
+	@Override
+	public int getNextLowerZ(int geoX, int geoY, int worldZ)
+	{
+		return worldZ;
+	}
+	
+	@Override
+	public int getNextHigherZ(int geoX, int geoY, int worldZ)
+	{
+		return worldZ;
+	}
+	
+	@Override
+	public boolean hasGeo()
+	{
+		return false;
+	}
 }

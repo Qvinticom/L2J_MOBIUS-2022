@@ -16,16 +16,45 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.loginserver.network.serverpackets;
+package commons.geodriver.blocks;
 
-import commons.mmocore.SendablePacket;
+import java.nio.ByteBuffer;
 
-import com.l2jserver.loginserver.network.L2LoginClient;
+import commons.geodriver.IBlock;
 
 /**
- * @author KenM
+ * @author HorridoJoho
  */
-public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
+public class FlatBlock implements IBlock
 {
+	private final short _height;
 	
+	public FlatBlock(ByteBuffer bb)
+	{
+		_height = bb.getShort();
+	}
+	
+	@Override
+	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
+	{
+		return true;
+	}
+	
+	@Override
+	public int getNearestZ(int geoX, int geoY, int worldZ)
+	{
+		return _height;
+	}
+	
+	@Override
+	public int getNextLowerZ(int geoX, int geoY, int worldZ)
+	{
+		return _height <= worldZ ? _height : worldZ;
+	}
+	
+	@Override
+	public int getNextHigherZ(int geoX, int geoY, int worldZ)
+	{
+		return _height >= worldZ ? _height : worldZ;
+	}
 }

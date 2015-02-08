@@ -24,7 +24,8 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import com.l2jserver.commons.mmocore.NioNetStringBuffer;
+import commons.mmocore.NioNetStringBuffer;
+
 import com.l2jserver.gameserver.GameServer;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;

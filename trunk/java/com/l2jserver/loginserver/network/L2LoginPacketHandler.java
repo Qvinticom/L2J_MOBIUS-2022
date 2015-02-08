@@ -21,8 +21,9 @@ package com.l2jserver.loginserver.network;
 import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
-import com.l2jserver.commons.mmocore.IPacketHandler;
-import com.l2jserver.commons.mmocore.ReceivablePacket;
+import commons.mmocore.IPacketHandler;
+import commons.mmocore.ReceivablePacket;
+
 import com.l2jserver.loginserver.network.L2LoginClient.LoginClientState;
 import com.l2jserver.loginserver.network.clientpackets.AuthGameGuard;
 import com.l2jserver.loginserver.network.clientpackets.RequestAuthLogin;

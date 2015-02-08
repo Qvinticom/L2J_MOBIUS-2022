@@ -21,7 +21,8 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.commons.mmocore.SendablePacket;
+import commons.mmocore.SendablePacket;
+
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 import com.l2jserver.gameserver.model.interfaces.IUpdateTypeComponent;

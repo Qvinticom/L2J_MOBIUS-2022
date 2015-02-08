@@ -23,9 +23,10 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import commons.geodriver.Cell;
+import commons.geodriver.GeoDriver;
+
 import com.l2jserver.Config;
-import com.l2jserver.commons.geodriver.Cell;
-import com.l2jserver.commons.geodriver.GeoDriver;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
