@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-
 /**
  * @author Gnacik, UnAfraid
  */

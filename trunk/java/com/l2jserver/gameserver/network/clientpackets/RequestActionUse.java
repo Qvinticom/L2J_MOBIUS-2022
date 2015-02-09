@@ -710,7 +710,8 @@ public final class RequestActionUse extends L2GameClientPacket
 				useSkill(6684, true);
 				break;
 			case 1099: // All servitor attack
-				activeChar.getServitors().values().forEach(s -> {
+				activeChar.getServitors().values().forEach(s ->
+				{
 					if (validateSummon(s, false))
 					{
 						if (s.canAttack(_ctrlPressed))
@@ -721,7 +722,8 @@ public final class RequestActionUse extends L2GameClientPacket
 				});
 				break;
 			case 1100: // All servitor move to
-				activeChar.getServitors().values().forEach(s -> {
+				activeChar.getServitors().values().forEach(s ->
+				{
 					if (validateSummon(s, false))
 					{
 						if ((target != null) && (s != target) && !s.isMovementDisabled())
@@ -733,7 +735,8 @@ public final class RequestActionUse extends L2GameClientPacket
 				});
 				break;
 			case 1101: // All servitor stop
-				activeChar.getServitors().values().forEach(summon -> {
+				activeChar.getServitors().values().forEach(summon ->
+				{
 					if (validateSummon(summon, false))
 					{
 						summon.cancelAction();
@@ -742,8 +745,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				break;
 			case 1102: // Unsummon all servitors
 				boolean canUnsummon = true;
-				OUT:
-				for (L2Summon s : activeChar.getServitors().values())
+				OUT: for (L2Summon s : activeChar.getServitors().values())
 				{
 					if (validateSummon(s, false))
 					{
@@ -758,7 +760,8 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				if (canUnsummon)
 				{
-					activeChar.getServitors().values().stream().forEach(s -> {
+					activeChar.getServitors().values().stream().forEach(s ->
+					{
 						s.unSummon(activeChar);
 					});
 				}
@@ -1115,7 +1118,8 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		activeChar.getServitors().values().forEach(servitor -> {
+		activeChar.getServitors().values().forEach(servitor ->
+		{
 			if (!validateSummon(servitor, false))
 			{
 				return;

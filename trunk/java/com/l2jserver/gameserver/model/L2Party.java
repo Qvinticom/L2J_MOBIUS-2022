@@ -364,7 +364,8 @@ public class L2Party extends AbstractPlayerGroup
 		
 		if (_positionBroadcastTask == null)
 		{
-			_positionBroadcastTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> {
+			_positionBroadcastTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
+			{
 				if (_positionPacket == null)
 				{
 					_positionPacket = new PartyMemberPosition(this);
@@ -430,7 +431,8 @@ public class L2Party extends AbstractPlayerGroup
 			{
 				// Otherwise, delete the old sign, and apply it to the new target
 				_tacticalSigns.replace(tacticalSignId, target);
-				getMembers().forEach(m -> {
+				getMembers().forEach(m ->
+				{
 					m.sendPacket(new ExTacticalSign(tacticalTarget, 0));
 					m.sendPacket(new ExTacticalSign(target, tacticalSignId));
 				});

@@ -11150,7 +11150,8 @@ public final class L2PcInstance extends L2Playable
 			pet.updateAndBroadcastStatus(0);
 		}
 		
-		getServitors().values().forEach(s -> {
+		getServitors().values().forEach(s ->
+		{
 			s.setFollowStatus(false);
 			s.teleToLocation(getLocation(), false);
 			((L2SummonAI) s.getAI()).setStartFollowController(true);
@@ -11753,7 +11754,8 @@ public final class L2PcInstance extends L2Playable
 					}
 				}
 				
-				getServitors().values().forEach(s -> {
+				getServitors().values().forEach(s ->
+				{
 					s.setRestoreSummon(true);
 					s.unSummon(this);
 				});

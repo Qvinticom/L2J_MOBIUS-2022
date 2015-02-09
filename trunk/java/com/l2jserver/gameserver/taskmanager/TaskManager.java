@@ -203,7 +203,8 @@ public final class TaskManager
 	public void registerTask(Task task)
 	{
 		int key = task.getName().hashCode();
-		_tasks.computeIfAbsent(key, k -> {
+		_tasks.computeIfAbsent(key, k ->
+		{
 			task.initializate();
 			return task;
 		});

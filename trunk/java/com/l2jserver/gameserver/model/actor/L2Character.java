@@ -4311,7 +4311,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (distFraction > 1)
 		{
-			ThreadPoolManager.getInstance().executeAi(() -> {
+			ThreadPoolManager.getInstance().executeAi(() ->
+			{
 				try
 				{
 					if (Config.MOVE_BASED_KNOWNLIST)

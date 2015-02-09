@@ -865,7 +865,8 @@ public final class FinalEmperialTomb extends AbstractInstance
 									{
 										targetList.add(pet);
 									}
-									player.getServitors().values().forEach(s -> {
+									player.getServitors().values().forEach(s ->
+									{
 										if (!s.isDead())
 										{
 											targetList.add(s);

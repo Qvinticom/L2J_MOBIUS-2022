@@ -855,7 +855,8 @@ public final class Instance
 	{
 		if ((player != null))
 		{
-			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			{
 				if (player.isDead() && (player.getInstanceId() == getId()))
 				{
 					player.setInstanceId(0);

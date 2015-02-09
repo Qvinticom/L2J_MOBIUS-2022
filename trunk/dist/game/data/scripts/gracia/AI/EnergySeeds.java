@@ -712,7 +712,8 @@ public class EnergySeeds extends AbstractNpcAI
 		
 		public void scheduleRespawn(long waitTime)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+			ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			{
 				// if the AI is inactive, do not spawn the NPC
 				if (isSeedActive(_seedId))
 				{

@@ -2508,14 +2508,16 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			if (includeCommandChannel && player.getParty().isInCommandChannel())
 			{
-				player.getParty().getCommandChannel().forEachMember(member -> {
+				player.getParty().getCommandChannel().forEachMember(member ->
+				{
 					actionForEachPlayer(member, npc, isSummon);
 					return true;
 				});
 			}
 			else if (includeParty)
 			{
-				player.getParty().forEachMember(member -> {
+				player.getParty().forEachMember(member ->
+				{
 					actionForEachPlayer(member, npc, isSummon);
 					return true;
 				});

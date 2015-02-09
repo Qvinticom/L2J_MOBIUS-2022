@@ -850,7 +850,8 @@ public final class CharEffectList
 	public void stopEffects(L2EffectType type)
 	{
 		boolean update = false;
-		final Consumer<BuffInfo> action = info -> {
+		final Consumer<BuffInfo> action = info ->
+		{
 			if (info.getEffects().stream().anyMatch(effect -> (effect != null) && (effect.getEffectType() == type)))
 			{
 				stopAndRemove(info);
