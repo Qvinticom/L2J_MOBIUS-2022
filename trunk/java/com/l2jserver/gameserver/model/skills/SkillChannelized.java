@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.skills;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,33 +33,22 @@ public final class SkillChannelized
 	
 	public void addChannelizer(int skillId, L2Character channelizer)
 	{
-		if (!_channelizers.containsKey(skillId))
-		{
-			_channelizers.put(skillId, new ConcurrentHashMap<Integer, L2Character>());
-		}
-		_channelizers.get(skillId).put(channelizer.getObjectId(), channelizer);
+		_channelizers.computeIfAbsent(skillId, k -> new ConcurrentHashMap<>()).put(channelizer.getObjectId(), channelizer);
 	}
 	
 	public void removeChannelizer(int skillId, L2Character channelizer)
 	{
-		if (_channelizers.containsKey(skillId))
-		{
-			_channelizers.get(skillId).remove(channelizer.getObjectId());
-		}
+		getChannelizers(skillId).remove(channelizer.getObjectId());
 	}
 	
 	public int getChannerlizersSize(int skillId)
 	{
-		if (_channelizers.containsKey(skillId))
-		{
-			return _channelizers.get(skillId).size();
-		}
-		return 0;
+		return getChannelizers(skillId).size();
 	}
 	
 	public Map<Integer, L2Character> getChannelizers(int skillId)
 	{
-		return _channelizers.get(skillId);
+		return _channelizers.getOrDefault(skillId, Collections.emptyMap());
 	}
 	
 	public void abortChannelization()

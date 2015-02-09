@@ -426,16 +426,8 @@ public class L2Attackable extends L2Npc
 						totalDamage += damage;
 						
 						// Calculate real damages (Summoners should get own damage plus summon's damage)
-						DamageDoneInfo reward = rewards.get(attacker);
-						if (reward == null)
-						{
-							reward = new DamageDoneInfo(attacker, damage);
-							rewards.put(attacker, reward);
-						}
-						else
-						{
-							reward.addDamage(damage);
-						}
+						final DamageDoneInfo reward = rewards.computeIfAbsent(attacker, DamageDoneInfo::new);
+						reward.addDamage(damage);
 						
 						if (reward.getDamage() > maxDamage)
 						{
@@ -710,12 +702,7 @@ public class L2Attackable extends L2Npc
 		
 		final L2PcInstance targetPlayer = attacker.getActingPlayer();
 		// Get the AggroInfo of the attacker L2Character from the _aggroList of the L2Attackable
-		AggroInfo ai = getAggroList().get(attacker);
-		if (ai == null)
-		{
-			ai = new AggroInfo(attacker);
-			getAggroList().put(attacker, ai);
-		}
+		final AggroInfo ai = getAggroList().computeIfAbsent(attacker, AggroInfo::new);
 		ai.addDamage(damage);
 		// traps does not cause aggro
 		// making this hack because not possible to determine if damage made by trap

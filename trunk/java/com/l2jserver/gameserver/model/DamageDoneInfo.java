@@ -28,10 +28,9 @@ public final class DamageDoneInfo
 	private final L2PcInstance _attacker;
 	private int _damage = 0;
 	
-	public DamageDoneInfo(L2PcInstance attacker, int damage)
+	public DamageDoneInfo(L2PcInstance attacker)
 	{
 		_attacker = attacker;
-		_damage = damage;
 	}
 	
 	public L2PcInstance getAttacker()

@@ -39,12 +39,8 @@ public final class PunishmentHolder
 	{
 		if (!task.isExpired())
 		{
-			String key = String.valueOf(task.getKey());
-			if (!_holder.containsKey(key))
-			{
-				_holder.put(key, new ConcurrentHashMap<PunishmentType, PunishmentTask>());
-			}
-			_holder.get(key).put(task.getType(), task);
+			final String key = String.valueOf(task.getKey());
+			_holder.computeIfAbsent(key, k -> new ConcurrentHashMap<>()).put(task.getType(), task);
 		}
 	}
 	

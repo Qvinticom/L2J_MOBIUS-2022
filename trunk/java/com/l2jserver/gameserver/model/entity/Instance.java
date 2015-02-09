@@ -841,13 +841,10 @@ public final class Instance
 	
 	public void cancelEjectDeadPlayer(L2PcInstance player)
 	{
-		if (_ejectDeadTasks.containsKey(player.getObjectId()))
+		final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
+		if (task != null)
 		{
-			final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
-			if (task != null)
-			{
-				task.cancel(true);
-			}
+			task.cancel(true);
 		}
 	}
 	

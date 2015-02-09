@@ -176,12 +176,11 @@ public class RaidBossSpawnManager
 	 */
 	public void updateStatus(L2RaidBossInstance boss, boolean isBossDead)
 	{
-		if (!_storedInfo.containsKey(boss.getId()))
+		final StatsSet info = _storedInfo.get(boss.getId());
+		if (info == null)
 		{
 			return;
 		}
-		
-		final StatsSet info = _storedInfo.get(boss.getId());
 		
 		if (isBossDead)
 		{

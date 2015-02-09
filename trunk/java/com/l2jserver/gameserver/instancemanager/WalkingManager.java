@@ -334,9 +334,9 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public synchronized void cancelMoving(L2Npc npc)
 	{
-		if (_activeRoutes.containsKey(npc.getObjectId()))
+		final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
+		if (walk != null)
 		{
-			final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
 			walk.getWalkCheckTask().cancel(true);
 			npc.getKnownList().stopTrackingTask();
 		}
@@ -348,15 +348,13 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public void resumeMoving(final L2Npc npc)
 	{
-		if (!_activeRoutes.containsKey(npc.getObjectId()))
-		{
-			return;
-		}
-		
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-		walk.setSuspended(false);
-		walk.setStoppedByAttack(false);
-		startMoving(npc, walk.getRoute().getName());
+		if (walk != null)
+		{
+			walk.setSuspended(false);
+			walk.setStoppedByAttack(false);
+			startMoving(npc, walk.getRoute().getName());
+		}
 	}
 	
 	/**

@@ -153,11 +153,7 @@ public class UIData implements IXmlReader
 	 */
 	public static void addCategory(Map<Integer, List<Integer>> map, int cat, int cmd)
 	{
-		if (!map.containsKey(cat))
-		{
-			map.put(cat, new ArrayList<Integer>());
-		}
-		map.get(cat).add(cmd);
+		map.computeIfAbsent(cat, k -> new ArrayList<>()).add(cmd);
 	}
 	
 	/**
@@ -168,11 +164,7 @@ public class UIData implements IXmlReader
 	 */
 	public static void addKey(Map<Integer, List<ActionKey>> map, int cat, ActionKey akey)
 	{
-		if (!map.containsKey(cat))
-		{
-			map.put(cat, new ArrayList<ActionKey>());
-		}
-		map.get(cat).add(akey);
+		map.computeIfAbsent(cat, k -> new ArrayList<>()).add(akey);
 	}
 	
 	/**

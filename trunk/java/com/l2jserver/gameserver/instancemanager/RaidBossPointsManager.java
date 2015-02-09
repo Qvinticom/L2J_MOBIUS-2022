@@ -95,22 +95,8 @@ public class RaidBossPointsManager
 	
 	public final void addPoints(L2PcInstance player, int bossId, int points)
 	{
-		int ownerId = player.getObjectId();
-		Map<Integer, Integer> tmpPoint = _list.get(ownerId);
-		if (tmpPoint == null)
-		{
-			tmpPoint = new HashMap<>();
-			tmpPoint.put(bossId, points);
-			updatePointsInDB(player, bossId, points);
-		}
-		else
-		{
-			int currentPoins = tmpPoint.containsKey(bossId) ? tmpPoint.get(bossId) : 0;
-			currentPoins += points;
-			tmpPoint.put(bossId, currentPoins);
-			updatePointsInDB(player, bossId, currentPoins);
-		}
-		_list.put(ownerId, tmpPoint);
+		final Map<Integer, Integer> tmpPoint = _list.computeIfAbsent(player.getObjectId(), k -> new HashMap<>());
+		updatePointsInDB(player, bossId, tmpPoint.merge(bossId, points, Integer::sum));
 	}
 	
 	public final int getPointsByOwnerId(int ownerId)
