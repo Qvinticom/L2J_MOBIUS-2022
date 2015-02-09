@@ -29,6 +29,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.StringJoiner;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
@@ -307,16 +308,13 @@ public final class Util
 	 */
 	public static String implodeString(Iterable<String> strArray, String strDelim)
 	{
-		final StringBuilder sbString = new StringBuilder();
+		final StringJoiner sj = new StringJoiner(strDelim);
 		
 		for (String strValue : strArray)
 		{
-			sbString.append(strValue);
-			sbString.append(strDelim);
+			sj.add(strValue);
 		}
-		
-		String result = sbString.toString();
-		return result;
+		return sj.toString();
 	}
 	
 	/**

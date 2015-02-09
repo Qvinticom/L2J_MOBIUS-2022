@@ -21,6 +21,7 @@ package com.l2jserver.gameserver;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -56,7 +57,7 @@ import com.l2jserver.util.Rnd;
 
 public class RecipeController
 {
-	protected static final ConcurrentHashMap<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
+	protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
 	
 	protected RecipeController()
 	{

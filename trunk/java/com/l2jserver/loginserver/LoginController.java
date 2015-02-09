@@ -61,7 +61,7 @@ public class LoginController
 	public static final int LOGIN_TIMEOUT = 60 * 1000;
 	
 	/** Authed Clients on LoginServer */
-	protected ConcurrentHashMap<String, L2LoginClient> _loginServerClients = new ConcurrentHashMap<>();
+	protected Map<String, L2LoginClient> _loginServerClients = new ConcurrentHashMap<>();
 	
 	private final Map<InetAddress, Integer> _failedLoginAttemps = new HashMap<>();
 	private final Map<InetAddress, Long> _bannedIps = new ConcurrentHashMap<>();

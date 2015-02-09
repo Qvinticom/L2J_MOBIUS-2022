@@ -453,7 +453,7 @@ public class MultiSellChoose extends L2GameClientPacket
 				}
 				finally
 				{
-					augmentation.clear(); // ?
+					augmentation.clear();
 				}
 				
 				// finally, give the tax to the castle...

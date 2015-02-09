@@ -27,12 +27,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -60,8 +60,8 @@ public final class TaskManager
 {
 	protected static final Logger _log = Logger.getLogger(TaskManager.class.getName());
 	
-	private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
-	protected final List<ExecutedTask> _currentTasks = new CopyOnWriteArrayList<>();
+	private final Map<Integer, Task> _tasks = new HashMap<>();
+	protected final List<ExecutedTask> _currentTasks = new ArrayList<>();
 	
 	protected static final String[] SQL_STATEMENTS =
 	{

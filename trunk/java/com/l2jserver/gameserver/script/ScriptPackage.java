@@ -35,14 +35,12 @@ public class ScriptPackage
 {
 	private static final Logger _log = Logger.getLogger(ScriptPackage.class.getName());
 	
-	private final List<ScriptDocument> _scriptFiles;
-	private final List<String> _otherFiles;
+	private final List<ScriptDocument> _scriptFiles = new ArrayList<>();
+	private final List<String> _otherFiles = new ArrayList<>();
 	private final String _name;
 	
 	public ScriptPackage(ZipFile pack)
 	{
-		_scriptFiles = new ArrayList<>();
-		_otherFiles = new ArrayList<>();
 		_name = pack.getName();
 		addFiles(pack);
 	}
@@ -75,8 +73,7 @@ public class ScriptPackage
 			{
 				try
 				{
-					ScriptDocument newScript = new ScriptDocument(entry.getName(), pack.getInputStream(entry));
-					_scriptFiles.add(newScript);
+					_scriptFiles.add(new ScriptDocument(entry.getName(), pack.getInputStream(entry)));
 				}
 				catch (IOException io)
 				{

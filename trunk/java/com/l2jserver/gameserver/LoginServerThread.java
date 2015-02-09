@@ -37,6 +37,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
@@ -104,7 +105,7 @@ public class LoginServerThread extends Thread
 	private final boolean _reserveHost;
 	private int _maxPlayer;
 	private final List<WaitingClient> _waitingClients;
-	private final ConcurrentHashMap<String, L2GameClient> _accountsInGameServer = new ConcurrentHashMap<>();
+	private final Map<String, L2GameClient> _accountsInGameServer = new ConcurrentHashMap<>();
 	private int _status;
 	private String _serverName;
 	private final List<String> _subnets;

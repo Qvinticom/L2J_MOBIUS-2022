@@ -3002,8 +3002,7 @@ public class L2Clan implements IIdentifiable, INamable
 				list.add(new SubPledgeSkill(subunit.getId(), skill.getId(), skill.getLevel()));
 			}
 		}
-		SubPledgeSkill[] result = list.toArray(new SubPledgeSkill[list.size()]);
-		return result;
+		return list.toArray(new SubPledgeSkill[list.size()]);
 	}
 	
 	public void setNewLeaderId(int objectId, boolean storeInDb)

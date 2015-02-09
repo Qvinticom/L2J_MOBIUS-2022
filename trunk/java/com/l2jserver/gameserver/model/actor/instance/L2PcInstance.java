@@ -777,7 +777,7 @@ public final class L2PcInstance extends L2Playable
 	/** Player's cubics. */
 	private final Map<Integer, L2CubicInstance> _cubics = new ConcurrentSkipListMap<>();
 	/** Active shots. */
-	protected CopyOnWriteArraySet<Integer> _activeSoulShots = new CopyOnWriteArraySet<>();
+	protected Set<Integer> _activeSoulShots = new CopyOnWriteArraySet<>();
 	
 	public final ReentrantLock soulShotLock = new ReentrantLock();
 	

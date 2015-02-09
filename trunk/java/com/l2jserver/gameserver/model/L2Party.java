@@ -83,7 +83,7 @@ public class L2Party extends AbstractPlayerGroup
 	private static final Duration PARTY_POSITION_BROADCAST_INTERVAL = Duration.ofSeconds(12);
 	private static final Duration PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT = Duration.ofSeconds(15);
 	
-	private final CopyOnWriteArrayList<L2PcInstance> _members;
+	private final List<L2PcInstance> _members;
 	private boolean _pendingInvitation = false;
 	private long _pendingInviteTimeout;
 	private int _partyLvl = 0;
@@ -769,11 +769,11 @@ public class L2Party extends AbstractPlayerGroup
 	public void distributeAdena(L2PcInstance player, long adena, L2Character target)
 	{
 		// Get all the party members
-		List<L2PcInstance> membersList = getMembers();
+		final List<L2PcInstance> membersList = getMembers();
 		
 		// Check the number of party members that must be rewarded
 		// (The party member must be in range to receive its reward)
-		List<L2PcInstance> ToReward = new ArrayList<>();
+		final List<L2PcInstance> ToReward = new ArrayList<>();
 		for (L2PcInstance member : membersList)
 		{
 			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
@@ -791,7 +791,7 @@ public class L2Party extends AbstractPlayerGroup
 		
 		// Now we can actually distribute the adena reward
 		// (Total adena splitted by the number of party members that are in range and must be rewarded)
-		long count = adena / ToReward.size();
+		final long count = adena / ToReward.size();
 		for (L2PcInstance member : ToReward)
 		{
 			member.addAdena("Party", count, player, true);

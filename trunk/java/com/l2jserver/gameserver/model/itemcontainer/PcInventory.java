@@ -169,10 +169,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -219,10 +216,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -255,10 +249,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -293,10 +284,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -326,10 +314,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -346,10 +331,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -366,10 +348,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
-		L2ItemInstance[] result = list.toArray(new L2ItemInstance[list.size()]);
-		
-		return result;
+		return list.toArray(new L2ItemInstance[list.size()]);
 	}
 	
 	/**
@@ -391,10 +370,7 @@ public class PcInventory extends Inventory
 				}
 			}
 		}
-		
-		TradeItem[] result = list.toArray(new TradeItem[list.size()]);
-		
-		return result;
+		return list.toArray(new TradeItem[list.size()]);
 	}
 	
 	/**

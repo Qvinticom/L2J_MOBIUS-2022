@@ -45,7 +45,7 @@ public class MinionList
 	
 	protected final L2MonsterInstance _master;
 	/** List containing the current spawned minions */
-	private final List<L2MonsterInstance> _minionReferences;
+	private final List<L2MonsterInstance> _minionReferences = new CopyOnWriteArrayList<>();
 	/** List containing the cached deleted minions for reuse */
 	protected List<L2MonsterInstance> _reusedMinionReferences = null;
 	
@@ -57,7 +57,6 @@ public class MinionList
 		}
 		
 		_master = pMaster;
-		_minionReferences = new CopyOnWriteArrayList<>();
 	}
 	
 	/**
