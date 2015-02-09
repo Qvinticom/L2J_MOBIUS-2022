@@ -1919,7 +1919,7 @@ public final class Config
 			BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
 			USE_SAY_FILTER = General.getBoolean("UseChatFilter", false);
 			CHAT_FILTER_CHARS = General.getString("ChatFilterChars", "^_^");
-			final String[] propertySplit4 = General.getString("BanChatChannels", "GENERAL;SHOUT;GLOBAL;TRADE;HERO_VOICE").trim().split(";");
+			final String[] propertySplit4 = General.getString("BanChatChannels", "GENERAL;SHOUT;WORLD;TRADE;HERO_VOICE").trim().split(";");
 			BAN_CHAT_CHANNELS = new HashSet<>();
 			try
 			{

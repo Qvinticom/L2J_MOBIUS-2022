@@ -25,7 +25,7 @@ public enum ChatType
 {
 	GENERAL(0),
 	SHOUT(1),
-	TELL(2),
+	WHISPER(2),
 	PARTY(3),
 	CLAN(4),
 	GM(5),
@@ -47,8 +47,8 @@ public enum ChatType
 	MPCC_ROOM(21),
 	NPC_GENERAL(22),
 	NPC_SHOUT(23),
-	NPC_TELL(24),
-	GLOBAL(25);
+	NPC_WHISPER(24),
+	WORLD(25);
 	
 	private final int _clientId;
 	

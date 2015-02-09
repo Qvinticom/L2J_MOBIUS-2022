@@ -154,7 +154,7 @@ public final class CreatureSay extends L2GameServerPacket
 		if (_text != null)
 		{
 			writeS(_text);
-			if ((_charLevel > 0) && (_textType == ChatType.TELL))
+			if ((_charLevel > 0) && (_textType == ChatType.WHISPER))
 			{
 				writeC(_mask);
 				if ((_mask & 0x10) == 0)

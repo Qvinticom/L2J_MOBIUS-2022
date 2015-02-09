@@ -95,7 +95,7 @@ public final class Say2 extends L2GameClientPacket
 	{
 		_text = readS();
 		_type = readD();
-		_target = (_type == ChatType.TELL.getClientId()) ? readS() : null;
+		_target = (_type == ChatType.WHISPER.getClientId()) ? readS() : null;
 	}
 	
 	@Override
@@ -138,7 +138,7 @@ public final class Say2 extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.L2WALKER_PROTECTION && (chatType == ChatType.TELL) && checkBot(_text))
+		if (Config.L2WALKER_PROTECTION && (chatType == ChatType.WHISPER) && checkBot(_text))
 		{
 			Util.handleIllegalPlayerAction(activeChar, "Client Emulator Detect: Player " + activeChar.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
 			return;
@@ -168,7 +168,7 @@ public final class Say2 extends L2GameClientPacket
 		
 		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT)
 		{
-			if ((chatType == ChatType.TELL) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE))
+			if ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE))
 			{
 				activeChar.sendMessage("You can not chat with players outside of the jail.");
 				return;
@@ -185,7 +185,7 @@ public final class Say2 extends L2GameClientPacket
 			final LogRecord record = new LogRecord(Level.INFO, _text);
 			record.setLoggerName("chat");
 			
-			if (chatType == ChatType.TELL)
+			if (chatType == ChatType.WHISPER)
 			{
 				record.setParameters(new Object[]
 				{
