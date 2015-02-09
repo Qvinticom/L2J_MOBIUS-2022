@@ -23,8 +23,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -43,7 +43,7 @@ public final class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
-	private final List<L2ItemInstance> _items = new CopyOnWriteArrayList<>();
+	private final List<L2ItemInstance> _items = new ArrayList<>();
 	
 	protected ItemsOnGroundManager()
 	{
