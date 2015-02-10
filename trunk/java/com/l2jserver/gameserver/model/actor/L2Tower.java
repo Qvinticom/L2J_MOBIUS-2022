@@ -30,9 +30,13 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
  */
 public abstract class L2Tower extends L2Npc
 {
-	public L2Tower(int objectId, L2NpcTemplate template)
+	/**
+	 * Creates an abstract Tower.
+	 * @param template the tower template
+	 */
+	public L2Tower(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setIsInvul(false);
 	}
 	

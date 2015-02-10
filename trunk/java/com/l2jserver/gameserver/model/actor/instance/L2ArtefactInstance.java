@@ -25,27 +25,15 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
-/**
- * This class manages all Castle Siege Artefacts.<BR>
- * <BR>
- * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/06 16:13:40 $
- */
 public final class L2ArtefactInstance extends L2Npc
 {
 	/**
-	 * Constructor of L2ArtefactInstance (use L2Character and L2NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Call the L2Character constructor to set the _template of the L2ArtefactInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li> <li>Set the name of the L2ArtefactInstance</li> <li>Create a RandomAnimation Task that will be launched after the
-	 * calculated delay if the server allow it</li><BR>
-	 * <BR>
-	 * @param objectId the identifier of the object to initialized
-	 * @param template to apply to the NPC
+	 * Creates a castle siege artifact.
+	 * @param template the artifact NPC template
 	 */
-	public L2ArtefactInstance(int objectId, L2NpcTemplate template)
+	public L2ArtefactInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2ArtefactInstance);
 	}
 	

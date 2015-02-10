@@ -23,7 +23,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.util.Rnd;
@@ -73,8 +72,7 @@ public class MonsterRace
 			{
 				L2NpcTemplate template = NpcData.getInstance().getTemplate(id + random);
 				Constructor<?> constructor = Class.forName("com.l2jserver.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
-				int objectId = IdFactory.getInstance().getNextId();
-				_monsters[i] = (L2Npc) constructor.newInstance(objectId, template);
+				_monsters[i] = (L2Npc) constructor.newInstance(template);
 			}
 			catch (Exception e)
 			{

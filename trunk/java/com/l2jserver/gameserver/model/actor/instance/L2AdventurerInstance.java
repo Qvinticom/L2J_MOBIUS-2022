@@ -28,9 +28,9 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
  */
 public class L2AdventurerInstance extends L2NpcInstance
 {
-	public L2AdventurerInstance(int objectId, L2NpcTemplate template)
+	public L2AdventurerInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2AdventurerInstance);
 	}
 	

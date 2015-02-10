@@ -48,9 +48,13 @@ public class L2FortManagerInstance extends L2MerchantInstance
 	protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
 	protected static final int COND_OWNER = 2;
 	
-	public L2FortManagerInstance(int objectId, L2NpcTemplate template)
+	/**
+	 * Creates a fort manager.
+	 * @param template the fort manager NPC template
+	 */
+	public L2FortManagerInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2FortManagerInstance);
 	}
 	

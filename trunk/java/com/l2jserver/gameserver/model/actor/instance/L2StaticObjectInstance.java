@@ -81,6 +81,18 @@ public final class L2StaticObjectInstance extends L2Character
 		}
 	}
 	
+	/**
+	 * Creates a static object.
+	 * @param template the static object
+	 * @param staticId the static ID
+	 */
+	public L2StaticObjectInstance(L2CharTemplate template, int staticId)
+	{
+		super(template);
+		setInstanceType(InstanceType.L2StaticObjectInstance);
+		_staticObjectId = staticId;
+	}
+	
 	@Override
 	protected L2CharacterAI initAI()
 	{
@@ -95,18 +107,6 @@ public final class L2StaticObjectInstance extends L2Character
 	public int getId()
 	{
 		return _staticObjectId;
-	}
-	
-	/**
-	 * @param objectId
-	 * @param template
-	 * @param staticId
-	 */
-	public L2StaticObjectInstance(int objectId, L2CharTemplate template, int staticId)
-	{
-		super(objectId, template);
-		setInstanceType(InstanceType.L2StaticObjectInstance);
-		_staticObjectId = staticId;
 	}
 	
 	@Override

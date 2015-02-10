@@ -54,9 +54,13 @@ public class L2SepulcherNpcInstance extends L2Npc
 	private static final String HTML_FILE_PATH = "data/html/SepulcherNpc/";
 	private static final int HALLS_KEY = 7260;
 	
-	public L2SepulcherNpcInstance(int objectID, L2NpcTemplate template)
+	/**
+	 * Creates a sepulcher.
+	 * @param template the sepulcher NPC template
+	 */
+	public L2SepulcherNpcInstance(L2NpcTemplate template)
 	{
-		super(objectID, template);
+		super(template);
 		setInstanceType(InstanceType.L2SepulcherNpcInstance);
 		setShowSummonAnimation(true);
 		

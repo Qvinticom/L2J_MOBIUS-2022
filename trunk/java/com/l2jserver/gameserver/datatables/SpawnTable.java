@@ -394,7 +394,7 @@ public final class SpawnTable implements IXmlReader
 	}
 	
 	/**
-	 * Add a new spawn to the spawn table.
+	 * Adds a new spawn to the spawn table.
 	 * @param spawn the spawn to add
 	 * @param storeInDb if {@code true} it'll be saved in the database
 	 */

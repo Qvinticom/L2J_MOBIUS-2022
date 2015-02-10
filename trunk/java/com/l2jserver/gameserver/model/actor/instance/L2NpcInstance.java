@@ -38,9 +38,13 @@ import com.l2jserver.util.StringUtil;
 
 public class L2NpcInstance extends L2Npc
 {
-	public L2NpcInstance(int objectId, L2NpcTemplate template)
+	/**
+	 * Creates a NPC.
+	 * @param template the NPC template
+	 */
+	public L2NpcInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2NpcInstance);
 		setIsInvul(false);
 	}

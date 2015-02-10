@@ -43,19 +43,12 @@ public class L2RaidBossInstance extends L2MonsterInstance
 	private boolean _useRaidCurse = true;
 	
 	/**
-	 * Constructor of L2RaidBossInstance (use L2Character and L2NpcInstance constructor).<br>
-	 * <B><U>Actions</U>:</B>
-	 * <ul>
-	 * <li>Call the L2Character constructor to set the _template of the L2RaidBossInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
-	 * <li>Set the name of the L2RaidBossInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
-	 * </ul>
-	 * @param objectId the identifier of the object to initialized
-	 * @param template to apply to the NPC
+	 * Creates a raid boss.
+	 * @param template the raid boss template
 	 */
-	public L2RaidBossInstance(int objectId, L2NpcTemplate template)
+	public L2RaidBossInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2RaidBossInstance);
 		setIsRaid(true);
 		setLethalable(false);

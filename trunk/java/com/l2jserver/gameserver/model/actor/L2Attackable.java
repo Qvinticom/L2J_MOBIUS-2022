@@ -111,17 +111,12 @@ public class L2Attackable extends L2Npc
 	private boolean _mustGiveExpSp;
 	
 	/**
-	 * Constructor of L2Attackable (use L2Character and L2NpcInstance constructor).<br>
-	 * Actions:<br>
-	 * Call the L2Character constructor to set the _template of the L2Attackable (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)<br>
-	 * Set the name of the L2Attackable<br>
-	 * Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it.
-	 * @param objectId identifier of the object initialized.
-	 * @param template the template to apply to the NPC.
+	 * Creates an attackable NPC.
+	 * @param template the attackable NPC template
 	 */
-	public L2Attackable(int objectId, L2NpcTemplate template)
+	public L2Attackable(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2Attackable);
 		setIsInvul(false);
 		_mustGiveExpSp = true;

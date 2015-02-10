@@ -43,9 +43,16 @@ public class L2SiegeFlagInstance extends L2Npc
 	private final boolean _isAdvanced;
 	private boolean _canTalk;
 	
-	public L2SiegeFlagInstance(L2PcInstance player, int objectId, L2NpcTemplate template, boolean advanced, boolean outPost)
+	/**
+	 * Creates a siege flag.
+	 * @param player
+	 * @param template
+	 * @param advanced
+	 * @param outPost
+	 */
+	public L2SiegeFlagInstance(L2PcInstance player, L2NpcTemplate template, boolean advanced, boolean outPost)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2SiegeFlagInstance);
 		
 		_clan = player.getClan();

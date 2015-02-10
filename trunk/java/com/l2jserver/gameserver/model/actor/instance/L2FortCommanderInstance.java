@@ -37,12 +37,15 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 public class L2FortCommanderInstance extends L2DefenderInstance
 {
-	
 	private boolean _canTalk;
 	
-	public L2FortCommanderInstance(int objectId, L2NpcTemplate template)
+	/**
+	 * Creates a fort commander.
+	 * @param template the fort commander NPC template
+	 */
+	public L2FortCommanderInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2FortCommanderInstance);
 		_canTalk = true;
 	}

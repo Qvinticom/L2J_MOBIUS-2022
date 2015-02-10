@@ -44,9 +44,14 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	private Future<?> _consumeFuelTask;
 	private Future<?> _checkTask;
 	
-	public L2ControllableAirShipInstance(int objectId, L2CharTemplate template, int ownerId)
+	/**
+	 * Creates a controllable air ship.
+	 * @param template the controllable air ship template
+	 * @param ownerId the owner ID
+	 */
+	public L2ControllableAirShipInstance(L2CharTemplate template, int ownerId)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2ControllableAirShipInstance);
 		_ownerId = ownerId;
 		_helmId = IdFactory.getInstance().getNextId(); // not forget to release !

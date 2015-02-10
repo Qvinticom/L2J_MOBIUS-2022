@@ -37,6 +37,8 @@ import com.l2jserver.gameserver.util.MinionList;
  */
 public class L2MonsterInstance extends L2Attackable
 {
+	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
+	
 	protected boolean _enableMinions = true;
 	
 	private L2MonsterInstance _master = null;
@@ -44,22 +46,13 @@ public class L2MonsterInstance extends L2Attackable
 	
 	protected ScheduledFuture<?> _maintenanceTask = null;
 	
-	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
-	
 	/**
-	 * Constructor of L2MonsterInstance (use L2Character and L2NpcInstance constructor).<br>
-	 * <B><U> Actions</U> :</B>
-	 * <ul>
-	 * <li>Call the L2Character constructor to set the _template of the L2MonsterInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
-	 * <li>Set the name of the L2MonsterInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
-	 * </ul>
-	 * @param objectId the identifier of the object to initialized
-	 * @param template to apply to the NPC
+	 * Creates a monster.
+	 * @param template the monster NPC template
 	 */
-	public L2MonsterInstance(int objectId, L2NpcTemplate template)
+	public L2MonsterInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2MonsterInstance);
 		setAutoAttackable(true);
 	}

@@ -54,15 +54,28 @@ public final class L2BabyPetInstance extends L2PetInstance
 	
 	protected boolean _bufferMode = true;
 	
-	public L2BabyPetInstance(int objectId, L2NpcTemplate template, L2PcInstance owner, L2ItemInstance control)
+	/**
+	 * Creates a baby pet.
+	 * @param template the baby pet NPC template
+	 * @param owner the owner
+	 * @param control the summoning item
+	 */
+	public L2BabyPetInstance(L2NpcTemplate template, L2PcInstance owner, L2ItemInstance control)
 	{
-		super(objectId, template, owner, control);
+		super(template, owner, control);
 		setInstanceType(InstanceType.L2BabyPetInstance);
 	}
 	
-	public L2BabyPetInstance(int objectId, L2NpcTemplate template, L2PcInstance owner, L2ItemInstance control, byte level)
+	/**
+	 * Creates a baby pet.
+	 * @param template the baby pet NPC template
+	 * @param owner the owner
+	 * @param control the summoning item
+	 * @param level the level
+	 */
+	public L2BabyPetInstance(L2NpcTemplate template, L2PcInstance owner, L2ItemInstance control, byte level)
 	{
-		super(objectId, template, owner, control, level);
+		super(template, owner, control, level);
 		setInstanceType(InstanceType.L2BabyPetInstance);
 	}
 	

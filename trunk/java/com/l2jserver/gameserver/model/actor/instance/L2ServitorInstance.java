@@ -72,9 +72,9 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 	
 	private int _referenceSkill;
 	
-	public L2ServitorInstance(int objectId, L2NpcTemplate template, L2PcInstance owner)
+	public L2ServitorInstance(L2NpcTemplate template, L2PcInstance owner)
 	{
-		super(objectId, template, owner);
+		super(template, owner);
 		setInstanceType(InstanceType.L2ServitorInstance);
 		setShowSummonAnimation(true);
 	}

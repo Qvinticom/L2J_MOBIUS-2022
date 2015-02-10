@@ -44,19 +44,12 @@ public class L2GuardInstance extends L2Attackable
 	private static Logger _log = Logger.getLogger(L2GuardInstance.class.getName());
 	
 	/**
-	 * Constructor of L2GuardInstance (use L2Character and L2NpcInstance constructor).<br>
-	 * <B><U> Actions</U> :</B>
-	 * <ul>
-	 * <li>Call the L2Character constructor to set the _template of the L2GuardInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
-	 * <li>Set the name of the L2GuardInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
-	 * </ul>
-	 * @param objectId the identifier of the object to initialized
-	 * @param template to apply to the NPC
+	 * Creates a guard.
+	 * @param template the guard NPC template
 	 */
-	public L2GuardInstance(int objectId, L2NpcTemplate template)
+	public L2GuardInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2GuardInstance);
 	}
 	

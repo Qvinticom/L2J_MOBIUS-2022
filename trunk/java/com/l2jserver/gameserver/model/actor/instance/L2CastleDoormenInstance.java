@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 
 public class L2CastleDoormenInstance extends L2DoormenInstance
 {
-	public L2CastleDoormenInstance(int objectID, L2NpcTemplate template)
+	public L2CastleDoormenInstance(L2NpcTemplate template)
 	{
-		super(objectID, template);
+		super(template);
 		setInstanceType(InstanceType.L2CastleDoormenInstance);
 	}
 	

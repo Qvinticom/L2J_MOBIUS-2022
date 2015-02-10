@@ -35,9 +35,13 @@ public class L2ControlTowerInstance extends L2Tower
 {
 	private volatile List<L2Spawn> _guards;
 	
-	public L2ControlTowerInstance(int objectId, L2NpcTemplate template)
+	/**
+	 * Creates a control tower.
+	 * @param template the control tower NPC template
+	 */
+	public L2ControlTowerInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2ControlTowerInstance);
 	}
 	

@@ -51,12 +51,12 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 	private int _clanHallId = -1;
 	
 	/**
-	 * @param objectId
-	 * @param template
+	 * Creates clan hall manager.
+	 * @param template the clan hall manager NPC template
 	 */
-	public L2ClanHallManagerInstance(int objectId, L2NpcTemplate template)
+	public L2ClanHallManagerInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2ClanHallManagerInstance);
 	}
 	

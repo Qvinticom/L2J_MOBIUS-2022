@@ -64,9 +64,15 @@ public final class L2TrapInstance extends L2Npc
 	// Tasks
 	private ScheduledFuture<?> _trapTask = null;
 	
-	public L2TrapInstance(int objectId, L2NpcTemplate template, int instanceId, int lifeTime)
+	/**
+	 * Creates a trap.
+	 * @param template the trap NPC template
+	 * @param instanceId the instance ID
+	 * @param lifeTime the life time
+	 */
+	public L2TrapInstance(L2NpcTemplate template, int instanceId, int lifeTime)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2TrapInstance);
 		setInstanceId(instanceId);
 		setName(template.getName());
@@ -84,9 +90,15 @@ public final class L2TrapInstance extends L2Npc
 		}
 	}
 	
-	public L2TrapInstance(int objectId, L2NpcTemplate template, L2PcInstance owner, int lifeTime)
+	/**
+	 * Creates a trap.
+	 * @param template the trap NPC template
+	 * @param owner the owner
+	 * @param lifeTime the life time
+	 */
+	public L2TrapInstance(L2NpcTemplate template, L2PcInstance owner, int lifeTime)
 	{
-		this(objectId, template, owner.getInstanceId(), lifeTime);
+		this(template, owner.getInstanceId(), lifeTime);
 		_owner = owner;
 	}
 	

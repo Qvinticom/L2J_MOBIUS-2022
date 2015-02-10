@@ -18,17 +18,14 @@
  */
 package com.l2jserver.gameserver.util;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -55,7 +52,6 @@ public class MinionList
 		{
 			throw new NullPointerException("MinionList: master is null");
 		}
-		
 		_master = pMaster;
 	}
 	
@@ -346,10 +342,7 @@ public class MinionList
 		{
 			return null;
 		}
-		
-		// Create and Init the Minion and generate its Identifier
-		L2MonsterInstance minion = new L2MonsterInstance(IdFactory.getInstance().getNextId(), minionTemplate);
-		return initializeNpcInstance(master, minion);
+		return initializeNpcInstance(master, new L2MonsterInstance(minionTemplate));
 	}
 	
 	protected static final L2MonsterInstance initializeNpcInstance(L2MonsterInstance master, L2MonsterInstance minion)
@@ -422,18 +415,8 @@ public class MinionList
 		return _minionReferences.size();
 	}
 	
-	public final int lazyCountSpawnedMinionsGroups()
+	public final long lazyCountSpawnedMinionsGroups()
 	{
-		Set<Integer> seenGroups = new HashSet<>();
-		for (L2MonsterInstance minion : _minionReferences)
-		{
-			if (minion == null)
-			{
-				continue;
-			}
-			
-			seenGroups.add(minion.getId());
-		}
-		return seenGroups.size();
+		return _minionReferences.stream().distinct().count();
 	}
 }

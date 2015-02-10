@@ -29,7 +29,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.AirShipTeleportList;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
@@ -104,7 +103,7 @@ public class AirShipManager
 	
 	public L2AirShipInstance getNewAirShip(int x, int y, int z, int heading)
 	{
-		final L2AirShipInstance airShip = new L2AirShipInstance(IdFactory.getInstance().getNextId(), _airShipTemplate);
+		final L2AirShipInstance airShip = new L2AirShipInstance(_airShipTemplate);
 		
 		airShip.setHeading(heading);
 		airShip.setXYZInvisible(x, y, z);
@@ -130,7 +129,7 @@ public class AirShipManager
 		}
 		else
 		{
-			airShip = new L2ControllableAirShipInstance(IdFactory.getInstance().getNextId(), _airShipTemplate, ownerId);
+			airShip = new L2ControllableAirShipInstance(_airShipTemplate, ownerId);
 			_airShips.put(ownerId, airShip);
 			
 			airShip.setMaxFuel(600);

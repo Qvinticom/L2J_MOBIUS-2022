@@ -875,6 +875,47 @@ public final class L2PcInstance extends L2Playable
 	
 	private volatile int _actionMask;
 	
+	/**
+	 * Creates a player.
+	 * @param objectId the object ID
+	 * @param template the player template
+	 * @param accountName the account name
+	 * @param app the player appearance
+	 */
+	private L2PcInstance(int objectId, L2PcTemplate template, String accountName, PcAppearance app)
+	{
+		super(objectId, template);
+		setInstanceType(InstanceType.L2PcInstance);
+		super.initCharStatusUpdateValues();
+		initPcStatusUpdateValues();
+		
+		for (int i = 0; i < _htmlActionCaches.length; ++i)
+		{
+			_htmlActionCaches[i] = new LinkedList<>();
+		}
+		
+		_accountName = accountName;
+		app.setOwner(this);
+		_appearance = app;
+		
+		// Create an AI
+		getAI();
+		
+		// Create a L2Radar object
+		_radar = new L2Radar(this);
+	}
+	
+	/**
+	 * Creates a player.
+	 * @param template the player template
+	 * @param accountName the account name
+	 * @param app the player appearance
+	 */
+	private L2PcInstance(L2PcTemplate template, String accountName, PcAppearance app)
+	{
+		this(IdFactory.getInstance().getNextId(), template, accountName, app);
+	}
+	
 	public void setPvpFlagLasts(long time)
 	{
 		_pvpFlagLasts = time;
@@ -951,7 +992,7 @@ public final class L2PcInstance extends L2Playable
 	public static L2PcInstance create(L2PcTemplate template, String accountName, String name, PcAppearance app)
 	{
 		// Create a new L2PcInstance with an account name
-		L2PcInstance player = new L2PcInstance(IdFactory.getInstance().getNextId(), template, accountName, app);
+		L2PcInstance player = new L2PcInstance(template, accountName, app);
 		// Set the name of the L2PcInstance
 		player.setName(name);
 		// Set Character's create time
@@ -1113,42 +1154,6 @@ public final class L2PcInstance extends L2Playable
 		_mpUpdateInterval = getMaxMp() / 352.0;
 		_mpUpdateIncCheck = getMaxMp();
 		_mpUpdateDecCheck = getMaxMp() - _mpUpdateInterval;
-	}
-	
-	/**
-	 * Constructor of L2PcInstance (use L2Character constructor).<br>
-	 * <B><U> Actions</U> :</B>
-	 * <ul>
-	 * <li>Call the L2Character constructor to create an empty _skills slot and copy basic Calculator set to this L2PcInstance</li>
-	 * <li>Set the name of the L2PcInstance</li>
-	 * </ul>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method SET the level of the L2PcInstance to 1</B></FONT>
-	 * @param objectId Identifier of the object to initialized
-	 * @param template The L2PcTemplate to apply to the L2PcInstance
-	 * @param accountName The name of the account including this L2PcInstance
-	 * @param app
-	 */
-	private L2PcInstance(int objectId, L2PcTemplate template, String accountName, PcAppearance app)
-	{
-		super(objectId, template);
-		setInstanceType(InstanceType.L2PcInstance);
-		super.initCharStatusUpdateValues();
-		initPcStatusUpdateValues();
-		
-		for (int i = 0; i < _htmlActionCaches.length; ++i)
-		{
-			_htmlActionCaches[i] = new LinkedList<>();
-		}
-		
-		_accountName = accountName;
-		app.setOwner(this);
-		_appearance = app;
-		
-		// Create an AI
-		getAI();
-		
-		// Create a L2Radar object
-		_radar = new L2Radar(this);
 	}
 	
 	@Override

@@ -24,12 +24,12 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 public class L2WarehouseInstance extends L2NpcInstance
 {
 	/**
-	 * @param objectId
-	 * @param template
+	 * Creates a warehouse NPC.
+	 * @param template the warehouse NPC template
 	 */
-	public L2WarehouseInstance(int objectId, L2NpcTemplate template)
+	public L2WarehouseInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2WarehouseInstance);
 	}
 	

@@ -24,10 +24,9 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 import java.util.StringJoiner;
 import java.util.StringTokenizer;
@@ -309,10 +308,9 @@ public final class Util
 	public static String implodeString(Iterable<String> strArray, String strDelim)
 	{
 		final StringJoiner sj = new StringJoiner(strDelim);
-		
-		for (String strValue : strArray)
+		for (String str : strArray)
 		{
-			sj.add(strValue);
+			sj.add(str);
 		}
 		return sj.toString();
 	}
@@ -709,26 +707,7 @@ public final class Util
 	 */
 	public static void fillMultiEditContent(L2PcInstance activeChar, String text)
 	{
-		text = text.replaceAll("<br>", Config.EOL);
-		List<String> arg = new ArrayList<>();
-		arg.add("0");
-		arg.add("0");
-		arg.add("0");
-		arg.add("0");
-		arg.add("0");
-		arg.add("0");
-		arg.add(activeChar.getName());
-		arg.add(Integer.toString(activeChar.getObjectId()));
-		arg.add(activeChar.getAccountName());
-		arg.add("9");
-		arg.add(" ");
-		arg.add(" ");
-		arg.add(text);
-		arg.add("0");
-		arg.add("0");
-		arg.add("0");
-		arg.add("0");
-		activeChar.sendPacket(new ShowBoard(arg));
+		activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
 	}
 	
 	/**

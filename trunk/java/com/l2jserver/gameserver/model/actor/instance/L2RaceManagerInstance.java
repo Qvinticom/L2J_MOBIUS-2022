@@ -92,9 +92,13 @@ public class L2RaceManagerInstance extends L2Npc
 		100000
 	};
 	
-	public L2RaceManagerInstance(int objectId, L2NpcTemplate template)
+	/**
+	 * Creates a race manager.
+	 * @param template the race manager NPC template
+	 */
+	public L2RaceManagerInstance(L2NpcTemplate template)
 	{
-		super(objectId, template);
+		super(template);
 		setInstanceType(InstanceType.L2RaceManagerInstance);
 		if (_notInitialized)
 		{
