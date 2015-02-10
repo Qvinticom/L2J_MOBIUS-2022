@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
@@ -135,6 +136,17 @@ public final class HomeBoard implements IParseBoardHandler
 			{
 				activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, activeChar);
 				SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar, activeChar);
+				if (activeChar.getServitors().size() > 0)
+				{
+					for (L2Summon summon : activeChar.getServitors().values())
+					{
+						SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(summon, summon);
+					}
+				}
+				if (activeChar.hasPet())
+				{
+					SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar.getPet(), activeChar.getPet());
+				}
 			}
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
