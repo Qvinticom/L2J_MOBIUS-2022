@@ -5,6 +5,13 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2884.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -17,6 +24,14 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		
 		<for>
 			<add stat="pAtk" val="3509.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -29,6 +44,13 @@
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="5678.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -41,6 +63,13 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2307.0" />
 			<add stat="mAtk" val="1676.0" />
@@ -53,6 +82,13 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1080" />
+	    <set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2307.0" />
 			<add stat="mAtk" val="1676.0" />
@@ -66,6 +102,13 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1080" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2809.0" />
 			<add stat="mAtk" val="1843.0" />
@@ -80,6 +123,13 @@
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2523.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -92,6 +142,13 @@
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="5678.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -104,6 +161,13 @@
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="3509.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -116,6 +180,13 @@
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2307.0" />
 			<add stat="mAtk" val="1676.0" />
@@ -128,6 +199,13 @@
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2884.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -140,6 +218,13 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1580" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="5113.0" />
 			<add stat="mAtk" val="1257.0" />
@@ -152,6 +237,13 @@
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="2050" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="element_enabled" val="false" />
+		<set name="enchant_enabled" val="0" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
 		<for>
 			<add stat="pAtk" val="2884.0" />
 			<add stat="mAtk" val="1257.0" />
