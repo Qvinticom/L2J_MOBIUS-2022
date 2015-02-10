@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
+import com.l2jserver.gameserver.network.serverpackets.ShowBoard;
 
 /**
  * Home board.
@@ -110,16 +111,14 @@ public final class HomeBoard implements IParseBoardHandler
 			final int x = Integer.parseInt(buypassOptions[0]);
 			final int y = Integer.parseInt(buypassOptions[1]);
 			final int z = Integer.parseInt(buypassOptions[2]);
-			final String page = buypassOptions[3];
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_TELEPORT_PRICE)
 			{
 				activeChar.sendMessage("Not enough currency!");
 				return false;
 			}
+			activeChar.sendPacket(new ShowBoard());
 			activeChar.getInventory().destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, activeChar);
 			activeChar.teleToLocation(x, y, z, 0);
-			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
-			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
 		{

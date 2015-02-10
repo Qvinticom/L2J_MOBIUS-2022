@@ -25,10 +25,20 @@ import com.l2jserver.util.StringUtil;
 public class ShowBoard extends L2GameServerPacket
 {
 	private final String _content;
+	private int _showBoard = 1; // 1 show, 0 hide
 	
 	public ShowBoard(String htmlCode, String id)
 	{
 		_content = id + "\u0008" + htmlCode;
+	}
+	
+	/**
+	 * Hides the community board
+	 */
+	public ShowBoard()
+	{
+		_showBoard = 0;
+		_content = "";
 	}
 	
 	public ShowBoard(List<String> arg)
@@ -45,7 +55,7 @@ public class ShowBoard extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x7B);
-		writeC(0x01); // c4 1 to show community 00 to hide
+		writeC(_showBoard); // c4 1 to show community 00 to hide
 		writeS("bypass _bbshome"); // top
 		writeS("bypass _bbsgetfav"); // favorite
 		writeS("bypass _bbsloc"); // region
