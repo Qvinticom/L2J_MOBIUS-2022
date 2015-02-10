@@ -188,8 +188,6 @@ public class GameServer
 	{
 		long serverLoadStart = System.currentTimeMillis();
 		
-		_log.info(getClass().getSimpleName() + ": Used memory: " + getUsedMemoryMB() + "MB");
-		
 		if (!IdFactory.getInstance().isInitialized())
 		{
 			_log.severe(getClass().getSimpleName() + ": Could not read object IDs from DB. Please check your data.");
@@ -281,11 +279,16 @@ public class GameServer
 		ClanEntryManager.getInstance();
 		
 		printSection("Geodata");
+		long geodataMemory = getUsedMemoryMB();
 		GeoData.getInstance();
-		
 		if (Config.PATHFINDING > 0)
 		{
 			PathFinding.getInstance();
+		}
+		geodataMemory -= getUsedMemoryMB();
+		if (geodataMemory < 0)
+		{
+			geodataMemory = 0;
 		}
 		
 		printSection("NPCs");
@@ -422,13 +425,11 @@ public class GameServer
 			_deadDetectThread = null;
 		}
 		System.gc();
-		// maxMemory is the upper limit the jvm can use, totalMemory the size of
-		// the current allocation pool, freeMemory the unused memory in the allocation pool
-		long freeMem = ((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576;
-		long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-		_log.info(getClass().getSimpleName() + ": Started, free memory " + freeMem + " Mb of " + totalMem + " Mb");
-		Toolkit.getDefaultToolkit().beep();
-		LoginServerThread.getInstance().start();
+		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
+		_log.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
+		_log.info(getClass().getSimpleName() + ": Geodata use " + geodataMemory + " MB of memory.");
+		_log.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
+		_log.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		
 		final SelectorConfig sc = new SelectorConfig();
 		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
@@ -465,8 +466,8 @@ public class GameServer
 			System.exit(1);
 		}
 		
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Maximum numbers of connected players: " + Config.MAXIMUM_ONLINE_USERS);
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+		LoginServerThread.getInstance().start();
+		Toolkit.getDefaultToolkit().beep();
 	}
 	
 	public static void main(String[] args) throws Exception
@@ -496,10 +497,6 @@ public class GameServer
 		if (Config.IS_TELNET_ENABLED)
 		{
 			new Status(Server.serverMode).start();
-		}
-		else
-		{
-			_log.info(GameServer.class.getSimpleName() + ": Telnet server is currently disabled.");
 		}
 	}
 	
