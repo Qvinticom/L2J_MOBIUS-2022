@@ -26,11 +26,14 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.BuyList;
+import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
 
 /**
  * Home board.
@@ -46,6 +49,7 @@ public final class HomeBoard implements IParseBoardHandler
 		"_bbshome",
 		"_bbstop",
 		"_bbsmultisell",
+		"_bbssell",
 		"_bbsteleport",
 		"_bbsbuff"
 	};
@@ -86,9 +90,17 @@ public final class HomeBoard implements IParseBoardHandler
 			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
-			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
+			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
+		}
+		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbssell"))
+		{
+			final String page = command.replace("_bbssell;", "");
+			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			CommunityBoardHandler.separateAndSend(html, activeChar);
+			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar.getAdena(), 0));
+			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_TELEPORTS && command.startsWith("_bbsteleport"))
 		{
