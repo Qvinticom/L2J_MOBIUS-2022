@@ -183,7 +183,8 @@ public class HtmCache
 		}
 		
 		String content = _cache.get(path);
-		if (Config.LAZY_CACHE && (content == null))
+		// TODO: Check why some files do not get in cache on server startup.
+		if (content == null)
 		{
 			content = loadFile(new File(Config.DATAPACK_ROOT, path));
 		}
