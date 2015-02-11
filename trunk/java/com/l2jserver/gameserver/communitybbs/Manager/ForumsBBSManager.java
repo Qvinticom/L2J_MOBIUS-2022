@@ -21,8 +21,8 @@ package com.l2jserver.gameserver.communitybbs.Manager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class ForumsBBSManager extends BaseBBSManager
 {
 	private static Logger _log = Logger.getLogger(ForumsBBSManager.class.getName());
-	private final List<Forum> _table;
+	private final List<Forum> _table = new CopyOnWriteArrayList<>();
 	private int _lastid = 1;
 	
 	/**
@@ -41,7 +41,6 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	protected ForumsBBSManager()
 	{
-		_table = new ArrayList<>();
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0"))
