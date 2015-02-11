@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
-import java.io.File;
-import java.nio.file.Files;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,12 +31,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Crest;
 import com.l2jserver.gameserver.model.L2Crest.CrestType;
-import com.l2jserver.util.file.filter.BMPFilter;
 
 /**
  * Loads and saves crests from database.
@@ -117,8 +113,6 @@ public final class CrestTable
 			LOGGER.log(Level.WARNING, "There was an error while loading crests from database:", e);
 		}
 		
-		moveOldCrestsToDb(crestsInUse);
-		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crests.size() + " Crests.");
 		
 		for (L2Clan clan : ClanTable.getInstance().getClans())
@@ -152,89 +146,6 @@ public final class CrestTable
 					clan.changeAllyCrest(0, true);
 				}
 			}
-		}
-	}
-	
-	/**
-	 * Moves old crests from data/crests folder to database and deletes crest folder<br>
-	 * <b>TODO:</b> remove it after some time
-	 * @param crestsInUse the set of crests in use
-	 */
-	private void moveOldCrestsToDb(Set<Integer> crestsInUse)
-	{
-		final File crestDir = new File(Config.DATAPACK_ROOT, "data/crests/");
-		if (crestDir.exists())
-		{
-			for (File file : crestDir.listFiles(new BMPFilter()))
-			{
-				try
-				{
-					final byte[] data = Files.readAllBytes(file.toPath());
-					if (file.getName().startsWith("Crest_Large_"))
-					{
-						final int crestId = Integer.parseInt(file.getName().substring(12, file.getName().length() - 4));
-						if (crestsInUse.contains(crestId))
-						{
-							final L2Crest crest = createCrest(data, CrestType.PLEDGE_LARGE);
-							if (crest != null)
-							{
-								for (L2Clan clan : ClanTable.getInstance().getClans())
-								{
-									if (clan.getCrestLargeId() == crestId)
-									{
-										clan.setCrestLargeId(0);
-										clan.changeLargeCrest(crest.getId());
-									}
-								}
-							}
-						}
-					}
-					else if (file.getName().startsWith("Crest_"))
-					{
-						final int crestId = Integer.parseInt(file.getName().substring(6, file.getName().length() - 4));
-						if (crestsInUse.contains(crestId))
-						{
-							final L2Crest crest = createCrest(data, CrestType.PLEDGE);
-							if (crest != null)
-							{
-								for (L2Clan clan : ClanTable.getInstance().getClans())
-								{
-									if (clan.getCrestId() == crestId)
-									{
-										clan.setCrestId(0);
-										clan.changeClanCrest(crest.getId());
-									}
-								}
-							}
-						}
-					}
-					else if (file.getName().startsWith("AllyCrest_"))
-					{
-						final int crestId = Integer.parseInt(file.getName().substring(10, file.getName().length() - 4));
-						if (crestsInUse.contains(crestId))
-						{
-							final L2Crest crest = createCrest(data, CrestType.ALLY);
-							if (crest != null)
-							{
-								for (L2Clan clan : ClanTable.getInstance().getClans())
-								{
-									if (clan.getAllyCrestId() == crestId)
-									{
-										clan.setAllyCrestId(0);
-										clan.changeAllyCrest(crest.getId(), false);
-									}
-								}
-							}
-						}
-					}
-					file.delete();
-				}
-				catch (Exception e)
-				{
-					LOGGER.log(Level.WARNING, "There was an error while moving crest file " + file.getName() + " to database:", e);
-				}
-			}
-			crestDir.delete();
 		}
 	}
 	
