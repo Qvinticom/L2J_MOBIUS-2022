@@ -18,28 +18,42 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import com.l2jserver.gameserver.data.sql.impl.CrestTable;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.PledgeCrest;
 
 /**
- * This class ...
- * @version $Revision: 1.4.4.4 $ $Date: 2005/03/27 15:29:30 $
+ * @author Mobius
  */
 public final class RequestPledgeCrest extends L2GameClientPacket
 {
 	private static final String _C__68_REQUESTPLEDGECREST = "[C] 68 RequestPledgeCrest";
 	
 	private int _crestId;
+	private int _clanId;
 	
 	@Override
 	protected void readImpl()
 	{
 		_crestId = readD();
+		_clanId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		sendPacket(new PledgeCrest(_crestId));
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		if (activeChar.getClan().getId() == _clanId)
+		{
+			return;
+		}
+		
+		if (_crestId == 0)
+		{
+			return;
+		}
+		
+		sendPacket(new PledgeCrest(_crestId, CrestTable.getInstance().getCrest(_crestId).getData()));
 	}
 	
 	@Override
