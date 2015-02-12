@@ -19,16 +19,17 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 
 public final class PledgeCrest extends L2GameServerPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
 	
-	public PledgeCrest(int crestId, byte[] data)
+	public PledgeCrest(int crestId)
 	{
 		_crestId = crestId;
-		_data = data;
+		_data = CrestTable.getInstance().getCrest(crestId).getData();
 	}
 	
 	@Override

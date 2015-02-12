@@ -100,7 +100,7 @@ public final class L2Crest implements IIdentifiable
 		{
 			case PLEDGE:
 			{
-				activeChar.sendPacket(new PledgeCrest(getId(), getData()));
+				activeChar.sendPacket(new PledgeCrest(getId()));
 				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
 				break;
 			}
@@ -130,7 +130,7 @@ public final class L2Crest implements IIdentifiable
 			}
 			case ALLY:
 			{
-				activeChar.sendPacket(new AllyCrest(getId(), getData()));
+				activeChar.sendPacket(new AllyCrest(getId()));
 				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
 				break;
 			}
