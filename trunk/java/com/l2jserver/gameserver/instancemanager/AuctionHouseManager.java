@@ -21,8 +21,9 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,7 +41,7 @@ public class AuctionHouseManager
 {
 	Connection con = null;
 	private static final Logger _log = Logger.getLogger(AuctionHouseManager.class.getName());
-	private static ArrayList<Auctions> auctions;
+	private static List<Auctions> auctions = new CopyOnWriteArrayList<>();
 	private static HashMap<Integer, Integer> convertedCategories;
 	private static HashMap<Integer, Integer> mainCategories;
 	
@@ -56,7 +57,7 @@ public class AuctionHouseManager
 	
 	private void load()
 	{
-		auctions = new ArrayList<>();
+		auctions.clear();
 		int auctionID = 0;
 		int sellerID = 0;
 		int count = 0;
@@ -759,7 +760,7 @@ public class AuctionHouseManager
 		return 58; // Other Item
 	}
 	
-	public ArrayList<Auctions> getAuctions()
+	public List<Auctions> getAuctions()
 	{
 		return auctions;
 	}
