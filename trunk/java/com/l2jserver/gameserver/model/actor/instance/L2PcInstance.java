@@ -717,6 +717,7 @@ public final class L2PcInstance extends L2Playable
 	private boolean _exchangeRefusal = false; // Exchange refusal
 	
 	private L2Party _party;
+	PartyDistributionType _partyDistributionType;
 	
 	// this is needed to find the inviting player for Party response
 	// there can only be one active party request at once
@@ -6771,6 +6772,16 @@ public final class L2PcInstance extends L2Playable
 		return _party;
 	}
 	
+	public void setPartyDistributionType(PartyDistributionType pdt)
+	{
+		_partyDistributionType = pdt;
+	}
+	
+	public PartyDistributionType getPartyDistributionType()
+	{
+		return _partyDistributionType;
+	}
+	
 	/**
 	 * Return True if the L2PcInstance is a GM.
 	 */
@@ -10898,6 +10909,7 @@ public final class L2PcInstance extends L2Playable
 		super.doRevive();
 		updateEffectIcons();
 		sendPacket(new EtcStatusUpdate(this));
+		_revivePet = false;
 		_reviveRequested = 0;
 		_revivePower = 0;
 		
@@ -13495,6 +13507,11 @@ public final class L2PcInstance extends L2Playable
 			case MANUFACTURE:
 				activeChar.sendPacket(new RecipeShopMsg(this));
 				break;
+		}
+		if (isMounted())
+		{
+			// Required double send for fix Mounted H5+
+			sendPacket(new CharInfo(activeChar));
 		}
 	}
 	

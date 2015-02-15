@@ -32,12 +32,10 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -82,29 +80,17 @@ public class RaidBossSpawnManager
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM raidboss_spawnlist ORDER BY boss_id");
 			ResultSet rset = statement.executeQuery())
 		{
-			L2Spawn spawnDat;
-			L2NpcTemplate template;
-			long respawnTime;
 			while (rset.next())
 			{
-				template = getValidTemplate(rset.getInt("boss_id"));
-				if (template != null)
-				{
-					spawnDat = new L2Spawn(template);
-					spawnDat.setX(rset.getInt("loc_x"));
-					spawnDat.setY(rset.getInt("loc_y"));
-					spawnDat.setZ(rset.getInt("loc_z"));
-					spawnDat.setAmount(rset.getInt("amount"));
-					spawnDat.setHeading(rset.getInt("heading"));
-					spawnDat.setRespawnDelay(rset.getInt("respawn_delay"), rset.getInt("respawn_random"));
-					respawnTime = rset.getLong("respawn_time");
-					
-					addNewSpawn(spawnDat, respawnTime, rset.getDouble("currentHP"), rset.getDouble("currentMP"), false);
-				}
-				else
-				{
-					_log.warning(getClass().getSimpleName() + ": Could not load raidboss #" + rset.getInt("boss_id") + " from DB");
-				}
+				final L2Spawn spawnDat = new L2Spawn(rset.getInt("boss_id"));
+				spawnDat.setX(rset.getInt("loc_x"));
+				spawnDat.setY(rset.getInt("loc_y"));
+				spawnDat.setZ(rset.getInt("loc_z"));
+				spawnDat.setAmount(rset.getInt("amount"));
+				spawnDat.setHeading(rset.getInt("heading"));
+				spawnDat.setRespawnDelay(rset.getInt("respawn_delay"), rset.getInt("respawn_random"));
+				
+				addNewSpawn(spawnDat, rset.getLong("respawn_time"), rset.getDouble("currentHP"), rset.getDouble("currentMP"), false);
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + _bosses.size() + " Instances");
@@ -479,25 +465,6 @@ public class RaidBossSpawnManager
 		{
 			return StatusEnum.UNDEFINED;
 		}
-	}
-	
-	/**
-	 * Gets the valid template.
-	 * @param bossId the boss id
-	 * @return the valid template
-	 */
-	public L2NpcTemplate getValidTemplate(int bossId)
-	{
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(bossId);
-		if (template == null)
-		{
-			return null;
-		}
-		if (!template.isType("L2RaidBoss"))
-		{
-			return null;
-		}
-		return template;
 	}
 	
 	/**

@@ -83,6 +83,11 @@ public final class SpawnTable implements IXmlReader
 		}
 	}
 	
+	/**
+	 * Verifies if the template exists and it's spawnable.
+	 * @param npcId the NPC ID
+	 * @return {@code true} if the NPC ID belongs to an spawnable tempalte, {@code false} otherwise
+	 */
 	private boolean checkTemplate(int npcId)
 	{
 		L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
@@ -297,7 +302,7 @@ public final class SpawnTable implements IXmlReader
 		int ret = 0;
 		try
 		{
-			spawnDat = new L2Spawn(NpcData.getInstance().getTemplate(spawnInfo.getInt("npcTemplateid")));
+			spawnDat = new L2Spawn(spawnInfo.getInt("npcTemplateid"));
 			spawnDat.setAmount(spawnInfo.getInt("count", 1));
 			spawnDat.setX(spawnInfo.getInt("x", 0));
 			spawnDat.setY(spawnInfo.getInt("y", 0));

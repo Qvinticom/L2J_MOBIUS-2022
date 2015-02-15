@@ -35,7 +35,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import java.util.function.Predicate;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import com.l2jserver.Config;
@@ -81,8 +80,6 @@ import com.l2jserver.util.Util;
  */
 public class Quest extends AbstractScript implements IIdentifiable
 {
-	public static final Logger _log = Logger.getLogger(Quest.class.getName());
-	
 	/** Map containing lists of timers from the name of the timer. */
 	private volatile Map<String, List<QuestTimer>> _questTimers = null;
 	private final ReentrantReadWriteLock _rwLock = new ReentrantReadWriteLock();
@@ -110,22 +107,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private static final int RESET_MINUTES = 30;
 	
 	/**
-	 * @return the reset hour for a daily quest, could be overridden on a script.
-	 */
-	public int getResetHour()
-	{
-		return RESET_HOUR;
-	}
-	
-	/**
-	 * @return the reset minutes for a daily quest, could be overridden on a script.
-	 */
-	public int getResetMinutes()
-	{
-		return RESET_MINUTES;
-	}
-	
-	/**
 	 * The Quest object constructor.<br>
 	 * Constructing a quest also calls the {@code init_LoadGlobalData} convenience method.
 	 * @param questId ID of the quest
@@ -147,6 +128,24 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		loadGlobalData();
+	}
+	
+	/**
+	 * Gets the reset hour for a daily quest.
+	 * @return the reset hour
+	 */
+	public int getResetHour()
+	{
+		return RESET_HOUR;
+	}
+	
+	/**
+	 * Gets the reset minutes for a daily quest.
+	 * @return the reset minutes
+	 */
+	public int getResetMinutes()
+	{
+		return RESET_MINUTES;
 	}
 	
 	/**
@@ -217,9 +216,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		return _initialState;
 	}
 	
-	/**
-	 * @return the name of the quest
-	 */
+	@Override
 	public String getName()
 	{
 		return _name;
@@ -2726,12 +2723,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	@Override
-	public String getScriptName()
-	{
-		return getName();
-	}
-	
-	@Override
 	public void setActive(boolean status)
 	{
 		// TODO: Implement me.
@@ -2789,7 +2780,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	@Override
-	public ScriptManager<?> getScriptManager()
+	public ScriptManager<?> getManager()
 	{
 		return QuestManager.getInstance();
 	}

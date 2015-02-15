@@ -30,6 +30,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.TerritoryTable;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.NpcPersonalAIData;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -145,6 +146,19 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		
 		// Create the generic constructor of L2Npc managed by this L2Spawn
 		_constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
+	}
+	
+	/**
+	 * Creates a spawn.
+	 * @param npcId the NPC ID
+	 * @throws ClassCastException
+	 * @throws NoSuchMethodException
+	 * @throws ClassNotFoundException
+	 * @throws SecurityException
+	 */
+	public L2Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	{
+		this(NpcData.getInstance().getTemplate(npcId));
 	}
 	
 	/**

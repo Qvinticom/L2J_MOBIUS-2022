@@ -446,50 +446,28 @@ public final class Formulas
 	}
 	
 	/**
-	 * Calculate the CP regen rate (base + modifiers).
-	 * @param cha
-	 * @return
+	 * Calculates the CP regeneration rate (base + modifiers).
+	 * @param player the player
+	 * @return the CP regeneration rate
 	 */
-	public static final double calcCpRegen(L2Character cha)
+	public static final double calcCpRegen(L2PcInstance player)
 	{
-		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseCpRegen(cha.getLevel()) : cha.getTemplate().getBaseHpReg();
+		// With CON bonus
+		final double init = player.getActingPlayer().getTemplate().getBaseCpRegen(player.getLevel()) * player.getLevelMod() * BaseStats.CON.calcBonus(player);
 		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
-		double cpRegenBonus = 0;
-		
-		if (cha.isPlayer())
+		if (player.isSitting())
 		{
-			L2PcInstance player = cha.getActingPlayer();
-			
-			// Calculate Movement bonus
-			if (player.isSitting())
-			{
-				cpRegenMultiplier *= 1.5; // Sitting
-			}
-			else if (!player.isMoving())
-			{
-				cpRegenMultiplier *= 1.1; // Staying
-			}
-			else if (player.isRunning())
-			{
-				cpRegenMultiplier *= 0.7; // Running
-			}
+			cpRegenMultiplier *= 1.5; // Sitting
 		}
-		else
+		else if (!player.isMoving())
 		{
-			// Calculate Movement bonus
-			if (!cha.isMoving())
-			{
-				cpRegenMultiplier *= 1.1; // Staying
-			}
-			else if (cha.isRunning())
-			{
-				cpRegenMultiplier *= 0.7; // Running
-			}
+			cpRegenMultiplier *= 1.1; // Staying
 		}
-		
-		// Apply CON bonus
-		init *= cha.getLevelMod() * BaseStats.CON.calcBonus(cha);
-		return (cha.calcStat(Stats.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier) + cpRegenBonus;
+		else if (player.isRunning())
+		{
+			cpRegenMultiplier *= 0.7; // Running
+		}
+		return player.calcStat(Stats.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier;
 	}
 	
 	public static final double calcSiegeRegenModifier(L2PcInstance activeChar)

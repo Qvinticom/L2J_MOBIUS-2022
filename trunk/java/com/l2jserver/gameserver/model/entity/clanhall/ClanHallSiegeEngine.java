@@ -33,7 +33,6 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
@@ -46,7 +45,6 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.Siegable;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -159,9 +157,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 				{
 					while (rset.next())
 					{
-						final int npcId = rset.getInt("npcId");
-						final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-						L2Spawn spawn = new L2Spawn(template);
+						final L2Spawn spawn = new L2Spawn(rset.getInt("npcId"));
 						spawn.setX(rset.getInt("x"));
 						spawn.setY(rset.getInt("y"));
 						spawn.setZ(rset.getInt("z"));

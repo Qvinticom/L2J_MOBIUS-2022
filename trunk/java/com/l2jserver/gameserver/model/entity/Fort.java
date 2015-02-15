@@ -40,7 +40,6 @@ import com.l2jserver.gameserver.FortUpdater.UpdaterType;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.data.xml.impl.StaticObjectData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.enums.MountType;
@@ -54,7 +53,6 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.zone.type.L2FortZone;
 import com.l2jserver.gameserver.model.zone.type.L2SiegeZone;
@@ -1168,28 +1166,18 @@ public final class Fort extends AbstractResidence
 			ps.setInt(2, 0);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				L2Spawn spawnDat;
-				L2NpcTemplate template;
 				while (rs.next())
 				{
-					template = NpcData.getInstance().getTemplate(rs.getInt("npcId"));
-					if (template != null)
-					{
-						spawnDat = new L2Spawn(template);
-						spawnDat.setAmount(1);
-						spawnDat.setX(rs.getInt("x"));
-						spawnDat.setY(rs.getInt("y"));
-						spawnDat.setZ(rs.getInt("z"));
-						spawnDat.setHeading(rs.getInt("heading"));
-						spawnDat.setRespawnDelay(60);
-						SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-						spawnDat.doSpawn();
-						spawnDat.startRespawn();
-					}
-					else
-					{
-						_log.warning("Fort " + getResidenceId() + " initNpcs: Data missing in NPC table for ID: " + rs.getInt("npcId") + ".");
-					}
+					L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					spawnDat.setAmount(1);
+					spawnDat.setX(rs.getInt("x"));
+					spawnDat.setY(rs.getInt("y"));
+					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setHeading(rs.getInt("heading"));
+					spawnDat.setRespawnDelay(60);
+					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
+					spawnDat.doSpawn();
+					spawnDat.startRespawn();
 				}
 			}
 		}
@@ -1209,26 +1197,16 @@ public final class Fort extends AbstractResidence
 			ps.setInt(2, 2);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				L2Spawn spawnDat;
-				L2NpcTemplate template;
 				while (rs.next())
 				{
-					template = NpcData.getInstance().getTemplate(rs.getInt("npcId"));
-					if (template != null)
-					{
-						spawnDat = new L2Spawn(template);
-						spawnDat.setAmount(1);
-						spawnDat.setX(rs.getInt("x"));
-						spawnDat.setY(rs.getInt("y"));
-						spawnDat.setZ(rs.getInt("z"));
-						spawnDat.setHeading(rs.getInt("heading"));
-						spawnDat.setRespawnDelay(60);
-						_siegeNpcs.add(spawnDat);
-					}
-					else
-					{
-						_log.warning("Fort " + getResidenceId() + " initSiegeNpcs: Data missing in NPC table for ID: " + rs.getInt("npcId") + ".");
-					}
+					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					spawnDat.setAmount(1);
+					spawnDat.setX(rs.getInt("x"));
+					spawnDat.setY(rs.getInt("y"));
+					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setHeading(rs.getInt("heading"));
+					spawnDat.setRespawnDelay(60);
+					_siegeNpcs.add(spawnDat);
 				}
 			}
 		}
@@ -1248,26 +1226,16 @@ public final class Fort extends AbstractResidence
 			ps.setInt(2, 1);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				L2Spawn spawnDat;
-				L2NpcTemplate template;
 				while (rs.next())
 				{
-					template = NpcData.getInstance().getTemplate(rs.getInt("npcId"));
-					if (template != null)
-					{
-						spawnDat = new L2Spawn(template);
-						spawnDat.setAmount(1);
-						spawnDat.setX(rs.getInt("x"));
-						spawnDat.setY(rs.getInt("y"));
-						spawnDat.setZ(rs.getInt("z"));
-						spawnDat.setHeading(rs.getInt("heading"));
-						spawnDat.setRespawnDelay(60);
-						_npcCommanders.add(spawnDat);
-					}
-					else
-					{
-						_log.warning("Fort " + getResidenceId() + " initNpcCommanders: Data missing in NPC table for ID: " + rs.getInt("npcId") + ".");
-					}
+					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					spawnDat.setAmount(1);
+					spawnDat.setX(rs.getInt("x"));
+					spawnDat.setY(rs.getInt("y"));
+					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setHeading(rs.getInt("heading"));
+					spawnDat.setRespawnDelay(60);
+					_npcCommanders.add(spawnDat);
 				}
 			}
 		}
@@ -1290,30 +1258,19 @@ public final class Fort extends AbstractResidence
 			ps.setInt(2, 3);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				L2Spawn spawnDat;
-				L2NpcTemplate template;
 				while (rs.next())
 				{
-					int castleId = rs.getInt("castleId");
-					int npcId = rs.getInt("npcId");
-					template = NpcData.getInstance().getTemplate(npcId);
-					if (template != null)
-					{
-						spawnDat = new L2Spawn(template);
-						spawnDat.setAmount(1);
-						spawnDat.setX(rs.getInt("x"));
-						spawnDat.setY(rs.getInt("y"));
-						spawnDat.setZ(rs.getInt("z"));
-						spawnDat.setHeading(rs.getInt("heading"));
-						spawnDat.setRespawnDelay(60);
-						_specialEnvoys.add(spawnDat);
-						_envoyCastles.put(npcId, castleId);
-						_availableCastles.add(castleId);
-					}
-					else
-					{
-						_log.warning("Fort " + getResidenceId() + " initSpecialEnvoys: Data missing in NPC table for ID: " + rs.getInt("npcId") + ".");
-					}
+					final int castleId = rs.getInt("castleId");
+					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					spawnDat.setAmount(1);
+					spawnDat.setX(rs.getInt("x"));
+					spawnDat.setY(rs.getInt("y"));
+					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setHeading(rs.getInt("heading"));
+					spawnDat.setRespawnDelay(60);
+					_specialEnvoys.add(spawnDat);
+					_envoyCastles.put(spawnDat.getId(), castleId);
+					_availableCastles.add(castleId);
 				}
 			}
 		}

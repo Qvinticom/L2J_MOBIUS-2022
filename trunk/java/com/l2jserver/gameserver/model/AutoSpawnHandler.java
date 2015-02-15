@@ -33,12 +33,10 @@ import java.util.logging.Logger;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
@@ -465,15 +463,7 @@ public class AutoSpawnHandler
 				final int z = locationList[locationIndex].getZ();
 				final int heading = locationList[locationIndex].getHeading();
 				
-				// Fetch the template for this NPC ID and create a new spawn.
-				L2NpcTemplate npcTemp = NpcData.getInstance().getTemplate(spawnInst.getId());
-				if (npcTemp == null)
-				{
-					_log.warning("Couldnt find NPC id" + spawnInst.getId() + " Try to update your DP");
-					return;
-				}
-				
-				L2Spawn newSpawn = new L2Spawn(npcTemp);
+				final L2Spawn newSpawn = new L2Spawn(spawnInst.getId());
 				newSpawn.setX(x);
 				newSpawn.setY(y);
 				newSpawn.setZ(z);

@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -45,7 +44,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.events.OnTvTEventFinish;
 import com.l2jserver.gameserver.model.events.impl.events.OnTvTEventKill;
@@ -117,17 +115,9 @@ public class TvTEvent
 	 */
 	public static boolean startParticipation()
 	{
-		L2NpcTemplate tmpl = NpcData.getInstance().getTemplate(Config.TVT_EVENT_PARTICIPATION_NPC_ID);
-		
-		if (tmpl == null)
-		{
-			_log.warning("TvTEventEngine[TvTEvent.startParticipation()]: L2NpcTemplate is a NullPointer -> Invalid npc id in configs?");
-			return false;
-		}
-		
 		try
 		{
-			_npcSpawn = new L2Spawn(tmpl);
+			_npcSpawn = new L2Spawn(Config.TVT_EVENT_PARTICIPATION_NPC_ID);
 			
 			_npcSpawn.setX(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0]);
 			_npcSpawn.setY(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1]);

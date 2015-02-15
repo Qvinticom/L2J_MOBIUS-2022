@@ -47,7 +47,7 @@ public final class RequestPledgeCrest extends L2GameClientPacket
 		}
 		
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar.getClan().getId() == _clanId)
+		if ((activeChar.getClan() != null) && (activeChar.getClan().getId() == _clanId))
 		{
 			return;
 		}

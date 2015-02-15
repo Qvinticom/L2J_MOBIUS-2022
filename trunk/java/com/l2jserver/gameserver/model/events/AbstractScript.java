@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.events;
 
+import java.io.File;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -35,6 +36,8 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.script.ScriptException;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -113,6 +116,7 @@ import com.l2jserver.gameserver.model.events.returns.AbstractEventReturn;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.interfaces.INamable;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
@@ -131,21 +135,26 @@ import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.scripting.ManagedScript;
+import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jserver.gameserver.scripting.ScriptManager;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.util.Rnd;
 
 /**
- * @author UnAfraid
+ * Abstract script.
+ * @author KenM, UnAfraid, Zoey76
  */
-public abstract class AbstractScript extends ManagedScript
+public abstract class AbstractScript implements INamable
 {
-	protected static final Logger _log = Logger.getLogger(AbstractScript.class.getName());
+	public static final Logger _log = Logger.getLogger(AbstractScript.class.getName());
 	private final Map<ListenerRegisterType, Set<Integer>> _registeredIds = new ConcurrentHashMap<>();
 	private final List<AbstractEventListener> _listeners = new CopyOnWriteArrayList<>();
+	private final File _scriptFile;
+	private boolean _isActive;
 	
 	public AbstractScript()
 	{
+		_scriptFile = L2ScriptEngineManager.getInstance().getCurrentLoadingScript();
 		initializeAnnotationListeners();
 	}
 	
@@ -300,16 +309,46 @@ public abstract class AbstractScript extends ManagedScript
 		}
 	}
 	
+	public void setActive(boolean status)
+	{
+		_isActive = status;
+	}
+	
+	public boolean isActive()
+	{
+		return _isActive;
+	}
+	
+	public File getScriptFile()
+	{
+		return _scriptFile;
+	}
+	
+	public boolean reload()
+	{
+		try
+		{
+			L2ScriptEngineManager.getInstance().executeScript(getScriptFile());
+			return true;
+		}
+		catch (ScriptException e)
+		{
+			return false;
+		}
+	}
+	
 	/**
 	 * Unloads all listeners registered by this class.
+	 * @return {@code true}
 	 */
-	@Override
 	public boolean unload()
 	{
 		_listeners.forEach(AbstractEventListener::unregisterMe);
 		_listeners.clear();
 		return true;
 	}
+	
+	public abstract ScriptManager<?> getManager();
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
@@ -1718,13 +1757,6 @@ public abstract class AbstractScript extends ManagedScript
 	{
 		try
 		{
-			final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-			if (template == null)
-			{
-				_log.severe("Couldn't find NPC template for ID:" + npcId + "!");
-				return null;
-			}
-			
 			if ((x == 0) && (y == 0))
 			{
 				_log.log(Level.SEVERE, "addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
@@ -1748,7 +1780,7 @@ public abstract class AbstractScript extends ManagedScript
 				y += offset;
 			}
 			
-			final L2Spawn spawn = new L2Spawn(template);
+			final L2Spawn spawn = new L2Spawn(npcId);
 			spawn.setInstanceId(instanceId);
 			spawn.setHeading(heading);
 			spawn.setX(x);
@@ -2318,24 +2350,34 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	public static boolean takeItems(L2PcInstance player, int itemId, long amount)
 	{
-		// Get object item from player's inventory list
-		final L2ItemInstance item = player.getInventory().getItemByItemId(itemId);
-		if (item == null)
+		final List<L2ItemInstance> items = player.getInventory().getItemsByItemId(itemId);
+		if (amount < 0)
 		{
-			return false;
+			items.forEach(i -> takeItem(player, i, i.getCount()));
 		}
-		
-		// Tests on count value in order not to have negative value
-		if ((amount < 0) || (amount > item.getCount()))
+		else
 		{
-			amount = item.getCount();
+			long currentCount = 0;
+			for (L2ItemInstance i : items)
+			{
+				long toDelete = i.getCount();
+				if ((currentCount + toDelete) > amount)
+				{
+					toDelete = amount - currentCount;
+				}
+				takeItem(player, i, toDelete);
+				currentCount += toDelete;
+			}
 		}
-		
-		// Destroy the quantity of items wanted
+		return true;
+	}
+	
+	private static boolean takeItem(L2PcInstance player, L2ItemInstance item, long toDelete)
+	{
 		if (item.isEquipped())
 		{
 			final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
@@ -2343,7 +2385,7 @@ public abstract class AbstractScript extends ManagedScript
 			player.sendPacket(iu);
 			player.broadcastUserInfo();
 		}
-		return player.destroyItemByItemId("Quest", itemId, amount, player, true);
+		return player.destroyItemByItemId("Quest", item.getId(), toDelete, player, true);
 	}
 	
 	/**

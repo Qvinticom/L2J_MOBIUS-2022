@@ -32,7 +32,6 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.FortTeleportWhoType;
 import com.l2jserver.gameserver.enums.SiegeClanType;
@@ -51,7 +50,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.sieges.fort.OnFortSiegeFinish;
 import com.l2jserver.gameserver.model.events.impl.sieges.fort.OnFortSiegeStart;
@@ -1098,28 +1096,18 @@ public class FortSiege implements Siegable
 		try
 		{
 			_commanders.clear();
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
 			for (FortSiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId()))
 			{
-				template1 = NpcData.getInstance().getTemplate(_sp.getId());
-				if (template1 != null)
-				{
-					spawnDat = new L2Spawn(template1);
-					spawnDat.setAmount(1);
-					spawnDat.setX(_sp.getLocation().getX());
-					spawnDat.setY(_sp.getLocation().getY());
-					spawnDat.setZ(_sp.getLocation().getZ());
-					spawnDat.setHeading(_sp.getLocation().getHeading());
-					spawnDat.setRespawnDelay(60);
-					spawnDat.doSpawn();
-					spawnDat.stopRespawn();
-					_commanders.add(spawnDat);
-				}
-				else
-				{
-					_log.warning("FortSiege.spawnCommander: Data missing in NPC table for ID: " + _sp.getId() + ".");
-				}
+				final L2Spawn spawnDat = new L2Spawn(_sp.getId());
+				spawnDat.setAmount(1);
+				spawnDat.setX(_sp.getLocation().getX());
+				spawnDat.setY(_sp.getLocation().getY());
+				spawnDat.setZ(_sp.getLocation().getZ());
+				spawnDat.setHeading(_sp.getLocation().getHeading());
+				spawnDat.setRespawnDelay(60);
+				spawnDat.doSpawn();
+				spawnDat.stopRespawn();
+				_commanders.add(spawnDat);
 			}
 		}
 		catch (Exception e)
