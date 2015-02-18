@@ -188,7 +188,7 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="rCrit" val="1.2" />
-				<mul stat="mCritRate" val="0.2" />
+				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -2495,7 +2495,7 @@
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<table name="#abnormalLvl"> 1 2 3 4 5 </table>
 		<table name="#magicLvl"> 78 85 90 95 99 </table>
-		<table name="#mpConsume"> 83 92 98 104 110 </table>
+		<table name="#mpInitialConsume"> 83 92 98 104 110 </table>
 		<table name="#power"> 4040 11557 13553 15150 16747 </table>
 		<table name="#ench1Power"> 4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507 </table>
 		<table name="#ench2Cost"> 80 78 76 74 72 70 68 66 64 62 59 57 55 53 51 </table>
@@ -2523,7 +2523,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DIRECTIONAL_CONTINUOUS" />
 		<set name="power" val="#power" />
@@ -2534,7 +2534,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2Cost" />
+		<enchant2 name="mpInitialConsume" val="#ench2Cost" />
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="element" val="0" /> <!-- Fire -->

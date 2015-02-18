@@ -1954,6 +1954,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					if (item.isEquipped())
 					{
+						if (item.getMana() < item.useSkillDisTime())
+						{
+							abortCast();
+							return;
+						}
 						item.decreaseMana(false, item.useSkillDisTime());
 						break;
 					}
@@ -5173,10 +5178,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Launch weapon Special ability effect if available
-		L2Weapon activeWeapon = getActiveWeaponItem();
-		if (activeWeapon != null)
+		if (crit)
 		{
-			activeWeapon.castOnCriticalSkill(this, target);
+			L2Weapon activeWeapon = getActiveWeaponItem();
+			if (activeWeapon != null)
+			{
+				activeWeapon.castOnCriticalSkill(this, target);
+			}
 		}
 		
 		// Recharge any active auto-soulshot tasks for current creature.

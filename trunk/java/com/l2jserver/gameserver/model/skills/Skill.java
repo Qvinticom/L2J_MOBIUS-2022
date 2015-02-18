@@ -126,7 +126,7 @@ public final class Skill implements IIdentifiable
 	/** If {@code true} this skill's effect recovery HP/MP or CP from herb. */
 	private final boolean _isRecoveryHerb;
 	
-	private final int _refId;
+	private int _refId;
 	// all times in milliseconds
 	private final int _hitTime;
 	// private final int _skillInterruptTime;
@@ -225,7 +225,6 @@ public final class Skill implements IIdentifiable
 	{
 		_id = set.getInt("skill_id");
 		_level = set.getInt("level");
-		_refId = set.getInt("referenceId", 0);
 		_displayId = set.getInt("displayId", _id);
 		_displayLevel = set.getInt("displayLevel", _level);
 		_name = set.getString("name", "");
@@ -1600,6 +1599,11 @@ public final class Skill implements IIdentifiable
 	public int getReferenceItemId()
 	{
 		return _refId;
+	}
+	
+	public void setReferenceItemId(int val)
+	{
+		_refId = val;
 	}
 	
 	public String getAttributeName()

@@ -48,7 +48,7 @@ public class ExPartyRoomMember extends L2GameServerPacket
 			writeS(member.getName());
 			writeD(member.getActiveClass());
 			writeD(member.getLevel());
-			writeD(0x00); // TODO: Closes town
+			writeD(_room.getLocation());
 			if (_room.getOwner().equals(member))
 			{
 				writeD(0x01);

@@ -454,6 +454,7 @@ public abstract class Inventory extends ItemContainer
 					
 					if (itemSkill != null)
 					{
+						itemSkill.setReferenceItemId(item.getId());
 						player.addSkill(itemSkill, false);
 						
 						if (itemSkill.isActive())

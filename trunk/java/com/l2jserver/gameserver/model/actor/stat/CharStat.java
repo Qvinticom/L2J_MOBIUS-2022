@@ -680,20 +680,7 @@ public class CharStat
 			return 1;
 		}
 		
-		double mpConsume = calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
-		
-		if (skill.isDance())
-		{
-			return (int) calcStat(Stats.DANCE_MP_CONSUME_RATE, mpConsume);
-		}
-		else if (skill.isMagic())
-		{
-			return (int) calcStat(Stats.MAGICAL_MP_CONSUME_RATE, mpConsume);
-		}
-		else
-		{
-			return (int) calcStat(Stats.PHYSICAL_MP_CONSUME_RATE, mpConsume);
-		}
+		return (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}
 	
 	public byte getAttackElement()

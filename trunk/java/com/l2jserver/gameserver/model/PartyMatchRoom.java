@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -35,7 +36,6 @@ public class PartyMatchRoom implements IIdentifiable
 	private final int _id;
 	private String _title;
 	private int _loot;
-	private int _location;
 	private int _minlvl;
 	private int _maxlvl;
 	private int _maxmem;
@@ -46,7 +46,6 @@ public class PartyMatchRoom implements IIdentifiable
 		_id = id;
 		_title = title;
 		_loot = loot;
-		_location = 0; // TODO: Closes town
 		_minlvl = minlvl;
 		_maxlvl = maxlvl;
 		_maxmem = maxmem;
@@ -132,9 +131,29 @@ public class PartyMatchRoom implements IIdentifiable
 		return _maxlvl;
 	}
 	
+	/**
+	 * <ul>
+	 * <li>1 : Talking Island</li>
+	 * <li>2 : Gludio</li>
+	 * <li>3 : Dark Elven Ter.</li>
+	 * <li>4 : Elven Territory</li>
+	 * <li>5 : Dion</li>
+	 * <li>6 : Giran</li>
+	 * <li>7 : Neutral Zone</li>
+	 * <li>8 : Lyonn</li>
+	 * <li>9 : Schuttgart</li>
+	 * <li>10 : Oren</li>
+	 * <li>11 : Hunters Village</li>
+	 * <li>12 : Innadril</li>
+	 * <li>13 : Aden</li>
+	 * <li>14 : Rune</li>
+	 * <li>15 : Goddard</li>
+	 * </ul>
+	 * @return the id
+	 */
 	public int getLocation()
 	{
-		return _location;
+		return MapRegionManager.getInstance().getMapRegion(_members.get(0)).getBbs();
 	}
 	
 	public int getMembers()
@@ -167,11 +186,6 @@ public class PartyMatchRoom implements IIdentifiable
 	public void setMaxLvl(int maxlvl)
 	{
 		_maxlvl = maxlvl;
-	}
-	
-	public void setLocation(int loc)
-	{
-		_location = loc;
 	}
 	
 	public void setLootType(int loot)
