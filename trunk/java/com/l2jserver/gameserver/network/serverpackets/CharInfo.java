@@ -174,7 +174,7 @@ public class CharInfo extends L2GameServerPacket
 		writeD(_activeChar.getVisualHairColor());
 		writeD(_activeChar.getVisualFace());
 		
-		writeS(gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
+		writeS(gmSeeInvis ? "[Invisible]" : _activeChar.getAppearance().getVisibleTitle());
 		
 		if (!_activeChar.isCursedWeaponEquipped())
 		{
