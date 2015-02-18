@@ -88,6 +88,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jserver.gameserver.network.serverpackets.HennaInfo;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.PledgeCrest;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
@@ -311,6 +312,12 @@ public class EnterWorld extends L2GameClientPacket
 			}
 			
 			showClanNotice = activeChar.getClan().isNoticeEnabled();
+			
+			// Show clan crest
+			if (activeChar.getClan().getCrestId() > 0)
+			{
+				sendPacket(new PledgeCrest(activeChar.getClan().getCrestId()));
+			}
 		}
 		
 		if (Config.ENABLE_VITALITY)
