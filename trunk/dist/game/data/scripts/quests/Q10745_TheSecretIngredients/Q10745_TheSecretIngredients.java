@@ -37,21 +37,17 @@ public class Q10745_TheSecretIngredients extends Quest
 	private static final int DOLKIN = 33954;
 	private static final int DOLKIN_INSTANCE = 34002;
 	private static final int KARLA = 33933;
-	
 	// Monsters
 	private static final int KARAPHON = 23459;
 	private static final int KEEN_HONEYBEE = 23460;
 	private static final int KEEN_GROWLER = 23461;
-	
 	// Locations
 	private static final Location DOLKIN_INSTANCE_SPAWN = new Location(-82407, 246018, -14158);
-	
 	// Items
 	private static final ItemHolder SECRET_INGREDIENTS = new ItemHolder(39533, 1);
 	private static final ItemHolder DOLKIN_REPORT = new ItemHolder(39534, 1);
 	private static final ItemHolder FAERON_SUPPORT_BOX = new ItemHolder(40262, 1);
 	private static final ItemHolder FAERON_SUPPORT_BOX_MAGE = new ItemHolder(40263, 1);
-	
 	// Level Condition
 	private static final int MIN_LEVEL = 17;
 	private static final int MAX_LEVEL = 25;
@@ -85,7 +81,6 @@ public class Q10745_TheSecretIngredients extends Quest
 				htmltext = event;
 				break;
 			}
-			
 			case "33954-04.html":
 			{
 				if (qs.isCond(2))
@@ -97,7 +92,6 @@ public class Q10745_TheSecretIngredients extends Quest
 				}
 				break;
 			}
-			
 			case "33933-02.html":
 			{
 				if (qs.isCond(3))
@@ -118,7 +112,6 @@ public class Q10745_TheSecretIngredients extends Quest
 				}
 				break;
 			}
-			
 			case "spawn_dolkin":
 			{
 				showOnScreenMsg(player, NpcStringId.TALK_TO_DOLKIN_AND_LEAVE_THE_KARAPHON_HABITAT, ExShowScreenMessage.TOP_CENTER, 4500);

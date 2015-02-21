@@ -38,11 +38,9 @@ public class Q10746_SeeTheWorld extends Quest
 	private static final int KARLA = 33933;
 	private static final int ASTIEL = 33948;
 	private static final int LEVIAN = 30037;
-	
 	// Items
 	private static final ItemHolder EMISSARY_SUPPORT_BOX_WARRIOR = new ItemHolder(40264, 1);
 	private static final ItemHolder EMISSARY_SUPPORT_BOX_MAGE = new ItemHolder(40265, 1);
-	
 	// Level Condition
 	private static final int MIN_LEVEL = 19;
 	private static final int MAX_LEVEL = 25;
@@ -75,7 +73,6 @@ public class Q10746_SeeTheWorld extends Quest
 				htmltext = event;
 				break;
 			}
-			
 			case "33948-02.htm":
 			{
 				if (qs.isCond(1))
@@ -115,7 +112,6 @@ public class Q10746_SeeTheWorld extends Quest
 				}
 				break;
 			}
-			
 			case ASTIEL:
 			{
 				switch (qs.getCond())
@@ -128,7 +124,6 @@ public class Q10746_SeeTheWorld extends Quest
 				}
 				break;
 			}
-			
 			case LEVIAN:
 			{
 				switch (qs.getCond())

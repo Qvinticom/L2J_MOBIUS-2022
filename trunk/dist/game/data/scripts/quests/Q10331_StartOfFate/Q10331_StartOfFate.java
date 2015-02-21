@@ -123,6 +123,7 @@ public class Q10331_StartOfFate extends Quest
 				{
 					return null;
 				}
+				
 				switch (player.getRace())
 				{
 					case HUMAN:
@@ -162,6 +163,7 @@ public class Q10331_StartOfFate extends Quest
 						break;
 					}
 				}
+				takeItems(player, SARIL_NECKLACE, -1);
 				break;
 			}
 		}
