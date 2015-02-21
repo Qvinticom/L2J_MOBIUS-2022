@@ -149,6 +149,7 @@ public class Q10742_AFurryFriend extends Quest
 							startQuestTimer("unspawn_ricky", 2000, npc, player);
 							cancelQuestTimer("check_ricky_distance", npc, player);
 						}
+						break;
 					}
 				}
 				break;
