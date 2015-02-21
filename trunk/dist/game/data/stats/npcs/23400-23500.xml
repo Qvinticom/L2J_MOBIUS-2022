@@ -1403,52 +1403,160 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23459" level="85" type="L2Npc" name="Karaphon" title="Earth Spirit">
+	<npc id="23459" level="19" type="L2Monster" name="Karaphon" title="Earth Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire expRate="8616" sp="2" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="1019" hpRegen="2.5" mp="508" mpRegen="1.2" />
+			<attack physical="37.82932" magical="25.83252" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81.34791" magical="54.1623558855199" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4296" level="4" /> <!--Spirits -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="64.2">
+					<item id="57" min="6" max="13" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.8">
+					<item id="35" min="1" max="1" chance="33" /> <!-- Cloth Shoes -->
+				</group>
+				<group chance="0.3">
+					<item id="36546" min="1" max="1" chance="28.3333" /> <!-- Weapon Fragment (Low-grade) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="25" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23460" level="18" type="L2Monster" name="Keen Honeybee" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<acquire expRate="205" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="239" hpRegen="1.5" mp="115.8" mpRegen="0.5" />
+			<attack physical="37.82932" magical="25.83252" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81.34791" magical="54.1623558855199" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		<hit_time>370</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4293" level="4" /> <!--Animals -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="60.4">
+					<item id="57" min="6" max="13" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.7">
+					<item id="41" min="1" max="1" chance="33" /> <!-- Cloth Cap -->
+				</group>
+				<group chance="0.3">
+					<item id="36561" min="1" max="1" chance="28.3333" /> <!-- Coke -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23460" level="85" type="L2Npc" name="Keen Honeybee" title="">
+	<npc id="23461" level="19" type="L2Monster" name="Keen Growler" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<sex>MALE</sex>
+		<acquire expRate="217" sp="0" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="254" hpRegen="1.5" mp="115.8" mpRegen="0.5" />
+			<attack physical="37.82932" magical="25.83252" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81.34791" magical="54.1623558855199" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+		<hit_time>370</hit_time>
 		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
-		</collision>
-	</npc>
-	<npc id="23461" level="85" type="L2Npc" name="Keen Growler" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4296" level="4" /> <!--Spirits -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="73.6">
+					<item id="57" min="6" max="13" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.8">
+					<item id="41" min="1" max="1" chance="33" /> <!-- Cloth Cap -->
+				</group>
+				<group chance="0.3">
+					<item id="36546" min="1" max="1" chance="28.3333" /> <!-- Weapon Fragment (Low-grade) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
