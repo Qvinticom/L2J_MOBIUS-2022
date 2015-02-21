@@ -31,8 +31,12 @@ import com.l2jserver.gameserver.model.skills.Skill;
  */
 public final class AdventurersGuide extends AbstractNpcAI
 {
-	// NPC
-	private static final int ADVENTURERS_GUIDE = 32327;
+	// NPCs
+	private static final int[] ADVENTURERS_GUIDE =
+	{
+		32327,
+		33454, // Newbie Helper
+	};
 	// Skills
 	private static final SkillHolder BLESS_PROTECTION = new SkillHolder(5182, 1); // Blessing of Protection
 	private static final SkillHolder KNIGHT = new SkillHolder(15648, 1); // Knight's Harmony (Adventurer)

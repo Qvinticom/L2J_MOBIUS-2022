@@ -106,8 +106,13 @@
 	<item id="17821" name="Proof of Courage" additionalName="" type="EtcItem">
 		<!-- Proof received by those who have completed the first class transfer. Can be exchanged for equipment. -->
 		<set name="icon" val="icon.item_normal52" />
-		<set name="weight" val="2" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="weight" val="2" />
 	</item>
 	<item id="17822" name="Proof of Justice" additionalName="" type="EtcItem">
 		<!-- Proof received by those who have completed the second class transfer. Can be exchanged for equipment. -->

@@ -935,18 +935,32 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="19155" level="85" type="L2Npc" name="Infiltration Officer" title="Combat Assistant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="19155" level="85" type="L2QuestGuard" name="Infiltration Officer" title="Combat Assistant">
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="5" /> <!--Very Weak P. Atk. -->
+			<skill id="4411" level="4" /> <!--Extremely Weak M. Atk. -->
+			<skill id="4412" level="16" /> <!--Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!--Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="14" /> <!--Humans -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
