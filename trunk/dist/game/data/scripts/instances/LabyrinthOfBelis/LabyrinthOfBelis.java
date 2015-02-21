@@ -376,52 +376,56 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getId() == OFFICER)
+		switch (npc.getId())
 		{
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			switch (world.getStatus())
+			case OFFICER:
 			{
-				case 1:
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+				switch (world.getStatus())
 				{
-					world.incStatus();
-					return "19155-01.html";
-				}
-				case 2:
-				{
-					return "19155-01.html";
-				}
-				case 4:
-				{
-					return "19155-02.html";
-				}
-				case 6:
-				{
-					return "19155-03.html";
-				}
-				case 13:
-				{
-					return "19155-04.html";
-				}
-				case 15:
-				{
-					return "19155-05.html";
-				}
-				default:
-				{
-					return "19155-06.html";
+					case 1:
+					{
+						world.incStatus();
+						return "19155-01.html";
+					}
+					case 2:
+					{
+						return "19155-01.html";
+					}
+					case 4:
+					{
+						return "19155-02.html";
+					}
+					case 6:
+					{
+						return "19155-03.html";
+					}
+					case 13:
+					{
+						return "19155-04.html";
+					}
+					case 15:
+					{
+						return "19155-05.html";
+					}
+					default:
+					{
+						return "19155-06.html";
+					}
 				}
 			}
-		}
-		else if (npc.getId() == VERIFICATION_SYSTEM)
-		{
-			return "33215-01.html";
-		}
-		else if (npc.getId() == ELECTRICITY_GENERATOR)
-		{
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (world.getStatus() < 12)
+			case VERIFICATION_SYSTEM:
 			{
-				return "33216-01.html";
+				return "33215-01.html";
+			}
+			case ELECTRICITY_GENERATOR:
+			{
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+				if (world.getStatus() < 12)
+				{
+					return "33216-01.html";
+				}
+				break;
 			}
 		}
 		return null;
