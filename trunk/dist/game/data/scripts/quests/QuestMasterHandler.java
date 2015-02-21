@@ -209,6 +209,7 @@ import quests.Q10742_AFurryFriend.Q10742_AFurryFriend;
 import quests.Q10743_StrangeFungus.Q10743_StrangeFungus;
 import quests.Q10744_StrongerThanSteel.Q10744_StrongerThanSteel;
 import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
+import quests.Q10746_SeeTheWorld.Q10746_SeeTheWorld;
 
 /**
  * @author NosBit
@@ -406,7 +407,8 @@ public class QuestMasterHandler
 		Q10742_AFurryFriend.class,
 		Q10743_StrangeFungus.class,
 		Q10744_StrongerThanSteel.class,
-		Q10745_TheSecretIngredients.class
+		Q10745_TheSecretIngredients.class,
+		Q10746_SeeTheWorld.class
 	};
 	
 	public static void main(String[] args)
