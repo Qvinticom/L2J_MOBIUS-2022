@@ -3333,18 +3333,6 @@ public final class L2PcInstance extends L2Playable
 			// Add the item to inventory
 			L2ItemInstance newitem = _inventory.addItem(process, item, this, reference);
 			
-			// Send inventory update packet
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				InventoryUpdate playerIU = new InventoryUpdate();
-				playerIU.addItem(newitem);
-				sendPacket(playerIU);
-			}
-			else
-			{
-				sendPacket(new ItemList(this, false));
-			}
-			
 			// Update current load as well
 			sendPacket(new ExUserInfoInvenWeight(this));
 			
