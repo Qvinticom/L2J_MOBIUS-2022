@@ -42270,6 +42270,27 @@ DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-107744' AND loc
 DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-107587' AND locy='246822' AND locz='-3368');
 DELETE FROM `spawnlist` WHERE (npc_templateid='20151' AND locx='-106766' AND locy='247338' AND locz='-3392');
 
+-- TI Sheep spawn reduction
+DELETE FROM spawnlist WHERE npc_templateid in(32970, 33230, 33231);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 32970, -116789, 249225, -1880, 0, 0, 40234, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -116952, 248975, -1912, 0, 0, 53866, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -116626, 248975, -1880, 0, 0, 1093, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -116300, 249850, -1776, 0, 0, 22020, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -116191, 248553, -1848, 0, 0, 28521, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -116137, 249600, -1720, 0, 0, 63771, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -115485, 249850, -1680, 0, 0, 47137, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -115349, 250209, -1696, 0, 0, 38349, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -115159, 249350, -1688, 0, 0, 51694, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -115159, 250225, -1712, 0, 0, 21851, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -114996, 249725, -1696, 0, 0, 56812, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -114833, 249725, -1688, 0, 0, 4399, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33230, -114833, 249850, -1696, 0, 0, 20693, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33231, -116789, 248850, -1904, 0, 0, 28115, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33231, -115974, 249350, -1680, 0, 0, 63268, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33231, -115159, 250225, -1712, 0, 0, 61338, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33231, -114996, 249100, -1688, 0, 0, 11866, 60, 0, 0, 0);
+INSERT INTO `spawnlist` VALUES ('16_25', 1, 33231, -114996, 250100, -1712, 0, 0, 44326, 60, 0, 0, 0);
+
 -- Remove old Altar Npcs
 DELETE FROM spawnlist WHERE npc_templateid in(4324, 4325, 4327, 4328);
 
