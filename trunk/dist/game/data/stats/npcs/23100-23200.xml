@@ -1020,7 +1020,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23160" level="85" type="L2Npc" name="Garden Chief Priest" title="">
+	<npc id="23160" level="85" type="L2Monster" name="Garden Chief Priest" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1031,13 +1031,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23161" level="85" type="L2Npc" name="Garden Priest" title="">
+	<npc id="23161" level="85" type="L2Monster" name="Garden Priest" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1048,7 +1048,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

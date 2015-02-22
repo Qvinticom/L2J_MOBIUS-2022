@@ -2656,7 +2656,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18972" level="85" type="L2Npc" name="Treekin Defender" title="Scout">
+	<npc id="18972" level="85" type="L2Monster" name="Treekin Defender" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2667,13 +2667,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="18973" level="85" type="L2Npc" name="Treekin Defender" title="Experienced Scout">
+	<npc id="18973" level="85" type="L2Monster" name="Treekin Defender" title="Experienced Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2684,13 +2684,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="18974" level="85" type="L2Npc" name="Centaur Archer" title="Scout">
+	<npc id="18974" level="85" type="L2Monster" name="Centaur Archer" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2701,13 +2701,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="18975" level="85" type="L2Npc" name="Centaur Archer" title="Experienced Scout">
+	<npc id="18975" level="85" type="L2Monster" name="Centaur Archer" title="Experienced Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2718,13 +2718,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="18976" level="85" type="L2Npc" name="Beorning Berserker" title="Scout">
+	<npc id="18976" level="85" type="L2Monster" name="Beorning Berserker" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2735,13 +2735,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="18977" level="85" type="L2Npc" name="Beorning Berserker" title="Experienced Scout">
+	<npc id="18977" level="85" type="L2Monster" name="Beorning Berserker" title="Experienced Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2752,7 +2752,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2912,7 +2912,6 @@
 		</collision>
 	</npc>
 	<npc id="18987" level="85" type="L2Npc" name="Vine" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2922,7 +2921,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

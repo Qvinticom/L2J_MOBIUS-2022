@@ -476,7 +476,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23038" level="85" type="L2Npc" name="Angel Statue Keeper" title="">
+	<npc id="23038" level="85" type="L2Monster" name="Angel Statue Keeper" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -487,13 +487,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23039" level="85" type="L2Npc" name="Fountain Keeper" title="">
+	<npc id="23039" level="85" type="L2Monster" name="Fountain Keeper" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -504,13 +504,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23040" level="85" type="L2Npc" name="Goddess Statue Keeper" title="">
+	<npc id="23040" level="85" type="L2Monster" name="Goddess Statue Keeper" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -521,13 +521,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23041" level="85" type="L2Npc" name="Pan Direm" title="">
+	<npc id="23041" level="85" type="L2Monster" name="Pan Direm" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -538,7 +538,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

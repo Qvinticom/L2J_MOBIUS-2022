@@ -1048,7 +1048,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1082,7 +1082,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

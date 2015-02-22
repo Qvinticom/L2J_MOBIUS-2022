@@ -1479,7 +1479,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33089" level="85" type="L2Npc" name="Teleport Device" title="Garden of Genesis">
+	<npc id="33089" level="85" type="L2Teleporter" name="Teleport Device" title="Garden of Genesis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1496,7 +1496,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="33090" level="85" type="L2Npc" name="Teleport Device" title="Garden of Genesis">
+	<npc id="33090" level="85" type="L2Teleporter" name="Teleport Device" title="Garden of Genesis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1558,7 +1558,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
