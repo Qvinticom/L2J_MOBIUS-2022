@@ -190,6 +190,15 @@ import quests.Q10325_SearchingForNewPower.Q10325_SearchingForNewPower;
 import quests.Q10326_RespectYourElders.Q10326_RespectYourElders;
 import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
+import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
+import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
+import quests.Q10397_KekropusLetter_ASuspiciousBadge.Q10397_KekropusLetter_ASuspiciousBadge;
+import quests.Q10401_KekropusLetter_DecodingTheBadge.Q10401_KekropusLetter_DecodingTheBadge;
+import quests.Q10404_KekropusLetter_AHiddenMeaning.Q10404_KekropusLetter_AHiddenMeaning;
+import quests.Q10408_KekropusLetter_TheSwampOfScream.Q10408_KekropusLetter_TheSwampOfScream;
+import quests.Q10411_KekropusLetter_TheForestOfTheDead.Q10411_KekropusLetter_TheForestOfTheDead;
+import quests.Q10414_KekropusLetter_WithCourage.Q10414_KekropusLetter_WithCourage;
+import quests.Q10415_KekropusLetter_WithWisdom.Q10415_KekropusLetter_WithWisdom;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
@@ -389,6 +398,15 @@ public class QuestMasterHandler
 		Q10326_RespectYourElders.class,
 		Q10331_StartOfFate.class,
 		Q10338_SeizeYourDestiny.class,
+		Q10390_KekropusLetter.class,
+		Q10393_KekropusLetter_AClueCompleted.class,
+		Q10397_KekropusLetter_ASuspiciousBadge.class,
+		Q10401_KekropusLetter_DecodingTheBadge.class,
+		Q10404_KekropusLetter_AHiddenMeaning.class,
+		Q10408_KekropusLetter_TheSwampOfScream.class,
+		Q10411_KekropusLetter_TheForestOfTheDead.class,
+		Q10414_KekropusLetter_WithCourage.class,
+		Q10415_KekropusLetter_WithWisdom.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
