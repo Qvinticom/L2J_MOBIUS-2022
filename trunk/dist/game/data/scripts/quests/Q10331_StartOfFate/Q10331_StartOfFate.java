@@ -100,7 +100,7 @@ public class Q10331_StartOfFate extends Quest
 				htmltext = event;
 				break;
 			}
-			case "LakcisTeleport":
+			case "lakcis_teleport":
 			{
 				if (qs.isCond(1))
 				{
@@ -119,9 +119,9 @@ public class Q10331_StartOfFate extends Quest
 			}
 			case "pantheon_send_to_master":
 			{
-				if (!qs.isCond(5))
+				if (!qs.isCond(5) || (getQuestItemsCount(player, SARIL_NECKLACE) == 0))
 				{
-					return null;
+					htmltext = getNoQuestMsg(player);
 				}
 				
 				switch (player.getRace())
