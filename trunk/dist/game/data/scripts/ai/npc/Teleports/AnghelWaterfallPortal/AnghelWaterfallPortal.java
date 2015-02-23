@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.AnghelWaterfallToArcan;
+package ai.npc.Teleports.AnghelWaterfallPortal;
 
 import ai.npc.AbstractNpcAI;
 
@@ -26,17 +26,17 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
 /**
- * Anghel Waterfall to Arcan teleport AI.
+ * Anghel Waterfall Portal teleport AI.
  * @author Mobius
  */
-public final class AnghelWaterfallToArcan extends AbstractNpcAI
+public final class AnghelWaterfallPortal extends AbstractNpcAI
 {
 	private static final int ZONE_ID = 200200;
 	private static final Location TELEPORT_LOC = new Location(207559, 86429, -1000);
 	
-	private AnghelWaterfallToArcan()
+	private AnghelWaterfallPortal()
 	{
-		super(AnghelWaterfallToArcan.class.getSimpleName(), "ai/npc/Teleports");
+		super(AnghelWaterfallPortal.class.getSimpleName(), "ai/npc/Teleports");
 		addEnterZoneId(ZONE_ID);
 	}
 	
@@ -53,6 +53,6 @@ public final class AnghelWaterfallToArcan extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new AnghelWaterfallToArcan();
+		new AnghelWaterfallPortal();
 	}
 }
