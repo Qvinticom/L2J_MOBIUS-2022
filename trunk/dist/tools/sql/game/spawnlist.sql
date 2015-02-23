@@ -44515,3 +44515,11 @@ INSERT INTO `spawnlist` VALUES ('26_20', '1', '33956', '207236', '86780', '-1028
 
 -- Anghel Waterfall Portal to Arcan
 INSERT INTO `spawnlist` VALUES ('25_20', '1', '32910', '175148', '90632', '-2202', '0', '0', '0', '60', '0', '0', '0');
+
+-- Correct spawns for Hunters Village npc Managers
+DELETE FROM `spawnlist` WHERE (npc_templateid='33463' AND locx='116963' AND locy='77253' AND locz='-2688');
+DELETE FROM `spawnlist` WHERE (npc_templateid='32327' AND locx='116935' AND locy='77258' AND locz='-2688');
+DELETE FROM `spawnlist` WHERE (npc_templateid='33587' AND locx='116900' AND locy='77282' AND locz='-2688');
+INSERT INTO `spawnlist` VALUES ('23_20', '1', '33587', '116921', '77195', '-2695', '0', '0', '38057', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('23_20', '1', '31792', '116833', '77312', '-2697', '0', '0', '39662', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('23_20', '1', '33463', '116829', '77223', '-2700', '0', '0', '36123', '0', '0', '0', '0');
