@@ -1043,3 +1043,8 @@ INSERT INTO `teleport` VALUES ('Orbis Temple 2nd floor', 3291206, 213025, 50424,
 INSERT INTO `teleport` VALUES ('Orbis Temple 3rd floor', 3291207, 214292, 115551, -12736, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('Arcan -> Garden of Genesis', 3308901, 207637, 112584, -2057, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('Garden of Genesis -> Arcan', 3309001, 210803, 89448, -1148, 0, 0, 57);
+
+-- Hunters Village to Anghel Waterfall
+INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023301, 172458, 90314, -1984, 6300, 1, 57);
+INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023302, 172458, 90314, -1984, 0, 1, 57);
+INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023303, 172458, 90314, -1984, 3150, 1, 57);
