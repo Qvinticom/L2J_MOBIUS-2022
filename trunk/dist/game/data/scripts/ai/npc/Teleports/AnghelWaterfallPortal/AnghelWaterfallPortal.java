@@ -22,7 +22,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
 /**
@@ -45,8 +44,7 @@ public final class AnghelWaterfallPortal extends AbstractNpcAI
 	{
 		if (character.isPlayer())
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			player.teleToLocation(TELEPORT_LOC);
+			character.teleToLocation(TELEPORT_LOC);
 		}
 		return super.onEnterZone(character, zone);
 	}
