@@ -1391,4 +1391,48 @@
 		<point X="-114371" Y="250846" Z="-1760" delay="0" run="false" />
 		<point X="-114289" Y="252353" Z="-1560" delay="0" run="false" />
 	</route>
+	<!-- Cas -->
+	<route name="arcan_cas" repeat="true" repeatStyle="back">
+		<target id="32901" spawnX="207227" spawnY="87730" spawnZ="-1104" />
+		<point X="207227" Y="87730" Z="-1104" delay="0" run="false" />
+		<point X="207634" Y="87933" Z="-1104" delay="0" run="false" />
+		<point X="207918" Y="88237" Z="-1112" delay="0" run="false" />
+		<point X="208016" Y="88631" Z="-1112" delay="0" run="false" />
+		<point X="207909" Y="89163" Z="-1112" delay="0" run="false" />
+		<point X="207567" Y="89441" Z="-1120" delay="0" run="false" />
+		<point X="207100" Y="89486" Z="-1120" delay="0" run="false" />
+		<point X="206597" Y="89345" Z="-1120" delay="0" run="false" />
+		<point X="206360" Y="89058" Z="-1120" delay="0" run="false" />
+		<point X="206220" Y="88562" Z="-1112" delay="0" run="false" />
+		<point X="206402" Y="88177" Z="-1104" delay="0" run="false" />
+		<point X="206630" Y="87933" Z="-1120" delay="0" run="false" />
+		<point X="206976" Y="87817" Z="-1120" delay="0" run="false" />
+	</route>
+	<!-- Kitt -->
+	<route name="arcan_kitt" repeat="true" repeatStyle="back">
+		<target id="32902" spawnX="208813" spawnY="88815" spawnZ="-1024" />
+		<point X="208813" Y="88815" Z="-1024" delay="0" run="false" />
+		<point X="208661" Y="88358" Z="-1024" delay="0" run="false" />
+		<point X="207926" Y="87488" Z="-1056" delay="0" run="false" />
+		<point X="207156" Y="87210" Z="-1048" delay="0" run="false" />
+		<point X="206796" Y="87226" Z="-1040" delay="0" run="false" />
+		<point X="206137" Y="87366" Z="-1024" delay="0" run="false" />
+		<point X="205838" Y="87665" Z="-1024" delay="0" run="false" />
+		<point X="205551" Y="88012" Z="-1024" delay="0" run="false" />
+		<point X="205345" Y="88698" Z="-1024" delay="0" run="false" />
+	</route>
+	<!-- Mr. Kay -->
+	<route name="arcan_mr_kay" repeat="true" repeatStyle="back">
+		<target id="32903" spawnX="207334" spawnY="89675" spawnZ="-1104" />
+		<point X="207334" Y="89675" Z="-1104" delay="0" run="false" />
+		<point X="207831" Y="89638" Z="-1104" delay="0" run="false" />
+		<point X="208059" Y="89299" Z="-1104" delay="0" run="false" />
+		<point X="208151" Y="88519" Z="-1104" delay="0" run="false" />
+		<point X="207993" Y="88112" Z="-1104" delay="0" run="false" />
+		<point X="207769" Y="87805" Z="-1104" delay="0" run="false" />
+		<point X="207447" Y="87553" Z="-1104" delay="0" run="false" />
+		<point X="207008" Y="87497" Z="-1104" delay="0" run="false" />
+		<point X="206534" Y="87582" Z="-1104" delay="0" run="false" />
+		<point X="206167" Y="87839" Z="-1096" delay="0" run="false" />
+	</route>
 </routes>
