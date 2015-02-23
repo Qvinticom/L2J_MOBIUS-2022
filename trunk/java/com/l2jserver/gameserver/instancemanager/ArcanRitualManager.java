@@ -1,12 +1,18 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
+ * Copyright (C) 2004-2015 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -14,6 +20,7 @@ package com.l2jserver.gameserver.instancemanager;
 
 import java.util.ArrayList;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
@@ -35,7 +42,6 @@ public class ArcanRitualManager extends Quest
 {
 	private static final int BLUE_TRIGGER = 262001;
 	private static final int RED_TRIGGER = 262003;
-	private static final long DELAY = 30 * 60 * 1000L; // 30min
 	private static final Location ARCAN_TOWN_LOC = new Location(207096, 88696, -1129);
 	// @formatter:off
 	static final int[][] RITUAL_NPCS =
@@ -150,7 +156,10 @@ public class ArcanRitualManager extends Quest
 		}
 		addEnterZoneId(arcanZone.getId());
 		ritualStage = BLUE_TRIGGER;
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ChangeStage(), DELAY, DELAY);
+		if (Config.ARCAN_RITUAL)
+		{
+			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ChangeStage(), Config.ARCAN_RITUAL_INTERVAL, Config.ARCAN_RITUAL_INTERVAL);
+		}
 	}
 	
 	@Override
