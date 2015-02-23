@@ -1983,8 +1983,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="32897" level="85" type="L2Npc" name="Alco" title="Grocer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="32897" level="85" type="L2Merchant" name="Alco" title="Grocer">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2017,10 +2016,9 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="32899" level="85" type="L2Npc" name="Hamrun" title="Warehouse Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="32899" level="85" type="L2Warehouse" name="Hamrun" title="Warehouse Keeper">
+		<race>DWARF</race>
+		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>

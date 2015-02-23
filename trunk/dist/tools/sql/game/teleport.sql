@@ -1028,5 +1028,18 @@ INSERT INTO `teleport` VALUES
 ('Monastic Fortress -> Ice Merchant Cabin',20179,113903,-108752,-860,500,0,57), -- retail
 ('Monastic Fortress -> Shyeed\'s Cavern',20180,76911,-55295,-5824,500,0,57); -- retail
 
+-- Reliquary of the Giants
 INSERT INTO `teleport` VALUES ('Reliquary of the Giants', 3334401, -114562, 227307, -2864, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('Reliquary of the Giants -> Talking Island', 3320501, -112529, 256741, -1456, 0, 0, 57);
+
+-- Magmeld
+INSERT INTO `teleport` VALUES ('Arms of Timiniel', 3291201, 214432, 79857, 816, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Garden of Genesis', 3291202, 207548, 112214, -2064, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Prison of Darkness', 3291203, 175314, 148011, -11648, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Prison of Darkness -> Arcan', 3294601, 207509, 86654, -1006, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Orbis Temple Entrance', 3291204, 198703, 86034, -192, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Orbis Temple 1st floor', 3291205, 213023, 52487, -8416, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Orbis Temple 2nd floor', 3291206, 213025, 50424, -14640, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Orbis Temple 3rd floor', 3291207, 214292, 115551, -12736, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Arcan -> Garden of Genesis', 3308901, 207637, 112584, -2057, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('Garden of Genesis -> Arcan', 3309001, 210803, 89448, -1148, 0, 0, 57);
