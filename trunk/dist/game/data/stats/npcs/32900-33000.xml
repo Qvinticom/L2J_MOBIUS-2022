@@ -171,7 +171,6 @@
 		</collision>
 	</npc>
 	<npc id="32910" level="85" type="L2Npc" name="Teleport Portal" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -181,7 +180,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
