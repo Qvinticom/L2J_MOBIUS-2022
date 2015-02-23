@@ -2030,7 +2030,7 @@ public final class Config
 			HELLBOUND_WITHOUT_QUEST = General.getBoolean("HellboundWithoutQuest", false);
 			
 			ARCAN_RITUAL = General.getBoolean("ArcanRitual", true);
-			ARCAN_RITUAL_INTERVAL = General.getInt("ArcanRitualInterval", 30);
+			ARCAN_RITUAL_INTERVAL = General.getInt("ArcanRitualInterval", 30) * 60000;
 			
 			NORMAL_ENCHANT_COST_MULTIPLIER = General.getInt("NormalEnchantCostMultipiler", 1);
 			SAFE_ENCHANT_COST_MULTIPLIER = General.getInt("SafeEnchantCostMultipiler", 5);
