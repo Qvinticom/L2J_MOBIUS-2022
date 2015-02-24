@@ -21,49 +21,20 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Orbis Temple Statues AI.
+ * Pagan Temple AI.
  * @author Mobius
  */
-public class OrbisTempleStatues extends AbstractNpcAI
+public class PaganTemple extends AbstractNpcAI
 {
-	// Npcs
-	private static final int VICTIM = 22913;
-	private static final int GUARD = 22916;
-	private static final int THROWER = 22919;
-	private static final int ANCIENT_HERO = 22925;
-	// Items
-	private static final int SWORD = 15280;
-	private static final int SPEAR = 17372;
+	// Npc
+	private static final int CHAPEL_GATEKEEPER = 22138;
 	
-	public OrbisTempleStatues()
+	public PaganTemple()
 	{
-		super(OrbisTempleStatues.class.getSimpleName(), "ai/group_template");
-		addSpawnId(VICTIM, GUARD, THROWER, ANCIENT_HERO);
-		addAttackId(VICTIM, GUARD, THROWER, ANCIENT_HERO);
-	}
-	
-	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		switch (npc.getId())
-		{
-			case VICTIM:
-			case GUARD:
-			{
-				npc.setRHandId(SWORD); // TODO: Find better way to change animation.
-				break;
-			}
-			case THROWER:
-			{
-				npc.setRHandId(SPEAR);
-				break;
-			}
-		}
-		
-		return super.onAttack(npc, attacker, damage, isPet);
+		super(PaganTemple.class.getSimpleName(), "ai/group_template");
+		addSpawnId(CHAPEL_GATEKEEPER);
 	}
 	
 	@Override
@@ -75,6 +46,6 @@ public class OrbisTempleStatues extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new OrbisTempleStatues();
+		new PaganTemple();
 	}
 }
