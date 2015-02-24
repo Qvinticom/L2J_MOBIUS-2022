@@ -7097,6 +7097,9 @@ public final class L2PcInstance extends L2Playable
 					player.setPledgeType(rset.getInt("subpledge"));
 					// player.setApprentice(rset.getInt("apprentice"));
 					
+					// Set Hero status if it applies
+					player.setHero(Hero.getInstance().isHero(objectId));
+					
 					if (clanId > 0)
 					{
 						player.setClan(ClanTable.getInstance().getClan(clanId));
@@ -7228,12 +7231,6 @@ public final class L2PcInstance extends L2Playable
 			if (player == null)
 			{
 				return null;
-			}
-			
-			// Set Hero status if it applies
-			if (Hero.getInstance().isHero(objectId))
-			{
-				player.setHero(true);
 			}
 			
 			// Retrieve from the database all items of this L2PcInstance and add them to _inventory

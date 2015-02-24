@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Duel;
@@ -28,12 +28,11 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 public final class DuelManager
 {
-	private final List<Duel> _duels;
+	private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
 	private int _currentDuelId = 0x90;
 	
 	protected DuelManager()
 	{
-		_duels = new ArrayList<>();
 	}
 	
 	private int getNextDuelId()
@@ -48,14 +47,7 @@ public final class DuelManager
 	
 	public Duel getDuel(int duelId)
 	{
-		for (Duel duel : _duels)
-		{
-			if (duel.getId() == duelId)
-			{
-				return duel;
-			}
-		}
-		return null;
+		return _duels.get(duelId);
 	}
 	
 	public void addDuel(L2PcInstance playerA, L2PcInstance playerB, int partyDuel)
@@ -112,9 +104,8 @@ public final class DuelManager
 				return;
 			}
 		}
-		
-		final Duel duel = new Duel(playerA, playerB, partyDuel, getNextDuelId());
-		_duels.add(duel);
+		final int duelId = getNextDuelId();
+		_duels.put(duelId, new Duel(playerA, playerB, partyDuel, duelId));
 	}
 	
 	public void removeDuel(Duel duel)

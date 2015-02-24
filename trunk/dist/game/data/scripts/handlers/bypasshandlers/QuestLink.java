@@ -81,7 +81,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
+	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
 		String state = "";
@@ -131,7 +131,7 @@ public class QuestLink implements IBypassHandler
 			else
 			{
 				int questId = quest.getId();
-				if (quest.getId() > 10000)
+				if (questId > 10000)
 				{
 					questId -= 5000;
 				}
