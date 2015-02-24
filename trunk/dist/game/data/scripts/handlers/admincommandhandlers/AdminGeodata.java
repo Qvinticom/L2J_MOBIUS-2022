@@ -23,6 +23,7 @@ import java.util.StringTokenizer;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -40,6 +41,7 @@ public class AdminGeodata implements IAdminCommandHandler
 		"admin_geo_can_move",
 		"admin_geo_can_see",
 		"admin_geogrid",
+		"admin_geomap"
 	};
 	
 	@Override
@@ -128,6 +130,13 @@ public class AdminGeodata implements IAdminCommandHandler
 			case "admin_geogrid":
 			{
 				GeoUtils.debugGrid(activeChar);
+				break;
+			}
+			case "admin_geomap":
+			{
+				final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+				final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+				activeChar.sendMessage("GeoMap: " + x + "_" + y);
 				break;
 			}
 		}
