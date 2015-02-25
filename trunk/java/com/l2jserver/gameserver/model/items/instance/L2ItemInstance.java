@@ -37,12 +37,14 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemOptionsData;
 import com.l2jserver.gameserver.data.xml.impl.OptionData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.enums.UserInfoType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
@@ -69,14 +71,17 @@ import com.l2jserver.gameserver.model.items.L2Armor;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.appearance.AppearanceStone;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.items.type.ItemType;
 import com.l2jserver.gameserver.model.options.EnchantOptions;
 import com.l2jserver.gameserver.model.options.Options;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
+import com.l2jserver.gameserver.model.variables.ItemVariables;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.DropItem;
 import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
+import com.l2jserver.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.GetItem;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -163,15 +168,13 @@ public final class L2ItemInstance extends L2Object
 	
 	private ScheduledFuture<?> itemLootShedule = null;
 	private ScheduledFuture<?> _lifeTimeTask;
+	private ScheduledFuture<?> _appearanceLifeTimeTask;
 	
 	private final DropProtection _dropProtection = new DropProtection();
 	
 	private int _shotsMask = 0;
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
-	
-	private int _appearanceId = 0;
-	private long _appearanceTime = -1;
 	
 	/**
 	 * Constructor of the L2ItemInstance from the objectId and the itemId.
@@ -1502,8 +1505,8 @@ public final class L2ItemInstance extends L2Object
 	public static L2ItemInstance restoreFromDb(int ownerId, ResultSet rs)
 	{
 		L2ItemInstance inst = null;
-		int objectId, item_id, loc_data, enchant_level, custom_type1, custom_type2, manaLeft, appearance_id;
-		long time, count, appearance_time;
+		int objectId, item_id, loc_data, enchant_level, custom_type1, custom_type2, manaLeft;
+		long time, count;
 		ItemLocation loc;
 		try
 		{
@@ -1517,8 +1520,6 @@ public final class L2ItemInstance extends L2Object
 			custom_type2 = rs.getInt("custom_type2");
 			manaLeft = rs.getInt("mana_left");
 			time = rs.getLong("time");
-			appearance_id = rs.getInt("appearance_id");
-			appearance_time = rs.getLong("appearance_time");
 		}
 		catch (Exception e)
 		{
@@ -1545,8 +1546,6 @@ public final class L2ItemInstance extends L2Object
 		// Setup life time for shadow weapons
 		inst._mana = manaLeft;
 		inst._time = time;
-		inst._appearanceId = appearance_id;
-		inst._appearanceTime = appearance_time;
 		
 		// load augmentation and elemental enchant
 		if (inst.isEquipable())
@@ -1665,7 +1664,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=?,appearance_id=?,appearance_time=? " + "WHERE object_id = ?"))
+			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? " + "WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
 			ps.setLong(2, getCount());
@@ -1676,9 +1675,7 @@ public final class L2ItemInstance extends L2Object
 			ps.setInt(7, getCustomType2());
 			ps.setInt(8, getMana());
 			ps.setLong(9, getTime());
-			ps.setInt(10, getVisualId());
-			ps.setLong(11, getAppearanceTime());
-			ps.setInt(12, getObjectId());
+			ps.setInt(10, getObjectId());
 			ps.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;
@@ -2260,27 +2257,101 @@ public final class L2ItemInstance extends L2Object
 			_lifeTimeTask.cancel(false);
 			_lifeTimeTask = null;
 		}
+		
+		if ((_appearanceLifeTimeTask != null) && !_appearanceLifeTimeTask.isDone())
+		{
+			_appearanceLifeTimeTask.cancel(false);
+			_appearanceLifeTimeTask = null;
+		}
+	}
+	
+	public final ItemVariables getVariables()
+	{
+		final ItemVariables vars = getScript(ItemVariables.class);
+		return vars != null ? vars : addScript(new ItemVariables(getObjectId()));
 	}
 	
 	public int getVisualId()
 	{
-		return _appearanceId;
+		final int visualId = getVariables().getInt(ItemVariables.VISUAL_ID, 0);
+		if (visualId > 0)
+		{
+			final int appearanceStoneId = getVariables().getInt(ItemVariables.VISUAL_APPEARANCE_STONE_ID, 0);
+			if (appearanceStoneId > 0)
+			{
+				final AppearanceStone stone = AppearanceItemData.getInstance().getStone(appearanceStoneId);
+				if (stone != null)
+				{
+					final L2PcInstance player = getActingPlayer();
+					if (player != null)
+					{
+						if (!stone.getRaces().isEmpty() && !stone.getRaces().contains(player.getRace()))
+						{
+							return 0;
+						}
+						if (!stone.getRacesNot().isEmpty() && stone.getRacesNot().contains(player.getRace()))
+						{
+							return 0;
+						}
+					}
+				}
+			}
+		}
+		return visualId;
 	}
 	
-	public void setAppearanceId(int appearanceId)
+	public void setVisualId(int visualId)
 	{
-		_storedInDb = false;
-		_appearanceId = appearanceId;
+		getVariables().set(ItemVariables.VISUAL_ID, visualId);
 	}
 	
-	public long getAppearanceTime()
+	public long getVisualLifeTime()
 	{
-		_storedInDb = false;
-		return _appearanceTime;
+		return getVariables().getLong(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, 0);
 	}
 	
-	public void setAppearanceTime(long appearanceTime)
+	public void scheduleVisualLifeTime()
 	{
-		_appearanceTime = appearanceTime;
+		if (_appearanceLifeTimeTask != null)
+		{
+			_appearanceLifeTimeTask.cancel(false);
+		}
+		if (getVisualLifeTime() > 0)
+		{
+			final long time = getVisualLifeTime() - System.currentTimeMillis();
+			if (time > 0)
+			{
+				_appearanceLifeTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(this::onVisualLifeTimeEnd, time);
+			}
+			else
+			{
+				ThreadPoolManager.getInstance().executeGeneral(this::onVisualLifeTimeEnd);
+			}
+		}
+	}
+	
+	private final void onVisualLifeTimeEnd()
+	{
+		final ItemVariables vars = getVariables();
+		vars.remove(ItemVariables.VISUAL_ID);
+		vars.remove(ItemVariables.VISUAL_APPEARANCE_STONE_ID);
+		vars.remove(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME);
+		vars.storeMe();
+		
+		final L2PcInstance player = getActingPlayer();
+		if (player != null)
+		{
+			final InventoryUpdate iu = new InventoryUpdate();
+			iu.addModifiedItem(this);
+			player.broadcastUserInfo(UserInfoType.APPAREANCE);
+			player.sendPacket(new ExUserInfoEquipSlot(player));
+			player.sendPacket(iu);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
+		}
+	}
+	
+	public boolean isAppearanceable()
+	{
+		return isWeapon() || isArmor();
 	}
 }

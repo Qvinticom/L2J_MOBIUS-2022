@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class L2ArmorSet
 {
+	private boolean _isVisual;
 	private int _minimumPieces;
 	private final List<Integer> _chests;
 	private final List<Integer> _legs;
@@ -73,6 +74,16 @@ public final class L2ArmorSet
 		_skills = new ArrayList<>();
 		_shieldSkills = new ArrayList<>();
 		_enchantSkills = new ArrayList<>();
+	}
+	
+	public boolean isVisual()
+	{
+		return _isVisual;
+	}
+	
+	public void setIsVisual(boolean val)
+	{
+		_isVisual = val;
 	}
 	
 	/**
@@ -327,6 +338,39 @@ public final class L2ArmorSet
 		}
 		return enchantLevel;
 		
+	}
+	
+	public int getVisualPiecesCount(L2PcInstance player)
+	{
+		final Inventory inv = player.getInventory();
+		
+		final L2ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final L2ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
+		final L2ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
+		final L2ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
+		
+		int legs = 0;
+		int head = 0;
+		int gloves = 0;
+		int feet = 0;
+		
+		if (legsItem != null)
+		{
+			legs = legsItem.getVisualId();
+		}
+		if (headItem != null)
+		{
+			head = headItem.getVisualId();
+		}
+		if (glovesItem != null)
+		{
+			gloves = glovesItem.getVisualId();
+		}
+		if (feetItem != null)
+		{
+			feet = feetItem.getVisualId();
+		}
+		return getPiecesCount(legs, head, gloves, feet);
 	}
 	
 	public int getCON()

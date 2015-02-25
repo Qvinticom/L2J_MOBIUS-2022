@@ -19,7 +19,6 @@
 package com.l2jserver.gameserver.model.items;
 
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.entity.AppearanceStone;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.type.ArmorType;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -117,11 +116,5 @@ public final class L2Armor extends L2Item
 			return null;
 		}
 		return _enchant4Skill.getSkill();
-	}
-	
-	@Override
-	public AppearanceStone getAppearanceStone()
-	{
-		return null;
 	}
 }

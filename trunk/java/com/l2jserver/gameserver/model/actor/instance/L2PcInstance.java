@@ -161,6 +161,7 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.L2Vehicle;
 import com.l2jserver.gameserver.model.actor.appearance.PcAppearance;
 import com.l2jserver.gameserver.model.actor.knownlist.PcKnownList;
+import com.l2jserver.gameserver.model.actor.request.AbstractRequest;
 import com.l2jserver.gameserver.model.actor.stat.PcStat;
 import com.l2jserver.gameserver.model.actor.status.PcStatus;
 import com.l2jserver.gameserver.model.actor.tasks.player.DismountTask;
@@ -759,6 +760,8 @@ public final class L2PcInstance extends L2Playable
 	private int _expertiseWeaponPenalty = 0;
 	private int _expertisePenaltyBonus = 0;
 	
+	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests;
+	
 	private boolean _isEnchanting = false;
 	private int _activeEnchantItemId = ID_NONE;
 	private int _activeEnchantSupportItemId = ID_NONE;
@@ -767,9 +770,6 @@ public final class L2PcInstance extends L2Playable
 	
 	private int _firstCompoundOID = -1;
 	private int _secondCompoundOID = -1;
-	private L2ItemInstance _usingAStone = null;
-	private L2ItemInstance _appearanceItem = null;
-	private L2ItemInstance _targetAppearanceItem = null;
 	
 	private boolean _usingPrimeShop = false;
 	
@@ -15044,6 +15044,105 @@ public final class L2PcInstance extends L2Playable
 		return getServitors().values().stream().mapToInt(L2Summon::getSummonPoints).sum();
 	}
 	
+	/**
+	 * @param request
+	 * @return {@code true} if the request was registered successfully, {@code false} otherwise.
+	 */
+	public boolean addRequest(AbstractRequest request)
+	{
+		if (_requests == null)
+		{
+			synchronized (this)
+			{
+				if (_requests == null)
+				{
+					_requests = new ConcurrentHashMap<>();
+				}
+			}
+		}
+		return canRequest(request) && (_requests.putIfAbsent(request.getClass(), request) == null);
+	}
+	
+	public boolean canRequest(AbstractRequest request)
+	{
+		return (_requests != null) && _requests.values().stream().allMatch(request::canWorkWith);
+	}
+	
+	/**
+	 * @param clazz
+	 * @return {@code true} if request was successfully removed, {@code false} in case processing set is not created or not containing the request.
+	 */
+	public boolean removeRequest(Class<? extends AbstractRequest> clazz)
+	{
+		return (_requests != null) && (_requests.remove(clazz) != null);
+	}
+	
+	/**
+	 * @param <T>
+	 * @param requestClass
+	 * @return object that is instance of {@code requestClass} param, {@code null} if not instance or not set.
+	 */
+	public <T extends AbstractRequest> T getRequest(Class<T> requestClass)
+	{
+		return _requests != null ? requestClass.cast(_requests.get(requestClass)) : null;
+	}
+	
+	/**
+	 * @return {@code true} if player has any processing request set, {@code false} otherwise.
+	 */
+	public boolean hasRequests()
+	{
+		return (_requests != null) && !_requests.isEmpty();
+	}
+	
+	public boolean hasItemRequest()
+	{
+		return (_requests != null) && _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+	}
+	
+	/**
+	 * @param requestClass
+	 * @param classes
+	 * @return {@code true} if player has the provided request and processing it, {@code false} otherwise.
+	 */
+	@SafeVarargs
+	public final boolean hasRequest(Class<? extends AbstractRequest> requestClass, Class<? extends AbstractRequest>... classes)
+	{
+		if (_requests != null)
+		{
+			for (Class<? extends AbstractRequest> clazz : classes)
+			{
+				if (_requests.containsKey(clazz))
+				{
+					return true;
+				}
+			}
+			return _requests.containsKey(requestClass);
+		}
+		return false;
+	}
+	
+	/**
+	 * @param objectId
+	 * @return {@code true} if item object id is currently in use by some request, {@code false} otherwise.
+	 */
+	public boolean isProcessingItem(int objectId)
+	{
+		return (_requests != null) && _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+	}
+	
+	/**
+	 * Removing all requests associated with the item object id provided.
+	 * @param objectId
+	 */
+	public void removeRequestsThatProcessesItem(int objectId)
+	{
+		if (_requests != null)
+		{
+			_requests.values().removeIf(req -> req.isUsing(objectId));
+		}
+	}
+	
 	/*
 	 * Return current vitality points in integer format
 	 */
@@ -15092,36 +15191,6 @@ public final class L2PcInstance extends L2Playable
 	public void setSecondCompoundOID(int secondCompoundOID)
 	{
 		_secondCompoundOID = secondCompoundOID;
-	}
-	
-	public L2ItemInstance getUsingAppearanceStone()
-	{
-		return _usingAStone;
-	}
-	
-	public void setUsingAppearanceStone(L2ItemInstance stone)
-	{
-		_usingAStone = stone;
-	}
-	
-	public L2ItemInstance getAppearanceItem()
-	{
-		return _appearanceItem;
-	}
-	
-	public void setAppearanceItem(L2ItemInstance item)
-	{
-		_appearanceItem = item;
-	}
-	
-	public L2ItemInstance getTargetAppearanceItem()
-	{
-		return _targetAppearanceItem;
-	}
-	
-	public void setTargetAppearanceItem(L2ItemInstance item)
-	{
-		_targetAppearanceItem = item;
 	}
 	
 	public void setUsingPrimeShop(boolean isUsing)

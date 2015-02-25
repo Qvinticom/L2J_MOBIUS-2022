@@ -16,35 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets.itemappearance;
+package com.l2jserver.gameserver.network.serverpackets.appearance;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public class ExPut_Shape_Shifting_Extraction_Item_Result extends L2GameServerPacket
+public class ExPutShapeShiftingExtractionItemResult extends L2GameServerPacket
 {
-	private final int _type;
-	private long _price = 0;
+	public static ExPutShapeShiftingExtractionItemResult FAILED = new ExPutShapeShiftingExtractionItemResult(0x00);
+	public static ExPutShapeShiftingExtractionItemResult SUCCESS = new ExPutShapeShiftingExtractionItemResult(0x01);
 	
-	public ExPut_Shape_Shifting_Extraction_Item_Result(int type)
-	{
-		_type = type;
-	}
+	private final int _result;
 	
-	public ExPut_Shape_Shifting_Extraction_Item_Result(int type, long price)
+	public ExPutShapeShiftingExtractionItemResult(int result)
 	{
-		_type = type;
-		_price = price;
+		_result = result;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0x12A);
-		writeD(_type);
-		writeQ(_price);
+		writeH(0x12B);
+		writeD(_result);
 	}
 }

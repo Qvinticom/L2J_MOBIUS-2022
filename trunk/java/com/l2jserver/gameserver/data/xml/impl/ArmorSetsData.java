@@ -68,6 +68,7 @@ public final class ArmorSetsData implements IXmlReader
 					if ("set".equalsIgnoreCase(d.getNodeName()))
 					{
 						set = new L2ArmorSet();
+						set.setIsVisual(parseBoolean(d.getAttributes(), "visual", false));
 						set.setMinimumPieces(parseInteger(d.getAttributes(), "minimumPieces"));
 						
 						for (Node a = d.getFirstChild(); a != null; a = a.getNextSibling())

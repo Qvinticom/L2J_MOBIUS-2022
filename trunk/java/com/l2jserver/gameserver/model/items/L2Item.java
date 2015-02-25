@@ -35,7 +35,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
-import com.l2jserver.gameserver.model.entity.AppearanceStone;
 import com.l2jserver.gameserver.model.events.ListenersContainer;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
@@ -964,6 +963,4 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	{
 		return null;
 	}
-	
-	public abstract AppearanceStone getAppearanceStone();
 }

@@ -16,27 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets.itemappearance;
-
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
+package com.l2jserver.gameserver.model.items.appearance;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public class ExPut_Shape_Shifting_Target_Item_Result extends L2GameServerPacket
+public enum AppearanceTargetType
 {
-	private final int _success;
-	
-	public ExPut_Shape_Shifting_Target_Item_Result(int success)
-	{
-		_success = success;
-	}
-	
-	@Override
-	protected void writeImpl()
-	{
-		writeC(0xFE);
-		writeH(0x12B);
-		writeD(_success);
-	}
+	NONE,
+	WEAPON,
+	ARMOR,
+	ACCESSORY,
+	ALL
 }

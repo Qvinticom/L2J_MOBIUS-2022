@@ -77,7 +77,7 @@ public class TradeItem
 		_isTimeLimited = item.isTimeLimitedItem();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getAppearanceTime();
+		_visualExpiration = item.getTime();
 	}
 	
 	public TradeItem(L2Item item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)

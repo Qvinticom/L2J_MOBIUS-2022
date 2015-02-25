@@ -16,46 +16,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets.itemappearance;
+package com.l2jserver.gameserver.network.serverpackets.appearance;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public class ExShape_Shifting_Result extends L2GameServerPacket
+public class ExPutShapeShiftingTargetItemResult extends L2GameServerPacket
 {
-	private final int _success;
-	private int _itemId = 0, _targetItemId = 0, _time = -1;
+	public static int RESULT_FAILED = 0x00;
+	public static int RESULT_SUCCESS = 0x01;
 	
-	public ExShape_Shifting_Result(int success)
-	{
-		_success = success;
-	}
+	public static ExPutShapeShiftingTargetItemResult FAILED = new ExPutShapeShiftingTargetItemResult(RESULT_FAILED, 0L);
 	
-	public ExShape_Shifting_Result(int success, int itemId, int targetItemId)
-	{
-		_success = success;
-		_itemId = itemId;
-		_targetItemId = targetItemId;
-	}
+	private final int _resultId;
+	private final long _price;
 	
-	public ExShape_Shifting_Result(int success, int itemId, int targetItemId, int time)
+	public ExPutShapeShiftingTargetItemResult(int resultId, long price)
 	{
-		_success = success;
-		_itemId = itemId;
-		_targetItemId = targetItemId;
-		_time = time;
+		_resultId = resultId;
+		_price = price;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0x12C);
-		writeD(_success); // Success - 1, Fail - 0
-		writeD(_itemId); // targetItemId
-		writeD(_targetItemId); // extractItemId
-		writeD(_time); // time
+		writeH(0x12A);
+		writeD(_resultId);
+		writeQ(_price);
 	}
 }

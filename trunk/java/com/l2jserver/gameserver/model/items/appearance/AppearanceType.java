@@ -16,34 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets.itemappearance;
-
-import com.l2jserver.gameserver.model.entity.AppearanceStone;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
+package com.l2jserver.gameserver.model.items.appearance;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public class ExChoose_Shape_Shifting_Item extends L2GameServerPacket
+public enum AppearanceType
 {
-	private final int _itemId;
-	private final int _type;
-	private final int _itemType;
-	
-	public ExChoose_Shape_Shifting_Item(AppearanceStone stone)
-	{
-		_itemId = stone.getItemId();
-		_type = stone.getType().ordinal();
-		_itemType = stone.getItemType().ordinal();
-	}
-	
-	@Override
-	protected void writeImpl()
-	{
-		writeC(0xFE);
-		writeH(0x129);
-		writeD(_type);
-		writeD(_itemType);
-		writeD(_itemId);
-	}
+	NONE,
+	NORMAL,
+	BLESSED,
+	FIXED,
+	RESTORE;
 }

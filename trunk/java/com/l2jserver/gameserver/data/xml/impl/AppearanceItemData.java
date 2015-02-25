@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -28,15 +27,17 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.data.xml.IXmlReader;
-import com.l2jserver.gameserver.model.entity.AppearanceStone;
-import com.l2jserver.gameserver.model.entity.AppearanceStone.AppearanceItemType;
-import com.l2jserver.gameserver.model.entity.AppearanceStone.StoneType;
+import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.items.appearance.AppearanceStone;
+import com.l2jserver.gameserver.model.items.appearance.AppearanceTargetType;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public final class AppearanceItemData implements IXmlReader
+public class AppearanceItemData implements IXmlReader
 {
 	private final Map<Integer, AppearanceStone> _stones = new HashMap<>();
 	
@@ -48,42 +49,88 @@ public final class AppearanceItemData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_stones.clear();
 		parseDatapackFile("data/AppearanceStones.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _stones.size() + " appearance stones.");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _stones.size() + " Stones");
+		
+		//@formatter:off
+		/*
+		for (L2Item item : ItemTable.getInstance().getAllItems())
+		{
+			if ((item == null) || !item.getName().contains("Appearance Stone"))
+			{
+				continue;
+			}
+			if (item.getName().contains("Pack") || _stones.containsKey(item.getId()))
+			{
+				continue;
+			}
+			
+			System.out.println("Unhandled appearance stone: " + item);
+		}
+		*/
+		//@formatter:on
 	}
 	
 	@Override
 	public void parseDocument(Document doc)
 	{
+		StatsSet set;
+		Node att;
+		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					if ("stone".equalsIgnoreCase(d.getNodeName()))
+					if ("appearance_stone".equalsIgnoreCase(d.getNodeName()))
 					{
-						final NamedNodeMap attrs = d.getAttributes();
-						int itemId = parseInteger(attrs, "id");
-						String type = parseString(attrs, "type");
-						String targetType = parseString(attrs, "targetType");
-						String grades[] = parseString(attrs, "grades", "none").split(";");
-						long cost = parseLong(attrs, "cost", 0l);
-						int visualId = parseInteger(attrs, "visualId", 0);
-						long lifeTime = parseLong(attrs, "lifeTime", 0l);
-						ArrayList<Integer> gradesIds = new ArrayList<>();
-						CrystalType cType;
-						for (String gr : grades)
+						attrs = d.getAttributes();
+						set = new StatsSet();
+						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							cType = CrystalType.valueOf(gr.toUpperCase());
-							gradesIds.add(cType.getId());
+							att = attrs.item(i);
+							set.set(att.getNodeName(), att.getNodeValue());
 						}
-						type = type.toUpperCase();
-						targetType = targetType.toUpperCase();
-						StoneType sType = StoneType.valueOf(type);
-						AppearanceItemType iType = AppearanceItemType.valueOf(targetType);
-						_stones.put(itemId, new AppearanceStone(itemId, sType, iType, gradesIds, cost, visualId, lifeTime));
+						
+						final AppearanceStone stone = new AppearanceStone(set);
+						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
+						{
+							switch (c.getNodeName())
+							{
+								case "grade":
+								{
+									final CrystalType type = CrystalType.valueOf(c.getTextContent());
+									stone.addCrystalType(type);
+									break;
+								}
+								case "targetType":
+								{
+									final AppearanceTargetType type = AppearanceTargetType.valueOf(c.getTextContent());
+									stone.addTargetType(type);
+									break;
+								}
+								case "bodyPart":
+								{
+									final int part = ItemTable._slots.get(c.getTextContent());
+									stone.addBodyPart(part);
+									break;
+								}
+								case "race":
+								{
+									final Race race = Race.valueOf(c.getTextContent());
+									stone.addRace(race);
+									break;
+								}
+								case "raceNot":
+								{
+									final Race raceNot = Race.valueOf(c.getTextContent());
+									stone.addRaceNot(raceNot);
+									break;
+								}
+							}
+						}
+						_stones.put(stone.getId(), stone);
 					}
 				}
 			}

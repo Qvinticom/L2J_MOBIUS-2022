@@ -16,15 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.clientpackets.itemappearance;
+package com.l2jserver.gameserver.network.clientpackets.appearance;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.appearance.ExShapeShiftingResult;
 
-public final class RequestExCancelShape_Shifting_Item extends L2GameClientPacket
+/**
+ * @author UnAfraid
+ */
+public class RequestExCancelShape_Shifting_Item extends L2GameClientPacket
 {
-	private static final String _C__D0_C6_REQUESTEXCANCELSHAPE_SHIFTING_ITEM = "[C] D0:C6 RequestExCancelShape_Shifting_Item";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -33,19 +36,19 @@ public final class RequestExCancelShape_Shifting_Item extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
-		player.setAppearanceItem(null);
-		player.setTargetAppearanceItem(null);
-		player.setUsingAppearanceStone(null);
+		
+		player.removeRequest(ShapeShiftingItemRequest.class);
+		player.sendPacket(ExShapeShiftingResult.FAILED);
 	}
 	
 	@Override
 	public String getType()
 	{
-		return _C__D0_C6_REQUESTEXCANCELSHAPE_SHIFTING_ITEM;
+		return getClass().getSimpleName();
 	}
 }

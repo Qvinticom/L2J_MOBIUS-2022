@@ -358,6 +358,7 @@ public abstract class Inventory extends ItemContainer
 						
 						if (itemSkill != null)
 						{
+							itemSkill.setReferenceItemId(item.getId());
 							player.addSkill(itemSkill, false);
 							
 							if (itemSkill.isActive())
@@ -454,7 +455,6 @@ public abstract class Inventory extends ItemContainer
 					
 					if (itemSkill != null)
 					{
-						itemSkill.setReferenceItemId(item.getId());
 						player.addSkill(itemSkill, false);
 						
 						if (itemSkill.isActive())
@@ -644,6 +644,16 @@ public abstract class Inventory extends ItemContainer
 				}
 			}
 			
+			final L2ArmorSet visualArmorSet = ArmorSetsData.getInstance().getSet(chestItem.getVisualId());
+			if ((visualArmorSet != null) && visualArmorSet.isVisual())
+			{
+				int pieces = visualArmorSet.getVisualPiecesCount(player);
+				if (pieces >= visualArmorSet.getMinimumPieces())
+				{
+					addSkills(player, item, visualArmorSet.getSkills(), visualArmorSet.getPiecesCount(player));
+				}
+			}
+			
 			if (update)
 			{
 				player.sendSkillList();
@@ -687,6 +697,11 @@ public abstract class Inventory extends ItemContainer
 				{
 					remove = true;
 				}
+				
+				if (removeArmorsetBonus(player, ArmorSetsData.getInstance().getSet(item.getVisualId())))
+				{
+					remove = true;
+				}
 			}
 			else
 			{
@@ -697,7 +712,7 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				final L2ArmorSet armorSet = ArmorSetsData.getInstance().getSet(chestItem.getId());
-				if (armorSet != null)
+				if ((armorSet != null) && !armorSet.isVisual())
 				{
 					if (armorSet.containItem(slot, item.getId())) // removed part of set
 					{
@@ -715,6 +730,25 @@ public abstract class Inventory extends ItemContainer
 					else if (armorSet.containShield(item.getId())) // removed shield
 					{
 						if (removeShieldSkills(player, armorSet.getShieldSkills()))
+						{
+							remove = true;
+						}
+					}
+				}
+				
+				final L2ArmorSet visualArmorSet = ArmorSetsData.getInstance().getSet(chestItem.getVisualId());
+				if ((visualArmorSet != null) && visualArmorSet.isVisual())
+				{
+					if (visualArmorSet.containItem(slot, item.getVisualId())) // removed part of set
+					{
+						if (removeArmorsetBonus(player, visualArmorSet))
+						{
+							remove = true;
+						}
+					}
+					else if (visualArmorSet.containShield(item.getVisualId())) // removed shield
+					{
+						if (removeShieldSkills(player, visualArmorSet.getShieldSkills()))
 						{
 							remove = true;
 						}
@@ -1788,7 +1822,7 @@ public abstract class Inventory extends ItemContainer
 	public void restore()
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time, appearance_id, appearance_time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
+			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
 		{
 			statement.setInt(1, getOwnerId());
 			statement.setString(2, getBaseLocation().name());

@@ -18,15 +18,18 @@
  */
 package handlers.itemhandlers;
 
+import com.l2jserver.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.ShapeShiftingItemRequest;
+import com.l2jserver.gameserver.model.items.appearance.AppearanceStone;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.itemappearance.ExChoose_Shape_Shifting_Item;
+import com.l2jserver.gameserver.network.serverpackets.appearance.ExChooseShapeShiftingItem;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
 public class Appearance implements IItemHandler
 {
@@ -40,21 +43,21 @@ public class Appearance implements IItemHandler
 		}
 		
 		final L2PcInstance player = playable.getActingPlayer();
-		
-		if (player.getUsingAppearanceStone() != null)
+		if (player.hasRequest(ShapeShiftingItemRequest.class))
 		{
 			player.sendPacket(SystemMessageId.APPEARANCE_MODIFICATION_OR_RESTORATION_IN_PROGRESS_PLEASE_TRY_AGAIN_AFTER_COMPLETING_THIS_TASK);
 			return false;
 		}
 		
-		if ((item == null) || !item.isEtcItem() || (item.isEtcItem() && (item.getEtcItem().getAppearanceStone() == null)))
+		final AppearanceStone stone = AppearanceItemData.getInstance().getStone(item.getId());
+		if (stone == null)
 		{
 			player.sendMessage("This item is either not an appearance stone or is currently not handled!");
 			return false;
 		}
 		
-		player.sendPacket(new ExChoose_Shape_Shifting_Item(item.getEtcItem().getAppearanceStone()));
-		player.setUsingAppearanceStone(item);
+		player.addRequest(new ShapeShiftingItemRequest(player, item));
+		player.sendPacket(new ExChooseShapeShiftingItem(stone));
 		return true;
 	}
 }

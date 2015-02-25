@@ -75,7 +75,6 @@ public class ItemInfo
 	};
 	
 	private int[] _option;
-	
 	private int _visualId;
 	private long _visualExpiration;
 	
@@ -152,13 +151,13 @@ public class ItemInfo
 		}
 		_option = item.getEnchantOptions();
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getAppearanceTime();
 	}
 	
 	public ItemInfo(L2ItemInstance item, int change)
 	{
 		this(item);
 		_change = change;
+		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
 	}
 	
 	public ItemInfo(TradeItem item)
@@ -201,8 +200,9 @@ public class ItemInfo
 		_change = 0;
 		
 		// Get shadow item mana
-		_mana = item.getMana();
-		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+		_mana = -1;
+		_time = -9999;
+		
 		_location = item.getLocationSlot();
 		
 		_elemAtkType = item.getAttackElementType();
@@ -211,9 +211,9 @@ public class ItemInfo
 		{
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
+		
 		_option = item.getEnchantOptions();
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getVisualExpiration();
 	}
 	
 	public ItemInfo(Product item)
@@ -303,8 +303,6 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		_visualId = item.getAppearanceId();
-		_visualExpiration = item.getAppearanceTime();
 	}
 	
 	public int getObjectId()
@@ -364,7 +362,7 @@ public class ItemInfo
 	
 	public int getTime()
 	{
-		return _time;
+		return _time > 0 ? _time : _visualExpiration > 0 ? (int) _visualExpiration : -9999;
 	}
 	
 	public int getLocation()

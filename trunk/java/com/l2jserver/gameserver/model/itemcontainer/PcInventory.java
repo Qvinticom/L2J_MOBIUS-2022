@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.inventory.OnP
 import com.l2jserver.gameserver.model.events.impl.character.player.inventory.OnPlayerItemTransfer;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.variables.ItemVariables;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
@@ -880,7 +881,7 @@ public class PcInventory extends Inventory
 	{
 		int[][] paperdoll = new int[33][4];
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level,appearance_id FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
+			PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
 		{
 			statement2.setInt(1, objectId);
 			try (ResultSet invdata = statement2.executeQuery())
@@ -888,13 +889,11 @@ public class PcInventory extends Inventory
 				while (invdata.next())
 				{
 					int slot = invdata.getInt("loc_data");
+					final ItemVariables vars = new ItemVariables(invdata.getInt("object_id"));
 					paperdoll[slot][0] = invdata.getInt("object_id");
 					paperdoll[slot][1] = invdata.getInt("item_id");
 					paperdoll[slot][2] = invdata.getInt("enchant_level");
-					paperdoll[slot][3] = invdata.getInt("appearance_id");
-					/*
-					 * if (slot == Inventory.PAPERDOLL_RHAND) { paperdoll[Inventory.PAPERDOLL_RHAND][0] = invdata.getInt("object_id"); paperdoll[Inventory.PAPERDOLL_RHAND][1] = invdata.getInt("item_id"); paperdoll[Inventory.PAPERDOLL_RHAND][2] = invdata.getInt("enchant_level"); }
-					 */
+					paperdoll[slot][3] = vars.getInt(ItemVariables.VISUAL_ID, 0);
 				}
 			}
 		}
