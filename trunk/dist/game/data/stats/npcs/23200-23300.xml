@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23200" level="85" type="L2Npc" name="Turan the Severed Ghost" title="">
+	<npc id="23200" level="85" type="L2Monster" name="Turan the Severed Ghost" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -11,13 +11,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23201" level="85" type="L2Npc" name="Nagdu the Deformed Merman" title="">
+	<npc id="23201" level="85" type="L2Monster" name="Nagdu the Deformed Merman" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -28,13 +28,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23202" level="85" type="L2Npc" name="Hakal the Butchered" title="">
+	<npc id="23202" level="85" type="L2Monster" name="Hakal the Butchered" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -45,13 +45,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23203" level="85" type="L2Npc" name="Centa the Standing Beast" title="">
+	<npc id="23203" level="85" type="L2Monster" name="Centa the Standing Beast" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -62,13 +62,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23204" level="85" type="L2Npc" name="Adidaiu of the Killer Fangs" title="">
+	<npc id="23204" level="85" type="L2Monster" name="Adidaiu of the Killer Fangs" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -79,13 +79,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23205" level="85" type="L2Npc" name="Haskal the Floating Ghost" title="">
+	<npc id="23205" level="85" type="L2Monster" name="Haskal the Floating Ghost" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -96,13 +96,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23206" level="85" type="L2Npc" name="Samita the Ex-Torture Expert" title="">
+	<npc id="23206" level="85" type="L2Monster" name="Samita the Ex-Torture Expert" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -113,13 +113,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23207" level="85" type="L2Npc" name="Gazem" title="Fortress Scout">
+	<npc id="23207" level="85" type="L2Monster" name="Gazem" title="Fortress Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -130,13 +130,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23208" level="85" type="L2Npc" name="Rosenia's Divine Spirit" title="">
+	<npc id="23208" level="85" type="L2Monster" name="Rosenia's Divine Spirit" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -147,13 +147,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23209" level="85" type="L2Npc" name="Kelbara the Dualsword Slaughterer" title="">
+	<npc id="23209" level="85" type="L2Monster" name="Kelbara the Dualsword Slaughterer" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -164,13 +164,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23210" level="85" type="L2Npc" name="Mandragora of Joy and Sorrow" title="">
+	<npc id="23210" level="85" type="L2Monster" name="Mandragora of Joy and Sorrow" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -181,13 +181,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23211" level="85" type="L2Npc" name="Mandragora of Prayer" title="">
+	<npc id="23211" level="85" type="L2Monster" name="Mandragora of Prayer" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -198,7 +198,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -680,7 +680,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23240" level="85" type="L2Npc" name="Mandragora" title="">
+	<npc id="23240" level="85" type="L2Monster" name="Mandragora" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -691,13 +691,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23241" level="85" type="L2Npc" name="Mandragora" title="">
+	<npc id="23241" level="85" type="L2Monster" name="Mandragora" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -708,7 +708,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -765,7 +765,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23245" level="85" type="L2Npc" name="Isaad" title="Watchman of the Eye of Infinity">
+	<npc id="23245" level="85" type="L2Monster" name="Isaad" title="Watchman of the Eye of Infinity">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -776,7 +776,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

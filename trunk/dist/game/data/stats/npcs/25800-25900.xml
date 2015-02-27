@@ -1533,7 +1533,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25886" level="85" type="L2Npc" name="Houpon the Warden Overseer" title="Raid Boss">
+	<npc id="25886" level="85" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1544,13 +1544,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25887" level="85" type="L2Npc" name="Crook the Mad" title="Raid Boss">
+	<npc id="25887" level="85" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1561,13 +1561,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25888" level="85" type="L2Npc" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
+	<npc id="25888" level="85" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1578,7 +1578,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1635,7 +1635,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25892" level="85" type="L2Npc" name="Guillotine of Death" title="Raid Boss">
+	<npc id="25892" level="85" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1646,7 +1646,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

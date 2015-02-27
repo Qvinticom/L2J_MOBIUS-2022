@@ -335,4 +335,12 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (25727,148482,117859,-3712,36584,129600,86400,6165648,20499); -- Dragon Beast (85)
 
 -- Removed
-DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25252); -- Palibati Queen Themis (70)
+DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25118); -- Guilotine, Warden Of The Execution Grounds
+DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25252); -- Palibati Queen Themis
+
+-- Guilotine Fortress
+INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`respawn_delay`,`respawn_random`,`currentHp`,`currentMp`) VALUES
+(25886,48232,147384,-3400,10866,86400,21600,0,0),
+(25887,43151,144689,-3100,52598,86400,21600,0,0),
+(25888,44970,155903,-1000,52598,86400,21600,0,0),
+(25892,44824,155944,-1056,35323,86400,21600,0,0);

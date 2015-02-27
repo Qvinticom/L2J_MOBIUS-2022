@@ -1683,7 +1683,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23199" level="85" type="L2Npc" name="Sadiac the Killer" title="">
+	<npc id="23199" level="85" type="L2Monster" name="Sadiac the Killer" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1694,13 +1694,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23200" level="85" type="L2Npc" name="Turan the Severed Ghost" title="">
+	<npc id="23200" level="85" type="L2Monster" name="Turan the Severed Ghost" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1711,7 +1711,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
