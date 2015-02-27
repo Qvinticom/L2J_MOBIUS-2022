@@ -659,7 +659,7 @@ public final class Config
 	public static boolean ENABLE_BLOCK_CHECKER_EVENT;
 	public static int MIN_BLOCK_CHECKER_TEAM_MEMBERS;
 	public static boolean HBCE_FAIR_PLAY;
-	public static boolean HELLBOUND_WITHOUT_QUEST;
+	public static int HELLBOUND_LEVEL_LIMIT;
 	public static boolean ARCAN_RITUAL;
 	public static int ARCAN_RITUAL_INTERVAL;
 	public static int PLAYER_MOVEMENT_BLOCK_TIME;
@@ -756,7 +756,6 @@ public final class Config
 	public static boolean L2JMOD_WEDDING_SAMESEX;
 	public static boolean L2JMOD_WEDDING_FORMALWEAR;
 	public static int L2JMOD_WEDDING_DIVORCE_COSTS;
-	public static boolean L2JMOD_HELLBOUND_STATUS;
 	public static boolean BANKING_SYSTEM_ENABLED;
 	public static int BANKING_SYSTEM_GOLDBARS;
 	public static int BANKING_SYSTEM_ADENA;
@@ -947,8 +946,6 @@ public final class Config
 	public static float RATE_SP;
 	public static float RATE_PARTY_XP;
 	public static float RATE_PARTY_SP;
-	public static float RATE_HB_TRUST_INCREASE;
-	public static float RATE_HB_TRUST_DECREASE;
 	public static float RATE_EXTRACTABLE;
 	public static int RATE_DROP_MANOR;
 	public static float RATE_QUEST_DROP;
@@ -2027,7 +2024,7 @@ public final class Config
 				MIN_BLOCK_CHECKER_TEAM_MEMBERS = 6;
 			}
 			HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
-			HELLBOUND_WITHOUT_QUEST = General.getBoolean("HellboundWithoutQuest", false);
+			HELLBOUND_LEVEL_LIMIT = General.getInt("HellboundLevelLimit", 99);
 			
 			ARCAN_RITUAL = General.getBoolean("ArcanRitual", true);
 			ARCAN_RITUAL_INTERVAL = General.getInt("ArcanRitualInterval", 30) * 60000;
@@ -2142,8 +2139,6 @@ public final class Config
 			RATE_QUEST_REWARD_SCROLL = RatesSettings.getFloat("RateQuestRewardScroll", 1);
 			RATE_QUEST_REWARD_RECIPE = RatesSettings.getFloat("RateQuestRewardRecipe", 1);
 			RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
-			RATE_HB_TRUST_INCREASE = RatesSettings.getFloat("RateHellboundTrustIncrease", 1);
-			RATE_HB_TRUST_DECREASE = RatesSettings.getFloat("RateHellboundTrustDecrease", 1);
 			
 			RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 2);
 			RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
@@ -2524,7 +2519,6 @@ public final class Config
 				_log.warning("MultiLang[Config.load()]: default language: " + L2JMOD_MULTILANG_DEFAULT + " is not in allowed list !");
 			}
 			
-			L2JMOD_HELLBOUND_STATUS = CustomSettings.getBoolean("HellboundStatus", false);
 			L2JMOD_MULTILANG_VOICED_ALLOW = CustomSettings.getBoolean("MultiLangVoiceCommand", true);
 			L2JMOD_MULTILANG_SM_ENABLE = CustomSettings.getBoolean("MultiLangSystemMessageEnable", false);
 			allowed = CustomSettings.getString("MultiLangSystemMessageAllowed", "").split(";");
@@ -3127,12 +3121,6 @@ public final class Config
 				break;
 			case "ratequestrewardmaterial":
 				RATE_QUEST_REWARD_MATERIAL = Float.parseFloat(pValue);
-				break;
-			case "ratehellboundtrustincrease":
-				RATE_HB_TRUST_INCREASE = Float.parseFloat(pValue);
-				break;
-			case "ratehellboundtrustdecrease":
-				RATE_HB_TRUST_DECREASE = Float.parseFloat(pValue);
 				break;
 			case "ratevitalityexpmultiplier":
 				RATE_VITALITY_EXP_MULTIPLIER = Float.parseFloat(pValue);

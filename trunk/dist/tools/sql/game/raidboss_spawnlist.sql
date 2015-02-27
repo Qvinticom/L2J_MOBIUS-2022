@@ -337,6 +337,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 -- Removed
 DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25118); -- Guilotine, Warden Of The Execution Grounds
 DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25252); -- Palibati Queen Themis
+DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25539); -- Typhoon
 
 -- Guilotine Fortress
 INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`respawn_delay`,`respawn_random`,`currentHp`,`currentMp`) VALUES
