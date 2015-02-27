@@ -799,7 +799,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23147" level="85" type="L2Npc" name="Resurrected Creation" title="">
+	<npc id="23147" level="85" type="L2Monster" name="Resurrected Creation" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -810,13 +810,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23148" level="85" type="L2Npc" name="Lunatic Creature" title="">
+	<npc id="23148" level="85" type="L2Monster" name="Lunatic Creature" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -827,13 +827,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23149" level="85" type="L2Npc" name="Undead Creature" title="">
+	<npc id="23149" level="85" type="L2Monster" name="Undead Creature" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -844,13 +844,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23150" level="85" type="L2Npc" name="Hellish Creature" title="">
+	<npc id="23150" level="85" type="L2Monster" name="Hellish Creature" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -861,13 +861,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="23151" level="85" type="L2Npc" name="Shilen's Messenger" title="">
+	<npc id="23151" level="85" type="L2Monster" name="Shilen's Messenger" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -878,7 +878,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

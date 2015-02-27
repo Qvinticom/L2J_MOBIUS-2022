@@ -333,3 +333,6 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (25725,152316,110439,-5520,36811,129600,86400,6165648,20499), -- Drake Lord (85)
 (25726,145734,120031,-3912,45303,129600,86400,6165648,20499), -- Behemoth Leader (85)
 (25727,148482,117859,-3712,36584,129600,86400,6165648,20499); -- Dragon Beast (85)
+
+-- Removed
+DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25252); -- Palibati Queen Themis (70)
