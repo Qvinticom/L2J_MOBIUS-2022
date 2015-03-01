@@ -91,10 +91,14 @@ public class Q10326_RespectYourElders extends Quest
 			}
 			case "32972-02.htm":
 			{
-				giveAdena(player, 140, true);
-				addExpAndSp(player, 6700, 5);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isStarted())
+				{
+					giveAdena(player, 140, true);
+					addExpAndSp(player, 6700, 5);
+					qs.exitQuest(false, true);
+					htmltext = event;
+					break;
+				}
 				break;
 			}
 			case "32980-02.htm":
