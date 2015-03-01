@@ -87,7 +87,6 @@ public final class HennaData implements IXmlReader
 		final List<ClassId> wearClassIds = new ArrayList<>();
 		NamedNodeMap attrs = d.getAttributes();
 		Node attr;
-		String name;
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			attr = attrs.item(i);
@@ -96,7 +95,7 @@ public final class HennaData implements IXmlReader
 		
 		for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 		{
-			name = c.getNodeName();
+			final String name = c.getNodeName();
 			attrs = c.getAttributes();
 			switch (name)
 			{

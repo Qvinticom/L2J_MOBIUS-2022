@@ -16,35 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.ai;
-
-import com.l2jserver.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jserver.gameserver.network.serverpackets.shuttle.ExShuttleMove;
+package com.l2jserver.gameserver.enums;
 
 /**
- * @author UnAfraid
+ * @author Zealar
  */
-public class L2ShuttleAI extends L2VehicleAI
+public enum EffectCalculationType
 {
-	public L2ShuttleAI(L2ShuttleInstance l2ShuttleInstance)
-	{
-		super(l2ShuttleInstance);
-	}
-	
-	@Override
-	public void moveTo(int x, int y, int z)
-	{
-		if (!_actor.isMovementDisabled())
-		{
-			_clientMoving = true;
-			_actor.moveToLocation(x, y, z, 0);
-			_actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
-		}
-	}
-	
-	@Override
-	public L2ShuttleInstance getActor()
-	{
-		return (L2ShuttleInstance) _actor;
-	}
+	DIFF,
+	PER
 }

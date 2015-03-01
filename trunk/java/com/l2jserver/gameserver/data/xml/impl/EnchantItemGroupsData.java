@@ -69,7 +69,7 @@ public final class EnchantItemGroupsData implements IXmlReader
 				{
 					if ("enchantRateGroup".equalsIgnoreCase(d.getNodeName()))
 					{
-						String name = parseString(d.getAttributes(), "name");
+						final String name = parseString(d.getAttributes(), "name");
 						final EnchantItemGroup group = new EnchantItemGroup(name);
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{

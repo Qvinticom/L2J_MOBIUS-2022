@@ -131,9 +131,6 @@ public abstract class AbstractAI implements Ctrl
 	/** The character that this AI manages */
 	protected final L2Character _actor;
 	
-	/** An accessor for private methods of the actor */
-	protected final L2Character.AIAccessor _accessor;
-	
 	/** Current long-term intention */
 	protected CtrlIntention _intention = AI_INTENTION_IDLE;
 	/** Current long-term intention parameter */
@@ -166,14 +163,11 @@ public abstract class AbstractAI implements Ctrl
 	
 	/**
 	 * Constructor of AbstractAI.
-	 * @param accessor The AI accessor of the L2Character
+	 * @param creature the creature
 	 */
-	protected AbstractAI(L2Character.AIAccessor accessor)
+	protected AbstractAI(L2Character creature)
 	{
-		_accessor = accessor;
-		
-		// Get the L2Character managed by this Accessor AI
-		_actor = accessor.getActor();
+		_actor = creature;
 	}
 	
 	/**
@@ -542,13 +536,13 @@ public abstract class AbstractAI implements Ctrl
 			_moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
 			_moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
 			
-			if ((pawn == null) || (_accessor == null))
+			if (pawn == null)
 			{
 				return;
 			}
 			
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-			_accessor.moveTo(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+			_actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			
 			if (!_actor.isMoving())
 			{
@@ -597,7 +591,7 @@ public abstract class AbstractAI implements Ctrl
 			_clientMovingToPawnOffset = 0;
 			
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-			_accessor.moveTo(x, y, z);
+			_actor.moveToLocation(x, y, z, 0);
 			
 			// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
 			_actor.broadcastPacket(new MoveToLocation(_actor));
@@ -619,7 +613,7 @@ public abstract class AbstractAI implements Ctrl
 		// Stop movement of the L2Character
 		if (_actor.isMoving())
 		{
-			_accessor.stopMove(loc);
+			_actor.stopMove(loc);
 		}
 		
 		_clientMovingToPawnOffset = 0;

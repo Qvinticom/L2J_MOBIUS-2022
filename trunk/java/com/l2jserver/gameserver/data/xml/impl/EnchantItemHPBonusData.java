@@ -65,12 +65,12 @@ public class EnchantItemHPBonusData implements IXmlReader
 				{
 					if ("enchantHP".equalsIgnoreCase(d.getNodeName()))
 					{
-						List<Integer> bonuses = new ArrayList<>();
+						final List<Integer> bonuses = new ArrayList<>(12);
 						for (Node e = d.getFirstChild(); e != null; e = e.getNextSibling())
 						{
 							if ("bonus".equalsIgnoreCase(e.getNodeName()))
 							{
-								bonuses.add(Integer.valueOf(e.getTextContent()));
+								bonuses.add(Integer.parseInt(e.getTextContent()));
 							}
 						}
 						_armorHPBonuses.put(parseEnum(d.getAttributes(), CrystalType.class, "grade"), bonuses);
@@ -82,12 +82,11 @@ public class EnchantItemHPBonusData implements IXmlReader
 		if (!_armorHPBonuses.isEmpty())
 		{
 			final ItemTable it = ItemTable.getInstance();
-			L2Item item;
 			// Armors
 			final Collection<Integer> armorIds = it.getAllArmorsId();
 			for (Integer itemId : armorIds)
 			{
-				item = it.getTemplate(itemId);
+				L2Item item = it.getTemplate(itemId);
 				if ((item != null) && (item.getCrystalType() != CrystalType.NONE))
 				{
 					switch (item.getBodyPart())

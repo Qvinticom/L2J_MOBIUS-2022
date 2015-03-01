@@ -153,7 +153,7 @@ public final class Calculator
 		
 		int i;
 		
-		for (i = 0; (i < funcs.length) && (function != funcs[i]); i++)
+		for (i = 0; (i < (funcs.length - 1)) && (function != funcs[i]); i++)
 		{
 			tmp[i] = funcs[i];
 		}

@@ -202,7 +202,7 @@ public class SkillChannelizer implements Runnable
 							}
 							
 							// Update PvP status
-							if (character.isPlayable() && getChannelizer().isPlayer())
+							if (character.isPlayable() && getChannelizer().isPlayer() && skill.isBad())
 							{
 								((L2PcInstance) getChannelizer()).updatePvPStatus(character);
 							}

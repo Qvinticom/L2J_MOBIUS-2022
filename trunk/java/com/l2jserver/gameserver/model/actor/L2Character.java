@@ -823,7 +823,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * </ul>
 	 * @param target The L2Character targeted
 	 */
-	protected void doAttack(L2Character target)
+	public void doAttack(L2Character target)
 	{
 		if (!_attackLock.tryLock())
 		{
@@ -2576,6 +2576,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return true;
 	}
 	
+	public void detachAI()
+	{
+		if (isWalker())
+		{
+			return;
+		}
+		setAI(null);
+	}
+	
 	protected void calculateRewards(L2Character killer)
 	{
 	}
@@ -2653,7 +2662,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	protected L2CharacterAI initAI()
 	{
-		return new L2CharacterAI(new AIAccessor());
+		return new L2CharacterAI(this);
 	}
 	
 	public void setAI(L2CharacterAI newAI)
@@ -3470,93 +3479,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public boolean isAffectedBySkill(int skillId)
 	{
 		return _effectList.isAffectedBySkill(skillId);
-	}
-	
-	// TODO: NEED TO ORGANIZE AND MOVE TO PROPER PLACE
-	/** This class permit to the L2Character AI to obtain informations and uses L2Character method */
-	public class AIAccessor
-	{
-		/**
-		 * @return the L2Character managed by this Accessor AI.
-		 */
-		public L2Character getActor()
-		{
-			return L2Character.this;
-		}
-		
-		/**
-		 * Accessor to L2Character moveToLocation() method with an interaction area.
-		 * @param x
-		 * @param y
-		 * @param z
-		 * @param offset
-		 */
-		public void moveTo(int x, int y, int z, int offset)
-		{
-			moveToLocation(x, y, z, offset);
-		}
-		
-		/**
-		 * Accessor to L2Character moveToLocation() method without interaction area.
-		 * @param x
-		 * @param y
-		 * @param z
-		 */
-		public void moveTo(int x, int y, int z)
-		{
-			moveToLocation(x, y, z, 0);
-		}
-		
-		/**
-		 * Accessor to L2Character stopMove() method.
-		 * @param loc
-		 */
-		public void stopMove(Location loc)
-		{
-			L2Character.this.stopMove(loc);
-		}
-		
-		/**
-		 * Accessor to L2Character doAttack() method.
-		 * @param target
-		 */
-		public void doAttack(L2Character target)
-		{
-			L2Character.this.doAttack(target);
-		}
-		
-		/**
-		 * Accessor to L2Character doCast() method.
-		 * @param skill
-		 */
-		public void doCast(Skill skill)
-		{
-			L2Character.this.doCast(skill);
-		}
-		
-		/**
-		 * Create a NotifyAITask.
-		 * @param evt
-		 * @return
-		 */
-		public NotifyAITask newNotifyTask(CtrlEvent evt)
-		{
-			return new NotifyAITask(getActor(), evt);
-		}
-		
-		/**
-		 * Cancel the AI.
-		 */
-		public void detachAI()
-		{
-			// Skip character, if it is controlled by Walking Manager
-			if (isWalker())
-			{
-				return;
-			}
-			
-			setAI(null);
-		}
 	}
 	
 	/**
@@ -4482,7 +4404,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return _target;
 	}
 	
-	// called from AIAccessor only
 	/**
 	 * Calculate movement data for a move to location action and add the L2Character to movingObjects of GameTimeController (only called by AI Accessor).<br>
 	 * <B><U>Concept</U>:</B><br>
@@ -4509,7 +4430,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param z The Y position of the destination
 	 * @param offset The size of the interaction area of the L2Character targeted
 	 */
-	protected void moveToLocation(int x, int y, int z, int offset)
+	public void moveToLocation(int x, int y, int z, int offset)
 	{
 		// Get the Move Speed of the L2Charcater
 		double speed = getMoveSpeed();
@@ -5175,18 +5096,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					}
 				}
 			}
-		}
-		
-		// Launch weapon Special ability effect if available
-		if (crit)
-		{
-			L2Weapon activeWeapon = getActiveWeaponItem();
-			if (activeWeapon != null)
+			// Launch weapon onCritical Special ability effect if available
+			if (crit && (weapon != null))
 			{
-				activeWeapon.castOnCriticalSkill(this, target);
+				weapon.castOnCriticalSkill(this, target);
 			}
 		}
-		
 		// Recharge any active auto-soulshot tasks for current creature.
 		rechargeShots(true, false);
 	}
@@ -7113,6 +7028,26 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public Race getRace()
 	{
 		return getTemplate().getRace();
+	}
+	
+	public boolean isInDuel()
+	{
+		return false;
+	}
+	
+	public int getDuelId()
+	{
+		return 0;
+	}
+	
+	public byte getSiegeState()
+	{
+		return 0;
+	}
+	
+	public int getSiegeSide()
+	{
+		return 0;
 	}
 	
 	public int getMinShopDistance()

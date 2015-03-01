@@ -56,10 +56,6 @@ public final class FishingMonstersData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		NamedNodeMap attrs;
-		Node att;
-		L2FishingMonster fishingMonster;
-		StatsSet set;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -69,15 +65,15 @@ public final class FishingMonstersData implements IXmlReader
 					if ("fishingMonster".equalsIgnoreCase(d.getNodeName()))
 					{
 						
-						attrs = d.getAttributes();
-						
-						set = new StatsSet();
+						final NamedNodeMap attrs = d.getAttributes();
+						final StatsSet set = new StatsSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							att = attrs.item(i);
+							final Node att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
-						fishingMonster = new L2FishingMonster(set);
+						
+						final L2FishingMonster fishingMonster = new L2FishingMonster(set);
 						_fishingMonstersData.put(fishingMonster.getFishingMonsterId(), fishingMonster);
 					}
 				}

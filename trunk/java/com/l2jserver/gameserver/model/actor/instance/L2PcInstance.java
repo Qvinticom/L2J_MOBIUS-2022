@@ -410,47 +410,6 @@ public final class L2PcInstance extends L2Playable
 	
 	private final List<IEventListener> _eventListeners = new CopyOnWriteArrayList<>();
 	
-	public class AIAccessor extends L2Character.AIAccessor
-	{
-		public L2PcInstance getPlayer()
-		{
-			return L2PcInstance.this;
-		}
-		
-		public void doPickupItem(L2Object object)
-		{
-			L2PcInstance.this.doPickupItem(object);
-		}
-		
-		public void doInteract(L2Character target)
-		{
-			L2PcInstance.this.doInteract(target);
-		}
-		
-		@Override
-		public void doAttack(L2Character target)
-		{
-			if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((isGood() && target.getActingPlayer().isGood()) || (isEvil() && target.getActingPlayer().isEvil())))
-			{
-				return;
-			}
-			
-			super.doAttack(target);
-			
-			// cancel the recent fake-death protection instantly if the player attacks or casts spells
-			getPlayer().setRecentFakeDeath(false);
-		}
-		
-		@Override
-		public void doCast(Skill skill)
-		{
-			super.doCast(skill);
-			
-			// cancel the recent fake-death protection instantly if the player attacks or casts spells
-			getPlayer().setRecentFakeDeath(false);
-		}
-	}
-	
 	private L2GameClient _client;
 	
 	private final String _accountName;
@@ -1235,7 +1194,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	protected L2CharacterAI initAI()
 	{
-		return new L2PlayerAI(new L2PcInstance.AIAccessor());
+		return new L2PlayerAI(this);
 	}
 	
 	/** Return the Level of the L2PcInstance. */
@@ -1674,6 +1633,7 @@ public final class L2PcInstance extends L2Playable
 	 * Get the siege state of the L2PcInstance.
 	 * @return 1 = attacker, 2 = defender, 0 = not involved
 	 */
+	@Override
 	public byte getSiegeState()
 	{
 		return _siegeState;
@@ -1697,6 +1657,7 @@ public final class L2PcInstance extends L2Playable
 		return true;
 	}
 	
+	@Override
 	public int getSiegeSide()
 	{
 		return _siegeSide;
@@ -4568,7 +4529,8 @@ public final class L2PcInstance extends L2Playable
 	 * current weight</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : If a Party is in progress, distribute Items between party members</B></FONT>
 	 * @param object The L2ItemInstance to pick up
 	 */
-	protected void doPickupItem(L2Object object)
+	@Override
+	public void doPickupItem(L2Object object)
 	{
 		if (isAlikeDead() || isFakeDeath())
 		{
@@ -4754,6 +4716,20 @@ public final class L2PcInstance extends L2Playable
 				}
 			}
 		}
+	}
+	
+	@Override
+	public void doAttack(L2Character target)
+	{
+		super.doAttack(target);
+		setRecentFakeDeath(false);
+	}
+	
+	@Override
+	public void doCast(Skill skill)
+	{
+		super.doCast(skill);
+		setRecentFakeDeath(false);
 	}
 	
 	public boolean canOpenPrivateStore()
@@ -5390,7 +5366,7 @@ public final class L2PcInstance extends L2Playable
 					// If player is Lucky shouldn't get penalized.
 					if (!isLucky() && !insidePvpZone)
 					{
-						calculateDeathExpPenalty(killer, atWarWith(pk));
+						calculateDeathExpPenalty(killer, isAtWarWith(pk));
 					}
 				}
 			}
@@ -10084,11 +10060,13 @@ public final class L2PcInstance extends L2Playable
 		return _inOlympiadMode;
 	}
 	
+	@Override
 	public boolean isInDuel()
 	{
 		return _isInDuel;
 	}
 	
+	@Override
 	public int getDuelId()
 	{
 		return _duelId;
@@ -14815,7 +14793,6 @@ public final class L2PcInstance extends L2Playable
 	public void setCharmOfCourage(boolean val)
 	{
 		_hasCharmOfCourage = val;
-		
 	}
 	
 	/**
@@ -14824,7 +14801,6 @@ public final class L2PcInstance extends L2Playable
 	public boolean hasCharmOfCourage()
 	{
 		return _hasCharmOfCourage;
-		
 	}
 	
 	public boolean isAwaken()
@@ -14872,20 +14848,99 @@ public final class L2PcInstance extends L2Playable
 	 * @param target the target
 	 * @return {@code true} if this player got war with the target, {@code false} otherwise.
 	 */
-	public boolean atWarWith(L2Playable target)
+	public boolean isAtWarWith(L2Character target)
 	{
 		if (target == null)
 		{
 			return false;
 		}
-		if ((_clan != null) && !isAcademyMember()) // Current player
+		if ((_clan != null) && !isAcademyMember())
 		{
-			if ((target.getClan() != null) && !target.isAcademyMember()) // Target player
+			if ((target.getClan() != null) && !target.isAcademyMember())
 			{
 				return _clan.isAtWarWith(target.getClan());
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * @param target the target
+	 * @return {@code true} if this player in same party with the target, {@code false} otherwise.
+	 */
+	public boolean isInPartyWith(L2Character target)
+	{
+		if (!isInParty() || !target.isInParty())
+		{
+			return false;
+		}
+		return getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId();
+	}
+	
+	/**
+	 * @param target the target
+	 * @return {@code true} if this player in same command channel with the target, {@code false} otherwise.
+	 */
+	public boolean isInCommandChannelWith(L2Character target)
+	{
+		if (!isInParty() || !target.isInParty())
+		{
+			return false;
+		}
+		
+		if (!getParty().isInCommandChannel() || !target.getParty().isInCommandChannel())
+		{
+			return false;
+		}
+		return getParty().getCommandChannel().getLeaderObjectId() == target.getParty().getCommandChannel().getLeaderObjectId();
+	}
+	
+	/**
+	 * @param target the target
+	 * @return {@code true} if this player in same clan with the target, {@code false} otherwise.
+	 */
+	public boolean isInClanWith(L2Character target)
+	{
+		if ((getClanId() == 0) || (target.getClanId() == 0))
+		{
+			return false;
+		}
+		return getClanId() == target.getClanId();
+	}
+	
+	/**
+	 * @param target the target
+	 * @return {@code true} if this player in same ally with the target, {@code false} otherwise.
+	 */
+	public boolean isInAllyWith(L2Character target)
+	{
+		if ((getAllyId() == 0) || (target.getAllyId() == 0))
+		{
+			return false;
+		}
+		return getAllyId() == target.getAllyId();
+	}
+	
+	/**
+	 * @param target the target
+	 * @return {@code true} if this player at duel with the target, {@code false} otherwise.
+	 */
+	public boolean isInDuelWith(L2Character target)
+	{
+		if (!isInDuel() || !target.isInDuel())
+		{
+			return false;
+		}
+		return getDuelId() == target.getDuelId();
+	}
+	
+	/**
+	 * @param target the target
+	 * @return {@code true} if this player is on same siege side with the target, {@code false} otherwise.
+	 */
+	public boolean isOnSameSiegeSideWith(L2Character target)
+	{
+		return (getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (getSiegeState() == target.getSiegeState()) && (getSiegeSide() == target.getSiegeSide());
 	}
 	
 	/**

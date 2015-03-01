@@ -57,8 +57,6 @@ public final class ArmorSetsData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		NamedNodeMap attrs;
-		L2ArmorSet set;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -67,13 +65,13 @@ public final class ArmorSetsData implements IXmlReader
 				{
 					if ("set".equalsIgnoreCase(d.getNodeName()))
 					{
-						set = new L2ArmorSet();
+						final L2ArmorSet set = new L2ArmorSet();
 						set.setIsVisual(parseBoolean(d.getAttributes(), "visual", false));
 						set.setMinimumPieces(parseInteger(d.getAttributes(), "minimumPieces"));
 						
 						for (Node a = d.getFirstChild(); a != null; a = a.getNextSibling())
 						{
-							attrs = a.getAttributes();
+							final NamedNodeMap attrs = a.getAttributes();
 							switch (a.getNodeName())
 							{
 								case "chest":

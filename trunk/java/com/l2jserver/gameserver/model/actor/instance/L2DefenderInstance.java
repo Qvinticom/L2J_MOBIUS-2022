@@ -70,13 +70,13 @@ public class L2DefenderInstance extends L2Attackable
 	{
 		if ((getConquerableHall() == null) && (getCastle(10000) == null))
 		{
-			return new L2FortSiegeGuardAI(new AIAccessor());
+			return new L2FortSiegeGuardAI(this);
 		}
 		else if (getCastle(10000) != null)
 		{
-			return new L2SiegeGuardAI(new AIAccessor());
+			return new L2SiegeGuardAI(this);
 		}
-		return new L2SpecialSiegeGuardAI(new AIAccessor());
+		return new L2SpecialSiegeGuardAI(this);
 	}
 	
 	/**

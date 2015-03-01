@@ -66,9 +66,6 @@ public class DoorData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		NamedNodeMap attrs;
-		Node att;
-		StatsSet set;
 		for (Node a = doc.getFirstChild(); a != null; a = a.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(a.getNodeName()))
@@ -77,12 +74,12 @@ public class DoorData implements IXmlReader
 				{
 					if ("door".equalsIgnoreCase(b.getNodeName()))
 					{
-						attrs = b.getAttributes();
-						set = new StatsSet();
+						final NamedNodeMap attrs = b.getAttributes();
+						final StatsSet set = new StatsSet();
 						set.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in L2CharTemplate
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							att = attrs.item(i);
+							final Node att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						makeDoor(set);

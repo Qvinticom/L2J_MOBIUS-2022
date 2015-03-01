@@ -58,9 +58,6 @@ public final class StaticObjectData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		NamedNodeMap attrs;
-		Node att;
-		StatsSet set;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -69,11 +66,11 @@ public final class StaticObjectData implements IXmlReader
 				{
 					if ("object".equalsIgnoreCase(d.getNodeName()))
 					{
-						attrs = d.getAttributes();
-						set = new StatsSet();
+						final NamedNodeMap attrs = d.getAttributes();
+						final StatsSet set = new StatsSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							att = attrs.item(i);
+							final Node att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						addObject(set);

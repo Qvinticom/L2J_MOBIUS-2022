@@ -72,8 +72,6 @@ public final class AdminData implements IXmlReader
 		NamedNodeMap attrs;
 		Node attr;
 		StatsSet set;
-		L2AccessLevel level;
-		L2AdminCommandAccessRight command;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -89,7 +87,7 @@ public final class AdminData implements IXmlReader
 							attr = attrs.item(i);
 							set.set(attr.getNodeName(), attr.getNodeValue());
 						}
-						level = new L2AccessLevel(set);
+						final L2AccessLevel level = new L2AccessLevel(set);
 						if (level.getLevel() > _highestLevel)
 						{
 							_highestLevel = level.getLevel();
@@ -105,7 +103,7 @@ public final class AdminData implements IXmlReader
 							attr = attrs.item(i);
 							set.set(attr.getNodeName(), attr.getNodeValue());
 						}
-						command = new L2AdminCommandAccessRight(set);
+						final L2AdminCommandAccessRight command = new L2AdminCommandAccessRight(set);
 						_adminCommandAccessRights.put(command.getAdminCommand(), command);
 					}
 				}

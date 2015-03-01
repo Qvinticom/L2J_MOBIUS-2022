@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
+
 import java.util.ArrayList;
 
 import com.l2jserver.Config;
@@ -100,6 +102,15 @@ public class MultiSellChoose extends L2GameClientPacket
 		{
 			player.setMultiSell(null);
 			return;
+		}
+		
+		if (!player.isGM() && (npc != null))
+		{
+			if (!player.isInsideRadius(npc, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != npc.getInstanceId()))
+			{
+				player.setMultiSell(null);
+				return;
+			}
 		}
 		
 		for (Entry entry : list.getEntries())

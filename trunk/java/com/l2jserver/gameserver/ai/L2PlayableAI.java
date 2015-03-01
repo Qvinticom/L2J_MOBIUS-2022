@@ -20,7 +20,6 @@ package com.l2jserver.gameserver.ai;
 
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Character.AIAccessor;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
@@ -34,11 +33,11 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public abstract class L2PlayableAI extends L2CharacterAI
 {
 	/**
-	 * @param accessor
+	 * @param creature the creature
 	 */
-	public L2PlayableAI(AIAccessor accessor)
+	public L2PlayableAI(L2Playable creature)
 	{
-		super(accessor);
+		super(creature);
 	}
 	
 	@Override

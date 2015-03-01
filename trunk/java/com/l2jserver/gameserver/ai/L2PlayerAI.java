@@ -29,7 +29,6 @@ import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Character.AIAccessor;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -39,11 +38,11 @@ public class L2PlayerAI extends L2PlayableAI
 {
 	private boolean _thinking; // to prevent recursive thinking
 	
-	IntentionCommand _nextIntention = null;
+	private IntentionCommand _nextIntention = null;
 	
-	public L2PlayerAI(AIAccessor accessor)
+	public L2PlayerAI(L2PcInstance creature)
 	{
-		super(accessor);
+		super(creature);
 	}
 	
 	void saveNextIntention(CtrlIntention intention, Object arg0, Object arg1)
@@ -240,7 +239,7 @@ public class L2PlayerAI extends L2PlayableAI
 			return;
 		}
 		
-		_accessor.doAttack(target);
+		_actor.doAttack(target);
 	}
 	
 	private void thinkCast()
@@ -278,7 +277,7 @@ public class L2PlayerAI extends L2PlayableAI
 			clientStopMoving(null);
 		}
 		
-		_accessor.doCast(_skill);
+		_actor.doCast(_skill);
 	}
 	
 	private void thinkPickUp()
@@ -297,7 +296,7 @@ public class L2PlayerAI extends L2PlayableAI
 			return;
 		}
 		setIntention(AI_INTENTION_IDLE);
-		((L2PcInstance.AIAccessor) _accessor).doPickupItem(target);
+		_actor.getActingPlayer().doPickupItem(target);
 	}
 	
 	private void thinkInteract()
@@ -317,7 +316,7 @@ public class L2PlayerAI extends L2PlayableAI
 		}
 		if (!(target instanceof L2StaticObjectInstance))
 		{
-			((L2PcInstance.AIAccessor) _accessor).doInteract((L2Character) target);
+			_actor.getActingPlayer().doInteract((L2Character) target);
 		}
 		setIntention(AI_INTENTION_IDLE);
 	}

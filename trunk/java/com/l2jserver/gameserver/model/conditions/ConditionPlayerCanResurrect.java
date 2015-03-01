@@ -47,6 +47,10 @@ public class ConditionPlayerCanResurrect extends Condition
 		{
 			return true;
 		}
+		if (effected == null)
+		{
+			return false;
+		}
 		boolean canResurrect = true;
 		
 		if (effected.isPlayer())

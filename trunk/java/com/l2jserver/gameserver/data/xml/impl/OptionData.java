@@ -57,8 +57,6 @@ public class OptionData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		int id;
-		Options op;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -67,8 +65,8 @@ public class OptionData implements IXmlReader
 				{
 					if ("option".equalsIgnoreCase(d.getNodeName()))
 					{
-						id = parseInteger(d.getAttributes(), "id");
-						op = new Options(id);
+						final int id = parseInteger(d.getAttributes(), "id");
+						final Options op = new Options(id);
 						
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{

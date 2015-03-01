@@ -77,11 +77,6 @@ public class EnchantSkillGroupsData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		NamedNodeMap attrs;
-		StatsSet set;
-		Node att;
-		int id = 0;
-		L2EnchantSkillGroup group;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -90,10 +85,9 @@ public class EnchantSkillGroupsData implements IXmlReader
 				{
 					if ("group".equalsIgnoreCase(d.getNodeName()))
 					{
-						attrs = d.getAttributes();
-						id = parseInteger(attrs, "id");
-						
-						group = _enchantSkillGroups.get(id);
+						NamedNodeMap attrs = d.getAttributes();
+						final int id = parseInteger(attrs, "id");
+						L2EnchantSkillGroup group = _enchantSkillGroups.get(id);
 						if (group == null)
 						{
 							group = new L2EnchantSkillGroup(id);
@@ -105,11 +99,11 @@ public class EnchantSkillGroupsData implements IXmlReader
 							if ("enchant".equalsIgnoreCase(b.getNodeName()))
 							{
 								attrs = b.getAttributes();
-								set = new StatsSet();
+								StatsSet set = new StatsSet();
 								
 								for (int i = 0; i < attrs.getLength(); i++)
 								{
-									att = attrs.item(i);
+									Node att = attrs.item(i);
 									set.set(att.getNodeName(), att.getNodeValue());
 								}
 								group.addEnchantDetail(new EnchantSkillHolder(set));

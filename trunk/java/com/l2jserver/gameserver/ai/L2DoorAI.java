@@ -31,12 +31,11 @@ import com.l2jserver.gameserver.model.skills.Skill;
  */
 public class L2DoorAI extends L2CharacterAI
 {
-	public L2DoorAI(L2DoorInstance.AIAccessor accessor)
+	public L2DoorAI(L2DoorInstance creature)
 	{
-		super(accessor);
+		super(creature);
 	}
 	
-	// rather stupid AI... well, it's for doors :D
 	@Override
 	protected void onIntentionIdle()
 	{
@@ -90,8 +89,7 @@ public class L2DoorAI extends L2CharacterAI
 	@Override
 	protected void onEvtAttacked(L2Character attacker)
 	{
-		L2DoorInstance me = (L2DoorInstance) _actor;
-		ThreadPoolManager.getInstance().executeGeneral(new onEventAttackedDoorTask(me, attacker));
+		ThreadPoolManager.getInstance().executeGeneral(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
 	}
 	
 	@Override

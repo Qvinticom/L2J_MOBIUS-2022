@@ -56,26 +56,21 @@ public final class ClassListData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		NamedNodeMap attrs;
-		Node attr;
-		ClassId classId;
-		String className;
-		ClassId parentClassId;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equals(n.getNodeName()))
 			{
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					attrs = d.getAttributes();
+					final NamedNodeMap attrs = d.getAttributes();
 					if ("class".equals(d.getNodeName()))
 					{
-						attr = attrs.getNamedItem("classId");
-						classId = ClassId.getClassId(parseInteger(attr));
+						Node attr = attrs.getNamedItem("classId");
+						final ClassId classId = ClassId.getClassId(parseInteger(attr));
 						attr = attrs.getNamedItem("name");
-						className = attr.getNodeValue();
+						final String className = attr.getNodeValue();
 						attr = attrs.getNamedItem("parentClassId");
-						parentClassId = (attr != null) ? ClassId.getClassId(parseInteger(attr)) : null;
+						final ClassId parentClassId = (attr != null) ? ClassId.getClassId(parseInteger(attr)) : null;
 						_classData.put(classId, new ClassInfo(classId, className, parentClassId));
 					}
 				}
@@ -85,7 +80,7 @@ public final class ClassListData implements IXmlReader
 	
 	/**
 	 * Gets the class list.
-	 * @return the complete class list.
+	 * @return the complete class list
 	 */
 	public Map<ClassId, ClassInfo> getClassList()
 	{
@@ -94,8 +89,8 @@ public final class ClassListData implements IXmlReader
 	
 	/**
 	 * Gets the class info.
-	 * @param classId the class Id.
-	 * @return the class info related to the given {@code classId}.
+	 * @param classId the class ID
+	 * @return the class info related to the given {@code classId}
 	 */
 	public ClassInfo getClass(ClassId classId)
 	{
@@ -104,8 +99,8 @@ public final class ClassListData implements IXmlReader
 	
 	/**
 	 * Gets the class info.
-	 * @param classId the class Id as integer.
-	 * @return the class info related to the given {@code classId}.
+	 * @param classId the class Id as integer
+	 * @return the class info related to the given {@code classId}
 	 */
 	public ClassInfo getClass(int classId)
 	{

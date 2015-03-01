@@ -65,12 +65,11 @@ public final class ExperienceData implements IXmlReader
 		MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
 		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
 		
-		NamedNodeMap attrs;
 		for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("experience".equals(n.getNodeName()))
 			{
-				attrs = n.getAttributes();
+				NamedNodeMap attrs = n.getAttributes();
 				_expTable.put(parseInteger(attrs, "level"), parseLong(attrs, "tolevel"));
 			}
 		}

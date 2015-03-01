@@ -74,9 +74,6 @@ public class AppearanceItemData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		StatsSet set;
-		Node att;
-		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -85,11 +82,11 @@ public class AppearanceItemData implements IXmlReader
 				{
 					if ("appearance_stone".equalsIgnoreCase(d.getNodeName()))
 					{
-						attrs = d.getAttributes();
-						set = new StatsSet();
+						final NamedNodeMap attrs = d.getAttributes();
+						final StatsSet set = new StatsSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							att = attrs.item(i);
+							final Node att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						

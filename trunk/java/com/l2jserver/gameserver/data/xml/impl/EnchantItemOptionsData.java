@@ -52,9 +52,7 @@ public class EnchantItemOptionsData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		Node att = null;
 		int counter = 0;
-		EnchantOptions op = null;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -72,12 +70,12 @@ public class EnchantItemOptionsData implements IXmlReader
 						{
 							if ("options".equalsIgnoreCase(cd.getNodeName()))
 							{
-								op = new EnchantOptions(parseInteger(cd.getAttributes(), "level"));
+								final EnchantOptions op = new EnchantOptions(parseInteger(cd.getAttributes(), "level"));
 								_data.get(itemId).put(op.getLevel(), op);
 								
 								for (byte i = 0; i < 3; i++)
 								{
-									att = cd.getAttributes().getNamedItem("option" + (i + 1));
+									final Node att = cd.getAttributes().getNamedItem("option" + (i + 1));
 									if ((att != null) && Util.isDigit(att.getNodeValue()))
 									{
 										op.setOption(i, parseInteger(att));

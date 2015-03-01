@@ -114,45 +114,10 @@ public class L2DoorInstance extends L2Character
 		}
 	}
 	
-	/** This class may be created only by L2Character and only for AI */
-	public class AIAccessor extends L2Character.AIAccessor
-	{
-		@Override
-		public L2DoorInstance getActor()
-		{
-			return L2DoorInstance.this;
-		}
-		
-		@Override
-		public void moveTo(int x, int y, int z, int offset)
-		{
-		}
-		
-		@Override
-		public void moveTo(int x, int y, int z)
-		{
-		}
-		
-		@Override
-		public void stopMove(Location loc)
-		{
-		}
-		
-		@Override
-		public void doAttack(L2Character target)
-		{
-		}
-		
-		@Override
-		public void doCast(Skill skill)
-		{
-		}
-	}
-	
 	@Override
 	protected L2CharacterAI initAI()
 	{
-		return new L2DoorAI(new AIAccessor());
+		return new L2DoorAI(this);
 	}
 	
 	private void startTimerOpen()
@@ -698,6 +663,26 @@ public class L2DoorInstance extends L2Character
 			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
 		}
 		return true;
+	}
+	
+	@Override
+	public void moveToLocation(int x, int y, int z, int offset)
+	{
+	}
+	
+	@Override
+	public void stopMove(Location loc)
+	{
+	}
+	
+	@Override
+	public void doAttack(L2Character target)
+	{
+	}
+	
+	@Override
+	public void doCast(Skill skill)
+	{
 	}
 	
 	@Override

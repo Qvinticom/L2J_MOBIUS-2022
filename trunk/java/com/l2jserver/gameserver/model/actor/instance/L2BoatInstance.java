@@ -44,7 +44,7 @@ public class L2BoatInstance extends L2Vehicle
 	{
 		super(template);
 		setInstanceType(InstanceType.L2BoatInstance);
-		setAI(new L2BoatAI(new AIAccessor()));
+		setAI(new L2BoatAI(this));
 	}
 	
 	@Override

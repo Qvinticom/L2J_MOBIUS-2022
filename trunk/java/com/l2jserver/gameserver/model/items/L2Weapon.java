@@ -399,6 +399,16 @@ public final class L2Weapon extends L2Item
 			return;
 		}
 		
+		if (trigger.isToggle())
+		{
+			return;
+		}
+		
+		if (caster.getAI().getCastTarget() != target)
+		{
+			return;
+		}
+		
 		if (_skillsOnMagicCondition != null)
 		{
 			if (!_skillsOnMagicCondition.test(caster, target, onMagicSkill))

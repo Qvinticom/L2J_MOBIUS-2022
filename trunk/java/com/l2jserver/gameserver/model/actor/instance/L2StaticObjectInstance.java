@@ -46,41 +46,6 @@ public final class L2StaticObjectInstance extends L2Character
 	private int _type = -1; // 0 - map signs, 1 - throne , 2 - arena signs
 	private ShowTownMap _map;
 	
-	/** This class may be created only by L2Character and only for AI */
-	public class AIAccessor extends L2Character.AIAccessor
-	{
-		@Override
-		public L2StaticObjectInstance getActor()
-		{
-			return L2StaticObjectInstance.this;
-		}
-		
-		@Override
-		public void moveTo(int x, int y, int z, int offset)
-		{
-		}
-		
-		@Override
-		public void moveTo(int x, int y, int z)
-		{
-		}
-		
-		@Override
-		public void stopMove(Location loc)
-		{
-		}
-		
-		@Override
-		public void doAttack(L2Character target)
-		{
-		}
-		
-		@Override
-		public void doCast(Skill skill)
-		{
-		}
-	}
-	
 	/**
 	 * Creates a static object.
 	 * @param template the static object
@@ -238,5 +203,25 @@ public final class L2StaticObjectInstance extends L2Character
 	public void sendInfo(L2PcInstance activeChar)
 	{
 		activeChar.sendPacket(new StaticObject(this));
+	}
+	
+	@Override
+	public void moveToLocation(int x, int y, int z, int offset)
+	{
+	}
+	
+	@Override
+	public void stopMove(Location loc)
+	{
+	}
+	
+	@Override
+	public void doAttack(L2Character target)
+	{
+	}
+	
+	@Override
+	public void doCast(Skill skill)
+	{
 	}
 }
