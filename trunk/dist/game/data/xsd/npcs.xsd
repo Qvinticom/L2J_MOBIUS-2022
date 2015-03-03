@@ -71,7 +71,7 @@
 							</xs:element>
 							<xs:element name="acquire" minOccurs="0" maxOccurs="1">
 								<xs:complexType>
-									<xs:attribute name="expRate" type="xs:decimal" />
+									<xs:attribute name="exp" type="xs:decimal" />
 									<xs:attribute name="sp" type="xs:decimal" />
 									<xs:attribute name="raidPoints" type="xs:decimal" />
 								</xs:complexType>

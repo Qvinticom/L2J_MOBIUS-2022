@@ -61,7 +61,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private int _rhandId;
 	private int _lhandId;
 	private int _weaponEnchant;
-	private double _expRate;
+	private double _exp;
 	private double _sp;
 	private double _raidPoints;
 	private boolean _unique;
@@ -133,7 +133,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_lhandId = set.getInt("lhandId", 0);
 		_weaponEnchant = set.getInt("weaponEnchant", 0);
 		
-		_expRate = set.getDouble("expRate", 0);
+		_exp = set.getDouble("exp", 0);
 		_sp = set.getDouble("sp", 0);
 		_raidPoints = set.getDouble("raidPoints", 0);
 		
@@ -257,9 +257,9 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		return _weaponEnchant;
 	}
 	
-	public double getExpRate()
+	public double getExp()
 	{
-		return _expRate;
+		return _exp;
 	}
 	
 	public double getSP()

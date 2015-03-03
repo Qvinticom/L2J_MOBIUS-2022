@@ -177,7 +177,7 @@ public class NpcData implements IXmlReader
 								}
 								case "acquire":
 								{
-									set.set("expRate", parseDouble(attrs, "expRate"));
+									set.set("exp", parseDouble(attrs, "exp"));
 									set.set("sp", parseDouble(attrs, "sp"));
 									set.set("raidPoints", parseDouble(attrs, "raidPoints"));
 									break;

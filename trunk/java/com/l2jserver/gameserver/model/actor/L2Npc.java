@@ -1183,7 +1183,7 @@ public class L2Npc extends L2Character
 	 */
 	public long getExpReward()
 	{
-		return (long) (getLevel() * getLevel() * getTemplate().getExpRate() * Config.RATE_XP);
+		return (long) (getTemplate().getExp() * Config.RATE_XP);
 	}
 	
 	/**
