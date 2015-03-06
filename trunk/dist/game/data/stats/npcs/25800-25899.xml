@@ -1,0 +1,1774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25800" level="98" type="L2RaidBoss" name="Mammon Collector Talos" title="Lord of Destruction">
+		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25801" count="3" respawnTime="360" weightPoint="1" /> <!-- Talos' Cohort -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeHold_a" id="4197" level="2" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2541012" sp="79280" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="43316.308536" hpRegen="18.438531" mp="259.2" mpRegen="1.5" />
+			<attack physical="74.22232" magical="4.67967" attackSpeed="253" range="40" />
+			<defence physical="305.50599" magical="149.04" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4197" level="2" /> <!--Hold -->
+			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4494" level="1" /> <!--Raid Boss -->
+			<skill id="4983" level="1" /> <!--Raid Boss - Level 25 -->
+		</skill_list>
+		<ai type="BALANCED" clanHelpRange="300" />
+		<drop_lists>
+			<death>
+				<item id="223" min="1" max="1" chance="1.975622141" /> <!-- Kukuri -->
+				<item id="238" min="1" max="1" chance="1.975622141" /> <!-- Dagger of Mana -->
+				<item id="239" min="1" max="1" chance="1.975622141" /> <!-- Mystic Knife -->
+				<item id="241" min="1" max="1" chance="1.975622141" /> <!-- Shilen Knife -->
+				<item id="393" min="1" max="1" chance="12.5543801799" /> <!-- Mithril Banded Mail -->
+				<item id="394" min="1" max="1" chance="12.5543801799" /> <!-- Reinforced Leather Shirt -->
+				<item id="415" min="1" max="1" chance="20.0664255381" /> <!-- Mithril Banded Gaiters -->
+				<item id="416" min="1" max="1" chance="20.0664255381" /> <!-- Reinforced Leather Gaiters -->
+				<item id="1938" min="60" max="180" chance="16.4578510346" /> <!-- Mithril Banded Mail Material -->
+				<item id="1939" min="28" max="84" chance="46.0776635407" /> <!-- Mithril Banded Gaiters Material -->
+				<item id="2028" min="27" max="81" chance="6.4637854247" /> <!-- Shilen Knife Edge -->
+				<item id="22229" min="1" max="1" chance="12.6939" /> <!-- Scroll: Enchant Weapon of Destruction (D-Grade) - Event -->
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="25801" level="22" type="L2Monster" name="Talos' Cohort" title="Follower of Destruction">
+		<!-- TODO: Must be confirmed -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6247.184788" hpRegen="17.157688" mp="218.52" mpRegen="1.5" />
+			<attack physical="231.18622" magical="58.17787" attackSpeed="253" range="40" />
+			<defence physical="138.98541" magical="135.6" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="3" /> <!--Light Armor Type -->
+			<skill id="4415" level="1" /> <!--Bare Hands -->
+			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4743" level="2" /> <!--BOSS Strike -->
+		</skill_list>
+		<ai clanHelpRange="300" />
+		<collision>
+			<radius normal="14" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="25802" level="89" type="L2Npc" name="Pan Direm" title="Faithful Servant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25803" level="87" type="L2Npc" name="Escort Captain" title="Successor Subordinate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25804" level="87" type="L2Npc" name="Escort Captain" title="Successor Subordinate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25805" level="88" type="L2Npc" name="Escort" title="Queen's Subordinate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25806" level="88" type="L2Npc" name="Escort" title="Queen's Subordinate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25807" level="89" type="L2Npc" name="Escort Captain" title="Queen's Subordinate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25808" level="89" type="L2Npc" name="Escort Captain" title="Queen's Subordinate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25809" level="59" type="L2Npc" name="Vladimir" title="Executioner">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25810" level="58" type="L2Npc" name="Vladimir's Follower" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25811" level="62" type="L2Npc" name="Lazearth" title="Destroyer">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25812" level="62" type="L2Npc" name="Lazearth" title="Destroyer">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25813" level="66" type="L2Npc" name="Byron" title="Queen of Blood">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25814" level="65" type="L2Npc" name="Byron's Maid" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25815" level="70" type="L2Npc" name="Ken" title="Savage">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25816" level="72" type="L2Npc" name="Heaven's Palace Sniper Captain" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25817" level="72" type="L2Npc" name="Heaven's Palace Sniper Captain" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25818" level="75" type="L2Npc" name="Emperor of Heaven's Palace" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25819" level="75" type="L2Npc" name="Heaven's Palace Healer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25820" level="75" type="L2Npc" name="Heaven's Palace Goddess" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25821" level="75" type="L2Npc" name="Heaven's Palace Goddess Warrior" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25822" level="95" type="L2Npc" name="Lakielo" title="Cursed Hero">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25823" level="95" type="L2Npc" name="Brakiera" title="Cursed Hero">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25824" level="97" type="L2Npc" name="Ron" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25825" level="97" type="L2Npc" name="Ron" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25826" level="95" type="L2Npc" name="Nameless Subject" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25827" level="45" type="L2Npc" name="Accencio" title="Event Monster">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25828" level="45" type="L2Npc" name="Malicio" title="Event Monster">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25829" level="45" type="L2Npc" name="Mertes" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25830" level="45" type="L2Npc" name="Golem of Repairs" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25831" level="10" type="L2Npc" name="Eyesaroch" title="Husk">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25832" level="20" type="L2Npc" name="Overseer" title="Embryo">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25833" level="97" type="L2Npc" name="Orbis' Victim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25834" level="97" type="L2Npc" name="Orbis' Guard" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25835" level="97" type="L2Npc" name="Orbis' Thrower" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25836" level="97" type="L2Npc" name="Orbis' Curator" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25837" level="92" type="L2Npc" name="Weeping Yui" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25838" level="93" type="L2Npc" name="Mukshu the Coward" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25839" level="96" type="L2Npc" name="Blind Hornafi" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25840" level="94" type="L2Npc" name="Enraged Master Kinen" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25841" level="95" type="L2Npc" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25842" level="95" type="L2Npc" name="Black Beast" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25843" level="96" type="L2Npc" name="Magical Warrior Konyar" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25844" level="96" type="L2Npc" name="Magical Warrior Konyar" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25845" level="96" type="L2Npc" name="Magical Warrior Konyar" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25846" level="96" type="L2Npc" name="Yoentumak the Waiter" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25847" level="88" type="L2Npc" name="Calamity Guardian" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25848" level="88" type="L2Npc" name="Calamity Warrior" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25849" level="88" type="L2Npc" name="Calamity Attacker" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25850" level="88" type="L2Npc" name="Calamity Sniper" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25851" level="88" type="L2Npc" name="Calamity Magician" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25852" level="88" type="L2Npc" name="Calamity Enchanter" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25853" level="88" type="L2Npc" name="Calamity Summoner" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25854" level="88" type="L2Npc" name="Calamity Healer" title="Giant's Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25855" level="96" type="L2Npc" name="Maliss" title="Grand Priest of Blood">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25856" level="96" type="L2Npc" name="Isadora" title="Great Magus of Greed">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25857" level="95" type="L2Npc" name="Corrupted Captain" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25858" level="95" type="L2Npc" name="Corrupted High Priest" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25859" level="97" type="L2Npc" name="Flynt" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25860" level="96" type="L2Npc" name="Flynt's Disciple" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25861" level="96" type="L2Npc" name="Flynt's Servant" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25862" level="97" type="L2Npc" name="Harp" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25863" level="96" type="L2Npc" name="Harp's Guard" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25864" level="96" type="L2Npc" name="Harp's Subordinate" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25865" level="93" type="L2Npc" name="Apherus Subordinate" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25866" level="94" type="L2Npc" name="Apherus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25867" level="98" type="L2Npc" name="Spezion" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25868" level="98" type="L2Npc" name="Spezion" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25869" level="98" type="L2Npc" name="Berserk Spezion" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25870" level="43" type="L2Npc" name="Rose" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25871" level="43" type="L2Npc" name="Thorn" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25872" level="97" type="L2Npc" name="Spezion's Subordinate" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25873" level="97" type="L2Npc" name="Spezion's Subordinate" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25874" level="97" type="L2Npc" name="Spezion's Subordinate" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25875" level="88" type="L2Npc" name="Queen of Darkness" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25876" level="96" type="L2Npc" name="Maliss" title="Grand Priest of Blood">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25877" level="96" type="L2Npc" name="Isadora" title="Great Magus of Greed">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25878" level="85" type="L2Npc" name="Arbitor of Darkness" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25879" level="88" type="L2Npc" name="Queen of Darkness" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25880" level="97" type="L2Npc" name="Georgios" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25881" level="98" type="L2Npc" name="Veridan" title="Hell's Warden">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25882" level="88" type="L2Npc" name="Zellaka" title="Lord of Kartia">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25883" level="93" type="L2Npc" name="Pelline" title="Lord of Kartia">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25884" level="98" type="L2Npc" name="Kalios" title="Lord of Kartia">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25885" level="97" type="L2Npc" name="Guillotine of Death" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25886" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25887" level="97" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25888" level="97" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25889" level="97" type="L2Npc" name="Revenant of Sir Calibus" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25890" level="97" type="L2Npc" name="Soul Collector Acheron" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25891" level="97" type="L2Npc" name="Evil Spirit Tempest" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25892" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25893" level="97" type="L2Npc" name="Strain" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25894" level="94" type="L2Npc" name="Enraged Master Kinen" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25895" level="99" type="L2Npc" name="Lyn Draco" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25896" level="99" type="L2Npc" name="Lyn Draco" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25897" level="99" type="L2Npc" name="Lyn Draco" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25898" level="99" type="L2Npc" name="Cyclone" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="25899" level="99" type="L2Npc" name="Lindvior" title="Wind Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+</list>
