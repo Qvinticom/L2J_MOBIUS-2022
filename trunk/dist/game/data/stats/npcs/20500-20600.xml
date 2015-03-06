@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20500" level="25" type="L2Monster" name="Turek Orc Sentinel">
+	<npc id="20500" level="33" type="L2Monster" name="Turek Orc Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -109,7 +109,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="20501" level="29" type="L2Monster" name="Turek Orc Shaman">
+	<npc id="20501" level="38" type="L2Monster" name="Turek Orc Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -501,7 +501,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="20506" level="17" type="L2Monster" name="Ruin Imp">
+	<npc id="20506" level="30" type="L2Monster" name="Ruin Imp">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -606,7 +606,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20507" level="21" type="L2Monster" name="Ruin Imp Elder">
+	<npc id="20507" level="32" type="L2Monster" name="Ruin Imp Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3741,7 +3741,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="20546" level="34" type="L2Monster" name="Turek Orc Elder">
+	<npc id="20546" level="40" type="L2Monster" name="Turek Orc Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -4741,7 +4741,7 @@
 			<height normal="39" grown="48" />
 		</collision>
 	</npc>
-	<npc id="20555" level="40" type="L2Monster" name="Giant Fungus">
+	<npc id="20555" level="53" type="L2Monster" name="Giant Fungus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5070,7 +5070,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="20558" level="43" type="L2Monster" name="Rotting tree">
+	<npc id="20558" level="54" type="L2Monster" name="Rotting tree">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -9884,7 +9884,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20600" level="85" type="L2Npc" name="Karul Bugbear" title="">
+	<npc id="20600" level="40" type="L2Npc" name="Karul Bugbear" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

@@ -721,7 +721,7 @@
 			<height normal="35" grown="43" />
 		</collision>
 	</npc>
-	<npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
+	<npc id="29014" level="60" type="L2GrandBoss" name="Orfen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -830,7 +830,7 @@
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="29015" level="48" type="L2Monster" name="Raikel">
+	<npc id="29015" level="59" type="L2Monster" name="Raikel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -877,7 +877,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29016" level="49" type="L2Monster" name="Raikel Leos">
+	<npc id="29016" level="59" type="L2Monster" name="Raikel Leos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -924,7 +924,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29017" level="48" type="L2Monster" name="Riba">
+	<npc id="29017" level="59" type="L2Monster" name="Riba">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -971,7 +971,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="29018" level="49" type="L2Monster" name="Riba Iren">
+	<npc id="29018" level="59" type="L2Monster" name="Riba Iren">
 		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>FEMALE</sex>
@@ -1224,7 +1224,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29020" level="75" type="L2GrandBoss" name="Baium">
+	<npc id="29020" level="78" type="L2GrandBoss" name="Baium">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1584,7 +1584,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="29025" level="75" type="L2Npc" name="Baium">
+	<npc id="29025" level="78" type="L2Npc" name="Baium">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1722,7 +1722,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="29028" level="85" type="L2GrandBoss" name="Valakas" title="Fire Dragon">
+	<npc id="29028" level="99" type="L2GrandBoss" name="Valakas" title="Fire Dragon">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -1855,7 +1855,7 @@
 			<height normal="335" />
 		</collision>
 	</npc>
-	<npc id="29029" level="85" type="L2Monster" name="Lavasaurus Alpha">
+	<npc id="29029" level="99" type="L2Monster" name="Lavasaurus Alpha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SkillRange" value="500" />
@@ -3093,7 +3093,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="29053" level="85" type="L2Monster" name="">
+	<npc id="29053" level="84" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3649,7 +3649,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="29063" level="80" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
+	<npc id="29063" level="99" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="10" /> <!-- BOSS Life Drain -->
@@ -3704,7 +3704,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="29064" level="80" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
+	<npc id="29064" level="99" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="10" /> <!-- BOSS Chant of Life -->
@@ -4264,7 +4264,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29068" level="85" type="L2GrandBoss" name="Antharas" title="Earth Dragon">
+	<npc id="29068" level="99" type="L2GrandBoss" name="Antharas" title="Earth Dragon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
@@ -4399,7 +4399,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29069" level="85" type="L2Monster" name="Behemoth Dragon">
+	<npc id="29069" level="99" type="L2Monster" name="Behemoth Dragon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RootingManage" value="0" />
@@ -4456,7 +4456,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29070" level="85" type="L2Monster" name="Dragon Bomber">
+	<npc id="29070" level="99" type="L2Monster" name="Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
@@ -4758,7 +4758,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29076" level="85" type="L2Monster" name="Dragon Bomber">
+	<npc id="29076" level="99" type="L2Monster" name="Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
@@ -6075,7 +6075,7 @@
 			<height normal="77.5" />
 		</collision>
 	</npc>
-	<npc id="29100" level="85" type="L2Npc" name="Crystal Prison Guard" title="">
+	<npc id="29100" level="83" type="L2Npc" name="Crystal Prison Guard" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

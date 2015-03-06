@@ -970,7 +970,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25418" level="44" type="L2RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
+	<npc id="25418" level="57" type="L2RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1062,7 +1062,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25419" level="43" type="L2Monster" name="Dread Panther" title="Raid Fighter">
+	<npc id="25419" level="56" type="L2Monster" name="Dread Panther" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
@@ -1178,7 +1178,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25421" level="47" type="L2Monster" name="Trisalim Escort" title="Raid Fighter">
+	<npc id="25421" level="57" type="L2Monster" name="Trisalim Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="4" /> <!-- Decrease Speed -->
@@ -1221,7 +1221,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25422" level="47" type="L2Monster" name="Page of Rotting Tree" title="Raid Fighter">
+	<npc id="25422" level="57" type="L2Monster" name="Page of Rotting Tree" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
@@ -5449,7 +5449,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="25500" level="85" type="L2Npc" name="Alligator of Istary" title="Raid Fighter">
+	<npc id="25500" level="44" type="L2Npc" name="Alligator of Istary" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

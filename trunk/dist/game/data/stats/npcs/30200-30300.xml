@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="30200" level="80" type="L2Guard" name="Stan" title="Guard">
+	<npc id="30200" level="99" type="L2Guard" name="Stan" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -41,7 +41,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30201" level="80" type="L2Guard" name="Pinaps" title="Guard">
+	<npc id="30201" level="99" type="L2Guard" name="Pinaps" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -242,7 +242,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30216" level="80" type="L2Guard" name="Wheeler" title="Sentinel">
+	<npc id="30216" level="99" type="L2Guard" name="Wheeler" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -283,7 +283,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30217" level="80" type="L2Guard" name="Berros" title="Sentinel">
+	<npc id="30217" level="99" type="L2Guard" name="Berros" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -324,7 +324,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30218" level="80" type="L2Guard" name="Kendell" title="Sentinel">
+	<npc id="30218" level="99" type="L2Guard" name="Kendell" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -365,7 +365,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30219" level="80" type="L2Guard" name="Veltress" title="Sentinel">
+	<npc id="30219" level="99" type="L2Guard" name="Veltress" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -406,7 +406,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30220" level="80" type="L2Guard" name="Starden" title="Sentinel">
+	<npc id="30220" level="99" type="L2Guard" name="Starden" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -447,7 +447,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30221" level="80" type="L2Guard" name="Rayen" title="Sentinel">
+	<npc id="30221" level="99" type="L2Guard" name="Rayen" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -568,7 +568,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="30224" level="80" type="L2Guard" name="Rayla" title="Sentry Knight">
+	<npc id="30224" level="99" type="L2Guard" name="Rayla" title="Sentry Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -972,7 +972,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="30284" level="80" type="L2Guard" name="Alberius" title="Sentinel Knight">
+	<npc id="30284" level="99" type="L2Guard" name="Alberius" title="Sentinel Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1013,7 +1013,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30285" level="80" type="L2Guard" name="Gartrandell" title="Sentinel">
+	<npc id="30285" level="99" type="L2Guard" name="Gartrandell" title="Sentinel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1378,7 +1378,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="30300" level="85" type="L2Npc" name="Pushkin" title="Blacksmith">
+	<npc id="30300" level="70" type="L2Npc" name="Pushkin" title="Blacksmith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

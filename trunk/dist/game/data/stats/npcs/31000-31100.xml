@@ -1170,7 +1170,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31032" level="80" type="L2Guard" name="Guard">
+	<npc id="31032" level="99" type="L2Guard" name="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -1258,7 +1258,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31034" level="80" type="L2Guard" name="Sentry">
+	<npc id="31034" level="99" type="L2Guard" name="Sentry">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -1300,7 +1300,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31035" level="80" type="L2Guard" name="Defender">
+	<npc id="31035" level="99" type="L2Guard" name="Defender">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -3041,7 +3041,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31100" level="85" type="L2Npc" name="Gatekeeper Ziggurat" title="">
+	<npc id="31100" level="70" type="L2Npc" name="Gatekeeper Ziggurat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
