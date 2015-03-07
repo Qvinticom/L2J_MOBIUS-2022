@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="32500" level="70" type="L2Npc" name="Inspector Sinai">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -41,7 +40,6 @@
 		</collision>
 	</npc>
 	<npc id="32501" level="70" type="L2Npc" name="Devil's Isle Supporter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -81,7 +79,6 @@
 		</collision>
 	</npc>
 	<npc id="32502" level="70" type="L2Npc" name="Ketra Orc Supporter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -122,7 +119,6 @@
 		</collision>
 	</npc>
 	<npc id="32503" level="70" type="L2Teleporter" name="Entrance Manager" title="Kratei's Cube">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -162,7 +158,6 @@
 		</collision>
 	</npc>
 	<npc id="32504" level="70" type="L2Npc" name="Match Manager" title="Kratei's Cube">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -202,7 +197,6 @@
 		</collision>
 	</npc>
 	<npc id="32505" level="70" type="L2Npc" name="Match Manager" title="Kratei's Cube">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -242,7 +236,6 @@
 		</collision>
 	</npc>
 	<npc id="32506" level="70" type="L2Npc" name="Match Manager" title="Kratei's Cube">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -282,7 +275,6 @@
 		</collision>
 	</npc>
 	<npc id="32507" level="70" type="L2Npc" name="Temple Inspector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -322,7 +314,6 @@
 		</collision>
 	</npc>
 	<npc id="32508" level="70" type="L2Npc" name="Dwarf Adventurer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -362,7 +353,6 @@
 		</collision>
 	</npc>
 	<npc id="32509" level="70" type="L2Npc" name="Ketra Orc Intelligence Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -403,7 +393,6 @@
 		</collision>
 	</npc>
 	<npc id="32510" level="70" type="L2Npc" name="Inspector Adler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="187" />
@@ -443,7 +432,6 @@
 		</collision>
 	</npc>
 	<npc id="32511" level="70" type="L2Npc" name="Dwarf Adventurer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -483,7 +471,6 @@
 		</collision>
 	</npc>
 	<npc id="32512" level="70" type="L2Npc" name="Ketra Orc Supporter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -524,7 +511,6 @@
 		</collision>
 	</npc>
 	<npc id="32513" level="70" type="L2Npc" name="Kun" title="Entrance Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -560,7 +546,6 @@
 		</collision>
 	</npc>
 	<npc id="32514" level="70" type="L2Npc" name="Tarion" title="Entrance Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -596,7 +581,6 @@
 		</collision>
 	</npc>
 	<npc id="32515" level="70" type="L2Npc" name="Leo" title="Entrance Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -632,7 +616,6 @@
 		</collision>
 	</npc>
 	<npc id="32516" level="70" type="L2Npc" name="Candice" title="Entrance Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -668,7 +651,6 @@
 		</collision>
 	</npc>
 	<npc id="32517" level="70" type="L2Npc" name="Flight Device">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -709,7 +691,6 @@
 		</collision>
 	</npc>
 	<npc id="32518" level="70" type="L2Npc" name="Vortex Gate" title="Aerial Cleft">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -753,7 +734,6 @@
 		</collision>
 	</npc>
 	<npc id="32519" level="70" type="L2Npc" name="Vortex Gate" title="Aerial Cleft">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -797,7 +777,6 @@
 		</collision>
 	</npc>
 	<npc id="32520" level="70" type="L2Npc" name="Emery Converter" title="Aerial Cleft">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -841,7 +820,6 @@
 		</collision>
 	</npc>
 	<npc id="32521" level="70" type="L2Npc" name="Entrance Manager" title="Handy's Block Checker - Arena 1">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="GroundID" value="0" />
 		</parameters>
@@ -880,7 +858,6 @@
 		</collision>
 	</npc>
 	<npc id="32522" level="70" type="L2Npc" name="Entrance Manager" title="Handy's Block Checker - Arena 2">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="GroundID" value="1" />
 		</parameters>
@@ -919,7 +896,6 @@
 		</collision>
 	</npc>
 	<npc id="32523" level="70" type="L2Npc" name="Entrance Manager" title="Handy's Block Checker - Arena 3">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="GroundID" value="2" />
 		</parameters>
@@ -958,7 +934,6 @@
 		</collision>
 	</npc>
 	<npc id="32524" level="70" type="L2Npc" name="Entrance Manager" title="Handy's Block Checker - Arena 4">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="GroundID" value="3" />
 		</parameters>
@@ -997,7 +972,6 @@
 		</collision>
 	</npc>
 	<npc id="32525" level="70" type="L2Npc" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1033,7 +1007,6 @@
 		</collision>
 	</npc>
 	<npc id="32526" level="70" type="L2Npc" name="Allenos" title="Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="13524" lhand="13525" /> <!-- rhand: Gracian Soldier One-handed Sword lhand: Gracian Soldier Shield -->
@@ -1070,7 +1043,6 @@
 		</collision>
 	</npc>
 	<npc id="32527" level="70" type="L2Npc" name="Edric" title="Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1110,7 +1082,6 @@
 		</collision>
 	</npc>
 	<npc id="32528" level="70" type="L2Npc" name="Medibal's Corpse">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1150,7 +1121,6 @@
 		</collision>
 	</npc>
 	<npc id="32529" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1187,7 +1157,6 @@
 		</collision>
 	</npc>
 	<npc id="32530" level="70" type="L2Npc" name="Tepios" title="Officer">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="13524" lhand="13525" /> <!-- rhand: Gracian Soldier One-handed Sword lhand: Gracian Soldier Shield -->
@@ -1224,7 +1193,6 @@
 		</collision>
 	</npc>
 	<npc id="32531" level="70" type="L2Npc" name="Destroyed Tumor">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1261,7 +1229,6 @@
 		</collision>
 	</npc>
 	<npc id="32532" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1298,7 +1265,6 @@
 		</collision>
 	</npc>
 	<npc id="32533" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1335,7 +1301,6 @@
 		</collision>
 	</npc>
 	<npc id="32534" level="70" type="L2Teleporter" name="Jaedin" title="Guide of Infinity">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1372,7 +1337,6 @@
 		</collision>
 	</npc>
 	<npc id="32535" level="70" type="L2Npc" name="Destroyed Tumor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="def" />
 		</parameters>
@@ -1412,7 +1376,6 @@
 		</collision>
 	</npc>
 	<npc id="32536" level="70" type="L2Npc" name="Destroyed Tumor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="boss" />
 		</parameters>
@@ -1452,7 +1415,6 @@
 		</collision>
 	</npc>
 	<npc id="32537" level="70" type="L2Npc" name="Mouth of Ekimus">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1489,7 +1451,6 @@
 		</collision>
 	</npc>
 	<npc id="32538" level="70" type="L2Npc" name="Closed Mouth of Ekimus">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1526,7 +1487,6 @@
 		</collision>
 	</npc>
 	<npc id="32539" level="70" type="L2Teleporter" name="Gatekeeper of Abyss">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1563,7 +1523,6 @@
 		</collision>
 	</npc>
 	<npc id="32540" level="70" type="L2Npc" name="Gatekeeper of Abyss">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1600,7 +1559,6 @@
 		</collision>
 	</npc>
 	<npc id="32541" level="70" type="L2Npc" name="Unstable Seed of Generation">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="def" />
 		</parameters>
@@ -1640,7 +1598,6 @@
 		</collision>
 	</npc>
 	<npc id="32542" level="70" type="L2Npc" name="Stabilized Seed of Generation">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1677,7 +1634,6 @@
 		</collision>
 	</npc>
 	<npc id="32543" level="99" type="L2Npc" name="Cocoring's Sprite" title="Chest of Glory">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1701,7 +1657,6 @@
 		</collision>
 	</npc>
 	<npc id="32544" level="70" type="L2Npc" name="Seed of Generation" title="Artificial">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="decoy" />
 		</parameters>
@@ -1741,7 +1696,6 @@
 		</collision>
 	</npc>
 	<npc id="32545" level="99" type="L2Npc" name="Cocoring's Sprite" title="Chest of Victory">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1765,7 +1719,6 @@
 		</collision>
 	</npc>
 	<npc id="32546" level="70" type="L2Merchant" name="Asyatei" title="Soul Trader">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1801,7 +1754,6 @@
 		</collision>
 	</npc>
 	<npc id="32547" level="70" type="L2Npc" name="Center Tumor">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1838,7 +1790,6 @@
 		</collision>
 	</npc>
 	<npc id="32548" level="70" type="L2Npc" name="Keucereus" title="Admiral">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1878,7 +1829,6 @@
 		</collision>
 	</npc>
 	<npc id="32549" level="70" type="L2Npc" name="Dilios" title="General">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1918,7 +1868,6 @@
 		</collision>
 	</npc>
 	<npc id="32550" level="70" type="L2Npc" name="Kirklan" title="Special Product Broker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1958,7 +1907,6 @@
 		</collision>
 	</npc>
 	<npc id="32551" level="70" type="L2Npc" name="Noiless" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1999,7 +1947,6 @@
 		</collision>
 	</npc>
 	<npc id="32552" level="70" type="L2Npc" name="Tomaris" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2040,7 +1987,6 @@
 		</collision>
 	</npc>
 	<npc id="32553" level="70" type="L2Npc" name="Jisans" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2081,7 +2027,6 @@
 		</collision>
 	</npc>
 	<npc id="32554" level="70" type="L2Npc" name="Moira" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -2122,7 +2067,6 @@
 		</collision>
 	</npc>
 	<npc id="32555" level="70" type="L2Npc" name="Tenius" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2162,7 +2106,6 @@
 		</collision>
 	</npc>
 	<npc id="32556" level="70" type="L2Npc" name="El" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2202,7 +2145,6 @@
 		</collision>
 	</npc>
 	<npc id="32557" level="70" type="L2Npc" name="Lekon" title="Engineer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -2242,7 +2184,6 @@
 		</collision>
 	</npc>
 	<npc id="32558" level="70" type="L2Npc" name="Barrier Orb">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2283,7 +2224,6 @@
 		</collision>
 	</npc>
 	<npc id="32559" level="70" type="L2Npc" name="Artius" title="War Mage">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -2323,7 +2263,6 @@
 		</collision>
 	</npc>
 	<npc id="32560" level="70" type="L2Npc" name="Orbyu" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2364,7 +2303,6 @@
 		</collision>
 	</npc>
 	<npc id="32561" level="70" type="L2Npc" name="Kunota" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2405,7 +2343,6 @@
 		</collision>
 	</npc>
 	<npc id="32562" level="70" type="L2Npc" name="Siest" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2446,7 +2383,6 @@
 		</collision>
 	</npc>
 	<npc id="32563" level="70" type="L2Npc" name="Plenos" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2487,7 +2423,6 @@
 		</collision>
 	</npc>
 	<npc id="32564" level="70" type="L2Npc" name="Papiku" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2527,7 +2462,6 @@
 		</collision>
 	</npc>
 	<npc id="32565" level="70" type="L2Npc" name="Felix" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2567,7 +2501,6 @@
 		</collision>
 	</npc>
 	<npc id="32566" level="70" type="L2Npc" name="Ginby" title="Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2610,7 +2543,6 @@
 		</collision>
 	</npc>
 	<npc id="32567" level="70" type="L2Npc" name="Lelrikia" title="Shilen's Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="200" />
@@ -2650,7 +2582,6 @@
 		</collision>
 	</npc>
 	<npc id="32568" level="70" type="L2Npc" name="Unidentified Body">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2690,7 +2621,6 @@
 		</collision>
 	</npc>
 	<npc id="32569" level="70" type="L2Npc" name="Cain" title="Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2730,7 +2660,6 @@
 		</collision>
 	</npc>
 	<npc id="32570" level="70" type="L2Npc" name="Eric" title="Herb Collector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2770,7 +2699,6 @@
 		</collision>
 	</npc>
 	<npc id="32571" level="70" type="L2Npc" name="Colin" title="Secret Agent">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2810,7 +2738,6 @@
 		</collision>
 	</npc>
 	<npc id="32572" level="70" type="L2Npc" name="Frog" title="Great King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2851,7 +2778,6 @@
 		</collision>
 	</npc>
 	<npc id="32573" level="70" type="L2Npc" name="Tess" title="Grandma">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="146" />
 			<param name="MoveAroundSocial1" value="61" />
@@ -2891,7 +2817,6 @@
 		</collision>
 	</npc>
 	<npc id="32574" level="70" type="L2Npc" name="Kuta" title="Native">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2931,7 +2856,6 @@
 		</collision>
 	</npc>
 	<npc id="32575" level="70" type="L2Npc" name="Light of Dawn" title="Teleporter">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2968,7 +2892,6 @@
 		</collision>
 	</npc>
 	<npc id="32576" level="70" type="L2Npc" name="John" title="Captain of the Dawn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3008,7 +2931,6 @@
 		</collision>
 	</npc>
 	<npc id="32577" level="70" type="L2Npc" name="Password Entry Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3045,7 +2967,6 @@
 		</collision>
 	</npc>
 	<npc id="32578" level="70" type="L2Npc" name="Identity Confirm Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3082,7 +3003,6 @@
 		</collision>
 	</npc>
 	<npc id="32579" level="70" type="L2Npc" name="Darkness of Dawn" title="Teleporter">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3119,7 +3039,6 @@
 		</collision>
 	</npc>
 	<npc id="32580" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3156,7 +3075,6 @@
 		</collision>
 	</npc>
 	<npc id="32581" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3193,7 +3111,6 @@
 		</collision>
 	</npc>
 	<npc id="32582" level="99" type="L2Npc" name="Cocoring's Sprite" title="Chest of Friendship">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3217,7 +3134,6 @@
 		</collision>
 	</npc>
 	<npc id="32583" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3258,7 +3174,6 @@
 		</collision>
 	</npc>
 	<npc id="32584" level="70" type="L2Npc" name="Merchant of Mammon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="203" />
@@ -3298,7 +3213,6 @@
 		</collision>
 	</npc>
 	<npc id="32585" level="70" type="L2Npc" name="Promise of Mammon" title="Teleporter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3339,7 +3253,6 @@
 		</collision>
 	</npc>
 	<npc id="32586" level="70" type="L2Npc" name="Shunaiman" title="Elmoreden's Emperor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3379,7 +3292,6 @@
 		</collision>
 	</npc>
 	<npc id="32587" level="70" type="L2Npc" name="Leon" title="Emperor's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3419,7 +3331,6 @@
 		</collision>
 	</npc>
 	<npc id="32588" level="70" type="L2Npc" name="Emperor's Seal Device">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3460,7 +3371,6 @@
 		</collision>
 	</npc>
 	<npc id="32589" level="70" type="L2Npc" name="Emperor's Seal Device">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3501,7 +3411,6 @@
 		</collision>
 	</npc>
 	<npc id="32590" level="70" type="L2Npc" name="Emperor's Seal Device">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3542,7 +3451,6 @@
 		</collision>
 	</npc>
 	<npc id="32591" level="70" type="L2Npc" name="Emperor's Seal Device">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3583,7 +3491,6 @@
 		</collision>
 	</npc>
 	<npc id="32592" level="70" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3620,7 +3527,6 @@
 		</collision>
 	</npc>
 	<npc id="32593" level="70" type="L2Npc" name="Wood" title="Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3660,7 +3566,6 @@
 		</collision>
 	</npc>
 	<npc id="32594" level="70" type="L2Npc" name="Leopard" title="Password Decoder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
@@ -3700,7 +3605,6 @@
 		</collision>
 	</npc>
 	<npc id="32595" level="70" type="L2Npc" name="Lawrence" title="Great Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -3740,7 +3644,6 @@
 		</collision>
 	</npc>
 	<npc id="32596" level="70" type="L2Npc" name="Sophia" title="Library of Sages Director">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3780,7 +3683,6 @@
 		</collision>
 	</npc>
 	<npc id="32597" level="70" type="L2Npc" name="Franz" title="Witness of Dawn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3820,7 +3722,6 @@
 		</collision>
 	</npc>
 	<npc id="32598" level="70" type="L2Npc" name="Court Wizard" title="Elmoreden's">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3860,7 +3761,6 @@
 		</collision>
 	</npc>
 	<npc id="32599" level="70" type="L2Npc" name="Master Yogi" title="Mountain Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22800" level="84" type="L2Monster" name="Divinity Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6321" level="1" /> <!-- Divine Flash -->
@@ -112,7 +111,6 @@
 		</collision>
 	</npc>
 	<npc id="22801" level="72" type="L2Monster" name="Cruel Pincer Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Privates01_sil" value="22802" /> <!-- Cruel Pincer Golem -->
 			<param name="Privates01_ai" value="golem_cannon2_p" />
@@ -212,7 +210,6 @@
 		</collision>
 	</npc>
 	<npc id="22802" level="72" type="L2Monster" name="Cruel Pincer Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9" /> <!-- NPC earth attack -->
 		</parameters>
@@ -310,7 +307,6 @@
 		</collision>
 	</npc>
 	<npc id="22803" level="72" type="L2Monster" name="Cruel Pincer Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9" /> <!-- NPC earth attack -->
 		</parameters>
@@ -404,7 +400,6 @@
 		</collision>
 	</npc>
 	<npc id="22804" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Privates01_sil" value="22805" /> <!-- Horrifying Jackhammer Golem -->
 			<param name="Privates01_ai" value="golem_prop2_p" />
@@ -503,7 +498,6 @@
 		</collision>
 	</npc>
 	<npc id="22805" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6599" level="9" /> <!-- NPC earth attack -->
 		</parameters>
@@ -599,7 +593,6 @@
 		</collision>
 	</npc>
 	<npc id="22806" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6599" level="9" /> <!-- NPC earth attack -->
 		</parameters>
@@ -694,7 +687,6 @@
 		</collision>
 	</npc>
 	<npc id="22807" level="72" type="L2Monster" name="Scout-type Golem No. 28">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6610" level="9" /> <!-- NPC earth magic -->
 			<skill name="Skill02_ID" id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
@@ -791,7 +783,6 @@
 		</collision>
 	</npc>
 	<npc id="22808" level="72" type="L2Monster" name="Scout-type Golem No. 2">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6597" level="9" /> <!-- NPC earth attack -->
@@ -892,7 +883,6 @@
 		</collision>
 	</npc>
 	<npc id="22809" level="73" type="L2Monster" name="Guard Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6599" level="9" /> <!-- NPC earth attack -->
@@ -963,7 +953,6 @@
 		</collision>
 	</npc>
 	<npc id="22810" level="72" type="L2Monster" name="Micro Scout Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6599" level="9" /> <!-- NPC earth attack -->
@@ -1036,7 +1025,6 @@
 		</collision>
 	</npc>
 	<npc id="22811" level="73" type="L2Monster" name="Great Chaos Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6262" level="1" /> <!-- EMP Power -->
@@ -1110,7 +1098,6 @@
 		</collision>
 	</npc>
 	<npc id="22812" level="72" type="L2Monster" name="Boom Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6264" level="1" /> <!-- Golem Boom -->
 		</parameters>
@@ -1246,7 +1233,6 @@
 		</collision>
 	</npc>
 	<npc id="22815" level="80" type="L2Monster" name="Drakos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6845" level="1" /> <!-- Power Strike -->
@@ -1360,7 +1346,6 @@
 		</collision>
 	</npc>
 	<npc id="22816" level="81" type="L2Monster" name="Maluk Maiden of the Valley">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6846" level="1" /> <!-- Vampiric Claw -->
@@ -1463,7 +1448,6 @@
 		</collision>
 	</npc>
 	<npc id="22817" level="82" type="L2Monster" name="Maluk Summoner of the Valley">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6849" level="1" /> <!-- Summoner Strike -->
 		</parameters>
@@ -1565,7 +1549,6 @@
 		</collision>
 	</npc>
 	<npc id="22818" level="81" type="L2Monster" name="Exploding Orc Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6850" level="1" /> <!-- Self-destruction -->
@@ -1677,7 +1660,6 @@
 		</collision>
 	</npc>
 	<npc id="22819" level="81" type="L2Monster" name="Wrathful Orc Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6851" level="1" /> <!-- Power Strike -->
@@ -1785,7 +1767,6 @@
 		</collision>
 	</npc>
 	<npc id="22820" level="82" type="L2Monster" name="Mesmer Drake" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -1891,7 +1872,6 @@
 		</collision>
 	</npc>
 	<npc id="22821" level="82" type="L2Monster" name="Immortal Necromancer" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6855" level="1" /> <!-- Magic Strike -->
@@ -1991,7 +1971,6 @@
 		</collision>
 	</npc>
 	<npc id="22822" level="83" type="L2Monster" name="Drakos Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6857" level="1" /> <!-- Power Strike -->
@@ -2070,7 +2049,6 @@
 		</collision>
 	</npc>
 	<npc id="22823" level="83" type="L2Monster" name="Drakos Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6859" level="1" /> <!-- Power Strike -->
@@ -2150,7 +2128,6 @@
 		</collision>
 	</npc>
 	<npc id="22824" level="84" type="L2Monster" name="Drakos Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6860" level="1" /> <!-- Power Strike -->
@@ -2238,7 +2215,6 @@
 		</collision>
 	</npc>
 	<npc id="22825" level="83" type="L2Monster" name="Giant Scorpion Bones">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6862" level="1" /> <!-- Poison -->
@@ -2321,7 +2297,6 @@
 		</collision>
 	</npc>
 	<npc id="22826" level="83" type="L2Monster" name="Scorpion Bones">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2399,7 +2374,6 @@
 		</collision>
 	</npc>
 	<npc id="22827" level="84" type="L2Monster" name="Batwing Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6866" level="1" /> <!-- Vampiric Claw -->
@@ -2481,7 +2455,6 @@
 		</collision>
 	</npc>
 	<npc id="22828" level="83" type="L2Monster" name="Parasitic Leech">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Probablity" value="1111" />
@@ -2565,7 +2538,6 @@
 		</collision>
 	</npc>
 	<npc id="22829" level="82" type="L2Monster" name="Emerald Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill05_Probablity" value="1111" />
@@ -2651,7 +2623,6 @@
 		</collision>
 	</npc>
 	<npc id="22830" level="83" type="L2Monster" name="Gem Dragon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6876" level="1" /> <!-- Power Strike -->
@@ -2739,7 +2710,6 @@
 		</collision>
 	</npc>
 	<npc id="22831" level="83" type="L2Monster" name="Dragon Tracker of the Valley" title="Tracker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6876" level="1" /> <!-- Power Strike -->
@@ -2823,7 +2793,6 @@
 		</collision>
 	</npc>
 	<npc id="22832" level="83" type="L2Monster" name="Dragon Scout of the Valley" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6876" level="1" /> <!-- Power Strike -->
@@ -2910,7 +2879,6 @@
 		</collision>
 	</npc>
 	<npc id="22833" level="83" type="L2Monster" name="Sand Drake Tracker" title="Tracker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6879" level="1" /> <!-- Vampiric Claw -->
@@ -3000,7 +2968,6 @@
 		</collision>
 	</npc>
 	<npc id="22834" level="84" type="L2Monster" name="Dust Dragon Tracker" title="Tracker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6881" level="1" /> <!-- Critical Strike -->
@@ -3083,7 +3050,6 @@
 		</collision>
 	</npc>
 	<npc id="22835" level="83" type="L2Monster" name="Magma Drake Mother">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3135,7 +3101,6 @@
 		</collision>
 	</npc>
 	<npc id="22836" level="83" type="L2Monster" name="Magma Drake Hatchling">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3187,7 +3152,6 @@
 		</collision>
 	</npc>
 	<npc id="22837" level="83" type="L2Monster" name="Gem Dragon Hatchling">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3238,7 +3202,6 @@
 		</collision>
 	</npc>
 	<npc id="22838" level="85" type="L2Monster" name="Maluk Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6748" level="1" /> <!-- Stun Attack -->
@@ -3326,7 +3289,6 @@
 		</collision>
 	</npc>
 	<npc id="22839" level="85" type="L2Monster" name="Maluk Warlord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6755" level="1" /> <!-- Death Strike -->
@@ -3419,7 +3381,6 @@
 		</collision>
 	</npc>
 	<npc id="22840" level="85" type="L2Monster" name="Maluk Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6753" level="1" /> <!-- Death Blow -->
@@ -3512,7 +3473,6 @@
 		</collision>
 	</npc>
 	<npc id="22841" level="85" type="L2Monster" name="Maluk Princess">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6749" level="1" /> <!-- Death Strike -->
@@ -3597,7 +3557,6 @@
 		</collision>
 	</npc>
 	<npc id="22842" level="85" type="L2Monster" name="Maluk Banshee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6757" level="1" /> <!-- Slow -->
@@ -3684,7 +3643,6 @@
 		</collision>
 	</npc>
 	<npc id="22843" level="85" type="L2Monster" name="Maluk Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6759" level="1" /> <!-- Death Shot -->
@@ -3770,7 +3728,6 @@
 		</collision>
 	</npc>
 	<npc id="22844" level="85" type="L2Monster" name="Dragon Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -3859,7 +3816,6 @@
 		</collision>
 	</npc>
 	<npc id="22845" level="85" type="L2Monster" name="Dragon Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -3948,7 +3904,6 @@
 		</collision>
 	</npc>
 	<npc id="22846" level="85" type="L2Monster" name="Elite Dragon Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -4036,7 +3991,6 @@
 		</collision>
 	</npc>
 	<npc id="22847" level="85" type="L2Monster" name="Dragon Knight Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" /> <!-- Dragon Strike -->
 			<skill name="Skill02_ID" id="6762" level="1" /> <!-- Rage -->
@@ -4124,7 +4078,6 @@
 		</collision>
 	</npc>
 	<npc id="22848" level="85" type="L2Monster" name="Drake Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -4212,7 +4165,6 @@
 		</collision>
 	</npc>
 	<npc id="22849" level="85" type="L2Monster" name="Drake Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" /> <!-- Dragon Strike -->
 		</parameters>
@@ -4298,7 +4250,6 @@
 		</collision>
 	</npc>
 	<npc id="22850" level="85" type="L2Monster" name="Drake Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6764" level="1" /> <!-- Dragon Earth Shot -->
 			<skill name="Skill02_ID" id="6761" level="1" /> <!-- Dragon Blow Strike -->
@@ -4385,7 +4336,6 @@
 		</collision>
 	</npc>
 	<npc id="22851" level="85" type="L2Monster" name="Drake Mage">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6766" level="1" /> <!-- Earth Tremor -->
 			<skill name="SpecialSkill01_ID" id="6765" level="1" /> <!-- Complete Recovery -->
@@ -4468,7 +4418,6 @@
 		</collision>
 	</npc>
 	<npc id="22852" level="85" type="L2Monster" name="Dragon Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6768" level="1" /> <!-- Stun Attack -->
@@ -4551,7 +4500,6 @@
 		</collision>
 	</npc>
 	<npc id="22853" level="85" type="L2Monster" name="Dragon Mage">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6769" level="1" /> <!-- Petrify -->
@@ -4636,7 +4584,6 @@
 		</collision>
 	</npc>
 	<npc id="22854" level="85" type="L2Monster" name="Bloody Karik">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6771" level="1" /> <!-- Death Strike -->
@@ -4722,7 +4669,6 @@
 		</collision>
 	</npc>
 	<npc id="22855" level="85" type="L2Monster" name="Bloody Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6774" level="1" /> <!-- Stun Attack -->
@@ -4808,7 +4754,6 @@
 		</collision>
 	</npc>
 	<npc id="22856" level="85" type="L2Monster" name="Bloody Karinness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6776" level="1" /> <!-- Paralysis -->
@@ -4899,7 +4844,6 @@
 		</collision>
 	</npc>
 	<npc id="22857" level="85" type="L2Monster" name="Knoriks" title="Land Dragon's Patrol">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="4239720" sp="348153" />
@@ -4984,7 +4928,6 @@
 		</collision>
 	</npc>
 	<npc id="22858" level="82" type="L2Monster" name="Necromancer of the Valley">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6855" level="1" /> <!-- Magic Strike -->
@@ -5091,7 +5034,6 @@
 		</collision>
 	</npc>
 	<npc id="22859" level="81" type="L2Monster" name="Howl" title="Tracker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6876" level="1" /> <!-- Power Strike -->
@@ -5197,7 +5139,6 @@
 		</collision>
 	</npc>
 	<npc id="22860" level="82" type="L2Monster" name="Hungry Parasitic Leech">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Probablity" value="1111" />
@@ -5288,7 +5229,6 @@
 		</collision>
 	</npc>
 	<npc id="22861" level="83" type="L2Monster" name="Hard Scorpion Bones">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6862" level="1" /> <!-- Poison -->
@@ -5375,7 +5315,6 @@
 		</collision>
 	</npc>
 	<npc id="22862" level="83" type="L2Monster" name="Drakos Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6857" level="1" /> <!-- Power Strike -->

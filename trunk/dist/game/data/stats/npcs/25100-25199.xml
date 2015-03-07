@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25100" level="55" type="L2Monster" name="Spirit of the Sea of Spores" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4782" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="4" /> <!-- BOSS Haste -->
@@ -44,7 +43,6 @@
 		</collision>
 	</npc>
 	<npc id="25101" level="55" type="L2Monster" name="Warrior of the Sea of Spores" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -81,7 +79,6 @@
 		</collision>
 	</npc>
 	<npc id="25102" level="45" type="L2RaidBoss" name="Shacram" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
@@ -157,7 +154,6 @@
 		</collision>
 	</npc>
 	<npc id="25103" level="55" type="L2RaidBoss" name="Wizard Isirr" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25104" count="1" respawnTime="360" weightPoint="1" /> <!-- Isirr's Guard -->
@@ -237,7 +233,6 @@
 		</collision>
 	</npc>
 	<npc id="25104" level="54" type="L2Monster" name="Isirr's Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4722" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -279,7 +274,6 @@
 		</collision>
 	</npc>
 	<npc id="25105" level="54" type="L2Monster" name="Isirr's Escorts" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="131" /> <!-- rhand: Spirit Sword -->
@@ -317,7 +311,6 @@
 		</collision>
 	</npc>
 	<npc id="25106" level="60" type="L2RaidBoss" name="Ghost of the Well Lidia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25107" count="3" respawnTime="360" weightPoint="1" /> <!-- Lidia's Archer -->
@@ -393,7 +386,6 @@
 		</collision>
 	</npc>
 	<npc id="25107" level="59" type="L2Monster" name="Lidia's Archer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="5" /> <!-- Stun -->
 		</parameters>
@@ -436,7 +428,6 @@
 		</collision>
 	</npc>
 	<npc id="25108" level="59" type="L2Monster" name="Lidia's Warrior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
@@ -475,7 +466,6 @@
 		</collision>
 	</npc>
 	<npc id="25109" level="74" type="L2RaidBoss" name="Antharas Priest Cloe" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25110" count="3" respawnTime="360" weightPoint="1" /> <!-- Cloe's Servitor -->
@@ -546,7 +536,6 @@
 		</collision>
 	</npc>
 	<npc id="25110" level="73" type="L2Monster" name="Cloe's Servitor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="7" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4200" level="7" /> <!-- Decrease Atk. Spd. -->
@@ -590,7 +579,6 @@
 		</collision>
 	</npc>
 	<npc id="25111" level="73" type="L2Monster" name="Cloe's Servitor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4170" level="7" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -632,7 +620,6 @@
 		</collision>
 	</npc>
 	<npc id="25112" level="30" type="L2RaidBoss" name="Beleth' Agent Meana" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25113" count="3" respawnTime="360" weightPoint="1" /> <!-- Meana's Maid -->
@@ -702,7 +689,6 @@
 		</collision>
 	</npc>
 	<npc id="25113" level="29" type="L2Monster" name="Meana's Maid" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="2" /> <!-- BOSS HP Drain -->
 			<skill name="Debuff_a" id="4199" level="2" /> <!-- Decrease P. Atk. -->
@@ -746,7 +732,6 @@
 		</collision>
 	</npc>
 	<npc id="25114" level="29" type="L2Monster" name="Meana's Guard Doll" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="2" /> <!-- Stun -->
 		</parameters>
@@ -788,7 +773,6 @@
 		</collision>
 	</npc>
 	<npc id="25115" level="40" type="L2RaidBoss" name="Icarus Sample 1" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25116" count="3" respawnTime="360" weightPoint="1" /> <!-- Icarus Sample 2 -->
@@ -872,7 +856,6 @@
 		</collision>
 	</npc>
 	<npc id="25116" level="39" type="L2Monster" name="Icarus Sample 2" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4755" level="3" /> <!-- BOSS Power Shot -->
 		</parameters>
@@ -914,7 +897,6 @@
 		</collision>
 	</npc>
 	<npc id="25117" level="39" type="L2Monster" name="Icarus Sample 3" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -951,7 +933,6 @@
 		</collision>
 	</npc>
 	<npc id="25118" level="35" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="4" /> <!-- BOSS Cancel Magic -->
@@ -1032,7 +1013,6 @@
 		</collision>
 	</npc>
 	<npc id="25119" level="50" type="L2RaidBoss" name="Fairy Queen's Messenger Berun" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25120" count="3" respawnTime="360" weightPoint="1" /> <!-- Berun's Officer -->
@@ -1112,7 +1092,6 @@
 		</collision>
 	</npc>
 	<npc id="25120" level="49" type="L2Monster" name="Berun's Servant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="4" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4199" level="4" /> <!-- Decrease P. Atk. -->
@@ -1156,7 +1135,6 @@
 		</collision>
 	</npc>
 	<npc id="25121" level="49" type="L2Monster" name="Berun's Prattler" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4170" level="4" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -1197,7 +1175,6 @@
 		</collision>
 	</npc>
 	<npc id="25122" level="56" type="L2RaidBoss" name="Refugee Applicant Leo" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25123" count="1" respawnTime="360" weightPoint="1" /> <!-- Leo's Servant -->
@@ -1273,7 +1250,6 @@
 		</collision>
 	</npc>
 	<npc id="25123" level="55" type="L2Monster" name="Leo's Servant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="5" /> <!-- Stun -->
 		</parameters>
@@ -1315,7 +1291,6 @@
 		</collision>
 	</npc>
 	<npc id="25124" level="55" type="L2Monster" name="Leo's Steward" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3938" /> <!-- rhand: Giant Rod -->
@@ -1353,7 +1328,6 @@
 		</collision>
 	</npc>
 	<npc id="25125" level="65" type="L2RaidBoss" name="Fierce Tiger King Angel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" /> <!-- BOSS Cancel Magic -->
@@ -1428,7 +1402,6 @@
 		</collision>
 	</npc>
 	<npc id="25126" level="79" type="L2RaidBoss" name="Longhorn Golkonda" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" /> <!-- BOSS Cancel Magic -->
@@ -1508,7 +1481,6 @@
 		</collision>
 	</npc>
 	<npc id="25127" level="24" type="L2RaidBoss" name="Langk Matriarch Rashkos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" /> <!-- BOSS Cancel Magic -->
@@ -1576,7 +1548,6 @@
 		</collision>
 	</npc>
 	<npc id="25128" level="33" type="L2RaidBoss" name="Vuku Grand Priest Gharmash" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25129" count="3" respawnTime="360" weightPoint="1" /> <!-- Vuku Shaman -->
@@ -1655,7 +1626,6 @@
 		</collision>
 	</npc>
 	<npc id="25129" level="32" type="L2Monster" name="Vuku Shaman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4203" level="3" /> <!-- Decrease Speed -->
@@ -1699,7 +1669,6 @@
 		</collision>
 	</npc>
 	<npc id="25130" level="32" type="L2Monster" name="Gharmash's Pet Trimden" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4722" level="3" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1740,7 +1709,6 @@
 		</collision>
 	</npc>
 	<npc id="25131" level="50" type="L2RaidBoss" name="Slaughter Lord Gato" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25132" count="3" respawnTime="360" weightPoint="1" /> <!-- Gato's Marksman -->
@@ -1816,7 +1784,6 @@
 		</collision>
 	</npc>
 	<npc id="25132" level="49" type="L2Monster" name="Gato's Sniper" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="4" /> <!-- Stun -->
 		</parameters>
@@ -1858,7 +1825,6 @@
 		</collision>
 	</npc>
 	<npc id="25133" level="49" type="L2Monster" name="Gato's Troop Captain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- rhand: Bastard Sword -->
@@ -1896,7 +1862,6 @@
 		</collision>
 	</npc>
 	<npc id="25134" level="40" type="L2RaidBoss" name="Leto Chief Talkin" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25135" count="2" respawnTime="360" weightPoint="1" /> <!-- Talkin's Seer -->
@@ -1968,7 +1933,6 @@
 		</collision>
 	</npc>
 	<npc id="25135" level="39" type="L2Monster" name="Talkin's Priest" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="4" /> <!-- BOSS Might -->
@@ -2012,7 +1976,6 @@
 		</collision>
 	</npc>
 	<npc id="25136" level="39" type="L2Monster" name="Talkin's Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2050,7 +2013,6 @@
 		</collision>
 	</npc>
 	<npc id="25137" level="55" type="L2RaidBoss" name="Beleth' Seer Sephia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25138" count="3" respawnTime="360" weightPoint="1" /> <!-- Soul Drinker -->
@@ -2126,7 +2088,6 @@
 		</collision>
 	</npc>
 	<npc id="25138" level="54" type="L2Monster" name="Soul Drinker" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="5" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4205" level="5" /> <!-- Paralysis -->
@@ -2169,7 +2130,6 @@
 		</collision>
 	</npc>
 	<npc id="25139" level="54" type="L2Monster" name="Sephia's Salve" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4731" level="5" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -2211,7 +2171,6 @@
 		</collision>
 	</npc>
 	<npc id="25140" level="65" type="L2RaidBoss" name="Hekaton Prime" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25141" count="1" respawnTime="360" weightPoint="1" /> <!-- Hekaton Cottus -->
@@ -2287,7 +2246,6 @@
 		</collision>
 	</npc>
 	<npc id="25141" level="64" type="L2Monster" name="Hekaton Cottus" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4720" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2328,7 +2286,6 @@
 		</collision>
 	</npc>
 	<npc id="25142" level="64" type="L2Monster" name="Hekaton Chires" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3937" /> <!-- rhand: Giant Bar -->
@@ -2366,7 +2323,6 @@
 		</collision>
 	</npc>
 	<npc id="25143" level="78" type="L2RaidBoss" name="Fire of Wrath Shuriel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25144" count="2" respawnTime="360" weightPoint="1" /> <!-- Shuriel's Oracle -->
@@ -2433,7 +2389,6 @@
 		</collision>
 	</npc>
 	<npc id="25144" level="78" type="L2Monster" name="Shuriel's Oracle" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="7" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4214" level="7" /> <!-- BOSS Reflect Damage -->
@@ -2477,7 +2432,6 @@
 		</collision>
 	</npc>
 	<npc id="25145" level="78" type="L2Monster" name="Shuriel's Paladin" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
@@ -2515,7 +2469,6 @@
 		</collision>
 	</npc>
 	<npc id="25146" level="21" type="L2RaidBoss" name="Evil Spirit Bifrons" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25147" count="3" respawnTime="360" weightPoint="1" /> <!-- Assassin of Bifrons -->
@@ -2584,7 +2537,6 @@
 		</collision>
 	</npc>
 	<npc id="25147" level="20" type="L2Monster" name="Assassin of Bifrons" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4778" level="2" /> <!-- BOSS Spear Attack -->
 		</parameters>
@@ -2626,7 +2578,6 @@
 		</collision>
 	</npc>
 	<npc id="25148" level="20" type="L2Monster" name="Butcher of Bifrons" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2664,7 +2615,6 @@
 		</collision>
 	</npc>
 	<npc id="25149" level="25" type="L2RaidBoss" name="Zombie Lord Crowl" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25150" count="3" respawnTime="360" weightPoint="1" /> <!-- Evil Spirit Archer -->
@@ -2732,7 +2682,6 @@
 		</collision>
 	</npc>
 	<npc id="25150" level="24" type="L2Monster" name="Evil Spirit Archer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4756" level="2" /> <!-- BOSS Power Shot -->
 		</parameters>
@@ -2775,7 +2724,6 @@
 		</collision>
 	</npc>
 	<npc id="25151" level="24" type="L2Monster" name="Evil Spirit Warrior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
@@ -2814,7 +2762,6 @@
 		</collision>
 	</npc>
 	<npc id="25152" level="35" type="L2RaidBoss" name="Flame Lord Shadar" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25153" count="1" respawnTime="360" weightPoint="1" /> <!-- Claws of Shadar -->
@@ -2886,7 +2833,6 @@
 		</collision>
 	</npc>
 	<npc id="25153" level="34" type="L2Monster" name="Claws of Shadar" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4731" level="3" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -2927,7 +2873,6 @@
 		</collision>
 	</npc>
 	<npc id="25154" level="34" type="L2Monster" name="Whip of Shadar" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2965,7 +2910,6 @@
 		</collision>
 	</npc>
 	<npc id="25155" level="40" type="L2RaidBoss" name="Shaman King Selu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25156" count="3" respawnTime="360" weightPoint="1" /> <!-- Fanatic Shaman -->
@@ -3037,7 +2981,6 @@
 		</collision>
 	</npc>
 	<npc id="25156" level="39" type="L2Monster" name="Fanatic Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4199" level="3" /> <!-- Decrease P. Atk. -->
@@ -3081,7 +3024,6 @@
 		</collision>
 	</npc>
 	<npc id="25157" level="39" type="L2Monster" name="Fanatic Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4719" level="3" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3123,7 +3065,6 @@
 		</collision>
 	</npc>
 	<npc id="25158" level="48" type="L2RaidBoss" name="King Tarlk" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
@@ -3201,7 +3142,6 @@
 		</collision>
 	</npc>
 	<npc id="25159" level="54" type="L2RaidBoss" name="Paniel the Unicorn" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25160" count="2" respawnTime="360" weightPoint="1" /> <!-- Rapini the Unicorn -->
@@ -3276,7 +3216,6 @@
 		</collision>
 	</npc>
 	<npc id="25160" level="53" type="L2Monster" name="Rapini the Unicorn" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="5" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="5" /> <!-- BOSS Haste -->
@@ -3319,7 +3258,6 @@
 		</collision>
 	</npc>
 	<npc id="25161" level="53" type="L2Monster" name="Ririf the Unicorn" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3356,7 +3294,6 @@
 		</collision>
 	</npc>
 	<npc id="25162" level="60" type="L2RaidBoss" name="Giant Marpanak" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" /> <!-- BOSS Cancel Magic -->
@@ -3432,7 +3369,6 @@
 		</collision>
 	</npc>
 	<npc id="25163" level="70" type="L2RaidBoss" name="Roaring Skylancer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" /> <!-- BOSS Cancel Magic -->
@@ -3508,7 +3444,6 @@
 		</collision>
 	</npc>
 	<npc id="25166" level="25" type="L2RaidBoss" name="Ikuntai" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25167" count="2" respawnTime="360" weightPoint="1" /> <!-- Ikuntai's Servitor -->
@@ -3577,7 +3512,6 @@
 		</collision>
 	</npc>
 	<npc id="25167" level="24" type="L2Monster" name="Ikuntai's Servitor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="2" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4214" level="2" /> <!-- BOSS Reflect Damage -->
@@ -3621,7 +3555,6 @@
 		</collision>
 	</npc>
 	<npc id="25168" level="24" type="L2Monster" name="Ikuntai's Pawn" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="299" /> <!-- rhand: Orcish Poleaxe -->
@@ -3660,7 +3593,6 @@
 		</collision>
 	</npc>
 	<npc id="25169" level="30" type="L2RaidBoss" name="Ragraman" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" /> <!-- BOSS Cancel Magic -->
@@ -3744,7 +3676,6 @@
 		</collision>
 	</npc>
 	<npc id="25170" level="38" type="L2RaidBoss" name="Lizardmen Captain Hellion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25171" count="3" respawnTime="360" weightPoint="1" /> <!-- Hellion's Archers -->
@@ -3815,7 +3746,6 @@
 		</collision>
 	</npc>
 	<npc id="25171" level="37" type="L2Monster" name="Hellion's Archers" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4757" level="3" /> <!-- BOSS Power Shot -->
 		</parameters>
@@ -3857,7 +3787,6 @@
 		</collision>
 	</npc>
 	<npc id="25172" level="37" type="L2Monster" name="Hellion's Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- rhand: Trident -->
@@ -3895,7 +3824,6 @@
 		</collision>
 	</npc>
 	<npc id="25173" level="45" type="L2RaidBoss" name="Tiger King Karuta" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25174" count="2" respawnTime="360" weightPoint="1" /> <!-- Karuta's Follower -->
@@ -3966,7 +3894,6 @@
 		</collision>
 	</npc>
 	<npc id="25174" level="44" type="L2Monster" name="Karuta's Follower" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4214" level="4" /> <!-- BOSS Reflect Damage -->
@@ -4010,7 +3937,6 @@
 		</collision>
 	</npc>
 	<npc id="25175" level="44" type="L2Monster" name="Karuta's Subordinate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4047,7 +3973,6 @@
 		</collision>
 	</npc>
 	<npc id="25176" level="55" type="L2RaidBoss" name="Black Lily" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25177" count="1" respawnTime="360" weightPoint="1" /> <!-- Guardian Knight of Black Lily -->
@@ -4124,7 +4049,6 @@
 		</collision>
 	</npc>
 	<npc id="25177" level="54" type="L2Monster" name="Guardian Knight of Black Lily" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="5" /> <!-- Stun -->
 		</parameters>
@@ -4167,7 +4091,6 @@
 		</collision>
 	</npc>
 	<npc id="25178" level="54" type="L2Monster" name="Servitor of Black Lily" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4205,7 +4128,6 @@
 		</collision>
 	</npc>
 	<npc id="25179" level="60" type="L2RaidBoss" name="Giant Statue Guardian Karum" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25180" count="3" respawnTime="360" weightPoint="1" /> <!-- Karum's Guard -->
@@ -4276,7 +4198,6 @@
 		</collision>
 	</npc>
 	<npc id="25180" level="59" type="L2Monster" name="Karum's Guard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="5" /> <!-- BOSS Life Drain -->
 			<skill name="Debuff_a" id="4198" level="5" /> <!-- Poison -->
@@ -4320,7 +4241,6 @@
 		</collision>
 	</npc>
 	<npc id="25181" level="59" type="L2Monster" name="Karum's Warrior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4721" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4361,7 +4281,6 @@
 		</collision>
 	</npc>
 	<npc id="25182" level="59" type="L2RaidBoss" name="Demon Kuri" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25183" count="2" respawnTime="360" weightPoint="1" /> <!-- Kuri's Wife -->
@@ -4437,7 +4356,6 @@
 		</collision>
 	</npc>
 	<npc id="25183" level="58" type="L2Monster" name="Kuri's Wife" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4786" level="5" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4213" level="5" /> <!-- BOSS Haste -->
@@ -4481,7 +4399,6 @@
 		</collision>
 	</npc>
 	<npc id="25184" level="58" type="L2Monster" name="Devil Blader of Chaos" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
@@ -4520,7 +4437,6 @@
 		</collision>
 	</npc>
 	<npc id="25185" level="35" type="L2RaidBoss" name="Tasaba Patriarch Hellena" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25186" count="3" respawnTime="360" weightPoint="1" /> <!-- Hellena's Marksman -->
@@ -4592,7 +4508,6 @@
 		</collision>
 	</npc>
 	<npc id="25186" level="34" type="L2Monster" name="Hellena's Sniper" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="3" /> <!-- Stun -->
 		</parameters>
@@ -4634,7 +4549,6 @@
 		</collision>
 	</npc>
 	<npc id="25187" level="34" type="L2Monster" name="Hellena's Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4672,7 +4586,6 @@
 		</collision>
 	</npc>
 	<npc id="25188" level="30" type="L2RaidBoss" name="Apepi" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" /> <!-- BOSS Cancel Magic -->
@@ -4753,7 +4666,6 @@
 		</collision>
 	</npc>
 	<npc id="25189" level="34" type="L2RaidBoss" name="Cronos' Servitor Mumu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25190" count="3" respawnTime="360" weightPoint="1" /> <!-- Mumu's Wizard -->
@@ -4817,7 +4729,6 @@
 		</collision>
 	</npc>
 	<npc id="25190" level="33" type="L2Monster" name="Mumu's Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4202" level="3" /> <!-- Hold -->
@@ -4860,7 +4771,6 @@
 		</collision>
 	</npc>
 	<npc id="25191" level="33" type="L2Monster" name="Mumu's Warrior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4722" level="3" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4901,7 +4811,6 @@
 		</collision>
 	</npc>
 	<npc id="25192" level="43" type="L2RaidBoss" name="Earth Protector Panathen" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25193" count="1" respawnTime="360" weightPoint="1" /> <!-- Panathen's Knight -->
@@ -4972,7 +4881,6 @@
 		</collision>
 	</npc>
 	<npc id="25193" level="42" type="L2Monster" name="Panathen's Knight" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4721" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -5014,7 +4922,6 @@
 		</collision>
 	</npc>
 	<npc id="25194" level="42" type="L2Monster" name="Panathen's Protectors" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- rhand: Dailaon Knife -->
@@ -5052,7 +4959,6 @@
 		</collision>
 	</npc>
 	<npc id="25198" level="70" type="L2RaidBoss" name="Fafurion's Herald Lokness" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" /> <!-- BOSS Cancel Magic -->
@@ -5125,7 +5031,6 @@
 		</collision>
 	</npc>
 	<npc id="25199" level="72" type="L2RaidBoss" name="Water Dragon Priest Sheshark" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25200" count="3" respawnTime="360" weightPoint="1" /> <!-- Family of Sheshark -->

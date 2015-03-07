@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25400" level="34" type="L2Monster" name="Watchman's Servant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="3" /> <!-- BOSS Haste -->
@@ -44,7 +43,6 @@
 		</collision>
 	</npc>
 	<npc id="25401" level="32" type="L2RaidBoss" name="Skyla" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25402" count="1" respawnTime="360" weightPoint="1" /> <!-- Retainer of Skyla -->
@@ -113,7 +111,6 @@
 		</collision>
 	</npc>
 	<npc id="25402" level="31" type="L2Monster" name="Skyla's Confidant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -155,7 +152,6 @@
 		</collision>
 	</npc>
 	<npc id="25403" level="31" type="L2Monster" name="Skyla's Follower" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="3" /> <!-- Bleed -->
@@ -199,7 +195,6 @@
 		</collision>
 	</npc>
 	<npc id="25404" level="33" type="L2RaidBoss" name="Corsair Captain Kylon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25405" count="2" respawnTime="360" weightPoint="1" /> <!-- Kylon's Pirate -->
@@ -273,7 +268,6 @@
 		</collision>
 	</npc>
 	<npc id="25405" level="32" type="L2Monster" name="Kylon's Pirate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -318,7 +312,6 @@
 		</collision>
 	</npc>
 	<npc id="25406" level="32" type="L2Monster" name="Kylon's Mate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="3" /> <!-- Stun -->
 		</parameters>
@@ -363,7 +356,6 @@
 		</collision>
 	</npc>
 	<npc id="25407" level="60" type="L2RaidBoss" name="Lord Ishka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25408" count="1" respawnTime="360" weightPoint="1" /> <!-- Ishka's Elite Officer -->
@@ -442,7 +434,6 @@
 		</collision>
 	</npc>
 	<npc id="25408" level="59" type="L2Monster" name="Ishka's Elite Officer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -487,7 +478,6 @@
 		</collision>
 	</npc>
 	<npc id="25409" level="59" type="L2Monster" name="Ishka's Elite Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -532,7 +522,6 @@
 		</collision>
 	</npc>
 	<npc id="25410" level="40" type="L2RaidBoss" name="Road Scavenger Leader" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25411" count="3" respawnTime="360" weightPoint="1" /> <!-- Road Scavenger Henchman -->
@@ -604,7 +593,6 @@
 		</collision>
 	</npc>
 	<npc id="25411" level="39" type="L2Monster" name="Road Scavenger Henchman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="3" /> <!-- Stun -->
 		</parameters>
@@ -645,7 +633,6 @@
 		</collision>
 	</npc>
 	<npc id="25412" level="47" type="L2RaidBoss" name="Necrosentinel Royal Guard" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25413" count="3" respawnTime="360" weightPoint="1" /> <!-- Necrosentinel Archer -->
@@ -724,7 +711,6 @@
 		</collision>
 	</npc>
 	<npc id="25413" level="46" type="L2Monster" name="Necrosentinel Archer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
@@ -765,7 +751,6 @@
 		</collision>
 	</npc>
 	<npc id="25414" level="46" type="L2Monster" name="Necrosentinel Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- rhand: Elemental Sword lhand: Tower Shield -->
@@ -806,7 +791,6 @@
 		</collision>
 	</npc>
 	<npc id="25415" level="40" type="L2RaidBoss" name="Nakondas" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25416" count="3" respawnTime="360" weightPoint="1" /> <!-- Nakondas' Slave -->
@@ -884,7 +868,6 @@
 		</collision>
 	</npc>
 	<npc id="25416" level="39" type="L2Monster" name="Nakondas' Slave" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4200" level="3" /> <!-- Decrease Atk. Spd. -->
@@ -927,7 +910,6 @@
 		</collision>
 	</npc>
 	<npc id="25417" level="39" type="L2Monster" name="Nakondas' Chain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="3" /> <!-- BOSS Haste -->
@@ -971,7 +953,6 @@
 		</collision>
 	</npc>
 	<npc id="25418" level="57" type="L2RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25419" count="3" respawnTime="360" weightPoint="1" /> <!-- Dread Panther -->
@@ -1063,7 +1044,6 @@
 		</collision>
 	</npc>
 	<npc id="25419" level="56" type="L2Monster" name="Dread Panther" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1104,7 +1084,6 @@
 		</collision>
 	</npc>
 	<npc id="25420" level="48" type="L2RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25421" count="3" respawnTime="360" weightPoint="1" /> <!-- Trisalim Escort -->
@@ -1179,7 +1158,6 @@
 		</collision>
 	</npc>
 	<npc id="25421" level="57" type="L2Monster" name="Trisalim's Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="4" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="4" /> <!-- Bleed -->
@@ -1222,7 +1200,6 @@
 		</collision>
 	</npc>
 	<npc id="25422" level="57" type="L2Monster" name="Rotting Tree's Servant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4212" level="4" /> <!-- BOSS Shield -->
@@ -1265,7 +1242,6 @@
 		</collision>
 	</npc>
 	<npc id="25423" level="61" type="L2RaidBoss" name="Fairy Queen Timiniel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25424" count="4" respawnTime="360" weightPoint="1" /> <!-- Timiniel's Royal Guards -->
@@ -1349,7 +1325,6 @@
 		</collision>
 	</npc>
 	<npc id="25424" level="60" type="L2Monster" name="Timiniel's Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1391,7 +1366,6 @@
 		</collision>
 	</npc>
 	<npc id="25425" level="60" type="L2Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4742" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1437,7 +1411,6 @@
 		</collision>
 	</npc>
 	<npc id="25426" level="25" type="L2RaidBoss" name="Betrayer of Urutu Freki" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25427" count="2" respawnTime="360" weightPoint="1" /> <!-- Freki's Vampire Bat -->
@@ -1501,7 +1474,6 @@
 		</collision>
 	</npc>
 	<npc id="25427" level="24" type="L2Monster" name="Freki's Vampire Bat" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1542,7 +1514,6 @@
 		</collision>
 	</npc>
 	<npc id="25428" level="24" type="L2Monster" name="Freki's Wild Bear" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="2" /> <!-- Stun -->
 		</parameters>
@@ -1583,7 +1554,6 @@
 		</collision>
 	</npc>
 	<npc id="25429" level="25" type="L2RaidBoss" name="Mammon Collector Talos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25430" count="3" respawnTime="360" weightPoint="1" /> <!-- Talos' Cohort -->
@@ -1656,7 +1626,6 @@
 		</collision>
 	</npc>
 	<npc id="25430" level="22" type="L2Monster" name="Talos' Pawn" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1700,7 +1669,6 @@
 		</collision>
 	</npc>
 	<npc id="25431" level="44" type="L2RaidBoss" name="Flamestone Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25433" count="2" respawnTime="360" weightPoint="1" /> <!-- Elemental of Spark -->
@@ -1772,7 +1740,6 @@
 		</collision>
 	</npc>
 	<npc id="25432" level="43" type="L2Monster" name="Elemental of Flame" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="4" /> <!-- BOSS Might -->
@@ -1818,7 +1785,6 @@
 		</collision>
 	</npc>
 	<npc id="25433" level="43" type="L2Monster" name="Elemental of Spark" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1858,7 +1824,6 @@
 		</collision>
 	</npc>
 	<npc id="25434" level="55" type="L2RaidBoss" name="Bandit Leader Barda" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25435" count="1" respawnTime="360" weightPoint="1" /> <!-- Barda's Bandit -->
@@ -1937,7 +1902,6 @@
 		</collision>
 	</npc>
 	<npc id="25435" level="54" type="L2Monster" name="Barda's Pawn" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1979,7 +1943,6 @@
 		</collision>
 	</npc>
 	<npc id="25436" level="54" type="L2Monster" name="Barda's Shaman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="5" /> <!-- BOSS Twister -->
 			<skill name="Debuff_a" id="4199" level="5" /> <!-- Decrease P. Atk. -->
@@ -2023,7 +1986,6 @@
 		</collision>
 	</npc>
 	<npc id="25437" level="45" type="L2RaidBoss" name="Timak Orc Gosmos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="4" /> <!-- BOSS Cancel Magic -->
@@ -2097,7 +2059,6 @@
 		</collision>
 	</npc>
 	<npc id="25438" level="44" type="L2RaidBoss" name="Thief Kelbar" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25439" count="1" respawnTime="360" weightPoint="1" /> <!-- Kelbar's Inferior -->
@@ -2168,7 +2129,6 @@
 		</collision>
 	</npc>
 	<npc id="25439" level="43" type="L2Monster" name="Kelbar's Subordinate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2210,7 +2170,6 @@
 		</collision>
 	</npc>
 	<npc id="25440" level="43" type="L2Monster" name="Kelbar's Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="4" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4200" level="4" /> <!-- Decrease Atk. Spd. -->
@@ -2254,7 +2213,6 @@
 		</collision>
 	</npc>
 	<npc id="25441" level="45" type="L2RaidBoss" name="Evil Spirit Cyrion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25442" count="4" respawnTime="360" weightPoint="1" /> <!-- Evil Creature of Forest -->
@@ -2333,7 +2291,6 @@
 		</collision>
 	</npc>
 	<npc id="25442" level="44" type="L2Monster" name="Evil Creature of Forest" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2370,7 +2327,6 @@
 		</collision>
 	</npc>
 	<npc id="25443" level="44" type="L2Monster" name="Anger of Forest" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2411,7 +2367,6 @@
 		</collision>
 	</npc>
 	<npc id="25444" level="65" type="L2RaidBoss" name="Enmity Ghost Ramdal" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25445" count="3" respawnTime="360" weightPoint="1" /> <!-- Enmity Ghosts -->
@@ -2486,7 +2441,6 @@
 		</collision>
 	</npc>
 	<npc id="25445" level="64" type="L2Monster" name="Enmity Ghost" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2526,7 +2480,6 @@
 		</collision>
 	</npc>
 	<npc id="25446" level="64" type="L2Monster" name="Begrudged Shooter" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
@@ -2567,7 +2520,6 @@
 		</collision>
 	</npc>
 	<npc id="25447" level="71" type="L2RaidBoss" name="Immortal Savior Mardil" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25448" count="2" respawnTime="360" weightPoint="1" /> <!-- Immortal Savior -->
@@ -2642,7 +2594,6 @@
 		</collision>
 	</npc>
 	<npc id="25448" level="70" type="L2Monster" name="Immortal Savior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2682,7 +2633,6 @@
 		</collision>
 	</npc>
 	<npc id="25449" level="70" type="L2Monster" name="Immortal Guide" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="7" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="7" /> <!-- BOSS Haste -->
@@ -2725,7 +2675,6 @@
 		</collision>
 	</npc>
 	<npc id="25450" level="79" type="L2RaidBoss" name="Cherub Galaxia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25451" count="3" respawnTime="360" weightPoint="1" /> <!-- Galaxia's Guards -->
@@ -2809,7 +2758,6 @@
 		</collision>
 	</npc>
 	<npc id="25451" level="78" type="L2Monster" name="Galaxia's Escorts" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4202" level="8" /> <!-- Hold -->
@@ -2853,7 +2801,6 @@
 		</collision>
 	</npc>
 	<npc id="25452" level="79" type="L2Monster" name="Messenger of Angel" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="8" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4212" level="8" /> <!-- BOSS Shield -->
@@ -2897,7 +2844,6 @@
 		</collision>
 	</npc>
 	<npc id="25453" level="70" type="L2RaidBoss" name="Meanas Anor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25454" count="3" respawnTime="360" weightPoint="1" /> <!-- Wyvern of Marsh -->
@@ -2972,7 +2918,6 @@
 		</collision>
 	</npc>
 	<npc id="25454" level="69" type="L2Monster" name="Swamp Wyvern" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="6" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -3015,7 +2960,6 @@
 		</collision>
 	</npc>
 	<npc id="25455" level="69" type="L2Monster" name="Swamp Succubus" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="6" /> <!-- BOSS Might -->
@@ -3059,7 +3003,6 @@
 		</collision>
 	</npc>
 	<npc id="25456" level="49" type="L2RaidBoss" name="Mirror of Oblivion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25457" count="1" respawnTime="360" weightPoint="1" /> <!-- Shards of Oblivion -->
@@ -3132,7 +3075,6 @@
 		</collision>
 	</npc>
 	<npc id="25457" level="48" type="L2Monster" name="Shards of Oblivion" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3172,7 +3114,6 @@
 		</collision>
 	</npc>
 	<npc id="25458" level="48" type="L2Monster" name="Shadow of Oblivion" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="4" /> <!-- BOSS Haste -->
@@ -3218,7 +3159,6 @@
 		</collision>
 	</npc>
 	<npc id="25459" level="48" type="L2Monster" name="Shards of Oblivion" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3258,7 +3198,6 @@
 		</collision>
 	</npc>
 	<npc id="25460" level="51" type="L2RaidBoss" name="Deadman Ereve" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25461" count="2" respawnTime="360" weightPoint="1" /> <!-- Ereve's Knight -->
@@ -3337,7 +3276,6 @@
 		</collision>
 	</npc>
 	<npc id="25461" level="50" type="L2Monster" name="Ereve's Knight" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3382,7 +3320,6 @@
 		</collision>
 	</npc>
 	<npc id="25462" level="50" type="L2Monster" name="Ereve's Squire" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
 		</parameters>
@@ -3427,7 +3364,6 @@
 		</collision>
 	</npc>
 	<npc id="25463" level="56" type="L2RaidBoss" name="Harit Guardian Garangky" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25464" count="1" respawnTime="360" weightPoint="1" /> <!-- Garangky Guard Captain -->
@@ -3498,7 +3434,6 @@
 		</collision>
 	</npc>
 	<npc id="25464" level="55" type="L2Monster" name="Garangky Escort Captain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
 		</parameters>
@@ -3540,7 +3475,6 @@
 		</collision>
 	</npc>
 	<npc id="25465" level="55" type="L2Monster" name="Garangky Escort Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="5" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4212" level="5" /> <!-- BOSS Shield -->
@@ -3584,7 +3518,6 @@
 		</collision>
 	</npc>
 	<npc id="25466" level="55" type="L2Monster" name="Garangky Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3626,7 +3559,6 @@
 		</collision>
 	</npc>
 	<npc id="25467" level="64" type="L2RaidBoss" name="Gorgolos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25468" count="4" respawnTime="360" weightPoint="1" /> <!-- Cursed Life -->
@@ -3703,7 +3635,6 @@
 		</collision>
 	</npc>
 	<npc id="25468" level="63" type="L2Monster" name="Cursed Life" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3741,7 +3672,6 @@
 		</collision>
 	</npc>
 	<npc id="25469" level="63" type="L2Monster" name="Cursed Soul" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3783,7 +3713,6 @@
 		</collision>
 	</npc>
 	<npc id="25470" level="66" type="L2RaidBoss" name="Last Titan Utenus" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25471" count="3" respawnTime="360" weightPoint="1" /> <!-- Utenus's Wizard -->
@@ -3861,7 +3790,6 @@
 		</collision>
 	</npc>
 	<npc id="25471" level="65" type="L2Monster" name="Utenus' Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="6" /> <!-- BOSS Twister -->
 			<skill name="Debuff_a" id="4205" level="6" /> <!-- Paralysis -->
@@ -3907,7 +3835,6 @@
 		</collision>
 	</npc>
 	<npc id="25472" level="65" type="L2Monster" name="Utenus' Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3951,7 +3878,6 @@
 		</collision>
 	</npc>
 	<npc id="25473" level="52" type="L2RaidBoss" name="Grave Robber Kim" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25474" count="3" respawnTime="360" weightPoint="1" /> <!-- Kim's Gang -->
@@ -4026,7 +3952,6 @@
 		</collision>
 	</npc>
 	<npc id="25474" level="51" type="L2Monster" name="Kim's Gang" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
 		</parameters>
@@ -4068,7 +3993,6 @@
 		</collision>
 	</npc>
 	<npc id="25475" level="55" type="L2RaidBoss" name="Ghost Knight Kabed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25476" count="3" respawnTime="360" weightPoint="1" /> <!-- Kabed's Soldier -->
@@ -4150,7 +4074,6 @@
 		</collision>
 	</npc>
 	<npc id="25476" level="54" type="L2Monster" name="Kabed's Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="125" /> <!-- rhand: Spinebone Sword -->
@@ -4191,7 +4114,6 @@
 		</collision>
 	</npc>
 	<npc id="25477" level="54" type="L2Monster" name="Kabed's Archer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
@@ -4232,7 +4154,6 @@
 		</collision>
 	</npc>
 	<npc id="25478" level="65" type="L2RaidBoss" name="Shilen's Priest Hisilrome" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25479" count="1" respawnTime="360" weightPoint="1" /> <!-- Hisilrome's Servitor -->
@@ -4308,7 +4229,6 @@
 		</collision>
 	</npc>
 	<npc id="25479" level="64" type="L2Monster" name="Hisilrome's Servitor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="6" /> <!-- BOSS HP Drain -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -4352,7 +4272,6 @@
 		</collision>
 	</npc>
 	<npc id="25480" level="64" type="L2Monster" name="Hisilrome's Servant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="6" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="6" /> <!-- BOSS Might -->
@@ -4395,7 +4314,6 @@
 		</collision>
 	</npc>
 	<npc id="25481" level="53" type="L2RaidBoss" name="Magus Kenishee" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25482" count="2" respawnTime="360" weightPoint="1" /> <!-- Shadow of Kenishee -->
@@ -4472,7 +4390,6 @@
 		</collision>
 	</npc>
 	<npc id="25482" level="52" type="L2Monster" name="Shadow of Kenishee" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4514,7 +4431,6 @@
 		</collision>
 	</npc>
 	<npc id="25483" level="52" type="L2Monster" name="Phantom of Kenishee" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="6" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4212" level="6" /> <!-- BOSS Shield -->
@@ -4558,7 +4474,6 @@
 		</collision>
 	</npc>
 	<npc id="25484" level="50" type="L2RaidBoss" name="Zaken's Chief Mate Tillion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25485" count="1" respawnTime="360" weightPoint="1" /> <!-- Tillion's Inferior -->
@@ -4639,7 +4554,6 @@
 		</collision>
 	</npc>
 	<npc id="25485" level="49" type="L2Monster" name="Tillion's Subordinate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4684,7 +4598,6 @@
 		</collision>
 	</npc>
 	<npc id="25486" level="49" type="L2Monster" name="Tillion's Bat" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4725,7 +4638,6 @@
 		</collision>
 	</npc>
 	<npc id="25487" level="40" type="L2RaidBoss" name="Water Spirit Lian" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25488" count="3" respawnTime="360" weightPoint="1" /> <!-- Spirit of Gildor -->
@@ -4821,7 +4733,6 @@
 		</collision>
 	</npc>
 	<npc id="25488" level="39" type="L2Monster" name="Gildor's Spirit" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4200" level="3" /> <!-- Decrease Atk. Spd. -->
@@ -4864,7 +4775,6 @@
 		</collision>
 	</npc>
 	<npc id="25489" level="39" type="L2Monster" name="Gildor's Guardian" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="3" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4905,7 +4815,6 @@
 		</collision>
 	</npc>
 	<npc id="25490" level="40" type="L2RaidBoss" name="Gwindorr" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25491" count="3" respawnTime="360" weightPoint="1" /> <!-- Guard of Gwindorr -->
@@ -4976,7 +4885,6 @@
 		</collision>
 	</npc>
 	<npc id="25491" level="39" type="L2Monster" name="Gwindorr's Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
@@ -5014,7 +4922,6 @@
 		</collision>
 	</npc>
 	<npc id="25492" level="39" type="L2Monster" name="Gwindorr's Follower" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -5052,7 +4959,6 @@
 		</collision>
 	</npc>
 	<npc id="25493" level="55" type="L2RaidBoss" name="Eva's Spirit Niniel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25494" count="1" respawnTime="360" weightPoint="1" /> <!-- Spirit of Niniel -->
@@ -5133,7 +5039,6 @@
 		</collision>
 	</npc>
 	<npc id="25494" level="54" type="L2Monster" name="Niniel's Spirit" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -5174,7 +5079,6 @@
 		</collision>
 	</npc>
 	<npc id="25495" level="54" type="L2Monster" name="Niniel's Spirit" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -5211,7 +5115,6 @@
 		</collision>
 	</npc>
 	<npc id="25496" level="52" type="L2RaidBoss" name="Fafurion's Envoy Pingolpin" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25497" count="3" respawnTime="360" weightPoint="1" /> <!-- Fafurion's Envoy -->
@@ -5287,7 +5190,6 @@
 		</collision>
 	</npc>
 	<npc id="25497" level="51" type="L2Monster" name="Fafurion's Envoy" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -5329,7 +5231,6 @@
 		</collision>
 	</npc>
 	<npc id="25498" level="45" type="L2RaidBoss" name="Fafurion's Henchman Istary" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25499" count="1" respawnTime="360" weightPoint="1" /> <!-- Alligator of Istary -->
@@ -5409,7 +5310,6 @@
 		</collision>
 	</npc>
 	<npc id="25499" level="44" type="L2Monster" name="Alligator of Istary" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="4" /> <!-- Stun -->
 		</parameters>

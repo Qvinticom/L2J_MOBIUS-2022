@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25700" level="88" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" /> <!-- Power Strike -->
 			<skill name="Skill02_ID" id="6295" level="1" /> <!-- Point Target -->
@@ -77,7 +76,6 @@
 		</collision>
 	</npc>
 	<npc id="25701" level="84" type="L2RaidBoss" name="Anais" title="Lord of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6324" level="1" /> <!-- Divine Strike -->
 			<skill name="Skill02_ID" id="6323" level="1" /> <!-- Divine Bolt -->
@@ -153,7 +151,6 @@
 		</collision>
 	</npc>
 	<npc id="25702" level="84" type="L2Monster" name="Guardian of the Grail">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" /> <!-- Martyr's Happiness -->
 		</parameters>
@@ -196,7 +193,6 @@
 		</collision>
 	</npc>
 	<npc id="25703" level="76" type="L2RaidBoss" name="Gigantic Golem" title="Chaos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25704" count="3" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
@@ -271,7 +267,6 @@
 		</collision>
 	</npc>
 	<npc id="25704" level="75" type="L2Monster" name="Gigantic Golem Subordinate" title="Chaos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 			<param name="Party_Loyalty" value="1" />
@@ -315,7 +310,6 @@
 		</collision>
 	</npc>
 	<npc id="25705" level="74" type="L2Monster" name="Gigantic Boom Golem" title="Chaos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6265" level="1" /> <!-- Smoke -->
 			<skill name="Skill02_ID" id="6264" level="1" /> <!-- Golem Boom -->
@@ -357,7 +351,6 @@
 		</collision>
 	</npc>
 	<npc id="25706" level="83" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="0" />
@@ -412,7 +405,6 @@
 		</collision>
 	</npc>
 	<npc id="25707" level="83" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="0" />
@@ -464,7 +456,6 @@
 		</collision>
 	</npc>
 	<npc id="25708" level="83" type="L2Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="0" />
@@ -519,7 +510,6 @@
 		</collision>
 	</npc>
 	<npc id="25709" level="83" type="L2RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="6694" level="8" /> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="6695" level="8" /> <!-- BOSS Spinning Slasher -->
@@ -568,7 +558,6 @@
 		</collision>
 	</npc>
 	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25711" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
@@ -640,7 +629,6 @@
 		</collision>
 	</npc>
 	<npc id="25711" level="83" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -680,7 +668,6 @@
 		</collision>
 	</npc>
 	<npc id="25712" level="83" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="8" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
@@ -729,7 +716,6 @@
 		</collision>
 	</npc>
 	<npc id="25713" level="84" type="L2RaidBoss" name="Darnel" title="Torture Maiden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" /> <!-- Poison -->
@@ -797,7 +783,6 @@
 		</collision>
 	</npc>
 	<npc id="25714" level="84" type="L2RaidBoss" name="Kechi" title="Flaming">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" /> <!-- Invincible -->
@@ -869,7 +854,6 @@
 		</collision>
 	</npc>
 	<npc id="25715" level="84" type="L2Monster" name="Kechi's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="0" />
 			<param name="AttackRange" value="0" />
@@ -922,7 +906,6 @@
 		</collision>
 	</npc>
 	<npc id="25716" level="84" type="L2RaidBoss" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" /> <!-- Freezing -->
@@ -990,7 +973,6 @@
 		</collision>
 	</npc>
 	<npc id="25717" level="84" type="L2Monster" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- rhand: Tears r1 lhand: Tears r1 -->
@@ -1031,7 +1013,6 @@
 		</collision>
 	</npc>
 	<npc id="25718" level="84" type="L2RaidBoss" name="Emerald Horn" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6821" level="1" /> <!-- P. Def. Decrease -->
@@ -1100,7 +1081,6 @@
 		</collision>
 	</npc>
 	<npc id="25719" level="84" type="L2RaidBoss" name="Dust Rider" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill03_Probablity" value="1111" />
@@ -1171,7 +1151,6 @@
 		</collision>
 	</npc>
 	<npc id="25720" level="84" type="L2RaidBoss" name="Bleeding Fly" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill03_Probablity" value="1111" />
@@ -1249,7 +1228,6 @@
 		</collision>
 	</npc>
 	<npc id="25721" level="84" type="L2RaidBoss" name="Blackdagger Wing" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill02_ID" id="6833" level="1" /> <!-- Power Strike -->
@@ -1322,7 +1300,6 @@
 		</collision>
 	</npc>
 	<npc id="25722" level="84" type="L2RaidBoss" name="Shadow Summoner" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1111" />
@@ -1399,7 +1376,6 @@
 		</collision>
 	</npc>
 	<npc id="25723" level="84" type="L2RaidBoss" name="Spike Slasher" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6839" level="1" /> <!-- Power Attack -->
@@ -1474,7 +1450,6 @@
 		</collision>
 	</npc>
 	<npc id="25724" level="84" type="L2RaidBoss" name="Muscle Bomber" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill04_ID" id="6844" level="1" /> <!-- Power Strike -->
@@ -1541,7 +1516,6 @@
 		</collision>
 	</npc>
 	<npc id="25725" level="85" type="L2RaidBoss" name="Drake Lord" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
@@ -1603,7 +1577,6 @@
 		</collision>
 	</npc>
 	<npc id="25726" level="85" type="L2RaidBoss" name="Behemoth Leader" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
@@ -1666,7 +1639,6 @@
 		</collision>
 	</npc>
 	<npc id="25727" level="85" type="L2RaidBoss" name="Dragon Beast" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
@@ -1725,7 +1697,6 @@
 		</collision>
 	</npc>
 	<npc id="25728" level="85" type="L2Monster" name="Death Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="hold_skill" id="6738" level="1" /> <!-- Hold -->
 		</parameters>
@@ -1769,7 +1740,6 @@
 		</collision>
 	</npc>
 	<npc id="25729" level="85" type="L2Monster" name="Death Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="fan_attack_skill" id="6889" level="1" /> <!-- Range Attack -->
 			<skill name="debuff_skill" id="6890" level="1" /> <!-- Bleed -->
@@ -1815,7 +1785,6 @@
 		</collision>
 	</npc>
 	<npc id="25730" level="80" type="L2Monster" name="Demon's Banquet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -1858,7 +1827,6 @@
 		</collision>
 	</npc>
 	<npc id="25731" level="80" type="L2Monster" name="Demon's Banquet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -1901,7 +1869,6 @@
 		</collision>
 	</npc>
 	<npc id="25732" level="85" type="L2Monster" name="Dragon Beast" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
@@ -1959,7 +1926,6 @@
 		</collision>
 	</npc>
 	<npc id="25733" level="83" type="L2Monster" name="Gem Dragon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6876" level="1" /> <!-- Power Strike -->
@@ -2006,7 +1972,6 @@
 		</collision>
 	</npc>
 	<npc id="25734" level="83" type="L2Monster" name="Parasitic Leech">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Probablity" value="1111" />

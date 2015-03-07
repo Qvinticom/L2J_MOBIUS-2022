@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22400" level="83" type="L2Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
 		</parameters>
@@ -74,7 +73,6 @@
 		</collision>
 	</npc>
 	<npc id="22401" level="83" type="L2Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
 		</parameters>
@@ -155,7 +153,6 @@
 		</collision>
 	</npc>
 	<npc id="22402" level="83" type="L2Monster" name="Shadow Column">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDmagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
 			<skill name="selfbuff" id="5417" level="1" /> <!-- Invincible -->
@@ -226,7 +223,6 @@
 		</collision>
 	</npc>
 	<npc id="22403" level="83" type="L2Monster" name="Foundry Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -327,7 +323,6 @@
 		</collision>
 	</npc>
 	<npc id="22404" level="83" type="L2Monster" name="Arcane Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -423,7 +418,6 @@
 		</collision>
 	</npc>
 	<npc id="22405" level="83" type="L2Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -522,7 +516,6 @@
 		</collision>
 	</npc>
 	<npc id="22406" level="83" type="L2Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -620,7 +613,6 @@
 		</collision>
 	</npc>
 	<npc id="22407" level="83" type="L2Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -720,7 +712,6 @@
 		</collision>
 	</npc>
 	<npc id="22408" level="83" type="L2Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -833,7 +824,6 @@
 		</collision>
 	</npc>
 	<npc id="22409" level="83" type="L2Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -946,7 +936,6 @@
 		</collision>
 	</npc>
 	<npc id="22410" level="83" type="L2Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1046,7 +1035,6 @@
 		</collision>
 	</npc>
 	<npc id="22411" level="83" type="L2Monster" name="Beleth's Retainer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1144,7 +1132,6 @@
 		</collision>
 	</npc>
 	<npc id="22412" level="83" type="L2Monster" name="Beleth's Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1251,7 +1238,6 @@
 		</collision>
 	</npc>
 	<npc id="22413" level="83" type="L2Monster" name="Beleth's Low Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1344,7 +1330,6 @@
 		</collision>
 	</npc>
 	<npc id="22414" level="83" type="L2Monster" name="Beleth's Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1424,7 +1409,6 @@
 		</collision>
 	</npc>
 	<npc id="22415" level="83" type="L2Monster" name="Beleth's Devotee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1520,7 +1504,6 @@
 		</collision>
 	</npc>
 	<npc id="22416" level="82" type="L2Monster" name="Kechi's Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -1606,7 +1589,6 @@
 		</collision>
 	</npc>
 	<npc id="22417" level="82" type="L2Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1709,7 +1691,6 @@
 		</collision>
 	</npc>
 	<npc id="22418" level="82" type="L2Monster" name="Burning Illith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1795,7 +1776,6 @@
 		</collision>
 	</npc>
 	<npc id="22419" level="82" type="L2Monster" name="Flame Illith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1890,7 +1870,6 @@
 		</collision>
 	</npc>
 	<npc id="22420" level="82" type="L2Monster" name="Brimstone Illith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1984,7 +1963,6 @@
 		</collision>
 	</npc>
 	<npc id="22422" level="83" type="L2Monster" name="Failan's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2068,7 +2046,6 @@
 		</collision>
 	</npc>
 	<npc id="22423" level="83" type="L2Monster" name="Original Sin Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2168,7 +2145,6 @@
 		</collision>
 	</npc>
 	<npc id="22424" level="83" type="L2Monster" name="Slave of Greed">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2255,7 +2231,6 @@
 		</collision>
 	</npc>
 	<npc id="22425" level="83" type="L2Monster" name="Slave of Lust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2339,7 +2314,6 @@
 		</collision>
 	</npc>
 	<npc id="22426" level="83" type="L2Monster" name="Slave of Wrath">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2426,7 +2400,6 @@
 		</collision>
 	</npc>
 	<npc id="22427" level="83" type="L2Monster" name="Slave of Sloth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2512,7 +2485,6 @@
 		</collision>
 	</npc>
 	<npc id="22428" level="83" type="L2Monster" name="Slave of Envy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2601,7 +2573,6 @@
 		</collision>
 	</npc>
 	<npc id="22429" level="83" type="L2Monster" name="Slave of Pride">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2698,7 +2669,6 @@
 		</collision>
 	</npc>
 	<npc id="22430" level="83" type="L2Monster" name="Slave of Gluttony">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2787,7 +2757,6 @@
 		</collision>
 	</npc>
 	<npc id="22431" level="83" type="L2Monster" name="Original Sin Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2888,7 +2857,6 @@
 		</collision>
 	</npc>
 	<npc id="22432" level="83" type="L2Monster" name="Slave of Greed">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2974,7 +2942,6 @@
 		</collision>
 	</npc>
 	<npc id="22433" level="83" type="L2Monster" name="Slave of Lust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3061,7 +3028,6 @@
 		</collision>
 	</npc>
 	<npc id="22434" level="83" type="L2Monster" name="Slave of Wrath">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -3157,7 +3123,6 @@
 		</collision>
 	</npc>
 	<npc id="22435" level="83" type="L2Monster" name="Slave of Sloth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3239,7 +3204,6 @@
 		</collision>
 	</npc>
 	<npc id="22436" level="83" type="L2Monster" name="Slave of Envy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3320,7 +3284,6 @@
 		</collision>
 	</npc>
 	<npc id="22437" level="83" type="L2Monster" name="Slave of Pride">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3403,7 +3366,6 @@
 		</collision>
 	</npc>
 	<npc id="22438" level="83" type="L2Monster" name="Slave of Gluttony">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3483,7 +3445,6 @@
 		</collision>
 	</npc>
 	<npc id="22439" level="83" type="L2Monster" name="Beleth's Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3575,7 +3536,6 @@
 		</collision>
 	</npc>
 	<npc id="22440" level="83" type="L2Monster" name="Beleth's Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3668,7 +3628,6 @@
 		</collision>
 	</npc>
 	<npc id="22441" level="83" type="L2Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3757,7 +3716,6 @@
 		</collision>
 	</npc>
 	<npc id="22442" level="83" type="L2Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3842,7 +3800,6 @@
 		</collision>
 	</npc>
 	<npc id="22443" level="45" type="L2Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3920,7 +3877,6 @@
 		</collision>
 	</npc>
 	<npc id="22444" level="55" type="L2Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3996,7 +3952,6 @@
 		</collision>
 	</npc>
 	<npc id="22445" level="65" type="L2Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4072,7 +4027,6 @@
 		</collision>
 	</npc>
 	<npc id="22446" level="75" type="L2Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4149,7 +4103,6 @@
 		</collision>
 	</npc>
 	<npc id="22447" level="80" type="L2Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4230,7 +4183,6 @@
 		</collision>
 	</npc>
 	<npc id="22448" level="86" type="L2Monster" name="Leodas" title="Resistance Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4334,7 +4286,6 @@
 		</collision>
 	</npc>
 	<npc id="22449" level="86" type="L2Monster" name="Amaskari" title="Torture Expert">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4438,7 +4389,6 @@
 		</collision>
 	</npc>
 	<npc id="22450" level="86" type="L2Monster" name="Tortured Native">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4511,7 +4461,6 @@
 		</collision>
 	</npc>
 	<npc id="22451" level="86" type="L2Monster" name="Native Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4593,7 +4542,6 @@
 		</collision>
 	</npc>
 	<npc id="22452" level="25" type="L2Monster" name="White Skull Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4691,7 +4639,6 @@
 		</collision>
 	</npc>
 	<npc id="22453" level="25" type="L2Monster" name="White Skull Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -4794,7 +4741,6 @@
 		</collision>
 	</npc>
 	<npc id="22454" level="27" type="L2Monster" name="White Skull Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4899,7 +4845,6 @@
 		</collision>
 	</npc>
 	<npc id="22455" level="30" type="L2Monster" name="Begrudged Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -4997,7 +4942,6 @@
 		</collision>
 	</npc>
 	<npc id="22456" level="30" type="L2Monster" name="Begrudged Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5098,7 +5042,6 @@
 		</collision>
 	</npc>
 	<npc id="22457" level="32" type="L2Monster" name="Begrudged Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -5201,7 +5144,6 @@
 		</collision>
 	</npc>
 	<npc id="22458" level="35" type="L2Monster" name="Rotten Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5298,7 +5240,6 @@
 		</collision>
 	</npc>
 	<npc id="22459" level="35" type="L2Monster" name="Rotten Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -5398,7 +5339,6 @@
 		</collision>
 	</npc>
 	<npc id="22460" level="37" type="L2Monster" name="Rotten Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5499,7 +5439,6 @@
 		</collision>
 	</npc>
 	<npc id="22461" level="40" type="L2Monster" name="Gluttonous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5597,7 +5536,6 @@
 		</collision>
 	</npc>
 	<npc id="22462" level="40" type="L2Monster" name="Gluttonous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5696,7 +5634,6 @@
 		</collision>
 	</npc>
 	<npc id="22463" level="42" type="L2Monster" name="Gluttonous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="81" />
@@ -5799,7 +5736,6 @@
 		</collision>
 	</npc>
 	<npc id="22464" level="45" type="L2Monster" name="Callous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5897,7 +5833,6 @@
 		</collision>
 	</npc>
 	<npc id="22465" level="45" type="L2Monster" name="Callous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5998,7 +5933,6 @@
 		</collision>
 	</npc>
 	<npc id="22466" level="47" type="L2Monster" name="Callous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -6101,7 +6035,6 @@
 		</collision>
 	</npc>
 	<npc id="22467" level="50" type="L2Monster" name="Savage Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -6199,7 +6132,6 @@
 		</collision>
 	</npc>
 	<npc id="22468" level="50" type="L2Monster" name="Savage Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -6300,7 +6232,6 @@
 		</collision>
 	</npc>
 	<npc id="22469" level="52" type="L2Monster" name="Savage Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6403,7 +6334,6 @@
 		</collision>
 	</npc>
 	<npc id="22470" level="55" type="L2Monster" name="Peerless Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -6501,7 +6431,6 @@
 		</collision>
 	</npc>
 	<npc id="22471" level="55" type="L2Monster" name="Peerless Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6602,7 +6531,6 @@
 		</collision>
 	</npc>
 	<npc id="22472" level="57" type="L2Monster" name="Peerless Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6705,7 +6633,6 @@
 		</collision>
 	</npc>
 	<npc id="22473" level="60" type="L2Monster" name="Massive Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -6803,7 +6730,6 @@
 		</collision>
 	</npc>
 	<npc id="22474" level="60" type="L2Monster" name="Massive Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -6904,7 +6830,6 @@
 		</collision>
 	</npc>
 	<npc id="22475" level="62" type="L2Monster" name="Massive Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -7007,7 +6932,6 @@
 		</collision>
 	</npc>
 	<npc id="22476" level="65" type="L2Monster" name="Fervent Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7105,7 +7029,6 @@
 		</collision>
 	</npc>
 	<npc id="22477" level="65" type="L2Monster" name="Fervent Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7205,7 +7128,6 @@
 		</collision>
 	</npc>
 	<npc id="22478" level="65" type="L2Monster" name="Fervent Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7307,7 +7229,6 @@
 		</collision>
 	</npc>
 	<npc id="22479" level="70" type="L2Monster" name="Ruptured Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -7404,7 +7325,6 @@
 		</collision>
 	</npc>
 	<npc id="22480" level="70" type="L2Monster" name="Ruptured Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -7504,7 +7424,6 @@
 		</collision>
 	</npc>
 	<npc id="22481" level="72" type="L2Monster" name="Ruptured Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -7606,7 +7525,6 @@
 		</collision>
 	</npc>
 	<npc id="22482" level="75" type="L2Monster" name="Sword Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7703,7 +7621,6 @@
 		</collision>
 	</npc>
 	<npc id="22483" level="75" type="L2Monster" name="Sword Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -7803,7 +7720,6 @@
 		</collision>
 	</npc>
 	<npc id="22484" level="77" type="L2Monster" name="Sword Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -7907,7 +7823,6 @@
 		</collision>
 	</npc>
 	<npc id="22485" level="29" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7969,7 +7884,6 @@
 		</collision>
 	</npc>
 	<npc id="22486" level="29" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -8028,7 +7942,6 @@
 		</collision>
 	</npc>
 	<npc id="22487" level="29" type="L2Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -8091,7 +8004,6 @@
 		</collision>
 	</npc>
 	<npc id="22488" level="39" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -8153,7 +8065,6 @@
 		</collision>
 	</npc>
 	<npc id="22489" level="39" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -8212,7 +8123,6 @@
 		</collision>
 	</npc>
 	<npc id="22490" level="39" type="L2Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -8275,7 +8185,6 @@
 		</collision>
 	</npc>
 	<npc id="22491" level="49" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -8336,7 +8245,6 @@
 		</collision>
 	</npc>
 	<npc id="22492" level="49" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -8394,7 +8302,6 @@
 		</collision>
 	</npc>
 	<npc id="22493" level="49" type="L2Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8456,7 +8363,6 @@
 		</collision>
 	</npc>
 	<npc id="22494" level="59" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -8518,7 +8424,6 @@
 		</collision>
 	</npc>
 	<npc id="22495" level="59" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -8577,7 +8482,6 @@
 		</collision>
 	</npc>
 	<npc id="22496" level="59" type="L2Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8639,7 +8543,6 @@
 		</collision>
 	</npc>
 	<npc id="22497" level="69" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -8700,7 +8603,6 @@
 		</collision>
 	</npc>
 	<npc id="22498" level="69" type="L2Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -8758,7 +8660,6 @@
 		</collision>
 	</npc>
 	<npc id="22499" level="69" type="L2Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />

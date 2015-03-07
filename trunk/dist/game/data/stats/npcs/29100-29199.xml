@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29100" level="83" type="L2Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="7" />
@@ -50,7 +49,6 @@
 		</collision>
 	</npc>
 	<npc id="29101" level="83" type="L2Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -90,7 +88,6 @@
 		</collision>
 	</npc>
 	<npc id="29102" level="83" type="L2Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -130,7 +127,6 @@
 		</collision>
 	</npc>
 	<npc id="29103" level="83" type="L2Monster" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5401" level="1" /> <!-- Stun -->
 		</parameters>
@@ -172,7 +168,6 @@
 		</collision>
 	</npc>
 	<npc id="29104" level="83" type="L2Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5405" level="1" /> <!-- Presentation - Demonic 1 -->
 			<skill name="d_skill2" id="5406" level="1" /> <!-- Presentation - Demonic 2 -->
@@ -216,7 +211,6 @@
 		</collision>
 	</npc>
 	<npc id="29105" level="83" type="L2Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5407" level="1" /> <!-- Presentation - Crystalline Golem 1 -->
 			<skill name="d_skill2" id="5408" level="1" /> <!-- Presentation - Crystalline Golem 2 -->
@@ -262,7 +256,6 @@
 		</collision>
 	</npc>
 	<npc id="29106" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -297,7 +290,6 @@
 		</collision>
 	</npc>
 	<npc id="29107" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -332,7 +324,6 @@
 		</collision>
 	</npc>
 	<npc id="29108" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -367,7 +358,6 @@
 		</collision>
 	</npc>
 	<npc id="29109" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -402,7 +392,6 @@
 		</collision>
 	</npc>
 	<npc id="29110" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -437,7 +426,6 @@
 		</collision>
 	</npc>
 	<npc id="29111" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -472,7 +460,6 @@
 		</collision>
 	</npc>
 	<npc id="29112" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -507,7 +494,6 @@
 		</collision>
 	</npc>
 	<npc id="29113" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -542,7 +528,6 @@
 		</collision>
 	</npc>
 	<npc id="29114" level="83" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -577,7 +562,6 @@
 		</collision>
 	</npc>
 	<npc id="29115" level="83" type="L2Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="7" />
@@ -622,7 +606,6 @@
 		</collision>
 	</npc>
 	<npc id="29116" level="83" type="L2Monster" name="Baylor's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -689,7 +672,6 @@
 		</collision>
 	</npc>
 	<npc id="29117" level="83" type="L2Monster" name="Baylor's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -746,7 +728,6 @@
 		</collision>
 	</npc>
 	<npc id="29118" level="99" type="L2GrandBoss" name="Beleth">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="16447436" sp="1362651" raidPoints="3997" />
@@ -832,7 +813,6 @@
 		</collision>
 	</npc>
 	<npc id="29119" level="83" type="L2Monster" name="Beleth">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -875,7 +855,6 @@
 		</collision>
 	</npc>
 	<npc id="29120" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -910,7 +889,6 @@
 		</collision>
 	</npc>
 	<npc id="29121" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -945,7 +923,6 @@
 		</collision>
 	</npc>
 	<npc id="29122" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -980,7 +957,6 @@
 		</collision>
 	</npc>
 	<npc id="29123" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1015,7 +991,6 @@
 		</collision>
 	</npc>
 	<npc id="29124" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1050,7 +1025,6 @@
 		</collision>
 	</npc>
 	<npc id="29125" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1085,7 +1059,6 @@
 		</collision>
 	</npc>
 	<npc id="29126" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1121,7 +1094,6 @@
 		</collision>
 	</npc>
 	<npc id="29127" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1157,7 +1129,6 @@
 		</collision>
 	</npc>
 	<npc id="29128" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1193,7 +1164,6 @@
 		</collision>
 	</npc>
 	<npc id="29129" level="29" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29130" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1264,7 +1234,6 @@
 		</collision>
 	</npc>
 	<npc id="29130" level="29" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- rhand: Stormbringer -->
@@ -1302,7 +1271,6 @@
 		</collision>
 	</npc>
 	<npc id="29131" level="29" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="2" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="2" /> <!-- BOSS Heal -->
@@ -1349,7 +1317,6 @@
 		</collision>
 	</npc>
 	<npc id="29132" level="39" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29133" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1423,7 +1390,6 @@
 		</collision>
 	</npc>
 	<npc id="29133" level="39" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -1461,7 +1427,6 @@
 		</collision>
 	</npc>
 	<npc id="29134" level="39" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="3" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="3" /> <!-- BOSS Heal -->
@@ -1508,7 +1473,6 @@
 		</collision>
 	</npc>
 	<npc id="29135" level="49" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29136" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1583,7 +1547,6 @@
 		</collision>
 	</npc>
 	<npc id="29136" level="49" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1620,7 +1583,6 @@
 		</collision>
 	</npc>
 	<npc id="29137" level="49" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="4" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="4" /> <!-- BOSS Heal -->
@@ -1666,7 +1628,6 @@
 		</collision>
 	</npc>
 	<npc id="29138" level="59" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29139" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1747,7 +1708,6 @@
 		</collision>
 	</npc>
 	<npc id="29139" level="59" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1784,7 +1744,6 @@
 		</collision>
 	</npc>
 	<npc id="29140" level="59" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="5" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="5" /> <!-- BOSS Heal -->
@@ -1830,7 +1789,6 @@
 		</collision>
 	</npc>
 	<npc id="29141" level="69" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29142" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1903,7 +1861,6 @@
 		</collision>
 	</npc>
 	<npc id="29142" level="69" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1940,7 +1897,6 @@
 		</collision>
 	</npc>
 	<npc id="29143" level="69" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="6" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
@@ -1986,7 +1942,6 @@
 		</collision>
 	</npc>
 	<npc id="29144" level="78" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29145" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
@@ -2060,7 +2015,6 @@
 		</collision>
 	</npc>
 	<npc id="29145" level="78" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8221" /> <!-- rhand: Monster Only (Grail Apostle Spear) -->
@@ -2100,7 +2054,6 @@
 		</collision>
 	</npc>
 	<npc id="29146" level="78" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="7" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="7" /> <!-- BOSS Heal -->
@@ -2149,7 +2102,6 @@
 		</collision>
 	</npc>
 	<npc id="29147" level="81" type="L2RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29148" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
@@ -2227,7 +2179,6 @@
 		</collision>
 	</npc>
 	<npc id="29148" level="81" type="L2Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2265,7 +2216,6 @@
 		</collision>
 	</npc>
 	<npc id="29149" level="81" type="L2Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="8" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
@@ -2312,7 +2262,6 @@
 		</collision>
 	</npc>
 	<npc id="29150" level="82" type="L2GrandBoss" name="Ekimus" title="Immortal Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_HPBuff" id="5916" level="1" /> <!-- Cruising Aura -->
 		</parameters>
@@ -2409,7 +2358,6 @@
 		</collision>
 	</npc>
 	<npc id="29151" level="82" type="L2Monster" name="Feral Hound of the Netherworld">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="1" />
 		</parameters>
@@ -2454,7 +2402,6 @@
 		</collision>
 	</npc>
 	<npc id="29152" level="82" type="L2Monster" name="Feral Hound of the Netherworld">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="3" />
 		</parameters>
@@ -2499,7 +2446,6 @@
 		</collision>
 	</npc>
 	<npc id="29153" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2534,7 +2480,6 @@
 		</collision>
 	</npc>
 	<npc id="29154" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2569,7 +2514,6 @@
 		</collision>
 	</npc>
 	<npc id="29155" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2604,7 +2548,6 @@
 		</collision>
 	</npc>
 	<npc id="29156" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2639,7 +2582,6 @@
 		</collision>
 	</npc>
 	<npc id="29157" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2674,7 +2616,6 @@
 		</collision>
 	</npc>
 	<npc id="29158" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2709,7 +2650,6 @@
 		</collision>
 	</npc>
 	<npc id="29159" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2744,7 +2684,6 @@
 		</collision>
 	</npc>
 	<npc id="29160" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2779,7 +2718,6 @@
 		</collision>
 	</npc>
 	<npc id="29161" level="73" type="L2Npc" name="Pre-Awakened Ekimus">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2814,7 +2752,6 @@
 		</collision>
 	</npc>
 	<npc id="29162" level="95" type="L2Monster" name="Soldiers of Bravery" title="Tiat's Escort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="3333" />
@@ -2867,7 +2804,6 @@
 		</collision>
 	</npc>
 	<npc id="29163" level="96" type="L2GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire raidPoints="3975" />
@@ -2951,7 +2887,6 @@
 		</collision>
 	</npc>
 	<npc id="29164" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2986,7 +2921,6 @@
 		</collision>
 	</npc>
 	<npc id="29165" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3021,7 +2955,6 @@
 		</collision>
 	</npc>
 	<npc id="29166" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3056,7 +2989,6 @@
 		</collision>
 	</npc>
 	<npc id="29167" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3091,7 +3023,6 @@
 		</collision>
 	</npc>
 	<npc id="29168" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3129,7 +3060,6 @@
 		</collision>
 	</npc>
 	<npc id="29169" level="73" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3164,7 +3094,6 @@
 		</collision>
 	</npc>
 	<npc id="29170" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3199,7 +3128,6 @@
 		</collision>
 	</npc>
 	<npc id="29171" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3234,7 +3162,6 @@
 		</collision>
 	</npc>
 	<npc id="29172" level="73" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3269,7 +3196,6 @@
 		</collision>
 	</npc>
 	<npc id="29173" level="73" type="L2Npc" name="Priest Tiat">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3304,7 +3230,6 @@
 		</collision>
 	</npc>
 	<npc id="29174" level="73" type="L2Npc" name="Priest Tiat">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3339,7 +3264,6 @@
 		</collision>
 	</npc>
 	<npc id="29175" level="82" type="L2GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="11480334" sp="4460470.034" raidPoints="3975" />
@@ -3411,7 +3335,6 @@
 		</collision>
 	</npc>
 	<npc id="29176" level="60" type="L2GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4154684" sp="587466.813342582" raidPoints="572" />
@@ -3476,7 +3399,6 @@
 		</collision>
 	</npc>
 	<npc id="29177" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -3519,7 +3441,6 @@
 		</collision>
 	</npc>
 	<npc id="29178" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -3562,7 +3483,6 @@
 		</collision>
 	</npc>
 	<npc id="29179" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="51569936" sp="6164678.02046629" raidPoints="11965" />
@@ -3660,7 +3580,6 @@
 		</collision>
 	</npc>
 	<npc id="29180" level="88" type="L2GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8789285120" sp="12524211.7184757" raidPoints="15922" />
@@ -3757,7 +3676,6 @@
 		</collision>
 	</npc>
 	<npc id="29181" level="83" type="L2GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="15282888" sp="2051807" raidPoints="1795" />
@@ -3860,7 +3778,6 @@
 		</collision>
 	</npc>
 	<npc id="29182" level="81" type="L2Monster" name="Doll Blader">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5129" /> <!-- rhand: Doll Knife -->
@@ -3903,7 +3820,6 @@
 		</collision>
 	</npc>
 	<npc id="29183" level="82" type="L2Monster" name="Veil Master">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3944,7 +3860,6 @@
 		</collision>
 	</npc>
 	<npc id="29184" level="83" type="L2Monster" name="Pirate Zombie Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5708" level="2" /> <!-- Water Cannon -->
@@ -3991,7 +3906,6 @@
 		</collision>
 	</npc>
 	<npc id="29185" level="81" type="L2Monster" name="Pirate Zombie">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="225" /> <!-- rhand: Mithril Dagger -->
@@ -4031,7 +3945,6 @@
 		</collision>
 	</npc>
 	<npc id="29186" level="85" type="L2GrandBoss" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" /> <!-- Balor - Physical Close Range Weak Point -->
 			<skill name="selfbuff2" id="5222" level="1" /> <!-- Balor - Physical Long Range Weak Point -->
@@ -4117,7 +4030,6 @@
 		</collision>
 	</npc>
 	<npc id="29187" level="85" type="L2Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="7" />
@@ -4168,7 +4080,6 @@
 		</collision>
 	</npc>
 	<npc id="29188" level="85" type="L2Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4210,7 +4121,6 @@
 		</collision>
 	</npc>
 	<npc id="29189" level="85" type="L2Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4252,7 +4162,6 @@
 		</collision>
 	</npc>
 	<npc id="29190" level="99" type="L2Monster" name="Tarask Dragon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
 			<skill name="Skill02_ID" id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->

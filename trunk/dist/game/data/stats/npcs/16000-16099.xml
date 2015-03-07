@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="16013" level="67" type="L2TamedBeast" name="Trained Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -62,7 +61,6 @@
 		</collision>
 	</npc>
 	<npc id="16014" level="67" type="L2TamedBeast" name="Trained Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -123,7 +121,6 @@
 		</collision>
 	</npc>
 	<npc id="16015" level="69" type="L2TamedBeast" name="Trained Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -184,7 +181,6 @@
 		</collision>
 	</npc>
 	<npc id="16016" level="69" type="L2TamedBeast" name="Trained Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -245,7 +241,6 @@
 		</collision>
 	</npc>
 	<npc id="16017" level="65" type="L2TamedBeast" name="Trained Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -306,7 +301,6 @@
 		</collision>
 	</npc>
 	<npc id="16018" level="65" type="L2TamedBeast" name="Trained Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -367,7 +361,6 @@
 		</collision>
 	</npc>
 	<npc id="16019" level="67" type="L2Monster" name="Tiny Baby Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -434,7 +427,6 @@
 		</collision>
 	</npc>
 	<npc id="16020" level="67" type="L2Monster" name="Trained Tiny Baby Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -497,7 +489,6 @@
 		</collision>
 	</npc>
 	<npc id="16021" level="69" type="L2Monster" name="Tiny Baby Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -564,7 +555,6 @@
 		</collision>
 	</npc>
 	<npc id="16022" level="69" type="L2Monster" name="Trained Tiny Baby Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -627,7 +617,6 @@
 		</collision>
 	</npc>
 	<npc id="16023" level="65" type="L2Monster" name="Tiny Baby Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -696,7 +685,6 @@
 		</collision>
 	</npc>
 	<npc id="16024" level="65" type="L2Monster" name="Trained Tiny Baby Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -759,7 +747,6 @@
 		</collision>
 	</npc>
 	<npc id="16025" level="55" type="L2Pet" name="Great Black Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
 			<param name="Skill01_ID" value="1041" />
@@ -807,7 +794,6 @@
 		</collision>
 	</npc>
 	<npc id="16026" level="55" type="L2Npc" name="Beastly Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -842,7 +828,6 @@
 		</collision>
 	</npc>
 	<npc id="16027" level="55" type="L2Npc" name="Rainbow Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -877,7 +862,6 @@
 		</collision>
 	</npc>
 	<npc id="16028" level="55" type="L2Npc" name="Lord Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -912,7 +896,6 @@
 		</collision>
 	</npc>
 	<npc id="16029" level="55" type="L2Npc" name="Fortress Agasion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -947,7 +930,6 @@
 		</collision>
 	</npc>
 	<npc id="16030" level="55" type="L2Pet" name="Great Black Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
 			<param name="Skill01_ID" value="1041" />
@@ -996,7 +978,6 @@
 		</collision>
 	</npc>
 	<npc id="16031" level="55" type="L2Npc" name="Little Angel Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1031,7 +1012,6 @@
 		</collision>
 	</npc>
 	<npc id="16032" level="55" type="L2Npc" name="Little Devil Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1066,7 +1046,6 @@
 		</collision>
 	</npc>
 	<npc id="16033" level="55" type="L2Npc" name="Rudolph Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1101,7 +1080,6 @@
 		</collision>
 	</npc>
 	<npc id="16034" level="55" type="L2BabyPet" name="Improved Baby Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5189" level="6" /> <!-- Pet Blessed Body -->
 			<skill name="step0_buff02" id="5586" level="3" /> <!-- Pet Might -->
@@ -1229,7 +1207,6 @@
 		</collision>
 	</npc>
 	<npc id="16035" level="55" type="L2BabyPet" name="Improved Baby Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5194" level="3" /> <!-- Pet Empower -->
 			<skill name="step0_buff02" id="5190" level="6" /> <!-- Pet Blessed Soul -->
@@ -1358,7 +1335,6 @@
 		</collision>
 	</npc>
 	<npc id="16036" level="55" type="L2BabyPet" name="Improved Baby Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5194" level="3" /> <!-- Pet Empower -->
 			<skill name="step0_buff02" id="5586" level="3" /> <!-- Pet Might -->
@@ -1486,7 +1462,6 @@
 		</collision>
 	</npc>
 	<npc id="16037" level="55" type="L2Pet" name="Great Snow Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -1607,7 +1582,6 @@
 		</collision>
 	</npc>
 	<npc id="16038" level="55" type="L2Pet" name="Red Wind Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -1707,7 +1681,6 @@
 		</collision>
 	</npc>
 	<npc id="16039" level="55" type="L2Pet" name="Red Star Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -1807,7 +1780,6 @@
 		</collision>
 	</npc>
 	<npc id="16040" level="55" type="L2Pet" name="Red Strider of Dusk">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1846,7 +1818,6 @@
 		</collision>
 	</npc>
 	<npc id="16041" level="55" type="L2Pet" name="Fenrir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
 			<param name="Skill01_ID" value="1041" />
@@ -1898,7 +1869,6 @@
 		</collision>
 	</npc>
 	<npc id="16042" level="55" type="L2Pet" name="Snow Fenrir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -2019,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="16043" level="55" type="L2Pet" name="Fox Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<skill name="step0_skill01" id="5749" level="1" /> <!-- Thunder Bolt -->
@@ -2125,7 +2094,6 @@
 		</collision>
 	</npc>
 	<npc id="16044" level="55" type="L2Pet" name="Wild Beast Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<skill name="step0_skill04" id="5745" level="1" /> <!-- Death Blow -->
@@ -2231,7 +2199,6 @@
 		</collision>
 	</npc>
 	<npc id="16045" level="55" type="L2BabyPet" name="White Weasel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="133" />
 			<skill name="step0_buff01" id="5189" level="6" /> <!-- Pet Blessed Body -->
@@ -2324,7 +2291,6 @@
 		</collision>
 	</npc>
 	<npc id="16046" level="55" type="L2BabyPet" name="Fairy Princess">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<skill name="step0_buff01" id="5190" level="6" /> <!-- Pet Blessed Soul -->
@@ -2411,7 +2377,6 @@
 		</collision>
 	</npc>
 	<npc id="16049" level="55" type="L2Npc" name="Love Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2446,7 +2411,6 @@
 		</collision>
 	</npc>
 	<npc id="16050" level="55" type="L2Pet" name="Owl Monk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 		</parameters>
@@ -2487,7 +2451,6 @@
 		</collision>
 	</npc>
 	<npc id="16051" level="55" type="L2BabyPet" name="Spirit Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<skill name="step0_skill01" id="5749" level="1" /> <!-- Thunder Bolt -->
@@ -2632,7 +2595,6 @@
 		</collision>
 	</npc>
 	<npc id="16052" level="55" type="L2BabyPet" name="Toy Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<skill name="step0_skill01" id="6046" level="1" /> <!-- Piercing Attack -->
@@ -2807,7 +2769,6 @@
 		</collision>
 	</npc>
 	<npc id="16053" level="55" type="L2BabyPet" name="Turtle Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<skill name="step0_skill01" id="6050" level="1" /> <!-- Power Smash -->
@@ -2979,7 +2940,6 @@
 		</collision>
 	</npc>
 	<npc id="16054" level="55" type="L2Npc" name="Monkey">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3014,7 +2974,6 @@
 		</collision>
 	</npc>
 	<npc id="16055" level="55" type="L2Npc" name="Griffon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3049,7 +3008,6 @@
 		</collision>
 	</npc>
 	<npc id="16056" level="55" type="L2Npc" name="Joy">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3084,7 +3042,6 @@
 		</collision>
 	</npc>
 	<npc id="16057" level="55" type="L2Npc" name="Sorrow">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3119,7 +3076,6 @@
 		</collision>
 	</npc>
 	<npc id="16058" level="55" type="L2Npc" name="Anger">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3154,7 +3110,6 @@
 		</collision>
 	</npc>
 	<npc id="16059" level="55" type="L2Npc" name="Boy Bear">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3189,7 +3144,6 @@
 		</collision>
 	</npc>
 	<npc id="16060" level="55" type="L2Npc" name="Girl Bear">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3224,7 +3178,6 @@
 		</collision>
 	</npc>
 	<npc id="16061" level="55" type="L2Npc" name="Collection Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3259,7 +3212,6 @@
 		</collision>
 	</npc>
 	<npc id="16062" level="55" type="L2Npc" name="Knight">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3294,7 +3246,6 @@
 		</collision>
 	</npc>
 	<npc id="16063" level="55" type="L2Npc" name="Neolithica">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3329,7 +3280,6 @@
 		</collision>
 	</npc>
 	<npc id="16064" level="55" type="L2Npc" name="Juju">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3364,7 +3314,6 @@
 		</collision>
 	</npc>
 	<npc id="16065" level="55" type="L2Npc" name="Oink Oink">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3399,7 +3348,6 @@
 		</collision>
 	</npc>
 	<npc id="16066" level="55" type="L2Npc" name="Light of Dawn">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3434,7 +3382,6 @@
 		</collision>
 	</npc>
 	<npc id="16067" level="55" type="L2Pet" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -3494,7 +3441,6 @@
 		</collision>
 	</npc>
 	<npc id="16068" level="55" type="L2Pet" name="Guardian's Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -3595,7 +3541,6 @@
 		</collision>
 	</npc>
 	<npc id="16069" level="55" type="L2Npc" name="Pona">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3630,7 +3575,6 @@
 		</collision>
 	</npc>
 	<npc id="16070" level="55" type="L2Npc" name="Towbat">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3664,7 +3608,6 @@
 		</collision>
 	</npc>
 	<npc id="16071" level="55" type="L2Pet" name="Wild Maguen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -3759,7 +3702,6 @@
 		</collision>
 	</npc>
 	<npc id="16072" level="55" type="L2Pet" name="Elite Maguen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -3854,7 +3796,6 @@
 		</collision>
 	</npc>
 	<npc id="16073" level="55" type="L2Npc" name="Rudolph Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

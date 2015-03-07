@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22600" level="82" type="L2Monster" name="Throne of Destruction Powerful Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -26,7 +25,6 @@
 		</collision>
 	</npc>
 	<npc id="22601" level="73" type="L2Monster" name="Heart Protection Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -51,7 +49,6 @@
 		</collision>
 	</npc>
 	<npc id="22602" level="73" type="L2Monster" name="Mutant Bird">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -132,7 +129,6 @@
 		</collision>
 	</npc>
 	<npc id="22603" level="74" type="L2Monster" name="Mutant Bird">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -217,7 +213,6 @@
 		</collision>
 	</npc>
 	<npc id="22604" level="74" type="L2Monster" name="Dra Hawk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -297,7 +292,6 @@
 		</collision>
 	</npc>
 	<npc id="22605" level="75" type="L2Monster" name="Dra Hawk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -377,7 +371,6 @@
 		</collision>
 	</npc>
 	<npc id="22606" level="76" type="L2Monster" name="Floating Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -460,7 +453,6 @@
 		</collision>
 	</npc>
 	<npc id="22607" level="77" type="L2Monster" name="Floating Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -531,7 +523,6 @@
 		</collision>
 	</npc>
 	<npc id="22608" level="75" type="L2Monster" name="Floating Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -603,7 +594,6 @@
 		</collision>
 	</npc>
 	<npc id="22609" level="76" type="L2Monster" name="Floating Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -675,7 +665,6 @@
 		</collision>
 	</npc>
 	<npc id="22610" level="75" type="L2Monster" name="Mutated Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -754,7 +743,6 @@
 		</collision>
 	</npc>
 	<npc id="22611" level="76" type="L2Monster" name="Mutated Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -833,7 +821,6 @@
 		</collision>
 	</npc>
 	<npc id="22612" level="76" type="L2Monster" name="Drak">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -915,7 +902,6 @@
 		</collision>
 	</npc>
 	<npc id="22613" level="77" type="L2Monster" name="Drak">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -995,7 +981,6 @@
 		</collision>
 	</npc>
 	<npc id="22614" level="74" type="L2Monster" name="Vulture Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1084,7 +1069,6 @@
 		</collision>
 	</npc>
 	<npc id="22615" level="75" type="L2Monster" name="Vulture Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1167,7 +1151,6 @@
 		</collision>
 	</npc>
 	<npc id="22616" level="81" type="L2Monster" name="Seed of Pain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5882" level="1" /> <!-- Weakened Pommel -->
 			<skill name="Skill02_ID" id="5890" level="1" /> <!-- Tainted Mass Shackle -->
@@ -1219,7 +1202,6 @@
 		</collision>
 	</npc>
 	<npc id="22617" level="82" type="L2Monster" name="Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -1302,7 +1284,6 @@
 		</collision>
 	</npc>
 	<npc id="22618" level="82" type="L2Monster" name="Spiked Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" /> <!-- NPC Mortal Blow -->
 		</parameters>
@@ -1388,7 +1369,6 @@
 		</collision>
 	</npc>
 	<npc id="22619" level="82" type="L2Monster" name="Spiked Stakato Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" /> <!-- NPC Mortal Blow -->
 		</parameters>
@@ -1468,7 +1448,6 @@
 		</collision>
 	</npc>
 	<npc id="22620" level="82" type="L2Monster" name="Female Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_guard" />
 			<param name="silhouette" value="22619" /> <!-- Spiked Stakato Guard -->
@@ -1556,7 +1535,6 @@
 		</collision>
 	</npc>
 	<npc id="22621" level="82" type="L2Monster" name="Male Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_male_spike_stakato_c" />
 			<param name="silhouette" value="22622" /> <!-- Male Spiked Stakato -->
@@ -1642,7 +1620,6 @@
 		</collision>
 	</npc>
 	<npc id="22622" level="83" type="L2Monster" name="Male Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" /> <!-- NPC AE Strike -->
 			<skill name="SelfRangeDDMagic" id="4571" level="7" /> <!-- NPC Blazing Circle -->
@@ -1728,7 +1705,6 @@
 		</collision>
 	</npc>
 	<npc id="22623" level="82" type="L2Monster" name="Spiked Stakato Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill name="W_ShortRangeDDMagic" id="4257" level="9" /> <!-- NPC Hydroblast - Magic -->
@@ -1812,7 +1788,6 @@
 		</collision>
 	</npc>
 	<npc id="22624" level="82" type="L2Monster" name="Cannibalistic Stakato Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4232" level="8" /> <!-- NPC AE Strike -->
 			<skill name="PhysicalSpecial2" id="6167" level="9" /> <!-- Shock -->
@@ -1898,7 +1873,6 @@
 		</collision>
 	</npc>
 	<npc id="22625" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="6168" level="9" /> <!-- Shock -->
 			<skill name="buff" id="4028" level="3" /> <!-- NPC Might -->
@@ -1987,7 +1961,6 @@
 		</collision>
 	</npc>
 	<npc id="22626" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6167" level="9" /> <!-- Shock -->
 			<skill name="SelfRangeDDMagic" id="4571" level="8" /> <!-- NPC Blazing Circle -->
@@ -2077,7 +2050,6 @@
 		</collision>
 	</npc>
 	<npc id="22627" level="83" type="L2Monster" name="Spiked Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -2165,7 +2137,6 @@
 		</collision>
 	</npc>
 	<npc id="22628" level="83" type="L2Monster" name="Spiked Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" /> <!-- NPC AE Strike -->
 		</parameters>
@@ -2252,7 +2223,6 @@
 		</collision>
 	</npc>
 	<npc id="22629" level="83" type="L2Monster" name="Spiked Stakato Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -2331,7 +2301,6 @@
 		</collision>
 	</npc>
 	<npc id="22630" level="83" type="L2Monster" name="Spiked Stakato Nurse">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_nurse_spike_stakato_c" />
 			<param name="silhouette" value="22631" /> <!-- Spiked Stakato Nurse -->
@@ -2422,7 +2391,6 @@
 		</collision>
 	</npc>
 	<npc id="22631" level="83" type="L2Monster" name="Spiked Stakato Nurse">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic1" id="4100" level="9" /> <!-- NPC Prominence -->
 			<skill name="DDMagic2" id="4078" level="9" /> <!-- NPC Flamestrike -->
@@ -2512,7 +2480,6 @@
 		</collision>
 	</npc>
 	<npc id="22632" level="82" type="L2Monster" name="Spiked Stakato Baby">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_raider" />
 			<param name="silhouette" value="22629" /> <!-- Spiked Stakato Captain -->
@@ -2604,7 +2571,6 @@
 		</collision>
 	</npc>
 	<npc id="22633" level="83" type="L2Monster" name="Spiked Stakato Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill name="W_ShortRangeDDMagic" id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -2694,7 +2660,6 @@
 		</collision>
 	</npc>
 	<npc id="22634" level="78" type="L2Monster" name="Scarlet Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -2767,7 +2732,6 @@
 		</collision>
 	</npc>
 	<npc id="22635" level="78" type="L2Monster" name="Scarlet Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4580" level="9" /> <!-- Decrease P. Atk. -->
@@ -2842,7 +2806,6 @@
 		</collision>
 	</npc>
 	<npc id="22636" level="78" type="L2Monster" name="Scarlet Stakato Noble">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2921,7 +2884,6 @@
 		</collision>
 	</npc>
 	<npc id="22637" level="78" type="L2Monster" name="Tepra Scorpion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -2994,7 +2956,6 @@
 		</collision>
 	</npc>
 	<npc id="22638" level="78" type="L2Monster" name="Tepra Scarab">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3068,7 +3029,6 @@
 		</collision>
 	</npc>
 	<npc id="22639" level="78" type="L2Monster" name="Assassin Beetle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3147,7 +3107,6 @@
 		</collision>
 	</npc>
 	<npc id="22640" level="78" type="L2Monster" name="Mercenary of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3222,7 +3181,6 @@
 		</collision>
 	</npc>
 	<npc id="22641" level="78" type="L2Monster" name="Knight of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3298,7 +3256,6 @@
 		</collision>
 	</npc>
 	<npc id="22642" level="78" type="L2Monster" name="Lavastone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4591" level="9" /> <!-- Decrease Speed -->
@@ -3372,7 +3329,6 @@
 		</collision>
 	</npc>
 	<npc id="22643" level="78" type="L2Monster" name="Magma Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
@@ -3447,7 +3403,6 @@
 		</collision>
 	</npc>
 	<npc id="22644" level="78" type="L2Monster" name="Arimanes of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4589" level="9" /> <!-- Decrease Speed -->
@@ -3525,7 +3480,6 @@
 		</collision>
 	</npc>
 	<npc id="22645" level="78" type="L2Monster" name="Balor of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4599" level="9" /> <!-- Decrease Speed -->
@@ -3600,7 +3554,6 @@
 		</collision>
 	</npc>
 	<npc id="22646" level="78" type="L2Monster" name="Ashuras of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3673,7 +3626,6 @@
 		</collision>
 	</npc>
 	<npc id="22647" level="78" type="L2Monster" name="Lavasillisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3746,7 +3698,6 @@
 		</collision>
 	</npc>
 	<npc id="22648" level="78" type="L2Monster" name="Blazing Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4605" level="9" /> <!-- Surrender To Fire -->
@@ -3817,7 +3768,6 @@
 		</collision>
 	</npc>
 	<npc id="22649" level="78" type="L2Monster" name="Magma Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3892,7 +3842,6 @@
 		</collision>
 	</npc>
 	<npc id="22650" level="83" type="L2Monster" name="Mucrokian Fanatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -3999,7 +3948,6 @@
 		</collision>
 	</npc>
 	<npc id="22651" level="83" type="L2Monster" name="Mucrokian Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4109,7 +4057,6 @@
 		</collision>
 	</npc>
 	<npc id="22652" level="84" type="L2Monster" name="Mucrokian Savior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4215,7 +4162,6 @@
 		</collision>
 	</npc>
 	<npc id="22653" level="84" type="L2Monster" name="Mucrokian Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4321,7 +4267,6 @@
 		</collision>
 	</npc>
 	<npc id="22654" level="83" type="L2Monster" name="Contaminated Mucrokian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4067" level="9" /> <!-- NPC Mortal Blow -->
@@ -4428,7 +4373,6 @@
 		</collision>
 	</npc>
 	<npc id="22655" level="84" type="L2Monster" name="Awakened Mucrokian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4072" level="9" /> <!-- Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4533,7 +4477,6 @@
 		</collision>
 	</npc>
 	<npc id="22656" level="83" type="L2Monster" name="Suppressor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4642,7 +4585,6 @@
 		</collision>
 	</npc>
 	<npc id="22657" level="84" type="L2Monster" name="Executioner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4751,7 +4693,6 @@
 		</collision>
 	</npc>
 	<npc id="22658" level="83" type="L2Monster" name="Sentinel Waterspirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5910" level="1" /> <!-- Stronghold Attack -->
@@ -4859,7 +4800,6 @@
 		</collision>
 	</npc>
 	<npc id="22659" level="84" type="L2Monster" name="Guardian Waterspirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5910" level="1" /> <!-- Stronghold Attack -->
@@ -4971,7 +4911,6 @@
 		</collision>
 	</npc>
 	<npc id="22660" level="81" type="L2Monster" name="Lesser Giant">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3937" /> <!-- rhand: Giant Bar -->
@@ -5051,7 +4990,6 @@
 		</collision>
 	</npc>
 	<npc id="22661" level="81" type="L2Monster" name="Lesser Giant Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SetHateGroup" value="ATTACKER_GROUP" />
 			<param name="SetHateGroupRatio" value="35" />
@@ -5136,7 +5074,6 @@
 		</collision>
 	</npc>
 	<npc id="22662" level="82" type="L2Monster" name="Lesser Giant Shooter">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="4028" /> <!-- rhand: Giant Cannon -->
@@ -5210,7 +5147,6 @@
 		</collision>
 	</npc>
 	<npc id="22663" level="82" type="L2Monster" name="Lesser Giant Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="6143" level="1" /> <!-- Ancient Beam -->
 		</parameters>
@@ -5292,7 +5228,6 @@
 		</collision>
 	</npc>
 	<npc id="22664" level="82" type="L2Monster" name="Lesser Giant Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="6144" level="1" /> <!-- Ancient Beam -->
 			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
@@ -5369,7 +5304,6 @@
 		</collision>
 	</npc>
 	<npc id="22665" level="82" type="L2Monster" name="Lesser Giant Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="CheckMagic" id="4036" level="9" /> <!-- Poison -->
 			<skill name="CheckMagic1" id="4046" level="9" /> <!-- Sleep -->
@@ -5452,7 +5386,6 @@
 		</collision>
 	</npc>
 	<npc id="22666" level="82" type="L2Monster" name="Barif">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ShoutTarget" value="1" />
 			<param name="SetHateGroup" value="ATTACKER_GROUP" />
@@ -5532,7 +5465,6 @@
 		</collision>
 	</npc>
 	<npc id="22667" level="81" type="L2Monster" name="Barif's Pet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -5607,7 +5539,6 @@
 		</collision>
 	</npc>
 	<npc id="22668" level="81" type="L2Monster" name="Gamlin" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="45270" sp="2646" />
@@ -5681,7 +5612,6 @@
 		</collision>
 	</npc>
 	<npc id="22669" level="81" type="L2Monster" name="Leogul" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff" id="4037" level="3" /> <!-- Decrease P. Atk. -->
 		</parameters>
@@ -5758,7 +5688,6 @@
 		</collision>
 	</npc>
 	<npc id="22670" level="80" type="L2Monster" name="Beastial Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="4072" level="9" /> <!-- Stun -->
 		</parameters>
@@ -5839,7 +5768,6 @@
 		</collision>
 	</npc>
 	<npc id="22671" level="80" type="L2Monster" name="Beastial Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4039" level="9" /> <!-- NPC MP Drain -->
 			<skill name="MagicHeal" id="4097" level="9" /> <!-- NPC Chant of Life -->
@@ -5919,7 +5847,6 @@
 		</collision>
 	</npc>
 	<npc id="22672" level="80" type="L2Monster" name="Beastial Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
 			<skill name="DeBuff" id="4098" level="9" /> <!-- Silence -->
@@ -6005,7 +5932,6 @@
 		</collision>
 	</npc>
 	<npc id="22673" level="80" type="L2Monster" name="Hirokai">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff" id="4088" level="9" /> <!-- Bleed -->
 		</parameters>
@@ -6087,7 +6013,6 @@
 		</collision>
 	</npc>
 	<npc id="22674" level="80" type="L2Monster" name="Imagro">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4001" level="9" /> <!-- NPC Windstrike -->
 		</parameters>
@@ -6164,7 +6089,6 @@
 		</collision>
 	</npc>
 	<npc id="22675" level="80" type="L2Monster" name="Palit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SetHateGroup" value="ATTACKER_GROUP" />
 			<param name="SetHateGroupRatio" value="35" />
@@ -6245,7 +6169,6 @@
 		</collision>
 	</npc>
 	<npc id="22676" level="80" type="L2Monster" name="Hamlet">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="44623" sp="2648" />
@@ -6315,7 +6238,6 @@
 		</collision>
 	</npc>
 	<npc id="22677" level="80" type="L2Monster" name="Klennot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4073" level="9" /> <!-- Stun -->
 		</parameters>
@@ -6390,7 +6312,6 @@
 		</collision>
 	</npc>
 	<npc id="22678" level="81" type="L2Monster" name="Grave Robber Summoner" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
 				<npc id="22683" count="1" respawnTime="0" weightPoint="1" /> <!-- Servitor of Darkness -->
@@ -6504,7 +6425,6 @@
 		</collision>
 	</npc>
 	<npc id="22679" level="82" type="L2Monster" name="Grave Robber Wizard" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
 				<npc id="22685" count="1" respawnTime="0" weightPoint="1" /> <!-- Servitor of Darkness -->
@@ -6617,7 +6537,6 @@
 		</collision>
 	</npc>
 	<npc id="22680" level="81" type="L2Monster" name="Grave Robber Worker" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
 			<skill name="SelfBuff" id="6145" level="1" /> <!-- Earthworm's Evil Aura -->
@@ -6718,7 +6637,6 @@
 		</collision>
 	</npc>
 	<npc id="22681" level="82" type="L2Monster" name="Grave Robber Warrior" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<skill name="Skill01_ID" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
@@ -6822,7 +6740,6 @@
 		</collision>
 	</npc>
 	<npc id="22682" level="82" type="L2Monster" name="Grave Robber Berserker" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4643" level="9" /> <!-- Decrease Speed -->
@@ -6925,7 +6842,6 @@
 		</collision>
 	</npc>
 	<npc id="22683" level="81" type="L2Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4643" level="9" /> <!-- Decrease Speed -->
 		</parameters>
@@ -7027,7 +6943,6 @@
 		</collision>
 	</npc>
 	<npc id="22684" level="81" type="L2Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 		</parameters>
@@ -7135,7 +7050,6 @@
 		</collision>
 	</npc>
 	<npc id="22685" level="82" type="L2Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 		</parameters>
@@ -7241,7 +7155,6 @@
 		</collision>
 	</npc>
 	<npc id="22686" level="82" type="L2Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 		</parameters>
@@ -7343,7 +7256,6 @@
 		</collision>
 	</npc>
 	<npc id="22687" level="81" type="L2Monster" name="Phantoms of the Mine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<param name="IsAggressive" value="1" />
@@ -7451,7 +7363,6 @@
 		</collision>
 	</npc>
 	<npc id="22688" level="82" type="L2Monster" name="Evil Spirits of the Mine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeBuffProb" value="3333" />
 			<param name="IsAggressive" value="1" />
@@ -7555,7 +7466,6 @@
 		</collision>
 	</npc>
 	<npc id="22689" level="82" type="L2Monster" name="Spelunking Bug">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="SelfBuff" id="6145" level="1" /> <!-- Earthworm's Evil Aura -->
@@ -7658,7 +7568,6 @@
 		</collision>
 	</npc>
 	<npc id="22690" level="82" type="L2Monster" name="Earth Wyrm's Descendant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="5000" />
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
@@ -7762,7 +7671,6 @@
 		</collision>
 	</npc>
 	<npc id="22691" level="81" type="L2Monster" name="Ragna Orc" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -7872,7 +7780,6 @@
 		</collision>
 	</npc>
 	<npc id="22692" level="82" type="L2Monster" name="Ragna Orc Warrior" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="BuffDelay" value="10" />
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
@@ -7986,7 +7893,6 @@
 		</collision>
 	</npc>
 	<npc id="22693" level="82" type="L2Monster" name="Ragna Orc Hero" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="BuffDelay" value="10" />
@@ -8110,7 +8016,6 @@
 		</collision>
 	</npc>
 	<npc id="22694" level="82" type="L2Monster" name="Ragna Orc Commander" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<minions name="Privates1">
@@ -8236,7 +8141,6 @@
 		</collision>
 	</npc>
 	<npc id="22695" level="81" type="L2Monster" name="Ragna Orc Healer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
 			<param name="SelfRangeHealProb" value="1500" />
@@ -8354,7 +8258,6 @@
 		</collision>
 	</npc>
 	<npc id="22696" level="81" type="L2Monster" name="Ragna Orc Shaman" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeHealProb" value="1000" />
 			<skill name="Skill01_ID" id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -8479,7 +8382,6 @@
 		</collision>
 	</npc>
 	<npc id="22697" level="82" type="L2Monster" name="Ragna Orc Priest" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="DeBuffProb" value="2000" />
@@ -8609,7 +8511,6 @@
 		</collision>
 	</npc>
 	<npc id="22698" level="81" type="L2Monster" name="Ragna Orc Archer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4040" level="9" /> <!-- NPC Bow Attack -->
@@ -8723,7 +8624,6 @@
 		</collision>
 	</npc>
 	<npc id="22699" level="82" type="L2Monster" name="Ragna Orc Sniper" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4040" level="9" /> <!-- NPC Bow Attack -->

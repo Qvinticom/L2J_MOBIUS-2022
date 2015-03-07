@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18500" level="70" type="L2Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_3c_en" />
 			<param name="DoorName2" value="c_tower_3c_ex" />
@@ -42,7 +41,6 @@
 		</collision>
 	</npc>
 	<npc id="18501" level="70" type="L2Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_3d_en" />
 			<param name="DoorName2" value="c_tower_3d_ex" />
@@ -83,7 +81,6 @@
 		</collision>
 	</npc>
 	<npc id="18502" level="70" type="L2Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2a_en" />
 			<param name="DoorName2" value="c_tower_2a_ex" />
@@ -124,7 +121,6 @@
 		</collision>
 	</npc>
 	<npc id="18503" level="70" type="L2Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2b_en" />
 			<param name="DoorName2" value="c_tower_2b_ex" />
@@ -165,7 +161,6 @@
 		</collision>
 	</npc>
 	<npc id="18504" level="70" type="L2Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2c_en" />
 			<param name="DoorName2" value="c_tower_2c_ex" />
@@ -206,7 +201,6 @@
 		</collision>
 	</npc>
 	<npc id="18505" level="70" type="L2Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2d_en" />
 			<param name="DoorName2" value="c_tower_2d_ex" />
@@ -247,7 +241,6 @@
 		</collision>
 	</npc>
 	<npc id="18506" level="87" type="L2Monster" name="Soul Crystal Pillar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5417" level="1" /> <!-- Invincible -->
 		</parameters>
@@ -286,7 +279,6 @@
 		</collision>
 	</npc>
 	<npc id="18507" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -327,7 +319,6 @@
 		</collision>
 	</npc>
 	<npc id="18508" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -368,7 +359,6 @@
 		</collision>
 	</npc>
 	<npc id="18509" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -409,7 +399,6 @@
 		</collision>
 	</npc>
 	<npc id="18510" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -450,7 +439,6 @@
 		</collision>
 	</npc>
 	<npc id="18511" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -491,7 +479,6 @@
 		</collision>
 	</npc>
 	<npc id="18512" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -532,7 +519,6 @@
 		</collision>
 	</npc>
 	<npc id="18513" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -573,7 +559,6 @@
 		</collision>
 	</npc>
 	<npc id="18514" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -614,7 +599,6 @@
 		</collision>
 	</npc>
 	<npc id="18515" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -655,7 +639,6 @@
 		</collision>
 	</npc>
 	<npc id="18516" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -697,7 +680,6 @@
 		</collision>
 	</npc>
 	<npc id="18517" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -739,7 +721,6 @@
 		</collision>
 	</npc>
 	<npc id="18518" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -781,7 +762,6 @@
 		</collision>
 	</npc>
 	<npc id="18519" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -823,7 +803,6 @@
 		</collision>
 	</npc>
 	<npc id="18520" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -865,7 +844,6 @@
 		</collision>
 	</npc>
 	<npc id="18521" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -907,7 +885,6 @@
 		</collision>
 	</npc>
 	<npc id="18522" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -949,7 +926,6 @@
 		</collision>
 	</npc>
 	<npc id="18523" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -991,7 +967,6 @@
 		</collision>
 	</npc>
 	<npc id="18524" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -1033,7 +1008,6 @@
 		</collision>
 	</npc>
 	<npc id="18525" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1074,7 +1048,6 @@
 		</collision>
 	</npc>
 	<npc id="18526" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1115,7 +1088,6 @@
 		</collision>
 	</npc>
 	<npc id="18527" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1156,7 +1128,6 @@
 		</collision>
 	</npc>
 	<npc id="18528" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1197,7 +1168,6 @@
 		</collision>
 	</npc>
 	<npc id="18529" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1238,7 +1208,6 @@
 		</collision>
 	</npc>
 	<npc id="18530" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1279,7 +1248,6 @@
 		</collision>
 	</npc>
 	<npc id="18531" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1320,7 +1288,6 @@
 		</collision>
 	</npc>
 	<npc id="18532" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1361,7 +1328,6 @@
 		</collision>
 	</npc>
 	<npc id="18533" level="78" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1402,7 +1368,6 @@
 		</collision>
 	</npc>
 	<npc id="18534" level="45" type="L2Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1446,7 +1411,6 @@
 		</collision>
 	</npc>
 	<npc id="18535" level="55" type="L2Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1490,7 +1454,6 @@
 		</collision>
 	</npc>
 	<npc id="18536" level="65" type="L2Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1534,7 +1497,6 @@
 		</collision>
 	</npc>
 	<npc id="18537" level="75" type="L2Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1578,7 +1540,6 @@
 		</collision>
 	</npc>
 	<npc id="18538" level="85" type="L2Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1622,7 +1583,6 @@
 		</collision>
 	</npc>
 	<npc id="18539" level="45" type="L2Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1658,7 +1618,6 @@
 		</collision>
 	</npc>
 	<npc id="18540" level="55" type="L2Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1694,7 +1653,6 @@
 		</collision>
 	</npc>
 	<npc id="18541" level="65" type="L2Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1730,7 +1688,6 @@
 		</collision>
 	</npc>
 	<npc id="18542" level="75" type="L2Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1766,7 +1723,6 @@
 		</collision>
 	</npc>
 	<npc id="18543" level="80" type="L2Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1802,7 +1758,6 @@
 		</collision>
 	</npc>
 	<npc id="18544" level="45" type="L2Monster" name="Cruma Border" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DespawnTime" value="60" />
 			<skill name="Skill01_ID" id="4357" level="2" /> <!-- Haste -->
@@ -1884,7 +1839,6 @@
 		</collision>
 	</npc>
 	<npc id="18545" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -1960,7 +1914,6 @@
 		</collision>
 	</npc>
 	<npc id="18546" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -2043,7 +1996,6 @@
 		</collision>
 	</npc>
 	<npc id="18547" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2126,7 +2078,6 @@
 		</collision>
 	</npc>
 	<npc id="18548" level="45" type="L2Monster" name="Ancient Giants' Experiment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2201,7 +2152,6 @@
 		</collision>
 	</npc>
 	<npc id="18549" level="45" type="L2Monster" name="Ancient Giants' Experiment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2293,7 +2243,6 @@
 		</collision>
 	</npc>
 	<npc id="18550" level="50" type="L2Monster" name="Cruma Phantom" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2382,7 +2331,6 @@
 		</collision>
 	</npc>
 	<npc id="18551" level="50" type="L2Monster" name="Cruma Phantom" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2482,7 +2430,6 @@
 		</collision>
 	</npc>
 	<npc id="18552" level="50" type="L2Monster" name="Cruma Phantom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2558,7 +2505,6 @@
 		</collision>
 	</npc>
 	<npc id="18553" level="50" type="L2Monster" name="Cruma Phantom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2645,7 +2591,6 @@
 		</collision>
 	</npc>
 	<npc id="18554" level="23" type="L2Monster" name="Tomlan Kamos" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="20" />
@@ -2718,7 +2663,6 @@
 		</collision>
 	</npc>
 	<npc id="18555" level="26" type="L2Monster" name="Ol Ariosh" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<skill name="Skill01" id="4736" level="2" /> <!-- BOSS Spinning Slash -->
@@ -2780,7 +2724,6 @@
 		</collision>
 	</npc>
 	<npc id="18556" level="26" type="L2Monster" name="Ariosh's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<skill name="Skill01" id="4719" level="1" /> <!-- BOSS Strike -->
@@ -2823,7 +2766,6 @@
 		</collision>
 	</npc>
 	<npc id="18557" level="26" type="L2Monster" name="Ranc Deumus" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -2890,7 +2832,6 @@
 		</collision>
 	</npc>
 	<npc id="18558" level="33" type="L2Monster" name="Crimson Hatu Otis" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="aoe_skill" id="4737" level="3" /> <!-- BOSS Spinning Slash -->
 			<skill name="haste_skill" id="4175" level="3" /> <!-- BOSS Haste -->
@@ -2962,7 +2903,6 @@
 		</collision>
 	</npc>
 	<npc id="18559" level="36" type="L2Monster" name="Seer Flouros" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="30" />
 			<param name="Skill02_Probablity" value="40" />
@@ -3025,7 +2965,6 @@
 		</collision>
 	</npc>
 	<npc id="18560" level="36" type="L2Monster" name="Flouros' Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="50" />
 			<skill name="Skill01" id="4194" level="3" /> <!-- BOSS Aura Burn -->
@@ -3067,7 +3006,6 @@
 		</collision>
 	</npc>
 	<npc id="18561" level="36" type="L2Monster" name="Granitick Duerga" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3140,7 +3078,6 @@
 		</collision>
 	</npc>
 	<npc id="18562" level="43" type="L2Monster" name="Blade Otis" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -3211,7 +3148,6 @@
 		</collision>
 	</npc>
 	<npc id="18563" level="43" type="L2Monster" name="Otis' Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="fake_heal" id="4065" level="1" /> <!-- NPC Heal -->
 			<skill name="real_heal" id="4209" level="6" /> <!-- BOSS Heal -->
@@ -3255,7 +3191,6 @@
 		</collision>
 	</npc>
 	<npc id="18564" level="46" type="L2Monster" name="Weird Bunei" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3321,7 +3256,6 @@
 		</collision>
 	</npc>
 	<npc id="18565" level="46" type="L2Monster" name="Brave Martim" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3400,7 +3334,6 @@
 		</collision>
 	</npc>
 	<npc id="18566" level="53" type="L2Monster" name="Kaim Abigore" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -3463,7 +3396,6 @@
 		</collision>
 	</npc>
 	<npc id="18567" level="53" type="L2Monster" name="Abigore's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="skill_explosion" id="4614" level="6" /> <!-- NPC Death Bomb -->
 		</parameters>
@@ -3504,7 +3436,6 @@
 		</collision>
 	</npc>
 	<npc id="18568" level="56" type="L2Monster" name="Knight Montagnar" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<skill name="Skill01" id="5043" level="7" /> <!-- NPC Super Sonic Blaster -->
@@ -3577,7 +3508,6 @@
 		</collision>
 	</npc>
 	<npc id="18569" level="56" type="L2Monster" name="Montagnar's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3614,7 +3544,6 @@
 		</collision>
 	</npc>
 	<npc id="18570" level="56" type="L2Monster" name="Summer Yaganitan" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3689,7 +3618,6 @@
 		</collision>
 	</npc>
 	<npc id="18571" level="63" type="L2Monster" name="Venomous Storace" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<skill name="Skill01" id="4171" level="6" /> <!-- BOSS Spinning Slash -->
@@ -3762,7 +3690,6 @@
 		</collision>
 	</npc>
 	<npc id="18572" level="63" type="L2Monster" name="Storace's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<skill name="Skill01" id="4723" level="5" /> <!-- BOSS Strike -->
@@ -3805,7 +3732,6 @@
 		</collision>
 	</npc>
 	<npc id="18573" level="66" type="L2Monster" name="Kel Bilette" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3884,7 +3810,6 @@
 		</collision>
 	</npc>
 	<npc id="18574" level="66" type="L2Monster" name="Bilette's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="less_heal" id="4065" level="6" /> <!-- NPC Heal -->
 		</parameters>
@@ -3926,7 +3851,6 @@
 		</collision>
 	</npc>
 	<npc id="18575" level="66" type="L2Monster" name="Warlord Tamuze" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<param name="Skill02_Probablity" value="5" />
@@ -4009,7 +3933,6 @@
 		</collision>
 	</npc>
 	<npc id="18576" level="66" type="L2Monster" name="Tamuze's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="self_explosion" id="4139" level="6" /> <!-- Boom Attack -->
 		</parameters>
@@ -4052,7 +3975,6 @@
 		</collision>
 	</npc>
 	<npc id="18577" level="73" type="L2Monster" name="White Allosce" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="20" />
@@ -4123,7 +4045,6 @@
 		</collision>
 	</npc>
 	<npc id="18578" level="73" type="L2Monster" name="Allosce's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="soul_skill" id="5624" level="1" /> <!-- Soul Confinement -->
 		</parameters>
@@ -4164,7 +4085,6 @@
 		</collision>
 	</npc>
 	<npc id="18579" level="70" type="L2Npc" name="Hunting Ground Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4247,7 +4167,6 @@
 		</collision>
 	</npc>
 	<npc id="18580" level="71" type="L2Npc" name="Cursed Girl">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4329,7 +4248,6 @@
 		</collision>
 	</npc>
 	<npc id="18581" level="72" type="L2Npc" name="Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4409,7 +4327,6 @@
 		</collision>
 	</npc>
 	<npc id="18582" level="75" type="L2Npc" name="Turned Girl" title="Kratei's Fortune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4492,7 +4409,6 @@
 		</collision>
 	</npc>
 	<npc id="18583" level="74" type="L2Npc" name="Housekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4572,7 +4488,6 @@
 		</collision>
 	</npc>
 	<npc id="18584" level="75" type="L2Npc" name="Turned Boy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4653,7 +4568,6 @@
 		</collision>
 	</npc>
 	<npc id="18585" level="75" type="L2Npc" name="Cursed Girl">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4735,7 +4649,6 @@
 		</collision>
 	</npc>
 	<npc id="18586" level="75" type="L2Npc" name="Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4815,7 +4728,6 @@
 		</collision>
 	</npc>
 	<npc id="18587" level="76" type="L2Npc" name="Begrudged Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4898,7 +4810,6 @@
 		</collision>
 	</npc>
 	<npc id="18588" level="77" type="L2Npc" name="Hunting Ground Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4981,7 +4892,6 @@
 		</collision>
 	</npc>
 	<npc id="18589" level="77" type="L2Npc" name="Cursed Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -5061,7 +4971,6 @@
 		</collision>
 	</npc>
 	<npc id="18590" level="78" type="L2Npc" name="Baroness' Employee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -5144,7 +5053,6 @@
 		</collision>
 	</npc>
 	<npc id="18591" level="79" type="L2Npc" name="Begrudged Boy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5225,7 +5133,6 @@
 		</collision>
 	</npc>
 	<npc id="18592" level="80" type="L2Npc" name="Kratei's Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -5311,7 +5218,6 @@
 		</collision>
 	</npc>
 	<npc id="18593" level="80" type="L2Npc" name="Housekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5393,7 +5299,6 @@
 		</collision>
 	</npc>
 	<npc id="18594" level="81" type="L2Npc" name="Mansion Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5475,7 +5380,6 @@
 		</collision>
 	</npc>
 	<npc id="18595" level="82" type="L2Npc" name="Baroness' Employee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -5560,7 +5464,6 @@
 		</collision>
 	</npc>
 	<npc id="18596" level="83" type="L2Npc" name="Cursed Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -5642,7 +5545,6 @@
 		</collision>
 	</npc>
 	<npc id="18597" level="84" type="L2Npc" name="Begrudged Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5727,7 +5629,6 @@
 		</collision>
 	</npc>
 	<npc id="18598" level="85" type="L2Npc" name="Cursed Head Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5814,7 +5715,6 @@
 		</collision>
 	</npc>
 	<npc id="18599" level="85" type="L2Npc" name="Mansion Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="136" />
 			<param name="MoveAroundSocial1" value="136" />

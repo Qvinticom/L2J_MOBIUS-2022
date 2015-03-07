@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20001" level="1" type="L2Monster" name="Gremlin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -43,7 +42,6 @@
 		</collision>
 	</npc>
 	<npc id="20002" level="1" type="L2Monster" name="Rabbit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -84,7 +82,6 @@
 		</collision>
 	</npc>
 	<npc id="20003" level="5" type="L2Monster" name="Goblin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
 			<param name="MoveAroundSocial1" value="42" />
@@ -187,7 +184,6 @@
 		</collision>
 	</npc>
 	<npc id="20004" level="6" type="L2Monster" name="Imp">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -287,7 +283,6 @@
 		</collision>
 	</npc>
 	<npc id="20005" level="7" type="L2Monster" name="Imp Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -387,7 +382,6 @@
 		</collision>
 	</npc>
 	<npc id="20006" level="8" type="L2Monster" name="Orc Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -487,7 +481,6 @@
 		</collision>
 	</npc>
 	<npc id="20007" level="9" type="L2Monster" name="Green Fungus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -586,7 +579,6 @@
 		</collision>
 	</npc>
 	<npc id="20008" level="14" type="L2Monster" name="Felim Lizardman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -685,7 +677,6 @@
 		</collision>
 	</npc>
 	<npc id="20009" level="14" type="L2Monster" name="Vuku Orc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -785,7 +776,6 @@
 		</collision>
 	</npc>
 	<npc id="20010" level="15" type="L2Monster" name="Felim Lizardman Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -883,7 +873,6 @@
 		</collision>
 	</npc>
 	<npc id="20011" level="15" type="L2Monster" name="Vuku Orc Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -982,7 +971,6 @@
 		</collision>
 	</npc>
 	<npc id="20012" level="16" type="L2Monster" name="Gora Werewolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -1082,7 +1070,6 @@
 		</collision>
 	</npc>
 	<npc id="20013" level="13" type="L2Monster" name="Dryad">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1182,7 +1169,6 @@
 		</collision>
 	</npc>
 	<npc id="20014" level="17" type="L2Monster" name="Felim Lizardman Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1284,7 +1270,6 @@
 		</collision>
 	</npc>
 	<npc id="20015" level="13" type="L2Monster" name="Marsh Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1388,7 +1373,6 @@
 		</collision>
 	</npc>
 	<npc id="20016" level="13" type="L2Monster" name="Stone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1491,7 +1475,6 @@
 		</collision>
 	</npc>
 	<npc id="20017" level="22" type="L2Monster" name="Vuku Orc Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1596,7 +1579,6 @@
 		</collision>
 	</npc>
 	<npc id="20018" level="14" type="L2Monster" name="Carnivorous Fungus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1643,7 +1625,6 @@
 		</collision>
 	</npc>
 	<npc id="20019" level="14" type="L2Monster" name="Dryad Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1744,7 +1725,6 @@
 		</collision>
 	</npc>
 	<npc id="20020" level="14" type="L2Monster" name="Marsh Zombie Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1848,7 +1828,6 @@
 		</collision>
 	</npc>
 	<npc id="20021" level="14" type="L2Monster" name="Red Bear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1948,7 +1927,6 @@
 		</collision>
 	</npc>
 	<npc id="20022" level="14" type="L2Monster" name="Misery Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -2018,7 +1996,6 @@
 		</collision>
 	</npc>
 	<npc id="20023" level="15" type="L2Monster" name="Shadow Beast">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2119,7 +2096,6 @@
 		</collision>
 	</npc>
 	<npc id="20024" level="17" type="L2Monster" name="Langk Lizardman Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2221,7 +2197,6 @@
 		</collision>
 	</npc>
 	<npc id="20025" level="15" type="L2Monster" name="Lesser Dark Horror">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2322,7 +2297,6 @@
 		</collision>
 	</npc>
 	<npc id="20026" level="24" type="L2Monster" name="Ruin Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2426,7 +2400,6 @@
 		</collision>
 	</npc>
 	<npc id="20027" level="16" type="L2Monster" name="Langk Lizardman Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -2527,7 +2500,6 @@
 		</collision>
 	</npc>
 	<npc id="20028" level="16" type="L2Monster" name="Pincher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2628,7 +2600,6 @@
 		</collision>
 	</npc>
 	<npc id="20029" level="25" type="L2Monster" name="Ruin Zombie Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2733,7 +2704,6 @@
 		</collision>
 	</npc>
 	<npc id="20030" level="20" type="L2Monster" name="Langk Lizardman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -2832,7 +2802,6 @@
 		</collision>
 	</npc>
 	<npc id="20031" level="17" type="L2Monster" name="Onyx Beast">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2903,7 +2872,6 @@
 		</collision>
 	</npc>
 	<npc id="20032" level="17" type="L2Monster" name="Pinrul">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3004,7 +2972,6 @@
 		</collision>
 	</npc>
 	<npc id="20033" level="17" type="L2Monster" name="Shade Horror">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3078,7 +3045,6 @@
 		</collision>
 	</npc>
 	<npc id="20034" level="17" type="L2Monster" name="Prowler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3177,7 +3143,6 @@
 		</collision>
 	</npc>
 	<npc id="20035" level="26" type="L2Monster" name="Skeleton Tracker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -3281,7 +3246,6 @@
 		</collision>
 	</npc>
 	<npc id="20036" level="18" type="L2Monster" name="Lirein">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3385,7 +3349,6 @@
 		</collision>
 	</npc>
 	<npc id="20037" level="18" type="L2Monster" name="Mana Seeker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3435,7 +3398,6 @@
 		</collision>
 	</npc>
 	<npc id="20038" level="18" type="L2Monster" name="Giant Venomous Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3541,7 +3503,6 @@
 		</collision>
 	</npc>
 	<npc id="20039" level="18" type="L2Monster" name="Ratman Scavenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3647,7 +3608,6 @@
 		</collision>
 	</npc>
 	<npc id="20040" level="18" type="L2Monster" name="Sukar Ratman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3719,7 +3679,6 @@
 		</collision>
 	</npc>
 	<npc id="20041" level="18" type="L2Monster" name="Contortion of Lunacy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3792,7 +3751,6 @@
 		</collision>
 	</npc>
 	<npc id="20042" level="18" type="L2Monster" name="Skeleton Tracker Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -3896,7 +3854,6 @@
 		</collision>
 	</npc>
 	<npc id="20043" level="19" type="L2Monster" name="Arachnid Tracker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4004,7 +3961,6 @@
 		</collision>
 	</npc>
 	<npc id="20044" level="19" type="L2Monster" name="Lirein Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4108,7 +4064,6 @@
 		</collision>
 	</npc>
 	<npc id="20045" level="27" type="L2Monster" name="Skeleton Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -4211,7 +4166,6 @@
 		</collision>
 	</npc>
 	<npc id="20046" level="19" type="L2Monster" name="Stink Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4287,7 +4241,6 @@
 		</collision>
 	</npc>
 	<npc id="20047" level="19" type="L2Monster" name="Sukar Ratman Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4361,7 +4314,6 @@
 		</collision>
 	</npc>
 	<npc id="20048" level="20" type="L2Monster" name="Lesser Succubus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4431,7 +4383,6 @@
 		</collision>
 	</npc>
 	<npc id="20049" level="20" type="L2Monster" name="Lycanthrope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -4531,7 +4482,6 @@
 		</collision>
 	</npc>
 	<npc id="20050" level="20" type="L2Monster" name="Arachnid Predator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4633,7 +4583,6 @@
 		</collision>
 	</npc>
 	<npc id="20051" level="27" type="L2Monster" name="Skeleton Bowman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -4737,7 +4686,6 @@
 		</collision>
 	</npc>
 	<npc id="20052" level="21" type="L2Monster" name="Lesser Succubus Turen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4816,7 +4764,6 @@
 		</collision>
 	</npc>
 	<npc id="20053" level="21" type="L2Monster" name="Ol Mahum Patrol">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4923,7 +4870,6 @@
 		</collision>
 	</npc>
 	<npc id="20054" level="28" type="L2Monster" name="Ruin Spartoi">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -5033,7 +4979,6 @@
 		</collision>
 	</npc>
 	<npc id="20055" level="21" type="L2Monster" name="Monster Eye Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5143,7 +5088,6 @@
 		</collision>
 	</npc>
 	<npc id="20056" level="22" type="L2Monster" name="Dre Vanul Disposer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5226,7 +5170,6 @@
 		</collision>
 	</npc>
 	<npc id="20057" level="22" type="L2Monster" name="Lesser Succubus Tilfo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -5303,7 +5246,6 @@
 		</collision>
 	</npc>
 	<npc id="20058" level="22" type="L2Monster" name="Ol Mahum Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -5408,7 +5350,6 @@
 		</collision>
 	</npc>
 	<npc id="20059" level="22" type="L2Monster" name="Monster Eye Patrol">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5517,7 +5458,6 @@
 		</collision>
 	</npc>
 	<npc id="20060" level="28" type="L2Monster" name="Raging Spartoi">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -5628,7 +5568,6 @@
 		</collision>
 	</npc>
 	<npc id="20061" level="23" type="L2Monster" name="Ol Mahum Straggler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -5735,7 +5674,6 @@
 		</collision>
 	</npc>
 	<npc id="20062" level="23" type="L2Monster" name="Tumran Bugbear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -5842,7 +5780,6 @@
 		</collision>
 	</npc>
 	<npc id="20063" level="24" type="L2Monster" name="Ol Mahum Shooter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5949,7 +5886,6 @@
 		</collision>
 	</npc>
 	<npc id="20064" level="24" type="L2Monster" name="Tumran Bugbear Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -6058,7 +5994,6 @@
 		</collision>
 	</npc>
 	<npc id="20065" level="25" type="L2Monster" name="Ol Mahum Patrolman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -6111,7 +6046,6 @@
 		</collision>
 	</npc>
 	<npc id="20066" level="25" type="L2Monster" name="Ol Mahum Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -6220,7 +6154,6 @@
 		</collision>
 	</npc>
 	<npc id="20067" level="34" type="L2Monster" name="Monster Eye Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6333,7 +6266,6 @@
 		</collision>
 	</npc>
 	<npc id="20068" level="26" type="L2Monster" name="Monster Eye Destroyer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6447,7 +6379,6 @@
 		</collision>
 	</npc>
 	<npc id="20069" level="26" type="L2Monster" name="Selu Lizardman Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -6500,7 +6431,6 @@
 		</collision>
 	</npc>
 	<npc id="20070" level="35" type="L2Monster" name="Lesser Basilisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6604,7 +6534,6 @@
 		</collision>
 	</npc>
 	<npc id="20071" level="27" type="L2Monster" name="Selu Lizardman Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6657,7 +6586,6 @@
 		</collision>
 	</npc>
 	<npc id="20072" level="35" type="L2Monster" name="Basilisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6762,7 +6690,6 @@
 		</collision>
 	</npc>
 	<npc id="20073" level="28" type="L2Monster" name="Ol Mahum Legionnaire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -6815,7 +6742,6 @@
 		</collision>
 	</npc>
 	<npc id="20074" level="29" type="L2Monster" name="Androscorpio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -6922,7 +6848,6 @@
 		</collision>
 	</npc>
 	<npc id="20075" level="29" type="L2Monster" name="Ant Larva">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -7033,7 +6958,6 @@
 		</collision>
 	</npc>
 	<npc id="20076" level="29" type="L2Monster" name="Ol Mahum Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -7143,7 +7067,6 @@
 		</collision>
 	</npc>
 	<npc id="20077" level="30" type="L2Monster" name="Androscorpio Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -7248,7 +7171,6 @@
 		</collision>
 	</npc>
 	<npc id="20078" level="24" type="L2Monster" name="Whispering Wind">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7362,7 +7284,6 @@
 		</collision>
 	</npc>
 	<npc id="20079" level="30" type="L2Monster" name="Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -7472,7 +7393,6 @@
 		</collision>
 	</npc>
 	<npc id="20080" level="31" type="L2Monster" name="Ant Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -7578,7 +7498,6 @@
 		</collision>
 	</npc>
 	<npc id="20081" level="32" type="L2Monster" name="Ant Overseer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -7691,7 +7610,6 @@
 		</collision>
 	</npc>
 	<npc id="20082" level="33" type="L2Monster" name="Ant Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7807,7 +7725,6 @@
 		</collision>
 	</npc>
 	<npc id="20083" level="33" type="L2Monster" name="Granite Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -7926,7 +7843,6 @@
 		</collision>
 	</npc>
 	<npc id="20084" level="34" type="L2Monster" name="Ant Patrol">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -8038,7 +7954,6 @@
 		</collision>
 	</npc>
 	<npc id="20085" level="34" type="L2Monster" name="Puncher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -8156,7 +8071,6 @@
 		</collision>
 	</npc>
 	<npc id="20086" level="35" type="L2Monster" name="Ant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -8268,7 +8182,6 @@
 		</collision>
 	</npc>
 	<npc id="20087" level="35" type="L2Monster" name="Ant Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -8384,7 +8297,6 @@
 		</collision>
 	</npc>
 	<npc id="20088" level="36" type="L2Monster" name="Ant Warrior Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -8495,7 +8407,6 @@
 		</collision>
 	</npc>
 	<npc id="20089" level="37" type="L2Monster" name="Noble Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8606,7 +8517,6 @@
 		</collision>
 	</npc>
 	<npc id="20090" level="38" type="L2Monster" name="Noble Ant Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8722,7 +8632,6 @@
 		</collision>
 	</npc>
 	<npc id="20091" level="1" type="L2Monster" name="Young Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -8764,7 +8673,6 @@
 		</collision>
 	</npc>
 	<npc id="20092" level="25" type="L2Monster" name="Monster Eye">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8836,7 +8744,6 @@
 		</collision>
 	</npc>
 	<npc id="20093" level="10" type="L2Monster" name="Orc Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -8938,7 +8845,6 @@
 		</collision>
 	</npc>
 	<npc id="20094" level="10" type="L2Monster" name="Orc Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -8986,7 +8892,6 @@
 		</collision>
 	</npc>
 	<npc id="20095" level="10" type="L2Monster" name="Vampire Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -9057,7 +8962,6 @@
 		</collision>
 	</npc>
 	<npc id="20096" level="11" type="L2Monster" name="Orc Lieutenant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -9161,7 +9065,6 @@
 		</collision>
 	</npc>
 	<npc id="20097" level="11" type="L2Monster" name="Drill Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -9231,7 +9134,6 @@
 		</collision>
 	</npc>
 	<npc id="20098" level="12" type="L2Monster" name="Orc Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -9333,7 +9235,6 @@
 		</collision>
 	</npc>
 	<npc id="20099" level="12" type="L2Monster" name="Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />

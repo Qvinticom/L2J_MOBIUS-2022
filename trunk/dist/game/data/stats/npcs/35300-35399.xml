@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35300" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
@@ -44,7 +43,6 @@
 		</collision>
 	</npc>
 	<npc id="35301" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
@@ -87,7 +85,6 @@
 		</collision>
 	</npc>
 	<npc id="35302" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -130,7 +127,6 @@
 		</collision>
 	</npc>
 	<npc id="35303" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -173,7 +169,6 @@
 		</collision>
 	</npc>
 	<npc id="35304" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -216,7 +211,6 @@
 		</collision>
 	</npc>
 	<npc id="35305" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -259,7 +253,6 @@
 		</collision>
 	</npc>
 	<npc id="35306" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -302,7 +295,6 @@
 		</collision>
 	</npc>
 	<npc id="35307" level="89" type="L2Defender" name="Escort" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -345,7 +337,6 @@
 		</collision>
 	</npc>
 	<npc id="35308" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -409,7 +400,6 @@
 		</collision>
 	</npc>
 	<npc id="35309" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -473,7 +463,6 @@
 		</collision>
 	</npc>
 	<npc id="35310" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -537,7 +526,6 @@
 		</collision>
 	</npc>
 	<npc id="35311" level="75" type="L2Npc" name="Mass Gatekeeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -581,7 +569,6 @@
 		</collision>
 	</npc>
 	<npc id="35312" level="75" type="L2CastleDoormen" name="Outer Castle Gatekeeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -631,7 +618,6 @@
 		</collision>
 	</npc>
 	<npc id="35313" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -681,7 +667,6 @@
 		</collision>
 	</npc>
 	<npc id="35314" level="75" type="L2Npc" name="Blacksmith" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -722,7 +707,6 @@
 		</collision>
 	</npc>
 	<npc id="35315" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -762,7 +746,6 @@
 		</collision>
 	</npc>
 	<npc id="35316" level="75" type="L2Merchant" name="Chamberlain of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -816,7 +799,6 @@
 		</collision>
 	</npc>
 	<npc id="35317" level="75" type="L2Npc" name="Tate" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -856,7 +838,6 @@
 		</collision>
 	</npc>
 	<npc id="35318" level="75" type="L2Merchant" name="Solinus" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -897,7 +878,6 @@
 		</collision>
 	</npc>
 	<npc id="35319" level="75" type="L2Merchant" name="Manor Manager" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -938,7 +918,6 @@
 		</collision>
 	</npc>
 	<npc id="35320" level="75" type="L2Npc" name="Raybell" title="Herald from Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -980,7 +959,6 @@
 		</collision>
 	</npc>
 	<npc id="35322" level="20" type="L2Artefact" name="Altar of Fire">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1017,7 +995,6 @@
 		</collision>
 	</npc>
 	<npc id="35323" level="20" type="L2Artefact" name="Altar of Water">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1054,7 +1031,6 @@
 		</collision>
 	</npc>
 	<npc id="35324" level="95" type="L2Defender" name="Heinz" title="Royal Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
@@ -1097,7 +1073,6 @@
 		</collision>
 	</npc>
 	<npc id="35325" level="97" type="L2Defender" name="Duke Mora Ken Abygail">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
@@ -1140,7 +1115,6 @@
 		</collision>
 	</npc>
 	<npc id="35326" level="93" type="L2Defender" name="Royal Knight" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
@@ -1183,7 +1157,6 @@
 		</collision>
 	</npc>
 	<npc id="35327" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -1230,7 +1203,6 @@
 		</collision>
 	</npc>
 	<npc id="35328" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -1277,7 +1249,6 @@
 		</collision>
 	</npc>
 	<npc id="35329" level="91" type="L2Defender" name="Royal Guard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
@@ -1320,7 +1291,6 @@
 		</collision>
 	</npc>
 	<npc id="35330" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
@@ -1363,7 +1333,6 @@
 		</collision>
 	</npc>
 	<npc id="35331" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -1406,7 +1375,6 @@
 		</collision>
 	</npc>
 	<npc id="35332" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -1449,7 +1417,6 @@
 		</collision>
 	</npc>
 	<npc id="35333" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -1492,7 +1459,6 @@
 		</collision>
 	</npc>
 	<npc id="35334" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -1535,7 +1501,6 @@
 		</collision>
 	</npc>
 	<npc id="35335" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -1578,7 +1543,6 @@
 		</collision>
 	</npc>
 	<npc id="35336" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -1621,7 +1585,6 @@
 		</collision>
 	</npc>
 	<npc id="35337" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -1664,7 +1627,6 @@
 		</collision>
 	</npc>
 	<npc id="35338" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
@@ -1707,7 +1669,6 @@
 		</collision>
 	</npc>
 	<npc id="35339" level="93" type="L2Defender" name="Royal Knight" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
@@ -1750,7 +1711,6 @@
 		</collision>
 	</npc>
 	<npc id="35340" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -1797,7 +1757,6 @@
 		</collision>
 	</npc>
 	<npc id="35341" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -1844,7 +1803,6 @@
 		</collision>
 	</npc>
 	<npc id="35342" level="91" type="L2Defender" name="Royal Guard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
@@ -1887,7 +1845,6 @@
 		</collision>
 	</npc>
 	<npc id="35343" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
@@ -1930,7 +1887,6 @@
 		</collision>
 	</npc>
 	<npc id="35344" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -1973,7 +1929,6 @@
 		</collision>
 	</npc>
 	<npc id="35345" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -2016,7 +1971,6 @@
 		</collision>
 	</npc>
 	<npc id="35346" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2059,7 +2013,6 @@
 		</collision>
 	</npc>
 	<npc id="35347" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -2102,7 +2055,6 @@
 		</collision>
 	</npc>
 	<npc id="35348" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -2145,7 +2097,6 @@
 		</collision>
 	</npc>
 	<npc id="35349" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2188,7 +2139,6 @@
 		</collision>
 	</npc>
 	<npc id="35350" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" /> <!-- rhand: Sword of Delusion -->
@@ -2231,7 +2181,6 @@
 		</collision>
 	</npc>
 	<npc id="35351" level="89" type="L2Defender" name="Escort" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
@@ -2274,7 +2223,6 @@
 		</collision>
 	</npc>
 	<npc id="35352" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2337,7 +2285,6 @@
 		</collision>
 	</npc>
 	<npc id="35353" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2400,7 +2347,6 @@
 		</collision>
 	</npc>
 	<npc id="35354" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2463,7 +2409,6 @@
 		</collision>
 	</npc>
 	<npc id="35355" level="75" type="L2Npc" name="Mass Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2506,7 +2451,6 @@
 		</collision>
 	</npc>
 	<npc id="35356" level="75" type="L2CastleDoormen" name="Outer Castle Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2555,7 +2499,6 @@
 		</collision>
 	</npc>
 	<npc id="35357" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2603,7 +2546,6 @@
 		</collision>
 	</npc>
 	<npc id="35358" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2651,7 +2593,6 @@
 		</collision>
 	</npc>
 	<npc id="35359" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2699,7 +2640,6 @@
 		</collision>
 	</npc>
 	<npc id="35360" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2747,7 +2687,6 @@
 		</collision>
 	</npc>
 	<npc id="35361" level="75" type="L2Npc" name="Blacksmith" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -2788,7 +2727,6 @@
 		</collision>
 	</npc>
 	<npc id="35362" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2828,7 +2766,6 @@
 		</collision>
 	</npc>
 	<npc id="35363" level="75" type="L2Merchant" name="Chamberlain of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -2885,7 +2822,6 @@
 		</collision>
 	</npc>
 	<npc id="35364" level="75" type="L2Npc" name="Hadley" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2925,7 +2861,6 @@
 		</collision>
 	</npc>
 	<npc id="35365" level="75" type="L2Merchant" name="Rowell" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2965,7 +2900,6 @@
 		</collision>
 	</npc>
 	<npc id="35366" level="75" type="L2Merchant" name="Manor Manager" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3006,7 +2940,6 @@
 		</collision>
 	</npc>
 	<npc id="35367" level="75" type="L2Npc" name="Daven" title="Herald from Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3047,7 +2980,6 @@
 		</collision>
 	</npc>
 	<npc id="35368" level="73" type="L2Monster" name="Bloody Lord Nurka">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- rhand: Stormbringer -->
@@ -3091,7 +3023,6 @@
 		</collision>
 	</npc>
 	<npc id="35369" level="70" type="L2Monster" name="Partisan Healer">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
@@ -3134,7 +3065,6 @@
 		</collision>
 	</npc>
 	<npc id="35370" level="70" type="L2Monster" name="Partisan Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- rhand: Bastard Sword -->
@@ -3177,7 +3107,6 @@
 		</collision>
 	</npc>
 	<npc id="35371" level="70" type="L2Monster" name="Partisan Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3220,7 +3149,6 @@
 		</collision>
 	</npc>
 	<npc id="35372" level="68" type="L2Monster" name="Partisan Soldier">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -3263,7 +3191,6 @@
 		</collision>
 	</npc>
 	<npc id="35373" level="68" type="L2Monster" name="Partisan Wizard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
@@ -3306,7 +3233,6 @@
 		</collision>
 	</npc>
 	<npc id="35374" level="68" type="L2Monster" name="Partisan Archer">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3349,7 +3275,6 @@
 		</collision>
 	</npc>
 	<npc id="35375" level="73" type="L2Monster" name="Bloody Lord Nurka">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- rhand: Stormbringer -->
@@ -3393,7 +3318,6 @@
 		</collision>
 	</npc>
 	<npc id="35376" level="70" type="L2Monster" name="Partisan Healer">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
@@ -3436,7 +3360,6 @@
 		</collision>
 	</npc>
 	<npc id="35377" level="70" type="L2Monster" name="Partisan Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- rhand: Bastard Sword -->
@@ -3479,7 +3402,6 @@
 		</collision>
 	</npc>
 	<npc id="35378" level="70" type="L2Monster" name="Partisan Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3522,7 +3444,6 @@
 		</collision>
 	</npc>
 	<npc id="35379" level="68" type="L2Monster" name="Partisan Soldier">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -3565,7 +3486,6 @@
 		</collision>
 	</npc>
 	<npc id="35380" level="68" type="L2Monster" name="Partisan Wizard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
@@ -3608,7 +3528,6 @@
 		</collision>
 	</npc>
 	<npc id="35381" level="68" type="L2Monster" name="Partisan Archer">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3651,7 +3570,6 @@
 		</collision>
 	</npc>
 	<npc id="35382" level="70" type="L2Npc" name="Brakel" title="Partisan Herald">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3692,7 +3610,6 @@
 		</collision>
 	</npc>
 	<npc id="35383" level="70" type="L2ClanHallManager" name="Tamutak" title="Ol Mahum Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3733,7 +3650,6 @@
 		</collision>
 	</npc>
 	<npc id="35384" level="70" type="L2ClanHallManager" name="Black" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3782,7 +3698,6 @@
 		</collision>
 	</npc>
 	<npc id="35385" level="70" type="L2ClanHallDoormen" name="Renny" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3822,7 +3737,6 @@
 		</collision>
 	</npc>
 	<npc id="35386" level="70" type="L2ClanHallManager" name="Boyer" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3871,7 +3785,6 @@
 		</collision>
 	</npc>
 	<npc id="35387" level="70" type="L2ClanHallDoormen" name="Baback" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3911,7 +3824,6 @@
 		</collision>
 	</npc>
 	<npc id="35388" level="70" type="L2ClanHallManager" name="Tim" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3960,7 +3872,6 @@
 		</collision>
 	</npc>
 	<npc id="35389" level="70" type="L2ClanHallDoormen" name="Loring" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4000,7 +3911,6 @@
 		</collision>
 	</npc>
 	<npc id="35390" level="70" type="L2ClanHallManager" name="Dillon" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4049,7 +3959,6 @@
 		</collision>
 	</npc>
 	<npc id="35391" level="70" type="L2ClanHallDoormen" name="Latif" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4089,7 +3998,6 @@
 		</collision>
 	</npc>
 	<npc id="35392" level="70" type="L2ClanHallManager" name="Bremmer" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4138,7 +4046,6 @@
 		</collision>
 	</npc>
 	<npc id="35393" level="70" type="L2ClanHallDoormen" name="Faolan" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4178,7 +4085,6 @@
 		</collision>
 	</npc>
 	<npc id="35394" level="70" type="L2ClanHallManager" name="Kalis" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4227,7 +4133,6 @@
 		</collision>
 	</npc>
 	<npc id="35395" level="70" type="L2ClanHallDoormen" name="Kogan" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4267,7 +4172,6 @@
 		</collision>
 	</npc>
 	<npc id="35396" level="70" type="L2ClanHallManager" name="Winker" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4316,7 +4220,6 @@
 		</collision>
 	</npc>
 	<npc id="35397" level="70" type="L2ClanHallDoormen" name="Merton" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4356,7 +4259,6 @@
 		</collision>
 	</npc>
 	<npc id="35398" level="70" type="L2ClanHallManager" name="Ruben" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4405,7 +4307,6 @@
 		</collision>
 	</npc>
 	<npc id="35399" level="70" type="L2ClanHallDoormen" name="Luce" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />

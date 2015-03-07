@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22700" level="82" type="L2Monster" name="Varangka's Guardian">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -28,7 +27,6 @@
 		</collision>
 	</npc>
 	<npc id="22701" level="81" type="L2Monster" name="Varangka's Dre Vanul">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
@@ -139,7 +137,6 @@
 		</collision>
 	</npc>
 	<npc id="22702" level="82" type="L2Monster" name="Varangka's Destroyer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<skill name="Skill01_ID" id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -252,7 +249,6 @@
 		</collision>
 	</npc>
 	<npc id="22703" level="81" type="L2Monster" name="Contaminated Morek Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="1000" />
 			<skill name="Skill01_ID" id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
@@ -328,7 +324,6 @@
 		</collision>
 	</npc>
 	<npc id="22704" level="81" type="L2Monster" name="Contaminated Batur Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -417,7 +412,6 @@
 		</collision>
 	</npc>
 	<npc id="22705" level="82" type="L2Monster" name="Contaminated Batur Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -506,7 +500,6 @@
 		</collision>
 	</npc>
 	<npc id="22706" level="82" type="L2Monster" name="Turka Subordinate's Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -595,7 +588,6 @@
 		</collision>
 	</npc>
 	<npc id="22707" level="82" type="L2Monster" name="Turka Chieftain's Ghost" title="Graveyard Guardian Spirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -682,7 +674,6 @@
 		</collision>
 	</npc>
 	<npc id="22708" level="81" type="L2Monster" name="Invader Warrior of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -764,7 +755,6 @@
 		</collision>
 	</npc>
 	<npc id="22709" level="81" type="L2Monster" name="Invader Healer of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -845,7 +835,6 @@
 		</collision>
 	</npc>
 	<npc id="22710" level="81" type="L2Monster" name="Invader Guide of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Target" value="2" />
@@ -928,7 +917,6 @@
 		</collision>
 	</npc>
 	<npc id="22711" level="81" type="L2Monster" name="Invader Destroyer of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1007,7 +995,6 @@
 		</collision>
 	</npc>
 	<npc id="22712" level="81" type="L2Monster" name="Invader Assassin of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4579" level="9" /> <!-- Bleed -->
@@ -1078,7 +1065,6 @@
 		</collision>
 	</npc>
 	<npc id="22713" level="81" type="L2Monster" name="Invader Shaman of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Target" value="2" />
@@ -1157,7 +1143,6 @@
 		</collision>
 	</npc>
 	<npc id="22714" level="81" type="L2Monster" name="Invader Archer of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5335" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack -->
@@ -1229,7 +1214,6 @@
 		</collision>
 	</npc>
 	<npc id="22715" level="81" type="L2Monster" name="Invader Soldier of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1302,7 +1286,6 @@
 		</collision>
 	</npc>
 	<npc id="22716" level="81" type="L2Monster" name="Invader Soldier of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1376,7 +1359,6 @@
 		</collision>
 	</npc>
 	<npc id="22717" level="81" type="L2Monster" name="Invader Disciple of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1450,7 +1432,6 @@
 		</collision>
 	</npc>
 	<npc id="22718" level="81" type="L2Monster" name="Invader Elite Soldier of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1525,7 +1506,6 @@
 		</collision>
 	</npc>
 	<npc id="22719" level="82" type="L2Monster" name="Nihil Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1600,7 +1580,6 @@
 		</collision>
 	</npc>
 	<npc id="22720" level="82" type="L2Monster" name="Nihil Invader Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1682,7 +1661,6 @@
 		</collision>
 	</npc>
 	<npc id="22721" level="82" type="L2Monster" name="Nihil Invader Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Target" value="2" />
@@ -1766,7 +1744,6 @@
 		</collision>
 	</npc>
 	<npc id="22722" level="82" type="L2Monster" name="Nihil Invader Destroyer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -1839,7 +1816,6 @@
 		</collision>
 	</npc>
 	<npc id="22723" level="82" type="L2Monster" name="Nihil Invader Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4579" level="9" /> <!-- Bleed -->
@@ -1916,7 +1892,6 @@
 		</collision>
 	</npc>
 	<npc id="22724" level="82" type="L2Monster" name="Nihil Invader Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Target" value="2" />
@@ -1996,7 +1971,6 @@
 		</collision>
 	</npc>
 	<npc id="22725" level="82" type="L2Monster" name="Nihil Invader Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5335" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack -->
@@ -2070,7 +2044,6 @@
 		</collision>
 	</npc>
 	<npc id="22726" level="82" type="L2Monster" name="Nihil Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -2144,7 +2117,6 @@
 		</collision>
 	</npc>
 	<npc id="22727" level="82" type="L2Monster" name="Nihil Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -2219,7 +2191,6 @@
 		</collision>
 	</npc>
 	<npc id="22728" level="82" type="L2Monster" name="Nihil Invader Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -2294,7 +2265,6 @@
 		</collision>
 	</npc>
 	<npc id="22729" level="82" type="L2Monster" name="Nihil Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -2369,7 +2339,6 @@
 		</collision>
 	</npc>
 	<npc id="22730" level="84" type="L2Monster" name="Mutant Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -2446,7 +2415,6 @@
 		</collision>
 	</npc>
 	<npc id="22731" level="84" type="L2Monster" name="Mutant Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -2524,7 +2492,6 @@
 		</collision>
 	</npc>
 	<npc id="22732" level="84" type="L2Monster" name="Mutant Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Target" value="2" />
@@ -2613,7 +2580,6 @@
 		</collision>
 	</npc>
 	<npc id="22733" level="84" type="L2Monster" name="Mutant Destroyer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -2695,7 +2661,6 @@
 		</collision>
 	</npc>
 	<npc id="22734" level="84" type="L2Monster" name="Mutant Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4579" level="9" /> <!-- Bleed -->
@@ -2773,7 +2738,6 @@
 		</collision>
 	</npc>
 	<npc id="22735" level="84" type="L2Monster" name="Mutant Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill02_Target" value="2" />
@@ -2855,7 +2819,6 @@
 		</collision>
 	</npc>
 	<npc id="22736" level="84" type="L2Monster" name="Mutant Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5335" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack -->
@@ -2929,7 +2892,6 @@
 		</collision>
 	</npc>
 	<npc id="22737" level="84" type="L2Monster" name="Mutant Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -3003,7 +2965,6 @@
 		</collision>
 	</npc>
 	<npc id="22738" level="84" type="L2Monster" name="Mutant Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -3077,7 +3038,6 @@
 		</collision>
 	</npc>
 	<npc id="22739" level="84" type="L2Monster" name="Mutant Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -3152,7 +3112,6 @@
 		</collision>
 	</npc>
 	<npc id="22740" level="84" type="L2Monster" name="Mutant Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
@@ -3230,7 +3189,6 @@
 		</collision>
 	</npc>
 	<npc id="22741" level="81" type="L2Monster" name="Grave Robber Warrior">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="12" /> <!-- rhand: Knife -->
@@ -3334,7 +3292,6 @@
 		</collision>
 	</npc>
 	<npc id="22742" level="80" type="L2Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="mobile_type" value="1" />
@@ -3448,7 +3405,6 @@
 		</collision>
 	</npc>
 	<npc id="22743" level="80" type="L2Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="mobile_type" value="1" />
@@ -3556,7 +3512,6 @@
 		</collision>
 	</npc>
 	<npc id="22744" level="80" type="L2Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="IsSayPrivate" value="0" />
@@ -3664,7 +3619,6 @@
 		</collision>
 	</npc>
 	<npc id="22745" level="80" type="L2Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="IsSayPrivate" value="0" />
@@ -3766,7 +3720,6 @@
 		</collision>
 	</npc>
 	<npc id="22746" level="88" type="L2Monster" name="Bgurent">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6382" level="1" /> <!-- Bistakon Rolling Claw -->
 			<skill name="Skill02_ID" id="6384" level="1" /> <!-- Bistakon Deadly Blow -->
@@ -3852,7 +3805,6 @@
 		</collision>
 	</npc>
 	<npc id="22747" level="88" type="L2Monster" name="Brakian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6384" level="2" /> <!-- Bistakon Deadly Blow -->
 			<skill name="Skill02_ID" id="6385" level="1" /> <!-- Bistakon Critical Claw -->
@@ -3936,7 +3888,6 @@
 		</collision>
 	</npc>
 	<npc id="22748" level="88" type="L2Monster" name="Groikan">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6386" level="1" /> <!-- Bistakon Earth Rise -->
 			<skill name="Skill02_ID" id="6387" level="1" /> <!-- Bistakon Earthquake -->
@@ -4022,7 +3973,6 @@
 		</collision>
 	</npc>
 	<npc id="22749" level="88" type="L2Monster" name="Treykan">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill name="Skill02_ID" id="6388" level="1" /> <!-- Bistakon Jump Blow -->
@@ -4124,7 +4074,6 @@
 		</collision>
 	</npc>
 	<npc id="22750" level="89" type="L2Monster" name="Elite Bgurent" title="Bistakon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6382" level="1" /> <!-- Bistakon Rolling Claw -->
 			<skill name="Skill02_ID" id="6384" level="1" /> <!-- Bistakon Deadly Blow -->
@@ -4219,7 +4168,6 @@
 		</collision>
 	</npc>
 	<npc id="22751" level="89" type="L2Monster" name="Elite Brakian" title="Bistakon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6384" level="2" /> <!-- Bistakon Deadly Blow -->
 			<skill name="Skill02_ID" id="6385" level="1" /> <!-- Bistakon Critical Claw -->
@@ -4318,7 +4266,6 @@
 		</collision>
 	</npc>
 	<npc id="22752" level="89" type="L2Monster" name="Elite Groikan" title="Bistakon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6386" level="1" /> <!-- Bistakon Earth Rise -->
 			<skill name="Skill02_ID" id="6387" level="1" /> <!-- Bistakon Earthquake -->
@@ -4404,7 +4351,6 @@
 		</collision>
 	</npc>
 	<npc id="22753" level="89" type="L2Monster" name="Elite Treykan" title="Bistakon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill name="Skill02_ID" id="6388" level="1" /> <!-- Bistakon Jump Blow -->
@@ -4488,7 +4434,6 @@
 		</collision>
 	</npc>
 	<npc id="22754" level="88" type="L2Monster" name="Turtlelian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6409" level="1" /> <!-- Reptilikon Earthquake -->
 			<skill name="Skill02_ID" id="6410" level="1" /> <!-- Reptilikon Rush -->
@@ -4590,7 +4535,6 @@
 		</collision>
 	</npc>
 	<npc id="22755" level="88" type="L2Monster" name="Krajian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6413" level="1" /> <!-- Reptilikon Missile -->
 			<skill name="Skill02_ID" id="6414" level="1" /> <!-- Reptilikon Charge -->
@@ -4685,7 +4629,6 @@
 		</collision>
 	</npc>
 	<npc id="22756" level="88" type="L2Monster" name="Tardyon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6416" level="1" /> <!-- Reptilikon Poison Breath -->
 			<skill name="Skill02_ID" id="6417" level="1" /> <!-- Reptilikon Poison Shot -->
@@ -4778,7 +4721,6 @@
 		</collision>
 	</npc>
 	<npc id="22757" level="89" type="L2Monster" name="Elite Turtlelian" title="Reptilikon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6409" level="1" /> <!-- Reptilikon Earthquake -->
 			<skill name="Skill02_ID" id="6410" level="1" /> <!-- Reptilikon Rush -->
@@ -4865,7 +4807,6 @@
 		</collision>
 	</npc>
 	<npc id="22758" level="89" type="L2Monster" name="Elite Krajian" title="Reptilikon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6413" level="1" /> <!-- Reptilikon Missile -->
 			<skill name="Skill02_ID" id="6414" level="1" /> <!-- Reptilikon Charge -->
@@ -4950,7 +4891,6 @@
 		</collision>
 	</npc>
 	<npc id="22759" level="89" type="L2Monster" name="Elite Tardyon" title="Reptilikon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6416" level="1" /> <!-- Reptilikon Poison Breath -->
 			<skill name="Skill02_ID" id="6417" level="1" /> <!-- Reptilikon Poison Shot -->
@@ -5035,7 +4975,6 @@
 		</collision>
 	</npc>
 	<npc id="22760" level="88" type="L2Monster" name="Kanibi">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6393" level="1" /> <!-- Cokrakon Sonic Beam -->
 			<skill name="Skill02_ID" id="6394" level="1" /> <!-- Cokrakon Sonic Bomb -->
@@ -5137,7 +5076,6 @@
 		</collision>
 	</npc>
 	<npc id="22761" level="88" type="L2Monster" name="Kiriona">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6396" level="1" /> <!-- Cokrakon Panic -->
 			<skill name="Skill02_ID" id="6397" level="1" /> <!-- Cokrakon Staggering Blow -->
@@ -5234,7 +5172,6 @@
 		</collision>
 	</npc>
 	<npc id="22762" level="88" type="L2Monster" name="Kaiona">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6399" level="1" /> <!-- Cokrakon Dreadful Piercing -->
 			<skill name="Skill02_ID" id="6400" level="1" /> <!-- Cokrakon Dwindling Velocity -->
@@ -5326,7 +5263,6 @@
 		</collision>
 	</npc>
 	<npc id="22763" level="89" type="L2Monster" name="Elite Kanibi" title="Kokracon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6393" level="1" /> <!-- Cokrakon Sonic Beam -->
 			<skill name="Skill02_ID" id="6394" level="1" /> <!-- Cokrakon Sonic Bomb -->
@@ -5423,7 +5359,6 @@
 		</collision>
 	</npc>
 	<npc id="22764" level="89" type="L2Monster" name="Elite Kiriona" title="Kokracon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6396" level="1" /> <!-- Cokrakon Panic -->
 			<skill name="Skill02_ID" id="6397" level="1" /> <!-- Cokrakon Staggering Blow -->
@@ -5523,7 +5458,6 @@
 		</collision>
 	</npc>
 	<npc id="22765" level="89" type="L2Monster" name="Elite Kaiona" title="Kokracon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6399" level="1" /> <!-- Cokrakon Dreadful Piercing -->
 			<skill name="Skill02_ID" id="6400" level="1" /> <!-- Cokrakon Dwindling Velocity -->
@@ -5608,7 +5542,6 @@
 		</collision>
 	</npc>
 	<npc id="22766" level="85" type="L2Monster" name="Mithril Millipede">
-		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="8104" sp="474" />
@@ -5657,7 +5590,6 @@
 		</collision>
 	</npc>
 	<npc id="22767" level="85" type="L2Monster" name="Ice Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" /> <!-- Power Strike -->
 			<skill name="Skill02_ID" id="6292" level="1" /> <!-- Rush -->
@@ -5713,7 +5645,6 @@
 		</collision>
 	</npc>
 	<npc id="22768" level="82" type="L2Monster" name="Tanta Lizardman Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6419" level="1" /> <!-- Light of Scout -->
@@ -5798,7 +5729,6 @@
 		</collision>
 	</npc>
 	<npc id="22769" level="83" type="L2Monster" name="Tanta Lizardman Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6420" level="1" /> <!-- Lizard Strike -->
 		</parameters>
@@ -5883,7 +5813,6 @@
 		</collision>
 	</npc>
 	<npc id="22770" level="84" type="L2Monster" name="Tanta Lizardman Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6421" level="1" /> <!-- Rage of Soldier -->
 		</parameters>
@@ -5980,7 +5909,6 @@
 		</collision>
 	</npc>
 	<npc id="22771" level="84" type="L2Monster" name="Tanta Lizardman Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6422" level="1" /> <!-- Resistance Explosion -->
 		</parameters>
@@ -6067,7 +5995,6 @@
 		</collision>
 	</npc>
 	<npc id="22772" level="83" type="L2Monster" name="Tanta Lizardman Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6423" level="1" /> <!-- Shock -->
 			<skill name="Skill02_ID" id="6424" level="1" /> <!-- Double Shot -->
@@ -6160,7 +6087,6 @@
 		</collision>
 	</npc>
 	<npc id="22773" level="83" type="L2Monster" name="Tanta Lizardman Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6676" level="1" /> <!-- Magician's Perversity -->
@@ -6263,7 +6189,6 @@
 		</collision>
 	</npc>
 	<npc id="22774" level="84" type="L2Monster" name="Tanta Lizardman Summoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6679" level="1" /> <!-- Summoner's Strike -->
 			<skill name="Skill02_ID" id="6425" level="1" /> <!-- Demotivation Hex -->
@@ -6354,7 +6279,6 @@
 		</collision>
 	</npc>
 	<npc id="22775" level="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500" />
 			<param name="Skill02_Probablity" value="500" />
@@ -6469,7 +6393,6 @@
 		</collision>
 	</npc>
 	<npc id="22776" level="84" type="L2Monster" name="Sel Mahum Training Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6338" level="1" /> <!-- Red Slash 2 -->
 			<skill name="Skill02_ID" id="6336" level="1" /> <!-- Electric Rain 2 -->
@@ -6583,7 +6506,6 @@
 		</collision>
 	</npc>
 	<npc id="22777" level="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500" />
 			<param name="Skill02_Probablity" value="500" />
@@ -6698,7 +6620,6 @@
 		</collision>
 	</npc>
 	<npc id="22778" level="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6334" level="1" /> <!-- Shock -->
 		</parameters>
@@ -6813,7 +6734,6 @@
 		</collision>
 	</npc>
 	<npc id="22779" level="84" type="L2Monster" name="Sel Mahum Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6339" level="1" /> <!-- Sacred Hammer Attack -->
 			<skill name="Skill02_ID" id="6340" level="1" /> <!-- Shock -->
@@ -6945,7 +6865,6 @@
 		</collision>
 	</npc>
 	<npc id="22780" level="83" type="L2Monster" name="Sel Mahum Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100" />
 			<param name="Skill02_Probablity" value="100" />
@@ -7047,7 +6966,6 @@
 		</collision>
 	</npc>
 	<npc id="22781" level="84" type="L2Monster" name="Sel Mahum Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500" />
 			<param name="Skill02_Probablity" value="500" />
@@ -7137,7 +7055,6 @@
 		</collision>
 	</npc>
 	<npc id="22782" level="83" type="L2Monster" name="Sel Mahum Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100" />
 			<param name="Skill02_Probablity" value="100" />
@@ -7222,7 +7139,6 @@
 		</collision>
 	</npc>
 	<npc id="22783" level="84" type="L2Monster" name="Sel Mahum Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100" />
 			<param name="Skill02_Probablity" value="100" />
@@ -7305,7 +7221,6 @@
 		</collision>
 	</npc>
 	<npc id="22784" level="83" type="L2Monster" name="Sel Mahum Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100" />
 			<param name="Skill02_Probablity" value="100" />
@@ -7385,7 +7300,6 @@
 		</collision>
 	</npc>
 	<npc id="22785" level="84" type="L2Monster" name="Sel Mahum Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500" />
 			<param name="Skill02_Probablity" value="500" />
@@ -7464,7 +7378,6 @@
 		</collision>
 	</npc>
 	<npc id="22786" level="84" type="L2Monster" name="Sel Mahum Squad Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6337" level="1" /> <!-- Red Slash 1 -->
 			<skill name="Skill02_ID" id="6335" level="1" /> <!-- Electric Rain 1 -->
@@ -7577,7 +7490,6 @@
 		</collision>
 	</npc>
 	<npc id="22787" level="84" type="L2Monster" name="Sel Mahum Squad Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6339" level="1" /> <!-- Sacred Hammer Attack -->
 			<skill name="Skill02_ID" id="6340" level="1" /> <!-- Shock -->
@@ -7716,7 +7628,6 @@
 		</collision>
 	</npc>
 	<npc id="22788" level="84" type="L2Monster" name="Sel Mahum Squad Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6333" level="1" /> <!-- Electric Bolt 1 -->
 		</parameters>
@@ -7848,7 +7759,6 @@
 		</collision>
 	</npc>
 	<npc id="22789" level="83" type="L2Monster" name="Solina Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6303" level="1" /> <!-- Trial of the Coup -->
 			<skill name="Skill02_ID" id="6304" level="1" /> <!-- Shock -->
@@ -7971,7 +7881,6 @@
 		</collision>
 	</npc>
 	<npc id="22790" level="83" type="L2Monster" name="Solina Seeker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6305" level="1" /> <!-- Sacred Gnosis -->
 			<skill name="Skill02_ID" id="6306" level="1" /> <!-- Solina Strike -->
@@ -8097,7 +8006,6 @@
 		</collision>
 	</npc>
 	<npc id="22791" level="83" type="L2Monster" name="Solina Savior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6307" level="1" /> <!-- Opus of the Hand -->
 			<skill name="Skill02_ID" id="6308" level="1" /> <!-- Opus of the Wave -->
@@ -8212,7 +8120,6 @@
 		</collision>
 	</npc>
 	<npc id="22792" level="83" type="L2Monster" name="Solina Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6309" level="1" /> <!-- Pain of the Ascetic -->
 			<skill name="Skill02_ID" id="6677" level="1" /> <!-- Hold -->
@@ -8327,7 +8234,6 @@
 		</collision>
 	</npc>
 	<npc id="22793" level="83" type="L2Monster" name="Solina Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6310" level="1" /> <!-- Loss of Quest -->
 		</parameters>
@@ -8440,7 +8346,6 @@
 		</collision>
 	</npc>
 	<npc id="22794" level="84" type="L2Monster" name="Divinity Judge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6314" level="1" /> <!-- Sacred Judgement -->
@@ -8526,7 +8431,6 @@
 		</collision>
 	</npc>
 	<npc id="22795" level="84" type="L2Monster" name="Divinity Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6309" level="1" /> <!-- Pain of the Ascetic -->
@@ -8618,7 +8522,6 @@
 		</collision>
 	</npc>
 	<npc id="22796" level="84" type="L2Monster" name="Divinity Supervisor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6317" level="1" /> <!-- Sacred Tacit -->
@@ -8708,7 +8611,6 @@
 		</collision>
 	</npc>
 	<npc id="22797" level="84" type="L2Monster" name="Divinity Worshipper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6327" level="1" /> <!-- Sacred Worship -->
@@ -8795,7 +8697,6 @@
 		</collision>
 	</npc>
 	<npc id="22798" level="84" type="L2Monster" name="Divinity Protector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6318" level="1" /> <!-- Divine Shield Protection -->
@@ -8897,7 +8798,6 @@
 		</collision>
 	</npc>
 	<npc id="22799" level="84" type="L2Monster" name="Divinity Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6328" level="1" /> <!-- Fighter Judgement -->

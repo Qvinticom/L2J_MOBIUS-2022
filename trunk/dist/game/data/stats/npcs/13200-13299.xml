@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13200" level="79" type="L2Npc" name="Young Child">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -36,7 +35,6 @@
 		</collision>
 	</npc>
 	<npc id="13201" level="79" type="L2Npc" name="Guard of the Dawn">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -71,7 +69,6 @@
 		</collision>
 	</npc>
 	<npc id="13202" level="76" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="11" /> <!-- Trap Explosion -->
@@ -112,7 +109,6 @@
 		</collision>
 	</npc>
 	<npc id="13203" level="77" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="12" /> <!-- Trap Explosion -->
@@ -153,7 +149,6 @@
 		</collision>
 	</npc>
 	<npc id="13204" level="78" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="13" /> <!-- Trap Explosion -->
@@ -194,7 +189,6 @@
 		</collision>
 	</npc>
 	<npc id="13205" level="79" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="14" /> <!-- Trap Explosion -->
@@ -235,7 +229,6 @@
 		</collision>
 	</npc>
 	<npc id="13206" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="15" /> <!-- Trap Explosion -->
@@ -276,7 +269,6 @@
 		</collision>
 	</npc>
 	<npc id="13207" level="81" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="16" /> <!-- Trap Explosion -->
@@ -317,7 +309,6 @@
 		</collision>
 	</npc>
 	<npc id="13208" level="82" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="17" /> <!-- Trap Explosion -->
@@ -358,7 +349,6 @@
 		</collision>
 	</npc>
 	<npc id="13209" level="83" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="18" /> <!-- Trap Explosion -->
@@ -399,7 +389,6 @@
 		</collision>
 	</npc>
 	<npc id="13210" level="84" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="19" /> <!-- Trap Explosion -->
@@ -440,7 +429,6 @@
 		</collision>
 	</npc>
 	<npc id="13211" level="85" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="20" /> <!-- Trap Explosion -->
@@ -481,7 +469,6 @@
 		</collision>
 	</npc>
 	<npc id="13212" level="86" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="21" /> <!-- Trap Explosion -->
@@ -522,7 +509,6 @@
 		</collision>
 	</npc>
 	<npc id="13213" level="76" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="7" /> <!-- Poison -->
@@ -563,7 +549,6 @@
 		</collision>
 	</npc>
 	<npc id="13214" level="77" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="8" /> <!-- Poison -->
@@ -604,7 +589,6 @@
 		</collision>
 	</npc>
 	<npc id="13215" level="78" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="9" /> <!-- Poison -->
@@ -645,7 +629,6 @@
 		</collision>
 	</npc>
 	<npc id="13216" level="79" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="10" /> <!-- Poison -->
@@ -686,7 +669,6 @@
 		</collision>
 	</npc>
 	<npc id="13217" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="11" /> <!-- Poison -->
@@ -727,7 +709,6 @@
 		</collision>
 	</npc>
 	<npc id="13218" level="81" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="12" /> <!-- Poison -->
@@ -768,7 +749,6 @@
 		</collision>
 	</npc>
 	<npc id="13219" level="82" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="13" /> <!-- Poison -->
@@ -809,7 +789,6 @@
 		</collision>
 	</npc>
 	<npc id="13220" level="83" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="14" /> <!-- Poison -->
@@ -850,7 +829,6 @@
 		</collision>
 	</npc>
 	<npc id="13221" level="84" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="15" /> <!-- Poison -->
@@ -891,7 +869,6 @@
 		</collision>
 	</npc>
 	<npc id="13222" level="85" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="16" /> <!-- Poison -->
@@ -932,7 +909,6 @@
 		</collision>
 	</npc>
 	<npc id="13223" level="86" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="17" /> <!-- Poison -->
@@ -973,7 +949,6 @@
 		</collision>
 	</npc>
 	<npc id="13224" level="76" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="7" /> <!-- Slow Trap -->
@@ -1014,7 +989,6 @@
 		</collision>
 	</npc>
 	<npc id="13225" level="77" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="8" /> <!-- Slow Trap -->
@@ -1055,7 +1029,6 @@
 		</collision>
 	</npc>
 	<npc id="13226" level="78" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="9" /> <!-- Slow Trap -->
@@ -1096,7 +1069,6 @@
 		</collision>
 	</npc>
 	<npc id="13227" level="79" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="10" /> <!-- Slow Trap -->
@@ -1137,7 +1109,6 @@
 		</collision>
 	</npc>
 	<npc id="13228" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="11" /> <!-- Slow Trap -->
@@ -1178,7 +1149,6 @@
 		</collision>
 	</npc>
 	<npc id="13229" level="81" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="12" /> <!-- Slow Trap -->
@@ -1219,7 +1189,6 @@
 		</collision>
 	</npc>
 	<npc id="13230" level="82" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="13" /> <!-- Slow Trap -->
@@ -1260,7 +1229,6 @@
 		</collision>
 	</npc>
 	<npc id="13231" level="83" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="14" /> <!-- Slow Trap -->
@@ -1301,7 +1269,6 @@
 		</collision>
 	</npc>
 	<npc id="13232" level="84" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="15" /> <!-- Slow Trap -->
@@ -1342,7 +1309,6 @@
 		</collision>
 	</npc>
 	<npc id="13233" level="85" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="16" /> <!-- Slow Trap -->
@@ -1383,7 +1349,6 @@
 		</collision>
 	</npc>
 	<npc id="13234" level="86" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="17" /> <!-- Slow Trap -->
@@ -1424,7 +1389,6 @@
 		</collision>
 	</npc>
 	<npc id="13235" level="76" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="6" /> <!-- Flash Trap -->
@@ -1465,7 +1429,6 @@
 		</collision>
 	</npc>
 	<npc id="13236" level="77" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="7" /> <!-- Flash Trap -->
@@ -1506,7 +1469,6 @@
 		</collision>
 	</npc>
 	<npc id="13237" level="78" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="8" /> <!-- Flash Trap -->
@@ -1547,7 +1509,6 @@
 		</collision>
 	</npc>
 	<npc id="13238" level="79" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="9" /> <!-- Flash Trap -->
@@ -1588,7 +1549,6 @@
 		</collision>
 	</npc>
 	<npc id="13239" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="10" /> <!-- Flash Trap -->
@@ -1629,7 +1589,6 @@
 		</collision>
 	</npc>
 	<npc id="13240" level="81" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="11" /> <!-- Flash Trap -->
@@ -1670,7 +1629,6 @@
 		</collision>
 	</npc>
 	<npc id="13241" level="82" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="12" /> <!-- Flash Trap -->
@@ -1711,7 +1669,6 @@
 		</collision>
 	</npc>
 	<npc id="13242" level="83" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="13" /> <!-- Flash Trap -->
@@ -1752,7 +1709,6 @@
 		</collision>
 	</npc>
 	<npc id="13243" level="84" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="14" /> <!-- Flash Trap -->
@@ -1793,7 +1749,6 @@
 		</collision>
 	</npc>
 	<npc id="13244" level="85" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="15" /> <!-- Flash Trap -->
@@ -1834,7 +1789,6 @@
 		</collision>
 	</npc>
 	<npc id="13245" level="86" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="16" /> <!-- Flash Trap -->
@@ -1875,7 +1829,6 @@
 		</collision>
 	</npc>
 	<npc id="13246" level="76" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="9" /> <!-- Hold -->
@@ -1916,7 +1869,6 @@
 		</collision>
 	</npc>
 	<npc id="13247" level="77" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="10" /> <!-- Hold -->
@@ -1957,7 +1909,6 @@
 		</collision>
 	</npc>
 	<npc id="13248" level="78" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="11" /> <!-- Hold -->
@@ -1998,7 +1949,6 @@
 		</collision>
 	</npc>
 	<npc id="13249" level="79" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="12" /> <!-- Hold -->
@@ -2039,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="13250" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="13" /> <!-- Hold -->
@@ -2080,7 +2029,6 @@
 		</collision>
 	</npc>
 	<npc id="13251" level="81" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="14" /> <!-- Hold -->
@@ -2121,7 +2069,6 @@
 		</collision>
 	</npc>
 	<npc id="13252" level="82" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="15" /> <!-- Hold -->
@@ -2162,7 +2109,6 @@
 		</collision>
 	</npc>
 	<npc id="13253" level="83" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="16" /> <!-- Hold -->
@@ -2203,7 +2149,6 @@
 		</collision>
 	</npc>
 	<npc id="13254" level="84" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="17" /> <!-- Hold -->
@@ -2244,7 +2189,6 @@
 		</collision>
 	</npc>
 	<npc id="13255" level="85" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="18" /> <!-- Hold -->
@@ -2285,7 +2229,6 @@
 		</collision>
 	</npc>
 	<npc id="13256" level="86" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="19" /> <!-- Hold -->
@@ -2326,7 +2269,6 @@
 		</collision>
 	</npc>
 	<npc id="13257" level="76" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="7" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2365,7 +2307,6 @@
 		</collision>
 	</npc>
 	<npc id="13258" level="77" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="8" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2404,7 +2345,6 @@
 		</collision>
 	</npc>
 	<npc id="13259" level="78" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="9" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2443,7 +2383,6 @@
 		</collision>
 	</npc>
 	<npc id="13260" level="79" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="10" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2482,7 +2421,6 @@
 		</collision>
 	</npc>
 	<npc id="13261" level="80" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="11" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2521,7 +2459,6 @@
 		</collision>
 	</npc>
 	<npc id="13262" level="81" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="12" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2560,7 +2497,6 @@
 		</collision>
 	</npc>
 	<npc id="13263" level="82" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="13" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2599,7 +2535,6 @@
 		</collision>
 	</npc>
 	<npc id="13264" level="83" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="14" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2638,7 +2573,6 @@
 		</collision>
 	</npc>
 	<npc id="13265" level="84" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="15" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2677,7 +2611,6 @@
 		</collision>
 	</npc>
 	<npc id="13266" level="85" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="16" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2716,7 +2649,6 @@
 		</collision>
 	</npc>
 	<npc id="13267" level="86" type="L2Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="17" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2755,7 +2687,6 @@
 		</collision>
 	</npc>
 	<npc id="13268" level="55" type="L2Npc" name="Aqua Elf">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2790,7 +2721,6 @@
 		</collision>
 	</npc>
 	<npc id="13269" level="80" type="L2Npc" name="Hot Weather">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2826,7 +2756,6 @@
 		</collision>
 	</npc>
 	<npc id="13270" level="80" type="L2Npc" name="Sultriness">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2862,7 +2791,6 @@
 		</collision>
 	</npc>
 	<npc id="13271" level="1" type="L2Npc" name="Young Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2899,7 +2827,6 @@
 		</collision>
 	</npc>
 	<npc id="13272" level="1" type="L2Npc" name="Defective Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2936,7 +2863,6 @@
 		</collision>
 	</npc>
 	<npc id="13273" level="1" type="L2Npc" name="Rain Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2974,7 +2900,6 @@
 		</collision>
 	</npc>
 	<npc id="13274" level="1" type="L2Npc" name="Large Rain Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3012,7 +2937,6 @@
 		</collision>
 	</npc>
 	<npc id="13275" level="1" type="L2Npc" name="Young Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3050,7 +2974,6 @@
 		</collision>
 	</npc>
 	<npc id="13276" level="1" type="L2Npc" name="Defective Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3088,7 +3011,6 @@
 		</collision>
 	</npc>
 	<npc id="13277" level="1" type="L2Npc" name="Rain Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3126,7 +3048,6 @@
 		</collision>
 	</npc>
 	<npc id="13278" level="1" type="L2Npc" name="Large Rain Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3164,7 +3085,6 @@
 		</collision>
 	</npc>
 	<npc id="13279" level="1" type="L2Npc" name="Uldie">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3202,7 +3122,6 @@
 		</collision>
 	</npc>
 	<npc id="13280" level="1" type="L2Npc" name="Belldandy">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3240,7 +3159,6 @@
 		</collision>
 	</npc>
 	<npc id="13281" level="80" type="L2Npc" name="Skooldie" title="Event manager">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3277,7 +3195,6 @@
 		</collision>
 	</npc>
 	<npc id="13282" level="1" type="L2Npc" name="Skooldie">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3315,7 +3232,6 @@
 		</collision>
 	</npc>
 	<npc id="13283" level="55" type="L2Npc" name="Treykan">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3350,7 +3266,6 @@
 		</collision>
 	</npc>
 	<npc id="13284" level="80" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3386,7 +3301,6 @@
 		</collision>
 	</npc>
 	<npc id="13285" level="80" type="L2Npc" name="Santa" title="Event manager">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3422,7 +3336,6 @@
 		</collision>
 	</npc>
 	<npc id="13286" level="85" type="L2Npc" name="Baby White Tiger">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3458,7 +3371,6 @@
 		</collision>
 	</npc>
 	<npc id="13287" level="85" type="L2Npc" name="Baby White Tiger Captain">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3494,7 +3406,6 @@
 		</collision>
 	</npc>
 	<npc id="13288" level="85" type="L2Npc" name="Gloomy Baby White Tiger">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3530,7 +3441,6 @@
 		</collision>
 	</npc>
 	<npc id="13289" level="85" type="L2Npc" name="Gloomy Baby White Tiger Captain">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3566,7 +3476,6 @@
 		</collision>
 	</npc>
 	<npc id="13290" level="85" type="L2Npc" name="White Tiger">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3602,7 +3511,6 @@
 		</collision>
 	</npc>
 	<npc id="13291" level="85" type="L2Npc" name="White Tiger Captain">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3638,7 +3546,6 @@
 		</collision>
 	</npc>
 	<npc id="13292" level="75" type="L2Npc" name="Employee of Magic Research Institute" title="Event manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="313" /> <!-- rhand: Temptation of Abyss -->
@@ -3675,7 +3582,6 @@
 		</collision>
 	</npc>
 	<npc id="13293" level="85" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3710,7 +3616,6 @@
 		</collision>
 	</npc>
 	<npc id="13294" level="85" type="L2Npc" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3745,7 +3650,6 @@
 		</collision>
 	</npc>
 	<npc id="13295" level="80" type="L2Npc" name="White Lady" title="Event manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3781,7 +3685,6 @@
 		</collision>
 	</npc>
 	<npc id="13296" level="80" type="L2Npc" name="Freya" title="Event manager">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

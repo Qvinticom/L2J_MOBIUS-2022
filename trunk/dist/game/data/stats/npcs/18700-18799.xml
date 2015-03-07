@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18700" level="80" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -36,7 +35,6 @@
 		</collision>
 	</npc>
 	<npc id="18701" level="80" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -71,7 +69,6 @@
 		</collision>
 	</npc>
 	<npc id="18702" level="80" type="L2Npc" name="Dimensional Teleport Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -110,7 +107,6 @@
 		</collision>
 	</npc>
 	<npc id="18703" level="80" type="L2Monster" name="Defeated Troops Controller">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -146,7 +142,6 @@
 		</collision>
 	</npc>
 	<npc id="18704" level="79" type="L2Monster" name="Tumor of Death">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -191,7 +186,6 @@
 		</collision>
 	</npc>
 	<npc id="18705" level="79" type="L2TerrainObject" name="Destroyed Tumor">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -236,7 +230,6 @@
 		</collision>
 	</npc>
 	<npc id="18706" level="79" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -288,7 +281,6 @@
 		</collision>
 	</npc>
 	<npc id="18707" level="73" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -330,7 +322,6 @@
 		</collision>
 	</npc>
 	<npc id="18708" level="81" type="L2Monster" name="Tumor of Death">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="1" />
 		</parameters>
@@ -377,7 +368,6 @@
 		</collision>
 	</npc>
 	<npc id="18709" level="80" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="def" />
 		</parameters>
@@ -432,7 +422,6 @@
 		</collision>
 	</npc>
 	<npc id="18710" level="81" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="def" />
 		</parameters>
@@ -487,7 +476,6 @@
 		</collision>
 	</npc>
 	<npc id="18711" level="81" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="def" />
 		</parameters>
@@ -542,7 +530,6 @@
 		</collision>
 	</npc>
 	<npc id="18712" level="81" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="boss" />
 		</parameters>
@@ -587,7 +574,6 @@
 		</collision>
 	</npc>
 	<npc id="18713" level="81" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="boss" />
 		</parameters>
@@ -632,7 +618,6 @@
 		</collision>
 	</npc>
 	<npc id="18714" level="81" type="L2Monster" name="Soul Coffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="boss" />
 		</parameters>
@@ -677,7 +662,6 @@
 		</collision>
 	</npc>
 	<npc id="18715" level="81" type="L2Monster" name="Conquered Soul">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -726,7 +710,6 @@
 		</collision>
 	</npc>
 	<npc id="18716" level="81" type="L2Monster" name="Conquered Soul">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -781,7 +764,6 @@
 		</collision>
 	</npc>
 	<npc id="18717" level="81" type="L2Monster" name="Conquered Soul">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
 			<param name="MoveAroundSocial1" value="200" />
@@ -833,7 +815,6 @@
 		</collision>
 	</npc>
 	<npc id="18718" level="81" type="L2Npc" name="Sacrificed Fanatic">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="13987" /> <!-- rhand: Exclusive to Monsters (Savage Warrior) -->
@@ -876,7 +857,6 @@
 		</collision>
 	</npc>
 	<npc id="18719" level="81" type="L2Npc" name="Sacrificed Fanatic">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -918,7 +898,6 @@
 		</collision>
 	</npc>
 	<npc id="18720" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -957,7 +936,6 @@
 		</collision>
 	</npc>
 	<npc id="18721" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -996,7 +974,6 @@
 		</collision>
 	</npc>
 	<npc id="18722" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1035,7 +1012,6 @@
 		</collision>
 	</npc>
 	<npc id="18723" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1074,7 +1050,6 @@
 		</collision>
 	</npc>
 	<npc id="18724" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1113,7 +1088,6 @@
 		</collision>
 	</npc>
 	<npc id="18725" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1152,7 +1126,6 @@
 		</collision>
 	</npc>
 	<npc id="18726" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1191,7 +1164,6 @@
 		</collision>
 	</npc>
 	<npc id="18727" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1230,7 +1202,6 @@
 		</collision>
 	</npc>
 	<npc id="18728" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4186" level="9" /> <!-- Hold -->
 		</parameters>
@@ -1269,7 +1240,6 @@
 		</collision>
 	</npc>
 	<npc id="18729" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1308,7 +1278,6 @@
 		</collision>
 	</npc>
 	<npc id="18730" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1347,7 +1316,6 @@
 		</collision>
 	</npc>
 	<npc id="18731" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1386,7 +1354,6 @@
 		</collision>
 	</npc>
 	<npc id="18732" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1425,7 +1392,6 @@
 		</collision>
 	</npc>
 	<npc id="18733" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1464,7 +1430,6 @@
 		</collision>
 	</npc>
 	<npc id="18734" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1503,7 +1468,6 @@
 		</collision>
 	</npc>
 	<npc id="18735" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1542,7 +1506,6 @@
 		</collision>
 	</npc>
 	<npc id="18736" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="4072" level="10" /> <!-- Stun -->
 		</parameters>
@@ -1581,7 +1544,6 @@
 		</collision>
 	</npc>
 	<npc id="18737" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1620,7 +1582,6 @@
 		</collision>
 	</npc>
 	<npc id="18738" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1659,7 +1620,6 @@
 		</collision>
 	</npc>
 	<npc id="18739" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1698,7 +1658,6 @@
 		</collision>
 	</npc>
 	<npc id="18740" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1737,7 +1696,6 @@
 		</collision>
 	</npc>
 	<npc id="18741" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1776,7 +1734,6 @@
 		</collision>
 	</npc>
 	<npc id="18742" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1815,7 +1772,6 @@
 		</collision>
 	</npc>
 	<npc id="18743" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1854,7 +1810,6 @@
 		</collision>
 	</npc>
 	<npc id="18744" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1893,7 +1848,6 @@
 		</collision>
 	</npc>
 	<npc id="18745" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1932,7 +1886,6 @@
 		</collision>
 	</npc>
 	<npc id="18746" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -1971,7 +1924,6 @@
 		</collision>
 	</npc>
 	<npc id="18747" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2010,7 +1962,6 @@
 		</collision>
 	</npc>
 	<npc id="18748" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2049,7 +2000,6 @@
 		</collision>
 	</npc>
 	<npc id="18749" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2088,7 +2038,6 @@
 		</collision>
 	</npc>
 	<npc id="18750" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2127,7 +2076,6 @@
 		</collision>
 	</npc>
 	<npc id="18751" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2166,7 +2114,6 @@
 		</collision>
 	</npc>
 	<npc id="18752" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2205,7 +2152,6 @@
 		</collision>
 	</npc>
 	<npc id="18753" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2244,7 +2190,6 @@
 		</collision>
 	</npc>
 	<npc id="18754" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2283,7 +2228,6 @@
 		</collision>
 	</npc>
 	<npc id="18755" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2322,7 +2266,6 @@
 		</collision>
 	</npc>
 	<npc id="18756" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2361,7 +2304,6 @@
 		</collision>
 	</npc>
 	<npc id="18757" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2400,7 +2342,6 @@
 		</collision>
 	</npc>
 	<npc id="18758" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2439,7 +2380,6 @@
 		</collision>
 	</npc>
 	<npc id="18759" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2478,7 +2418,6 @@
 		</collision>
 	</npc>
 	<npc id="18760" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2517,7 +2456,6 @@
 		</collision>
 	</npc>
 	<npc id="18761" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2556,7 +2494,6 @@
 		</collision>
 	</npc>
 	<npc id="18762" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2595,7 +2532,6 @@
 		</collision>
 	</npc>
 	<npc id="18763" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2634,7 +2570,6 @@
 		</collision>
 	</npc>
 	<npc id="18764" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2673,7 +2608,6 @@
 		</collision>
 	</npc>
 	<npc id="18765" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2712,7 +2646,6 @@
 		</collision>
 	</npc>
 	<npc id="18766" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2751,7 +2684,6 @@
 		</collision>
 	</npc>
 	<npc id="18767" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2790,7 +2722,6 @@
 		</collision>
 	</npc>
 	<npc id="18768" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2829,7 +2760,6 @@
 		</collision>
 	</npc>
 	<npc id="18769" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2868,7 +2798,6 @@
 		</collision>
 	</npc>
 	<npc id="18770" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="trap_skill" id="5340" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 		</parameters>
@@ -2907,7 +2836,6 @@
 		</collision>
 	</npc>
 	<npc id="18771" level="80" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22541" count="2" respawnTime="0" weightPoint="1" /> <!-- Dragon Steed Troop Infantry -->
@@ -2948,7 +2876,6 @@
 		</collision>
 	</npc>
 	<npc id="18772" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22546" count="2" respawnTime="0" weightPoint="1" /> <!-- Warrior of Light -->
@@ -2990,7 +2917,6 @@
 		</collision>
 	</npc>
 	<npc id="18773" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22546" count="2" respawnTime="0" weightPoint="1" /> <!-- Warrior of Light -->
@@ -3032,7 +2958,6 @@
 		</collision>
 	</npc>
 	<npc id="18774" level="94" type="L2Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22546" count="2" respawnTime="0" weightPoint="1" /> <!-- Warrior of Light -->
@@ -3074,7 +2999,6 @@
 		</collision>
 	</npc>
 	<npc id="18775" level="81" type="L2Npc" name="Seed of Destruction Control Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="265161" sp="11412" />
@@ -3113,7 +3037,6 @@
 		</collision>
 	</npc>
 	<npc id="18776" level="95" type="L2Monster" name="Obelisk">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3152,7 +3075,6 @@
 		</collision>
 	</npc>
 	<npc id="18777" level="95" type="L2Monster" name="Great Powerful Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3195,7 +3117,6 @@
 		</collision>
 	</npc>
 	<npc id="18778" level="95" type="L2Monster" name="Throne of Destruction Powerful Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3238,7 +3159,6 @@
 		</collision>
 	</npc>
 	<npc id="18779" level="82" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3273,7 +3193,6 @@
 		</collision>
 	</npc>
 	<npc id="18780" level="83" type="L2Monster" name="Symbol of Cohemenes">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="1" />
 		</parameters>
@@ -3318,7 +3237,6 @@
 		</collision>
 	</npc>
 	<npc id="18781" level="83" type="L2Monster" name="Young Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3353,7 +3271,6 @@
 		</collision>
 	</npc>
 	<npc id="18782" level="70" type="L2Monster" name="Shilen's Zealot">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3392,7 +3309,6 @@
 		</collision>
 	</npc>
 	<npc id="18783" level="81" type="L2Monster" name="Defeated Troops Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3447,7 +3363,6 @@
 		</collision>
 	</npc>
 	<npc id="18784" level="81" type="L2Monster" name="Defeated Troops No 1 Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3502,7 +3417,6 @@
 		</collision>
 	</npc>
 	<npc id="18785" level="81" type="L2Monster" name="Defeated Troops White Dragon Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3557,7 +3471,6 @@
 		</collision>
 	</npc>
 	<npc id="18786" level="80" type="L2Monster" name="Defeated Troops Infantry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3612,7 +3525,6 @@
 		</collision>
 	</npc>
 	<npc id="18787" level="81" type="L2Monster" name="Defeated Troops Wizard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3668,7 +3580,6 @@
 		</collision>
 	</npc>
 	<npc id="18788" level="81" type="L2Monster" name="Defeated Troops Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3724,7 +3635,6 @@
 		</collision>
 	</npc>
 	<npc id="18789" level="80" type="L2Monster" name="Defeated Troops Wizard Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3781,7 +3691,6 @@
 		</collision>
 	</npc>
 	<npc id="18790" level="79" type="L2Monster" name="Defeated Troops Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="2000" />
 			<skill name="Skill01_ID" id="5835" level="1" /> <!-- Major Heal -->
@@ -3834,7 +3743,6 @@
 		</collision>
 	</npc>
 	<npc id="18791" level="80" type="L2Monster" name="Defeated Troops Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3885,7 +3793,6 @@
 		</collision>
 	</npc>
 	<npc id="18792" level="80" type="L2Monster" name="Defeated Troops Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3937,7 +3844,6 @@
 		</collision>
 	</npc>
 	<npc id="18793" level="84" type="L2Monster" name="Bizarre Cocoon">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3971,7 +3877,6 @@
 		</collision>
 	</npc>
 	<npc id="18794" level="84" type="L2Monster" name="Bizarre Cocoon">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4005,7 +3910,6 @@
 		</collision>
 	</npc>
 	<npc id="18795" level="84" type="L2Monster" name="Bizarre Cocoon">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4039,7 +3943,6 @@
 		</collision>
 	</npc>
 	<npc id="18796" level="84" type="L2Monster" name="Bizarre Cocoon">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4073,7 +3976,6 @@
 		</collision>
 	</npc>
 	<npc id="18797" level="84" type="L2Monster" name="Bizarre Cocoon">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4107,7 +4009,6 @@
 		</collision>
 	</npc>
 	<npc id="18798" level="84" type="L2Monster" name="Bizarre Cocoon">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4141,7 +4042,6 @@
 		</collision>
 	</npc>
 	<npc id="18799" level="77" type="L2Monster" name="Newborn Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
