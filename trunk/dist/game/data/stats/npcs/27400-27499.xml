@@ -23,17 +23,17 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="19" /> <!--Others -->
-			<skill id="5975" level="1" /> <!--Dark Attack -->
-			<skill id="5976" level="1" /> <!--Dark Storm -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
@@ -65,17 +65,17 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="19" /> <!--Others -->
-			<skill id="5975" level="1" /> <!--Dark Attack -->
-			<skill id="5976" level="2" /> <!--Dark Storm -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="2" /> <!-- Dark Storm -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
@@ -111,18 +111,18 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="5467" level="1" /> <!--Dark Attacks -->
-			<skill id="5975" level="3" /> <!--Dark Attack -->
-			<skill id="5976" level="3" /> <!--Dark Storm -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5975" level="3" /> <!-- Dark Attack -->
+			<skill id="5976" level="3" /> <!-- Dark Storm -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
@@ -214,7 +214,7 @@
 	<npc id="27407" level="80" type="L2Monster" name="Solina Lay Brother">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
-		<equipment rhand="8212" /> <!--Monster Only (Solina Brother Mace)-->
+		<equipment rhand="8212" /> <!-- Monster Only (Solina Brother Mace)-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -300,7 +300,7 @@
 	<npc id="27410" level="80" type="L2Monster" name="Solina Knights">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
-		<equipment rhand="8211" lhand="8210" /> <!--Monster Only (Monk Warrior Shield)-->
+		<equipment rhand="8211" lhand="8210" /> <!-- Monster Only (Monk Warrior Shield)-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -346,7 +346,7 @@
 	<npc id="27412" level="80" type="L2Monster" name="Divinity Supervisor">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
-		<equipment rhand="8221" /> <!--Monster Only (Grail Apostle Spear)-->
+		<equipment rhand="8221" /> <!-- Monster Only (Grail Apostle Spear)-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -468,7 +468,7 @@
 	<npc id="27417" level="80" type="L2Monster" name="Mutant Archer">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
-		<equipment rhand="274" /> <!--Reinforced Bow-->
+		<equipment rhand="274" /> <!-- Reinforced Bow-->
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
 			<vitals hp="2444" mp="2444.0" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
@@ -887,10 +887,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -933,10 +933,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -979,10 +979,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -1025,10 +1025,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -1071,10 +1071,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -1116,10 +1116,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -1163,10 +1163,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
@@ -1409,10 +1409,10 @@
 		<drop_lists>
 			<corpse>
 				<group chance="100.0">
-					<item id="8602" min="1" max="1" chance="100" /> <!--Superior Herb of Life -->
+					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				</group>
 				<group chance="100.0">
-					<item id="8605" min="1" max="1" chance="100" /> <!--Superior Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 				</group>
 			</corpse>
 		</drop_lists>
