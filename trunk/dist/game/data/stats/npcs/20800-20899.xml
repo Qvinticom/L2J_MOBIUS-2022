@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20800" level="47" type="L2Monster" name="Eva's Seeker">
+	<npc id="20800" level="47" type="L2Monster" name="Eva's Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -1164,7 +1164,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20810" level="60" type="L2Monster" name="Hallate's Seer">
+	<npc id="20810" level="60" type="L2Monster" name="Hallate's Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -1626,7 +1626,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="20815" level="63" type="L2Monster" name="Hound Dog of Hallate">
+	<npc id="20815" level="63" type="L2Monster" name="Hallate's Hound Dog">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2932,7 +2932,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20829" level="71" type="L2Monster" name="Platinum Tribe Overlord">
+	<npc id="20829" level="71" type="L2Monster" name="Platinum Tribe Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3420,7 +3420,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20835" level="92" type="L2Monster" name="Zaken's Seer">
+	<npc id="20835" level="92" type="L2Monster" name="Zaken's Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
@@ -3791,7 +3791,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="20839" level="92" type="L2Monster" name="Unpleasant Humming">
+	<npc id="20839" level="92" type="L2Monster" name="Dismal Humming">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />

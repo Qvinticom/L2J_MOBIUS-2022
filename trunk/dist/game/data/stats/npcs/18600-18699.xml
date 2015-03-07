@@ -88,7 +88,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18601" level="70" type="L2Npc" name="Kratei's Watcher">
+	<npc id="18601" level="70" type="L2Npc" name="Kratei's Watchman">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -123,7 +123,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="18602" level="70" type="L2Npc" name="Kratei's Watcher">
+	<npc id="18602" level="70" type="L2Npc" name="Kratei's Watchman">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -158,7 +158,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="18603" level="73" type="L2Npc">
+	<npc id="18603" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -193,7 +193,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18604" level="73" type="L2Npc">
+	<npc id="18604" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -228,7 +228,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18605" level="73" type="L2Npc">
+	<npc id="18605" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -263,7 +263,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18606" level="73" type="L2Npc">
+	<npc id="18606" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -298,7 +298,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18607" level="51" type="L2Monster" name="Gargos" title="Spirit of Fire">
+	<npc id="18607" level="51" type="L2Monster" name="Gargos" title="Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
@@ -363,7 +363,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18608" level="51" type="L2Monster" name="Kinsus" title="Spirit of Fire">
+	<npc id="18608" level="51" type="L2Monster" name="Kinsus" title="Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -426,7 +426,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18609" level="50" type="L2Monster" name="Papion" title="Spirit of Water">
+	<npc id="18609" level="50" type="L2Monster" name="Papion" title="Water Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -492,7 +492,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18610" level="50" type="L2Monster" name="Hillas" title="Spirit of Water">
+	<npc id="18610" level="50" type="L2Monster" name="Hillas" title="Water Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -560,7 +560,7 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="18611" level="49" type="L2Monster" name="Spirit of Water">
+	<npc id="18611" level="49" type="L2Monster" name="Water Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -631,7 +631,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18612" level="50" type="L2Monster" name="Spirit of Water">
+	<npc id="18612" level="50" type="L2Monster" name="Water Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -702,7 +702,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18613" level="51" type="L2Monster" name="Spirit of Water">
+	<npc id="18613" level="51" type="L2Monster" name="Water Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -773,7 +773,7 @@
 			<height normal="39.7" />
 		</collision>
 	</npc>
-	<npc id="18614" level="50" type="L2Monster" name="Spirit of Fire">
+	<npc id="18614" level="50" type="L2Monster" name="Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -845,7 +845,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18615" level="51" type="L2Monster" name="Spirit of Fire">
+	<npc id="18615" level="51" type="L2Monster" name="Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -982,7 +982,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18617" level="36" type="L2Npc">
+	<npc id="18617" level="36" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1019,7 +1019,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18618" level="50" type="L2Npc">
+	<npc id="18618" level="50" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1056,7 +1056,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18619" level="50" type="L2Npc">
+	<npc id="18619" level="50" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1131,7 +1131,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="18621" level="42" type="L2Npc">
+	<npc id="18621" level="42" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1935,7 +1935,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18634" level="64" type="L2Monster" name="Lematan's Follower">
+	<npc id="18634" level="64" type="L2Monster" name="Lematan's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2699,7 +2699,7 @@
 			<height normal="55.2" />
 		</collision>
 	</npc>
-	<npc id="18646" level="73" type="L2Monster" name="Varka Silenos Officer">
+	<npc id="18646" level="73" type="L2Monster" name="Varka Silenos Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2827,7 +2827,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18648" level="73" type="L2Monster" name="Varka Silenos Seer">
+	<npc id="18648" level="73" type="L2Monster" name="Varka Silenos Chief Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -2960,7 +2960,7 @@
 			<height normal="49.2" />
 		</collision>
 	</npc>
-	<npc id="18650" level="73" type="L2Monster" name="Varka Silenos General">
+	<npc id="18650" level="73" type="L2Monster" name="Varka Silenos Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3090,7 +3090,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18652" level="74" type="L2Monster" name="Varka Silenos Great Seer">
+	<npc id="18652" level="74" type="L2Monster" name="Varka Silenos Grand Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -3158,7 +3158,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18653" level="74" type="L2Monster" name="Varka's Elite Guard">
+	<npc id="18653" level="74" type="L2Monster" name="Varka's Elite Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -3288,7 +3288,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="18655" level="74" type="L2Monster" name="Varka's Head Guard">
+	<npc id="18655" level="74" type="L2Monster" name="Varka's Chief Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -3353,7 +3353,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18656" level="74" type="L2Monster" name="Varka's Head Magus">
+	<npc id="18656" level="74" type="L2Monster" name="Varka's Chief Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -3419,7 +3419,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18657" level="74" type="L2Monster" name="Prophet's Guard">
+	<npc id="18657" level="74" type="L2Monster" name="Prophet's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -3484,7 +3484,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18658" level="74" type="L2Monster" name="Disciple of Prophet">
+	<npc id="18658" level="74" type="L2Monster" name="Prophet's Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3654,7 +3654,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18661" level="75" type="L2Npc">
+	<npc id="18661" level="75" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3690,7 +3690,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18662" level="73" type="L2Npc">
+	<npc id="18662" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3726,7 +3726,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18663" level="73" type="L2Npc">
+	<npc id="18663" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3761,7 +3761,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18664" level="52" type="L2Monster" name="Lucky Pig" title="The Spirit of Fortune">
+	<npc id="18664" level="52" type="L2Monster" name="Lucky Pig">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -3802,7 +3802,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18665" level="70" type="L2Monster" name="Lucky Pig" title="The Spirit of Fortune">
+	<npc id="18665" level="70" type="L2Monster" name="Lucky Pig">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -3843,7 +3843,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18666" level="75" type="L2Monster" name="Lucky Pig" title="The Spirit of Fortune">
+	<npc id="18666" level="75" type="L2Monster" name="Lucky Pig">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -3967,7 +3967,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="18669" level="73" type="L2Npc">
+	<npc id="18669" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4002,7 +4002,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18670" level="73" type="L2Npc">
+	<npc id="18670" level="73" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4217,7 +4217,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="18676" level="73" type="L2Monster" name="Block-Carrying GIrl">
+	<npc id="18676" level="73" type="L2Monster" name="Block-Carrying Girl">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -4917,7 +4917,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18693" level="76" type="L2Monster" name="Treasure Chest of the Ancient Giants">
+	<npc id="18693" level="76" type="L2Monster" name="Treasure Chest of Ancient Times">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -5062,7 +5062,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18696" level="95" type="L2Monster" name="Dimension Moving Device">
+	<npc id="18696" level="95" type="L2Monster" name="Dimensional Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>

@@ -188,7 +188,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29004" level="37" type="L2Monster" name="Guard Ant">
+	<npc id="29004" level="37" type="L2Monster" name="Escort Ant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -235,7 +235,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29005" level="39" type="L2Monster" name="Court Guard Ant">
+	<npc id="29005" level="39" type="L2Monster" name="Royal Guard Ant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -830,7 +830,7 @@
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="29015" level="59" type="L2Monster" name="Raikel">
+	<npc id="29015" level="59" type="L2Monster" name="Laikel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -877,7 +877,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29016" level="59" type="L2Monster" name="Raikel Leos">
+	<npc id="29016" level="59" type="L2Monster" name="Laikel Leos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2333,7 +2333,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="29038" level="84" type="L2Monster" name="Kinaz's Ifrit">
+	<npc id="29038" level="84" type="L2Monster" name="Kinaz' Ifrit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" /> <!-- BOSS Windstrike -->
@@ -2380,7 +2380,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29039" level="84" type="L2Monster" name="Kinaz's Ifrit">
+	<npc id="29039" level="84" type="L2Monster" name="Kinaz' Ifrit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="9" /> <!-- BOSS Chant of Life -->
@@ -2967,7 +2967,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29050" level="85" type="L2Monster" name="Breath of Halisha">
+	<npc id="29050" level="85" type="L2Monster" name="Halisha's Breath">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3010,7 +3010,7 @@
 			<height normal="40" grown="50" />
 		</collision>
 	</npc>
-	<npc id="29051" level="85" type="L2Monster" name="Breath of Halisha">
+	<npc id="29051" level="85" type="L2Monster" name="Halisha's Breath">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3330,7 +3330,7 @@
 			<height normal="35.6" />
 		</collision>
 	</npc>
-	<npc id="29057" level="59" type="L2Monster" name="Sirra's Page" title="Raid Fighter">
+	<npc id="29057" level="59" type="L2Monster" name="Sirra's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="5" /> <!-- BOSS Heal -->
@@ -3432,7 +3432,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="29059" level="80" type="L2Monster">
+	<npc id="29059" level="80" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3467,7 +3467,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29060" level="59" type="L2RaidBoss" name="Captain of the Ice Queen's Royal Guard" title="Raid Boss">
+	<npc id="29060" level="59" type="L2RaidBoss" name="Ice Queen's Escort Captain" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
@@ -4264,7 +4264,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29068" level="99" type="L2GrandBoss" name="Antharas" title="Earth Dragon">
+	<npc id="29068" level="99" type="L2GrandBoss" name="Antharas" title="Land Dragon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
@@ -4810,7 +4810,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="29077" level="78" type="L2Monster">
+	<npc id="29077" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="177456" />
@@ -4863,7 +4863,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29078" level="78" type="L2Monster">
+	<npc id="29078" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175952" />
@@ -4916,7 +4916,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29079" level="78" type="L2Monster">
+	<npc id="29079" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175120" />
@@ -4969,7 +4969,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29080" level="78" type="L2Monster">
+	<npc id="29080" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="174640" />
@@ -5022,7 +5022,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29081" level="78" type="L2Monster">
+	<npc id="29081" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="173968" />
@@ -5075,7 +5075,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29082" level="78" type="L2Monster">
+	<npc id="29082" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="173920" />
@@ -5128,7 +5128,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29083" level="78" type="L2Monster">
+	<npc id="29083" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="174704" />
@@ -5181,7 +5181,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29084" level="78" type="L2Monster">
+	<npc id="29084" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175424" />
@@ -5234,7 +5234,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29085" level="78" type="L2Monster">
+	<npc id="29085" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="176880" />
@@ -5287,7 +5287,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29086" level="78" type="L2Monster">
+	<npc id="29086" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="178368" />
@@ -5340,7 +5340,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29087" level="78" type="L2Monster">
+	<npc id="29087" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="179696" />
@@ -5393,7 +5393,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29088" level="78" type="L2Monster">
+	<npc id="29088" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180592" />
@@ -5446,7 +5446,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29089" level="78" type="L2Monster">
+	<npc id="29089" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180896" />
@@ -5499,7 +5499,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29090" level="78" type="L2Monster">
+	<npc id="29090" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180496" />
@@ -5552,7 +5552,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29091" level="78" type="L2Monster">
+	<npc id="29091" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180896" />
@@ -5605,7 +5605,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29092" level="78" type="L2Monster">
+	<npc id="29092" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180720" />
@@ -5658,7 +5658,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29093" level="78" type="L2Monster">
+	<npc id="29093" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180048" />
@@ -5711,7 +5711,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29094" level="78" type="L2Monster">
+	<npc id="29094" level="78" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="178848" />
@@ -5960,7 +5960,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="29098" level="80" type="L2Monster" name="Splendor Worshiper" title="Raid Fighter">
+	<npc id="29098" level="80" type="L2Monster" name="Worshiper of Splendor" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4208" level="10" /> <!-- Stun -->

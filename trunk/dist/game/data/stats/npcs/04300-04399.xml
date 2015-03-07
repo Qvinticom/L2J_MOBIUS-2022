@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="4301" level="70" type="L2Npc" name="Miss Queen" title="Valentine Messenger">
+	<npc id="4301" level="70" type="L2Npc" name="Queen of Hearts" title="Valentine Messenger">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -109,7 +109,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="4304" level="70" type="L2Npc" name="White-Bearded Santa" title="Merry Christmas~">
+	<npc id="4304" level="70" type="L2Npc" name="White-Bearded Santa" title="Happy Holidays~">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -180,7 +180,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="4306" level="85" type="L2Npc" name="Steve Shyagel" title="Eva's High Priest">
+	<npc id="4306" level="85" type="L2Npc" name="Jack Sage" title="Eva's High Priest">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -216,7 +216,7 @@
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="4307" level="80" type="L2Npc" name="Santa Claus" title="Event Manager">
+	<npc id="4307" level="80" type="L2Npc" name="Santa" title="Event Manager">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -236,7 +236,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="4308" level="70" type="L2Npc" name="Angel Cat" title="Heavenly Envoy">
+	<npc id="4308" level="70" type="L2Npc" name="Angel Cat" title="Love's Envoy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -256,7 +256,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="4309" level="70" type="L2Npc" name="Prophet" title="Sinister">
+	<npc id="4309" level="70" type="L2Npc" name="Follower" title="Sinister">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -279,7 +279,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="4310" level="70" type="L2Npc" name="Prophet" title="Sinister">
+	<npc id="4310" level="70" type="L2Npc" name="Follower" title="Sinister">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -302,7 +302,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="4311" level="70" type="L2Npc" name="Prophet" title="Sinister">
+	<npc id="4311" level="70" type="L2Npc" name="Follower" title="Sinister">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -325,7 +325,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="4312" level="70" type="L2Npc" name="Prophet" title="Sinister">
+	<npc id="4312" level="70" type="L2Npc" name="Follower" title="Sinister">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -348,7 +348,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="4313" level="70" type="L2Npc" name="Angel Cat" title="Character Collector">
+	<npc id="4313" level="70" type="L2Npc" name="Angel Cat" title="Letter Collector">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -423,7 +423,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="4316" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4316" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -454,7 +454,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4317" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4317" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -485,7 +485,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4318" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4318" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -516,7 +516,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4319" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4319" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -547,7 +547,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4320" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4320" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -578,7 +578,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4321" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4321" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -609,7 +609,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4322" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4322" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -640,7 +640,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4323" level="55" type="L2Teleporter" name="Photo Snow" title="Photographer">
+	<npc id="4323" level="55" type="L2Teleporter" name="Snow" title="Photographer">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -717,7 +717,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="4326" level="80" type="L2Npc" name="Nevit's Herald" title="Invoker">
+	<npc id="4326" level="80" type="L2Npc" name="Tersi's Herald" title="Invoker">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -786,7 +786,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="4329" level="70" type="L2Npc" name="Miss Queen" title="Happy Messenger">
+	<npc id="4329" level="70" type="L2Npc" name="Queen of Hearts" title="Happy Messenger">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -860,7 +860,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4333" level="70" type="L2Npc" name="" title="">
+	<npc id="4333" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -877,7 +877,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4334" level="70" type="L2Npc" name="" title="">
+	<npc id="4334" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -894,7 +894,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4335" level="70" type="L2Npc" name="" title="">
+	<npc id="4335" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -911,7 +911,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4336" level="70" type="L2Npc" name="" title="">
+	<npc id="4336" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -928,7 +928,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4337" level="70" type="L2Npc" name="" title="">
+	<npc id="4337" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -945,7 +945,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4338" level="70" type="L2Npc" name="" title="">
+	<npc id="4338" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -962,7 +962,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4339" level="70" type="L2Npc" name="" title="">
+	<npc id="4339" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -979,7 +979,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4340" level="70" type="L2Npc" name="" title="">
+	<npc id="4340" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -996,7 +996,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4341" level="70" type="L2Npc" name="" title="">
+	<npc id="4341" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1013,7 +1013,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4342" level="70" type="L2Npc" name="" title="">
+	<npc id="4342" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1030,7 +1030,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4343" level="70" type="L2Npc" name="" title="">
+	<npc id="4343" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1047,7 +1047,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4344" level="70" type="L2Npc" name="" title="">
+	<npc id="4344" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1064,7 +1064,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4345" level="70" type="L2Npc" name="" title="">
+	<npc id="4345" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1081,7 +1081,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4346" level="70" type="L2Npc" name="" title="">
+	<npc id="4346" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1098,7 +1098,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4347" level="70" type="L2Npc" name="" title="">
+	<npc id="4347" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1115,7 +1115,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4348" level="70" type="L2Npc" name="" title="">
+	<npc id="4348" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1132,7 +1132,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4349" level="70" type="L2Npc" name="" title="">
+	<npc id="4349" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1149,7 +1149,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4350" level="70" type="L2Npc" name="" title="">
+	<npc id="4350" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1166,7 +1166,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4351" level="70" type="L2Npc" name="" title="">
+	<npc id="4351" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1183,7 +1183,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4352" level="70" type="L2Npc" name="" title="">
+	<npc id="4352" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1200,7 +1200,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4353" level="70" type="L2Npc" name="" title="">
+	<npc id="4353" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1217,7 +1217,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4354" level="70" type="L2Npc" name="" title="">
+	<npc id="4354" level="70" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1234,7 +1234,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4355" level="70" type="L2Npc" name="Excited Child" title="">
+	<npc id="4355" level="70" type="L2Npc" name="Excited Child">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1251,7 +1251,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4356" level="70" type="L2Npc" name="Ecstatic Child" title="">
+	<npc id="4356" level="70" type="L2Npc" name="Ecstatic Child">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1370,7 +1370,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4363" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4363" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1387,7 +1387,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4364" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4364" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1404,7 +1404,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4366" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4366" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1421,7 +1421,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4367" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4367" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1438,7 +1438,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4368" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4368" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1455,7 +1455,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4369" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4369" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1472,7 +1472,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4370" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4370" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1489,7 +1489,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4371" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4371" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1506,7 +1506,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4372" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4372" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1523,7 +1523,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4373" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4373" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1540,7 +1540,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4374" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4374" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1557,7 +1557,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4375" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4375" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1574,7 +1574,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4376" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4376" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1591,7 +1591,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="4377" level="85" type="L2Npc" name="Festival Goer" title="">
+	<npc id="4377" level="85" type="L2Npc" name="Festival Goer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

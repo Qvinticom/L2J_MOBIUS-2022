@@ -36,7 +36,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="101" level="80" type="L2Npc">
+	<npc id="101" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -107,7 +107,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="103" level="70" type="L2Npc" name="Christmas Santa" title="Merry Christmas~">
+	<npc id="103" level="70" type="L2Npc" name="Holiday Santa" title="Happy Holidays~">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -144,7 +144,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="104" level="70" type="L2Npc" name="Christmas Santa" title="Merry Christmas~">
+	<npc id="104" level="70" type="L2Npc" name="Holiday Santa" title="Happy Holidays~">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -181,7 +181,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="105" level="70" type="L2Npc" name="Christmas Sled" title="Merry Christmas~">
+	<npc id="105" level="70" type="L2Npc" name="Holiday Sled" title="Happy Holidays~">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -255,7 +255,7 @@
 			<height normal="0.01" />
 		</collision>
 	</npc>
-	<npc id="107" level="1" type="L2Npc" name="Spirit of Fire">
+	<npc id="107" level="1" type="L2Npc" name="Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="life_time" value="70" />
@@ -302,7 +302,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="108" level="1" type="L2Npc" name="Reckless Spirit of Fire">
+	<npc id="108" level="1" type="L2Npc" name="Reckless Fire Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="life_time" value="70" />
@@ -349,7 +349,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="109" level="85" type="L2Npc" name="Steve Shyagel" title="Eva's High Priest">
+	<npc id="109" level="85" type="L2Npc" name="Jack Sage" title="Eva's High Priest">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -422,7 +422,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="111" level="80" type="L2Npc">
+	<npc id="111" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -457,7 +457,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="112" level="55" type="L2Npc" name="Friendly Sno" title="Beginner Supporter">
+	<npc id="112" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -492,7 +492,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="113" level="55" type="L2Npc" name="Friendly Sno" title="Beginner Supporter">
+	<npc id="113" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -527,7 +527,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="114" level="55" type="L2Npc" name="Friendly Sno" title="Beginner Supporter">
+	<npc id="114" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -562,7 +562,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="115" level="55" type="L2Npc" name="Friendly Sno" title="Beginner Supporter">
+	<npc id="115" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -597,7 +597,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="116" level="55" type="L2Npc" name="Friendly Sno" title="Beginner Supporter">
+	<npc id="116" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -632,7 +632,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="117" level="55" type="L2Npc" name="Friendly Sno" title="Beginner Supporter">
+	<npc id="117" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -894,7 +894,7 @@
 			<height normal="5" />
 		</collision>
 	</npc>
-	<npc id="124" level="70" type="L2Npc" name="Peace Lamp">
+	<npc id="124" level="70" type="L2Npc" name="Comfort Sky Lantern">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1080,7 +1080,7 @@
 			<height normal="0.01" />
 		</collision>
 	</npc>
-	<npc id="129" level="70" type="L2Npc" name="White-Bearded Santa" title="Merry Christmas~">
+	<npc id="129" level="70" type="L2Npc" name="White-Bearded Santa" title="Happy Holidays~">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1117,7 +1117,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="130" level="80" type="L2Npc">
+	<npc id="130" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -1154,7 +1154,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="131" level="80" type="L2Npc" name="Jetbike">
+	<npc id="131" level="80" type="L2Npc" name="Jet Bike">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1353,7 +1353,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="138" level="80" type="L2Npc" name="Jetbike">
+	<npc id="138" level="80" type="L2Npc" name="Jet Bike">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1418,7 +1418,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="141" level="70" type="L2Npc" name="Dimensional Door" title="Customer Joining">
+	<npc id="141" level="70" type="L2Npc" name="Dimensional Door" title="Customer Support">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1441,7 +1441,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="142" level="70" type="L2Npc" name="Dimensional Door" title="Customer Joining">
+	<npc id="142" level="70" type="L2Npc" name="Dimensional Door" title="Customer Support">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1506,7 +1506,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="145" level="85" type="L2Npc" name="Totem of Bravery">
+	<npc id="145" level="85" type="L2Npc" name="Totem of Courage">
 		<!-- TODO: Must be confirmed -->
 		<sex>ETC</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1589,7 +1589,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="149" level="85" type="L2Monster" name="Angry Bunny">
+	<npc id="149" level="85" type="L2Monster" name="Bad Bunny">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1613,7 +1613,7 @@
 			<height normal="5.5" />
 		</collision>
 	</npc>
-	<npc id="150" level="85" type="L2Monster" name="Large Angry Bunny">
+	<npc id="150" level="85" type="L2Monster" name="Bad Bunny Captain">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1637,7 +1637,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="151" level="85" type="L2Monster" name="Fearless Angry Bunny">
+	<npc id="151" level="85" type="L2Monster" name="Liverless Bunny">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1661,7 +1661,7 @@
 			<height normal="5.5" />
 		</collision>
 	</npc>
-	<npc id="152" level="85" type="L2Monster" name="Large Fearless Angry Bunny">
+	<npc id="152" level="85" type="L2Monster" name="Liverless Bunny Captain">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1685,7 +1685,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="153" level="75" type="L2Npc" name="Magic Research Institute Employee" title="Event Manager">
+	<npc id="153" level="75" type="L2Npc" name="Employee of Magic Research Institute" title="Event Manager">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1705,7 +1705,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="154" level="85" type="L2Npc">
+	<npc id="154" level="85" type="L2Npc" name="">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1728,7 +1728,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="155" level="85" type="L2Npc">
+	<npc id="155" level="85" type="L2Npc" name="">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1751,7 +1751,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="156" level="85" type="L2Monster" name="Raging Bunny">
+	<npc id="156" level="85" type="L2Monster" name="Big Liver Bunny">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1775,7 +1775,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="157" level="85" type="L2Monster" name="Large Raging Bunny">
+	<npc id="157" level="85" type="L2Monster" name="Big Liver Bunny Captain">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1819,7 +1819,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="159" level="1" type="L2Npc" name="Tame Princess Ant" title="">
+	<npc id="159" level="1" type="L2Npc" name="Tame Princess Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1836,7 +1836,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="160" level="1" type="L2Npc" name="Black Bear" title="">
+	<npc id="160" level="1" type="L2Npc" name="Black Bear">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1853,7 +1853,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="161" level="1" type="L2Npc" name="Halloween Witch's Broomstick" title="">
+	<npc id="161" level="1" type="L2Npc" name="Halloween Witch's Broomstick">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

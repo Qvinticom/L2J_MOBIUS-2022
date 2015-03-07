@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="27300" level="76" type="L2Monster" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27300" level="76" type="L2Monster" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -54,7 +54,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27301" level="76" type="L2Monster" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27301" level="76" type="L2Monster" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -767,7 +767,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27317" level="70" type="L2Monster" name="Restrainer of Glory" title="Quest Monster">
+	<npc id="27317" level="70" type="L2Monster" name="Restrainer of Splendor" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1048,7 +1048,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="27324" level="76" type="L2Monster" name="Vision Guard Eranus" title="Quest Monster">
+	<npc id="27324" level="76" type="L2Monster" name="Vision Guardian Eranus" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1102,7 +1102,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="27325" level="76" type="L2Monster" name="Archon of Halisha" title="Quest Monster">
+	<npc id="27325" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1282,7 +1282,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="27329" level="76" type="L2Monster" name="Archon of Halisha" title="Quest Monster">
+	<npc id="27329" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1419,7 +1419,7 @@
 			<height normal="25.4" />
 		</collision>
 	</npc>
-	<npc id="27334" level="76" type="L2Monster" name="Archon of Halisha" title="Quest Monster">
+	<npc id="27334" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1672,7 +1672,7 @@
 			<height normal="21.5" grown="25.8" />
 		</collision>
 	</npc>
-	<npc id="27340" level="39" type="L2Monster" name="Pursuer">
+	<npc id="27340" level="39" type="L2Monster" name="Tracker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1993,7 +1993,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27347" level="85" type="L2Monster" name="Guards of the Dawn Oracle">
+	<npc id="27347" level="85" type="L2Monster" name="Guard of the Oracle of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
@@ -2017,7 +2017,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="27348" level="85" type="L2Monster" name="Guards of the Dawn Oracle">
+	<npc id="27348" level="85" type="L2Monster" name="Guard of the Oracle of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
@@ -2055,7 +2055,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="27349" level="85" type="L2Monster" name="Guards of the Dawn Oracle">
+	<npc id="27349" level="85" type="L2Monster" name="Guard of the Oracle of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
@@ -2079,7 +2079,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="27350" level="85" type="L2Monster" name="Guards of the Dawn Oracle">
+	<npc id="27350" level="85" type="L2Monster" name="Guard of the Oracle of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
@@ -2117,7 +2117,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="27351" level="85" type="L2Monster" name="Guards of the Dawn">
+	<npc id="27351" level="85" type="L2Monster" name="Guard of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Fstring_Num" value="19505" />
@@ -2158,7 +2158,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27352" level="85" type="L2Monster" name="Guards of the Dawn Oracle">
+	<npc id="27352" level="85" type="L2Monster" name="Guard of the Oracle of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
@@ -2382,7 +2382,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27357" level="51" type="L2Monster" name="Lilim Seer">
+	<npc id="27357" level="51" type="L2Monster" name="Lilim Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2572,7 +2572,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="27361" level="51" type="L2Monster" name="Lilim Guard Knight">
+	<npc id="27361" level="51" type="L2Monster" name="Lilim Royal Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2808,7 +2808,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27366" level="61" type="L2Monster" name="Lilim Seer">
+	<npc id="27366" level="61" type="L2Monster" name="Lilim Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2998,7 +2998,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="27370" level="61" type="L2Monster" name="Lilim Guard Knight">
+	<npc id="27370" level="61" type="L2Monster" name="Lilim Royal Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3457,7 +3457,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="27379" level="79" type="L2Monster" name="Lilim Guard Knight">
+	<npc id="27379" level="79" type="L2Monster" name="Lilim Royal Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3508,7 +3508,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="27380" level="76" type="L2Monster" name="Reckless Sprite of Water" title="Quest Monster">
+	<npc id="27380" level="76" type="L2Monster" name="Reckless Water Spirit" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3552,7 +3552,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27381" level="76" type="L2Monster" name="Reckless Sprite of Air" title="Quest Monster">
+	<npc id="27381" level="76" type="L2Monster" name="Reckless Wind Spirit" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3739,7 +3739,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="27386" level="85" type="L2Monster" name="Lilith's Steward">
+	<npc id="27386" level="85" type="L2Monster" name="Lilith' Agent">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -3764,7 +3764,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="27387" level="85" type="L2Monster" name="Lilith's Elite">
+	<npc id="27387" level="85" type="L2Monster" name="Lilith' Escort">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3839,7 +3839,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="27390" level="85" type="L2Monster" name="Anakim's Guard">
+	<npc id="27390" level="85" type="L2Monster" name="Anakim's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3889,7 +3889,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27392" level="65" type="L2Monster" name="Bloody Axe Aide">
+	<npc id="27392" level="65" type="L2Monster" name="Bloody Axe Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>

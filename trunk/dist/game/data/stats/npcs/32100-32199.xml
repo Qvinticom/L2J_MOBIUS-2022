@@ -318,7 +318,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="32108" level="70" type="L2FlyTerrainObject">
+	<npc id="32108" level="70" type="L2FlyTerrainObject" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="mobile_type" value="1" />
@@ -393,7 +393,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="32110" level="70" type="L2Npc">
+	<npc id="32110" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -865,7 +865,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="32122" level="70" type="L2Npc" name="Warrior's Grave">
+	<npc id="32122" level="70" type="L2Npc" name="Warrior's Tomb">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1129,7 +1129,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="32129" level="70" type="L2Npc">
+	<npc id="32129" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1204,7 +1204,7 @@
 			<height normal="16.0055" />
 		</collision>
 	</npc>
-	<npc id="32131" level="70" type="L2Npc" name="Magic Laboratory Worker" title="Event Manager">
+	<npc id="32131" level="70" type="L2Npc" name="Employee of Magic Research Institute" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -1356,7 +1356,7 @@
 			<height normal="22.25" />
 		</collision>
 	</npc>
-	<npc id="32135" level="70" type="L2Npc" name="Newbie Guide">
+	<npc id="32135" level="70" type="L2Npc" name="Newbie Helper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1809,7 +1809,7 @@
 			<height normal="22.25" />
 		</collision>
 	</npc>
-	<npc id="32146" level="70" type="L2VillageMasterKamael" name="Valpor" title="Grand Master">
+	<npc id="32146" level="70" type="L2VillageMasterKamael" name="Valfar" title="Grand Master">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2051,7 +2051,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="32152" level="70" type="L2Trainer" name="Henri" title="Seer">
+	<npc id="32152" level="70" type="L2Trainer" name="Henri" title="Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2091,7 +2091,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32153" level="70" type="L2VillageMasterPriest" name="Prana" title="High Priest">
+	<npc id="32153" level="70" type="L2VillageMasterPriest" name="Franco" title="High Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2495,7 +2495,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32163" level="70" type="L2Teleporter" name="Ragara" title="Gatekeeper">
+	<npc id="32163" level="70" type="L2Teleporter" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

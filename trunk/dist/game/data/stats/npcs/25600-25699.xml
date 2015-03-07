@@ -1759,7 +1759,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25627" level="75" type="L2Monster" name="Mutant Bird" title="Subordinate of King">
+	<npc id="25627" level="75" type="L2Monster" name="Mutant Bird" title="King's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_Target" value="3" />
@@ -1810,7 +1810,7 @@
 			<height normal="85" />
 		</collision>
 	</npc>
-	<npc id="25628" level="76" type="L2Monster" name="Dra Hawk" title="Subordinate of King">
+	<npc id="25628" level="76" type="L2Monster" name="Dra Hawk" title="King's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_AttackSplash" value="1" />
@@ -1860,7 +1860,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25629" level="78" type="L2Monster" name="Floating Skull" title="Enira's Evil Spirit">
+	<npc id="25629" level="78" type="L2Monster" name="Floating Skeleton" title="Enira's Evil Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5803" level="1" /> <!-- Green Chili -->
@@ -2058,7 +2058,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25633" level="76" type="L2Monster" name="Elite Rider" title="Valdstone's Elites">
+	<npc id="25633" level="76" type="L2Monster" name="Elite Rider" title="Valdstone's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill03_Target" value="4" />
@@ -4480,7 +4480,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="25667" level="84" type="L2RaidBoss" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25667" level="84" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" /> <!-- NPC(party) - Physical Single Close Range Attack - Earth -->
@@ -4542,7 +4542,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25668" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25668" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" /> <!-- NPC(party) - Physical Single Close Range Attack - Earth -->
@@ -4604,7 +4604,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25669" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25669" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" /> <!-- NPC(party) - Physical Single Close Range Attack - Earth -->
@@ -4666,7 +4666,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25670" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25670" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" /> <!-- NPC(party) - Physical Single Close Range Attack - Earth -->
@@ -4959,7 +4959,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25675" level="82" type="L2Monster" name="Guard of Gwindorr" title="Raid Fighter">
+	<npc id="25675" level="82" type="L2Monster" name="Gwindorr's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4999,7 +4999,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25676" level="82" type="L2Monster" name="Follower of Gwindorr" title="Raid Fighter">
+	<npc id="25676" level="82" type="L2Monster" name="Gwindorr's Follower" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5113,7 +5113,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25678" level="83" type="L2Monster" name="Sprite of Gildor" title="Raid Fighter">
+	<npc id="25678" level="83" type="L2Monster" name="Gildor's Spirit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="9" /> <!-- Decrease Speed -->
@@ -5158,7 +5158,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25679" level="83" type="L2Monster" name="Guardian of Gildor" title="Raid Fighter">
+	<npc id="25679" level="83" type="L2Monster" name="Gildor's Guardian" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="9" /> <!-- BOSS Strike -->
@@ -5517,7 +5517,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25685" level="82" type="L2Monster" name="Utenus's Wizard" title="Raid Fighter">
+	<npc id="25685" level="82" type="L2Monster" name="Utenus' Wizard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="8" /> <!-- BOSS Twister -->
@@ -5565,7 +5565,7 @@
 			<height normal="91" />
 		</collision>
 	</npc>
-	<npc id="25686" level="82" type="L2Monster" name="Utenus's Guard" title="Raid Fighter">
+	<npc id="25686" level="82" type="L2Monster" name="Utenus' Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="8" /> <!-- BOSS Strike -->
@@ -6492,7 +6492,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="25699" level="85" type="L2RaidBoss" name="Glakias" title="Archery Knight Captain">
+	<npc id="25699" level="85" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" /> <!-- Power Strike -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35700" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35700" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -45,7 +45,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35701" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35701" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -93,7 +93,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35702" level="94" type="L2Defender" name="Rebel Commander" title="Southern Fortress">
+	<npc id="35702" level="94" type="L2Defender" name="Rebel Commander" title="Gludio Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -166,7 +166,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="35703" level="90" type="L2Defender" name="Decorated Rebel Soldier" title="Southern Fortress">
+	<npc id="35703" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Gludio Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -230,7 +230,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="35704" level="89" type="L2Defender" name="Rebel Private" title="Southern Fortress">
+	<npc id="35704" level="89" type="L2Defender" name="Rebel Private" title="Gludio Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -289,7 +289,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35705" level="86" type="L2Defender" name="Court Guard" title="Southern Fortress">
+	<npc id="35705" level="86" type="L2Defender" name="Royal Guard" title="Gludio Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -351,7 +351,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35706" level="86" type="L2Defender" name="Guard" title="Southern Fortress">
+	<npc id="35706" level="86" type="L2Defender" name="Escort" title="Gludio Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1410,7 +1410,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35723" level="80" type="L2Monster" name="Ballista" title="Southern Fortress">
+	<npc id="35723" level="80" type="L2Monster" name="Ballista" title="Gludio Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2024,7 +2024,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35736" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35736" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2069,7 +2069,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35737" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35737" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2114,7 +2114,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35738" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35738" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2235,7 +2235,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="35740" level="90" type="L2Defender" name="Decorated Rebel Soldier" title="Hive Fortress">
+	<npc id="35740" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2358,7 +2358,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35742" level="86" type="L2Defender" name="Court Guard" title="Hive Fortress">
+	<npc id="35742" level="86" type="L2Defender" name="Royal Guard" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2420,7 +2420,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35743" level="86" type="L2Defender" name="Guard" title="Hive Fortress">
+	<npc id="35743" level="86" type="L2Defender" name="Escort" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3794,7 +3794,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35768" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35768" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3839,7 +3839,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35769" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35769" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3884,7 +3884,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35770" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35770" level="75" type="L2FortDoormen" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4005,7 +4005,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="35772" level="90" type="L2Defender" name="Decorated Rebel Soldier" title="Valley Fortress">
+	<npc id="35772" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4128,7 +4128,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35774" level="86" type="L2Defender" name="Court Guard" title="Valley Fortress">
+	<npc id="35774" level="86" type="L2Defender" name="Royal Guard" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4190,7 +4190,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35775" level="86" type="L2Defender" name="Guard" title="Valley Fortress">
+	<npc id="35775" level="86" type="L2Defender" name="Escort" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

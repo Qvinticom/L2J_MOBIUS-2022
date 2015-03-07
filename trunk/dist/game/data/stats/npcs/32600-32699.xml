@@ -40,7 +40,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="32601" level="70" type="L2Npc" name="Instant Moving Device">
+	<npc id="32601" level="70" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -155,7 +155,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32604" level="70" type="L2Npc" name="Airship Controller">
+	<npc id="32604" level="70" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -196,7 +196,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32605" level="70" type="L2Npc" name="Airship Controller">
+	<npc id="32605" level="70" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -237,7 +237,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32606" level="70" type="L2Npc" name="Airship Controller">
+	<npc id="32606" level="70" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -278,7 +278,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32607" level="70" type="L2Npc" name="Airship Controller">
+	<npc id="32607" level="70" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -319,7 +319,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32608" level="70" type="L2Npc" name="Airship Controller">
+	<npc id="32608" level="70" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -360,7 +360,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32609" level="70" type="L2Npc" name="Airship Controller">
+	<npc id="32609" level="70" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -750,7 +750,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="32619" level="70" type="L2Npc">
+	<npc id="32619" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -790,7 +790,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32620" level="70" type="L2Npc">
+	<npc id="32620" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -830,7 +830,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32621" level="70" type="L2Npc">
+	<npc id="32621" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -1203,7 +1203,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="32631" level="70" type="L2Npc" name="Gracia Server Proof Exchanger">
+	<npc id="32631" level="70" type="L2Npc" name="Gracia Server Mark Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1349,7 +1349,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="32635" level="75" type="L2Npc" name="Master Dugi" title="Energy Recovery Event">
+	<npc id="32635" level="75" type="L2Npc" name="Master Dugi" title="Vitality Recovery Event">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -2107,7 +2107,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="32656" level="80" type="L2Monster">
+	<npc id="32656" level="80" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>

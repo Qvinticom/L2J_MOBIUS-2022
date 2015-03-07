@@ -37,7 +37,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="25501" level="30" type="L2RaidBoss" name="Boss Akata" title="Raid Boss">
+	<npc id="25501" level="30" type="L2RaidBoss" name="Grave Robber Leader Akata" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -109,7 +109,7 @@
 			<height normal="23.6" />
 		</collision>
 	</npc>
-	<npc id="25502" level="30" type="L2Monster" name="Akata's Thug" title="Raid Fighter">
+	<npc id="25502" level="30" type="L2Monster" name="Akata's Warrior" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4757" level="3" /> <!-- BOSS Power Shot -->
@@ -151,7 +151,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25503" level="30" type="L2Monster" name="Akata's Lackey" title="Raid Fighter">
+	<npc id="25503" level="30" type="L2Monster" name="Akata's Subordinate" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -385,7 +385,7 @@
 			<height normal="33.2" />
 		</collision>
 	</npc>
-	<npc id="25507" level="36" type="L2Monster" name="Rayito's Henchman" title="Raid Fighter">
+	<npc id="25507" level="36" type="L2Monster" name="Rayito's Guard Captain" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="3" /> <!-- Stun -->
@@ -597,7 +597,7 @@
 			<height normal="26.9" />
 		</collision>
 	</npc>
-	<npc id="25511" level="52" type="L2Monster" name="Varangka's Page" title="Raid Fighter">
+	<npc id="25511" level="52" type="L2Monster" name="Varangka's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1069,7 +1069,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25526" level="75" type="L2Monster" name="Charged Spirit" title="Raid Fighter">
+	<npc id="25526" level="75" type="L2Monster" name="flame Spirit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1443,7 +1443,7 @@
 			<height normal="40.5985" />
 		</collision>
 	</npc>
-	<npc id="25532" level="82" type="L2RaidBoss" name="Kechi" title="Fire">
+	<npc id="25532" level="82" type="L2RaidBoss" name="Kechi" title="Flaming">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
@@ -1533,7 +1533,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25533" level="82" type="L2Monster" name="Kechi's Henchman">
+	<npc id="25533" level="82" type="L2Monster" name="Kechi's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="0" />
@@ -2305,7 +2305,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="25546" level="95" type="L2RaidBoss" name="Rhianna the Traitor" title="Forsaken Prisoner">
+	<npc id="25546" level="95" type="L2RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3381,7 +3381,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25565" level="99" type="L2Monster" name="Atrielle's Minion">
+	<npc id="25565" level="99" type="L2Monster" name="Atrielle's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3676,7 +3676,7 @@
 			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="25570" level="99" type="L2Monster" name="Jax's Vanguard">
+	<npc id="25570" level="99" type="L2Monster" name="Jax' Vanguard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3720,7 +3720,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25571" level="99" type="L2Monster" name="Jax's Raider">
+	<npc id="25571" level="99" type="L2Monster" name="Jax' Raider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3833,7 +3833,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25573" level="93" type="L2Monster" name="Hager's Henchman">
+	<npc id="25573" level="93" type="L2Monster" name="Hager's Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
@@ -3879,7 +3879,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25574" level="93" type="L2Monster" name="Hager's Bodyguard">
+	<npc id="25574" level="93" type="L2Monster" name="Hager's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3921,7 +3921,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25575" level="93" type="L2RaidBoss" name="All-Seeing Rango" title="Forsaken Inmate">
+	<npc id="25575" level="93" type="L2RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4795,7 +4795,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25590" level="97" type="L2Monster" name="Brand's Chamberlain">
+	<npc id="25590" level="97" type="L2Monster" name="Brand's Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="6" /> <!-- Stun -->
@@ -4839,7 +4839,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25591" level="97" type="L2Monster" name="Brand's Servant">
+	<npc id="25591" level="97" type="L2Monster" name="Brand's Maid">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -5069,7 +5069,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25595" level="99" type="L2Monster" name="Gerg's Henchman">
+	<npc id="25595" level="99" type="L2Monster" name="Gerg's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->

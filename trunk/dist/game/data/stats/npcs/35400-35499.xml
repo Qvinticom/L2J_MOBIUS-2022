@@ -850,7 +850,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="35417" level="75" type="L2CastleDoormen" name="Doorman of Hell">
+	<npc id="35417" level="75" type="L2CastleDoormen" name="Gatekeeper of Hell">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -893,7 +893,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35418" level="75" type="L2CastleDoormen" name="Doorman of Hell">
+	<npc id="35418" level="75" type="L2CastleDoormen" name="Gatekeeper of Hell">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -977,7 +977,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35420" level="75" type="L2Npc" name="Loken" title="Messenger">
+	<npc id="35420" level="75" type="L2Npc" name="Loken" title="Herald">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1060,7 +1060,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="35422" level="75" type="L2Npc" name="Flag of Winner">
+	<npc id="35422" level="75" type="L2Npc" name="Victor's Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1395,7 +1395,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="35430" level="73" type="L2Defender" name="Oel Mahum Leader">
+	<npc id="35430" level="73" type="L2Defender" name="Oel Mahum Prefect">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1511,7 +1511,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35433" level="75" type="L2CastleDoormen" name="Inner Doorman">
+	<npc id="35433" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1555,7 +1555,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35434" level="75" type="L2CastleDoormen" name="Inner Doorman">
+	<npc id="35434" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1599,7 +1599,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35435" level="75" type="L2CastleDoormen" name="Outer Doorman">
+	<npc id="35435" level="75" type="L2CastleDoormen" name="Outer Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1643,7 +1643,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35436" level="75" type="L2CastleDoormen" name="Outer Doorman">
+	<npc id="35436" level="75" type="L2CastleDoormen" name="Outer Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1687,7 +1687,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35437" level="75" type="L2Npc" name="Messenger">
+	<npc id="35437" level="75" type="L2Npc" name="Herald">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3167,7 +3167,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35469" level="20" type="L2Artefact" name="Gods' Altar">
+	<npc id="35469" level="20" type="L2Artefact" name="Divine Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3290,7 +3290,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35472" level="93" type="L2Defender" name="Court Sorcerer" title="Rune">
+	<npc id="35472" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
@@ -3336,7 +3336,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35473" level="93" type="L2Defender" name="Court Sorcerer" title="Rune">
+	<npc id="35473" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
@@ -3382,7 +3382,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35474" level="93" type="L2Defender" name="Court Guard" title="Rune">
+	<npc id="35474" level="93" type="L2Defender" name="Royal Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3424,7 +3424,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35475" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35475" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3466,7 +3466,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35476" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35476" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3508,7 +3508,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35477" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35477" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3550,7 +3550,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35478" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35478" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -3592,7 +3592,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35479" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35479" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -3634,7 +3634,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35480" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35480" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -3676,7 +3676,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35481" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35481" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3718,7 +3718,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35482" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35482" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3760,7 +3760,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35483" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35483" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3845,7 +3845,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35485" level="93" type="L2Defender" name="Court Sorcerer" title="Rune">
+	<npc id="35485" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
@@ -3891,7 +3891,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35486" level="93" type="L2Defender" name="Court Sorcerer" title="Rune">
+	<npc id="35486" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
@@ -3937,7 +3937,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35487" level="93" type="L2Defender" name="Court Guard" title="Rune">
+	<npc id="35487" level="93" type="L2Defender" name="Royal Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3979,7 +3979,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35488" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35488" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4021,7 +4021,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35489" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35489" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4063,7 +4063,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35490" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35490" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4105,7 +4105,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35491" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35491" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -4147,7 +4147,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35492" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35492" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -4189,7 +4189,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35493" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35493" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -4231,7 +4231,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35494" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35494" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4273,7 +4273,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35495" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35495" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4315,7 +4315,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35496" level="92" type="L2Defender" name="Guard" title="Rune">
+	<npc id="35496" level="92" type="L2Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>

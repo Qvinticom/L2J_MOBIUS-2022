@@ -109,7 +109,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="20501" level="38" type="L2Monster" name="Turek Orc Shaman">
+	<npc id="20501" level="38" type="L2Monster" name="Turek Orc Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -501,7 +501,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="20506" level="30" type="L2Monster" name="Ruin Imp">
+	<npc id="20506" level="30" type="L2Monster" name="Ruin Imp" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -606,7 +606,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20507" level="32" type="L2Monster" name="Ruin Imp Elder">
+	<npc id="20507" level="32" type="L2Monster" name="Ruin Imp Elder" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2102,7 +2102,7 @@
 			<height normal="31" grown="37.5" />
 		</collision>
 	</npc>
-	<npc id="20527" level="4" type="L2Monster" name="Great Snow Wolf">
+	<npc id="20527" level="4" type="L2Monster" name="Snow Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3855,7 +3855,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20547" level="23" type="L2Monster" name="Ol Mahum Reserve">
+	<npc id="20547" level="23" type="L2Monster" name="Ol Mahum Support Troop">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -5777,7 +5777,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="20564" level="41" type="L2Monster" name="Enchanted Monstereye">
+	<npc id="20564" level="41" type="L2Monster" name="Reinforced Monster Eye">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5895,7 +5895,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20565" level="42" type="L2Monster" name="Enchanted Stone Golem">
+	<npc id="20565" level="42" type="L2Monster" name="Reinforced Stone Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -6009,7 +6009,7 @@
 			<height normal="40.3" />
 		</collision>
 	</npc>
-	<npc id="20566" level="43" type="L2Monster" name="Enchanted Iron Golem">
+	<npc id="20566" level="43" type="L2Monster" name="Reinforced Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6128,7 +6128,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="20567" level="44" type="L2Monster" name="Enchanted Gargoyle">
+	<npc id="20567" level="44" type="L2Monster" name="Reinforced Gargoyle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6731,7 +6731,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20572" level="49" type="L2Monster" name="Tarlk Bugbear High Warrior">
+	<npc id="20572" level="49" type="L2Monster" name="Tarlk Bugbear Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -7200,7 +7200,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="20576" level="55" type="L2Monster" name="Oel Mahum Witch Doctor">
+	<npc id="20576" level="55" type="L2Monster" name="Oel Mahum Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -8593,7 +8593,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="20588" level="45" type="L2Monster" name="Timak Orc Overlord">
+	<npc id="20588" level="45" type="L2Monster" name="Timak Orc Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -9787,7 +9787,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20599" level="55" type="L2Monster" name="Unicorn Elder">
+	<npc id="20599" level="55" type="L2Monster" name="Elder the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />

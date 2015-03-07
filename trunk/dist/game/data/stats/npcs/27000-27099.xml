@@ -42,7 +42,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27002" level="12" type="L2Monster" name="Orc Fighter">
+	<npc id="27002" level="12" type="L2Monster" name="Orc Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -459,7 +459,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27018" level="10" type="L2Monster" name="Orc Warrior">
+	<npc id="27018" level="10" type="L2Monster" name="Orc Lieutenant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -500,7 +500,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="27019" level="11" type="L2Monster" name="Orc Warrior Leader">
+	<npc id="27019" level="11" type="L2Monster" name="Orc Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -886,7 +886,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="27033" level="12" type="L2Monster" name="Lizardman Scout" title="Quest Monster">
+	<npc id="27033" level="12" type="L2Monster" name="Lizardman Lieutenant" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
@@ -1054,7 +1054,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="27037" level="10" type="L2Monster" name="Calpico's Goons" title="Quest Monster">
+	<npc id="27037" level="10" type="L2Monster" name="Calpico's Pawn" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -1325,7 +1325,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27045" level="18" type="L2Monster" name="Kuruka Ratman Leader" title="Quest Monster">
+	<npc id="27045" level="18" type="L2Monster" name="Kuruka Ratman Captain" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2471,7 +2471,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="27077" level="30" type="L2Monster" name="Unicorn Of Eva" title="Quest Monster">
+	<npc id="27077" level="30" type="L2Monster" name="Eva's Unicorn" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2595,7 +2595,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 	</npc>
-	<npc id="27080" level="37" type="L2Monster" name="Pashika Son Of Voltar" title="Quest Monster">
+	<npc id="27080" level="37" type="L2Monster" name="Pashika the Son Of Voltar" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2641,7 +2641,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="27081" level="37" type="L2Monster" name="Vultus Son Of Voltar" title="Quest Monster">
+	<npc id="27081" level="37" type="L2Monster" name="Vultus the Son Of Voltar" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2687,7 +2687,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="27082" level="33" type="L2Monster" name="Enku Orc Overlord" title="Quest Monster">
+	<npc id="27082" level="33" type="L2Monster" name="Enku Orc Prefect" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2779,7 +2779,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27086" level="39" type="L2Monster" name="Revenant of Tantos Chief" title="Quest Monster">
+	<npc id="27086" level="39" type="L2Monster" name="Revenant of Tantos Chieftain" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2909,7 +2909,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27090" level="41" type="L2Monster" name="Serpent Demon Kadesh" title="Quest Monster">
+	<npc id="27090" level="41" type="L2Monster" name="Evil Spirit Kadesh" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2951,7 +2951,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="27092" level="33" type="L2Monster" name="Neer Bodyguard" title="Quest Monster">
+	<npc id="27092" level="33" type="L2Monster" name="Neer's Escort" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
@@ -3089,7 +3089,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27095" level="44" type="L2Monster" name="Singing Flower of Phantasm" title="Quest Monster">
+	<npc id="27095" level="44" type="L2Monster" name="Apparition Singing Flower" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

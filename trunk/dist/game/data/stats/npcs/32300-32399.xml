@@ -431,7 +431,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="32314" level="70" type="L2Npc" name="Warpgate">
+	<npc id="32314" level="70" type="L2Npc" name="Warp Gate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -473,7 +473,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="32315" level="70" type="L2Npc" name="Warpgate">
+	<npc id="32315" level="70" type="L2Npc" name="Warp Gate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -515,7 +515,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="32316" level="70" type="L2Npc" name="Warpgate">
+	<npc id="32316" level="70" type="L2Npc" name="Warp Gate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -557,7 +557,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="32317" level="70" type="L2Npc" name="Warpgate">
+	<npc id="32317" level="70" type="L2Npc" name="Warp Gate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -599,7 +599,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="32318" level="70" type="L2Npc" name="Warpgate">
+	<npc id="32318" level="70" type="L2Npc" name="Warp Gate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -641,7 +641,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="32319" level="70" type="L2Npc" name="Warpgate">
+	<npc id="32319" level="70" type="L2Npc" name="Warp Gate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
@@ -964,7 +964,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="32327" level="70" type="L2Npc" name="Adventurers' Guide">
+	<npc id="32327" level="70" type="L2Npc" name="Adventurers' Guide" title="Newbie Buff Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1088,7 +1088,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="32331" level="70" type="L2Npc" name="Arcane Nucleus">
+	<npc id="32331" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1815,7 +1815,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="32350" level="84" type="L2Npc" name="Sandstorm">
+	<npc id="32350" level="84" type="L2Npc" name="Sandblast">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1890,7 +1890,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="32352" level="70" type="L2Npc" name="Desert Heatmaster">
+	<npc id="32352" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2319,7 +2319,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="32364" level="70" type="L2Npc" name="Hellbound Traitor">
+	<npc id="32364" level="70" type="L2Npc" name="Native Traitor">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2820,7 +2820,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="32377" level="70" type="L2Npc" name="Kuram" title="Coordinator">
+	<npc id="32377" level="70" type="L2Npc" name="Kuram" title="Entrance Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -2856,7 +2856,7 @@
 			<height normal="17.285" />
 		</collision>
 	</npc>
-	<npc id="32378" level="70" type="L2Teleporter" name="Fantasy Isle Paddies" title="Gatekeeper">
+	<npc id="32378" level="70" type="L2Teleporter" name="Fantasy Isle Paddy" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2896,7 +2896,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="32379" level="70" type="L2Npc">
+	<npc id="32379" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2932,7 +2932,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="32380" level="70" type="L2Npc">
+	<npc id="32380" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2968,7 +2968,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="32381" level="70" type="L2Npc">
+	<npc id="32381" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3004,7 +3004,7 @@
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="32382" level="70" type="L2Npc">
+	<npc id="32382" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3040,7 +3040,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="32383" level="70" type="L2Npc">
+	<npc id="32383" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3076,7 +3076,7 @@
 			<height normal="10.25" />
 		</collision>
 	</npc>
-	<npc id="32384" level="70" type="L2Npc">
+	<npc id="32384" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3112,7 +3112,7 @@
 			<height normal="10.25" />
 		</collision>
 	</npc>
-	<npc id="32385" level="70" type="L2Npc">
+	<npc id="32385" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3148,7 +3148,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="32386" level="70" type="L2Npc">
+	<npc id="32386" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3184,7 +3184,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32387" level="70" type="L2Npc">
+	<npc id="32387" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3220,7 +3220,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="32388" level="70" type="L2Npc">
+	<npc id="32388" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3256,7 +3256,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="32389" level="70" type="L2Npc">
+	<npc id="32389" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3292,7 +3292,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32390" level="70" type="L2Npc">
+	<npc id="32390" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3328,7 +3328,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="32391" level="70" type="L2Npc">
+	<npc id="32391" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -3364,7 +3364,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="32392" level="70" type="L2Npc">
+	<npc id="32392" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -3400,7 +3400,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="32393" level="70" type="L2Npc">
+	<npc id="32393" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3436,7 +3436,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="32394" level="70" type="L2Npc">
+	<npc id="32394" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3472,7 +3472,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="32395" level="70" type="L2Npc">
+	<npc id="32395" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3508,7 +3508,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="32396" level="70" type="L2Npc">
+	<npc id="32396" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -3544,7 +3544,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="32397" level="70" type="L2Npc">
+	<npc id="32397" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -3580,7 +3580,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="32398" level="70" type="L2Npc">
+	<npc id="32398" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -3616,7 +3616,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="32399" level="70" type="L2Npc">
+	<npc id="32399" level="70" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>

@@ -35,7 +35,7 @@
 			<height normal="12.3" />
 		</collision>
 	</npc>
-	<npc id="13201" level="79" type="L2Npc" name="Guards of the Dawn">
+	<npc id="13201" level="79" type="L2Npc" name="Guard of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2325,7 +2325,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13257" level="76" type="L2Decoy" name="Virtual Image">
+	<npc id="13257" level="76" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="7" /> <!-- Decoy Provocation -->
@@ -2364,7 +2364,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13258" level="77" type="L2Decoy" name="Virtual Image">
+	<npc id="13258" level="77" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="8" /> <!-- Decoy Provocation -->
@@ -2403,7 +2403,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13259" level="78" type="L2Decoy" name="Virtual Image">
+	<npc id="13259" level="78" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="9" /> <!-- Decoy Provocation -->
@@ -2442,7 +2442,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13260" level="79" type="L2Decoy" name="Virtual Image">
+	<npc id="13260" level="79" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="10" /> <!-- Decoy Provocation -->
@@ -2481,7 +2481,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13261" level="80" type="L2Decoy" name="Virtual Image">
+	<npc id="13261" level="80" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="11" /> <!-- Decoy Provocation -->
@@ -2520,7 +2520,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13262" level="81" type="L2Decoy" name="Virtual Image">
+	<npc id="13262" level="81" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="12" /> <!-- Decoy Provocation -->
@@ -2559,7 +2559,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13263" level="82" type="L2Decoy" name="Virtual Image">
+	<npc id="13263" level="82" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="13" /> <!-- Decoy Provocation -->
@@ -2598,7 +2598,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13264" level="83" type="L2Decoy" name="Virtual Image">
+	<npc id="13264" level="83" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="14" /> <!-- Decoy Provocation -->
@@ -2637,7 +2637,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13265" level="84" type="L2Decoy" name="Virtual Image">
+	<npc id="13265" level="84" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="15" /> <!-- Decoy Provocation -->
@@ -2676,7 +2676,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13266" level="85" type="L2Decoy" name="Virtual Image">
+	<npc id="13266" level="85" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="16" /> <!-- Decoy Provocation -->
@@ -2715,7 +2715,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13267" level="86" type="L2Decoy" name="Virtual Image">
+	<npc id="13267" level="86" type="L2Decoy" name="Illusion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="17" /> <!-- Decoy Provocation -->
@@ -3349,7 +3349,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="13284" level="80" type="L2Npc">
+	<npc id="13284" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3385,7 +3385,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="13285" level="80" type="L2Npc" name="Santa Claus" title="Event manager">
+	<npc id="13285" level="80" type="L2Npc" name="Santa" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -3674,7 +3674,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="13293" level="85" type="L2Npc">
+	<npc id="13293" level="85" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3709,7 +3709,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="13294" level="85" type="L2Npc">
+	<npc id="13294" level="85" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3816,7 +3816,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="13297" level="80" type="L2Npc" name="World Cup Cat">
+	<npc id="13297" level="80" type="L2Npc" name="World Cup Cat" title="Event Manager">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3836,7 +3836,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13298" level="55" type="L2Npc" name="Game Manager" title="Customer Joining">
+	<npc id="13298" level="55" type="L2Npc" name="Game Master" title="Customer Support">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3856,7 +3856,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13299" level="55" type="L2Npc" name="Orbis' Curse" title="">
+	<npc id="13299" level="55" type="L2Npc" name="Orbis' Curse">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

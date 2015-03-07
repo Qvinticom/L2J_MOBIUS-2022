@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25200" level="71" type="L2Monster" name="Family of Sheshark" title="Raid Fighter">
+	<npc id="25200" level="71" type="L2Monster" name="Sheshark's Family" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="7" /> <!-- BOSS Twister -->
@@ -43,7 +43,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25201" level="71" type="L2Monster" name="Guard of Sheshark" title="Raid Fighter">
+	<npc id="25201" level="71" type="L2Monster" name="Sheshark's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4724" level="7" /> <!-- Stun -->
@@ -161,7 +161,7 @@
 			<height normal="86" />
 		</collision>
 	</npc>
-	<npc id="25203" level="73" type="L2Monster" name="Parhit Padisha Sobekk" title="Raid Fighter">
+	<npc id="25203" level="73" type="L2Monster" name="Parhit Sha Sobekk" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="6" /> <!-- BOSS Chant of Life -->
@@ -205,7 +205,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="25204" level="73" type="L2Monster" name="Krokian Padisha Sobekk" title="Raid Fighter">
+	<npc id="25204" level="73" type="L2Monster" name="Krokian Sha Sobekk" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -400,7 +400,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="25208" level="40" type="L2RaidBoss" name="Water Couatle Ateka" title="Raid Boss">
+	<npc id="25208" level="40" type="L2RaidBoss" name="Water Couatl Ateka" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -515,7 +515,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25210" level="39" type="L2Monster" name="Ateka's Grunt" title="Raid Fighter">
+	<npc id="25210" level="39" type="L2Monster" name="Ateka's Soldier" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4721" level="3" /> <!-- BOSS Strike -->
@@ -705,7 +705,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25214" level="40" type="L2RaidBoss" name="Fafurion's Page Sika" title="Raid Boss">
+	<npc id="25214" level="40" type="L2RaidBoss" name="Fafurion's Servant Sika" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -778,7 +778,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25215" level="39" type="L2Monster" name="Sika's Wizard" title="Raid Fighter">
+	<npc id="25215" level="39" type="L2Monster" name="Sika's Mage" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="3" /> <!-- BOSS Windstrike -->
@@ -821,7 +821,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25216" level="39" type="L2Monster" name="Sika's Fighter" title="Raid Fighter">
+	<npc id="25216" level="39" type="L2Monster" name="Sika's Warrior" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4732" level="3" /> <!-- BOSS Mortal Blow -->
@@ -1412,7 +1412,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25227" level="61" type="L2Monster" name="Kastor's Seer" title="Raid Fighter">
+	<npc id="25227" level="61" type="L2Monster" name="Kastor's Priest" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4779" level="6" /> <!-- BOSS Heal -->
@@ -1569,7 +1569,7 @@
 			<height normal="108" />
 		</collision>
 	</npc>
-	<npc id="25230" level="57" type="L2RaidBoss" name="Timak Seer Ragoth" title="Raid Boss">
+	<npc id="25230" level="57" type="L2RaidBoss" name="Timak Priest Ragoth" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1645,7 +1645,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25231" level="56" type="L2Monster" name="Ragoth's Guard" title="Raid Fighter">
+	<npc id="25231" level="56" type="L2Monster" name="Ragoth' Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="5" /> <!-- BOSS Strike -->
@@ -1687,7 +1687,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25232" level="56" type="L2Monster" name="Ragoth's Herald" title="Raid Fighter">
+	<npc id="25232" level="56" type="L2Monster" name="Ragoth' Herald" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1802,7 +1802,7 @@
 			<height normal="46.5" grown="48.4" />
 		</collision>
 	</npc>
-	<npc id="25234" level="60" type="L2RaidBoss" name="Ancient Drake" title="Raid Boss">
+	<npc id="25234" level="60" type="L2RaidBoss" name="Ancient Weird Drake" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -2311,7 +2311,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25243" level="54" type="L2Monster" name="Tamash's Servant" title="Raid Fighter">
+	<npc id="25243" level="54" type="L2Monster" name="Tamash's Confidant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4730" level="5" /> <!-- BOSS Mortal Blow -->
@@ -2573,7 +2573,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25248" level="72" type="L2RaidBoss" name="Doom Blade Tanatos" title="Raid Boss">
+	<npc id="25248" level="72" type="L2RaidBoss" name="Doom Blade Thanatos" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -2923,7 +2923,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25254" level="69" type="L2Monster" name="Themis's Sentinel" title="Raid Fighter">
+	<npc id="25254" level="69" type="L2Monster" name="Themis' Royal Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4739" level="6" /> <!-- BOSS Strike -->
@@ -3909,7 +3909,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25272" level="28" type="L2RaidBoss" name="Partisan Leader Talakin" title="Raid Boss">
+	<npc id="25272" level="28" type="L2RaidBoss" name="Partisan Commander Talakin" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -4218,7 +4218,7 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="25277" level="50" type="L2RaidBoss" name="Lilith's Witch Marilion" title="Raid Boss">
+	<npc id="25277" level="50" type="L2RaidBoss" name="Lilith' Witch Marilion" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4295,7 +4295,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="25278" level="49" type="L2Monster" name="Dead Soul of Stigma" title="Raid Fighter">
+	<npc id="25278" level="49" type="L2Monster" name="Dead Soul of the Branded" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4779" level="4" /> <!-- BOSS Heal -->
@@ -4340,7 +4340,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25279" level="49" type="L2Monster" name="Evil Spirit of Stigma" title="Raid Fighter">
+	<npc id="25279" level="49" type="L2Monster" name="Evil Spirit of the Branded" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4379,7 +4379,7 @@
 			<height normal="20" grown="24" />
 		</collision>
 	</npc>
-	<npc id="25280" level="55" type="L2RaidBoss" name="Pagan Watcher Cerberon" title="Raid Boss">
+	<npc id="25280" level="55" type="L2RaidBoss" name="Pagan Watchman Cerberon" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
@@ -4624,7 +4624,7 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="25283" level="89" type="L2RaidBoss" name="Lilith" title="Raid Boss">
+	<npc id="25283" level="89" type="L2RaidBoss" name="Lilith" title="Apostle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4693,7 +4693,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25284" level="86" type="L2Monster" name="Lilith's Agent" title="Raid Fighter">
+	<npc id="25284" level="86" type="L2Monster" name="Lilith' Agent">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4316" level="8" /> <!-- BOSS Lilim Drain -->
@@ -4737,7 +4737,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25285" level="86" type="L2Monster" name="Lilith's Escort" title="Raid Fighter">
+	<npc id="25285" level="86" type="L2Monster" name="Lilith' Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4179" level="8" /> <!-- BOSS Strike -->
@@ -4781,7 +4781,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25286" level="94" type="L2RaidBoss" name="Anakim" title="Raid Boss">
+	<npc id="25286" level="94" type="L2RaidBoss" name="Anakim" title="Fallen Angel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4858,7 +4858,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25287" level="91" type="L2Monster" name="Anakim's Guardian" title="Raid Fighter">
+	<npc id="25287" level="91" type="L2Monster" name="Anakim's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="8" /> <!-- BOSS Heal -->
@@ -4901,7 +4901,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="25288" level="91" type="L2Monster" name="Anakim's Royal Guard" title="Raid Fighter">
+	<npc id="25288" level="91" type="L2Monster" name="Anakim's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -4976,7 +4976,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25290" level="78" type="L2RaidBoss" name="Daimon the White-Eyed" title="Raid Boss">
+	<npc id="25290" level="78" type="L2RaidBoss" name="Daimon the White-eyed" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5047,7 +5047,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25291" level="77" type="L2Monster" name="Family of Daimon" title="Raid Fighter">
+	<npc id="25291" level="77" type="L2Monster" name="Daimon's Family" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" /> <!-- BOSS Aura Burn -->
@@ -5090,7 +5090,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25292" level="77" type="L2Monster" name="Family of Daimon" title="Raid Fighter">
+	<npc id="25292" level="77" type="L2Monster" name="Daimon's Family" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="8" /> <!-- BOSS Heal -->
@@ -5206,7 +5206,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25294" level="77" type="L2Monster" name="Fighter of Hestia" title="Raid Fighter">
+	<npc id="25294" level="77" type="L2Monster" name="Hestia's Fighter" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4740" level="8" /> <!-- BOSS Strike -->
@@ -5247,7 +5247,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25295" level="77" type="L2Monster" name="Follower of Hestia" title="Raid Fighter">
+	<npc id="25295" level="77" type="L2Monster" name="Hestia's Follower" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>

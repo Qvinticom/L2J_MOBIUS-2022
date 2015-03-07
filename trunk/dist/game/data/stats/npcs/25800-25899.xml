@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25800" level="98" type="L2RaidBoss" name="Mammon Collector Talos" title="Lord of Destruction">
+	<npc id="25800" level="98" type="L2RaidBoss" name="Michaela" title="Grand Judge">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<minions name="Privates">
@@ -64,7 +64,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="25801" level="22" type="L2Monster" name="Talos' Cohort" title="Follower of Destruction">
+	<npc id="25801" level="22" type="L2Monster" name="Teredor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
@@ -241,7 +241,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25810" level="58" type="L2Npc" name="Vladimir's Follower" title="">
+	<npc id="25810" level="58" type="L2Npc" name="Vladimir's Follower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -309,7 +309,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25814" level="65" type="L2Npc" name="Byron's Maid" title="">
+	<npc id="25814" level="65" type="L2Npc" name="Byron's Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -343,7 +343,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25816" level="72" type="L2Npc" name="Heaven's Palace Sniper Captain" title="">
+	<npc id="25816" level="72" type="L2Npc" name="Heaven's Palace Sniper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -360,7 +360,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25817" level="72" type="L2Npc" name="Heaven's Palace Sniper Captain" title="">
+	<npc id="25817" level="72" type="L2Npc" name="Heaven's Palace Sniper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -377,7 +377,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25818" level="75" type="L2Npc" name="Emperor of Heaven's Palace" title="">
+	<npc id="25818" level="75" type="L2Npc" name="Emperor of Heaven's Palace">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -394,7 +394,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25819" level="75" type="L2Npc" name="Heaven's Palace Healer" title="">
+	<npc id="25819" level="75" type="L2Npc" name="Heaven's Palace Healer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -411,7 +411,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25820" level="75" type="L2Npc" name="Heaven's Palace Goddess" title="">
+	<npc id="25820" level="75" type="L2Npc" name="Heaven's Palace Goddess">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -428,7 +428,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25821" level="75" type="L2Npc" name="Heaven's Palace Goddess Warrior" title="">
+	<npc id="25821" level="75" type="L2Npc" name="Heaven's Palace Goddess Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -564,7 +564,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25829" level="45" type="L2Npc" name="Mertes" title="">
+	<npc id="25829" level="45" type="L2Npc" name="Mertes">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -581,7 +581,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25830" level="45" type="L2Npc" name="Golem of Repairs" title="">
+	<npc id="25830" level="45" type="L2Npc" name="Golem of Repairs">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -632,7 +632,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25833" level="97" type="L2Npc" name="Orbis' Victim" title="">
+	<npc id="25833" level="97" type="L2Npc" name="Orbis' Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -649,7 +649,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25834" level="97" type="L2Npc" name="Orbis' Guard" title="">
+	<npc id="25834" level="97" type="L2Npc" name="Orbis' Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -666,7 +666,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25835" level="97" type="L2Npc" name="Orbis' Thrower" title="">
+	<npc id="25835" level="97" type="L2Npc" name="Orbis' Thrower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -683,7 +683,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25836" level="97" type="L2Npc" name="Orbis' Curator" title="">
+	<npc id="25836" level="97" type="L2Npc" name="Orbis' Curator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1040,7 +1040,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25857" level="95" type="L2Npc" name="Corrupted Captain" title="">
+	<npc id="25857" level="95" type="L2Npc" name="Corrupted Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1057,7 +1057,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25858" level="95" type="L2Npc" name="Corrupted High Priest" title="">
+	<npc id="25858" level="95" type="L2Npc" name="Corrupted High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1176,7 +1176,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25865" level="93" type="L2Npc" name="Apherus Subordinate" title="">
+	<npc id="25865" level="93" type="L2Npc" name="Apherus Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1193,7 +1193,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25866" level="94" type="L2Npc" name="Apherus" title="">
+	<npc id="25866" level="94" type="L2Npc" name="Apherus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1295,7 +1295,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25872" level="97" type="L2Npc" name="Spezion's Subordinate" title="">
+	<npc id="25872" level="97" type="L2Npc" name="Spezion's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1312,7 +1312,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25873" level="97" type="L2Npc" name="Spezion's Subordinate" title="">
+	<npc id="25873" level="97" type="L2Npc" name="Spezion's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1329,7 +1329,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25874" level="97" type="L2Npc" name="Spezion's Subordinate" title="">
+	<npc id="25874" level="97" type="L2Npc" name="Spezion's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1652,7 +1652,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25893" level="97" type="L2Npc" name="Strain" title="">
+	<npc id="25893" level="97" type="L2Npc" name="Strain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1686,7 +1686,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25895" level="99" type="L2Npc" name="Lyn Draco" title="">
+	<npc id="25895" level="99" type="L2Npc" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1703,7 +1703,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25896" level="99" type="L2Npc" name="Lyn Draco" title="">
+	<npc id="25896" level="99" type="L2Npc" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1720,7 +1720,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25897" level="99" type="L2Npc" name="Lyn Draco" title="">
+	<npc id="25897" level="99" type="L2Npc" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1737,7 +1737,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="25898" level="99" type="L2Npc" name="Cyclone" title="">
+	<npc id="25898" level="99" type="L2Npc" name="Cyclone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

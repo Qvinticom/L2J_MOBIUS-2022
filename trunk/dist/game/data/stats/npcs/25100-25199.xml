@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25100" level="55" type="L2Monster" name="Spirit of Sea of Spores" title="Raid Fighter">
+	<npc id="25100" level="55" type="L2Monster" name="Spirit of the Sea of Spores" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4782" level="4" /> <!-- BOSS Heal -->
@@ -43,7 +43,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25101" level="55" type="L2Monster" name="Fighter of Sea of Spores" title="Raid Fighter">
+	<npc id="25101" level="55" type="L2Monster" name="Warrior of the Sea of Spores" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -156,7 +156,7 @@
 			<height normal="94" />
 		</collision>
 	</npc>
-	<npc id="25103" level="55" type="L2RaidBoss" name="Sorcerer Isirr" title="Raid Boss">
+	<npc id="25103" level="55" type="L2RaidBoss" name="Wizard Isirr" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -236,7 +236,7 @@
 			<height normal="63" grown="76" />
 		</collision>
 	</npc>
-	<npc id="25104" level="54" type="L2Monster" name="Isirr's Guard" title="Raid Fighter">
+	<npc id="25104" level="54" type="L2Monster" name="Isirr's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4722" level="5" /> <!-- BOSS Strike -->
@@ -278,7 +278,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25105" level="54" type="L2Monster" name="Isirr's Guards" title="Raid Fighter">
+	<npc id="25105" level="54" type="L2Monster" name="Isirr's Escorts" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -435,7 +435,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25108" level="59" type="L2Monster" name="Lidia's Fighter" title="Raid Fighter">
+	<npc id="25108" level="59" type="L2Monster" name="Lidia's Warrior" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -631,7 +631,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25112" level="30" type="L2RaidBoss" name="Beleth's Agent, Meana" title="Raid Boss">
+	<npc id="25112" level="30" type="L2RaidBoss" name="Beleth' Agent Meana" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -950,7 +950,7 @@
 			<height normal="20" grown="24" />
 		</collision>
 	</npc>
-	<npc id="25118" level="35" type="L2RaidBoss" name="Guilotine, Warden of the Execution Grounds" title="Raid Boss">
+	<npc id="25118" level="35" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
@@ -1031,7 +1031,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="25119" level="50" type="L2RaidBoss" name="Messenger of Fairy Queen Berun" title="Raid Boss">
+	<npc id="25119" level="50" type="L2RaidBoss" name="Fairy Queen's Messenger Berun" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1111,7 +1111,7 @@
 			<height normal="73" />
 		</collision>
 	</npc>
-	<npc id="25120" level="49" type="L2Monster" name="Berun's Officer" title="Raid Fighter">
+	<npc id="25120" level="49" type="L2Monster" name="Berun's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="4" /> <!-- BOSS Windstrike -->
@@ -1575,7 +1575,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25128" level="33" type="L2RaidBoss" name="Vuku Grand Seer Gharmash" title="Raid Boss">
+	<npc id="25128" level="33" type="L2RaidBoss" name="Vuku Grand Priest Gharmash" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1739,7 +1739,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25131" level="50" type="L2RaidBoss" name="Carnage Lord Gato" title="Raid Boss">
+	<npc id="25131" level="50" type="L2RaidBoss" name="Slaughter Lord Gato" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1815,7 +1815,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25132" level="49" type="L2Monster" name="Gato's Marksman" title="Raid Fighter">
+	<npc id="25132" level="49" type="L2Monster" name="Gato's Sniper" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="4" /> <!-- Stun -->
@@ -1857,7 +1857,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25133" level="49" type="L2Monster" name="Gato's Troop Leader" title="Raid Fighter">
+	<npc id="25133" level="49" type="L2Monster" name="Gato's Troop Captain" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1967,7 +1967,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25135" level="39" type="L2Monster" name="Talkin's Seer" title="Raid Fighter">
+	<npc id="25135" level="39" type="L2Monster" name="Talkin's Priest" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
@@ -2011,7 +2011,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25136" level="39" type="L2Monster" name="Talkin's Bodyguard" title="Raid Fighter">
+	<npc id="25136" level="39" type="L2Monster" name="Talkin's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2049,7 +2049,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25137" level="55" type="L2RaidBoss" name="Beleth's Seer, Sephia" title="Raid Boss">
+	<npc id="25137" level="55" type="L2RaidBoss" name="Beleth' Seer Sephia" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2514,7 +2514,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25146" level="21" type="L2RaidBoss" name="Serpent Demon Bifrons" title="Raid Boss">
+	<npc id="25146" level="21" type="L2RaidBoss" name="Evil Spirit Bifrons" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3036,7 +3036,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25156" level="39" type="L2Monster" name="Fanatic Shaman" title="Raid Fighter">
+	<npc id="25156" level="39" type="L2Monster" name="Fanatic Wizard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
@@ -3620,7 +3620,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25168" level="24" type="L2Monster" name="Pawn of Ikuntai" title="Raid Fighter">
+	<npc id="25168" level="24" type="L2Monster" name="Ikuntai's Pawn" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3743,7 +3743,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25170" level="38" type="L2RaidBoss" name="Lizardmen Leader Hellion" title="Raid Boss">
+	<npc id="25170" level="38" type="L2RaidBoss" name="Lizardmen Captain Hellion" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3856,7 +3856,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25172" level="37" type="L2Monster" name="Hellion's Guards" title="Raid Fighter">
+	<npc id="25172" level="37" type="L2Monster" name="Hellion's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4009,7 +4009,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="25175" level="44" type="L2Monster" name="Karuta's Inferiors" title="Raid Fighter">
+	<npc id="25175" level="44" type="L2Monster" name="Karuta's Subordinate" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -4204,7 +4204,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25179" level="60" type="L2RaidBoss" name="Guardian of the Statue of Giant Karum" title="Raid Boss">
+	<npc id="25179" level="60" type="L2RaidBoss" name="Giant Statue Guardian Karum" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4591,7 +4591,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25186" level="34" type="L2Monster" name="Hellena's Marksman" title="Raid Fighter">
+	<npc id="25186" level="34" type="L2Monster" name="Hellena's Sniper" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="3" /> <!-- Stun -->
@@ -4752,7 +4752,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25189" level="34" type="L2RaidBoss" name="Cronos's Servitor Mumu" title="Raid Boss">
+	<npc id="25189" level="34" type="L2RaidBoss" name="Cronos' Servitor Mumu" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5124,7 +5124,7 @@
 			<height normal="80.5" />
 		</collision>
 	</npc>
-	<npc id="25199" level="72" type="L2RaidBoss" name="Water Dragon Seer Sheshark" title="Raid Boss">
+	<npc id="25199" level="72" type="L2RaidBoss" name="Water Dragon Priest Sheshark" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">

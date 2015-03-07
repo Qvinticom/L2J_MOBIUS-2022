@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25400" level="34" type="L2Monster" name="Page of Watchman" title="Raid Fighter">
+	<npc id="25400" level="34" type="L2Monster" name="Watchman's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" /> <!-- BOSS Heal -->
@@ -112,7 +112,7 @@
 			<height normal="63" grown="76" />
 		</collision>
 	</npc>
-	<npc id="25402" level="31" type="L2Monster" name="Retainer of Skyla" title="Raid Fighter">
+	<npc id="25402" level="31" type="L2Monster" name="Skyla's Confidant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" /> <!-- BOSS Mortal Blow -->
@@ -154,7 +154,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25403" level="31" type="L2Monster" name="Follower of Skyla" title="Raid Fighter">
+	<npc id="25403" level="31" type="L2Monster" name="Skyla's Follower" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
@@ -1178,7 +1178,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25421" level="57" type="L2Monster" name="Trisalim Escort" title="Raid Fighter">
+	<npc id="25421" level="57" type="L2Monster" name="Trisalim's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="4" /> <!-- Decrease Speed -->
@@ -1221,7 +1221,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25422" level="57" type="L2Monster" name="Page of Rotting Tree" title="Raid Fighter">
+	<npc id="25422" level="57" type="L2Monster" name="Rotting Tree's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
@@ -1348,7 +1348,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25424" level="60" type="L2Monster" name="Timiniel's Royal Guards" title="Raid Fighter">
+	<npc id="25424" level="60" type="L2Monster" name="Timiniel's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
@@ -1390,7 +1390,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25425" level="60" type="L2Monster" name="Timiniel's Royal Guard Captain" title="Raid Fighter">
+	<npc id="25425" level="60" type="L2Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4742" level="6" /> <!-- BOSS Strike -->
@@ -1655,7 +1655,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="25430" level="22" type="L2Monster" name="Talos' Cohort" title="Raid Fighter">
+	<npc id="25430" level="22" type="L2Monster" name="Talos' Pawn" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
@@ -1936,7 +1936,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25435" level="54" type="L2Monster" name="Barda's Bandit" title="Raid Fighter">
+	<npc id="25435" level="54" type="L2Monster" name="Barda's Pawn" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
@@ -2167,7 +2167,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25439" level="43" type="L2Monster" name="Kelbar's Inferior" title="Raid Fighter">
+	<npc id="25439" level="43" type="L2Monster" name="Kelbar's Subordinate" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
@@ -2485,7 +2485,7 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="25445" level="64" type="L2Monster" name="Enmity Ghosts" title="Raid Fighter">
+	<npc id="25445" level="64" type="L2Monster" name="Enmity Ghost" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2525,7 +2525,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25446" level="64" type="L2Monster" name="Shooter of Enmity" title="Raid Fighter">
+	<npc id="25446" level="64" type="L2Monster" name="Begrudged Shooter" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2808,7 +2808,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25451" level="78" type="L2Monster" name="Galaxia's Guards" title="Raid Fighter">
+	<npc id="25451" level="78" type="L2Monster" name="Galaxia's Escorts" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" /> <!-- BOSS Aura Burn -->
@@ -2971,7 +2971,7 @@
 			<height normal="108" />
 		</collision>
 	</npc>
-	<npc id="25454" level="69" type="L2Monster" name="Wyvern of Marsh" title="Raid Fighter">
+	<npc id="25454" level="69" type="L2Monster" name="Swamp Wyvern" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="6" /> <!-- Decrease Speed -->
@@ -3014,7 +3014,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25455" level="69" type="L2Monster" name="Succubus of Marsh" title="Raid Fighter">
+	<npc id="25455" level="69" type="L2Monster" name="Swamp Succubus" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
@@ -3497,7 +3497,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25464" level="55" type="L2Monster" name="Garangky Guard Captain" title="Raid Fighter">
+	<npc id="25464" level="55" type="L2Monster" name="Garangky Escort Captain" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
@@ -3539,7 +3539,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25465" level="55" type="L2Monster" name="Garangky Guard Shaman" title="Raid Fighter">
+	<npc id="25465" level="55" type="L2Monster" name="Garangky Escort Wizard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="5" /> <!-- BOSS Heal -->
@@ -3583,7 +3583,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25466" level="55" type="L2Monster" name="Garangky Guard" title="Raid Fighter">
+	<npc id="25466" level="55" type="L2Monster" name="Garangky Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
@@ -3860,7 +3860,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25471" level="65" type="L2Monster" name="Utenus's Wizard" title="Raid Fighter">
+	<npc id="25471" level="65" type="L2Monster" name="Utenus' Wizard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="6" /> <!-- BOSS Twister -->
@@ -3906,7 +3906,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25472" level="65" type="L2Monster" name="Utenus's Guard" title="Raid Fighter">
+	<npc id="25472" level="65" type="L2Monster" name="Utenus' Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" /> <!-- BOSS Strike -->
@@ -4351,7 +4351,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25480" level="64" type="L2Monster" name="Hisilrome's Page" title="Raid Fighter">
+	<npc id="25480" level="64" type="L2Monster" name="Hisilrome's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="6" /> <!-- BOSS Heal -->
@@ -4638,7 +4638,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25485" level="49" type="L2Monster" name="Tillion's Inferior" title="Raid Fighter">
+	<npc id="25485" level="49" type="L2Monster" name="Tillion's Subordinate" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
@@ -4820,7 +4820,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25488" level="39" type="L2Monster" name="Spirit of Gildor" title="Raid Fighter">
+	<npc id="25488" level="39" type="L2Monster" name="Gildor's Spirit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
@@ -4863,7 +4863,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25489" level="39" type="L2Monster" name="Guardian of Gildor" title="Raid Fighter">
+	<npc id="25489" level="39" type="L2Monster" name="Gildor's Guardian" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="3" /> <!-- BOSS Strike -->
@@ -4975,7 +4975,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25491" level="39" type="L2Monster" name="Guard of Gwindorr" title="Raid Fighter">
+	<npc id="25491" level="39" type="L2Monster" name="Gwindorr's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5013,7 +5013,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25492" level="39" type="L2Monster" name="Follower of Gwindorr" title="Raid Fighter">
+	<npc id="25492" level="39" type="L2Monster" name="Gwindorr's Follower" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5132,7 +5132,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="25494" level="54" type="L2Monster" name="Spirit of Niniel" title="Raid Fighter">
+	<npc id="25494" level="54" type="L2Monster" name="Niniel's Spirit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" /> <!-- BOSS Mortal Blow -->
@@ -5173,7 +5173,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25495" level="54" type="L2Monster" name="Spirit of Niniel" title="Raid Fighter">
+	<npc id="25495" level="54" type="L2Monster" name="Niniel's Spirit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>

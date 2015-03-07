@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25300" level="79" type="L2Monster" name="Scout of Hekaton" title="Raid Fighter">
+	<npc id="25300" level="79" type="L2Monster" name="Hekaton's Scout" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -38,7 +38,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25301" level="79" type="L2Monster" name="Servant of Hekaton" title="Raid Fighter">
+	<npc id="25301" level="79" type="L2Monster" name="Hekaton's Servant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -186,7 +186,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25304" level="80" type="L2Monster" name="Tayr's Guard" title="Raid Fighter">
+	<npc id="25304" level="80" type="L2Monster" name="Tayr's Royal Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="9" /> <!-- BOSS Strike -->
@@ -301,7 +301,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="25306" level="80" type="L2RaidBoss" name="Soul of Fire Nastron" title="Raid Boss">
+	<npc id="25306" level="80" type="L2RaidBoss" name="Fire Spirit Nastron" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -533,7 +533,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="25310" level="79" type="L2Monster" name="Shadith's Royal Guard Captain" title="Raid Fighter">
+	<npc id="25310" level="79" type="L2Monster" name="Shadith' Escort Captain" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="8" /> <!-- BOSS Strike -->
@@ -575,7 +575,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="25311" level="79" type="L2Monster" name="Shadith's Sentinel" title="Raid Fighter">
+	<npc id="25311" level="79" type="L2Monster" name="Shadith' Sentinel" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -730,7 +730,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="25314" level="80" type="L2Monster" name="Mos' Guard" title="Raid Fighter">
+	<npc id="25314" level="80" type="L2Monster" name="Mos' Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -850,7 +850,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25316" level="80" type="L2RaidBoss" name="Soul of Water Ashutar" title="Raid Boss">
+	<npc id="25316" level="80" type="L2RaidBoss" name="Water Spirit Ashutar" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2188,7 +2188,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="25339" level="80" type="L2SepulcherMonster" name="Shadow of Halisha" title="Ruler of Sepulcher">
+	<npc id="25339" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2344,7 +2344,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25342" level="80" type="L2SepulcherMonster" name="Shadow of Halisha" title="Ruler of Sepulcher">
+	<npc id="25342" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2538,7 +2538,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25346" level="80" type="L2SepulcherMonster" name="Shadow of Halisha" title="Ruler of Sepulcher">
+	<npc id="25346" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2697,7 +2697,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25349" level="80" type="L2SepulcherMonster" name="Shadow of Halisha" title="Ruler of Sepulcher">
+	<npc id="25349" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2930,7 +2930,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25353" level="29" type="L2Monster" name="Giant Wasteland Basilisk" title="Raid Fighter">
+	<npc id="25353" level="29" type="L2Monster" name="Wasteland Basilisk" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="2" /> <!-- Stun -->
@@ -3090,7 +3090,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25356" level="34" type="L2Monster" name="Sirocco's Guards" title="Raid Fighter">
+	<npc id="25356" level="34" type="L2Monster" name="Sirocco's Escorts" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="3" /> <!-- BOSS Strike -->
@@ -3134,7 +3134,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25357" level="21" type="L2RaidBoss" name="Sukar Wererat Chief" title="Raid Boss">
+	<npc id="25357" level="21" type="L2RaidBoss" name="Sukar Ratman Chief" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3200,7 +3200,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25358" level="20" type="L2Monster" name="Sukar Wererat Guard" title="Raid Fighter">
+	<npc id="25358" level="20" type="L2Monster" name="Sukar Ratman Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="2" /> <!-- BOSS Mortal Blow -->
@@ -3242,7 +3242,7 @@
 			<height normal="18.7" />
 		</collision>
 	</npc>
-	<npc id="25359" level="20" type="L2Monster" name="Sukar Wererat Priest" title="Raid Fighter">
+	<npc id="25359" level="20" type="L2Monster" name="Sukar Ratman Priest" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="2" /> <!-- BOSS Heal -->
@@ -3396,7 +3396,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="25362" level="23" type="L2RaidBoss" name="Tracker Leader Sharuk" title="Raid Boss">
+	<npc id="25362" level="23" type="L2RaidBoss" name="Tracker Captain Sharuk" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4007,7 +4007,7 @@
 			<height normal="40.3" />
 		</collision>
 	</npc>
-	<npc id="25373" level="21" type="L2RaidBoss" name="Malex Herald of Dagoniel" title="Raid Boss">
+	<npc id="25373" level="21" type="L2RaidBoss" name="Dagoniel's Herald Malex" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4378,7 +4378,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="25380" level="21" type="L2RaidBoss" name="Kaysha Herald of Icarus" title="Raid Boss">
+	<npc id="25380" level="21" type="L2RaidBoss" name="Icarus' Herald Kaysha" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5025,7 +5025,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="25392" level="32" type="L2RaidBoss" name="Captain of Queen's Royal Guards" title="Raid Boss">
+	<npc id="25392" level="32" type="L2RaidBoss" name="Queen's Royal Guard Captain" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5214,7 +5214,7 @@
 			<height normal="39" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25395" level="45" type="L2RaidBoss" name="Archon Suscepter" title="Raid Boss">
+	<npc id="25395" level="45" type="L2RaidBoss" name="Archon Susceptor" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5303,7 +5303,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25396" level="44" type="L2Monster" name="Kusion Suscepter" title="Raid Fighter">
+	<npc id="25396" level="44" type="L2Monster" name="Kusion Susceptor" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="4" /> <!-- BOSS Chant of Life -->
@@ -5346,7 +5346,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="25397" level="44" type="L2Monster" name="Gustos Suscepter" title="Raid Fighter">
+	<npc id="25397" level="44" type="L2Monster" name="Gustos Susceptor" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
@@ -5387,7 +5387,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="25398" level="35" type="L2RaidBoss" name="Beleth's Eye" title="Raid Boss">
+	<npc id="25398" level="35" type="L2RaidBoss" name="Beleth' Eye" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5459,7 +5459,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="25399" level="34" type="L2Monster" name="Apprentice of Watchman" title="Raid Fighter">
+	<npc id="25399" level="34" type="L2Monster" name="Watchman's Apprentice" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->

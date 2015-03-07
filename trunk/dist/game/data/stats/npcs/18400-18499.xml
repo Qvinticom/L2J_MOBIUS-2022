@@ -774,7 +774,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="18416" level="18" type="L2Npc" name="Doorman">
+	<npc id="18416" level="18" type="L2Npc" name="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_detected" value="1" />
@@ -1008,7 +1008,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="18427" level="78" type="L2Npc">
+	<npc id="18427" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_activated" value="1" />
@@ -1046,7 +1046,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18428" level="78" type="L2Npc">
+	<npc id="18428" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_activated" value="1" />
@@ -1084,7 +1084,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18429" level="78" type="L2Npc">
+	<npc id="18429" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_activated" value="1" />
@@ -1122,7 +1122,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18430" level="78" type="L2Npc">
+	<npc id="18430" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_activated" value="1" />
@@ -1399,7 +1399,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18437" level="18" type="L2Npc" name="Trap">
+	<npc id="18437" level="18" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="buff1" id="4094" level="12" /> <!-- NPC Cancel Magic -->
@@ -2309,7 +2309,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="18463" level="81" type="L2Monster" name="Remnant Diabolist">
+	<npc id="18463" level="81" type="L2Monster" name="Remnant Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2393,7 +2393,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18464" level="81" type="L2Monster" name="Remnant Diviner">
+	<npc id="18464" level="81" type="L2Monster" name="Remnant Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2480,7 +2480,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18465" level="81" type="L2Monster" name="Derek" title="First Generation Seer">
+	<npc id="18465" level="81" type="L2Monster" name="Derek" title="Founding Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2576,7 +2576,7 @@
 			<height normal="28.1" />
 		</collision>
 	</npc>
-	<npc id="18466" level="81" type="L2Monster" name="Outpost Captain">
+	<npc id="18466" level="81" type="L2Monster" name="Outpost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2637,7 +2637,7 @@
 			<height normal="56" />
 		</collision>
 	</npc>
-	<npc id="18467" level="81" type="L2Monster" name="Wounded Land Guard">
+	<npc id="18467" level="81" type="L2Monster" name="Wounded Land Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2690,7 +2690,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="18468" level="99" type="L2Npc" name="Doorman">
+	<npc id="18468" level="99" type="L2Npc" name="Tester">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_created" value="1" />
@@ -2975,7 +2975,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18473" level="83" type="L2Npc" name="Hall Captain">
+	<npc id="18473" level="83" type="L2Npc" name="Hall Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3427,7 +3427,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="18481" level="81" type="L2Npc" name="Inner Castle Seer">
+	<npc id="18481" level="81" type="L2Npc" name="Inner Castle Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3626,7 +3626,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="18485" level="78" type="L2Npc">
+	<npc id="18485" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3661,7 +3661,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18486" level="78" type="L2Npc">
+	<npc id="18486" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3696,7 +3696,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18487" level="78" type="L2Npc">
+	<npc id="18487" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3731,7 +3731,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18488" level="78" type="L2Npc">
+	<npc id="18488" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3766,7 +3766,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18489" level="78" type="L2Npc">
+	<npc id="18489" level="78" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3801,7 +3801,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18490" level="86" type="L2Monster" name="Beleth's Slave">
+	<npc id="18490" level="86" type="L2Monster" name="Beleth' Slave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3934,7 +3934,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="18492" level="87" type="L2Npc" name="Controller" title="Tower of Naia">
+	<npc id="18492" level="87" type="L2Npc" name="Control Unit" title="Tower of Naia">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="skill_overflow" id="5527" level="1" /> <!-- Overflow -->
