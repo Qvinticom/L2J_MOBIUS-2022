@@ -301,7 +301,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="28793" sp="714" />
+		<acquire exp="28793" sp="6" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="41473" hpRegen="9" mp="387.72" mpRegen="1.8" />
 			<attack physical="166.06476" magical="82.76936" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -364,7 +364,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="28793" sp="714" />
+		<acquire exp="28793" sp="6" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="25821" hpRegen="9" mp="387.72" mpRegen="1.8" />
 			<attack physical="166.06476" magical="82.76936" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -428,7 +428,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="31200" sp="652" />
+		<acquire exp="31200" sp="7" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="16662" hpRegen="9" mp="343.8" mpRegen="1.8" />
 			<attack physical="137.86467" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -495,7 +495,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="31200" sp="652" />
+		<acquire exp="31200" sp="7" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="19247" hpRegen="9" mp="343.8" mpRegen="1.8" />
 			<attack physical="137.86467" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1076,7 +1076,7 @@
 	<npc id="18620" level="52" type="L2Monster" name="Adiantum">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="210709" sp="4070" />
+		<acquire exp="210709" sp="50" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="43547" hpRegen="9" mp="432.72" mpRegen="1.8" />
 			<attack physical="198.34591" magical="100.26304" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1194,7 +1194,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
-		<acquire exp="4815" sp="273" />
+		<acquire exp="4815" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -1538,7 +1538,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
-		<acquire exp="4400" sp="249" />
+		<acquire exp="4400" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1606,7 +1606,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- rhand: Elemental Sword lhand: Tower Shield -->
-		<acquire exp="94773" sp="5562" />
+		<acquire exp="94773" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="22092.8243635408" hpRegen="15" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1674,7 +1674,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="3" /> <!-- rhand: Broadsword -->
-		<acquire exp="94773" sp="5562" />
+		<acquire exp="94773" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="22092.8243635408" hpRegen="15" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1742,7 +1742,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
-		<acquire exp="97320" sp="5952" />
+		<acquire exp="97320" sp="23" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="22860.7262608719" hpRegen="15" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1810,7 +1810,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
-		<acquire exp="97320" sp="5952" />
+		<acquire exp="97320" sp="23" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="24719.1969350524" hpRegen="15" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1868,7 +1868,7 @@
 	<npc id="18633" level="67" type="L2Monster" name="Lematan">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="476731" sp="23080" />
+		<acquire exp="476731" sp="114" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="49438.3938701049" hpRegen="15" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1951,7 +1951,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- rhand: Meteor Shower lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="47334" sp="2980" />
+		<acquire exp="47334" sp="11" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7483.65031581907" hpRegen="17" mp="1410.0" mpRegen="3" />
 			<attack physical="365.712" magical="124.8841975" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2016,7 +2016,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- rhand: Meteor Shower lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="47334" sp="2980" />
+		<acquire exp="47334" sp="11" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7483.65031581907" hpRegen="17" mp="1410.0" mpRegen="3" />
 			<attack physical="365.712" magical="124.8841975" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2078,7 +2078,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6129" sp="400" />
+		<acquire exp="6129" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2142,7 +2142,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- rhand: Meteor Shower lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="5009" sp="338" />
+		<acquire exp="5009" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7577.69917044356" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="365.712" magical="124.8841975" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
@@ -2207,7 +2207,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6917" /> <!-- rhand: Monster Only (Poison Sting) -->
-		<acquire exp="4356" sp="292" />
+		<acquire exp="4356" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -2273,7 +2273,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4356" sp="292" />
+		<acquire exp="4356" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2340,7 +2340,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="7202" sp="513" />
+		<acquire exp="7202" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2405,7 +2405,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- rhand: Keshanberk lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="5700" sp="402" />
+		<acquire exp="5700" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="7577.69917044356" hpRegen="17" mp="1475.0" mpRegen="3" />
 			<attack physical="386.5" magical="132.104" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2467,7 +2467,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6302" sp="434" />
+		<acquire exp="6302" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2533,7 +2533,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4356" sp="316" />
+		<acquire exp="4356" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2600,7 +2600,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" lhand="6918" /> <!-- rhand: Monster Only(Silenos Shaman) lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="4882" sp="360" />
+		<acquire exp="4882" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2665,7 +2665,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- rhand: Meteor Shower lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="56434" sp="3932" />
+		<acquire exp="56434" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="6660.84527194068" hpRegen="17" mp="1540.8" mpRegen="3" />
 			<attack physical="412.21" magical="140.74335" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2727,7 +2727,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="6199" sp="449" />
+		<acquire exp="6199" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2793,7 +2793,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4210" sp="308" />
+		<acquire exp="4210" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2858,7 +2858,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- rhand: Dark Legion's Edge lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="55634" sp="4028" />
+		<acquire exp="55634" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="9374.13308462609" hpRegen="17" mp="1574.0" mpRegen="3" />
 			<attack physical="438.22" magical="146.209" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2923,7 +2923,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- rhand: Dark Legion's Edge lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="55634" sp="4028" />
+		<acquire exp="55634" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="9374.13308462609" hpRegen="17" mp="1574.0" mpRegen="3" />
 			<attack physical="438.22" magical="146.209" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2986,7 +2986,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6199" sp="467" />
+		<acquire exp="6199" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3052,7 +3052,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4327" sp="333" />
+		<acquire exp="4327" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3117,7 +3117,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- rhand: Meteor Shower lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="58812" sp="3836" />
+		<acquire exp="58812" sp="14" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="6703.71622103469" hpRegen="17" mp="1475.0" mpRegen="3" />
 			<attack physical="386.51" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3181,7 +3181,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- rhand: Dark Legion's Edge lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="54887" sp="3398" />
+		<acquire exp="54887" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="6656.85971425381" hpRegen="17" mp="1507.8" mpRegen="3" />
 			<attack physical="397.12" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3245,7 +3245,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- rhand: Keshanberk lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="57169" sp="4028" />
+		<acquire exp="57169" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="8619.06371275888" hpRegen="17" mp="1574.0" mpRegen="3" />
 			<attack physical="428.243" magical="146.209" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3310,7 +3310,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4327" sp="333" />
+		<acquire exp="4327" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3374,7 +3374,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- rhand: Meteor Shower lhand: Monster Only (Shield of Silenos) -->
-		<acquire exp="56348" sp="4122" />
+		<acquire exp="56348" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="8619.06371275888" hpRegen="17" mp="1607.4" mpRegen="3" />
 			<attack physical="445.25" magical="152.024" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3439,7 +3439,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4327" sp="333" />
+		<acquire exp="4327" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3505,7 +3505,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- rhand: Monster Only(Silenos Shaman) -->
-		<acquire exp="4327" sp="346" />
+		<acquire exp="4327" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3561,7 +3561,7 @@
 	<npc id="18660" level="75" type="L2Monster" name="Latana">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="680737" sp="4067" />
+		<acquire exp="680737" sp="163" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="60325.8102951336" hpRegen="17" mp="1251.0" mpRegen="2.7" />
 			<attack physical="4768.26" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3596,7 +3596,7 @@
 	<npc id="18661" level="75" type="L2Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="12129" sp="614" />
+		<acquire exp="12129" sp="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3631,7 +3631,7 @@
 	<npc id="18662" level="73" type="L2Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="11491" sp="300" />
+		<acquire exp="11491" sp="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
