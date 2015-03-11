@@ -1028,6 +1028,13 @@ INSERT INTO `teleport` VALUES
 ('Monastic Fortress -> Ice Merchant Cabin',20179,113903,-108752,-860,500,0,57), -- retail
 ('Monastic Fortress -> Shyeed\'s Cavern',20180,76911,-55295,-5824,500,0,57); -- retail
 
+-- Ye Sagira
+INSERT INTO `teleport` VALUES
+('Ye Sagira Explorarion Observatory -> The 1st Exploration Zone',3318001,-115005,237383,-3088,0,0,57),
+('Ye Sagira Explorarion Observatory -> Exit to the East',3318101,-109294,237397,-2928,0,0,57),
+('Ye Sagira Explorarion Observatory -> Exit to the West',3318102,-122189,241009,-2328,0,0,57),
+('Ye Sagira Explorarion Observatory -> Return to town',3318103,-114413,252159,-1592,0,0,57);
+
 -- Reliquary of the Giants
 INSERT INTO `teleport` VALUES ('Reliquary of the Giants', 3334401, -114562, 227307, -2864, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('Reliquary of the Giants -> Talking Island', 3320501, -112529, 256741, -1456, 0, 0, 57);
