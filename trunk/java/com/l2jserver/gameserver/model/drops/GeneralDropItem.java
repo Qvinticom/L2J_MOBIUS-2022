@@ -264,21 +264,13 @@ public class GeneralDropItem implements IDropItem
 		}
 		
 		final double chance = getChance(victim, killer);
-		int successes;
-		if (!Config.L2JMOD_OLD_DROP_BEHAVIOR)
-		{
-			successes = chance > (Rnd.nextDouble() * 100) ? 1 : 0;
-		}
-		else
-		{
-			successes = (int) (chance / 100);
-			successes += (chance % 100) > (Rnd.nextDouble() * 100) ? 1 : 0;
-		}
-		
-		if (successes > 0)
+		final boolean successes = chance > (Rnd.nextDouble() * 100);
+		if (successes)
 		{
 			final Collection<ItemHolder> items = new ArrayList<>(1);
-			items.add(new ItemHolder(getItemId(), Rnd.get(getMin(victim, killer), getMax(victim, killer)) * successes));
+			final long baseDropCount = Rnd.get(getMin(victim, killer), getMax(victim, killer));
+			final long finaldropCount = (long) (Config.L2JMOD_OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + (chance > 100 ? (chance % 100) > (Rnd.nextDouble() * 100) ? baseDropCount : 0 : 0) : baseDropCount);
+			items.add(new ItemHolder(getItemId(), finaldropCount));
 			return items;
 		}
 		

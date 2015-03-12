@@ -126,28 +126,24 @@ public class GroupedGeneralDropItem implements IDropItem
 		}
 		
 		final double chance = getChance(victim, killer) * chanceModifier;
-		int successes;
-		if (!Config.L2JMOD_OLD_DROP_BEHAVIOR)
-		{
-			successes = chance > (Rnd.nextDouble() * 100) ? 1 : 0;
-		}
-		else
-		{
-			successes = (int) (chance / 100);
-			successes += (chance % 100) > (Rnd.nextDouble() * 100) ? 1 : 0;
-		}
+		final boolean successes = chance > (Rnd.nextDouble() * 100);
 		
-		double totalChance = 0;
-		final double random = (Rnd.nextDouble() * 100);
-		for (GeneralDropItem item : getItems())
+		if (successes)
 		{
-			// Grouped item chance rates should not be modified.
-			totalChance += item.getChance();
-			if (totalChance > random)
+			double totalChance = 0;
+			final double random = (Rnd.nextDouble() * 100);
+			for (GeneralDropItem item : getItems())
 			{
-				final Collection<ItemHolder> items = new ArrayList<>(1);
-				items.add(new ItemHolder(item.getItemId(), Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer)) * successes));
-				return items;
+				// Grouped item chance rates should not be modified.
+				totalChance += item.getChance();
+				if (totalChance > random)
+				{
+					final Collection<ItemHolder> items = new ArrayList<>(1);
+					final long baseDropCount = Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer));
+					final long finaldropCount = (long) (Config.L2JMOD_OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + (chance > 100 ? (chance % 100) > (Rnd.nextDouble() * 100) ? baseDropCount : 0 : 0) : baseDropCount);
+					items.add(new ItemHolder(item.getItemId(), finaldropCount));
+					return items;
+				}
 			}
 		}
 		
