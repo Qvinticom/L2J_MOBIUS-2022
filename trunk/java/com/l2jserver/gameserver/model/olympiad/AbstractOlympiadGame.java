@@ -410,7 +410,7 @@ public abstract class AbstractOlympiadGame
 		{
 			return;
 		}
-		
+		player.setIsPendingRevive(false);
 		player.setInstanceId(0);
 		player.teleToLocation(loc);
 		player.unsetLastLocation();

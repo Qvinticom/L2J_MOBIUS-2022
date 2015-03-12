@@ -621,7 +621,7 @@ public interface IXmlReader
 	 * Simple XML error handler.
 	 * @author Zoey76
 	 */
-	class XMLErrorHandler implements ErrorHandler
+	static class XMLErrorHandler implements ErrorHandler
 	{
 		@Override
 		public void warning(SAXParseException e) throws SAXParseException
