@@ -140,7 +140,7 @@ public class Q10742_AFurryFriend extends Quest
 					}
 					else
 					{
-						final L2Npc leira = (L2Npc) npc.getKnownList().getKnownCharactersInRadius(100).stream().filter(n -> (n.getId() == LEIRA)).findFirst().orElse(null);
+						final L2Npc leira = (L2Npc) npc.getKnownList().getKnownCharactersInRadius(300).stream().filter(n -> (n.getId() == LEIRA)).findFirst().orElse(null);
 						if (leira != null)
 						{
 							qs.setCond(2, true);
