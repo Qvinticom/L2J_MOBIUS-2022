@@ -72,6 +72,21 @@
 		<!-- Dualsword that contains the power of a Duelist. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -83,6 +98,21 @@
 		<!-- Spear that contains the power of a Dreadnought. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_eigelus_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -94,6 +124,21 @@
 		<!-- Sword that contains the power of a Phoenix Knight. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -105,6 +150,21 @@
 		<!-- Sword that contains the power of a Hell Knight. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -116,6 +176,23 @@
 		<!-- Bow that contains the power of a Sagittarius. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -127,6 +204,21 @@
 		<!-- Dual daggers that contains the power of an Adventurer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -138,6 +230,21 @@
 		<!-- Sword that contains the power of an Archmage. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="BRONZE" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -149,6 +256,21 @@
 		<!-- Sword that contains the power of a Soultaker. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="BRONZE" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -160,6 +282,21 @@
 		<!-- Blunt Weapon that contains the power of an Arcana Lord. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -172,6 +309,21 @@
 		<!-- Staff that contains the power of a Cardinal. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcorda_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="CRYSTAL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -184,6 +336,21 @@
 		<!-- Staff that contains the power of a Hierophant. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcorda_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="CRYSTAL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -196,6 +363,21 @@
 		<!-- Sword that contains the power of an Eva's Templar. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -207,6 +389,21 @@
 		<!-- Sword that contains the power of a Sword Muse. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -218,6 +415,21 @@
 		<!-- Dagger that contains the power of a Wind Rider. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_radice_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -229,6 +441,23 @@
 		<!-- Bow that contains the power of a Moonlight Sentinel. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -240,6 +469,21 @@
 		<!-- Sword that contains the power of a Mystic Muse. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="BRONZE" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -251,6 +495,21 @@
 		<!-- Blunt Weapon that contains the power of an Elemental Master. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -263,6 +522,21 @@
 		<!-- Blunt Weapon that contains the power of an Eva's Saint. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -275,6 +549,21 @@
 		<!-- Sword that contains the power of a Shillien Templar. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -286,6 +575,21 @@
 		<!-- Dualsword that contains the power of a Spectral Dancer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -297,6 +601,21 @@
 		<!-- Dagger that contains the power of a Ghost Hunter. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_radice_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -308,6 +627,23 @@
 		<!-- Bow that contains the power of a Ghost Sentinel. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -319,6 +655,21 @@
 		<!-- Sword that contains the power of a Storm Screamer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="BRONZE" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -330,6 +681,21 @@
 		<!-- Sword that contains the power of a Spectral Master. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="BRONZE" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -341,6 +707,21 @@
 		<!-- Blunt Weapon that contains the power of a Shillien Saint. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="WOOD" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -353,6 +734,21 @@
 		<!-- Two-handed Sword that contains the power of a Titan. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_spigel_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -364,6 +760,21 @@
 		<!-- Fist Weapon that contains the power of a Grand Khavatari. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="material" val="LEATHER" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -376,6 +787,21 @@
 		<!-- Sword that contains the power of a Dominator. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2902" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -387,6 +813,19 @@
 		<!-- Dualsword that contains the power of a Doomcryer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -398,6 +837,19 @@
 		<!-- Dagger that contains the power of a Fortune Seeker. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_radice_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="false" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
@@ -409,6 +861,14 @@
 		<!-- Staff with sealed power of a Maestro. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcorda_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="CRYSTAL" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="6" />
 		<for>
 			<add stat="pAtk" val="30.0" />
 			<add stat="mAtk" val="30.0" />
