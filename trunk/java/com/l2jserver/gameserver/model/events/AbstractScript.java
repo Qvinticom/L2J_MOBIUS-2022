@@ -2013,7 +2013,7 @@ public abstract class AbstractScript implements INamable
 	 * @param count the amount of Adena to give
 	 * @param applyRates if {@code true} quest rates will be applied to the amount
 	 */
-	public void giveAdena(L2PcInstance player, long count, boolean applyRates)
+	public static void giveAdena(L2PcInstance player, long count, boolean applyRates)
 	{
 		if (applyRates)
 		{

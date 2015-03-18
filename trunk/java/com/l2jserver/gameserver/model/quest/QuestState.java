@@ -38,7 +38,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.AbstractScript;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -707,7 +706,7 @@ public final class QuestState
 	 */
 	public void giveAdena(long count, boolean applyRates)
 	{
-		giveItems(Inventory.ADENA_ID, count, applyRates ? 0 : 1);
+		AbstractScript.giveAdena(_player, count, applyRates);
 	}
 	
 	/**
