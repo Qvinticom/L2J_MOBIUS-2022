@@ -2,6 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<!-- Feoh Storm Screamer -->
 	<skillTree type="classSkillTree" classId="169" parentClassId="110">
+		<!-- Expertise Skills -->
+		<skill skillName="Expertise S80" skillId="239" skillLvl="6" getLevel="80" autoGet="true" />
+		<skill skillName="Expertise S84" skillId="239" skillLvl="7" getLevel="84" autoGet="true" />
+		<skill skillName="Expertise R" skillId="239" skillLvl="8" getLevel="85" autoGet="true" />
+		<skill skillName="Expertise R95" skillId="239" skillLvl="9" getLevel="95" autoGet="true" />
+		<skill skillName="Expertise R99" skillId="239" skillLvl="10" getLevel="99" autoGet="true" />
+		
 		<skill skillName="Feoh Aura" skillId="1935" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Hell Binding" skillId="11050" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1069" />
