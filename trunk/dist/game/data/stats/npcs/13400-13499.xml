@@ -1,119 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13400" level="1" type="L2Npc" name="High Quality Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="13401" level="1" type="L2Npc" name="Defective Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="13402" level="1" type="L2Npc" name="King Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="13403" level="1" type="L2Npc" name="Young Large Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="13404" level="1" type="L2Npc" name="High Quality Large Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="13405" level="1" type="L2Npc" name="Defective Large Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="13406" level="1" type="L2Npc" name="Emperor Wintermelon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="68" hpRegen="7.5" mp="68" mpRegen="2.7" />
+			<attack physical="8" magical="6" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35" magical="33" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4416" level="19" />
+			<skill id="4414" level="3" />
+			<skill id="4045" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

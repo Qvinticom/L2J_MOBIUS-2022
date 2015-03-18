@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="36700" level="75" type="L2Npc" name="Dimensional Emissary" title="Oren">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2779" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -18,15 +23,20 @@
 		</collision>
 	</npc>
 	<npc id="36701" level="75" type="L2Npc" name="Dimensional Emissary" title="Aden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2779" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -35,15 +45,20 @@
 		</collision>
 	</npc>
 	<npc id="36702" level="75" type="L2Npc" name="Dimensional Emissary" title="Innadril">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2779" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -52,15 +67,20 @@
 		</collision>
 	</npc>
 	<npc id="36703" level="75" type="L2Npc" name="Dimensional Emissary" title="Goddard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2779" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -69,15 +89,20 @@
 		</collision>
 	</npc>
 	<npc id="36704" level="75" type="L2Npc" name="Dimensional Emissary" title="Rune">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2779" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -86,15 +111,20 @@
 		</collision>
 	</npc>
 	<npc id="36705" level="75" type="L2Npc" name="Dimensional Emissary" title="Schuttgart">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2779" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -103,15 +133,20 @@
 		</collision>
 	</npc>
 	<npc id="36706" level="75" type="L2Npc" name="Mermoden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4630" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="1564" magical="958" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="468" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>

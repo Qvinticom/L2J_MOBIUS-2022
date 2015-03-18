@@ -1785,15 +1785,20 @@
 		</collision>
 	</npc>
 	<npc id="159" level="1" type="L2Npc" name="Tame Princess Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1802,15 +1807,20 @@
 		</collision>
 	</npc>
 	<npc id="160" level="1" type="L2Npc" name="Black Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1819,15 +1829,20 @@
 		</collision>
 	</npc>
 	<npc id="161" level="1" type="L2Npc" name="Halloween Witch's Broomstick">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>

@@ -2893,632 +2893,1668 @@
 		</collision>
 	</npc>
 	<npc id="22863" level="88" type="L2Monster" name="Fairy Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="41546" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="569701" sp="2264" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="792" magical="960" />
+			<attribute>
+				<defence fire="175" water="200" wind="223" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="3" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<ai aggroRange="400" clanHelpRange="400" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="809" max="1889" chance="70" />
+				<item id="36517" min="1" max="1" chance="4.60509" />
+				<item id="36518" min="1" max="1" chance="1.05095" />
+				<item id="36826" min="1" max="1" chance="0.36364" />
+				<item id="17527" min="1" max="1" chance="0.01273" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="47.03" />
+				<item id="36518" min="1" max="1" chance="8.969" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22864" level="90" type="L2Monster" name="Fairy Warrior" title="Wicked">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="96096" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1211505" sp="4933" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
+			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1040" magical="1250" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="3" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1198" max="2790" chance="70" />
+				<item id="36517" min="1" max="1" chance="5.68057" />
+				<item id="17374" min="1" max="1" chance="5.04939" />
+				<item id="36518" min="1" max="1" chance="1.427" />
+				<item id="36826" min="1" max="1" chance="0.41152" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="68.14" />
+				<item id="36518" min="1" max="1" chance="13.59" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22865" level="89" type="L2Monster" name="Fairy Warrior" title="Mature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="71688" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="892271" sp="3593" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="816" magical="980" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="3" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1036" max="2414" chance="70" />
+				<item id="36517" min="1" max="1" chance="7.39336" />
+				<item id="36518" min="1" max="1" chance="0.56818" />
+				<item id="36826" min="1" max="1" chance="0.28409" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="59.87" />
+				<item id="36518" min="1" max="1" chance="11.67" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22866" level="89" type="L2Monster" name="Fairy Warrior" title="Imperfect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="47792" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="643256" sp="2590" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="816" magical="980" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="3" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="875" max="2042" chance="70" />
+				<item id="36517" min="1" max="1" chance="6.41269" />
+				<item id="36518" min="1" max="1" chance="0.88496" />
+				<item id="36826" min="1" max="1" chance="0.31746" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="48.74" />
+				<item id="36518" min="1" max="1" chance="9.69699" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22867" level="91" type="L2Monster" name="Fairy Warrior" title="Violent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="73367" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="998082" sp="4105" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1458" magical="1275" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="4" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1094" max="2553" chance="70" />
+				<item id="36517" min="1" max="1" chance="6.39882" />
+				<item id="36518" min="1" max="1" chance="1.35355" />
+				<item id="36826" min="1" max="1" chance="0.55556" />
+				<item id="17527" min="1" max="1" chance="0.03848" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="60.89" />
+				<item id="36518" min="1" max="1" chance="12.25" />
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="22868" level="93" type="L2Npc" name="Fairy Warrior" title="Brutal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="150172" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="22868" level="93" type="L2Monster" name="Fairy Warrior" title="Brutal">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="2045722" sp="8596" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
+			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1513" magical="1458" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="4" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1542" max="3589" chance="70" />
+				<item id="17374" min="1" max="1" chance="10.1486" />
+				<item id="36517" min="1" max="1" chance="7.45913" />
+				<item id="36518" min="1" max="1" chance="1.39673" />
+				<item id="36826" min="1" max="1" chance="1" />
+				<item id="30425" min="1" max="1" chance="0.03" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="90.755" />
+				<item id="36518" min="1" max="1" chance="16.87" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22869" level="92" type="L2Monster" name="Fairy Warrior" title="Fully Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="122945" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1741611" sp="7250" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1485" magical="1430" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="4" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1402" max="3254" chance="70" />
+				<item id="36517" min="1" max="1" chance="9.79166" />
+				<item id="36826" min="1" max="1" chance="1.66666" />
+				<item id="36518" min="1" max="1" chance="1.25" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="81.16" />
+				<item id="36518" min="1" max="1" chance="15.06" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22870" level="92" type="L2Monster" name="Fairy Warrior" title="Slightly Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="98356" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1287461" sp="5360" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1485" magical="1300" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14040" level="4" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1265" max="2950" chance="70" />
+				<item id="36517" min="1" max="1" chance="6.15268" />
+				<item id="36518" min="1" max="1" chance="1.05474" />
+				<item id="36826" min="1" max="1" chance="0.54054" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="36764" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="70.28" />
+				<item id="36518" min="1" max="1" chance="13.39" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22871" level="88" type="L2Monster" name="Fairy Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="41546" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="569701" sp="2264" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="792" magical="960" />
+			<attribute>
+				<defence fire="175" water="200" wind="223" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<ai aggroRange="400" clanHelpRange="400" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="809" max="1889" chance="70" />
+				<item id="36843" min="1" max="1" chance="1.15633" />
+				<item id="36781" min="1" max="1" chance="0.02613" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22872" level="90" type="L2Monster" name="Fairy Rogue" title="Wicked">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="96096" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1211505" sp="4933" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
+			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1040" magical="1250" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1197" max="2790" chance="70" />
+				<item id="17374" min="1" max="1" chance="5.09175" />
+				<item id="36843" min="1" max="1" chance="1.75756" />
+				<item id="36781" min="1" max="1" chance="0.03" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22873" level="89" type="L2Monster" name="Fairy Rogue" title="Mature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="71688" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="892271" sp="3593" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="816" magical="980" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1038" max="2413" chance="70" />
+				<item id="36843" min="1" max="1" chance="1.12244" />
+				<item id="9547" min="1" max="1" chance="0.10204" />
+				<item id="36781" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22874" level="89" type="L2Monster" name="Fairy Rogue" title="Imperfect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="47792" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="643256" sp="2590" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="816" magical="980" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="875" max="2043" chance="70" />
+				<item id="36843" min="1" max="1" chance="1.15495" />
+				<item id="36781" min="1" max="1" chance="0.03" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22875" level="91" type="L2Monster" name="Fairy Rogue" title="Violent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="73367" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="998082" sp="4105" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1060" magical="1275" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1094" max="2553" chance="70" />
+				<item id="36843" min="1" max="1" chance="1.42452" />
+				<item id="36781" min="1" max="1" chance="0.02717" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22876" level="93" type="L2Monster" name="Fairy Rogue" title="Brutal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="150172" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="2045722" sp="8596" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
+			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1513" magical="1458" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1541" max="3589" chance="70" />
+				<item id="17374" min="1" max="1" chance="9.87948" />
+				<item id="36843" min="1" max="1" chance="2.38059" />
+				<item id="9548" min="1" max="1" chance="0.14881" />
+				<item id="36781" min="1" max="1" chance="0.03" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.07502" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22877" level="92" type="L2Monster" name="Fairy Rogue" title="Fully Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="122945" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1741611" sp="7250" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1485" magical="1430" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1399" max="3235" chance="70" />
+				<item id="36843" min="1" max="1" chance="1.03305" />
+				<item id="17527" min="1" max="1" chance="0.07502" />
+				<item id="36781" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22878" level="92" type="L2Monster" name="Fairy Rogue" title="Slightly Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="98356" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1287461" sp="5360" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1080" magical="1300" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1265" max="2950" chance="70" />
+				<item id="36843" min="1" max="1" chance="1.61106" />
+				<item id="36781" min="1" max="1" chance="0.02537" />
+				<item id="17527" min="1" max="1" chance="0.02537" />
+			</death>
+			<corpse>
+				<item id="17526" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22879" level="88" type="L2Monster" name="Fairy Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="41546" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="569701" sp="2264" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1188" magical="960" />
+			<attribute>
+				<defence fire="175" water="200" wind="223" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="2" />
+			<skill id="4414" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="809" max="1889" chance="70" />
+				<item id="36517" min="1" max="1" chance="4.74785" />
+				<item id="36518" min="1" max="1" chance="0.9434" />
+				<item id="36825" min="1" max="1" chance="0.37037" />
+				<item id="17527" min="1" max="1" chance="0.01372" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="29.26" />
+				<item id="36518" min="1" max="1" chance="5.963" />
+				<item id="17527" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22880" level="90" type="L2Monster" name="Fairy Knight" title="Wicked">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="96096" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1211505" sp="4933" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
+			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1560" magical="1250" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="14040" level="2" />
+			<skill id="4414" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1197" max="2790" chance="70" />
+				<item id="36517" min="1" max="1" chance="6.91673" />
+				<item id="17374" min="1" max="1" chance="5.02793" />
+				<item id="36518" min="1" max="1" chance="1.72918" />
+				<item id="36825" min="1" max="1" chance="0.8" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="44.91" />
+				<item id="36518" min="1" max="1" chance="8.75" />
+				<item id="17527" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22881" level="89" type="L2Monster" name="Fairy Knight" title="Mature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="71688" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="892271" sp="3593" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1224" magical="980" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="2" />
+			<skill id="4414" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1038" max="2412" chance="70" />
+				<item id="36517" min="1" max="1" chance="5.69715" />
+				<item id="36518" min="1" max="1" chance="1.64917" />
+				<item id="36825" min="1" max="1" chance="0.2994" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="39.08" />
+				<item id="36518" min="1" max="1" chance="7.542" />
+				<item id="17527" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22882" level="89" type="L2Monster" name="Fairy Knight" title="Imperfect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="47792" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="643256" sp="2590" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1224" magical="980" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="2" />
+			<skill id="4414" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="876" max="2043" chance="70" />
+				<item id="36517" min="1" max="1" chance="5.20868" />
+				<item id="36518" min="1" max="1" chance="0.9009" />
+				<item id="36825" min="1" max="1" chance="0.4" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="34.52" />
+				<item id="36518" min="1" max="1" chance="6.387" />
+				<item id="17527" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22883" level="91" type="L2Monster" name="Fairy Knight" title="Violent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="73367" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="998082" sp="4105" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="689" magical="1275" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="5" />
+			<!-- <skill id="4412" level="4" /> -->
+			<skill id="4414" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1094" max="2553" chance="70" />
+				<item id="36517" min="1" max="1" chance="8.4129" />
+				<item id="36518" min="1" max="1" chance="1.56551" />
+				<item id="36825" min="1" max="1" chance="0.48077" />
+				<item id="36763" min="1" max="1" chance="0.00918" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="62.94" />
+				<item id="36518" min="1" max="1" chance="12.64" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22884" level="93" type="L2Monster" name="Fairy Knight" title="Brutal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="150172" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="2045722" sp="8596" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
+			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1513" magical="1458" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="14040" level="5" />
+			<skill id="4414" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1540" max="3589" chance="70" />
+				<item id="17374" min="1" max="1" chance="10.5921" />
+				<item id="36517" min="1" max="1" chance="7.25974" />
+				<item id="36518" min="1" max="1" chance="1.11573" />
+				<item id="36825" min="1" max="1" chance="0.72993" />
+				<item id="9549" min="1" max="1" chance="0.05949" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="90.18" />
+				<item id="36518" min="1" max="1" chance="17.27" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22885" level="92" type="L2Monster" name="Fairy Knight" title="Fully Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="122945" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1741611" sp="7250" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1485" magical="1430" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="5" />
+			<skill id="4414" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1446" max="3242" chance="70" />
+				<item id="36517" min="1" max="1" chance="8.2725" />
+				<item id="36825" min="1" max="1" chance="1.45985" />
+				<item id="36518" min="1" max="1" chance="0.72993" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="53.34" />
+				<item id="36518" min="1" max="1" chance="9.9" />
+				<item id="17527" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22886" level="92" type="L2Monster" name="Fairy Knight" title="Slightly Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="98356" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="1287461" sp="5360" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="702" magical="1300" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="5" />
+			<!-- <skill id="4412" level="4" /> -->
+			<skill id="4414" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4416" level="13" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1265" max="2950" chance="70" />
+				<item id="36517" min="1" max="1" chance="7.82945" />
+				<item id="36518" min="1" max="1" chance="1.58914" />
+				<item id="36825" min="1" max="1" chance="0.64516" />
+				<item id="17527" min="1" max="1" chance="0.03874" />
+				<item id="36763" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36517" min="1" max="1" chance="49.07" />
+				<item id="36518" min="1" max="1" chance="9.251" />
+				<item id="17527" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22887" level="88" type="L2Monster" name="Satyr Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="41546" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="569701" sp="2264" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="960" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="2" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="2" />
+			<skill id="14048" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="830" max="1940" chance="70" />
+				<item id="36835" min="1" max="1" chance="0.37736" />
+				<item id="36860" min="1" max="1" chance="0.03" />
+				<item id="36773" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10.83" />
+				<item id="36533" min="1" max="1" chance="2.003" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22888" level="90" type="L2Monster" name="Satyr Wizard" title="Wicked">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="96096" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1211505" sp="4933" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
+			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="2" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14046" level="2" />
+			<skill id="14048" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1218" max="2834" chance="70" />
+				<item id="17374" min="1" max="1" chance="5.26595" />
+				<item id="36835" min="1" max="1" chance="0.47847" />
+				<item id="17527" min="1" max="1" chance="0.07502" />
+				<item id="36773" min="1" max="1" chance="0.0055" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="14.72" />
+				<item id="36533" min="1" max="1" chance="2.972" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22889" level="89" type="L2Monster" name="Satyr Wizard" title="Mature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="71688" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="892271" sp="3593" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1020" magical="980" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="2" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="2" />
+			<skill id="14048" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1056" max="2445" chance="70" />
+				<item id="36835" min="1" max="1" chance="0.9901" />
+				<item id="9548" min="1" max="1" chance="0.3003" />
+				<item id="36773" min="1" max="1" chance="0.0055" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12.79" />
+				<item id="36533" min="1" max="1" chance="2.602" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22890" level="89" type="L2Monster" name="Satyr Wizard" title="Imperfect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="47792" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="643256" sp="2590" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1020" magical="980" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="2" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="2" />
+			<skill id="14048" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="893" max="2085" chance="70" />
+				<item id="36835" min="1" max="1" chance="0.38911" />
+				<item id="9546" min="1" max="1" chance="0.17668" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="36773" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10.88" />
+				<item id="36533" min="1" max="1" chance="2.178" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22891" level="91" type="L2Monster" name="Satyr Wizard" title="Violent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="73367" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="998082" sp="4105" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1325" magical="1403" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="3" />
+			<skill id="14048" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1106" max="2580" chance="70" />
+				<item id="36835" min="1" max="1" chance="0.5988" />
+				<item id="17527" min="1" max="1" chance="0.04105" />
+				<item id="36773" min="1" max="1" chance="0.00821" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="13.93" />
+				<item id="36533" min="1" max="1" chance="2.641" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22892" level="93" type="L2Monster" name="Satyr Wizard" title="Brutal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="150172" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="2045722" sp="8596" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
+			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1513" magical="1458" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14046" level="3" />
+			<skill id="14048" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1542" max="3591" chance="70" />
+				<item id="17374" min="1" max="1" chance="10.989" />
+				<item id="36835" min="1" max="1" chance="0.64103" />
+				<item id="9550" min="1" max="1" chance="0.15267" />
+				<item id="36773" min="1" max="1" chance="0.0055" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="19.89" />
+				<item id="36533" min="1" max="1" chance="3.708" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22893" level="92" type="L2Monster" name="Satyr Wizard" title="Fully Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="122945" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1741611" sp="7250" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1485" magical="1430" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="3" />
+			<skill id="14048" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1410" max="3267" chance="70" />
+				<item id="36835" min="1" max="1" chance="0.22075" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="36773" min="1" max="1" chance="0.0055" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="18.07" />
+				<item id="36533" min="1" max="1" chance="3.425" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22894" level="92" type="L2Monster" name="Satyr Wizard" title="Slightly Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="98356" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1287461" sp="5360" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
+			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1350" magical="1430" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="3" />
+			<skill id="14048" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1272" max="2967" chance="70" />
+				<item id="36835" min="1" max="1" chance="0.5618" />
+				<item id="17527" min="1" max="1" chance="0.0256" />
+				<item id="36773" min="1" max="1" chance="0.0055" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.23" />
+				<item id="36533" min="1" max="1" chance="3.076" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22895" level="88" type="L2Monster" name="Satyr Summoner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="41546" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="569701" sp="2264" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="960" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14047" level="3" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="830" max="1940" chance="70" />
+				<item id="36834" min="1" max="1" chance="0.22124" />
+				<item id="17527" min="1" max="1" chance="0.02684" />
+				<item id="36772" min="1" max="1" chance="0.003" />
+				<item id="17333" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22896" level="90" type="L2Monster" name="Satyr Summoner" title="Wicked">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="96096" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1211505" sp="4933" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
+			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14047" level="3" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1217" max="2834" chance="70" />
+				<item id="17374" min="1" max="1" chance="5.1315" />
+				<item id="36834" min="1" max="1" chance="0.3125" />
+				<item id="36772" min="1" max="1" chance="0.0055" />
+				<item id="36907" min="1" max="1" chance="0.003" />
+				<item id="17333" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22897" level="89" type="L2Monster" name="Satyr Summoner" title="Mature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="71688" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="892271" sp="3593" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1020" magical="980" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14047" level="3" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1055" max="2463" chance="70" />
+				<item id="36834" min="1" max="1" chance="0.3003" />
+				<item id="36772" min="1" max="1" chance="0.0055" />
+				<item id="17333" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22898" level="89" type="L2Monster" name="Satyr Summoner" title="Imperfect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="47792" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="643256" sp="2590" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1020" magical="980" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="3" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14047" level="3" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="893" max="2085" chance="70" />
+				<item id="36834" min="1" max="1" chance="0.1385" />
+				<item id="9550" min="1" max="1" chance="0.03465" />
+				<item id="36772" min="1" max="1" chance="0.003" />
+				<item id="17333" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22899" level="91" type="L2Monster" name="Satyr Summoner" title="Violent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="73367" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="998082" sp="4105" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1325" magical="1275" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="4" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14047" level="4" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1106" max="2580" chance="70" />
+				<item id="36834" min="1" max="1" chance="0.20367" />
+				<item id="17527" min="1" max="1" chance="0.0382" />
+				<item id="36772" min="1" max="1" chance="0.01273" />
+				<item id="17333" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
 	</npc>
 </list>

@@ -145,15 +145,20 @@
 		</collision>
 	</npc>
 	<npc id="1606" level="55" type="L2Npc" name="Valakas1">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -162,15 +167,20 @@
 		</collision>
 	</npc>
 	<npc id="1607" level="55" type="L2Npc" name="Valakas2">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -179,15 +189,20 @@
 		</collision>
 	</npc>
 	<npc id="1608" level="55" type="L2Npc" name="Valakas3">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -196,15 +211,20 @@
 		</collision>
 	</npc>
 	<npc id="1609" level="55" type="L2Npc" name="Valakas4">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -213,15 +233,20 @@
 		</collision>
 	</npc>
 	<npc id="1610" level="55" type="L2Npc" name="Valakas5">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -230,15 +255,20 @@
 		</collision>
 	</npc>
 	<npc id="1611" level="55" type="L2Npc" name="Valakas6">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -247,15 +277,20 @@
 		</collision>
 	</npc>
 	<npc id="1612" level="55" type="L2Npc" name="Valakas7">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="186" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>

@@ -3760,15 +3760,20 @@
 		</collision>
 	</npc>
 	<npc id="13299" level="55" type="L2Npc" name="Orbis' Curse">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1738" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="5193" hpRegen="7.5" mp="5193" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>

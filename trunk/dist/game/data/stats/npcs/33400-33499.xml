@@ -1,675 +1,996 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="33400" level="85" type="L2Npc" name="Powerful Bow/Crossbow Sharpshooters" title="Yul Archer Awakening">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="50" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33401" level="85" type="L2Npc" name="Powerful Magic Damage Dealer" title="Feoh Wizard Awakening">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="50" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33402" level="85" type="L2Npc" name="Powerful Magic Buffer" title="Iss Enchanter Awakening">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="50" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33403" level="85" type="L2Npc" name="Powerful Magic Summoner" title="Wynn Summoner Awakening">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="50" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33404" level="85" type="L2Npc" name="Powerful Magic Healer" title="Aeore Healer Awakening">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="50" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33405" level="85" type="L2Npc" name="Rotating Dimensional Door">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="50" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33406" level="85" type="L2Npc" name="Rieyi">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DARK_ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33407" level="85" type="L2Npc" name="Quartermaster" title="Aden Vanguard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="64" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33408" level="85" type="L2Npc" name="Backup Soldier" title="Aden Vanguard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" talkable="false" targetable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33409" level="85" type="L2Npc" name="Backup Soldier" title="Aden Vanguard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" talkable="false" targetable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33410" level="85" type="L2Npc" name="Summoner Riera" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33411" level="85" type="L2Npc" name="Guardian Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELEMENTAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="250" earth="135" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="7" />
+			<skill id="888" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33412" level="85" type="L2Npc" name="Guardian Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELEMENTAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="250" earth="135" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="7" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33413" level="85" type="L2Npc" name="Guardian Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELEMENTAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="250" earth="135" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="7" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33414" level="76" type="L2Npc" name="Van Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4771" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
+			<attack physical="1615" magical="995" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="535" magical="434" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33415" level="76" type="L2Npc" name="Van Infantry">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4771" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
+			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="535" magical="434" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33416" level="85" type="L2Npc" name="Van Defense Wall">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33417" level="85" type="L2Npc" name="Perina" title="Auction House Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33418" level="85" type="L2Npc" name="Sarnya" title="Auction House Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33419" level="85" type="L2Npc" name="Josephina">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33420" level="85" type="L2Npc" name="Diania" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33421" level="85" type="L2Npc" name="Commando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33422" level="85" type="L2Npc" name="Commando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33423" level="85" type="L2Npc" name="Commando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33424" level="85" type="L2Npc" name="Commando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33425" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33426" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33427" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33428" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33429" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33430" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33431" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33432" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33433" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33434" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33435" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33436" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33437" level="85" type="L2Npc" name="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33438" level="85" type="L2Npc" name="Escape Device">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33439" level="97" type="L2Npc" name="Fellow" title="Antharas Expedition">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -678,15 +999,20 @@
 		</collision>
 	</npc>
 	<npc id="33440" level="97" type="L2Npc" name="Ateld" title="Antharas Expedition">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -695,15 +1021,20 @@
 		</collision>
 	</npc>
 	<npc id="33441" level="97" type="L2Npc" name="Paulia" title="Antharas Expedition">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -712,15 +1043,20 @@
 		</collision>
 	</npc>
 	<npc id="33442" level="97" type="L2Npc" name="Rash" title="Support Troop Lieutenant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -729,15 +1065,20 @@
 		</collision>
 	</npc>
 	<npc id="33443" level="97" type="L2Npc" name="Kale" title="Kingdom Delegate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -746,15 +1087,20 @@
 		</collision>
 	</npc>
 	<npc id="33444" level="97" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -763,15 +1109,20 @@
 		</collision>
 	</npc>
 	<npc id="33445" level="97" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -780,15 +1131,20 @@
 		</collision>
 	</npc>
 	<npc id="33446" level="97" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7915" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -797,151 +1153,221 @@
 		</collision>
 	</npc>
 	<npc id="33447" level="85" type="L2Npc" name="Gwendiel" title="Auction House Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33448" level="85" type="L2Npc" name="Atran">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33449" level="85" type="L2Npc" name="Chesha">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="36" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33450" level="85" type="L2Npc" name="Nagel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33451" level="85" type="L2Npc" name="Celin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="64" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33452" level="85" type="L2Npc" name="Walter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="63" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33453" level="85" type="L2Npc" name="Dep">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="64" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33454" level="85" type="L2Npc" name="Newbie Helper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="38" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+			<skill id="16025" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33455" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -950,15 +1376,20 @@
 		</collision>
 	</npc>
 	<npc id="33456" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -967,15 +1398,20 @@
 		</collision>
 	</npc>
 	<npc id="33457" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -984,15 +1420,20 @@
 		</collision>
 	</npc>
 	<npc id="33458" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1001,15 +1442,20 @@
 		</collision>
 	</npc>
 	<npc id="33459" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1018,691 +1464,1000 @@
 		</collision>
 	</npc>
 	<npc id="33460" level="85" type="L2Npc" name="Shuman" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" talkable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33461" level="85" type="L2Guard" name="Noah" title="Guard">
-		<!-- TODO: confirm me! -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>MALE</sex>
-		<equipment rhand="275" /> <!-- rhand: Long Bow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="341" magical="250" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" undying="false" talkable="false" />
 		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4416" level="14" />
 		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33462" level="85" type="L2Npc" name="Jonadan" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33463" level="85" type="L2Npc" name="Adventurer Helper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33464" level="85" type="L2Npc" name="Evain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="35" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33465" level="85" type="L2Npc" name="Dirkman" title="Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" talkable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33466" level="85" type="L2Npc" name="Sappharine" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33467" level="85" type="L2Npc" name="Meraldi" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33468" level="85" type="L2Npc" name="Altar of Sacrifice Controller">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33469" level="85" type="L2Npc" name="Altar of Sacrifice Controller">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33470" level="95" type="L2Npc" name="Controller">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7154" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33471" level="95" type="L2Npc" name="Controller">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7154" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33472" level="95" type="L2Npc" name="Controller">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7154" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33473" level="95" type="L2Npc" name="Controller">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7154" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33474" level="95" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="11922" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DARK_ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33475" level="95" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="11922" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DARK_ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33476" level="95" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="11922" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DARK_ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33477" level="85" type="L2Npc" name="Cellphine" title="Giant's Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="28" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33478" level="85" type="L2Npc" name="Ariel" title="Armor Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="15" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33479" level="85" type="L2Npc" name="Minaless" title="Accessory Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4396" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DARK_ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33480" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="39" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33481" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="39" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33482" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="39" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33483" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="39" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33484" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="39" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33485" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="39" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33486" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33487" level="85" type="L2Npc" name="Giant's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33488" level="85" type="L2Npc" name="Akram" title="Giant's Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="28" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33489" level="85" type="L2Npc" name="Large Verdant Wilds" title="Wisp's Favorite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33490" level="85" type="L2Npc" name="Trandon" title="Subclass/Dual Class Certificate Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DARK_ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33491" level="85" type="L2Npc" name="Raina" title="Subclass/Dual Class Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELF</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="30" />
 				<run ground="120" />
 			</speed>
+			<hit_time>398</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="15" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33492" level="85" type="L2Npc" name="Ravidoff" title="Giant's Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>KAMAEL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="28" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="25" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33493" level="85" type="L2Merchant" name="Raminya" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33494" level="85" type="L2Merchant" name="Ephesona" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33495" level="85" type="L2Merchant" name="Jyamis" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33496" level="85" type="L2Merchant" name="Diamis" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33497" level="85" type="L2Merchant" name="Leuna" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33498" level="85" type="L2Merchant" name="Dominie" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="33499" level="85" type="L2Merchant" name="Roepina" title="Mysterious Dye Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

@@ -4215,154 +4215,490 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29191" level="98" type="L2Npc" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="47211215" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="29191" level="98" type="L2Monster" name="Octavis">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="2732594106" sp="186080440" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="47211215" hpRegen="7.5" mp="47211215" mpRegen="2.7" />
+			<attack physical="450000" magical="300000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6000" magical="4000" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="300" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14726" level="1" />
+			<skill id="14285" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="29192" level="98" type="L2Npc" name="Octavis' Beast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2159243" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2159243" hpRegen="7.5" mp="2159243" mpRegen="2.7" />
+			<attack physical="250000" magical="150000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5500" magical="3500" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="300" />
 			</speed>
+			<hit_time>373</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="14023" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14024" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="29193" level="98" type="L2Npc" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="29579579" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="29193" level="98" type="L2Monster" name="Octavis">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="2788645860" sp="186080440" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="29579579" hpRegen="7.5" mp="29579579" mpRegen="2.7" />
+			<attack physical="600000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6000" magical="4000" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="180" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14027" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="14575" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="14026" level="1" />
+			<skill id="14726" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="29194" level="98" type="L2Npc" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="37360854" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="29194" level="98" type="L2Monster" name="Octavis">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="16629786992" sp="66519147" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="37360854" hpRegen="7.5" mp="37360854" mpRegen="2.7" />
+			<attack physical="800000" magical="600000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8000" magical="6000" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="180" />
 			</speed>
+			<hit_time>373</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14030" level="1" />
+			<skill id="14031" level="1" />
+			<skill id="14726" level="1" />
+			<skill id="14279" level="1" />
+			<skill id="14280" level="1" />
+			<skill id="14281" level="1" />
+		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="19447" min="1" max="1" chance="100" />
+				<item id="36288" min="1" max="1" chance="50" />
+				<item id="19444" min="1" max="1" chance="30" />
+				<item id="36289" min="1" max="1" chance="15" />
+				<item id="19462" min="1" max="1" chance="11.675" />
+				<item id="17747" min="1" max="1" chance="10" />
+				<item id="19445" min="1" max="1" chance="5" />
+				<item id="19457" min="1" max="1" chance="1.5" />
+				<item id="17405" min="1" max="1" chance="1.00001" />
+				<item id="17399" min="1" max="1" chance="1" />
+				<item id="17412" min="1" max="1" chance="1" />
+				<item id="17411" min="1" max="1" chance="1" />
+				<item id="17400" min="1" max="1" chance="1" />
+				<item id="17398" min="1" max="1" chance="1" />
+				<item id="17397" min="1" max="1" chance="1" />
+				<item id="17396" min="1" max="1" chance="1" />
+				<item id="19458" min="1" max="1" chance="1" />
+				<item id="17410" min="1" max="1" chance="1" />
+				<item id="17409" min="1" max="1" chance="1" />
+				<item id="17404" min="1" max="1" chance="1" />
+				<item id="17403" min="1" max="1" chance="1" />
+				<item id="17402" min="1" max="1" chance="1" />
+				<item id="17406" min="1" max="1" chance="1" />
+				<item id="17401" min="1" max="1" chance="1" />
+				<item id="17407" min="1" max="1" chance="1" />
+				<item id="17408" min="1" max="1" chance="1" />
+				<item id="19459" min="1" max="1" chance="0.6993" />
+				<item id="17392" min="1" max="1" chance="0.3003" />
+				<item id="17391" min="1" max="1" chance="0.3003" />
+				<item id="17390" min="1" max="1" chance="0.3003" />
+				<item id="17389" min="1" max="1" chance="0.3003" />
+				<item id="17388" min="1" max="1" chance="0.3003" />
+				<item id="17387" min="1" max="1" chance="0.3003" />
+				<item id="17386" min="1" max="1" chance="0.3003" />
+				<item id="17385" min="1" max="1" chance="0.3003" />
+				<item id="17383" min="1" max="1" chance="0.3003" />
+				<item id="17382" min="1" max="1" chance="0.3003" />
+				<item id="17384" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="29195" level="94" type="L2Npc" name="Istina" title="Queen of Annihilation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="40836019" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="29195" level="94" type="L2Monster" name="Istina" title="Queen of Annihilation">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<acquire exp="7840606928" sp="31362428" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="40836019" hpRegen="7.5" mp="40836019" mpRegen="2.7" />
+			<attack physical="341250" magical="243750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7000" magical="6750" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="190" />
 			</speed>
+			<hit_time>373</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5463" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14708" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="19448" min="1" max="1" chance="100" />
+				<item id="36285" min="1" max="1" chance="50" />
+				<item id="19444" min="1" max="1" chance="30" />
+				<item id="36286" min="1" max="1" chance="15" />
+				<item id="19456" min="1" max="1" chance="10" />
+				<item id="19445" min="1" max="1" chance="5" />
+				<item id="17352" min="1" max="1" chance="1.00001" />
+				<item id="17341" min="1" max="1" chance="1" />
+				<item id="17339" min="1" max="1" chance="1" />
+				<item id="17338" min="1" max="1" chance="1" />
+				<item id="17354" min="1" max="1" chance="1" />
+				<item id="17353" min="1" max="1" chance="1" />
+				<item id="17340" min="1" max="1" chance="1" />
+				<item id="17351" min="1" max="1" chance="1" />
+				<item id="17350" min="1" max="1" chance="1" />
+				<item id="17349" min="1" max="1" chance="1" />
+				<item id="17348" min="1" max="1" chance="1" />
+				<item id="17342" min="1" max="1" chance="1" />
+				<item id="17343" min="1" max="1" chance="1" />
+				<item id="17344" min="1" max="1" chance="1" />
+				<item id="17345" min="1" max="1" chance="1" />
+				<item id="17346" min="1" max="1" chance="1" />
+				<item id="17347" min="1" max="1" chance="1" />
+				<item id="17334" min="1" max="1" chance="0.5" />
+				<item id="17333" min="1" max="1" chance="0.5" />
+				<item id="17332" min="1" max="1" chance="0.5" />
+				<item id="17331" min="1" max="1" chance="0.5" />
+				<item id="17330" min="1" max="1" chance="0.5" />
+				<item id="17329" min="1" max="1" chance="0.5" />
+				<item id="17328" min="1" max="1" chance="0.5" />
+				<item id="17327" min="1" max="1" chance="0.5" />
+				<item id="17326" min="1" max="1" chance="0.5" />
+				<item id="17325" min="1" max="1" chance="0.5" />
+				<item id="17324" min="1" max="1" chance="0.5" />
+				<item id="19451" min="1" max="1" chance="0.5" />
+				<item id="19452" min="1" max="1" chance="0.4" />
+				<item id="19453" min="1" max="1" chance="0.33333" />
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="29196" level="99" type="L2Npc" name="Istina" title="Queen of Annihilation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="41029787" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="29196" level="99" type="L2Monster" name="Istina" title="Queen of Annihilation">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<acquire exp="11505119472" sp="46020504" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="41029787" hpRegen="7.5" mp="41029787" mpRegen="2.7" />
+			<attack physical="660000" magical="495000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13200" magical="13275" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="190" />
 			</speed>
+			<hit_time>373</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5463" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14709" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="19456" min="1" max="1" chance="70" />
+				<item id="36287" min="1" max="1" chance="55" />
+				<item id="19448" min="1" max="1" chance="35" />
+				<item id="36389" min="1" max="1" chance="35" />
+				<item id="36290" min="1" max="1" chance="30" />
+				<item id="36386" min="1" max="1" chance="15" />
+				<item id="18561" min="1" max="1" chance="15" />
+				<item id="18562" min="1" max="1" chance="15" />
+				<item id="19446" min="1" max="1" chance="15" />
+				<item id="18560" min="1" max="1" chance="15" />
+				<item id="19447" min="1" max="1" chance="15" />
+				<item id="17697" min="1" max="1" chance="9.00005" />
+				<item id="17698" min="1" max="1" chance="9" />
+				<item id="17699" min="1" max="1" chance="9" />
+				<item id="17700" min="1" max="1" chance="9" />
+				<item id="17701" min="1" max="1" chance="9" />
+				<item id="17702" min="1" max="1" chance="9" />
+				<item id="17703" min="1" max="1" chance="4.5" />
+				<item id="17706" min="1" max="1" chance="4.5" />
+				<item id="17704" min="1" max="1" chance="4.5" />
+				<item id="17708" min="1" max="1" chance="4.5" />
+				<item id="17707" min="1" max="1" chance="4.5" />
+				<item id="17705" min="1" max="1" chance="4.5" />
+				<item id="17709" min="1" max="1" chance="3" />
+				<item id="17711" min="1" max="1" chance="3" />
+				<item id="17712" min="1" max="1" chance="3" />
+				<item id="17713" min="1" max="1" chance="3" />
+				<item id="17714" min="1" max="1" chance="3" />
+				<item id="17710" min="1" max="1" chance="3" />
+				<item id="19451" min="1" max="1" chance="1.7" />
+				<item id="19452" min="1" max="1" chance="1.5" />
+				<item id="19453" min="1" max="1" chance="1.1" />
+				<item id="17400" min="1" max="1" chance="1.00001" />
+				<item id="17396" min="1" max="1" chance="1" />
+				<item id="17411" min="1" max="1" chance="1" />
+				<item id="17410" min="1" max="1" chance="1" />
+				<item id="17409" min="1" max="1" chance="1" />
+				<item id="17408" min="1" max="1" chance="1" />
+				<item id="17407" min="1" max="1" chance="1" />
+				<item id="17406" min="1" max="1" chance="1" />
+				<item id="17405" min="1" max="1" chance="1" />
+				<item id="17404" min="1" max="1" chance="1" />
+				<item id="17403" min="1" max="1" chance="1" />
+				<item id="17402" min="1" max="1" chance="1" />
+				<item id="17401" min="1" max="1" chance="1" />
+				<item id="17399" min="1" max="1" chance="1" />
+				<item id="17398" min="1" max="1" chance="1" />
+				<item id="17397" min="1" max="1" chance="1" />
+				<item id="17412" min="1" max="1" chance="1" />
+				<item id="17430" min="1" max="1" chance="0.3003" />
+				<item id="17443" min="1" max="1" chance="0.3003" />
+				<item id="17444" min="1" max="1" chance="0.3003" />
+				<item id="17445" min="1" max="1" chance="0.3003" />
+				<item id="17446" min="1" max="1" chance="0.3003" />
+				<item id="17440" min="1" max="1" chance="0.3003" />
+				<item id="17439" min="1" max="1" chance="0.3003" />
+				<item id="17438" min="1" max="1" chance="0.3003" />
+				<item id="17442" min="1" max="1" chance="0.3003" />
+				<item id="17434" min="1" max="1" chance="0.3003" />
+				<item id="17437" min="1" max="1" chance="0.3003" />
+				<item id="17436" min="1" max="1" chance="0.3003" />
+				<item id="17435" min="1" max="1" chance="0.3003" />
+				<item id="17433" min="1" max="1" chance="0.3003" />
+				<item id="17432" min="1" max="1" chance="0.3003" />
+				<item id="17431" min="1" max="1" chance="0.3003" />
+				<item id="17441" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="29197" level="99" type="L2Npc" name="Earth Wyrm Trasken" title="Hell's Gate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="871083427" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="29197" level="99" type="L2Monster" name="Earth Wyrm Trasken" title="Hell's Gate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="871083427" hpRegen="7.5" mp="871083427" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="275" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="130" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="14335" level="1" />
+			<skill id="14717" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="19447" min="1" max="1" chance="100" />
+				<item id="19448" min="1" max="1" chance="100" />
+				<item id="19446" min="1" max="1" chance="70" />
+				<item id="18560" min="1" max="1" chance="33.33" />
+				<item id="18562" min="1" max="1" chance="33.33" />
+				<item id="18561" min="1" max="1" chance="33.33" />
+				<item id="35568" min="1" max="1" chance="20" />
+				<item id="17623" min="1" max="1" chance="10" />
+				<item id="17420" min="1" max="1" chance="9" />
+				<item id="17426" min="1" max="1" chance="9" />
+				<item id="17425" min="1" max="1" chance="9" />
+				<item id="17424" min="1" max="1" chance="9" />
+				<item id="17423" min="1" max="1" chance="9" />
+				<item id="17422" min="1" max="1" chance="9" />
+				<item id="17421" min="1" max="1" chance="9" />
+				<item id="17419" min="1" max="1" chance="9" />
+				<item id="17418" min="1" max="1" chance="9" />
+				<item id="17417" min="1" max="1" chance="9" />
+				<item id="17416" min="1" max="1" chance="9" />
+				<item id="17446" min="1" max="1" chance="5.8" />
+				<item id="17438" min="1" max="1" chance="5.8" />
+				<item id="17445" min="1" max="1" chance="5.8" />
+				<item id="17444" min="1" max="1" chance="5.8" />
+				<item id="17443" min="1" max="1" chance="5.8" />
+				<item id="17442" min="1" max="1" chance="5.8" />
+				<item id="17441" min="1" max="1" chance="5.8" />
+				<item id="17430" min="1" max="1" chance="5.8" />
+				<item id="17431" min="1" max="1" chance="5.8" />
+				<item id="17432" min="1" max="1" chance="5.8" />
+				<item id="17433" min="1" max="1" chance="5.8" />
+				<item id="17434" min="1" max="1" chance="5.8" />
+				<item id="17435" min="1" max="1" chance="5.8" />
+				<item id="17436" min="1" max="1" chance="5.8" />
+				<item id="17437" min="1" max="1" chance="5.8" />
+				<item id="17439" min="1" max="1" chance="5.8" />
+				<item id="17440" min="1" max="1" chance="5.8" />
+				<item id="18096" min="1" max="1" chance="2" />
+				<item id="18097" min="1" max="1" chance="2" />
+				<item id="18098" min="1" max="1" chance="2" />
+				<item id="18099" min="1" max="1" chance="2" />
+				<item id="18095" min="1" max="1" chance="2" />
+				<item id="18094" min="1" max="1" chance="2" />
+				<item id="18088" min="1" max="1" chance="2" />
+				<item id="18087" min="1" max="1" chance="2" />
+				<item id="18086" min="1" max="1" chance="2" />
+				<item id="18085" min="1" max="1" chance="2" />
+				<item id="18084" min="1" max="1" chance="2" />
+				<item id="18089" min="1" max="1" chance="2" />
+				<item id="18083" min="1" max="1" chance="2" />
+				<item id="18090" min="1" max="1" chance="2" />
+				<item id="18091" min="1" max="1" chance="2" />
+				<item id="18092" min="1" max="1" chance="2" />
+				<item id="18093" min="1" max="1" chance="2" />
+				<item id="18079" min="1" max="1" chance="0.75188" />
+				<item id="18078" min="1" max="1" chance="0.75188" />
+				<item id="18077" min="1" max="1" chance="0.75188" />
+				<item id="18076" min="1" max="1" chance="0.75188" />
+				<item id="18075" min="1" max="1" chance="0.75188" />
+				<item id="18074" min="1" max="1" chance="0.75188" />
+				<item id="18073" min="1" max="1" chance="0.75188" />
+				<item id="18072" min="1" max="1" chance="0.75188" />
+				<item id="18071" min="1" max="1" chance="0.75188" />
+				<item id="18069" min="1" max="1" chance="0.75188" />
+				<item id="18070" min="1" max="1" chance="0.75188" />
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29198" level="99" type="L2Npc" name="Tentacle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2208510" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2208510" hpRegen="7.5" mp="2208510" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="235" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="14331" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="29199" level="99" type="L2Npc" name="Giant Tentacle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2208510" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2208510" hpRegen="7.5" mp="2208510" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="135" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="14333" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
