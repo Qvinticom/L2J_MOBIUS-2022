@@ -145,7 +145,7 @@ public final class SkillTreesData implements IXmlReader
 		_dualClassSkillTree.clear();
 		
 		// Load files.
-		parseDatapackDirectory("data/skillTrees/", false);
+		parseDatapackDirectory("data/skillTrees/", true);
 		
 		// Generate check arrays.
 		generateCheckArrays();
