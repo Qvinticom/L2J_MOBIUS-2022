@@ -1033,7 +1033,12 @@ INSERT INTO `teleport` VALUES
 ('Ye Sagira Explorarion Observatory -> The 1st Exploration Zone',3318001,-115005,237383,-3088,0,0,57),
 ('Ye Sagira Explorarion Observatory -> Exit to the East',3318101,-109294,237397,-2928,0,0,57),
 ('Ye Sagira Explorarion Observatory -> Exit to the West',3318102,-122189,241009,-2328,0,0,57),
-('Ye Sagira Explorarion Observatory -> Return to town',3318103,-114413,252159,-1592,0,0,57);
+('Ye Sagira Explorarion Observatory -> Return to town',3318103,-114413,252159,-1592,0,0,57),
+('Enter The Ruins of Ye Sagira', 3318004, -114896, 230162, -1655, 0, 0, 57),
+('The 2nd Exploration Zone', 3318005, -118350, 233992, -2904, 0, 0, 57),
+('The 3rd Exploration Zone', 3318006, -116380, 239086, -2736, 0, 0, 57),
+('The 4th Exploration Zone', 3318007, -112388, 238699, -2904, 0, 0, 57),
+('The 5th Exploration Zone', 3318008, -110964, 233816, -3192, 0, 0, 57);
 
 -- Reliquary of the Giants
 INSERT INTO `teleport` VALUES ('Reliquary of the Giants', 3334401, -114562, 227307, -2864, 0, 0, 57);
