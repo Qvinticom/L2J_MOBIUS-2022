@@ -1,32 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8900" levels="1" name="Dragon's Sealed Power(Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, HP/MP/CP + 30%, Atk. Spd. + 300, P. Critical Rate + 100, and added damage to dragons + 100%. -->
-		<set name="icon" val="icon.skill5860" />
+		<set name="icon" val="icon.skill8900" />
+		<set name="magicLevel" val="85" />
+		<set name="target" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<for> 
+			<effect name="Buff">
+				<mul stat="maxMp" val="1.30" />
+				<mul stat="maxHp" val="1.30" />
+				<mul stat="maxCp" val="1.30" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<add stat="pAtkSpd" val="300" />
+				<add stat="rCrit" val="100" /> 
+			</effect>
+			<effect name="AttackTrait">
+				<param DRAGON_WEAKNESS="100" />
+			</effect> 
+		</for>
 	</skill>
 	<skill id="8901" levels="1" name="Dragon's Power (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, and added damage to dragons + 300%. -->
-		<set name="icon" val="icon.skill5861" />
+		<set name="icon" val="icon.skill8901" />
+		<set name="magicLevel" val="85" />
+		<set name="target" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<for> 
+			<effect name="Buff">
+				<mul stat="maxMp" val="2.0" />
+				<mul stat="maxHp" val="2.0" />
+				<mul stat="maxCp" val="3.0" />
+				<mul stat="pvpMagicalDmg" val="1.30" />
+				<mul stat="pvpPhysSkillsDmg" val="1.30" />
+				<mul stat="pvpPhysDmg" val="1.30" />
+				<add stat="pAtkSpd" val="1500" />
+				<add stat="rCrit" val="500" />
+			</effect>
+			<effect name="AttackTrait">
+				<param DRAGON_WEAKNESS="300" />
+			</effect> 
+		</for>
 	</skill>
 	<skill id="8902" levels="1" name="Dragon's Sealed Power(Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, HP/MP/CP + 30%, Casting Spd. + 300, M. Critical Rate + 100, and added damage to dragons + 100%. -->
-		<set name="icon" val="icon.skill5860" />
+		<set name="icon" val="icon.skill8902" />
+		<set name="magicLevel" val="85" />
+		<set name="target" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<for> 
+			<effect name="Buff">
+				<mul stat="maxMp" val="1.30" />
+				<mul stat="maxHp" val="1.30" />
+				<mul stat="maxCp" val="1.30" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<add stat="mAtkSpd" val="300" />
+				<add stat="mCritRate" val="100" /> 
+			</effect>
+			<effect name="AttackTrait">
+				<param DRAGON_WEAKNESS="100" />
+			</effect> 
+		</for>
 	</skill>
 	<skill id="8903" levels="1" name="Dragon's Power (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, and added damage to dragons + 300%. -->
-		<set name="icon" val="icon.skill5861" />
+		<set name="icon" val="icon.skill8903" />
+		<set name="magicLevel" val="85" />
+		<set name="target" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="2.0" />
+				<mul stat="maxHp" val="2.0" />
+				<mul stat="maxCp" val="3.0" />
+				<mul stat="pvpMagicalDmg" val="1.30" />
+				<mul stat="pvpPhysSkillsDmg" val="1.30" />
+				<mul stat="pvpPhysDmg" val="1.30" />
+				<add stat="mAtkSpd" val="1999" />
+				<add stat="mCritRate" val="500" /> 
+			</effect>
+			<effect name="AttackTrait">
+				<param DRAGON_WEAKNESS="300" />
+			</effect> 
+		</for>
 	</skill>
 	<skill id="8904" levels="1" name="Summon Eviscerator Fox">
 		<!-- AUTO GENERATED SKILL -->

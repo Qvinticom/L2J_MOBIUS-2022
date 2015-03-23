@@ -598,14 +598,25 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8890" levels="1" name="Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, Speed + 100 and becomes resistant to all Debuffs. Requires 1 Dragon Blood. Cooldown is 10 minutes. -->
 		<set name="icon" val="icon.skill5662" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<table name="#spd">100</table>
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="600000" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="#spd" />
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8891" levels="1" name="Worship">
 		<!-- AUTO GENERATED SKILL -->
