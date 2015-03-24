@@ -31,8 +31,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="1000" />
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="20" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="101" level="80" type="L2Npc" name="">
@@ -101,7 +101,7 @@
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
-			<height normal="16.5" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="103" level="70" type="L2Npc" name="Holiday Santa" title="Happy Holidays~">
@@ -136,8 +136,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" />
-			<height normal="24" />
+			<radius normal="9" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="104" level="70" type="L2Npc" name="Holiday Santa" title="Happy Holidays~">
@@ -172,8 +172,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" />
-			<height normal="24" />
+			<radius normal="9" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="105" level="70" type="L2Npc" name="Holiday Sled" title="Happy Holidays~">
@@ -208,8 +208,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.01" />
-			<height normal="50" />
+			<radius normal="9" />
+			<height normal="27.3" />
 		</collision>
 	</npc>
 	<npc id="106" level="70" type="L2Npc" name="Birthday Cake">
@@ -245,7 +245,7 @@
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="0.01" />
-			<height normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="107" level="1" type="L2Npc" name="Fire Spirit">
@@ -407,7 +407,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="40" />
+			<radius normal="40.01" />
 			<height normal="120" />
 		</collision>
 	</npc>
@@ -475,8 +475,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="9" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="113" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
@@ -510,7 +510,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="114" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
@@ -544,7 +544,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="115" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
@@ -578,7 +578,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="116" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
@@ -612,7 +612,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="117" level="55" type="L2Npc" name="Snow" title="Newbie Supporter">
@@ -646,7 +646,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="118" level="80" type="L2Npc" name="Uldie" title="Halloween's Three Siblings">
@@ -681,8 +681,8 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="119" level="80" type="L2Npc" name="Belldandy" title="Halloween's Three Siblings">
@@ -719,7 +719,7 @@
 		<ai aggroRange="1000" />
 		<collision>
 			<radius normal="10" />
-			<height normal="16" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="120" level="80" type="L2Npc" name="Skooldie" title="Jack Game Trainer">
@@ -755,8 +755,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" />
 		<collision>
-			<radius normal="10" />
-			<height normal="14" />
+			<radius normal="23" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="121" level="70" type="L2Npc" name="Lucky Lamp">
@@ -792,8 +792,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" />
 		<collision>
-			<radius normal="10" />
-			<height normal="16" />
+			<radius normal="4.2" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="122" level="70" type="L2Npc" name="Environment Lamp">
@@ -975,8 +975,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="24.5" />
+			<height normal="14" />
 		</collision>
 	</npc>
 	<npc id="127" level="80" type="L2Npc" name="Kotatz">
@@ -1011,8 +1011,8 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="24.5" />
-			<height normal="14" />
+			<radius normal="25.5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="128" level="70" type="L2Npc" name="Flame Box" title="Flame Box">
@@ -1047,8 +1047,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="11" />
+			<height normal="12.5" />
 		</collision>
 	</npc>
 	<npc id="129" level="70" type="L2Npc" name="White-Bearded Santa" title="Happy Holidays~">
@@ -1083,8 +1083,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="11" />
-			<height normal="12.5" />
+			<radius normal="9" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="130" level="80" type="L2Npc" name="">
@@ -1153,8 +1153,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="21.5" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="132" level="80" type="L2Npc" name="Trejuo" title="Blessed Child">
@@ -1187,8 +1187,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="30" />
-			<height normal="29" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="133" level="80" type="L2Npc" name="Sujin" title="Blessed Child">
@@ -1220,8 +1220,8 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="10" />
-			<height normal="13" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="134" level="80" type="L2Npc" name="Dragon Master Lee">
@@ -1253,8 +1253,8 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="10" />
-			<height normal="13" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="135" level="80" type="L2Npc" name="Dragon Master Karin">
@@ -1273,8 +1273,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="8" />
-			<height normal="18.6" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="136" level="80" type="L2Npc" name="Shiny Platform">
@@ -1294,7 +1294,7 @@
 		</stats>
 		<collision>
 			<radius normal="21.5" />
-			<height normal="12.5" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="137" level="70" type="L2Npc" name="Big Wedding Cake">
@@ -1314,7 +1314,7 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<collision>
-			<radius normal="25.5" />
+			<radius normal="21.5" />
 			<height normal="27" />
 		</collision>
 	</npc>
@@ -1335,7 +1335,7 @@
 		</stats>
 		<collision>
 			<radius normal="21.5" />
-			<height normal="24" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="139" level="70" type="L2Npc" name="Birthday Cake">
@@ -1357,7 +1357,7 @@
 		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
 			<radius normal="0.01" />
-			<height normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="140" level="55" type="L2Npc" name="Block Checker Blue">
@@ -1379,8 +1379,8 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="21" />
+			<radius normal="9" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="141" level="70" type="L2Npc" name="Dimensional Door" title="Customer Support">
@@ -1402,8 +1402,8 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<collision>
-			<radius normal="24" />
-			<height normal="35" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="142" level="70" type="L2Npc" name="Dimensional Door" title="Customer Support">
@@ -1425,8 +1425,8 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<collision>
-			<radius normal="24" />
-			<height normal="35" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="143" level="85" type="L2Npc" name="Totem of Body">
@@ -1446,8 +1446,8 @@
 		</stats>
 		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
-			<radius normal="9" />
-			<height normal="20" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="144" level="85" type="L2Npc" name="Totem of Spirit">
@@ -1467,8 +1467,8 @@
 		</stats>
 		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
-			<radius normal="9" />
-			<height normal="20" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="145" level="85" type="L2Npc" name="Totem of Courage">
@@ -1488,8 +1488,8 @@
 		</stats>
 		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
-			<radius normal="9" />
-			<height normal="20" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="146" level="85" type="L2Npc" name="Totem of Fortitude">
@@ -1509,8 +1509,8 @@
 		</stats>
 		<status targetable="false" canMove="false" canBeSown="true" />
 		<collision>
-			<radius normal="9" />
-			<height normal="20" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="147" level="70" type="L2Npc" name="Party Cake">
@@ -1551,7 +1551,7 @@
 		</stats>
 		<collision>
 			<radius normal="29" />
-			<height normal="31" />
+			<height normal="30.5" />
 		</collision>
 	</npc>
 	<npc id="149" level="85" type="L2Monster" name="Bad Bunny">
@@ -1574,8 +1574,8 @@
 			<skill id="6133" level="1" /> <!-- Effect of Doubt -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="5.5" />
+			<radius normal="11" />
+			<height normal="15.7" />
 		</collision>
 	</npc>
 	<npc id="150" level="85" type="L2Monster" name="Bad Bunny Captain">
@@ -1598,8 +1598,8 @@
 			<skill id="6135" level="1" /> <!-- Mutant Curse -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="8.5" />
+			<radius normal="11" />
+			<height normal="15.7" />
 		</collision>
 	</npc>
 	<npc id="151" level="85" type="L2Monster" name="Liverless Bunny">
@@ -1622,8 +1622,8 @@
 			<skill id="6133" level="1" /> <!-- Effect of Doubt -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="5.5" />
+			<radius normal="11" />
+			<height normal="15.7" />
 		</collision>
 	</npc>
 	<npc id="152" level="85" type="L2Monster" name="Liverless Bunny Captain">
@@ -1646,8 +1646,8 @@
 			<skill id="6135" level="1" /> <!-- Mutant Curse -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="8.5" />
+			<radius normal="11" />
+			<height normal="15.7" />
 		</collision>
 	</npc>
 	<npc id="153" level="75" type="L2Npc" name="Employee of Magic Research Institute" title="Event Manager">
@@ -1736,8 +1736,8 @@
 			<skill id="6133" level="1" /> <!-- Effect of Doubt -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="8.5" />
+			<radius normal="11" />
+			<height normal="15.7" />
 		</collision>
 	</npc>
 	<npc id="157" level="85" type="L2Monster" name="Big Liver Bunny Captain">
@@ -1760,7 +1760,7 @@
 			<skill id="6135" level="1" /> <!-- Mutant Curse -->
 		</skill_list>
 		<collision>
-			<radius normal="23" />
+			<radius normal="11" />
 			<height normal="15.7" />
 		</collision>
 	</npc>
@@ -1780,8 +1780,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="32.5" />
-			<height normal="31" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="159" level="1" type="L2Npc" name="Tame Princess Ant">
@@ -1802,8 +1802,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="160" level="1" type="L2Npc" name="Black Bear">
@@ -1824,8 +1824,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="28" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="161" level="1" type="L2Npc" name="Halloween Witch's Broomstick">
@@ -1846,8 +1846,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 </list>

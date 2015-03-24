@@ -3366,7 +3366,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="8" />
+			<radius normal="11" />
 			<height normal="15.7" />
 		</collision>
 	</npc>
@@ -3436,7 +3436,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="8" />
+			<radius normal="11" />
 			<height normal="15.7" />
 		</collision>
 	</npc>
@@ -3735,8 +3735,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="13298" level="55" type="L2Npc" name="Game Master" title="Customer Support">
@@ -3755,8 +3755,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13299" level="55" type="L2Npc" name="Orbis' Curse">
@@ -3777,8 +3777,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="18" />
+			<height normal="60" />
 		</collision>
 	</npc>
 </list>

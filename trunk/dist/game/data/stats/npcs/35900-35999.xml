@@ -1845,8 +1845,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="35935" level="95" type="L2Npc" name="Supply Box">
@@ -2134,7 +2134,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
-			<height normal="26.985" />
+			<height normal="26.99" />
 		</collision>
 	</npc>
 	<npc id="35941" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Borderland Fortress">
@@ -2312,7 +2312,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -2807,7 +2807,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -2868,7 +2868,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -3015,7 +3015,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="35956" level="90" type="L2Defender" name="Healer" title="Support Unit">
@@ -3589,7 +3589,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -3889,8 +3889,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="35973" level="95" type="L2Npc" name="Supply Box">
@@ -4178,7 +4178,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
-			<height normal="26.985" />
+			<height normal="26.99" />
 		</collision>
 	</npc>
 	<npc id="35979" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Swamp Fortress">
@@ -4356,7 +4356,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -4851,7 +4851,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -4912,7 +4912,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -5059,7 +5059,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="35994" level="90" type="L2Defender" name="Healer" title="Support Unit">

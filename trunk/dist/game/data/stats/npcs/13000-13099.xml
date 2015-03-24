@@ -32,7 +32,7 @@
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
-			<height normal="120" />
+			<height normal="75" />
 		</collision>
 	</npc>
 	<npc id="13002" level="20" type="L2ControlTower" name="Life Control Tower">
@@ -66,8 +66,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="7" />
-			<height normal="35" />
+			<radius normal="13" />
+			<height normal="54" />
 		</collision>
 	</npc>
 	<npc id="13003" level="20" type="L2ControlTower" name="Life Control Tower">
@@ -136,8 +136,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="7" />
-			<height normal="35" />
+			<radius normal="13" />
+			<height normal="54" />
 		</collision>
 	</npc>
 	<npc id="13005" level="20" type="L2FlameTower" name="Flame Control Tower">
@@ -207,8 +207,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="0" />
+			<height normal="0" />
 		</collision>
 	</npc>
 	<npc id="13007" level="70" type="L2Npc" name="Special Holiday Tree">
@@ -243,8 +243,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="0" />
+			<height normal="0" />
 		</collision>
 	</npc>
 	<npc id="13014" level="85" type="L2Npc" name="">
@@ -2833,7 +2833,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" />
 		<collision>
-			<radius normal="12" />
+			<radius normal="14" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
@@ -3158,7 +3158,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="12" />
-			<height normal="31.5725" />
+			<height normal="31.57" />
 		</collision>
 	</npc>
 	<npc id="13087" level="55" type="L2Npc" name="Akamanah">
@@ -3195,7 +3195,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="10" />
-			<height normal="32.7295" />
+			<height normal="32.73" />
 		</collision>
 	</npc>
 	<npc id="13088" level="55" type="L2Npc" name="Final Form">
@@ -3267,7 +3267,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="10" />
-			<height normal="32.7615" />
+			<height normal="32.76" />
 		</collision>
 	</npc>
 	<npc id="13090" level="55" type="L2Npc" name="Native">
@@ -3301,8 +3301,8 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" />
 		<collision>
-			<radius normal="10" />
-			<height normal="24" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="13091" level="55" type="L2Npc" name="Yeti">

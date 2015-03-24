@@ -102,8 +102,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="10" />
-			<height normal="16" />
+			<radius normal="23" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="4304" level="70" type="L2Npc" name="White-Bearded Santa" title="Happy Holidays~">
@@ -137,8 +137,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="1000" clanHelpRange="300" />
 		<collision>
-			<radius normal="8" />
-			<height normal="24" />
+			<radius normal="9" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="4305" level="70" type="L2Npc" name="Rosalia" title="Helpless Romantic">
@@ -226,8 +226,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="4308" level="70" type="L2Npc" name="Angel Cat" title="Love's Envoy">
@@ -246,8 +246,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="4309" level="70" type="L2Npc" name="Follower" title="Sinister">
@@ -269,8 +269,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="22" />
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 	</npc>
 	<npc id="4310" level="70" type="L2Npc" name="Follower" title="Sinister">
@@ -292,8 +292,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="22" />
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 	</npc>
 	<npc id="4311" level="70" type="L2Npc" name="Follower" title="Sinister">
@@ -315,8 +315,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="22" />
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 	</npc>
 	<npc id="4312" level="70" type="L2Npc" name="Follower" title="Sinister">
@@ -338,8 +338,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="22" />
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 	</npc>
 	<npc id="4313" level="70" type="L2Npc" name="Angel Cat" title="Letter Collector">
@@ -358,8 +358,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="4314" level="70" type="L2Npc" name="Teleport Device">
@@ -381,8 +381,8 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="15" />
+			<height normal="51.5" />
 		</collision>
 	</npc>
 	<npc id="4315" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Fantasy Isle Warehouse Keeper">
@@ -445,7 +445,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4317" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -476,7 +476,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4318" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -507,7 +507,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4319" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -538,7 +538,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4320" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -569,7 +569,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4321" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -600,7 +600,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4322" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -631,7 +631,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4323" level="55" type="L2Teleporter" name="Snow" title="Photographer">
@@ -662,7 +662,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="16.3" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4324" level="70" type="L2Npc" name="Worshipper" title="Sinister">
@@ -684,8 +684,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
-			<height normal="25" />
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 	</npc>
 	<npc id="4325" level="70" type="L2Npc" name="Altar Guard">
@@ -707,7 +707,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -730,8 +730,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="4327" level="70" type="L2Npc" name="Worshipper" title="Sinister">
@@ -753,8 +753,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
-			<height normal="24" />
+			<radius normal="8" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="4328" level="70" type="L2Npc" name="Altar Guard">
@@ -776,7 +776,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
+			<radius normal="8" />
 			<height normal="23" />
 		</collision>
 	</npc>
@@ -799,8 +799,8 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="8" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="4330" level="99" type="L2Npc" name="Seira" title="Exorcist">
@@ -821,8 +821,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="4331" level="99" type="L2Npc" name="Einhasad Priest" title="Exorcist">
@@ -843,8 +843,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="4332" level="99" type="L2Npc" name="Alestina" title="Zombie Shaman">
@@ -865,8 +865,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="30.6" />
 		</collision>
 	</npc>
 	<npc id="4333" level="70" type="L2Npc" name="">
@@ -1371,8 +1371,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="12.3" />
 		</collision>
 	</npc>
 	<npc id="4356" level="70" type="L2Npc" name="Ecstatic Child">
@@ -1393,8 +1393,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="12.3" />
 		</collision>
 	</npc>
 	<npc id="4357" level="40" type="L2Npc" name="Daemon Angma" title="Helpful">
@@ -1415,8 +1415,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="4358" level="40" type="L2Npc" name="Daemon Angma" title="Aggressive">
@@ -1437,8 +1437,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="4359" level="40" type="L2Npc" name="Daemon Angma" title="Distracted">
@@ -1459,8 +1459,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="4360" level="90" type="L2Npc" name="Bard" title="Joyful">
@@ -1481,8 +1481,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="22" />
+			<height normal="62" />
 		</collision>
 	</npc>
 	<npc id="4361" level="90" type="L2Npc" name="Small Bard" title="Fantasy Isle Festival Manager">
@@ -1503,8 +1503,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="18.5" />
 		</collision>
 	</npc>
 	<npc id="4362" level="90" type="L2Npc" name="Festival Informer" title="Fantasy Isle Manager">
@@ -1525,8 +1525,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="28.3" />
 		</collision>
 	</npc>
 	<npc id="4363" level="85" type="L2Npc" name="Festival Goer">
@@ -1547,8 +1547,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="4364" level="85" type="L2Npc" name="Festival Goer">
@@ -1569,8 +1569,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="7" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="4366" level="85" type="L2Npc" name="Festival Goer">
@@ -1591,8 +1591,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="7" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="4367" level="85" type="L2Npc" name="Festival Goer">
@@ -1613,8 +1613,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="4368" level="85" type="L2Npc" name="Festival Goer">
@@ -1635,8 +1635,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="4369" level="85" type="L2Npc" name="Festival Goer">
@@ -1657,8 +1657,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="4370" level="85" type="L2Npc" name="Festival Goer">
@@ -1679,8 +1679,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="4371" level="85" type="L2Npc" name="Festival Goer">
@@ -1701,8 +1701,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="4372" level="85" type="L2Npc" name="Festival Goer">
@@ -1723,8 +1723,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="22.25" />
 		</collision>
 	</npc>
 	<npc id="4373" level="85" type="L2Npc" name="Festival Goer">
@@ -1745,8 +1745,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="4374" level="85" type="L2Npc" name="Festival Goer">
@@ -1767,8 +1767,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="4375" level="85" type="L2Npc" name="Festival Goer">
@@ -1789,8 +1789,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="17.5" />
 		</collision>
 	</npc>
 	<npc id="4376" level="85" type="L2Npc" name="Festival Goer">
@@ -1811,8 +1811,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="4377" level="85" type="L2Npc" name="Festival Goer">
@@ -1833,8 +1833,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="4378" level="99" type="L2Npc" name="Manager" title="Royal Training Camp">
@@ -1850,8 +1850,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
 	</npc>
 </list>

@@ -25,8 +25,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="17" />
+			<height normal="5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -52,8 +52,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -79,8 +79,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="19003" level="92" type="L2Npc" name="Apherus Package" title="Mysterious">
@@ -101,8 +101,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="19004" level="90" type="L2Npc" name="Jungle Control 1">
@@ -123,8 +123,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19005" level="90" type="L2Npc" name="Jungle Control 2">
@@ -145,8 +145,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19006" level="90" type="L2Npc" name="Jungle Control 3">
@@ -167,8 +167,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19007" level="90" type="L2Npc" name="Jungle Control 4">
@@ -189,8 +189,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19008" level="98" type="L2Monster" name="Water Cannon" title="Square Base">
@@ -217,8 +217,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="24.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -248,8 +248,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19011" level="97" type="L2Npc" name="Trap">
@@ -273,8 +273,8 @@
 			<skill id="14180" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="19012" level="97" type="L2Npc" name="Trap">
@@ -298,8 +298,8 @@
 			<skill id="14180" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="19013" level="96" type="L2Npc" name="Crystalline Golem">
@@ -326,8 +326,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="34" />
+			<height normal="47" />
 		</collision>
 	</npc>
 	<npc id="19014" level="96" type="L2Npc" name="Crystalline Golem">
@@ -354,8 +354,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="34" />
+			<height normal="47" />
 		</collision>
 	</npc>
 	<npc id="19015" level="88" type="L2Monster" name="Elite Millipede">
@@ -383,8 +383,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="50" />
+			<height normal="22.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -424,8 +424,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="17" />
+			<height normal="5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -465,8 +465,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="7" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="19018" level="95" type="L2Npc" name="Lizard Charmer">
@@ -495,8 +495,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="29" />
+			<height normal="44" />
 		</collision>
 	</npc>
 	<npc id="19019" level="95" type="L2Npc" name="Lizard Spearman">
@@ -525,8 +525,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="40.25" />
 		</collision>
 	</npc>
 	<npc id="19020" level="92" type="L2Npc" name="Lizard Spearman">
@@ -555,8 +555,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="28" />
+			<height normal="37.5" />
 		</collision>
 	</npc>
 	<npc id="19021" level="85" type="L2Npc" name="Magical Power Ballista">
@@ -577,8 +577,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="70" />
+			<height normal="60.5" />
 		</collision>
 	</npc>
 	<npc id="19022" level="90" type="L2Npc" name="">
@@ -622,8 +622,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="19024" level="88" type="L2Monster" name="Beetle" title="Hatcher">
@@ -653,8 +653,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="43.6" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -690,8 +690,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19026" level="90" type="L2Npc" name="Earth Wyrm Topography 2">
@@ -713,8 +713,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19027" level="90" type="L2Npc" name="Earth Wyrm Topography 3">
@@ -736,8 +736,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19028" level="90" type="L2Npc" name="Earth Wyrm Topography 4">
@@ -759,8 +759,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19029" level="90" type="L2Npc" name="Earth Wyrm Topography 5">
@@ -782,8 +782,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19030" level="90" type="L2Npc" name="Earth Wyrm Topography 6">
@@ -805,8 +805,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19031" level="90" type="L2Npc" name="Earth Wyrm Topography 7">
@@ -828,8 +828,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19032" level="90" type="L2Npc" name="Earth Wyrm Topography 8">
@@ -851,8 +851,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="1331" />
 		</collision>
 	</npc>
 	<npc id="19033" level="90" type="L2Npc" name="Earth Wyrm Topography 9">
@@ -873,8 +873,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19034" level="90" type="L2Npc" name="Earth Wyrm Topography 10">
@@ -895,8 +895,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19035" level="90" type="L2Npc" name="Earth Wyrm Topography 11">
@@ -917,8 +917,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19036" level="99" type="L2Npc" name="Sealing Energy">
@@ -943,8 +943,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19037" level="85" type="L2Npc" name="Wild Maguen" title="Raider">
@@ -968,8 +968,8 @@
 			<skill id="4416" level="3" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="13.25" />
 		</collision>
 	</npc>
 	<npc id="19038" level="97" type="L2Npc" name="Baylor's Treasure Chest">
@@ -994,8 +994,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="8.5" />
 		</collision>
 	</npc>
 	<npc id="19039" level="97" type="L2Npc" name="Baylor's Treasure Chest">
@@ -1020,8 +1020,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="8.5" />
 		</collision>
 	</npc>
 	<npc id="19040" level="98" type="L2Npc" name="Hell's Gate">
@@ -1046,8 +1046,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="2" />
 		</collision>
 	</npc>
 	<npc id="19041" level="97" type="L2Monster" name="Greedy Crystalline Golem">
@@ -1073,8 +1073,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="40" />
+			<height normal="57.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1100,8 +1100,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19043" level="90" type="L2Npc" name="For direction 1">
@@ -1122,8 +1122,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19044" level="90" type="L2Npc" name="For direction 2">
@@ -1144,8 +1144,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19045" level="90" type="L2Npc" name="For direction 3">
@@ -1166,8 +1166,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19046" level="90" type="L2Npc" name="For direction 4">
@@ -1188,8 +1188,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19047" level="90" type="L2Npc" name="For direction 5">
@@ -1210,8 +1210,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19048" level="90" type="L2Npc" name="For direction 6">
@@ -1232,8 +1232,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="46" />
 		</collision>
 	</npc>
 	<npc id="19049" level="90" type="L2Npc" name="For direction 7">
@@ -1254,8 +1254,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="48.15" />
 		</collision>
 	</npc>
 	<npc id="19050" level="90" type="L2Npc" name="For direction 8">
@@ -1276,8 +1276,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="51.4" />
 		</collision>
 	</npc>
 	<npc id="19051" level="90" type="L2Npc" name="For direction 9">
@@ -1298,8 +1298,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="43.5" />
 		</collision>
 	</npc>
 	<npc id="19052" level="90" type="L2Npc" name="For direction 10">
@@ -1320,8 +1320,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="45.8" />
 		</collision>
 	</npc>
 	<npc id="19053" level="90" type="L2Npc" name="For direction 11">
@@ -1342,8 +1342,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="49" />
 		</collision>
 	</npc>
 	<npc id="19054" level="90" type="L2Npc" name="For direction 12">
@@ -1364,8 +1364,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="46" />
 		</collision>
 	</npc>
 	<npc id="19055" level="90" type="L2Npc" name="For direction 13">
@@ -1386,8 +1386,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="48.75" />
 		</collision>
 	</npc>
 	<npc id="19056" level="90" type="L2Npc" name="For direction 14">
@@ -1409,8 +1409,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="51.5" />
 		</collision>
 	</npc>
 	<npc id="19057" level="90" type="L2Npc" name="For direction 15">
@@ -1432,8 +1432,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="19058" level="90" type="L2Npc" name="For direction 16">
@@ -1454,8 +1454,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="19059" level="90" type="L2Npc" name="For direction 17">
@@ -1476,8 +1476,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="19060" level="90" type="L2Npc" name="For direction 18">
@@ -1498,8 +1498,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="19061" level="90" type="L2Npc" name="For direction 19">
@@ -1521,8 +1521,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="19062" level="90" type="L2Npc" name="For direction 20">
@@ -1544,8 +1544,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19063" level="90" type="L2Npc" name="For direction 21">
@@ -1567,8 +1567,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19064" level="90" type="L2Npc" name="For direction 22">
@@ -1590,8 +1590,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19065" level="90" type="L2Npc" name="For direction 23">
@@ -1613,8 +1613,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19066" level="90" type="L2Npc" name="For direction 24">
@@ -1636,8 +1636,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19067" level="90" type="L2Npc" name="For direction 25">
@@ -1659,8 +1659,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19068" level="90" type="L2Npc" name="For direction 26">
@@ -1682,8 +1682,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19069" level="90" type="L2Npc" name="For direction 27">
@@ -1705,8 +1705,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="50" />
+			<height normal="170" />
 		</collision>
 	</npc>
 	<npc id="19070" level="90" type="L2Npc" name="Dimensional Keeper">
@@ -1727,8 +1727,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="18" />
+			<height normal="77" />
 		</collision>
 	</npc>
 	<npc id="19071" level="90" type="L2Raidboss" name="Raid Boss Dummy">
@@ -1749,8 +1749,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="19072" level="99" type="L2Npc" name="Standard Monster Dummy">
@@ -1771,8 +1771,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="19073" level="90" type="L2Npc" name="Genesis Transparent">
@@ -1793,8 +1793,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19074" level="98" type="L2Npc" name="Decaying Darkness Region">
@@ -1815,8 +1815,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19075" level="97" type="L2Npc" name="Jewel Transparent 1">
@@ -1837,8 +1837,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19076" level="93" type="L2Npc" name="Escort Paladin">
@@ -1864,8 +1864,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="18" />
+			<height normal="76" />
 		</collision>
 	</npc>
 	<npc id="19077" level="99" type="L2Npc" name="Jewel Transparent 2">
@@ -1886,8 +1886,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19078" level="98" type="L2Npc" name="Water Cannon" title="Square Base">
@@ -1912,8 +1912,8 @@
 			<skill id="5463" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19079" level="98" type="L2Npc" name="Water Cannon" title="Square Base">
@@ -1938,8 +1938,8 @@
 			<skill id="5463" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19080" level="95" type="L2Npc" name="Earth Wyrm Egg">
@@ -1960,8 +1960,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="19081" level="95" type="L2Npc" name="Earth Wyrm Heart">
@@ -1986,8 +1986,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="19082" level="85" type="L2Npc" name="Light Sphere">
@@ -2011,8 +2011,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19083" level="85" type="L2Npc" name="Light Sphere" title="Large">
@@ -2036,8 +2036,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19084" level="97" type="L2Npc" name="Cursed Priest">
@@ -2064,8 +2064,8 @@
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="15.6" />
 		</collision>
 	</npc>
 	<npc id="19085" level="99" type="L2Monster" name="Bundle">
@@ -2086,8 +2086,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="9" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2113,8 +2113,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19087" level="40" type="L2Npc" name="Daemon Angma Captain">
@@ -2135,8 +2135,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19088" level="40" type="L2Npc" name="Follower of Shilen">
@@ -2160,8 +2160,8 @@
 			<skill id="4416" level="16" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19089" level="99" type="L2Npc" name="Follower of Shilen">
@@ -2185,8 +2185,8 @@
 			<skill id="4416" level="16" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19090" level="40" type="L2Npc" name="Cursed Villager">
@@ -2211,8 +2211,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="19091" level="40" type="L2Npc" name="Cursed Villager">
@@ -2237,8 +2237,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19092" level="40" type="L2Npc" name="Totem">
@@ -2263,8 +2263,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="19093" level="99" type="L2Monster" name="Immune Watchman">
@@ -2286,8 +2286,8 @@
 		<status attackable="true" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="45" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2314,8 +2314,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19095" level="1" type="L2Npc" name="Jewel">
@@ -2336,8 +2336,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19096" level="97" type="L2Npc" name="Antharas Transparent 1">
@@ -2358,8 +2358,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19097" level="97" type="L2Npc" name="Antharas Transparent 2">
@@ -2381,8 +2381,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="19098" level="97" type="L2Npc" name="Antharas Transparent 3">
@@ -2404,8 +2404,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="19099" level="97" type="L2Npc" name="Antharas Transparent 4">
@@ -2426,8 +2426,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 </list>

@@ -26,8 +26,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19301" level="93" type="L2Npc" name="Elite Soldier Clone 1">
@@ -56,8 +56,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="19302" level="93" type="L2Npc" name="Spicula Elite Guard 1">
@@ -85,8 +85,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="19303" level="94" type="L2Npc" name="Elite Soldier Clone 2">
@@ -114,8 +114,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="19304" level="94" type="L2Npc" name="Spicula Elite Guard 2">
@@ -143,8 +143,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="19305" level="94" type="L2Npc" name="Boz" title="Spicula Clone Generator">
@@ -165,8 +165,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="70" />
 		</collision>
 	</npc>
 	<npc id="19306" level="95" type="L2Npc" name="Yin Spicula Lieutenant">
@@ -195,8 +195,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19307" level="96" type="L2Npc" name="Yin Spicula Captain">
@@ -225,8 +225,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19308" level="94" type="L2Npc" name="Yin Fragment" title="Spicula Clone Generator">
@@ -255,8 +255,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="50" />
 		</collision>
 	</npc>
 	<npc id="19309" level="94" type="L2Npc" name="Golem of Repairs" title="Black Anvil Guild">
@@ -277,8 +277,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19310" level="94" type="L2Npc" name="Drill Golem" title="Black Anvil Guild">
@@ -307,8 +307,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19311" level="94" type="L2Npc" name="Drill Golem" title="Black Anvil Guild">
@@ -329,8 +329,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19312" level="94" type="L2Npc" name="Excavator Golem" title="Black Anvil Guild">
@@ -359,8 +359,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19313" level="94" type="L2Npc" name="Excavator Golem" title="Black Anvil Guild">
@@ -381,8 +381,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19314" level="95" type="L2Npc" name="Pincer Golem" title="Black Anvil Guild">
@@ -411,8 +411,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="19315" level="95" type="L2Npc" name="Pincer Golem" title="Black Anvil Guild">
@@ -433,8 +433,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="19316" level="94" type="L2Npc" name="Screw Golem" title="Black Anvil Guild">
@@ -463,8 +463,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="18" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19317" level="94" type="L2Npc" name="Screw Golem" title="Black Anvil Guild">
@@ -485,8 +485,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="18" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19318" level="94" type="L2Npc" name="Cannon Golem" title="Black Anvil Guild">
@@ -515,8 +515,8 @@
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="45" />
+			<height normal="43" />
 		</collision>
 	</npc>
 	<npc id="19319" level="94" type="L2Npc" name="Cannon Golem" title="Black Anvil Guild">
@@ -537,8 +537,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="45" />
+			<height normal="47.5" />
 		</collision>
 	</npc>
 	<npc id="19320" level="94" type="L2Npc" name="Yin" title="Spicula Clone Generator">
@@ -559,8 +559,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="40" />
+			<height normal="90" />
 		</collision>
 	</npc>
 	<npc id="19321" level="94" type="L2Npc" name="For Raid Presentation Purposes">
@@ -581,8 +581,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19322" level="94" type="L2Npc" name="Yuti" title="Captain">
@@ -603,8 +603,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19323" level="94" type="L2Npc" name="Raider's Crossroads D?cor">
@@ -625,8 +625,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19324" level="94" type="L2Npc" name="For Raid Presentation Purposes">
@@ -647,8 +647,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19325" level="85" type="L2Npc" name="Sticky Mushroom">
@@ -669,8 +669,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19326" level="94" type="L2Npc" name="For Raid Presentation Purposes">
@@ -691,8 +691,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="19" />
 		</collision>
 	</npc>
 	<npc id="19327" level="95" type="L2Monster" name="Gustav">
@@ -720,8 +720,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -790,8 +790,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19329" level="95" type="L2Npc" name="Mikhail">
@@ -819,8 +819,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19330" level="95" type="L2Npc" name="Mikhail" title="Resurrected">
@@ -848,8 +848,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19331" level="95" type="L2Npc" name="Dietrich">
@@ -877,8 +877,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19332" level="95" type="L2Npc" name="Dietrich" title="Resurrected">
@@ -906,8 +906,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="21" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19333" level="95" type="L2Npc" name="Demolished Throne Stronghold">
@@ -928,8 +928,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="50" />
 		</collision>
 	</npc>
 	<npc id="19334" level="95" type="L2Npc" name="Transportation Stronghold">
@@ -950,8 +950,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="17.5" />
+			<height normal="52.5" />
 		</collision>
 	</npc>
 	<npc id="19335" level="95" type="L2Npc" name="Attack Stronghold">
@@ -972,8 +972,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="19336" level="94" type="L2Monster" name="Doom Servant">
@@ -1002,8 +1002,8 @@
 		</skill_list>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1041,8 +1041,8 @@
 		</skill_list>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1080,8 +1080,8 @@
 		</skill_list>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="27" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1119,8 +1119,8 @@
 		</skill_list>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="28" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1158,8 +1158,8 @@
 		</skill_list>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="25" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1197,8 +1197,8 @@
 		</skill_list>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1235,8 +1235,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="25.4" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1305,8 +1305,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5.5" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="19344" level="95" type="L2Npc" name="Giselle von Hellmann" title="Resurrected">
@@ -1334,8 +1334,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5.5" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="19345" level="95" type="L2Npc" name="Alfred von Hellmann" title="Master of the von Hellmann House">
@@ -1363,8 +1363,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="19" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="19346" level="94" type="L2Npc" name="Vampire Adept">
@@ -1392,8 +1392,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="6" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="19347" level="94" type="L2Npc" name="Vampire Soldier">
@@ -1421,8 +1421,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="19348" level="94" type="L2Npc" name="Vampire Caster">
@@ -1450,8 +1450,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="6" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="19349" level="94" type="L2Npc" name="Vampire Magister">
@@ -1479,8 +1479,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5.5" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="19350" level="95" type="L2Npc" name="Vampire Warlord">
@@ -1508,8 +1508,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="31.5" />
 		</collision>
 	</npc>
 	<npc id="19351" level="95" type="L2Npc" name="Vampire Leader">
@@ -1537,8 +1537,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="7.5" />
+			<height normal="25.8" />
 		</collision>
 	</npc>
 	<npc id="19352" level="90" type="L2Npc" name="Sophie von Hellmann's Soul" title="Maligned">
@@ -1566,8 +1566,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="25.5" />
 		</collision>
 	</npc>
 	<npc id="19353" level="95" type="L2Npc" name="Logan" title="Near-death">
@@ -1595,8 +1595,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="19354" level="95" type="L2Npc" name="Von Hellmann House's Maligned Spirit">
@@ -1624,8 +1624,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="19355" level="95" type="L2Monster" name="">
@@ -1707,8 +1707,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="37" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1781,8 +1781,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="14" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="19359" level="95" type="L2Npc" name="Nurka's Royal Guard">
@@ -1811,8 +1811,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="14" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19360" level="94" type="L2Npc" name="Soldier of Resistance">
@@ -1841,8 +1841,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19361" level="94" type="L2Npc" name="Archer of Resistance">
@@ -1871,8 +1871,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="14" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19362" level="95" type="L2Npc" name="Wizard of Resistance">
@@ -1901,8 +1901,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="19363" level="95" type="L2Npc" name="Healer of Resistance">
@@ -1931,8 +1931,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="19364" level="99" type="L2Npc" name="">
@@ -1975,8 +1975,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="16" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="19366" level="1" type="L2Npc" name="Cute Spotted Buffalo">
@@ -1997,8 +1997,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="19367" level="1" type="L2Npc" name="Silvermane White Tiger" title="Cow Thief">
@@ -2023,8 +2023,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="34" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="19368" level="1" type="L2Npc" name="Greedy Mahum Chef">
@@ -2045,8 +2045,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="37" />
 		</collision>
 	</npc>
 	<npc id="19369" level="99" type="L2Npc" name="Campfire">
@@ -2067,8 +2067,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="32" />
+			<height normal="17.5" />
 		</collision>
 	</npc>
 	<npc id="19370" level="99" type="L2Npc" name="Mysterious Fruit Tree">
@@ -2089,8 +2089,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="51" />
+			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="19371" level="99" type="L2Npc" name="Greedy Pixie">
@@ -2115,8 +2115,8 @@
 			<skill id="4416" level="13" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19372" level="99" type="L2Npc" name="Dimensional Rift">
@@ -2141,8 +2141,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19373" level="1" type="L2Npc" name="Broken Toad Cannon">
@@ -2163,8 +2163,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="45" />
+			<height normal="47.5" />
 		</collision>
 	</npc>
 	<npc id="19374" level="1" type="L2Npc" name="Broken Gathering Robot">
@@ -2189,8 +2189,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19375" level="99" type="L2Npc" name="Repair Robot">
@@ -2215,8 +2215,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19376" level="99" type="L2Npc" name="Repair Robot">
@@ -2237,8 +2237,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19377" level="99" type="L2Npc" name="Teleport Source" title="Teleport">
@@ -2259,8 +2259,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="16" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="19378" level="99" type="L2Npc" name="Star Stone" title="Gatherable">
@@ -2281,8 +2281,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="54" />
+			<height normal="61" />
 		</collision>
 	</npc>
 	<npc id="19379" level="99" type="L2Npc" name="Sandblast">
@@ -2303,8 +2303,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="19380" level="99" type="L2Npc" name="Stone Gathering Robot">
@@ -2325,8 +2325,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="32.8" />
 		</collision>
 	</npc>
 	<npc id="19381" level="1" type="L2Npc" name="Destroyer Robot">
@@ -2351,8 +2351,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="19" />
 		</collision>
 	</npc>
 	<npc id="19382" level="1" type="L2Npc" name="Clan Request Assistant">
@@ -2373,8 +2373,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5.5" />
+			<height normal="6.25" />
 		</collision>
 	</npc>
 	<npc id="19383" level="99" type="L2Npc" name="Blue Stone" title="Gatherable">
@@ -2395,8 +2395,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="38" />
+			<height normal="43.5" />
 		</collision>
 	</npc>
 	<npc id="19384" level="99" type="L2Npc" name="Dark Summon Circle">
@@ -2417,8 +2417,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19385" level="99" type="L2Npc" name="Crystal Raider">
@@ -2469,8 +2469,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="18" />
+			<height normal="41.5" />
 		</collision>
 	</npc>
 	<npc id="19387" level="1" type="L2Npc" name="Cute Milk Cow">
@@ -2495,8 +2495,8 @@
 			<skill id="4414" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="26" />
+			<height normal="28.5" />
 		</collision>
 	</npc>
 	<npc id="19388" level="99" type="L2Npc" name="Summon Device">
@@ -2517,8 +2517,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="19389" level="1" type="L2Npc" name="">
@@ -2627,8 +2627,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="112" />
+			<height normal="59" />
 		</collision>
 	</npc>
 	<npc id="19394" level="85" type="L2Npc" name="Large Contaminated Cocoon">
@@ -2649,8 +2649,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="112" />
+			<height normal="59" />
 		</collision>
 	</npc>
 	<npc id="19395" level="99" type="L2Npc" name="">

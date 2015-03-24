@@ -18,8 +18,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="13301" level="85" type="L2Npc" name="Symbol of Lakcis">
@@ -40,8 +40,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="13302" level="85" type="L2Npc" name="Incarnation">
@@ -62,8 +62,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13303" level="90" type="L2Npc" name="Incarnation">
@@ -84,8 +84,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13304" level="95" type="L2Npc" name="Incarnation">
@@ -106,8 +106,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13305" level="97" type="L2Npc" name="Incarnation">
@@ -128,8 +128,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13306" level="85" type="L2Npc" name="Damaged Area">
@@ -151,8 +151,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13307" level="85" type="L2Npc" name="Ant Hell">
@@ -174,8 +174,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13308" level="85" type="L2Npc" name="Ring of Yoke">
@@ -197,8 +197,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13309" level="85" type="L2Npc" name="Stealth Detector">
@@ -220,8 +220,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13310" level="85" type="L2Npc" name="Solo Dance">
@@ -242,8 +242,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13311" level="85" type="L2Npc" name="Awakened Knight's Mount">
@@ -268,8 +268,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="13312" level="85" type="L2Npc" name="Awakened Warrior's Mount">
@@ -294,8 +294,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="13313" level="85" type="L2Npc" name="Awakened Rogue's Mount">
@@ -320,8 +320,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.25" />
 		</collision>
 	</npc>
 	<npc id="13314" level="85" type="L2Npc" name="Awakened Archer's Mount">
@@ -346,8 +346,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="13315" level="85" type="L2Npc" name="Awakened Wizard's Mount">
@@ -372,8 +372,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.25" />
 		</collision>
 	</npc>
 	<npc id="13316" level="85" type="L2Npc" name="Awakened Summoner's Mount">
@@ -398,8 +398,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.25" />
 		</collision>
 	</npc>
 	<npc id="13317" level="85" type="L2Npc" name="Awakened Enchanter's Mount">
@@ -424,8 +424,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="13318" level="85" type="L2Npc" name="Awakened Healer's Mount">
@@ -450,8 +450,8 @@
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="31" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="13319" level="85" type="L2Npc" name="Shadow of Hell">
@@ -475,8 +475,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13320" level="85" type="L2Npc" name="Shadow of Hell">
@@ -500,8 +500,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13321" level="85" type="L2Npc" name="Shadow of Hell">
@@ -525,8 +525,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13322" level="85" type="L2Npc" name="Shadow of Hell">
@@ -550,8 +550,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="13323" level="85" type="L2Npc" name="Whisper of Fear">
@@ -572,8 +572,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13324" level="85" type="L2Npc" name="Whisper of Fear">
@@ -594,8 +594,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13325" level="85" type="L2Npc" name="Whisper of Fear">
@@ -616,8 +616,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13326" level="99" type="L2Npc" name="Severe Trap">
@@ -641,8 +641,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13327" level="99" type="L2Npc" name="Yoke Trap">
@@ -666,8 +666,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13328" level="99" type="L2Npc" name="Decoy">
@@ -691,8 +691,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13329" level="90" type="L2Npc" name="Illusion">
@@ -716,8 +716,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13330" level="1" type="L2Npc" name="Kukuru">
@@ -741,8 +741,8 @@
 			<skill id="1627" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="13331" level="85" type="L2Npc" name="Guitar Fairy">
@@ -764,8 +764,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="4" />
 		</collision>
 	</npc>
 	<npc id="13332" level="85" type="L2Npc" name="Maracas Fairy">
@@ -787,8 +787,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="4" />
 		</collision>
 	</npc>
 	<npc id="13333" level="85" type="L2Npc" name="Cymbal Fairy">
@@ -810,8 +810,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="4" />
 		</collision>
 	</npc>
 	<npc id="13334" level="85" type="L2Npc" name="Drums Fairy">
@@ -833,8 +833,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="4" />
 		</collision>
 	</npc>
 	<npc id="13335" level="85" type="L2Npc" name="Pipe Organ Fairy">
@@ -856,8 +856,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="4" />
 		</collision>
 	</npc>
 	<npc id="13336" level="85" type="L2Npc" name="Bugle Fairy">
@@ -879,8 +879,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="4" />
 		</collision>
 	</npc>
 	<npc id="13337" level="85" type="L2Npc" name="Vampiric Fairy">
@@ -902,8 +902,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="7.5" />
 		</collision>
 	</npc>
 	<npc id="13338" level="85" type="L2Npc" name="Enchanting Stone">
@@ -925,8 +925,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="20.5" />
 		</collision>
 	</npc>
 	<npc id="13339" level="85" type="L2Npc" name="Illusion">
@@ -947,8 +947,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13340" level="85" type="L2Npc" name="Kukurin">
@@ -969,8 +969,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="13341" level="70" type="L2Npc" name="Vitality Recovering Cake">
@@ -991,8 +991,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="13342" level="1" type="L2Npc" name="Specter of Light">
@@ -1013,8 +1013,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13343" level="1" type="L2Npc" name="Specter of Mysterious Light">
@@ -1035,8 +1035,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13344" level="1" type="L2Npc" name="Specter of Mysterious Light">
@@ -1057,8 +1057,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13345" level="1" type="L2Npc" name="Specter of Mysterious Light">
@@ -1079,8 +1079,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13346" level="1" type="L2Npc" name="Specter of Light">
@@ -1101,8 +1101,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13347" level="1" type="L2Npc" name="Specter of Light">
@@ -1123,8 +1123,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13348" level="1" type="L2Npc" name="Specter of Light">
@@ -1145,8 +1145,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13349" level="1" type="L2Npc" name="Shard of Light">
@@ -1167,8 +1167,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="13350" level="85" type="L2Npc" name="Black Bear Mount">
@@ -1189,8 +1189,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="28" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="13351" level="85" type="L2Npc" name="Rosy Rose">
@@ -1211,8 +1211,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="22.7" />
+			<height normal="14.3" />
 		</collision>
 	</npc>
 	<npc id="13352" level="85" type="L2Npc" name="Deadly Rose">
@@ -1233,8 +1233,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="24.3" />
+			<height normal="13.6" />
 		</collision>
 	</npc>
 	<npc id="13353" level="85" type="L2Npc" name="Knight of Chaos">
@@ -1255,8 +1255,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="19" />
+			<height normal="30.5" />
 		</collision>
 	</npc>
 	<npc id="13354" level="1" type="L2Npc" name="T-shirt Portal">
@@ -1280,8 +1280,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="115" />
 		</collision>
 	</npc>
 	<npc id="13355" level="55" type="L2Npc" name="HM Pona" title="Customer Support">
@@ -1305,8 +1305,8 @@
 			<skill id="4416" level="4" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="38" />
 		</collision>
 	</npc>
 	<npc id="13356" level="55" type="L2Npc" name="HM Bard" title="Customer Support">
@@ -1330,8 +1330,8 @@
 			<skill id="4416" level="4" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="18.5" />
 		</collision>
 	</npc>
 	<npc id="13357" level="99" type="L2Npc" name="Severe Trap">
@@ -1352,8 +1352,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13358" level="99" type="L2Npc" name="Severe Trap">
@@ -1374,8 +1374,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13359" level="99" type="L2Npc" name="Severe Trap">
@@ -1396,8 +1396,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13360" level="99" type="L2Npc" name="Severe Trap">
@@ -1418,8 +1418,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13361" level="99" type="L2Npc" name="Severe Trap">
@@ -1440,8 +1440,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13362" level="99" type="L2Npc" name="Severe Trap">
@@ -1462,8 +1462,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13363" level="99" type="L2Npc" name="Severe Trap">
@@ -1484,8 +1484,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13364" level="99" type="L2Npc" name="Severe Trap">
@@ -1506,8 +1506,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13365" level="99" type="L2Npc" name="Severe Trap">
@@ -1528,8 +1528,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13366" level="99" type="L2Npc" name="Severe Trap">
@@ -1550,8 +1550,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13367" level="99" type="L2Npc" name="Yoke Trap">
@@ -1572,8 +1572,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13368" level="99" type="L2Npc" name="Yoke Trap">
@@ -1594,8 +1594,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13369" level="99" type="L2Npc" name="Yoke Trap">
@@ -1616,8 +1616,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13370" level="99" type="L2Npc" name="Yoke Trap">
@@ -1638,8 +1638,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13371" level="99" type="L2Npc" name="Yoke Trap">
@@ -1660,8 +1660,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13372" level="99" type="L2Npc" name="Yoke Trap">
@@ -1682,8 +1682,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13373" level="99" type="L2Npc" name="Yoke Trap">
@@ -1704,8 +1704,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13374" level="99" type="L2Npc" name="Yoke Trap">
@@ -1726,8 +1726,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13375" level="99" type="L2Npc" name="Yoke Trap">
@@ -1748,8 +1748,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13376" level="99" type="L2Npc" name="Yoke Trap">
@@ -1770,8 +1770,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13377" level="87" type="L2Npc" name="Solo Dance">
@@ -1793,8 +1793,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13378" level="90" type="L2Npc" name="Solo Dance">
@@ -1816,8 +1816,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13379" level="93" type="L2Npc" name="Solo Dance">
@@ -1839,8 +1839,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13380" level="96" type="L2Npc" name="Solo Dance">
@@ -1862,8 +1862,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13381" level="99" type="L2Npc" name="Solo Dance">
@@ -1885,8 +1885,8 @@
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="0.01" />
 		</collision>
 	</npc>
 	<npc id="13382" level="55" type="L2Npc" name="Orfen">
@@ -1907,8 +1907,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="15" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13383" level="55" type="L2Npc" name="Queen Ant">
@@ -1929,8 +1929,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="25" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="13384" level="55" type="L2Npc" name="Lilith">
@@ -1951,8 +1951,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30.5" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="13385" level="55" type="L2Npc" name="Anakim">
@@ -1973,8 +1973,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13.5" />
+			<height normal="29" />
 		</collision>
 	</npc>
 	<npc id="13386" level="90" type="L2Npc" name="Transformed: Greater Arcana Lord" title="Transformed: Wynn Arcana Lord">
@@ -1998,8 +1998,8 @@
 			<skill id="4416" level="8" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="14.5" />
+			<height normal="29" />
 		</collision>
 	</npc>
 	<npc id="13387" level="90" type="L2Npc" name="Transformed: Greater Spectral Master" title="Transformed: Wynn Spectral Master">
@@ -2023,8 +2023,8 @@
 			<skill id="4416" level="8" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="13388" level="90" type="L2Npc" name="Transformed: Greater Elemental Master" title="Transformed: Wynn Elemental Master">
@@ -2048,8 +2048,8 @@
 			<skill id="4416" level="8" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="16" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="13389" level="85" type="L2Npc" name="Transformed: Siege Golem" title="Transformed: Tyrr Maestro">
@@ -2073,8 +2073,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="50" />
+			<height normal="68" />
 		</collision>
 	</npc>
 	<npc id="13390" level="99" type="L2Npc" name="Lind Rider">
@@ -2098,8 +2098,8 @@
 			<skill id="4416" level="10" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="46" />
+			<height normal="33" />
 		</collision>
 	</npc>
 	<npc id="13391" level="99" type="L2Npc" name="Air Bike">
@@ -2123,8 +2123,8 @@
 			<skill id="4416" level="2" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="35" />
+			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="13392" level="99" type="L2Npc" name="Transformed: Part-time Seller Cat">
@@ -2148,8 +2148,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="13393" level="99" type="L2Npc" name="Transformed: Part-time Seller Cat">
@@ -2173,8 +2173,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="12.5" />
 		</collision>
 	</npc>
 	<npc id="13394" level="99" type="L2Npc" name="Transformed: Part-time Seller Cat">
@@ -2198,8 +2198,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="11" />
 		</collision>
 	</npc>
 	<npc id="13395" level="99" type="L2Npc" name="Transformed: Part-time Seller Cat">
@@ -2223,8 +2223,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="12.5" />
 		</collision>
 	</npc>
 	<npc id="13396" level="99" type="L2Npc" name="Transformed: Part-time Seller Cat">
@@ -2248,8 +2248,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="13" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="13397" level="99" type="L2Npc" name="Bae Kisung">
@@ -2273,8 +2273,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13398" level="99" type="L2Npc" name="Holiday Bae Kisung">
@@ -2298,8 +2298,8 @@
 			<skill id="4416" level="6" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13399" level="1" type="L2Npc" name="Young Wintermelon">
@@ -2326,8 +2326,8 @@
 			<skill id="4045" level="1" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="23" />
+			<height normal="25" />
 		</collision>
 	</npc>
 </list>

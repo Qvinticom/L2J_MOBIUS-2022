@@ -113,7 +113,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -408,7 +408,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -469,7 +469,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -616,7 +616,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="36310" level="90" type="L2Defender" name="Healer" title="Support Unit">
@@ -1058,7 +1058,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -1358,8 +1358,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="36325" level="95" type="L2Npc" name="Supply Box">
@@ -1644,7 +1644,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
-			<height normal="26.985" />
+			<height normal="26.99" />
 		</collision>
 	</npc>
 	<npc id="36331" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Demon Fortress">
@@ -1822,7 +1822,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -2317,7 +2317,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -2378,7 +2378,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -2525,7 +2525,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="36346" level="90" type="L2Defender" name="Healer" title="Support Unit">
@@ -3098,7 +3098,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -3398,8 +3398,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="36363" level="95" type="L2Npc" name="Supply Box">
@@ -3684,7 +3684,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
-			<height normal="26.985" />
+			<height normal="26.99" />
 		</collision>
 	</npc>
 	<npc id="36369" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Monastic Fortress">
@@ -3862,7 +3862,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -4357,7 +4357,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -4418,7 +4418,7 @@
 			</death>
 		</drop_lists>
 		<collision>
-			<radius normal="7" />
+			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
@@ -4565,7 +4565,7 @@
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="36384" level="90" type="L2Defender" name="Healer" title="Support Unit">
@@ -5217,7 +5217,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
-			<height normal="22" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="36396" level="75" type="L2Npc" name="Special Envoy" title="Giran">
@@ -5334,7 +5334,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
-			<height normal="22" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="36399" level="75" type="L2Npc" name="Special Envoy" title="Aden">
@@ -5373,7 +5373,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
-			<height normal="22" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 </list>

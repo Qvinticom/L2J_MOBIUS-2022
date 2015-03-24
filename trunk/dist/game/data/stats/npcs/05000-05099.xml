@@ -23,8 +23,8 @@
 			<!-- <skill id="4413" level="12" /> -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="5002" level="80" type="L2Npc" name="Santa Girl" title="Happy Holidays">
@@ -48,8 +48,8 @@
 			<skill id="4416" level="4" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="5003" level="55" type="L2Npc" name="Snow Man Grouch">
@@ -73,8 +73,8 @@
 			<skill id="4416" level="4" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="5004" level="55" type="L2Npc" name="Snow Man Grouch">
@@ -98,8 +98,8 @@
 			<skill id="4416" level="4" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="5005" level="55" type="L2Npc" name="Game Master" title="Customer Support">
@@ -120,8 +120,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="1" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="5006" level="70" type="L2Npc" name="Holiday Tree">
@@ -142,8 +142,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="50" />
+			<height normal="60.5" />
 		</collision>
 	</npc>
 	<npc id="5007" level="80" type="L2Npc" name="Evolution Deliverer" title="Beginning of Flames">
@@ -164,8 +164,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="14.5" />
 		</collision>
 	</npc>
 	<npc id="5008" level="80" type="L2Npc" name="Evolution Guide" title="Root of Flames">
@@ -186,8 +186,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="30" />
+			<height normal="53.5" />
 		</collision>
 	</npc>
 	<npc id="5009" level="80" type="L2Npc" name="Instant Zone Roadblock D?cor">
@@ -208,8 +208,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="14.5" />
 		</collision>
 	</npc>
 	<npc id="5010" level="70" type="L2Npc" name="Queen of Hearts" title="Valentine Messenger">
@@ -233,8 +233,8 @@
 			<skill id="4416" level="7" />
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="15" />
 		</collision>
 	</npc>
 </list>

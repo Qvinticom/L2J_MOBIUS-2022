@@ -789,8 +789,8 @@
 		<corpse_time>86400</corpse_time>
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="32" />
-			<height normal="21.412" />
+			<radius normal="25" />
+			<height normal="21.41" />
 		</collision>
 	</npc>
 	<npc id="16026" level="55" type="L2Npc" name="Beastly Agathion">
@@ -823,7 +823,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
+			<radius normal="9" />
 			<height normal="11.3" />
 		</collision>
 	</npc>
@@ -857,7 +857,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
+			<radius normal="11" />
 			<height normal="6.7" />
 		</collision>
 	</npc>
@@ -891,7 +891,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
+			<radius normal="3" />
 			<height normal="9.5" />
 		</collision>
 	</npc>
@@ -925,7 +925,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
+			<radius normal="1" />
 			<height normal="3.5" />
 		</collision>
 	</npc>
@@ -974,7 +974,7 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<collision>
 			<radius normal="25" />
-			<height normal="21.412" />
+			<height normal="23.56" />
 		</collision>
 	</npc>
 	<npc id="16031" level="55" type="L2Npc" name="Little Angel Agathion">
@@ -1008,7 +1008,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
 			<radius normal="0.01" />
-			<height normal="4.5475" />
+			<height normal="4.55" />
 		</collision>
 	</npc>
 	<npc id="16032" level="55" type="L2Npc" name="Little Devil Agathion">
@@ -1076,7 +1076,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
 			<radius normal="0.01" />
-			<height normal="5.271" />
+			<height normal="5.27" />
 		</collision>
 	</npc>
 	<npc id="16034" level="55" type="L2BabyPet" name="Improved Baby Buffalo">
@@ -1578,7 +1578,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
 			<radius normal="25" />
-			<height normal="21.412" />
+			<height normal="23.56" />
 		</collision>
 	</npc>
 	<npc id="16038" level="55" type="L2Pet" name="Red Wind Strider">
@@ -1865,7 +1865,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
 			<radius normal="25" />
-			<height normal="21.412" />
+			<height normal="23.56" />
 		</collision>
 	</npc>
 	<npc id="16042" level="55" type="L2Pet" name="Snow Fenrir">
@@ -1985,7 +1985,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
 			<radius normal="25" />
-			<height normal="21.412" />
+			<height normal="23.56" />
 		</collision>
 	</npc>
 	<npc id="16043" level="55" type="L2Pet" name="Fox Shaman">
@@ -2194,8 +2194,8 @@
 		<corpse_time>86400</corpse_time>
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="11" />
-			<height normal="16.5" />
+			<radius normal="10" />
+			<height normal="18.5" />
 		</collision>
 	</npc>
 	<npc id="16045" level="55" type="L2BabyPet" name="White Weasel">
@@ -2406,7 +2406,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="5" />
+			<radius normal="0.01" />
 			<height normal="3.75" />
 		</collision>
 	</npc>
@@ -2446,8 +2446,8 @@
 		<corpse_time>86400</corpse_time>
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="13" />
-			<height normal="19.5" />
+			<radius normal="40" />
+			<height normal="27.5" />
 		</collision>
 	</npc>
 	<npc id="16051" level="55" type="L2BabyPet" name="Spirit Shaman">
@@ -2969,7 +2969,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="15" />
+			<radius normal="0.01" />
 			<height normal="7" />
 		</collision>
 	</npc>
@@ -3003,7 +3003,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="5" />
+			<radius normal="0.01" />
 			<height normal="5.5" />
 		</collision>
 	</npc>
@@ -3037,7 +3037,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="6.5" />
+			<radius normal="0.01" />
 			<height normal="6.5" />
 		</collision>
 	</npc>
@@ -3071,7 +3071,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="5" />
+			<radius normal="0.01" />
 			<height normal="5" />
 		</collision>
 	</npc>
@@ -3105,7 +3105,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="3" />
+			<radius normal="0.01" />
 			<height normal="3" />
 		</collision>
 	</npc>
@@ -3241,7 +3241,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<collision>
-			<radius normal="4.5" />
+			<radius normal="0.01" />
 			<height normal="7" />
 		</collision>
 	</npc>
@@ -3275,7 +3275,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="3" />
+			<radius normal="0.01" />
 			<height normal="5.15" />
 		</collision>
 	</npc>
@@ -3309,8 +3309,8 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="5" />
-			<height normal="7" />
+			<radius normal="0.01" />
+			<height normal="5.75" />
 		</collision>
 	</npc>
 	<npc id="16065" level="55" type="L2Npc" name="Oink Oink">
@@ -3343,7 +3343,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="6" />
+			<radius normal="0.01" />
 			<height normal="5.75" />
 		</collision>
 	</npc>
@@ -3377,7 +3377,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="6" />
+			<radius normal="0.01" />
 			<height normal="5.75" />
 		</collision>
 	</npc>
@@ -3570,7 +3570,7 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="3" />
+			<radius normal="0.01" />
 			<height normal="5.15" />
 		</collision>
 	</npc>
@@ -3603,8 +3603,8 @@
 		<shots soul="2" spirit="2" />
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="4" />
-			<height normal="5.87" />
+			<radius normal="0.01" />
+			<height normal="5.75" />
 		</collision>
 	</npc>
 	<npc id="16071" level="55" type="L2Pet" name="Wild Maguen">
@@ -3826,7 +3826,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
 			<radius normal="0.01" />
-			<height normal="5.271" />
+			<height normal="5.27" />
 		</collision>
 	</npc>
 	<npc id="16074" level="55" type="L2Npc" name="Ball Trapping Gnosian">
@@ -3845,8 +3845,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="16075" level="55" type="L2Npc" name="Ball Trapping Orodriel">
@@ -3865,8 +3865,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="16076" level="55" type="L2Npc" name="Penalty Kick">
@@ -3885,8 +3885,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="16077" level="55" type="L2Npc" name="Antharas">
@@ -3905,8 +3905,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="3" />
+			<height normal="10.15" />
 		</collision>
 	</npc>
 	<npc id="16078" level="55" type="L2Npc" name="Nevit's Messenger Kanna">
@@ -3925,8 +3925,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="3" />
+			<height normal="10.15" />
 		</collision>
 	</npc>
 	<npc id="16079" level="55" type="L2Npc" name="Guardian of Dawn Kallesin">
@@ -3945,8 +3945,8 @@
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="3" />
+			<height normal="10.15" />
 		</collision>
 	</npc>
 	<npc id="16080" level="55" type="L2Npc" name="Magmeld Fairy">
@@ -3967,8 +3967,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3.7" />
+			<height normal="9.5" />
 		</collision>
 	</npc>
 	<npc id="16081" level="55" type="L2Npc" name="Fairy of Life">
@@ -3989,8 +3989,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="16082" level="55" type="L2Npc" name="Tersi's Spirit">
@@ -4011,8 +4011,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="3" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="16083" level="55" type="L2Npc" name="Propeller Boy Agathion">
@@ -4033,8 +4033,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="7.5" />
 		</collision>
 	</npc>
 	<npc id="16084" level="55" type="L2Npc" name="Magical Girl Agathion">
@@ -4055,8 +4055,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="5.5" />
 		</collision>
 	</npc>
 	<npc id="16085" level="55" type="L2Npc" name="Cobra Agathion">
@@ -4077,8 +4077,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="7.5" />
 		</collision>
 	</npc>
 	<npc id="16086" level="55" type="L2Npc" name="Baby Ufa Agathion">
@@ -4099,8 +4099,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="0.01" />
+			<height normal="7.5" />
 		</collision>
 	</npc>
 	<npc id="16087" level="55" type="L2Npc" name="Agathion - XP Bottle">
@@ -4121,8 +4121,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="2" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="16088" level="55" type="L2Npc" name="Agathion Hye-jin Jang">
@@ -4143,8 +4143,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="1.01" />
+			<height normal="5.45" />
 		</collision>
 	</npc>
 	<npc id="16089" level="55" type="L2Npc" name="Agathion Hyuk Jang">
@@ -4165,8 +4165,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="1" />
+			<height normal="6.15" />
 		</collision>
 	</npc>
 	<npc id="16090" level="55" type="L2Npc" name="Agathion Soo-ro Kim">
@@ -4187,8 +4187,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="1" />
+			<height normal="6.75" />
 		</collision>
 	</npc>
 	<npc id="16091" level="55" type="L2Npc" name="Agathion Jaebum Park">
@@ -4209,8 +4209,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="1" />
+			<height normal="7" />
 		</collision>
 	</npc>
 	<npc id="16092" level="55" type="L2Npc" name="Agathion Shin-young Kim">
@@ -4231,8 +4231,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="1" />
+			<height normal="5.2" />
 		</collision>
 	</npc>
 	<npc id="16093" level="55" type="L2Npc" name="Flame Spirit">
@@ -4253,8 +4253,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="5" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="16094" level="55" type="L2Npc" name="Clan-exclusive Pet">
@@ -4275,8 +4275,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="9.5" />
 		</collision>
 	</npc>
 	<npc id="16095" level="55" type="L2Npc" name="Clan-exclusive Pet">
@@ -4297,8 +4297,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="7.5" />
 		</collision>
 	</npc>
 	<npc id="16096" level="55" type="L2Npc" name="Clan-exclusive Pet">
@@ -4319,8 +4319,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="16097" level="55" type="L2Npc" name="Clan-exclusive Pet for Training">
@@ -4341,8 +4341,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="16098" level="55" type="L2Npc" name="Sin Eater">
@@ -4363,8 +4363,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="6" />
+			<height normal="3" />
 		</collision>
 	</npc>
 	<npc id="16099" level="55" type="L2Npc" name="Sin Eater">
@@ -4385,8 +4385,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="6" />
+			<height normal="3" />
 		</collision>
 	</npc>
 </list>
