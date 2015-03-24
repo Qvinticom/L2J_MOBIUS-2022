@@ -33,8 +33,7 @@
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="TriggerSkillByDamage">
-				<param skillId="30002" skillLevel="1" />
-				<!-- Storm Sign -->
+				<param skillId="30002" skillLevel="1" /> <!-- Storm Sign -->
 				<param chance="100" />
 				<param targetType="ONE" />
 			</effect>
@@ -57,7 +56,6 @@
 		</for>
 	</skill>
 	<skill id="30003" levels="17" name="Hydro Flare">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Eliminates Storm Sign and attacks target with 110 Power added to M. Atk. 10% more damage if target is debuffed. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
 		<table name="#power">114 120 130 140 150 157 162 167 172 501 515 543 571 599 627 655 683</table>
 		<table name="#mpConsumes">47 51 54 58 60 62 64 65 66 67 67 68 68 68 69 69 70</table>
@@ -80,7 +78,6 @@
 		</for>
 	</skill>
 	<skill id="30004" levels="22" name="Hydro Strike">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon. -->
 		<table name="#magicLevel">40 44 48 52 56 58 64 68 72 76 78 80 82 84 85 87 89 91 93 95 97 99</table>
 		<table name="#power">57 66 74 83 92 101 110 118 127 136 140 145 149 154 420 442 464 486 508 530 552 574</table>
@@ -119,7 +116,6 @@
 		</for>
 	</skill>
 	<skill id="30006" levels="8" name="Storm Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<table name="#mpConsumes">134 135 136 137 138 138 139 141</table>
 		<table name="#power"> 255 269 283 297 311 325 339 353 </table>
@@ -139,7 +135,6 @@
 		</for>
 	</skill>
 	<skill id="30007" levels="12" name="Hydro Drain">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Eliminates Storm Sign and attacks target with 123 Power added to M. atk. and recovers 10% HP and 5% MP. Over-hit. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
 		<table name="#power">123 127 130 134 386 396 416 436 456 476 496 516</table>		
 		<table name="#mpConsumes">63 64 65 66 67 67 68 68 68 69 69 70</table>
@@ -183,7 +178,6 @@
 		</for>
 	</skill>
 	<skill id="30009" levels="10" name="Deceptive Blink">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon. -->
 		<table name="#mpConsumes"> 77 78 79 80 81 82 82 83 83 84 </table>
 		<set name="icon" val="icon.skill30009" />
@@ -201,7 +195,6 @@
 		</effect>
 	</skill>
 	<skill id="30010" levels="1" name="Windy Refuge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels all debuffs and recovers HP/MP for 10 sec. inside a refuge of wind. Cannot move. -->
 		<set name="icon" val="icon.skill30010" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -212,9 +205,18 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="180000" />
 		<set name="isMagic" val="1" />
+		<set name="castRange" val="0" />
+		<for>
+			<effect name="Buff">
+				<add stat="regHp" val="266" /> <!-- Retail Value -->
+				<add stat="regMp" val="74" /> <!-- Retail Value -->
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30011" levels="12" name="Threatening Wind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Sends a slashing wind to brand target with Storm Sign Stage 3. Requires a sword or blunt Weapon. -->
 		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
 		<set name="icon" val="icon.skill30011" />
@@ -231,14 +233,12 @@
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="300" />
 				<param chance="80" />
-				<param skillId="30002" skillLevel="3" />
-				<!-- Counter Critical -->
+				<param skillId="30002" skillLevel="3" /> <!-- Counter Critical -->
 				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="30012" levels="22" name="Air Rush">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
 		<table name="#power"> 57 66 74 83 92 101 110 118 127 136 141 145 150 154 376 397 418 438 459 480 501 522 </table>
 		<table name="#mpConsumes"> 31 34 38 41 45 49 53 56 59 62 63 64 65 66 67 67 68 68 69 69 69 70 </table>
@@ -268,8 +268,7 @@
 			<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 			<param minDamage="1" />
 			<param chance="100" />
-			<param skillId="30002" skillLevel="1" />
-			<!-- Storm Sign -->
+			<param skillId="30002" skillLevel="1" /> <!-- Storm Sign -->
 			<param targetType="ONE" />
 		</effect>
 	</skill>
@@ -287,7 +286,6 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="30014" levels="12" name="Compelling Wind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
 		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
 		<set name="icon" val="icon.skill30014" />
@@ -314,7 +312,6 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="30016" levels="3" name="Eye of the Storm">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%. -->
 		<table name="#mpConsumes"> 18 37 40 </table>
 		<set name="icon" val="icon.skill30016" />
@@ -363,7 +360,6 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="30019" levels="8" name="Sayha's Word">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<table name="#power">533 561 589 617 645 673 701 729</table>
 		<table name="#mpConsumes"> 670 677 682 687 690 694 699 705 </table>
@@ -389,7 +385,6 @@
 		</for>
 	</skill>
 	<skill id="30020" levels="1" name="Sayha's Fury">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
 		<set name="icon" val="icon.skill30020" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -412,15 +407,13 @@
 				<param castSkillId="1401" />
 				<!-- Major Heal -->
 				<param chance="100" />
-				<param skillId="30026" skillLevel="3" />
-				<!-- PvP Armor - Heal -->
+				<param skillId="30026" skillLevel="3" /> <!-- PvP Armor - Heal -->
 				<param targetType="ONE" />
 				<param allowWeapons="SWORD,BLUNT" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="30022" levels="1" name="Sayha's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
 		<set name="icon" val="icon.skill30022" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -448,7 +441,6 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="30026" levels="3" name="Lightning Squall">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 50 Power added to M. Atk., and decreases Speed by 20. -->
 		<table name="#power"> 50 100 150 </table>
 		<set name="icon" val="icon.skill30026" />
@@ -475,7 +467,6 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="30029" levels="1" name="Divine Storm">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<table name="#power">448</table>		
 		<set name="icon" val="icon.iconskill30007" />
@@ -503,12 +494,16 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="30031" levels="1" name="Magic Potential">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max. M. Critical Rate to 550. -->
 		<set name="icon" val="icon.skill30025" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="0" />
+		<for>
+			<effect name="Buff">
+				<set stat="mCritRate" val="550" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%. -->
 	<!-- Level 2 : When equipped with a blunt weapon, M. Atk. +17% and + 57, Casting Spd. + 5%. -->
@@ -618,24 +613,53 @@
 		</for>
 	</skill>
 	<skill id="30043" levels="2" name="Eminent Attribute Resistance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Wind Resistance + 30. -->
+		<!-- Level 1: Wind Resistance + 30. -->
+		<!-- Level 2: Wind Resistance + 30, Holy Resistance +30. -->
+		<table name="#magicLevel"> 76 85 </table>
+		<table name="#elementwind"> 30 30 </table>
+		<table name="#elementholy"> 0 30 </table>	
 		<set name="icon" val="icon.skill11006" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="#elementwind" />
+				<add stat="holyRes" val="#elementholy" />
+			</effect>
+		</for>		
 	</skill>
 	<skill id="30044" levels="2" name="Eminent Trait Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Hold/Mental Resistance + 30. -->
+		<table name="#magicLevel"> 76 85 </table>
+		<table name="#elementholdm"> 30 30 </table>
+		<table name="#elementhatep"> 0 30 </table>	
 		<set name="icon" val="icon.skill10005" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DefenceTrait">
+				<param HOLD="#elementholdm" />
+				<param PARALYZE="#elementholdm" />
+				<param SLEEP="#elementholdm" />
+				<param SHOCK="#elementholdm" />
+				<param DERANGEMENT="#elementhatep" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="30045" levels="3" name="Eminent Ability">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2. -->
+		<!-- LeveL 1: INT + 2. -->
+		<!-- LeveL 1: INT + 4. -->
+		<!-- LeveL 1: INT + 16. -->
+		<table name="#magicLevel"> 40 76 85 </table>
+		<table name="#tableINT"> 2 4 16 </table>
 		<set name="icon" val="icon.skill11253" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="#tableINT" />
+			</effect>
+		</for>
 	</skill>
 </list>
