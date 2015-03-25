@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
@@ -37,8 +38,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class L2CommandChannel extends AbstractPlayerGroup
 {
-	private final List<L2Party> _parties;
-	private L2PcInstance _commandLeader = null;
+	private final List<L2Party> _parties = new CopyOnWriteArrayList<>();
+	private L2PcInstance _commandLeader;
 	private int _channelLvl;
 	
 	/**
@@ -49,7 +50,6 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	{
 		_commandLeader = leader;
 		L2Party party = leader.getParty();
-		_parties = new CopyOnWriteArrayList<>();
 		_parties.add(party);
 		_channelLvl = party.getLevel();
 		party.setCommandChannel(this);
@@ -163,7 +163,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	@Override
 	public List<L2PcInstance> getMembers()
 	{
-		List<L2PcInstance> members = new CopyOnWriteArrayList<>();
+		final List<L2PcInstance> members = new LinkedList<>();
 		for (L2Party party : getPartys())
 		{
 			members.addAll(party.getMembers());

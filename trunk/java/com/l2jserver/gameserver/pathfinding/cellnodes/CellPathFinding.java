@@ -19,8 +19,10 @@
 package com.l2jserver.gameserver.pathfinding.cellnodes;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -48,7 +50,7 @@ public class CellPathFinding extends PathFinding
 	private int _postFilterPasses = 0;
 	private long _postFilterElapsed = 0;
 	
-	private ArrayList<L2ItemInstance> _debugItems = null;
+	private List<L2ItemInstance> _debugItems = null;
 	
 	public static CellPathFinding getInstance()
 	{
@@ -119,16 +121,12 @@ public class CellPathFinding extends PathFinding
 		{
 			if (_debugItems == null)
 			{
-				_debugItems = new ArrayList<>();
+				_debugItems = new CopyOnWriteArrayList<>();
 			}
 			else
 			{
 				for (L2ItemInstance item : _debugItems)
 				{
-					if (item == null)
-					{
-						continue;
-					}
 					item.decayMe();
 				}
 				
@@ -136,7 +134,7 @@ public class CellPathFinding extends PathFinding
 			}
 		}
 		
-		ArrayList<AbstractNodeLoc> path = null;
+		List<AbstractNodeLoc> path = null;
 		try
 		{
 			CellNode result = buffer.findPath(gx, gy, gz, gtx, gty, gtz);
@@ -242,9 +240,9 @@ public class CellPathFinding extends PathFinding
 		return path;
 	}
 	
-	private ArrayList<AbstractNodeLoc> constructPath(AbstractNode node)
+	private List<AbstractNodeLoc> constructPath(AbstractNode node)
 	{
-		ArrayList<AbstractNodeLoc> path = new ArrayList<>();
+		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
 		int previousDirectionX = Integer.MIN_VALUE;
 		int previousDirectionY = Integer.MIN_VALUE;
 		int directionX, directionY;
@@ -278,13 +276,12 @@ public class CellPathFinding extends PathFinding
 				previousDirectionX = directionX;
 				previousDirectionY = directionY;
 				
-				path.add(node.getLoc());
+				path.addFirst(node.getLoc());
 				node.setLoc(null);
 			}
 			
 			node = node.getParent();
 		}
-		
 		return path;
 	}
 	

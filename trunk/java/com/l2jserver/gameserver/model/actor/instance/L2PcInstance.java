@@ -478,7 +478,7 @@ public final class L2PcInstance extends L2Playable
 	
 	private int _bookmarkslot = 0; // The Teleport Bookmark Slot
 	
-	private final Map<Integer, TeleportBookmark> _tpbookmarks = new HashMap<>();
+	private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentHashMap<>();
 	
 	private boolean _canFeed;
 	private boolean _isInSiege;
@@ -519,11 +519,11 @@ public final class L2PcInstance extends L2Playable
 	private Transform _transformation;
 	
 	/** The table containing all L2RecipeList of the L2PcInstance */
-	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new HashMap<>();
-	private final Map<Integer, L2RecipeList> _commonRecipeBook = new HashMap<>();
+	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new ConcurrentHashMap<>();
+	private final Map<Integer, L2RecipeList> _commonRecipeBook = new ConcurrentHashMap<>();
 	
 	/** Premium Items */
-	private final Map<Integer, L2PremiumItem> _premiumItems = new HashMap<>();
+	private final Map<Integer, L2PremiumItem> _premiumItems = new ConcurrentHashMap<>();
 	
 	/** True if the L2PcInstance is sitting */
 	private boolean _waitTypeSitting;
@@ -581,7 +581,7 @@ public final class L2PcInstance extends L2Playable
 	private int _questNpcObject = 0;
 	
 	/** The table containing all Quests began by the L2PcInstance */
-	private final Map<String, QuestState> _quests = new HashMap<>();
+	private final Map<String, QuestState> _quests = new ConcurrentHashMap<>();
 	
 	/** The list containing all shortCuts of this player. */
 	private final ShortCuts _shortCuts = new ShortCuts(this);
@@ -589,8 +589,8 @@ public final class L2PcInstance extends L2Playable
 	/** The list containing all macros of this player. */
 	private final MacroList _macros = new MacroList(this);
 	
-	private final List<L2PcInstance> _snoopListener = new ArrayList<>();
-	private final List<L2PcInstance> _snoopedPlayer = new ArrayList<>();
+	private final Set<L2PcInstance> _snoopListener = ConcurrentHashMap.newKeySet(1);
+	private final Set<L2PcInstance> _snoopedPlayer = ConcurrentHashMap.newKeySet(1);
 	
 	// hennas
 	private final L2Henna[] _henna = new L2Henna[3];
@@ -710,7 +710,7 @@ public final class L2PcInstance extends L2Playable
 	/** The fists L2Weapon of the L2PcInstance (used when no weapon is equipped) */
 	private L2Weapon _fistsWeaponItem;
 	
-	private final Map<Integer, String> _chars = new HashMap<>();
+	private final Map<Integer, String> _chars = new LinkedHashMap<>();
 	
 	// private byte _updateKnownCounter = 0;
 	
@@ -733,9 +733,9 @@ public final class L2PcInstance extends L2Playable
 	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
-	private final Map<Integer, L2CubicInstance> _cubics = new ConcurrentSkipListMap<>();
+	private final Map<Integer, L2CubicInstance> _cubics = new ConcurrentSkipListMap<>(); // TODO(Zoey76): This should be sorted in insert order.
 	/** Active shots. */
-	protected Set<Integer> _activeSoulShots = ConcurrentHashMap.newKeySet();
+	protected Set<Integer> _activeSoulShots = ConcurrentHashMap.newKeySet(1);
 	
 	public final ReentrantLock soulShotLock = new ReentrantLock();
 	
@@ -1535,7 +1535,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (_notifyQuestOfDeathList == null)
 				{
-					_notifyQuestOfDeathList = new ArrayList<>();
+					_notifyQuestOfDeathList = new CopyOnWriteArrayList<>();
 				}
 			}
 		}
@@ -5924,7 +5924,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_tamedBeast == null)
 		{
-			_tamedBeast = new ArrayList<>();
+			_tamedBeast = new CopyOnWriteArrayList<>();
 		}
 		_tamedBeast.add(tamedBeast);
 	}
@@ -6875,8 +6875,7 @@ public final class L2PcInstance extends L2Playable
 		su.addAttribute(StatusUpdate.KARMA, getKarma());
 		sendPacket(su);
 		
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
 			if ((player == null) || !isVisibleFor(player))
 			{
@@ -8537,7 +8536,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// is AutoAttackable if both players are in the same duel and the duel is still going on
-		if (attacker.isPlayer() && (getDuelState() == Duel.DUELSTATE_DUELLING) && (getDuelId() == ((L2PcInstance) attacker).getDuelId()))
+		if (attacker.isPlayable() && (getDuelState() == Duel.DUELSTATE_DUELLING) && (getDuelId() == attacker.getActingPlayer().getDuelId()))
 		{
 			return true;
 		}
@@ -10491,7 +10490,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_subClasses == null)
 		{
-			_subClasses = new HashMap<>();
+			_subClasses = new ConcurrentSkipListMap<>();
 		}
 		
 		return _subClasses;
@@ -11229,10 +11228,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public void addSnooper(L2PcInstance pci)
 	{
-		if (!_snoopListener.contains(pci))
-		{
 			_snoopListener.add(pci);
-		}
 	}
 	
 	public void removeSnooper(L2PcInstance pci)
@@ -11242,10 +11238,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public void addSnooped(L2PcInstance pci)
 	{
-		if (!_snoopedPlayer.contains(pci))
-		{
 			_snoopedPlayer.add(pci);
-		}
 	}
 	
 	public void removeSnooped(L2PcInstance pci)
@@ -13569,9 +13562,7 @@ public final class L2PcInstance extends L2Playable
 		return (int) time;
 	}
 	
-	/**
-	 * list of character friends
-	 */
+	/** Friend list. */
 	private final HashMap<Integer, Friend> _friendList = new HashMap<>();
 	private final ArrayList<Integer> _updateMemos = new ArrayList<>();
 	

@@ -47,7 +47,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	private final int _id;
 	protected L2ZoneForm _zone;
-	protected ConcurrentHashMap<Integer, L2Character> _characterList;
+	protected Map<Integer, L2Character> _characterList;
 	
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected = false;

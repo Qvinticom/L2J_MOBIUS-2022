@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.data.xml;
+package com.l2jserver.util.data.xml;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -35,7 +35,7 @@ import com.l2jserver.Config;
 import com.l2jserver.util.file.filter.XMLFilter;
 
 /**
- * Abstract class for XML parsers.
+ * Interface for XML parsers.
  * @author Zoey76
  */
 public interface IXmlReader
@@ -107,6 +107,27 @@ public interface IXmlReader
 	default boolean parseDirectory(File file)
 	{
 		return parseDirectory(file, false);
+	}
+	
+	/**
+	 * Wrapper for {@link #parseDirectory(File, boolean)}.
+	 * @param path the path to the directory where the XML files are.
+	 * @return {@code false} if it fails to find the directory, {@code true} otherwise.
+	 */
+	default boolean parseDirectory(String path)
+	{
+		return parseDirectory(new File(path), false);
+	}
+	
+	/**
+	 * Wrapper for {@link #parseDirectory(File, boolean)}.
+	 * @param path the path to the directory where the XML files are.
+	 * @param recursive parses all sub folders if there is.
+	 * @return {@code false} if it fails to find the directory, {@code true} otherwise.
+	 */
+	default boolean parseDirectory(String path, boolean recursive)
+	{
+		return parseDirectory(new File(path), recursive);
 	}
 	
 	/**

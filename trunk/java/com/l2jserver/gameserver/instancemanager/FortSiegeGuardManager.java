@@ -23,6 +23,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,7 +37,7 @@ public final class FortSiegeGuardManager
 	private static final Logger _log = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
 	private final Fort _fort;
-	private final HashMap<Integer, ArrayList<L2Spawn>> _siegeGuards = new HashMap<>();
+	private final Map<Integer, List<L2Spawn>> _siegeGuards = new HashMap<>();
 	
 	public FortSiegeGuardManager(Fort fort)
 	{
@@ -49,7 +51,7 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final ArrayList<L2Spawn> monsterList = getSiegeGuardSpawn().get(getFort().getResidenceId());
+			final List<L2Spawn> monsterList = _siegeGuards.get(getFort().getResidenceId());
 			if (monsterList != null)
 			{
 				for (L2Spawn spawnDat : monsterList)
@@ -79,8 +81,7 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final ArrayList<L2Spawn> monsterList = getSiegeGuardSpawn().get(getFort().getResidenceId());
-			
+			final List<L2Spawn> monsterList = _siegeGuards.get(getFort().getResidenceId());
 			if (monsterList != null)
 			{
 				for (L2Spawn spawnDat : monsterList)
@@ -112,7 +113,7 @@ public final class FortSiegeGuardManager
 			ps.setInt(1, fortId);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				ArrayList<L2Spawn> siegeGuardSpawns = new ArrayList<>();
+				final List<L2Spawn> siegeGuardSpawns = new ArrayList<>();
 				while (rs.next())
 				{
 					final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
@@ -140,7 +141,7 @@ public final class FortSiegeGuardManager
 		return _fort;
 	}
 	
-	public final HashMap<Integer, ArrayList<L2Spawn>> getSiegeGuardSpawn()
+	public final Map<Integer, List<L2Spawn>> getSiegeGuardSpawn()
 	{
 		return _siegeGuards;
 	}

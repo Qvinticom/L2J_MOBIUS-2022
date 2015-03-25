@@ -63,10 +63,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public void initRoot()
 	{
-		for (Forum f : _table)
-		{
-			f.vload();
-		}
+		_table.forEach(f -> f.vload());
 		_log.info("Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
 	}
 	
@@ -101,14 +98,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public Forum getForumByName(String name)
 	{
-		for (Forum f : _table)
-		{
-			if (f.getName().equals(name))
-			{
-				return f;
-			}
-		}
-		return null;
+		return _table.stream().filter(f -> f.getName().equals(name)).findFirst().orElse(null);
 	}
 	
 	/**
@@ -143,14 +133,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public Forum getForumByID(int idf)
 	{
-		for (Forum f : _table)
-		{
-			if (f.getID() == idf)
-			{
-				return f;
-			}
-		}
-		return null;
+		return _table.stream().filter(f -> f.getID() == idf).findFirst().orElse(null);
 	}
 	
 	@Override

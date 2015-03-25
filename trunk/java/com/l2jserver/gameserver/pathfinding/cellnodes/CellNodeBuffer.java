@@ -18,7 +18,8 @@
  */
 package com.l2jserver.gameserver.pathfinding.cellnodes;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 import com.l2jserver.Config;
@@ -112,10 +113,9 @@ public class CellNodeBuffer
 		return _lastElapsedTime;
 	}
 	
-	public final ArrayList<CellNode> debugPath()
+	public final List<CellNode> debugPath()
 	{
-		ArrayList<CellNode> result = new ArrayList<>();
-		
+		final List<CellNode> result = new LinkedList<>();
 		for (CellNode n = _current; n.getParent() != null; n = (CellNode) n.getParent())
 		{
 			result.add(n);
@@ -135,7 +135,6 @@ public class CellNodeBuffer
 				result.add(n);
 			}
 		}
-		
 		return result;
 	}
 	

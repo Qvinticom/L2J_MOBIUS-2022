@@ -37,13 +37,13 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Spawn data retriever.

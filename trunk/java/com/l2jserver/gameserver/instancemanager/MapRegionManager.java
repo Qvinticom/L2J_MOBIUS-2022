@@ -27,7 +27,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.L2MapRegion;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
@@ -42,6 +41,7 @@ import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jserver.gameserver.model.zone.type.L2RespawnZone;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author Nyaran

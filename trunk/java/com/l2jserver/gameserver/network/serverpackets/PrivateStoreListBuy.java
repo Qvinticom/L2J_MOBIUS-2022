@@ -18,18 +18,16 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.List;
+
 import com.l2jserver.gameserver.model.TradeItem;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * This class ...
- * @version $Revision: 1.7.2.2.2.3 $ $Date: 2005/03/27 15:29:39 $
- */
 public class PrivateStoreListBuy extends AbstractItemPacket
 {
 	private final int _objId;
 	private final long _playerAdena;
-	private final TradeItem[] _items;
+	private final List<TradeItem> _items;
 	
 	public PrivateStoreListBuy(L2PcInstance player, L2PcInstance storePlayer)
 	{
@@ -46,7 +44,7 @@ public class PrivateStoreListBuy extends AbstractItemPacket
 		writeD(_objId);
 		writeQ(_playerAdena);
 		writeD(0x00); // unk
-		writeD(_items.length);
+		writeD(_items.size());
 		
 		for (TradeItem item : _items)
 		{

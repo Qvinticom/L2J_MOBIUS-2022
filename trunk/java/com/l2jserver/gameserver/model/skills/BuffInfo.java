@@ -319,7 +319,7 @@ public final class BuffInfo
 			if (task != null)
 			{
 				task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
-				_effected.getEffectList().remove(true, this); // Remove the buff from the effect list.
+				_effected.getEffectList().stopSkillEffects(true, getSkill()); // Remove the buff from the effect list.
 			}
 		}
 	}

@@ -89,11 +89,9 @@ public class TvTEvent
 	/** Instance id<br> */
 	private static int _TvTEventInstance = 0;
 	
-	/**
-	 * No instance of this class!<br>
-	 */
 	private TvTEvent()
 	{
+		// Prevent external initialization.
 	}
 	
 	/**
@@ -165,7 +163,7 @@ public class TvTEvent
 	 * Starts the TvTEvent fight<br>
 	 * 1. Set state EventState.STARTING<br>
 	 * 2. Close doors specified in configs<br>
-	 * 3. Abort if not enought participants(return false)<br>
+	 * 3. Abort if not enough participants(return false)<br>
 	 * 4. Set state EventState.STARTED<br>
 	 * 5. Teleport all participants to team spot<br>
 	 * <br>

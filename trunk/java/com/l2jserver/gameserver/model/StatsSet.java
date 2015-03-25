@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -47,7 +47,7 @@ public class StatsSet implements IParserAdvUtils
 	
 	public StatsSet()
 	{
-		this(new HashMap<String, Object>());
+		this(new LinkedHashMap<>());
 	}
 	
 	public StatsSet(Map<String, Object> map)

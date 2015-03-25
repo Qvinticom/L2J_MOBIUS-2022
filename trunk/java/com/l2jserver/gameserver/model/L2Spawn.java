@@ -19,10 +19,12 @@
 package com.l2jserver.gameserver.model;
 
 import java.lang.reflect.Constructor;
-import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -79,9 +81,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private boolean _doRespawn;
 	/** If true then spawn is custom */
 	private boolean _customSpawn;
-	private static List<SpawnListener> _spawnListeners = new ArrayList<>();
-	private final ArrayList<L2Npc> _spawnedNpcs = new ArrayList<>();
-	private L2Npc _lastSpawn;
+	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
+	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private Map<Integer, Location> _lastSpawnPoints;
 	private boolean _isNoRndWalk = false; // Is no random walk
 	
@@ -688,7 +689,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		notifyNpcSpawned(mob);
 		
 		_spawnedNpcs.add(mob);
-		_lastSpawn = mob;
 		if (_lastSpawnPoints != null)
 		{
 			_lastSpawnPoints.put(mob.getObjectId(), new Location(newlocx, newlocy, newlocz));
@@ -705,28 +705,19 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	
 	public static void addSpawnListener(SpawnListener listener)
 	{
-		synchronized (_spawnListeners)
-		{
-			_spawnListeners.add(listener);
-		}
+		_spawnListeners.add(listener);
 	}
 	
 	public static void removeSpawnListener(SpawnListener listener)
 	{
-		synchronized (_spawnListeners)
-		{
-			_spawnListeners.remove(listener);
-		}
+		_spawnListeners.remove(listener);
 	}
 	
 	public static void notifyNpcSpawned(L2Npc npc)
 	{
-		synchronized (_spawnListeners)
+		for (SpawnListener listener : _spawnListeners)
 		{
-			for (SpawnListener listener : _spawnListeners)
-			{
-				listener.npcSpawned(npc);
-			}
+			listener.npcSpawned(npc);
 		}
 	}
 	
@@ -791,10 +782,10 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	
 	public L2Npc getLastSpawn()
 	{
-		return _lastSpawn;
+		return _spawnedNpcs.peekLast();
 	}
 	
-	public final ArrayList<L2Npc> getSpawnedNpcs()
+	public final Deque<L2Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
 	}

@@ -26,10 +26,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class loads and holds all static object data.

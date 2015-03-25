@@ -23,10 +23,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -243,7 +243,7 @@ public final class Castle extends AbstractResidence
 	{
 		super(castleId);
 		load();
-		_function = new HashMap<>();
+		_function = new ConcurrentHashMap<>();
 		initResidenceZone();
 		spawnSideNpcs();
 		if (getOwnerId() != 0)
@@ -260,11 +260,7 @@ public final class Castle extends AbstractResidence
 	 */
 	public CastleFunction getFunction(int type)
 	{
-		if (_function.containsKey(type))
-		{
-			return _function.get(type);
-		}
-		return null;
+		return _function.get(type);
 	}
 	
 	public synchronized void engrave(L2Clan clan, L2Object target, CastleSide side)

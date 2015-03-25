@@ -24,8 +24,8 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class load, holds and calculates the hit condition bonuses.

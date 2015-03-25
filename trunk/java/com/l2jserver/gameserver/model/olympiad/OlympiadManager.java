@@ -80,7 +80,7 @@ public class OlympiadManager
 			{
 				if (result == null)
 				{
-					result = new ArrayList<>();
+					result = new CopyOnWriteArrayList<>();
 				}
 				
 				result.add(classList.getValue());
@@ -297,7 +297,7 @@ public class OlympiadManager
 				}
 				
 				int teamPoints = 0;
-				ArrayList<Integer> team = new ArrayList<>(party.getMemberCount());
+				List<Integer> team = new ArrayList<>(party.getMemberCount());
 				for (L2PcInstance noble : party.getMembers())
 				{
 					if (!checkNoble(noble, player))
@@ -391,7 +391,6 @@ public class OlympiadManager
 		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
 		if ((classed != null) && classed.remove(objId))
 		{
-			_classBasedRegisters.remove(noble.getBaseClass());
 			_classBasedRegisters.put(noble.getBaseClass(), classed);
 			
 			if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)

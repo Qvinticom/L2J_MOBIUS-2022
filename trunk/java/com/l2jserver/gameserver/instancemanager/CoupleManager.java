@@ -21,7 +21,8 @@ package com.l2jserver.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,7 +38,7 @@ public final class CoupleManager
 {
 	private static final Logger _log = Logger.getLogger(CoupleManager.class.getName());
 	
-	private ArrayList<Couple> _couples;
+	private final List<Couple> _couples = new CopyOnWriteArrayList<>();
 	
 	protected CoupleManager()
 	{
@@ -46,7 +47,7 @@ public final class CoupleManager
 	
 	public void reload()
 	{
-		getCouples().clear();
+		_couples.clear();
 		load();
 	}
 	
@@ -84,15 +85,15 @@ public final class CoupleManager
 		{
 			if ((player1.getPartnerId() == 0) && (player2.getPartnerId() == 0))
 			{
-				int _player1id = player1.getObjectId();
-				int _player2id = player2.getObjectId();
+				int player1id = player1.getObjectId();
+				int player2id = player2.getObjectId();
 				
-				Couple _new = new Couple(player1, player2);
-				getCouples().add(_new);
-				player1.setPartnerId(_player2id);
-				player2.setPartnerId(_player1id);
-				player1.setCoupleId(_new.getId());
-				player2.setCoupleId(_new.getId());
+				Couple couple = new Couple(player1, player2);
+				getCouples().add(couple);
+				player1.setPartnerId(player2id);
+				player2.setPartnerId(player1id);
+				player1.setCoupleId(couple.getId());
+				player2.setCoupleId(couple.getId());
 			}
 		}
 	}
@@ -138,12 +139,8 @@ public final class CoupleManager
 		return -1;
 	}
 	
-	public final ArrayList<Couple> getCouples()
+	public final List<Couple> getCouples()
 	{
-		if (_couples == null)
-		{
-			_couples = new ArrayList<>();
-		}
 		return _couples;
 	}
 	

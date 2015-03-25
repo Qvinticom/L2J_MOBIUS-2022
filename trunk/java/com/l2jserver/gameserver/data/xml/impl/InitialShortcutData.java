@@ -27,7 +27,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.MacroType;
 import com.l2jserver.gameserver.enums.ShortcutType;
 import com.l2jserver.gameserver.model.Macro;
@@ -37,6 +36,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.serverpackets.ShortCutRegister;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class holds the Initial Shortcuts information.<br>

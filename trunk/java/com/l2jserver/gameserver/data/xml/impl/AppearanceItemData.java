@@ -26,13 +26,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.items.appearance.AppearanceStone;
 import com.l2jserver.gameserver.model.items.appearance.AppearanceTargetType;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
@@ -109,7 +109,7 @@ public class AppearanceItemData implements IXmlReader
 								}
 								case "bodyPart":
 								{
-									final int part = ItemTable._slots.get(c.getTextContent());
+									final int part = ItemTable.SLOTS.get(c.getTextContent());
 									stone.addBodyPart(part);
 									break;
 								}

@@ -45,7 +45,7 @@ public final class CHSiegeManager
 	private static final Logger _log = Logger.getLogger(CHSiegeManager.class.getName());
 	private static final String SQL_LOAD_HALLS = "SELECT * FROM siegable_clanhall";
 	
-	private final HashMap<Integer, SiegableHall> _siegableHalls = new HashMap<>();
+	private final Map<Integer, SiegableHall> _siegableHalls = new HashMap<>();
 	
 	protected CHSiegeManager()
 	{
@@ -86,7 +86,7 @@ public final class CHSiegeManager
 		}
 	}
 	
-	public HashMap<Integer, SiegableHall> getConquerableHalls()
+	public Map<Integer, SiegableHall> getConquerableHalls()
 	{
 		return _siegableHalls;
 	}

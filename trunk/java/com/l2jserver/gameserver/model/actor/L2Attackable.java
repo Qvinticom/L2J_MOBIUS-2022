@@ -109,6 +109,7 @@ public class L2Attackable extends L2Npc
 	private final Map<Integer, AbsorberInfo> _absorbersList = new ConcurrentHashMap<>();
 	// Misc
 	private boolean _mustGiveExpSp;
+	protected int _onKillDelay = 5000;
 	
 	/**
 	 * Creates an attackable NPC.
@@ -347,7 +348,7 @@ public class L2Attackable extends L2Npc
 		if ((killer != null) && killer.isPlayable())
 		{
 			// Delayed notification
-			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this);
+			EventDispatcher.getInstance().notifyEventAsyncDelayed(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this, _onKillDelay);
 		}
 		
 		// Notify to minions if there are.
@@ -1545,6 +1546,20 @@ public class L2Attackable extends L2Npc
 	public final boolean isSeeded()
 	{
 		return _seeded;
+	}
+	
+	/**
+	 * Set delay for onKill() call, in ms Default: 5000 ms
+	 * @param delay
+	 */
+	public final void setOnKillDelay(int delay)
+	{
+		_onKillDelay = delay;
+	}
+	
+	public final int getOnKillDelay()
+	{
+		return _onKillDelay;
 	}
 	
 	/**

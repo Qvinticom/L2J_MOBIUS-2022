@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.model.actor.knownlist;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -204,10 +205,9 @@ public class CharKnownList extends ObjectKnownList
 		return (L2Character) super.getActiveObject();
 	}
 	
-	public Collection<L2Character> getKnownCharacters()
+	public List<L2Character> getKnownCharacters()
 	{
-		ArrayList<L2Character> result = new ArrayList<>();
-		
+		List<L2Character> result = new LinkedList<>();
 		final Collection<L2Object> objs = getKnownObjects().values();
 		for (L2Object obj : objs)
 		{

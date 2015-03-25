@@ -29,7 +29,6 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.tasks.StartMovingTask;
 import com.l2jserver.gameserver.model.L2NpcWalkerNode;
@@ -45,6 +44,7 @@ import com.l2jserver.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class manages walking monsters.

@@ -46,7 +46,6 @@ public class L2RaceManagerInstance extends L2Npc
 	public static final int LANES = 8;
 	public static final int WINDOW_START = 0;
 	
-	// private static List<Race> _history;
 	private static List<L2RaceManagerInstance> _managers;
 	protected static int _raceNumber = 4;
 	
@@ -104,7 +103,6 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			_notInitialized = false;
 			
-			// _history = new ArrayList<>();
 			_managers = new ArrayList<>();
 			
 			ThreadPoolManager s = ThreadPoolManager.getInstance();
@@ -128,7 +126,6 @@ public class L2RaceManagerInstance extends L2Npc
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
-			// */
 		}
 		_managers.add(this);
 	}

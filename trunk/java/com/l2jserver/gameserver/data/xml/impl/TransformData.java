@@ -26,7 +26,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.transform.Transform;
@@ -36,6 +35,7 @@ import com.l2jserver.gameserver.model.holders.AdditionalItemHolder;
 import com.l2jserver.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.ExBasicActionList;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid

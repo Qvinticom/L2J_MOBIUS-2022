@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
 import com.l2jserver.gameserver.model.FortSiegeSpawn;
@@ -47,7 +47,7 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 		writeD(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
 		writeD(_fortress.getFortSize()); // barracks count
 		
-		ArrayList<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
+		List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
 		if ((commanders != null) && (commanders.size() != 0) && _fortress.getSiege().isInProgress())
 		{
 			switch (commanders.size())

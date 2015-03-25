@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -32,7 +32,7 @@ public class PartyMatchWaitingList
 	
 	protected PartyMatchWaitingList()
 	{
-		_members = new ArrayList<>();
+		_members = new CopyOnWriteArrayList<>();
 	}
 	
 	public void addPlayer(L2PcInstance player)

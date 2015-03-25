@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  */
 public final class RandomSpawn extends AbstractNpcAI
 {
-	private static Map<Integer, Location[]> SPAWN_POINTS = new HashMap<>();
+	private static final Map<Integer, Location[]> SPAWN_POINTS = new HashMap<>();
 	static
 	{
 		// Keltas

@@ -24,10 +24,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -120,9 +122,9 @@ public final class FourSepulchersManager
 	};
 	// @formatter:on
 	
-	protected Map<Integer, Boolean> _archonSpawned = new HashMap<>();
-	protected Map<Integer, Boolean> _hallInUse = new HashMap<>();
-	protected Map<Integer, L2PcInstance> _challengers = new HashMap<>();
+	protected Map<Integer, Boolean> _archonSpawned = new ConcurrentHashMap<>();
+	protected Map<Integer, Boolean> _hallInUse = new ConcurrentHashMap<>();
+	protected Map<Integer, L2PcInstance> _challengers = new ConcurrentHashMap<>();
 	protected Map<Integer, int[]> _startHallSpawns = new HashMap<>();
 	protected Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
 	protected Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
@@ -143,7 +145,7 @@ public final class FourSepulchersManager
 	protected List<L2Spawn> _managers;
 	protected List<L2Spawn> _dukeFinalSpawns;
 	protected List<L2Spawn> _emperorsGraveSpawns;
-	protected List<L2Npc> _allMobs = new ArrayList<>();
+	protected List<L2Npc> _allMobs = new CopyOnWriteArrayList<>();
 	
 	private long _attackTimeEnd = 0;
 	private long _coolDownTimeEnd = 0;
@@ -260,19 +262,15 @@ public final class FourSepulchersManager
 		_hallInUse.put(31923, false);
 		_hallInUse.put(31924, false);
 		
-		if (_archonSpawned.size() != 0)
+		for (int npcId : _archonSpawned.keySet())
 		{
-			Set<Integer> npcIdSet = _archonSpawned.keySet();
-			for (int npcId : npcIdSet)
-			{
-				_archonSpawned.put(npcId, false);
-			}
+			_archonSpawned.put(npcId, false);
 		}
 	}
 	
 	protected void spawnManagers()
 	{
-		_managers = new ArrayList<>();
+		_managers = new CopyOnWriteArrayList<>();
 		
 		for (int npcId = 31921; npcId <= 31924; npcId++)
 		{
@@ -972,7 +970,7 @@ public final class FourSepulchersManager
 		
 		if (Config.FS_PARTY_MEMBER_COUNT > 1)
 		{
-			List<L2PcInstance> members = new ArrayList<>();
+			final List<L2PcInstance> members = new LinkedList<>();
 			for (L2PcInstance mem : player.getParty().getMembers())
 			{
 				if (!mem.isDead() && Util.checkIfInRange(700, player, mem, true))
@@ -1006,7 +1004,7 @@ public final class FourSepulchersManager
 		}
 		if ((Config.FS_PARTY_MEMBER_COUNT <= 1) && player.isInParty())
 		{
-			List<L2PcInstance> members = new ArrayList<>();
+			final List<L2PcInstance> members = new LinkedList<>();
 			for (L2PcInstance mem : player.getParty().getMembers())
 			{
 				if (!mem.isDead() && Util.checkIfInRange(700, player, mem, true))
@@ -1084,9 +1082,8 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		List<L2Spawn> monsterList;
-		List<L2SepulcherMonsterInstance> mobs = new ArrayList<>();
-		
+		final List<L2SepulcherMonsterInstance> mobs = new CopyOnWriteArrayList<>();
+		final List<L2Spawn> monsterList;
 		if (Rnd.get(2) == 0)
 		{
 			monsterList = _physicalMonsters.get(npcId);
@@ -1366,11 +1363,6 @@ public final class FourSepulchersManager
 	{
 		for (L2Npc mob : _allMobs)
 		{
-			if (mob == null)
-			{
-				continue;
-			}
-			
 			try
 			{
 				if (mob.getSpawn() != null)

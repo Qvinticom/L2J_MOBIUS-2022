@@ -100,7 +100,7 @@ public final class CubicAction implements Runnable
 			boolean useCubicCure = false;
 			if ((_cubic.getId() >= L2CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= L2CubicInstance.SMART_CUBIC_SPECTRALMASTER))
 			{
-				for (BuffInfo info : _cubic.getOwner().getEffectList().getDebuffs().values())
+				for (BuffInfo info : _cubic.getOwner().getEffectList().getDebuffs())
 				{
 					if (info.getSkill().canBeDispeled())
 					{

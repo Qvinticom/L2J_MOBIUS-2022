@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -107,7 +108,7 @@ public final class CrystalCaverns extends AbstractInstance
 			0,
 			0
 		}; // 0: not spawned, 1: spawned, 2: cleared
-		public Map<L2DoorInstance, L2PcInstance> openedDoors = new HashMap<>();
+		public Map<L2DoorInstance, L2PcInstance> openedDoors = new ConcurrentHashMap<>();
 		public Map<Integer, Map<L2Npc, Boolean>> npcList2 = new HashMap<>();
 		public Map<L2Npc, L2Npc> oracles = new HashMap<>();
 		public List<L2Npc> keyKeepers = new ArrayList<>();
@@ -1378,27 +1379,24 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					return "";
 				}
+				
 				CrystalGolem cryGolem = world.crystalGolems.get(npc);
-				List<L2Object> crystals = new ArrayList<>();
+				int minDist = 300000;
 				for (L2Object object : L2World.getInstance().getVisibleObjects(npc, 300))
 				{
-					if ((object instanceof L2ItemInstance) && (object.getId() == CRYSTALFOOD))
+					if (object.isItem() && (object.getId() == CRYSTALFOOD))
 					{
-						crystals.add(object);
+						int dx = npc.getX() - object.getX();
+						int dy = npc.getY() - object.getY();
+						int d = (dx * dx) + (dy * dy);
+						if (d < minDist)
+						{
+							minDist = d;
+							cryGolem.foodItem = (L2ItemInstance) object;
+						}
 					}
 				}
-				int minDist = 300000;
-				for (L2Object crystal : crystals)
-				{
-					int dx = npc.getX() - crystal.getX();
-					int dy = npc.getY() - crystal.getY();
-					int d = (dx * dx) + (dy * dy);
-					if (d < minDist)
-					{
-						minDist = d;
-						cryGolem.foodItem = (L2ItemInstance) crystal;
-					}
-				}
+				
 				if (minDist != 300000)
 				{
 					startQuestTimer("getFood", 2000, npc, null);

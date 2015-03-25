@@ -25,10 +25,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,15 +54,15 @@ public final class FortSiegeManager
 	private int _attackerMaxClans = 500; // Max number of clans
 	
 	// Fort Siege settings
-	private HashMap<Integer, ArrayList<FortSiegeSpawn>> _commanderSpawnList;
-	private HashMap<Integer, ArrayList<CombatFlag>> _flagList;
+	private Map<Integer, List<FortSiegeSpawn>> _commanderSpawnList;
+	private Map<Integer, List<CombatFlag>> _flagList;
 	private boolean _justToTerritory = true; // Changeable in fortsiege.properties
 	private int _flagMaxCount = 1; // Changeable in fortsiege.properties
 	private int _siegeClanMinLevel = 4; // Changeable in fortsiege.properties
 	private int _siegeLength = 60; // Time in minute. Changeable in fortsiege.properties
 	private int _countDownLength = 10; // Time in minute. Changeable in fortsiege.properties
 	private int _suspiciousMerchantRespawnDelay = 180; // Time in minute. Changeable in fortsiege.properties
-	private List<FortSiege> _sieges;
+	private final List<FortSiege> _sieges = new ArrayList<>();
 	
 	protected FortSiegeManager()
 	{
@@ -137,13 +138,13 @@ public final class FortSiegeManager
 		_suspiciousMerchantRespawnDelay = Integer.decode(siegeSettings.getProperty("SuspiciousMerchantRespawnDelay", "180"));
 		
 		// Siege spawns settings
-		_commanderSpawnList = new HashMap<>();
-		_flagList = new HashMap<>();
+		_commanderSpawnList = new ConcurrentHashMap<>();
+		_flagList = new ConcurrentHashMap<>();
 		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
-			ArrayList<FortSiegeSpawn> _commanderSpawns = new ArrayList<>();
-			ArrayList<CombatFlag> _flagSpawns = new ArrayList<>();
+			List<FortSiegeSpawn> commanderSpawns = new ArrayList<>();
+			List<CombatFlag> flagSpawns = new ArrayList<>();
 			for (int i = 1; i < 5; i++)
 			{
 				final String _spawnParams = siegeSettings.getProperty(fort.getName().replace(" ", "") + "Commander" + i, "");
@@ -161,7 +162,7 @@ public final class FortSiegeManager
 					int heading = Integer.parseInt(st.nextToken());
 					int npc_id = Integer.parseInt(st.nextToken());
 					
-					_commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
+					commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
 				}
 				catch (Exception e)
 				{
@@ -169,7 +170,7 @@ public final class FortSiegeManager
 				}
 			}
 			
-			_commanderSpawnList.put(fort.getResidenceId(), _commanderSpawns);
+			_commanderSpawnList.put(fort.getResidenceId(), commanderSpawns);
 			
 			for (int i = 1; i < 4; i++)
 			{
@@ -187,33 +188,25 @@ public final class FortSiegeManager
 					int z = Integer.parseInt(st.nextToken());
 					int flag_id = Integer.parseInt(st.nextToken());
 					
-					_flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
+					flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
 				}
 				catch (Exception e)
 				{
 					_log.warning("Error while loading flag(s) for " + fort.getName() + " fort.");
 				}
 			}
-			_flagList.put(fort.getResidenceId(), _flagSpawns);
+			_flagList.put(fort.getResidenceId(), flagSpawns);
 		}
 	}
 	
-	public final ArrayList<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
+	public final List<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
 	{
-		if (_commanderSpawnList.containsKey(_fortId))
-		{
-			return _commanderSpawnList.get(_fortId);
-		}
-		return null;
+		return _commanderSpawnList.get(_fortId);
 	}
 	
-	public final ArrayList<CombatFlag> getFlagList(int _fortId)
+	public final List<CombatFlag> getFlagList(int _fortId)
 	{
-		if (_flagList.containsKey(_fortId))
-		{
-			return _flagList.get(_fortId);
-		}
-		return null;
+		return _flagList.get(_fortId);
 	}
 	
 	public final int getAttackerMaxClans()
@@ -270,19 +263,11 @@ public final class FortSiegeManager
 	
 	public final List<FortSiege> getSieges()
 	{
-		if (_sieges == null)
-		{
-			_sieges = new ArrayList<>();
-		}
 		return _sieges;
 	}
 	
 	public final void addSiege(FortSiege fortSiege)
 	{
-		if (_sieges == null)
-		{
-			_sieges = new ArrayList<>();
-		}
 		_sieges.add(fortSiege);
 	}
 	
@@ -300,7 +285,7 @@ public final class FortSiegeManager
 		
 		final Fort fort = FortManager.getInstance().getFort(player);
 		
-		final ArrayList<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+		final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
 		for (CombatFlag cf : fcf)
 		{
 			if (cf.getCombatFlagInstance() == item)
@@ -347,9 +332,7 @@ public final class FortSiegeManager
 	public void dropCombatFlag(L2PcInstance player, int fortId)
 	{
 		final Fort fort = FortManager.getInstance().getFortById(fortId);
-		
-		final ArrayList<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
-		
+		final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
 		for (CombatFlag cf : fcf)
 		{
 			if (cf.getPlayerObjectId() == player.getObjectId())

@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
 import com.l2jserver.gameserver.model.FortSiegeSpawn;
@@ -41,7 +41,7 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 	{
 		_fortId = fort.getResidenceId();
 		_size = fort.getFortSize();
-		ArrayList<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortId);
+		List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortId);
 		_csize = ((commanders == null) ? 0 : commanders.size());
 		_csize2 = fort.getSiege().getCommanders().size();
 	}

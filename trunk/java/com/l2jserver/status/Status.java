@@ -27,7 +27,6 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
@@ -43,7 +42,7 @@ public class Status extends Thread
 	private final int _uptime;
 	private String _statusPw;
 	private final int _mode;
-	private final List<LoginStatusThread> _loginStatus = new CopyOnWriteArrayList<>();
+	private final List<LoginStatusThread> _loginStatus;
 	
 	@Override
 	public void run()
@@ -123,6 +122,7 @@ public class Status extends Thread
 		}
 		statusServerSocket = new ServerSocket(statusPort);
 		_uptime = (int) System.currentTimeMillis();
+		_loginStatus = new ArrayList<>();
 	}
 	
 	private String rndPW(int length)
@@ -153,7 +153,7 @@ public class Status extends Thread
 	
 	public void sendMessageToTelnets(String msg)
 	{
-		List<LoginStatusThread> lsToRemove = new ArrayList<>();
+		List<LoginStatusThread> lsToRemove = new ArrayList<>(); // TODO(Zoey76): Unused?
 		for (LoginStatusThread ls : _loginStatus)
 		{
 			if (ls.isInterrupted())

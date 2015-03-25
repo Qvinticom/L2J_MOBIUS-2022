@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.gameserver.enums.PetitionState;
 import com.l2jserver.gameserver.enums.PetitionType;
@@ -43,7 +43,7 @@ public final class Petition
 	private final PetitionType _type;
 	private PetitionState _state = PetitionState.PENDING;
 	private final String _content;
-	private final List<CreatureSay> _messageLog = new ArrayList<>();
+	private final List<CreatureSay> _messageLog = new CopyOnWriteArrayList<>();
 	private final L2PcInstance _petitioner;
 	private L2PcInstance _responder;
 	

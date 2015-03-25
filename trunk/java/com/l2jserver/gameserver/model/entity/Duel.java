@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.model.entity;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -108,7 +107,7 @@ public class Duel
 		private double _cp;
 		private boolean _paDuel;
 		private int _x, _y, _z;
-		private ArrayList<Skill> _debuffs;
+		private List<Skill> _debuffs;
 		
 		public PlayerCondition(L2PcInstance player, boolean partyDuel)
 		{
@@ -160,7 +159,7 @@ public class Duel
 		{
 			if (_debuffs == null)
 			{
-				_debuffs = new ArrayList<>();
+				_debuffs = new CopyOnWriteArrayList<>();
 			}
 			
 			_debuffs.add(debuff);

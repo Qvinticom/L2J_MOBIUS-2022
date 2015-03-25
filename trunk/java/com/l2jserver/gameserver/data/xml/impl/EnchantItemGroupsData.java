@@ -26,7 +26,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.holders.RangeChanceHolder;
 import com.l2jserver.gameserver.model.items.L2Item;
@@ -34,6 +33,7 @@ import com.l2jserver.gameserver.model.items.enchant.EnchantItemGroup;
 import com.l2jserver.gameserver.model.items.enchant.EnchantRateItem;
 import com.l2jserver.gameserver.model.items.enchant.EnchantScrollGroup;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
@@ -117,7 +117,7 @@ public final class EnchantItemGroupsData implements IXmlReader
 										final NamedNodeMap attrs = z.getAttributes();
 										if (attrs.getNamedItem("slot") != null)
 										{
-											rateGroup.addSlot(ItemTable._slots.get(parseString(attrs, "slot")));
+											rateGroup.addSlot(ItemTable.SLOTS.get(parseString(attrs, "slot")));
 										}
 										if (attrs.getNamedItem("magicWeapon") != null)
 										{

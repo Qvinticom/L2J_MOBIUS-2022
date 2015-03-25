@@ -18,7 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
@@ -29,12 +30,11 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 public final class L2Radar
 {
 	private final L2PcInstance _player;
-	private final ArrayList<RadarMarker> _markers;
+	private final List<RadarMarker> _markers = new CopyOnWriteArrayList<>();
 	
 	public L2Radar(L2PcInstance player)
 	{
 		_player = player;
-		_markers = new ArrayList<>();
 	}
 	
 	// Add a marker to player's radar

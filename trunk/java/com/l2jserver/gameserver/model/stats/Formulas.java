@@ -1511,16 +1511,17 @@ public final class Formulas
 		{
 			if (attacker.isPlayer())
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
 				sm.addCharName(target);
-				sm.addSkillName(skill);
+				sm.addCharName(attacker);
 				attacker.sendPacket(sm);
 				damage /= 2;
 			}
 			
 			if (target.isPlayer())
 			{
-				SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+				SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
+				sm2.addCharName(target);
 				sm2.addCharName(attacker);
 				target.sendPacket(sm2);
 			}
@@ -1916,14 +1917,14 @@ public final class Formulas
 				}
 				
 				// Prevent initialization.
-				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs().values()) : new ArrayList<>(1);
+				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs()) : new ArrayList<>(1);
 				if (target.getEffectList().hasTriggered())
 				{
-					buffs.addAll(target.getEffectList().getTriggered().values());
+					buffs.addAll(target.getEffectList().getTriggered());
 				}
 				if (target.getEffectList().hasDances())
 				{
-					buffs.addAll(target.getEffectList().getDances().values());
+					buffs.addAll(target.getEffectList().getDances());
 				}
 				for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
 				{
@@ -1942,7 +1943,7 @@ public final class Formulas
 			}
 			case "debuff":
 			{
-				final List<BuffInfo> debuffs = new ArrayList<>(target.getEffectList().getDebuffs().values());
+				final List<BuffInfo> debuffs = new ArrayList<>(target.getEffectList().getDebuffs());
 				for (int i = debuffs.size() - 1; i >= 0; i--)
 				{
 					BuffInfo info = debuffs.get(i);

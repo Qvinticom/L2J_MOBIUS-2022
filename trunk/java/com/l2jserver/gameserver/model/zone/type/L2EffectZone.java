@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.zone.type;
 
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -46,7 +47,7 @@ public class L2EffectZone extends L2ZoneType
 	private int _reuse;
 	protected boolean _bypassConditions;
 	private boolean _isShowDangerIcon;
-	protected volatile ConcurrentHashMap<Integer, Integer> _skills;
+	protected volatile Map<Integer, Integer> _skills;
 	
 	public L2EffectZone(int id)
 	{

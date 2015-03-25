@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
@@ -121,7 +121,7 @@ public abstract class ItemContainer
 	 */
 	public List<L2ItemInstance> getItemsByItemId(int itemId)
 	{
-		final List<L2ItemInstance> returnList = new ArrayList<>();
+		final List<L2ItemInstance> returnList = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getId() == itemId))

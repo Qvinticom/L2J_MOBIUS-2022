@@ -1488,8 +1488,9 @@ public final class Skill implements IIdentifiable
 			}
 			default:
 			{
-				for (L2Character target : (L2Character[]) targets)
+				for (L2Object obj : targets)
 				{
+					final L2Character target = (L2Character) obj;
 					if (Formulas.calcBuffDebuffReflection(target, this))
 					{
 						// if skill is reflected instant effects should be casted on target

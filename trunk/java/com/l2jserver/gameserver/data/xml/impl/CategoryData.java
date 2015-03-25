@@ -29,8 +29,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.CategoryType;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Loads the category data with Class or NPC IDs.

@@ -112,7 +112,6 @@ public final class RelationChanged extends L2GameServerPacket
 			{
 				writeRelation(r);
 			}
-			// _multi.clear();
 		}
 	}
 	

@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.enums.InstanceType;
@@ -56,10 +56,6 @@ public class L2ControlTowerInstance extends L2Tower
 			{
 				for (L2Spawn spawn : _guards)
 				{
-					if (spawn == null)
-					{
-						continue;
-					}
 					try
 					{
 						spawn.stopRespawn();
@@ -89,7 +85,7 @@ public class L2ControlTowerInstance extends L2Tower
 			{
 				if (_guards == null)
 				{
-					_guards = new ArrayList<>();
+					_guards = new CopyOnWriteArrayList<>();
 				}
 			}
 		}

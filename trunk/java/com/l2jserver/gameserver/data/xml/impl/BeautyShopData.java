@@ -25,12 +25,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.Sex;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.beautyshop.BeautyData;
 import com.l2jserver.gameserver.model.beautyshop.BeautyItem;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author Sdw

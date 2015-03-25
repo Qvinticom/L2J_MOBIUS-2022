@@ -35,14 +35,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.friend.BlockListPacket;
 
-/**
- * This class ...
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
- */
 public class BlockList
 {
 	private static Logger _log = Logger.getLogger(BlockList.class.getName());
-	private static Map<Integer, HashMap<Integer, String>> _offlineList = new HashMap<>();
+	private static Map<Integer, HashMap<Integer, String>> OFFLINE_LIST = new HashMap<>();
 	
 	private final L2PcInstance _owner;
 	private HashMap<Integer, String> _blockList;
@@ -51,7 +47,7 @@ public class BlockList
 	public BlockList(L2PcInstance owner)
 	{
 		_owner = owner;
-		_blockList = _offlineList.get(owner.getObjectId());
+		_blockList = OFFLINE_LIST.get(owner.getObjectId());
 		if (_blockList == null)
 		{
 			_blockList = loadList(_owner.getObjectId());
@@ -108,7 +104,7 @@ public class BlockList
 	
 	public void playerLogout()
 	{
-		_offlineList.put(_owner.getObjectId(), _blockList);
+		OFFLINE_LIST.put(_owner.getObjectId(), _blockList);
 	}
 	
 	private static HashMap<Integer, String> loadList(int ObjId)
@@ -303,10 +299,10 @@ public class BlockList
 		{
 			return BlockList.isBlocked(player, targetId);
 		}
-		if (!_offlineList.containsKey(ownerId))
+		if (!OFFLINE_LIST.containsKey(ownerId))
 		{
-			_offlineList.put(ownerId, loadList(ownerId));
+			OFFLINE_LIST.put(ownerId, loadList(ownerId));
 		}
-		return _offlineList.get(ownerId).containsKey(targetId);
+		return OFFLINE_LIST.get(ownerId).containsKey(targetId);
 	}
 }

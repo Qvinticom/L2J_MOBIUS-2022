@@ -18,7 +18,6 @@
  */
 package ai.individual;
 
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -43,8 +42,8 @@ public final class DarkWaterDragon extends AbstractNpcAI
 	private static final int FAFURION = 18482;
 	private static final int DETRACTOR1 = 22270;
 	private static final int DETRACTOR2 = 22271;
-	private static Set<Integer> SECOND_SPAWN = new HashSet<>(); // Used to track if second Shades were already spawned
-	private static Set<Integer> MY_TRACKING_SET = new HashSet<>(); // Used to track instances of npcs
+	private static final Set<Integer> SECOND_SPAWN = ConcurrentHashMap.newKeySet(); // Used to track if second Shades were already spawned
+	private static Set<Integer> MY_TRACKING_SET = ConcurrentHashMap.newKeySet(); // Used to track instances of npcs
 	private static Map<Integer, L2PcInstance> ID_MAP = new ConcurrentHashMap<>(); // Used to track instances of npcs
 	
 	private DarkWaterDragon()

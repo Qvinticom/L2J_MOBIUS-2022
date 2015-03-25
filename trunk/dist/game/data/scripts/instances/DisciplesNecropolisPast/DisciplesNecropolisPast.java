@@ -22,6 +22,7 @@ import instances.AbstractInstance;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
@@ -47,8 +48,8 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 {
 	protected class DNPWorld extends InstanceWorld
 	{
-		protected final ArrayList<L2Npc> anakimGroup = new ArrayList<>();
-		protected final ArrayList<L2Npc> lilithGroup = new ArrayList<>();
+		protected final List<L2Npc> anakimGroup = new ArrayList<>();
+		protected final List<L2Npc> lilithGroup = new ArrayList<>();
 		protected int countKill = 0;
 	}
 	
@@ -180,7 +181,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		teleportPlayer(player, ENTER, world.getInstanceId());
 	}
 	
-	private void makeCast(L2Npc npc, ArrayList<L2Npc> targets)
+	private void makeCast(L2Npc npc, List<L2Npc> targets)
 	{
 		npc.setTarget(targets.get(getRandom(targets.size())));
 		if (SKILLS.containsKey(npc.getId()))

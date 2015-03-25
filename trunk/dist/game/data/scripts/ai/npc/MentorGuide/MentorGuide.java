@@ -29,7 +29,6 @@ import org.w3c.dom.Node;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.MailType;
 import com.l2jserver.gameserver.instancemanager.MailManager;
@@ -57,6 +56,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.mentoring.ExMentorList;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Mentor Guide.

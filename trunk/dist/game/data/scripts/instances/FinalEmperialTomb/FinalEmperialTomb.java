@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
@@ -82,10 +83,10 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class FinalEmperialTomb extends AbstractInstance
 {
-	private class FETWorld extends InstanceWorld
+	protected class FETWorld extends InstanceWorld
 	{
 		protected Lock lock = new ReentrantLock();
-		protected CopyOnWriteArrayList<L2Npc> npcList = new CopyOnWriteArrayList<>();
+		protected List<L2Npc> npcList = new CopyOnWriteArrayList<>();
 		protected int darkChoirPlayerCount = 0;
 		protected FrintezzaSong OnSong = null;
 		protected ScheduledFuture<?> songTask = null;
@@ -98,17 +99,13 @@ public final class FinalEmperialTomb extends AbstractInstance
 		protected L2Npc scarletDummy = null;
 		protected L2GrandBossInstance frintezza = null;
 		protected L2GrandBossInstance activeScarlet = null;
-		protected List<L2MonsterInstance> demons = new ArrayList<>();
-		protected Map<L2MonsterInstance, Integer> portraits = new HashMap<>();
+		protected List<L2MonsterInstance> demons = new CopyOnWriteArrayList<>();
+		protected Map<L2MonsterInstance, Integer> portraits = new ConcurrentHashMap<>();
 		protected int scarlet_x = 0;
 		protected int scarlet_y = 0;
 		protected int scarlet_z = 0;
 		protected int scarlet_h = 0;
 		protected int scarlet_a = 0;
-		
-		protected FETWorld()
-		{
-		}
 	}
 	
 	protected static class FETSpawn
@@ -298,11 +295,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 									_log.severe("[Final Emperial Tomb] Missing flag in npc List npcId: " + npcId + ", skipping");
 									continue;
 								}
+								
 								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
-								if (!_spawnList.containsKey(flag))
-								{
-									_spawnList.put(flag, new ArrayList<FETSpawn>());
-								}
+								_spawnList.putIfAbsent(flag, new ArrayList<FETSpawn>());
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
@@ -848,7 +843,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 					
 					if ((_world.frintezza != null) && !_world.frintezza.isDead() && (_world.activeScarlet != null) && !_world.activeScarlet.isDead())
 					{
-						List<L2Character> targetList = new ArrayList<>();
+						final List<L2Character> targetList = new ArrayList<>();
 						if (skill.hasEffectType(L2EffectType.STUN) || skill.isDebuff())
 						{
 							for (int objId : _world.getAllowed())
@@ -879,7 +874,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 						{
 							targetList.add(_world.activeScarlet);
 						}
-						if (targetList.size() > 0)
+						if (!targetList.isEmpty())
 						{
 							_world.frintezza.doCast(skill, targetList.get(0), targetList.toArray(new L2Character[targetList.size()]));
 						}

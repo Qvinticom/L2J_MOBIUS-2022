@@ -23,6 +23,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,9 +45,9 @@ public final class ClanHallManager
 {
 	protected static final Logger _log = Logger.getLogger(ClanHallManager.class.getName());
 	
-	private final Map<Integer, AuctionableHall> _clanHall;
-	private final Map<Integer, AuctionableHall> _freeClanHall;
-	private final Map<Integer, AuctionableHall> _allAuctionableClanHalls;
+	private final Map<Integer, AuctionableHall> _clanHall = new ConcurrentHashMap<>();
+	private final Map<Integer, AuctionableHall> _freeClanHall = new ConcurrentHashMap<>();
+	private final Map<Integer, AuctionableHall> _allAuctionableClanHalls = new HashMap<>();
 	private static Map<Integer, ClanHall> _allClanHalls = new HashMap<>();
 	private boolean _loaded = false;
 	
@@ -57,9 +58,6 @@ public final class ClanHallManager
 	
 	protected ClanHallManager()
 	{
-		_clanHall = new HashMap<>();
-		_freeClanHall = new HashMap<>();
-		_allAuctionableClanHalls = new HashMap<>();
 		load();
 	}
 	
@@ -216,7 +214,7 @@ public final class ClanHallManager
 	 */
 	public final ClanHall getClanHall(int x, int y, int z)
 	{
-		for (ClanHall temp : getAllClanHalls().values())
+		for (ClanHall temp : _allClanHalls.values())
 		{
 			if (temp.checkIfInZone(x, y, z))
 			{

@@ -27,7 +27,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -35,6 +34,7 @@ import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jserver.gameserver.model.primeshop.PrimeShopItem;
 import com.l2jserver.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author Gnacik, UnAfraid

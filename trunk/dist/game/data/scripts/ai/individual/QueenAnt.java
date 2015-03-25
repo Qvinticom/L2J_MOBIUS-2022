@@ -18,8 +18,8 @@
  */
 package ai.individual;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
 import ai.npc.AbstractNpcAI;
@@ -83,7 +83,7 @@ public final class QueenAnt extends AbstractNpcAI
 	
 	L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
-	private final List<L2MonsterInstance> _nurses = new ArrayList<>(5);
+	private final List<L2MonsterInstance> _nurses = new CopyOnWriteArrayList<>();
 	ScheduledFuture<?> _task = null;
 	
 	private QueenAnt()

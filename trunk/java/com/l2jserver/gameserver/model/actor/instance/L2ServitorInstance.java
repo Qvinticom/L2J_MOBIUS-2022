@@ -21,11 +21,12 @@ package com.l2jserver.gameserver.model.actor.instance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -292,7 +293,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			
 			int buff_index = 0;
 			
-			final List<Integer> storedSkills = new ArrayList<>();
+			final List<Integer> storedSkills = new LinkedList<>();
 			
 			// Store all effect data along with calculated remaining
 			if (storeEffects)
@@ -351,7 +352,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 						}
 						if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill()))
 						{
-							SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), new ArrayList<SummonEffect>());
+							SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), new CopyOnWriteArrayList<SummonEffect>());
 						}
 						
 						SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(SummonEffectsTable.getInstance().new SummonEffect(skill, info.getTime()));
@@ -407,7 +408,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 								}
 								if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill()))
 								{
-									SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), new ArrayList<SummonEffect>());
+									SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), new CopyOnWriteArrayList<SummonEffect>());
 								}
 								
 								SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(SummonEffectsTable.getInstance().new SummonEffect(skill, effectCurTime));

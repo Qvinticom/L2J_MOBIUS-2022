@@ -525,7 +525,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	{
 		if (_scripts == null)
 		{
-			// Double-checked locking
 			synchronized (this)
 			{
 				if (_scripts == null)

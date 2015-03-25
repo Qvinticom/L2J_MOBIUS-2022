@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
@@ -134,7 +135,7 @@ public class LoginServerThread extends Thread
 		_reserveHost = Config.RESERVE_HOST_ON_LOGIN;
 		_subnets = Config.GAME_SERVER_SUBNETS;
 		_hosts = Config.GAME_SERVER_HOSTS;
-		_waitingClients = new ArrayList<>();
+		_waitingClients = new CopyOnWriteArrayList<>();
 		_maxPlayer = Config.MAXIMUM_ONLINE_USERS;
 	}
 	

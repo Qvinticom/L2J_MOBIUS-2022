@@ -18,8 +18,8 @@
  */
 package ai.individual;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import ai.npc.AbstractNpcAI;
 
@@ -54,7 +54,7 @@ public final class SinWardens extends AbstractNpcAI
 		22438
 	};
 	
-	private final Map<Integer, Integer> killedMinionsCount = new HashMap<>();
+	private final Map<Integer, Integer> killedMinionsCount = new ConcurrentHashMap<>();
 	
 	private SinWardens()
 	{

@@ -26,10 +26,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
-/**
- * This class ...
- * @version $Revision: 1.4.2.3.2.4 $ $Date: 2005/03/27 15:29:39 $
- */
 public class SellList extends L2GameServerPacket
 {
 	private final L2PcInstance _activeChar;

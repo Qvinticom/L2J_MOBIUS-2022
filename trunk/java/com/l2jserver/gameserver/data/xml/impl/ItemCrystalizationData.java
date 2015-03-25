@@ -26,9 +26,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.CrystalizationData;
 import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid

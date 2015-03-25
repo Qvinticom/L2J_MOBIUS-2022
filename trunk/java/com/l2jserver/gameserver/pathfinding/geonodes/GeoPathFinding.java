@@ -225,7 +225,7 @@ public class GeoPathFinding extends PathFinding
 		short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
 		ByteBuffer pn = _pathNodes.get(regoffset);
 		
-		List<AbstractNode> Neighbors = new ArrayList<>(8);
+		List<AbstractNode> neighbors = new ArrayList<>(8);
 		GeoNode newNode;
 		short new_node_x, new_node_y;
 		
@@ -239,7 +239,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // NE
@@ -251,7 +251,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // E
@@ -263,7 +263,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // SE
@@ -275,7 +275,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // S
@@ -287,7 +287,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // SW
@@ -299,7 +299,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // W
@@ -311,7 +311,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // NW
@@ -323,11 +323,11 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				Neighbors.add(newNode);
+				neighbors.add(newNode);
 			}
 		}
-		GeoNode[] result = new GeoNode[Neighbors.size()];
-		return Neighbors.toArray(result);
+		GeoNode[] result = new GeoNode[neighbors.size()];
+		return neighbors.toArray(result);
 	}
 	
 	// Private

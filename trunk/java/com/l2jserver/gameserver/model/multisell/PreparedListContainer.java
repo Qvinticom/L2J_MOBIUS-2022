@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.model.multisell;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -32,8 +33,7 @@ public class PreparedListContainer extends ListContainer
 	
 	public PreparedListContainer(ListContainer template, boolean inventoryOnly, L2PcInstance player, L2Npc npc)
 	{
-		super(template);
-		
+		super(template.getListId());
 		setMaintainEnchantment(template.getMaintainEnchantment());
 		setApplyTaxes(false);
 		double taxRate = 0;
@@ -64,8 +64,7 @@ public class PreparedListContainer extends ListContainer
 				items = player.getInventory().getUniqueItems(false, false, false);
 			}
 			
-			// size is not known - using ArrayList
-			_entries = new ArrayList<>();
+			_entries = new LinkedList<>();
 			for (L2ItemInstance item : items)
 			{
 				// only do the match up on equippable items that are not currently equipped

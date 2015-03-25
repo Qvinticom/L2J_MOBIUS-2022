@@ -74,7 +74,7 @@ public class AppearanceStone
 			addTargetType(targetType);
 		}
 		
-		final int bodyPart = ItemTable._slots.get(set.getString("bodyPart", "none"));
+		final int bodyPart = ItemTable.SLOTS.get(set.getString("bodyPart", "none"));
 		if (bodyPart != L2Item.SLOT_NONE)
 		{
 			addBodyPart(bodyPart);

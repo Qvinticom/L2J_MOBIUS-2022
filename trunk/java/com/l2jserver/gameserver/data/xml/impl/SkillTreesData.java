@@ -36,7 +36,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
@@ -54,6 +53,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.interfaces.ISkillsHolder;
 import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>

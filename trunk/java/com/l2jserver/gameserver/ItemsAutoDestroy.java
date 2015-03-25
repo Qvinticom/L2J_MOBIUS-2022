@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.ItemLocation;
@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public final class ItemsAutoDestroy
 {
-	private final List<L2ItemInstance> _items = new CopyOnWriteArrayList<>();
+	private final Map<Integer, L2ItemInstance> _items = new ConcurrentHashMap<>();
 	
 	protected ItemsAutoDestroy()
 	{
@@ -44,22 +44,22 @@ public final class ItemsAutoDestroy
 	public synchronized void addItem(L2ItemInstance item)
 	{
 		item.setDropTime(System.currentTimeMillis());
-		_items.add(item);
+		_items.put(item.getObjectId(), item);
 	}
 	
 	public synchronized void removeItems()
 	{
-		if (_items.isEmpty())
+		final long curtime = System.currentTimeMillis();
+		for (L2ItemInstance item : _items.values())
 		{
-			return;
-		}
-		
-		long curtime = System.currentTimeMillis();
-		for (L2ItemInstance item : _items)
-		{
-			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
+			if (item == null)
 			{
-				_items.remove(item);
+				continue;
+			}
+			
+			if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
+			{
+				_items.remove(item.getObjectId());
 			}
 			else
 			{
@@ -69,7 +69,7 @@ public final class ItemsAutoDestroy
 					{
 						L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
 						L2World.getInstance().removeObject(item);
-						_items.remove(item);
+						_items.remove(item.getObjectId());
 						if (Config.SAVE_DROPPED_ITEM)
 						{
 							ItemsOnGroundManager.getInstance().removeObject(item);
@@ -82,7 +82,7 @@ public final class ItemsAutoDestroy
 					{
 						L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
 						L2World.getInstance().removeObject(item);
-						_items.remove(item);
+						_items.remove(item.getObjectId());
 						if (Config.SAVE_DROPPED_ITEM)
 						{
 							ItemsOnGroundManager.getInstance().removeObject(item);
@@ -97,7 +97,7 @@ public final class ItemsAutoDestroy
 					{
 						L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
 						L2World.getInstance().removeObject(item);
-						_items.remove(item);
+						_items.remove(item.getObjectId());
 						if (Config.SAVE_DROPPED_ITEM)
 						{
 							ItemsOnGroundManager.getInstance().removeObject(item);

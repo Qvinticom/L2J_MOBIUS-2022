@@ -30,13 +30,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2DoorTemplate;
 import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Loads doors.

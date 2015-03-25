@@ -2715,7 +2715,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (_attackByList == null)
 				{
-					_attackByList = new HashSet<>();
+					_attackByList = ConcurrentHashMap.newKeySet();
 				}
 			}
 		}
@@ -3178,7 +3178,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void resetCurrentAbnormalVisualEffects()
 	{
-		final Collection<BuffInfo> passives = getEffectList().hasPassives() ? new ArrayList<>(getEffectList().getPassives().values()) : null;
+		final Collection<BuffInfo> passives = getEffectList().hasPassives() ? new ArrayList<>(getEffectList().getPassives()) : null;
 		//@formatter:off
 		final Set<AbnormalVisualEffect> abnormalVisualEffects =  Stream.concat(getEffectList().getEffects().stream(), passives != null ? passives.stream() : Stream.empty())
 			.filter(Objects::nonNull)
@@ -5530,7 +5530,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			int _skiprange = 0;
 			int _skipgeo = 0;
 			int _skippeace = 0;
-			List<L2Character> targetList = new ArrayList<>(targets.length);
+			final List<L2Object> targetList = new ArrayList<>();
 			for (L2Object target : targets)
 			{
 				if (target instanceof L2Character)
@@ -5564,7 +5564,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 							}
 						}
 					}
-					targetList.add((L2Character) target);
+					targetList.add(target);
 				}
 			}
 			if (targetList.isEmpty())

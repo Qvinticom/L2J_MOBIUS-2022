@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,8 +27,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 public class L2SiegeClan
 {
 	private int _clanId = 0;
-	private List<L2Npc> _flag = new ArrayList<>();
-	private int _numFlagsAdded = 0;
+	private final List<L2Npc> _flag = new CopyOnWriteArrayList<>();
 	private SiegeClanType _type;
 	
 	public L2SiegeClan(int clanId, SiegeClanType type)
@@ -39,43 +38,25 @@ public class L2SiegeClan
 	
 	public int getNumFlags()
 	{
-		return _numFlagsAdded;
+		return _flag.size();
 	}
 	
 	public void addFlag(L2Npc flag)
 	{
-		_numFlagsAdded++;
-		getFlag().add(flag);
+		_flag.add(flag);
 	}
 	
 	public boolean removeFlag(L2Npc flag)
 	{
-		if (flag == null)
-		{
-			return false;
-		}
-		boolean ret = getFlag().remove(flag);
-		// check if null objects or duplicates remain in the list.
-		// for some reason, this might be happening sometimes...
-		// delete false duplicates: if this flag got deleted, delete its copies too.
-		if (ret)
-		{
-			while (getFlag().remove(flag))
-			{
-				//
-			}
-		}
+		boolean ret = _flag.remove(flag);
 		flag.deleteMe();
-		_numFlagsAdded--;
 		return ret;
 	}
 	
 	public void removeFlags()
 	{
-		for (L2Npc flag : getFlag())
-		{
-			removeFlag(flag);
-		}
+		_flag.forEach(f -> f.decayMe());
+		_flag.clear();
 	}
 	
 	public final int getClanId()
@@ -85,10 +66,6 @@ public class L2SiegeClan
 	
 	public final List<L2Npc> getFlag()
 	{
-		if (_flag == null)
-		{
-			_flag = new ArrayList<>();
-		}
 		return _flag;
 	}
 	

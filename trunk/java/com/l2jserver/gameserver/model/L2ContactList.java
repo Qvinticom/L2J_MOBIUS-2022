@@ -43,7 +43,7 @@ public class L2ContactList
 {
 	private final Logger _log = Logger.getLogger(getClass().getName());
 	private final L2PcInstance activeChar;
-	private final List<String> _contacts;
+	private final List<String> _contacts = new CopyOnWriteArrayList<>();
 	
 	private static final String QUERY_ADD = "INSERT INTO character_contacts (charId, contactId) VALUES (?, ?)";
 	private static final String QUERY_REMOVE = "DELETE FROM character_contacts WHERE charId = ? and contactId = ?";
@@ -52,7 +52,6 @@ public class L2ContactList
 	public L2ContactList(L2PcInstance player)
 	{
 		activeChar = player;
-		_contacts = new CopyOnWriteArrayList<>();
 		restore();
 	}
 	

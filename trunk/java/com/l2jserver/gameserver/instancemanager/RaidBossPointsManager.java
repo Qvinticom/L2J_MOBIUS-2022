@@ -26,8 +26,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,7 +44,7 @@ public class RaidBossPointsManager
 {
 	private static final Logger _log = Logger.getLogger(RaidBossPointsManager.class.getName());
 	
-	private HashMap<Integer, Map<Integer, Integer>> _list;
+	private final Map<Integer, Map<Integer, Integer>> _list = new ConcurrentHashMap<>();
 	
 	public RaidBossPointsManager()
 	{
@@ -51,7 +53,6 @@ public class RaidBossPointsManager
 	
 	private final void init()
 	{
-		_list = new HashMap<>();
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT `charId`,`boss_id`,`points` FROM `character_raid_points`"))
@@ -101,8 +102,7 @@ public class RaidBossPointsManager
 	
 	public final int getPointsByOwnerId(int ownerId)
 	{
-		Map<Integer, Integer> tmpPoint;
-		tmpPoint = _list.get(ownerId);
+		Map<Integer, Integer> tmpPoint = _list.get(ownerId);
 		int totalPoints = 0;
 		
 		if ((tmpPoint == null) || tmpPoint.isEmpty())
@@ -148,9 +148,7 @@ public class RaidBossPointsManager
 	
 	public Map<Integer, Integer> getRankList()
 	{
-		Map<Integer, Integer> tmpRanking = new HashMap<>();
-		Map<Integer, Integer> tmpPoints = new HashMap<>();
-		
+		final Map<Integer, Integer> tmpPoints = new HashMap<>();
 		for (int ownerId : _list.keySet())
 		{
 			int totalPoints = getPointsByOwnerId(ownerId);
@@ -159,16 +157,15 @@ public class RaidBossPointsManager
 				tmpPoints.put(ownerId, totalPoints);
 			}
 		}
-		ArrayList<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
 		
+		final List<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
 		list.sort(Comparator.comparing(Entry<Integer, Integer>::getValue).reversed());
-		
 		int ranking = 1;
-		for (Map.Entry<Integer, Integer> entry : list)
+		final Map<Integer, Integer> tmpRanking = new HashMap<>();
+		for (Entry<Integer, Integer> entry : list)
 		{
 			tmpRanking.put(entry.getKey(), ranking++);
 		}
-		
 		return tmpRanking;
 	}
 	

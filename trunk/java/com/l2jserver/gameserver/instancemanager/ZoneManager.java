@@ -32,7 +32,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.L2WorldRegion;
@@ -49,6 +48,7 @@ import com.l2jserver.gameserver.model.zone.type.L2ArenaZone;
 import com.l2jserver.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import com.l2jserver.gameserver.model.zone.type.L2RespawnZone;
 import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class manages the zones

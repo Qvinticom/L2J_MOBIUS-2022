@@ -176,9 +176,6 @@ public final class DocumentItem extends DocumentBase
 		}
 	}
 	
-	/**
-	 * @return
-	 */
 	public List<L2Item> getItemList()
 	{
 		return _itemsInFile;

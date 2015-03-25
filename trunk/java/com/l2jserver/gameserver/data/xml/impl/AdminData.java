@@ -30,7 +30,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.L2AccessLevel;
 import com.l2jserver.gameserver.model.L2AdminCommandAccessRight;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -38,6 +37,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Loads administrator access levels and commands.

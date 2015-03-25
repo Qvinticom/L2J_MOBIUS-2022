@@ -61,6 +61,7 @@ public class RecipeController
 	
 	protected RecipeController()
 	{
+		// Prevent external initialization.
 	}
 	
 	public void requestBookOpen(L2PcInstance player, boolean isDwarvenCraft)

@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.model.variables;
 
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.l2jserver.gameserver.model.StatsSet;
@@ -32,11 +31,6 @@ import com.l2jserver.gameserver.model.interfaces.IStorable;
 public abstract class AbstractVariables extends StatsSet implements IRestorable, IStorable, IDeletable
 {
 	private final AtomicBoolean _hasChanges = new AtomicBoolean(false);
-	
-	public AbstractVariables()
-	{
-		super(new ConcurrentHashMap<String, Object>());
-	}
 	
 	/**
 	 * Overriding following methods to prevent from doing useless database operations if there is no changes since player's login.

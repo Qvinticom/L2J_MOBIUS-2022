@@ -29,6 +29,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -59,13 +61,13 @@ public final class GrandBossManager implements IStorable
 	
 	protected static Logger _log = Logger.getLogger(GrandBossManager.class.getName());
 	
-	protected static Map<Integer, L2GrandBossInstance> _bosses = new HashMap<>();
+	protected static final Map<Integer, L2GrandBossInstance> BOSSES = new ConcurrentHashMap<>();
 	
 	protected static Map<Integer, StatsSet> _storedInfo = new HashMap<>();
 	
 	private final Map<Integer, Integer> _bossStatus = new HashMap<>();
 	
-	private final List<L2BossZone> _zones = new ArrayList<>();
+	private final List<L2BossZone> _zones = new CopyOnWriteArrayList<>();
 	
 	protected GrandBossManager()
 	{
@@ -276,13 +278,13 @@ public final class GrandBossManager implements IStorable
 	{
 		if (boss != null)
 		{
-			_bosses.put(boss.getId(), boss);
+			BOSSES.put(boss.getId(), boss);
 		}
 	}
 	
 	public L2GrandBossInstance getBoss(int bossId)
 	{
-		return _bosses.get(bossId);
+		return BOSSES.get(bossId);
 	}
 	
 	public StatsSet getStatsSet(int bossId)
@@ -329,7 +331,7 @@ public final class GrandBossManager implements IStorable
 			}
 			for (Entry<Integer, StatsSet> e : _storedInfo.entrySet())
 			{
-				final L2GrandBossInstance boss = _bosses.get(e.getKey());
+				final L2GrandBossInstance boss = BOSSES.get(e.getKey());
 				StatsSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -379,7 +381,7 @@ public final class GrandBossManager implements IStorable
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			L2GrandBossInstance boss = _bosses.get(bossId);
+			L2GrandBossInstance boss = BOSSES.get(bossId);
 			StatsSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))
@@ -428,7 +430,7 @@ public final class GrandBossManager implements IStorable
 	{
 		storeMe();
 		
-		_bosses.clear();
+		BOSSES.clear();
 		_storedInfo.clear();
 		_bossStatus.clear();
 		_zones.clear();

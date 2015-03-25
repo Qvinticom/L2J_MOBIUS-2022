@@ -21,9 +21,9 @@ package com.l2jserver.gameserver.model;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -83,7 +83,7 @@ public class L2Party extends AbstractPlayerGroup
 	private static final Duration PARTY_POSITION_BROADCAST_INTERVAL = Duration.ofSeconds(12);
 	private static final Duration PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT = Duration.ofSeconds(15);
 	
-	private final List<L2PcInstance> _members;
+	private final List<L2PcInstance> _members = new CopyOnWriteArrayList<>();
 	private boolean _pendingInvitation = false;
 	private long _pendingInviteTimeout;
 	private int _partyLvl = 0;
@@ -116,7 +116,6 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public L2Party(L2PcInstance leader, PartyDistributionType partyDistributionType)
 	{
-		_members = new CopyOnWriteArrayList<>();
 		_members.add(leader);
 		_partyLvl = leader.getLevel();
 		_distributionType = partyDistributionType;
@@ -768,33 +767,26 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public void distributeAdena(L2PcInstance player, long adena, L2Character target)
 	{
-		// Get all the party members
-		final List<L2PcInstance> membersList = getMembers();
-		
 		// Check the number of party members that must be rewarded
 		// (The party member must be in range to receive its reward)
-		final List<L2PcInstance> ToReward = new ArrayList<>();
-		for (L2PcInstance member : membersList)
+		final List<L2PcInstance> toReward = new LinkedList<>();
+		for (L2PcInstance member : getMembers())
 		{
-			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
 			{
-				continue;
+				toReward.add(member);
 			}
-			ToReward.add(member);
 		}
 		
-		// Avoid null exceptions, if any
-		if (ToReward.isEmpty())
+		if (!toReward.isEmpty())
 		{
-			return;
-		}
-		
-		// Now we can actually distribute the adena reward
-		// (Total adena splitted by the number of party members that are in range and must be rewarded)
-		final long count = adena / ToReward.size();
-		for (L2PcInstance member : ToReward)
-		{
-			member.addAdena("Party", count, player, true);
+			// Now we can actually distribute the adena reward
+			// (Total adena splitted by the number of party members that are in range and must be rewarded)
+			long count = adena / toReward.size();
+			for (L2PcInstance member : toReward)
+			{
+				member.addAdena("Party", count, player, true);
+			}
 		}
 	}
 	
@@ -1044,14 +1036,7 @@ public class L2Party extends AbstractPlayerGroup
 	@Override
 	public L2PcInstance getLeader()
 	{
-		try
-		{
-			return _members.get(0);
-		}
-		catch (NoSuchElementException e)
-		{
-			return null;
-		}
+		return _members.get(0);
 	}
 	
 	public synchronized void requestLootChange(PartyDistributionType partyDistributionType)

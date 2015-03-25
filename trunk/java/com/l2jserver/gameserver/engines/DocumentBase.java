@@ -148,12 +148,11 @@ public abstract class DocumentBase
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	private final File _file;
-	protected Map<String, String[]> _tables;
+	protected final Map<String, String[]> _tables = new HashMap<>();
 	
 	protected DocumentBase(File pFile)
 	{
 		_file = pFile;
-		_tables = new HashMap<>();
 	}
 	
 	public Document parse()
@@ -184,7 +183,7 @@ public abstract class DocumentBase
 	
 	protected void resetTable()
 	{
-		_tables = new HashMap<>();
+		_tables.clear();
 	}
 	
 	protected void setTable(String name, String[] table)
@@ -1189,9 +1188,9 @@ public abstract class DocumentBase
 					{
 						int old = mask;
 						String item = st.nextToken().trim();
-						if (ItemTable._slots.containsKey(item))
+						if (ItemTable.SLOTS.containsKey(item))
 						{
-							mask |= ItemTable._slots.get(item);
+							mask |= ItemTable.SLOTS.get(item);
 						}
 						
 						if (old == mask)

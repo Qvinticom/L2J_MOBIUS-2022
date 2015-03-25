@@ -24,6 +24,7 @@ import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionException;
@@ -97,7 +98,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	
 	private boolean _isAuthedGG;
 	private final long _connectionStartTime;
-	private CharSelectInfoPackage[] _charSlotMapping = null;
+	private List<CharSelectInfoPackage> _charSlotMapping = null;
 	
 	// flood protectors
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
@@ -626,20 +627,20 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	}
 	
 	/**
-	 * @param chars
+	 * @param list
 	 */
-	public void setCharSelection(CharSelectInfoPackage[] chars)
+	public void setCharSelection(List<CharSelectInfoPackage> list)
 	{
-		_charSlotMapping = chars;
+		_charSlotMapping = list;
 	}
 	
 	public CharSelectInfoPackage getCharSelection(int charslot)
 	{
-		if ((_charSlotMapping == null) || (charslot < 0) || (charslot >= _charSlotMapping.length))
+		if ((_charSlotMapping == null) || (charslot < 0) || (charslot >= _charSlotMapping.size()))
 		{
 			return null;
 		}
-		return _charSlotMapping[charslot];
+		return _charSlotMapping.get(charslot);
 	}
 	
 	public SecondaryPasswordAuth getSecondaryAuth()

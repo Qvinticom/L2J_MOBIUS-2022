@@ -19,7 +19,6 @@
 package instances.KaraphonHabitat;
 
 import instances.AbstractInstance;
-
 import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;

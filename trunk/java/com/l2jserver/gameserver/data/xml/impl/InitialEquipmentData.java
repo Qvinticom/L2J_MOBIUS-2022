@@ -28,10 +28,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.items.PcItemTemplate;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class holds the Initial Equipment information.<br>

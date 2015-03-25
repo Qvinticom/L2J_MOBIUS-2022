@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -141,7 +141,7 @@ public class PcInventory extends Inventory
 	
 	public L2ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -186,7 +186,7 @@ public class PcInventory extends Inventory
 	
 	public L2ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -237,7 +237,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAllItemsByItemId(int itemId, boolean includeEquipped)
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -272,7 +272,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -296,7 +296,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable)
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item == null) || !item.isAvailable(getOwner(), allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
@@ -324,7 +324,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAugmentedItems()
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAugmented())
@@ -341,7 +341,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getElementItems()
 	{
-		final ArrayList<L2ItemInstance> list = new ArrayList<>();
+		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getElementals() != null))
@@ -359,7 +359,7 @@ public class PcInventory extends Inventory
 	 */
 	public TradeItem[] getAvailableItems(TradeList tradeList)
 	{
-		final ArrayList<TradeItem> list = new ArrayList<>();
+		List<TradeItem> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAvailable(getOwner(), false, false))

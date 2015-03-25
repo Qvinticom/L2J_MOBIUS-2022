@@ -30,8 +30,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Newbie Travel Token AI.<br>
- * Original Jython script by DrLecter.
+ * Newbie Travel Token AI.
  * @author Plim
  */
 public final class NewbieTravelToken extends AbstractNpcAI

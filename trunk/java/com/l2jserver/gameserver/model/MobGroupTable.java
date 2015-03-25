@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jserver.gameserver.model.actor.instance.L2ControllableMobInstance;
 
@@ -35,7 +35,7 @@ public class MobGroupTable
 	
 	protected MobGroupTable()
 	{
-		_groupMap = new HashMap<>();
+		_groupMap = new ConcurrentHashMap<>();
 	}
 	
 	public static MobGroupTable getInstance()

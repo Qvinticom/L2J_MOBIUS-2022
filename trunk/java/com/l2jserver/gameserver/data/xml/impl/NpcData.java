@@ -36,7 +36,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.AISkillScope;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -51,6 +50,7 @@ import com.l2jserver.gameserver.model.holders.MinionHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * NPC data parser.

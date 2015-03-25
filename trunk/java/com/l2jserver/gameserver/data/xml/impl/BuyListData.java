@@ -33,11 +33,11 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.data.xml.IXmlReader;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.model.buylist.Product;
 import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.util.data.xml.IXmlReader;
 import com.l2jserver.util.file.filter.NumericNameFilter;
 
 /**

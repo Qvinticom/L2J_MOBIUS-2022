@@ -18,8 +18,8 @@
  */
 package com.l2jserver.gameserver.model.holders;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.model.Location;
@@ -50,7 +50,7 @@ public final class PlayerEventHolder
 	private final int _pkKills;
 	private final int _karma;
 	
-	private final List<L2PcInstance> _kills;
+	private final List<L2PcInstance> _kills = new CopyOnWriteArrayList<>();
 	private boolean _sitForced;
 	
 	public PlayerEventHolder(L2PcInstance player)
@@ -68,7 +68,7 @@ public final class PlayerEventHolder
 		_pvpKills = player.getPvpKills();
 		_pkKills = player.getPkKills();
 		_karma = player.getKarma();
-		_kills = new ArrayList<>();
+		
 		_sitForced = sitForced;
 	}
 	
