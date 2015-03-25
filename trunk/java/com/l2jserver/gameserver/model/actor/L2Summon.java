@@ -251,6 +251,12 @@ public abstract class L2Summon extends L2Playable
 	}
 	
 	@Override
+	public final int getReputation()
+	{
+		return getOwner() != null ? getOwner().getReputation() : 0;
+	}
+	
+	@Override
 	public final byte getPvpFlag()
 	{
 		return getOwner() != null ? getOwner().getPvpFlag() : 0;

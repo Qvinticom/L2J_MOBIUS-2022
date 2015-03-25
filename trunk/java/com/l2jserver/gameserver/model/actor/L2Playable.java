@@ -348,6 +348,8 @@ public abstract class L2Playable extends L2Character
 	
 	public abstract int getKarma();
 	
+	public abstract int getReputation();
+	
 	public abstract byte getPvpFlag();
 	
 	public abstract boolean useMagic(Skill skill, boolean forceUse, boolean dontMove);

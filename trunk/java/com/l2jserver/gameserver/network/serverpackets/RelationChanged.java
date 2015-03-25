@@ -53,7 +53,7 @@ public final class RelationChanged extends L2GameServerPacket
 	
 	protected static class Relation
 	{
-		int _objId, _relation, _autoAttackable, _karma, _pvpFlag;
+		int _objId, _relation, _autoAttackable, _reputation, _pvpFlag;
 	}
 	
 	private Relation _singled;
@@ -68,7 +68,7 @@ public final class RelationChanged extends L2GameServerPacket
 		_singled._objId = activeChar.getObjectId();
 		_singled._relation = relation;
 		_singled._autoAttackable = autoattackable ? 1 : 0;
-		_singled._karma = activeChar.getKarma();
+		_singled._reputation = activeChar.getReputation();
 		_singled._pvpFlag = activeChar.getPvpFlag();
 		setInvisible(activeChar.isInvisible());
 	}
@@ -91,7 +91,7 @@ public final class RelationChanged extends L2GameServerPacket
 		r._objId = activeChar.getObjectId();
 		r._relation = relation;
 		r._autoAttackable = autoattackable ? 1 : 0;
-		r._karma = activeChar.getKarma();
+		r._reputation = activeChar.getReputation();
 		r._pvpFlag = activeChar.getPvpFlag();
 		_multi.add(r);
 	}
@@ -123,7 +123,7 @@ public final class RelationChanged extends L2GameServerPacket
 		{
 			writeD(relation._relation);
 			writeC(relation._autoAttackable);
-			writeD(relation._karma);
+			writeD(relation._reputation);
 			writeC(relation._pvpFlag);
 		}
 	}

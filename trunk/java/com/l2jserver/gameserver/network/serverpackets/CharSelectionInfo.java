@@ -134,7 +134,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 			writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High Five
 			writeD(charInfoPackage.getLevel());
 			
-			writeD(charInfoPackage.getKarma());
+			writeD(charInfoPackage.getKarma() > 0 ? 0 /* 255? */: charInfoPackage.getReputation());
 			writeD(charInfoPackage.getPkKills());
 			writeD(charInfoPackage.getPvPKills());
 			
@@ -146,8 +146,8 @@ public class CharSelectionInfo extends L2GameServerPacket
 			writeD(0x00);
 			writeD(0x00);
 			
-			writeD(0x00); // Erthreia
-			writeD(0x00); // Erthreia
+			writeD(0x00); // Ertheia
+			writeD(0x00); // Ertheia
 			
 			for (int slot : getPaperdollOrder())
 			{
@@ -278,6 +278,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 		charInfopackage.setMaxMp(chardata.getInt("maxmp"));
 		charInfopackage.setCurrentMp(chardata.getDouble("curmp"));
 		charInfopackage.setKarma(chardata.getInt("karma"));
+		charInfopackage.setReputation(chardata.getInt("reputation"));
 		charInfopackage.setPkKills(chardata.getInt("pkkills"));
 		charInfopackage.setPvPKills(chardata.getInt("pvpkills"));
 		charInfopackage.setFace(chardata.getInt("face"));
