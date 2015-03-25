@@ -61,12 +61,21 @@
 		<set name="reuseDelay" val="45000" />
 	</skill>
 	<skill id="9206" levels="1" name="Fast Run">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 seconds, Speed + 95. -->
 		<set name="icon" val="icon.skill9206" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="45000" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9207" levels="1" name="Lucky Clover (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
@@ -102,6 +111,9 @@
 		<for>
 			<effect name="DispelBySlot">
 				<param dispel="TRANSFORM,-1" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SPEED_UP_SPECIAL" rate="100" />
 			</effect>
 		</for>
 	</skill>

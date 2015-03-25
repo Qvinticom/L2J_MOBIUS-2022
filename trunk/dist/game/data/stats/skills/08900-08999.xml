@@ -89,19 +89,49 @@
 		</for>
 	</skill>
 	<skill id="8904" levels="1" name="Summon Eviscerator Fox">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mount the Eviscerator's pet fox. -->
 		<set name="icon" val="icon.skill8904" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="10000" />
+		<set name="mpConsume" val="40" />
+		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="154" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8905" levels="1" name="Summon Sayha's Seer Fox">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mount the Sayha's Seer's pet fox. -->
 		<set name="icon" val="icon.skill8905" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="10000" />
+		<set name="mpConsume" val="40" />
+		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="155" />
+			</effect>
+		</for>
 	</skill>
 </list>
