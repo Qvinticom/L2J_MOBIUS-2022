@@ -68,7 +68,7 @@ public final class RelationChanged extends L2GameServerPacket
 		_singled._objId = activeChar.getObjectId();
 		_singled._relation = relation;
 		_singled._autoAttackable = autoattackable ? 1 : 0;
-		_singled._reputation = activeChar.getReputation();
+		_singled._reputation = activeChar.getKarma() > 0 ? activeChar.getKarma() * -1 : activeChar.getReputation();
 		_singled._pvpFlag = activeChar.getPvpFlag();
 		setInvisible(activeChar.isInvisible());
 	}
@@ -91,7 +91,7 @@ public final class RelationChanged extends L2GameServerPacket
 		r._objId = activeChar.getObjectId();
 		r._relation = relation;
 		r._autoAttackable = autoattackable ? 1 : 0;
-		r._reputation = activeChar.getReputation();
+		r._reputation = activeChar.getKarma() > 0 ? activeChar.getKarma() * -1 : activeChar.getReputation();
 		r._pvpFlag = activeChar.getPvpFlag();
 		_multi.add(r);
 	}

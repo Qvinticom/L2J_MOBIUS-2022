@@ -134,7 +134,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 			writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High Five
 			writeD(charInfoPackage.getLevel());
 			
-			writeD(charInfoPackage.getKarma() > 0 ? 0 /* 255? */: charInfoPackage.getReputation());
+			writeD(charInfoPackage.getKarma() > 0 ? charInfoPackage.getKarma() * -1 : charInfoPackage.getReputation());
 			writeD(charInfoPackage.getPkKills());
 			writeD(charInfoPackage.getPvPKills());
 			
