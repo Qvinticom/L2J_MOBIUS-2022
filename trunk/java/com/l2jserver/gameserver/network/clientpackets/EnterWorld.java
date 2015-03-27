@@ -60,6 +60,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.AllyCrest;
 import com.l2jserver.gameserver.network.serverpackets.Die;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ExAcquireAPSkillList;
@@ -317,6 +318,11 @@ public class EnterWorld extends L2GameClientPacket
 			if (activeChar.getClan().getCrestId() > 0)
 			{
 				sendPacket(new PledgeCrest(activeChar.getClan().getCrestId()));
+			}
+			// Show ally crest
+			if (activeChar.getClan().getAllyCrestId() > 0)
+			{
+				sendPacket(new AllyCrest(activeChar.getClan().getAllyCrestId()));
 			}
 		}
 		
