@@ -45431,3 +45431,7 @@ INSERT INTO `spawnlist` VALUES ('19_25', 1, 23399, -9544, 251288, -2939, 0, 0, 4
 INSERT INTO `spawnlist` VALUES ('19_25', 1, 23397, -9416, 252216, -3045, 0, 0, 37355, 60, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('19_25', 1, 23397, -10264, 251048, -2904, 0, 0, 40014, 60, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('20_25', 1, 32245, 8800, 251652, -2024, 0, 0, 11668, 60, 0, 0, 0);
+
+-- Shadai Heine spawn
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('23_24', '1', '32347', '112003', '219608', '-3664', '0', '0', '26124', '60', '0', '0', '0');
