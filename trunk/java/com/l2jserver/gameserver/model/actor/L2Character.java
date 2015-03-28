@@ -5587,7 +5587,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				abortCast();
 				return;
 			}
-			mut.setTargets(targetList.toArray(new L2Character[targetList.size()]));
+			mut.setTargets(targetList.toArray(new L2Object[targetList.size()]));
 		}
 		
 		// Ensure that a cast is in progress

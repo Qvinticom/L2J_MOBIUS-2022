@@ -541,7 +541,6 @@ public class AdminTeleport implements IAdminCommandHandler
 		if ((obj instanceof L2Npc) && !((L2Npc) obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
 		{
 			L2Npc target = (L2Npc) obj;
-			
 			L2Spawn spawn = target.getSpawn();
 			if (spawn == null)
 			{

@@ -345,8 +345,8 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	private L2MonsterInstance spawnSupriseMob(L2Npc energy, int npcId)
 	{
-				L2NpcTemplate surpriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
-				L2MonsterInstance monster = new L2MonsterInstance(surpriseMobTemplate);
+		L2NpcTemplate surpriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
+		L2MonsterInstance monster = new L2MonsterInstance(surpriseMobTemplate);
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
 		monster.setHeading(energy.getHeading());
 		monster.setInstanceId(energy.getInstanceId());

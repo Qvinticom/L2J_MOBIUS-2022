@@ -43,7 +43,12 @@ public class L2ShuttleInstance extends L2Vehicle
 	{
 		super(template);
 		setInstanceType(InstanceType.L2ShuttleInstance);
-		setAI(new L2ShuttleAI(this));
+	}
+	
+	@Override
+	public L2ShuttleAI initAI()
+	{
+		return new L2ShuttleAI(this);
 	}
 	
 	public List<L2ShuttleStop> getStops()

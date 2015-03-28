@@ -155,6 +155,7 @@ public final class RequestJoinParty extends L2GameClientPacket
 	private void addTargetToParty(L2PcInstance target, L2PcInstance requestor)
 	{
 		final L2Party party = requestor.getParty();
+		
 		// summary of ppl already in party and ppl that get invitation
 		if (!party.isLeader(requestor))
 		{

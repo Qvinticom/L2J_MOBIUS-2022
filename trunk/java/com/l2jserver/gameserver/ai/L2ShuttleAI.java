@@ -26,9 +26,9 @@ import com.l2jserver.gameserver.network.serverpackets.shuttle.ExShuttleMove;
  */
 public class L2ShuttleAI extends L2VehicleAI
 {
-	public L2ShuttleAI(L2ShuttleInstance l2ShuttleInstance)
+	public L2ShuttleAI(L2ShuttleInstance actor)
 	{
-		super(l2ShuttleInstance);
+		super(actor);
 	}
 	
 	@Override

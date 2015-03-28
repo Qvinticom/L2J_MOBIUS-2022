@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.model.holders;
 import java.time.DayOfWeek;
 
 /**
- * Simple class for storing Reenter Data for Intances.
+ * Simple class for storing Reenter Data for Instances.
  * @author FallenAngel
  */
 public final class InstanceReenterTimeHolder

@@ -53,7 +53,6 @@ public final class RequestRestart extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance player = getClient().getActiveChar();
-		
 		if (player == null)
 		{
 			return;

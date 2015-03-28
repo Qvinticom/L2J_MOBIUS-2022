@@ -76,7 +76,6 @@ public final class RelationChanged extends L2GameServerPacket
 	public RelationChanged()
 	{
 		_mask |= SEND_MULTI;
-		
 		_multi = new ArrayList<>();
 	}
 	

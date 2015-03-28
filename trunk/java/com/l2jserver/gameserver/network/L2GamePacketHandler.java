@@ -99,6 +99,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 		{
 			return null;
 		}
+		
 		int opcode = buf.get() & 0xFF;
 		
 		ReceivablePacket<L2GameClient> msg = null;

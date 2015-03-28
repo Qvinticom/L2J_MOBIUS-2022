@@ -301,17 +301,14 @@ public final class Util
 	
 	/**
 	 * (Based on implode() in PHP)
-	 * @param strArray - an array of strings to concatenate
-	 * @param strDelim - the delimiter to put between the strings
+	 * @param strings an array of strings to concatenate
+	 * @param delimiter the delimiter to put between the strings
 	 * @return a delimited string for a given array of string elements.
 	 */
-	public static String implodeString(Iterable<String> strArray, String strDelim)
+	public static String implodeString(Iterable<String> strings, String delimiter)
 	{
-		final StringJoiner sj = new StringJoiner(strDelim);
-		for (String str : strArray)
-		{
-			sj.add(str);
-		}
+		final StringJoiner sj = new StringJoiner(delimiter);
+		strings.forEach(sj::add);
 		return sj.toString();
 	}
 	

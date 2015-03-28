@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
@@ -225,9 +226,10 @@ public class MultiSellChoose extends L2GameClientPacket
 					}
 				}
 				
-				ArrayList<L2Augmentation> augmentation = new ArrayList<>();
+				List<L2Augmentation> augmentation = new ArrayList<>();
 				Elementals[] elemental = null;
 				/** All ok, remove items and add final product */
+				
 				for (Ingredient e : entry.getIngredients())
 				{
 					if (e.getItemId() < 0)

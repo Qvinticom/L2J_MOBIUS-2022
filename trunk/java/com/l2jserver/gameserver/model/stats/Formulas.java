@@ -452,9 +452,11 @@ public final class Formulas
 	 */
 	public static final double calcCpRegen(L2PcInstance player)
 	{
+		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
 		// With CON bonus
 		final double init = player.getActingPlayer().getTemplate().getBaseCpRegen(player.getLevel()) * player.getLevelMod() * BaseStats.CON.calcBonus(player);
-		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
+		
+		// Calculate Movement bonus
 		if (player.isSitting())
 		{
 			cpRegenMultiplier *= 1.5; // Sitting

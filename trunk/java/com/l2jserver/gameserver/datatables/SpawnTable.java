@@ -389,11 +389,11 @@ public final class SpawnTable implements IXmlReader
 	}
 	
 	/**
-	 * Gets a spawn for the given NPC ID.
+	 * Finds a spawn for the given NPC ID.
 	 * @param npcId the NPC Id
 	 * @return a spawn for the given NPC ID or {@code null}
 	 */
-	public L2Spawn getAnySpawn(int npcId)
+	public L2Spawn findAny(int npcId)
 	{
 		return getSpawns(npcId).stream().findFirst().orElse(null);
 	}
