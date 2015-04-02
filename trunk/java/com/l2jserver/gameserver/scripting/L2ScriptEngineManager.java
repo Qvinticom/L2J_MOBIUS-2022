@@ -195,7 +195,13 @@ public final class L2ScriptEngineManager
 	{
 		if (dir.isDirectory())
 		{
-			for (File file : dir.listFiles())
+			final File[] files = dir.listFiles();
+			if (files == null)
+			{
+				return;
+			}
+			
+			for (File file : files)
 			{
 				if (file.isDirectory() && recurseDown && (maxDepth > currentDepth))
 				{

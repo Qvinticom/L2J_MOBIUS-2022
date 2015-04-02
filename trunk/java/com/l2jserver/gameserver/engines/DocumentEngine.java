@@ -69,10 +69,14 @@ public class DocumentEngine
 			_log.warning("Dir " + dir.getAbsolutePath() + " not exists");
 			return;
 		}
-		File[] files = dir.listFiles(new XMLFilter());
-		for (File f : files)
+		
+		final File[] files = dir.listFiles(new XMLFilter());
+		if (files != null)
 		{
-			hash.add(f);
+			for (File f : files)
+			{
+				hash.add(f);
+			}
 		}
 	}
 	

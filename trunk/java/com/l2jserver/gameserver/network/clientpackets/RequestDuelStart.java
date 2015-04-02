@@ -92,7 +92,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 		if (_partyDuel == 1)
 		{
 			// Player must be in a party & the party leader
-			if (!activeChar.isInParty() || !(activeChar.isInParty() && activeChar.getParty().isLeader(activeChar)))
+			if (!activeChar.isInParty() || !activeChar.getParty().isLeader(activeChar))
 			{
 				activeChar.sendMessage("You have to be the leader of a party in order to request a party duel.");
 				return;

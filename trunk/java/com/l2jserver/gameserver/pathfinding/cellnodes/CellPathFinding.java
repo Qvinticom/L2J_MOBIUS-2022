@@ -19,9 +19,8 @@
 package com.l2jserver.gameserver.pathfinding.cellnodes;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -186,8 +185,6 @@ public class CellPathFinding extends PathFinding
 			_postFilterPlayableUses++;
 		}
 		
-		int currentX, currentY, currentZ;
-		ListIterator<AbstractNodeLoc> middlePoint, endPoint;
 		boolean remove;
 		int pass = 0;
 		do
@@ -196,19 +193,18 @@ public class CellPathFinding extends PathFinding
 			_postFilterPasses++;
 			
 			remove = false;
-			middlePoint = path.listIterator();
-			endPoint = path.listIterator(1);
-			currentX = x;
-			currentY = y;
-			currentZ = z;
+			final Iterator<AbstractNodeLoc> endPoint = path.iterator();
+			int currentX = x;
+			int currentY = y;
+			int currentZ = z;
 			
-			while (endPoint.hasNext())
+			for (int i = 0; i < path.size(); i++)
 			{
+				AbstractNodeLoc locMiddle = path.get(i);
 				AbstractNodeLoc locEnd = endPoint.next();
-				AbstractNodeLoc locMiddle = middlePoint.next();
 				if (GeoData.getInstance().canMove(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instanceId))
 				{
-					middlePoint.remove();
+					path.remove(i);
 					remove = true;
 					if (debug)
 					{
@@ -228,11 +224,7 @@ public class CellPathFinding extends PathFinding
 		
 		if (debug)
 		{
-			middlePoint = path.listIterator();
-			while (middlePoint.hasNext())
-			{
-				dropDebugItem(65, 1, middlePoint.next());
-			}
+			path.forEach(n -> dropDebugItem(65, 1, n));
 		}
 		
 		_findSuccess++;
@@ -242,7 +234,7 @@ public class CellPathFinding extends PathFinding
 	
 	private List<AbstractNodeLoc> constructPath(AbstractNode node)
 	{
-		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
+		final List<AbstractNodeLoc> path = new CopyOnWriteArrayList<>();
 		int previousDirectionX = Integer.MIN_VALUE;
 		int previousDirectionY = Integer.MIN_VALUE;
 		int directionX, directionY;
@@ -276,7 +268,7 @@ public class CellPathFinding extends PathFinding
 				previousDirectionX = directionX;
 				previousDirectionY = directionY;
 				
-				path.addFirst(node.getLoc());
+				path.add(0, node.getLoc());
 				node.setLoc(null);
 			}
 			
@@ -349,7 +341,7 @@ public class CellPathFinding extends PathFinding
 	{
 		final int mapSize;
 		final int count;
-		ArrayList<CellNodeBuffer> bufs;
+		List<CellNodeBuffer> bufs;
 		int uses = 0;
 		int playableUses = 0;
 		int overflows = 0;

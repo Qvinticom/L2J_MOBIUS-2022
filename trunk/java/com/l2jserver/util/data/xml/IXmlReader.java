@@ -144,16 +144,19 @@ public interface IXmlReader
 			return false;
 		}
 		
-		final File[] listOfFiles = dir.listFiles();
-		for (File f : listOfFiles)
+		final File[] files = dir.listFiles();
+		if (files != null)
 		{
-			if (recursive && f.isDirectory())
+			for (File f : files)
 			{
-				parseDirectory(f, recursive);
-			}
-			else if (getCurrentFileFilter().accept(f))
-			{
-				parseFile(f);
+				if (recursive && f.isDirectory())
+				{
+					parseDirectory(f, recursive);
+				}
+				else if (getCurrentFileFilter().accept(f))
+				{
+					parseFile(f);
+				}
 			}
 		}
 		return true;

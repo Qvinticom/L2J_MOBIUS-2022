@@ -18,11 +18,17 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
@@ -37,12 +43,7 @@ public class SummonEffectsTable
 	// ---> key: servitorSkillId, value: Effects list
 	private final Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> _servitorEffects = new HashMap<>();
 	
-	public Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> getServitorEffectsOwner()
-	{
-		return _servitorEffects;
-	}
-	
-	public Map<Integer, List<SummonEffect>> getServitorEffects(L2PcInstance owner)
+	private Map<Integer, List<SummonEffect>> getServitorEffects(L2PcInstance owner)
 	{
 		final Map<Integer, Map<Integer, List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
 		if (servitorMap == null)
@@ -52,15 +53,107 @@ public class SummonEffectsTable
 		return servitorMap.get(owner.getClassIndex());
 	}
 	
+	private List<SummonEffect> getServitorEffects(L2PcInstance owner, int referenceSkill)
+	{
+		return containsOwner(owner) ? getServitorEffects(owner).get(referenceSkill) : null;
+	}
+	
+	private boolean containsOwner(L2PcInstance owner)
+	{
+		return _servitorEffects.getOrDefault(owner.getObjectId(), Collections.emptyMap()).containsKey(owner.getClassIndex());
+	}
+	
+	private void removeEffects(List<SummonEffect> effects, int skillId)
+	{
+		if ((effects != null) && !effects.isEmpty())
+		{
+			for (SummonEffect effect : effects)
+			{
+				final Skill skill = effect.getSkill();
+				if ((skill != null) && (skill.getId() == skillId))
+				{
+					effects.remove(effect);
+				}
+			}
+		}
+	}
+	
+	private void applyEffects(L2Summon summon, List<SummonEffect> summonEffects)
+	{
+		if (summonEffects == null)
+		{
+			return;
+		}
+		for (SummonEffect se : summonEffects)
+		{
+			if (se != null)
+			{
+				se.getSkill().applyEffects(summon, summon, false, se.getEffectCurTime());
+			}
+		}
+	}
+	
+	public boolean containsSkill(L2PcInstance owner, int referenceSkill)
+	{
+		return containsOwner(owner) && getServitorEffects(owner).containsKey(referenceSkill);
+	}
+	
+	public void clearServitorEffects(L2PcInstance owner, int referenceSkill)
+	{
+		if (containsOwner(owner))
+		{
+			
+			getServitorEffects(owner).getOrDefault(referenceSkill, Collections.emptyList()).clear();
+		}
+	}
+	
+	public void addServitorEffect(L2PcInstance owner, int referenceSkill, Skill skill, int effectCurTime)
+	{
+		_servitorEffects.putIfAbsent(owner.getObjectId(), new HashMap<Integer, Map<Integer, List<SummonEffect>>>());
+		_servitorEffects.get(owner.getObjectId()).putIfAbsent(owner.getClassIndex(), new HashMap<Integer, List<SummonEffect>>());
+		getServitorEffects(owner).putIfAbsent(referenceSkill, new CopyOnWriteArrayList<SummonEffect>());
+		getServitorEffects(owner).get(referenceSkill).add(new SummonEffect(skill, effectCurTime));
+	}
+	
+	public void removeServitorEffects(L2PcInstance owner, int referenceSkill, int skillId)
+	{
+		removeEffects(getServitorEffects(owner, referenceSkill), skillId);
+	}
+	
+	public void applyServitorEffects(L2ServitorInstance l2ServitorInstance, L2PcInstance owner, int referenceSkill)
+	{
+		applyEffects(l2ServitorInstance, getServitorEffects(owner, referenceSkill));
+	}
+	
 	/** Pets **/
 	private final Map<Integer, List<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
 	
-	public Map<Integer, List<SummonEffect>> getPetEffects()
+	public void addPetEffect(int controlObjectId, Skill skill, int effectCurTime)
 	{
-		return _petEffects;
+		_petEffects.putIfAbsent(controlObjectId, new ArrayList<>()).add(new SummonEffect(skill, effectCurTime));
 	}
 	
-	public class SummonEffect
+	public boolean containsPetId(int controlObjectId)
+	{
+		return _petEffects.containsKey(controlObjectId);
+	}
+	
+	public void applyPetEffects(L2PetInstance l2PetInstance, int controlObjectId)
+	{
+		applyEffects(l2PetInstance, _petEffects.get(controlObjectId));
+	}
+	
+	public void clearPetEffects(int controlObjectId)
+	{
+		_petEffects.getOrDefault(controlObjectId, Collections.emptyList()).clear();
+	}
+	
+	public void removePetEffects(int controlObjectId, int skillId)
+	{
+		removeEffects(_petEffects.get(controlObjectId), skillId);
+	}
+	
+	private class SummonEffect
 	{
 		Skill _skill;
 		int _effectCurTime;

@@ -200,7 +200,7 @@ public class GeoData
 			return z;
 		}
 		
-		int nextLowerZ = getNextLowerZ(geoX, geoY, z + 100);
+		int nextLowerZ = getNextLowerZ(geoX, geoY, z + 20);
 		return Math.abs(nextLowerZ - z) <= SPAWN_Z_DELTA_LIMIT ? nextLowerZ : z;
 	}
 	

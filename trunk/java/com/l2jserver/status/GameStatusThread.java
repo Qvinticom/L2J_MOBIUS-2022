@@ -34,7 +34,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.handler.TelnetHandler;
 
-public class GameStatusThread extends Thread
+public final class GameStatusThread extends Thread
 {
 	private static final Logger _log = Logger.getLogger(GameStatusThread.class.getName());
 	

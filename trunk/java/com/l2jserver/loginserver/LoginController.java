@@ -327,21 +327,21 @@ public class LoginController
 		_bannedIps.putIfAbsent(address, System.currentTimeMillis() + duration);
 	}
 	
-	public boolean isBannedAddress(InetAddress address)
+	public boolean isBannedAddress(InetAddress address) throws UnknownHostException
 	{
 		String[] parts = address.getHostAddress().split("\\.");
 		Long bi = _bannedIps.get(address);
 		if (bi == null)
 		{
-			bi = _bannedIps.get(parts[0] + "." + parts[1] + "." + parts[2] + ".0");
+			bi = _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + "." + parts[2] + ".0"));
 		}
 		if (bi == null)
 		{
-			bi = _bannedIps.get(parts[0] + "." + parts[1] + ".0.0");
+			bi = _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + ".0.0"));
 		}
 		if (bi == null)
 		{
-			bi = _bannedIps.get(parts[0] + ".0.0.0");
+			bi = _bannedIps.get(InetAddress.getByName(parts[0] + ".0.0.0"));
 		}
 		if (bi != null)
 		{
@@ -368,7 +368,7 @@ public class LoginController
 	 */
 	public boolean removeBanForAddress(InetAddress address)
 	{
-		return _bannedIps.remove(address.getHostAddress()) != null;
+		return _bannedIps.remove(address) != null;
 	}
 	
 	/**

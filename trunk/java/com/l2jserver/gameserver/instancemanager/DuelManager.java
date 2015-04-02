@@ -110,7 +110,7 @@ public final class DuelManager
 	
 	public void removeDuel(Duel duel)
 	{
-		_duels.remove(duel);
+		_duels.remove(duel.getId());
 	}
 	
 	public void doSurrender(L2PcInstance player)

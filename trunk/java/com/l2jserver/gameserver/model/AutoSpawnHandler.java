@@ -26,7 +26,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -552,11 +554,6 @@ public class AutoSpawnHandler
 				
 				for (L2Npc npcInst : spawnInst.getNPCInstanceList())
 				{
-					if (npcInst == null)
-					{
-						continue;
-					}
-					
 					npcInst.deleteMe();
 					SpawnTable.getInstance().deleteSpawn(npcInst.getSpawn(), false);
 					spawnInst.removeNpcInstance(npcInst);
@@ -592,7 +589,7 @@ public class AutoSpawnHandler
 		
 		protected int _lastLocIndex = -1;
 		
-		private final List<L2Npc> _npcList = new CopyOnWriteArrayList<>();
+		private final Queue<L2Npc> _npcList = new ConcurrentLinkedQueue<>();
 		
 		private final List<Location> _locList = new CopyOnWriteArrayList<>();
 		
@@ -665,16 +662,9 @@ public class AutoSpawnHandler
 			return _locList.toArray(new Location[_locList.size()]);
 		}
 		
-		public L2Npc[] getNPCInstanceList()
+		public Queue<L2Npc> getNPCInstanceList()
 		{
-			L2Npc[] ret;
-			synchronized (_npcList)
-			{
-				ret = new L2Npc[_npcList.size()];
-				_npcList.toArray(ret);
-			}
-			
-			return ret;
+			return _npcList;
 		}
 		
 		public List<L2Spawn> getSpawns()

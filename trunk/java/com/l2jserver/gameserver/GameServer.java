@@ -155,7 +155,7 @@ import com.l2jserver.status.Status;
 import com.l2jserver.util.DeadLockDetector;
 import com.l2jserver.util.IPv4Filter;
 
-public class GameServer
+public final class GameServer
 {
 	private static final Logger _log = Logger.getLogger(GameServer.class.getName());
 	

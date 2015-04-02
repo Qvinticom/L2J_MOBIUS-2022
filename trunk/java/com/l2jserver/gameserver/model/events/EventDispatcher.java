@@ -160,13 +160,13 @@ public final class EventDispatcher
 	 */
 	private <T extends AbstractEventReturn> T notifyEventToMultipleContainers(IBaseEvent event, ListenersContainer[] containers, Class<T> callbackClass)
 	{
+		if (event == null)
+		{
+			throw new NullPointerException("Event cannot be null!");
+		}
+		
 		try
 		{
-			if (event == null)
-			{
-				throw new NullPointerException("Event cannot be null!");
-			}
-			
 			T callback = null;
 			if (containers != null)
 			{
