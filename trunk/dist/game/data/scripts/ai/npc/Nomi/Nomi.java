@@ -95,18 +95,6 @@ public final class Nomi extends AbstractNpcAI
 				htmltext = event;
 				break;
 			}
-			case "weakenBreath":
-			{
-				if (player.getShilensBreathDebuffLevel() < 3)
-				{
-					htmltext = "guide-noBreath.html";
-					break;
-				}
-				
-				player.setShilensBreathDebuffLevel(2);
-				htmltext = ""; // TODO: Any success html?
-				break;
-			}
 			case "knight":
 			{
 				htmltext = applyBuffs(npc, player, KNIGHT.getSkill());
