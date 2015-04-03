@@ -45262,7 +45262,6 @@ INSERT INTO `spawnlist` VALUES ('26_20', 1, 32920, 227460, 78744, 896, 0, 0, 0, 
 INSERT INTO `spawnlist` VALUES ('26_20', 1, 32920, 227696, 78048, 880, 0, 0, 0, 60, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('26_20', 1, 32920, 227744, 76992, 912, 0, 0, 0, 60, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('26_20', 1, 32921, 207872, 84340, -936, 0, 0, 11547, 60, 0, 0, 0);
-INSERT INTO `spawnlist` VALUES ('26_20', 1, 32946, 175477, 148291, -11650, 0, 0, 49151, 0, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('26_21', 1, 33031, 207798, 112440, -2064, 0, 0, 0, 60, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('26_21', 1, 33032, 207896, 112474, -2056, 0, 0, 0, 60, 0, 0, 0);
 INSERT INTO `spawnlist` VALUES ('26_20', 1, 33089, 211049, 89489, -1144, 0, 0, 0, 60, 0, 0, 0);
@@ -45435,3 +45434,102 @@ INSERT INTO `spawnlist` VALUES ('20_25', 1, 32245, 8800, 251652, -2024, 0, 0, 11
 -- Shadai Heine spawn
 INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
 ('23_24', '1', '32347', '112003', '219608', '-3664', '0', '0', '26124', '60', '0', '0', '0');
+
+-- Prison of Darkness
+DELETE FROM spawnlist WHERE npc_templateid in (
+22965, 22966, 22967, 22968, 22969, 22970, 32939, 32940, 32941, 32942, 32945, 32946, 32948);
+INSERT INTO `spawnlist` VALUES
+-- Prison of Darkness NPCs
+('prison_of_darkness', 1, 32939, 175882, 143122, -11768, 0, 0, 11476, 30, 30, 0, 0), -- Cannon
+('prison_of_darkness', 1, 32940, 175975, 142257, -11768, 0, 0, 60752, 30, 30, 0, 0), -- Cannon
+('prison_of_darkness', 1, 32941, 175024, 142216, -11768, 0, 0, 40952, 30, 30, 0, 0), -- Cannon
+('prison_of_darkness', 1, 32942, 175076, 143197, -11768, 0, 0, 25000, 30, 30, 0, 0), -- Cannon
+('prison_of_darkness', 1, 32945, 175476, 143259, -11752, 0, 0, 16420, 30, 30, 0, 0), -- Spezion's Headstone
+('prison_of_darkness', 1, 32946, 175467, 148287, -11648, 0, 0, 49462, 30, 30, 0, 0), -- Opera
+('prison_of_darkness', 1, 32948, 175466, 142727, -11314, 0, 0, 16384, 30, 30, 0, 0), -- None
+-- Prison of Darkness monsters
+('prison_of_darkness', 1, 22965, 173207, 142392, -11896, 0, 0, 245, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 173207, 142557, -11896, 0, 0, 4524, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 173346, 143371, -11896, 0, 0, 8562, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 173594, 143770, -11896, 0, 0, 16834, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 173806, 144450, -11896, 0, 0, 12411, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 173809, 141562, -11864, 0, 0, 10088, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 173809, 141947, -11824, 0, 0, 6095, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 174371, 140758, -11896, 0, 0, 53272, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 174599, 141008, -11840, 0, 0, 588, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 174612, 144768, -11896, 0, 0, 62619, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 175199, 140565, -11896, 0, 0, 29624, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 175251, 141009, -11808, 0, 0, 6937, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 176073, 144306, -11816, 0, 0, 8606, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 176073, 144356, -11816, 0, 0, 58435, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 176363, 140841, -11880, 0, 0, 22124, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 176471, 141205, -11824, 0, 0, 59845, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 176943, 141947, -11808, 0, 0, 1548, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 177273, 142065, -11840, 0, 0, 19679, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 177390, 143946, -11896, 0, 0, 62135, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 177446, 143886, -11896, 0, 0, 14873, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 177456, 142710, -11856, 0, 0, 25796, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22965, 177752, 142554, -11896, 0, 0, 19837, 30, 30, 0, 0), -- Novice Phantom
+('prison_of_darkness', 1, 22966, 173222, 143542, -11896, 0, 0, 6079, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 173407, 142667, -11880, 0, 0, 32111, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 173650, 141947, -11856, 0, 0, 53989, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 173718, 144226, -11896, 0, 0, 48229, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 173767, 142447, -11816, 0, 0, 63930, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 173862, 141232, -11888, 0, 0, 46954, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 174314, 141258, -11832, 0, 0, 3511, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 174426, 144450, -11864, 0, 0, 670, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 174656, 141058, -11832, 0, 0, 11172, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 174984, 144344, -11816, 0, 0, 56372, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 175511, 141083, -11808, 0, 0, 60048, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 175563, 140454, -11896, 0, 0, 55623, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 176305, 144656, -11880, 0, 0, 62015, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 176711, 144306, -11856, 0, 0, 57130, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 176741, 140997, -11888, 0, 0, 31096, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 176795, 140997, -11896, 0, 0, 50546, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 176886, 143646, -11808, 0, 0, 61603, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 176943, 141829, -11808, 0, 0, 14498, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 177110, 143946, -11864, 0, 0, 57912, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 177160, 142970, -11816, 0, 0, 40396, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 177218, 141239, -11896, 0, 0, 23321, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22966, 177456, 142866, -11856, 0, 0, 27771, 30, 30, 0, 0), -- Novice Phantom Wizard
+('prison_of_darkness', 1, 22967, 174269, 143481, -11808, 0, 0, 28791, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 174483, 142387, -11776, 0, 0, 13858, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 174538, 142175, -11776, 0, 0, 26040, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 174569, 143163, -11776, 0, 0, 62338, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 175544, 143548, -11768, 0, 0, 46836, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 175583, 141524, -11776, 0, 0, 15324, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 175712, 141954, -11768, 0, 0, 17323, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 175892, 143466, -11760, 0, 0, 55256, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 176123, 141962, -11776, 0, 0, 7441, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 176216, 143046, -11768, 0, 0, 59320, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 176618, 141962, -11792, 0, 0, 48902, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22967, 176799, 143202, -11792, 0, 0, 55524, 30, 30, 0, 0), -- Median Phantom
+('prison_of_darkness', 1, 22968, 174169, 143057, -11776, 0, 0, 24641, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 174483, 142122, -11776, 0, 0, 53613, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 174813, 141804, -11776, 0, 0, 9221, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 174869, 143322, -11760, 0, 0, 18764, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 175067, 141610, -11776, 0, 0, 46714, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 175153, 141782, -11768, 0, 0, 47519, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 175602, 143999, -11776, 0, 0, 8519, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 175718, 144163, -11808, 0, 0, 55031, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 176068, 142170, -11768, 0, 0, 22871, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 176322, 143514, -11776, 0, 0, 26776, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 176343, 141650, -11792, 0, 0, 18310, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22968, 176640, 143098, -11776, 0, 0, 1786, 30, 30, 0, 0), -- Median Escort Swordsman
+('prison_of_darkness', 1, 22969, 173407, 143162, -11880, 0, 0, 35378, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 173650, 142112, -11840, 0, 0, 24747, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 173656, 143941, -11896, 0, 0, 63623, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 174116, 144450, -11896, 0, 0, 27288, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 174200, 141158, -11856, 0, 0, 41150, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 175251, 140935, -11816, 0, 0, 59750, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 176471, 140581, -11896, 0, 0, 61336, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 176479, 144356, -11840, 0, 0, 20825, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 176886, 143946, -11824, 0, 0, 50570, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 177163, 142065, -11816, 0, 0, 23751, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22969, 177308, 142918, -11824, 0, 0, 35816, 30, 30, 0, 0), -- Wraith Guardian
+('prison_of_darkness', 1, 22970, 174043, 142281, -11816, 0, 0, 42531, 30, 30, 0, 0), -- Wraith Warrior
+('prison_of_darkness', 1, 22970, 174869, 143216, -11768, 0, 0, 60061, 30, 30, 0, 0), -- Wraith Warrior
+('prison_of_darkness', 1, 22970, 175602, 143466, -11768, 0, 0, 58470, 30, 30, 0, 0), -- Wraith Warrior
+('prison_of_darkness', 1, 22970, 175798, 141223, -11816, 0, 0, 49030, 30, 30, 0, 0), -- Wraith Warrior
+('prison_of_darkness', 1, 22970, 176216, 142942, -11768, 0, 0, 29353, 30, 30, 0, 0), -- Wraith Warrior
+('prison_of_darkness', 1, 22970, 176508, 141910, -11776, 0, 0, 32377, 30, 30, 0, 0); -- Wraith Warrior
