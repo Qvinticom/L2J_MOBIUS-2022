@@ -2410,89 +2410,181 @@
 		</collision>
 	</npc>
 	<npc id="23384" level="99" type="L2Monster" name="Smaug">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="71385191" sp="171324" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="48" />
 			<height normal="53.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17109" max="1016822" chance="13.8" />
+				<item id="37890" min="1" max="1" chance="0.9" />
+				<item id="37791" min="1" max="1" chance="0.4" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="58.2" />
+				<item id="40050" min="1" max="1" chance="5.8" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23385" level="99" type="L2Monster" name="Lunatikan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="71385191" sp="171324" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="40" />
 			<height normal="73" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17263" max="1294257" chance="12.9" />
+				<item id="37791" min="1" max="1" chance="0.6" />
+				<item id="37790" min="1" max="1" chance="0.3" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="60.2" />
+				<item id="40050" min="1" max="1" chance="5.9" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23386" level="99" type="L2Monster" name="Jabberwok">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="71385191" sp="171324" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="23" />
 			<height normal="30.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="68375" max="148631" chance="24.8" />
+				<item id="37791" min="1" max="1" chance="1.8" />
+				<item id="37890" min="1" max="1" chance="0.3" />
+				<item id="36550" min="1" max="1" chance="0.07501" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="76" />
+				<item id="40050" min="1" max="1" chance="22.9" />
+				<item id="40051" min="1" max="1" chance="2.2" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23387" level="99" type="L2Monster" name="Kanzaroth">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="71385191" sp="171324" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="28" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17195" max="1154758" chance="18.9" />
+				<item id="37890" min="1" max="1" chance="0.3" />
+				<item id="37791" min="1" max="1" chance="0.3" />
+				<item id="36565" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="57.6" />
+				<item id="40050" min="1" max="1" chance="5.9" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23388" level="99" type="L2Monster" name="Kandiloth">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="71385191" sp="171324" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="38.7" />
 			<height normal="54.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17385" max="640211" chance="15.3" />
+				<item id="37791" min="1" max="1" chance="0.3" />
+				<item id="36550" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="60.2" />
+				<item id="40050" min="1" max="1" chance="5.9" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23389" level="99" type="L2Npc" name="Viper" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2597,88 +2689,182 @@
 		</collision>
 	</npc>
 	<npc id="23395" level="99" type="L2Monster" name="Garion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="90421085" sp="217010" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1644368" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="21993" max="1631033" chance="13.6" />
+				<item id="37791" min="1" max="1" chance="0.8" />
+				<item id="37890" min="1" max="1" chance="0.2" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="74.4" />
+				<item id="40050" min="1" max="1" chance="7.6" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23396" level="99" type="L2Monster" name="Garion Neti">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="90421085" sp="217010" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1644368" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="22033" max="1552806" chance="13" />
+				<item id="37791" min="1" max="1" chance="0.8" />
+				<item id="37890" min="1" max="1" chance="0.5" />
+				<item id="36943" min="1" max="1" chance="0.0009" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="76.4" />
+				<item id="40050" min="1" max="1" chance="7.6" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23397" level="99" type="L2Monster" name="Desert Wendigo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="90421085" sp="217010" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1644368" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="40" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="21883" max="1732301" chance="13.6" />
+				<item id="37791" min="1" max="1" chance="0.4" />
+				<item id="37890" min="1" max="1" chance="0.2" />
+				<item id="36550" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="77.2" />
+				<item id="40050" min="1" max="1" chance="7.5" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23398" level="99" type="L2Monster" name="Koraza">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="90421085" sp="217010" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1644368" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="28" />
 			<height normal="28.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="21796" max="1412884" chance="14.1" />
+				<item id="37791" min="1" max="1" chance="0.6" />
+				<item id="37890" min="1" max="1" chance="0.4" />
+				<item id="36565" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="77.1" />
+				<item id="40050" min="1" max="1" chance="7.5" />
+				<item id="40051" min="1" max="1" chance="0.8" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23399" level="99" type="L2Monster" name="Bend Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- GUESSED STATS TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<acquire exp="90421085" sp="217010" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1644368" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2570" magical="2584" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="40" />
 			<height normal="67" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="30540" max="2418494" chance="13.2" />
+				<item id="37791" min="1" max="1" chance="0.6" />
+				<item id="37890" min="1" max="1" chance="0.3" />
+				<item id="36550" min="1" max="1" chance="0.07501" />
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="1" chance="51.8" />
+				<item id="40050" min="1" max="1" chance="10.3" />
+				<item id="40051" min="1" max="1" chance="1.1" />
+			</corpse>
+		</drop_lists>
 	</npc>
 </list>
