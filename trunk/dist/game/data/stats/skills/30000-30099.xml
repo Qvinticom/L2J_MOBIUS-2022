@@ -17,6 +17,7 @@
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
+		<set name="triggeredId" val="30002" />
 		<set name="icon" val="icon.skill30001" />
 		<set name="isMagic" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -163,15 +164,12 @@
 		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="#magicLevel" />
+		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="isMagic" val="1" />
-		<cond msgId="113" addName="1">
-			<and>
-				<using kind="SWORD,BLUNT" />
-			</and>
-		</cond>
 		<for>
+			<effect name="Invincible" time="10" val="0" />
 			<effect name="Buff" time="10" val="0">
 				<add stat="runSpd" val="#spd" />
 			</effect>
@@ -229,13 +227,8 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="300" />
-				<param chance="80" />
-				<param skillId="30002" skillLevel="3" /> <!-- Counter Critical -->
-				<param targetType="SELF" />
-			</effect>
+			<effect abnormalTime="10" chance="100" name="TriggerSkillBySkill" triggeredId="30002"
+					triggeredLevel="1" val="0" />
 		</for>
 	</skill>
 	<skill id="30012" levels="22" name="Air Rush">
@@ -249,6 +242,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="nextAction" val="attack" />
 		<set name="power" val="#power" />
+		<set name="triggeredId" val="30002" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1000" />
