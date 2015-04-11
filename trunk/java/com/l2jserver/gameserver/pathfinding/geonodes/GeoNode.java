@@ -19,18 +19,17 @@
 package com.l2jserver.gameserver.pathfinding.geonodes;
 
 import com.l2jserver.gameserver.pathfinding.AbstractNode;
-import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
 
 /**
  * @author -Nemesiss-
  */
-public class GeoNode extends AbstractNode
+public class GeoNode extends AbstractNode<GeoNodeLoc>
 {
 	private final int _neighborsIdx;
 	private short _cost;
 	private GeoNode[] _neighbors;
 	
-	public GeoNode(AbstractNodeLoc Loc, int Neighbors_idx)
+	public GeoNode(GeoNodeLoc Loc, int Neighbors_idx)
 	{
 		super(Loc);
 		_neighborsIdx = Neighbors_idx;
@@ -51,15 +50,13 @@ public class GeoNode extends AbstractNode
 		return _neighbors;
 	}
 	
-	public void attachNeighbors()
+	public void attachNeighbors(GeoNode[] neighbors)
 	{
-		if (getLoc() == null)
-		{
-			_neighbors = null;
-		}
-		else
-		{
-			_neighbors = GeoPathFinding.getInstance().readNeighbors(this, _neighborsIdx);
-		}
+		_neighbors = neighbors;
+	}
+	
+	public int getNeighborsIdx()
+	{
+		return _neighborsIdx;
 	}
 }

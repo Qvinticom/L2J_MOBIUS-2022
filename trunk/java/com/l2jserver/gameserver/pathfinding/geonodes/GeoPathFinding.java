@@ -155,7 +155,7 @@ public class GeoPathFinding extends PathFinding
 			
 			i++;
 			visited.add(node);
-			node.attachNeighbors();
+			node.attachNeighbors(readNeighbors(node));
 			GeoNode[] neighbors = node.getNeighbors();
 			if (neighbors == null)
 			{
@@ -191,7 +191,7 @@ public class GeoPathFinding extends PathFinding
 		return null;
 	}
 	
-	public List<AbstractNodeLoc> constructPath2(AbstractNode node)
+	public List<AbstractNodeLoc> constructPath2(AbstractNode<GeoNodeLoc> node)
 	{
 		LinkedList<AbstractNodeLoc> path = new LinkedList<>();
 		int previousDirectionX = -1000;
@@ -216,8 +216,15 @@ public class GeoPathFinding extends PathFinding
 		return path;
 	}
 	
-	public GeoNode[] readNeighbors(GeoNode n, int idx)
+	private GeoNode[] readNeighbors(GeoNode n)
 	{
+		if (n.getLoc() == null)
+		{
+			return null;
+		}
+		
+		int idx = n.getNeighborsIdx();
+		
 		int node_x = n.getLoc().getNodeX();
 		int node_y = n.getLoc().getNodeY();
 		// short node_z = n.getLoc().getZ();
@@ -225,7 +232,7 @@ public class GeoPathFinding extends PathFinding
 		short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
 		ByteBuffer pn = _pathNodes.get(regoffset);
 		
-		List<AbstractNode> neighbors = new ArrayList<>(8);
+		List<AbstractNode<GeoNodeLoc>> neighbors = new ArrayList<>(8);
 		GeoNode newNode;
 		short new_node_x, new_node_y;
 		

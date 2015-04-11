@@ -65,9 +65,8 @@ public class L2PlayerAI extends L2PlayableAI
 	@Override
 	protected synchronized void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
-		// do nothing unless CAST intention
-		// however, forget interrupted actions when starting to use an offensive skill
-		if ((intention != AI_INTENTION_CAST) || ((arg0 != null) && ((Skill) arg0).isBad()))
+		// Forget next if it's not cast or it's cast and skill is toggle.
+		if ((intention != AI_INTENTION_CAST) || ((arg0 != null) && !((Skill) arg0).isToggle()))
 		{
 			_nextIntention = null;
 			super.changeIntention(intention, arg0, arg1);

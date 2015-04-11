@@ -139,9 +139,9 @@ public class NodeLoc extends AbstractNodeLoc
 		{
 			nswe |= Cell.NSWE_SOUTH;
 		}
-		if (canGoEast())
+		if (canGoWest())
 		{
-			nswe |= Cell.NSWE_EAST;
+			nswe |= Cell.NSWE_WEST;
 		}
 		
 		result = (prime * result) + (((_geoHeight & 0xFFFF) << 1) | nswe);

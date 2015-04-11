@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.pathfinding.utils;
 
+import java.util.ArrayList;
+
 import com.l2jserver.gameserver.pathfinding.AbstractNode;
 
 /**
@@ -25,40 +27,25 @@ import com.l2jserver.gameserver.pathfinding.AbstractNode;
  */
 public class FastNodeList
 {
-	private final AbstractNode[] _list;
-	private int _size;
+	private final ArrayList<AbstractNode<?>> _list;
 	
 	public FastNodeList(int size)
 	{
-		_list = new AbstractNode[size];
+		_list = new ArrayList<>(size);
 	}
 	
-	public void add(AbstractNode n)
+	public void add(AbstractNode<?> n)
 	{
-		_list[_size++] = n;
+		_list.add(n);
 	}
 	
-	public boolean contains(AbstractNode n)
+	public boolean contains(AbstractNode<?> n)
 	{
-		for (int i = 0; i < _size; i++)
-		{
-			if (_list[i].equals(n))
-			{
-				return true;
-			}
-		}
-		return false;
+		return _list.contains(n);
 	}
 	
-	public boolean containsRev(AbstractNode n)
+	public boolean containsRev(AbstractNode<?> n)
 	{
-		for (int i = _size - 1; i >= 0; i--)
-		{
-			if (_list[i].equals(n))
-			{
-				return true;
-			}
-		}
-		return false;
+		return _list.lastIndexOf(n) != -1;
 	}
 }

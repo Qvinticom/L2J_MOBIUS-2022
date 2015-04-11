@@ -35,6 +35,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.StampedLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -232,7 +233,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private L2Character _debugger = null;
 	
 	private final ReentrantLock _teleportLock = new ReentrantLock();
-	private final ReentrantLock _attackLock = new ReentrantLock();
+	private final StampedLock _attackLock = new StampedLock();
 	
 	private Team _team = Team.NONE;
 	
@@ -825,10 +826,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void doAttack(L2Character target)
 	{
-		if (!_attackLock.tryLock())
-		{
-			return;
-		}
+		final long stamp = _attackLock.tryWriteLock();
 		try
 		{
 			if ((target == null) || isAttackingDisabled())
@@ -932,9 +930,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			stopEffectsOnAction();
 			
-			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
-			L2Weapon weaponItem = getActiveWeaponItem();
-			
 			// GeoData Los Check here (or dz > 1000)
 			if (!GeoData.getInstance().canSeeTarget(this, target))
 			{
@@ -945,6 +940,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			// BOW and CROSSBOW checks
+			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
+			L2Weapon weaponItem = getActiveWeaponItem();
 			if ((weaponItem != null) && !isTransformed())
 			{
 				if (weaponItem.getItemType() == WeaponType.BOW)
@@ -1200,7 +1197,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		finally
 		{
-			_attackLock.unlock();
+			_attackLock.unlockWrite(stamp);
 		}
 	}
 	

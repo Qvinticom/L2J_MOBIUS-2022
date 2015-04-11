@@ -19,15 +19,14 @@
 package com.l2jserver.gameserver.pathfinding.cellnodes;
 
 import com.l2jserver.gameserver.pathfinding.AbstractNode;
-import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
 
-public class CellNode extends AbstractNode
+public class CellNode extends AbstractNode<NodeLoc>
 {
 	private CellNode _next = null;
 	private boolean _isInUse = true;
 	private float _cost = -1000;
 	
-	public CellNode(AbstractNodeLoc loc)
+	public CellNode(NodeLoc loc)
 	{
 		super(loc);
 	}
