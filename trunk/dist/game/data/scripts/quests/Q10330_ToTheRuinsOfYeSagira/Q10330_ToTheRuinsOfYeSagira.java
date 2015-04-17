@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * @author Neanrakyr
+ * @author Gladicek
  */
 public class Q10330_ToTheRuinsOfYeSagira extends Quest
 {

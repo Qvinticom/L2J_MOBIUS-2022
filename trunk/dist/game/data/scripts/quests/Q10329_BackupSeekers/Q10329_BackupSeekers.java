@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author Neanrakyr
+ * @author Gladicek
  */
 public class Q10329_BackupSeekers extends Quest
 {

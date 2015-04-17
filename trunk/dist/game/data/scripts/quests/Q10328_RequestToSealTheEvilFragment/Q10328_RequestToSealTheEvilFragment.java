@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * @author Neanrakyr
+ * @author Gladicek
  */
 public final class Q10328_RequestToSealTheEvilFragment extends Quest
 {

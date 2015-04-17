@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * @author Neanrakyr
+ * @author Gladicek
  */
 public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 {
