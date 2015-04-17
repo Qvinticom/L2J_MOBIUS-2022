@@ -189,6 +189,10 @@ import quests.Q10323_TrainLikeItsReal.Q10323_TrainLikeItsReal;
 import quests.Q10324_FindingMagisterGallint.Q10324_FindingMagisterGallint;
 import quests.Q10325_SearchingForNewPower.Q10325_SearchingForNewPower;
 import quests.Q10326_RespectYourElders.Q10326_RespectYourElders;
+import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheBookOfGiants;
+import quests.Q10328_RequestToSealTheEvilFragment.Q10328_RequestToSealTheEvilFragment;
+import quests.Q10329_BackupSeekers.Q10329_BackupSeekers;
+import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
 import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
@@ -398,6 +402,10 @@ public class QuestMasterHandler
 		Q10324_FindingMagisterGallint.class,
 		Q10325_SearchingForNewPower.class,
 		Q10326_RespectYourElders.class,
+		Q10327_IntruderWhoWantsTheBookOfGiants.class,
+		Q10328_RequestToSealTheEvilFragment.class,
+		Q10329_BackupSeekers.class,
+		Q10330_ToTheRuinsOfYeSagira.class,
 		Q10331_StartOfFate.class,
 		Q10338_SeizeYourDestiny.class,
 		Q10390_KekropusLetter.class,
