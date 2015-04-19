@@ -2643,7 +2643,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String showHtmlFile(L2PcInstance player, String filename, L2Npc npc)
 	{
-		boolean questwindow = !filename.endsWith(".html");
+		boolean questwindow = false;
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (qs.getState() == State.CREATED))
+		{
+			questwindow = true;
+		}
 		int questId = getId();
 		
 		// Create handler to file linked to the quest
