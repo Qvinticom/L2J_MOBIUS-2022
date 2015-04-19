@@ -48105,3 +48105,7 @@ INSERT INTO `spawnlist` VALUES
 ('bloody_swampland', 1, 23172, -22469, 53264, -3592, 0, 0, 19297, 30, 30, 0, 0), -- Delegate of Blood
 ('bloody_swampland', 1, 23172, -23529, 52855, -3664, 0, 0, 27584, 30, 30, 0, 0), -- Delegate of Blood
 ('bloody_swampland', 1, 23172, -23578, 52787, -3680, 0, 0, 65037, 30, 30, 0, 0); -- Delegate of Blood
+
+-- Faster respawn for training NPCs
+UPDATE spawnlist SET respawn_delay=20 WHERE npc_templateid in (
+27457, 27532);
