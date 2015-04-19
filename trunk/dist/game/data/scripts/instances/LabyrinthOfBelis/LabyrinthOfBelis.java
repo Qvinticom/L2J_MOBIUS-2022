@@ -54,9 +54,6 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	private static final int EMBRYO_OPERATIVE = 22998;
 	private static final int VERIFICATION_SYSTEM = 33215;
 	private static final int ELECTRICITY_GENERATOR = 33216;
-	private static L2QuestGuardInstance terian;
-	private static L2Npc generator;
-	private List<L2Npc> savedSpawns;
 	// Items
 	private static final int SARIL_NECKLACE = 17580;
 	private static final int BELIS_MARK = 17615;
@@ -86,10 +83,13 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	private static final int DOOR_7 = 16240007;
 	private static final int DOOR_8 = 16240008;
 	private static final int DAMAGE_ZONE_ID = 10331;
-	private boolean assistPlayer = false;
 	
 	protected class LOBWorld extends InstanceWorld
 	{
+		protected L2QuestGuardInstance terian = null;
+		protected L2Npc generator = null;
+		protected List<L2Npc> savedSpawns = null;
+		protected boolean assistPlayer = false;
 	}
 	
 	public LabyrinthOfBelis()
@@ -109,6 +109,20 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			return null;
 		}
 		
+		if (event.equals("enter_instance"))
+		{
+			enterInstance(player, new LOBWorld(), "LabyrinthOfBelis.xml", TEMPLATE_ID);
+			return null;
+		}
+		
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
+		if ((tmpworld == null) || !(tmpworld instanceof LOBWorld))
+		{
+			return null;
+		}
+		
+		final LOBWorld world = (LOBWorld) tmpworld;
+		
 		switch (event)
 		{
 			case "enter_instance":
@@ -118,88 +132,84 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			}
 			case "officer_wait_1":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				if (world.getStatus() == 1)
 				{
 					showOnScreenMsg(player, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, ExShowScreenMessage.TOP_CENTER, 4000);
-					broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, 1000);
-					startQuestTimer("officer_wait_1", 5000, terian, player);
+					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, 1000);
+					startQuestTimer("officer_wait_1", 5000, world.terian, player);
 				}
 				break;
 			}
 			case "room_1":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				openDoor(DOOR_2, player.getInstanceId());
 				world.setStatus(3);
-				assistPlayer = true;
-				startQuestTimer("assist_player", 3000, terian, player);
+				world.assistPlayer = true;
+				startQuestTimer("assist_player", 3000, world.terian, player);
 				return null;
 			}
 			case "assist_player":
 			{
-				if (assistPlayer)
+				if (world.assistPlayer)
 				{
-					terian.setIsRunning(true);
+					world.terian.setIsRunning(true);
 					if (player.isInCombat() && (player.getTarget() != null) && player.getTarget().isMonster() && !((L2MonsterInstance) player.getTarget()).isAlikeDead())
 					{
-						if (terian.calculateDistance(player.getTarget(), false, false) > 50)
+						if (world.terian.calculateDistance(player.getTarget(), false, false) > 50)
 						{
-							terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
+							world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
 						}
-						else if (terian.getTarget() != player.getTarget())
+						else if (world.terian.getTarget() != player.getTarget())
 						{
-							terian.addDamageHate((L2Character) player.getTarget(), 0, 1000);
+							world.terian.addDamageHate((L2Character) player.getTarget(), 0, 1000);
 						}
 					}
 					else
 					{
-						terian.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+						world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					}
-					startQuestTimer("assist_player", 1000, terian, player);
+					startQuestTimer("assist_player", 1000, world.terian, player);
 				}
 				break;
 			}
 			case "officer_goto_2":
 			{
-				if (terian.calculateDistance(TERIAN_ROOM_2_CORIDOR, false, false) > 10)
+				if (world.terian.calculateDistance(TERIAN_ROOM_2_CORIDOR, false, false) > 10)
 				{
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_2_CORIDOR);
-					startQuestTimer("officer_goto_2", 1000, terian, player);
+					world.terian.setIsRunning(true);
+					world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_2_CORIDOR);
+					startQuestTimer("officer_goto_2", 1000, world.terian, player);
 				}
 				else
 				{
-					startQuestTimer("officer_wait_2", 1000, terian, player);
+					startQuestTimer("officer_wait_2", 1000, world.terian, player);
 				}
 				break;
 			}
 			case "officer_wait_2":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
-				if (terian.calculateDistance(TERIAN_ROOM_2_WAIT_LOC, false, false) > 10)
+				if (world.terian.calculateDistance(TERIAN_ROOM_2_WAIT_LOC, false, false) > 10)
 				{
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_2_WAIT_LOC);
-					startQuestTimer("officer_wait_2", 1000, terian, player);
+					world.terian.setIsRunning(true);
+					world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_2_WAIT_LOC);
+					startQuestTimer("officer_wait_2", 1000, world.terian, player);
 				}
 				else
 				{
-					terian.setHeading(terian.getHeading() + 32500);
-					terian.broadcastInfo();
-					broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.HEY_YOU_RE_NOT_ALL_BAD_LET_ME_KNOW_WHEN_YOU_RE_READY, 1000);
+					world.terian.setHeading(world.terian.getHeading() + 32500);
+					world.terian.broadcastInfo();
+					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.HEY_YOU_RE_NOT_ALL_BAD_LET_ME_KNOW_WHEN_YOU_RE_READY, 1000);
 					world.setStatus(4);
 				}
 				break;
 			}
 			case "room_2":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				world.setStatus(5);
 				openDoor(DOOR_4, player.getInstanceId());
 				showOnScreenMsg(player, NpcStringId.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES_NUSE_THEM_IN_THE_BELIS_VERIFICATION_SYSTEM, ExShowScreenMessage.TOP_CENTER, 5000);
-				assistPlayer = true;
-				startQuestTimer("assist_player", 3000, terian, player);
+				world.assistPlayer = true;
+				startQuestTimer("assist_player", 3000, world.terian, player);
 				return null;
 			}
 			case "insert_belis_marks":
@@ -208,67 +218,63 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				{
 					takeItems(player, BELIS_MARK, 3);
 					openDoor(DOOR_5, player.getInstanceId());
-					assistPlayer = false;
-					broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.COME_ON_ONTO_THE_NEXT_PLACE, 1000);
-					startQuestTimer("officer_goto_3", 5000, terian, player);
+					world.assistPlayer = false;
+					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.COME_ON_ONTO_THE_NEXT_PLACE, 1000);
+					startQuestTimer("officer_goto_3", 5000, world.terian, player);
 					return "33215-02.html";
 				}
 				return "33215-03.html";
 			}
 			case "officer_goto_3":
 			{
-				if (terian.calculateDistance(TERIAN_ROOM_3_CORIDOR, false, false) > 10)
+				if (world.terian.calculateDistance(TERIAN_ROOM_3_CORIDOR, false, false) > 10)
 				{
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_CORIDOR);
-					startQuestTimer("officer_goto_3", 1000, terian, player);
+					world.terian.setIsRunning(true);
+					world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_CORIDOR);
+					startQuestTimer("officer_goto_3", 1000, world.terian, player);
 				}
 				else
 				{
-					startQuestTimer("officer_wait_3", 1000, terian, player);
+					startQuestTimer("officer_wait_3", 1000, world.terian, player);
 				}
 				break;
 			}
 			case "officer_wait_3":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
-				if (terian.calculateDistance(TERIAN_ROOM_3_WAIT_LOC, false, false) > 10)
+				if (world.terian.calculateDistance(TERIAN_ROOM_3_WAIT_LOC, false, false) > 10)
 				{
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_WAIT_LOC);
-					startQuestTimer("officer_wait_3", 1000, terian, player);
+					world.terian.setIsRunning(true);
+					world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_WAIT_LOC);
+					startQuestTimer("officer_wait_3", 1000, world.terian, player);
 				}
 				else
 				{
-					terian.setHeading(terian.getHeading() + 32500);
-					terian.broadcastInfo();
-					broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.READY_LET_ME_KNOW, 1000);
+					world.terian.setHeading(world.terian.getHeading() + 32500);
+					world.terian.broadcastInfo();
+					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.READY_LET_ME_KNOW, 1000);
 					world.setStatus(6);
 				}
 				break;
 			}
 			case "room_3":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				world.setStatus(7);
-				generator.setState(1);
+				world.generator.setState(1);
 				final L2ZoneType dmgZone = ZoneManager.getInstance().getZoneById(DAMAGE_ZONE_ID);
 				if (dmgZone != null)
 				{
 					dmgZone.setEnabled(true);
 				}
 				openDoor(DOOR_6, player.getInstanceId());
-				terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_INSIDE);
-				broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
-				startQuestTimer("room_3_spawns", 10000, terian, player);
+				world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_INSIDE);
+				broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
+				startQuestTimer("room_3_spawns", 10000, world.terian, player);
 				return null;
 			}
 			case "room_3_spawns":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
-				
 				showOnScreenMsg(player, NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU, ExShowScreenMessage.TOP_CENTER, 4000);
-				broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
+				broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
 				// TODO:
 				/*
 				 * if (getRandomBoolean()) { showOnScreenMsg(player, NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL, ExShowScreenMessage.TOP_CENTER, 4000); }
@@ -284,13 +290,13 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					invader = addSpawn(EMBRYO_OPERATIVE, TERIAN_ROOM_3_MONSTER_SPAWN, false, 0, true, world.getInstanceId());
 				}
 				invader.setSpawn(null);
-				((L2Attackable) invader).addDamageHate(terian, 0, 1000);
+				((L2Attackable) invader).addDamageHate(world.terian, 0, 1000);
 				invader.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_INSIDE);
 				invader.setRunning();
 				
 				if (world.getStatus() < 12)
 				{
-					startQuestTimer("room_3_spawns", 12000, terian, player);
+					startQuestTimer("room_3_spawns", 12000, world.terian, player);
 				}
 				else
 				{
@@ -299,71 +305,73 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					{
 						dmgZone.setEnabled(false);
 					}
-					if (generator != null)
+					if (world.generator != null)
 					{
-						generator.deleteMe();
+						world.generator.deleteMe();
 					}
 					openDoor(DOOR_7, player.getInstanceId());
 					showOnScreenMsg(player, NpcStringId.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, ExShowScreenMessage.TOP_CENTER, 4000);
-					broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT, 1000);
-					startQuestTimer("officer_goto_4", 1000, terian, player);
+					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT, 1000);
+					startQuestTimer("officer_goto_4", 1000, world.terian, player);
 				}
 				break;
 			}
 			case "officer_goto_4":
 			{
-				if (terian.calculateDistance(TERIAN_ROOM_4_CORIDOR, false, false) > 10)
+				if (world.terian.calculateDistance(TERIAN_ROOM_4_CORIDOR, false, false) > 10)
 				{
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_4_CORIDOR);
-					startQuestTimer("officer_goto_4", 1000, terian, player);
+					world.terian.setIsRunning(true);
+					world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_4_CORIDOR);
+					startQuestTimer("officer_goto_4", 1000, world.terian, player);
 				}
 				else
 				{
-					startQuestTimer("officer_wait_4", 1000, terian, player);
+					startQuestTimer("officer_wait_4", 1000, world.terian, player);
 				}
 				break;
 			}
 			case "officer_wait_4":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
-				if (terian.calculateDistance(TERIAN_ROOM_4_WAIT_LOC, false, false) > 10)
+				if (world.terian.calculateDistance(TERIAN_ROOM_4_WAIT_LOC, false, false) > 10)
 				{
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_4_WAIT_LOC);
-					startQuestTimer("officer_wait_4", 1000, terian, player);
+					world.terian.setIsRunning(true);
+					world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_4_WAIT_LOC);
+					startQuestTimer("officer_wait_4", 1000, world.terian, player);
 				}
 				else
 				{
-					terian.setHeading(terian.getHeading() + 32500);
-					terian.broadcastInfo();
-					broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.SOMETHING_OMINOUS_IN_THERE_I_HOPE_YOU_RE_REALLY_READY_FOR_THIS_LET_ME_KNOW, 1000);
+					world.terian.setHeading(world.terian.getHeading() + 32500);
+					world.terian.broadcastInfo();
+					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.SOMETHING_OMINOUS_IN_THERE_I_HOPE_YOU_RE_REALLY_READY_FOR_THIS_LET_ME_KNOW, 1000);
 					world.setStatus(13);
 				}
 				break;
 			}
 			case "room_4":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				world.setStatus(14);
 				player.showQuestMovie(43);
 				openDoor(DOOR_8, player.getInstanceId());
-				startQuestTimer("spawn_boss", 47000, terian, player);
+				startQuestTimer("spawn_boss", 47000, world.terian, player);
 				break;
 			}
 			case "spawn_boss":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				addSpawn(NEMERTESS, NEMERTESS_SPAWN_LOC, false, 0, false, world.getInstanceId());
+				break;
+			}
+			case "officer_goto_end":
+			{
+				world.terian.setIsRunning(true);
+				world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_4_INSIDE);
 				break;
 			}
 			case "exit_instance":
 			{
-				if (terian != null)
+				if (world.terian != null)
 				{
-					terian.deleteMe();
+					world.terian.deleteMe();
 				}
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(player.getInstanceId());
 				world.removeAllowed(player.getObjectId());
 				teleportPlayer(player, EXIT_LOC, 0);
 				break;
@@ -434,61 +442,63 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if (world instanceof LOBWorld)
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(killer);
+		if ((tmpworld == null) || !(tmpworld instanceof LOBWorld))
 		{
-			switch (npc.getId())
+			return null;
+		}
+		final LOBWorld world = (LOBWorld) tmpworld;
+		
+		switch (npc.getId())
+		{
+			case EMBRYO_OPERATIVE:
 			{
-				case EMBRYO_OPERATIVE:
-				{
-					if ((world.getStatus() > 6) && (world.getStatus() < 12))
-					{
-						world.incStatus();
-					}
-					else
-					{
-						savedSpawns.remove(0);
-						if ((world.getStatus() == 3) && savedSpawns.isEmpty())
-						{
-							assistPlayer = false;
-							openDoor(DOOR_3, npc.getInstanceId());
-							broadcastNpcSay(terian, ChatType.NPC_GENERAL, NpcStringId.ALL_RIGHT_LET_S_MOVE_OUT, 1000);
-							startQuestTimer("officer_goto_2", 100, terian, killer);
-						}
-					}
-					break;
-				}
-				case EMBRYO_HANDYMAN:
-				{
-					if ((world.getStatus() > 6) && (world.getStatus() < 12))
-					{
-						world.incStatus();
-					}
-					else
-					{
-						if (getRandomBoolean())
-						{
-							npc.dropItem(killer, BELIS_MARK, 1);
-						}
-					}
-					break;
-				}
-				case NEMERTESS:
+				if ((world.getStatus() > 6) && (world.getStatus() < 12))
 				{
 					world.incStatus();
-					npc.deleteMe();
-					killer.showQuestMovie(44);
-					terian.setIsRunning(true);
-					terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_4_INSIDE);
-					final QuestState qs = killer.getQuestState(Q10331_StartOfFate.class.getSimpleName());
-					if (qs == null)
-					{
-						return null;
-					}
-					giveItems(killer, SARIL_NECKLACE, 1);
-					qs.setCond(5);
-					break;
 				}
+				else
+				{
+					world.savedSpawns.remove(0);
+					if ((world.getStatus() == 3) && world.savedSpawns.isEmpty())
+					{
+						world.assistPlayer = false;
+						openDoor(DOOR_3, npc.getInstanceId());
+						broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.ALL_RIGHT_LET_S_MOVE_OUT, 1000);
+						startQuestTimer("officer_goto_2", 100, world.terian, killer);
+					}
+				}
+				break;
+			}
+			case EMBRYO_HANDYMAN:
+			{
+				if ((world.getStatus() > 6) && (world.getStatus() < 12))
+				{
+					world.incStatus();
+				}
+				else
+				{
+					if (getRandomBoolean())
+					{
+						npc.dropItem(killer, BELIS_MARK, 1);
+					}
+				}
+				break;
+			}
+			case NEMERTESS:
+			{
+				world.incStatus();
+				npc.deleteMe();
+				killer.showQuestMovie(44);
+				startQuestTimer("officer_goto_end", 20000, world.terian, killer);
+				final QuestState qs = killer.getQuestState(Q10331_StartOfFate.class.getSimpleName());
+				if (qs == null)
+				{
+					return null;
+				}
+				giveItems(killer, SARIL_NECKLACE, 1);
+				qs.setCond(5);
+				break;
 			}
 		}
 		
@@ -498,17 +508,18 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	@Override
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
+		final LOBWorld tmpworld = (LOBWorld) world;
 		if (firstEntrance)
 		{
-			world.setStatus(1);
-			world.addAllowed(player.getObjectId());
-			terian = (L2QuestGuardInstance) addSpawn(OFFICER, TERIAN_SPAWN_LOC, false, 0, false, world.getInstanceId());
-			terian.setSpawn(null);
-			savedSpawns = spawnGroup("room_1", world.getInstanceId());
-			generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN_LOC, false, 0, false, world.getInstanceId());
-			openDoor(DOOR_1, world.getInstanceId());
-			startQuestTimer("officer_wait_1", 5000, terian, player);
+			tmpworld.setStatus(1);
+			tmpworld.addAllowed(player.getObjectId());
+			tmpworld.terian = (L2QuestGuardInstance) addSpawn(OFFICER, TERIAN_SPAWN_LOC, false, 0, false, tmpworld.getInstanceId());
+			tmpworld.terian.setSpawn(null);
+			tmpworld.savedSpawns = spawnGroup("room_1", tmpworld.getInstanceId());
+			tmpworld.generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN_LOC, false, 0, false, tmpworld.getInstanceId());
+			openDoor(DOOR_1, tmpworld.getInstanceId());
+			startQuestTimer("officer_wait_1", 5000, tmpworld.terian, player);
 		}
-		teleportPlayer(player, START_LOC, world.getInstanceId());
+		teleportPlayer(player, START_LOC, tmpworld.getInstanceId());
 	}
 }
