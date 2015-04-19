@@ -660,8 +660,6 @@ public final class Config
 	public static int MIN_BLOCK_CHECKER_TEAM_MEMBERS;
 	public static boolean HBCE_FAIR_PLAY;
 	public static int HELLBOUND_LEVEL_LIMIT;
-	public static boolean ARCAN_RITUAL;
-	public static int ARCAN_RITUAL_INTERVAL;
 	public static int PLAYER_MOVEMENT_BLOCK_TIME;
 	public static int ABILITY_MAX_POINTS;
 	public static long ABILITY_POINTS_RESET_ADENA;
@@ -2025,9 +2023,6 @@ public final class Config
 			}
 			HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
 			HELLBOUND_LEVEL_LIMIT = General.getInt("HellboundLevelLimit", 99);
-			
-			ARCAN_RITUAL = General.getBoolean("ArcanRitual", true);
-			ARCAN_RITUAL_INTERVAL = General.getInt("ArcanRitualInterval", 30) * 60000;
 			
 			NORMAL_ENCHANT_COST_MULTIPLIER = General.getInt("NormalEnchantCostMultipiler", 1);
 			SAFE_ENCHANT_COST_MULTIPLIER = General.getInt("SafeEnchantCostMultipiler", 5);

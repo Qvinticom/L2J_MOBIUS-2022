@@ -98,7 +98,6 @@ import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
-import com.l2jserver.gameserver.instancemanager.ArcanRitualManager;
 import com.l2jserver.gameserver.instancemanager.AuctionHouseManager;
 import com.l2jserver.gameserver.instancemanager.BoatManager;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
@@ -329,7 +328,6 @@ public final class GameServer
 		BoatManager.getInstance();
 		AirShipManager.getInstance();
 		ShuttleData.getInstance();
-		ArcanRitualManager.getInstance();
 		JumpManager.getInstance();
 		GraciaSeedsManager.getInstance();
 		

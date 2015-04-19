@@ -1,14 +1,14 @@
 /*
- * Copyright (C) 2004-2015 L2J Server
+ * Copyright (C) 2004-2015 L2J DataPack
  * 
- * This file is part of L2J Server.
+ * This file is part of L2J DataPack.
  * 
- * L2J Server is free software: you can redistribute it and/or modify
+ * L2J DataPack is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J Server is distributed in the hope that it will be useful,
+ * L2J DataPack is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -16,11 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.instancemanager;
+package ai.group_template;
 
 import java.util.ArrayList;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
@@ -38,10 +37,12 @@ import com.l2jserver.gameserver.network.serverpackets.OnEventTrigger;
 /**
  * @author Mobius
  */
-public class ArcanRitualManager extends Quest
+public class ArcanRitual extends Quest
 {
 	private static final int BLUE_TRIGGER = 262001;
 	private static final int RED_TRIGGER = 262003;
+	private static final int ARCAN_RITUAL_INTERVAL = 30 * 60000; // 30 minutes
+	private static final boolean ENABLED = true; // In case we want to disable spawning NPCs
 	private static final Location ARCAN_TOWN_LOC = new Location(207096, 88696, -1129);
 	// @formatter:off
 	static final int[][] RITUAL_NPCS =
@@ -143,9 +144,9 @@ public class ArcanRitualManager extends Quest
 	static int ritualStage;
 	static ArrayList<L2Npc> ritualSpawns = new ArrayList<>();
 	
-	public ArcanRitualManager()
+	public ArcanRitual()
 	{
-		super(-1, "Arcan Manager", "Arcan Manager");
+		super(-1, "Arcan Ritual", "Arcan Ritual");
 		for (L2ZoneType zone : L2World.getInstance().getRegion(ARCAN_TOWN_LOC).getZones())
 		{
 			if (zone instanceof L2PeaceZone)
@@ -156,9 +157,9 @@ public class ArcanRitualManager extends Quest
 		}
 		addEnterZoneId(arcanZone.getId());
 		ritualStage = BLUE_TRIGGER;
-		if (Config.ARCAN_RITUAL)
+		if (ENABLED)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ChangeStage(), Config.ARCAN_RITUAL_INTERVAL, Config.ARCAN_RITUAL_INTERVAL);
+			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ChangeStage(), ARCAN_RITUAL_INTERVAL, ARCAN_RITUAL_INTERVAL);
 		}
 	}
 	
@@ -231,13 +232,8 @@ public class ArcanRitualManager extends Quest
 		}
 	}
 	
-	public static final ArcanRitualManager getInstance()
+	public static void main(String[] args)
 	{
-		return SingletonHolder._instance;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final ArcanRitualManager _instance = new ArcanRitualManager();
+		new ArcanRitual();
 	}
 }
