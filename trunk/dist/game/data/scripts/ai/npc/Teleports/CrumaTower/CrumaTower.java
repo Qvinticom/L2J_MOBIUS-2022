@@ -26,35 +26,48 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Cruma Tower teleport AI.
- * @author Plim
+ * @author Stayway
  */
 public final class CrumaTower extends AbstractNpcAI
 {
 	// NPC
-	private static final int MOZELLA = 30483;
+	private static final int CARSUS = 30483;
 	// Locations
-	private static final Location TELEPORT_LOC1 = new Location(17776, 113968, -11671);
-	private static final Location TELEPORT_LOC2 = new Location(17680, 113968, -11671);
+	private static final Location TELEPORT_LOC1 = new Location(17664, 108288, -9056);
+	private static final Location TELEPORT_LOC2 = new Location(17729, 114808, -11696);
 	// Misc
 	private static final int MAX_LEVEL = 55;
 	
 	private CrumaTower()
 	{
 		super(CrumaTower.class.getSimpleName(), "ai/npc/Teleports");
-		addFirstTalkId(MOZELLA);
-		addStartNpc(MOZELLA);
-		addTalkId(MOZELLA);
+		addFirstTalkId(CARSUS);
+		addStartNpc(CARSUS);
+		addTalkId(CARSUS);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (talker.getLevel() <= MAX_LEVEL)
+		if (event.equals("chat1"))
 		{
-			talker.teleToLocation(getRandomBoolean() ? TELEPORT_LOC1 : TELEPORT_LOC2);
-			return null;
+			if (player.getLevel() <= MAX_LEVEL)
+			{
+				player.teleToLocation(TELEPORT_LOC1, true);
+				return null;
+			}
+			return "30483-1.html";
 		}
-		return "30483-1.html";
+		else if (event.equals("chat2"))
+		{
+			if (player.getLevel() <= MAX_LEVEL)
+			{
+				player.teleToLocation(TELEPORT_LOC2, true);
+				return null;
+			}
+			return "30483-1.html";
+		}
+		return event;
 	}
 	
 	public static void main(String[] args)
