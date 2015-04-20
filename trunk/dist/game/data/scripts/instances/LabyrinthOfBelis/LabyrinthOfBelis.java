@@ -125,11 +125,6 @@ public final class LabyrinthOfBelis extends AbstractInstance
 		
 		switch (event)
 		{
-			case "enter_instance":
-			{
-				enterInstance(player, new LOBWorld(), "LabyrinthOfBelis.xml", TEMPLATE_ID);
-				break;
-			}
 			case "officer_wait_1":
 			{
 				if (world.getStatus() == 1)
@@ -508,18 +503,17 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	@Override
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		final LOBWorld tmpworld = (LOBWorld) world;
 		if (firstEntrance)
 		{
-			tmpworld.setStatus(1);
-			tmpworld.addAllowed(player.getObjectId());
-			tmpworld.terian = (L2QuestGuardInstance) addSpawn(OFFICER, TERIAN_SPAWN_LOC, false, 0, false, tmpworld.getInstanceId());
-			tmpworld.terian.setSpawn(null);
-			tmpworld.savedSpawns = spawnGroup("room_1", tmpworld.getInstanceId());
-			tmpworld.generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN_LOC, false, 0, false, tmpworld.getInstanceId());
-			openDoor(DOOR_1, tmpworld.getInstanceId());
-			startQuestTimer("officer_wait_1", 5000, tmpworld.terian, player);
+			world.setStatus(1);
+			world.addAllowed(player.getObjectId());
+			((LOBWorld) world).terian = (L2QuestGuardInstance) addSpawn(OFFICER, TERIAN_SPAWN_LOC, false, 0, false, world.getInstanceId());
+			((LOBWorld) world).terian.setSpawn(null);
+			((LOBWorld) world).savedSpawns = spawnGroup("room_1", world.getInstanceId());
+			((LOBWorld) world).generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN_LOC, false, 0, false, world.getInstanceId());
+			openDoor(DOOR_1, world.getInstanceId());
+			startQuestTimer("officer_wait_1", 5000, ((LOBWorld) world).terian, player);
 		}
-		teleportPlayer(player, START_LOC, tmpworld.getInstanceId());
+		teleportPlayer(player, START_LOC, world.getInstanceId());
 	}
 }

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instance name="Museum Dungeon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
-	<activityTime val="20" />
 	<allowSummon val="false" />
-	<emptyDestroyTime val="60" />
-	<spawnPoint spawnX="-114359" spawnY="260120" spawnZ="-1192" />
+	<emptyDestroyTime val="5" />
+	<spawnPoint spawnX="-114711" spawnY="243911" spawnZ="-7968" />
 	<spawnlist>	
 		<group name="desks">
-			<!-- Desk -->
 			<spawn npcId="33126" x="-113744" y="244686" z="-7952" heading="0" respawn="0" />
 			<spawn npcId="33126" x="-114713" y="245760" z="-7952" heading="0" respawn="0" />
 			<spawn npcId="33126" x="-115684" y="244677" z="-7952" heading="0" respawn="0" />
 			<spawn npcId="33126" x="-114717" y="243602" z="-7952" heading="0" respawn="0" />
 		</group>
 		<group name="thiefs">
-			<!-- Thief -->
 			<spawn npcId="23121" x="-114865" y="244942" z="-7984" heading="0" respawn="0" />
 			<spawn npcId="23121" x="-114576" y="244952" z="-7976" heading="0" respawn="0" />
 		</group>		

@@ -79,29 +79,22 @@ public final class Toyron extends AbstractNpcAI
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
 		
-		if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
+		if ((world != null) && (world.getTemplateId() == TEMPLATE_ID) && (qs != null))
 		{
-			if (qs != null)
+			switch (qs.getCond())
 			{
-				switch (qs.getCond())
+				case 1:
 				{
-					case 1:
-					{
-						return "33004-01.html";
-					}
-					case 2:
-					{
-						return "33004-02.html";
-					}
-					case 3:
-					{
-						return "33004.html";
-					}
+					return "33004-01.html";
 				}
-			}
-			else
-			{
-				return "33004.html";
+				case 2:
+				{
+					return "33004-02.html";
+				}
+				case 3:
+				{
+					return "33004.html";
+				}
 			}
 		}
 		return "33004.html";

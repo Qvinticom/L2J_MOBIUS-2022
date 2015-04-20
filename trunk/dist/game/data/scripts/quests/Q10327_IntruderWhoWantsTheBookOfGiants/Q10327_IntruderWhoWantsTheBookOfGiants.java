@@ -22,7 +22,6 @@ import quests.Q10326_RespectYourElders.Q10326_RespectYourElders;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -30,26 +29,27 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * @author Gladicek
+ * Intruder Who Wants the Book of Giants (10327)
+ * @author Mobius
  */
 public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 {
-	// Npcs
+	// Npc
 	private static final int PANTHEON = 32972;
 	// Items
 	private static final int THE_WAR_OF_GODS_AND_GIANTS = 17575;
-	private static final ItemHolder APPRENTICE_EARRING = new ItemHolder(112, 2);
-	// Level Condition
+	private static final int APPRENTICE_EARRING = 112;
+	// Other
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10327_IntruderWhoWantsTheBookOfGiants()
 	{
-		super(10327, Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "Intruder Who Wants the Book of Giants ");
+		super(10327, Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "Intruder Who Wants the Book of Giants");
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON);
 		registerQuestItems(THE_WAR_OF_GODS_AND_GIANTS);
-		addCondMaxLevel(MAX_LEVEL, "32972-09.htm");
-		addCondCompletedQuest(Q10326_RespectYourElders.class.getSimpleName(), "32972-09.htm");
+		addCondMaxLevel(MAX_LEVEL, "no_level.htm");
+		addCondCompletedQuest(Q10326_RespectYourElders.class.getSimpleName(), "no_level.htm");
 	}
 	
 	@Override
@@ -75,16 +75,15 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32972-07.htm":
+			case "32972-06.htm":
 			{
 				if (qs.isCond(3))
 				{
-					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-					giveAdena(player, 160, true);
-					giveItems(player, APPRENTICE_EARRING);
+					giveAdena(player, 159, true);
+					giveItems(player, APPRENTICE_EARRING, 2);
 					addExpAndSp(player, 7800, 5);
+					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
 					qs.exitQuest(false, true);
-					break;
 				}
 				break;
 			}
@@ -107,28 +106,23 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(1))
-				{
-					htmltext = "32972-04.htm";
-					break;
-				}
-				else if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					htmltext = "32972-05.htm";
-					break;
 				}
-				else if (qs.isCond(3))
+				else
 				{
-					htmltext = "32972-06.htm";
-					break;
+					htmltext = "32972-04.htm";
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = "32972-08.htm";
+				htmltext = "32972-07.htm";
 				break;
 			}
 		}
+		
 		return htmltext;
 	}
 }
