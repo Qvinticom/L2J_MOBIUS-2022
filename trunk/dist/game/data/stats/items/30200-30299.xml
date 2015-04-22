@@ -187,6 +187,7 @@
 		<set name="price" val="646636000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<add stat="pAtk" val="1257.0" />
 			<add stat="mAtk" val="278.0" />
@@ -376,6 +377,7 @@
 		<set name="price" val="646636000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<add stat="pAtk" val="511.0" />
 			<add stat="mAtk" val="371.0" />
@@ -511,6 +513,7 @@
 		<set name="price" val="775963200" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<add stat="pAtk" val="777.0" />
 			<add stat="mAtk" val="278.0" />
@@ -1581,6 +1584,7 @@
 		<set name="price" val="969954000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<for>
 			<add stat="pAtk" val="800.0" />
 			<add stat="mAtk" val="286.0" />
@@ -1705,17 +1709,20 @@
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="30298" name="Superior Giant's Codex - Mastery" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for blessed skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="30299" name="Superior Giant's Codex - Discipline" additionalName="" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed to change an enchantment path after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 </list>

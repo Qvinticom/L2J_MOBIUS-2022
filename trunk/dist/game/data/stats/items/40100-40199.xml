@@ -567,8 +567,17 @@
 	</item>
 	<item id="40195" name="Scroll of Escape: Faeron Village" additionalName="" type="EtcItem">
 		<!-- Teleports you to Faeron Village. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
-		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18105-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="40196" name="Ertheia Bracelet" additionalName="" type="Armor">
 		<!-- Activates 5 Talisman Slots. MP + 216, STR + 1, and INT + 1. -->

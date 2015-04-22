@@ -221,7 +221,6 @@ import com.l2jserver.gameserver.model.interfaces.IEventListener;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jserver.gameserver.model.itemcontainer.PcAuction;
 import com.l2jserver.gameserver.model.itemcontainer.PcFreight;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.itemcontainer.PcRefund;
@@ -256,7 +255,6 @@ import com.l2jserver.gameserver.model.variables.AccountVariables;
 import com.l2jserver.gameserver.model.variables.PlayerVariables;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
-import com.l2jserver.gameserver.model.zone.type.L2BattalionZone;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -332,6 +330,7 @@ import com.l2jserver.gameserver.network.serverpackets.TradeOtherDone;
 import com.l2jserver.gameserver.network.serverpackets.TradeStart;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
+import com.l2jserver.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import com.l2jserver.gameserver.network.serverpackets.friend.L2FriendStatus;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -550,7 +549,6 @@ public final class L2PcInstance extends L2Playable
 	private int _vitalityPoints = 140000;
 	
 	private final PcInventory _inventory = new PcInventory(this);
-	private final PcAuction _auctionInventory = new PcAuction(this);
 	private final PcFreight _freight = new PcFreight(this);
 	private PcWarehouse _warehouse;
 	private PcRefund _refund;
@@ -679,7 +677,7 @@ public final class L2PcInstance extends L2Playable
 	private boolean _exchangeRefusal = false; // Exchange refusal
 	
 	private L2Party _party;
-	PartyDistributionType _partyDistributionType;
+	private PartyDistributionType _partyDistributionType;
 	
 	// this is needed to find the inviting player for Party response
 	// there can only be one active party request at once
@@ -693,6 +691,8 @@ public final class L2PcInstance extends L2Playable
 	private long _protectEndTime = 0;
 	
 	private L2ItemInstance _lure = null;
+	
+	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
 	
 	public boolean isSpawnProtected()
 	{
@@ -722,17 +722,6 @@ public final class L2PcInstance extends L2Playable
 	private int _expertisePenaltyBonus = 0;
 	
 	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests;
-	
-	private boolean _isEnchanting = false;
-	private int _activeEnchantItemId = ID_NONE;
-	private int _activeEnchantSupportItemId = ID_NONE;
-	private int _activeEnchantAttrItemId = ID_NONE;
-	private long _activeEnchantTimestamp = 0;
-	
-	private int _firstCompoundOID = -1;
-	private int _secondCompoundOID = -1;
-	
-	private boolean _usingPrimeShop = false;
 	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
@@ -2434,63 +2423,6 @@ public final class L2PcInstance extends L2Playable
 		return getStat().getExp();
 	}
 	
-	public void setActiveEnchantAttrItemId(int objectId)
-	{
-		_activeEnchantAttrItemId = objectId;
-	}
-	
-	public int getActiveEnchantAttrItemId()
-	{
-		return _activeEnchantAttrItemId;
-	}
-	
-	public void setActiveEnchantItemId(int objectId)
-	{
-		// If we don't have a Enchant Item, we are not enchanting.
-		if (objectId == ID_NONE)
-		{
-			setActiveEnchantSupportItemId(ID_NONE);
-			setActiveEnchantTimestamp(0);
-			setIsEnchanting(false);
-		}
-		_activeEnchantItemId = objectId;
-	}
-	
-	public int getActiveEnchantItemId()
-	{
-		return _activeEnchantItemId;
-	}
-	
-	public void setActiveEnchantSupportItemId(int objectId)
-	{
-		_activeEnchantSupportItemId = objectId;
-	}
-	
-	public int getActiveEnchantSupportItemId()
-	{
-		return _activeEnchantSupportItemId;
-	}
-	
-	public long getActiveEnchantTimestamp()
-	{
-		return _activeEnchantTimestamp;
-	}
-	
-	public void setActiveEnchantTimestamp(long val)
-	{
-		_activeEnchantTimestamp = val;
-	}
-	
-	public void setIsEnchanting(boolean val)
-	{
-		_isEnchanting = val;
-	}
-	
-	public boolean isEnchanting()
-	{
-		return _isEnchanting;
-	}
-	
 	/**
 	 * Set the fists weapon of the L2PcInstance (used when no weapon is equiped).
 	 * @param weaponItem The fists L2Weapon to set to the L2PcInstance
@@ -2856,11 +2788,6 @@ public final class L2PcInstance extends L2Playable
 	public PcInventory getInventory()
 	{
 		return _inventory;
-	}
-	
-	public PcAuction getAuctionInventory()
-	{
-		return _auctionInventory;
 	}
 	
 	/**
@@ -3976,7 +3903,7 @@ public final class L2PcInstance extends L2Playable
 			return null;
 		}
 		
-		if (getActiveEnchantItemId() == objectId)
+		if (isProcessingItem(objectId))
 		{
 			if (Config.DEBUG)
 			{
@@ -5644,8 +5571,6 @@ public final class L2PcInstance extends L2Playable
 		if ((target instanceof L2PcInstance) && AntiFeedManager.getInstance().check(this, target))
 		{
 			setPvpKills(getPvpKills() + 1);
-			
-			L2BattalionZone.givereward(this);
 			
 			// Send a Server->Client UserInfo packet to attacker with its Karma and PK Counter
 			UserInfo ui = new UserInfo(this, false);
@@ -11364,7 +11289,7 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		if (getActiveEnchantItemId() == objectId)
+		if (isProcessingItem(objectId))
 		{
 			if (Config.DEBUG)
 			{
@@ -13983,7 +13908,7 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(sm);
 		}
 		
-		// Prevent falling in game graphics.
+		// FIXME: Prevent falling in game graphics.
 		sendPacket(new ValidateLocation(this));
 		
 		setFalling();
@@ -15093,11 +15018,17 @@ public final class L2PcInstance extends L2Playable
 		return getPlayerSide() == CastleSide.LIGHT;
 	}
 	
+	/**
+	 * @return the maximum amount of points that player can use
+	 */
 	public int getMaxSummonPoints()
 	{
 		return (int) getStat().calcStat(Stats.MAX_SUMMON_POINTS, 0, null, null);
 	}
 	
+	/**
+	 * @return the amount of points that player used
+	 */
 	public int getSummonPoints()
 	{
 		return getServitors().values().stream().mapToInt(L2Summon::getSummonPoints).sum();
@@ -15232,36 +15163,6 @@ public final class L2PcInstance extends L2Playable
 		_vitalityPoints = points;
 	}
 	
-	public int getFirstCompoundOID()
-	{
-		return _firstCompoundOID;
-	}
-	
-	public void setFirstCompoundOID(int firstCompoundOID)
-	{
-		_firstCompoundOID = firstCompoundOID;
-	}
-	
-	public int getSecondCompoundOID()
-	{
-		return _secondCompoundOID;
-	}
-	
-	public void setSecondCompoundOID(int secondCompoundOID)
-	{
-		_secondCompoundOID = secondCompoundOID;
-	}
-	
-	public void setUsingPrimeShop(boolean isUsing)
-	{
-		_usingPrimeShop = isUsing;
-	}
-	
-	public boolean isUsingPrimeShop()
-	{
-		return _usingPrimeShop;
-	}
-	
 	/**
 	 * @return the prime shop points of the player.
 	 */
@@ -15280,6 +15181,25 @@ public final class L2PcInstance extends L2Playable
 		final AccountVariables vars = getAccountVariables();
 		vars.set("PRIME_POINTS", points);
 		vars.storeMe();
+	}
+	
+	/**
+	 * Gets the last commission infos.
+	 * @return the last commission infos
+	 */
+	public Map<Integer, ExResponseCommissionInfo> getLastCommissionInfos()
+	{
+		if (_lastCommissionInfos == null)
+		{
+			synchronized (this)
+			{
+				if (_lastCommissionInfos == null)
+				{
+					_lastCommissionInfos = new ConcurrentHashMap<>();
+				}
+			}
+		}
+		return _lastCommissionInfos;
 	}
 	
 	/**

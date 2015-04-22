@@ -31,5 +31,5 @@ public enum ItemLocation
 	REFUND,
 	MAIL,
 	FREIGHT,
-	AUCTION_HOUSE
+	COMMISSION
 }

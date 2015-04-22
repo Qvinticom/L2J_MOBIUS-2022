@@ -21,16 +21,18 @@ package com.l2jserver.gameserver.network.serverpackets.adenadistribution;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
- * @author Erlandys
+ * @author Sdw
  */
 public class ExDivideAdenaCancel extends L2GameServerPacket
 {
 	public static final ExDivideAdenaCancel STATIC_PACKET = new ExDivideAdenaCancel();
 	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x15C);
+		
+		writeC(0x00); // TODO: Find me
 	}
 }

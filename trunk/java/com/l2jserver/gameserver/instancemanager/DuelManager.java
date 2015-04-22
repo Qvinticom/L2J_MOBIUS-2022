@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.instancemanager;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Duel;
@@ -29,20 +30,11 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 public final class DuelManager
 {
 	private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
-	private int _currentDuelId = 0x90;
+	private final AtomicInteger _currentDuelId = new AtomicInteger();
 	
 	protected DuelManager()
 	{
-	}
-	
-	private int getNextDuelId()
-	{
-		// In case someone wants to run the server forever :)
-		if (++_currentDuelId >= 2147483640)
-		{
-			_currentDuelId = 1;
-		}
-		return _currentDuelId;
+		
 	}
 	
 	public Duel getDuel(int duelId)
@@ -104,7 +96,7 @@ public final class DuelManager
 				return;
 			}
 		}
-		final int duelId = getNextDuelId();
+		final int duelId = _currentDuelId.incrementAndGet();
 		_duels.put(duelId, new Duel(playerA, playerB, partyDuel, duelId));
 	}
 	

@@ -98,7 +98,6 @@ import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.AirShipManager;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
-import com.l2jserver.gameserver.instancemanager.AuctionHouseManager;
 import com.l2jserver.gameserver.instancemanager.BoatManager;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
@@ -106,6 +105,7 @@ import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.ClanEntryManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
+import com.l2jserver.gameserver.instancemanager.CommissionManager;
 import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
@@ -241,7 +241,7 @@ public final class GameServer
 		FishingMonstersData.getInstance();
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
-		AuctionHouseManager.getInstance();
+		CommissionManager.getInstance();
 		PrimeShopData.getInstance();
 		AppearanceItemData.getInstance();
 		

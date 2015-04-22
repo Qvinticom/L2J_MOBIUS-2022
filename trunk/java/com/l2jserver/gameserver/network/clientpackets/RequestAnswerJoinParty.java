@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.PartyMatchRoom;
 import com.l2jserver.gameserver.model.PartyMatchRoomList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.PartyRequest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExManagePartyRoomMember;
 import com.l2jserver.gameserver.network.serverpackets.JoinParty;
@@ -48,12 +49,19 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance requestor = player.getActiveRequester();
+		final PartyRequest request = player.getRequest(PartyRequest.class);
+		if ((request == null) || request.isProcessing())
+		{
+			return;
+		}
+		request.setProcessing(true);
+		
+		final L2PcInstance requestor = request.getActiveChar();
 		if (requestor == null)
 		{
 			return;
 		}
-		
+		final L2Party party = requestor.getParty();
 		requestor.sendPacket(new JoinParty(_response));
 		
 		switch (_response)
@@ -138,11 +146,11 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 		
 		if (requestor.isInParty())
 		{
-			requestor.getParty().setPendingInvitation(false); // if party is null, there is no need of decreasing
+			party.setPendingInvitation(false); // if party is null, there is no need of decreasing
 		}
 		
-		player.setActiveRequester(null);
-		requestor.onTransactionResponse();
+		request.setProcessing(false);
+		player.removeRequest(request.getClass());
 	}
 	
 	@Override

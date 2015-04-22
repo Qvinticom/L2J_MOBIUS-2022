@@ -18,89 +18,122 @@
  */
 package com.l2jserver.gameserver.network.clientpackets.compound;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.CompoundRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
+import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantFail;
+import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantOneFail;
 import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantSucess;
 import com.l2jserver.util.Rnd;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public final class RequestNewEnchantTry extends L2GameClientPacket
+public class RequestNewEnchantTry extends L2GameClientPacket
 {
-	private static final String _C__D0_F9_REQUESTNEWENCHANTTRY = "[C] D0:F9 RequestNewEnchantTry";
-	
 	@Override
 	protected void readImpl()
 	{
+		
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		final L2ItemInstance firstItem = activeChar.getInventory().getItemByObjectId(activeChar.getFirstCompoundOID());
-		final L2ItemInstance secondItem = activeChar.getInventory().getItemByObjectId(activeChar.getSecondCompoundOID());
-		if ((firstItem == null) || (secondItem == null))
+		else if (activeChar.isInStoreMode())
 		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		int levelOfStone = 0;
-		if (firstItem.getId() < 38900)
+		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
 		{
-			levelOfStone = (firstItem.getId() % 5) + 1;
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			return;
+		}
+		
+		final CompoundRequest request = activeChar.getRequest(CompoundRequest.class);
+		if ((request == null) || request.isProcessing())
+		{
+			activeChar.sendPacket(ExEnchantFail.STATIC_PACKET);
+			return;
+		}
+		
+		request.setProcessing(true);
+		
+		final L2ItemInstance itemOne = request.getItemOne();
+		final L2ItemInstance itemTwo = request.getItemTwo();
+		if ((itemOne == null) || (itemTwo == null))
+		{
+			activeChar.sendPacket(ExEnchantFail.STATIC_PACKET);
+			activeChar.removeRequest(request.getClass());
+			return;
+		}
+		
+		// Lets prevent using same item twice
+		if (itemOne.getObjectId() == itemTwo.getObjectId())
+		{
+			activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
+			activeChar.removeRequest(request.getClass());
+			return;
+		}
+		
+		// Combining only same items!
+		if (itemOne.getItem().getId() != itemTwo.getItem().getId())
+		{
+			activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
+			activeChar.removeRequest(request.getClass());
+			return;
+		}
+		
+		// Not implemented or not able to merge!
+		if ((itemOne.getItem().getCompoundItem() == 0) || (itemOne.getItem().getCompoundChance() == 0))
+		{
+			activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
+			activeChar.removeRequest(request.getClass());
+			return;
+		}
+		
+		final InventoryUpdate iu = new InventoryUpdate();
+		final double random = Rnd.nextDouble() * 100;
+		
+		// Success
+		if (random < itemOne.getItem().getCompoundChance())
+		{
+			iu.addRemovedItem(itemOne);
+			iu.addRemovedItem(itemTwo);
+			
+			if (activeChar.destroyItem("Compound-Item-One", itemOne, null, true) && activeChar.destroyItem("Compound-Item-Two", itemTwo, null, true))
+			{
+				final L2ItemInstance item = activeChar.addItem("Compound-Result", itemOne.getItem().getCompoundItem(), 1, null, true);
+				activeChar.sendPacket(new ExEnchantSucess(item.getItem().getId()));
+			}
 		}
 		else
 		{
-			levelOfStone = (firstItem.getId() - 38926);
+			iu.addRemovedItem(itemTwo);
+			
+			// Upon fail we destroy the second item.
+			if (activeChar.destroyItem("Compound-Item-Two-Fail", itemTwo, null, true))
+			{
+				activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
+			}
 		}
-		if ((levelOfStone == 0) || (levelOfStone == 5))
-		{
-			return;
-		}
-		int percent = 0;
-		switch (levelOfStone)
-		{
-			case 1:
-				percent = Config.SECOND_LEVEL_UPGRADE_CHANCE;
-				break;
-			case 2:
-				percent = Config.THIRD_LEVEL_UPGRADE_CHANCE;
-				break;
-			case 3:
-				percent = Config.FOURTH_LEVEL_UPGRADE_CHANCE;
-				break;
-			case 4:
-				percent = Config.FITH_LEVEL_UPGRADE_CHANCE;
-				break;
-		}
-		if (Rnd.get(100) <= percent)
-		{
-			int newItem = firstItem.getId() + 1;
-			activeChar.destroyItem("FirstCompoundItem", firstItem, null, true);
-			activeChar.destroyItem("SecondCompoundItem", secondItem, null, true);
-			activeChar.addItem("CompoundItem", newItem, 1, null, true);
-			activeChar.sendPacket(new ExEnchantSucess(newItem));
-		}
-		else
-		{
-			activeChar.sendPacket(new ExEnchantFail(firstItem.getId(), secondItem.getId()));
-			activeChar.destroyItem("SecondCompoundItem", secondItem, null, true);
-		}
-		activeChar.setFirstCompoundOID(-1);
-		activeChar.setSecondCompoundOID(-1);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_F9_REQUESTNEWENCHANTTRY;
+		
+		activeChar.sendPacket(iu);
+		activeChar.sendPacket(new ExAdenaInvenCount(activeChar));
+		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
+		activeChar.removeRequest(request.getClass());
 	}
 }

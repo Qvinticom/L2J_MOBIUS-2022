@@ -42,11 +42,29 @@
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="18105" levels="1" name="Scroll of Escape: Faeron Village">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<table name="#coordX"> -80344 </table>
+		<table name="#coordY"> 248099 </table>
+		<table name="#coordZ"> -3501 </table>
+		<table name="#itemConsumeId"> 40195 </table>
+		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="20000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18106" levels="1" name="Ertheia Bracelet">
 		<!-- AUTO GENERATED SKILL -->

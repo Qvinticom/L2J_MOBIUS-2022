@@ -20,12 +20,19 @@ package com.l2jserver.gameserver.network.serverpackets.compound;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author UnAfraid
+ */
 public class ExEnchantTwoOK extends L2GameServerPacket
 {
 	public static final ExEnchantTwoOK STATIC_PACKET = new ExEnchantTwoOK();
 	
+	private ExEnchantTwoOK()
+	{
+	}
+	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x16C);

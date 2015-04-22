@@ -77,7 +77,7 @@ public final class TradeDone extends L2GameClientPacket
 				return;
 			}
 			
-			if ((trade.getOwner().getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (trade.getPartner().getActiveEnchantItemId() != L2PcInstance.ID_NONE))
+			if ((trade.getOwner().hasItemRequest()) || (trade.getPartner().hasItemRequest()))
 			{
 				return;
 			}

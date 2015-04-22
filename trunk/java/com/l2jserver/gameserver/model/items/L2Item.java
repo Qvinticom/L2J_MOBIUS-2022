@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.commission.CommissionItemType;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.events.ListenersContainer;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -126,7 +127,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final int _time;
 	private final int _autoDestroyTime;
 	private final int _bodyPart;
-	private final String _bodyPartName;
 	private final int _referencePrice;
 	private final int _crystalCount;
 	private final boolean _sellable;
@@ -161,6 +161,10 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final int _reuseDelay;
 	private final int _sharedReuseGroup;
 	
+	private final CommissionItemType _commissionItemType;
+	private final int _compoundItem;
+	private final float _compoundChance;
+	
 	/**
 	 * Constructor of the L2Item that fill class variables.<BR>
 	 * <BR>
@@ -179,7 +183,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_time = set.getInt("time", -1);
 		_autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
 		_bodyPart = ItemTable.SLOTS.get(set.getString("bodypart", "none"));
-		_bodyPartName = set.getString("bodypart", "none");
 		_referencePrice = set.getInt("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);
@@ -206,6 +209,9 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_defaultEnchantLevel = set.getInt("enchanted", 0);
 		_reuseDelay = set.getInt("reuse_delay", 0);
 		_sharedReuseGroup = set.getInt("shared_reuse_group", 0);
+		_commissionItemType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
+		_compoundItem = set.getInt("compoundItem", 0);
+		_compoundChance = set.getFloat("compoundChance", 0);
 		
 		String skills = set.getString("item_skill", null);
 		if (skills != null)
@@ -932,6 +938,21 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		return _sharedReuseGroup;
 	}
 	
+	public CommissionItemType getCommissionItemType()
+	{
+		return _commissionItemType;
+	}
+	
+	public int getCompoundItem()
+	{
+		return _compoundItem;
+	}
+	
+	public float getCompoundChance()
+	{
+		return _compoundChance;
+	}
+	
 	/**
 	 * Usable in HTML windows.
 	 * @return the icon link in client files
@@ -939,14 +960,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public String getIcon()
 	{
 		return _icon;
-	}
-	
-	/**
-	 * @return body part name
-	 */
-	public String getBodyPartName()
-	{
-		return _bodyPartName;
 	}
 	
 	public int getDefaultEnchantLevel()

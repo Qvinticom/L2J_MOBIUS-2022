@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jserver.gameserver.model.items.enchant.EnchantSupportItem;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -52,34 +53,41 @@ public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		if ((request == null) || request.isProcessing())
 		{
-			final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_enchantObjectId);
-			final L2ItemInstance scroll = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantItemId());
-			final L2ItemInstance support = activeChar.getInventory().getItemByObjectId(_supportObjectId);
-			
-			if ((item == null) || (scroll == null) || (support == null))
-			{
-				// message may be custom
-				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.setActiveEnchantSupportItemId(L2PcInstance.ID_NONE);
-				return;
-			}
-			
-			final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-			final EnchantSupportItem supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
-			
-			if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate))
-			{
-				// message may be custom
-				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.setActiveEnchantSupportItemId(L2PcInstance.ID_NONE);
-				activeChar.sendPacket(new ExPutEnchantSupportItemResult(0));
-				return;
-			}
-			activeChar.setActiveEnchantSupportItemId(support.getObjectId());
-			activeChar.sendPacket(new ExPutEnchantSupportItemResult(_supportObjectId));
+			return;
 		}
+		
+		request.setEnchantingItem(_enchantObjectId);
+		request.setSupportItem(_supportObjectId);
+		
+		final L2ItemInstance item = request.getEnchantingItem();
+		final L2ItemInstance scroll = request.getEnchantingScroll();
+		final L2ItemInstance support = request.getSupportItem();
+		if ((item == null) || (scroll == null) || (support == null))
+		{
+			// message may be custom
+			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			request.setEnchantingItem(L2PcInstance.ID_NONE);
+			request.setSupportItem(L2PcInstance.ID_NONE);
+			return;
+		}
+		
+		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
+		final EnchantSupportItem supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
+		if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate))
+		{
+			// message may be custom
+			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			request.setSupportItem(L2PcInstance.ID_NONE);
+			activeChar.sendPacket(new ExPutEnchantSupportItemResult(0));
+			return;
+		}
+		
+		request.setSupportItem(support.getObjectId());
+		request.setTimestamp(System.currentTimeMillis());
+		activeChar.sendPacket(new ExPutEnchantSupportItemResult(_supportObjectId));
 	}
 	
 	@Override

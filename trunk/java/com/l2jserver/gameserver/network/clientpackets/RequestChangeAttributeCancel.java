@@ -15,6 +15,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
 
 /**
  * @author Erlandys
@@ -36,7 +37,12 @@ public class RequestChangeAttributeCancel extends L2GameClientPacket
 		{
 			return;
 		}
-		player.setActiveEnchantAttrItemId(0);
+		final EnchantItemAttributeRequest request = player.getRequest(EnchantItemAttributeRequest.class);
+		if (request == null)
+		{
+			return;
+		}
+		player.removeRequest(request.getClass());
 	}
 	
 	@Override

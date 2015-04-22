@@ -19,38 +19,63 @@
 package com.l2jserver.gameserver.network.clientpackets.compound;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.CompoundRequest;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantOneFail;
+import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantTwoRemoveFail;
+import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantTwoRemoveOK;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public final class RequestNewEnchantRemoveTwo extends L2GameClientPacket
+public class RequestNewEnchantRemoveTwo extends L2GameClientPacket
 {
-	private static final String _C__D0_F7_REQUESTNEWENCHANTREMOVETWO = "[C] D0:F7 RequestNewEnchantRemoveTwo";
-	
-	@SuppressWarnings("unused")
-	private int _itemId;
+	private int _objectId;
 	
 	@Override
 	protected void readImpl()
 	{
-		_itemId = readD();
+		_objectId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		System.out.println(_C__D0_F7_REQUESTNEWENCHANTREMOVETWO);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_F7_REQUESTNEWENCHANTREMOVETWO;
+		else if (activeChar.isInStoreMode())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			return;
+		}
+		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			return;
+		}
+		
+		final CompoundRequest request = activeChar.getRequest(CompoundRequest.class);
+		if ((request == null) || request.isProcessing())
+		{
+			activeChar.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
+			return;
+		}
+		
+		final L2ItemInstance item = request.getItemTwo();
+		if ((item == null) || (item.getObjectId() != _objectId))
+		{
+			activeChar.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
+			return;
+		}
+		request.setItemTwo(0);
+		
+		activeChar.sendPacket(ExEnchantTwoRemoveOK.STATIC_PACKET);
 	}
 }

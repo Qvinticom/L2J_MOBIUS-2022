@@ -20,12 +20,19 @@ package com.l2jserver.gameserver.network.serverpackets.compound;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author UnAfraid
+ */
 public class ExEnchantOneRemoveOK extends L2GameServerPacket
 {
 	public static final ExEnchantOneRemoveOK STATIC_PACKET = new ExEnchantOneRemoveOK();
 	
+	private ExEnchantOneRemoveOK()
+	{
+	}
+	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x16A);

@@ -796,6 +796,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2027-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="6570" type="EtcItem" name="Blessed Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
@@ -809,6 +810,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2209-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="6571" type="EtcItem" name="Blessed Scroll: Enchant Weapon (B-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
@@ -822,6 +824,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2028-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="6572" type="EtcItem" name="Blessed Scroll: Enchant Armor (B-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
@@ -835,6 +838,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2210-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="6573" type="EtcItem" name="Blessed Scroll: Enchant Weapon (C-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
@@ -848,6 +852,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2029-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="6574" type="EtcItem" name="Blessed Scroll: Enchant Armor (C-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
@@ -861,6 +866,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2211-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="6575" type="EtcItem" name="Blessed Scroll: Enchant Weapon (D-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
@@ -887,6 +893,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2212-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="6577" type="EtcItem" name="Blessed Scroll: Enchant Weapon (S-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
@@ -900,6 +907,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2026-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="6578" type="EtcItem" name="Blessed Scroll: Enchant Armor (S-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
@@ -913,6 +921,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2208-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="6579" type="Weapon" name="Arcana Mace">
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
@@ -933,6 +942,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="225" />
 			<set stat="mAtk" val="175" />
@@ -963,6 +973,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3570-1" />
 		<set name="item_skill" val="3552-1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -1107,6 +1118,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="281" />
 			<set stat="mAtk" val="132" />
@@ -1257,6 +1269,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3572-1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="246" />
 			<set stat="mAtk" val="132" />

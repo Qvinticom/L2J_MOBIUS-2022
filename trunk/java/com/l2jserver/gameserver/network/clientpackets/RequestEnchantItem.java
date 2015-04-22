@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.enums.UserInfoType;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.enchant.EnchantResultType;
 import com.l2jserver.gameserver.model.items.enchant.EnchantScroll;
@@ -64,38 +65,44 @@ public final class RequestEnchantItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar == null) || (_objectId == 0))
+		if (activeChar == null)
 		{
 			return;
 		}
 		
+		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		if ((request == null) || request.isProcessing())
+		{
+			return;
+		}
+		
+		request.setEnchantingItem(_objectId);
+		request.setProcessing(true);
+		
 		if (!activeChar.isOnline() || getClient().isDetached())
 		{
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			return;
 		}
 		
 		if (activeChar.isProcessingTransaction() || activeChar.isInStoreMode())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			return;
 		}
 		
-		L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-		L2ItemInstance scroll = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantItemId());
-		L2ItemInstance support = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantSupportItemId());
-		
+		final L2ItemInstance item = request.getEnchantingItem();
+		final L2ItemInstance scroll = request.getEnchantingScroll();
+		final L2ItemInstance support = request.getSupportItem();
 		if ((item == null) || (scroll == null))
 		{
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			return;
 		}
 		
 		// template for scroll
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-		
-		// scroll not found in list
 		if (scrollTemplate == null)
 		{
 			return;
@@ -107,7 +114,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 		{
 			if (support.getObjectId() != _supportId)
 			{
-				activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+				activeChar.removeRequest(request.getClass());
 				return;
 			}
 			supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
@@ -117,27 +124,26 @@ public final class RequestEnchantItem extends L2GameClientPacket
 		if (!scrollTemplate.isValid(item, supportTemplate))
 		{
 			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
 		// fast auto-enchant cheat check
-		if ((activeChar.getActiveEnchantTimestamp() == 0) || ((System.currentTimeMillis() - activeChar.getActiveEnchantTimestamp()) < 2000))
+		if ((request.getTimestamp() == 0) || ((System.currentTimeMillis() - request.getTimestamp()) < 2000))
 		{
 			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
 		// attempting to destroy scroll
-		scroll = activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item);
-		if (scroll == null)
+		if (activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item) == null)
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
 			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
@@ -145,12 +151,11 @@ public final class RequestEnchantItem extends L2GameClientPacket
 		// attempting to destroy support if exist
 		if (support != null)
 		{
-			support = activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item);
-			if (support == null)
+			if (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null)
 			{
 				activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
 				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
-				activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+				activeChar.removeRequest(request.getClass());
 				activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
 			}
@@ -163,7 +168,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 			if ((item.getOwnerId() != activeChar.getObjectId()) || (item.isEnchantable() == 0))
 			{
 				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+				activeChar.removeRequest(request.getClass());
 				activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
 			}
@@ -174,7 +179,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 				case ERROR:
 				{
 					activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-					activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+					activeChar.removeRequest(request.getClass());
 					activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 					break;
 				}
@@ -318,12 +323,11 @@ public final class RequestEnchantItem extends L2GameClientPacket
 								count = 1;
 							}
 							
-							item = activeChar.getInventory().destroyItem("Enchant", item, activeChar, null);
-							if (item == null)
+							if (activeChar.getInventory().destroyItem("Enchant", item, activeChar, null) == null)
 							{
 								// unable to destroy item, cheater ?
 								Util.handleIllegalPlayerAction(activeChar, "Unable to delete item on enchant failure from player " + activeChar.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
-								activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+								activeChar.removeRequest(request.getClass());
 								activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 								
 								if (Config.LOG_ITEM_ENCHANTS)
@@ -429,6 +433,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 				activeChar.sendPacket(new ItemList(activeChar, true));
 			}
 			
+			request.setProcessing(false);
 			activeChar.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
 			activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
 			activeChar.sendPacket(new ExAdenaInvenCount(activeChar));

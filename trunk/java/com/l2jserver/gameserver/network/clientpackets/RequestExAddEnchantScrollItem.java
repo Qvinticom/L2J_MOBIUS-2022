@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -51,29 +52,39 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		if ((request == null) || request.isProcessing())
 		{
-			final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_enchantObjectId);
-			final L2ItemInstance scroll = activeChar.getInventory().getItemByObjectId(_scrollObjectId);
-			
-			if ((item == null) || (scroll == null))
-			{
-				// message may be custom
-				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				return;
-			}
-			
-			final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-			
-			if ((scrollTemplate == null))
-			{
-				// message may be custom
-				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
-				return;
-			}
-			activeChar.sendPacket(new ExPutEnchantScrollItemResult(_scrollObjectId));
+			return;
 		}
+		
+		request.setEnchantingItem(_enchantObjectId);
+		request.setEnchantingScroll(_scrollObjectId);
+		
+		final L2ItemInstance item = request.getEnchantingItem();
+		final L2ItemInstance scroll = request.getEnchantingScroll();
+		if ((item == null) || (scroll == null))
+		{
+			// message may be custom
+			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
+			request.setEnchantingItem(L2PcInstance.ID_NONE);
+			request.setEnchantingScroll(L2PcInstance.ID_NONE);
+			return;
+		}
+		
+		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
+		if ((scrollTemplate == null))
+		{
+			// message may be custom
+			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
+			request.setEnchantingScroll(L2PcInstance.ID_NONE);
+			return;
+		}
+		
+		request.setTimestamp(System.currentTimeMillis());
+		activeChar.sendPacket(new ExPutEnchantScrollItemResult(_scrollObjectId));
 	}
 	
 	@Override

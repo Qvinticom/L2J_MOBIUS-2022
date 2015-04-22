@@ -182,6 +182,7 @@ public class PcKnownList extends PlayableKnownList
 			return 2900;
 		}
 		
+		// Old custom/wrong method.
 		// if (knownlistSize <= 70)
 		// {
 		// return 2300;

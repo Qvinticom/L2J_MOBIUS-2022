@@ -450,7 +450,17 @@
 	<item id="32226" name="Scroll of Escape: Talking Island Village" additionalName="" type="EtcItem">
 		<!-- Magical scroll that relocates you to Talking Island. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
-		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22053-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="32227" name="Stone of Awakening" additionalName="" type="EtcItem">
 		<!-- Proof for awakening. -->
@@ -961,6 +971,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="199900" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32293" name="Recipe: Immortal Bracelet (60%)" additionalName="" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -982,6 +993,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="597000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32296" name="Recipe: Twilight Bracelet (60%)" additionalName="" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -996,6 +1008,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="1194100" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32298" name="Recipe: Seraph Belt (60%)" additionalName="" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Seraph Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -1003,6 +1016,7 @@
 		<set name="weight" val="30" />
 		<set name="price" val="1364800" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="32299" name="Recipe: Seraph Bracelet (60%)" additionalName="" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Seraph Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -1010,5 +1024,6 @@
 		<set name="weight" val="30" />
 		<set name="price" val="355600" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 	</item>
 </list>

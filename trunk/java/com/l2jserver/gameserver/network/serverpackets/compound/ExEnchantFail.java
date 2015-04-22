@@ -20,23 +20,27 @@ package com.l2jserver.gameserver.network.serverpackets.compound;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author UnAfraid
+ */
 public class ExEnchantFail extends L2GameServerPacket
 {
-	private final int _itemId1;
-	private final int _itemId2;
+	public static final ExEnchantFail STATIC_PACKET = new ExEnchantFail(0, 0);
+	private final int _itemOne;
+	private final int _itemTwo;
 	
-	public ExEnchantFail(int itemId1, int itemId2)
+	public ExEnchantFail(int itemOne, int itemTwo)
 	{
-		_itemId1 = itemId1;
-		_itemId2 = itemId2;
+		_itemOne = itemOne;
+		_itemTwo = itemTwo;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x171);
-		writeD(_itemId1);
-		writeD(_itemId2);
+		writeD(_itemOne);
+		writeD(_itemTwo);
 	}
 }

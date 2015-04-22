@@ -88,7 +88,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT);
 			return;

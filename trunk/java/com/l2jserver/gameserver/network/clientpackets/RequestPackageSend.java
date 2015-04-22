@@ -93,7 +93,7 @@ public class RequestPackageSend extends L2GameClientPacket
 			return;
 		}
 		
-		if (player.getActiveEnchantItemId() != L2PcInstance.ID_NONE)
+		if (player.hasItemRequest())
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 			return;

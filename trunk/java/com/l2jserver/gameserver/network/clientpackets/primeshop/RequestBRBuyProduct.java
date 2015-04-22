@@ -23,6 +23,7 @@ import java.util.Calendar;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.PrimeShopRequest;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jserver.gameserver.model.primeshop.PrimeShopItem;
@@ -58,13 +59,13 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isUsingPrimeShop())
+		if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class))
 		{
 			activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
 			return;
 		}
 		
-		activeChar.setUsingPrimeShop(true);
+		activeChar.addRequest(new PrimeShopRequest(activeChar));
 		
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
 		if (validatePlayer(item, _count, activeChar))
@@ -104,7 +105,7 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 			activeChar.sendPacket(new ExBRGamePoint(activeChar));
 		}
 		
-		activeChar.setUsingPrimeShop(false);
+		activeChar.removeRequest(PrimeShopRequest.class);
 	}
 	
 	/**

@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.PartyRequest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.AskJoinParty;
@@ -160,29 +161,27 @@ public final class RequestJoinParty extends L2GameClientPacket
 		if (!party.isLeader(requestor))
 		{
 			requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
-			return;
 		}
-		if (party.getMemberCount() >= 9)
+		else if (party.getMemberCount() >= 9)
 		{
 			requestor.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
-			return;
 		}
-		if (party.getPendingInvitation() && !party.isInvitationRequestExpired())
+		else if (party.getPendingInvitation() && !party.isInvitationRequestExpired())
 		{
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
-			return;
 		}
-		
-		if (!target.isProcessingRequest())
+		else if (!target.hasRequest(PartyRequest.class))
 		{
-			requestor.onTransactionRequest(target);
-			// in case a leader change has happened, use party's mode
+			final PartyRequest request = new PartyRequest(requestor, target);
+			request.scheduleTimeout(30 * 1000);
+			requestor.addRequest(request);
+			target.addRequest(request);
 			target.sendPacket(new AskJoinParty(requestor.getName(), party.getDistributionType()));
 			party.setPendingInvitation(true);
 		}
 		else
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 		}
@@ -194,17 +193,20 @@ public final class RequestJoinParty extends L2GameClientPacket
 	 */
 	private void createNewParty(L2PcInstance target, L2PcInstance requestor)
 	{
-		PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
+		final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
 		if (partyDistributionType == null)
 		{
 			return;
 		}
 		
-		if (!target.isProcessingRequest())
+		if (!target.hasRequest(PartyRequest.class))
 		{
+			final PartyRequest request = new PartyRequest(requestor, target);
+			request.scheduleTimeout(30 * 1000);
+			requestor.addRequest(request);
+			target.addRequest(request);
 			target.sendPacket(new AskJoinParty(requestor.getName(), partyDistributionType));
-			target.setActiveRequester(requestor);
-			requestor.onTransactionRequest(target);
+			
 			requestor.setPartyDistributionType(partyDistributionType);
 		}
 		else

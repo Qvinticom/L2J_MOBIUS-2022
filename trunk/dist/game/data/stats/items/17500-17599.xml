@@ -196,6 +196,7 @@
 		<set name="price" val="16000000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="9185-1" />
 	</item>
@@ -210,6 +211,7 @@
 		<set name="price" val="1250000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="9186-1" />
 	</item>

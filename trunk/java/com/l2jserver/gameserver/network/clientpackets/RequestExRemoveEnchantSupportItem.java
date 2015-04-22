@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExRemoveEnchantSupportItemResult;
 
@@ -39,21 +40,24 @@ public class RequestExRemoveEnchantSupportItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		activeChar.setActiveEnchantTimestamp(System.currentTimeMillis());
-		
-		final L2ItemInstance supportItem = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantSupportItemId());
-		
-		if ((supportItem == null) || (supportItem.getCount() < 1))
+		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		if ((request == null) || request.isProcessing())
 		{
-			activeChar.setActiveEnchantSupportItemId(L2PcInstance.ID_NONE);
+			return;
 		}
 		
+		final L2ItemInstance supportItem = request.getSupportItem();
+		if ((supportItem == null) || (supportItem.getCount() < 1))
+		{
+			request.setSupportItem(L2PcInstance.ID_NONE);
+		}
+		
+		request.setTimestamp(System.currentTimeMillis());
 		activeChar.sendPacket(ExRemoveEnchantSupportItemResult.STATIC_PACKET);
 	}
 	

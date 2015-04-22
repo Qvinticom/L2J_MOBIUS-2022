@@ -287,6 +287,7 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="price" val="300000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
 	<item id="19441" name="Spiritshot (R-grade)" additionalName="" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with an R-grade weapon. -->
@@ -300,6 +301,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SpiritShot" />
 		<set name="item_skill" val="9194-1" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
 	</item>
 	<item id="19442" name="Blessed Spiritshot (R-grade)" additionalName="" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. -->
@@ -313,6 +315,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="item_skill" val="9195-1" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
 	</item>
 	<item id="19443" name="Orichalcum Bolt" additionalName="" type="EtcItem">
 		<!-- Bolt made of Orichalcum. Used as bolts for R-grade Crossbows. -->
@@ -331,12 +334,14 @@
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="19445" name="Unbind Scroll (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R95-grade bound item into a standard item through the Blacksmith of Mammon. Also has a low chance of becoming Blessed. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="19446" name="Unbind Scroll (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Transforms an R99-grade bound item into a standard item through the Blacksmith of Mammon. Also has a low chance of becoming Blessed. -->
@@ -355,6 +360,7 @@
 		<set name="price" val="150000000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="9187-1" />
 	</item>
@@ -368,6 +374,7 @@
 		<set name="price" val="18000000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="9196-1" />
 	</item>
@@ -396,6 +403,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
@@ -411,6 +419,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
@@ -426,6 +435,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
@@ -456,6 +466,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="3556000" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="19456" name="Istina's Shirt" additionalName="" type="Armor">
 		<!-- When equipped with Istina's Shirt, STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7 and Water Resistance + 30. -->
@@ -482,6 +493,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add stat="mDef" val="103.0" />
 			<enchant stat="mDef" val="0" />
@@ -497,6 +509,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="154.0" />
 			<enchant stat="mDef" val="0" />
@@ -512,6 +525,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add stat="mDef" val="205.0" />
 			<enchant stat="mDef" val="0" />
@@ -542,6 +556,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="3556000" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="19462" name="Octavis' Shirt" additionalName="" type="Armor">
 		<!-- When equipped with Octavis' Shirt, STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7 and Dark Resistance + 30. -->
@@ -553,6 +568,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="130" />
 		<set name="price" val="2540000" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
 			<add stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
@@ -568,6 +584,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="3700000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add stat="mDef" val="170.0" />
 			<enchant stat="mDef" val="0" />
@@ -594,6 +611,7 @@
 		<set name="weight" val="60" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="19466" name="Bottle of Valakas' Soul" additionalName="" type="EtcItem">
 		<!-- Bring 10 of this to Rafforty to bestow Valakas' Necklace with Valakas' Soul. -->
@@ -601,24 +619,28 @@
 		<set name="weight" val="60" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="19467" name="Yellow Soul Crystal Fragment (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary yellow crystal fragment containing the light of absorbed souls. R99-grade . Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19468" name="Teal Soul Crystal Fragment (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary Teal crystal fragment containing the light of absorbed souls. R99-grade . Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i04" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19469" name="Purple Soul Crystal Fragment (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary purple crystal fragment containing the light of absorbed souls. R99-grade . Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i05" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="19470" name="Immortal Belt" additionalName="" type="Armor">
 		<!-- R-grade Rune Clip. Can use a magic ornament to add functions. -->
@@ -630,6 +652,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<set name="price" val="1999000" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />
@@ -645,6 +668,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="150" />
 		<set name="price" val="10668000" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="19472" name="Immortal Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r1_shirt_i00" />
@@ -670,6 +694,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<set name="price" val="5970000" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="21.0" />
 			<enchant stat="pDef" val="0" />
@@ -710,6 +735,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<set name="price" val="13648000" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="23.0" />
 			<enchant stat="pDef" val="0" />
@@ -750,6 +776,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<set name="price" val="35570000" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
 			<add stat="pDef" val="24.0" />
 			<enchant stat="pDef" val="0" />

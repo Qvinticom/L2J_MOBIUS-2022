@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.network.serverpackets.EnchantResult;
 
 /**
@@ -37,12 +38,14 @@ public class RequestExCancelEnchantItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar != null)
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		if (activeChar == null)
 		{
-			activeChar.sendPacket(new EnchantResult(2, 0, 0));
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			return;
 		}
+		
+		activeChar.sendPacket(new EnchantResult(2, 0, 0));
+		activeChar.removeRequest(EnchantItemRequest.class);
 	}
 	
 	@Override

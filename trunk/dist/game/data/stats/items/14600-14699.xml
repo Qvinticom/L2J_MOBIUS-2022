@@ -245,6 +245,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2856-1" />
 		<set name="for_npc" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14615" type="EtcItem" name="Holiday Scroll (Wizard)">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
@@ -1291,6 +1292,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14679" type="EtcItem" name="Neolithic Crystal (A-grade)">
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
@@ -1298,6 +1300,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14680" type="EtcItem" name="Neolithic Crystal (S-grade)">
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
@@ -1362,6 +1365,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-3" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1398,6 +1402,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-5" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1416,6 +1421,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-6" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1505,6 +1511,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-5" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1615,5 +1622,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2862-6" />
+		<set name="commissionItemType" val="POTION" />
 	</item>
 </list>

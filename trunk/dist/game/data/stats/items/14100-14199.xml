@@ -106,6 +106,7 @@
 		<set name="price" val="35000000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add order="0" stat="pDef" val="177" />
 			<enchant stat="pDef" val="0" />
@@ -124,6 +125,7 @@
 		<set name="price" val="35000000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
 			<add order="0" stat="pDef" val="118" />
 			<add stat="maxMp" val="637" />
@@ -143,6 +145,7 @@
 		<set name="price" val="29168000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="148" />
 			<enchant stat="pDef" val="0" />
@@ -160,6 +163,7 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -177,6 +181,7 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -193,6 +198,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SHIELD" />
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
@@ -213,6 +219,7 @@
 		<set name="price" val="21876000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="111" />
 			<enchant stat="pDef" val="0" />
@@ -230,6 +237,7 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -247,6 +255,7 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -265,6 +274,7 @@
 		<set name="price" val="21876000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
 			<add order="0" stat="pDef" val="74" />
 			<add stat="maxMp" val="415" />
@@ -283,6 +293,7 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="GLOVES" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -300,6 +311,7 @@
 		<set name="price" val="11667000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="FEET" />
 		<for>
 			<add order="0" stat="pDef" val="68" />
 			<enchant stat="pDef" val="0" />
@@ -354,6 +366,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -528,6 +541,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -587,6 +601,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3572-2" />
+		<set name="commissionItemType" val="DAGGER" />
 		<for>
 			<set stat="pAtk" val="346" />
 			<set stat="mAtk" val="176" />
@@ -703,6 +718,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1025,6 +1041,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -1241,6 +1258,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3567-3" />
+		<set name="commissionItemType" val="BOW" />
 		<for>
 			<set stat="pAtk" val="724" />
 			<set stat="mAtk" val="176" />
@@ -1601,6 +1619,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="7713000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="83" />
 			<enchant stat="mDef" val="0" />
@@ -1617,6 +1636,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="10284000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="110" />
 			<enchant stat="mDef" val="0" />
@@ -1633,6 +1653,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="5142000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="55" />
 			<enchant stat="mDef" val="0" />
@@ -1696,6 +1717,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="41400" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="84" />
 		</cond>
@@ -1707,6 +1729,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="165800" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="84" />
 		</cond>
@@ -1718,6 +1741,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="829000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="84" />
 		</cond>
@@ -1729,6 +1753,7 @@
 		<set name="weight" val="2" />
 		<set name="price" val="4146000" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="84" />
 		</cond>
@@ -1772,6 +1797,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2806-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14174" type="EtcItem" name="Forgotten Scroll: Pain of Shilen">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
@@ -1782,6 +1808,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2807-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14175" type="EtcItem" name="Forgotten Scroll: Exciting Adventure">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
@@ -1802,6 +1829,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2809-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14177" type="EtcItem" name="Forgotten Scroll: Ghost Walking">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
@@ -1842,6 +1870,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2813-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14181" type="EtcItem" name="Forgotten Scroll: Dread Pool">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
@@ -1852,6 +1881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2814-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14182" type="EtcItem" name="Forgotten Scroll: Force of Destruction">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
@@ -1872,6 +1902,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2816-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14184" type="EtcItem" name="Forgotten Scroll: Golem Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
@@ -1882,6 +1913,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2817-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14185" type="EtcItem" name="Forgotten Scroll: Wild Shot">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
@@ -1902,6 +1934,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2819-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14187" type="EtcItem" name="Forgotten Scroll: Flame Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
@@ -1912,6 +1945,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2820-1" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 	</item>
 	<item id="14188" type="EtcItem" name="Forgotten Scroll: Frost Armor">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />

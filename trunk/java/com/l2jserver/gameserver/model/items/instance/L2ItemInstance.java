@@ -862,9 +862,7 @@ public final class L2ItemInstance extends L2Object
 			&& (getItem().getType2() != L2Item.TYPE2_QUEST) // Not Quest Item
 			&& ((getItem().getType2() != L2Item.TYPE2_MONEY) || (getItem().getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
 			&& ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
-			&& (player.getActiveEnchantItemId() != getObjectId()) // Not momentarily used enchant scroll
-			&& (player.getActiveEnchantSupportItemId() != getObjectId()) // Not momentarily used enchant support item
-			&& (player.getActiveEnchantAttrItemId() != getObjectId()) // Not momentarily used enchant attribute item
+			&& !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
 			&& (allowAdena || (getId() != Inventory.ADENA_ID)) // Not Adena
 			&& ((player.getCurrentSkill() == null) || (player.getCurrentSkill().getSkill().getItemConsumeId() != getId())) && (!player.isCastingSimultaneouslyNow() || (player.getLastSimultaneousSkillCast() == null) || (player.getLastSimultaneousSkillCast().getItemConsumeId() != getId())) && (allowNonTradeable || (isTradeable() && (!((getItem().getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
 	}

@@ -223,6 +223,7 @@
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SIGIL" />
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="13" />
@@ -378,6 +379,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2365-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -407,6 +409,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2371-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10132" type="EtcItem" name="Transformation Scroll: Death Blader">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -418,6 +421,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2372-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10133" type="EtcItem" name="Transformation Scroll: Grail Apostle">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -429,6 +433,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2373-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10134" type="EtcItem" name="Transformation Scroll: Unicorn">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -440,6 +445,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2374-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10135" type="EtcItem" name="Transformation Scroll: Lilim Knight">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -451,6 +457,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2375-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10136" type="EtcItem" name="Transformation Scroll: Golem Guardian">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -462,6 +469,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2376-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10137" type="EtcItem" name="Transformation Scroll: Inferno Drake">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -473,6 +481,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2377-1" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="10138" type="EtcItem" name="Transformation Scroll: Dragon Bomber">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -710,6 +719,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2395-1" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player SiegeZone="126" />
 		</cond>
@@ -744,6 +754,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2402-1" />
+		<set name="commissionItemType" val="POTION" />
 		<cond msgId="113" addName="1">
 			<player SiegeZone="126" />
 		</cond>

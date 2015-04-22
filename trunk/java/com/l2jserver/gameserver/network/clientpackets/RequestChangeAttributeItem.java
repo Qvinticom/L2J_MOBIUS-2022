@@ -17,6 +17,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExChangeAttributeFail;
@@ -56,30 +57,39 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 			return;
 		}
 		
+		final EnchantItemAttributeRequest request = player.getRequest(EnchantItemAttributeRequest.class);
+		if (request == null)
+		{
+			return;
+		}
+		request.setProcessing(true);
+		
 		L2ItemInstance item = player.getInventory().getItemByObjectId(_itemOID);
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
 		if (player.getActiveTradeList() != null)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_ATTRIBUTES_WHILE_EXCHANGING);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
 		if (!item.isWeapon())
 		{
-			player.setActiveEnchantAttrItemId(0);
+			player.removeRequest(request.getClass());
 			player.sendPacket(new ExChangeAttributeItemList(player, _attributeOID));
 			return;
 		}
 		
 		if (_newAttributeID == -1)
 		{
-			player.setActiveEnchantAttrItemId(0);
+			player.removeRequest(request.getClass());
 			player.sendPacket(new ExChangeAttributeItemList(player, _attributeOID));
 			return;
 		}
@@ -123,7 +133,7 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		}
 		player.sendPacket(iu);
 		
-		player.setActiveEnchantAttrItemId(0);
+		player.removeRequest(request.getClass());
 	}
 	
 	@Override

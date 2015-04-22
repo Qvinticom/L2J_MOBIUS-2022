@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExChangeAttributeItemList;
@@ -42,13 +43,13 @@ public class ChangeAttribute implements IItemHandler
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHANGING_ATTRIBUTES_IS_IN_PROGRESS_PLEASE_TRY_AGAIN_AFTER_ENDING_THE_PREVIOUS_TASK));
 			return false;
 		}
 		
-		activeChar.setActiveEnchantAttrItemId(item.getId());
+		activeChar.addRequest(new EnchantItemAttributeRequest(activeChar, item.getObjectId()));
 		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHANGING_ATTRIBUTES_IS_IN_PROGRESS_PLEASE_TRY_AGAIN_AFTER_ENDING_THE_PREVIOUS_TASK));
 		activeChar.sendPacket(new ExChangeAttributeItemList(activeChar, item.getObjectId()));
 		return true;

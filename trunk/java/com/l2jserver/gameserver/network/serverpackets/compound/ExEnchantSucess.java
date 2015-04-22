@@ -20,20 +20,23 @@ package com.l2jserver.gameserver.network.serverpackets.compound;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author UnAfraid
+ */
 public class ExEnchantSucess extends L2GameServerPacket
 {
-	int _newItemId;
+	private final int _itemId;
 	
-	public ExEnchantSucess(int newItemId)
+	public ExEnchantSucess(int itemId)
 	{
-		_newItemId = newItemId;
+		_itemId = itemId;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x170);
-		writeD(_newItemId);
+		writeD(_itemId);
 	}
 }

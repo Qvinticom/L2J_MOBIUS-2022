@@ -20,12 +20,19 @@ package com.l2jserver.gameserver.network.serverpackets.compound;
 
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author UnAfraid
+ */
 public class ExEnchantOneFail extends L2GameServerPacket
 {
 	public static final ExEnchantOneFail STATIC_PACKET = new ExEnchantOneFail();
 	
+	private ExEnchantOneFail()
+	{
+	}
+	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x169);

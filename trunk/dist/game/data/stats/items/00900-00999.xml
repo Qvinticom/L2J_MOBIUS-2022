@@ -268,6 +268,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="60420" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
 			<enchant stat="mDef" val="0" />
@@ -316,6 +317,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4361000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
@@ -414,6 +416,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="189600" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
 			<add order="0" stat="mDef" val="72" />
 			<enchant stat="mDef" val="0" />
@@ -713,6 +716,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2015-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="948" type="EtcItem" name="Scroll: Enchant Armor (B-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
@@ -726,6 +730,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2016-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="949" type="EtcItem" name="Crystal Scroll: Enchant Weapon (B-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
@@ -757,6 +762,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2017-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="952" type="EtcItem" name="Scroll: Enchant Armor (C-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
@@ -770,6 +776,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2018-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="953" type="EtcItem" name="Crystal Scroll: Enchant Weapon (C-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
@@ -801,6 +808,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2019-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="956" type="EtcItem" name="Scroll: Enchant Armor (D-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
@@ -814,6 +822,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2020-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="957" type="EtcItem" name="Crystal Scroll: Enchant Weapon (D-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
@@ -845,6 +854,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2021-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="960" type="EtcItem" name="Scroll: Enchant Armor (S-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
@@ -858,6 +868,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2022-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="961" type="EtcItem" name="Crystal Scroll: Enchant Weapon (S-Grade)">
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />

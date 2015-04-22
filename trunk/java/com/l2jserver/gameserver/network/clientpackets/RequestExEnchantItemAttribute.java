@@ -22,6 +22,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAttributeEnchantResult;
@@ -54,24 +55,32 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 			return;
 		}
 		
+		final EnchantItemAttributeRequest request = player.getRequest(EnchantItemAttributeRequest.class);
+		if (request == null)
+		{
+			return;
+		}
+		
+		request.setProcessing(true);
+		
 		if (_objectId == 0xFFFFFFFF)
 		{
 			// Player canceled enchant
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
 		
 		if (!player.isOnline())
 		{
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -80,16 +89,16 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		{
 			// Cancel trade
 			player.cancelActiveTrade();
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_TRADING);
 			return;
 		}
 		
 		final L2ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		final L2ItemInstance stone = player.getInventory().getItemByObjectId(player.getActiveEnchantAttrItemId());
+		final L2ItemInstance stone = request.getEnchantingStone();
 		if ((item == null) || (stone == null))
 		{
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
@@ -97,7 +106,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		if (!item.isElementable())
 		{
 			player.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -108,14 +117,14 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 			{
 				if (item.getOwnerId() != player.getObjectId())
 				{
-					player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+					player.removeRequest(request.getClass());
 					return;
 				}
 				break;
 			}
 			default:
 			{
-				player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+				player.removeRequest(request.getClass());
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 				return;
 			}
@@ -139,7 +148,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || (item.isArmor() && (item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 3)))
 		{
 			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -150,7 +159,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 			{
 				if (elm.getElement() == opositeElement)
 				{
-					player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+					player.removeRequest(request.getClass());
 					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
 					return;
 				}
@@ -167,7 +176,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		if (powerToAdd <= 0)
 		{
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -267,7 +276,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 			iu.addModifiedItem(stone);
 		}
 		
-		player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+		player.removeRequest(request.getClass());
 		player.sendPacket(new ExAttributeEnchantResult(result, item.isWeapon(), elementToAdd, elementValue, newValue, successfulAttempts, failedAttempts));
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(iu);
@@ -290,7 +299,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		if (powerToAdd <= 0)
 		{
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.removeRequest(EnchantItemAttributeRequest.class);
 			return -1;
 		}
 		

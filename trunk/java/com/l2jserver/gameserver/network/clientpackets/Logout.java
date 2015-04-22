@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
-import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
@@ -54,7 +53,7 @@ public final class Logout extends L2GameClientPacket
 			return;
 		}
 		
-		if ((player.getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (player.getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
+		if (player.hasItemRequest())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -63,13 +62,6 @@ public final class Logout extends L2GameClientPacket
 		if (player.isLocked())
 		{
 			_log.warning("Player " + player.getName() + " tried to logout during class change.");
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (player.isInsideZone(ZoneId.BATTALION) && !Config.BTZ_LOGOUT_ZONE)
-		{
-			player.sendMessage("You cannot logout while inside a Battalion zone.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

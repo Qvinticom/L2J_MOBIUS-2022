@@ -91,7 +91,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (activeChar.hasItemRequest())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
 			return;

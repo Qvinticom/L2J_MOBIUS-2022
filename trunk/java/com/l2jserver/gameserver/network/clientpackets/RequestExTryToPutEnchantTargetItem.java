@@ -22,6 +22,7 @@ import java.util.logging.Level;
 
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jserver.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -46,18 +47,21 @@ public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((_objectId == 0) || (activeChar == null))
+		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		if ((request == null) || request.isProcessing())
 		{
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-		final L2ItemInstance scroll = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantItemId());
+		request.setEnchantingItem(_objectId);
+		
+		final L2ItemInstance item = request.getEnchantingItem();
+		final L2ItemInstance scroll = request.getEnchantingScroll();
 		if ((item == null) || (scroll == null))
 		{
 			return;
@@ -67,7 +71,7 @@ public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
 		{
 			activeChar.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			activeChar.removeRequest(request.getClass());
 			activeChar.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
@@ -75,8 +79,7 @@ public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 			}
 			return;
 		}
-		activeChar.setIsEnchanting(true);
-		activeChar.setActiveEnchantTimestamp(System.currentTimeMillis());
+		request.setTimestamp(System.currentTimeMillis());
 		activeChar.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 	}
 	

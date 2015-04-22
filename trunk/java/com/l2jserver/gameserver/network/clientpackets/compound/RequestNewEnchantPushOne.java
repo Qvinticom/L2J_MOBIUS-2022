@@ -19,56 +19,72 @@
 package com.l2jserver.gameserver.network.clientpackets.compound;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.actor.request.CompoundRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantOneFail;
 import com.l2jserver.gameserver.network.serverpackets.compound.ExEnchantOneOK;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public final class RequestNewEnchantPushOne extends L2GameClientPacket
+public class RequestNewEnchantPushOne extends L2GameClientPacket
 {
-	private static final String _C__D0_F4_REQUESTNEWENCHANTPUSHONE = "[C] D0:F4 RequestNewEnchantPushOne";
-	
-	private int _itemId;
+	private int _objectId;
 	
 	@Override
 	protected void readImpl()
 	{
-		_itemId = readD();
+		_objectId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemId);
-		if (item == null)
+		else if (activeChar.isInStoreMode())
 		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		final int secondCompoundOID = activeChar.getSecondCompoundOID();
-		final L2ItemInstance secondItem = activeChar.getInventory().getItemByObjectId(secondCompoundOID);
-		if ((item.getItem().getBodyPart() != L2Item.SLOT_BROOCH_JEWEL) || ((secondItem != null) && ((secondItem.getObjectId() == item.getObjectId()) || (secondItem.getId() != item.getId()))) || ((item.getId() == 38931) || ((item.getId() % 10) == 4) || ((item.getId() % 10) == 9)))
+		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(new ExEnchantOneFail());
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			return;
 		}
-		else
+		
+		final CompoundRequest request = new CompoundRequest(activeChar);
+		if (!activeChar.addRequest(request))
 		{
-			activeChar.setFirstCompoundOID(_itemId);
-			activeChar.sendPacket(new ExEnchantOneOK());
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			return;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_F4_REQUESTNEWENCHANTPUSHONE;
+		
+		// Make sure player owns this item.
+		request.setItemOne(_objectId);
+		final L2ItemInstance itemOne = request.getItemOne();
+		if (itemOne == null)
+		{
+			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			activeChar.removeRequest(request.getClass());
+			return;
+		}
+		
+		// Not implemented or not able to merge!
+		if ((itemOne.getItem().getCompoundItem() == 0) || (itemOne.getItem().getCompoundChance() == 0))
+		{
+			activeChar.sendPacket(ExEnchantOneOK.STATIC_PACKET);
+			activeChar.removeRequest(request.getClass());
+			return;
+		}
+		
+		activeChar.sendPacket(ExEnchantOneOK.STATIC_PACKET);
 	}
 }

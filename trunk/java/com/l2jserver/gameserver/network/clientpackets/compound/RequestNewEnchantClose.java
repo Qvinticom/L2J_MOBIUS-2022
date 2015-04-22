@@ -19,35 +19,30 @@
 package com.l2jserver.gameserver.network.clientpackets.compound;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.request.CompoundRequest;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 
 /**
- * @author Erlandys
+ * @author UnAfraid
  */
-public final class RequestNewEnchantClose extends L2GameClientPacket
+public class RequestNewEnchantClose extends L2GameClientPacket
 {
-	private static final String _C__D0_F8_REQUESTNEWENCHANTCLOSE = "[C] D0:F8 RequestNewEnchantClose";
 	
 	@Override
 	protected void readImpl()
 	{
+		
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		activeChar.setFirstCompoundOID(-1);
-		activeChar.setSecondCompoundOID(-1);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_F8_REQUESTNEWENCHANTCLOSE;
+		
+		activeChar.removeRequest(CompoundRequest.class);
 	}
 }
