@@ -1462,7 +1462,7 @@ public final class L2ItemInstance extends L2Object
 	
 	/**
 	 * Updates the database.<BR>
-	 * @param force if the update should necessarilly be done.
+	 * @param force if the update should necessarily be done.
 	 */
 	public void updateDatabase(boolean force)
 	{

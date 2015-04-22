@@ -31,6 +31,8 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.logging.Logger;
 
 /**
@@ -222,5 +224,17 @@ public final class Util
 			.min(Comparator.naturalOrder())
 			.orElse(dateNowWithDifferentTime.with(TemporalAdjusters.next(daysOfWeek.get(0))));
 		// @formatter:on
+	}
+	
+	/**
+	 * This method translates map to function
+	 * @param <K> key type of the map and argument of the function
+	 * @param <V> value type of the map and return type of the function
+	 * @param map the input map
+	 * @return a function which returns map.get(arg)
+	 */
+	public static <K, V> Function<K, V> mapToFunction(Map<K, V> map)
+	{
+		return key -> map.get(key);
 	}
 }

@@ -1,44 +1,49 @@
 /*
  * Copyright (C) 2004-2015 L2J Server
- * 
+ *
  * This file is part of L2J Server.
- * 
+ *
  * L2J Server is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * L2J Server is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.drops;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.drops.strategy.IAmountMultiplierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IChanceMultiplierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IDropCalculationStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IKillerChanceModifierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.INonGroupedKillerChanceModifierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IPreciseDeterminationStrategy;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.items.L2Item;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author NosBit
  */
-public class GeneralDropItem implements IDropItem
+public final class GeneralDropItem implements IDropItem
 {
 	private final int _itemId;
 	private final long _min;
 	private final long _max;
 	private final double _chance;
+	
+	protected final IAmountMultiplierStrategy _amountStrategy;
+	protected final IChanceMultiplierStrategy _chanceStrategy;
+	protected final IPreciseDeterminationStrategy _preciseStrategy;
+	protected final INonGroupedKillerChanceModifierStrategy _killerStrategy;
+	protected final IDropCalculationStrategy _dropCalculationStrategy;
 	
 	/**
 	 * @param itemId the item id
@@ -48,232 +53,192 @@ public class GeneralDropItem implements IDropItem
 	 */
 	public GeneralDropItem(int itemId, long min, long max, double chance)
 	{
+		this(itemId, min, max, chance, 1, 1);
+	}
+	
+	public GeneralDropItem(int itemId, long min, long max, double chance, double defaultAmountMultiplier, double defaultChanceMultiplier)
+	{
+		this(itemId, min, max, defaultChanceMultiplier, IAmountMultiplierStrategy.DEFAULT_STRATEGY(defaultAmountMultiplier), IChanceMultiplierStrategy.DEFAULT_STRATEGY(defaultChanceMultiplier));
+	}
+	
+	public GeneralDropItem(int itemId, long min, long max, double chance, IAmountMultiplierStrategy amountMultiplierStrategy, IChanceMultiplierStrategy chanceMultiplierStrategy)
+	{
+		this(itemId, min, max, chance, amountMultiplierStrategy, chanceMultiplierStrategy, IPreciseDeterminationStrategy.DEFAULT, IKillerChanceModifierStrategy.DEFAULT_NONGROUP_STRATEGY);
+	}
+	
+	public GeneralDropItem(int itemId, long min, long max, double chance, IAmountMultiplierStrategy amountMultiplierStrategy, IChanceMultiplierStrategy chanceMultiplierStrategy, IPreciseDeterminationStrategy preciseStrategy, INonGroupedKillerChanceModifierStrategy killerStrategy)
+	{
+		this(itemId, min, max, chance, amountMultiplierStrategy, chanceMultiplierStrategy, preciseStrategy, killerStrategy, IDropCalculationStrategy.DEFAULT_STRATEGY);
+	}
+	
+	public GeneralDropItem(int itemId, long min, long max, double chance, IAmountMultiplierStrategy amountMultiplierStrategy, IChanceMultiplierStrategy chanceMultiplierStrategy, IPreciseDeterminationStrategy preciseStrategy, INonGroupedKillerChanceModifierStrategy killerStrategy, IDropCalculationStrategy dropCalculationStrategy)
+	{
 		_itemId = itemId;
 		_min = min;
 		_max = max;
 		_chance = chance;
+		_amountStrategy = amountMultiplierStrategy;
+		_chanceStrategy = chanceMultiplierStrategy;
+		_preciseStrategy = preciseStrategy;
+		_killerStrategy = killerStrategy;
+		_dropCalculationStrategy = dropCalculationStrategy;
+		
 	}
 	
-	protected double getGlobalChanceMultiplier(boolean isPremium)
+	/**
+	 * @return the _amountStrategy
+	 */
+	public final IAmountMultiplierStrategy getAmountStrategy()
 	{
-		return 1.;
+		return _amountStrategy;
 	}
 	
-	protected double getGlobalAmountMultiplier(boolean isPremium)
+	/**
+	 * @return the _chanceStrategy
+	 */
+	public final IChanceMultiplierStrategy getChanceStrategy()
 	{
-		return 1.;
+		return _chanceStrategy;
 	}
 	
-	private final long getMinMax(L2Character victim, L2Character killer, long val)
+	/**
+	 * @return the _preciseStrategy
+	 */
+	public final IPreciseDeterminationStrategy getPreciseStrategy()
 	{
-		double multiplier = 1;
-		
-		// individual drop amount
-		Float individualDropAmountMultiplier = null;
-		if (killer.getActingPlayer().hasPremiumStatus())
-		{
-			final Float normalMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(getItemId());
-			final Float premiumMultiplier = Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(getItemId());
-			if ((normalMultiplier != null) && (premiumMultiplier != null))
-			{
-				individualDropAmountMultiplier = normalMultiplier * premiumMultiplier;
-			}
-			else if (normalMultiplier != null)
-			{
-				individualDropAmountMultiplier = normalMultiplier;
-			}
-			else if (premiumMultiplier != null)
-			{
-				individualDropAmountMultiplier = premiumMultiplier;
-			}
-		}
-		else
-		{
-			individualDropAmountMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(getItemId());
-		}
-		
-		if (individualDropAmountMultiplier != null)
-		{
-			// individual amount list multiplier
-			multiplier *= individualDropAmountMultiplier;
-		}
-		else
-		{
-			final L2Item item = ItemTable.getInstance().getTemplate(getItemId());
-			// global amount multiplier
-			if ((item != null) && item.hasExImmediateEffect())
-			{
-				// global herb amount multiplier
-				multiplier *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
-			}
-			else
-			{
-				// drop type specific amount multiplier
-				multiplier *= getGlobalAmountMultiplier(killer.getActingPlayer().hasPremiumStatus());
-			}
-		}
-		
-		// global champions amount multiplier
-		if (victim.isChampion())
-		{
-			multiplier *= getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS : Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
-		}
-		
-		return (long) (val * multiplier);
+		return _preciseStrategy;
+	}
+	
+	/**
+	 * @return the _killerStrategy
+	 */
+	public final INonGroupedKillerChanceModifierStrategy getKillerChanceModifierStrategy()
+	{
+		return _killerStrategy;
+	}
+	
+	/**
+	 * @return the _dropCalculationStrategy
+	 */
+	public final IDropCalculationStrategy getDropCalculationStrategy()
+	{
+		return _dropCalculationStrategy;
 	}
 	
 	/**
 	 * Gets the item id
 	 * @return the item id
 	 */
-	public int getItemId()
+	public final int getItemId()
 	{
 		return _itemId;
 	}
 	
 	/**
-	 * Gets the min drop count
+	 * Gets the base min drop count
 	 * @return the min
 	 */
-	public long getMin()
+	public final long getMin()
 	{
 		return _min;
 	}
 	
 	/**
-	 * Gets the min drop count
-	 * @param victim the victim
-	 * @param killer the killer
+	 * Gets the min drop count modified by server rates
+	 * @param victim the victim who drops the item
+	 * @param killer
 	 * @return the min modified by any rates.
 	 */
-	public long getMin(L2Character victim, L2Character killer)
+	public final long getMin(L2Character victim, L2Character killer)
 	{
-		return getMinMax(victim, killer, getMin());
+		return (long) (getMin() * getAmountMultiplier(victim, killer));
 	}
 	
 	/**
-	 * Gets the max drop count
+	 * Gets the base max drop count
 	 * @return the max
 	 */
-	public long getMax()
+	public final long getMax()
 	{
 		return _max;
 	}
 	
 	/**
-	 * Gets the max drop count
-	 * @param victim the victim
-	 * @param killer the killer
+	 * Gets the max drop count modified by server rates
+	 * @param victim the victim who drops the item
+	 * @param killer
 	 * @return the max modified by any rates.
 	 */
-	public long getMax(L2Character victim, L2Character killer)
+	public final long getMax(L2Character victim, L2Character killer)
 	{
-		return getMinMax(victim, killer, getMax());
+		return (long) (getMax() * getAmountMultiplier(victim, killer));
 	}
 	
 	/**
 	 * Gets the chance of this drop item.
 	 * @return the chance
 	 */
-	public double getChance()
+	public final double getChance()
 	{
 		return _chance;
 	}
 	
 	/**
-	 * Gets the chance of this drop item.
-	 * @param victim the victim
-	 * @param killer the killer
-	 * @return the chance modified by any rates.
+	 * Gets the chance of dropping this item for current killer and victim (modified by server rates and another rules based on killer) <br>
+	 * This shall be used to calculate chance outside of drop groups.
+	 * @param victim the victim who drops the item
+	 * @param killer who kills the victim
+	 * @return a chance to drop modified by deep blue drop rules
 	 */
-	public double getChance(L2Character victim, L2Character killer)
+	public final double getChance(L2Character victim, L2Character killer)
 	{
-		double multiplier = 1;
-		
-		// individual drop chance
-		Float individualDropChanceMultiplier = null;
-		if (killer.getActingPlayer().hasPremiumStatus())
-		{
-			final Float normalMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(getItemId());
-			final Float premiumMultiplier = Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(getItemId());
-			if ((normalMultiplier != null) && (premiumMultiplier != null))
-			{
-				individualDropChanceMultiplier = normalMultiplier * premiumMultiplier;
-			}
-			else if (normalMultiplier != null)
-			{
-				individualDropChanceMultiplier = normalMultiplier;
-			}
-			else if (premiumMultiplier != null)
-			{
-				individualDropChanceMultiplier = premiumMultiplier;
-			}
-		}
-		else
-		{
-			individualDropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(getItemId());
-		}
-		
-		if (individualDropChanceMultiplier != null)
-		{
-			multiplier *= individualDropChanceMultiplier;
-		}
-		else
-		{
-			final L2Item item = ItemTable.getInstance().getTemplate(getItemId());
-			if ((item != null) && item.hasExImmediateEffect())
-			{
-				multiplier *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
-			}
-			else
-			{
-				multiplier *= getGlobalChanceMultiplier(killer.getActingPlayer().hasPremiumStatus());
-			}
-		}
-		
-		if (victim.isChampion())
-		{
-			multiplier *= Config.L2JMOD_CHAMPION_REWARDS;
-		}
-		
-		return (getChance() * multiplier);
+		return (getKillerChanceModifier(victim, killer) * getChance());
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.drop.IDropItem#calculateDrops(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.actor.L2Character)
-	 */
 	@Override
-	public Collection<ItemHolder> calculateDrops(L2Character victim, L2Character killer)
+	public final List<ItemHolder> calculateDrops(L2Character victim, L2Character killer)
 	{
-		final int levelDifference = victim.getLevel() - killer.getLevel();
-		final double levelGapChanceToDrop;
-		if (getItemId() == Inventory.ADENA_ID)
-		{
-			levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
-		}
-		else
-		{
-			levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
-		}
-		
-		// There is a chance of level gap that it wont drop this item
-		if (levelGapChanceToDrop < (Rnd.nextDouble() * 100))
-		{
-			return null;
-		}
-		
-		final double chance = getChance(victim, killer);
-		final boolean successes = chance > (Rnd.nextDouble() * 100);
-		if (successes)
-		{
-			final Collection<ItemHolder> items = new ArrayList<>(1);
-			final long baseDropCount = Rnd.get(getMin(victim, killer), getMax(victim, killer));
-			final long finaldropCount = (long) (Config.L2JMOD_OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + (chance > 100 ? (chance % 100) > (Rnd.nextDouble() * 100) ? baseDropCount : 0 : 0) : baseDropCount);
-			items.add(new ItemHolder(getItemId(), finaldropCount));
-			return items;
-		}
-		
-		return null;
+		return _dropCalculationStrategy.calculateDrops(this, victim, killer);
+	}
+	
+	/**
+	 * @return <code>true</code> if chance over 100% should be handled
+	 */
+	public final boolean isPreciseCalculated()
+	{
+		return _preciseStrategy.isPreciseCalculated(this);
+	}
+	
+	/**
+	 * This handles by default deep blue drop rules. It may also be used to handle another drop chance rules based on killer
+	 * @param victim the victim who drops the item
+	 * @param killer who kills the victim
+	 * @return a number between 0 and 1 (usually)
+	 */
+	protected final double getKillerChanceModifier(L2Character victim, L2Character killer)
+	{
+		return _killerStrategy.getKillerChanceModifier(this, victim, killer);
+	}
+	
+	/**
+	 * This gets standard server rates for this item
+	 * @param victim who drops the item
+	 * @param killer
+	 * @return
+	 */
+	protected final double getAmountMultiplier(L2Character victim, L2Character killer)
+	{
+		return _amountStrategy.getAmountMultiplier(this, victim, killer);
+	}
+	
+	/**
+	 * This gets standard server rates for this item
+	 * @param victim who drops the item
+	 * @param killer
+	 * @return
+	 */
+	protected final double getChanceMultiplier(L2Character victim, L2Character killer)
+	{
+		return _chanceStrategy.getChanceMultiplier(this, victim, killer);
 	}
 }

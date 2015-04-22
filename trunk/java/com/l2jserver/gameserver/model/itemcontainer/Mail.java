@@ -25,6 +25,7 @@ import java.util.logging.Level;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.enums.ItemLocation;
+import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -108,19 +109,10 @@ public class Mail extends ItemContainer
 		item.setItemLocation(getBaseLocation(), _messageId);
 	}
 	
-	/*
-	 * Allow saving of the items without owner
-	 */
 	@Override
 	public void updateDatabase()
 	{
-		for (L2ItemInstance item : _items)
-		{
-			if (item != null)
-			{
-				item.updateDatabase(true);
-			}
-		}
+		_items.forEach(i -> i.updateDatabase(true));
 	}
 	
 	@Override
@@ -167,5 +159,18 @@ public class Mail extends ItemContainer
 	public int getOwnerId()
 	{
 		return _ownerId;
+	}
+	
+	@Override
+	public void deleteMe()
+	{
+		_items.forEach(i ->
+		{
+			i.updateDatabase(true);
+			i.deleteMe();
+			L2World.getInstance().removeObject(i);
+			IdFactory.getInstance().releaseId(i.getObjectId());
+		});
+		_items.clear();
 	}
 }

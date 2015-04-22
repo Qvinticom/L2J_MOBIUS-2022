@@ -18,75 +18,46 @@
  */
 package com.l2jserver.gameserver.model.drops;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import com.l2jserver.gameserver.model.drops.strategy.IAmountMultiplierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IChanceMultiplierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IGroupedItemDropCalculationStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IKillerChanceModifierStrategy;
+import com.l2jserver.gameserver.model.drops.strategy.IPreciseDeterminationStrategy;
 
 /**
  * @author NosBit
  */
-public enum DropListScope
+public enum DropListScope implements IDropItemFactory, IGroupedDropItemFactory
 {
-	DEATH(DeathDropItem.class, GroupedDeathDropItem.class),
-	CORPSE(CorpseDropItem.class, GroupedCorpseDropItem.class);
+	DEATH((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.DROP, IChanceMultiplierStrategy.DROP), chance -> new GroupedGeneralDropItem(chance)),
+	CORPSE((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.SPOIL, IChanceMultiplierStrategy.SPOIL), DEATH),
 	
-	private static final Logger _log = Logger.getLogger(DropListScope.class.getName());
+	/**
+	 * This droplist scope isn't affected by ANY rates, nor Champion, etc...
+	 */
+	STATIC(
+		(itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.STATIC, IChanceMultiplierStrategy.STATIC, IPreciseDeterminationStrategy.ALWAYS, IKillerChanceModifierStrategy.NO_RULES),
+		chance -> new GroupedGeneralDropItem(chance, IGroupedItemDropCalculationStrategy.DEFAULT_STRATEGY, IKillerChanceModifierStrategy.NO_RULES, IPreciseDeterminationStrategy.ALWAYS)),
+	QUEST((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.STATIC, IChanceMultiplierStrategy.QUEST, IPreciseDeterminationStrategy.ALWAYS, IKillerChanceModifierStrategy.NO_RULES), STATIC);
 	
-	private final Class<? extends GeneralDropItem> _dropItemClass;
-	private final Class<? extends GroupedGeneralDropItem> _groupedDropItemClass;
+	private final IDropItemFactory _factory;
+	private final IGroupedDropItemFactory _groupFactory;
 	
-	private DropListScope(Class<? extends GeneralDropItem> dropItemClass, Class<? extends GroupedGeneralDropItem> groupedDropItemClass)
+	private DropListScope(IDropItemFactory factory, IGroupedDropItemFactory groupFactory)
 	{
-		_dropItemClass = dropItemClass;
-		_groupedDropItemClass = groupedDropItemClass;
+		_factory = factory;
+		_groupFactory = groupFactory;
 	}
 	
+	@Override
 	public IDropItem newDropItem(int itemId, long min, long max, double chance)
 	{
-		final Constructor<? extends GeneralDropItem> constructor;
-		try
-		{
-			constructor = _dropItemClass.getConstructor(int.class, long.class, long.class, double.class);
-		}
-		catch (NoSuchMethodException | SecurityException e)
-		{
-			_log.log(Level.SEVERE, "Constructor(int, long, long, double) not found for " + _dropItemClass.getSimpleName(), e);
-			return null;
-		}
-		
-		try
-		{
-			return constructor.newInstance(itemId, min, max, chance);
-		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
-		{
-			_log.log(Level.SEVERE, "", e);
-			return null;
-		}
+		return _factory.newDropItem(itemId, min, max, chance);
 	}
 	
+	@Override
 	public GroupedGeneralDropItem newGroupedDropItem(double chance)
 	{
-		final Constructor<? extends GroupedGeneralDropItem> constructor;
-		try
-		{
-			constructor = _groupedDropItemClass.getConstructor(double.class);
-		}
-		catch (NoSuchMethodException | SecurityException e)
-		{
-			_log.log(Level.SEVERE, "Constructor(double) not found for " + _groupedDropItemClass.getSimpleName(), e);
-			return null;
-		}
-		
-		try
-		{
-			return constructor.newInstance(chance);
-		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
-		{
-			_log.log(Level.SEVERE, "", e);
-			return null;
-		}
+		return _groupFactory.newGroupedDropItem(chance);
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2015 L2J Server
+ * Copyright (C) 2004-2014 L2J Server
  * 
  * This file is part of L2J Server.
  * 
@@ -16,30 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.model.drops;
+package com.l2jserver.gameserver.model.drops.strategy;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.model.drops.IDropItem;
 
 /**
- * @author NosBit
+ * @author Battlecruiser
  */
-public class GroupedCorpseDropItem extends GroupedGeneralDropItem
+public interface IPreciseDeterminationStrategy
 {
-	/**
-	 * @param chance the chance of this drop item.
-	 */
-	public GroupedCorpseDropItem(double chance)
-	{
-		super(chance);
-	}
+	public static final IPreciseDeterminationStrategy ALWAYS = dropItem -> true;
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
+	public static final IPreciseDeterminationStrategy DEFAULT = dropItem -> Config.PRECISE_DROP_CALCULATION;
+	
+	public static final IPreciseDeterminationStrategy NEVER = dropItem -> false;
+	
+	/**
+	 * @param dropItem
+	 * @return <code>true</code> if drop calculation strategy should use precise rules
 	 */
-	@Override
-	protected double getGlobalChanceMultiplier()
-	{
-		return Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
-	}
+	public boolean isPreciseCalculated(IDropItem dropItem);
 }

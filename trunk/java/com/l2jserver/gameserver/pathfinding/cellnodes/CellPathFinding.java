@@ -199,13 +199,14 @@ public class CellPathFinding extends PathFinding
 			int currentY = y;
 			int currentZ = z;
 			
-			for (int i = 0; i < path.size() - 1; i++)
+			int midPoint = 0;
+			while (endPoint.hasNext())
 			{
-				AbstractNodeLoc locMiddle = path.get(i);
+				AbstractNodeLoc locMiddle = path.get(midPoint);
 				AbstractNodeLoc locEnd = endPoint.next();
 				if (GeoData.getInstance().canMove(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instanceId))
 				{
-					path.remove(i);
+					path.remove(midPoint);
 					remove = true;
 					if (debug)
 					{
@@ -217,6 +218,7 @@ public class CellPathFinding extends PathFinding
 					currentX = locMiddle.getX();
 					currentY = locMiddle.getY();
 					currentZ = locMiddle.getZ();
+					midPoint++;
 				}
 			}
 		}

@@ -39,6 +39,7 @@ import com.l2jserver.gameserver.datatables.EventDroplist;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.announce.EventAnnouncement;
+import com.l2jserver.gameserver.model.drops.DropListScope;
 import com.l2jserver.gameserver.model.drops.GeneralDropItem;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.script.DateRange;
@@ -188,7 +189,7 @@ public class LongTimeEvent extends Quest
 										continue;
 									}
 									
-									_dropList.add(new GeneralDropItem(itemId, minCount, maxCount, finalChance));
+									_dropList.add((GeneralDropItem) DropListScope.STATIC.newDropItem(itemId, minCount, maxCount, finalChance));
 								}
 								catch (NumberFormatException nfe)
 								{

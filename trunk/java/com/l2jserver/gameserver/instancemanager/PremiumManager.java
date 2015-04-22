@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * @author Mobius, RobíkBobík
+ * @author Mobius
  */
 public class PremiumManager
 {
