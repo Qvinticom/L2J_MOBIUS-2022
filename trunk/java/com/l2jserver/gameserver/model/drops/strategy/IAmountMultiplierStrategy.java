@@ -39,7 +39,7 @@ public interface IAmountMultiplierStrategy
 			double multiplier = 1;
 			
 			final Float dropChanceMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
-			final Float premiumAmountMultiplier = Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(item.getItemId());
+			final Float premiumAmountMultiplier = Config.PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
 			if (Config.PREMIUM_SYSTEM_ENABLED && (premiumAmountMultiplier != null) && (killer != null) && killer.isPlayer() && killer.getActingPlayer().hasPremiumStatus())
 			{
 				multiplier *= premiumAmountMultiplier;

@@ -842,13 +842,12 @@ public final class Config
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
-	public static Map<Integer, Float> PREMIUM_RATE_DROP_ITEMS_ID;
 	public static float PREMIUM_RATE_DROP_CHANCE;
 	public static float PREMIUM_RATE_DROP_AMOUNT;
 	public static float PREMIUM_RATE_SPOIL_CHANCE;
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
-	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
-	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_MULTIPLIER;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER;
 	public static boolean PC_BANG_ENABLED;
 	public static int PC_BANG_MAX_POINTS;
 	public static boolean PC_BANG_ENABLE_DOUBLE_POINTS;
@@ -2626,8 +2625,8 @@ public final class Config
 			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 2);
 			PREMIUM_RATE_SPOIL_CHANCE = CustomSettings.getFloat("PremiumRateSpoilChance", 1);
 			PREMIUM_RATE_SPOIL_AMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmount", 2);
-			String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumRateDropChanceByItemId", "").split(";");
-			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
+			String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumDropChanceMultiplierByItemId", "").split(";");
+			PREMIUM_RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(premiumDropChanceMultiplier.length);
 			if (!premiumDropChanceMultiplier[0].isEmpty())
 			{
 				for (String item : premiumDropChanceMultiplier)
@@ -2635,26 +2634,26 @@ public final class Config
 					String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropChanceMultiplierByItemId \"", item, "\""));
 					}
 					else
 					{
 						try
 						{
-							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							PREMIUM_RATE_DROP_CHANCE_MULTIPLIER.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropChanceMultiplierByItemId \"", item, "\""));
 							}
 						}
 					}
 				}
 			}
-			String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumRateDropAmountByItemId", "").split(";");
-			PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
+			String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumDropAmountMultiplierByItemId", "").split(";");
+			PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER = new HashMap<>(premiumDropAmountMultiplier.length);
 			if (!premiumDropAmountMultiplier[0].isEmpty())
 			{
 				for (String item : premiumDropAmountMultiplier)
@@ -2662,19 +2661,19 @@ public final class Config
 					String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropAmountMultiplierByItemId \"", item, "\""));
 					}
 					else
 					{
 						try
 						{
-							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropAmountMultiplierByItemId \"", item, "\""));
 							}
 						}
 					}
