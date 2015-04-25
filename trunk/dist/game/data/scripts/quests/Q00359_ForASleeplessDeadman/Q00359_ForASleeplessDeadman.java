@@ -38,7 +38,9 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 	private static final int REMAINS_OF_ADEN_RESIDENTS = 5869;
 	// Misc
 	private static final int MIN_LEVEL = 60;
+	private static final int MAX_LEVEL = 67;
 	private static final int REMAINS_COUNT = 60;
+	
 	// Rewards
 	private static final int[] REWARDS = new int[]
 	{
@@ -63,6 +65,7 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 	public Q00359_ForASleeplessDeadman()
 	{
 		super(359, Q00359_ForASleeplessDeadman.class.getSimpleName(), "For a Sleepless Deadman");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30857-06.html");
 		addStartNpc(ORVEN);
 		addTalkId(ORVEN);
 		addKillId(MOBS.keySet());
