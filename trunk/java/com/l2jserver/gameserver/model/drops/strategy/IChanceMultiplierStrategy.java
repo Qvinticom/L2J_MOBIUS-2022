@@ -31,9 +31,9 @@ public interface IChanceMultiplierStrategy
 {
 	public static final IChanceMultiplierStrategy DROP = DEFAULT_STRATEGY(Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER);
 	public static final IChanceMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER);
-	public static final IChanceMultiplierStrategy STATIC = (item, victim, killer) -> 1;
+	public static final IChanceMultiplierStrategy STATIC = (item, victim) -> 1;
 	
-	public static final IChanceMultiplierStrategy QUEST = (item, victim, killer) ->
+	public static final IChanceMultiplierStrategy QUEST = (item, victim) ->
 	{
 		double championmult;
 		if ((item.getItemId() == Inventory.ADENA_ID) || (item.getItemId() == Inventory.ANCIENT_ADENA_ID))
@@ -50,20 +50,15 @@ public interface IChanceMultiplierStrategy
 	
 	public static IChanceMultiplierStrategy DEFAULT_STRATEGY(final double defaultMultiplier)
 	{
-		return (item, victim, killer) ->
+		return (item, victim) ->
 		{
 			float multiplier = 1;
 			if (victim.isChampion())
 			{
 				multiplier *= item.getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS : Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
 			}
-			final Float dropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(item.getItemId());
-			final Float premiumChanceMultiplier = Config.PREMIUM_RATE_DROP_CHANCE_MULTIPLIER.get(item.getItemId());
-			if (Config.PREMIUM_SYSTEM_ENABLED && (premiumChanceMultiplier != null) && (killer != null) && killer.isPlayer() && killer.getActingPlayer().hasPremiumStatus())
-			{
-				multiplier *= premiumChanceMultiplier;
-			}
-			else if (dropChanceMultiplier != null)
+			Float dropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(item.getItemId());
+			if (dropChanceMultiplier != null)
 			{
 				multiplier *= dropChanceMultiplier;
 			}
@@ -75,17 +70,6 @@ public interface IChanceMultiplierStrategy
 			{
 				multiplier *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
 			}
-			else if (Config.PREMIUM_SYSTEM_ENABLED && (killer != null) && killer.isPlayer() && killer.getActingPlayer().hasPremiumStatus())
-			{
-				if ((defaultMultiplier == Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER) && (defaultMultiplier != Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER))
-				{
-					multiplier *= Config.PREMIUM_RATE_DROP_CHANCE;
-				}
-				else
-				{
-					multiplier *= Config.PREMIUM_RATE_SPOIL_CHANCE;
-				}
-			}
 			else
 			{
 				multiplier *= defaultMultiplier;
@@ -94,5 +78,5 @@ public interface IChanceMultiplierStrategy
 		};
 	}
 	
-	public double getChanceMultiplier(GeneralDropItem item, L2Character victim, L2Character killer);
+	public double getChanceMultiplier(GeneralDropItem item, L2Character victim);
 }

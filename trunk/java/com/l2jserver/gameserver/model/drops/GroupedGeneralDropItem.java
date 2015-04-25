@@ -214,14 +214,14 @@ public final class GroupedGeneralDropItem implements IDropItem
 		double sumchance = 0;
 		for (GeneralDropItem item : getItems())
 		{
-			sumchance += (item.getChance(victim, killer) * getChance() * chanceModifier) / 100;
+			sumchance += (item.getChance(victim) * getChance() * chanceModifier) / 100;
 		}
 		GroupedGeneralDropItem group = new GroupedGeneralDropItem(sumchance, getDropCalculationStrategy(), IKillerChanceModifierStrategy.NO_RULES, getPreciseStrategy()); // to discard further deep blue calculations
 		List<GeneralDropItem> items = new ArrayList<>();
 		for (GeneralDropItem item : getItems())
 		{
 			// the item is made almost "static"
-			items.add(new GeneralDropItem(item.getItemId(), item.getMin(victim, killer), item.getMax(victim, killer), (item.getChance(victim, killer) * getChance() * chanceModifier) / sumchance, IAmountMultiplierStrategy.STATIC, IChanceMultiplierStrategy.STATIC, getPreciseStrategy(), IKillerChanceModifierStrategy.NO_RULES, item.getDropCalculationStrategy()));
+			items.add(new GeneralDropItem(item.getItemId(), item.getMin(victim), item.getMax(victim), (item.getChance(victim) * getChance() * chanceModifier) / sumchance, IAmountMultiplierStrategy.STATIC, IChanceMultiplierStrategy.STATIC, getPreciseStrategy(), IKillerChanceModifierStrategy.NO_RULES, item.getDropCalculationStrategy()));
 		}
 		group.setItems(items);
 		return group;

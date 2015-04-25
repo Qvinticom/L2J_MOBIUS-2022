@@ -30,21 +30,16 @@ public interface IAmountMultiplierStrategy
 {
 	public static final IAmountMultiplierStrategy DROP = DEFAULT_STRATEGY(Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER);
 	public static final IAmountMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER);
-	public static final IAmountMultiplierStrategy STATIC = (item, victim, killer) -> 1;
+	public static final IAmountMultiplierStrategy STATIC = (item, victim) -> 1;
 	
 	public static IAmountMultiplierStrategy DEFAULT_STRATEGY(final double defaultMultiplier)
 	{
-		return (item, victim, killer) ->
+		return (item, victim) ->
 		{
 			double multiplier = 1;
 			
-			final Float dropChanceMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
-			final Float premiumAmountMultiplier = Config.PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
-			if (Config.PREMIUM_SYSTEM_ENABLED && (premiumAmountMultiplier != null) && (killer != null) && killer.isPlayer() && killer.getActingPlayer().hasPremiumStatus())
-			{
-				multiplier *= premiumAmountMultiplier;
-			}
-			else if (dropChanceMultiplier != null)
+			Float dropChanceMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
+			if (dropChanceMultiplier != null)
 			{
 				multiplier *= dropChanceMultiplier;
 			}
@@ -56,17 +51,6 @@ public interface IAmountMultiplierStrategy
 			{
 				multiplier *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
 			}
-			else if (Config.PREMIUM_SYSTEM_ENABLED && (killer != null) && killer.isPlayer() && killer.getActingPlayer().hasPremiumStatus())
-			{
-				if ((defaultMultiplier == Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER) && (defaultMultiplier != Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER))
-				{
-					multiplier *= Config.PREMIUM_RATE_DROP_AMOUNT;
-				}
-				else
-				{
-					multiplier *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
-				}
-			}
 			else
 			{
 				multiplier *= defaultMultiplier;
@@ -75,5 +59,5 @@ public interface IAmountMultiplierStrategy
 		};
 	}
 	
-	public double getAmountMultiplier(GeneralDropItem item, L2Character victim, L2Character killer);
+	public double getAmountMultiplier(GeneralDropItem item, L2Character victim);
 }

@@ -79,7 +79,7 @@ public interface IGroupedItemDropCalculationStrategy
 							}
 						}
 						
-						return Collections.singletonList(new ItemHolder(item2.getItemId(), Rnd.get(item2.getMin(victim, killer), item2.getMax(victim, killer)) * amountMultiply));
+						return Collections.singletonList(new ItemHolder(item2.getItemId(), Rnd.get(item2.getMin(victim), item2.getMax(victim)) * amountMultiply));
 					}
 				}
 			}

@@ -146,12 +146,11 @@ public final class GeneralDropItem implements IDropItem
 	/**
 	 * Gets the min drop count modified by server rates
 	 * @param victim the victim who drops the item
-	 * @param killer
 	 * @return the min modified by any rates.
 	 */
-	public final long getMin(L2Character victim, L2Character killer)
+	public final long getMin(L2Character victim)
 	{
-		return (long) (getMin() * getAmountMultiplier(victim, killer));
+		return (long) (getMin() * getAmountMultiplier(victim));
 	}
 	
 	/**
@@ -166,12 +165,11 @@ public final class GeneralDropItem implements IDropItem
 	/**
 	 * Gets the max drop count modified by server rates
 	 * @param victim the victim who drops the item
-	 * @param killer
 	 * @return the max modified by any rates.
 	 */
-	public final long getMax(L2Character victim, L2Character killer)
+	public final long getMax(L2Character victim)
 	{
-		return (long) (getMax() * getAmountMultiplier(victim, killer));
+		return (long) (getMax() * getAmountMultiplier(victim));
 	}
 	
 	/**
@@ -184,6 +182,17 @@ public final class GeneralDropItem implements IDropItem
 	}
 	
 	/**
+	 * Gets the general chance to drop this item modified by rates. <br>
+	 * This shall be used in calculating chance within drop groups.
+	 * @param victim the victim who drops the item
+	 * @return the chance modified by any rates.
+	 */
+	public final double getChance(L2Character victim)
+	{
+		return getChance() * getChanceMultiplier(victim);
+	}
+	
+	/**
 	 * Gets the chance of dropping this item for current killer and victim (modified by server rates and another rules based on killer) <br>
 	 * This shall be used to calculate chance outside of drop groups.
 	 * @param victim the victim who drops the item
@@ -192,7 +201,7 @@ public final class GeneralDropItem implements IDropItem
 	 */
 	public final double getChance(L2Character victim, L2Character killer)
 	{
-		return (getKillerChanceModifier(victim, killer) * getChance());
+		return (getKillerChanceModifier(victim, killer) * getChance(victim));
 	}
 	
 	@Override
@@ -223,22 +232,20 @@ public final class GeneralDropItem implements IDropItem
 	/**
 	 * This gets standard server rates for this item
 	 * @param victim who drops the item
-	 * @param killer
 	 * @return
 	 */
-	protected final double getAmountMultiplier(L2Character victim, L2Character killer)
+	protected final double getAmountMultiplier(L2Character victim)
 	{
-		return _amountStrategy.getAmountMultiplier(this, victim, killer);
+		return _amountStrategy.getAmountMultiplier(this, victim);
 	}
 	
 	/**
 	 * This gets standard server rates for this item
 	 * @param victim who drops the item
-	 * @param killer
 	 * @return
 	 */
-	protected final double getChanceMultiplier(L2Character victim, L2Character killer)
+	protected final double getChanceMultiplier(L2Character victim)
 	{
-		return _chanceStrategy.getChanceMultiplier(this, victim, killer);
+		return _chanceStrategy.getChanceMultiplier(this, victim);
 	}
 }

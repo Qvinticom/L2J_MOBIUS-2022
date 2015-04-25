@@ -40,11 +40,11 @@ public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceMo
 		}
 		else if (Config.DEEPBLUE_DROP_RULES)
 		{
+			
 			return Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0) / 100;
 		}
 		return 1;
 	};
-	
 	public static final INonGroupedKillerChanceModifierStrategy DEFAULT_NONGROUP_STRATEGY = (item, victim, killer) ->
 	{
 		if (((!(victim.isRaid())) && Config.DEEPBLUE_DROP_RULES) || ((victim.isRaid()) && Config.DEEPBLUE_DROP_RULES_RAID))
@@ -52,6 +52,7 @@ public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceMo
 			int levelDifference = victim.getLevel() - killer.getLevel();
 			if (item.getItemId() == Inventory.ADENA_ID)
 			{
+				
 				return Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0) / 100;
 			}
 			return Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0) / 100;
