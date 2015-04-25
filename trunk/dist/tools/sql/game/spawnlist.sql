@@ -48109,3 +48109,6 @@ INSERT INTO `spawnlist` VALUES
 -- Faster respawn for training NPCs
 UPDATE spawnlist SET respawn_delay=20 WHERE npc_templateid in (
 27457, 27532);
+
+-- Rumiese
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES ('Rumiese', 1, 33151, -178480, 147098, 2132, 0, 0, 16383, 0, 0, 0, 0);
