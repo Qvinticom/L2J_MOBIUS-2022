@@ -1608,8 +1608,15 @@
 	<item id="30276" name="Soulshot Pack (R-grade)" additionalName="" type="EtcItem">
 		<!-- Can acquire 5,000 soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="17754,5000,5000,100" />
 	</item>
 	<item id="30277" name="Soulshot Large Pack (R-grade)" additionalName="" type="EtcItem">
 		<!-- Can acquire 10,000 soulshots (R-grade). -->
@@ -1632,8 +1639,15 @@
 	<item id="30280" name="Blessed Spiritshot Pack (R-grade)" additionalName="" type="EtcItem">
 		<!-- Can acquire 5,000 blessed spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="22434,5000,5000,100" />
 	</item>
 	<item id="30281" name="Blessed Spiritshot Large Pack (R-grade)" additionalName="" type="EtcItem">
 		<!-- Can acquire 10,000 blessed spiritshots (R-grade). -->
