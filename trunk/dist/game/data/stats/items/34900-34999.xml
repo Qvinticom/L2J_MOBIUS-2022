@@ -575,10 +575,19 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="34985" name="Talisman - Destruction" additionalName="" type="Armor">
-		<!-- Increases Max HP/MP/CP by 100, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 2%, Atk. Spd. and Casting Spd. by 10, P. Critical Rate by 30, and M. Critical Rate by 10. -->
-		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
+		<set name="icon" val="icon.accessory_destruction_talisman_i01"/>
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
+		<set name="bodypart" val="deco1"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150"/>
+		<set name="equip_reuse_delay" val="30"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="is_destroyable" val="false"/>
+		<set name="item_skill" val="8864-2"/>
+		<set name="useSkillDisTime" val="6"/>
 	</item>
 	<item id="34986" name="Talisman - Annihilation" additionalName="" type="Armor">
 		<!-- Increases Max HP/MP/CP by 300, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 3%, Atk. Spd. and Casting Spd. by 20, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->

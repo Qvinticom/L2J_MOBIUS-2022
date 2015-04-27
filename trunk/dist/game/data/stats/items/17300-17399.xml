@@ -1127,8 +1127,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
 		<set name="crystal_type" val="B" />
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_count" val="395" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="60"/>
+		</for>
 	</item>
 	<item id="17361" name="Necklace of Insolence" additionalName="" type="Armor">
 		<!-- Necklace of Insolence. Has the effect of MP + 26. -->
