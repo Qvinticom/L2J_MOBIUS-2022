@@ -642,10 +642,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23314" level="99" type="L2Monster" name="Nerva Orc Raider">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="95996433" sp="187402" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="602935" hpRegen="7.5" mp="602935" mpRegen="2.7" />
 			<attack physical="2500000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9250" magical="9000" />
@@ -658,10 +657,13 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="18707" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15575" level="1"/>
+			<skill id="15568" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -681,10 +683,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23315" level="99" type="L2Monster" name="Nerva Orc Archer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="103650867" sp="202345" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="663228" hpRegen="7.5" mp="663228" mpRegen="2.7" />
 			<attack physical="2660000" magical="1000000" random="30" critical="8" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
 			<defence physical="9000" magical="8700" />
@@ -697,10 +698,14 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="15304" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15587" level="1"/>
+			<skill id="15620" level="1"/>
+			<skill id="15621" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -721,10 +726,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23316" level="99" type="L2Monster" name="Nerva Orc Priest">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="124437220" sp="242924" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1096245" mpRegen="2.7" />
 			<attack physical="2300000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9100" magical="9000" />
@@ -737,11 +741,14 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="18009" lhand="15588" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="15629" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15149" level="1"/>
+			<skill id="15579" level="1"/>
+			<skill id="15580" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -763,10 +770,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23317" level="99" type="L2Monster" name="Nerva Orc Wizard">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="111937319" sp="218522" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="729003" hpRegen="7.5" mp="729003" mpRegen="2.7" />
 			<attack physical="2220000" magical="500000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="8900" />
@@ -779,11 +785,14 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="8688" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="15629" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15581" level="1"/>
+			<skill id="15582" level="1"/>
+			<skill id="15603" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -805,10 +814,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23318" level="99" type="L2Monster" name="Nerva Orc Assassin">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="104493557" sp="203990" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="882477" hpRegen="7.5" mp="882477" mpRegen="2.7" />
 			<attack physical="2400000" magical="500000" random="30" critical="8" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10000" magical="10000" />
@@ -821,10 +829,13 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="15833" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15583" level="1"/>
+			<skill id="15584" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -846,10 +857,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23319" level="99" type="L2Monster" name="Nerva Orc Ambusher">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="88903792" sp="173556" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="2400000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="8900" />
@@ -862,10 +872,13 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="15304" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15576" level="1"/>
+			<skill id="15577" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -887,10 +900,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23320" level="99" type="L2Monster" name="Nerva Orc Merchant">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="120926012" sp="173556" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="800259" hpRegen="7.5" mp="800259" mpRegen="2.7" />
 			<attack physical="2500000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="8900" />
@@ -905,8 +917,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15579" level="1"/>
+			<skill id="15580" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -928,10 +942,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23321" level="99" type="L2Monster" name="Nerva Orc Warrior">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="215798859" sp="421279" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1644368" hpRegen="7.5" mp="1644368" mpRegen="2.7" />
 			<attack physical="2500000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10000" magical="9000" />
@@ -946,8 +959,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15585" level="1"/>
+			<skill id="15586" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -969,10 +984,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23322" level="99" type="L2Monster" name="Nerva Orc Prefect">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="272259087" sp="531500" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2192491" hpRegen="7.5" mp="2192491" mpRegen="2.7" />
 			<attack physical="2500000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10000" magical="9000" />
@@ -1011,10 +1025,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23323" level="99" type="L2Monster" name="Nerva Orc Elite">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="95996433" sp="187402" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="602935" hpRegen="7.5" mp="602935" mpRegen="2.7" />
 			<attack physical="2300000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="8000" />
@@ -1029,8 +1042,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15589" level="1"/>
+			<skill id="15576" level="1"/>
+			<skill id="15608" level="6"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1051,10 +1067,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23324" level="99" type="L2Monster" name="Captain" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="171101178" sp="334021" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1096245" hpRegen="7.5" mp="1096245" mpRegen="2.7" />
 			<attack physical="2000000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="9000" />
@@ -1069,8 +1084,14 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15585" level="1"/>
+			<skill id="15586" level="1"/>
+			<skill id="15551" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1091,10 +1112,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23325" level="99" type="L2Monster" name="Archer" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="30863520" sp="133868" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="1596000" magical="570000" random="30" critical="8" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
 			<defence physical="6210" magical="6210" />
@@ -1107,14 +1127,17 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="15304" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
-			<!-- <skill id="4411" level="8" /> -->
-			<!-- <skill id="4413" level="7" /> -->
-			<!-- <skill id="4410" level="8" /> -->
-			<!-- <skill id="4412" level="7" /> -->
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15545" level="1"/>
+			<skill id="15557" level="1"/>
+			<skill id="15587" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1135,10 +1158,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23326" level="99" type="L2Monster" name="Wizard" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="30863520" sp="133868" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="1520000" magical="570000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6210" magical="6210" />
@@ -1151,15 +1173,18 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="8688" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="15629" level="1" />
-			<skill id="4416" level="17" />
-			<!-- <skill id="4411" level="8" /> -->
-			<!-- <skill id="4413" level="7" /> -->
-			<!-- <skill id="4410" level="8" /> -->
-			<!-- <skill id="4412" level="7" /> -->
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15541" level="1"/>
+			<skill id="15548" level="1"/>
+			<skill id="15550" level="1"/>
+			<skill id="15558" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1179,10 +1204,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23327" level="99" type="L2Monster" name="Soldier" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="30863520" sp="133868" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="1520000" magical="570000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6210" magical="6210" />
@@ -1195,14 +1219,17 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="18707" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
-			<!-- <skill id="4411" level="8" /> -->
-			<!-- <skill id="4413" level="7" /> -->
-			<!-- <skill id="4410" level="8" /> -->
-			<!-- <skill id="4412" level="7" /> -->
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15556" level="1"/>
+			<skill id="15560" level="1"/>
+			<skill id="15578" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1222,10 +1249,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23328" level="99" type="L2Monster" name="Assassin" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="30863520" sp="133868" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="1520000" magical="570000" random="30" critical="8" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6210" magical="6210" />
@@ -1238,14 +1264,17 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
+		<equipment rhand="15280" />
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
-			<!-- <skill id="4411" level="8" /> -->
-			<!-- <skill id="4413" level="7" /> -->
-			<!-- <skill id="4410" level="8" /> -->
-			<!-- <skill id="4412" level="7" /> -->
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15561" level="1"/>
+			<skill id="15575" level="1"/>
+			<skill id="15568" level="1"/>
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1265,10 +1294,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23329" level="99" type="L2Monster" name="Nerva Kaiser">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<acquire exp="959958945" sp="1874028" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="2000000" magical="1000000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="40000" magical="35000" />
