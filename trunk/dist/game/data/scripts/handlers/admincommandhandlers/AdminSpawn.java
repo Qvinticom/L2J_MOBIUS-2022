@@ -250,7 +250,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				String cmd = st.nextToken();
 				String id = st.nextToken();
-				int respawnTime = 0;
+				int respawnTime = 60; // default is set to 60 seconds
 				int mobCount = 1;
 				if (st.hasMoreTokens())
 				{
