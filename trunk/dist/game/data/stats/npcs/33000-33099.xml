@@ -1672,8 +1672,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="33072" level="85" type="L2Npc" name="Teleport Device">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="33072" level="85" type="L2Teleporter" name="Teleport Device">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />

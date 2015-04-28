@@ -1060,3 +1060,7 @@ INSERT INTO `teleport` VALUES ('Garden of Genesis -> Arcan', 3309001, 210803, 89
 INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023301, 172458, 90314, -1984, 6300, 1, 57);
 INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023302, 172458, 90314, -1984, 0, 1, 57);
 INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023303, 172458, 90314, -1984, 3150, 1, 57);
+
+-- Teleport Device to Gludio
+INSERT INTO `teleport` (`Description`, `id`, `loc_x`, `loc_y`, `loc_z`, `price`, `fornoble`, `itemId`) VALUES
+('Wasteland -> Gludio', 3319001, -14567, 123872, -3104, 0, 0, 57);

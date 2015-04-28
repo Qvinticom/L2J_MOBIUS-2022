@@ -49728,3 +49728,7 @@ INSERT INTO `spawnlist` VALUES ('20_14', '1', '33834', '16233', '-114355', '-226
 INSERT INTO `spawnlist` VALUES ('20_14', '1', '33835', '16437', '-113838', '-226', '0', '0', '46433', '60', '0', '0', '0');
 INSERT INTO `spawnlist` VALUES ('20_14', '1', '33836', '16606', '-114161', '-206', '0', '0', '30709', '60', '0', '0', '0');
 INSERT INTO `spawnlist` VALUES ('20_14', '1', '33839', '14731', '-120358', '-1117', '0', '0', '13464', '60', '0', '0', '0');
+
+-- Teleport Device Wasteland (Entrance)
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wasteland', 1, 33072, -16365, 208927, -3664, 0, 0, 15805, 60, 0, 0, 0);
