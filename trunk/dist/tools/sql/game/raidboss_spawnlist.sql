@@ -345,3 +345,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (25887,43151,144689,-3100,52598,86400,21600,0,0),
 (25888,44970,155903,-1000,52598,86400,21600,0,0),
 (25892,44824,155944,-1056,35323,86400,21600,0,0);
+
+-- Correct Location for Tiger King Karuta
+REPLACE INTO `raidboss_spawnlist` (`boss_id`, `amount`, `loc_x`, `loc_y`, `loc_z`, `heading`, `respawn_delay`, `respawn_random`, `respawn_time`, `currentHp`, `currentMp`) VALUES
+(25173, 1, 80049, 102334, -3577, 28250, 129600, 86400, 0, '235128', '1279');
