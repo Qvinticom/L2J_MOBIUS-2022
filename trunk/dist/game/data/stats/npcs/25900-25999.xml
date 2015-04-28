@@ -26,7 +26,7 @@
 			<height normal="390.6" />
 		</collision>
 	</npc>
-	<npc id="25901" level="96" type="L2Raidboss" name="Spicula Zero" title="Raid Boss">
+	<npc id="25901" level="96" type="L2RaidBoss" name="Spicula Zero" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="2109284352" sp="8437137" />
@@ -95,7 +95,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25902" level="96" type="L2Raidboss" name="Gigantic Golem" title="Raid Boss">
+	<npc id="25902" level="96" type="L2RaidBoss" name="Gigantic Golem" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<minions name="Privates">
@@ -693,7 +693,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25922" level="99" type="L2Raidboss" name="Nerva Chief Turakan" title="Raid Boss">
+	<npc id="25922" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<minions name="Privates">
@@ -849,7 +849,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25923" level="99" type="L2Raidboss" name="Nerva Chief Turakan" title="Raid Boss">
+	<npc id="25923" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<minions name="Privates">
@@ -963,7 +963,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25927" level="99" type="L2Monster" name="Krogel" title="Raid Monster">
+	<npc id="25927" level="99" type="L2RaidBoss" name="Krogel" title="Raid Monster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<minions name="Privates">
@@ -1120,7 +1120,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25928" level="99" type="L2Monster" name="Tebot" title="Raid Monster">
+	<npc id="25928" level="99" type="L2RaidBoss" name="Tebot" title="Raid Monster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="1188371250" sp="4753485" />
@@ -1271,7 +1271,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25929" level="99" type="L2Monster" name="Tegaffe" title="Raid Monster">
+	<npc id="25929" level="99" type="L2RaidBoss" name="Tegaffe" title="Raid Monster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="1188371250" sp="4753485" />
@@ -1422,7 +1422,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25930" level="99" type="L2Monster" name="Thesakar" title="Raid Monster">
+	<npc id="25930" level="99" type="L2RaidBoss" name="Thesakar" title="Raid Monster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="1188371250" sp="4753485" />
@@ -1573,7 +1573,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25931" level="99" type="L2Monster" name="Theor" title="Raid Monster">
+	<npc id="25931" level="99" type="L2RaidBoss" name="Theor" title="Raid Monster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="1188371250" sp="4753485" />
@@ -1726,7 +1726,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25932" level="86" type="L2Raidboss" name="Transformed: Dartanion" title="Raid Boss">
+	<npc id="25932" level="86" type="L2RaidBoss" name="Transformed: Dartanion" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<acquire exp="3394764000" sp="0" />
@@ -1855,7 +1855,7 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25933" level="93" type="L2Raidboss" name="Garden Patrol Captain" title="Raid Boss">
+	<npc id="25933" level="93" type="L2RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<minions name="Privates">
@@ -2069,7 +2069,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25937" level="95" type="L2Raidboss" name="Spicula Negative" title="Raid Boss">
+	<npc id="25937" level="95" type="L2RaidBoss" name="Spicula Negative" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<minions name="Privates">

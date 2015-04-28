@@ -349,3 +349,13 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 -- Correct Location for Tiger King Karuta
 REPLACE INTO `raidboss_spawnlist` (`boss_id`, `amount`, `loc_x`, `loc_y`, `loc_z`, `heading`, `respawn_delay`, `respawn_random`, `respawn_time`, `currentHp`, `currentMp`) VALUES
 (25173, 1, 80049, 102334, -3577, 28250, 129600, 86400, 0, '235128', '1279');
+
+-- Orc Village Area changes
+INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`respawn_delay`,`respawn_random`,`currentHp`,`currentMp`) VALUES
+(25922, 17688, -148888, -184, 17681, 5000, 0, 3271103, 5116283),
+(25927, -18371, -114358, -4072, 16383, 86400, 21600, 3271103, 5116283),
+(25928, 16278, -119509, -880, 25269, 8000, 0, 3271103, 5116283),
+(25929, 16125, -119266, -872, 50450, 8000, 0, 3271103, 5116283),
+(25930, 16086, -119455, -880, 7324, 8000, 0, 3271103, 5116283),
+(25931, 16318, -119300, -872, 40015, 8000, 0, 3271103, 5116283);
+
