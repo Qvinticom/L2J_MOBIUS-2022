@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11746" levels="3" name="Superior Inquisition">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%. -->
-		<set name="icon" val="icon.skill1520" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="abnormalTime" val="3" />
+		<for>
+			<effect name="DamOverTime" val="0">
+				<mul stat="pveMagicalDmg" val="1.5" />
+				<mul stat="MagicalMpConsumeRate" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11747" levels="1" name="Enchanter - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
@@ -24,53 +30,119 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="11749" levels="1" name="Heavy Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful blow on target. -->
-		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="40" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+		<set name="flyRadius" val="60" />
+		<set name="effectRange" val="900" />
+		<set name="castRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="99" />
+		<set name="power" val="5000" />
+		<set name="mpConsume" val="92" />
+		<set name="effectRange" val="400" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="isDebuff" val="true" />
+		<!--<for>
+			<effect abnormalLvl="1" abnormalTime="5" abnormalVisualEffect="sflyup" effectPower="60" effectType="FLY_UP" name="FlyUp" val="0" />
+		</for>-->
 	</skill>
 	<skill id="11750" levels="1" name="Heavy Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful blow on target. -->
-		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+		<set name="flyRadius" val="60" />
+		<set name="effectRange" val="1100" />
 		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="99" />
+		<set name="abnormalTime" val="5" />
+		<set name="power" val="5000" />
+		<set name="mpConsume" val="92" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="trait" val="KNOCKDOWN" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect effectType="KNOCK_DOWN" name="KnockDown" val="0" />
+		</for>
 	</skill>
 	<skill id="11751" levels="1" name="Superior Magic Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases INT by 2, M. Atk. by 103, P. Atk. by 82, and M. Critical Rate by 6%. Skill Cooldown may reset or abnormal status may last up to twice as long depending on your INT. -->
-		<set name="icon" val="icon.skill11251" />
+		<table name="#ench1pAtk">87 93 98 104 109 115 120 126 131 137</table>
+		<table name="#ench1mAtk">109 116 123 130 137 144 151 158 165 172</table>
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
+		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="mAtk" val="103" />
+				<add stat="pAtk" val="82" />
+				<mul stat="mCritRate" val="1.06" />
+				<mul stat="pAtk" val="1.45" />
+				<mul stat="mAtk" val="1.24" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="mAtk" val="#ench1mAtk" />
+				<add stat="pAtk" val="#ench1pAtk" />
+				<mul stat="mCritRate" val="1.06" />
+				<mul stat="pAtk" val="1.45" />
+				<mul stat="mAtk" val="1.24" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11752" levels="8" name="Sustain">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 15 seconds, Heals the selected party member by 172 per second. Further increases incoming Healing power by 10%. Also increases your Healing power. -->
-		<table name="#mpConsumes"> 53 48 50 52 54 56 57 57 </table>
-		<set name="icon" val="icon.skill11752" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
 		<set name="hitTime" val="500" />
+		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<table name="#mpConsume">44 38 39 40 41 42 43 43</table>
+		<table name="#mpInitialConsume">9 10 11 12 13 14 14 14</table>
+		<table name="#power">1.10 1.13 1.16 1.19 1.22 1.25 1.28 1.30</table>
+		<table name="#magicLvl">85 87 89 91 93 95 97 99</table>
+		<table name="#hotValue">172 173 173 174 174 175 175 176</table>
+		<table name="#aggroPoints">419 423 437 446 452 458 463 468</table>
+		<set name="abnormalTime" val="15" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="buffDuration" val="15000" />
+		<set name="chanceType" val="ON_CAST" />
+		<set name="triggeredId" val="11753" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="100" />
+		<set name="activationSkills" val="11752" />
+		<for>
+			<effect name="HealOverTime" val="#hotValue">
+				<mul stat="healEffect" val="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11753" levels="3" name="Sustain">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 10 seconds, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<set name="icon" val="icon.skill11752" />
+		<table name="#power">50 100 200</table>
+		<table name="#activationChance">100 100 100</table>
+		<table name="#abnormalLevel">1 2 3</table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="4" />
+		<set name="abnormalTime" val="10" />
+		<set name="triggeredLevelUpMax" val="3" />
+		<for>
+			<effect name="HealOverTime" val="0">
+				<mul stat="healEffect" val="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11754" levels="5" name="Fairy of Life">
 		<!-- AUTO GENERATED SKILL -->
@@ -404,18 +476,37 @@
 		</enchant1for>
 	</skill>
 	<skill id="11766" levels="8" name="Dark Blast">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 153 Power added to M. Atk. -->
-		<table name="#mpConsumes"> 70 72 76 78 82 85 88 92 </table>
-		<set name="icon" val="icon.skill11766" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
 		<set name="hitTime" val="2280" />
 		<set name="coolTime" val="500" />
+		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="1" />
+		<table name="#mpConsume">56 58 61 63 66 68 71 74</table>
+		<table name="#mpInitialConsume">14 14 15 15 16 17 17 18</table>
+		<table name="#ench1MpConsume">69 64 60 55 51 47 42 38 33 29</table>
+		<table name="#ench1MpInitialConsume">17 16 15 13 12 11 10 9 8 7</table>
+		<table name="#enchelementPower">30 33 36 40 43 46 50 53 56 60</table>
+		<table name="#ench2Duel">156 158 159 161 163 165 167 169 170 172</table>
+		<table name="#magicLvl">85 87 89 91 93 95 97 99</table>
+		<table name="#power">128 132 136 139 143 147 150 154</table>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="630" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+		<set name="effectRange" val="900" />
+		<set name="castMagic" val="MAGIC" />
+		<set name="isDebuff" val="true" />
+		<set name="trait" val="DERANGEMENT" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="pvpPower" val="#ench2Duel" />
+		<enchant3 name="element" val="4" />
+		<enchant3 name="elementPower" val="#enchelementPower" />
+		<enchant4 name="element" val="5" />
+		<enchant4 name="elementPower" val="#enchelementPower" />
 	</skill>
 	<skill id="11767" levels="8" name="Mass Dark Veil">
 		<!-- AUTO GENERATED SKILL -->
@@ -481,30 +572,76 @@
 		</enchant2for>
 	</skill>
 	<skill id="11769" levels="6" name="Dark Backfire">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 sec., target's MP Consumption + 50%, and Casting Spd. and Atk. Spd. - 20%. -->
-		<table name="#mpConsumes"> 35 36 38 41 43 46 </table>
-		<set name="icon" val="icon.skill11769" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
+		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
+		<table name="#mpConsume">28 29 31 33 35 37</table>
+		<table name="#mpInitialConsume">7 7 7 8 8 9</table>
+		<table name="#ench1MpConsume">34 32 30 27 25 23 21 19 16 14</table>
+		<table name="#ench1MpInitialConsume">8 8 7 6 6 5 5 4 4 3</table>
+		<table name="#ench2Power">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#ench34CastAtkSpdReduce">0.79 0.78 0.77 0.76 0.75 0.74 0.73 0.72 0.71 0.70</table>
+		<table name="#magicLvl">85 87 90 93 96 99</table>
+		<table name="#power">60 65 65 70 70 75</table>
+		<table name="#abnormalLvl">1 2 3 4 5 6</table>
+		<table name="#MpConsumeRate">1.5 2.5 3 3.5 3.5 4</table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="lvlDepend" val="2" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="power" val="#power" />
+		<set name="effectRange" val="900" />
+		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="power" val="#ench2Power" />
+		<for>
+			<effect abnormalLvl="#abnormalLvl" abnormalTime="30" abnormalType="mp_cost_up" name="Debuff" val="0">
+				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="mAtkSpd" val="0.8" />
+				<mul stat="pAtkSpd" val="0.8" />
+			</effect>
+		</for>
+		<echant3for>
+			<effect abnormalLvl="6" abnormalTime="30" abnormalType="mp_cost_up" name="Debuff" val="0">
+				<mul stat="MagicalMpConsumeRate" val="4" />
+				<mul stat="PhysicalMpConsumeRate" val="4" />
+				<mul stat="mAtkSpd" val="0.8" />
+				<mul stat="pAtkSpd" val="#ench34CastAtkSpdReduce" />
+			</effect>
+		</echant3for>
+		<echant4for>
+			<effect abnormalLvl="6" abnormalTime="30" abnormalType="mp_cost_up" name="Debuff" val="0">
+				<mul stat="MagicalMpConsumeRate" val="4" />
+				<mul stat="PhysicalMpConsumeRate" val="4" />
+				<mul stat="mAtkSpd" val="#ench34CastAtkSpdReduce" />
+				<mul stat="pAtkSpd" val="0.8" />
+			</effect>
+		</echant4for>
 	</skill>
 	<skill id="11770" levels="1" name="Dissolve">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Removes the aggression of nearby enemies toward you and increases speed by 100. -->
-		<set name="icon" val="icon.skill11770" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="300000" />
-		<set name="isMagic" val="1" />
+		<set name="mpConsume" val="8" />
+		<set name="mpInitialConsume" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="power" val="90" />
+		<set name="abnormalTime" val="15" />
+		<set name="targetType" val="AURA" />
+		<set name="skillType" val="AGGREMOVE" />
+		<set name="skillRadius" val="200" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="castMagic" val="MAGIC" />
+		<for>
+			<effect name="Buff" self="1" val="0">
+				<add stat="runSpd" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11771" levels="1" name="Wise Retainer of Lights">
 		<!-- AUTO GENERATED SKILL -->
@@ -593,33 +730,80 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11776" levels="4" name="Summon Lumi">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons a Spirit of Light. -->
-		<table name="#mpConsumes"> 96 106 117 127 </table>
-		<set name="icon" val="icon.skill11776" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<table name="#mpConsume">77 85 94 102</table>
+		<table name="#mpInitialConsume">19 21 23 25</table>
+		<table name="#npcId">14925 14944 14945 14946</table>
+		<table name="#enchantNpcId">15000 15001 15002 15003 15004 15005 15006 15007 15008 15009</table>
+		<table name="#magicLvl">85 90 95 99</table>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="summonGroupReplace" val="aeore_healer" />
+		<set name="skillToCast" val="11818" />
+		<set name="skillToCastLevel" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="SUMMON" />
+		<set name="castMagic" val="MAGIC" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="npcId" val="#npcId" />
+		<enchant1 name="npcId" val="#enchantNpcId" />
 	</skill>
 	<skill id="11777" levels="5" name="Mark of Lumi">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by 10%, and consumes 113 HP every second for 60 seconds. -->
-		<table name="#coolTimes"> 800 800 800 800 0 </table>
-		<table name="#mpConsumes"> 40 42 45 47 32 </table>
-		<set name="icon" val="icon.skill11777" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
 		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="#coolTimes" />
+		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="4000" />
-		<set name="isMagic" val="1" />
+		<table name="#mpConsume">32 34 36 38 26</table>
+		<table name="#mpInitialConsume">8 8 9 9 6</table>
+		<table name="#ench1count">66 72 78 84 90 96 102 108 118 120</table>
+		<table name="#ench2pDef">0.74 0.73 0.72 0.71 0.70 0.69 0.68 0.67 0.66 0.65</table>
+		<table name="#ench3mDef">0.74 0.73 0.72 0.71 0.70 0.69 0.68 0.67 0.66 0.65</table>
+		<table name="#pDef">0.9 0.85 0.8 0.75 0.75</table>
+		<table name="#mDef">0.9 0.85 0.8 0.75 0.75</table>
+		<table name="#magicLvl">85 88 91 94 97</table>
+		<table name="#dmg">113 118 123 128 134</table>
+		<set name="abnormalTime" val="10" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="89" />
+		<set name="element" val="5" />
+		<set name="elementPower" val="20" />
+		<set name="skillType" val="POISON" />
 		<set name="isDebuff" val="true" />
+		<set name="isRestartableDebuff" val="true" />
+		<set name="castMagic" val="MAGIC" />
+		<set name="targetType" val="ONE" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="effectRange" val="900" />
+		<set name="trait" val="POISON" />
+		<for>
+			<effect name="DamOverTime" val="#dmg">
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mDef" val="#mDef" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="DamOverTime" val="134">
+				<mul stat="pDef" val="0.75" />
+				<mul stat="mDef" val="0.75" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="DamOverTime" val="134">
+				<mul stat="pDef" val="#ench2pDef" />
+				<mul stat="mDef" val="0.75" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="DamOverTime" val="134">
+				<mul stat="pDef" val="0.75" />
+				<mul stat="mDef" val="#ench3mDef" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="11778" levels="6" name="Fatal Sleep">
 		<!-- AUTO GENERATED SKILL -->
@@ -636,27 +820,61 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="11779" levels="5" name="Yoked status">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases Speed, Atk. Spd. and Casting Spd. by 50%. -->
-		<set name="icon" val="icon.skill1394" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<table name="#spd">0.5 0.4 0.3 0.2 0.1</table>
+		<table name="#magicLvl">85 86 89 92 95 98</table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="isTriggeredSkill" val="true" />
+		<set name="power" val="1000000" />
+		<set name="abnormalTime" val="10" />
 		<set name="targetType" val="SELF" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" val="0">
+				<mul stat="runSpd" val="#spd" />
+				<mul stat="mAtkSpd" val="#spd" />
+				<mul stat="pAtkSpd" val="#spd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11780" levels="6" name="Dark Devour">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases target's Recovery by 50%. -->
-		<table name="#mpConsumes"> 35 35 37 40 42 45 </table>
-		<set name="icon" val="icon.skill11780" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
+		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
+		<table name="#mpConsume">28 28 30 32 34 36</table>
+		<table name="#mpInitialConsume">7 7 7 8 8 9</table>
+		<table name="#ench1MpConsume">33 31 29 27 25 23 20 18 16 14</table>
+		<table name="#ench1MpInitialConsume">8 7 7 6 6 5 5 4 4 3</table>
+		<table name="#ench2Power">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#ench3debuffPower">0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.20</table>
+		<table name="#magicLvl">85 86 89 92 95 98</table>
+		<table name="#gainHp">0.5 0.48 0.44 0.4 0.35 0.3</table>
+		<table name="#power">60 65 65 70 70 75</table>
+		<set name="abnormalTime" val="60" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="targetType" val="ONE" />
+		<set name="lvlDepend" val="1" />
+		<set name="power" val="#power" />
+		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="effectRange" val="900" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="power" val="#ench2Power" />
+		<for>
+			<effect name="Debuff" val="0">
+				<mul stat="healEffect" val="#gainHp" />
+			</effect>
+		</for>
+		<enchant3for>
+			<effect name="Debuff" val="0">
+				<mul stat="healEffect" val="#ench3debuffPower" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="11781" levels="6" name="Dark Devour">
 		<!-- AUTO GENERATED SKILL -->
@@ -667,11 +885,21 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11782" levels="2" name="Frantic Healing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casting Spd. + 30% when equipped with a Robe/ Light Armor. MP is continuously consumed. -->
-		<set name="icon" val="icon.skill11782" />
-		<set name="operateType" val="TOGGLE" />
+		<table name="#mAtkSpd">1.3 1.5</table>
+		<set name="abnormalTime" val="3" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="TOGGLE" />
+		<for>
+			<effect name="DamOverTime" val="0">
+				<mul stat="mAtkSpd" val="#mAtkSpd">
+					<using kind="MAGIC,LIGHT" />
+				</mul>
+				<mul stat="MagicalMpConsumeRate" val="1.3" />
+				<mul stat="PhysicalMpConsumeRate" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11783" levels="1" name="Reset">
 		<!-- AUTO GENERATED SKILL -->
@@ -713,17 +941,39 @@
 		</for>
 	</skill>
 	<skill id="11785" levels="3" name="Party Resurrection">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Resurrects all dead party members and restores 80% of the XP lost. -->
-		<table name="#mpConsumes"> 133 145 152 </table>
-		<set name="icon" val="icon.skill11785" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
-		<set name="isMagic" val="4" />
+		<table name="#mpConsume">107 116 122</table>
+		<table name="#mpInitialConsume">26 29 30</table>
+		<table name="#ench1MpConsume">117 112 107 102 97 92 87 82 78 73</table>
+		<table name="#magicLvl">89 93 96</table>
+		<table name="#power">80 90 100</table>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="aggroPoints" val="578" />
+		<set name="castMagic" val="MAGIC" />
+		<set name="staticReuse" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="900" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="PARTY" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<cond>
+			<player canResurrect="true" />
+		</cond>
+		<for>
+			<effect name="Resurrection">
+				<param power="#power" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Resurrection">
+				<param power="#ench1power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11786" levels="1" name="Debuff Immunity">
 		<!-- AUTO GENERATED SKILL -->
@@ -735,46 +985,169 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11787" levels="1" name="Superior Armor Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2. Max HP + 4299 and M. Def. + 610 when equipped with Light Armor or a Robe. P. Def. + 1126 when equipped with a Robe, and P. Def. + 809 when equipped with Light Armor. Additional HP Recovery Bonus + 2.8 and MP Recovery Bonus + 3.6. -->
-		<set name="icon" val="icon.skill11787" />
-		<set name="operateType" val="PASSIVE" />
+		<table name="#ench1pDef">116 123 130 137 144 151 158 165 172 180</table>
+		<table name="#ench1mDef">320 340 360 380 400 420 440 460 480 500</table>
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="maxHp" val="4299">
+					<using kind="MAGIC,LIGHT" />
+				</add>
+				<add stat="pDef" val="109">
+					<using kind="MAGIC" />
+				</add>
+				<add stat="pDef" val="73">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef" val="300">
+					<using kind="MAGIC" />
+					<using kind="LIGHT" />
+				</add>
+				<add stat="regHp" val="2.8" />
+				<add stat="regMp" val="3.6" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="maxHp" val="4299">
+					<using kind="MAGIC,LIGHT" />
+				</add>
+				<add stat="pDef" val="#ench1pDef">
+					<using kind="MAGIC" />
+				</add>
+				<add stat="pDef" val="73">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef" val="#ench1mDef">
+					<using kind="MAGIC" />
+				</add>
+				<add stat="mDef" val="300">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="regHp" val="2.8" />
+				<add stat="regMp" val="3.6" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11788" levels="1" name="Superior Casting Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2. Max MP + 313, Casting Spd. + 23%, MP Consumption for magic skills - 15%, and Cooldown - 25%. -->
-		<set name="icon" val="icon.skill11788" />
-		<set name="operateType" val="PASSIVE" />
+		<table name="#ench1maxMp">333 353 374 394 415 435 455 476 496 517</table>
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="PASSIVE" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="maxMp" val="313" />
+				<mul stat="mAtkSpd" val="1.23" />
+				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="mReuse" val="0.75" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="maxMp" val="#ench1maxMp" />
+				<mul stat="mAtkSpd" val="1.23" />
+				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="mReuse" val="0.75" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11789" levels="1" name="Superior Anti Magic">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2, M. Def. + 139 and Attack Magic Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance for 10 seconds. -->
-		<set name="icon" val="icon.skill10004" />
-		<set name="operateType" val="PASSIVE" />
+		<table name="#ench1mDef">146 154 162 170 178 186 194 202 210 218</table>
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="triggeredId" val="10058" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="20" />
+		<set name="activationElements" val="0,1,2,3,4,5" />
+		<set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL" />
+		<for>
+			<effect name="Buff">
+				<add stat="mDef" val="139" />
+				<add stat="INT" val="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="mDef" val="#ench1mDef" />
+				<add stat="INT" val="2" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11790" levels="1" name="Superior Elemental Resistance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2. Increases Fire/Water/Wind/Earth Resistance by 20. -->
-		<set name="icon" val="icon.skill10044" />
+		<table name="#ench1Vuln">21 22 23 24 25 26 27 28 29 30</table>
+		<set name="magicLvl" val="87" />
 		<set name="operateType" val="PASSIVE" />
+		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="waterRes" val="20" />
+				<add stat="fireRes" val="20" />
+				<add stat="windRes" val="20" />
+				<add stat="earthRes" val="20" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="waterRes" val="#ench1Vuln" />
+				<add stat="fireRes" val="#ench1Vuln" />
+				<add stat="windRes" val="#ench1Vuln" />
+				<add stat="earthRes" val="#ench1Vuln" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11791" levels="1" name="Superior Sigil Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2. Increases MP Recovery Bonus by 20 and power of recovery skills by 40 when equipped with a Sigil. -->
-		<set name="icon" val="icon.skill11791" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
+		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<add stat="regMp" val="20" />
+				<add stat="healEffect" val="40">
+					<using kind="SIGIL" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11792" levels="1" name="Superior Mental Attack Resistance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- INT + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker. -->
-		<set name="icon" val="icon.skill10005" />
-		<set name="operateType" val="PASSIVE" />
+		<table name="#enchPower">21 22 23 24 25 26 27 28 29 30</table>
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="PASSIVE" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<param SHOCK="20" />
+				<param HOLD="20" />
+				<param SLEEP="20" />
+				<param DERANGEMENT="20" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+				<param SHOCK="#enchPower" />
+				<param HOLD="#enchPower" />
+				<param SLEEP="#enchPower" />
+				<param DERANGEMENT="#enchPower" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11793" levels="3" name="Sustain">
 		<!-- AUTO GENERATED SKILL -->

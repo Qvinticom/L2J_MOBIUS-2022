@@ -186,6 +186,7 @@ public final class EffectMasterHandler
 		TargetMeProbability.class,
 		Teleport.class,
 		TeleportToTarget.class,
+		ThrowHorizontal.class,
 		ThrowUp.class,
 		TransferDamage.class,
 		TransferHate.class,

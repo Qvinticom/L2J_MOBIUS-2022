@@ -316,7 +316,7 @@
 	<skill id="11828" levels="1" name="Progressive Heal" enchantGroup1="10">
 		<!-- Heals target and the 10 most injured allies around target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<table name="#ench1Cost"> 62 59 57 54 52 49 47 44 41 38 </table>
-		<table name="#ench1mpConsume"> 448 434 420 405 391 374 360 345 331 316 </table> 
+		<table name="#ench1mpConsume"> 448 434 420 405 391 374 360 345 331 316 </table>
 		<table name="#ench1mpInitialConsume"> 112 108 105 101 97 93 90 86 82 79 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="300" />
