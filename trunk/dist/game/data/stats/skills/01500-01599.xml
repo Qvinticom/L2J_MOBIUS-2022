@@ -284,8 +284,8 @@
 		</for>
 	</skill>
 	<skill id="1509" levels="6" name="Seal of Limit">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 81 82 85 90 95 99 </table>
+		<table name="#mpConsume"> 90 130 252 278 306 332 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="LIMIT" />
@@ -299,8 +299,8 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="44" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="11" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="2000" />

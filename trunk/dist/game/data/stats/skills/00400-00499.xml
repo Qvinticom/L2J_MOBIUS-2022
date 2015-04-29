@@ -1515,7 +1515,8 @@
 		</for>
 	</skill>
 	<skill id="438" levels="4" name="Soul of the Phoenix">
-		<!-- TODO: Auto level parse, Requires manual update -->
+		<table name="#magicLvl"> 79 85 95 99 </table>
+		<table name="#reuseDelay"> 4500000 4200000 3900000 3600000 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
@@ -1525,11 +1526,11 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="8873" /> <!-- Phoenix Blood -->
-		<set name="magicLvl" val="79" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="200" />
 		<set name="mpInitialConsume" val="50" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
+		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />

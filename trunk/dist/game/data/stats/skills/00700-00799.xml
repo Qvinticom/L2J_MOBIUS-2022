@@ -2425,8 +2425,9 @@
 		</for>
 	</skill>
 	<skill id="791" levels="5" name="Lightning Shock">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#magicLvl"> 81 85 90 95 95 </table>
+		<table name="#mpConsume"> 67 72 77 83 89 </table>
+		<table name="#power"> 149 158 169 179 188 </table>
 		<set name="abnormalTime" val="5" />
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
@@ -2439,10 +2440,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="52" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="69" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />

@@ -1497,17 +1497,17 @@
 		</selfEffects>
 	</skill>
 	<skill id="346" levels="12" name="Raging Force">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#magicLvl"> 78 79 80 81 85 86 88 90 92 94 96 98 </table>
+		<table name="#mpConsume"> 50 55 56 57 58 59 61 63 65 67 69 71 </table>
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-340" />
 		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="1200" />
 		<set name="hpConsume" val="50" />
 		<set name="icon" val="icon.skill0346" />
-		<set name="magicLvl" val="78" />
-		<set name="mpConsume" val="5" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
