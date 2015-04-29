@@ -55,13 +55,13 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 			return;
 		}
 		request.setProcessing(true);
-		
 		final L2PcInstance requestor = request.getActiveChar();
 		if (requestor == null)
 		{
 			return;
 		}
 		final L2Party party = requestor.getParty();
+		
 		requestor.sendPacket(new JoinParty(_response));
 		
 		switch (_response)
@@ -75,7 +75,6 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 			}
 			case 0: // Party cancel by player
 			{
-				
 				// requestor.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY); FIXME: Done in client?
 				break;
 			}
@@ -144,7 +143,7 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 			}
 		}
 		
-		if (requestor.isInParty())
+		if (party != null)
 		{
 			party.setPendingInvitation(false); // if party is null, there is no need of decreasing
 		}
