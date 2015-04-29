@@ -3368,7 +3368,7 @@
 		</skill_list>
 		<corpse_time>300</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="48.80440139770508">
@@ -3708,7 +3708,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="30">

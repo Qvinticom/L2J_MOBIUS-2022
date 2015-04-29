@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27500" level="80" type="L2Npc" name="Ketra's Commander Tayr" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
@@ -26,7 +26,7 @@
 		</collision>
 	</npc>
 	<npc id="27501" level="80" type="L2Npc" name="Ketra's Chief Brakki" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>ANIMAL</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
@@ -51,7 +51,7 @@
 		</collision>
 	</npc>
 	<npc id="27502" level="80" type="L2Npc" name="Varka's Commander Mos" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
@@ -76,7 +76,7 @@
 		</collision>
 	</npc>
 	<npc id="27503" level="80" type="L2Npc" name="Varka's Chief Horus" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
@@ -101,7 +101,7 @@
 		</collision>
 	</npc>
 	<npc id="27504" level="60" type="L2Npc" name="Guardian Giant Akum" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>GIANT</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="13378" hpRegen="7.5" mp="13378" mpRegen="2.7" />
@@ -126,7 +126,7 @@
 		</collision>
 	</npc>
 	<npc id="27505" level="84" type="L2Monster" name="Awakening Meccadan" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<parameters>
 			<minions name="Privates">
 				<npc id="27506" count="3" respawnTime= "3" weightPoint="4" />
@@ -156,7 +156,7 @@
 		</collision>
 	</npc>
 	<npc id="27506" level="84" type="L2Npc" name="Meccadan's Minion" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="6987" hpRegen="7.5" mp="6987" mpRegen="2.7" />
@@ -181,7 +181,7 @@
 		</collision>
 	</npc>
 	<npc id="27507" level="99" type="L2Npc" name="One-armed Zombie" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>UNDEAD</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="27406" hpRegen="7.5" mp="27406" mpRegen="2.7" />
@@ -206,7 +206,7 @@
 		</collision>
 	</npc>
 	<npc id="27508" level="65" type="L2Npc" name="Swamp of Screams Scout" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="3794" hpRegen="7.5" mp="3794" mpRegen="2.7" />
@@ -231,7 +231,7 @@
 		</collision>
 	</npc>
 	<npc id="27509" level="65" type="L2Npc" name="Forest of the Dead Scout" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="3794" hpRegen="7.5" mp="3794" mpRegen="2.7" />
@@ -256,7 +256,7 @@
 		</collision>
 	</npc>
 	<npc id="27510" level="70" type="L2Npc" name="Ceremony Executor" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMAN</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
@@ -281,7 +281,7 @@
 		</collision>
 	</npc>
 	<npc id="27511" level="76" type="L2Npc" name="Ketra Backup Shooter" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
@@ -306,7 +306,7 @@
 		</collision>
 	</npc>
 	<npc id="27512" level="76" type="L2Npc" name="Ketra Backup Wizard" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMAN</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
@@ -331,7 +331,7 @@
 		</collision>
 	</npc>
 	<npc id="27513" level="78" type="L2Npc" name="Belos" title="Sakum's Clone">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>ANIMAL</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="5145" hpRegen="7.5" mp="5145" mpRegen="2.7" />
@@ -356,7 +356,7 @@
 		</collision>
 	</npc>
 	<npc id="27514" level="76" type="L2Npc" name="Varka Backup Shooter" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
@@ -381,7 +381,7 @@
 		</collision>
 	</npc>
 	<npc id="27515" level="76" type="L2Npc" name="Varka Backup Wizard" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMAN</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
@@ -406,7 +406,7 @@
 		</collision>
 	</npc>
 	<npc id="27516" level="78" type="L2Npc" name="Kampf" title="Sakum's Clone">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>ANIMAL</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="5145" hpRegen="7.5" mp="5145" mpRegen="2.7" />
@@ -431,7 +431,7 @@
 		</collision>
 	</npc>
 	<npc id="27517" level="65" type="L2Npc" name="Armed Assault" title="Embryo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+
 		<race>HUMANOID</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="3794" hpRegen="7.5" mp="3794" mpRegen="2.7" />
@@ -613,7 +613,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1270745" hpRegen="5" mp="467" mpRegen="4" />
+			<vitals hp="1270" hpRegen="5" mp="467" mpRegen="4" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />

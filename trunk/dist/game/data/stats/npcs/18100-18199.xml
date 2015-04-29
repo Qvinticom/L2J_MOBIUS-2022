@@ -40,7 +40,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -84,7 +84,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -133,7 +133,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -192,7 +192,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -249,7 +249,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -307,7 +307,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -358,7 +358,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" dodge="15" isAggressive="false" />
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="500" dodge="15" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="32.4" />
@@ -404,7 +404,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -460,7 +460,7 @@
 		</skill_list>
 		<corpse_time>3</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="70">
@@ -508,7 +508,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -565,7 +565,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -623,7 +623,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -681,7 +681,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -739,7 +739,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -797,7 +797,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -854,7 +854,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -912,7 +912,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -970,7 +970,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -1028,7 +1028,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="false">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>

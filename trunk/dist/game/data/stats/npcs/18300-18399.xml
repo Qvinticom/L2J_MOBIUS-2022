@@ -1369,7 +1369,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
 			<clan_list>
 				<clan>ICE</clan>
 			</clan_list>
@@ -2144,7 +2144,7 @@
 			<skill id="4416" level="13" /> <!-- Fairies -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="100">

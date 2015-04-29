@@ -29,7 +29,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="75" />
@@ -64,7 +64,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="54" />
@@ -99,7 +99,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="35" />
@@ -134,7 +134,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="54" />
@@ -169,7 +169,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="35" />
@@ -205,7 +205,7 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="0" />
 			<height normal="0" />
@@ -241,7 +241,7 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="0" />
 			<height normal="0" />
@@ -279,7 +279,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -318,7 +318,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000">
+		<ai aggroRange="500">
 			<clan_list>
 				<clan>ANDREAS</clan>
 			</clan_list>
@@ -358,7 +358,7 @@
 			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" />
+		<ai type="BALANCED" aggroRange="500" />
 		<collision>
 			<radius normal="23" />
 			<height normal="25" />
@@ -394,7 +394,7 @@
 			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" />
+		<ai type="BALANCED" aggroRange="500" />
 		<collision>
 			<radius normal="34" />
 			<height normal="40" />

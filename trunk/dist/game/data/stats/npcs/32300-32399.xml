@@ -219,7 +219,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" />
+		<ai type="BALANCED" aggroRange="500" />
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
@@ -1254,7 +1254,7 @@
 			<skill id="4416" level="25" /> <!-- Kamael -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="22.5" />
@@ -1295,7 +1295,7 @@
 			<skill id="4416" level="25" /> <!-- Kamael -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="22.5" />
@@ -1336,7 +1336,7 @@
 			<skill id="4416" level="15" /> <!-- Elves -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="6" />
 			<height normal="21" />
@@ -1376,7 +1376,7 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="17.5" />
@@ -1417,7 +1417,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1457,7 +1457,7 @@
 			<skill id="4416" level="17" /> <!-- Orcs -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="26" />
@@ -1801,7 +1801,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="0.01" />
 			<height normal="35" />
@@ -1837,7 +1837,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />

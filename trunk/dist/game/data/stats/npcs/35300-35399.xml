@@ -31,7 +31,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -73,7 +73,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -115,7 +115,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -157,7 +157,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -199,7 +199,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -241,7 +241,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -283,7 +283,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -325,7 +325,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -388,7 +388,7 @@
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -451,7 +451,7 @@
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -514,7 +514,7 @@
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -562,7 +562,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" />
+		<ai aggroRange="500" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -611,7 +611,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -660,7 +660,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -700,7 +700,7 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="7" />
 			<height normal="16.5" />
@@ -739,7 +739,7 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="17" />
@@ -792,7 +792,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
@@ -831,7 +831,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="25" />
@@ -871,7 +871,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="21.5" />
@@ -911,7 +911,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
@@ -952,7 +952,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -988,7 +988,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" />
 			<height normal="65" />
@@ -1024,7 +1024,7 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="34" />
 			<height normal="65" />
@@ -1061,7 +1061,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1103,7 +1103,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1145,7 +1145,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1191,7 +1191,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1237,7 +1237,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1279,7 +1279,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1321,7 +1321,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1363,7 +1363,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1405,7 +1405,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1447,7 +1447,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1489,7 +1489,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1531,7 +1531,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1573,7 +1573,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1615,7 +1615,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1657,7 +1657,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1699,7 +1699,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1745,7 +1745,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1791,7 +1791,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1833,7 +1833,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1875,7 +1875,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1917,7 +1917,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1959,7 +1959,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2001,7 +2001,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2043,7 +2043,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2085,7 +2085,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2127,7 +2127,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2169,7 +2169,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2211,7 +2211,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2273,7 +2273,7 @@
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2335,7 +2335,7 @@
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2397,7 +2397,7 @@
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -2444,7 +2444,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" />
+		<ai aggroRange="500" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -2492,7 +2492,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -2539,7 +2539,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -2586,7 +2586,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -2633,7 +2633,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -2680,7 +2680,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -2720,7 +2720,7 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="7" />
 			<height normal="16.5" />
@@ -2759,7 +2759,7 @@
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="17" />
@@ -2815,7 +2815,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
@@ -2854,7 +2854,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -2893,7 +2893,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -2933,7 +2933,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
@@ -2973,7 +2973,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -3012,7 +3012,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3054,7 +3054,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3096,7 +3096,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3138,7 +3138,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3180,7 +3180,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3222,7 +3222,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3264,7 +3264,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3307,7 +3307,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3349,7 +3349,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3391,7 +3391,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3433,7 +3433,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3475,7 +3475,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3517,7 +3517,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3559,7 +3559,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>PARTISAN</clan>
 			</clan_list>
@@ -3603,7 +3603,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" />
+		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -3643,7 +3643,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -3691,7 +3691,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3730,7 +3730,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3778,7 +3778,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3817,7 +3817,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3865,7 +3865,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3904,7 +3904,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3952,7 +3952,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -3991,7 +3991,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4039,7 +4039,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4078,7 +4078,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4126,7 +4126,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4165,7 +4165,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4213,7 +4213,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4252,7 +4252,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4300,7 +4300,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -4339,7 +4339,7 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />

@@ -134,7 +134,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="4500" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="4500" isAggressive="false">
 			<clan_list>
 				<clan>QUEEN_ANT</clan>
 			</clan_list>
@@ -175,7 +175,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="700" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="700" isAggressive="false">
 			<clan_list>
 				<clan>QUEEN_ANT</clan>
 			</clan_list>
@@ -221,7 +221,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="700">
+		<ai aggroRange="500" clanHelpRange="700">
 			<clan_list>
 				<clan>QUEEN_ANT</clan>
 			</clan_list>
@@ -267,7 +267,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="700" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="700" isAggressive="false">
 			<clan_list>
 				<clan>QUEEN_ANT</clan>
 			</clan_list>
@@ -748,7 +748,7 @@
 		</skill_list>
 		<corpse_time>300</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="3500" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="3500" isAggressive="false">
 			<clan_list>
 				<clan>ORFEN</clan>
 			</clan_list>
@@ -1238,7 +1238,7 @@
 		</skill_list>
 		<corpse_time>13</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4127" />
 		</ai>
 		<drop_lists>
@@ -1316,7 +1316,7 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
 			<clan_list>
 				<clan>ARCHANGEL</clan>
 			</clan_list>
@@ -1358,7 +1358,7 @@
 		</skill_list>
 		<corpse_time>300</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="30">
@@ -1868,7 +1868,7 @@
 			<skill id="6675" level="1" /> <!-- Lavasaurus Firstborn Attack -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300">
 			<clan_list>
 				<clan>VALAKAS</clan>
 			</clan_list>
@@ -1919,7 +1919,7 @@
 			<skill id="4978" level="1" /> <!-- Raid Boss - Level 81 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -1974,7 +1974,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2014,7 +2014,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2065,7 +2065,7 @@
 			<skill id="4979" level="1" /> <!-- Raid Boss - Level 82 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2120,7 +2120,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2160,7 +2160,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2213,7 +2213,7 @@
 			<skill id="4980" level="1" /> <!-- Raid Boss - Level 83 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2277,7 +2277,7 @@
 			<skill id="4981" level="1" /> <!-- Raid Boss - Level 84 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2332,7 +2332,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2378,7 +2378,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2438,7 +2438,7 @@
 			<skill id="4982" level="1" /> <!-- Raid Boss - Level 85 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2491,7 +2491,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2531,7 +2531,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2577,7 +2577,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -2623,7 +2623,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>FIRE</clan>
 			</clan_list>
@@ -3122,7 +3122,7 @@
 			<skill id="4996" level="1" /> <!-- Venom - Range Teleport -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1000" />
+		<ai aggroRange="500" />
 		<drop_lists>
 			<death>
 				<group chance="68.26920318603516">
@@ -3234,7 +3234,7 @@
 			<skill id="5036" level="1" /> <!-- Raid Boss - Level 60 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
 			<clan_list>
 				<clan>ICE</clan>
 			</clan_list>
@@ -3739,7 +3739,7 @@
 			<skill id="5180" level="1" /> <!-- Raid Boss - Level 80 -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<group chance="53.194801330566406">
@@ -4369,7 +4369,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
 			<skill maxChance="25" />
 		</ai>
 		<drop_lists>
@@ -4780,7 +4780,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -4832,7 +4832,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -4884,7 +4884,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -4936,7 +4936,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -4988,7 +4988,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5040,7 +5040,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5092,7 +5092,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5144,7 +5144,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5196,7 +5196,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5248,7 +5248,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5300,7 +5300,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5352,7 +5352,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5404,7 +5404,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5456,7 +5456,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5508,7 +5508,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5560,7 +5560,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5612,7 +5612,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -5664,7 +5664,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1000" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="500" isAggressive="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
