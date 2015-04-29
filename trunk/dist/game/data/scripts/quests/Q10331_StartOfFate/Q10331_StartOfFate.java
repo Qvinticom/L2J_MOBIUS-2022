@@ -19,7 +19,6 @@
 package quests.Q10331_StartOfFate;
 
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
-import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 
@@ -288,10 +286,6 @@ public class Q10331_StartOfFate extends Quest
 			player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_009_enchant_01.htm", TutorialShowHtml.LARGE_WINDOW));
 			MultisellData.getInstance().separateAndSend(717, player, npc, false);
 			player.broadcastUserInfo();
-			if (SkillTreesData.getInstance().hasAvailableSkills(player, player.getClassId()))
-			{
-				player.sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
-			}
 			qs.exitQuest(false, true);
 		}
 		

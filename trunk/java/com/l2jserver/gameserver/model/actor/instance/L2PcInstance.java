@@ -274,6 +274,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExFishingStart;
 import com.l2jserver.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jserver.gameserver.network.serverpackets.ExGetOnAirShip;
 import com.l2jserver.gameserver.network.serverpackets.ExMagicAttackInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import com.l2jserver.gameserver.network.serverpackets.ExOlympiadMode;
 import com.l2jserver.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jserver.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
@@ -2378,12 +2379,20 @@ public final class L2PcInstance extends L2Playable
 			
 			sendPacket(new ExSubjobInfo(this, SubclassInfoType.CLASS_CHANGED));
 			
+			setLearningClass(getClassId());
+			
 			// Add AutoGet skills and normal skills and/or learnByFS depending on configurations.
 			rewardSkills();
 			
 			if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && Config.DECREASE_SKILL_LEVEL)
 			{
 				checkPlayerSkills();
+			}
+			
+			// Send ExNewSkillToLearnByLevelUp if there are new skills to learn.
+			if (SkillTreesData.getInstance().hasAvailableSkills(this, getClassId()))
+			{
+				sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
 			}
 			
 			notifyFriends(L2FriendStatus.MODE_CLASS);
