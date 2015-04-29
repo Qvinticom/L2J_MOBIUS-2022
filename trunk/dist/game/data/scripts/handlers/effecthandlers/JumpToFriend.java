@@ -18,6 +18,8 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.GeoData;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -28,12 +30,12 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 /**
- * Throw Horizontal effect implementation.
+ * Jump to Friend effect implementation.
  * @author Mobius
  */
-public final class ThrowHorizontal extends AbstractEffect
+public final class JumpToFriend extends AbstractEffect
 {
-	public ThrowHorizontal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public JumpToFriend(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
@@ -73,8 +75,10 @@ public final class ThrowHorizontal extends AbstractEffect
 			return;
 		}
 		
-		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), FlyType.THROW_HORIZONTAL));
-		info.getEffected().setXYZ(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ());
-		info.getEffected().broadcastPacket(new ValidateLocation(info.getEffected()));
+		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), info.getEffected().getInstanceId());
+		
+		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), destination, FlyType.JUMP_EFFECTED));
+		info.getEffected().setXYZ(destination);
+		info.getEffector().broadcastPacket(new ValidateLocation(info.getEffected()));
 	}
 }
