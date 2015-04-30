@@ -227,105 +227,6 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.setIsDead(true);
 		}
 		
-		boolean showClanNotice = false;
-		
-		// Clan related checks are here
-		if (activeChar.getClan() != null)
-		{
-			notifyClanMembers(activeChar);
-			
-			notifySponsorOrApprentice(activeChar);
-			
-			AuctionableHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan());
-			
-			if (clanHall != null)
-			{
-				if (!clanHall.getPaid())
-				{
-					activeChar.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-				}
-			}
-			
-			for (Siege siege : SiegeManager.getInstance().getSieges())
-			{
-				if (!siege.isInProgress())
-				{
-					continue;
-				}
-				
-				if (siege.checkIsAttacker(activeChar.getClan()))
-				{
-					activeChar.setSiegeState((byte) 1);
-					activeChar.setSiegeSide(siege.getCastle().getResidenceId());
-				}
-				
-				else if (siege.checkIsDefender(activeChar.getClan()))
-				{
-					activeChar.setSiegeState((byte) 2);
-					activeChar.setSiegeSide(siege.getCastle().getResidenceId());
-				}
-			}
-			
-			for (FortSiege siege : FortSiegeManager.getInstance().getSieges())
-			{
-				if (!siege.isInProgress())
-				{
-					continue;
-				}
-				
-				if (siege.checkIsAttacker(activeChar.getClan()))
-				{
-					activeChar.setSiegeState((byte) 1);
-					activeChar.setSiegeSide(siege.getFort().getResidenceId());
-				}
-				
-				else if (siege.checkIsDefender(activeChar.getClan()))
-				{
-					activeChar.setSiegeState((byte) 2);
-					activeChar.setSiegeSide(siege.getFort().getResidenceId());
-				}
-			}
-			
-			for (SiegableHall hall : CHSiegeManager.getInstance().getConquerableHalls().values())
-			{
-				if (!hall.isInSiege())
-				{
-					continue;
-				}
-				
-				if (hall.isRegistered(activeChar.getClan()))
-				{
-					activeChar.setSiegeState((byte) 1);
-					activeChar.setSiegeSide(hall.getId());
-					activeChar.setIsInHideoutSiege(true);
-				}
-			}
-			
-			// Residential skills support
-			if (activeChar.getClan().getCastleId() > 0)
-			{
-				CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
-			}
-			
-			if (activeChar.getClan().getFortId() > 0)
-			{
-				FortManager.getInstance().getFortByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
-			}
-			
-			showClanNotice = activeChar.getClan().isNoticeEnabled();
-			
-			// Show clan crest
-			if (activeChar.getClan().getCrestId() > 0)
-			{
-				sendPacket(new PledgeCrest(activeChar.getClan().getCrestId()));
-			}
-			// Show ally crest
-			if (activeChar.getClan().getAllyCrestId() > 0)
-			{
-				sendPacket(new AllyCrest(activeChar.getClan().getAllyCrestId()));
-			}
-		}
-		
 		if (Config.ENABLE_VITALITY)
 		{
 			activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
@@ -427,6 +328,103 @@ public class EnterWorld extends L2GameClientPacket
 		
 		// Send Quest List
 		activeChar.sendPacket(new QuestList());
+		
+		boolean showClanNotice = false;
+		
+		// Clan related checks are here
+		if (activeChar.getClan() != null)
+		{
+			notifyClanMembers(activeChar);
+			
+			notifySponsorOrApprentice(activeChar);
+			
+			AuctionableHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan());
+			
+			if (clanHall != null)
+			{
+				if (!clanHall.getPaid())
+				{
+					activeChar.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+				}
+			}
+			
+			for (Siege siege : SiegeManager.getInstance().getSieges())
+			{
+				if (!siege.isInProgress())
+				{
+					continue;
+				}
+				
+				if (siege.checkIsAttacker(activeChar.getClan()))
+				{
+					activeChar.setSiegeState((byte) 1);
+					activeChar.setSiegeSide(siege.getCastle().getResidenceId());
+				}
+				else if (siege.checkIsDefender(activeChar.getClan()))
+				{
+					activeChar.setSiegeState((byte) 2);
+					activeChar.setSiegeSide(siege.getCastle().getResidenceId());
+				}
+			}
+			
+			for (FortSiege siege : FortSiegeManager.getInstance().getSieges())
+			{
+				if (!siege.isInProgress())
+				{
+					continue;
+				}
+				
+				if (siege.checkIsAttacker(activeChar.getClan()))
+				{
+					activeChar.setSiegeState((byte) 1);
+					activeChar.setSiegeSide(siege.getFort().getResidenceId());
+				}
+				else if (siege.checkIsDefender(activeChar.getClan()))
+				{
+					activeChar.setSiegeState((byte) 2);
+					activeChar.setSiegeSide(siege.getFort().getResidenceId());
+				}
+			}
+			
+			for (SiegableHall hall : CHSiegeManager.getInstance().getConquerableHalls().values())
+			{
+				if (!hall.isInSiege())
+				{
+					continue;
+				}
+				
+				if (hall.isRegistered(activeChar.getClan()))
+				{
+					activeChar.setSiegeState((byte) 1);
+					activeChar.setSiegeSide(hall.getId());
+					activeChar.setIsInHideoutSiege(true);
+				}
+			}
+			
+			// Residential skills support
+			if (activeChar.getClan().getCastleId() > 0)
+			{
+				CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
+			}
+			
+			if (activeChar.getClan().getFortId() > 0)
+			{
+				FortManager.getInstance().getFortByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
+			}
+			
+			showClanNotice = activeChar.getClan().isNoticeEnabled();
+			
+			// Show clan crest
+			if (activeChar.getClan().getCrestId() > 0)
+			{
+				sendPacket(new PledgeCrest(activeChar.getClan().getCrestId()));
+			}
+			// Show ally crest
+			if (activeChar.getClan().getAllyCrestId() > 0)
+			{
+				sendPacket(new AllyCrest(activeChar.getClan().getAllyCrestId()));
+			}
+		}
 		
 		if (Config.PLAYER_SPAWN_PROTECTION > 0)
 		{
