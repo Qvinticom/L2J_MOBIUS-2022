@@ -25,6 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jserver.Config;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
@@ -50,7 +51,7 @@ public final class ExperienceData implements IXmlReader
 	public void load()
 	{
 		_expTable.clear();
-		parseDatapackFile("data/stats/experience.xml");
+		parseDatapackFile(Config.SERVER_CLASSIC_SUPPORT ? "data/stats/classic_experience.xml" : "data/stats/experience.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
 		LOGGER.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
 		LOGGER.info(getClass().getSimpleName() + ": Max Pet Level is: " + (MAX_PET_LEVEL - 1));

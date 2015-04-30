@@ -149,6 +149,10 @@ public interface IXmlReader
 		{
 			for (File f : files)
 			{
+				if (!Config.SERVER_CLASSIC_SUPPORT && f.getName().contains("classic"))
+				{
+					continue;
+				}
 				if (recursive && f.isDirectory())
 				{
 					parseDirectory(f, recursive);

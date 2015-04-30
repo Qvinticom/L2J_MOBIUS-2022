@@ -129,7 +129,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.CURRENT_MP);
 		}
 		
-		if (npc.getTemplate().getDisplayId() != npc.getTemplate().getId())
+		if ((npc.getTemplate().getDisplayId() != npc.getTemplate().getId()) || Config.SERVER_CLASSIC_SUPPORT)
 		{
 			addComponentType(NpcInfoType.NAME);
 		}

@@ -299,6 +299,44 @@ public final class CharacterCreate extends L2GameClientPacket
 		{
 			newChar.setXYZInvisible(Config.FACTION_STARTING_LOCATION.getX(), Config.FACTION_STARTING_LOCATION.getY(), Config.FACTION_STARTING_LOCATION.getZ());
 		}
+		else if (Config.SERVER_CLASSIC_SUPPORT)
+		{
+			switch (template.getRace())
+			{
+				case HUMAN:
+				{
+					if (template.getClassId().isMage())
+					{
+						newChar.setXYZInvisible(-90875, 248162, -3570);
+					}
+					else
+					{
+						newChar.setXYZInvisible(-71338, 258271, -3104);
+					}
+					break;
+				}
+				case ELF:
+				{
+					newChar.setXYZInvisible(46045, 41251, -3440);
+					break;
+				}
+				case DARK_ELF:
+				{
+					newChar.setXYZInvisible(28295, 11063, -4224);
+					break;
+				}
+				case ORC:
+				{
+					newChar.setXYZInvisible(-56733, -113459, -690);
+					break;
+				}
+				case DWARF:
+				{
+					newChar.setXYZInvisible(108644, -173947, -400);
+					break;
+				}
+			}
+		}
 		else
 		{
 			Location createLoc = template.getCreationPoint();
@@ -359,7 +397,7 @@ public final class CharacterCreate extends L2GameClientPacket
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
 		
 		newChar.setOnlineStatus(true, false);
-		if (Config.SHOW_GOD_VIDEO_INTRO)
+		if (Config.SHOW_GOD_VIDEO_INTRO && !Config.SERVER_CLASSIC_SUPPORT)
 		{
 			newChar.getVariables().set("intro_god_video", true);
 		}

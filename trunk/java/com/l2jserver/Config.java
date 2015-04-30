@@ -432,9 +432,6 @@ public final class Config
 	// General Settings
 	// --------------------------------------------------
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
-	public static boolean SERVER_LIST_BRACKET;
-	public static int SERVER_LIST_TYPE;
-	public static int SERVER_LIST_AGE;
 	public static boolean SERVER_GMONLY;
 	public static boolean GM_HERO_AURA;
 	public static boolean GM_STARTUP_INVULNERABLE;
@@ -993,6 +990,10 @@ public final class Config
 	public static int REQUEST_ID;
 	public static boolean RESERVE_HOST_ON_LOGIN = false;
 	public static List<Integer> PROTOCOL_LIST;
+	public static int SERVER_LIST_TYPE;
+	public static int SERVER_LIST_AGE;
+	public static boolean SERVER_LIST_BRACKET;
+	public static boolean SERVER_CLASSIC_SUPPORT = false;
 	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
 	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
 	
@@ -1235,6 +1236,9 @@ public final class Config
 					_log.log(Level.WARNING, "Wrong config protocol version: " + protocol + ". Skipped.");
 				}
 			}
+			SERVER_LIST_TYPE = getServerTypeId(serverSettings.getString("ServerListType", "Free").split(","));
+			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
+			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 			
 			// Hosts and Subnets
 			IPConfigData ipcd = new IPConfigData();
@@ -1766,9 +1770,6 @@ public final class Config
 			// Load General L2Properties file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 			EVERYBODY_HAS_ADMIN_RIGHTS = General.getBoolean("EverybodyHasAdminRights", false);
-			SERVER_LIST_BRACKET = General.getBoolean("ServerListBrackets", false);
-			SERVER_LIST_TYPE = getServerTypeId(General.getString("ServerListType", "Normal").split(","));
-			SERVER_LIST_AGE = General.getInt("ServerListAge", 0);
 			SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
 			GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
 			GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
@@ -3897,6 +3898,7 @@ public final class Config
 					break;
 				case "classic":
 					serverType |= 0x400;
+					SERVER_CLASSIC_SUPPORT = true;
 					break;
 			}
 		}

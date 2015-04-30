@@ -77,7 +77,7 @@ public class RaidBossSpawnManager
 		_schedules.clear();
 		
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM raidboss_spawnlist ORDER BY boss_id");
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM " + (Config.SERVER_CLASSIC_SUPPORT ? "classic_raidboss_spawnlist" : "raidboss_spawnlist") + " ORDER BY boss_id");
 			ResultSet rset = statement.executeQuery())
 		{
 			while (rset.next())
@@ -98,7 +98,7 @@ public class RaidBossSpawnManager
 		}
 		catch (SQLException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": Couldnt load raidboss_spawnlist table");
+			_log.warning(getClass().getSimpleName() + ": Couldnt load raidboss spawnlist table.");
 		}
 		catch (Exception e)
 		{
@@ -266,7 +266,7 @@ public class RaidBossSpawnManager
 		if (storeInDb)
 		{
 			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("INSERT INTO raidboss_spawnlist (boss_id,amount,loc_x,loc_y,loc_z,heading,respawn_time,currentHp,currentMp) VALUES(?,?,?,?,?,?,?,?,?)"))
+				PreparedStatement statement = con.prepareStatement("INSERT INTO " + (Config.SERVER_CLASSIC_SUPPORT ? "classic_raidboss_spawnlist" : "raidboss_spawnlist") + " (boss_id,amount,loc_x,loc_y,loc_z,heading,respawn_time,currentHp,currentMp) VALUES(?,?,?,?,?,?,?,?,?)"))
 			{
 				statement.setInt(1, spawnDat.getId());
 				statement.setInt(2, spawnDat.getAmount());
@@ -327,7 +327,7 @@ public class RaidBossSpawnManager
 		if (updateDb)
 		{
 			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("DELETE FROM raidboss_spawnlist WHERE boss_id=?"))
+				PreparedStatement statement = con.prepareStatement("DELETE FROM " + (Config.SERVER_CLASSIC_SUPPORT ? "classic_raidboss_spawnlist" : "raidboss_spawnlist") + " WHERE boss_id=?"))
 			{
 				statement.setInt(1, bossId);
 				statement.execute();
@@ -346,7 +346,7 @@ public class RaidBossSpawnManager
 	private void updateDb()
 	{
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
+			PreparedStatement statement = con.prepareStatement("UPDATE " + (Config.SERVER_CLASSIC_SUPPORT ? "classic_raidboss_spawnlist" : "raidboss_spawnlist") + " SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
 		{
 			for (Integer bossId : _storedInfo.keySet())
 			{
@@ -385,7 +385,7 @@ public class RaidBossSpawnManager
 				}
 				catch (SQLException e)
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt update raidboss_spawnlist table " + e.getMessage(), e);
+					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt update raidboss spawnlist table " + e.getMessage(), e);
 				}
 			}
 		}
