@@ -359,3 +359,13 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (25930, 16086, -119455, -880, 7324, 8000, 0, 3271103, 5116283),
 (25931, 16318, -119300, -872, 40015, 8000, 0, 3271103, 5116283);
 
+-- Wastelands
+-- Ragraman
+REPLACE INTO `raidboss_spawnlist` (`boss_id`, `amount`, `loc_x`, `loc_y`, `loc_z`, `heading`, `respawn_delay`, `respawn_random`, `respawn_time`, `currentHp`, `currentMp`) VALUES
+(25169, 1, -54464, 172151, -3633, 0, 129600, 86400, 0, '175403', '473');
+-- Rose
+INSERT INTO `raidboss_spawnlist` (`boss_id`, `amount`, `loc_x`, `loc_y`, `loc_z`, `heading`, `respawn_delay`, `respawn_random`, `respawn_time`, `currentHp`, `currentMp`) VALUES
+(25870, 1, -30013, 168759, -3862, 26591, 129600, 86400, 0, '517915', '517915');
+-- Thorn
+INSERT INTO `raidboss_spawnlist` (`boss_id`, `amount`, `loc_x`, `loc_y`, `loc_z`, `heading`, `respawn_delay`, `respawn_random`, `respawn_time`, `currentHp`, `currentMp`) VALUES
+(25871, 1, -27329, 182826, -3639, 24935, 129600, 86400, 0, '517915', '517915');

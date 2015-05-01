@@ -49732,3 +49732,46 @@ INSERT INTO `spawnlist` VALUES ('20_14', '1', '33839', '14731', '-120358', '-111
 -- Teleport Device Wasteland (Entrance)
 INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
 ('Wasteland', 1, 33072, -16365, 208927, -3664, 0, 0, 15805, 60, 0, 0, 0);
+
+-- Wastelands
+-- Guards Passive
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 33425, -16869, 207774, -3647, 0, 0, 1129, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -16838, 208396, -3649, 0, 0, 58757, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -16823, 207724, -3653, 0, 0, 25873, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -16801, 207781, -3653, 0, 0, 44727, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -16788, 208345, -3643, 0, 0, 5344, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -16708, 208338, -3643, 0, 0, 30566, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15797, 208674, -3665, 0, 0, 64703, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15747, 208597, -3665, 0, 0, 8191, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15670, 208667, -3665, 0, 0, 35981, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15595, 208900, -3665, 0, 0, 63739, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15548, 208831, -3665, 0, 0, 18879, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15532, 208953, -3665, 0, 0, 50019, 60, 0, 0, 0),
+('Wastelands', 1, 33425, -15471, 208881, -3665, 0, 0, 18259, 60, 0, 0, 0);
+-- Guard Commander
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 33426, -16352, 209624, -3665, 0, 0, 11730, 60, 0, 0, 0),
+('Wastelands', 1, 33426, -16250, 208083, -3665, 0, 0, 12587, 60, 0, 0, 0);
+-- Trainning
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 33427, -16464, 209770, -3665, 0, 0, 42020, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16388, 209751, -3665, 0, 0, 46835, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16307, 209719, -3665, 0, 0, 46786, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16271, 208207, -3665, 0, 0, 45183, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16247, 208280, -3664, 0, 0, 46249, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16240, 209695, -3665, 0, 0, 44315, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16214, 208363, -3663, 0, 0, 46596, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16210, 208181, -3665, 0, 0, 45574, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16182, 208261, -3665, 0, 0, 46786, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16175, 209673, -3665, 0, 0, 43893, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16153, 208352, -3665, 0, 0, 46433, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16140, 208155, -3665, 0, 0, 45916, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16115, 208233, -3665, 0, 0, 46061, 60, 0, 0, 0),
+('Wastelands', 1, 33427, -16086, 208328, -3665, 0, 0, 46191, 60, 0, 0, 0);
+-- Guard Fred
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 33179, -16276, 208841, -3664, 0, 0, 36991, 60, 0, 0, 0);
+-- Renfad
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 33524, -24569, 188865, -3942, 0, 0, 39437, 0, 0, 0, 0);

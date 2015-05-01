@@ -1061,6 +1061,13 @@ INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023301, 1
 INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023302, 172458, 90314, -1984, 0, 1, 57);
 INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023303, 172458, 90314, -1984, 3150, 1, 57);
 
--- Teleport Device to Gludio
+-- Wastelands
 INSERT INTO `teleport` (`Description`, `id`, `loc_x`, `loc_y`, `loc_z`, `price`, `fornoble`, `itemId`) VALUES
-('Wasteland -> Gludio', 3319001, -14567, 123872, -3104, 0, 0, 57);
+('Wastelands Merchant Entrance', 3319001, -17151, 208992, -3664, 0, 0, 57),
+('Elder Casian', 3319002, -16832, 194491, -4208, 0, 0, 57),
+('Ant Nest Entrance', 3319003, -9570, 176327, -4144, 0, 0, 57),
+('Near Wasteland Basilisk', 3319004, -16415, 174003, -3304, 0, 0, 57),
+('Gargoyle Lord Sirocco', 3319005, -16516, 182801, -3872, 0, 0, 57),
+('Ragraman', 3319006, -53027, 172265, -3680, 0, 0, 57),
+('Iris', 3319007, -31348, 169552, -3840, 0, 0, 57),
+('Thorn', 3319008, -28460, 183596, -3760, 0, 0, 57);
