@@ -114,7 +114,8 @@ public class HtmCache
 			return null;
 		}
 		
-		final String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
+		String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
+		relpath = relpath.replace("_classic", "");
 		String content = null;
 		try (FileInputStream fis = new FileInputStream(file);
 			BufferedInputStream bis = new BufferedInputStream(fis))

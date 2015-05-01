@@ -137,7 +137,13 @@ public class AdminReload implements IAdminCommandHandler
 					{
 						final String path = st.nextToken();
 						final File file = new File(Config.DATAPACK_ROOT, "data/html/" + path);
-						if (file.exists())
+						final File file_classic = new File(Config.DATAPACK_ROOT, "data/html_classic/" + path);
+						if (Config.SERVER_CLASSIC_SUPPORT && file_classic.exists())
+						{
+							HtmCache.getInstance().reload(file_classic);
+							AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + file_classic.getName() + ".");
+						}
+						else if (file.exists())
 						{
 							HtmCache.getInstance().reload(file);
 							AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + file.getName() + ".");
