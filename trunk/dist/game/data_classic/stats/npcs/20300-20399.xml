@@ -2322,6 +2322,78 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
+	<npc id="20329" level="21" type="L2Monster" name="Ghost Guardian">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="771" sp="36" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+			<attack physical="47.91924" magical="32.72263" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="89.73059" magical="59.7436374813816" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hit_time>390</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="131" max="234" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.01810000091791153">
+					<item id="16" min="1" max="1" chance="100" /> <!-- Great Spear -->
+				</group>
+				<group chance="13.910099983215332">
+					<item id="1869" min="1" max="1" chance="17.4486" /> <!-- Iron Ore -->
+					<item id="1870" min="1" max="1" chance="17.4486" /> <!-- Coal -->
+					<item id="1871" min="1" max="1" chance="17.4486" /> <!-- Charcoal -->
+					<item id="1872" min="1" max="1" chance="23.2648" /> <!-- Animal Bone -->
+					<item id="1867" min="1" max="1" chance="23.2648" /> <!-- Animal Skin -->
+					<item id="2258" min="1" max="1" chance="0.4266" /> <!-- Recipe: Temptation of Abyss -->
+					<item id="5268" min="1" max="1" chance="0.698" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1869" min="1" max="1" chance="28.7587" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="2.8759" /> <!-- Steel -->
+				<item id="1898" min="1" max="1" chance="2.9542" /> <!-- Blue Diamond Necklace Gem -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
 	<npc id="20330" level="11" type="L2Monster" name="Spelunking Bat">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2916,6 +2988,149 @@
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="20" grown="24" />
+		</collision>
+	</npc>
+	<npc id="20340" level="12" type="L2Monster" name="Slave Skeleton">
+		<parameters>
+			<param name="MoveAroundSocial" value="167" />
+			<param name="MoveAroundSocial1" value="167" />
+			<param name="MoveAroundSocial2" value="167" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
+		<acquire exp="363" sp="13" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="199.62322" hpRegen="2.5" mp="124.48" mpRegen="1.2" />
+			<attack physical="22.99606" magical="15.70333" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="66.32989" magical="44.163184477748" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>300</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="7" /> <!--Daggers -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>SKELETON</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="95" max="131" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.07909999787807465">
+					<item id="2371" min="1" max="1" chance="68.0851" /> <!-- Fist of Butcher -->
+					<item id="255" min="1" max="1" chance="31.9149" /> <!-- Fox Claw Gloves -->
+				</group>
+				<group chance="9.940999984741211">
+					<item id="1870" min="1" max="1" chance="35.2071" /> <!-- Coal -->
+					<item id="1865" min="1" max="1" chance="35.2071" /> <!-- Varnish -->
+					<item id="1803" min="1" max="1" chance="29.5858" /> <!-- Recipe: Necklace of Wisdom -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1792" min="1" max="1" chance="1.3068" /> <!-- Recipe: Short Spear -->
+				<item id="1792" min="1" max="1" chance="1.3068" /> <!-- Recipe: Short Spear -->
+				<item id="1792" min="1" max="1" chance="1.3068" /> <!-- Recipe: Short Spear -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="20341" level="19" type="L2Monster" name="Undead Slave">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+			<skill name="DDMagicSlow" id="4247" level="1" /> <!-- NPC Windstrike - Slow -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="799" sp="36" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="321.63954" hpRegen="2.5" mp="183.28" mpRegen="1.2" />
+			<attack physical="40.96915" magical="27.97662" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="84.07638" magical="55.9790056860875" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="15" />
+				<run ground="15" />
+			</speed>
+			<hit_time>430</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
+			<skill id="4247" level="1" /> <!--NPC Windstrike - Slow -->
+			<skill id="4284" level="5" /> <!--Resist Bleed Attacks -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
+			<skill id="4413" level="18" /> <!--Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ALL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="115" max="195" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.6640000343322754">
+					<item id="945" min="1" max="1" chance="16.452" /> <!-- Skeleton Buckler -->
+					<item id="102" min="1" max="1" chance="7.9403" /> <!-- Round Shield -->
+					<item id="44" min="1" max="1" chance="5.5541" /> <!-- Leather Helmet -->
+					<item id="1924" min="1" max="1" chance="70.0536" /> <!-- Leather Helmet Design -->
+				</group>
+				<group chance="11.94789981842041">
+					<item id="1866" min="1" max="1" chance="26.8852" /> <!-- Suede -->
+					<item id="1871" min="1" max="1" chance="40.3279" /> <!-- Charcoal -->
+					<item id="2175" min="1" max="1" chance="32.7869" /> <!-- Recipe: Boots -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2141" min="1" max="1" chance="4.8936" /> <!-- Recipe: Silver Mold -->
+				<item id="2143" min="1" max="1" chance="4.8936" /> <!-- Recipe: Synthetic Cokes -->
+				<item id="1897" min="1" max="1" chance="5.8257" /> <!-- Necklace of Wisdom Chain -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
 		</collision>
 	</npc>
 	<npc id="20342" level="12" type="L2Monster" name="Werewolf Chieftain">
@@ -4813,6 +5028,77 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
+	<npc id="20368" level="13" type="L2Monster" name="Grave Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="116" />
+			<param name="MoveAroundSocial1" value="116" />
+			<param name="MoveAroundSocial2" value="116" />
+			<skill name="DDMagicSlow" id="4247" level="1" /> <!-- NPC Windstrike - Slow -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="545" sp="21" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="214.61578" hpRegen="2.5" mp="132.64" mpRegen="1.2" />
+			<attack physical="25.04271" magical="17.10092" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="68.67458" magical="45.7243124542497" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="23" />
+				<run ground="23" />
+			</speed>
+			<hit_time>410</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4247" level="1" /> <!--NPC Windstrike - Slow -->
+			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
+			<skill id="4284" level="5" /> <!--Resist Bleed Attacks -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="19" /> <!--Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="2" /> <!--Magic Creatures -->
+			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ALL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="106" max="150" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.05719999969005585">
+					<item id="271" min="1" max="1" chance="100" /> <!-- Hunting Bow -->
+				</group>
+				<group chance="6.906700134277344">
+					<item id="1866" min="1" max="1" chance="38.3099" /> <!-- Suede -->
+					<item id="1871" min="1" max="1" chance="57.4648" /> <!-- Charcoal -->
+					<item id="1793" min="1" max="1" chance="4.2253" /> <!-- Recipe: Sword of Reflection -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1873" min="1" max="1" chance="8.0618" /> <!-- Silver Nugget -->
+				<item id="1833" min="1" max="1" chance="53.7455" /> <!-- Bandage -->
+				<item id="1793" min="1" max="1" chance="1.482" /> <!-- Recipe: Sword of Reflection -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="20" grown="25" />
+			<height normal="31" grown="37.5" />
+		</collision>
+	</npc>
 	<npc id="20369" level="17" type="L2Monster" name="Moonstone Beast">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5208,6 +5494,159 @@
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
+		</collision>
+	</npc>
+	<npc id="20374" level="22" type="L2Monster" name="Varangka's Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4077" level="2" /> <!-- NPC Aura Burn -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="68" /> <!-- rhand: Falchion -->
+		<acquire exp="1093" sp="52" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="387.02878" hpRegen="3.5" mp="218.52" mpRegen="1.5" />
+			<attack physical="51.75278" magical="35.34044" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="92.65694" magical="61.6920289224665" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>300</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4077" level="2" /> <!--NPC Aura Burn -->
+			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>SKELETON</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="182" max="327" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.025200000032782555">
+					<item id="257" min="1" max="1" chance="100" /> <!-- Viper Fang -->
+				</group>
+				<group chance="14.712900161743164">
+					<item id="1873" min="1" max="1" chance="16.129" /> <!-- Silver Nugget -->
+					<item id="1868" min="1" max="1" chance="80.6452" /> <!-- Thread -->
+					<item id="5273" min="1" max="1" chance="1.6129" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
+					<item id="5158" min="1" max="1" chance="1.6129" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2255" min="1" max="1" chance="0.9821" /> <!-- Recipe: Saber -->
+				<item id="1871" min="1" max="1" chance="40.1688" /> <!-- Charcoal -->
+				<item id="1898" min="1" max="1" chance="4.1262" /> <!-- Blue Diamond Necklace Gem -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="27" grown="34" />
+		</collision>
+	</npc>
+	<npc id="20375" level="21" type="L2Monster" name="Varangka's Escort">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
+		<acquire exp="779" sp="36" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+			<attack physical="47.91924" magical="32.72263" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="89.73059" magical="59.7436374813816" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>300</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="7" /> <!--Daggers -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>SKELETON</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="132" max="236" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.018300000578165054">
+					<item id="16" min="1" max="1" chance="100" /> <!-- Great Spear -->
+				</group>
+				<group chance="7.710400104522705">
+					<item id="1865" min="1" max="1" chance="44.5104" /> <!-- Varnish -->
+					<item id="1870" min="1" max="1" chance="44.5104" /> <!-- Coal -->
+					<item id="1879" min="1" max="1" chance="7.4184" /> <!-- Cokes -->
+					<item id="5158" min="1" max="1" chance="1.7804" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
+					<item id="5158" min="1" max="1" chance="1.7804" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2257" min="1" max="1" chance="0.7102" /> <!-- Recipe: Trident -->
+				<item id="2014" min="1" max="1" chance="0.3339" /> <!-- Iron Hammer Head -->
+				<item id="1804" min="1" max="1" chance="1.1619" /> <!-- Recipe: Soulshot (D-Grade) -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="27" grown="34" />
 		</collision>
 	</npc>
 	<npc id="20376" level="10" type="L2Monster" name="Varika Brigand Leader">

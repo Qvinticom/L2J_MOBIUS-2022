@@ -880,6 +880,248 @@
 			<height normal="30" />
 		</collision>
 	</npc>
+	<npc id="21108" level="67" type="L2Monster" name="Glow Wisp">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="DDMagic1" id="4100" level="6" /> <!-- NPC Prominence -->
+			<skill name="DDMagic2" id="4039" level="6" /> <!-- NPC MP Drain -->
+			<skill name="DeBuff" id="4076" level="3" /> <!-- Decrease Speed -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="7834" sp="746" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="187.460838840844" />
+			<attribute>
+				<defence fire="20" water="-5" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>100</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4039" level="6" /> <!--NPC MP Drain -->
+			<skill id="4076" level="3" /> <!--Decrease Speed -->
+			<skill id="4100" level="6" /> <!--NPC Prominence -->
+			<skill id="4276" level="1" /> <!--Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="2" /> <!--Magic Creatures -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ALL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1068" max="2182" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.6574000120162964">
+					<item id="12204" min="1" max="1" chance="2.7002" /> <!-- Common Item - Blue Wolf Breastplate -->
+					<item id="4078" min="1" max="1" chance="29.6205" /> <!-- Blue Wolf Breastplate Part -->
+					<item id="12184" min="1" max="1" chance="1.6621" /> <!-- Common Item - Doom Plate Armor -->
+					<item id="4081" min="1" max="1" chance="19.9864" /> <!-- Doom Plate Armor Temper -->
+					<item id="12193" min="1" max="1" chance="4.3191" /> <!-- Common Item - Blue Wolf Gaiters -->
+					<item id="4080" min="1" max="1" chance="41.7117" /> <!-- Blue Wolf Gaiters Material -->
+				</group>
+				<group chance="22.99799919128418">
+					<item id="1869" min="1" max="1" chance="31.6179" /> <!-- Iron Ore -->
+					<item id="1864" min="1" max="1" chance="63.2357" /> <!-- Stem -->
+					<item id="1880" min="1" max="1" chance="3.1618" /> <!-- Steel -->
+					<item id="5550" min="1" max="1" chance="0.4216" /> <!-- Durable Metal Plate -->
+					<item id="4043" min="1" max="1" chance="1.0539" /> <!-- Asofe -->
+					<item id="5230" min="1" max="1" chance="0.0422" /> <!-- Recipe: Mithril Arrow (100%) -->
+					<item id="8487" min="1" max="1" chance="0.0173" /> <!-- Recipe: Destroyer Hammer (60%) -->
+					<item id="8730" min="1" max="1" chance="0.3513" /> <!-- Life Stone - Level 67 -->
+					<item id="8740" min="1" max="1" chance="0.0878" /> <!-- Mid-Grade Life Stone - Level 67 -->
+					<item id="8750" min="1" max="1" chance="0.0088" /> <!-- High-Grade Life Stone - Level 67 -->
+					<item id="8760" min="1" max="1" chance="0.0017" /> <!-- Top-Grade Life Stone - Level 67 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="5230" min="1" max="1" chance="0.361" /> <!-- Recipe: Mithril Arrow (100%) -->
+				<item id="4052" min="1" max="1" chance="9.5871" /> <!-- Earring of Black Ore Piece -->
+				<item id="5550" min="1" max="1" chance="3.6105" /> <!-- Durable Metal Plate -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="13" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="21109" level="68" type="L2Monster" name="Hames Orc Scout">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="DaggerBackAttack" value="1" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="PhysicalSpecial" id="4067" level="6" /> <!-- NPC Mortal Blow -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" /> <!-- rhand: Kris -->
+		<acquire exp="9698" sp="937" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="190.662718462344" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="185" />
+			</speed>
+			<hit_time>460</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="3" /> <!--Light Armor Type -->
+			<skill id="4415" level="7" /> <!--Daggers -->
+			<skill id="4416" level="6" /> <!--Humanoids -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="400" isAggressive="false">
+			<clan_list>
+				<clan>ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1330" max="2704" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.652999997138977">
+					<item id="12345" min="1" max="1" chance="3.8667" /> <!-- Common Item - Sealed Phoenix Earring -->
+					<item id="6341" min="1" max="1" chance="27.6997" /> <!-- Sealed Phoenix Earring Gemstone -->
+					<item id="12344" min="1" max="1" chance="2.9028" /> <!-- Common Item - Sealed Phoenix Necklace -->
+					<item id="6343" min="1" max="1" chance="21.4129" /> <!-- Sealed Phoenix Necklace Beads -->
+					<item id="12346" min="1" max="1" chance="5.8057" /> <!-- Common Item - Sealed Phoenix Ring -->
+					<item id="6345" min="1" max="1" chance="38.3122" /> <!-- Sealed Phoenix Ring Gemstone -->
+				</group>
+				<group chance="35.72079849243164">
+					<item id="1870" min="1" max="1" chance="23.172" /> <!-- Coal -->
+					<item id="1865" min="1" max="1" chance="23.172" /> <!-- Varnish -->
+					<item id="1874" min="1" max="1" chance="1.5448" /> <!-- Oriharukon Ore -->
+					<item id="4043" min="1" max="1" chance="0.7724" /> <!-- Asofe -->
+					<item id="4039" min="1" max="1" chance="0.7724" /> <!-- Mold Glue -->
+					<item id="1807" min="1" max="1" chance="0.0309" /> <!-- Recipe: Soulshot (A-Grade) -->
+					<item id="6037" min="1" max="1" chance="46.344" /> <!-- Waking Scroll -->
+					<item id="6670" min="1" max="1" chance="3.862" /> <!-- Deluxe Chest Key - Grade 6 -->
+					<item id="8730" min="1" max="1" chance="0.2575" /> <!-- Life Stone - Level 67 -->
+					<item id="8740" min="1" max="1" chance="0.0644" /> <!-- Mid-Grade Life Stone - Level 67 -->
+					<item id="8750" min="1" max="1" chance="0.0064" /> <!-- High-Grade Life Stone - Level 67 -->
+					<item id="8760" min="1" max="1" chance="0.0012" /> <!-- Top-Grade Life Stone - Level 67 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1874" min="1" max="1" chance="22.4175" /> <!-- Oriharukon Ore -->
+				<item id="4043" min="1" max="1" chance="11.2087" /> <!-- Asofe -->
+				<item id="5478" min="1" max="1" chance="2.8276" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
 	<npc id="21110" level="69" type="L2Monster" name="Swamp Predator">
 		<parameters>
 			<param name="MoveAroundSocial" value="82" />
@@ -1348,6 +1590,125 @@
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="21114" level="73" type="L2Monster" name="Cursed Guardian">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="SelfRangeDDMagic" id="4033" level="7" /> <!-- NPC Burn -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
+		<acquire exp="11077" sp="1140" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
+			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310.02959" magical="206.421198742611" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="175" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4033" level="7" /> <!--NPC Burn -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="3" /> <!--Light Armor Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clan_list>
+				<clan>ALL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1538" max="3132" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.4668999910354614">
+					<item id="12227" min="1" max="1" chance="4.4751" /> <!-- Common Item - Sealed Dark Crystal Breastplate -->
+					<item id="5520" min="1" max="1" chance="26.477" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+					<item id="12233" min="1" max="1" chance="2.7556" /> <!-- Common Item - Sealed Tallum Plate Armor -->
+					<item id="5521" min="1" max="1" chance="18.6832" /> <!-- Sealed Tallum Plate Armor Pattern -->
+					<item id="12220" min="1" max="1" chance="7.1407" /> <!-- Common Item - Sealed Dark Crystal Gaiters -->
+					<item id="5524" min="1" max="1" chance="40.4684" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
+				</group>
+				<group chance="35.51499938964844">
+					<item id="1870" min="1" max="1" chance="29.4419" /> <!-- Coal -->
+					<item id="1865" min="1" max="1" chance="29.4419" /> <!-- Varnish -->
+					<item id="1874" min="1" max="1" chance="1.9628" /> <!-- Oriharukon Ore -->
+					<item id="4043" min="1" max="1" chance="0.9814" /> <!-- Asofe -->
+					<item id="4039" min="1" max="1" chance="0.9814" /> <!-- Mold Glue -->
+					<item id="5271" min="1" max="1" chance="0.0393" /> <!-- Recipe: Greater Soulshot (A) Compressed Package(100%) -->
+					<item id="8731" min="1" max="1" chance="0.2726" /> <!-- Life Stone - Level 70 -->
+					<item id="8741" min="1" max="1" chance="0.0682" /> <!-- Mid-Grade Life Stone - Level 70 -->
+					<item id="8751" min="1" max="1" chance="0.0068" /> <!-- High-Grade Life Stone - Level 70 -->
+					<item id="8761" min="1" max="1" chance="0.0014" /> <!-- Top-Grade Life Stone - Level 70 -->
+					<item id="1344" min="10" max="30" chance="36.8023" /> <!-- Mithril Arrow -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1875" min="1" max="1" chance="20.7673" /> <!-- Stone of Purity -->
+				<item id="5494" min="1" max="1" chance="6.5423" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5161" min="1" max="1" chance="0.4153" /> <!-- Recipe: Spiritshot (A) Compressed Package (100%) -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="21115" level="74" type="L2Monster" name="Hames Orc Shaman">

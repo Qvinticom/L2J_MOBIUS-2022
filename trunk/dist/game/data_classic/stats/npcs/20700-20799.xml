@@ -1804,7 +1804,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20761" level="69" type="L2Monster" name="Pytan">
+	<npc id="20761" level="69" type="L2Monster" name="Pytan" title="Valley Watcher">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1984,6 +1984,329 @@
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="20763" level="40" type="L2Monster" name="Lord of the Plains">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4032" level="4" /> <!-- NPC Strike -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="221" /> <!-- rhand: Assassin Knife -->
+		<acquire exp="4643" sp="300" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
+			<attack physical="176.36077" magical="120.43155" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="104.232986928232" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="53" />
+				<run ground="174" />
+			</speed>
+			<hit_time>460</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4032" level="4" /> <!--NPC Strike -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="7" /> <!--Daggers -->
+			<skill id="4416" level="6" /> <!--Humanoids -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>LIZARDMAN</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="636" max="1270" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.4235000014305115">
+					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
+					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
+				</group>
+				<group chance="39.11399841308594">
+					<item id="1872" min="1" max="1" chance="44.7566" /> <!-- Animal Bone -->
+					<item id="1867" min="1" max="1" chance="44.7566" /> <!-- Animal Skin -->
+					<item id="1881" min="1" max="1" chance="4.4757" /> <!-- Coarse Bone Powder -->
+					<item id="1875" min="1" max="1" chance="2.2378" /> <!-- Stone of Purity -->
+					<item id="2146" min="1" max="1" chance="2.3977" /> <!-- Recipe: Artisan's frame -->
+					<item id="2196" min="1" max="1" chance="1.3756" /> <!-- Recipe: Plate Gaiters -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1941" min="1" max="1" chance="6.0607" /> <!-- Brigandine Temper -->
+				<item id="1873" min="1" max="1" chance="60.9587" /> <!-- Silver Nugget -->
+				<item id="1902" min="1" max="1" chance="15.4404" /> <!-- Elven Earring Beads -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="20764" level="39" type="L2Monster" name="Shaman of the Plains">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4066" level="3" /> <!-- NPC Twister -->
+			<skill name="MagicHeal" id="4065" level="3" /> <!-- NPC Heal -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
+		<acquire exp="4149" sp="264" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="925.85879" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
+			<attack physical="166.06476" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="152.46752" magical="101.514599764346" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="43" />
+				<run ground="174" />
+			</speed>
+			<hit_time>630</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4065" level="3" /> <!--NPC Heal -->
+			<skill id="4066" level="3" /> <!--NPC Twister -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="6" /> <!--Humanoids -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>LIZARDMAN</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="575" max="1146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.3447000980377197">
+					<item id="437" min="1" max="1" chance="0.8713" /> <!-- Mithril Tunic -->
+					<item id="1944" min="1" max="1" chance="38.2206" /> <!-- Mithril Tunic Fabric -->
+					<item id="470" min="1" max="1" chance="1.3915" /> <!-- Mithril Stockings -->
+					<item id="1945" min="1" max="1" chance="59.5166" /> <!-- Mithril Stocking Design -->
+				</group>
+				<group chance="35.25040054321289">
+					<item id="1872" min="1" max="1" chance="44.3038" /> <!-- Animal Bone -->
+					<item id="1867" min="1" max="1" chance="44.3038" /> <!-- Animal Skin -->
+					<item id="1881" min="1" max="1" chance="4.4304" /> <!-- Coarse Bone Powder -->
+					<item id="1875" min="1" max="1" chance="2.2152" /> <!-- Stone of Purity -->
+					<item id="2149" min="1" max="1" chance="2.3734" /> <!-- Recipe: Metallic Fiber -->
+					<item id="5473" min="1" max="1" chance="2.3734" /> <!-- Recipe: Durable Metal Plate(100%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1902" min="1" max="1" chance="13.7744" /> <!-- Elven Earring Beads -->
+				<item id="1825" min="1" max="1" chance="9.711" /> <!-- Recipe: Oriharukon -->
+				<item id="1903" min="1" max="1" chance="22.6779" /> <!-- Elven Ring Piece -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="13" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20765" level="38" type="L2Monster" name="Warrior of the Plains">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Buff" id="4030" level="2" /> <!-- NPC Clan Might -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="3590" sp="224" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
+			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="148.44287" magical="98.8349371271581" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="174" />
+			</speed>
+			<hit_time>560</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4030" level="2" /> <!--NPC Clan Might -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="6" /> <!--Humanoids -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>LIZARDMAN</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="497" max="993" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.7548000812530518">
+					<item id="850" min="1" max="1" chance="0.7508" /> <!-- Elven Earring -->
+					<item id="1902" min="1" max="1" chance="27.3465" /> <!-- Elven Earring Beads -->
+					<item id="913" min="1" max="1" chance="0.5635" /> <!-- Elven Necklace -->
+					<item id="1904" min="1" max="1" chance="25.1899" /> <!-- Elven Necklace Beads -->
+					<item id="881" min="1" max="1" chance="1.127" /> <!-- Elven Ring -->
+					<item id="1903" min="1" max="1" chance="45.0223" /> <!-- Elven Ring Piece -->
+				</group>
+				<group chance="31.22369956970215">
+					<item id="1873" min="1" max="1" chance="12.9832" /> <!-- Silver Nugget -->
+					<item id="1868" min="1" max="1" chance="64.916" /> <!-- Thread -->
+					<item id="1876" min="1" max="1" chance="6.4916" /> <!-- Mithril Ore -->
+					<item id="1895" min="1" max="1" chance="9.2737" /> <!-- Metallic Fiber -->
+					<item id="2145" min="1" max="1" chance="2.3184" /> <!-- Recipe: Mithril Alloy -->
+					<item id="2158" min="1" max="1" chance="4.0171" /> <!-- Recipe: Mithril Ring -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2145" min="1" max="1" chance="8.4024" /> <!-- Recipe: Mithril Alloy -->
+				<item id="1904" min="1" max="1" chance="10.9784" /> <!-- Elven Necklace Beads -->
+				<item id="1873" min="1" max="1" chance="47.0534" /> <!-- Silver Nugget -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="13" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20766" level="36" type="L2Monster" name="Scout of the Plains">
+		<parameters>
+			<param name="MoveAroundSocial" value="125" />
+			<param name="MoveAroundSocial1" value="125" />
+			<param name="MoveAroundSocial2" value="125" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="3191" sp="193" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<attack physical="137.86467" magical="94.1437" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="140.57278" magical="93.5949427192352" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="37" />
+				<run ground="174" />
+			</speed>
+			<hit_time>930</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="9" /> <!--Bows -->
+			<skill id="4416" level="6" /> <!--Humanoids -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>LIZARDMAN</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="443" max="889" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.437399983406067">
+					<item id="553" min="1" max="1" chance="2.8426" /> <!-- Iron Boots -->
+					<item id="1940" min="1" max="1" chance="82.9444" /> <!-- Iron Boots Design -->
+					<item id="2422" min="1" max="1" chance="2.8426" /> <!-- Reinforced Leather Boots -->
+					<item id="2423" min="1" max="1" chance="2.8426" /> <!-- Boots of Knowledge -->
+					<item id="63" min="1" max="1" chance="2.8426" /> <!-- Gauntlets -->
+					<item id="2446" min="1" max="1" chance="2.8426" /> <!-- Reinforced Leather Gloves -->
+					<item id="2447" min="1" max="1" chance="2.8426" /> <!-- Gloves of Knowledge -->
+				</group>
+				<group chance="34.226200103759766">
+					<item id="1864" min="1" max="1" chance="46.6765" /> <!-- Stem -->
+					<item id="1869" min="1" max="1" chance="23.3383" /> <!-- Iron Ore -->
+					<item id="1878" min="1" max="1" chance="9.3353" /> <!-- Braided Hemp -->
+					<item id="1884" min="1" max="1" chance="14.362" /> <!-- Cord -->
+					<item id="2155" min="1" max="1" chance="3.7461" /> <!-- Recipe: Elven Ring -->
+					<item id="2195" min="1" max="1" chance="0.5969" /> <!-- Recipe: Half Plate Armor -->
+					<item id="6035" min="1" max="1" chance="1.9449" /> <!-- Magic Haste Potion -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1869" min="1" max="3" chance="52.5817" /> <!-- Iron Ore -->
+				<item id="1901" min="1" max="1" chance="14.5253" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="2154" min="1" max="1" chance="11.2595" /> <!-- Recipe: Elven Earring -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="11" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="20767" level="45" type="L2Monster" name="Timak Orc Troop Captain">
@@ -2501,6 +2824,181 @@
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20773" level="72" type="L2Monster" name="Conjurer Bat Lord">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DeBuff" id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="12643" sp="1284" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="203.311781207645" />
+			<attribute>
+				<defence fire="20" water="20" wind="-5" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="174" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!--Decrease Atk. Spd. -->
+			<skill id="4276" level="1" /> <!--Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>GIANT</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1748" max="3569" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.9180999994277954">
+					<item id="6324" min="1" max="1" chance="0.2263" /> <!-- Sealed Phoenix Earring -->
+					<item id="6341" min="1" max="1" chance="31.451" /> <!-- Sealed Phoenix Earring Gemstone -->
+					<item id="6323" min="1" max="1" chance="0.1697" /> <!-- Sealed Phoenix Necklace -->
+					<item id="6343" min="1" max="1" chance="24.3128" /> <!-- Sealed Phoenix Necklace Beads -->
+					<item id="6325" min="1" max="1" chance="0.3394" /> <!-- Sealed Phoenix Ring -->
+					<item id="6345" min="1" max="1" chance="43.5008" /> <!-- Sealed Phoenix Ring Gemstone -->
+				</group>
+				<group chance="31.17169952392578">
+					<item id="1868" min="1" max="1" chance="76.335" /> <!-- Thread -->
+					<item id="1873" min="1" max="1" chance="15.267" /> <!-- Silver Nugget -->
+					<item id="5549" min="1" max="1" chance="3.8167" /> <!-- Metallic Thread -->
+					<item id="1889" min="1" max="1" chance="2.5445" /> <!-- Compound Braid -->
+					<item id="4044" min="1" max="1" chance="1.2722" /> <!-- Thons -->
+					<item id="4157" min="1" max="1" chance="0.1899" /> <!-- Recipe: Blue Wolf Gaiters (100%) -->
+					<item id="730" min="1" max="1" chance="0.0318" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+					<item id="8730" min="1" max="1" chance="0.4241" /> <!-- Life Stone - Level 67 -->
+					<item id="8740" min="1" max="1" chance="0.106" /> <!-- Mid-Grade Life Stone - Level 67 -->
+					<item id="8750" min="1" max="1" chance="0.0106" /> <!-- High-Grade Life Stone - Level 67 -->
+					<item id="8760" min="1" max="1" chance="0.0022" /> <!-- Top-Grade Life Stone - Level 67 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="5478" min="1" max="1" chance="2.9805" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="1807" min="1" max="1" chance="0.4726" /> <!-- Recipe: Soulshot (A-Grade) -->
+				<item id="5479" min="1" max="1" chance="2.0973" /> <!-- Sealed Tallum Leather Armor Pattern -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="10" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="20774" level="70" type="L2Monster" name="Conjurer Bat">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="MagicHeal" id="4065" level="5" /> <!-- NPC Heal -->
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="13368" sp="1326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="197.024195544734" />
+			<attribute>
+				<defence fire="20" water="20" wind="-5" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="174" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4065" level="5" /> <!--NPC Heal -->
+			<skill id="4276" level="1" /> <!--Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="4" /> <!--Animals -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>GIANT</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1844" max="3751" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.6301000118255615">
+					<item id="5291" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Boots -->
+					<item id="5496" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Boots Lining -->
+					<item id="5296" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Boots -->
+					<item id="5497" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Boots Lining -->
+					<item id="5290" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5508" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Gloves Design -->
+					<item id="5295" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Gloves -->
+					<item id="5509" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Gloves Design -->
+				</group>
+				<group chance="40.18339920043945">
+					<item id="1873" min="1" max="1" chance="13.7083" /> <!-- Silver Nugget -->
+					<item id="1868" min="1" max="1" chance="68.5416" /> <!-- Thread -->
+					<item id="1876" min="1" max="1" chance="6.8542" /> <!-- Mithril Ore -->
+					<item id="1895" min="1" max="1" chance="9.7917" /> <!-- Metallic Fiber -->
+					<item id="4042" min="1" max="1" chance="0.5712" /> <!-- Enria -->
+					<item id="5271" min="1" max="1" chance="0.0457" /> <!-- Recipe: Greater Soulshot (A) Compressed Package(100%) -->
+					<item id="8730" min="1" max="1" chance="0.3808" /> <!-- Life Stone - Level 67 -->
+					<item id="8740" min="1" max="1" chance="0.0952" /> <!-- Mid-Grade Life Stone - Level 67 -->
+					<item id="8750" min="1" max="1" chance="0.0095" /> <!-- High-Grade Life Stone - Level 67 -->
+					<item id="8760" min="1" max="1" chance="0.0018" /> <!-- Top-Grade Life Stone - Level 67 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1807" min="1" max="1" chance="0.6216" /> <!-- Recipe: Soulshot (A-Grade) -->
+				<item id="5478" min="1" max="1" chance="3.9204" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="1889" min="1" max="1" chance="31.0807" /> <!-- Compound Braid -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="10" />
+			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="20775" level="17" type="L2Monster" name="Bugbear Raider">

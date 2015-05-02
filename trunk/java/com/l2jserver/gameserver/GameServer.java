@@ -241,9 +241,12 @@ public final class GameServer
 		FishingMonstersData.getInstance();
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
-		CommissionManager.getInstance();
-		PrimeShopData.getInstance();
-		AppearanceItemData.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			CommissionManager.getInstance();
+			PrimeShopData.getInstance();
+			AppearanceItemData.getInstance();
+		}
 		
 		printSection("Characters");
 		ClassListData.getInstance();
@@ -259,8 +262,11 @@ public final class GameServer
 		RaidBossPointsManager.getInstance();
 		PetDataTable.getInstance();
 		CharSummonTable.getInstance().init();
-		BeautyShopData.getInstance();
-		MentorManager.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			BeautyShopData.getInstance();
+			MentorManager.getInstance();
+		}
 		if (Config.FACTION_SYSTEM_ENABLED)
 		{
 			FactionManager.getInstance();
@@ -298,14 +304,20 @@ public final class GameServer
 		StaticObjectData.getInstance();
 		ZoneManager.getInstance();
 		DoorData.getInstance();
-		ItemAuctionManager.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			ItemAuctionManager.getInstance();
+		}
 		CastleManager.getInstance().loadInstances();
 		NpcBufferTable.getInstance();
 		GrandBossManager.getInstance().initZones();
 		EventDroplist.getInstance();
 		
-		printSection("Olympiad");
-		Olympiad.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			printSection("Olympiad");
+			Olympiad.getInstance();
+		}
 		Hero.getInstance();
 		
 		// Call to load caches
@@ -326,10 +338,13 @@ public final class GameServer
 		printSection("Scripts");
 		QuestManager.getInstance();
 		BoatManager.getInstance();
-		AirShipManager.getInstance();
-		ShuttleData.getInstance();
-		JumpManager.getInstance();
-		GraciaSeedsManager.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			AirShipManager.getInstance();
+			ShuttleData.getInstance();
+			JumpManager.getInstance();
+			GraciaSeedsManager.getInstance();
+		}
 		
 		try
 		{
@@ -346,15 +361,21 @@ public final class GameServer
 		
 		SpawnTable.getInstance().load();
 		DayNightSpawnManager.getInstance().trim().notifyChangeMode();
-		FourSepulchersManager.getInstance().init();
 		RaidBossSpawnManager.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			FourSepulchersManager.getInstance().init();
+		}
 		
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
 		CastleManager.getInstance().activateInstances();
-		FortManager.getInstance().loadInstances();
-		FortManager.getInstance().activateInstances();
-		FortSiegeManager.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			FortManager.getInstance().loadInstances();
+			FortManager.getInstance().activateInstances();
+			FortSiegeManager.getInstance();
+		}
 		SiegeScheduleData.getInstance();
 		
 		MerchantPriceConfigTable.getInstance().updateReferences();

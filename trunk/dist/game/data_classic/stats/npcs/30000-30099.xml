@@ -195,7 +195,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30006" level="70" type="L2Teleporter" name="Milia" title="Gatekeeper">
+	<npc id="30006" level="70" type="L2Teleporter" name="Roxxy" title="Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -350,6 +350,119 @@
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30011" level="40" type="L2Monster" name="Turek Orc Elder">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="3" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
+		<acquire exp="4272" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1532" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+			<attack physical="121.20802" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="132.9486" magical="88.5186722618248" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<hit_time>260</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
+			<clan_list>
+				<clan>ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="288" max="574" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.3701000213623047">
+					<item id="849" min="1" max="1" chance="2.6765" /> <!-- Tiger's Eye Earring -->
+					<item id="1901" min="1" max="1" chance="91.3106" /> <!-- Tiger's Eye Earring Stone -->
+					<item id="912" min="1" max="1" chance="2.0063" /> <!-- Near Forest Necklace -->
+					<item id="880" min="1" max="1" chance="4.0066" /> <!-- Black Pearl Ring -->
+				</group>
+				<group chance="3.821000099182129">
+					<item id="1876" min="1" max="1" chance="23.7048" /> <!-- Mithril Ore -->
+					<item id="1880" min="1" max="1" chance="11.8524" /> <!-- Steel -->
+					<item id="1877" min="1" max="1" chance="4.741" /> <!-- Adamantite Nugget -->
+					<item id="1881" min="1" max="1" chance="15.8032" /> <!-- Coarse Bone Powder -->
+					<item id="1882" min="1" max="1" chance="26.3387" /> <!-- Leather -->
+					<item id="2276" min="1" max="1" chance="0.8466" /> <!-- Recipe: Maingauche -->
+					<item id="2274" min="1" max="1" chance="0.8466" /> <!-- Recipe: Skull Breaker -->
+					<item id="2976" min="1" max="1" chance="15.8667" /> <!-- Recipe: Manticore Skin Boots -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2279" min="1" max="1" chance="0.4867" /> <!-- Recipe: War Pick -->
+				<item id="2979" min="1" max="1" chance="9.122" /> <!-- Recipe: Manticore Skin Gloves -->
+				<item id="1877" min="1" max="1" chance="2.7257" /> <!-- Adamantite Nugget -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="30014" level="70" type="L2Trainer" name="Celma" title="Master">
@@ -2373,7 +2486,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30078" level="70" type="L2Merchant" name="Pano" title="Grocer">
+	<npc id="30078" level="70" type="L2Merchant" name="Pano" title="Floran Merchant">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />

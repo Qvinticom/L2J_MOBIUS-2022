@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21000" level="54" type="L2Monster" name="Soul of Ruins">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="5191" sp="414" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="218.89589" magical="145.743350252286" />
+			<attribute>
+				<attack type="UNHOLY" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="174" />
+			</speed>
+			<hit_time>390</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4002" level="5" /> <!--NPC HP Drain -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="1" /> <!--Undead -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="688" max="1402" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.15449999272823334">
+					<item id="301" min="1" max="1" chance="0.3776" /> <!-- Scorpion -->
+					<item id="2113" min="1" max="1" chance="33.6275" /> <!-- Scorpion Blade -->
+					<item id="303" min="1" max="1" chance="0.3776" /> <!-- Widow Maker -->
+					<item id="2114" min="1" max="1" chance="33.6275" /> <!-- Widowmaker Head -->
+					<item id="299" min="1" max="1" chance="0.2946" /> <!-- Orcish Poleaxe -->
+					<item id="2122" min="1" max="1" chance="31.6952" /> <!-- Orcish Poleaxe Blade -->
+				</group>
+				<group chance="11.355299949645996">
+					<item id="1865" min="1" max="1" chance="43.589" /> <!-- Varnish -->
+					<item id="1870" min="1" max="1" chance="43.589" /> <!-- Coal -->
+					<item id="1879" min="1" max="1" chance="7.2648" /> <!-- Cokes -->
+					<item id="1875" min="1" max="1" chance="2.9059" /> <!-- Stone of Purity -->
+					<item id="4040" min="1" max="1" chance="0.8718" /> <!-- Mold Lubricant -->
+					<item id="4182" min="1" max="1" chance="0.0502" /> <!-- Recipe: Great Sword (100%) -->
+					<item id="5160" min="1" max="1" chance="0.0872" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
+					<item id="5436" min="1" max="1" chance="0.0711" /> <!-- Recipe: Berserker Blade(100%) -->
+					<item id="4146" min="1" max="1" chance="0.2794" /> <!-- Recipe: Tunic of Zubei (100%) -->
+					<item id="8726" min="1" max="1" chance="1.009" /> <!-- Life Stone - Level 55 -->
+					<item id="8736" min="1" max="1" chance="0.2523" /> <!-- Mid-Grade Life Stone - Level 55 -->
+					<item id="8746" min="1" max="1" chance="0.0252" /> <!-- High-Grade Life Stone - Level 55 -->
+					<item id="8756" min="1" max="1" chance="0.0051" /> <!-- Top-Grade Life Stone - Level 55 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="3" chance="87.1346" /> <!-- Varnish -->
+				<item id="1986" min="1" max="1" chance="1.8415" /> <!-- Full Plate Armor Temper -->
+				<item id="1918" min="1" max="1" chance="7.5474" /> <!-- Nassen's Earring Gemstone -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
 	<npc id="21001" level="60" type="L2Monster" name="Archer of Destruction">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
