@@ -479,7 +479,7 @@ public class Olympiad extends ListenersContainer
 		
 		_scheduledCompStart = ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
-			if (isOlympiadEnd())
+			if (isOlympiadEnd() || Config.SERVER_CLASSIC_SUPPORT)
 			{
 				return;
 			}
@@ -491,7 +491,7 @@ public class Olympiad extends ListenersContainer
 			_logResults.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
 			_gameManager = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
-			if (Config.ALT_OLY_ANNOUNCE_GAMES && !Config.SERVER_CLASSIC_SUPPORT)
+			if (Config.ALT_OLY_ANNOUNCE_GAMES)
 			{
 				_gameAnnouncer = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
 			}
