@@ -229,7 +229,7 @@ public final class L2TeleporterInstance extends L2Npc
 	{
 		if (type == TeleportType.NORMAL)
 		{
-			if (!player.isSubClassActive() && (player.getLevel() < 77))
+			if (!player.isSubClassActive() && (player.getLevel() < (Config.SERVER_CLASSIC_SUPPORT ? 41 : 77)))
 			{
 				return 0;
 			}
@@ -247,7 +247,7 @@ public final class L2TeleporterInstance extends L2Npc
 	
 	protected boolean shouldPayFee(L2PcInstance player, TeleportType type, TeleportLocation loc)
 	{
-		return (type != TeleportType.NORMAL) || (!Config.ALT_GAME_FREE_TELEPORT && ((player.getLevel() > 76) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+		return (type != TeleportType.NORMAL) || (!Config.ALT_GAME_FREE_TELEPORT && ((player.getLevel() > (Config.SERVER_CLASSIC_SUPPORT ? 40 : 76)) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
 	}
 	
 	protected int parseNextInt(StringTokenizer st, int defaultVal)
