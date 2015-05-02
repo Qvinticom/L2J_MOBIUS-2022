@@ -82,7 +82,7 @@ public final class L2TeleporterInstance extends L2Npc
 			case "showNoblesSelect":
 			{
 				final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
-				msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/" + (player.isNoble() ? "nobles_select" : "not_nobles") + ".htm");
+				msg.setFile(player.getHtmlPrefix(), "html/teleporter/" + (player.isNoble() ? "nobles_select" : "not_nobles") + ".htm");
 				msg.replace("%objectId%", getObjectId());
 				player.sendPacket(msg);
 				break;
@@ -104,7 +104,7 @@ public final class L2TeleporterInstance extends L2Npc
 				}
 				
 				final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
-				msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/teleports.htm");
+				msg.setFile(player.getHtmlPrefix(), "html/teleporter/teleports.htm");
 				final StringBuilder sb = new StringBuilder();
 				final Collection<TeleportLocation> locs = holder.getLocations(type);
 				final List<NpcStringId> questLocations = new ArrayList<>();
@@ -181,7 +181,7 @@ public final class L2TeleporterInstance extends L2Npc
 				else if (getCastle().getSiege().isInProgress())
 				{
 					final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
-					msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/castleteleporter-busy.htm");
+					msg.setFile(player.getHtmlPrefix(), "html/teleporter/castleteleporter-busy.htm");
 					player.sendPacket(msg);
 				}
 				else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getKarma() != 0)) // TODO: Update me when Karma is replaced with Reputation system!
@@ -330,7 +330,7 @@ public final class L2TeleporterInstance extends L2Npc
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			
-			String filename = "data/html/teleporter/epictransformed.htm";
+			String filename = "html/teleporter/epictransformed.htm";
 			
 			html.setFile(player.getHtmlPrefix(), filename);
 			html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -429,7 +429,7 @@ public final class L2TeleporterInstance extends L2Npc
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/teleporter/" + pom + ".htm";
+		return "html/teleporter/" + pom + ".htm";
 	}
 	
 	private void showNewbieHtml(L2PcInstance player)
@@ -441,10 +441,10 @@ public final class L2TeleporterInstance extends L2Npc
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		
-		String filename = "data/html/teleporter/free/" + getTemplate().getId() + ".htm";
+		String filename = "html/teleporter/free/" + getTemplate().getId() + ".htm";
 		if (!HtmCache.getInstance().isLoadable(filename))
 		{
-			filename = "data/html/teleporter/" + getTemplate().getId() + "-1.htm";
+			filename = "html/teleporter/" + getTemplate().getId() + "-1.htm";
 		}
 		
 		html.setFile(player.getHtmlPrefix(), filename);
@@ -462,10 +462,10 @@ public final class L2TeleporterInstance extends L2Npc
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		
-		String filename = "data/html/teleporter/half/" + getId() + ".htm";
+		String filename = "html/teleporter/half/" + getId() + ".htm";
 		if (!HtmCache.getInstance().isLoadable(filename))
 		{
-			filename = "data/html/teleporter/" + getId() + "-1.htm";
+			filename = "html/teleporter/" + getId() + "-1.htm";
 		}
 		
 		html.setFile(player.getHtmlPrefix(), filename);
@@ -477,7 +477,7 @@ public final class L2TeleporterInstance extends L2Npc
 	@Override
 	public void showChatWindow(L2PcInstance player)
 	{
-		String filename = "data/html/teleporter/castleteleporter-no.htm";
+		String filename = "html/teleporter/castleteleporter-no.htm";
 		
 		int condition = validateCondition(player);
 		if (condition == COND_REGULAR)
@@ -489,7 +489,7 @@ public final class L2TeleporterInstance extends L2Npc
 		{
 			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 			{
-				filename = "data/html/teleporter/castleteleporter-busy.htm"; // Busy because of siege
+				filename = "html/teleporter/castleteleporter-busy.htm"; // Busy because of siege
 			}
 			else if (condition == COND_OWNER) // Clan owns castle
 			{
@@ -532,7 +532,7 @@ public final class L2TeleporterInstance extends L2Npc
 			}
 			else if (list.getIsForNoble() && !player.isNoble())
 			{
-				String filename = "data/html/teleporter/nobleteleporter-no.htm";
+				String filename = "html/teleporter/nobleteleporter-no.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));

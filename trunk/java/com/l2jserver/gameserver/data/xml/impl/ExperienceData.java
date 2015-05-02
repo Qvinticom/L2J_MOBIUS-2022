@@ -50,7 +50,7 @@ public final class ExperienceData implements IXmlReader
 	public void load()
 	{
 		_expTable.clear();
-		parseDatapackFile("data/stats/experience.xml");
+		parseDatapackFile("stats/experience.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
 		LOGGER.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
 		LOGGER.info(getClass().getSimpleName() + ": Max Pet Level is: " + (MAX_PET_LEVEL - 1));

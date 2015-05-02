@@ -854,7 +854,7 @@ public class L2Npc extends L2Character
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/npcbusy.htm");
+				html.setFile(player.getHtmlPrefix(), "html/npcbusy.htm");
 				html.replace("%busymessage%", getBusyMessage());
 				html.replace("%npcname%", getName());
 				html.replace("%playername%", player.getName());
@@ -957,9 +957,9 @@ public class L2Npc extends L2Character
 	/**
 	 * <B><U Format of the pathfile</U>:</B>
 	 * <ul>
-	 * <li>if the file exists on the server (page number = 0) : <B>data/html/default/12006.htm</B> (npcId-page number)</li>
-	 * <li>if the file exists on the server (page number > 0) : <B>data/html/default/12006-1.htm</B> (npcId-page number)</li>
-	 * <li>if the file doesn't exist on the server : <B>data/html/npcdefault.htm</B> (message : "I have nothing to say to you")</li>
+	 * <li>if the file exists on the server (page number = 0) : <B>html/default/12006.htm</B> (npcId-page number)</li>
+	 * <li>if the file exists on the server (page number > 0) : <B>html/default/12006-1.htm</B> (npcId-page number)</li>
+	 * <li>if the file doesn't exist on the server : <B>html/npcdefault.htm</B> (message : "I have nothing to say to you")</li>
 	 * </ul>
 	 * @param npcId The Identifier of the L2NpcInstance whose text must be display
 	 * @param val The number of the page to display
@@ -978,7 +978,7 @@ public class L2Npc extends L2Character
 			pom = npcId + "-" + val;
 		}
 		
-		String temp = "data/html/default/" + pom + ".htm";
+		String temp = "html/default/" + pom + ".htm";
 		
 		if (!Config.LAZY_CACHE)
 		{
@@ -997,7 +997,7 @@ public class L2Npc extends L2Character
 		}
 		
 		// If the file is not found, the standard message "I have nothing to say to you" is returned
-		return "data/html/npcdefault.htm";
+		return "html/npcdefault.htm";
 	}
 	
 	public void showChatWindow(L2PcInstance player)
@@ -1013,7 +1013,7 @@ public class L2Npc extends L2Character
 	 */
 	private boolean showPkDenyChatWindow(L2PcInstance player, String type)
 	{
-		final String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/" + type + "/" + getId() + "-pk.htm");
+		final String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/" + type + "/" + getId() + "-pk.htm");
 		if (html != null)
 		{
 			insertObjectIdAndShowChatWindow(player, html);
@@ -1478,15 +1478,15 @@ public class L2Npc extends L2Character
 		
 		if (this instanceof L2WarehouseInstance)
 		{
-			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/warehouse/" + npcId + "-noteach.htm");
+			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/warehouse/" + npcId + "-noteach.htm");
 		}
 		else if (this instanceof L2TrainerInstance)
 		{
-			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/trainer/" + npcId + "-noteach.htm");
+			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/trainer/" + npcId + "-noteach.htm");
 			// Trainer Healer?
 			if (html == null)
 			{
-				html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/ai/npc/Trainers/HealerTrainer/" + npcId + "-noteach.html");
+				html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/ai/npc/Trainers/HealerTrainer/" + npcId + "-noteach.html");
 			}
 		}
 		

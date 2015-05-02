@@ -108,7 +108,7 @@ public class JumpManager
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT, "data/JumpTrack.xml");
+		File file = new File(Config.DATAPACK_ROOT, "JumpTrack.xml");
 		Document doc = null;
 		
 		if (file.exists())

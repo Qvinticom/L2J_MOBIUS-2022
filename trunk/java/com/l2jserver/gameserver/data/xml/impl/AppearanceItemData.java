@@ -49,7 +49,7 @@ public class AppearanceItemData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/AppearanceStones.xml");
+		parseDatapackFile("AppearanceStones.xml");
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _stones.size() + " Stones");
 		
 		//@formatter:off

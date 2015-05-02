@@ -50,16 +50,16 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/petmanager/" + pom + ".htm";
+		return "html/petmanager/" + pom + ".htm";
 	}
 	
 	@Override
 	public void showChatWindow(L2PcInstance player)
 	{
-		String filename = "data/html/petmanager/" + getId() + ".htm";
+		String filename = "html/petmanager/" + getId() + ".htm";
 		if ((getId() == 36478) && player.hasSummon())
 		{
-			filename = "data/html/petmanager/restore-unsummonpet.htm";
+			filename = "html/petmanager/restore-unsummonpet.htm";
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -122,7 +122,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			if (!ok)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/petmanager/evolve_no.htm");
+				html.setFile(player.getHtmlPrefix(), "html/petmanager/evolve_no.htm");
 				player.sendPacket(html);
 			}
 			return;
@@ -154,7 +154,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			if (!ok)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/petmanager/restore_no.htm");
+				html.setFile(player.getHtmlPrefix(), "html/petmanager/restore_no.htm");
 				player.sendPacket(html);
 			}
 			return;
@@ -171,12 +171,12 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		if (player.destroyItemByItemId("Consume", itemIdtake, 1, this, true))
 		{
 			player.addItem("", itemIdgive, 1, this, true);
-			html.setFile(player.getHtmlPrefix(), "data/html/petmanager/" + getId() + ".htm");
+			html.setFile(player.getHtmlPrefix(), "html/petmanager/" + getId() + ".htm");
 			player.sendPacket(html);
 		}
 		else
 		{
-			html.setFile(player.getHtmlPrefix(), "data/html/petmanager/exchange_no.htm");
+			html.setFile(player.getHtmlPrefix(), "html/petmanager/exchange_no.htm");
 			player.sendPacket(html);
 		}
 	}

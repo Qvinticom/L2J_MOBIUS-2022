@@ -306,7 +306,7 @@ public class FishingChampionshipManager
 						pl.addItem("fishing_reward", Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM, rewardCnt, null, true);
 						
 						final NpcHtmlMessage html = new NpcHtmlMessage();
-						html.setFile(pl.getHtmlPrefix(), "data/html/fisherman/championship/fish_event_reward001.htm");
+						html.setFile(pl.getHtmlPrefix(), "html/fisherman/championship/fish_event_reward001.htm");
 						pl.sendPacket(html);
 					}
 				}
@@ -320,7 +320,7 @@ public class FishingChampionshipManager
 		
 		if (_needRefresh)
 		{
-			html.setFile(pl.getHtmlPrefix(), "data/html/fisherman/championship/fish_event003.htm");
+			html.setFile(pl.getHtmlPrefix(), "html/fisherman/championship/fish_event003.htm");
 			pl.sendPacket(html);
 			
 			refreshResult();
@@ -328,7 +328,7 @@ public class FishingChampionshipManager
 			return;
 		}
 		
-		html.setFile(pl.getHtmlPrefix(), "data/html/fisherman/championship/fish_event002.htm");
+		html.setFile(pl.getHtmlPrefix(), "html/fisherman/championship/fish_event002.htm");
 		
 		String str = null;
 		for (int x = 1; x <= 5; x++)
@@ -350,7 +350,7 @@ public class FishingChampionshipManager
 	public void showChampScreen(L2PcInstance pl, L2NpcInstance npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(pl.getHtmlPrefix(), "data/html/fisherman/championship/fish_event001.htm");
+		html.setFile(pl.getHtmlPrefix(), "html/fisherman/championship/fish_event001.htm");
 		
 		String str = null;
 		for (int x = 1; x <= 5; x++)

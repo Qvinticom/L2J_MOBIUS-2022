@@ -169,7 +169,7 @@ public class Q10414_KekropusLetter_WithCourage extends Quest implements IBypassH
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10414_KekropusLetter_WithCourage/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10414_KekropusLetter_WithCourage/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

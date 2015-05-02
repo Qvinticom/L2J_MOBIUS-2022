@@ -45,7 +45,7 @@ public final class ItemCrystalizationData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/CrystalizableItems.xml");
+		parseDatapackFile("CrystalizableItems.xml");
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _items.size() + " Items");
 	}
 	

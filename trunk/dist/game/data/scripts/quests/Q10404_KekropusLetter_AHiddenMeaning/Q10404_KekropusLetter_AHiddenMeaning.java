@@ -165,7 +165,7 @@ public class Q10404_KekropusLetter_AHiddenMeaning extends Quest implements IBypa
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10404_KekropusLetter_AHiddenMeaning/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10404_KekropusLetter_AHiddenMeaning/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

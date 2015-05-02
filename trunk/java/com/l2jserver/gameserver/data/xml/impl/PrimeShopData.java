@@ -52,7 +52,7 @@ public class PrimeShopData implements IXmlReader
 	public void load()
 	{
 		_primeItems.clear();
-		parseDatapackFile("data/PrimeShop.xml");
+		parseDatapackFile("PrimeShop.xml");
 		
 		if (_primeItems.size() > 0)
 		{

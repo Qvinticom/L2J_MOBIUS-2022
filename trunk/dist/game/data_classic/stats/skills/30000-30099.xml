@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30000" levels="1" name="Hydro Attack: Debuff">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Stacks Storm Marks when using Hydro Attack. -->
+		<set name="icon" val="icon.skill11011" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="0" />
+	</skill>
+	<skill id="30001" levels="25" name="Hydro Attack">
+		<table name="#magicLevel">1 20 28 36 42 46 50 54 60 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
+		<table name="#power">6 14 19 25 32 36 41 46 50 55 60 64 69 72 75 77 79 171 179 187 195 203 211 219 227</table>
+		<table name="#mpConsume">3 8 10 13 16 18 20 21 23 25 27 29 30 31 32 32 33 33 33 34 34 34 34 34 35</table>
+		<set name="effectRange" val="80" />
+		<set name="effectPoint" val="-720" />
+		<set name="castRange" val="60" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="triggeredId" val="30002" />
+		<set name="icon" val="icon.skill30001" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="TriggerSkillByDamage">
+				<param skillId="30002" skillLevel="1" /> <!-- Storm Sign -->
+				<param chance="100" />
+				<param targetType="ONE" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30002" levels="3" name="Storm Sign">
+		<!-- M. Def. - 30%, Speed - 70. -->
+		<set name="icon" val="icon.skill30027" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="abnormalTime" val="10" />
+		<set name="isTriggeredSkill" val="true" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" time="10" val="0">
+				<mul stat="mDef" val="0.3" />
+				<mul stat="runSpd" val="70" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30003" levels="17" name="Hydro Flare">
+		<!-- Eliminates Storm Sign and attacks target with 110 Power added to M. Atk. 10% more damage if target is debuffed. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
+		<table name="#power">114 120 130 140 150 157 162 167 172 501 515 543 571 599 627 655 683</table>
+		<table name="#mpConsumes">47 51 54 58 60 62 64 65 66 67 67 68 68 68 69 69 70</table>
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="icon" val="icon.skill30003" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
+	</skill>
+	<skill id="30004" levels="22" name="Hydro Strike">
+		<!-- Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon. -->
+		<table name="#magicLevel">40 44 48 52 56 58 64 68 72 76 78 80 82 84 85 87 89 91 93 95 97 99</table>
+		<table name="#power">57 66 74 83 92 101 110 118 127 136 140 145 149 154 420 442 464 486 508 530 552 574</table>
+		<table name="#mpConsume">27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 70</table>
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="500" />
+		<set name="icon" val="icon.skill30004" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
+	</skill>
+	<!-- Level 4 : M. Def. - 50%, Speed - 100. -->
+	<skill id="30005" levels="4" name="Storm Sign">
+		<set name="icon" val="icon.skill30027" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="4" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="0.5" />
+				<add stat="runSpd" val="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30006" levels="8" name="Storm Rage">
+		<!-- Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes">134 135 136 137 138 138 139 141</table>
+		<table name="#power"> 255 269 283 297 311 325 339 353 </table>
+		<set name="icon" val="icon.skill30006" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="power" val="#power" />
+		<set name="affectRange" val="300" />
+		<set name="effectRange" val="400" />
+		<set name="castRange" val="60" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
+	</skill>
+	<skill id="30007" levels="12" name="Hydro Drain">
+		<!-- Eliminates Storm Sign and attacks target with 123 Power added to M. atk. and recovers 10% HP and 5% MP. Over-hit. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
+		<table name="#power">123 127 130 134 386 396 416 436 456 476 496 516</table>		
+		<table name="#mpConsumes">63 64 65 66 67 67 68 68 68 69 69 70</table>
+		<set name="icon" val="icon.skill30007" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="overHit" val="true" />
+	</skill>
+	<skill id="30008" levels="5" name="Wind Blend">
+		<table name="#abnormalLvls">1 2 3 4 5</table>
+		<table name="#magicLevel">20 85 90 94 98</table>
+		<table name="#mpConsume">16 67 68 69 70</table>
+		<table name="#reuseDelay">50000 50000 40000 30000 25000</table>
+		<table name="#spd">70 100 100 100 100</table>
+		<set name="icon" val="icon.skill30008" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="10" />	
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="removedOnAnyActionExceptMove" val="true" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect name="Invincible" time="10" val="0" />
+			<effect name="Buff" time="10" val="0">
+				<add stat="runSpd" val="#spd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30009" levels="10" name="Deceptive Blink">
+		<!-- For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon. -->
+		<table name="#mpConsumes"> 77 78 79 80 81 82 82 83 83 84 </table>
+		<set name="icon" val="icon.skill30009" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="5" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<effect name="Buff">
+			<add stat="runSpd" val="100" />
+		</effect>
+	</skill>
+	<skill id="30010" levels="1" name="Windy Refuge">
+		<!-- Cancels all debuffs and recovers HP/MP for 10 sec. inside a refuge of wind. Cannot move. -->
+		<set name="icon" val="icon.skill30010" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="180000" />
+		<set name="isMagic" val="1" />
+		<set name="castRange" val="0" />
+		<for>
+			<effect name="Buff">
+				<add stat="regHp" val="266" /> <!-- Retail Value -->
+				<add stat="regMp" val="74" /> <!-- Retail Value -->
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30011" levels="12" name="Threatening Wind">
+		<!-- Sends a slashing wind to brand target with Storm Sign Stage 3. Requires a sword or blunt Weapon. -->
+		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
+		<set name="icon" val="icon.skill30011" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect abnormalTime="10" chance="100" name="TriggerSkillBySkill" triggeredId="30002"
+					triggeredLevel="1" val="0" />
+		</for>
+	</skill>
+	<skill id="30012" levels="22" name="Air Rush">
+		<!-- Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
+		<table name="#power"> 57 66 74 83 92 101 110 118 127 136 141 145 150 154 376 397 418 438 459 480 501 522 </table>
+		<table name="#mpConsumes"> 31 34 38 41 45 49 53 56 59 62 63 64 65 66 67 67 68 68 69 69 69 70 </table>
+		<set name="icon" val="icon.skill30012" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="flyType" val="CHARGE" />
+		<set name="skillType" val="PDAM" />
+		<set name="nextAction" val="attack" />
+		<set name="power" val="#power" />
+		<set name="triggeredId" val="30002" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="7000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
+		<effect name="TriggerSkillByDamage">
+			<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+			<param minDamage="1" />
+			<param chance="100" />
+			<param skillId="30002" skillLevel="1" /> <!-- Storm Sign -->
+			<param targetType="ONE" />
+		</effect>
+	</skill>
+	<skill id="30013" levels="1" name="Switch Places">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Trades places with target. Requires a sword or blunt weapon. PC targets only. -->
+		<set name="icon" val="icon.skill30005" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="705" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="30014" levels="12" name="Compelling Wind">
+		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
+		<set name="icon" val="icon.skill30014" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="5" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="30015" levels="1" name="Mass Compelling Wind">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
+		<set name="icon" val="icon.skill0028" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30016" levels="3" name="Eye of the Storm">
+		<!-- For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%. -->
+		<table name="#mpConsumes"> 18 37 40 </table>
+		<set name="icon" val="icon.skill30016" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="30" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="storm">
+				<add stat="mCritRate" val="100" />
+				<add stat="pDef" val="1.30" />
+				<add stat="mDef" val="1.30" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30017" levels="3" name="Squall">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
+		<table name="#mpConsumes"> 18 37 40 </table>
+		<set name="icon" val="icon.skill30017" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="30018" levels="1" name="Windy Illusion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Removes all debuffs and becomes invincible against targeting for 10 sec. -->
+		<set name="icon" val="icon.skill30018" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="10" />		
+		<set name="mpConsume" val="41" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+	</skill>
+	<skill id="30019" levels="8" name="Sayha's Word">
+		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<table name="#power">533 561 589 617 645 673 701 729</table>
+		<table name="#mpConsumes"> 670 677 682 687 690 694 699 705 </table>
+		<set name="icon" val="icon.skill30019" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="10" />
+		<set name="castRange" val="80" />
+		<set name="hitTime" val="5500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="SWORD,BLUNT" />
+			</and>
+		</cond>
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
+	</skill>
+	<skill id="30020" levels="1" name="Sayha's Fury">
+		<!-- For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
+		<set name="icon" val="icon.skill30020" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="30" />
+		<set name="mpConsume" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="fury">
+				<add stat="runSpd" val="1.5" />
+				<mul stat="mCritRate" val="0.50" />
+				<mul stat="rCrit" val="0.50" />
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<param castSkillId="1401" />
+				<!-- Major Heal -->
+				<param chance="100" />
+				<param skillId="30026" skillLevel="3" /> <!-- PvP Armor - Heal -->
+				<param targetType="ONE" />
+				<param allowWeapons="SWORD,BLUNT" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30022" levels="1" name="Sayha's Blessing">
+		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
+		<set name="icon" val="icon.skill30022" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="PARTY" />
+		<set name="abnormalTime" val="30" />
+		<set name="mpConsume" val="84" />
+		<set name="hitTime" val="5500" />
+		<set name="coolTime" val="500" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect name="Buff" time="30" val="0">
+				<add stat="runSpd" val="50" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30023" levels="1" name="Decoy Lock">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cannot change target. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30026" levels="3" name="Lightning Squall">
+		<!-- Attacks target with 50 Power added to M. Atk., and decreases Speed by 20. -->
+		<table name="#power"> 50 100 150 </table>
+		<set name="icon" val="icon.skill30026" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="power" val="#power" />
+		<set name="targetType" val="ONE" />
+		<set name="castRange" val="1100" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Buff" >
+				<mul stat="runSpd" val="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30027" levels="1" name="Destructive Bolt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 300 Power added to M. Atk. and has a 10% chance of branding target with Storm Sign Stage 4. -->
+		<set name="icon" val="icon.skill30026" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1100" />
+		<set name="isMagic" val="4" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30029" levels="1" name="Divine Storm">
+		<!-- Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
+		<table name="#power">448</table>		
+		<set name="icon" val="icon.iconskill30007" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="power" val="#power" />
+		<set name="abnormalTime" val="5" />
+		<set name="mpConsume" val="1405" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="7" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="Paralyze" />
+		</for>
+	</skill>
+	<skill id="30030" levels="1" name="Storm Captivity">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Trapped by a storm that gives continuous damage. -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30031" levels="1" name="Magic Potential">
+		<!-- Increases Max. M. Critical Rate to 550. -->
+		<set name="icon" val="icon.skill30025" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<set name="castRange" val="0" />
+		<for>
+			<effect name="Buff">
+				<set stat="mCritRate" val="550" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Level 1 : When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%. -->
+	<!-- Level 2 : When equipped with a blunt weapon, M. Atk. +17% and + 57, Casting Spd. + 5%. -->
+	<!-- Level 3 : When equipped with a blunt weapon, M. Atk. +17% and + 228, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 4 : When equipped with a blunt weapon, M. Atk. +17% and + 436, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 5 : When equipped with a blunt weapon, M. Atk. +17% and + 728, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 6 : When equipped with a blunt weapon, M. Atk. +17% and + 834, Casting Spd. + 15%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 7 : When equipped with a blunt weapon, M. Atk. +17% and + 942, Casting Spd. + 20%. and brands target with Storm Sign when using Hydro Attack. -->
+	<!-- Level 8 : When equipped with a blunt weapon, M. Atk. +40% and + 1050, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<!-- Level 9 : When equipped with a blunt weapon, M. Atk. +40% and + 1252, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<!-- Level 10 : When equipped with a blunt weapon, M. Atk. +40% and + 1454, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<!-- Level 11 : When equipped with a blunt weapon, M. Atk. +40% and + 1727, Casting Spd. + 30%, M. Critical Rate + 10%, M. Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with Storm Sign Stage 4. Brands target with Storm Sign Lv. 3 when using Sayha's Word. -->
+	<skill id="30040" levels="11" name="Eminent Blunt Weapon Mastery">
+		<table name="#magicLevel"> 5 20 40 52 64 76 80 85 90 95 99 </table>
+		<table name="#mAtkAdd"> 10 57 228 436 728 834 942 1050 1252 1454 1727 </table>
+		<table name="#mAtkMul"> 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.40 1.40 1.40 1.40 </table>
+		<table name="#mAtkSpd"> 1.05 1.05 1.10 1.10 1.10 1.15 1.20 1.30 1.30 1.30 1.30 </table>
+		<table name="#mCritRate"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 </table>
+		<table name="#mCritPower"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 </table>
+		<set name="icon" val="icon.skill30023" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="mAtk" val="#mAtkAdd">
+					<using kind="BLUNT" />
+				</add>
+				<mul stat="mAtk" val="#mAtkMul">
+					<using kind="BLUNT" />
+				</mul>
+				<mul stat="mAtkSpd" val="#mAtkSpd">
+					<using kind="BLUNT" />
+				</mul>
+				<mul stat="mCritRate" val="#mCritRate">
+					<using kind="BLUNT" />
+				</mul>
+				<mul stat="mCritPower" val="#mCritPower">
+					<using kind="BLUNT" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<!-- Level 1 : When equipped with a robe, P. Def. +7. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 2 : When equipped with a robe, P. Def. +12, Magic Resistance + 5%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 3 : When equipped with a robe, P. Def. +27, Magic Resistance + 10%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 4 : When equipped with a robe, P. Def. +39, Magic Resistance + 15%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 5 : When equipped with a robe, P. Def. +55, Magic Resistance + 20%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 6 : When equipped with a robe, P. Def. +69, Magic Resistance + 25%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 7 : When equipped with a robe, P. Def. +77, M. Def. + 533, M. Def. + 3%, Magic Resistance + 30%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 8 : When equipped with a robe, P. Def. +1238, M. Def. + 1156, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 9 : When equipped with a robe, P. Def. +1347, M. Def. + 1258, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 10 : When equipped with a robe, P. Def. +1456, M. Def. + 1360, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<!-- Level 11 : When equipped with a robe, P. Def. +1601, M. Def. + 1496, M. Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind. -->
+	<skill id="30041" levels="11" name="Eminent Robe Mastery">
+		<table name="#magicLevel"> 5 20 40 44 64 76 80 85 90 95 99 </table>
+		<table name="#pDef"> 7 12 27 39 55 69 77 1238 1347 1456 1601 </table>
+		<table name="#mDef"> 1 1 1 1 1 1 1.03 1.05 1.05 1.05 1.05 </table>
+		<table name="#mDefAdd"> 0 0 0 0 0 0 533 1156 1258 1360 1496 </table>
+		<table name="#magicSuccRes"> 1 1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.35 1.35 1.35 </table>
+		<set name="icon" val="icon.skill30024" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pDef" val="#pDef">
+					<using kind="MAGIC" />
+				</add>
+				<add stat="mDef" val="#mDefAdd">
+					<using kind="MAGIC" />
+				</add>			
+				<mul stat="mDef" val="#mDef">
+					<using kind="MAGIC" />
+				</mul>
+				<mul stat="magicSuccRes" val="#magicSuccRes">
+					<using kind="MAGIC" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<!-- Level 1 : Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%. -->
+	<!-- Level 2 : Max. MP + 77, MP Recovery Bonus + 3, and M. Skill Cooldown - 15%. -->
+	<!-- Level 3 : Max. MP + 223, MP Recovery Bonus + 5, and M. Skill Cooldown - 20%, M. Skill MP Consumption - 5%. -->
+	<!-- Level 4 : Max. HP + 4891, Max. MP + 344, MP Recovery Bonus + 7, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<!-- Level 5 : Max. HP + 4891, Max. MP + 411, MP Recovery Bonus + 8, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<!-- Level 6 : Max. HP + 4891, Max. MP + 478, MP Recovery Bonus + 10, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<!-- Level 7 : Max. HP + 4891, Max. MP + 568, MP Recovery Bonus + 11, and M. Skill Cooldown - 30%, M. Skill MP Consumption - 7%. -->
+	<skill id="30042" levels="7" name="Eminent Quick Recovery">
+		<table name="#magicLevel"> 20 40 76 85 90 95 99 </table>
+		<table name="#maxHp"> 0 0 0 4891 4891 4891 4891 </table>
+		<table name="#maxMp"> 33 77 223 344 411 478 568 </table>
+		<table name="#regMp"> 1 3 5 7 8 10 11 </table>
+		<table name="#mReuse"> 1.10 1.15 1.20 1.30 1.30 1.30 1.30 </table>
+		<table name="#MagicalMpConsumeRate"> 1 1 0.95 0.93 0.93 0.93 0.93 </table>
+		<set name="icon" val="icon.skill10504" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="#maxHp" />
+				<mul stat="mReuse" val="#mReuse" />
+				<add stat="regMp" val="#regMp" />
+				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30043" levels="2" name="Eminent Attribute Resistance">
+		<!-- Level 1: Wind Resistance + 30. -->
+		<!-- Level 2: Wind Resistance + 30, Holy Resistance +30. -->
+		<table name="#magicLevel"> 76 85 </table>
+		<table name="#elementwind"> 30 30 </table>
+		<table name="#elementholy"> 0 30 </table>	
+		<set name="icon" val="icon.skill11006" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="#elementwind" />
+				<add stat="holyRes" val="#elementholy" />
+			</effect>
+		</for>		
+	</skill>
+	<skill id="30044" levels="2" name="Eminent Trait Resistance">
+		<!-- Hold/Mental Resistance + 30. -->
+		<table name="#magicLevel"> 76 85 </table>
+		<table name="#elementholdm"> 30 30 </table>
+		<table name="#elementhatep"> 0 30 </table>	
+		<set name="icon" val="icon.skill10005" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DefenceTrait">
+				<param HOLD="#elementholdm" />
+				<param PARALYZE="#elementholdm" />
+				<param SLEEP="#elementholdm" />
+				<param SHOCK="#elementholdm" />
+				<param DERANGEMENT="#elementhatep" />
+			</effect>
+		</for>	
+	</skill>
+	<skill id="30045" levels="3" name="Eminent Ability">
+		<!-- LeveL 1: INT + 2. -->
+		<!-- LeveL 1: INT + 4. -->
+		<!-- LeveL 1: INT + 16. -->
+		<table name="#magicLevel"> 40 76 85 </table>
+		<table name="#tableINT"> 2 4 16 </table>
+		<set name="icon" val="icon.skill11253" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="#tableINT" />
+			</effect>
+		</for>
+	</skill>
+</list>

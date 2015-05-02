@@ -48,7 +48,7 @@ public class TeleportersData implements IXmlReader
 	public void load()
 	{
 		_teleporters.clear();
-		parseDatapackDirectory("data/teleporters", true);
+		parseDatapackDirectory("teleporters", true);
 		LOGGER.log(Level.INFO, "Loaded: " + _teleporters.size() + " npc teleporters.");
 	}
 	

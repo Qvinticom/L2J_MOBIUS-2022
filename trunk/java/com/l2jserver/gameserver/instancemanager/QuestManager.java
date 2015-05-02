@@ -103,7 +103,7 @@ public final class QuestManager extends ScriptManager<Quest>
 		
 		try
 		{
-			L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "data/scripts.cfg"));
+			L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "scripts.cfg"));
 		}
 		catch (IOException e)
 		{

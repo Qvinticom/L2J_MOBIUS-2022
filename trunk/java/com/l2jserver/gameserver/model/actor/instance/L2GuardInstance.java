@@ -99,8 +99,8 @@ public class L2GuardInstance extends L2Attackable
 	 * Return the pathfile of the selected HTML file in function of the L2GuardInstance Identifier and of the page number.<br>
 	 * <B><U> Format of the pathfile </U> :</B>
 	 * <ul>
-	 * <li>if page number = 0 : <B>data/html/guard/12006.htm</B> (npcId-page number)</li>
-	 * <li>if page number > 0 : <B>data/html/guard/12006-1.htm</B> (npcId-page number)</li>
+	 * <li>if page number = 0 : <B>html/guard/12006.htm</B> (npcId-page number)</li>
+	 * <li>if page number > 0 : <B>html/guard/12006-1.htm</B> (npcId-page number)</li>
 	 * </ul>
 	 * @param npcId The Identifier of the L2NpcInstance whose text must be display
 	 * @param val The number of the page to display
@@ -117,7 +117,7 @@ public class L2GuardInstance extends L2Attackable
 		{
 			pom = npcId + "-" + val;
 		}
-		return "data/html/guard/" + pom + ".htm";
+		return "html/guard/" + pom + ".htm";
 	}
 	
 	/**

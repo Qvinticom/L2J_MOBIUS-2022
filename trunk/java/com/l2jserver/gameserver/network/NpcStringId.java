@@ -33203,7 +33203,7 @@ public final class NpcStringId
 		String text;
 		for (final String lang : languages)
 		{
-			file = new File(Config.DATAPACK_ROOT, "/data/lang/" + lang + "/ns/NpcStringLocalisation.xml");
+			file = new File(Config.DATAPACK_ROOT, "/lang/" + lang + "/ns/NpcStringLocalisation.xml");
 			if (!file.isFile())
 			{
 				continue;

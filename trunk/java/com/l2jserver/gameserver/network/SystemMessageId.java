@@ -13979,7 +13979,7 @@ public final class SystemMessageId
 		String text;
 		for (final String lang : languages)
 		{
-			file = new File(Config.DATAPACK_ROOT, "/data/lang/" + lang + "/sm/SystemMessageLocalisation.xml");
+			file = new File(Config.DATAPACK_ROOT, "/lang/" + lang + "/sm/SystemMessageLocalisation.xml");
 			if (!file.isFile())
 			{
 				continue;

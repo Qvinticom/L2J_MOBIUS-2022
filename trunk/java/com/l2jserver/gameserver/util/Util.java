@@ -468,7 +468,7 @@ public final class Util
 	
 	public static File[] getDatapackFiles(String dirname, String extention)
 	{
-		File dir = new File(Config.DATAPACK_ROOT, "data/" + dirname);
+		File dir = new File(Config.DATAPACK_ROOT, "/" + dirname);
 		if (!dir.exists())
 		{
 			return null;

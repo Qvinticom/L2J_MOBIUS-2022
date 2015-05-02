@@ -511,7 +511,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT, "data/levelUpCrystalData.xml");
+			File file = new File(Config.DATAPACK_ROOT, "levelUpCrystalData.xml");
 			if (!file.exists())
 			{
 				_log.severe("[EnhanceYourWeapon] Missing levelUpCrystalData.xml. The quest wont work without it!");

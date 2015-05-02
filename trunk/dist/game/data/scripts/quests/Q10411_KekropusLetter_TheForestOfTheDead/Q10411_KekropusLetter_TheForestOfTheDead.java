@@ -173,7 +173,7 @@ public class Q10411_KekropusLetter_TheForestOfTheDead extends Quest implements I
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10411_KekropusLetter_TheForestOfTheDead/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10411_KekropusLetter_TheForestOfTheDead/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

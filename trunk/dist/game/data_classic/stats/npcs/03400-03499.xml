@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="3401" level="23" type="L2Monster" name="Greyclaw Kutus" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="538023" sp="1678" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="192052" hpRegen="7.5" mp="192052" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4790" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="21" />
+			<height normal="43.5" />
+		</collision>
+	</npc>
+	<npc id="3402" level="22" type="L2Npc" name="Kutus' Escort" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7241" hpRegen="7.5" mp="7241" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="3403" level="22" type="L2Npc" name="Kutus' Pawn" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="10807" hpRegen="7.5" mp="10807" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="3404" level="23" type="L2Monster" name="Tracker Captain Sharuk" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="538023" sp="1678" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="63377" hpRegen="7.5" mp="63377" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4929" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="3405" level="22" type="L2Npc" name="Sharuk's Tracker" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="3566" hpRegen="7.5" mp="3566" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="3406" level="22" type="L2Npc" name="Sharuk's Marksman" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4779" hpRegen="7.5" mp="4779" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="3407" level="21" type="L2Monster" name="Sukar Ratman Chief" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="529271" sp="1449" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="180415" hpRegen="7.5" mp="180415" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4927" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="3408" level="20" type="L2Npc" name="Sukar Ratman Escort" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="10199" hpRegen="7.5" mp="10199" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="18.7" />
+		</collision>
+	</npc>
+	<npc id="3409" level="20" type="L2Npc" name="Sukar Ratman Priest" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="10199" hpRegen="7.5" mp="10199" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="18.7" />
+		</collision>
+	</npc>
+	<npc id="3410" level="25" type="L2Monster" name="Ikuntai" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="317859" sp="2949" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="206272" hpRegen="7.5" mp="206272" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="4853" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="3411" level="24" type="L2Npc" name="Ikuntai's Servitor" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11556" hpRegen="7.5" mp="11556" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4780" level="1" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="3412" level="24" type="L2Npc" name="Ikuntai's Pawn" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="5778" hpRegen="7.5" mp="5778" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="3413" level="25" type="L2Monster" name="Zombie Lord Crowl" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="508202" sp="1903" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="206272" hpRegen="7.5" mp="206272" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="4846" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="21.25" />
+		</collision>
+	</npc>
+	<npc id="3414" level="24" type="L2Npc" name="Evil Spirit Archer" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7742" hpRegen="7.5" mp="7742" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="3415" level="24" type="L2Npc" name="Evil Spirit Warrior" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="5778" hpRegen="7.5" mp="5778" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="3416" level="20" type="L2Monster" name="Zombie Lord Ferkel" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="608353" sp="1432" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="175466" hpRegen="7.5" mp="175466" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="4899" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="3417" level="19" type="L2Npc" name="Ferkel's Warrior" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="9942" hpRegen="7.5" mp="9942" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="3418" level="19" type="L2Npc" name="Ferkel's Priest" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="9942" hpRegen="7.5" mp="9942" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="3419" level="35" type="L2Monster" name="Execution Grounds Watchman Guillotine" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="382478" sp="3460" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="218274" hpRegen="7.5" mp="218274" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="4833" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="58" />
+		</collision>
+	</npc>
+	<npc id="3420" level="35" type="L2Monster" name="Flame Lord Shadar" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="382478" sp="3460" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="330718" hpRegen="7.5" mp="330718" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4494" level="1" />
+			<skill id="4847" level="1" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="28" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="3421" level="34" type="L2Npc" name="Claws of Shadar" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18211" hpRegen="7.5" mp="18211" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="5" water="20" wind="43" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4414" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="3422" level="34" type="L2Npc" name="Whip of Shadar" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="9105" hpRegen="7.5" mp="9105" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4414" level="3" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="3423" level="35" type="L2Monster" name="Soul Collector Acheron" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="382478" sp="3460" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="109137" hpRegen="7.5" mp="109137" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4494" level="1" />
+			<skill id="4869" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="18" />
+			<height normal="63" />
+		</collision>
+	</npc>
+	<npc id="3424" level="34" type="L2Npc" name="Soul Slasher" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="8052" hpRegen="7.5" mp="8052" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="3425" level="34" type="L2Npc" name="Soul Strainer" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="12019" hpRegen="7.5" mp="12019" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="3426" level="60" type="L2Npc" name="Lord Ishka" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="528144" hpRegen="7.5" mp="528144" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="4947" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="67" />
+		</collision>
+	</npc>
+	<npc id="3427" level="59" type="L2Npc" name="Ishka's Elite Officer" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="54346" hpRegen="7.5" mp="54346" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="3428" level="59" type="L2Npc" name="Ishka's Elite Soldier" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="54346" hpRegen="7.5" mp="54346" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="3429" level="59" type="L2Monster" name="Demon Kuri" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="1342137" sp="22888" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="338190" hpRegen="7.5" mp="338190" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4494" level="1" />
+			<skill id="4859" level="1" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="50" />
+			<height normal="180" />
+		</collision>
+	</npc>
+	<npc id="3430" level="58" type="L2Npc" name="Kuri's Wife" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="38200" hpRegen="7.5" mp="38200" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="3431" level="58" type="L2Npc" name="Devil Blader of Chaos" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="19100" hpRegen="7.5" mp="19100" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="3432" level="60" type="L2Npc" name="Ancient Weird Drake" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1056289" hpRegen="7.5" mp="1056289" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="220" water="135" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="4494" level="1" />
+			<skill id="4874" level="1" />
+			<skill id="4276" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="45" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="3433" level="50" type="L2Monster" name="Slaughter Lord Gato" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1194883" sp="16879" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="738329" hpRegen="7.5" mp="738329" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4840" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="57" />
+		</collision>
+	</npc>
+	<npc id="3434" level="49" type="L2Npc" name="Gato's Sniper" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="27461" hpRegen="7.5" mp="27461" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="3435" level="49" type="L2Npc" name="Gato's Troop Captain" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="20493" hpRegen="7.5" mp="20493" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="3436" level="49" type="L2Monster" name="Ketra's Commander Atis" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1164034" sp="17099" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="705138" hpRegen="7.5" mp="705138" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4799" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="3437" level="48" type="L2Npc" name="Ketra Marksman" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="26181" hpRegen="7.5" mp="26181" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="3438" level="48" type="L2Npc" name="Ketra Raider" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="19538" hpRegen="7.5" mp="19538" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="3439" level="45" type="L2Monster" name="Beacon of Blue Sky" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<acquire exp="1042754" sp="13800" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="577073" hpRegen="7.5" mp="577073" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="4810" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="3440" level="44" type="L2Npc" name="Beacon's Shooter" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="21302" hpRegen="7.5" mp="21302" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="3441" level="44" type="L2Npc" name="Beacon's Warrior" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="15897" hpRegen="7.5" mp="15897" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="3442" level="43" type="L2Monster" name="Earth Protector Panathen" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="988446" sp="12363" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="517915" hpRegen="7.5" mp="517915" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4863" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="16" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="3443" level="42" type="L2Npc" name="Panathen's Knight" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="28480" hpRegen="7.5" mp="28480" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="3444" level="42" type="L2Npc" name="Panathen's Protectors" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="14240" hpRegen="7.5" mp="14240" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="3445" level="25" type="L2Monster" name="Betrayer of Urutu Freki" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="508202" sp="1903" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="206272" hpRegen="7.5" mp="206272" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4954" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="11" />
+			<height normal="29.7" />
+		</collision>
+	</npc>
+	<npc id="3446" level="24" type="L2Npc" name="Freki's Vampire Bat" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11556" hpRegen="7.5" mp="11556" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="4" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="3447" level="24" type="L2Npc" name="Freki's Wild Bear" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11556" hpRegen="7.5" mp="11556" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="4" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="21" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="3448" level="39" type="L2Monster" name="Nellis' Vengeful Spirit" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="397690" sp="4155" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="413681" hpRegen="7.5" mp="413681" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="5026" level="1" />
+			<skill id="4333" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="28.1" />
+		</collision>
+	</npc>
+	<npc id="3449" level="38" type="L2Npc" name="Nellis' Follower" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="22722" hpRegen="7.5" mp="22722" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4333" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="18.7" />
+		</collision>
+	</npc>
+	<npc id="3450" level="37" type="L2Monster" name="Rayito the Looter" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="386517" sp="3689" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="184748" hpRegen="7.5" mp="184748" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="5027" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="16" />
+			<height normal="33.2" />
+		</collision>
+	</npc>
+	<npc id="3451" level="36" type="L2Npc" name="Rayito's Guard Captain" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="20311" hpRegen="7.5" mp="20311" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="14.5" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="3452" level="36" type="L2Npc" name="Rayito's Henchman" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="13608" hpRegen="7.5" mp="13608" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.6" />
+		</collision>
+	</npc>
+	<npc id="3453" level="80" type="L2Monster" name="Ketra's Hero Hekaton" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="3775960" sp="66873" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1430157" hpRegen="7.5" mp="1430157" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4903" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="17" />
+			<height normal="46.2" />
+		</collision>
+	</npc>
+	<npc id="3454" level="79" type="L2Npc" name="Hekaton's Scout" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="55129" hpRegen="7.5" mp="55129" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="3455" level="79" type="L2Npc" name="Hekaton's Servant" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41141" hpRegen="7.5" mp="41141" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="3456" level="80" type="L2Monster" name="Varka's Hero Shadith" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="3775960" sp="66873" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1430157" hpRegen="7.5" mp="1430157" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4494" level="1" />
+			<skill id="4907" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="17" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="3457" level="79" type="L2Npc" name="Shadith' Escort Captain" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="82282" hpRegen="7.5" mp="82282" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="16" />
+			<height normal="41" />
+		</collision>
+	</npc>
+	<npc id="3458" level="79" type="L2Npc" name="Shadith' Sentinel" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="41141" hpRegen="7.5" mp="41141" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="16" />
+			<height normal="38" />
+		</collision>
+	</npc>
+	<npc id="3459" level="72" type="L2Monster" name="Doom Blade Thanatos" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="5140646" sp="100" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1309119" hpRegen="7.5" mp="1309119" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4494" level="1" />
+			<skill id="4880" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="3460" level="75" type="L2Monster" name="Kernon" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="5231148" sp="103692" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="946298" hpRegen="7.5" mp="946298" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4494" level="1" />
+			<skill id="4809" level="1" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="3461" level="74" type="L2Npc" name="Taliadon" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="108753" hpRegen="7.5" mp="108753" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="3462" level="74" type="L2Npc" name="Vemsk" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="54376" hpRegen="7.5" mp="54376" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4275" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="3463" level="70" type="L2Monster" name="Meanas Anor" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<acquire exp="4596479" sp="96313" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1275172" hpRegen="7.5" mp="1275172" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="80" water="5" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="4494" level="1" />
+			<skill id="4962" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="58" />
+			<height normal="108" />
+		</collision>
+	</npc>
+	<npc id="3464" level="69" type="L2Npc" name="Swamp Wyvern" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48961" hpRegen="7.5" mp="48961" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="220" water="135" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="29" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="3465" level="69" type="L2Npc" name="Swamp Succubus" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="73077" hpRegen="7.5" mp="73077" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="127" dark="324" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4278" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4414" level="3" />
+			<skill id="4333" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="3466" level="25" type="L2Monster" name="Mammon Collector Talos" title="Lord of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="508202" sp="1903" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="206272" hpRegen="7.5" mp="206272" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4444" level="2" />
+			<skill id="4416" level="9" />
+			<skill id="4494" level="1" />
+			<skill id="4983" level="1" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="3467" level="22" type="L2Npc" name="Talos' Pawn" title="Follower of Destruction">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="10807" hpRegen="7.5" mp="10807" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="127" dark="324" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4444" level="2" />
+			<skill id="4416" level="9" />
+			<skill id="4414" level="3" />
+			<skill id="4273" level="3" />
+			<skill id="4274" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="3468" level="88" type="L2Npc" name="Jermann" title="Weakened Ruler">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="126" int="79" dex="55" wit="78" con="96" men="113" -->
+			<vitals hp="348077" hpRegen="7.5" mp="348077" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3469" level="93" type="L2Npc" name="Jermann" title="Weakened Ruler">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="126" int="79" dex="55" wit="78" con="96" men="113" -->
+			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3470" level="98" type="L2Npc" name="Jermann" title="Weakened Ruler">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="126" int="79" dex="55" wit="78" con="96" men="113" -->
+			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3471" level="75" type="L2Npc" name="Jermann" title="35% Drop">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="48" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3472" level="80" type="L2Npc" name="Jermann" title="50% Drop">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="57" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3473" level="96" type="L2RaidBoss" name="Omega Golem" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="207470592" sp="83404800" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="56203347" hpRegen="7.5" mp="56203347" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="120" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4494" level="1" />
+			<skill id="15413" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="50" />
+			<height normal="68" />
+		</collision>
+	</npc>
+	<npc id="3474" level="95" type="L2Npc" name="Super Kat the Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3475" level="95" type="L2Npc" name="Super Feline Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELEMENTAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="7" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3476" level="95" type="L2Npc" name="Super Mew the Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="4" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3477" level="88" type="L2RaidBoss" name="Reinforced Super Kat the Cat" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="174332928" sp="70083200" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="30496657" hpRegen="7.5" mp="30496657" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3478" level="87" type="L2Npc" name="Reinforced Kat the Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="496672" hpRegen="7.5" mp="496672" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="3479" level="92" type="L2RaidBoss" name="Darkened Super Feline Queen" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="190541568" sp="76599200" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="33852162" hpRegen="7.5" mp="33852162" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="7" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3480" level="91" type="L2Npc" name="Mind-controlling Feline Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="525953" hpRegen="7.5" mp="525953" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="3481" level="94" type="L2RaidBoss" name="Control-crazed Mew the Cat" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<acquire exp="198916032" sp="79965800" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="82" men="149" -->
+			<vitals hp="24955737" hpRegen="7.5" mp="24955737" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="4" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="3482" level="93" type="L2Npc" name="Traitorous Mew the Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+</list>

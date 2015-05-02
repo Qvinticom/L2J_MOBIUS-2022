@@ -65,7 +65,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 	{
 		_enchantSkillGroups.clear();
 		_enchantSkillTrees.clear();
-		parseDatapackFile("data/enchantSkillGroups.xml");
+		parseDatapackFile("enchantSkillGroups.xml");
 		int routes = 0;
 		for (L2EnchantSkillGroup group : _enchantSkillGroups.values())
 		{

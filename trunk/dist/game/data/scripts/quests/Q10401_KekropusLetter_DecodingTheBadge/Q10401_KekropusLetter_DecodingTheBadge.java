@@ -165,7 +165,7 @@ public class Q10401_KekropusLetter_DecodingTheBadge extends Quest implements IBy
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10401_KekropusLetter_DecodingTheBadge/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10401_KekropusLetter_DecodingTheBadge/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

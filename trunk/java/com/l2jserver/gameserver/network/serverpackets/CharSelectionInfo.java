@@ -318,7 +318,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 			{
 				lang = Config.L2JMOD_MULTILANG_DEFAULT;
 			}
-			charInfopackage.setHtmlPrefix("data/lang/" + lang + "/");
+			charInfopackage.setHtmlPrefix("lang/" + lang + "/");
 		}
 		
 		// if is in subclass, load subclass exp, sp, lvl info

@@ -44,7 +44,7 @@ public final class PlayerXpPercentLostData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/stats/chars/playerXpPercentLost.xml");
+		parseDatapackFile("stats/chars/playerXpPercentLost.xml");
 	}
 	
 	@Override

@@ -14022,7 +14022,7 @@ public final class L2PcInstance extends L2Playable
 				_lang = Config.L2JMOD_MULTILANG_DEFAULT;
 			}
 			
-			_htmlPrefix = "data/lang/" + _lang + "/";
+			_htmlPrefix = "lang/" + _lang + "/";
 		}
 		else
 		{

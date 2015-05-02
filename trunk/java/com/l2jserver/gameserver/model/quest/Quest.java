@@ -1779,7 +1779,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static String getNoQuestMsg(L2PcInstance player)
 	{
-		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/noquest.htm");
+		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/noquest.htm");
 		if ((result != null) && (result.length() > 0))
 		{
 			return result;
@@ -1793,7 +1793,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static String getAlreadyCompletedMsg(L2PcInstance player)
 	{
-		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/alreadycompleted.htm");
+		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/alreadycompleted.htm");
 		if ((result != null) && (result.length() > 0))
 		{
 			return result;
@@ -2689,13 +2689,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String getHtm(String prefix, String fileName)
 	{
 		final HtmCache hc = HtmCache.getInstance();
-		String content = hc.getHtm(prefix, fileName.startsWith("data/") ? fileName : "data/scripts/" + getDescr().toLowerCase() + "/" + getName() + "/" + fileName);
+		String content = hc.getHtm(prefix, !fileName.startsWith("scripts/") ? fileName : "scripts/" + getDescr().toLowerCase() + "/" + getName() + "/" + fileName);
 		if (content == null)
 		{
-			content = hc.getHtm(prefix, "data/scripts/" + getDescr() + "/" + getName() + "/" + fileName);
+			content = hc.getHtm(prefix, "scripts/" + getDescr() + "/" + getName() + "/" + fileName);
 			if (content == null)
 			{
-				content = hc.getHtmForce(prefix, "data/scripts/quests/" + getName() + "/" + fileName);
+				content = hc.getHtmForce(prefix, "scripts/quests/" + getName() + "/" + fileName);
 			}
 		}
 		return content;

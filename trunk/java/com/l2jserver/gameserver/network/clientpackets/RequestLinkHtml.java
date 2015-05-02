@@ -73,7 +73,7 @@ public final class RequestLinkHtml extends L2GameClientPacket
 			return;
 		}
 		
-		String filename = "data/html/" + _link;
+		String filename = "html/" + _link;
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
 		msg.setFile(actor.getHtmlPrefix(), filename);
 		sendPacket(msg);

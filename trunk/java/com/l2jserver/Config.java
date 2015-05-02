@@ -1194,16 +1194,6 @@ public final class Config
 			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
 			
-			try
-			{
-				DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
-			}
-			catch (IOException e)
-			{
-				_log.log(Level.WARNING, "Error setting datapack root!", e);
-				DATAPACK_ROOT = new File(".");
-			}
-			
 			Pattern charNamePattern;
 			
 			try
@@ -1240,6 +1230,16 @@ public final class Config
 			SERVER_LIST_TYPE = getServerTypeId(serverSettings.getString("ServerListType", "Free").split(","));
 			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
 			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
+			
+			try
+			{
+				DATAPACK_ROOT = new File(serverSettings.getString((SERVER_CLASSIC_SUPPORT ? "ClassicDatapackRoot" : "DatapackRoot"), ".").replaceAll("\\\\", "/")).getCanonicalFile();
+			}
+			catch (IOException e)
+			{
+				_log.log(Level.WARNING, "Error setting datapack root!", e);
+				DATAPACK_ROOT = new File(".");
+			}
 			
 			// Hosts and Subnets
 			IPConfigData ipcd = new IPConfigData();
@@ -2880,12 +2880,12 @@ public final class Config
 			
 			try
 			{
-				PATHNODE_DIR = new File(geoData.getString("PathnodeDirectory", "data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
+				PATHNODE_DIR = new File(geoData.getString("PathnodeDirectory", "pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
 			}
 			catch (IOException e)
 			{
 				_log.log(Level.WARNING, "Error setting pathnode directory!", e);
-				PATHNODE_DIR = new File("data/pathnode");
+				PATHNODE_DIR = new File("pathnode");
 			}
 			
 			PATHFINDING = geoData.getInt("PathFinding", 0);
@@ -2899,7 +2899,7 @@ public final class Config
 			DEBUG_PATH = geoData.getBoolean("DebugPath", false);
 			FORCE_GEODATA = geoData.getBoolean("ForceGeoData", true);
 			COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
-			GEODATA_PATH = Paths.get(geoData.getString("GeoDataPath", "./data/geodata"));
+			GEODATA_PATH = Paths.get(geoData.getString("GeoDataPath", "geodata"));
 			TRY_LOAD_UNSPECIFIED_REGIONS = geoData.getBoolean("TryLoadUnspecifiedRegions", true);
 			GEODATA_REGIONS = new HashMap<>();
 			for (int regionX = L2World.TILE_X_MIN; regionX <= L2World.TILE_X_MAX; regionX++)

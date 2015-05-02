@@ -1,0 +1,4449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="23100" level="39" type="L2Monster" name="Ant Warrior Captain">
+
+		<race>BUG</race>
+		<acquire exp="5648" sp="69" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="2934" hpRegen="7.5" mp="2934" mpRegen="2.7" />
+			<attack physical="1068" magical="802" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310" magical="228" />
+			<attribute>
+				<defence fire="5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="130" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<!-- <skill id="4413" level="10" /> -->
+			<!-- <skill id="4412" level="10" /> -->
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4074" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="35" />
+			<height normal="17" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="224" max="520" chance="70" />
+				<item id="1061" min="1" max="1" chance="4" />
+				<item id="2054" min="1" max="1" chance="0.5" />
+				<item id="2050" min="1" max="1" chance="0.3003" />
+				<item id="2427" min="1" max="1" chance="0.1" />
+				<item id="2288" min="1" max="1" chance="0.05" />
+				<item id="225" min="1" max="1" chance="0.05" />
+				<item id="2499" min="1" max="1" chance="0.05" />
+				<item id="955" min="1" max="1" chance="0.05" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="3" chance="65.9722" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23101" level="61" type="L2Monster" name="Slaughter Bathin">
+
+		<race>UNDEAD</race>
+		<acquire exp="85638" sp="1435" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="25176" hpRegen="7.5" mp="25176" mpRegen="2.7" />
+			<attack physical="1291" magical="2075" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4032" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="17" /> -->
+			<!-- <skill id="4410" level="14" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3298" max="7688" chance="70" />
+				<item id="4085" min="1" max="1" chance="3" />
+				<item id="4129" min="1" max="1" chance="1.6" />
+				<item id="4162" min="1" max="1" chance="0.54945" />
+				<item id="4120" min="1" max="1" chance="0.54945" />
+				<item id="2404" min="1" max="1" chance="0.5" />
+				<item id="4117" min="1" max="1" chance="0.4" />
+				<item id="947" min="1" max="1" chance="0.05" />
+				<item id="4194" min="1" max="1" chance="0.03" />
+				<item id="79" min="1" max="1" chance="0.03" />
+				<item id="7893" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="9" chance="82.5397" />
+				<item id="36532" min="1" max="1" chance="4.7619" />
+				<item id="36880" min="1" max="1" chance="0.3003" />
+				<item id="36882" min="1" max="1" chance="0.3003" />
+				<item id="36881" min="1" max="1" chance="0.05501" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23102" level="60" type="L2Monster" name="Bathin's Knight">
+
+		<race>UNDEAD</race>
+		<acquire exp="74260" sp="1226" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="3064" hpRegen="7.5" mp="3064" mpRegen="2.7" />
+			<attack physical="971" magical="1174" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="375" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4032" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2916" max="6807" chance="70" />
+				<item id="4082" min="1" max="1" chance="3" />
+				<item id="4114" min="1" max="1" chance="0.75188" />
+				<item id="948" min="1" max="1" chance="0.75188" />
+				<item id="2398" min="1" max="1" chance="0.3003" />
+				<item id="287" min="1" max="1" chance="0.05501" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="13" chance="90.325" />
+				<item id="36532" min="1" max="1" chance="14.43" />
+				<item id="36880" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23103" level="60" type="L2Monster" name="Bathin's Wizard">
+
+		<race>DEMONIC</race>
+		<acquire exp="74967" sp="1238" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="3064" hpRegen="7.5" mp="3064" mpRegen="2.7" />
+			<attack physical="1418" magical="550" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="375" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="4414" level="3" />
+			<skill id="4065" level="1" />
+			<!-- <skill id="4411" level="10" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2945" max="6874" chance="70" />
+				<item id="4083" min="1" max="1" chance="2.2" />
+				<item id="4115" min="1" max="1" chance="0.75188" />
+				<item id="8330" min="1" max="1" chance="0.75188" />
+				<item id="864" min="1" max="1" chance="0.07502" />
+				<item id="2399" min="1" max="1" chance="0.03" />
+				<item id="7883" min="1" max="1" chance="0.003" />
+				<item id="7901" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="13" chance="92.37" />
+				<item id="36532" min="1" max="1" chance="13.66" />
+				<item id="36880" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23104" level="65" type="L2Monster" name="Elmoreden's Lady">
+
+		<race>DEMONIC</race>
+		<acquire exp="94499" sp="1669" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="27812" hpRegen="7.5" mp="27812" mpRegen="2.7" />
+			<attack physical="1418" magical="1174" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4087" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13.5" />
+			<height normal="38" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3670" max="8" chance="70" />
+				<item id="5525" min="1" max="1" chance="7.10784" />
+				<item id="8720" min="1" max="1" chance="0.8547" />
+				<item id="5292" min="1" max="1" chance="0.08" />
+				<item id="8710" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="7.6923" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23105" level="64" type="L2Monster" name="Elmoreden's Archer">
+
+		<race>UNDEAD</race>
+		<acquire exp="83747" sp="1458" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="16973" hpRegen="7.5" mp="16973" mpRegen="2.7" />
+			<attack physical="971" magical="550" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="273" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="140" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4414" level="3" />
+			<skill id="4040" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="10" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3352" max="7742" chance="70" />
+				<item id="6346" min="1" max="1" chance="11.45" />
+				<item id="5522" min="1" max="1" chance="0.64935" />
+				<item id="5428" min="1" max="1" chance="0.14993" />
+				<item id="5290" min="1" max="1" chance="0.07502" />
+				<item id="8704" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="15.15" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23106" level="64" type="L2Monster" name="Elmoreden's Maid">
+
+		<race>DEMONIC</race>
+		<acquire exp="82626" sp="1437" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="16973" hpRegen="7.5" mp="16973" mpRegen="2.7" />
+			<attack physical="1291" magical="550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="22" />
+				<run ground="150" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="4099" level="1" />
+			<!-- <skill id="4411" level="10" /> -->
+			<!-- <skill id="4410" level="14" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="12" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3286" max="7629" chance="70" />
+				<item id="5523" min="1" max="1" chance="2.5" />
+				<item id="8729" min="1" max="1" chance="0.25974" />
+				<item id="8739" min="1" max="1" chance="0.14993" />
+				<item id="5314" min="1" max="1" chance="0.07502" />
+				<item id="5422" min="1" max="1" chance="0.03" />
+				<item id="8749" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="15.35" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23107" level="64" type="L2Monster" name="Elmoreden's Warrior">
+
+		<race>UNDEAD</race>
+		<acquire exp="85893" sp="1497" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="16973" hpRegen="7.5" mp="16973" mpRegen="2.7" />
+			<attack physical="971" magical="2075" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4032" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="17" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3410" max="7934" chance="70" />
+				<item id="5527" min="1" max="1" chance="3.65" />
+				<item id="5380" min="1" max="1" chance="1" />
+				<item id="8713" min="1" max="1" chance="0.5" />
+				<item id="5291" min="1" max="1" chance="0.07502" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.67" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23108" level="69" type="L2Monster" name="Binder">
+
+		<race>DIVINE</race>
+		<acquire exp="112041" sp="2090" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="30374" hpRegen="7.5" mp="30374" mpRegen="2.7" />
+			<attack physical="1068" magical="3043" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="375" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="4032" level="1" />
+			<!-- <skill id="4411" level="19" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="19" />
+			<height normal="48" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4415" max="10286" chance="70" />
+				<item id="5495" min="1" max="1" chance="5.1" />
+				<item id="5497" min="1" max="3" chance="4.5" />
+				<item id="8731" min="1" max="1" chance="0.4" />
+				<item id="5382" min="1" max="1" chance="0.3003" />
+				<item id="8751" min="1" max="1" chance="0.05" />
+				<item id="8741" min="1" max="1" chance="0.045" />
+				<item id="5320" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="20.4082" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23109" level="68" type="L2Monster" name="Bound Warrior">
+
+		<race>DIVINE</race>
+		<acquire exp="95658" sp="1758" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="18590" hpRegen="7.5" mp="18590" mpRegen="2.7" />
+			<attack physical="1068" magical="1419" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="4032" level="1" />
+			<!-- <skill id="4411" level="15" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="28" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3854" max="8950" chance="70" />
+				<item id="5485" min="1" max="1" chance="3.4" />
+				<item id="8730" min="1" max="1" chance="0.92593" />
+				<item id="8716" min="1" max="1" chance="0.34965" />
+				<item id="8740" min="1" max="1" chance="0.14993" />
+				<item id="5294" min="1" max="1" chance="0.07502" />
+				<item id="5350" min="1" max="1" chance="0.03" />
+				<item id="8750" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12.1951" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23110" level="68" type="L2Monster" name="Bound Archer">
+
+		<race>DIVINE</race>
+		<acquire exp="94543" sp="1736" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="18590" hpRegen="7.5" mp="18590" mpRegen="2.7" />
+			<attack physical="1068" magical="550" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="310" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="4040" level="1" />
+			<!-- <skill id="4411" level="10" /> -->
+			<!-- <skill id="4412" level="10" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="27" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3791" max="8839" chance="70" />
+				<item id="5486" min="1" max="1" chance="1.3" />
+				<item id="5481" min="1" max="1" chance="0.68027" />
+				<item id="5404" min="1" max="1" chance="0.35971" />
+				<item id="5424" min="1" max="1" chance="0.2" />
+				<item id="5318" min="1" max="1" chance="0.07502" />
+				<item id="8685" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="26.8293" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23111" level="74" type="L2Monster" name="Heaven's Palace Seraphim">
+
+		<race>DIVINE</race>
+		<acquire exp="126995" sp="2522" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="33376" hpRegen="7.5" mp="33376" mpRegen="2.7" />
+			<attack physical="1068" magical="3043" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="375" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<!-- <skill id="4411" level="19" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="5084" max="11809" chance="70" />
+				<item id="5514" min="1" max="1" chance="12.2" />
+				<item id="5334" min="1" max="1" chance="0.3003" />
+				<item id="11590" min="1" max="1" chance="0.07502" />
+				<item id="729" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="19.74" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23112" level="73" type="L2Monster" name="Heaven's Palace Seraphim Escort">
+
+		<race>DIVINE</race>
+		<acquire exp="108420" sp="2121" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="2586" hpRegen="7.5" mp="2586" mpRegen="2.7" />
+			<attack physical="1068" magical="1419" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<!-- <skill id="4411" level="15" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="14" />
+			<height normal="31.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4409" max="10287" chance="70" />
+				<item id="5480" min="1" max="1" chance="2.35" />
+				<item id="5332" min="1" max="1" chance="0.75188" />
+				<item id="8712" min="1" max="1" chance="0.75188" />
+				<item id="5329" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.66" />
+				<item id="36882" min="1" max="1" chance="0.75188" />
+				<item id="36881" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23113" level="4" type="L2Monster" name="Crawler" title="Husk">
+
+		<race>HUMANOID</race>
+		<acquire exp="175" sp="1" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="108" hpRegen="7.5" mp="108" mpRegen="2.7" />
+			<attack physical="20" magical="20" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="20" magical="20" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="8" />
+				<run ground="120" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="14158" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="18.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6" max="14" chance="70" />
+				<item id="1061" min="1" max="1" chance="5.5" />
+				<item id="18" min="1" max="1" chance="3.5" />
+				<item id="35" min="1" max="1" chance="3" />
+				<item id="36" min="1" max="1" chance="2.15" />
+				<item id="48" min="1" max="1" chance="2" />
+				<item id="41" min="1" max="1" chance="1.75" />
+				<item id="112" min="1" max="1" chance="1.75" />
+				<item id="2386" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.959" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23114" level="6" type="L2Monster" name="Stalker" title="Husk">
+
+		<race>HUMAN</race>
+		<acquire exp="263" sp="2" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="148" hpRegen="7.5" mp="148" mpRegen="2.7" />
+			<attack physical="90" magical="90" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="59" magical="90" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="10" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14156" level="1" />
+			<skill id="4416" level="14" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9.4" />
+			<height normal="20" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="12" max="28" chance="70" />
+				<item id="116" min="1" max="1" chance="7.2" />
+				<item id="1061" min="1" max="1" chance="5" />
+				<item id="118" min="1" max="1" chance="3.5" />
+				<item id="462" min="1" max="1" chance="2.5" />
+				<item id="426" min="1" max="1" chance="1.55" />
+				<item id="253" min="1" max="1" chance="0.3003" />
+				<item id="115" min="1" max="1" chance="0.07502" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="7.752" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23115" level="12" type="L2Monster" name="Critter" title="Husk">
+
+		<race>ANIMAL</race>
+		<acquire exp="527" sp="4" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="418" hpRegen="7.5" mp="418" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="10" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14166" level="1" />
+			<skill id="4416" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="14.5" />
+			<height normal="18" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="31" max="74" chance="70" />
+				<item id="1061" min="1" max="1" chance="5" />
+				<item id="51" min="1" max="1" chance="0.75188" />
+				<item id="1105" min="1" max="1" chance="0.3003" />
+				<item id="257" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="21.85" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23116" level="14" type="L2Monster" name="Avian" title="Husk">
+
+		<race>ANIMAL</race>
+		<acquire exp="615" sp="5" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="364" hpRegen="7.5" mp="364" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="10" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14161" level="1" />
+			<skill id="4416" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="34" max="79" chance="70" />
+				<item id="1061" min="1" max="1" chance="5" />
+				<item id="876" min="1" max="1" chance="0.75188" />
+				<item id="271" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="21.47" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23117" level="16" type="L2Monster" name="Rider" title="Husk">
+
+		<race>HUMAN</race>
+		<acquire exp="704" sp="6" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="478" hpRegen="7.5" mp="478" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="10" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="14" />
+			<skill id="14162" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="31" />
+			<height normal="36.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="36" max="84" chance="70" />
+				<item id="1061" min="1" max="1" chance="5" />
+				<item id="20" min="1" max="1" chance="0.3003" />
+				<item id="464" min="1" max="1" chance="0.3003" />
+				<item id="216" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="24.54" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23118" level="8" type="L2Monster" name="Krapher" title="Husk">
+
+		<race>HUMANOID</race>
+		<acquire exp="351" sp="3" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="364" hpRegen="7.5" mp="364" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="10" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="14164" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="22.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="19" max="44" chance="70" />
+				<item id="1061" min="1" max="1" chance="5" />
+				<item id="1122" min="1" max="1" chance="0.75188" />
+				<item id="42" min="1" max="1" chance="0.3003" />
+				<item id="254" min="1" max="1" chance="0.033" />
+				<item id="5" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="12.51" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23119" level="18" type="L2Monster" name="Handyman" title="Embryo">
+
+		<race>HUMANOID</race>
+		<acquire exp="528" sp="3" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="478" hpRegen="7.5" mp="478" mpRegen="2.7" />
+			<attack physical="37" magical="25" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="81" magical="54" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="14167" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="22.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="38" max="90" chance="70" />
+				<item id="1061" min="1" max="1" chance="5.7" />
+				<item id="36536" min="1" max="1" chance="0.54945" />
+				<item id="2506" min="1" max="1" chance="0.35971" />
+				<item id="43" min="1" max="1" chance="0.17986" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="30.9524" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23120" level="18" type="L2Monster" name="Operative" title="Embryo">
+
+		<race>HUMANOID</race>
+		<acquire exp="992" sp="5" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="478" hpRegen="7.5" mp="478" mpRegen="2.7" />
+			<attack physical="37" magical="25" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81" magical="54" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14169" level="1" />
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="22.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="38" max="90" chance="70" />
+				<item id="1061" min="1" max="1" chance="5.5" />
+				<item id="36516" min="1" max="1" chance="2.15" />
+				<item id="675" min="1" max="1" chance="0.54945" />
+				<item id="49" min="1" max="1" chance="0.35971" />
+				<item id="36541" min="1" max="1" chance="0.35461" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="30.9524" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23121" level="8" type="L2Monster" name="Thief">
+
+		<race>HUMAN</race>
+		<acquire exp="992" sp="5" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="634" hpRegen="7.5" mp="634" mpRegen="2.7" />
+			<attack physical="37" magical="25" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81" magical="54" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14172" level="1" />
+			<skill id="4416" level="14" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="23" max="53" chance="70" />
+				<item id="1061" min="1" max="1" chance="5" />
+				<item id="36516" min="1" max="1" chance="0.9009" />
+				<item id="36521" min="1" max="1" chance="0.5988" />
+				<item id="428" min="1" max="1" chance="0.5988" />
+				<item id="29" min="1" max="1" chance="0.3003" />
+				<item id="1119" min="1" max="1" chance="0.3003" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="11.5385" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23122" level="20" type="L2Monster" name="Eyesaroch" title="Husk">
+
+		<race>HUMANOID</race>
+		<acquire exp="879" sp="8" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="542" hpRegen="7.5" mp="542" mpRegen="2.7" />
+			<attack physical="23" magical="31" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="51" magical="30" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hit_time>334</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="14159" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="24" />
+			<height normal="29" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="41" max="95" chance="70" />
+				<item id="1061" min="1" max="1" chance="5.5" />
+				<item id="114" min="1" max="1" chance="0.4" />
+				<item id="30" min="1" max="1" chance="0.4" />
+				<item id="36536" min="1" max="1" chance="0.3003" />
+				<item id="36541" min="1" max="1" chance="0.3003" />
+				<item id="36521" min="1" max="1" chance="0.3003" />
+				<item id="37" min="1" max="1" chance="0.2" />
+				<item id="20" min="1" max="1" chance="0.2" />
+				<item id="36556" min="1" max="1" chance="0.2" />
+				<item id="36546" min="1" max="1" chance="0.07502" />
+				<item id="36551" min="1" max="1" chance="0.03" />
+				<item id="255" min="1" max="1" chance="0.03" />
+				<item id="36561" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="26.087" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23123" level="98" type="L2Npc" name="Isolation Room Warden">
+
+		<race>ELEMENTAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
+			<attack physical="43000" magical="32250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1720" magical="1740" />
+			<attribute>
+				<defence fire="280" water="280" wind="370" earth="255" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="7" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="60" />
+			<height normal="99.5" />
+		</collision>
+	</npc>
+	<npc id="23124" level="97" type="L2Npc" name="Istina's Creation">
+
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="200396" hpRegen="7.5" mp="200396" mpRegen="2.7" />
+			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1710" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="150" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="14231" level="1" />
+			<skill id="4416" level="3" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="27" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="23125" level="97" type="L2Npc" name="Istina's Creation">
+
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="200396" hpRegen="7.5" mp="200396" mpRegen="2.7" />
+			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1710" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="150" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="14231" level="1" />
+			<skill id="4416" level="3" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="27" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="23126" level="95" type="L2Monster" name="Elite Escort" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="3551002" sp="15203" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="44000" magical="36300" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<skill id="5273" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8800" max="8991" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="17527" min="1" max="1" chance="0.25" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23127" level="95" type="L2Monster" name="Elite Manhunter" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="2542693" sp="10886" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="48400" magical="43800" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<skill id="5298" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6514" max="15218" chance="70" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="17527" min="1" max="1" chance="0.25" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23128" level="95" type="L2Monster" name="Elite Warrior" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="2578796" sp="11040" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="53200" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5275" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<!-- <skill id="4410" level="14" /> -->
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6875" max="13487" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="17527" min="1" max="1" chance="0.25" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23129" level="95" type="L2Monster" name="Elite Alchemist" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="2640687" sp="11305" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="48400" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="2195" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5312" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6702" max="6702" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="17526" min="1" max="1" chance="0.125" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23130" level="95" type="L2Monster" name="Elite High Priest" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="2506589" sp="10731" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="44000" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4002" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="9701" max="9701" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="17526" min="1" max="1" chance="0.125" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23131" level="95" type="L2Monster" name="Executor Captain" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="8739270" sp="37416" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="48400" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2128" magical="2195" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<skill id="5273" level="1" />
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4412" level="14" /> -->
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17899" max="41469" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.1" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="3" chance="25" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23132" level="95" type="L2Monster" name="Shilen's Enchanter" title="Embryo">
+
+		<race>HUMANOID</race>
+		<acquire exp="5795272" sp="24811" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="53200" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5336" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<!-- <skill id="4410" level="14" /> -->
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17170" max="34171" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="20" />
+				<item id="19440" min="1" max="1" chance="2.5" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23133" level="95" type="L2Monster" name="Shilen's Priest" title="Embryo">
+
+		<race>DIVINE</race>
+		<acquire exp="2506589" sp="10731" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="44000" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="4002" level="1" />
+			<skill id="5467" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6458" max="15086" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="15" />
+				<item id="19440" min="1" max="1" chance="1.5" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23134" level="95" type="L2Monster" name="Shilen's Protector" title="Embryo">
+
+		<race>DIVINE</race>
+		<acquire exp="3551002" sp="15203" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="44000" magical="36300" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="5334" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="14" />
+			<height normal="31.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="7584" max="16861" chance="70" />
+				<item id="30425" min="1" max="1" chance="0.1" />
+				<item id="17526" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="15" />
+				<item id="19440" min="1" max="1" chance="1.5" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23135" level="95" type="L2Monster" name="Shilen's Warrior" title="Embryo">
+
+		<race>DIVINE</race>
+		<acquire exp="2326074" sp="9958" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="58400" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1600" magical="1650" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="5334" level="1" />
+			<!-- <skill id="4410" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8644" max="12444" chance="70" />
+				<item id="17526" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="15" />
+				<item id="19440" min="1" max="1" chance="1.5" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23136" level="95" type="L2Monster" name="Shilen's Mage" title="Embryo">
+
+		<race>DIVINE</race>
+		<acquire exp="2640687" sp="11305" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="48400" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="2195" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5373" level="1" />
+			<skill id="5467" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="26" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6648" max="15530" chance="70" />
+				<item id="17526" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="15" />
+				<item id="19440" min="1" max="1" chance="1.5" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23137" level="95" type="L2Monster" name="Shilen's Assassin" title="Embryo">
+
+		<race>ETC</race>
+		<acquire exp="2578796" sp="11040" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="53200" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="19" />
+			<skill id="5467" level="1" />
+			<skill id="6093" level="1" />
+			<!-- <skill id="4410" level="14" /> -->
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6570" max="15350" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="15" />
+				<item id="19440" min="1" max="1" chance="1.5" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23138" level="95" type="L2Monster" name="Shilen's Bladers" title="Embryo">
+
+		<race>DEMONIC</race>
+		<acquire exp="8739270" sp="37416" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
+			<attack physical="48400" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2128" magical="2195" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="227" dark="424" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="6093" level="1" />
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4412" level="14" /> -->
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="18382" max="41394" chance="70" />
+				<item id="17526" min="1" max="1" chance="0.05" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="30" />
+				<item id="19440" min="1" max="1" chance="3" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23139" level="95" type="L2Monster" name="Researcher" title="Embryo">
+
+		<race>DARK_ELF</race>
+		<acquire exp="1792263" sp="7673" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="278461" hpRegen="7.5" mp="278461" mpRegen="2.7" />
+			<attack physical="53200" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="5328" level="1" />
+			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4416" level="16" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="26.99" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="10093" max="11424" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="20" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23140" level="95" type="L2Monster" name="Archer Recruit" title="Embryo">
+
+		<race>ELF</race>
+		<acquire exp="1774211" sp="7596" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="278461" hpRegen="7.5" mp="278461" mpRegen="2.7" />
+			<attack physical="48400" magical="43800" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="5298" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4416" level="15" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="5435" max="11412" chance="70" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="20" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23141" level="95" type="L2Monster" name="Soldier Recruit" title="Embryo">
+
+		<race>ORC</race>
+		<acquire exp="1820630" sp="7794" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="278461" hpRegen="7.5" mp="278461" mpRegen="2.7" />
+			<attack physical="48400" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="2195" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="5273" level="1" />
+			<skill id="4416" level="17" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="14.5" />
+			<height normal="30" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="7383" max="12269" chance="70" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="20" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23142" level="95" type="L2Monster" name="Knight Recruit" title="Embryo">
+
+		<race>HUMAN</race>
+		<acquire exp="1794842" sp="7684" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="278461" hpRegen="7.5" mp="278461" mpRegen="2.7" />
+			<attack physical="44000" magical="36300" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2128" magical="2195" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="14" />
+			<skill id="5273" level="1" />
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4412" level="14" /> -->
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.75" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6094" max="11666" chance="70" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="20" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23143" level="99" type="L2Npc" name="Octavis' Gladiator">
+
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="3694489" hpRegen="7.5" mp="3694489" mpRegen="2.7" />
+			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1710" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14033" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="25" />
+			<height normal="67" />
+		</collision>
+	</npc>
+	<npc id="23144" level="99" type="L2Npc" name="Beast of the Arena">
+
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="52324" hpRegen="7.5" mp="52324" mpRegen="2.7" />
+			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1710" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14037" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="40" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="23145" level="97" type="L2Npc" name="Octavis' Gladiator">
+
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="3694489" hpRegen="7.5" mp="3694489" mpRegen="2.7" />
+			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1710" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14032" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="25" />
+			<height normal="67" />
+		</collision>
+	</npc>
+	<npc id="23146" level="97" type="L2Npc" name="Beast of the Arena">
+
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="52324" hpRegen="7.5" mp="52324" mpRegen="2.7" />
+			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1710" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="3" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<skill id="14036" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="40" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="23147" level="95" type="L2Monster" name="Resurrected Creation">
+
+		<race>UNDEAD</race>
+		<acquire exp="1212532" sp="5191" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="51231" hpRegen="7.5" mp="51231" mpRegen="2.7" />
+			<attack physical="53200" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1760" magical="1815" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="100" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4410" level="14" /> -->
+			<skill id="14266" level="1" />
+			<skill id="14650" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4225" level="2" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="28" />
+			<height normal="41" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1033" max="2414" chance="70" />
+				<item id="36548" min="1" max="1" chance="0.48077" />
+				<item id="9550" min="1" max="1" chance="0.4" />
+				<item id="36549" min="1" max="1" chance="0.04" />
+			</death>
+			<corpse>
+				<item id="36548" min="1" max="1" chance="0.75188" />
+				<item id="36549" min="1" max="1" chance="0.07502" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23148" level="95" type="L2Monster" name="Lunatic Creature">
+
+		<race>UNDEAD</race>
+		<acquire exp="1374965" sp="5886" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="51231" hpRegen="7.5" mp="51231" mpRegen="2.7" />
+			<attack physical="58400" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14061" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="14661" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14042" level="6" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="35" />
+			<height normal="32.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1046" max="2446" chance="70" />
+				<item id="9547" min="1" max="1" chance="0.06502" />
+				<item id="35325" min="1" max="1" chance="0.04299" />
+				<item id="36548" min="1" max="1" chance="0.03" />
+				<item id="17527" min="1" max="1" chance="0.018" />
+				<item id="36549" min="1" max="1" chance="0.003" />
+				<item id="17414" min="1" max="1" chance="0.003" />
+				<item id="35449" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+				<item id="36548" min="1" max="1" chance="0.3003" />
+				<item id="36549" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23149" level="95" type="L2Monster" name="Undead Creature">
+
+		<race>UNDEAD</race>
+		<acquire exp="2070902" sp="8866" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="102462" hpRegen="7.5" mp="102462" mpRegen="2.7" />
+			<attack physical="48400" magical="43800" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1936" magical="1997" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="20" />
+				<run ground="90" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14652" level="1" />
+			<skill id="14660" level="1" />
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4225" level="2" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1373" max="3206" chance="70" />
+				<item id="36523" min="1" max="1" chance="0.4902" />
+				<item id="35321" min="1" max="1" chance="0.08503" />
+				<item id="36524" min="1" max="1" chance="0.05079" />
+				<item id="9548" min="1" max="1" chance="0.05" />
+				<item id="9549" min="1" max="1" chance="0.03799" />
+				<item id="35445" min="1" max="1" chance="0.003" />
+				<item id="17410" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="5.816" />
+				<item id="36524" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23150" level="96" type="L2Monster" name="Hellish Creature">
+
+		<race>UNDEAD</race>
+		<acquire exp="2223049" sp="9594" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="103039" hpRegen="7.5" mp="103039" mpRegen="2.7" />
+			<attack physical="54530" magical="54428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1984" magical="2234" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14664" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4410" level="14" /> -->
+			<skill id="1676" level="1" />
+			<skill id="14650" level="1" />
+			<!-- <skill id="4412" level="13" /> -->
+			<skill id="14656" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="34" />
+			<height normal="34" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1417" max="3302" chance="70" />
+				<item id="36523" min="1" max="1" chance="0.55866" />
+				<item id="35313" min="1" max="1" chance="0.09001" />
+				<item id="9549" min="1" max="1" chance="0.06998" />
+				<item id="9551" min="1" max="1" chance="0.06998" />
+				<item id="36524" min="1" max="1" chance="0.0375" />
+				<item id="17402" min="1" max="1" chance="0.003" />
+				<item id="35437" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="5.917" />
+				<item id="36524" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23151" level="96" type="L2Monster" name="Shilen's Messenger">
+
+		<race>UNDEAD</race>
+		<acquire exp="1460930" sp="6304" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="51519" hpRegen="7.5" mp="51519" mpRegen="2.7" />
+			<attack physical="59860" magical="54428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="2181" magical="2033" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14655" level="1" />
+			<skill id="14654" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+			<!-- <skill id="4412" level="14" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<skill id="4225" level="3" />
+			<skill id="14508" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="22.88" />
+			<height normal="41.6" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1080" max="2518" chance="70" />
+				<item id="35326" min="1" max="1" chance="0.07502" />
+				<item id="36548" min="1" max="1" chance="0.05" />
+				<item id="9551" min="1" max="1" chance="0.05" />
+				<item id="36549" min="1" max="1" chance="0.00555" />
+				<item id="17415" min="1" max="1" chance="0.003" />
+				<item id="35450" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+				<item id="36548" min="1" max="1" chance="0.3003" />
+				<item id="36549" min="1" max="1" chance="0.03" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23152" level="10" type="L2Npc" name="Eyesaroch">
+
+		<race>HUMANOID</race>
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="542" hpRegen="7.5" mp="542" mpRegen="2.7" />
+			<attack physical="23" magical="31" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="51" magical="30" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="4158" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="24" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="23153" level="51" type="L2Monster" name="Achelando">
+
+		<race>CONSTRUCT</race>
+		<acquire exp="18029" sp="265" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="6991" hpRegen="7.5" mp="6991" mpRegen="2.7" />
+			<attack physical="1563" magical="2513" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="365" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" />
+			<skill id="4036" level="1" />
+			<!-- <skill id="4410" level="16" /> -->
+			<!-- <skill id="4411" level="18" /> -->
+			<!-- <skill id="4413" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2269" max="5297" chance="70" />
+				<item id="36541" min="1" max="1" chance="7.5" />
+				<item id="36546" min="1" max="1" chance="2" />
+				<item id="632" min="1" max="1" chance="0.6993" />
+				<item id="4129" min="1" max="1" chance="0.07502" />
+				<item id="4162" min="1" max="1" chance="0.033" />
+				<item id="94" min="1" max="1" chance="0.03" />
+				<item id="951" min="1" max="1" chance="0.03" />
+				<item id="36872" min="1" max="1" chance="0.003" />
+				<item id="36930" min="1" max="1" chance="0.003" />
+				<item id="4194" min="1" max="1" chance="0.003" />
+				<item id="36864" min="1" max="1" chance="0.003" />
+				<item id="36922" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="15" chance="93.0213" />
+				<item id="36880" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23154" level="51" type="L2Monster" name="Styrindo">
+
+		<race>CONSTRUCT</race>
+		<acquire exp="17624" sp="262" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="7229" hpRegen="7.5" mp="7229" mpRegen="2.7" />
+			<attack physical="1563" magical="2513" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="365" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" />
+			<skill id="4032" level="1" />
+			<!-- <skill id="4410" level="16" /> -->
+			<!-- <skill id="4411" level="18" /> -->
+			<!-- <skill id="4413" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="35" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2250" max="5246" chance="70" />
+				<item id="4084" min="1" max="1" chance="2.7" />
+				<item id="36546" min="1" max="1" chance="2.1" />
+				<item id="36551" min="1" max="1" chance="2" />
+				<item id="4121" min="1" max="1" chance="1" />
+				<item id="4116" min="1" max="1" chance="0.54945" />
+				<item id="4165" min="1" max="1" chance="0.03" />
+				<item id="4159" min="1" max="1" chance="0.03" />
+				<item id="5312" min="1" max="1" chance="0.03" />
+				<item id="4197" min="1" max="1" chance="0.003" />
+				<item id="36872" min="1" max="1" chance="0.003" />
+				<item id="36930" min="1" max="1" chance="0.003" />
+				<item id="36888" min="1" max="1" chance="0.001" />
+				<item id="36938" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="11" chance="83.4613" />
+				<item id="36532" min="1" max="1" chance="11.933" />
+				<item id="36880" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23155" level="51" type="L2Monster" name="Ashende">
+
+		<race>CONSTRUCT</race>
+		<acquire exp="21954" sp="334" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="7469" hpRegen="7.5" mp="7469" mpRegen="2.7" />
+			<attack physical="1855" magical="2075" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="375" magical="303" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" />
+			<skill id="4032" level="1" />
+			<!-- <skill id="4411" level="17" /> -->
+			<!-- <skill id="4410" level="18" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2641" max="6158" chance="70" />
+				<item id="36516" min="1" max="3" chance="24" />
+				<item id="36556" min="1" max="1" chance="7.7" />
+				<item id="4085" min="1" max="1" chance="4" />
+				<item id="36551" min="1" max="1" chance="2.2" />
+				<item id="4117" min="1" max="1" chance="0.6993" />
+				<item id="4120" min="1" max="1" chance="0.6993" />
+				<item id="4164" min="1" max="1" chance="0.05999" />
+				<item id="36889" min="1" max="1" chance="0.03" />
+				<item id="4160" min="1" max="1" chance="0.03" />
+				<item id="5289" min="1" max="1" chance="0.015" />
+				<item id="947" min="1" max="1" chance="0.0055" />
+				<item id="4196" min="1" max="1" chance="0.003" />
+				<item id="36888" min="1" max="1" chance="0.003" />
+				<item id="36938" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="13" chance="82.4903" />
+				<item id="36532" min="1" max="1" chance="13.2649" />
+				<item id="36880" min="1" max="1" chance="1" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23156" level="51" type="L2Monster" name="Meforde">
+
+		<race>GIANT</race>
+		<acquire exp="22790" sp="352" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="7711" hpRegen="7.5" mp="7711" mpRegen="2.7" />
+			<attack physical="1855" magical="2075" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="375" magical="303" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="11" />
+			<skill id="4032" level="1" />
+			<!-- <skill id="4411" level="17" /> -->
+			<!-- <skill id="4410" level="18" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="50" />
+			<height normal="44" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2726" max="6368" chance="70" />
+				<item id="36521" min="1" max="1" chance="18" />
+				<item id="36516" min="3" max="9" chance="8.7" />
+				<item id="36556" min="1" max="1" chance="7.5" />
+				<item id="36561" min="1" max="1" chance="1.6" />
+				<item id="5487" min="1" max="1" chance="1.25" />
+				<item id="4163" min="1" max="1" chance="0.05999" />
+				<item id="36889" min="1" max="1" chance="0.045" />
+				<item id="5313" min="1" max="1" chance="0.03" />
+				<item id="948" min="1" max="1" chance="0.015" />
+				<item id="4161" min="1" max="1" chance="0.015" />
+				<item id="8688" min="1" max="1" chance="0.003" />
+				<item id="4195" min="1" max="1" chance="0.003" />
+				<item id="36901" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="13" chance="86.1824" />
+				<item id="36532" min="1" max="1" chance="12.6013" />
+				<item id="36880" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23157" level="51" type="L2Monster" name="Rorka">
+
+		<race>GIANT</race>
+		<acquire exp="20870" sp="324" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="7955" hpRegen="7.5" mp="7955" mpRegen="2.7" />
+			<attack physical="1719" magical="1419" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="454" magical="333" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="11" />
+			<skill id="4036" level="1" />
+			<!-- <skill id="4410" level="17" /> -->
+			<!-- <skill id="4411" level="15" /> -->
+			<!-- <skill id="4413" level="14" /> -->
+			<!-- <skill id="4412" level="14" /> -->
+			<skill id="4414" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="50" />
+			<height normal="44" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2583" max="6026" chance="70" />
+				<item id="36521" min="1" max="1" chance="23" />
+				<item id="36526" min="3" max="9" chance="11.2" />
+				<item id="6344" min="1" max="1" chance="4.5" />
+				<item id="36561" min="1" max="1" chance="1.77" />
+				<item id="5488" min="1" max="1" chance="1.25" />
+				<item id="4129" min="1" max="1" chance="0.06502" />
+				<item id="5290" min="1" max="1" chance="0.035" />
+				<item id="4162" min="1" max="1" chance="0.03" />
+				<item id="36902" min="1" max="1" chance="0.01" />
+				<item id="4194" min="1" max="1" chance="0.0055" />
+				<item id="36901" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="11" chance="93.8042" />
+				<item id="36532" min="1" max="1" chance="12.4411" />
+				<item id="36880" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23158" level="51" type="L2Monster" name="Shumerun">
+
+		<race>GIANT</race>
+		<acquire exp="25000" sp="394" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="10934" hpRegen="7.5" mp="10934" mpRegen="2.7" />
+			<attack physical="1563" magical="2513" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="365" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="11" />
+			<!-- <skill id="4410" level="16" /> -->
+			<!-- <skill id="4411" level="18" /> -->
+			<skill id="4158" level="1" />
+			<!-- <skill id="4413" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="30" />
+			<height normal="66" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2570" max="5984" chance="70" />
+				<item id="36536" min="1" max="1" chance="20" />
+				<item id="36526" min="3" max="9" chance="13.5" />
+				<item id="6346" min="1" max="1" chance="9" />
+				<item id="5522" min="1" max="1" chance="1" />
+				<item id="36902" min="1" max="1" chance="0.75188" />
+				<item id="5422" min="1" max="1" chance="0.3003" />
+				<item id="5292" min="1" max="1" chance="0.07502" />
+				<item id="36856" min="1" max="1" chance="0.05501" />
+				<item id="36914" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="11" chance="95.0957" />
+				<item id="36532" min="1" max="1" chance="13.6364" />
+				<item id="36880" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23159" level="45" type="L2Monster" name="Accencio" title="Event Monster">
+
+		<race>CONSTRUCT</race>
+		<acquire exp="315535" sp="103425" />
+		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
+			<vitals hp="2219000" hpRegen="7.5" mp="2219000" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" />
+			<skill id="14274" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="7359" max="17163" chance="70" />
+				<item id="1890" min="1" max="1" chance="3.6821" />
+				<item id="1891" min="1" max="1" chance="0.75188" />
+				<item id="382" min="1" max="1" chance="0.75188" />
+				<item id="951" min="1" max="1" chance="0.3003" />
+				<item id="2502" min="1" max="1" chance="0.3003" />
+				<item id="4165" min="1" max="1" chance="0.0142" />
+				<item id="4159" min="1" max="1" chance="0.00142" />
+				<item id="4197" min="1" max="1" chance="0.00026" />
+			</death>
+			<corpse>
+				<item id="4165" min="1" max="1" chance="0.3003" />
+				<item id="4159" min="1" max="1" chance="0.03" />
+				<item id="4197" min="1" max="1" chance="0.0055" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23160" level="93" type="L2Monster" name="Garden Chief Priest">
+
+		<parameters>
+			<minions name="Privates">
+				<npc id="23161" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="14624008" sp="61449" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1623662" hpRegen="7.5" mp="1623662" mpRegen="2.7" />
+			<attack physical="44223" magical="42038" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1829" magical="1603" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="57" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14081" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="14" /> -->
+			<!-- <skill id="4412" level="14" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="35" />
+			<height normal="46.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6992" max="16208" chance="70" />
+				<item id="36528" min="2" max="6" chance="16" />
+				<item id="36527" min="17" max="44" chance="8" />
+				<item id="17527" min="1" max="1" chance="1.3" />
+			</death>
+			<corpse>
+				<item id="36527" min="1" max="9" chance="90.39" />
+				<item id="36528" min="1" max="1" chance="86.26" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23161" level="92" type="L2Monster" name="Garden Priest">
+
+		<race>HUMANOID</race>
+		<acquire exp="576976" sp="2401" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="49178" hpRegen="7.5" mp="49178" mpRegen="2.7" />
+			<attack physical="39174" magical="33763" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1796" magical="1573" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="13" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="6610" level="1" />
+			<!-- <skill id="4412" level="14" /> -->
+			<!-- <skill id="4411" level="13" /> -->
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="14" />
+			<height normal="30" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="754" max="1744" chance="70" />
+				<item id="36848" min="1" max="1" chance="1.5" />
+				<item id="36786" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="14.95" />
+				<item id="36533" min="1" max="1" chance="2.83" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23162" level="87" type="L2Monster" name="Corpse Devourer">
+
+		<race>BUG</race>
+		<acquire exp="765498" sp="3011" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<attack physical="24000" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="960" magical="940" />
+			<attribute>
+				<defence fire="155" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="14627" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="45" />
+			<height normal="8" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="830" max="1934" chance="70" />
+				<item id="36794" min="1" max="1" chance="1.3" />
+				<item id="36732" min="1" max="1" chance="0.03" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="15.94" />
+				<item id="36533" min="1" max="1" chance="3.016" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23163" level="87" type="L2Monster" name="Corpse Absorber">
+
+		<race>UNDEAD</race>
+		<acquire exp="765498" sp="3011" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<attack physical="24000" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="960" magical="940" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="127" dark="213" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="200" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14628" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="23" />
+			<height normal="31" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="855" max="1993" chance="70" />
+				<item id="36816" min="1" max="1" chance="4" />
+				<item id="36754" min="1" max="1" chance="0.14993" />
+				<item id="17527" min="1" max="1" chance="0.045" />
+				<item id="17315" min="1" max="1" chance="0.035" />
+				<item id="30423" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23164" level="88" type="L2Monster" name="Corpse Shredder">
+
+		<race>UNDEAD</race>
+		<acquire exp="869224" sp="3455" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46945" hpRegen="7.5" mp="46945" mpRegen="2.7" />
+			<attack physical="27225" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1089" magical="1056" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="127" dark="213" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14629" level="1" />
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="36" />
+			<height normal="31" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="860" max="2009" chance="70" />
+				<item id="36799" min="1" max="1" chance="0.64935" />
+				<item id="9550" min="1" max="1" chance="0.17007" />
+				<item id="36737" min="1" max="1" chance="0.03" />
+				<item id="17295" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10.78" />
+				<item id="36533" min="1" max="1" chance="2.162" />
+				<item id="36886" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23165" level="87" type="L2Monster" name="Plagueworm">
+
+		<race>BUG</race>
+		<acquire exp="49705" sp="196" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11674" hpRegen="7.5" mp="11674" mpRegen="2.7" />
+			<attack physical="18240" magical="9120" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="662" magical="649" />
+			<attribute>
+				<defence fire="155" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<!-- <skill id="4411" level="8" /> -->
+			<!-- <skill id="4413" level="7" /> -->
+			<!-- <skill id="4410" level="8" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="17" />
+			<height normal="5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="409" max="954" chance="70" />
+				<item id="36522" min="1" max="1" chance="5" />
+				<item id="36523" min="1" max="1" chance="1" />
+				<item id="36918" min="1" max="1" chance="0.003" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="6.006" />
+				<item id="36523" min="1" max="1" chance="1.095" />
+				<item id="19440" min="1" max="1" chance="0.07502" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23166" level="88" type="L2Monster" name="Contaminated Rotten Root">
+
+		<race>PLANT</race>
+		<acquire exp="915974" sp="3640" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46945" hpRegen="7.5" mp="46945" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1198" magical="1162" />
+			<attribute>
+				<defence fire="127" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="5" />
+			<skill id="14630" level="1" />
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="36" />
+			<height normal="50" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="895" max="2090" chance="70" />
+				<item id="36817" min="1" max="1" chance="3.5" />
+				<item id="36755" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.98" />
+				<item id="36533" min="1" max="1" chance="3.312" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23167" level="88" type="L2Monster" name="Decayed Spore">
+
+		<race>BEAST</race>
+		<acquire exp="785438" sp="3122" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46945" hpRegen="7.5" mp="46945" mpRegen="2.7" />
+			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="960" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14631" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="22" />
+			<height normal="22" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="850" max="1986" chance="70" />
+				<item id="36522" min="1" max="1" chance="13" />
+				<item id="36523" min="1" max="1" chance="2.5" />
+				<item id="9548" min="1" max="1" chance="0.34965" />
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="18.74" />
+				<item id="36523" min="1" max="1" chance="3.565" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23168" level="89" type="L2Monster" name="Swamp Tracker">
+
+		<race>DEMONIC</race>
+		<acquire exp="835507" sp="3364" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1020" magical="1078" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="167" dark="364" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="14632" level="1" />
+			<!-- <skill id="4413" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="20" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="875" max="2043" chance="70" />
+				<item id="36795" min="1" max="1" chance="1" />
+				<item id="9550" min="1" max="1" chance="0.1" />
+				<item id="36733" min="1" max="1" chance="0.015" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.42" />
+				<item id="36533" min="1" max="1" chance="3.224" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23169" level="89" type="L2Monster" name="Swamp Assassin">
+
+		<race>UNDEAD</race>
+		<acquire exp="823699" sp="3317" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<attack physical="28050" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1020" magical="980" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="147" dark="233" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="90" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14633" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="22" />
+			<height normal="14.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="875" max="2043" chance="70" />
+				<item id="36820" min="1" max="1" chance="6.5" />
+				<item id="9546" min="1" max="1" chance="0.08503" />
+				<item id="36758" min="1" max="1" chance="0.07698" />
+				<item id="17319" min="1" max="1" chance="0.06998" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="11.09" />
+				<item id="36533" min="1" max="1" chance="2.099" />
+				<item id="36886" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23170" level="90" type="L2Monster" name="Swamp Watcher">
+
+		<race>UNDEAD</race>
+		<acquire exp="844337" sp="3438" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+			<attack physical="33688" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="147" dark="233" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="300" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="14598" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="28" />
+			<height normal="39" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="914" max="2131" chance="70" />
+				<item id="36801" min="1" max="1" chance="0.71942" />
+				<item id="36547" min="1" max="1" chance="0.16" />
+				<item id="36548" min="1" max="1" chance="0.03" />
+				<item id="9550" min="1" max="1" chance="0.03" />
+				<item id="9551" min="1" max="1" chance="0.03" />
+				<item id="30425" min="1" max="1" chance="0.0055" />
+				<item id="36739" min="1" max="1" chance="0.003" />
+				<item id="17297" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36547" min="1" max="1" chance="2.585" />
+				<item id="36548" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23171" level="90" type="L2Monster" name="Corpse Collector">
+
+		<race>UNDEAD</race>
+		<acquire exp="877465" sp="3573" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+			<attack physical="33688" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1375" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="147" dark="233" />
+			</attribute>
+			<speed>
+				<walk ground="110" />
+				<run ground="200" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14635" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="40" />
+			<height normal="23" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="918" max="2131" chance="70" />
+				<item id="36818" min="1" max="1" chance="6.1" />
+				<item id="30424" min="1" max="1" chance="0.03" />
+				<item id="36756" min="1" max="1" chance="0.03" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="17.23" />
+				<item id="32816" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23172" level="90" type="L2Monster" name="Delegate of Blood">
+
+		<parameters>
+			<minions name="Privates">
+				<npc id="23173" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="899338" sp="3662" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+			<attack physical="37056" magical="21875" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1430" magical="1250" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="147" dark="233" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14636" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="891" max="2070" chance="70" />
+				<item id="36800" min="1" max="1" chance="1.2" />
+				<item id="9549" min="1" max="1" chance="0.07502" />
+				<item id="9551" min="1" max="1" chance="0.07502" />
+				<item id="36738" min="1" max="1" chance="0.0055" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.13" />
+				<item id="36533" min="1" max="1" chance="3.289" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23173" level="90" type="L2Monster" name="Blood Aide">
+
+		<race>DEMONIC</race>
+		<acquire exp="934589" sp="3806" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="13886" hpRegen="7.5" mp="13886" mpRegen="2.7" />
+			<attack physical="37056" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1430" magical="1375" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="167" dark="364" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="14637" level="1" />
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="18" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="987" max="2303" chance="70" />
+				<item id="9549" min="1" max="1" chance="0.3003" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="2.356" />
+				<item id="36884" min="1" max="1" chance="0.54945" />
+				<item id="36883" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23174" level="85" type="L2Monster" name="Arbitor of Darkness">
+
+		<race>UNDEAD</race>
+		<acquire exp="648733" sp="2477" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="45632" hpRegen="7.5" mp="45632" mpRegen="2.7" />
+			<attack physical="20475" magical="18150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="900" magical="900" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="107" dark="193" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14638" level="1" />
+			<!-- <skill id="4410" level="10" /> -->
+			<!-- <skill id="4411" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="38" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="786" max="1831" chance="70" />
+				<item id="36803" min="1" max="1" chance="0.35971" />
+				<item id="17527" min="1" max="1" chance="0.025" />
+				<item id="36741" min="1" max="1" chance="0.007" />
+				<item id="17299" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="21.2714" />
+				<item id="36533" min="1" max="1" chance="3.58598" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23175" level="85" type="L2Monster" name="Altar of Evil Spirit Offering Box">
+
+		<race>CONSTRUCT</race>
+		<acquire exp="807392" sp="3083" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="45632" hpRegen="7.5" mp="45632" mpRegen="2.7" />
+			<attack physical="22500" magical="18150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="990" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="80" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5464" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="14639" level="1" />
+			<!-- <skill id="4411" level="12" /> -->
+			<!-- <skill id="4413" level="12" /> -->
+			<!-- <skill id="4412" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="15" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="827" max="1927" chance="70" />
+				<item id="36802" min="1" max="1" chance="0.4" />
+				<item id="36552" min="1" max="1" chance="0.17007" />
+				<item id="36553" min="1" max="1" chance="0.04" />
+				<item id="17527" min="1" max="1" chance="0.012" />
+				<item id="17298" min="1" max="1" chance="0.003" />
+				<item id="36740" min="1" max="1" chance="0.0015" />
+			</death>
+			<corpse>
+				<item id="36552" min="1" max="1" chance="2.04262" />
+				<item id="36553" min="1" max="1" chance="0.35461" />
+				<item id="36886" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23176" level="86" type="L2Monster" name="Mutated Cerberos">
+
+		<race>ANIMAL</race>
+		<acquire exp="747757" sp="2896" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="45868" hpRegen="7.5" mp="45868" mpRegen="2.7" />
+			<attack physical="23250" magical="15500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="930" magical="920" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="4" />
+			<skill id="5464" level="1" />
+			<skill id="14640" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="30" />
+			<height normal="19.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="806" max="1879" chance="70" />
+				<item id="36806" min="1" max="1" chance="3.13" />
+				<item id="36744" min="1" max="1" chance="0.042" />
+				<item id="17527" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10.1307" />
+				<item id="36533" min="1" max="1" chance="1.79738" />
+				<item id="36886" min="1" max="1" chance="0.9009" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23177" level="85" type="L2Monster" name="Dartanion">
+
+		<race>CONSTRUCT</race>
+		<acquire exp="893488" sp="3411" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="45632" hpRegen="7.5" mp="45632" mpRegen="2.7" />
+			<attack physical="27225" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1089" magical="1089" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="20" />
+				<run ground="80" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="14641" level="1" />
+			<skill id="4416" level="2" />
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="44" />
+			<height normal="38" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="806" max="1878" chance="70" />
+				<item id="36819" min="1" max="1" chance="4.8" />
+				<item id="36757" min="1" max="1" chance="0.1" />
+				<item id="17318" min="1" max="1" chance="0.04" />
+				<item id="30423" min="1" max="1" chance="0.02" />
+				<item id="17526" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="19.83" />
+				<item id="32814" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23178" level="87" type="L2Monster" name="Insane Phion">
+
+		<race>ANIMAL</race>
+		<acquire exp="765498" sp="3011" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<attack physical="24000" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="960" magical="940" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14642" level="1" />
+			<skill id="4416" level="4" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="22" />
+			<height normal="14.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="829" max="1934" chance="70" />
+				<item id="36522" min="1" max="1" chance="13" />
+				<item id="36523" min="1" max="1" chance="2.6" />
+				<item id="17526" min="1" max="1" chance="0.01" />
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="18.38" />
+				<item id="36523" min="1" max="1" chance="3.454" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23179" level="87" type="L2Monster" name="Dimensional Rifter">
+
+		<race>DRAGON</race>
+		<acquire exp="843804" sp="3319" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<attack physical="31920" magical="19360" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="960" magical="940" />
+			<attribute>
+				<defence fire="240" water="155" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="160" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" />
+			<skill id="14643" level="1" />
+			<!-- <skill id="4410" level="14" /> -->
+			<!-- <skill id="4411" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="40" />
+			<height normal="44" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="829" max="1934" chance="70" />
+				<item id="36823" min="1" max="1" chance="6.8" />
+				<item id="36761" min="1" max="1" chance="0.11299" />
+				<item id="17322" min="1" max="1" chance="0.036" />
+				<item id="30423" min="1" max="1" chance="0.012" />
+				<item id="17526" min="1" max="1" chance="0.0016" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="14.99" />
+				<item id="36533" min="1" max="1" chance="3.091" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23180" level="87" type="L2Monster" name="Hellgate Fighting Dog">
+
+		<race>UNDEAD</race>
+		<acquire exp="914811" sp="3598" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<attack physical="26400" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1162" magical="1137" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="127" dark="213" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="14644" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4413" level="13" /> -->
+			<!-- <skill id="4410" level="12" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="42" />
+			<height normal="30" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="850" max="1983" chance="70" />
+				<item id="36804" min="1" max="1" chance="1.13" />
+				<item id="36742" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.04" />
+				<item id="36533" min="1" max="1" chance="3.16" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23181" level="78" type="L2Monster" name="Succubus Soldier">
+
+		<race>UNDEAD</race>
+		<acquire exp="73219" sp="1521" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="9428" hpRegen="7.5" mp="9428" mpRegen="2.7" />
+			<attack physical="5390" magical="4514" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="27" dark="113" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4414" level="1" />
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="649" max="1513" chance="70" />
+				<item id="9530" min="1" max="1" chance="0.5" />
+				<item id="9531" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="6" />
+				<item id="36533" min="1" max="1" chance="0.66667" />
+				<item id="36881" min="1" max="1" chance="0.60241" />
+				<item id="36882" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23182" level="79" type="L2Monster" name="Succubus Warrior">
+
+		<race>UNDEAD</race>
+		<acquire exp="75109" sp="1580" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="9915" hpRegen="7.5" mp="9915" mpRegen="2.7" />
+			<attack physical="5929" magical="4514" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="47" dark="133" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="170" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4414" level="1" />
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="30" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="667" max="1554" chance="70" />
+				<item id="9535" min="1" max="1" chance="0.5" />
+				<item id="9536" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="6" />
+				<item id="36533" min="1" max="1" chance="0.66667" />
+				<item id="36881" min="1" max="1" chance="0.60241" />
+				<item id="36882" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23183" level="78" type="L2Monster" name="Succubus Archer">
+
+		<race>UNDEAD</race>
+		<acquire exp="73219" sp="1521" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="9428" hpRegen="7.5" mp="9428" mpRegen="2.7" />
+			<attack physical="7154" magical="4514" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="27" dark="113" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="22" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="649" max="1513" chance="70" />
+				<item id="9535" min="1" max="1" chance="0.5" />
+				<item id="9536" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="8.09248" />
+				<item id="36533" min="1" max="1" chance="1.15606" />
+				<item id="36881" min="1" max="1" chance="0.54945" />
+				<item id="36882" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23184" level="78" type="L2Monster" name="Succubus Shaman">
+
+		<race>DEMONIC</race>
+		<acquire exp="71577" sp="1485" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="9428" hpRegen="7.5" mp="9428" mpRegen="2.7" />
+			<attack physical="7154" magical="5457" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1062" magical="825" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="47" dark="244" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4412" level="9" /> -->
+			<!-- <skill id="4411" level="15" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="615" max="1430" chance="70" />
+				<item id="9540" min="1" max="1" chance="0.5" />
+				<item id="9541" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="6" />
+				<item id="36533" min="1" max="1" chance="0.66667" />
+				<item id="36881" min="1" max="1" chance="0.60241" />
+				<item id="36882" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23185" level="81" type="L2Monster" name="Bloody Succubus" title="Succubus Disciple">
+
+		<race>UNDEAD</race>
+		<acquire exp="312713" sp="361" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="34874" hpRegen="7.5" mp="34874" mpRegen="2.7" />
+			<attack physical="4606" magical="2397" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1325" magical="1238" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4410" level="3" /> -->
+			<!-- <skill id="4411" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4414" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2676" max="6234" chance="70" />
+				<item id="2133" min="1" max="1" chance="1" />
+				<item id="9993" min="1" max="1" chance="1" />
+				<item id="9991" min="1" max="1" chance="0.66667" />
+				<item id="9992" min="1" max="1" chance="0.5" />
+				<item id="9454" min="1" max="1" chance="0.025" />
+				<item id="9452" min="1" max="1" chance="0.02222" />
+				<item id="9453" min="1" max="1" chance="0.02" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="15" />
+				<item id="36533" min="1" max="1" chance="2.5" />
+				<item id="36881" min="1" max="1" chance="1.33333" />
+				<item id="36882" min="1" max="1" chance="0.66667" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23186" level="80" type="L2Monster" name="Phantom Soldier">
+
+		<race>UNDEAD</race>
+		<acquire exp="74741" sp="1592" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="10429" hpRegen="7.5" mp="10429" mpRegen="2.7" />
+			<attack physical="5929" magical="4965" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4414" level="1" />
+			<skill id="14953" level="1" />
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="671" max="1566" chance="70" />
+				<item id="15663" min="1" max="1" chance="0.5" />
+				<item id="15666" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+				<item id="6622" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12" />
+				<item id="36533" min="1" max="1" chance="1.25" />
+				<item id="36881" min="1" max="1" chance="0.8" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23187" level="81" type="L2Monster" name="Phantom Warrior">
+
+		<race>DEMONIC</race>
+		<acquire exp="78549" sp="1651" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="10973" hpRegen="7.5" mp="10973" mpRegen="2.7" />
+			<attack physical="6522" magical="4965" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="87" dark="284" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14954" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4414" level="1" />
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="31" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="689" max="1608" chance="70" />
+				<item id="15664" min="1" max="1" chance="0.5" />
+				<item id="15670" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+				<item id="6622" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12" />
+				<item id="36533" min="1" max="1" chance="1.25" />
+				<item id="36881" min="1" max="1" chance="0.8" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23188" level="81" type="L2Monster" name="Phantom Archer">
+
+		<race>UNDEAD</race>
+		<acquire exp="78549" sp="1651" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="10973" hpRegen="7.5" mp="10973" mpRegen="2.7" />
+			<attack physical="7869" magical="4965" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="140" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14955" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="689" max="1609" chance="70" />
+				<item id="15664" min="1" max="1" chance="0.5" />
+				<item id="15670" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+				<item id="6622" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12" />
+				<item id="36533" min="1" max="1" chance="1.25" />
+				<item id="36881" min="1" max="1" chance="0.8" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23189" level="81" type="L2Monster" name="Phantom Shaman">
+
+		<race>UNDEAD</race>
+		<acquire exp="76733" sp="1611" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="10973" hpRegen="7.5" mp="10973" mpRegen="2.7" />
+			<attack physical="7869" magical="6003" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1062" magical="825" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="140" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14956" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4412" level="9" /> -->
+			<!-- <skill id="4411" level="15" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="26.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="653" max="1519" chance="70" />
+				<item id="15665" min="1" max="1" chance="0.5" />
+				<item id="15673" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+				<item id="6622" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12" />
+				<item id="36533" min="1" max="1" chance="1.25" />
+				<item id="36881" min="1" max="1" chance="0.8" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23190" level="81" type="L2Monster" name="Phantom Martyr">
+
+		<race>UNDEAD</race>
+		<acquire exp="78549" sp="1651" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="10973" hpRegen="7.5" mp="10973" mpRegen="2.7" />
+			<attack physical="6522" magical="4965" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="883" magical="825" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="14957" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="38" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="691" max="1608" chance="70" />
+				<item id="15663" min="1" max="1" chance="0.5" />
+				<item id="15666" min="1" max="1" chance="0.5" />
+				<item id="2133" min="1" max="1" chance="0.25" />
+				<item id="6622" min="1" max="1" chance="0.25" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="12" />
+				<item id="36533" min="1" max="1" chance="1.25" />
+				<item id="36881" min="1" max="1" chance="0.8" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23191" level="82" type="L2Monster" name="Succubus of Death" title="Succubus Disciple">
+
+		<race>UNDEAD</race>
+		<acquire exp="340448" sp="361" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="34812" hpRegen="7.5" mp="34812" mpRegen="2.7" />
+			<attack physical="5067" magical="2637" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1325" magical="1238" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14967" level="1" />
+			<!-- <skill id="4410" level="3" /> -->
+			<!-- <skill id="4411" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="14963" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="21" />
+			<height normal="48" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2751" max="6393" chance="70" />
+				<item id="15769" min="1" max="1" chance="2" />
+				<item id="15770" min="1" max="1" chance="1.5" />
+				<item id="15771" min="1" max="1" chance="1" />
+				<item id="2133" min="1" max="1" chance="0.60241" />
+				<item id="6622" min="1" max="1" chance="0.60241" />
+				<item id="14162" min="1" max="1" chance="0.025" />
+				<item id="14160" min="1" max="1" chance="0.02222" />
+				<item id="14161" min="1" max="1" chance="0.02" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="36881" min="1" max="1" chance="1.33333" />
+				<item id="36882" min="1" max="1" chance="0.66667" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23192" level="82" type="L2Monster" name="Succubus of Darkness" title="Succubus Disciple">
+
+		<race>UNDEAD</race>
+		<acquire exp="340448" sp="361" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="34812" hpRegen="7.5" mp="34812" mpRegen="2.7" />
+			<attack physical="5067" magical="2637" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1325" magical="1238" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="67" dark="153" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14968" level="1" />
+			<!-- <skill id="4410" level="3" /> -->
+			<!-- <skill id="4411" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="14963" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="24" />
+			<height normal="50.4" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2751" max="6393" chance="70" />
+				<item id="15769" min="1" max="1" chance="2" />
+				<item id="15770" min="1" max="1" chance="1.5" />
+				<item id="15771" min="1" max="1" chance="1" />
+				<item id="2133" min="1" max="1" chance="0.60241" />
+				<item id="6622" min="1" max="1" chance="0.60241" />
+				<item id="14162" min="1" max="1" chance="0.025" />
+				<item id="14160" min="1" max="1" chance="0.02222" />
+				<item id="14161" min="1" max="1" chance="0.02" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="36881" min="1" max="1" chance="1.33333" />
+				<item id="36882" min="1" max="1" chance="0.66667" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23193" level="82" type="L2Monster" name="Apparition Destroyer">
+
+		<race>DEMONIC</race>
+		<acquire exp="82500" sp="1712" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="11549" hpRegen="7.5" mp="11549" mpRegen="2.7" />
+			<attack physical="8085" magical="6770" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="972" magical="908" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="87" dark="284" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4414" level="1" />
+			<skill id="14958" level="1" />
+			<!-- <skill id="4410" level="12" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="20" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="707" max="1650" chance="70" />
+				<item id="15663" min="1" max="1" chance="0.66667" />
+				<item id="15666" min="1" max="1" chance="0.66667" />
+				<item id="2133" min="1" max="1" chance="0.33333" />
+				<item id="6622" min="1" max="1" chance="0.33333" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="4" />
+				<item id="36533" min="1" max="1" chance="1" />
+				<item id="36881" min="1" max="1" chance="0.66667" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23194" level="83" type="L2Monster" name="Apparition Assassin">
+
+		<race>DEMONIC</race>
+		<acquire exp="86599" sp="1775" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="12158" hpRegen="7.5" mp="12158" mpRegen="2.7" />
+			<attack physical="8894" magical="6770" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="972" magical="908" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="107" dark="304" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14959" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<!-- <skill id="4410" level="13" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="32" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="725" max="1693" chance="70" />
+				<item id="15664" min="1" max="1" chance="0.66667" />
+				<item id="15670" min="1" max="1" chance="0.66667" />
+				<item id="2133" min="1" max="1" chance="0.33333" />
+				<item id="6622" min="1" max="1" chance="0.33333" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="4" />
+				<item id="36533" min="1" max="1" chance="1" />
+				<item id="36881" min="1" max="1" chance="0.66667" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23195" level="83" type="L2Monster" name="Apparition Sniper">
+
+		<race>UNDEAD</race>
+		<acquire exp="86599" sp="1775" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="12158" hpRegen="7.5" mp="12158" mpRegen="2.7" />
+			<attack physical="10731" magical="6770" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="972" magical="908" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="87" dark="173" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14960" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="14" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="18" />
+			<height normal="27.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="725" max="1693" chance="70" />
+				<item id="15664" min="1" max="1" chance="0.66667" />
+				<item id="15670" min="1" max="1" chance="0.66667" />
+				<item id="2133" min="1" max="1" chance="0.33333" />
+				<item id="6622" min="1" max="1" chance="0.33333" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="4" />
+				<item id="36533" min="1" max="1" chance="1" />
+				<item id="36881" min="1" max="1" chance="0.66667" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23196" level="83" type="L2Monster" name="Apparition Wizard">
+
+		<race>DEMONIC</race>
+		<acquire exp="84597" sp="1731" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="12158" hpRegen="7.5" mp="12158" mpRegen="2.7" />
+			<attack physical="10731" magical="8186" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1169" magical="908" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="107" dark="304" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="140" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="14961" level="1" />
+			<!-- <skill id="4412" level="9" /> -->
+			<!-- <skill id="4411" level="15" /> -->
+			<!-- <skill id="4410" level="15" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="686" max="1597" chance="70" />
+				<item id="15665" min="1" max="1" chance="0.66667" />
+				<item id="15673" min="1" max="1" chance="0.66667" />
+				<item id="2133" min="1" max="1" chance="0.33333" />
+				<item id="6622" min="1" max="1" chance="0.33333" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="4" />
+				<item id="36533" min="1" max="1" chance="1" />
+				<item id="36881" min="1" max="1" chance="0.66667" />
+				<item id="36882" min="1" max="1" chance="0.4" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23197" level="84" type="L2Monster" name="Succubus of Lunacy" title="Succubus Disciple">
+
+		<race>DEMONIC</race>
+		<acquire exp="378034" sp="362" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="34600" hpRegen="7.5" mp="34600" mpRegen="2.7" />
+			<attack physical="6909" magical="3596" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1457" magical="1362" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="107" dark="304" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="14970" level="1" />
+			<!-- <skill id="4410" level="3" /> -->
+			<!-- <skill id="4411" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="14963" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="25" />
+			<height normal="44" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2891" max="6716" chance="70" />
+				<item id="15769" min="1" max="1" chance="2" />
+				<item id="15770" min="1" max="1" chance="1.5" />
+				<item id="15771" min="1" max="1" chance="1" />
+				<item id="2133" min="1" max="1" chance="0.5" />
+				<item id="6622" min="1" max="1" chance="0.5" />
+				<item id="14162" min="1" max="1" chance="0.025" />
+				<item id="14160" min="1" max="1" chance="0.02222" />
+				<item id="14161" min="1" max="1" chance="0.02" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="36881" min="1" max="1" chance="1.33333" />
+				<item id="36882" min="1" max="1" chance="0.66667" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23198" level="84" type="L2Monster" name="Succubus of Silence" title="Succubus Disciple">
+
+		<race>DEMONIC</race>
+		<acquire exp="378034" sp="362" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="34600" hpRegen="7.5" mp="34600" mpRegen="2.7" />
+			<attack physical="6909" magical="3596" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1457" magical="1362" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="107" dark="304" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="14971" level="1" />
+			<!-- <skill id="4410" level="3" /> -->
+			<!-- <skill id="4411" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+			<skill id="14963" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="48" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2891" max="6716" chance="70" />
+				<item id="15769" min="1" max="1" chance="2" />
+				<item id="15770" min="1" max="1" chance="1.5" />
+				<item id="15771" min="1" max="1" chance="1" />
+				<item id="2133" min="1" max="1" chance="0.5" />
+				<item id="6622" min="1" max="1" chance="0.5" />
+				<item id="14162" min="1" max="1" chance="0.025" />
+				<item id="14160" min="1" max="1" chance="0.02222" />
+				<item id="14161" min="1" max="1" chance="0.02" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="36881" min="1" max="1" chance="1.33333" />
+				<item id="36882" min="1" max="1" chance="0.66667" />
+			</corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23199" level="96" type="L2Monster" name="Sadiac the Killer">
+
+		<race>UNDEAD</race>
+		<acquire exp="12663060" sp="34626" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1086370" hpRegen="7.5" mp="1086370" mpRegen="2.7" />
+			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1968" magical="1680" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="35" />
+			<height normal="32.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="19589" max="44367" chance="70" />
+				<item id="35309" min="1" max="1" chance="1.13" />
+				<item id="35433" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="71.11" />
+				<item id="36534" min="1" max="1" chance="6.66" />
+			</corpse>
+		</drop_lists>
+	</npc>
+</list>

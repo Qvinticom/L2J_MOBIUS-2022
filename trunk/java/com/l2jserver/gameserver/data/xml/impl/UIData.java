@@ -51,7 +51,7 @@ public class UIData implements IXmlReader
 	{
 		_storedKeys.clear();
 		_storedCategories.clear();
-		parseDatapackFile("data/ui/ui_en.xml");
+		parseDatapackFile("ui/ui_en.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _storedKeys.size() + " keys " + _storedCategories.size() + " categories.");
 	}
 	

@@ -50,7 +50,7 @@ public final class BeautyShopData implements IXmlReader
 	{
 		_beautyList.clear();
 		_beautyData.clear();
-		parseDatapackFile("data/BeautyShop.xml");
+		parseDatapackFile("BeautyShop.xml");
 	}
 	
 	@Override

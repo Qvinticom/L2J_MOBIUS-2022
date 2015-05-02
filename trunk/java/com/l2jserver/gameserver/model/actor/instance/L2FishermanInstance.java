@@ -55,7 +55,7 @@ public final class L2FishermanInstance extends L2MerchantInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/fisherman/" + pom + ".htm";
+		return "html/fisherman/" + pom + ".htm";
 	}
 	
 	@Override

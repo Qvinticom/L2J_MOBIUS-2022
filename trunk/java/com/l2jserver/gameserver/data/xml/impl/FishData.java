@@ -55,7 +55,7 @@ public final class FishData implements IXmlReader
 		_fishEasy.clear();
 		_fishNormal.clear();
 		_fishHard.clear();
-		parseDatapackFile("data/stats/fishing/fishes.xml");
+		parseDatapackFile("stats/fishing/fishes.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_fishEasy.size() + _fishNormal.size() + _fishHard.size()) + " Fishes.");
 	}
 	

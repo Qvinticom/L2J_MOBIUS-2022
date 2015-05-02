@@ -1,0 +1,4333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25700" level="88" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
+		<parameters>
+			<skill name="Skill01_ID" id="6293" level="1" /> <!-- Power Strike -->
+			<skill name="Skill02_ID" id="6295" level="1" /> <!-- Point Target -->
+			<skill name="Skill03_ID" id="6297" level="1" /> <!-- Cylinder Throw -->
+			<skill name="SelfRangeBuff" id="6294" level="1" /> <!-- Leader's Roar -->
+			<skill name="Skill_Summon" id="6298" level="1" /> <!-- Summon Follower Knight -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="22299331" hpRegen="1947.68743288799" mp="92340.0" mpRegen="500" />
+			<attack physical="21748.0531096014" magical="3775.91585911807" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2063.7429186" magical="1089.14036" evasion="4" />
+			<attribute>
+				<attack type="WATER" value="250" />
+				<defence fire="150" water="250" wind="200" earth="200" holy="200" dark="200" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="6293" level="1" /> <!-- Power Strike -->
+			<skill id="6294" level="1" /> <!-- Leader's Roar -->
+			<skill id="6295" level="1" /> <!-- Point Target -->
+			<skill id="6297" level="1" /> <!-- Cylinder Throw -->
+			<skill id="6298" level="1" /> <!-- Summon Follower Knight -->
+			<skill id="6661" level="1" /> <!-- Level 85 Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>FREYA</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="5.903900146484375">
+					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="12.578700065612793">
+					<item id="14160" min="1" max="1" chance="30.7692" /> <!-- Sealed Vesper Earring -->
+					<item id="14161" min="1" max="1" chance="23.0769" /> <!-- Sealed Vesper Necklace -->
+					<item id="14162" min="1" max="1" chance="46.1539" /> <!-- Sealed Vesper Ring -->
+				</group>
+				<group chance="94.32319641113281">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="28" />
+			<height normal="67.5" />
+		</collision>
+	</npc>
+	<npc id="25701" level="84" type="L2RaidBoss" name="Anais" title="Lord of Splendor">
+		<parameters>
+			<skill name="Skill01_ID" id="6324" level="1" /> <!-- Divine Strike -->
+			<skill name="Skill02_ID" id="6323" level="1" /> <!-- Divine Bolt -->
+			<skill name="Skill03_ID" id="6325" level="1" /> <!-- Divine Nova -->
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<equipment rhand="8214" /> <!-- rhand: Monster Only (Solina Priest Pole) -->
+		<acquire exp="6653170" sp="1596" raidPoints="508" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="937564.609209036" hpRegen="240.220217981479" mp="21812.0" mpRegen="500" />
+			<attack physical="11094.68934" magical="1192.88500315956" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1428.96384939" magical="576.114" evasion="-18" />
+			<attribute>
+				<attack type="HOLY" value="300" />
+				<defence fire="220" water="220" wind="220" earth="220" holy="300" dark="180" default="220" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>430</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="6323" level="1" /> <!-- Divine Bolt -->
+			<skill id="6324" level="1" /> <!-- Divine Strike -->
+			<skill id="6325" level="1" /> <!-- Divine Nova -->
+			<skill id="6664" level="1" /> <!-- Level 84 Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<drop_lists>
+			<death>
+				<group chance="24.853200912475586">
+					<item id="14109" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Gauntlet -->
+					<item id="14113" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Leather Gloves -->
+					<item id="14116" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Gloves -->
+					<item id="14110" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Boots -->
+					<item id="14114" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Leather Boots -->
+					<item id="14117" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Shoes -->
+					<item id="15484" min="1" max="1" chance="79.546" /> <!-- High-level Angel Circlet -->
+				</group>
+				<group chance="6.9475998878479">
+					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="50.080101013183594">
+					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="24" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="25702" level="84" type="L2Monster" name="Guardian of the Grail">
+		<parameters>
+			<skill name="Skill01_ID" id="6326" level="1" /> <!-- Martyr's Happiness -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<attack physical="1144.73130112535" magical="781.703083407155" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<attack type="HOLY" value="220" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="220" dark="170" default="180" />
+			</attribute>
+			<speed>
+				<walk ground="25" />
+				<run ground="140" />
+			</speed>
+			<hit_time>100</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="6326" level="1" /> <!-- Martyr's Happiness -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="25703" level="76" type="L2RaidBoss" name="Gigantic Golem" title="Chaos">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25704" count="3" respawnTime="420" weightPoint="1" /> <!-- Gigantic Golem Subordinate -->
+			</minions>
+			<minions name="Privates2">
+				<npc id="25705" count="6" respawnTime="360" weightPoint="1" /> <!-- Gigantic Boom Golem -->
+			</minions>
+			<param name="Party_Type" value="2" />
+			<param name="Party_Loyalty" value="2" />
+			<param name="Skill01_Probablity" value="0" />
+			<skill name="Skill01_ID" id="6263" level="1" /> <!-- EMP Shock -->
+			<skill name="Skill02_ID" id="6608" level="10" /> <!-- NPC earth shot -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="3429146" sp="822" raidPoints="442" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="402092.518544389" hpRegen="172.748301603872" mp="15408.0" mpRegen="300" />
+			<attack physical="9037.418752" magical="896.946049858317" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="971.35365" magical="473.86" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="100" />
+				<defence fire="90" water="90" wind="30" earth="150" holy="90" dark="90" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="18" />
+				<run ground="190" />
+			</speed>
+			<hit_time>430</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="6263" level="1" /> <!-- EMP Shock -->
+			<skill id="6608" level="10" /> <!-- NPC earth shot -->
+			<skill id="6663" level="1" /> <!-- Level 76 Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="0.9563999772071838">
+					<item id="6364" min="1" max="1" chance="50" /> <!-- Forgotten Blade -->
+					<item id="6372" min="1" max="1" chance="50" /> <!-- Heaven's Divider -->
+				</group>
+				<group chance="1.4347000122070312">
+					<item id="6366" min="1" max="1" chance="25" /> <!-- Imperial Staff -->
+					<item id="6369" min="1" max="1" chance="25" /> <!-- Dragon Hunter Axe -->
+					<item id="6365" min="1" max="1" chance="25" /> <!-- Basalt Battlehammer -->
+					<item id="6579" min="1" max="1" chance="25" /> <!-- Arcana Mace -->
+				</group>
+				<group chance="43.737098693847656">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="31" />
+			<height normal="51.8" />
+		</collision>
+	</npc>
+	<npc id="25704" level="75" type="L2Monster" name="Gigantic Golem Subordinate" title="Chaos">
+		<parameters>
+			<param name="Party_Type" value="1" />
+			<param name="Party_Loyalty" value="1" />
+			<skill name="Skill01_ID" id="6602" level="10" /> <!-- NPC earth attack -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="4604.887488" hpRegen="62.39684944" mp="1507.8" mpRegen="3" />
+			<attack physical="2372.401605" magical="907.281935" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1277" magical="467.22" />
+			<attribute>
+				<attack type="EARTH" value="100" />
+				<defence fire="90" water="90" wind="30" earth="120" holy="90" dark="90" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="53" />
+				<run ground="200" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="6602" level="10" /> <!-- NPC earth attack -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="41.5" />
+		</collision>
+	</npc>
+	<npc id="25705" level="74" type="L2Monster" name="Gigantic Boom Golem" title="Chaos">
+		<parameters>
+			<skill name="Skill01_ID" id="6265" level="1" /> <!-- Smoke -->
+			<skill name="Skill02_ID" id="6264" level="1" /> <!-- Golem Boom -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
+			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="48" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="6264" level="1" /> <!-- Golem Boom -->
+			<skill id="6265" level="1" /> <!-- Smoke -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="25706" level="83" type="L2Monster" name="Lost Watchman">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="is_private" value="0" />
+			<param name="silhouette" value="25707" /> <!-- Lost Watcher -->
+			<param name="ai_type" value="kamaloka_83_a_false" />
+			<skill name="Skill01_ID" id="6693" level="9" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4047" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
+			<attack physical="9288.76621110816" magical="6343.02319953908" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566.178304" magical="621.45708" />
+			<attribute>
+				<attack type="UNHOLY" value="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="92" />
+				<run ground="200" />
+			</speed>
+			<hit_time>480</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="6693" level="9" /> <!-- NPC Strike -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clan_list>
+				<clan>ABYSS</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="27" />
+			<height normal="48.5" />
+		</collision>
+	</npc>
+	<npc id="25707" level="83" type="L2Monster" name="Lost Watchman">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_Probablity" value="500" />
+			<skill name="Skill01_ID" id="6693" level="9" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4047" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
+			<attack physical="9288.76621110816" magical="6343.02319953908" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566.178304" magical="621.45708" />
+			<attribute>
+				<attack type="UNHOLY" value="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="92" />
+				<run ground="200" />
+			</speed>
+			<hit_time>480</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="6693" level="9" /> <!-- NPC Strike -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clan_list>
+				<clan>ABYSS</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="27" />
+			<height normal="48.5" />
+		</collision>
+	</npc>
+	<npc id="25708" level="83" type="L2Monster" name="Lost Beholder">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="6693" level="9" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="Skill03_ID" id="4098" level="10" /> <!-- Silence -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="112316.37469612" hpRegen="190.745373183435" mp="1777.4" mpRegen="3" />
+			<attack physical="9063.04944399325" magical="6188.88790774729" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566.178304" magical="621.45708" />
+			<attribute>
+				<attack type="UNHOLY" value="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="64" />
+				<run ground="200" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4098" level="10" /> <!-- Silence -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="6693" level="9" /> <!-- NPC Strike -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clan_list>
+				<clan>ABYSS</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="27.2" />
+		</collision>
+	</npc>
+	<npc id="25709" level="83" type="L2RaidBoss" name="Lost Warden">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="6694" level="8" /> <!-- BOSS Strike -->
+			<skill name="SelfRangePhysicalSpecial_a" id="6695" level="8" /> <!-- BOSS Spinning Slasher -->
+			<skill name="SelfBuff_a" id="4173" level="8" /> <!-- BOSS Might -->
+			<skill name="SelfRangeCancel_a" id="4177" level="8" /> <!-- BOSS Cancel Magic -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="1455513" sp="349" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="618854.527530717" hpRegen="237.841799981663" mp="1777.4" mpRegen="20" />
+			<attack physical="10874.372072" magical="2209.19927785661" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1061.58432" magical="517.88" evasion="-18" />
+			<attribute>
+				<attack type="UNHOLY" value="170" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="110" dark="170" default="120" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4173" level="8" /> <!-- BOSS Might -->
+			<skill id="4177" level="8" /> <!-- BOSS Cancel Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="6694" level="8" /> <!-- BOSS Strike -->
+			<skill id="6695" level="8" /> <!-- BOSS Spinning Slasher -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="51.6" />
+			<height normal="57" />
+		</collision>
+	</npc>
+	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Guard Captain">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25711" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
+				<npc id="25712" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Assistant Guard -->
+			</minions>
+			<param name="PCCafe_Reward" value="13002" /> <!-- Essence of Kamaloka -->
+			<param name="PCCafe_Number" value="19" />
+			<skill name="RangeDDMagic_a" id="4178" level="8" /> <!-- BOSS Flamestrike -->
+			<skill name="Debuff1" id="5699" level="7" /> <!-- Decrease P. Def -->
+			<skill name="Debuff2" id="5700" level="7" /> <!-- Magic Resistance Decrease -->
+			<skill name="Debuff3" id="5701" level="7" /> <!-- Decrease P. Atk -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="16653943" sp="3996" raidPoints="1461.5545" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="280911.661939328" hpRegen="36.8918887774779" mp="17774.0" mpRegen="400" />
+			<attack physical="10229.1336718125" magical="1682.35468775538" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3184.75296" magical="1553.64" />
+			<attribute>
+				<attack type="UNHOLY" value="250" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="250" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="73" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4178" level="8" /> <!-- BOSS Flamestrike -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5699" level="7" /> <!-- Decrease P. Def -->
+			<skill id="5700" level="7" /> <!-- Magic Resistance Decrease -->
+			<skill id="5701" level="7" /> <!-- Decrease P. Atk -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="20.002700805664062">
+					<item id="15766" min="1" max="1" chance="46.1565" /> <!-- Sealed Moirai Ring -->
+					<item id="15767" min="1" max="1" chance="30.7673" /> <!-- Sealed Moirai Earring -->
+					<item id="15768" min="1" max="1" chance="23.0762" /> <!-- Sealed Moirai Necklace -->
+				</group>
+				<group chance="1.4673999547958374">
+					<item id="10219" min="1" max="1" chance="100" /> <!-- Icarus Trident -->
+				</group>
+				<group chance="88.53970336914062">
+					<item id="959" min="1" max="1" chance="16.6667" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="3" chance="83.3333" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="34.32" />
+			<height normal="62.4" />
+		</collision>
+	</npc>
+	<npc id="25711" level="83" type="L2Monster" name="Lost Guard">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="16110.4741695923" hpRegen="17.7763833411484" mp="1777.4" mpRegen="3" />
+			<attack physical="3582.73437561952" magical="2446.5431410217" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="530.79216" magical="258.937040508719" />
+			<attribute>
+				<attack type="UNHOLY" value="200" />
+				<defence fire="170" water="170" wind="170" earth="170" holy="150" dark="200" default="170" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hit_time>480</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="34" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="25712" level="83" type="L2Monster" name="Lost Assistant Guard">
+		<parameters>
+			<skill name="SelfRangeBuff_a" id="4214" level="8" /> <!-- BOSS Reflect Damage -->
+			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="16110.4741695923" hpRegen="17.7763833411484" mp="1777.4" mpRegen="20" />
+			<attack physical="2388.48958374635" magical="1631.02876068113" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="530.79216" magical="258.937040508719" />
+			<attribute>
+				<attack type="UNHOLY" value="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="73" />
+				<run ground="170" />
+			</speed>
+			<hit_time>480</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4214" level="8" /> <!-- BOSS Reflect Damage -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4440" level="4" /> <!-- Greater Resist Paralysis -->
+			<skill id="4441" level="4" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="4780" level="8" /> <!-- BOSS Heal -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="19" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="25713" level="84" type="L2RaidBoss" name="Darnel" title="Torture Maiden">
+		<parameters>
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeDebuff_a" id="4182" level="9" /> <!-- Poison -->
+			<skill name="debuff" id="4189" level="9" /> <!-- Paralysis -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="1789793" sp="429" raidPoints="197" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1395831.13184129" hpRegen="159.893968662935" mp="18120.0" mpRegen="30" />
+			<attack physical="5370.6622877502" magical="3746.43835324209" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="644.161014000002" magical="345.953238849299" />
+			<attribute>
+				<attack type="UNHOLY" value="250" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="250" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>580</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4182" level="9" /> <!-- Poison -->
+			<skill id="4189" level="9" /> <!-- Paralysis -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="6658" level="1" /> <!-- Level 84 Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="4.49970006942749">
+					<item id="15694" min="1" max="1" chance="17.0733" /> <!-- Sealed Moirai Helmet -->
+					<item id="15695" min="1" max="1" chance="17.0733" /> <!-- Sealed Moirai Leather Helmet -->
+					<item id="15696" min="1" max="1" chance="17.0733" /> <!-- Sealed Moirai Circlet -->
+					<item id="15710" min="1" max="1" chance="24.3901" /> <!-- Sealed Moirai Shield -->
+					<item id="15709" min="1" max="1" chance="24.39" /> <!-- Sealed Moirai Sigil -->
+				</group>
+				<group chance="0.46889999508857727">
+					<item id="10223" min="1" max="1" chance="100" /> <!-- Icarus Spitter -->
+				</group>
+				<group chance="51.87110137939453">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="20" />
+			<height normal="40.5985" />
+		</collision>
+	</npc>
+	<npc id="25714" level="84" type="L2RaidBoss" name="Kechi" title="Flaming">
+		<parameters>
+			<param name="InzoneRestriction" value="1" />
+			<skill name="selfbuff1" id="5418" level="1" /> <!-- Invincible -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2662110" sp="638" raidPoints="126" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="344947.576547878" hpRegen="196.415209791805" mp="18120.0" mpRegen="30" />
+			<attack physical="4613.33483436704" magical="3161.66316920124" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="644.161014" magical="345.953044240155" />
+			<attribute>
+				<attack type="FIRE" value="250" />
+				<defence fire="250" water="150" wind="200" earth="200" holy="200" dark="200" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="26" />
+				<run ground="180" />
+			</speed>
+			<hit_time>470</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5418" level="1" /> <!-- Invincible -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="6659" level="1" /> <!-- Level 84 Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>GRANISKO</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="4.426799774169922">
+					<item id="15703" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Gauntlet -->
+					<item id="15704" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Leather Gloves -->
+					<item id="15705" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Gloves -->
+					<item id="15706" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Boots -->
+					<item id="15707" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Leather Boots -->
+					<item id="15708" min="1" max="1" chance="16.6665" /> <!-- Sealed Moirai Shoes -->
+				</group>
+				<group chance="0.3603000044822693">
+					<item id="10222" min="1" max="1" chance="50" /> <!-- Icarus Hall -->
+					<item id="10220" min="1" max="1" chance="50" /> <!-- Icarus Hammer -->
+				</group>
+				<group chance="39.85319900512695">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="25715" level="84" type="L2Monster" name="Kechi's Subordinate">
+		<parameters>
+			<param name="IsAggressive" value="0" />
+			<param name="AttackRange" value="0" />
+			<param name="Party_Type" value="1" />
+			<param name="Party_Loyalty" value="2" />
+			<skill name="selfbuff1" id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill name="selfbuff1" id="4084" level="2" /> <!-- Resist Physical Attack -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="19178.9661763889" hpRegen="196.571121475454" mp="1812.0" mpRegen="3" />
+			<attack physical="2181.24139515455" magical="1494.87319472736" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="644.161014" magical="628.492106633077" />
+			<attribute>
+				<attack type="FIRE" value="250" />
+				<defence fire="250" water="150" wind="200" earth="200" holy="200" dark="200" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4084" level="2" /> <!-- Resist Physical Attack -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>GRANISKO</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25716" level="84" type="L2RaidBoss" name="Tears" title="Ice">
+		<parameters>
+			<param name="InzoneRestriction" value="1" />
+			<skill name="W_LongRangeDDMagic" id="5238" level="1" /> <!-- Freezing -->
+			<skill name="selfbuff1" id="5420" level="1" /> <!-- Invincible -->
+			<skill name="selfbuff2" id="2369" level="1" /> <!-- Water Dragon Scale -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="9638" lhand="9638" /> <!-- rhand: Tears r1 lhand: Tears r1 -->
+		<acquire exp="2039316" sp="489" raidPoints="223.291907361045" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1360985.8136379" hpRegen="154.089581103435" mp="18120.0" mpRegen="30" />
+			<attack physical="5380.73978332843" magical="3682.3307263833" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="644.161013999999" magical="345.953432805874" />
+			<attribute>
+				<attack type="WATER" value="250" />
+				<defence fire="150" water="250" wind="200" earth="200" holy="200" dark="200" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="2369" level="1" /> <!-- Water Dragon Scale -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5238" level="1" /> <!-- Freezing -->
+			<skill id="5420" level="1" /> <!-- Invincible -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="6660" level="1" /> <!-- Level 84 Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<group chance="2.642400026321411">
+					<item id="15698" min="1" max="1" chance="38.461" /> <!-- Sealed Moirai Leather Breastplate -->
+					<item id="15701" min="1" max="1" chance="61.539" /> <!-- Sealed Moirai Leather Legging -->
+				</group>
+				<group chance="0.49630001187324524">
+					<item id="10223" min="1" max="1" chance="100" /> <!-- Icarus Spitter -->
+				</group>
+				<group chance="19.408599853515625">
+					<item id="6578" min="1" max="1" chance="28.5714" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+					<item id="6570" min="1" max="1" chance="71.4286" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="20" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25717" level="84" type="L2Monster" name="Tears" title="Ice">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="9638" lhand="9638" /> <!-- rhand: Tears r1 lhand: Tears r1 -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1360985.8136379" hpRegen="154.089581103435" mp="18120.0" mpRegen="30" />
+			<attack physical="215.229591333137" magical="147.293229055332" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="644.161013999999" magical="345.953432805874" />
+			<attribute>
+				<attack type="WATER" value="250" />
+				<defence fire="150" water="250" wind="200" earth="200" holy="200" dark="200" default="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25718" level="84" type="L2RaidBoss" name="Emerald Horn" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="6821" level="1" /> <!-- P. Def. Decrease -->
+			<skill name="Skill02_ID" id="6821" level="1" /> <!-- P. Def. Decrease -->
+			<skill name="Skill03_ID" id="6822" level="1" /> <!-- P. Def. Decrease -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>FEMALE</sex>
+		<acquire exp="14073897" sp="3377" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3750258.43683614" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="17953.9556768251" magical="29074.4276846416" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1073.60169" magical="523.74" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="300" />
+				<defence fire="250" water="250" wind="220" earth="300" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6821" level="1" /> <!-- P. Def. Decrease -->
+			<skill id="6822" level="1" /> <!-- P. Def. Decrease -->
+			<skill id="6824" level="1" /> <!-- Piercing Storm -->
+			<skill id="6825" level="1" /> <!-- Bleed -->
+			<skill id="6898" level="1" /> <!-- 84 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="1.054800033569336">
+					<item id="14105" min="1" max="1" chance="15.6016" /> <!-- Sealed Vesper Breastplate -->
+					<item id="14108" min="1" max="1" chance="24.9621" /> <!-- Sealed Vesper Gaiters -->
+					<item id="13887" min="1" max="1" chance="59.4363" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="1.2835999727249146">
+					<item id="14106" min="1" max="1" chance="38.4626" /> <!-- Sealed Vesper Leather Breastplate -->
+					<item id="14112" min="1" max="1" chance="61.5374" /> <!-- Sealed Vesper Leather Leggings -->
+				</group>
+				<group chance="4.480000019073486">
+					<item id="959" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="60" />
+			<height normal="77" />
+		</collision>
+	</npc>
+	<npc id="25719" level="84" type="L2RaidBoss" name="Dust Rider" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Skill03_Probablity" value="1111" />
+			<skill name="Skill01_ID" id="6826" level="1" /> <!-- Critical Strike -->
+			<skill name="Skill02_ID" id="6827" level="1" /> <!-- Petrify -->
+			<skill name="Skill03_ID" id="6828" level="1" /> <!-- Dust Storm -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="17240524" sp="4137" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3187719.67131072" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="19948.8396409168" magical="29074.4276846416" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1073.60169" magical="523.74" evasion="-18" />
+			<attribute>
+				<attack type="WIND" value="300" />
+				<defence fire="250" water="250" wind="300" earth="220" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="200" />
+			</speed>
+			<hit_time>480</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6826" level="1" /> <!-- Critical Strike -->
+			<skill id="6827" level="1" /> <!-- Petrify -->
+			<skill id="6828" level="1" /> <!-- Dust Storm -->
+			<skill id="6899" level="1" /> <!-- 84 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="1.04830002784729">
+					<item id="14106" min="1" max="1" chance="38.4626" /> <!-- Sealed Vesper Leather Breastplate -->
+					<item id="14112" min="1" max="1" chance="61.5374" /> <!-- Sealed Vesper Leather Leggings -->
+				</group>
+				<group chance="1.9381999969482422">
+					<item id="14105" min="1" max="1" chance="15.6016" /> <!-- Sealed Vesper Breastplate -->
+					<item id="14108" min="1" max="1" chance="24.9621" /> <!-- Sealed Vesper Gaiters -->
+					<item id="13887" min="1" max="1" chance="59.4363" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="5.792900085449219">
+					<item id="959" min="1" max="1" chance="47.3684" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="6578" min="1" max="1" chance="52.6316" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="48" />
+			<height normal="53.5" />
+		</collision>
+	</npc>
+	<npc id="25720" level="84" type="L2RaidBoss" name="Bleeding Fly" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Skill03_Probablity" value="1111" />
+			<skill name="Skill01_ID" id="6829" level="1" /> <!-- Vampiric Attack -->
+			<skill name="Skill02_ID" id="6829" level="1" /> <!-- Vampiric Attack -->
+			<skill name="Skill03_ID" id="6831" level="1" /> <!-- Blood Burst -->
+			<skill name="Skill04_ID" id="6830" level="1" /> <!-- Bleed -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="19351609" sp="4644" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3750258.43683614" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="19948.8396409168" magical="32304.9196496018" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1073.60169" magical="523.74" evasion="-18" />
+			<attribute>
+				<attack type="WIND" value="300" />
+				<defence fire="250" water="250" wind="300" earth="220" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6829" level="1" /> <!-- Vampiric Attack -->
+			<skill id="6830" level="1" /> <!-- Bleed -->
+			<skill id="6831" level="1" /> <!-- Blood Burst -->
+			<skill id="6900" level="1" /> <!-- 84 level Raid Boss -->
+			<skill id="6915" level="1" /> <!-- npc Acumen -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="2.1205999851226807">
+					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="4.072999954223633">
+					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
+					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
+					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
+					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
+					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
+					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
+				</group>
+				<group chance="6.502200126647949">
+					<item id="959" min="1" max="1" chance="47.3684" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="6578" min="1" max="1" chance="52.6316" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="153" />
+			<height normal="140" />
+		</collision>
+	</npc>
+	<npc id="25721" level="84" type="L2RaidBoss" name="Blackdagger Wing" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill02_ID" id="6833" level="1" /> <!-- Power Strike -->
+			<skill name="Skill02_ID" id="6833" level="1" /> <!-- Power Strike -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="21110846" sp="5066" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3750258.43683614" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="19948.8396409168" magical="25843.9357196815" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1073.60169" magical="523.74" evasion="-18" />
+			<attribute>
+				<attack type="UNHOLY" value="300" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="220" dark="300" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6833" level="1" /> <!-- Power Strike -->
+			<skill id="6834" level="1" /> <!-- Range Magic Attack -->
+			<skill id="6901" level="1" /> <!-- 84 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="2.9621999263763428">
+					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
+					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
+					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
+					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
+					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
+					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
+				</group>
+				<group chance="3.470099925994873">
+					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="7.093299865722656">
+					<item id="959" min="1" max="1" chance="47.3684" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="6578" min="1" max="1" chance="52.6316" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="112" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="25722" level="84" type="L2RaidBoss" name="Shadow Summoner" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Skill01_Probablity" value="1111" />
+			<skill name="Skill01_ID" id="6836" level="1" /> <!-- Silence -->
+			<skill name="Skill02_ID" id="6837" level="1" /> <!-- Range Magic Attack -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="22870083" sp="5488" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3750258.43683614" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="17953.9556768251" magical="29074.4276846416" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1073.60169" magical="523.74" evasion="-18" />
+			<attribute>
+				<attack type="UNHOLY" value="300" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="220" dark="300" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="160" />
+			</speed>
+			<hit_time>490</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6835" level="1" /> <!-- Summon Skeleton -->
+			<skill id="6836" level="1" /> <!-- Silence -->
+			<skill id="6837" level="1" /> <!-- Range Magic Attack -->
+			<skill id="6838" level="1" /> <!-- Self-destruction -->
+			<skill id="6902" level="1" /> <!-- 84 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="2.506200075149536">
+					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="4.813600063323975">
+					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
+					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
+					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
+					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
+					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
+					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
+				</group>
+				<group chance="4.246699810028076">
+					<item id="959" min="1" max="1" chance="85.7143" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="6577" min="1" max="1" chance="14.2857" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="60" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="25723" level="84" type="L2RaidBoss" name="Spike Slasher" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="6839" level="1" /> <!-- Power Attack -->
+			<skill name="Skill02_ID" id="6839" level="2" /> <!-- Power Attack -->
+			<skill name="Skill03_ID" id="6840" level="1" /> <!-- Paralysis -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="24629320" sp="5911" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2625180.9057853" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="17953.9556768251" magical="25843.9357196815" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1073.60169" magical="523.74" evasion="-18" />
+			<attribute>
+				<attack type="WATER" value="300" />
+				<defence fire="220" water="300" wind="250" earth="250" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="200" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6839" level="1" /> <!-- Power Attack -->
+			<skill id="6840" level="1" /> <!-- Paralysis -->
+			<skill id="6841" level="1" /> <!-- Summon Subordinate -->
+			<skill id="6903" level="1" /> <!-- 84 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="3.455899953842163">
+					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
+					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
+					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
+					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
+					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
+					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
+				</group>
+				<group chance="4.048500061035156">
+					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="4.573299884796143">
+					<item id="959" min="1" max="1" chance="85.7143" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="6577" min="1" max="1" chance="14.2857" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="55" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="25724" level="84" type="L2RaidBoss" name="Muscle Bomber" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill04_ID" id="6844" level="1" /> <!-- Power Strike -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="26388558" sp="6333" raidPoints="356" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3750258.43683614" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<attack physical="23938.6075691002" magical="31012.7228636178" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1288.322028" magical="628.488" evasion="-18" />
+			<attribute>
+				<attack type="FIRE" value="300" />
+				<defence fire="300" water="220" wind="250" earth="250" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="200" />
+			</speed>
+			<hit_time>570</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6842" level="1" /> <!-- Enhance -->
+			<skill id="6844" level="1" /> <!-- Power Strike -->
+			<skill id="6904" level="1" /> <!-- 84 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<group chance="1.6045000553131104">
+					<item id="14107" min="1" max="1" chance="38.4626" /> <!-- Sealed Vesper Tunic -->
+					<item id="14115" min="1" max="1" chance="61.5374" /> <!-- Sealed Vesper Stockings -->
+				</group>
+				<group chance="2.966599941253662">
+					<item id="14105" min="1" max="1" chance="15.6016" /> <!-- Sealed Vesper Breastplate -->
+					<item id="14108" min="1" max="1" chance="24.9621" /> <!-- Sealed Vesper Gaiters -->
+					<item id="13887" min="1" max="1" chance="59.4363" /> <!-- Sealed Vesper Sigil -->
+				</group>
+				<group chance="4.900000095367432">
+					<item id="959" min="1" max="1" chance="85.7143" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="6577" min="1" max="1" chance="14.2857" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				</group>
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="60" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="25725" level="85" type="L2RaidBoss" name="Drake Lord" title="Raid Boss">
+		<parameters>
+			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill name="notank_skill_b" id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill name="Skill01_ID" id="6891" level="1" /> <!-- Power Attack -->
+			<skill name="Skill02_ID" id="6892" level="1" /> <!-- Power Shot -->
+			<skill name="Skill03_ID" id="6732" level="1" /> <!-- Mirage -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire raidPoints="213" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3902308.59665528" hpRegen="556.482123682282" mp="18468.0" mpRegen="500" />
+			<attack physical="15345.2612622437" magical="23259.5421477133" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1876.129926" magical="529.48" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="300" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="220" dark="300" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="54" />
+				<run ground="150" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6732" level="1" /> <!-- Mirage -->
+			<skill id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill id="6891" level="1" /> <!-- Power Attack -->
+			<skill id="6892" level="1" /> <!-- Power Shot -->
+			<skill id="6905" level="1" /> <!-- 85 level Raid Boss -->
+		</skill_list>
+		<corpse_time>14</corpse_time>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="500" clanHelpRange="300" />
+		<drop_lists>
+			<death>
+				<item id="17266" min="1" max="1" chance="20" /> <!-- Will of Antharas -->
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="18" />
+			<height normal="51" />
+		</collision>
+	</npc>
+	<npc id="25726" level="85" type="L2RaidBoss" name="Behemoth Leader" title="Raid Boss">
+		<parameters>
+			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill name="notank_skill_b" id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill name="Skill01_ID" id="6893" level="1" /> <!-- Power Attack -->
+			<skill name="Skill02_ID" id="6894" level="1" /> <!-- Power Shot -->
+			<skill name="Skill03_ID_P" id="6739" level="1" /> <!-- Presentation - Behemoth Leader Casting Preparation -->
+			<skill name="Skill03_ID_F" id="6741" level="1" /> <!-- Presentation - Behemoth Leader Casting Failure -->
+			<skill name="Skill03_ID" id="6740" level="1" /> <!-- Presentation - Behemoth Leader Casting -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire raidPoints="213" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3902308.59665528" hpRegen="556.482123682282" mp="18468.0" mpRegen="500" />
+			<attack physical="15345.2612622437" magical="23259.5421477133" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1876.129926" magical="529.48" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="300" />
+				<defence fire="250" water="250" wind="220" earth="300" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="180" />
+				<run ground="180" />
+			</speed>
+			<hit_time>900</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill id="6893" level="1" /> <!-- Power Attack -->
+			<skill id="6894" level="1" /> <!-- Power Shot -->
+		</skill_list>
+		<corpse_time>14</corpse_time>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="500" clanHelpRange="300" />
+		<drop_lists>
+			<death>
+				<item id="17266" min="1" max="1" chance="20" /> <!-- Will of Antharas -->
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="63" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="25727" level="85" type="L2RaidBoss" name="Dragon Beast" title="Raid Boss">
+		<parameters>
+			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill name="notank_skill_b" id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill name="Skill01_ID" id="6895" level="1" /> <!-- Power Attack -->
+			<skill name="Skill02_ID" id="6896" level="1" /> <!-- Power Shot -->
+			<skill name="Skill03_ID" id="6736" level="1" /> <!-- Fierce Attack -->
+			<skill name="Skill04_ID" id="6737" level="1" /> <!-- Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3902308.59665528" hpRegen="556.482123682282" mp="18468.0" mpRegen="500" />
+			<attack physical="11508.9459466828" magical="14537.2138423208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1876.129926" magical="529.48" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="300" />
+				<defence fire="250" water="250" wind="220" earth="300" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="250" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6736" level="1" /> <!-- Fierce Attack -->
+			<skill id="6737" level="1" /> <!-- Heal -->
+			<skill id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill id="6895" level="1" /> <!-- Power Attack -->
+			<skill id="6896" level="1" /> <!-- Power Shot -->
+			<skill id="6907" level="1" /> <!-- 85 level Raid Boss -->
+		</skill_list>
+		<corpse_time>14</corpse_time>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="500" clanHelpRange="300" />
+		<collision>
+			<radius normal="50" />
+			<height normal="84" />
+		</collision>
+	</npc>
+	<npc id="25728" level="85" type="L2Monster" name="Death Knight">
+		<parameters>
+			<skill name="hold_skill" id="6738" level="1" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10865.4200394007" hpRegen="109.442978618283" mp="1846.8" mpRegen="3" />
+			<attack physical="7925.28894736539" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.861024" magical="635.378064" evasion="-18" />
+			<attribute>
+				<attack type="UNHOLY" value="300" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="220" dark="300" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hit_time>710</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="6738" level="1" /> <!-- Hold -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="25729" level="85" type="L2Monster" name="Death Knight">
+		<parameters>
+			<skill name="fan_attack_skill" id="6889" level="1" /> <!-- Range Attack -->
+			<skill name="debuff_skill" id="6890" level="1" /> <!-- Bleed -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10865.4200394007" hpRegen="109.442978618283" mp="1846.8" mpRegen="3" />
+			<attack physical="7925.28894736539" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.861024" magical="635.378064" evasion="-18" />
+			<attribute>
+				<attack type="UNHOLY" value="300" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="220" dark="300" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hit_time>710</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="6889" level="1" /> <!-- Range Attack -->
+			<skill id="6890" level="1" /> <!-- Bleed -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="25730" level="80" type="L2Monster" name="Demon's Banquet">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945" /> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<attack type="UNHOLY" value="180" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>300</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="25731" level="80" type="L2Monster" name="Demon's Banquet">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945" /> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<attack type="UNHOLY" value="180" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hit_time>300</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="25732" level="85" type="L2Monster" name="Dragon Beast" title="Raid Boss">
+		<parameters>
+			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
+			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
+			<skill name="notank_skill_b" id="6888" level="1" /> <!-- Fatal Shot -->
+			<skill name="Skill01_ID" id="6895" level="1" /> <!-- Power Attack -->
+			<skill name="Skill02_ID" id="6896" level="1" /> <!-- Power Shot -->
+			<skill name="Skill03_ID" id="6736" level="1" /> <!-- Fierce Attack -->
+			<skill name="Skill04_ID" id="6737" level="1" /> <!-- Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire raidPoints="71" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3902308.59665528" hpRegen="556.482123682282" mp="18468.0" mpRegen="500" />
+			<attack physical="11508.9459466828" magical="14537.2138423208" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1876.129926" magical="529.48" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="300" />
+				<defence fire="250" water="250" wind="220" earth="300" holy="250" dark="250" default="260" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="250" />
+			</speed>
+			<hit_time>450</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="6895" level="1" /> <!-- Power Attack -->
+			<skill id="6907" level="1" /> <!-- 85 level Raid Boss -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17266" min="1" max="1" chance="6.6666" /> <!-- Will of Antharas -->
+			</death>
+		</drop_lists>
+		<collision>
+			<radius normal="50" />
+			<height normal="84" />
+		</collision>
+	</npc>
+	<npc id="25733" level="83" type="L2Monster" name="Gem Dragon">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="6876" level="1" /> <!-- Power Strike -->
+			<skill name="Skill02_ID" id="6877" level="1" /> <!-- Power Strike -->
+			<skill name="Skill03_ID" id="6878" level="1" /> <!-- Paralysis -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
+			<attack physical="10247.9853769394" magical="6998.04554416799" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566.178304" magical="621.45708" />
+			<attribute>
+				<attack type="WATER" value="200" />
+				<defence fire="140" water="200" wind="170" earth="170" holy="170" dark="170" default="180" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="200" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="250" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="25734" level="83" type="L2Monster" name="Parasitic Leech">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Skill02_Probablity" value="1111" />
+			<skill name="Skill01_ID" id="6870" level="1" /> <!-- Vampiric Claw -->
+			<skill name="Skill02_ID" id="6871" level="1" /> <!-- Range Magic Attack -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
+			<attack physical="10247.9853769394" magical="6998.04554416799" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566.178304" magical="621.45708" />
+			<attribute>
+				<attack type="WATER" value="200" />
+				<defence fire="140" water="200" wind="170" earth="170" holy="170" dark="170" default="180" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="50" />
+			</speed>
+			<hit_time>650</hit_time>
+		</stats>
+		<status undying="false" />
+		<skill_list>
+			<skill id="4274" level="4" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="25735" level="90" type="L2Monster" name="Fairy Warrior" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="2690116" sp="83882" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="1" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25736" level="90" type="L2Monster" name="Fairy Rogue" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14043" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="6914" level="3" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25737" level="90" type="L2Monster" name="Fairy Knight" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25738" level="90" type="L2Monster" name="Satyr Wizard" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="2690116" sp="83882" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14046" level="1" />
+			<skill id="14048" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25739" level="90" type="L2Monster" name="Satyr Summoner" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14047" level="1" />
+			<skill id="14048" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25740" level="90" type="L2Monster" name="Satyr Witch" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14049" level="1" />
+			<skill id="14046" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25741" level="90" type="L2Monster" name="Treekin Defender" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="59537" hpRegen="7.5" mp="59537" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="187" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="5" />
+			<skill id="14053" level="1" />
+		</skill_list>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="36" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25742" level="90" type="L2Monster" name="Centaur Archer" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="48442" hpRegen="7.5" mp="48442" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="14055" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="14" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="25743" level="90" type="L2Monster" name="Beorning Berserker" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="57903" hpRegen="7.5" mp="57903" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5462" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14050" level="1" />
+		</skill_list>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="32" />
+			<height normal="29.8" />
+		</collision>
+	</npc>
+	<npc id="25744" level="91" type="L2Monster" name="Double Nightmare" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="251772" hpRegen="7.5" mp="251772" mpRegen="2.7" />
+			<attack physical="11084" magical="7916" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1375" magical="1325" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14059" level="1" />
+			<skill id="14058" level="1" />
+			<skill id="14060" level="1" />
+		</skill_list>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="7" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25745" level="92" type="L2Monster" name="Kimerian" title="Fairy Leader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25746" count="4" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>FAIRY</race>
+		<acquire exp="136101120" sp="54440" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="1028131" hpRegen="7.5" mp="1028131" mpRegen="2.7" />
+			<attack physical="21580" magical="15416" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1350" magical="1300" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14061" level="1" />
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5465" level="1" />
+			<skill id="14042" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14718" level="1" />
+			<skill id="14063" level="1" />
+			<skill id="14062" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="52" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="3" />
+				<item id="17357" min="1" max="1" chance="0.75188" />
+				<item id="17356" min="1" max="1" chance="0.56497" />
+				<item id="17526" min="1" max="1" chance="0.5" />
+				<item id="17355" min="1" max="1" chance="0.42918" />
+				<item id="17354" min="1" max="1" chance="0.36101" />
+				<item id="17343" min="1" max="1" chance="0.36101" />
+				<item id="17346" min="1" max="1" chance="0.3003" />
+				<item id="17339" min="1" max="1" chance="0.3003" />
+				<item id="17338" min="1" max="1" chance="0.3003" />
+				<item id="17340" min="1" max="1" chance="0.3003" />
+				<item id="17341" min="1" max="1" chance="0.3003" />
+				<item id="17342" min="1" max="1" chance="0.3003" />
+				<item id="17344" min="1" max="1" chance="0.3003" />
+				<item id="17345" min="1" max="1" chance="0.3003" />
+				<item id="17353" min="1" max="1" chance="0.3003" />
+				<item id="17347" min="1" max="1" chance="0.3003" />
+				<item id="17348" min="1" max="1" chance="0.3003" />
+				<item id="17349" min="1" max="1" chance="0.3003" />
+				<item id="17350" min="1" max="1" chance="0.3003" />
+				<item id="17351" min="1" max="1" chance="0.3003" />
+				<item id="17352" min="1" max="1" chance="0.3003" />
+				<item id="17334" min="1" max="1" chance="0.03" />
+				<item id="17333" min="1" max="1" chance="0.03" />
+				<item id="17332" min="1" max="1" chance="0.03" />
+				<item id="17331" min="1" max="1" chance="0.03" />
+				<item id="17330" min="1" max="1" chance="0.03" />
+				<item id="17329" min="1" max="1" chance="0.03" />
+				<item id="17328" min="1" max="1" chance="0.03" />
+				<item id="17327" min="1" max="1" chance="0.03" />
+				<item id="17326" min="1" max="1" chance="0.03" />
+				<item id="17325" min="1" max="1" chance="0.03" />
+				<item id="17324" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25746" level="90" type="L2Monster" name="Kimerian Ghost">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="35967" hpRegen="7.5" mp="35967" mpRegen="2.7" />
+			<attack physical="7656" magical="5468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="870" magical="840" />
+			<attribute>
+				<defence fire="135" water="160" wind="183" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="52" />
+		</collision>
+	</npc>
+	<npc id="25747" level="25" type="L2Monster" name="Kimerian" title="Fairy Leader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="2541012" sp="9513" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="296576" hpRegen="7.5" mp="296576" mpRegen="2.7" />
+			<attack physical="21580" magical="15416" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1350" magical="1300" />
+			<attribute>
+				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<hit_time>330</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14718" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="52" />
+		</collision>
+	</npc>
+	<npc id="25748" level="93" type="L2Monster" name="Fairy Warrior" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="25028" hpRegen="7.5" mp="25028" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="6914" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25749" level="94" type="L2Monster" name="Fairy Rogue" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="11556" hpRegen="7.5" mp="11556" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="6914" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25750" level="93" type="L2Monster" name="Fairy Knight" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="10199" hpRegen="7.5" mp="10199" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14040" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25751" level="93" type="L2Monster" name="Satyr Wizard" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="9942" hpRegen="7.5" mp="9942" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25752" level="94" type="L2Monster" name="Satyr Summoner" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="9942" hpRegen="7.5" mp="9942" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25753" level="94" type="L2Monster" name="Satyr Witch" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="12687" hpRegen="7.5" mp="12687" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14045" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25754" level="94" type="L2Monster" name="Treekin Defender" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="25167" hpRegen="7.5" mp="25167" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="187" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="5" />
+			<skill id="14053" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="36" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25755" level="93" type="L2Monster" name="Centaur Archer" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="25028" hpRegen="7.5" mp="25028" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="14055" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="25756" level="94" type="L2Monster" name="Beorning Berserker" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="25167" hpRegen="7.5" mp="25167" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5462" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14050" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="32" />
+			<height normal="29.8" />
+		</collision>
+	</npc>
+	<npc id="25757" level="94" type="L2Monster" name="Double Nightmare" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="258086" sp="526" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="580768" hpRegen="7.5" mp="580768" mpRegen="2.7" />
+			<attack physical="15312" magical="10937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1300" magical="1250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14058" level="1" />
+		</skill_list>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="7" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25758" level="95" type="L2Monster" name="Kimerian" title="Fairy Leader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25759" count="4" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>FAIRY</race>
+		<acquire exp="145122000" sp="580488" />
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="1649921" hpRegen="7.5" mp="1649921" mpRegen="2.7" />
+			<attack physical="21580" magical="15416" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1350" magical="1300" />
+			<attribute>
+				<defence fire="235" water="260" wind="283" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5465" level="1" />
+			<skill id="14042" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14719" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="52" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="6" />
+				<item id="17526" min="1" max="1" chance="1" />
+				<item id="17415" min="1" max="1" chance="0.37594" />
+				<item id="17414" min="1" max="1" chance="0.28249" />
+				<item id="17413" min="1" max="1" chance="0.21459" />
+				<item id="17412" min="1" max="1" chance="0.18051" />
+				<item id="17401" min="1" max="1" chance="0.18051" />
+				<item id="17404" min="1" max="1" chance="0.15015" />
+				<item id="17397" min="1" max="1" chance="0.15015" />
+				<item id="17396" min="1" max="1" chance="0.15015" />
+				<item id="17398" min="1" max="1" chance="0.15015" />
+				<item id="17399" min="1" max="1" chance="0.15015" />
+				<item id="17400" min="1" max="1" chance="0.15015" />
+				<item id="17402" min="1" max="1" chance="0.15015" />
+				<item id="17403" min="1" max="1" chance="0.15015" />
+				<item id="17411" min="1" max="1" chance="0.15015" />
+				<item id="17405" min="1" max="1" chance="0.15015" />
+				<item id="17406" min="1" max="1" chance="0.15015" />
+				<item id="17407" min="1" max="1" chance="0.15015" />
+				<item id="17408" min="1" max="1" chance="0.15015" />
+				<item id="17409" min="1" max="1" chance="0.15015" />
+				<item id="17410" min="1" max="1" chance="0.15015" />
+				<item id="17392" min="1" max="1" chance="0.015" />
+				<item id="17391" min="1" max="1" chance="0.015" />
+				<item id="17390" min="1" max="1" chance="0.015" />
+				<item id="17389" min="1" max="1" chance="0.015" />
+				<item id="17388" min="1" max="1" chance="0.015" />
+				<item id="17387" min="1" max="1" chance="0.015" />
+				<item id="17386" min="1" max="1" chance="0.015" />
+				<item id="17385" min="1" max="1" chance="0.015" />
+				<item id="17384" min="1" max="1" chance="0.015" />
+				<item id="17383" min="1" max="1" chance="0.015" />
+				<item id="17382" min="1" max="1" chance="0.015" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25759" level="92" type="L2Monster" name="Kimerian Ghost" title="Fairy Leader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="55325" hpRegen="7.5" mp="55325" mpRegen="2.7" />
+			<attack physical="21580" magical="15416" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1350" magical="1300" />
+			<attribute>
+				<defence fire="135" water="160" wind="183" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="52" />
+		</collision>
+	</npc>
+	<npc id="25760" level="98" type="L2Monster" name="Turanclass" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="194577040" sp="778338" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2278804" hpRegen="7.5" mp="2278804" mpRegen="2.7" />
+			<attack physical="86000" magical="64500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3440" magical="3480" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14015" level="1" />
+			<skill id="14748" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="28" />
+			<height normal="84" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="9552" min="1" max="1" chance="10" />
+				<item id="30297" min="1" max="1" chance="7" />
+				<item id="17526" min="1" max="1" chance="2" />
+				<item id="17446" min="1" max="1" chance="0.75188" />
+				<item id="17431" min="1" max="1" chance="0.3003" />
+				<item id="17438" min="1" max="1" chance="0.3003" />
+				<item id="17442" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25761" level="97" type="L2Monster" name="Georgios" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="42359318" sp="169452" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1580452" hpRegen="7.5" mp="1580452" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="14012" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="14749" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="40" />
+			<height normal="91" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="9557" min="1" max="1" chance="3" />
+				<item id="17526" min="1" max="1" chance="0.75188" />
+				<item id="17387" min="1" max="1" chance="0.03" />
+				<item id="17390" min="1" max="1" chance="0.03" />
+				<item id="17391" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25762" level="97" type="L2Monster" name="Angelos" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="84718636" sp="338904" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14001" level="1" />
+			<skill id="14750" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="78" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="15" />
+				<item id="9553" min="1" max="1" chance="5" />
+				<item id="17396" min="1" max="1" chance="0.3003" />
+				<item id="17405" min="1" max="1" chance="0.3003" />
+				<item id="17411" min="1" max="1" chance="0.3003" />
+				<item id="17384" min="1" max="1" chance="0.03" />
+				<item id="17386" min="1" max="1" chance="0.03" />
+				<item id="17389" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25763" level="97" type="L2Monster" name="Theofanis" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="84718636" sp="338904" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14751" level="1" />
+			<skill id="14004" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="78" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="9554" min="1" max="1" chance="5" />
+				<item id="17526" min="1" max="1" chance="1" />
+				<item id="17401" min="1" max="1" chance="0.75188" />
+				<item id="17412" min="1" max="1" chance="0.75188" />
+				<item id="17383" min="1" max="1" chance="0.03" />
+				<item id="17388" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25764" level="97" type="L2Monster" name="Steregos" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="84718636" sp="338904" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14032" level="1" />
+			<skill id="14752" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="25" />
+			<height normal="67" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="15" />
+				<item id="9556" min="1" max="1" chance="5" />
+				<item id="17413" min="1" max="1" chance="0.3003" />
+				<item id="17382" min="1" max="1" chance="0.03" />
+				<item id="17385" min="1" max="1" chance="0.03" />
+				<item id="17392" min="1" max="1" chance="0.03" />
+				<item id="22821" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25765" level="96" type="L2Monster" name="Beast" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="358277" hpRegen="7.5" mp="358277" mpRegen="2.7" />
+			<attack physical="82000" magical="61500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3280" magical="3360" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14036" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="40" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="25766" level="98" type="L2Monster" name="Talicrome" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="194577040" sp="778338" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2278804" hpRegen="7.5" mp="2278804" mpRegen="2.7" />
+			<attack physical="86000" magical="64500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3440" magical="3480" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14019" level="1" />
+			<skill id="14753" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="77" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="25" />
+				<item id="9555" min="1" max="1" chance="7" />
+				<item id="30297" min="1" max="1" chance="7" />
+				<item id="17435" min="1" max="1" chance="0.75188" />
+				<item id="17432" min="1" max="1" chance="0.3003" />
+				<item id="17437" min="1" max="1" chance="0.3003" />
+				<item id="17443" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25767" level="97" type="L2Monster" name="Meikaliya" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="42359318" sp="169452" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14754" level="1" />
+			<skill id="14009" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="86" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="9552" min="1" max="1" chance="3" />
+				<item id="17526" min="1" max="1" chance="0.75188" />
+				<item id="17397" min="1" max="1" chance="0.3003" />
+				<item id="17404" min="1" max="1" chance="0.3003" />
+				<item id="17408" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25768" level="97" type="L2Monster" name="Evangelos" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="84718636" sp="338904" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14755" level="1" />
+			<skill id="14009" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="59" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="15" />
+				<item id="9555" min="1" max="1" chance="5" />
+				<item id="17398" min="1" max="1" chance="0.3003" />
+				<item id="17403" min="1" max="1" chance="0.3003" />
+				<item id="17409" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25769" level="97" type="L2Monster" name="Sotiris" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="84718636" sp="338904" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="82000" magical="61500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3280" magical="3360" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14756" level="1" />
+			<skill id="14009" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="59" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="9557" min="1" max="1" chance="5" />
+				<item id="17526" min="1" max="1" chance="1.5" />
+				<item id="17397" min="1" max="1" chance="0.3003" />
+				<item id="17399" min="1" max="1" chance="0.3003" />
+				<item id="17404" min="1" max="1" chance="0.3003" />
+				<item id="17406" min="1" max="1" chance="0.3003" />
+				<item id="17407" min="1" max="1" chance="0.3003" />
+				<item id="17408" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25770" level="97" type="L2Monster" name="Lazaros" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="84718636" sp="338904" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2257788" hpRegen="7.5" mp="2257788" mpRegen="2.7" />
+			<attack physical="80000" magical="60000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="3300" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="14757" level="1" />
+			<skill id="14009" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="59" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="15" />
+				<item id="9553" min="1" max="1" chance="5" />
+				<item id="17398" min="1" max="1" chance="0.3003" />
+				<item id="17400" min="1" max="1" chance="0.3003" />
+				<item id="17402" min="1" max="1" chance="0.3003" />
+				<item id="17409" min="1" max="1" chance="0.3003" />
+				<item id="17410" min="1" max="1" chance="0.3003" />
+				<item id="17403" min="1" max="1" chance="0.3003" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25771" level="87" type="L2Monster" name="Noctum" title="Gravekeeper">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="17039332" sp="1717663" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="368130" hpRegen="7.5" mp="368130" mpRegen="2.7" />
+			<attack physical="48000" magical="32000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1920" magical="1880" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14449" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="50" />
+			<height normal="60.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17526" min="1" max="1" chance="0.75188" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25772" level="87" type="L2Monster" name="Harnak's Wraith" title="Greater Giant King">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="28398888" sp="113596" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1840653" hpRegen="7.5" mp="1840653" mpRegen="2.7" />
+			<attack physical="48000" magical="32000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1920" magical="1880" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hit_time>353</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14449" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="40" />
+			<height normal="100" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17526" min="1" max="1" chance="1.02" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25773" level="88" type="L2Monster" name="Demonic Noctum" title="Cursed Manager">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="17433292" sp="1717663" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="371819" hpRegen="7.5" mp="371819" mpRegen="2.7" />
+			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1980" magical="1920" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14447" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="50" />
+			<height normal="60.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="8.5" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25774" level="88" type="L2Monster" name="Harnak's Evil Spirit" title="Greater Giant King">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="174332928" sp="697332" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="3718193" hpRegen="7.5" mp="3718193" mpRegen="2.7" />
+			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1980" magical="1920" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14445" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="40" />
+			<height normal="100" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="1" chance="41.49" />
+				<item id="17526" min="1" max="1" chance="3.28" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25775" level="94" type="L2Monster" name="Apherus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="198916032" sp="490762" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="4111534" hpRegen="7.5" mp="4111534" mpRegen="2.7" />
+			<attack physical="68250" magical="48750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2800" magical="2700" />
+			<attribute>
+				<defence fire="187" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="100" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14087" level="1" />
+			<skill id="5465" level="1" />
+			<skill id="4416" level="5" />
+			<skill id="4494" level="1" />
+			<skill id="14723" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="35" />
+			<height normal="93" />
+		</collision>
+	</npc>
+	<npc id="25776" level="92" type="L2Monster" name="Royal Guard" title="Apherus Garden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25778" count="3" respawnTime= "3" weightPoint="4" />
+				<npc id="25777" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="1976893" sp="247245" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="147710" hpRegen="7.5" mp="147710" mpRegen="2.7" />
+			<attack physical="64750" magical="46250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2700" magical="2600" />
+			<attribute>
+				<defence fire="167" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="6599" level="1" />
+			<skill id="4416" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="25.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="9816" min="1" max="2" chance="89" />
+				<item id="8176" min="1" max="1" chance="70" />
+				<item id="1970" min="12" max="36" chance="46.5225" />
+				<item id="2088" min="12" max="36" chance="22.0235" />
+				<item id="440" min="1" max="1" chance="16.5586" />
+				<item id="325" min="1" max="1" chance="6.78807" />
+				<item id="22227" min="1" max="2" chance="0.52632" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25777" level="92" type="L2Monster" name="Chasseur" title="Apherus Garden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="147710" hpRegen="7.5" mp="147710" mpRegen="2.7" />
+			<attack physical="64750" magical="46250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2700" magical="2600" />
+			<attribute>
+				<defence fire="167" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14089" level="1" />
+			<skill id="4416" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="25778" level="92" type="L2Monster" name="Escort" title="Apherus Garden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="147710" hpRegen="7.5" mp="147710" mpRegen="2.7" />
+			<attack physical="64750" magical="46250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2700" magical="2600" />
+			<attribute>
+				<defence fire="167" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="14090" level="1" />
+			<skill id="4416" level="5" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="25779" level="94" type="L2Monster" name="Spezion" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1011156496" sp="4044625" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2055767" hpRegen="7.5" mp="2055767" mpRegen="2.7" />
+			<attack physical="341250" magical="243750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5600" magical="5400" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14152" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14721" level="1" />
+		</skill_list>
+		<ai aggroRange="900" clanHelpRange="900" />
+		<collision>
+			<radius normal="30" />
+			<height normal="81" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17526" min="1" max="1" chance="10" />
+				<item id="17324" min="1" max="1" chance="0.8" />
+				<item id="17334" min="1" max="1" chance="0.8" />
+				<item id="17333" min="1" max="1" chance="0.8" />
+				<item id="17332" min="1" max="1" chance="0.8" />
+				<item id="17331" min="1" max="1" chance="0.8" />
+				<item id="17330" min="1" max="1" chance="0.8" />
+				<item id="17329" min="1" max="1" chance="0.8" />
+				<item id="17328" min="1" max="1" chance="0.8" />
+				<item id="17327" min="1" max="1" chance="0.8" />
+				<item id="17326" min="1" max="1" chance="0.8" />
+				<item id="17325" min="1" max="1" chance="0.8" />
+				<item id="22807" min="1" max="1" chance="0.25" />
+				<item id="17747" min="1" max="1" chance="0.2" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25780" level="94" type="L2Monster" name="Spezion's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18112" hpRegen="7.5" mp="18112" mpRegen="2.7" />
+			<attack physical="170625" magical="121875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2800" magical="2700" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="127" dark="324" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17611" min="1" max="1" chance="10" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25781" level="94" type="L2Monster" name="Spezion's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18112" hpRegen="7.5" mp="18112" mpRegen="2.7" />
+			<attack physical="170625" magical="121875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2800" magical="2700" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="127" dark="324" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="25" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="25782" level="94" type="L2Monster" name="Spezion's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18112" hpRegen="7.5" mp="18112" mpRegen="2.7" />
+			<attack physical="170625" magical="121875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2800" magical="2700" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="207" dark="404" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="25783" level="20" type="L2Monster" name="Eyesaroch" title="Husk">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="542" hpRegen="7.5" mp="542" mpRegen="2.7" />
+			<attack physical="23" magical="31" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="51" magical="30" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="14159" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="25784" level="10" type="L2Monster" name="Overseer" title="Embryo">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMAN</race>
+		<acquire exp="1932589" sp="184431" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2685" hpRegen="7.5" mp="2685" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="14172" level="1" />
+			<skill id="4416" level="14" />
+		</skill_list>
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="2935" min="24" max="72" chance="22.9435" />
+				<item id="2387" min="1" max="1" chance="22.7514" />
+				<item id="2074" min="12" max="36" chance="18.3398" />
+				<item id="397" min="1" max="1" chance="14.2372" />
+				<item id="281" min="1" max="1" chance="7.05038" />
+				<item id="1961" min="53" max="157" chance="6.31318" />
+				<item id="22227" min="1" max="2" chance="0.52632" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25785" level="88" type="L2Monster" name="Teredor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<acquire exp="886192384" sp="3544769" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="2602735" hpRegen="7.5" mp="2602735" mpRegen="2.7" />
+			<attack physical="62971" magical="33663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3341" magical="3250" />
+			<attribute>
+				<defence fire="155" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<hit_time>398</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="6268" level="1" />
+			<skill id="14110" level="1" />
+			<skill id="4441" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="14111" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14747" level="1" />
+			<skill id="14112" level="2" />
+		</skill_list>
+		<collision>
+			<radius normal="90" />
+			<height normal="190" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17526" min="1" max="1" chance="15" />
+				<item id="17527" min="3" max="9" chance="15" />
+				<item id="17305" min="1" max="1" chance="3.333" />
+				<item id="17311" min="1" max="1" chance="3.333" />
+				<item id="17316" min="1" max="1" chance="3.333" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25786" level="87" type="L2RaidBoss" name="Lachikios" title="Son-in-law of the King">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="2566" hpRegen="7.5" mp="2566" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14099" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+	</npc>
+	<npc id="25787" level="87" type="L2RaidBoss" name="Lachikios" title="Son-in-law of the King">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25788" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25789" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>BEAST</race>
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="5214" hpRegen="7.5" mp="5214" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="6691" min="3" max="9" chance="56.593" />
+				<item id="6707" min="12" max="36" chance="21.6211" />
+				<item id="6680" min="1" max="1" chance="1.34465" />
+				<item id="6367" min="1" max="1" chance="0.73529" />
+				<item id="22221" min="1" max="1" chance="0.0559" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25788" level="89" type="L2RaidBoss" name="Lachikios" title="Queen's Companion">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="4957" hpRegen="7.5" mp="4957" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14099" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
+	</npc>
+	<npc id="25789" level="89" type="L2Monster" name="Lachikios" title="Queen's Companion">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+			<vitals hp="4957" hpRegen="7.5" mp="4957" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
+	</npc>
+	<npc id="25790" level="86" type="L2Monster" name="Escort" title="Lachikios Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25791" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25792" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="5214" hpRegen="7.5" mp="5214" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14099" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="6691" min="3" max="9" chance="56.593" />
+				<item id="6702" min="4" max="12" chance="44.8612" />
+				<item id="6701" min="8" max="22" chance="18.5867" />
+				<item id="6675" min="1" max="1" chance="1.31111" />
+				<item id="6674" min="1" max="1" chance="0.81967" />
+				<item id="6367" min="1" max="1" chance="0.73529" />
+				<item id="22221" min="1" max="1" chance="0.0559" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25791" level="88" type="L2Monster" name="Escort" title="Lachikios Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="4957" hpRegen="7.5" mp="4957" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+	</npc>
+	<npc id="25792" level="88" type="L2RaidBoss" name="Rachicues" title="Successor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="4957" hpRegen="7.5" mp="4957" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14099" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="31" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="25793" level="88" type="L2Monster" name="Rachicues" title="Successor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="4009" hpRegen="7.5" mp="4009" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="31" />
+			<height normal="31" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="8176" min="1" max="4" chance="82" />
+				<item id="9814" min="3" max="7" chance="82" />
+				<item id="8619" min="1" max="1" chance="54" />
+				<item id="5537" min="12" max="36" chance="25.5028" />
+				<item id="5528" min="14" max="42" chance="21.1695" />
+				<item id="5495" min="40" max="120" chance="9.41028" />
+				<item id="5315" min="1" max="1" chance="6.97286" />
+				<item id="5312" min="1" max="1" chance="4.87964" />
+				<item id="5317" min="1" max="1" chance="4.87964" />
+				<item id="5527" min="81" max="243" chance="3.65894" />
+				<item id="236" min="1" max="1" chance="2.15127" />
+				<item id="22223" min="1" max="2" chance="0.30581" />
+				<item id="22221" min="1" max="2" chance="0.07634" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25794" level="90" type="L2Monster" name="Rachicues" title="Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="4225" hpRegen="7.5" mp="4225" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14099" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="31" />
+			<height normal="31" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="6703" min="8" max="24" chance="22.3739" />
+				<item id="6695" min="12" max="36" chance="19.9953" />
+				<item id="6704" min="14" max="40" chance="13.2586" />
+				<item id="6708" min="20" max="60" chance="8.94955" />
+				<item id="6709" min="28" max="82" chance="6.50874" />
+				<item id="6712" min="36" max="108" chance="4.97197" />
+				<item id="6713" min="46" max="136" chance="3.93405" />
+				<item id="6676" min="1" max="1" chance="1.57386" />
+				<item id="6686" min="1" max="1" chance="1.57386" />
+				<item id="6685" min="1" max="1" chance="1.57386" />
+				<item id="6682" min="1" max="1" chance="1.57386" />
+				<item id="6681" min="1" max="1" chance="1.57386" />
+				<item id="6677" min="1" max="1" chance="1.57386" />
+				<item id="6371" min="1" max="1" chance="1.05839" />
+				<item id="22221" min="1" max="1" chance="0.0559" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25795" level="90" type="L2Monster" name="Rachicues" title="Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="4154" hpRegen="7.5" mp="4154" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="31" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="25796" level="98" type="L2Monster" name="Veridan" title="Hell's Warden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="234222352" sp="936890" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1775522" hpRegen="7.5" mp="1775522" mpRegen="2.7" />
+			<attack physical="516000" magical="387000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6880" magical="6960" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+			</attribute>
+			<speed>
+				<walk ground="34" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4437" level="3" />
+			<skill id="4441" level="3" />
+			<skill id="4435" level="3" />
+			<skill id="4436" level="3" />
+			<skill id="4440" level="3" />
+			<skill id="4439" level="3" />
+			<skill id="4438" level="3" />
+			<skill id="4416" level="9" />
+			<skill id="5463" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14714" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36513" min="2" max="3" chance="7.5" />
+				<item id="17441" min="1" max="1" chance="0.06667" />
+				<item id="17442" min="1" max="1" chance="0.06667" />
+				<item id="17443" min="1" max="1" chance="0.06667" />
+				<item id="17444" min="1" max="1" chance="0.06667" />
+				<item id="17445" min="1" max="1" chance="0.06667" />
+				<item id="17446" min="1" max="1" chance="0.06667" />
+				<item id="17447" min="1" max="1" chance="0.06667" />
+				<item id="17448" min="1" max="1" chance="0.06667" />
+				<item id="17449" min="1" max="1" chance="0.06667" />
+				<item id="17440" min="1" max="1" chance="0.06667" />
+				<item id="17439" min="1" max="1" chance="0.06667" />
+				<item id="17430" min="1" max="1" chance="0.06667" />
+				<item id="17431" min="1" max="1" chance="0.06667" />
+				<item id="17432" min="1" max="1" chance="0.06667" />
+				<item id="17433" min="1" max="1" chance="0.06667" />
+				<item id="17434" min="1" max="1" chance="0.06667" />
+				<item id="17435" min="1" max="1" chance="0.06667" />
+				<item id="17436" min="1" max="1" chance="0.06667" />
+				<item id="17437" min="1" max="1" chance="0.06667" />
+				<item id="17438" min="1" max="1" chance="0.06667" />
+				<item id="17391" min="1" max="1" chance="0.025" />
+				<item id="17390" min="1" max="1" chance="0.025" />
+				<item id="17389" min="1" max="1" chance="0.025" />
+				<item id="17388" min="1" max="1" chance="0.025" />
+				<item id="17387" min="1" max="1" chance="0.025" />
+				<item id="17386" min="1" max="1" chance="0.025" />
+				<item id="17385" min="1" max="1" chance="0.025" />
+				<item id="17384" min="1" max="1" chance="0.025" />
+				<item id="17383" min="1" max="1" chance="0.025" />
+				<item id="17382" min="1" max="1" chance="0.025" />
+				<item id="17392" min="1" max="1" chance="0.025" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25797" level="98" type="L2Monster" name="Kechi" title="Flaming">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="468444704" sp="1873779" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1775522" hpRegen="7.5" mp="1775522" mpRegen="2.7" />
+			<attack physical="516000" magical="387000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8256" magical="6960" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14715" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36513" min="2" max="3" chance="20" />
+				<item id="17441" min="1" max="1" chance="0.07502" />
+				<item id="17442" min="1" max="1" chance="0.07502" />
+				<item id="17443" min="1" max="1" chance="0.07502" />
+				<item id="17444" min="1" max="1" chance="0.07502" />
+				<item id="17445" min="1" max="1" chance="0.07502" />
+				<item id="17446" min="1" max="1" chance="0.07502" />
+				<item id="17447" min="1" max="1" chance="0.07502" />
+				<item id="17448" min="1" max="1" chance="0.07502" />
+				<item id="17449" min="1" max="1" chance="0.07502" />
+				<item id="17440" min="1" max="1" chance="0.07502" />
+				<item id="17439" min="1" max="1" chance="0.07502" />
+				<item id="17430" min="1" max="1" chance="0.07502" />
+				<item id="17431" min="1" max="1" chance="0.07502" />
+				<item id="17432" min="1" max="1" chance="0.07502" />
+				<item id="17433" min="1" max="1" chance="0.07502" />
+				<item id="17434" min="1" max="1" chance="0.07502" />
+				<item id="17435" min="1" max="1" chance="0.07502" />
+				<item id="17436" min="1" max="1" chance="0.07502" />
+				<item id="17437" min="1" max="1" chance="0.07502" />
+				<item id="17438" min="1" max="1" chance="0.07502" />
+				<item id="17391" min="1" max="1" chance="0.03" />
+				<item id="17390" min="1" max="1" chance="0.03" />
+				<item id="17389" min="1" max="1" chance="0.03" />
+				<item id="17388" min="1" max="1" chance="0.03" />
+				<item id="17387" min="1" max="1" chance="0.03" />
+				<item id="17386" min="1" max="1" chance="0.03" />
+				<item id="17385" min="1" max="1" chance="0.03" />
+				<item id="17384" min="1" max="1" chance="0.03" />
+				<item id="17383" min="1" max="1" chance="0.03" />
+				<item id="17382" min="1" max="1" chance="0.03" />
+				<item id="17392" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25798" level="97" type="L2Monster" name="Kechi's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="133516" hpRegen="7.5" mp="133516" mpRegen="2.7" />
+			<attack physical="252000" magical="189000" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2688" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4084" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25799" level="98" type="L2Monster" name="Michaela" title="Grand Judge">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="468444704" sp="1873779" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1775522" hpRegen="7.5" mp="1775522" mpRegen="2.7" />
+			<attack physical="516000" magical="387000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6880" magical="6960" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+			</attribute>
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<hit_time>333</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5238" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14716" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="32" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36513" min="2" max="3" chance="10" />
+				<item id="17441" min="1" max="1" chance="0.07502" />
+				<item id="17442" min="1" max="1" chance="0.07502" />
+				<item id="17443" min="1" max="1" chance="0.07502" />
+				<item id="17444" min="1" max="1" chance="0.07502" />
+				<item id="17445" min="1" max="1" chance="0.07502" />
+				<item id="17446" min="1" max="1" chance="0.07502" />
+				<item id="17447" min="1" max="1" chance="0.07502" />
+				<item id="17448" min="1" max="1" chance="0.07502" />
+				<item id="17449" min="1" max="1" chance="0.07502" />
+				<item id="17440" min="1" max="1" chance="0.07502" />
+				<item id="17439" min="1" max="1" chance="0.07502" />
+				<item id="17430" min="1" max="1" chance="0.07502" />
+				<item id="17431" min="1" max="1" chance="0.07502" />
+				<item id="17432" min="1" max="1" chance="0.07502" />
+				<item id="17433" min="1" max="1" chance="0.07502" />
+				<item id="17434" min="1" max="1" chance="0.07502" />
+				<item id="17435" min="1" max="1" chance="0.07502" />
+				<item id="17436" min="1" max="1" chance="0.07502" />
+				<item id="17437" min="1" max="1" chance="0.07502" />
+				<item id="17438" min="1" max="1" chance="0.07502" />
+				<item id="17391" min="1" max="1" chance="0.03" />
+				<item id="17390" min="1" max="1" chance="0.03" />
+				<item id="17389" min="1" max="1" chance="0.03" />
+				<item id="17388" min="1" max="1" chance="0.03" />
+				<item id="17387" min="1" max="1" chance="0.03" />
+				<item id="17386" min="1" max="1" chance="0.03" />
+				<item id="17385" min="1" max="1" chance="0.03" />
+				<item id="17384" min="1" max="1" chance="0.03" />
+				<item id="17383" min="1" max="1" chance="0.03" />
+				<item id="17382" min="1" max="1" chance="0.03" />
+				<item id="17392" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+</list>

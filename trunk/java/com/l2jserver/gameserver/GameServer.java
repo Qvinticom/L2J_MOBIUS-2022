@@ -336,7 +336,7 @@ public final class GameServer
 			_log.info(getClass().getSimpleName() + ": Loading server scripts:");
 			if (!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS)
 			{
-				L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "data/scripts.cfg"));
+				L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "scripts.cfg"));
 			}
 		}
 		catch (IOException ioe)
@@ -479,7 +479,7 @@ public final class GameServer
 		
 		/*** Main ***/
 		// Create log folder
-		File logFolder = new File(Config.DATAPACK_ROOT, LOG_FOLDER);
+		File logFolder = new File(".", LOG_FOLDER);
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory

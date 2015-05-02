@@ -816,7 +816,7 @@ public final class Raina extends AbstractNpcAI
 	private NpcHtmlMessage getNpcHtmlMessage(L2PcInstance player, L2Npc npc, String fileName)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/ai/npc/Raina/" + fileName));
+		html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/ai/npc/Raina/" + fileName));
 		return html;
 	}
 	

@@ -73,7 +73,7 @@ public final class GameServerTable implements IXmlReader
 	public void load()
 	{
 		SERVER_NAMES.clear();
-		parseDatapackFile("data/servername.xml");
+		parseDatapackFile("servername.xml");
 		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + SERVER_NAMES.size() + " server names");
 	}
 	

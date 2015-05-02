@@ -1,0 +1,3280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25900" level="99" type="L2Npc" name="Skill Lind">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
+			<attack physical="88000" magical="66000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="3540" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="19" />
+			<skill id="5464" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="190" />
+			<height normal="390.6" />
+		</collision>
+	</npc>
+	<npc id="25901" level="96" type="L2RaidBoss" name="Spicula Zero" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="2109284352" sp="8437137" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="2845522" hpRegen="7.5" mp="2845522" mpRegen="2.7" />
+			<attack physical="82000" magical="61500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="3360" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="15414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17527" min="1" max="3" chance="40" />
+				<item id="17526" min="1" max="1" chance="10" />
+				<item id="19513" min="1" max="1" chance="1" />
+				<item id="19512" min="1" max="1" chance="1" />
+				<item id="19511" min="1" max="1" chance="1" />
+				<item id="35450" min="1" max="1" chance="0.8" />
+				<item id="35449" min="1" max="1" chance="0.57143" />
+				<item id="35448" min="1" max="1" chance="0.5" />
+				<item id="35447" min="1" max="1" chance="0.4" />
+				<item id="35436" min="1" max="1" chance="0.4" />
+				<item id="35438" min="1" max="1" chance="0.33333" />
+				<item id="35437" min="1" max="1" chance="0.33333" />
+				<item id="35431" min="1" max="1" chance="0.33333" />
+				<item id="35435" min="1" max="1" chance="0.33333" />
+				<item id="35434" min="1" max="1" chance="0.33333" />
+				<item id="35433" min="1" max="1" chance="0.33333" />
+				<item id="35432" min="1" max="1" chance="0.33333" />
+				<item id="35439" min="1" max="1" chance="0.33333" />
+				<item id="35446" min="1" max="1" chance="0.33333" />
+				<item id="35443" min="1" max="1" chance="0.33333" />
+				<item id="35442" min="1" max="1" chance="0.33333" />
+				<item id="35441" min="1" max="1" chance="0.33333" />
+				<item id="35444" min="1" max="1" chance="0.33333" />
+				<item id="35440" min="1" max="1" chance="0.33333" />
+				<item id="35445" min="1" max="1" chance="0.33333" />
+				<item id="35430" min="1" max="1" chance="0.25" />
+				<item id="35429" min="1" max="1" chance="0.25" />
+				<item id="35428" min="1" max="1" chance="0.25" />
+				<item id="35427" min="1" max="1" chance="0.25" />
+				<item id="35426" min="1" max="1" chance="0.25" />
+				<item id="35425" min="1" max="1" chance="0.25" />
+				<item id="35424" min="1" max="1" chance="0.25" />
+				<item id="35423" min="1" max="1" chance="0.25" />
+				<item id="35422" min="1" max="1" chance="0.25" />
+				<item id="35420" min="1" max="1" chance="0.25" />
+				<item id="35421" min="1" max="1" chance="0.25" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25902" level="96" type="L2RaidBoss" name="Gigantic Golem" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25903" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25904" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<acquire exp="1746210816" sp="6984843" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="3248143" hpRegen="7.5" mp="3248143" mpRegen="2.7" />
+			<attack physical="82000" magical="61500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4608" magical="3360" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4494" level="1" />
+			<skill id="15413" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="50" />
+			<height normal="68" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17526" min="1" max="1" chance="1.5" />
+				<item id="35450" min="1" max="1" chance="0.8" />
+				<item id="17397" min="1" max="1" chance="0.75188" />
+				<item id="17409" min="1" max="1" chance="0.75188" />
+				<item id="17408" min="1" max="1" chance="0.75188" />
+				<item id="17404" min="1" max="1" chance="0.75188" />
+				<item id="17403" min="1" max="1" chance="0.75188" />
+				<item id="17398" min="1" max="1" chance="0.75188" />
+				<item id="35449" min="1" max="1" chance="0.57143" />
+				<item id="35448" min="1" max="1" chance="0.5" />
+				<item id="35436" min="1" max="1" chance="0.4" />
+				<item id="35447" min="1" max="1" chance="0.4" />
+				<item id="35438" min="1" max="1" chance="0.33333" />
+				<item id="35439" min="1" max="1" chance="0.33333" />
+				<item id="35440" min="1" max="1" chance="0.33333" />
+				<item id="35441" min="1" max="1" chance="0.33333" />
+				<item id="35442" min="1" max="1" chance="0.33333" />
+				<item id="35443" min="1" max="1" chance="0.33333" />
+				<item id="35444" min="1" max="1" chance="0.33333" />
+				<item id="35445" min="1" max="1" chance="0.33333" />
+				<item id="35446" min="1" max="1" chance="0.33333" />
+				<item id="35437" min="1" max="1" chance="0.33333" />
+				<item id="35435" min="1" max="1" chance="0.33333" />
+				<item id="35434" min="1" max="1" chance="0.33333" />
+				<item id="35433" min="1" max="1" chance="0.33333" />
+				<item id="35432" min="1" max="1" chance="0.33333" />
+				<item id="35431" min="1" max="1" chance="0.33333" />
+				<item id="17385" min="1" max="1" chance="0.3003" />
+				<item id="17384" min="1" max="1" chance="0.3003" />
+				<item id="17383" min="1" max="1" chance="0.3003" />
+				<item id="17382" min="1" max="1" chance="0.3003" />
+				<item id="17386" min="1" max="1" chance="0.3003" />
+				<item id="17387" min="1" max="1" chance="0.3003" />
+				<item id="17388" min="1" max="1" chance="0.3003" />
+				<item id="17392" min="1" max="1" chance="0.3003" />
+				<item id="17391" min="1" max="1" chance="0.3003" />
+				<item id="17390" min="1" max="1" chance="0.3003" />
+				<item id="17389" min="1" max="1" chance="0.3003" />
+				<item id="35430" min="1" max="1" chance="0.25" />
+				<item id="35428" min="1" max="1" chance="0.25" />
+				<item id="35427" min="1" max="1" chance="0.25" />
+				<item id="35426" min="1" max="1" chance="0.25" />
+				<item id="35429" min="1" max="1" chance="0.25" />
+				<item id="35424" min="1" max="1" chance="0.25" />
+				<item id="35423" min="1" max="1" chance="0.25" />
+				<item id="35422" min="1" max="1" chance="0.25" />
+				<item id="35421" min="1" max="1" chance="0.25" />
+				<item id="35420" min="1" max="1" chance="0.25" />
+				<item id="35425" min="1" max="1" chance="0.25" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25903" level="95" type="L2Npc" name="Gigantic Golem Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="32481" hpRegen="7.5" mp="32481" mpRegen="2.7" />
+			<attack physical="80000" magical="60000" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="4608" magical="3300" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25904" level="95" type="L2Npc" name="Gigantic Golem Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="32481" hpRegen="7.5" mp="32481" mpRegen="2.7" />
+			<attack physical="80000" magical="60000" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="4608" magical="3300" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25905" level="92" type="L2Npc" name="Queen Ant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="95760031" hpRegen="7.5" mp="95760031" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4017" level="1" />
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="4021" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="25906" level="92" type="L2Npc" name="Queen Ant Larva">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="1023" hpRegen="7.5" mp="1023" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="25907" level="92" type="L2Npc" name="Nurse Ant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="6920" hpRegen="7.5" mp="6920" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4020" level="1" />
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="25908" level="92" type="L2Npc" name="Escort Ant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="7513" hpRegen="7.5" mp="7513" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="25909" level="92" type="L2Npc" name="Royal Guard Ant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="12198" hpRegen="7.5" mp="12198" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="25910" level="92" type="L2Npc" name="Orfen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="115920004" hpRegen="7.5" mp="115920004" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4062" level="1" />
+			<skill id="4063" level="1" />
+			<skill id="4416" level="13" />
+		</skill_list>
+		<collision>
+			<radius normal="32" />
+			<height normal="143" />
+		</collision>
+	</npc>
+	<npc id="25911" level="92" type="L2Npc" name="Laikel">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="37" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="25912" level="92" type="L2Npc" name="Laikel Leos">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="37" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="25913" level="92" type="L2Npc" name="Riba">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="25" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="25914" level="92" type="L2Npc" name="Riba Iren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="4516" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="25" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="25915" level="92" type="L2Npc" name="Anakim" title="Flames of Sacred Fire">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1645147" hpRegen="7.5" mp="1645147" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="15.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="25916" level="92" type="L2Npc" name="Anakim's Guardian">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="172116" hpRegen="7.5" mp="172116" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4209" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="23" />
+			<height normal="40.5" />
+		</collision>
+	</npc>
+	<npc id="25917" level="92" type="L2Npc" name="Anakim's Royal Guard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="86058" hpRegen="7.5" mp="86058" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4273" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="43" />
+		</collision>
+	</npc>
+	<npc id="25918" level="92" type="L2Npc" name="Anakim's Executor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="86058" hpRegen="7.5" mp="86058" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4209" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="25919" level="92" type="L2Npc" name="Lilith" title="Holy Mother of Abyss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="1645147" hpRegen="7.5" mp="1645147" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4197" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="42.5" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="25920" level="92" type="L2Npc" name="Lilith' Agent">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="115318" hpRegen="7.5" mp="115318" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4198" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="25921" level="92" type="L2Npc" name="Lilith' Escort">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="172116" hpRegen="7.5" mp="172116" mpRegen="2.7" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="825" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4179" level="1" />
+			<skill id="4273" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25922" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25924" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>ORC</race>
+		<acquire exp="5380749000" sp="21522996" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="23023279" hpRegen="7.5" mp="23023279" mpRegen="2.7" />
+			<attack physical="2000000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="598" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10000" magical="8000" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="17" />
+			<skill id="4494" level="1" />
+			<skill id="15635" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="27.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36514" min="1" max="1" chance="100" />
+				<item id="36979" min="1" max="1" chance="66.6667" />
+				<item id="36978" min="1" max="1" chance="33.3333" />
+				<item id="35569" min="1" max="1" chance="8" />
+				<item id="35567" min="1" max="1" chance="8" />
+				<item id="35357" min="1" max="10" chance="3.5" />
+				<item id="35327" min="1" max="10" chance="3.3" />
+				<item id="35328" min="1" max="10" chance="3.3" />
+				<item id="35329" min="1" max="10" chance="3.3" />
+				<item id="35330" min="1" max="10" chance="3.3" />
+				<item id="35331" min="1" max="10" chance="3.3" />
+				<item id="35332" min="1" max="10" chance="3.3" />
+				<item id="35333" min="1" max="10" chance="3.3" />
+				<item id="35334" min="1" max="10" chance="3.3" />
+				<item id="35335" min="1" max="10" chance="3.3" />
+				<item id="35336" min="1" max="10" chance="3.3" />
+				<item id="35337" min="1" max="10" chance="3.3" />
+				<item id="35356" min="1" max="10" chance="3.3" />
+				<item id="35345" min="1" max="10" chance="3.3" />
+				<item id="35338" min="1" max="10" chance="3.3" />
+				<item id="35339" min="1" max="10" chance="3.3" />
+				<item id="35340" min="1" max="10" chance="3.3" />
+				<item id="35341" min="1" max="10" chance="3.3" />
+				<item id="35342" min="1" max="10" chance="3.3" />
+				<item id="35343" min="1" max="10" chance="3.3" />
+				<item id="35344" min="1" max="10" chance="3.3" />
+				<item id="35346" min="1" max="10" chance="3.3" />
+				<item id="35347" min="1" max="10" chance="3.3" />
+				<item id="35354" min="1" max="10" chance="3.3" />
+				<item id="35353" min="1" max="10" chance="3.3" />
+				<item id="35352" min="1" max="10" chance="3.3" />
+				<item id="35351" min="1" max="10" chance="3.3" />
+				<item id="35350" min="1" max="10" chance="3.3" />
+				<item id="35349" min="1" max="10" chance="3.3" />
+				<item id="35348" min="1" max="10" chance="3.3" />
+				<item id="35355" min="1" max="10" chance="3" />
+				<item id="37083" min="1" max="1" chance="0.75188" />
+				<item id="37082" min="1" max="1" chance="0.75188" />
+				<item id="37081" min="1" max="1" chance="0.75188" />
+				<item id="37080" min="1" max="1" chance="0.75188" />
+				<item id="37079" min="1" max="1" chance="0.75188" />
+				<item id="37078" min="1" max="1" chance="0.75188" />
+				<item id="37077" min="1" max="1" chance="0.75188" />
+				<item id="37076" min="1" max="1" chance="0.75188" />
+				<item id="37075" min="1" max="1" chance="0.75188" />
+				<item id="37074" min="1" max="1" chance="0.75188" />
+				<item id="37084" min="1" max="1" chance="0.75188" />
+				<item id="37085" min="1" max="1" chance="0.75188" />
+				<item id="37086" min="1" max="1" chance="0.75188" />
+				<item id="35460" min="1" max="4" chance="0.75188" />
+				<item id="35459" min="1" max="4" chance="0.75188" />
+				<item id="35458" min="1" max="4" chance="0.75188" />
+				<item id="35457" min="1" max="4" chance="0.75188" />
+				<item id="35456" min="1" max="4" chance="0.75188" />
+				<item id="35455" min="1" max="4" chance="0.75188" />
+				<item id="35454" min="1" max="4" chance="0.75188" />
+				<item id="35453" min="1" max="4" chance="0.75188" />
+				<item id="35451" min="1" max="4" chance="0.75188" />
+				<item id="35461" min="1" max="4" chance="0.75188" />
+				<item id="37073" min="1" max="1" chance="0.75188" />
+				<item id="35452" min="1" max="4" chance="0.75188" />
+				<item id="37067" min="1" max="1" chance="0.75188" />
+				<item id="37068" min="1" max="1" chance="0.75188" />
+				<item id="37069" min="1" max="1" chance="0.75188" />
+				<item id="37070" min="1" max="1" chance="0.75188" />
+				<item id="37071" min="1" max="1" chance="0.75188" />
+				<item id="37072" min="1" max="1" chance="0.75188" />
+				<item id="35470" min="1" max="4" chance="0.75188" />
+				<item id="35469" min="1" max="4" chance="0.75188" />
+				<item id="35468" min="1" max="4" chance="0.75188" />
+				<item id="35467" min="1" max="4" chance="0.75188" />
+				<item id="35466" min="1" max="4" chance="0.75188" />
+				<item id="35462" min="1" max="4" chance="0.75188" />
+				<item id="35463" min="1" max="4" chance="0.75188" />
+				<item id="35464" min="1" max="4" chance="0.75188" />
+				<item id="35465" min="1" max="4" chance="0.75188" />
+				<item id="35471" min="1" max="4" chance="0.75188" />
+				<item id="35472" min="1" max="4" chance="0.75188" />
+				<item id="35481" min="1" max="4" chance="0.75188" />
+				<item id="35480" min="1" max="4" chance="0.75188" />
+				<item id="35479" min="1" max="4" chance="0.75188" />
+				<item id="35478" min="1" max="4" chance="0.75188" />
+				<item id="35477" min="1" max="4" chance="0.75188" />
+				<item id="35476" min="1" max="4" chance="0.75188" />
+				<item id="35475" min="1" max="4" chance="0.75188" />
+				<item id="35474" min="1" max="4" chance="0.75188" />
+				<item id="35473" min="1" max="4" chance="0.75188" />
+				<item id="17436" min="1" max="1" chance="0.03" />
+				<item id="17419" min="1" max="1" chance="0.03" />
+				<item id="17418" min="1" max="1" chance="0.03" />
+				<item id="17417" min="1" max="1" chance="0.03" />
+				<item id="17416" min="1" max="1" chance="0.03" />
+				<item id="17449" min="1" max="1" chance="0.03" />
+				<item id="17420" min="1" max="1" chance="0.03" />
+				<item id="17421" min="1" max="1" chance="0.03" />
+				<item id="17422" min="1" max="1" chance="0.03" />
+				<item id="17423" min="1" max="1" chance="0.03" />
+				<item id="17424" min="1" max="1" chance="0.03" />
+				<item id="17425" min="1" max="1" chance="0.03" />
+				<item id="17426" min="1" max="1" chance="0.03" />
+				<item id="17448" min="1" max="1" chance="0.03" />
+				<item id="17447" min="1" max="1" chance="0.03" />
+				<item id="17431" min="1" max="1" chance="0.03" />
+				<item id="17432" min="1" max="1" chance="0.03" />
+				<item id="17433" min="1" max="1" chance="0.03" />
+				<item id="17434" min="1" max="1" chance="0.03" />
+				<item id="17435" min="1" max="1" chance="0.03" />
+				<item id="17437" min="1" max="1" chance="0.03" />
+				<item id="17438" min="1" max="1" chance="0.03" />
+				<item id="17439" min="1" max="1" chance="0.03" />
+				<item id="17440" min="1" max="1" chance="0.03" />
+				<item id="17441" min="1" max="1" chance="0.03" />
+				<item id="17442" min="1" max="1" chance="0.03" />
+				<item id="17443" min="1" max="1" chance="0.03" />
+				<item id="17444" min="1" max="1" chance="0.03" />
+				<item id="17445" min="1" max="1" chance="0.03" />
+				<item id="17446" min="1" max="1" chance="0.03" />
+				<item id="17430" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25923" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25924" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>ETC</race>
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="23023279" hpRegen="7.5" mp="23023279" mpRegen="2.7" />
+			<attack physical="500000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4320" magical="4885" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25924" level="99" type="L2Npc" name="Nerva Orc Linebreaker">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ORC</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
+			<attack physical="500000" magical="66000" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3520" magical="3540" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="17" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25925" level="99" type="L2Monster" name="Kro" title="Part of Krogel">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="5845590" sp="28929" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="246654" hpRegen="7.5" mp="246654" mpRegen="2.7" />
+			<attack physical="73040" magical="45540" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2429" magical="2443" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="9" /> -->
+			<!-- <skill id="4410" level="9" /> -->
+			<!-- <skill id="4413" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+		</skill_list>
+		<collision>
+			<radius normal="40" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="25926" level="99" type="L2Npc" name="Gel" title="Part of Krogel">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="246654" hpRegen="7.5" mp="246654" mpRegen="2.7" />
+			<attack physical="73040" magical="45540" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2429" magical="2443" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<!-- <skill id="4411" level="9" /> -->
+			<!-- <skill id="4410" level="9" /> -->
+			<!-- <skill id="4413" level="7" /> -->
+			<!-- <skill id="4412" level="7" /> -->
+		</skill_list>
+		<collision>
+			<radius normal="48" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25927" level="99" type="L2RaidBoss" name="Krogel" title="Raid Monster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25926" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25925" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="5380749000" sp="21522996" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="23023279" hpRegen="7.5" mp="23023279" mpRegen="2.7" />
+			<attack physical="330000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7320" magical="8850" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="15634" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="48" />
+			<height normal="53" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36514" min="1" max="1" chance="100" />
+				<item id="36979" min="1" max="1" chance="66.6667" />
+				<item id="36978" min="1" max="1" chance="33.3333" />
+				<item id="35569" min="1" max="1" chance="10" />
+				<item id="35567" min="1" max="1" chance="10" />
+				<item id="35357" min="1" max="10" chance="3.5" />
+				<item id="35327" min="1" max="10" chance="3.3" />
+				<item id="35328" min="1" max="10" chance="3.3" />
+				<item id="35329" min="1" max="10" chance="3.3" />
+				<item id="35330" min="1" max="10" chance="3.3" />
+				<item id="35331" min="1" max="10" chance="3.3" />
+				<item id="35332" min="1" max="10" chance="3.3" />
+				<item id="35333" min="1" max="10" chance="3.3" />
+				<item id="35334" min="1" max="10" chance="3.3" />
+				<item id="35335" min="1" max="10" chance="3.3" />
+				<item id="35336" min="1" max="10" chance="3.3" />
+				<item id="35337" min="1" max="10" chance="3.3" />
+				<item id="35356" min="1" max="10" chance="3.3" />
+				<item id="35345" min="1" max="10" chance="3.3" />
+				<item id="35338" min="1" max="10" chance="3.3" />
+				<item id="35339" min="1" max="10" chance="3.3" />
+				<item id="35340" min="1" max="10" chance="3.3" />
+				<item id="35341" min="1" max="10" chance="3.3" />
+				<item id="35342" min="1" max="10" chance="3.3" />
+				<item id="35343" min="1" max="10" chance="3.3" />
+				<item id="35344" min="1" max="10" chance="3.3" />
+				<item id="35346" min="1" max="10" chance="3.3" />
+				<item id="35347" min="1" max="10" chance="3.3" />
+				<item id="35354" min="1" max="10" chance="3.3" />
+				<item id="35353" min="1" max="10" chance="3.3" />
+				<item id="35352" min="1" max="10" chance="3.3" />
+				<item id="35351" min="1" max="10" chance="3.3" />
+				<item id="35350" min="1" max="10" chance="3.3" />
+				<item id="35349" min="1" max="10" chance="3.3" />
+				<item id="35348" min="1" max="10" chance="3.3" />
+				<item id="35355" min="1" max="10" chance="3" />
+				<item id="37083" min="1" max="1" chance="0.75188" />
+				<item id="37082" min="1" max="1" chance="0.75188" />
+				<item id="37081" min="1" max="1" chance="0.75188" />
+				<item id="37080" min="1" max="1" chance="0.75188" />
+				<item id="37079" min="1" max="1" chance="0.75188" />
+				<item id="37078" min="1" max="1" chance="0.75188" />
+				<item id="37077" min="1" max="1" chance="0.75188" />
+				<item id="37076" min="1" max="1" chance="0.75188" />
+				<item id="37075" min="1" max="1" chance="0.75188" />
+				<item id="37074" min="1" max="1" chance="0.75188" />
+				<item id="37084" min="1" max="1" chance="0.75188" />
+				<item id="37085" min="1" max="1" chance="0.75188" />
+				<item id="37086" min="1" max="1" chance="0.75188" />
+				<item id="35460" min="1" max="4" chance="0.75188" />
+				<item id="35459" min="1" max="4" chance="0.75188" />
+				<item id="35458" min="1" max="4" chance="0.75188" />
+				<item id="35457" min="1" max="4" chance="0.75188" />
+				<item id="35456" min="1" max="4" chance="0.75188" />
+				<item id="35455" min="1" max="4" chance="0.75188" />
+				<item id="35454" min="1" max="4" chance="0.75188" />
+				<item id="35453" min="1" max="4" chance="0.75188" />
+				<item id="35451" min="1" max="4" chance="0.75188" />
+				<item id="35461" min="1" max="4" chance="0.75188" />
+				<item id="37073" min="1" max="1" chance="0.75188" />
+				<item id="35452" min="1" max="4" chance="0.75188" />
+				<item id="37067" min="1" max="1" chance="0.75188" />
+				<item id="37068" min="1" max="1" chance="0.75188" />
+				<item id="37069" min="1" max="1" chance="0.75188" />
+				<item id="37070" min="1" max="1" chance="0.75188" />
+				<item id="37071" min="1" max="1" chance="0.75188" />
+				<item id="37072" min="1" max="1" chance="0.75188" />
+				<item id="35470" min="1" max="4" chance="0.75188" />
+				<item id="35469" min="1" max="4" chance="0.75188" />
+				<item id="35468" min="1" max="4" chance="0.75188" />
+				<item id="35467" min="1" max="4" chance="0.75188" />
+				<item id="35466" min="1" max="4" chance="0.75188" />
+				<item id="35462" min="1" max="4" chance="0.75188" />
+				<item id="35463" min="1" max="4" chance="0.75188" />
+				<item id="35464" min="1" max="4" chance="0.75188" />
+				<item id="35465" min="1" max="4" chance="0.75188" />
+				<item id="35471" min="1" max="4" chance="0.75188" />
+				<item id="35472" min="1" max="4" chance="0.75188" />
+				<item id="35481" min="1" max="4" chance="0.75188" />
+				<item id="35480" min="1" max="4" chance="0.75188" />
+				<item id="35479" min="1" max="4" chance="0.75188" />
+				<item id="35478" min="1" max="4" chance="0.75188" />
+				<item id="35477" min="1" max="4" chance="0.75188" />
+				<item id="35476" min="1" max="4" chance="0.75188" />
+				<item id="35475" min="1" max="4" chance="0.75188" />
+				<item id="35474" min="1" max="4" chance="0.75188" />
+				<item id="35473" min="1" max="4" chance="0.75188" />
+				<item id="17436" min="1" max="1" chance="0.03" />
+				<item id="17419" min="1" max="1" chance="0.03" />
+				<item id="17418" min="1" max="1" chance="0.03" />
+				<item id="17417" min="1" max="1" chance="0.03" />
+				<item id="17416" min="1" max="1" chance="0.03" />
+				<item id="17449" min="1" max="1" chance="0.03" />
+				<item id="17420" min="1" max="1" chance="0.03" />
+				<item id="17421" min="1" max="1" chance="0.03" />
+				<item id="17422" min="1" max="1" chance="0.03" />
+				<item id="17423" min="1" max="1" chance="0.03" />
+				<item id="17424" min="1" max="1" chance="0.03" />
+				<item id="17425" min="1" max="1" chance="0.03" />
+				<item id="17426" min="1" max="1" chance="0.03" />
+				<item id="17448" min="1" max="1" chance="0.03" />
+				<item id="17447" min="1" max="1" chance="0.03" />
+				<item id="17431" min="1" max="1" chance="0.03" />
+				<item id="17432" min="1" max="1" chance="0.03" />
+				<item id="17433" min="1" max="1" chance="0.03" />
+				<item id="17434" min="1" max="1" chance="0.03" />
+				<item id="17435" min="1" max="1" chance="0.03" />
+				<item id="17437" min="1" max="1" chance="0.03" />
+				<item id="17438" min="1" max="1" chance="0.03" />
+				<item id="17439" min="1" max="1" chance="0.03" />
+				<item id="17440" min="1" max="1" chance="0.03" />
+				<item id="17441" min="1" max="1" chance="0.03" />
+				<item id="17442" min="1" max="1" chance="0.03" />
+				<item id="17443" min="1" max="1" chance="0.03" />
+				<item id="17444" min="1" max="1" chance="0.03" />
+				<item id="17445" min="1" max="1" chance="0.03" />
+				<item id="17446" min="1" max="1" chance="0.03" />
+				<item id="17430" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25928" level="99" type="L2RaidBoss" name="Tebot" title="Raid Monster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ORC</race>
+		<acquire exp="1188371250" sp="4753485" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="5116283" hpRegen="7.5" mp="5116283" mpRegen="2.7" />
+			<attack physical="1000000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7320" magical="8850" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5462" level="1" />
+			<skill id="4416" level="17" />
+			<skill id="4494" level="1" />
+			<skill id="15633" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="8" />
+			<height normal="50" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36514" min="1" max="1" chance="100" />
+				<item id="36979" min="1" max="1" chance="71.4286" />
+				<item id="36978" min="1" max="1" chance="28.5714" />
+				<item id="35567" min="1" max="1" chance="10" />
+				<item id="35569" min="1" max="1" chance="10" />
+				<item id="35357" min="1" max="10" chance="3.5" />
+				<item id="35340" min="1" max="10" chance="3.3" />
+				<item id="35339" min="1" max="10" chance="3.3" />
+				<item id="35330" min="1" max="10" chance="3.3" />
+				<item id="35342" min="1" max="10" chance="3.3" />
+				<item id="35343" min="1" max="10" chance="3.3" />
+				<item id="35344" min="1" max="10" chance="3.3" />
+				<item id="35345" min="1" max="10" chance="3.3" />
+				<item id="35346" min="1" max="10" chance="3.3" />
+				<item id="35347" min="1" max="10" chance="3.3" />
+				<item id="35329" min="1" max="10" chance="3.3" />
+				<item id="35328" min="1" max="10" chance="3.3" />
+				<item id="35327" min="1" max="10" chance="3.3" />
+				<item id="35356" min="1" max="10" chance="3.3" />
+				<item id="35353" min="1" max="10" chance="3.3" />
+				<item id="35352" min="1" max="10" chance="3.3" />
+				<item id="35351" min="1" max="10" chance="3.3" />
+				<item id="35350" min="1" max="10" chance="3.3" />
+				<item id="35349" min="1" max="10" chance="3.3" />
+				<item id="35338" min="1" max="10" chance="3.3" />
+				<item id="35331" min="1" max="10" chance="3.3" />
+				<item id="35348" min="1" max="10" chance="3.3" />
+				<item id="35354" min="1" max="10" chance="3.3" />
+				<item id="35341" min="1" max="10" chance="3.3" />
+				<item id="35337" min="1" max="10" chance="3.3" />
+				<item id="35336" min="1" max="10" chance="3.3" />
+				<item id="35335" min="1" max="10" chance="3.3" />
+				<item id="35332" min="1" max="10" chance="3.3" />
+				<item id="35334" min="1" max="10" chance="3.3" />
+				<item id="35333" min="1" max="10" chance="3.3" />
+				<item id="35355" min="1" max="10" chance="3" />
+				<item id="35452" min="1" max="4" chance="0.75188" />
+				<item id="35453" min="1" max="4" chance="0.75188" />
+				<item id="35451" min="1" max="4" chance="0.75188" />
+				<item id="35454" min="1" max="4" chance="0.75188" />
+				<item id="35455" min="1" max="4" chance="0.75188" />
+				<item id="35456" min="1" max="4" chance="0.75188" />
+				<item id="35457" min="1" max="4" chance="0.75188" />
+				<item id="35459" min="1" max="4" chance="0.75188" />
+				<item id="35460" min="1" max="4" chance="0.75188" />
+				<item id="35461" min="1" max="4" chance="0.75188" />
+				<item id="35458" min="1" max="4" chance="0.75188" />
+				<item id="37070" min="1" max="1" chance="0.75188" />
+				<item id="37075" min="1" max="1" chance="0.75188" />
+				<item id="37074" min="1" max="1" chance="0.75188" />
+				<item id="37073" min="1" max="1" chance="0.75188" />
+				<item id="37072" min="1" max="1" chance="0.75188" />
+				<item id="37071" min="1" max="1" chance="0.75188" />
+				<item id="37069" min="1" max="1" chance="0.75188" />
+				<item id="37068" min="1" max="1" chance="0.75188" />
+				<item id="37067" min="1" max="1" chance="0.75188" />
+				<item id="37077" min="1" max="1" chance="0.75188" />
+				<item id="37078" min="1" max="1" chance="0.75188" />
+				<item id="37079" min="1" max="1" chance="0.75188" />
+				<item id="37076" min="1" max="1" chance="0.75188" />
+				<item id="37086" min="1" max="1" chance="0.75188" />
+				<item id="37085" min="1" max="1" chance="0.75188" />
+				<item id="37084" min="1" max="1" chance="0.75188" />
+				<item id="37083" min="1" max="1" chance="0.75188" />
+				<item id="37082" min="1" max="1" chance="0.75188" />
+				<item id="37081" min="1" max="1" chance="0.75188" />
+				<item id="37080" min="1" max="1" chance="0.75188" />
+				<item id="35481" min="1" max="4" chance="0.75188" />
+				<item id="35480" min="1" max="4" chance="0.75188" />
+				<item id="35479" min="1" max="4" chance="0.75188" />
+				<item id="35478" min="1" max="4" chance="0.75188" />
+				<item id="35477" min="1" max="4" chance="0.75188" />
+				<item id="35476" min="1" max="4" chance="0.75188" />
+				<item id="35462" min="1" max="4" chance="0.75188" />
+				<item id="35463" min="1" max="4" chance="0.75188" />
+				<item id="35464" min="1" max="4" chance="0.75188" />
+				<item id="35465" min="1" max="4" chance="0.75188" />
+				<item id="35466" min="1" max="4" chance="0.75188" />
+				<item id="35467" min="1" max="4" chance="0.75188" />
+				<item id="35468" min="1" max="4" chance="0.75188" />
+				<item id="35469" min="1" max="4" chance="0.75188" />
+				<item id="35475" min="1" max="4" chance="0.75188" />
+				<item id="35474" min="1" max="4" chance="0.75188" />
+				<item id="35473" min="1" max="4" chance="0.75188" />
+				<item id="35472" min="1" max="4" chance="0.75188" />
+				<item id="35471" min="1" max="4" chance="0.75188" />
+				<item id="35470" min="1" max="4" chance="0.75188" />
+				<item id="17418" min="1" max="1" chance="0.03" />
+				<item id="17417" min="1" max="1" chance="0.03" />
+				<item id="17416" min="1" max="1" chance="0.03" />
+				<item id="17449" min="1" max="1" chance="0.03" />
+				<item id="17448" min="1" max="1" chance="0.03" />
+				<item id="17447" min="1" max="1" chance="0.03" />
+				<item id="17419" min="1" max="1" chance="0.03" />
+				<item id="17420" min="1" max="1" chance="0.03" />
+				<item id="17421" min="1" max="1" chance="0.03" />
+				<item id="17422" min="1" max="1" chance="0.03" />
+				<item id="17423" min="1" max="1" chance="0.03" />
+				<item id="17424" min="1" max="1" chance="0.03" />
+				<item id="17425" min="1" max="1" chance="0.03" />
+				<item id="17426" min="1" max="1" chance="0.03" />
+				<item id="17446" min="1" max="1" chance="0.03" />
+				<item id="17445" min="1" max="1" chance="0.03" />
+				<item id="17444" min="1" max="1" chance="0.03" />
+				<item id="17431" min="1" max="1" chance="0.03" />
+				<item id="17432" min="1" max="1" chance="0.03" />
+				<item id="17433" min="1" max="1" chance="0.03" />
+				<item id="17434" min="1" max="1" chance="0.03" />
+				<item id="17435" min="1" max="1" chance="0.03" />
+				<item id="17436" min="1" max="1" chance="0.03" />
+				<item id="17437" min="1" max="1" chance="0.03" />
+				<item id="17438" min="1" max="1" chance="0.03" />
+				<item id="17439" min="1" max="1" chance="0.03" />
+				<item id="17440" min="1" max="1" chance="0.03" />
+				<item id="17441" min="1" max="1" chance="0.03" />
+				<item id="17442" min="1" max="1" chance="0.03" />
+				<item id="17443" min="1" max="1" chance="0.03" />
+				<item id="17430" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25929" level="99" type="L2RaidBoss" name="Tegaffe" title="Raid Monster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ORC</race>
+		<acquire exp="1188371250" sp="4753485" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="5116283" hpRegen="7.5" mp="5116283" mpRegen="2.7" />
+			<attack physical="1000000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7320" magical="8850" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5462" level="1" />
+			<skill id="4416" level="17" />
+			<skill id="4494" level="1" />
+			<skill id="15633" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="8" />
+			<height normal="50" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36514" min="1" max="1" chance="100" />
+				<item id="36979" min="1" max="1" chance="71.4286" />
+				<item id="36978" min="1" max="1" chance="28.5714" />
+				<item id="35567" min="1" max="1" chance="10" />
+				<item id="35569" min="1" max="1" chance="10" />
+				<item id="35357" min="1" max="10" chance="3.5" />
+				<item id="35340" min="1" max="10" chance="3.3" />
+				<item id="35339" min="1" max="10" chance="3.3" />
+				<item id="35330" min="1" max="10" chance="3.3" />
+				<item id="35342" min="1" max="10" chance="3.3" />
+				<item id="35343" min="1" max="10" chance="3.3" />
+				<item id="35344" min="1" max="10" chance="3.3" />
+				<item id="35345" min="1" max="10" chance="3.3" />
+				<item id="35346" min="1" max="10" chance="3.3" />
+				<item id="35347" min="1" max="10" chance="3.3" />
+				<item id="35329" min="1" max="10" chance="3.3" />
+				<item id="35328" min="1" max="10" chance="3.3" />
+				<item id="35327" min="1" max="10" chance="3.3" />
+				<item id="35356" min="1" max="10" chance="3.3" />
+				<item id="35353" min="1" max="10" chance="3.3" />
+				<item id="35352" min="1" max="10" chance="3.3" />
+				<item id="35351" min="1" max="10" chance="3.3" />
+				<item id="35350" min="1" max="10" chance="3.3" />
+				<item id="35349" min="1" max="10" chance="3.3" />
+				<item id="35338" min="1" max="10" chance="3.3" />
+				<item id="35331" min="1" max="10" chance="3.3" />
+				<item id="35348" min="1" max="10" chance="3.3" />
+				<item id="35354" min="1" max="10" chance="3.3" />
+				<item id="35341" min="1" max="10" chance="3.3" />
+				<item id="35337" min="1" max="10" chance="3.3" />
+				<item id="35336" min="1" max="10" chance="3.3" />
+				<item id="35335" min="1" max="10" chance="3.3" />
+				<item id="35332" min="1" max="10" chance="3.3" />
+				<item id="35334" min="1" max="10" chance="3.3" />
+				<item id="35333" min="1" max="10" chance="3.3" />
+				<item id="35355" min="1" max="10" chance="3" />
+				<item id="35452" min="1" max="4" chance="0.75188" />
+				<item id="35453" min="1" max="4" chance="0.75188" />
+				<item id="35451" min="1" max="4" chance="0.75188" />
+				<item id="35454" min="1" max="4" chance="0.75188" />
+				<item id="35455" min="1" max="4" chance="0.75188" />
+				<item id="35456" min="1" max="4" chance="0.75188" />
+				<item id="35457" min="1" max="4" chance="0.75188" />
+				<item id="35459" min="1" max="4" chance="0.75188" />
+				<item id="35460" min="1" max="4" chance="0.75188" />
+				<item id="35461" min="1" max="4" chance="0.75188" />
+				<item id="35458" min="1" max="4" chance="0.75188" />
+				<item id="37070" min="1" max="1" chance="0.75188" />
+				<item id="37075" min="1" max="1" chance="0.75188" />
+				<item id="37074" min="1" max="1" chance="0.75188" />
+				<item id="37073" min="1" max="1" chance="0.75188" />
+				<item id="37072" min="1" max="1" chance="0.75188" />
+				<item id="37071" min="1" max="1" chance="0.75188" />
+				<item id="37069" min="1" max="1" chance="0.75188" />
+				<item id="37068" min="1" max="1" chance="0.75188" />
+				<item id="37067" min="1" max="1" chance="0.75188" />
+				<item id="37077" min="1" max="1" chance="0.75188" />
+				<item id="37078" min="1" max="1" chance="0.75188" />
+				<item id="37079" min="1" max="1" chance="0.75188" />
+				<item id="37076" min="1" max="1" chance="0.75188" />
+				<item id="37086" min="1" max="1" chance="0.75188" />
+				<item id="37085" min="1" max="1" chance="0.75188" />
+				<item id="37084" min="1" max="1" chance="0.75188" />
+				<item id="37083" min="1" max="1" chance="0.75188" />
+				<item id="37082" min="1" max="1" chance="0.75188" />
+				<item id="37081" min="1" max="1" chance="0.75188" />
+				<item id="37080" min="1" max="1" chance="0.75188" />
+				<item id="35481" min="1" max="4" chance="0.75188" />
+				<item id="35480" min="1" max="4" chance="0.75188" />
+				<item id="35479" min="1" max="4" chance="0.75188" />
+				<item id="35478" min="1" max="4" chance="0.75188" />
+				<item id="35477" min="1" max="4" chance="0.75188" />
+				<item id="35476" min="1" max="4" chance="0.75188" />
+				<item id="35462" min="1" max="4" chance="0.75188" />
+				<item id="35463" min="1" max="4" chance="0.75188" />
+				<item id="35464" min="1" max="4" chance="0.75188" />
+				<item id="35465" min="1" max="4" chance="0.75188" />
+				<item id="35466" min="1" max="4" chance="0.75188" />
+				<item id="35467" min="1" max="4" chance="0.75188" />
+				<item id="35468" min="1" max="4" chance="0.75188" />
+				<item id="35469" min="1" max="4" chance="0.75188" />
+				<item id="35475" min="1" max="4" chance="0.75188" />
+				<item id="35474" min="1" max="4" chance="0.75188" />
+				<item id="35473" min="1" max="4" chance="0.75188" />
+				<item id="35472" min="1" max="4" chance="0.75188" />
+				<item id="35471" min="1" max="4" chance="0.75188" />
+				<item id="35470" min="1" max="4" chance="0.75188" />
+				<item id="17418" min="1" max="1" chance="0.03" />
+				<item id="17417" min="1" max="1" chance="0.03" />
+				<item id="17416" min="1" max="1" chance="0.03" />
+				<item id="17449" min="1" max="1" chance="0.03" />
+				<item id="17448" min="1" max="1" chance="0.03" />
+				<item id="17447" min="1" max="1" chance="0.03" />
+				<item id="17419" min="1" max="1" chance="0.03" />
+				<item id="17420" min="1" max="1" chance="0.03" />
+				<item id="17421" min="1" max="1" chance="0.03" />
+				<item id="17422" min="1" max="1" chance="0.03" />
+				<item id="17423" min="1" max="1" chance="0.03" />
+				<item id="17424" min="1" max="1" chance="0.03" />
+				<item id="17425" min="1" max="1" chance="0.03" />
+				<item id="17426" min="1" max="1" chance="0.03" />
+				<item id="17446" min="1" max="1" chance="0.03" />
+				<item id="17445" min="1" max="1" chance="0.03" />
+				<item id="17444" min="1" max="1" chance="0.03" />
+				<item id="17431" min="1" max="1" chance="0.03" />
+				<item id="17432" min="1" max="1" chance="0.03" />
+				<item id="17433" min="1" max="1" chance="0.03" />
+				<item id="17434" min="1" max="1" chance="0.03" />
+				<item id="17435" min="1" max="1" chance="0.03" />
+				<item id="17436" min="1" max="1" chance="0.03" />
+				<item id="17437" min="1" max="1" chance="0.03" />
+				<item id="17438" min="1" max="1" chance="0.03" />
+				<item id="17439" min="1" max="1" chance="0.03" />
+				<item id="17440" min="1" max="1" chance="0.03" />
+				<item id="17441" min="1" max="1" chance="0.03" />
+				<item id="17442" min="1" max="1" chance="0.03" />
+				<item id="17443" min="1" max="1" chance="0.03" />
+				<item id="17430" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25930" level="99" type="L2RaidBoss" name="Thesakar" title="Raid Monster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ORC</race>
+		<acquire exp="1188371250" sp="4753485" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="5116283" hpRegen="7.5" mp="5116283" mpRegen="2.7" />
+			<attack physical="1000000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7320" magical="8850" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5462" level="1" />
+			<skill id="4416" level="17" />
+			<skill id="4494" level="1" />
+			<skill id="15633" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="28" />
+			<height normal="33.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36514" min="1" max="1" chance="100" />
+				<item id="36979" min="1" max="1" chance="71.4286" />
+				<item id="36978" min="1" max="1" chance="28.5714" />
+				<item id="35567" min="1" max="1" chance="10" />
+				<item id="35569" min="1" max="1" chance="10" />
+				<item id="35357" min="1" max="10" chance="3.5" />
+				<item id="35340" min="1" max="10" chance="3.3" />
+				<item id="35339" min="1" max="10" chance="3.3" />
+				<item id="35330" min="1" max="10" chance="3.3" />
+				<item id="35342" min="1" max="10" chance="3.3" />
+				<item id="35343" min="1" max="10" chance="3.3" />
+				<item id="35344" min="1" max="10" chance="3.3" />
+				<item id="35345" min="1" max="10" chance="3.3" />
+				<item id="35346" min="1" max="10" chance="3.3" />
+				<item id="35347" min="1" max="10" chance="3.3" />
+				<item id="35329" min="1" max="10" chance="3.3" />
+				<item id="35328" min="1" max="10" chance="3.3" />
+				<item id="35327" min="1" max="10" chance="3.3" />
+				<item id="35356" min="1" max="10" chance="3.3" />
+				<item id="35353" min="1" max="10" chance="3.3" />
+				<item id="35352" min="1" max="10" chance="3.3" />
+				<item id="35351" min="1" max="10" chance="3.3" />
+				<item id="35350" min="1" max="10" chance="3.3" />
+				<item id="35349" min="1" max="10" chance="3.3" />
+				<item id="35338" min="1" max="10" chance="3.3" />
+				<item id="35331" min="1" max="10" chance="3.3" />
+				<item id="35348" min="1" max="10" chance="3.3" />
+				<item id="35354" min="1" max="10" chance="3.3" />
+				<item id="35341" min="1" max="10" chance="3.3" />
+				<item id="35337" min="1" max="10" chance="3.3" />
+				<item id="35336" min="1" max="10" chance="3.3" />
+				<item id="35335" min="1" max="10" chance="3.3" />
+				<item id="35332" min="1" max="10" chance="3.3" />
+				<item id="35334" min="1" max="10" chance="3.3" />
+				<item id="35333" min="1" max="10" chance="3.3" />
+				<item id="35355" min="1" max="10" chance="3" />
+				<item id="35452" min="1" max="4" chance="0.75188" />
+				<item id="35453" min="1" max="4" chance="0.75188" />
+				<item id="35451" min="1" max="4" chance="0.75188" />
+				<item id="35454" min="1" max="4" chance="0.75188" />
+				<item id="35455" min="1" max="4" chance="0.75188" />
+				<item id="35456" min="1" max="4" chance="0.75188" />
+				<item id="35457" min="1" max="4" chance="0.75188" />
+				<item id="35459" min="1" max="4" chance="0.75188" />
+				<item id="35460" min="1" max="4" chance="0.75188" />
+				<item id="35461" min="1" max="4" chance="0.75188" />
+				<item id="35458" min="1" max="4" chance="0.75188" />
+				<item id="37070" min="1" max="1" chance="0.75188" />
+				<item id="37075" min="1" max="1" chance="0.75188" />
+				<item id="37074" min="1" max="1" chance="0.75188" />
+				<item id="37073" min="1" max="1" chance="0.75188" />
+				<item id="37072" min="1" max="1" chance="0.75188" />
+				<item id="37071" min="1" max="1" chance="0.75188" />
+				<item id="37069" min="1" max="1" chance="0.75188" />
+				<item id="37068" min="1" max="1" chance="0.75188" />
+				<item id="37067" min="1" max="1" chance="0.75188" />
+				<item id="37077" min="1" max="1" chance="0.75188" />
+				<item id="37078" min="1" max="1" chance="0.75188" />
+				<item id="37079" min="1" max="1" chance="0.75188" />
+				<item id="37076" min="1" max="1" chance="0.75188" />
+				<item id="37086" min="1" max="1" chance="0.75188" />
+				<item id="37085" min="1" max="1" chance="0.75188" />
+				<item id="37084" min="1" max="1" chance="0.75188" />
+				<item id="37083" min="1" max="1" chance="0.75188" />
+				<item id="37082" min="1" max="1" chance="0.75188" />
+				<item id="37081" min="1" max="1" chance="0.75188" />
+				<item id="37080" min="1" max="1" chance="0.75188" />
+				<item id="35481" min="1" max="4" chance="0.75188" />
+				<item id="35480" min="1" max="4" chance="0.75188" />
+				<item id="35479" min="1" max="4" chance="0.75188" />
+				<item id="35478" min="1" max="4" chance="0.75188" />
+				<item id="35477" min="1" max="4" chance="0.75188" />
+				<item id="35476" min="1" max="4" chance="0.75188" />
+				<item id="35462" min="1" max="4" chance="0.75188" />
+				<item id="35463" min="1" max="4" chance="0.75188" />
+				<item id="35464" min="1" max="4" chance="0.75188" />
+				<item id="35465" min="1" max="4" chance="0.75188" />
+				<item id="35466" min="1" max="4" chance="0.75188" />
+				<item id="35467" min="1" max="4" chance="0.75188" />
+				<item id="35468" min="1" max="4" chance="0.75188" />
+				<item id="35469" min="1" max="4" chance="0.75188" />
+				<item id="35475" min="1" max="4" chance="0.75188" />
+				<item id="35474" min="1" max="4" chance="0.75188" />
+				<item id="35473" min="1" max="4" chance="0.75188" />
+				<item id="35472" min="1" max="4" chance="0.75188" />
+				<item id="35471" min="1" max="4" chance="0.75188" />
+				<item id="35470" min="1" max="4" chance="0.75188" />
+				<item id="17418" min="1" max="1" chance="0.03" />
+				<item id="17417" min="1" max="1" chance="0.03" />
+				<item id="17416" min="1" max="1" chance="0.03" />
+				<item id="17449" min="1" max="1" chance="0.03" />
+				<item id="17448" min="1" max="1" chance="0.03" />
+				<item id="17447" min="1" max="1" chance="0.03" />
+				<item id="17419" min="1" max="1" chance="0.03" />
+				<item id="17420" min="1" max="1" chance="0.03" />
+				<item id="17421" min="1" max="1" chance="0.03" />
+				<item id="17422" min="1" max="1" chance="0.03" />
+				<item id="17423" min="1" max="1" chance="0.03" />
+				<item id="17424" min="1" max="1" chance="0.03" />
+				<item id="17425" min="1" max="1" chance="0.03" />
+				<item id="17426" min="1" max="1" chance="0.03" />
+				<item id="17446" min="1" max="1" chance="0.03" />
+				<item id="17445" min="1" max="1" chance="0.03" />
+				<item id="17444" min="1" max="1" chance="0.03" />
+				<item id="17431" min="1" max="1" chance="0.03" />
+				<item id="17432" min="1" max="1" chance="0.03" />
+				<item id="17433" min="1" max="1" chance="0.03" />
+				<item id="17434" min="1" max="1" chance="0.03" />
+				<item id="17435" min="1" max="1" chance="0.03" />
+				<item id="17436" min="1" max="1" chance="0.03" />
+				<item id="17437" min="1" max="1" chance="0.03" />
+				<item id="17438" min="1" max="1" chance="0.03" />
+				<item id="17439" min="1" max="1" chance="0.03" />
+				<item id="17440" min="1" max="1" chance="0.03" />
+				<item id="17441" min="1" max="1" chance="0.03" />
+				<item id="17442" min="1" max="1" chance="0.03" />
+				<item id="17443" min="1" max="1" chance="0.03" />
+				<item id="17430" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25931" level="99" type="L2RaidBoss" name="Theor" title="Raid Monster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ORC</race>
+		<acquire exp="1188371250" sp="4753485" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="5116283" hpRegen="7.5" mp="5116283" mpRegen="2.7" />
+			<attack physical="1000000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7320" magical="8850" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="15564" level="1" />
+			<skill id="15565" level="1" />
+			<skill id="5462" level="1" />
+			<skill id="4416" level="17" />
+			<skill id="4494" level="1" />
+			<skill id="15633" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="8" />
+			<height normal="54.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36514" min="1" max="1" chance="100" />
+				<item id="36979" min="1" max="1" chance="71.4286" />
+				<item id="36978" min="1" max="1" chance="28.5714" />
+				<item id="35567" min="1" max="1" chance="10" />
+				<item id="35569" min="1" max="1" chance="10" />
+				<item id="35357" min="1" max="10" chance="3.5" />
+				<item id="35340" min="1" max="10" chance="3.3" />
+				<item id="35339" min="1" max="10" chance="3.3" />
+				<item id="35330" min="1" max="10" chance="3.3" />
+				<item id="35342" min="1" max="10" chance="3.3" />
+				<item id="35343" min="1" max="10" chance="3.3" />
+				<item id="35344" min="1" max="10" chance="3.3" />
+				<item id="35345" min="1" max="10" chance="3.3" />
+				<item id="35346" min="1" max="10" chance="3.3" />
+				<item id="35347" min="1" max="10" chance="3.3" />
+				<item id="35329" min="1" max="10" chance="3.3" />
+				<item id="35328" min="1" max="10" chance="3.3" />
+				<item id="35327" min="1" max="10" chance="3.3" />
+				<item id="35356" min="1" max="10" chance="3.3" />
+				<item id="35353" min="1" max="10" chance="3.3" />
+				<item id="35352" min="1" max="10" chance="3.3" />
+				<item id="35351" min="1" max="10" chance="3.3" />
+				<item id="35350" min="1" max="10" chance="3.3" />
+				<item id="35349" min="1" max="10" chance="3.3" />
+				<item id="35338" min="1" max="10" chance="3.3" />
+				<item id="35331" min="1" max="10" chance="3.3" />
+				<item id="35348" min="1" max="10" chance="3.3" />
+				<item id="35354" min="1" max="10" chance="3.3" />
+				<item id="35341" min="1" max="10" chance="3.3" />
+				<item id="35337" min="1" max="10" chance="3.3" />
+				<item id="35336" min="1" max="10" chance="3.3" />
+				<item id="35335" min="1" max="10" chance="3.3" />
+				<item id="35332" min="1" max="10" chance="3.3" />
+				<item id="35334" min="1" max="10" chance="3.3" />
+				<item id="35333" min="1" max="10" chance="3.3" />
+				<item id="35355" min="1" max="10" chance="3" />
+				<item id="35452" min="1" max="4" chance="0.75188" />
+				<item id="35453" min="1" max="4" chance="0.75188" />
+				<item id="35451" min="1" max="4" chance="0.75188" />
+				<item id="35454" min="1" max="4" chance="0.75188" />
+				<item id="35455" min="1" max="4" chance="0.75188" />
+				<item id="35456" min="1" max="4" chance="0.75188" />
+				<item id="35457" min="1" max="4" chance="0.75188" />
+				<item id="35459" min="1" max="4" chance="0.75188" />
+				<item id="35460" min="1" max="4" chance="0.75188" />
+				<item id="35461" min="1" max="4" chance="0.75188" />
+				<item id="35458" min="1" max="4" chance="0.75188" />
+				<item id="37070" min="1" max="1" chance="0.75188" />
+				<item id="37075" min="1" max="1" chance="0.75188" />
+				<item id="37074" min="1" max="1" chance="0.75188" />
+				<item id="37073" min="1" max="1" chance="0.75188" />
+				<item id="37072" min="1" max="1" chance="0.75188" />
+				<item id="37071" min="1" max="1" chance="0.75188" />
+				<item id="37069" min="1" max="1" chance="0.75188" />
+				<item id="37068" min="1" max="1" chance="0.75188" />
+				<item id="37067" min="1" max="1" chance="0.75188" />
+				<item id="37077" min="1" max="1" chance="0.75188" />
+				<item id="37078" min="1" max="1" chance="0.75188" />
+				<item id="37079" min="1" max="1" chance="0.75188" />
+				<item id="37076" min="1" max="1" chance="0.75188" />
+				<item id="37086" min="1" max="1" chance="0.75188" />
+				<item id="37085" min="1" max="1" chance="0.75188" />
+				<item id="37084" min="1" max="1" chance="0.75188" />
+				<item id="37083" min="1" max="1" chance="0.75188" />
+				<item id="37082" min="1" max="1" chance="0.75188" />
+				<item id="37081" min="1" max="1" chance="0.75188" />
+				<item id="37080" min="1" max="1" chance="0.75188" />
+				<item id="35481" min="1" max="4" chance="0.75188" />
+				<item id="35480" min="1" max="4" chance="0.75188" />
+				<item id="35479" min="1" max="4" chance="0.75188" />
+				<item id="35478" min="1" max="4" chance="0.75188" />
+				<item id="35477" min="1" max="4" chance="0.75188" />
+				<item id="35476" min="1" max="4" chance="0.75188" />
+				<item id="35462" min="1" max="4" chance="0.75188" />
+				<item id="35463" min="1" max="4" chance="0.75188" />
+				<item id="35464" min="1" max="4" chance="0.75188" />
+				<item id="35465" min="1" max="4" chance="0.75188" />
+				<item id="35466" min="1" max="4" chance="0.75188" />
+				<item id="35467" min="1" max="4" chance="0.75188" />
+				<item id="35468" min="1" max="4" chance="0.75188" />
+				<item id="35469" min="1" max="4" chance="0.75188" />
+				<item id="35475" min="1" max="4" chance="0.75188" />
+				<item id="35474" min="1" max="4" chance="0.75188" />
+				<item id="35473" min="1" max="4" chance="0.75188" />
+				<item id="35472" min="1" max="4" chance="0.75188" />
+				<item id="35471" min="1" max="4" chance="0.75188" />
+				<item id="35470" min="1" max="4" chance="0.75188" />
+				<item id="17418" min="1" max="1" chance="0.03" />
+				<item id="17417" min="1" max="1" chance="0.03" />
+				<item id="17416" min="1" max="1" chance="0.03" />
+				<item id="17449" min="1" max="1" chance="0.03" />
+				<item id="17448" min="1" max="1" chance="0.03" />
+				<item id="17447" min="1" max="1" chance="0.03" />
+				<item id="17419" min="1" max="1" chance="0.03" />
+				<item id="17420" min="1" max="1" chance="0.03" />
+				<item id="17421" min="1" max="1" chance="0.03" />
+				<item id="17422" min="1" max="1" chance="0.03" />
+				<item id="17423" min="1" max="1" chance="0.03" />
+				<item id="17424" min="1" max="1" chance="0.03" />
+				<item id="17425" min="1" max="1" chance="0.03" />
+				<item id="17426" min="1" max="1" chance="0.03" />
+				<item id="17446" min="1" max="1" chance="0.03" />
+				<item id="17445" min="1" max="1" chance="0.03" />
+				<item id="17444" min="1" max="1" chance="0.03" />
+				<item id="17431" min="1" max="1" chance="0.03" />
+				<item id="17432" min="1" max="1" chance="0.03" />
+				<item id="17433" min="1" max="1" chance="0.03" />
+				<item id="17434" min="1" max="1" chance="0.03" />
+				<item id="17435" min="1" max="1" chance="0.03" />
+				<item id="17436" min="1" max="1" chance="0.03" />
+				<item id="17437" min="1" max="1" chance="0.03" />
+				<item id="17438" min="1" max="1" chance="0.03" />
+				<item id="17439" min="1" max="1" chance="0.03" />
+				<item id="17440" min="1" max="1" chance="0.03" />
+				<item id="17441" min="1" max="1" chance="0.03" />
+				<item id="17442" min="1" max="1" chance="0.03" />
+				<item id="17443" min="1" max="1" chance="0.03" />
+				<item id="17430" min="1" max="1" chance="0.03" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25932" level="86" type="L2RaidBoss" name="Transformed: Dartanion" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="3394764000" sp="0" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="41235567" hpRegen="7.5" mp="41235567" mpRegen="2.7" />
+			<attack physical="46500" magical="31000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1860" magical="1840" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4494" level="1" />
+			<skill id="15626" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="44" />
+			<height normal="38" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36513" min="1" max="4" chance="88" />
+				<item id="36979" min="1" max="1" chance="7" />
+				<item id="36855" min="1" max="5" chance="3.5" />
+				<item id="36847" min="1" max="5" chance="3.3" />
+				<item id="36848" min="1" max="5" chance="3.3" />
+				<item id="36849" min="1" max="5" chance="3.3" />
+				<item id="36850" min="1" max="5" chance="3.3" />
+				<item id="36851" min="1" max="5" chance="3.3" />
+				<item id="36852" min="1" max="5" chance="3.3" />
+				<item id="36854" min="1" max="5" chance="3.3" />
+				<item id="36846" min="1" max="5" chance="3.3" />
+				<item id="36845" min="1" max="5" chance="3.3" />
+				<item id="36836" min="1" max="5" chance="3.3" />
+				<item id="36837" min="1" max="5" chance="3.3" />
+				<item id="36838" min="1" max="5" chance="3.3" />
+				<item id="36839" min="1" max="5" chance="3.3" />
+				<item id="36840" min="1" max="5" chance="3.3" />
+				<item id="36841" min="1" max="5" chance="3.3" />
+				<item id="36842" min="1" max="5" chance="3.3" />
+				<item id="36843" min="1" max="5" chance="3.3" />
+				<item id="36844" min="1" max="5" chance="3.3" />
+				<item id="36792" min="1" max="2" chance="3.2" />
+				<item id="36791" min="1" max="2" chance="3.2" />
+				<item id="36790" min="1" max="2" chance="3.2" />
+				<item id="36789" min="1" max="2" chance="3.2" />
+				<item id="36788" min="1" max="2" chance="3.2" />
+				<item id="36787" min="1" max="2" chance="3.2" />
+				<item id="36786" min="1" max="2" chance="3.2" />
+				<item id="36785" min="1" max="2" chance="3.2" />
+				<item id="36784" min="1" max="2" chance="3.2" />
+				<item id="36793" min="1" max="2" chance="3.2" />
+				<item id="36763" min="1" max="2" chance="3.2" />
+				<item id="36764" min="1" max="2" chance="3.2" />
+				<item id="36772" min="1" max="2" chance="3.2" />
+				<item id="36771" min="1" max="2" chance="3.2" />
+				<item id="36770" min="1" max="2" chance="3.2" />
+				<item id="36769" min="1" max="2" chance="3.2" />
+				<item id="36768" min="1" max="2" chance="3.2" />
+				<item id="36767" min="1" max="2" chance="3.2" />
+				<item id="36766" min="1" max="2" chance="3.2" />
+				<item id="36765" min="1" max="2" chance="3.2" />
+				<item id="36773" min="1" max="2" chance="3.2" />
+				<item id="36783" min="1" max="2" chance="3.2" />
+				<item id="36833" min="1" max="5" chance="3.2" />
+				<item id="36832" min="1" max="5" chance="3.2" />
+				<item id="36831" min="1" max="5" chance="3.2" />
+				<item id="36830" min="1" max="5" chance="3.2" />
+				<item id="36829" min="1" max="5" chance="3.2" />
+				<item id="36828" min="1" max="5" chance="3.2" />
+				<item id="36827" min="1" max="5" chance="3.2" />
+				<item id="36826" min="1" max="5" chance="3.2" />
+				<item id="36825" min="1" max="5" chance="3.2" />
+				<item id="36834" min="1" max="5" chance="3.2" />
+				<item id="36835" min="1" max="5" chance="3.2" />
+				<item id="36782" min="1" max="2" chance="3.2" />
+				<item id="36781" min="1" max="2" chance="3.2" />
+				<item id="36780" min="1" max="2" chance="3.2" />
+				<item id="36779" min="1" max="2" chance="3.2" />
+				<item id="36778" min="1" max="2" chance="3.2" />
+				<item id="36777" min="1" max="2" chance="3.2" />
+				<item id="36776" min="1" max="2" chance="3.2" />
+				<item id="36775" min="1" max="2" chance="3.2" />
+				<item id="36774" min="1" max="2" chance="3.2" />
+				<item id="36853" min="1" max="5" chance="3.1" />
+				<item id="36978" min="1" max="1" chance="3" />
+				<item id="17356" min="1" max="1" chance="2" />
+				<item id="17324" min="1" max="1" chance="2" />
+				<item id="17325" min="1" max="1" chance="2" />
+				<item id="17326" min="1" max="1" chance="2" />
+				<item id="17327" min="1" max="1" chance="2" />
+				<item id="17328" min="1" max="1" chance="2" />
+				<item id="17357" min="1" max="1" chance="2" />
+				<item id="17329" min="1" max="1" chance="2" />
+				<item id="17330" min="1" max="1" chance="2" />
+				<item id="17331" min="1" max="1" chance="2" />
+				<item id="17332" min="1" max="1" chance="2" />
+				<item id="17333" min="1" max="1" chance="2" />
+				<item id="17334" min="1" max="1" chance="2" />
+				<item id="17346" min="1" max="1" chance="2" />
+				<item id="17355" min="1" max="1" chance="2" />
+				<item id="17354" min="1" max="1" chance="2" />
+				<item id="17339" min="1" max="1" chance="2" />
+				<item id="17340" min="1" max="1" chance="2" />
+				<item id="17341" min="1" max="1" chance="2" />
+				<item id="17342" min="1" max="1" chance="2" />
+				<item id="17343" min="1" max="1" chance="2" />
+				<item id="17344" min="1" max="1" chance="2" />
+				<item id="17345" min="1" max="1" chance="2" />
+				<item id="17347" min="1" max="1" chance="2" />
+				<item id="17348" min="1" max="1" chance="2" />
+				<item id="17349" min="1" max="1" chance="2" />
+				<item id="17350" min="1" max="1" chance="2" />
+				<item id="17351" min="1" max="1" chance="2" />
+				<item id="17352" min="1" max="1" chance="2" />
+				<item id="17353" min="1" max="1" chance="2" />
+				<item id="17338" min="1" max="1" chance="2" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25933" level="93" type="L2RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25934" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25935" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25936" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="3969891000" sp="15879564" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="48998765" hpRegen="7.5" mp="48998765" mpRegen="2.7" />
+			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2750" magical="2650" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="15627" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="35" />
+			<height normal="46.5" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36513" min="1" max="4" chance="83" />
+				<item id="36979" min="1" max="1" chance="25" />
+				<item id="36978" min="1" max="1" chance="15" />
+				<item id="35325" min="1" max="1" chance="3.2" />
+				<item id="35326" min="1" max="1" chance="3.2" />
+				<item id="35296" min="1" max="1" chance="3.2" />
+				<item id="35297" min="1" max="1" chance="3.2" />
+				<item id="35298" min="1" max="1" chance="3.2" />
+				<item id="35299" min="1" max="1" chance="3.2" />
+				<item id="35300" min="1" max="1" chance="3.2" />
+				<item id="35301" min="1" max="1" chance="3.2" />
+				<item id="35302" min="1" max="1" chance="3.2" />
+				<item id="35303" min="1" max="1" chance="3.2" />
+				<item id="35304" min="1" max="1" chance="3.2" />
+				<item id="35305" min="1" max="1" chance="3.2" />
+				<item id="35306" min="1" max="1" chance="3.2" />
+				<item id="35324" min="1" max="1" chance="3.2" />
+				<item id="35323" min="1" max="1" chance="3.2" />
+				<item id="35322" min="1" max="1" chance="3.2" />
+				<item id="35307" min="1" max="1" chance="3.2" />
+				<item id="35308" min="1" max="1" chance="3.2" />
+				<item id="35309" min="1" max="1" chance="3.2" />
+				<item id="35310" min="1" max="1" chance="3.2" />
+				<item id="35311" min="1" max="1" chance="3.2" />
+				<item id="35312" min="1" max="1" chance="3.2" />
+				<item id="35313" min="1" max="1" chance="3.2" />
+				<item id="35314" min="1" max="1" chance="3.2" />
+				<item id="35315" min="1" max="1" chance="3.2" />
+				<item id="35321" min="1" max="1" chance="3.2" />
+				<item id="35320" min="1" max="1" chance="3.2" />
+				<item id="35319" min="1" max="1" chance="3.2" />
+				<item id="35318" min="1" max="1" chance="3.2" />
+				<item id="35317" min="1" max="1" chance="3.2" />
+				<item id="35316" min="1" max="1" chance="3.2" />
+				<item id="35438" min="1" max="1" chance="1.6" />
+				<item id="35439" min="1" max="1" chance="1.6" />
+				<item id="35440" min="1" max="1" chance="1.6" />
+				<item id="35441" min="1" max="1" chance="1.6" />
+				<item id="35442" min="1" max="1" chance="1.6" />
+				<item id="35443" min="1" max="1" chance="1.6" />
+				<item id="35444" min="1" max="1" chance="1.6" />
+				<item id="35445" min="1" max="1" chance="1.6" />
+				<item id="35446" min="1" max="1" chance="1.6" />
+				<item id="35447" min="1" max="1" chance="1.6" />
+				<item id="35448" min="1" max="1" chance="1.6" />
+				<item id="35449" min="1" max="1" chance="1.6" />
+				<item id="35450" min="1" max="1" chance="1.6" />
+				<item id="35437" min="1" max="1" chance="1.6" />
+				<item id="35436" min="1" max="1" chance="1.6" />
+				<item id="35435" min="1" max="1" chance="1.6" />
+				<item id="35421" min="1" max="1" chance="1.6" />
+				<item id="35420" min="1" max="1" chance="1.6" />
+				<item id="35422" min="1" max="1" chance="1.6" />
+				<item id="35423" min="1" max="1" chance="1.6" />
+				<item id="35424" min="1" max="1" chance="1.6" />
+				<item id="35425" min="1" max="1" chance="1.6" />
+				<item id="35426" min="1" max="1" chance="1.6" />
+				<item id="35427" min="1" max="1" chance="1.6" />
+				<item id="35428" min="1" max="1" chance="1.6" />
+				<item id="35434" min="1" max="1" chance="1.6" />
+				<item id="35433" min="1" max="1" chance="1.6" />
+				<item id="35432" min="1" max="1" chance="1.6" />
+				<item id="35431" min="1" max="1" chance="1.6" />
+				<item id="35430" min="1" max="1" chance="1.6" />
+				<item id="35429" min="1" max="1" chance="1.6" />
+				<item id="17386" min="1" max="1" chance="0.75188" />
+				<item id="17385" min="1" max="1" chance="0.75188" />
+				<item id="17384" min="1" max="1" chance="0.75188" />
+				<item id="17383" min="1" max="1" chance="0.75188" />
+				<item id="17382" min="1" max="1" chance="0.75188" />
+				<item id="17414" min="1" max="1" chance="0.75188" />
+				<item id="17415" min="1" max="1" chance="0.75188" />
+				<item id="17387" min="1" max="1" chance="0.75188" />
+				<item id="17388" min="1" max="1" chance="0.75188" />
+				<item id="17389" min="1" max="1" chance="0.75188" />
+				<item id="17390" min="1" max="1" chance="0.75188" />
+				<item id="17391" min="1" max="1" chance="0.75188" />
+				<item id="17392" min="1" max="1" chance="0.75188" />
+				<item id="17404" min="1" max="1" chance="0.75188" />
+				<item id="17413" min="1" max="1" chance="0.75188" />
+				<item id="17412" min="1" max="1" chance="0.75188" />
+				<item id="17397" min="1" max="1" chance="0.75188" />
+				<item id="17398" min="1" max="1" chance="0.75188" />
+				<item id="17399" min="1" max="1" chance="0.75188" />
+				<item id="17400" min="1" max="1" chance="0.75188" />
+				<item id="17401" min="1" max="1" chance="0.75188" />
+				<item id="17402" min="1" max="1" chance="0.75188" />
+				<item id="17403" min="1" max="1" chance="0.75188" />
+				<item id="17405" min="1" max="1" chance="0.75188" />
+				<item id="17406" min="1" max="1" chance="0.75188" />
+				<item id="17407" min="1" max="1" chance="0.75188" />
+				<item id="17408" min="1" max="1" chance="0.75188" />
+				<item id="17409" min="1" max="1" chance="0.75188" />
+				<item id="17410" min="1" max="1" chance="0.75188" />
+				<item id="17411" min="1" max="1" chance="0.75188" />
+				<item id="17396" min="1" max="1" chance="0.75188" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25934" level="93" type="L2Monster" name="Garden Patrol Minion" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
+			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2750" magical="2650" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="3" />
+		</skill_list>
+		<collision>
+			<radius normal="53" />
+			<height normal="45.5" />
+		</collision>
+	</npc>
+	<npc id="25935" level="93" type="L2Monster" name="Gardener Minion" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
+			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2750" magical="2650" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="4" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="43" />
+			<height normal="51.5" />
+		</collision>
+	</npc>
+	<npc id="25936" level="93" type="L2Monster" name="Garden Manager Minion" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
+			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2750" magical="2650" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="14" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="25937" level="95" type="L2RaidBoss" name="Spicula Negative" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25938" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25939" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="4142475000" sp="16569900" />
+		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+			<vitals hp="54247280" hpRegen="7.5" mp="54247280" mpRegen="2.7" />
+			<attack physical="80000" magical="60000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="3300" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="15628" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="36513" min="2" max="3" chance="90" />
+				<item id="36514" min="1" max="1" chance="80" />
+				<item id="36979" min="1" max="1" chance="60" />
+				<item id="36978" min="1" max="1" chance="30" />
+				<item id="35298" min="1" max="1" chance="3.2" />
+				<item id="35297" min="1" max="1" chance="3.2" />
+				<item id="35296" min="1" max="1" chance="3.2" />
+				<item id="35326" min="1" max="1" chance="3.2" />
+				<item id="35325" min="1" max="1" chance="3.2" />
+				<item id="35299" min="1" max="1" chance="3.2" />
+				<item id="35300" min="1" max="1" chance="3.2" />
+				<item id="35301" min="1" max="1" chance="3.2" />
+				<item id="35302" min="1" max="1" chance="3.2" />
+				<item id="35303" min="1" max="1" chance="3.2" />
+				<item id="35304" min="1" max="1" chance="3.2" />
+				<item id="35305" min="1" max="1" chance="3.2" />
+				<item id="35306" min="1" max="1" chance="3.2" />
+				<item id="35324" min="1" max="1" chance="3.2" />
+				<item id="35323" min="1" max="1" chance="3.2" />
+				<item id="35322" min="1" max="1" chance="3.2" />
+				<item id="35307" min="1" max="1" chance="3.2" />
+				<item id="35308" min="1" max="1" chance="3.2" />
+				<item id="35309" min="1" max="1" chance="3.2" />
+				<item id="35310" min="1" max="1" chance="3.2" />
+				<item id="35311" min="1" max="1" chance="3.2" />
+				<item id="35312" min="1" max="1" chance="3.2" />
+				<item id="35313" min="1" max="1" chance="3.2" />
+				<item id="35314" min="1" max="1" chance="3.2" />
+				<item id="35315" min="1" max="1" chance="3.2" />
+				<item id="35321" min="1" max="1" chance="3.2" />
+				<item id="35320" min="1" max="1" chance="3.2" />
+				<item id="35319" min="1" max="1" chance="3.2" />
+				<item id="35318" min="1" max="1" chance="3.2" />
+				<item id="35317" min="1" max="1" chance="3.2" />
+				<item id="35316" min="1" max="1" chance="3.2" />
+				<item id="35438" min="1" max="1" chance="1.6" />
+				<item id="35439" min="1" max="1" chance="1.6" />
+				<item id="35440" min="1" max="1" chance="1.6" />
+				<item id="35441" min="1" max="1" chance="1.6" />
+				<item id="35442" min="1" max="1" chance="1.6" />
+				<item id="35443" min="1" max="1" chance="1.6" />
+				<item id="35444" min="1" max="1" chance="1.6" />
+				<item id="35445" min="1" max="1" chance="1.6" />
+				<item id="35446" min="1" max="1" chance="1.6" />
+				<item id="35447" min="1" max="1" chance="1.6" />
+				<item id="35448" min="1" max="1" chance="1.6" />
+				<item id="35449" min="1" max="1" chance="1.6" />
+				<item id="35450" min="1" max="1" chance="1.6" />
+				<item id="35437" min="1" max="1" chance="1.6" />
+				<item id="35436" min="1" max="1" chance="1.6" />
+				<item id="35435" min="1" max="1" chance="1.6" />
+				<item id="35421" min="1" max="1" chance="1.6" />
+				<item id="35420" min="1" max="1" chance="1.6" />
+				<item id="35422" min="1" max="1" chance="1.6" />
+				<item id="35423" min="1" max="1" chance="1.6" />
+				<item id="35424" min="1" max="1" chance="1.6" />
+				<item id="35425" min="1" max="1" chance="1.6" />
+				<item id="35426" min="1" max="1" chance="1.6" />
+				<item id="35427" min="1" max="1" chance="1.6" />
+				<item id="35428" min="1" max="1" chance="1.6" />
+				<item id="35434" min="1" max="1" chance="1.6" />
+				<item id="35433" min="1" max="1" chance="1.6" />
+				<item id="35432" min="1" max="1" chance="1.6" />
+				<item id="35431" min="1" max="1" chance="1.6" />
+				<item id="35430" min="1" max="1" chance="1.6" />
+				<item id="35429" min="1" max="1" chance="1.6" />
+				<item id="17386" min="1" max="1" chance="0.75188" />
+				<item id="17385" min="1" max="1" chance="0.75188" />
+				<item id="17384" min="1" max="1" chance="0.75188" />
+				<item id="17383" min="1" max="1" chance="0.75188" />
+				<item id="17382" min="1" max="1" chance="0.75188" />
+				<item id="17414" min="1" max="1" chance="0.75188" />
+				<item id="17415" min="1" max="1" chance="0.75188" />
+				<item id="17387" min="1" max="1" chance="0.75188" />
+				<item id="17388" min="1" max="1" chance="0.75188" />
+				<item id="17389" min="1" max="1" chance="0.75188" />
+				<item id="17390" min="1" max="1" chance="0.75188" />
+				<item id="17391" min="1" max="1" chance="0.75188" />
+				<item id="17392" min="1" max="1" chance="0.75188" />
+				<item id="17404" min="1" max="1" chance="0.75188" />
+				<item id="17413" min="1" max="1" chance="0.75188" />
+				<item id="17412" min="1" max="1" chance="0.75188" />
+				<item id="17397" min="1" max="1" chance="0.75188" />
+				<item id="17398" min="1" max="1" chance="0.75188" />
+				<item id="17399" min="1" max="1" chance="0.75188" />
+				<item id="17400" min="1" max="1" chance="0.75188" />
+				<item id="17401" min="1" max="1" chance="0.75188" />
+				<item id="17402" min="1" max="1" chance="0.75188" />
+				<item id="17403" min="1" max="1" chance="0.75188" />
+				<item id="17405" min="1" max="1" chance="0.75188" />
+				<item id="17406" min="1" max="1" chance="0.75188" />
+				<item id="17407" min="1" max="1" chance="0.75188" />
+				<item id="17408" min="1" max="1" chance="0.75188" />
+				<item id="17409" min="1" max="1" chance="0.75188" />
+				<item id="17410" min="1" max="1" chance="0.75188" />
+				<item id="17411" min="1" max="1" chance="0.75188" />
+				<item id="17396" min="1" max="1" chance="0.75188" />
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25938" level="95" type="L2Monster" name="Spicula Fighter Minion" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="80000" magical="60000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="3300" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="25939" level="95" type="L2Monster" name="Spicula Archer Minion" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<attack physical="80000" magical="60000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="3300" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25940" level="99" type="L2Npc" name="Yehan Klodekus" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="63772970" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="34.32" />
+			<height normal="62.4" />
+		</collision>
+	</npc>
+	<npc id="25941" level="99" type="L2Npc" name="Yehan Klanikus" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="63772970" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="34.32" />
+			<height normal="62.4" />
+		</collision>
+	</npc>
+	<npc id="25942" level="98" type="L2Npc" name="Flaming Ladar" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="56685419" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="45.5" />
+		</collision>
+	</npc>
+	<npc id="25943" level="93" type="L2Npc" name="Wind Cassius" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43557442" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="45.5" />
+		</collision>
+	</npc>
+	<npc id="25944" level="88" type="L2Npc" name="Earth Terakan" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="38196049" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="45.5" />
+		</collision>
+	</npc>
+	<npc id="25945" level="98" type="L2Npc" name="Megaloprepis" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="56685419" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="100" />
+			<height normal="82.1" />
+		</collision>
+	</npc>
+	<npc id="25946" level="98" type="L2Npc" name="Antharas' Herald Komabor" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="63" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="25947" level="98" type="L2Npc" name="Skellrus' Herald Iskios" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="112" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="25948" level="98" type="L2Npc" name="Valakas' Herald Potigia" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="48" />
+			<height normal="73" />
+		</collision>
+	</npc>
+	<npc id="25949" level="98" type="L2Npc" name="Lindvior's Herald Numa" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25950" level="98" type="L2Npc" name="Fafurion's Herald Aquarion" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="55" />
+			<height normal="80.5" />
+		</collision>
+	</npc>
+	<npc id="25951" level="98" type="L2Npc" name="Mino Muscle Bomber" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="50" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="25952" level="98" type="L2Npc" name="Mino Dragon" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="46.5" />
+		</collision>
+	</npc>
+	<npc id="25953" level="98" type="L2Npc" name="Mino Povetor" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="25954" level="98" type="L2Npc" name="Mino Wyrm" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="25955" level="98" type="L2Npc" name="Nepho" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2463607" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="19" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="25956" level="98" type="L2Npc" name="Vengeful Eligos" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="56685419" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="25957" level="98" type="L2Npc" name="Vengeful Agarez" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="25958" level="98" type="L2Npc" name="Vengeful Lerazia" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25959" level="98" type="L2Npc" name="Vengeful Oretross" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="46.15" />
+		</collision>
+	</npc>
+	<npc id="25960" level="98" type="L2Npc" name="Vengeful Edaire" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25961" level="98" type="L2Npc" name="Vengeful Agonia" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="48182606" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="46.15" />
+		</collision>
+	</npc>
+	<npc id="25962" level="98" type="L2Npc" name="Dark Spicula" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="25963" level="98" type="L2Npc" name="Bloody Spicula" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25964" level="98" type="L2Npc" name="Dark Weiss" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25965" level="98" type="L2Npc" name="Bloody Weiss" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2745786" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25966" level="98" type="L2Npc" name="Spicula of Death" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2463607" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="25967" level="97" type="L2Npc" name="Zetahl" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="52069755" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="25968" level="97" type="L2Npc" name="Tabris" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="25969" level="97" type="L2Npc" name="Stelos" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="40.5" />
+		</collision>
+	</npc>
+	<npc id="25970" level="97" type="L2Npc" name="Ravolas" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25971" level="97" type="L2Npc" name="Stelo Soma" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="40.5" />
+		</collision>
+	</npc>
+	<npc id="25972" level="97" type="L2Npc" name="Dephracor" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25973" level="97" type="L2Npc" name="Puppet Orc Warrior" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="38.5" />
+		</collision>
+	</npc>
+	<npc id="25974" level="97" type="L2Npc" name="Puppet Orc Archer" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25975" level="97" type="L2Npc" name="Puppet Orc Shaman" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25976" level="97" type="L2Npc" name="Puppet Orc Wizard" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25977" level="97" type="L2Npc" name="Puppet Orc" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2462992" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="25978" level="97" type="L2Npc" name="Garamor's Herald Gariott" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="52069755" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="25979" level="97" type="L2Npc" name="Varvacion" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="44.5" />
+		</collision>
+	</npc>
+	<npc id="25980" level="97" type="L2Npc" name="Varmoni" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25981" level="97" type="L2Npc" name="Varvinos" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="41.5" />
+		</collision>
+	</npc>
+	<npc id="25982" level="97" type="L2Npc" name="Varmonia" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25983" level="97" type="L2Npc" name="Varkaron" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44259292" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="25984" level="97" type="L2Npc" name="Monisac" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25985" level="97" type="L2Npc" name="Monishe" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25986" level="97" type="L2Npc" name="Vinosac" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="25987" level="97" type="L2Npc" name="Vinoshe" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2522208" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="19" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="25988" level="97" type="L2Npc" name="Varkaron's Minion Karnon" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2462992" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25989" level="93" type="L2Npc" name="Harp's Clone" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43557442" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="44" />
+			<height normal="78" />
+		</collision>
+	</npc>
+	<npc id="25990" level="93" type="L2Npc" name="Isadora's Avatar" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="25991" level="93" type="L2Npc" name="Maliss' Avatar" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="25992" level="93" type="L2Npc" name="Embryo Garron" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="26.99" />
+		</collision>
+	</npc>
+	<npc id="25993" level="93" type="L2Npc" name="Embryo Nigel" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="25994" level="93" type="L2Npc" name="Embryo Dabos" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="25995" level="93" type="L2Npc" name="Embryo Warrior" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1265929" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25996" level="93" type="L2Npc" name="Embryo Archer" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2109880" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25997" level="93" type="L2Npc" name="Embryo Wizard" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2109880" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="25998" level="93" type="L2Npc" name="Embryo Priest" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2109880" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="25999" level="93" type="L2Npc" name="Embryo Infantry" title="Raid Minion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2164883" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+</list>

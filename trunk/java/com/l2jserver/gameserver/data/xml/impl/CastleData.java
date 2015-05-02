@@ -49,7 +49,7 @@ public final class CastleData implements IXmlReader
 	public void load()
 	{
 		_castles.clear();
-		parseDatapackDirectory("data/castles", true);
+		parseDatapackDirectory("/castles", true);
 	}
 	
 	@Override

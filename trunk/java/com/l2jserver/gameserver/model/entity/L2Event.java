@@ -134,11 +134,11 @@ public class L2Event
 				
 				if (_registeredPlayers.contains(player))
 				{
-					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/mods/EventEngine/Participating.htm");
+					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/mods/EventEngine/Participating.htm");
 				}
 				else
 				{
-					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/mods/EventEngine/Participation.htm");
+					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/mods/EventEngine/Participation.htm");
 				}
 				
 				if (htmContent != null)
@@ -372,7 +372,7 @@ public class L2Event
 				return "Cannot start event, invalid npc id.";
 			}
 			
-			try (FileReader fr = new FileReader(Config.DATAPACK_ROOT + "/data/events/" + _eventName);
+			try (FileReader fr = new FileReader(Config.DATAPACK_ROOT + "/events/" + _eventName);
 				BufferedReader br = new BufferedReader(fr))
 			{
 				_eventCreator = br.readLine();

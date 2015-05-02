@@ -53,6 +53,6 @@ public class L2WarehouseInstance extends L2NpcInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/warehouse/" + pom + ".htm";
+		return "html/warehouse/" + pom + ".htm";
 	}
 }

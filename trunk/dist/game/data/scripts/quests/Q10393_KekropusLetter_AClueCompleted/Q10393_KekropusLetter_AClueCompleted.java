@@ -160,7 +160,7 @@ public class Q10393_KekropusLetter_AClueCompleted extends Quest implements IBypa
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10393_KekropusLetter_AClueCompleted/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10393_KekropusLetter_AClueCompleted/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

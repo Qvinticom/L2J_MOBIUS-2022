@@ -67,7 +67,7 @@ public class L2MerchantInstance extends L2NpcInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/merchant/" + pom + ".htm";
+		return "html/merchant/" + pom + ".htm";
 	}
 	
 	/**

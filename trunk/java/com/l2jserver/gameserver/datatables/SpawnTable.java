@@ -53,7 +53,7 @@ public final class SpawnTable implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	// SQL
-	private static final String SELECT_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM " + (Config.SERVER_CLASSIC_SUPPORT ? "classic_spawnlist" : "spawnlist");
+	private static final String SELECT_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM spawnlist";
 	private static final String SELECT_CUSTOM_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM custom_spawnlist";
 	
 	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
@@ -78,7 +78,7 @@ public final class SpawnTable implements IXmlReader
 			}
 			
 			// Load XML list
-			parseDatapackDirectory("data/spawnlist", false);
+			parseDatapackDirectory("spawnlist", false);
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _xmlSpawnCount + " npc spawns from XML.");
 		}
 	}

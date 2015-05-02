@@ -42,7 +42,7 @@ public class ExPCCafeRequestOpenWindowWithoutNPC extends L2GameClientPacket
 	public void getHtmlPage(L2PcInstance player)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(player.getHtmlPrefix(), "data/html/pccafe.htm");
+		html.setFile(player.getHtmlPrefix(), "html/pccafe.htm");
 		player.sendPacket(html);
 	}
 	

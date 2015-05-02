@@ -83,10 +83,6 @@ public class PcStat extends PlayableStat
 		{
 			return false;
 		}
-		if (Config.SERVER_CLASSIC_SUPPORT && (getActiveChar().getLevel() >= Config.MAX_CLASSIC_PLAYER_LEVEL))
-		{
-			return false;
-		}
 		
 		if (!super.addExp(value))
 		{
@@ -461,9 +457,9 @@ public class PcStat extends PlayableStat
 	@Override
 	public final void setLevel(byte value)
 	{
-		if (value > (Config.SERVER_CLASSIC_SUPPORT ? Config.MAX_CLASSIC_PLAYER_LEVEL : ExperienceData.getInstance().getMaxLevel() - 1))
+		if (value > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
-			value = Config.SERVER_CLASSIC_SUPPORT ? Config.MAX_CLASSIC_PLAYER_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+			value = (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
 		}
 		
 		if (getActiveChar().isSubClassActive())

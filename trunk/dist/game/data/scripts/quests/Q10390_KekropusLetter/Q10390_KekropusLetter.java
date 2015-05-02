@@ -235,7 +235,7 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10390_KekropusLetter/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10390_KekropusLetter/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

@@ -21,7 +21,6 @@ package vehicles;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.instancemanager.BoatManager;
@@ -168,11 +167,6 @@ public class BoatRunePrimeval implements Runnable
 	
 	public static void main(String[] args)
 	{
-		if (Config.SERVER_CLASSIC_SUPPORT)
-		{
-			return;
-		}
-		
 		final L2BoatInstance boat = BoatManager.getInstance().getNewBoat(5, 34381, -37680, -3610, 40785);
 		if (boat != null)
 		{

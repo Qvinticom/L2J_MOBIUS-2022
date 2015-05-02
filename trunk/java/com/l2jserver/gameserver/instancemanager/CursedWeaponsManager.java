@@ -96,10 +96,10 @@ public final class CursedWeaponsManager
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/data/cursedWeapons.xml");
+			File file = new File(Config.DATAPACK_ROOT + "/cursedWeapons.xml");
 			if (!file.exists())
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find data/" + file.getName());
+				_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find " + file.getName());
 				return;
 			}
 			

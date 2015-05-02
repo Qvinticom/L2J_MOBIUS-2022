@@ -48,7 +48,7 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	private static final int REQUIRED_CRYSTAL_COUNT = 10;
 	private static final int REQUIRED_CLAN_LEVEL = 4;
 	private static final int MINUTES_TO_SIEGE = 3600;
-	private static final String PATH_TO_HTML = "data/scripts/conquerablehalls/flagwar/WildBeastReserve/messenger_initial.htm";
+	private static final String PATH_TO_HTML = "scripts/conquerablehalls/flagwar/WildBeastReserve/messenger_initial.htm";
 	
 	public Q00655_AGrandPlanForTamingWildBeasts()
 	{

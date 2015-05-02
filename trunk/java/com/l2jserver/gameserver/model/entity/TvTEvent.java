@@ -77,7 +77,7 @@ public class TvTEvent
 	
 	protected static final Logger _log = Logger.getLogger(TvTEvent.class.getName());
 	/** html path **/
-	private static final String htmlPath = "data/scripts/custom/events/TvT/TvTManager/";
+	private static final String htmlPath = "scripts/custom/events/TvT/TvTManager/";
 	/** The teams of the TvTEvent<br> */
 	private static TvTEventTeam[] _teams = new TvTEventTeam[2];
 	/** The state of the TvTEvent<br> */

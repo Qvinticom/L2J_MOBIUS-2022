@@ -49,7 +49,7 @@ public final class ClassListData implements IXmlReader
 	public void load()
 	{
 		_classData.clear();
-		parseDatapackFile("data/stats/chars/classList.xml");
+		parseDatapackFile("stats/chars/classList.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " Class data.");
 	}
 	

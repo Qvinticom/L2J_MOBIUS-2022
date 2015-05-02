@@ -20,7 +20,6 @@ package ai.npc.Nomi;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -76,11 +75,6 @@ public final class Nomi extends AbstractNpcAI
 		addStartNpc(NOMI);
 		addTalkId(NOMI);
 		addFirstTalkId(NOMI);
-		
-		if (Config.SERVER_CLASSIC_SUPPORT)
-		{
-			return;
-		}
 		
 		for (Location loc : SPAWN_LOCATIONS)
 		{

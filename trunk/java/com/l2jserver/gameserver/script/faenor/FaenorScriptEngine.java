@@ -42,7 +42,7 @@ import com.l2jserver.util.file.filter.XMLFilter;
 public class FaenorScriptEngine extends ScriptEngine
 {
 	private static final Logger _log = Logger.getLogger(FaenorScriptEngine.class.getName());
-	public static final String PACKAGE_DIRECTORY = "data/faenor/";
+	public static final String PACKAGE_DIRECTORY = "faenor/";
 	
 	protected FaenorScriptEngine()
 	{

@@ -46,6 +46,6 @@ public class L2TrainerInstance extends L2NpcInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/trainer/" + pom + ".htm";
+		return "html/trainer/" + pom + ".htm";
 	}
 }

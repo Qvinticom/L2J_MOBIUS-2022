@@ -261,7 +261,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/data/spawnZones/final_emperial_tomb.xml");
+			File file = new File(Config.DATAPACK_ROOT + "/spawnZones/final_emperial_tomb.xml");
 			if (!file.exists())
 			{
 				_log.severe("[Final Emperial Tomb] Missing final_emperial_tomb.xml. The quest wont work without it!");

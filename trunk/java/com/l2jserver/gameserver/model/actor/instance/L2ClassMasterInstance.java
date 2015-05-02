@@ -64,7 +64,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/classmaster/" + pom + ".htm";
+		return "html/classmaster/" + pom + ".htm";
 	}
 	
 	@Override
@@ -89,7 +89,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			if (checkAndChangeClass(player, val))
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/ok.htm");
+				html.setFile(player.getHtmlPrefix(), "html/classmaster/ok.htm");
 				html.replace("%name%", ClassListData.getInstance().getClass(val).getClientCode());
 				player.sendPacket(html);
 			}
@@ -101,7 +101,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 				player.setNoble(true);
 				player.sendPacket(new UserInfo(player));
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/nobleok.htm");
+				html.setFile(player.getHtmlPrefix(), "html/classmaster/nobleok.htm");
 				player.sendPacket(html);
 			}
 		}
@@ -114,13 +114,13 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			if (!player.isClanLeader())
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/noclanleader.htm");
+				html.setFile(player.getHtmlPrefix(), "html/classmaster/noclanleader.htm");
 				player.sendPacket(html);
 			}
 			else if (player.getClan().getLevel() >= 5)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/noclanlevel.htm");
+				html.setFile(player.getHtmlPrefix(), "html/classmaster/noclanlevel.htm");
 				player.sendPacket(html);
 			}
 			else
@@ -194,7 +194,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		if (!Config.ALLOW_CLASS_MASTERS)
 		{
-			html.setFile(player.getHtmlPrefix(), "data/html/classmaster/disabled.htm");
+			html.setFile(player.getHtmlPrefix(), "html/classmaster/disabled.htm");
 		}
 		else if (!Config.CLASS_MASTER_SETTINGS.isAllowed(level))
 		{
@@ -257,7 +257,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			final ClassId currentClassId = player.getClassId();
 			if (currentClassId.level() >= level)
 			{
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/nomore.htm");
+				html.setFile(player.getHtmlPrefix(), "html/classmaster/nomore.htm");
 			}
 			else
 			{
@@ -279,13 +279,13 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 					
 					if (menu.length() > 0)
 					{
-						html.setFile(player.getHtmlPrefix(), "data/html/classmaster/template.htm");
+						html.setFile(player.getHtmlPrefix(), "html/classmaster/template.htm");
 						html.replace("%name%", ClassListData.getInstance().getClass(currentClassId).getClientCode());
 						html.replace("%menu%", menu.toString());
 					}
 					else
 					{
-						html.setFile(player.getHtmlPrefix(), "data/html/classmaster/comebacklater.htm");
+						html.setFile(player.getHtmlPrefix(), "html/classmaster/comebacklater.htm");
 						html.replace("%level%", String.valueOf(getMinLevel(level - 1)));
 					}
 				}
@@ -293,12 +293,12 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 				{
 					if (minLevel < Integer.MAX_VALUE)
 					{
-						html.setFile(player.getHtmlPrefix(), "data/html/classmaster/comebacklater.htm");
+						html.setFile(player.getHtmlPrefix(), "html/classmaster/comebacklater.htm");
 						html.replace("%level%", String.valueOf(minLevel));
 					}
 					else
 					{
-						html.setFile(player.getHtmlPrefix(), "data/html/classmaster/nomore.htm");
+						html.setFile(player.getHtmlPrefix(), "html/classmaster/nomore.htm");
 					}
 				}
 			}
@@ -317,7 +317,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			return;
 		}
 		
-		String msg = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/classmaster/tutorialtemplate.htm");
+		String msg = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/classmaster/tutorialtemplate.htm");
 		msg = msg.replaceAll("%name%", ClassListData.getInstance().getClass(currentClassId).getEscapedClientCode());
 		
 		final StringBuilder menu = new StringBuilder(100);

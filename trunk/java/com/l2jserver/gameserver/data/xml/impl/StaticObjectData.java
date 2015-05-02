@@ -51,7 +51,7 @@ public final class StaticObjectData implements IXmlReader
 	public void load()
 	{
 		_staticObjects.clear();
-		parseDatapackFile("data/staticObjects.xml");
+		parseDatapackFile("staticObjects.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _staticObjects.size() + " static object templates.");
 	}
 	

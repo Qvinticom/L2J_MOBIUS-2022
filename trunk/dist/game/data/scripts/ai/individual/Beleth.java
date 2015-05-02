@@ -666,7 +666,7 @@ public final class Beleth extends AbstractNpcAI
 			html = "32470b.htm";
 		}
 		
-		return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/default/" + html);
+		return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/default/" + html);
 	}
 	
 	@Override

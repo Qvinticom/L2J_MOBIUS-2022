@@ -170,7 +170,7 @@ public class Q10415_KekropusLetter_WithWisdom extends Quest implements IBypassHa
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/quests/Q10415_KekropusLetter_WithWisdom/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10415_KekropusLetter_WithWisdom/Announce.html"));
 				player.sendPacket(html);
 			}
 			return;

@@ -48,6 +48,6 @@ public class L2AdventurerInstance extends L2NpcInstance
 			pom = npcId + "-" + val;
 		}
 		
-		return "data/html/adventurer_guildsman/" + pom + ".htm";
+		return "html/adventurer_guildsman/" + pom + ".htm";
 	}
 }
