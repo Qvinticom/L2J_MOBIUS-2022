@@ -7,6 +7,7 @@
 			<slot slotId="3" shortcutType="ACTION" shortcutId="5" /> <!-- Pick Up -->
 			<slot slotId="4" shortcutType="ACTION" shortcutId="4" /> <!-- Next Target -->
 			<slot slotId="10" shortcutType="ACTION" shortcutId="0" /> <!-- Sit/Stand -->
+			<slot slotId="11" shortcutType="ITEM" shortcutId="5588" /> <!-- Tutorial Guide -->
 		</page>
 		<!-- Custom example. -->
 		<page pageId="1">
@@ -38,12 +39,6 @@
 	<shortcuts classId="49">
 		<page pageId="0">
 			<slot slotId="1" shortcutType="SKILL" shortcutId="1001" shortcutLevel="1" /> <!-- Soul Cry -->
-		</page>
-	</shortcuts>
-	<!-- Ertheia Wizard -->
-	<shortcuts classId="183">
-		<page pageId="0">
-			<slot slotId="1" shortcutType="SKILL" shortcutId="30001" shortcutLevel="1" /> <!-- Hydro Attack -->
 		</page>
 	</shortcuts>
 	<!-- Macro presets -->
