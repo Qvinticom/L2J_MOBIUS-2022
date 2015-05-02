@@ -36,7 +36,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 	// NPCs
 	private static final int PREFECT_KARUKIA = 30570;
 	private static final int PREFRCT_KASMAN = 30501;
-	private static final int PREFRCT_TAZEER = 31978;
+	private static final int PREFRCT_TAZEER = 31978; // Careful with this id, might have changed during Chronicles.
 	// Items
 	private static final int GREEN_BLOOD = 1578;
 	private static final int GOBLIN_DWELLING_MAP = 1579;

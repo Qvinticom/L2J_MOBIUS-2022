@@ -38,9 +38,9 @@ public final class Q00418_PathOfTheArtisan extends Quest
 	private static final int BLACKSMITH_PINTER = 30298;
 	private static final int BLACKSMITH_KLUTO = 30317;
 	private static final int IRON_GATES_LOCKIRIN = 30531;
-	private static final int WAREHOUSE_KEEPER_RYDEL = 31956;
-	private static final int MINERAL_TRADER_HITCHI = 31963;
-	private static final int RAILROAD_WORKER_OBI = 32052;
+	private static final int WAREHOUSE_KEEPER_RYDEL = 31956; // Careful with this id, might have changed during Chronicles.
+	private static final int MINERAL_TRADER_HITCHI = 31963; // Careful with this id, might have changed during Chronicles.
+	private static final int RAILROAD_WORKER_OBI = 32052; // Careful with this id, might have changed during Chronicles.
 	// Items
 	private static final int SILVERYS_RING = 1632;
 	private static final int PASS_1ST_CERTIFICATE = 1633;

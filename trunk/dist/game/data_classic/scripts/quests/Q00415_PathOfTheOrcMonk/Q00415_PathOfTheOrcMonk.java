@@ -40,8 +40,8 @@ public final class Q00415_PathOfTheOrcMonk extends Quest
 	private static final int GANTAKI_ZU_URUTU = 30587;
 	private static final int KHAVATARI_ROSHEEK = 30590;
 	private static final int KHAVATARI_TORUKU = 30591;
-	private static final int SEER_MOIRA = 31979;
-	private static final int KHAVATARI_AREN = 32056;
+	private static final int SEER_MOIRA = 31979; // Careful with this id, might have changed during Chronicles.
+	private static final int KHAVATARI_AREN = 32056; // Careful with this id, might have changed during Chronicles.
 	// Items
 	private static final int POMEGRANATE = 1593;
 	private static final int LEATHER_POUCH_1ST = 1594;

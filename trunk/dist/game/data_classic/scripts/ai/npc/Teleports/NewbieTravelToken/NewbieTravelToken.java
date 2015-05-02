@@ -49,7 +49,6 @@ public final class NewbieTravelToken extends AbstractNpcAI
 		DATA.put(30599, new Location(45470, 48328, -3059)); // EV
 		DATA.put(30602, new Location(-45067, -113563, -199)); // OV
 		DATA.put(30598, new Location(-84053, 243343, -3729)); // TI
-		DATA.put(32135, new Location(-119712, 44519, 368)); // SI
 		
 		for (int npcId : DATA.keySet())
 		{

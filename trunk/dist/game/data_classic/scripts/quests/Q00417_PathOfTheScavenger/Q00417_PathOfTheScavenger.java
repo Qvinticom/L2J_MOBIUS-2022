@@ -43,7 +43,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 	private static final int PRIEST_OF_THE_EARTH_ZIMENF = 30538;
 	private static final int MASTER_TOMA = 30556;
 	private static final int TORAI = 30557;
-	private static final int WAREHOUSE_CHIEF_YASENI = 31958;
+	private static final int WAREHOUSE_CHIEF_YASENI = 31958; // Careful with this id, might have changed during Chronicles.
 	// Items
 	private static final int PIPPIS_LETTER_OF_RECOMMENDATION = 1643;
 	private static final int ROUTS_TELEPORT_SCROLL = 1644;

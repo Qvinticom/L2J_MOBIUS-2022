@@ -44,9 +44,9 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	private static final int TATARU_ZU_HESTUI = 30585;
 	private static final int HESTUI_TOTEM_SPIRIT = 30592;
 	private static final int DUDA_MARA_TOTEM_SPIRIT = 30593;
-	private static final int MOIRA = 31979;
-	private static final int TOTEM_SPIRIT_OF_GANDI = 32057;
-	private static final int DEAD_LEOPARDS_CARCASS = 32090;
+	private static final int MOIRA = 31979; // Careful with this id, might have changed during Chronicles.
+	private static final int TOTEM_SPIRIT_OF_GANDI = 32057; // Careful with this id, might have changed during Chronicles.
+	private static final int DEAD_LEOPARDS_CARCASS = 32090; // Careful with this id, might have changed during Chronicles.
 	// Items
 	private static final int FIRE_CHARM = 1616;
 	private static final int KASHA_BEAR_PELT = 1617;
