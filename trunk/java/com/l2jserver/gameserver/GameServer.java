@@ -313,9 +313,9 @@ public final class GameServer
 		GrandBossManager.getInstance().initZones();
 		EventDroplist.getInstance();
 		
+		printSection("Olympiad");
 		if (!Config.SERVER_CLASSIC_SUPPORT)
 		{
-			printSection("Olympiad");
 			Olympiad.getInstance();
 		}
 		Hero.getInstance();
