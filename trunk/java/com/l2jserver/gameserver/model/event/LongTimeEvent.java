@@ -32,6 +32,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -110,7 +111,7 @@ public class LongTimeEvent extends Quest
 	 */
 	private void loadConfig()
 	{
-		File configFile = new File("scripts/events/" + getName() + "/config.xml");
+		File configFile = new File(Config.DATAPACK_ROOT.getPath() + "/scripts/events/" + getName() + "/config.xml");
 		try
 		{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
