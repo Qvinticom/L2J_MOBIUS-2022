@@ -272,46 +272,6 @@
 		<race name="ELF" point="giran_castle_town" />
 		<race name="KAMAEL" point="giran_castle_town" />
 	</zone>
-	<zone name="heiness_town_23_22_2" type="RespawnZone" shape="NPoly" minZ="-4572" maxZ="-2072">
-		<node X="123367" Y="145103" />
-		<node X="131151" Y="141459" />
-		<node X="131237" Y="164129" />
-		<node X="119229" Y="164122" />
-		<node X="119264" Y="151714" />
-		<race name="HUMAN" point="heiness_town" />
-		<race name="DARK_ELF" point="heiness_town" />
-		<race name="ORC" point="heiness_town" />
-		<race name="DWARF" point="heiness_town" />
-		<race name="ELF" point="heiness_town" />
-		<race name="KAMAEL" point="heiness_town" />
-	</zone>
-	<zone name="heiness_town_23_22_1" type="RespawnZone" shape="NPoly" minZ="-4578" maxZ="-2078">
-		<node X="108429" Y="151108" />
-		<node X="119577" Y="151332" />
-		<node X="119582" Y="164120" />
-		<node X="98099" Y="164101" />
-		<node X="98071" Y="157216" />
-		<node X="100683" Y="154025" />
-		<race name="HUMAN" point="heiness_town" />
-		<race name="DARK_ELF" point="heiness_town" />
-		<race name="ORC" point="heiness_town" />
-		<race name="DWARF" point="heiness_town" />
-		<race name="ELF" point="heiness_town" />
-		<race name="KAMAEL" point="heiness_town" />
-	</zone>
-	<zone name="heiness_town_22_22" type="RespawnZone" shape="NPoly" minZ="-4331" maxZ="-1831">
-		<node X="93549" Y="155049" />
-		<node X="98410" Y="156923" />
-		<node X="98436" Y="163903" />
-		<node X="82360" Y="163905" />
-		<node X="82360" Y="160215" />
-		<race name="HUMAN" point="heiness_town" />
-		<race name="DARK_ELF" point="heiness_town" />
-		<race name="ORC" point="heiness_town" />
-		<race name="DWARF" point="heiness_town" />
-		<race name="ELF" point="heiness_town" />
-		<race name="KAMAEL" point="heiness_town" />
-	</zone>
 	<zone name="giran_castle_town_21_24" type="RespawnZone" shape="NPoly" minZ="-5068" maxZ="2932">
 		<node X="56950" Y="199547" />
 		<node X="60975" Y="202588" />
@@ -1145,19 +1105,6 @@
 		<race name="DWARF" point="rune_town" />
 		<race name="ELF" point="rune_town" />
 		<race name="KAMAEL" point="rune_town" />
-	</zone>
-	<zone name="heiness_town_24_22" type="RespawnZone" shape="NPoly" minZ="-23970" maxZ="36029">
-		<node X="135252" Y="147334" />
-		<node X="148970" Y="141187" />
-		<node X="163230" Y="148425" />
-		<node X="163566" Y="164342" />
-		<node X="131584" Y="164349" />
-		<race name="HUMAN" point="heiness_town" />
-		<race name="DARK_ELF" point="heiness_town" />
-		<race name="ORC" point="heiness_town" />
-		<race name="DWARF" point="heiness_town" />
-		<race name="ELF" point="heiness_town" />
-		<race name="KAMAEL" point="heiness_town" />
 	</zone>
 	<zone name="ironcastle_inner_oasis_20_25" type="RespawnZone" shape="NPoly" minZ="-30000" maxZ="30000">
 		<node X="28066" Y="258031" />
