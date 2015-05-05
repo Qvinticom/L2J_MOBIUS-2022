@@ -38,10 +38,10 @@ public interface IAmountMultiplierStrategy
 		{
 			double multiplier = 1;
 			
-			Float dropChanceMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
-			if (dropChanceMultiplier != null)
+			Float dropAmountMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
+			if (dropAmountMultiplier != null)
 			{
-				multiplier *= dropChanceMultiplier;
+				multiplier *= dropAmountMultiplier;
 			}
 			else if (ItemTable.getInstance().getTemplate(item.getItemId()).hasExImmediateEffect())
 			{

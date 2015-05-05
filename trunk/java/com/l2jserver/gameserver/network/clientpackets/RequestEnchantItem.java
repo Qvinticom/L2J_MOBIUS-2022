@@ -358,14 +358,6 @@ public final class RequestEnchantItem extends L2GameClientPacket
 								activeChar.sendPacket(sm);
 							}
 							
-							if (!Config.FORCE_INVENTORY_UPDATE)
-							{
-								if (crystals != null)
-								{
-									iu.addItem(crystals);
-								}
-							}
-							
 							if (crystalId == 0)
 							{
 								activeChar.sendPacket(new EnchantResult(EnchantResult.NO_CRYSTAL, 0, 0));
