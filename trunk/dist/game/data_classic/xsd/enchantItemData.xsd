@@ -50,32 +50,6 @@
 						<xs:attribute name="scrollGroupId" type="xs:int" use="optional" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="support" minOccurs="1" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-						<xs:attribute name="maxEnchant" use="required">
-							<xs:simpleType>
-								<xs:restriction base="xs:positiveInteger">
-									<xs:minInclusive value="1" />
-									<xs:maxInclusive value="65535" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
-						<xs:attribute name="bonusRate" type="xs:double" use="required" />
-						<xs:attribute name="targetGrade" use="required">
-							<xs:simpleType>
-								<xs:restriction base="xs:token">
-									<xs:enumeration value="A" />
-									<xs:enumeration value="B" />
-									<xs:enumeration value="C" />
-									<xs:enumeration value="D" />
-									<xs:enumeration value="S" />
-									<xs:enumeration value="R" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
-					</xs:complexType>
-				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

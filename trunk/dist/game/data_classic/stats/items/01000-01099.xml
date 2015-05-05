@@ -12,83 +12,6 @@
 			<add order="0" stat="pDef" val="9" />
 		</for>
 	</item>
-	<item id="1001" type="EtcItem" name="Book of Aklantoth - Part 4">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1002" type="EtcItem" name="Book of Aklantoth - Part 5">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1003" type="EtcItem" name="Book of Aklantoth - Part 6">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1004" type="EtcItem" name="Book of Aklantoth - Part 7">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1005" type="EtcItem" name="Book of Aklantoth - Part 8">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1006" type="EtcItem" name="Book of Aklantoth - Part 9">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1007" type="EtcItem" name="Book of Aklantoth - Part 10">
-		<set name="icon" val="icon.item_normal07" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
 	<item id="1008" type="EtcItem" name="Harrys's 1st Receipt">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -655,63 +578,6 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1062" type="EtcItem" name="Haste Potion">
-		<set name="icon" val="icon.etc_reagent_green_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="180" />
-		<set name="price" val="5000" />
-		<set name="reuse_delay" val="500" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="for_npc" val="true" />
-	</item>
-	<item id="1063" type="EtcItem" name="Tutorial Parchment">
-		<set name="icon" val="icon.item_canuse15" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1064" type="EtcItem" name="Tutorial Parchment">
-		<set name="icon" val="icon.item_canuse15" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1065" type="EtcItem" name="Tutorial Parchment">
-		<set name="icon" val="icon.item_canuse15" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1066" type="EtcItem" name="Tutorial Parchment">
-		<set name="icon" val="icon.item_canuse15" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
 	<item id="1067" type="EtcItem" name="Recommendation">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -791,22 +657,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2031-1" />
 		<set name="for_npc" val="true" />
-	</item>
-	<item id="1074" type="EtcItem" name="Boat Ticket: Talking Island to Gludin">
-		<set name="icon" val="icon.etc_ticket_red_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="20" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1075" type="EtcItem" name="Boat Ticket: Gludin to Talking Island">
-		<set name="icon" val="icon.etc_ticket_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="20" />
-		<set name="price" val="5000" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1076" type="EtcItem" name="Carlon's Letter">
 		<set name="icon" val="icon.etc_scroll_white_i00" />

@@ -472,32 +472,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3035" type="EtcItem" name="Recipe: Spiritshot A">
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="150000" />
-		<set name="recipe_id" val="320" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-		<set name="commissionItemType" val="RECIPE" />
-	</item>
-	<item id="3036" type="EtcItem" name="Recipe: Spiritshot S">
-		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="450000" />
-		<set name="recipe_id" val="321" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-		<set name="commissionItemType" val="RECIPE" />
-	</item>
 	<item id="3037" type="EtcItem" name="Kakan's Letter">
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />

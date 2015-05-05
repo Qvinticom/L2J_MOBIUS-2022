@@ -39,16 +39,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="10" max="20" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="10" max="20" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />

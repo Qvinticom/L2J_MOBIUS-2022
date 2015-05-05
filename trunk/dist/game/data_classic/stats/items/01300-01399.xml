@@ -660,32 +660,6 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1344" type="EtcItem" name="Mithril Arrow">
-		<set name="icon" val="icon.etc_mithril_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="3" />
-		<set name="price" val="8" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1345" type="EtcItem" name="Arrow of Light">
-		<set name="icon" val="icon.etc_shining_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="3" />
-		<set name="price" val="10" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="1346" type="EtcItem" name="Golem's Stoneheart">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1189,20 +1163,6 @@
 		<set name="weight" val="120" />
 		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1395" type="EtcItem" name="Spellbook: Surrender to Water">
-		<set name="icon" val="icon.etc_spell_books_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="price" val="1250" />
-	</item>
-	<item id="1396" type="EtcItem" name="Spellbook: Surrender to Wind">
-		<set name="icon" val="icon.etc_spell_books_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="price" val="1250" />
 	</item>
 	<item id="1397" type="EtcItem" name="Spellbook: Peace">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />

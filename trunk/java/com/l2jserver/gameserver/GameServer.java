@@ -228,21 +228,24 @@ public final class GameServer
 		ItemTable.getInstance();
 		EnchantItemGroupsData.getInstance();
 		EnchantItemData.getInstance();
-		EnchantItemOptionsData.getInstance();
-		ItemCrystalizationData.getInstance();
-		OptionData.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			EnchantItemOptionsData.getInstance();
+			ItemCrystalizationData.getInstance();
+			OptionData.getInstance();
+		}
 		EnchantItemHPBonusData.getInstance();
 		MerchantPriceConfigTable.getInstance().loadInstances();
 		BuyListData.getInstance();
 		MultisellData.getInstance();
 		RecipeData.getInstance();
 		ArmorSetsData.getInstance();
-		FishData.getInstance();
-		FishingMonstersData.getInstance();
-		FishingRodsData.getInstance();
 		HennaData.getInstance();
 		if (!Config.SERVER_CLASSIC_SUPPORT)
 		{
+			FishData.getInstance();
+			FishingMonstersData.getInstance();
+			FishingRodsData.getInstance();
 			CommissionManager.getInstance();
 			PrimeShopData.getInstance();
 			AppearanceItemData.getInstance();
@@ -258,13 +261,13 @@ public final class GameServer
 		HitConditionBonusData.getInstance();
 		PlayerTemplateData.getInstance();
 		CharNameTable.getInstance();
+		BeautyShopData.getInstance();
 		AdminData.getInstance();
 		RaidBossPointsManager.getInstance();
-		PetDataTable.getInstance();
 		CharSummonTable.getInstance().init();
 		if (!Config.SERVER_CLASSIC_SUPPORT)
 		{
-			BeautyShopData.getInstance();
+			PetDataTable.getInstance();
 			MentorManager.getInstance();
 		}
 		if (Config.FACTION_SYSTEM_ENABLED)

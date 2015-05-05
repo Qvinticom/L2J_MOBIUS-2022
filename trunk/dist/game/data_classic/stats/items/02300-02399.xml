@@ -300,18 +300,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2325" type="EtcItem" name="Recipe: Tears of Fairy">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="11480" />
-		<set name="recipe_id" val="218" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
 	<item id="2326" type="EtcItem" name="Recipe: Horn of Glory">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -576,30 +564,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2348" type="EtcItem" name="Recipe: Heathen's Book">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17200" />
-		<set name="recipe_id" val="241" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2349" type="EtcItem" name="Recipe: Hex Doll">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17200" />
-		<set name="recipe_id" val="242" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
 	<item id="2350" type="EtcItem" name="Recipe: Pa'agrian Axe">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -729,90 +693,6 @@
 		<set name="weight" val="30" />
 		<set name="price" val="24520" />
 		<set name="recipe_id" val="253" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2361" type="EtcItem" name="Recipe: Candle of Wisdom">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="254" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2362" type="EtcItem" name="Recipe: Blessed Branch">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="255" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2363" type="EtcItem" name="Recipe: Phoenix Feather">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="256" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2364" type="EtcItem" name="Recipe: Cerberus Eye">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="257" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2365" type="EtcItem" name="Recipe: Scroll of Destruction">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="258" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2366" type="EtcItem" name="Recipe: Claws of Black Dragon">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="259" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="2367" type="EtcItem" name="Recipe: Three Eyed Crow's Feather">
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="24520" />
-		<set name="recipe_id" val="260" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -976,21 +856,6 @@
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="2375" type="EtcItem" name="Wolf Collar">
-		<set name="icon" val="icon.etc_prefect_belt_i00" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
-		<set name="etcitem_type" val="PET_COLLAR" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="10" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<set name="commissionItemType" val="PET_SUPPLIES" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
-	</item>
 	<item id="2376" type="Armor" name="Avadon Breastplate">
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1096,42 +961,6 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="2382" type="Armor" name="Tallum Plate Armor">
-		<set name="icon" val="icon.armor_t77_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="308" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="9780" />
-		<set name="price" val="5788000" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="FULL_BODY" />
-		<for>
-			<add order="0" stat="pDef" val="278" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
-	<item id="2383" type="Armor" name="Majestic Plate Armor">
-		<set name="icon" val="icon.armor_t83_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="469" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="9200" />
-		<set name="price" val="8804000" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="FULL_BODY" />
-		<for>
-			<add order="0" stat="pDef" val="293" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
 	<item id="2384" type="Armor" name="Zubei's Leather Shirt">
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,23 +975,6 @@
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="117" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
-	<item id="2385" type="Armor" name="Dark Crystal Leather Armor">
-		<set name="icon" val="icon.armor_t75_u_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="142" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="4300" />
-		<set name="price" val="2671000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="pDef" val="128" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1210,23 +1022,6 @@
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="pDef" val="73" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
-	<item id="2389" type="Armor" name="Dark Crystal Leggings">
-		<set name="icon" val="icon.armor_t75_l_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="89" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1480" />
-		<set name="price" val="1670000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="pDef" val="80" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1280,58 +1075,6 @@
 		<set name="commissionItemType" val="FULL_BODY" />
 		<for>
 			<add order="0" stat="pDef" val="202" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
-	<item id="2393" type="Armor" name="Tallum Leather Armor">
-		<set name="icon" val="icon.armor_t78_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="231" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="5400" />
-		<set name="price" val="4341000" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="FULL_BODY" />
-		<for>
-			<add order="0" stat="pDef" val="209" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
-	<item id="2394" type="Armor" name="Leather Armor of Nightmare">
-		<set name="icon" val="icon.armor_t81_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="352" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="5300" />
-		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="pDef" val="220" />
-			<enchant stat="pDef" val="0" />
-		</for>
-	</item>
-	<item id="2395" type="Armor" name="Majestic Leather Armor">
-		<set name="icon" val="icon.armor_t84_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="352" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="5350" />
-		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="pDef" val="220" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

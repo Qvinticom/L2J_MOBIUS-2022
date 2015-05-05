@@ -71,15 +71,6 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="452" max="904" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6360" min="8" max="16" chance="100" /> <!-- Blue Seal Stone -->
-				</group>
 				<group chance="2.028599977493286">
 					<item id="357" min="1" max="1" chance="0.135" /> <!-- Zubei's Breastplate -->
 					<item id="4056" min="1" max="1" chance="19.5049" /> <!-- Zubei's Breastplate Part -->
@@ -179,12 +170,6 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="574" max="1144" chance="100" /> <!-- Green Seal Stone -->
-				</group>
 				<group chance="2.3301000595092773">
 					<item id="2398" min="1" max="1" chance="0.1309" /> <!-- Blue Wolf Tunic -->
 					<item id="4084" min="1" max="1" chance="21.1296" /> <!-- Blue Wolf Tunic Fabric -->
@@ -207,7 +192,6 @@
 			</death>
 			<corpse>
 				<item id="4052" min="1" max="1" chance="27.1551" /> <!-- Earring of Black Ore Piece -->
-				<item id="5230" min="1" max="1" chance="1.0227" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4053" min="1" max="1" chance="32.8759" /> <!-- Ring of Black Ore Gemstone -->
 			</corpse>
 		</drop_lists>
@@ -279,12 +263,6 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="578" max="1160" chance="100" /> <!-- Green Seal Stone -->
-				</group>
 				<group chance="3.961199998855591">
 					<item id="864" min="1" max="1" chance="0.2845" /> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="35.806" /> <!-- Earring of Black Ore Piece -->
@@ -299,11 +277,9 @@
 					<item id="1881" min="1" max="1" chance="16.2376" /> <!-- Coarse Bone Powder -->
 					<item id="1875" min="1" max="1" chance="8.1188" /> <!-- Stone of Purity -->
 					<item id="4041" min="1" max="1" chance="1.059" /> <!-- Mold Hardener -->
-					<item id="5230" min="1" max="1" chance="0.1623" /> <!-- Recipe: Mithril Arrow (100%) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5230" min="1" max="1" chance="1.0851" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4054" min="1" max="1" chance="16.0289" /> <!-- Necklace of Black Ore Beads -->
 				<item id="4041" min="1" max="1" chance="7.0764" /> <!-- Mold Hardener -->
 			</corpse>
@@ -384,35 +360,16 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="557" max="1114" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.802500009536743">
-					<item id="5291" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Boots -->
-					<item id="5496" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="5296" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Boots -->
-					<item id="5497" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Boots Lining -->
-					<item id="5290" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Gloves -->
-					<item id="5508" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="5295" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Gloves -->
-					<item id="5509" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Gloves Design -->
-				</group>
 				<group chance="41.83890151977539">
 					<item id="1873" min="1" max="1" chance="32.3351" /> <!-- Silver Nugget -->
 					<item id="1868" min="4" max="12" chance="20.2094" /> <!-- Thread -->
 					<item id="1876" min="1" max="1" chance="16.1675" /> <!-- Mithril Ore -->
 					<item id="1895" min="1" max="1" chance="23.0965" /> <!-- Metallic Fiber -->
 					<item id="4042" min="1" max="1" chance="1.3473" /> <!-- Enria -->
-					<item id="5156" min="1" max="1" chance="0.1078" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-					<item id="1344" min="150" max="450" chance="6.7364" /> <!-- Mithril Arrow -->
 				</group>
 			</death>
 			<corpse>
 				<item id="1876" min="1" max="3" chance="80.1503" /> <!-- Mithril Ore -->
-				<item id="5478" min="1" max="1" chance="6.7398" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
 				<item id="4042" min="1" max="1" chance="13.3584" /> <!-- Enria -->
 			</corpse>
 		</drop_lists>
@@ -489,33 +446,13 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="687" max="1380" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.6494998931884766">
-					<item id="5292" min="1" max="1" chance="0.408" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="40.0555" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5289" min="1" max="1" chance="0.2855" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="29.4828" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5294" min="1" max="1" chance="0.2855" /> <!-- Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="29.4827" /> <!-- Sealed Tallum Helm Design -->
-				</group>
 				<group chance="6.779099941253662">
 					<item id="1894" min="1" max="1" chance="31.389" /> <!-- Crafted Leather -->
 					<item id="4039" min="1" max="1" chance="29.8196" /> <!-- Mold Glue -->
 					<item id="4041" min="1" max="1" chance="7.779" /> <!-- Mold Hardener -->
 					<item id="4044" min="1" max="1" chance="29.8196" /> <!-- Thons -->
-					<item id="3956" min="1" max="1" chance="1.1928" /> <!-- Recipe: Blessed Spiritshot A -->
 				</group>
 			</death>
-			<corpse>
-				<item id="1807" min="1" max="1" chance="1.095" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5479" min="1" max="1" chance="4.8593" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="1.095" /> <!-- Recipe: Spiritshot A -->
-			</corpse>
 		</drop_lists>
 		<collision>
 			<radius normal="13" grown="15.6" />
@@ -585,31 +522,14 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="700" max="1400" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="1.47160005569458">
-					<item id="5297" min="1" max="1" chance="0.2697" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="30.2857" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5301" min="1" max="1" chance="0.1659" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="21.3111" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="5298" min="1" max="1" chance="0.4313" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="47.5363" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
 				<group chance="22.6781005859375">
 					<item id="1895" min="1" max="1" chance="80.1336" /> <!-- Metallic Fiber -->
 					<item id="4040" min="1" max="1" chance="5.6093" /> <!-- Mold Lubricant -->
 					<item id="4042" min="1" max="1" chance="4.6745" /> <!-- Enria -->
 					<item id="4043" min="1" max="1" chance="9.3489" /> <!-- Asofe -->
-					<item id="730" min="1" max="1" chance="0.2337" /> <!-- Scroll: Enchant Armor (A-Grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5480" min="1" max="1" chance="3.8649" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="729" min="1" max="1" chance="0.0957" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
 				<item id="1895" min="1" max="5" chance="82.03" /> <!-- Metallic Fiber -->
 			</corpse>
 		</drop_lists>
@@ -684,37 +604,16 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="666" max="1336" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="1.0858999490737915">
-					<item id="5287" min="1" max="1" chance="0.2669" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5520" min="1" max="1" chance="30.6553" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="5293" min="1" max="1" chance="0.1643" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5521" min="1" max="1" chance="21.6316" /> <!-- Sealed Tallum Plate Armor Pattern -->
-					<item id="5288" min="1" max="1" chance="0.4271" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5524" min="1" max="1" chance="46.8548" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
-				</group>
 				<group chance="42.05440139770508">
 					<item id="1873" min="1" max="1" chance="29.4574" /> <!-- Silver Nugget -->
 					<item id="1868" min="3" max="9" chance="24.5478" /> <!-- Thread -->
 					<item id="1876" min="1" max="1" chance="14.7287" /> <!-- Mithril Ore -->
 					<item id="1895" min="1" max="1" chance="21.041" /> <!-- Metallic Fiber -->
 					<item id="4042" min="1" max="1" chance="1.2274" /> <!-- Enria -->
-					<item id="5282" min="1" max="1" chance="0.0327" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-					<item id="6671" min="1" max="1" chance="8.1826" /> <!-- Deluxe Chest Key - Grade 7 -->
-					<item id="8732" min="1" max="1" chance="0.6137" /> <!-- Life Stone - Level 76 -->
-					<item id="8742" min="1" max="1" chance="0.1534" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8752" min="1" max="1" chance="0.0153" /> <!-- High-Grade Life Stone - Level 76 -->
 				</group>
 			</death>
 			<corpse>
 				<item id="1875" min="1" max="1" chance="55.9187" /> <!-- Stone of Purity -->
-				<item id="5481" min="1" max="1" chance="3.7638" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5487" min="1" max="1" chance="3.7771" /> <!-- Sealed Robe of Nightmare Fabric -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -785,34 +684,14 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="805" max="1610" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.510200023651123">
-					<item id="5315" min="1" max="1" chance="0.3567" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5495" min="1" max="1" chance="38.5067" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5312" min="1" max="1" chance="0.2496" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5527" min="1" max="1" chance="30.3187" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5317" min="1" max="1" chance="0.2496" /> <!-- Sealed Majestic Circlet -->
-					<item id="5528" min="1" max="1" chance="30.3187" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
 				<group chance="26.484899520874023">
 					<item id="1871" min="4" max="12" chance="30.046" /> <!-- Charcoal -->
 					<item id="1866" min="1" max="3" chance="53.4151" /> <!-- Suede -->
 					<item id="1877" min="1" max="1" chance="9.6147" /> <!-- Adamantite Nugget -->
 					<item id="4041" min="1" max="1" chance="2.0902" /> <!-- Mold Hardener -->
 					<item id="4040" min="1" max="1" chance="4.8074" /> <!-- Mold Lubricant -->
-					<item id="729" min="1" max="1" chance="0.0266" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
 				</group>
 			</death>
-			<corpse>
-				<item id="5488" min="1" max="1" chance="4.6584" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="730" min="1" max="1" chance="0.8621" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="5480" min="1" max="1" chance="4.642" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-			</corpse>
 		</drop_lists>
 		<collision>
 			<radius normal="13" grown="15.6" />
@@ -1620,10 +1499,6 @@
 					<item id="5550" min="1" max="1" chance="0.4149" /> <!-- Durable Metal Plate -->
 					<item id="4043" min="1" max="1" chance="1.0373" /> <!-- Asofe -->
 					<item id="2213" min="1" max="1" chance="0.4832" /> <!-- Recipe: Dwarven Chain Mail Shirt -->
-					<item id="8723" min="1" max="1" chance="1.2448" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3112" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0311" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0063" /> <!-- Top-Grade Life Stone - Level 46 -->
 				</group>
 			</death>
 			<corpse>
@@ -1842,10 +1717,6 @@
 					<item id="6037" min="1" max="3" chance="27.8049" /> <!-- Waking Scroll -->
 					<item id="3955" min="1" max="1" chance="0.0556" /> <!-- Recipe: Blessed Spiritshot B -->
 					<item id="5280" min="1" max="1" chance="0.0556" /> <!-- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%) -->
-					<item id="8725" min="1" max="1" chance="0.7724" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.1931" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0193" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0039" /> <!-- Top-Grade Life Stone - Level 52 -->
 					<item id="1342" min="30" max="90" chance="18.5365" /> <!-- Steel Arrow -->
 				</group>
 			</death>
@@ -1930,10 +1801,6 @@
 					<item id="4126" min="1" max="1" chance="0.5592" /> <!-- Recipe: Adamantite Earrings (100%) -->
 					<item id="4965" min="1" max="1" chance="0.039" /> <!-- Recipe: Sprite's Staff (60%) -->
 					<item id="4183" min="1" max="1" chance="0.039" /> <!-- Recipe: Heavy War Axe (100%) -->
-					<item id="8726" min="1" max="1" chance="0.7845" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1961" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0196" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0039" /> <!-- Top-Grade Life Stone - Level 55 -->
 				</group>
 			</death>
 			<corpse>
@@ -2017,10 +1884,6 @@
 					<item id="4042" min="1" max="1" chance="0.5659" /> <!-- Enria -->
 					<item id="4130" min="1" max="1" chance="0.5512" /> <!-- Recipe: Ring of Black Ore (100%) -->
 					<item id="4182" min="1" max="1" chance="0.0391" /> <!-- Recipe: Great Sword (100%) -->
-					<item id="8727" min="1" max="1" chance="0.679" /> <!-- Life Stone - Level 58 -->
-					<item id="8737" min="1" max="1" chance="0.1698" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8747" min="1" max="1" chance="0.017" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8757" min="1" max="1" chance="0.0032" /> <!-- Top-Grade Life Stone - Level 58 -->
 				</group>
 			</death>
 			<corpse>
@@ -2105,10 +1968,6 @@
 					<item id="4041" min="1" max="1" chance="0.5565" /> <!-- Mold Hardener -->
 					<item id="4044" min="1" max="1" chance="2.1334" /> <!-- Thons -->
 					<item id="4158" min="1" max="1" chance="0.1359" /> <!-- Recipe: Doom Plate Armor (100%) -->
-					<item id="8728" min="1" max="1" chance="1.0667" /> <!-- Life Stone - Level 61 -->
-					<item id="8738" min="1" max="1" chance="0.2667" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8748" min="1" max="1" chance="0.0267" /> <!-- High-Grade Life Stone - Level 61 -->
-					<item id="8758" min="1" max="1" chance="0.0053" /> <!-- Top-Grade Life Stone - Level 61 -->
 					<item id="1343" min="10" max="30" chance="91.4298" /> <!-- Silver Arrow -->
 				</group>
 			</death>
@@ -2195,7 +2054,6 @@
 			</death>
 			<corpse>
 				<item id="4052" min="1" max="1" chance="20.1435" /> <!-- Earring of Black Ore Piece -->
-				<item id="5230" min="1" max="1" chance="0.7586" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4053" min="1" max="1" chance="24.3872" /> <!-- Ring of Black Ore Gemstone -->
 			</corpse>
 		</drop_lists>
@@ -2262,9 +2120,7 @@
 					<item id="79" min="1" max="1" chance="0.1503" /> <!-- Sword of Damascus -->
 					<item id="4114" min="1" max="1" chance="33.2016" /> <!-- Sword of Damascus Blade -->
 					<item id="7883" min="1" max="1" chance="0.1503" /> <!-- Guardian Sword -->
-					<item id="8330" min="1" max="1" chance="33.1458" /> <!-- Guardian Sword Blade -->
 					<item id="7889" min="1" max="1" chance="0.1503" /> <!-- Wizard's Tear -->
-					<item id="8336" min="1" max="1" chance="33.2017" /> <!-- Blade of the Wizard's Tear -->
 				</group>
 				<group chance="40.92359924316406">
 					<item id="1867" min="1" max="3" chance="29.075" /> <!-- Animal Skin -->
@@ -2272,16 +2128,9 @@
 					<item id="1882" min="1" max="1" chance="9.6917" /> <!-- Leather -->
 					<item id="1894" min="1" max="1" chance="1.5303" /> <!-- Crafted Leather -->
 					<item id="4042" min="1" max="1" chance="0.7269" /> <!-- Enria -->
-					<item id="5230" min="1" max="1" chance="0.0581" /> <!-- Recipe: Mithril Arrow (100%) -->
-					<item id="8314" min="1" max="1" chance="0.0238" /> <!-- Recipe: Spiritual Eye (60%) -->
-					<item id="8729" min="1" max="1" chance="0.5815" /> <!-- Life Stone - Level 64 -->
-					<item id="8739" min="1" max="1" chance="0.1454" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="8749" min="1" max="1" chance="0.0145" /> <!-- High-Grade Life Stone - Level 64 -->
-					<item id="8759" min="1" max="1" chance="0.0029" /> <!-- Top-Grade Life Stone - Level 64 -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5230" min="1" max="1" chance="0.8862" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4054" min="1" max="1" chance="13.0913" /> <!-- Necklace of Black Ore Beads -->
 				<item id="4052" min="1" max="1" chance="23.5314" /> <!-- Earring of Black Ore Piece -->
 			</corpse>
@@ -2356,18 +2205,11 @@
 					<item id="5549" min="1" max="1" chance="6.1877" /> <!-- Metallic Thread -->
 					<item id="1889" min="1" max="1" chance="4.1252" /> <!-- Compound Braid -->
 					<item id="4044" min="1" max="1" chance="2.0626" /> <!-- Thons -->
-					<item id="5230" min="1" max="1" chance="0.0825" /> <!-- Recipe: Mithril Arrow (100%) -->
-					<item id="8314" min="1" max="1" chance="0.0338" /> <!-- Recipe: Spiritual Eye (60%) -->
-					<item id="8730" min="1" max="1" chance="0.6875" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.1719" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0172" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 67 -->
 				</group>
 			</death>
 			<corpse>
 				<item id="5549" min="1" max="1" chance="71.2964" /> <!-- Metallic Thread -->
 				<item id="4077" min="1" max="1" chance="32.0722" /> <!-- Doom Shield Fragment -->
-				<item id="5230" min="1" max="1" chance="0.9506" /> <!-- Recipe: Mithril Arrow (100%) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -2434,32 +2276,14 @@
 				<group chance="70">
 					<item id="57" min="2875" max="5849" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.7529000043869019">
-					<item id="5287" min="1" max="1" chance="0.2669" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5520" min="1" max="1" chance="30.6553" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="5293" min="1" max="1" chance="0.1643" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5521" min="1" max="1" chance="21.6316" /> <!-- Sealed Tallum Plate Armor Pattern -->
-					<item id="5288" min="1" max="1" chance="0.4271" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5524" min="1" max="1" chance="46.8548" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
-				</group>
 				<group chance="38.958900451660156">
 					<item id="1866" min="1" max="1" chance="36.7461" /> <!-- Suede -->
 					<item id="1871" min="1" max="1" chance="55.1192" /> <!-- Charcoal -->
 					<item id="5220" min="1" max="1" chance="2.2048" /> <!-- Metal Hardener -->
 					<item id="1885" min="1" max="1" chance="4.5933" /> <!-- High-Grade Suede -->
 					<item id="4041" min="1" max="1" chance="0.4793" /> <!-- Mold Hardener -->
-					<item id="5271" min="1" max="1" chance="0.0735" /> <!-- Recipe: Greater Soulshot (A) Compressed Package(100%) -->
-					<item id="8730" min="1" max="1" chance="0.6124" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.1531" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0153" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 67 -->
 				</group>
 			</death>
-			<corpse>
-				<item id="1807" min="1" max="1" chance="0.9693" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5478" min="1" max="1" chance="6.1132" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="0.9693" /> <!-- Recipe: Spiritshot A -->
-			</corpse>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
@@ -2521,28 +2345,14 @@
 				<group chance="70">
 					<item id="57" min="3110" max="6350" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="3.4126999378204346">
-					<item id="6324" min="1" max="1" chance="0.2263" /> <!-- Sealed Phoenix Earring -->
-					<item id="6341" min="1" max="1" chance="31.451" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="6323" min="1" max="1" chance="0.1697" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6343" min="1" max="1" chance="24.3128" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="6325" min="1" max="1" chance="0.3394" /> <!-- Sealed Phoenix Ring -->
-					<item id="6345" min="1" max="1" chance="43.5008" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
 				<group chance="3.185699939727783">
 					<item id="1894" min="1" max="1" chance="28.4953" /> <!-- Crafted Leather -->
 					<item id="4039" min="1" max="1" chance="27.0705" /> <!-- Mold Glue -->
 					<item id="4041" min="1" max="1" chance="7.0619" /> <!-- Mold Hardener -->
 					<item id="4044" min="1" max="1" chance="27.0705" /> <!-- Thons -->
-					<item id="730" min="1" max="1" chance="0.6768" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="8731" min="1" max="1" chance="7.5196" /> <!-- Life Stone - Level 70 -->
-					<item id="8741" min="1" max="1" chance="1.8799" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8751" min="1" max="1" chance="0.188" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8761" min="1" max="1" chance="0.0375" /> <!-- Top-Grade Life Stone - Level 70 -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5479" min="1" max="1" chance="3.7315" /> <!-- Sealed Tallum Leather Armor Pattern -->
 				<item id="4041" min="1" max="1" chance="5.4837" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="21.0209" /> <!-- Thons -->
 			</corpse>
@@ -2606,31 +2416,13 @@
 				<group chance="70">
 					<item id="57" min="3587" max="7319" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="2.3459999561309814">
-					<item id="5292" min="1" max="1" chance="0.408" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="40.0555" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5289" min="1" max="1" chance="0.2855" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="29.4828" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5294" min="1" max="1" chance="0.2855" /> <!-- Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="29.4827" /> <!-- Sealed Tallum Helm Design -->
-				</group>
 				<group chance="10.989899635314941">
 					<item id="1895" min="1" max="1" chance="77.5556" /> <!-- Metallic Fiber -->
 					<item id="4040" min="1" max="1" chance="5.4289" /> <!-- Mold Lubricant -->
 					<item id="4042" min="1" max="1" chance="4.5241" /> <!-- Enria -->
 					<item id="4043" min="1" max="1" chance="9.0481" /> <!-- Asofe -->
-					<item id="730" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="8731" min="1" max="1" chance="2.5134" /> <!-- Life Stone - Level 70 -->
-					<item id="8741" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8751" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8761" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 70 -->
 				</group>
 			</death>
-			<corpse>
-				<item id="5480" min="1" max="1" chance="3.2628" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="5481" min="1" max="1" chance="3.2628" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5487" min="1" max="1" chance="3.2744" /> <!-- Sealed Robe of Nightmare Fabric -->
-			</corpse>
 		</drop_lists>
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -2687,30 +2479,16 @@
 				<group chance="70">
 					<item id="57" min="3602" max="7359" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="2.3573999404907227">
-					<item id="5292" min="1" max="1" chance="0.408" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="40.0555" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5289" min="1" max="1" chance="0.2855" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="29.4828" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5294" min="1" max="1" chance="0.2855" /> <!-- Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="29.4827" /> <!-- Sealed Tallum Helm Design -->
-				</group>
 				<group chance="39.88479995727539">
 					<item id="1872" min="1" max="3" chance="50.1049" /> <!-- Animal Bone -->
 					<item id="1867" min="1" max="3" chance="33.4032" /> <!-- Animal Skin -->
 					<item id="1881" min="1" max="1" chance="10.021" /> <!-- Coarse Bone Powder -->
 					<item id="1875" min="1" max="1" chance="5.0105" /> <!-- Stone of Purity -->
 					<item id="4041" min="1" max="1" chance="0.6535" /> <!-- Mold Hardener -->
-					<item id="729" min="1" max="1" chance="0.0084" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="8732" min="1" max="1" chance="0.6263" /> <!-- Life Stone - Level 76 -->
-					<item id="8742" min="1" max="1" chance="0.1566" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8752" min="1" max="1" chance="0.0156" /> <!-- High-Grade Life Stone - Level 76 -->
 				</group>
 			</death>
 			<corpse>
-				<item id="729" min="1" max="1" chance="0.0812" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
 				<item id="1875" min="1" max="1" chance="48.7115" /> <!-- Stone of Purity -->
-				<item id="5480" min="1" max="1" chance="3.2787" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3314,7 +3092,6 @@
 					<item id="57" min="932" max="1861" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.6208000183105469">
-					<item id="21731" min="1" max="1" chance="0.866" /> <!-- Maingauche - Event -->
 					<item id="2038" min="1" max="1" chance="49.134" /> <!-- Maingauche Edge -->
 					<item id="1660" min="1" max="1" chance="0.866" /> <!-- Cursed Maingauche -->
 					<item id="2044" min="1" max="1" chance="49.134" /> <!-- Cursed Maingauche Edge -->
@@ -3486,10 +3263,6 @@
 					<item id="1895" min="1" max="1" chance="9.5929" /> <!-- Metallic Fiber -->
 					<item id="4042" min="1" max="1" chance="0.5596" /> <!-- Enria -->
 					<item id="2214" min="1" max="1" chance="0.8331" /> <!-- Recipe: Dwarven Chain Gaiters -->
-					<item id="8723" min="1" max="1" chance="1.343" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3358" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0336" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0066" /> <!-- Top-Grade Life Stone - Level 46 -->
 				</group>
 			</death>
 			<corpse>
@@ -3574,10 +3347,6 @@
 					<item id="1895" min="1" max="1" chance="9.6955" /> <!-- Metallic Fiber -->
 					<item id="4042" min="1" max="1" chance="0.5656" /> <!-- Enria -->
 					<item id="951" min="1" max="1" chance="0.0617" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="8724" min="1" max="1" chance="1.1311" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.2828" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0283" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0057" /> <!-- Top-Grade Life Stone - Level 49 -->
 				</group>
 			</death>
 			<corpse>
@@ -3660,10 +3429,6 @@
 					<item id="4040" min="1" max="1" chance="0.8518" /> <!-- Mold Lubricant -->
 					<item id="2170" min="1" max="1" chance="1.0045" /> <!-- Recipe: Nassen's Earring -->
 					<item id="2970" min="1" max="1" chance="1.5103" /> <!-- Recipe: Ring of Seal -->
-					<item id="8725" min="1" max="1" chance="1.1831" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.2958" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0296" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0059" /> <!-- Top-Grade Life Stone - Level 52 -->
 				</group>
 			</death>
 			<corpse>
@@ -3743,11 +3508,6 @@
 					<item id="4040" min="1" max="1" chance="1.1" /> <!-- Mold Lubricant -->
 					<item id="2353" min="1" max="1" chance="0.0897" /> <!-- Recipe: Samurai Longsword -->
 					<item id="4122" min="1" max="1" chance="2.4445" /> <!-- Recipe: Maestro Holder (100%) -->
-					<item id="8309" min="1" max="1" chance="0.0634" /> <!-- Recipe: Spell Breaker (100%) -->
-					<item id="8725" min="1" max="1" chance="1.5278" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.382" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0382" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0076" /> <!-- Top-Grade Life Stone - Level 52 -->
 				</group>
 			</death>
 			<corpse>
@@ -3833,10 +3593,6 @@
 					<item id="4127" min="1" max="1" chance="0.8258" /> <!-- Recipe: Adamantite Ring (100%) -->
 					<item id="4965" min="1" max="1" chance="0.0384" /> <!-- Recipe: Sprite's Staff (60%) -->
 					<item id="4183" min="1" max="1" chance="0.0384" /> <!-- Recipe: Heavy War Axe (100%) -->
-					<item id="8726" min="1" max="1" chance="0.7723" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1931" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0193" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.004" /> <!-- Top-Grade Life Stone - Level 55 -->
 				</group>
 			</death>
 			<corpse>
@@ -3922,10 +3678,6 @@
 					<item id="4041" min="1" max="1" chance="0.2976" /> <!-- Mold Hardener -->
 					<item id="4131" min="1" max="1" chance="0.2783" /> <!-- Recipe: Necklace of Black Ore (100%) -->
 					<item id="4173" min="1" max="1" chance="0.4257" /> <!-- Recipe: Sealed Blue Wolf Gloves (100%) -->
-					<item id="8727" min="1" max="1" chance="0.6846" /> <!-- Life Stone - Level 58 -->
-					<item id="8737" min="1" max="1" chance="0.1711" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8747" min="1" max="1" chance="0.0171" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8757" min="1" max="1" chance="0.0035" /> <!-- Top-Grade Life Stone - Level 58 -->
 				</group>
 			</death>
 			<corpse>
@@ -4015,10 +3767,6 @@
 					<item id="5550" min="1" max="1" chance="0.4161" /> <!-- Durable Metal Plate -->
 					<item id="4043" min="1" max="1" chance="1.0403" /> <!-- Asofe -->
 					<item id="4159" min="1" max="1" chance="0.0884" /> <!-- Recipe: Blue Wolf Leather Armor (100%) -->
-					<item id="8728" min="1" max="1" chance="0.5202" /> <!-- Life Stone - Level 61 -->
-					<item id="8738" min="1" max="1" chance="0.13" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8748" min="1" max="1" chance="0.013" /> <!-- High-Grade Life Stone - Level 61 -->
-					<item id="8758" min="1" max="1" chance="0.0026" /> <!-- Top-Grade Life Stone - Level 61 -->
 					<item id="6036" min="1" max="1" chance="1.0404" /> <!-- Greater Magic Haste Potion -->
 				</group>
 			</death>
@@ -4102,15 +3850,9 @@
 					<item id="1877" min="1" max="1" chance="2.2808" /> <!-- Adamantite Nugget -->
 					<item id="4041" min="1" max="1" chance="0.4958" /> <!-- Mold Hardener -->
 					<item id="4040" min="1" max="1" chance="1.1404" /> <!-- Mold Lubricant -->
-					<item id="5166" min="1" max="1" chance="0.076" /> <!-- Recipe: Blessed Spiritshot (A) Compressed Package (100%) -->
-					<item id="8729" min="1" max="1" chance="0.7603" /> <!-- Life Stone - Level 64 -->
-					<item id="8739" min="1" max="1" chance="0.1901" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="8749" min="1" max="1" chance="0.019" /> <!-- High-Grade Life Stone - Level 64 -->
-					<item id="8759" min="1" max="1" chance="0.0038" /> <!-- Top-Grade Life Stone - Level 64 -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5230" min="1" max="1" chance="0.7586" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4052" min="1" max="1" chance="20.1435" /> <!-- Earring of Black Ore Piece -->
 				<item id="4053" min="1" max="1" chance="24.3872" /> <!-- Ring of Black Ore Gemstone -->
 			</corpse>
@@ -4189,16 +3931,10 @@
 					<item id="4041" min="1" max="1" chance="0.3131" /> <!-- Mold Hardener -->
 					<item id="4040" min="1" max="1" chance="0.7201" /> <!-- Mold Lubricant -->
 					<item id="1830" min="1" max="1" chance="14.4018" /> <!-- Scroll of Escape: Castle -->
-					<item id="8729" min="1" max="1" chance="0.4801" /> <!-- Life Stone - Level 64 -->
-					<item id="8739" min="1" max="1" chance="0.12" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="8749" min="1" max="1" chance="0.012" /> <!-- High-Grade Life Stone - Level 64 -->
-					<item id="8759" min="1" max="1" chance="0.0024" /> <!-- Top-Grade Life Stone - Level 64 -->
-					<item id="1344" min="20" max="60" chance="22.5028" /> <!-- Mithril Arrow -->
 				</group>
 			</death>
 			<corpse>
 				<item id="4052" min="1" max="1" chance="23.5314" /> <!-- Earring of Black Ore Piece -->
-				<item id="5230" min="1" max="1" chance="0.8862" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4053" min="1" max="1" chance="28.4889" /> <!-- Ring of Black Ore Gemstone -->
 			</corpse>
 		</drop_lists>
@@ -4279,15 +4015,9 @@
 					<item id="1885" min="1" max="1" chance="3.838" /> <!-- High-Grade Suede -->
 					<item id="4041" min="1" max="1" chance="0.4005" /> <!-- Mold Hardener -->
 					<item id="1830" min="1" max="1" chance="18.4226" /> <!-- Scroll of Escape: Castle -->
-					<item id="8730" min="1" max="1" chance="0.5117" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.1279" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0128" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0026" /> <!-- Top-Grade Life Stone - Level 67 -->
-					<item id="1344" min="20" max="60" chance="28.7852" /> <!-- Mithril Arrow -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5230" min="1" max="1" chance="0.9506" /> <!-- Recipe: Mithril Arrow (100%) -->
 				<item id="4054" min="1" max="1" chance="14.043" /> <!-- Necklace of Black Ore Beads -->
 				<item id="4053" min="1" max="1" chance="30.56" /> <!-- Ring of Black Ore Gemstone -->
 			</corpse>
@@ -4356,25 +4086,9 @@
 				<group chance="70">
 					<item id="57" min="2875" max="5849" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.9936000108718872">
-					<item id="5297" min="1" max="1" chance="0.2697" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="30.2857" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5301" min="1" max="1" chance="0.1659" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="21.3111" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="5298" min="1" max="1" chance="0.4313" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="47.5363" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
-				<group chance="4.618000030517578">
-					<item id="10579" min="1" max="1" chance="25" /> <!-- Forgotten Scroll - Improve Combat -->
-					<item id="10583" min="1" max="1" chance="25" /> <!-- Forgotten Scroll - Improve Shield Defense -->
-					<item id="10608" min="1" max="1" chance="25" /> <!-- Forgotten Scroll - Chant of Combat -->
-					<item id="14214" min="1" max="1" chance="25" /> <!-- Forgotten Scroll - Chant of Movement -->
-				</group>
 			</death>
 			<corpse>
-				<item id="5478" min="1" max="1" chance="6.1132" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
 				<item id="4053" min="1" max="1" chance="31.1606" /> <!-- Ring of Black Ore Gemstone -->
-				<item id="5230" min="1" max="1" chance="0.9693" /> <!-- Recipe: Mithril Arrow (100%) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4437,26 +4151,7 @@
 				<group chance="70">
 					<item id="57" min="3110" max="6350" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="1.0773999691009521">
-					<item id="5304" min="1" max="1" chance="0.2697" /> <!-- Sealed Tallum Tunic -->
-					<item id="5485" min="1" max="1" chance="30.2857" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="5308" min="1" max="1" chance="0.1659" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5486" min="1" max="1" chance="21.3111" /> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="5305" min="1" max="1" chance="0.4313" /> <!-- Sealed Tallum Stockings -->
-					<item id="5489" min="1" max="1" chance="47.5363" /> <!-- Sealed Tallum Stockings Fabric -->
-				</group>
-				<group chance="4.69920015335083">
-					<item id="10580" min="1" max="1" chance="24.7754" /> <!-- Forgotten Scroll - Improve Magic -->
-					<item id="10582" min="1" max="1" chance="24.7754" /> <!-- Forgotten Scroll - Improve Critical Attack -->
-					<item id="10610" min="1" max="1" chance="24.7754" /> <!-- Forgotten Scroll - Chant of Blood Awakening -->
-					<item id="14215" min="1" max="1" chance="25.6738" /> <!-- Forgotten Scroll - Combat of Pa'agrio -->
-				</group>
 			</death>
-			<corpse>
-				<item id="1807" min="1" max="1" chance="0.8408" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5479" min="1" max="1" chance="3.7315" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="0.8408" /> <!-- Recipe: Spiritshot A -->
-			</corpse>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -4518,21 +4213,8 @@
 				<group chance="70">
 					<item id="57" min="3587" max="7319" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="3.934999942779541">
-					<item id="6324" min="1" max="1" chance="0.2263" /> <!-- Sealed Phoenix Earring -->
-					<item id="6341" min="1" max="1" chance="31.451" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="6323" min="1" max="1" chance="0.1697" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6343" min="1" max="1" chance="24.3128" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="6325" min="1" max="1" chance="0.3394" /> <!-- Sealed Phoenix Ring -->
-					<item id="6345" min="1" max="1" chance="43.5008" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-				<group chance="5.36959981918335">
-					<item id="14216" min="1" max="1" chance="100" /> <!-- Forgotten Scroll - Critical of Pa'agrio -->
-				</group>
 			</death>
 			<corpse>
-				<item id="5480" min="1" max="1" chance="3.2628" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="729" min="1" max="1" chance="0.0808" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
 				<item id="1877" min="1" max="1" chance="29.0856" /> <!-- Adamantite Nugget -->
 			</corpse>
 		</drop_lists>
@@ -4591,31 +4273,16 @@
 				<group chance="70">
 					<item id="57" min="3814" max="7793" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="1.3220000267028809">
-					<item id="5297" min="1" max="1" chance="0.2697" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="30.2857" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5301" min="1" max="1" chance="0.1659" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="21.3111" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="5298" min="1" max="1" chance="0.4313" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="47.5363" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
 				<group chance="38.79560089111328">
 					<item id="1873" min="1" max="1" chance="29.4574" /> <!-- Silver Nugget -->
 					<item id="1868" min="3" max="9" chance="24.5478" /> <!-- Thread -->
 					<item id="1876" min="1" max="1" chance="14.7287" /> <!-- Mithril Ore -->
 					<item id="1895" min="1" max="1" chance="21.041" /> <!-- Metallic Fiber -->
 					<item id="4042" min="1" max="1" chance="1.2274" /> <!-- Enria -->
-					<item id="5282" min="1" max="1" chance="0.0327" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-					<item id="6671" min="1" max="1" chance="8.1826" /> <!-- Deluxe Chest Key - Grade 7 -->
-					<item id="8732" min="1" max="1" chance="0.6137" /> <!-- Life Stone - Level 76 -->
-					<item id="8742" min="1" max="1" chance="0.1534" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8752" min="1" max="1" chance="0.0153" /> <!-- High-Grade Life Stone - Level 76 -->
 				</group>
 			</death>
 			<corpse>
 				<item id="4041" min="1" max="1" chance="6.7285" /> <!-- Mold Hardener -->
-				<item id="5481" min="1" max="1" chance="3.4721" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5487" min="1" max="1" chance="3.4844" /> <!-- Sealed Robe of Nightmare Fabric -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4760,37 +4427,6 @@
 					<item id="1873" min="1" max="1" chance="16.1074" /> <!-- Silver Nugget -->
 					<item id="735" min="1" max="1" chance="3.3557" /> <!-- Alacrity Potion -->
 				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
 			</death>
 			<corpse>
 				<item id="1868" min="1" max="1" chance="51.1527" /> <!-- Thread -->
@@ -4848,41 +4484,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="1000" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -4956,41 +4557,6 @@
 					<item id="1895" min="1" max="1" chance="9.771" /> <!-- Metallic Fiber -->
 					<item id="4042" min="1" max="1" chance="0.57" /> <!-- Enria -->
 					<item id="947" min="1" max="1" chance="0.0137" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-					<item id="8728" min="1" max="1" chance="0.57" /> <!-- Life Stone - Level 61 -->
-					<item id="8738" min="1" max="1" chance="0.1425" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8748" min="1" max="1" chance="0.0142" /> <!-- High-Grade Life Stone - Level 61 -->
-					<item id="8758" min="1" max="1" chance="0.0027" /> <!-- Top-Grade Life Stone - Level 61 -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -5125,42 +4691,7 @@
 					<item id="5550" min="1" max="1" chance="0.3911" /> <!-- Durable Metal Plate -->
 					<item id="4043" min="1" max="1" chance="0.9779" /> <!-- Asofe -->
 					<item id="2231" min="1" max="1" chance="0.1264" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8725" min="1" max="1" chance="0.8149" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.2037" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0204" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0041" /> <!-- Top-Grade Life Stone - Level 52 -->
 					<item id="1539" min="1" max="1" chance="6.5192" /> <!-- Greater Healing Potion -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="19" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="69" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -5241,42 +4772,7 @@
 					<item id="5550" min="1" max="1" chance="0.3918" /> <!-- Durable Metal Plate -->
 					<item id="4043" min="1" max="1" chance="0.9796" /> <!-- Asofe -->
 					<item id="2231" min="1" max="1" chance="0.1267" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8726" min="1" max="1" chance="0.6803" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1701" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.017" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 55 -->
 					<item id="1539" min="1" max="1" chance="6.5305" /> <!-- Greater Healing Potion -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -5357,42 +4853,7 @@
 					<item id="5550" min="1" max="1" chance="0.3918" /> <!-- Durable Metal Plate -->
 					<item id="4043" min="1" max="1" chance="0.9796" /> <!-- Asofe -->
 					<item id="2231" min="1" max="1" chance="0.1267" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8726" min="1" max="1" chance="0.6803" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1701" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.017" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 55 -->
 					<item id="1539" min="1" max="1" chance="6.5305" /> <!-- Greater Healing Potion -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -5476,42 +4937,7 @@
 					<item id="5550" min="1" max="1" chance="0.3923" /> <!-- Durable Metal Plate -->
 					<item id="4043" min="1" max="1" chance="0.9807" /> <!-- Asofe -->
 					<item id="2231" min="1" max="1" chance="0.1268" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8727" min="1" max="1" chance="0.5884" /> <!-- Life Stone - Level 58 -->
-					<item id="8737" min="1" max="1" chance="0.1471" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8747" min="1" max="1" chance="0.0147" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8757" min="1" max="1" chance="0.0029" /> <!-- Top-Grade Life Stone - Level 58 -->
 					<item id="1539" min="1" max="1" chance="6.5384" /> <!-- Greater Healing Potion -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -5604,37 +5030,6 @@
 					<item id="1884" min="1" max="1" chance="14.9276" /> <!-- Cord -->
 					<item id="2154" min="1" max="1" chance="2.5972" /> <!-- Recipe: Elven Earring -->
 				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
 			</death>
 			<corpse>
 				<item id="1864" min="1" max="3" chance="62.7198" /> <!-- Stem -->
@@ -5703,41 +5098,6 @@
 				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -5799,41 +5159,6 @@
 				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -5916,37 +5241,6 @@
 					<item id="6037" min="1" max="3" chance="12.6006" /> <!-- Waking Scroll -->
 					<item id="1341" min="20" max="60" chance="31.5015" /> <!-- Bone Arrow -->
 				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="35" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="12" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="56" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="32" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
 			</death>
 			<corpse>
 				<item id="1940" min="1" max="1" chance="17.4118" /> <!-- Iron Boots Design -->
@@ -6014,7 +5308,6 @@
 					<item id="57" min="561" max="1119" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.36880001425743103">
-					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
 					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
 				</group>
 				<group chance="40.31719970703125">
@@ -6023,37 +5316,6 @@
 					<item id="1881" min="1" max="1" chance="4.5381" /> <!-- Coarse Bone Powder -->
 					<item id="1875" min="1" max="1" chance="2.269" /> <!-- Stone of Purity -->
 					<item id="1825" min="1" max="1" chance="2.4311" /> <!-- Recipe: Oriharukon -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -6125,7 +5387,6 @@
 					<item id="2031" min="1" max="1" chance="19.9807" /> <!-- Morning Star Head -->
 					<item id="90" min="1" max="1" chance="0.3676" /> <!-- Goat Head Staff -->
 					<item id="2032" min="1" max="1" chance="18.2395" /> <!-- Goat Head Staff Head -->
-					<item id="21735" min="1" max="1" chance="0.3676" /> <!-- Tarbar - Event -->
 					<item id="2035" min="1" max="1" chance="19.9807" /> <!-- Tarbar Head -->
 					<item id="169" min="1" max="1" chance="0.3676" /> <!-- Skull Breaker -->
 					<item id="2036" min="1" max="1" chance="19.9807" /> <!-- Skull Breaker Head -->
@@ -6138,37 +5399,6 @@
 					<item id="5549" min="1" max="1" chance="3.7906" /> <!-- Metallic Thread -->
 					<item id="1889" min="1" max="1" chance="2.5271" /> <!-- Compound Braid -->
 					<item id="2145" min="1" max="1" chance="2.7075" /> <!-- Recipe: Mithril Alloy -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -6241,7 +5471,6 @@
 					<item id="57" min="383" max="764" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.2517000138759613">
-					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
 					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
 				</group>
 				<group chance="38.601600646972656">
@@ -6250,37 +5479,6 @@
 					<item id="1878" min="1" max="1" chance="9.703" /> <!-- Braided Hemp -->
 					<item id="1884" min="1" max="1" chance="14.9276" /> <!-- Cord -->
 					<item id="2154" min="1" max="1" chance="2.5972" /> <!-- Recipe: Elven Earring -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -6352,7 +5550,6 @@
 					<item id="57" min="679" max="1355" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.4462999999523163">
-					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
 					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
 				</group>
 				<group chance="40.77259826660156">
@@ -6361,37 +5558,6 @@
 					<item id="1878" min="1" max="1" chance="16.2881" /> <!-- Braided Hemp -->
 					<item id="1884" min="1" max="1" chance="25.0586" /> <!-- Cord -->
 					<item id="2154" min="1" max="1" chance="4.3597" /> <!-- Recipe: Elven Earring -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
@@ -6470,7 +5636,6 @@
 					<item id="57" min="1969" max="3922" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="1.2932000160217285">
-					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
 					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
 				</group>
 				<group chance="42.34489822387695">
@@ -6479,37 +5644,6 @@
 					<item id="1878" min="3" max="9" chance="7.5745" /> <!-- Braided Hemp -->
 					<item id="1884" min="2" max="6" chance="13.9837" /> <!-- Cord -->
 					<item id="2154" min="1" max="1" chance="12.1647" /> <!-- Recipe: Elven Earring -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="35" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="12" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="56" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="32" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>

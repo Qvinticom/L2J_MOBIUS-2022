@@ -467,50 +467,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1448" type="EtcItem" name="Mirien's Review">
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1449" type="EtcItem" name="Mirien's Review">
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1450" type="EtcItem" name="Mirien's Review">
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1451" type="EtcItem" name="Mirien's Review">
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
 	<item id="1452" type="EtcItem" name="Harpy's Feather">
 		<set name="icon" val="icon.etc_feather_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -607,26 +563,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1461" type="EtcItem" name="Crystal (A-grade)">
-		<set name="icon" val="icon.etc_crystal_silver_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="PAPER" />
-		<set name="price" val="12500" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="CRYSTAL" />
-	</item>
-	<item id="1462" type="EtcItem" name="Crystal (S-grade)">
-		<set name="icon" val="icon.etc_crystal_gold_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="PAPER" />
-		<set name="price" val="15000" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="CRYSTAL" />
-	</item>
 	<item id="1463" type="EtcItem" name="Soulshot (D-grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -668,58 +604,6 @@
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2152-1" />
 		<set name="commissionItemType" val="SOULSHOT" />
-	</item>
-	<item id="1466" type="EtcItem" name="Soulshot (A-grade)">
-		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
-		<set name="default_action" val="SOULSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="80" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="SoulShots" />
-		<set name="item_skill" val="2153-1" />
-		<set name="commissionItemType" val="SOULSHOT" />
-	</item>
-	<item id="1467" type="EtcItem" name="Soulshot (S-grade)">
-		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
-		<set name="default_action" val="SOULSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="100" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="SoulShots" />
-		<set name="item_skill" val="2154-1" />
-		<set name="commissionItemType" val="SOULSHOT" />
-	</item>
-	<item id="1468" type="EtcItem" name="Gludin Panacen">
-		<set name="icon" val="icon.etc_reagent_gold_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="PAPER" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1469" type="EtcItem" name="Gludin Vermouth">
-		<set name="icon" val="icon.etc_fruit_green_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="PAPER" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1470" type="EtcItem" name="Artemeter">
-		<set name="icon" val="icon.etc_leaf_green_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="PAPER" />
-		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1471" type="Weapon" name="Silenos Blowgun">
 		<set name="icon" val="icon.weapon_monster_i00" />

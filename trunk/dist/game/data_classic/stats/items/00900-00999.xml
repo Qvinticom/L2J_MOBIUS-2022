@@ -16,71 +16,6 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="901" type="Armor" name="Ring of Holy Spirit">
-		<set name="icon" val="icon.accessary_ring_of_holy_spirit_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="9" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="94800" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="36" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="902" type="Armor" name="Phoenix Ring">
-		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="35" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="670000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add stat="maxMp" val="13" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="903" type="Armor" name="Cerberus Ring">
-		<set name="icon" val="icon.accessary_cerberuss_ring_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="53" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="999000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="40" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="904" type="Armor" name="Ring of Aid">
-		<set name="icon" val="icon.accessary_ring_of_assistance_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="6" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="62120" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="34" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
 	<item id="905" type="Armor" name="Ring of Blessing">
 		<set name="icon" val="icon.accessary_ring_of_blessing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -306,40 +241,6 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="920" type="Armor" name="Tateossian Necklace">
-		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="139" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="4361000" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="NECKLACE" />
-		<for>
-			<add order="0" stat="mDef" val="95" />
-			<add stat="maxMp" val="42" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="921" type="Armor" name="Necklace of Mana">
-		<set name="icon" val="icon.accessary_necklace_of_mana_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="12" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="124240" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="68" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
 	<item id="922" type="Armor" name="Sage's Necklace">
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -353,55 +254,6 @@
 		<set name="enchant_enabled" val="1" />
 		<for>
 			<add order="0" stat="mDef" val="72" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="923" type="Armor" name="Paradia Necklace">
-		<set name="icon" val="icon.accessary_paradia_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="17" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="189600" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="72" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="924" type="Armor" name="Majestic Necklace">
-		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="106" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="1998000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="85" />
-			<add stat="maxMp" val="33" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="925" type="Armor" name="Necklace of Solar Eclipse">
-		<set name="icon" val="icon.accessary_necklace_of_sola_eclipse_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="12" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="124240" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="68" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -422,137 +274,8 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="927" type="Armor" name="Summoning Necklace">
-		<set name="icon" val="icon.accessary_necklace_of_summons_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="12" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="124240" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="68" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="928" type="Armor" name="Otherworldly Necklace">
-		<set name="icon" val="icon.accessary_another_worlds_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="17" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="189600" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="72" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="929" type="Armor" name="Elemental Necklace">
-		<set name="icon" val="icon.accessary_elemental_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="17" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="189600" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="72" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="930" type="Armor" name="Necklace of Phantom">
-		<set name="icon" val="icon.accessary_necklace_of_phantom_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="106" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="1998000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="80" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
 	<item id="931" type="Armor" name="Necklace of Grace">
 		<set name="icon" val="icon.accessary_necklace_of_grace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="12" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="124240" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="68" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="932" type="Armor" name="Necklace of Holy Spirit">
-		<set name="icon" val="icon.accessary_necklace_of_holy_spirit_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="17" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="189600" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="72" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="933" type="Armor" name="Phoenix Necklace">
-		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="1340000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="80" />
-			<add stat="maxMp" val="26" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="934" type="Armor" name="Cerberus Necklace">
-		<set name="icon" val="icon.accessary_cerberuss_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="106" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="1998000" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<add order="0" stat="mDef" val="80" />
-			<enchant stat="mDef" val="0" />
-		</for>
-	</item>
-	<item id="935" type="Armor" name="Necklace of Aid">
-		<set name="icon" val="icon.accessary_necklace_of_assistance_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -732,24 +455,6 @@
 		<set name="item_skill" val="2016-1" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
-	<item id="949" type="EtcItem" name="Crystal Scroll: Enchant Weapon (B-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
-	<item id="950" type="EtcItem" name="Crystal Scroll: Enchant Armor (B-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
 	<item id="951" type="EtcItem" name="Scroll: Enchant Weapon (C-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -778,24 +483,6 @@
 		<set name="item_skill" val="2018-1" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
-	<item id="953" type="EtcItem" name="Crystal Scroll: Enchant Weapon (C-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
-	<item id="954" type="EtcItem" name="Crystal Scroll: Enchant Armor (C-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
 	<item id="955" type="EtcItem" name="Scroll: Enchant Weapon (D-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -823,70 +510,6 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2020-1" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-	</item>
-	<item id="957" type="EtcItem" name="Crystal Scroll: Enchant Weapon (D-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
-	<item id="958" type="EtcItem" name="Crystal Scroll: Enchant Armor (D-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
-	<item id="959" type="EtcItem" name="Scroll: Enchant Weapon (S-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="price" val="5000000" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-		<set name="item_skill" val="2021-1" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-	</item>
-	<item id="960" type="EtcItem" name="Scroll: Enchant Armor (S-Grade)">
-		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="price" val="500000" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-		<set name="item_skill" val="2022-1" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-	</item>
-	<item id="961" type="EtcItem" name="Crystal Scroll: Enchant Weapon (S-Grade)">
-		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
-	</item>
-	<item id="962" type="EtcItem" name="Crystal Scroll: Enchant Armor (S-Grade)">
-		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="963" type="EtcItem" name="Orc Arrowhead">
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
@@ -1076,17 +699,6 @@
 	</item>
 	<item id="979" type="EtcItem" name="Bloodspear Amulet">
 		<set name="icon" val="icon.item_normal89" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="980" type="EtcItem" name="0">
-		<set name="icon" val="icon.weapon_mace23" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

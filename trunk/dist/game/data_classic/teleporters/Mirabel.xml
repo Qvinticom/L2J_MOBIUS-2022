@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="30146"> <!-- Mirabel -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010005" x="-12787" y="122779" z="-3112" feeCount="9200" /> <!-- The Town of Gludio -->
+			<location npcStringId="1010158" x="115120" y="-178224" z="-880" feeCount="23000" /> <!-- Dwarven Village -->
+			<location npcStringId="1010157" x="-45158" y="-112583" z="-240" feeCount="18000" /> <!-- Orc Village -->
+			<location npcStringId="1010156" x="9709" y="15566" z="-4568" feeCount="4700" /> <!-- Dark Elf Village -->
+			<location npcStringId="1010167" x="21373" y="51119" z="-3693" feeCount="710" /> <!-- Elven Forest (Lv. 8) -->
+			<location npcStringId="1010560" x="29298" y="74968" z="-3777" feeCount="820" /> <!-- Elven Fortress (Lv. 10) -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeId="13722" feeCount="1" /> <!-- Giran Arena -->
+			<location npcStringId="1010613" x="-18415" y="85624" z="-3675" feeId="13722" feeCount="1" /> <!-- The Center of the Neutral Zone -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
+			<location npcStringId="1010507" x="73579" y="142709" z="-3763" feeCount="1000" /> <!-- Giran Arena -->
+			<location npcStringId="1010613" x="-18415" y="85624" z="-3675" feeCount="1000" /> <!-- The Center of the Neutral Zone -->
+			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
+		</teleport>
+	</npc>
+</list>

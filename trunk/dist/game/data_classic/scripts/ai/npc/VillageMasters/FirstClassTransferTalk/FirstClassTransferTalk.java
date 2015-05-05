@@ -46,15 +46,6 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 		MASTERS.put(30565, Race.ORC); // Kakai, Orc Village Flame Lord
 		MASTERS.put(30520, Race.DWARF); // Reed, Dwarven Village Warehouse Chief
 		MASTERS.put(30525, Race.DWARF); // Bronk, Dwarven Village Head Blacksmith
-		// Kamael Village NPCs
-		MASTERS.put(32171, Race.DWARF); // Hoffa, Warehouse Chief
-		MASTERS.put(32158, Race.DWARF); // Fisler, Dwarf Guild Warehouse Chief
-		MASTERS.put(32157, Race.DWARF); // Moka, Dwarf Guild Head Blacksmith
-		MASTERS.put(32160, Race.DARK_ELF); // Devon, Dark Elf Guild Grand Magister
-		MASTERS.put(32147, Race.ELF); // Rivian, Elf Guild Grand Master
-		MASTERS.put(32150, Race.ORC); // Took, Orc Guild High Prefect
-		MASTERS.put(32153, Race.HUMAN); // Prana, Human Guild High Priest
-		MASTERS.put(32154, Race.HUMAN); // Aldenia, Human Guild Grand Master
 	}
 	
 	private FirstClassTransferTalk()

@@ -37,6 +37,7 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 	private static final ItemHolder BLACK_WOLF_PELT = new ItemHolder(1482, 40);
 	// Monster
 	private static final int BLACK_WOLF = 20317;
+	private static final int BLACK_TIMBER_WOLF = 20318;
 	// Rewards
 	private static final int SCROLL_OF_ESCAPE = 736;
 	private static final int GRANDMAS_PEARL = 1502;
@@ -51,7 +52,7 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 		super(291, Q00291_RevengeOfTheRedbonnet.class.getSimpleName(), "Revenge of the Redbonnet");
 		addStartNpc(MARYSE_REDBONNET);
 		addTalkId(MARYSE_REDBONNET);
-		addKillId(BLACK_WOLF);
+		addKillId(BLACK_WOLF, BLACK_TIMBER_WOLF);
 		registerQuestItems(BLACK_WOLF_PELT.getId());
 	}
 	

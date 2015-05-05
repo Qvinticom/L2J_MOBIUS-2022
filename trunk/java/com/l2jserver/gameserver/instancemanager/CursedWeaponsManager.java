@@ -72,7 +72,7 @@ public final class CursedWeaponsManager
 	{
 		_cursedWeapons = new HashMap<>();
 		
-		if (!Config.ALLOW_CURSED_WEAPONS)
+		if (!Config.ALLOW_CURSED_WEAPONS || Config.SERVER_CLASSIC_SUPPORT)
 		{
 			return;
 		}

@@ -49,7 +49,6 @@
 				<group chance="65.16929626464844">
 					<item id="348" min="1" max="1" chance="41.8439" /> <!-- Scale Mail -->
 					<item id="377" min="4" max="12" chance="8.3639" /> <!-- Scale Gaiters -->
-					<item id="1935" min="53" max="157" chance="11.4099" /> <!-- Scale Mail Fragment -->
 					<item id="1937" min="24" max="72" chance="38.3823" /> <!-- Scale Gaiters Fragment -->
 				</group>
 				<group chance="62.36869812011719">
@@ -205,18 +204,12 @@
 					<item id="352" min="1" max="1" chance="23.9206" /> <!-- Brigandine Tunic -->
 					<item id="2377" min="6" max="16" chance="3.4785" /> <!-- Mithril Scale Gaiters -->
 					<item id="2378" min="1" max="1" chance="38.263" /> <!-- Brigandine Gaiters -->
-					<item id="1941" min="140" max="420" chance="3.9021" /> <!-- Brigandine Temper -->
 					<item id="2918" min="40" max="120" chance="20.3744" /> <!-- Mithril Scale Gaiters Material -->
-					<item id="2919" min="81" max="243" chance="10.0614" /> <!-- Brigandine Gaiters Material -->
 				</group>
 				<group chance="48.21739959716797">
-					<item id="21731" min="1" max="1" chance="14.3583" /> <!-- Maingauche - Event -->
 					<item id="1660" min="1" max="1" chance="14.3583" /> <!-- Cursed Maingauche -->
 					<item id="2038" min="24" max="72" chance="16.9722" /> <!-- Maingauche Edge -->
 					<item id="2044" min="8" max="22" chance="54.3112" /> <!-- Cursed Maingauche Edge -->
-				</group>
-				<group chance="32.128700256347656">
-					<item id="6387" min="60" max="180" chance="100" /> <!-- Blessed Scroll of Resurrection for Pets -->
 				</group>
 			</death>
 		</drop_lists>
@@ -348,15 +341,11 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9816" min="1" max="5" chance="73" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="2" chance="73" /> <!-- Destruction Tombstone -->
 				<group chance="71.42739868164062">
 					<item id="398" min="1" max="1" chance="16.102" /> <!-- Plated Leather -->
 					<item id="418" min="7" max="19" chance="1.9806" /> <!-- Plated Leather Gaiters -->
 					<item id="399" min="1" max="1" chance="14.8467" /> <!-- Rind Leather Armor -->
 					<item id="419" min="1" max="1" chance="23.7752" /> <!-- Rind Leather Gaiters -->
-					<item id="1966" min="192" max="576" chance="2.6255" /> <!-- Plated Leather Fragment -->
-					<item id="1967" min="116" max="346" chance="6.52" /> <!-- Plated Leather Gaiters Material -->
 					<item id="1975" min="23" max="67" chance="20.1565" /> <!-- Rind Leather Armor Design -->
 					<item id="1976" min="60" max="180" chance="13.9935" /> <!-- Rind Leather Gaiters Material -->
 				</group>
@@ -499,13 +488,10 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9818" min="2" max="7" chance="72" /> <!-- Angelic Essence -->
-				<item id="8176" min="1" max="3" chance="80" /> <!-- Destruction Tombstone -->
 				<group chance="68.81600189208984">
 					<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei -->
 					<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei -->
 					<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe -->
-					<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric -->
 					<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric -->
 					<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric -->
 				</group>
@@ -654,13 +640,10 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9814" min="2" max="5" chance="77" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="3" chance="67" /> <!-- Destruction Tombstone -->
 				<group chance="57.767799377441406">
 					<item id="2384" min="1" max="1" chance="9.4025" /> <!-- Zubei's Leather Shirt -->
 					<item id="2388" min="1" max="1" chance="15.0405" /> <!-- Zubei's Leather Gaiters -->
 					<item id="2390" min="1" max="1" chance="5.7836" /> <!-- Avadon Leather Armor -->
-					<item id="4066" min="81" max="243" chance="8.1898" /> <!-- Zubei's Leather Shirt Fabric -->
 					<item id="4067" min="40" max="120" chance="25.1809" /> <!-- Zubei's Leather Gaiter Texture -->
 					<item id="4068" min="14" max="42" chance="36.4027" /> <!-- Avadon Leather Armor Lining -->
 				</group>
@@ -806,16 +789,12 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9817" min="2" max="7" chance="74" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="3" chance="83" /> <!-- Destruction Tombstone -->
 				<group chance="61.51530075073242">
 					<item id="601" min="1" max="1" chance="15.7283" /> <!-- Sealed Doom Boots -->
 					<item id="2439" min="1" max="1" chance="15.7283" /> <!-- Sealed Blue Wolf Boots -->
 					<item id="2475" min="1" max="1" chance="15.7283" /> <!-- Sealed Doom Gloves -->
 					<item id="2487" min="1" max="1" chance="15.7283" /> <!-- Sealed Blue Wolf Gloves -->
 					<item id="4099" min="60" max="180" chance="18.2056" /> <!-- Sealed Doom Boots Part -->
-					<item id="4090" min="116" max="346" chance="9.4574" /> <!-- Sealed Blue Wolf Boots Design -->
-					<item id="4091" min="192" max="576" chance="5.6892" /> <!-- Sealed Doom Gloves Part -->
 					<item id="4096" min="293" max="877" chance="3.7346" /> <!-- Sealed Blue Wolf Gloves Fabric -->
 				</group>
 				<group chance="36.26259994506836">
@@ -966,7 +945,6 @@
 					<item id="394" min="1" max="1" chance="26.1614" /> <!-- Reinforced Leather Shirt -->
 					<item id="415" min="4" max="12" chance="5.2269" /> <!-- Mithril Banded Gaiters -->
 					<item id="416" min="5" max="13" chance="4.6461" /> <!-- Reinforced Leather Gaiters -->
-					<item id="1938" min="53" max="157" chance="9.7987" /> <!-- Mithril Banded Mail Material -->
 					<item id="1939" min="24" max="72" chance="28.0055" /> <!-- Mithril Banded Gaiters Material -->
 				</group>
 				<group chance="73.07039642333984">
@@ -1189,7 +1167,6 @@
 				<group chance="61.40140151977539">
 					<item id="353" min="1" max="1" chance="30.8014" /> <!-- Half Plate Armor -->
 					<item id="380" min="4" max="12" chance="6.1603" /> <!-- Plate Gaiters -->
-					<item id="1950" min="53" max="157" chance="14.3198" /> <!-- Half Plate Temper -->
 					<item id="1951" min="24" max="72" chance="48.7185" /> <!-- Plate Gaiters Part -->
 				</group>
 				<group chance="41.70389938354492">
@@ -1330,14 +1307,10 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone -->
 				<group chance="65.29170227050781">
 					<item id="119" min="1" max="1" chance="14.8393" /> <!-- Necklace of Seal -->
 					<item id="855" min="1" max="1" chance="19.7857" /> <!-- Nassen's Earring -->
 					<item id="886" min="1" max="1" chance="29.6786" /> <!-- Ring of Seal -->
-					<item id="1920" min="140" max="420" chance="3.9388" /> <!-- Necklace of Seal Chain -->
-					<item id="1918" min="81" max="243" chance="8.6166" /> <!-- Nassen's Earring Gemstone -->
 					<item id="2917" min="40" max="120" chance="23.141" /> <!-- Ring of Seal Gemstone -->
 				</group>
 				<group chance="76.59960174560547">
@@ -1480,15 +1453,11 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9817" min="2" max="6" chance="79" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone -->
 				<group chance="75.74919891357422">
 					<item id="503" min="1" max="1" chance="12.6448" /> <!-- Zubei's Helmet -->
 					<item id="633" min="1" max="1" chance="18.0649" /> <!-- Zubei's Shield -->
 					<item id="673" min="1" max="1" chance="18.0649" /> <!-- Avadon Shield -->
 					<item id="2415" min="1" max="1" chance="12.6448" /> <!-- Avadon Circlet -->
-					<item id="4102" min="192" max="576" chance="4.4266" /> <!-- Zubei's Helmet Design -->
-					<item id="4101" min="116" max="346" chance="9.4977" /> <!-- Zubei's Shield Fragment -->
 					<item id="4439" min="60" max="180" chance="21.7506" /> <!-- Avadon Shield Fragment -->
 					<item id="4072" min="293" max="877" chance="2.9057" /> <!-- Avadon Circlet Pattern -->
 				</group>
@@ -1632,28 +1601,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="2" max="6" chance="82" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="3" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="54.956600189208984">
-					<item id="5297" min="1" max="1" chance="6.8601" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5298" min="1" max="1" chance="10.9721" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5301" min="1" max="1" chance="4.221" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5478" min="9" max="27" chance="42.8005" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5482" min="28" max="84" chance="21.5934" /> <!-- Sealed Dark Crystal Leggings Design -->
-					<item id="5479" min="20" max="60" chance="13.5529" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				</group>
-				<group chance="35.42610168457031">
-					<item id="288" min="1" max="1" chance="9.0731" /> <!-- Carnage Bow -->
-					<item id="5535" min="12" max="36" chance="90.9269" /> <!-- Carnage Bow Stave -->
-				</group>
-				<group chance="32.6338996887207">
-					<item id="6570" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-					<item id="729" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="38" />
@@ -1792,27 +1739,6 @@
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9814" min="3" max="8" chance="74" /> <!-- Memento Mori -->
-				<item id="8176" min="2" max="3" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="62.820098876953125">
-					<item id="5313" min="1" max="1" chance="8.645" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5314" min="1" max="1" chance="8.645" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5318" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Gauntlets -->
-					<item id="5319" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Boots -->
-					<item id="5514" min="60" max="180" chance="8.2433" /> <!-- Sealed Gauntlets of Nightmare Design -->
-					<item id="5502" min="116" max="346" chance="4.2822" /> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="5515" min="16" max="48" chance="30.9123" /> <!-- Sealed Majestic Gauntlets Design -->
-					<item id="5503" min="23" max="67" chance="21.9822" /> <!-- Sealed Majestic Boots Lining -->
-				</group>
-				<group chance="27.354400634765625">
-					<item id="305" min="1" max="1" chance="7.7821" /> <!-- Tallum Glaive -->
-					<item id="5541" min="12" max="36" chance="92.2179" /> <!-- Tallum Glaive Edge -->
-				</group>
-				<group chance="42.60810089111328">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
 			</death>
 		</drop_lists>
 		<collision>
@@ -2107,12 +2033,8 @@
 					<item id="2427" min="10" max="30" chance="1.1414" /> <!-- Salamander Skin Boots -->
 					<item id="2428" min="1" max="1" chance="22.8284" /> <!-- Plate Boots -->
 					<item id="2451" min="1" max="1" chance="22.8284" /> <!-- Sage's Worn Gloves -->
-					<item id="1949" min="112" max="336" chance="4.2767" /> <!-- Mithril Gloves Design -->
 					<item id="1963" min="203" max="607" chance="2.3654" /> <!-- Ogre Power Gauntlets Part -->
-					<item id="1957" min="320" max="960" chance="1.4968" /> <!-- Assault Boots Part -->
-					<item id="2931" min="28" max="82" chance="17.4178" /> <!-- Salamander Skin Boot Lining -->
 					<item id="2932" min="36" max="108" chance="13.3052" /> <!-- Plate Boots Design -->
-					<item id="2933" min="46" max="136" chance="10.5274" /> <!-- Sage's Worn Gloves Lining -->
 				</group>
 				<group chance="29.55190086364746">
 					<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr -->
@@ -2253,8 +2175,6 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9814" min="1" max="3" chance="81" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="81" /> <!-- Destruction Tombstone -->
 				<group chance="71.66889953613281">
 					<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots -->
 					<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves -->
@@ -2264,11 +2184,9 @@
 					<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets -->
 					<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves -->
 					<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture -->
-					<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture -->
 					<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design -->
 					<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part -->
 					<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design -->
-					<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part -->
 					<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern -->
 				</group>
 				<group chance="70.55290222167969">
@@ -2420,8 +2338,6 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone -->
 				<group chance="77.13909912109375">
 					<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots -->
 					<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves -->
@@ -2431,11 +2347,9 @@
 					<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets -->
 					<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves -->
 					<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture -->
-					<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture -->
 					<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design -->
 					<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part -->
 					<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design -->
-					<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part -->
 					<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern -->
 				</group>
 				<group chance="75.93800354003906">
@@ -2584,8 +2498,6 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
 				<group chance="60.47779846191406">
 					<item id="2384" min="1" max="1" chance="5.6807" /> <!-- Zubei's Leather Shirt -->
 					<item id="2388" min="1" max="1" chance="9.0869" /> <!-- Zubei's Leather Gaiters -->
@@ -2654,29 +2566,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="3" max="7" chance="80" /> <!-- Memento Mori -->
-				<item id="8176" min="2" max="3" chance="80" /> <!-- Destruction Tombstone -->
-				<group chance="78.03739929199219">
-					<item id="5287" min="1" max="1" chance="3.4556" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5288" min="1" max="1" chance="5.5295" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5293" min="1" max="1" chance="2.1266" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5520" min="9" max="27" chance="22.048" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="5524" min="28" max="84" chance="10.8318" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
-					<item id="5521" min="3" max="7" chance="56.0085" /> <!-- Sealed Tallum Plate Armor Pattern -->
-				</group>
-				<group chance="33.70370101928711">
-					<item id="235" min="1" max="1" chance="9.097" /> <!-- Bloody Orchid -->
-					<item id="5536" min="12" max="36" chance="90.903" /> <!-- Bloody Orchid Head -->
-				</group>
-				<group chance="89.44409942626953">
-					<item id="729" min="1" max="1" chance="11.6009" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="87.007" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="1.3921" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="34" />
@@ -2808,33 +2697,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="69.43990325927734">
-					<item id="6676" min="1" max="1" chance="2.2665" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6677" min="1" max="1" chance="2.2665" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6681" min="1" max="1" chance="2.2665" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6682" min="1" max="1" chance="2.2665" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6685" min="1" max="1" chance="2.2665" /> <!-- Sealed Major Arcana Glove -->
-					<item id="6686" min="1" max="1" chance="2.2665" /> <!-- Sealed Major Arcana Boots -->
-					<item id="6703" min="8" max="24" chance="32.2205" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-					<item id="6704" min="14" max="40" chance="19.0936" /> <!-- Sealed Imperial Crusader Boots Design -->
-					<item id="6708" min="20" max="60" chance="12.8882" /> <!-- Sealed Draconic Leather Gloves Fabric -->
-					<item id="6709" min="28" max="82" chance="9.3732" /> <!-- Sealed Draconic Leather Boots Design -->
-					<item id="6712" min="36" max="108" chance="7.1601" /> <!-- Sealed Major Arcana Gloves fabric -->
-					<item id="6713" min="46" max="136" chance="5.6654" /> <!-- Sealed Major Arcana Boots Design -->
-				</group>
-				<group chance="21.053699493408203">
-					<item id="6371" min="1" max="1" chance="5.0271" /> <!-- Demon Splinter -->
-					<item id="6695" min="12" max="36" chance="94.9729" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="43.673301696777344">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="24" grown="29" />
 			<height normal="40" grown="48" />
@@ -2965,13 +2827,9 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
 				<group chance="76.56690216064453">
 					<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots -->
 					<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets -->
-					<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part -->
-					<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design -->
 				</group>
 				<group chance="47.26750183105469">
 					<item id="231" min="1" max="1" chance="5.193" /> <!-- Grace Dagger -->
@@ -3128,7 +2986,6 @@
 					<item id="2024" min="12" max="36" chance="42.3714" /> <!-- Elven Bow Shaft -->
 				</group>
 				<group chance="67.11280059814453">
-					<item id="6387" min="24" max="72" chance="22.9759" /> <!-- Blessed Scroll of Resurrection for Pets -->
 					<item id="955" min="4" max="10" chance="15.7549" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 					<item id="956" min="8" max="22" chance="61.2692" /> <!-- Scroll: Enchant Armor (D-Grade) -->
 				</group>
@@ -3274,8 +3131,6 @@
 					<item id="2412" min="1" max="1" chance="38.3646" /> <!-- Plate Helmet -->
 					<item id="2494" min="6" max="18" chance="4.5649" /> <!-- Plate Shield -->
 					<item id="1956" min="40" max="120" chance="30.7004" /> <!-- Square Shield Fragment -->
-					<item id="2930" min="140" max="420" chance="6.2295" /> <!-- Plate Helmet Design -->
-					<item id="2934" min="81" max="243" chance="15.1607" /> <!-- Plate Shield Fragment -->
 				</group>
 				<group chance="29.55190086364746">
 					<item id="297" min="1" max="1" chance="29.5049" /> <!-- Glaive -->
@@ -3341,15 +3196,10 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9818" min="1" max="3" chance="64" /> <!-- Angelic Essence -->
-				<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone -->
 				<group chance="64.1427993774414">
 					<item id="852" min="1" max="1" chance="40.3267" /> <!-- Moonstone Earring -->
 					<item id="883" min="6" max="16" chance="5.5014" /> <!-- Aquastone Ring -->
 					<item id="915" min="1" max="1" chance="30.2577" /> <!-- Aquastone Necklace -->
-					<item id="1908" min="81" max="243" chance="14.0613" /> <!-- Moonstone Earring Wire -->
-					<item id="1909" min="480" max="1440" chance="3.3838" /> <!-- Aquastone Ring Wire -->
-					<item id="1910" min="140" max="420" chance="6.4691" /> <!-- Aquastone Necklace Chain -->
 				</group>
 				<group chance="79.06189727783203">
 					<item id="89" min="1" max="1" chance="1.2454" /> <!-- Big Hammer -->
@@ -3506,13 +3356,10 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9816" min="2" max="6" chance="79" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone -->
 				<group chance="67.25969696044922">
 					<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei -->
 					<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei -->
 					<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe -->
-					<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric -->
 					<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric -->
 					<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric -->
 				</group>
@@ -3660,15 +3507,11 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9818" min="1" max="4" chance="75" /> <!-- Angelic Essence -->
-				<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone -->
 				<group chance="59.259498596191406">
 					<item id="856" min="1" max="1" chance="16.3105" /> <!-- Adamantite Earring -->
 					<item id="887" min="1" max="1" chance="24.4657" /> <!-- Adamantite Ring -->
 					<item id="918" min="1" max="1" chance="12.2329" /> <!-- Adamantite Necklace -->
-					<item id="4049" min="81" max="243" chance="12.302" /> <!-- Adamantite Earring Gemstone -->
 					<item id="4050" min="40" max="120" chance="29.4263" /> <!-- Adamantite Ring Wire -->
-					<item id="4051" min="140" max="420" chance="5.2626" /> <!-- Adamantite Necklace Chain -->
 				</group>
 				<group chance="39.72629928588867">
 					<item id="78" min="1" max="1" chance="2.5452" /> <!-- Great Sword -->
@@ -3819,23 +3662,6 @@
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9814" min="2" max="8" chance="76" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
-				<group chance="67.66829681396484">
-					<item id="5326" min="1" max="1" chance="3.2792" /> <!-- Sealed Robe of Nightmare -->
-					<item id="5329" min="1" max="1" chance="3.2792" /> <!-- Sealed Majestic Robe -->
-					<item id="5487" min="4" max="12" chance="60.9401" /> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="5488" min="8" max="22" chance="32.5015" /> <!-- Sealed Majestic Robe Fabric -->
-				</group>
-				<group chance="27.259899139404297">
-					<item id="289" min="1" max="1" chance="7.7743" /> <!-- Soul Bow -->
-					<item id="5534" min="12" max="36" chance="92.2257" /> <!-- Soul Bow Stave -->
-				</group>
-				<group chance="42.41830062866211">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
 			</death>
 		</drop_lists>
 		<collision>
@@ -4118,8 +3944,6 @@
 				<group chance="51.1702995300293">
 					<item id="437" min="1" max="1" chance="56.3214" /> <!-- Mithril Tunic -->
 					<item id="470" min="4" max="12" chance="11.2434" /> <!-- Mithril Stockings -->
-					<item id="1944" min="53" max="157" chance="23.5297" /> <!-- Mithril Tunic Fabric -->
-					<item id="1945" min="216" max="648" chance="8.9055" /> <!-- Mithril Stocking Design -->
 				</group>
 				<group chance="42.475799560546875">
 					<item id="318" min="1" max="1" chance="32.5983" /> <!-- Crucifix of Blood -->
@@ -4412,14 +4236,10 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9816" min="2" max="4" chance="75" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="2" chance="75" /> <!-- Destruction Tombstone -->
 				<group chance="55.97269821166992">
 					<item id="854" min="7" max="19" chance="8.1969" /> <!-- Earring of Seal -->
 					<item id="885" min="6" max="16" chance="14.5276" /> <!-- Ring of Ages -->
 					<item id="917" min="7" max="21" chance="5.7092" /> <!-- Necklace of Mermaid -->
-					<item id="1914" min="81" max="243" chance="41.8683" /> <!-- Earring of Seal Gemstone -->
-					<item id="1915" min="280" max="840" chance="18.9949" /> <!-- Ring of Ages Gemstone -->
 					<item id="1916" min="240" max="720" chance="10.7031" /> <!-- Necklace of Mermaid Teardrop -->
 				</group>
 				<group chance="72.7343978881836">
@@ -4560,8 +4380,6 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9817" min="2" max="4" chance="74" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="2" chance="74" /> <!-- Destruction Tombstone -->
 				<group chance="55.15010070800781">
 					<item id="355" min="1" max="1" chance="29.2819" /> <!-- Dwarven Chain Mail Shirt -->
 					<item id="382" min="1" max="1" chance="46.8492" /> <!-- Dwarven Chain Gaiters -->
@@ -4629,8 +4447,6 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9816" min="1" max="4" chance="83" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="2" chance="70" /> <!-- Destruction Tombstone -->
 				<group chance="60.582698822021484">
 					<item id="864" min="1" max="1" chance="11.7667" /> <!-- Earring of Black Ore -->
 					<item id="895" min="1" max="1" chance="17.6501" /> <!-- Ring of Black Ore -->
@@ -4793,24 +4609,6 @@
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9814" min="3" max="7" chance="81" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
-				<group chance="79.40280151367188">
-					<item id="5312" min="1" max="1" chance="6.0811" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5315" min="1" max="1" chance="8.6898" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5317" min="1" max="1" chance="6.0811" /> <!-- Sealed Majestic Circlet -->
-					<item id="5527" min="9" max="27" chance="41.0386" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5495" min="40" max="120" chance="11.7274" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5528" min="14" max="42" chance="26.382" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
-				<group chance="27.354400634765625">
-					<item id="305" min="1" max="1" chance="7.7821" /> <!-- Tallum Glaive -->
-					<item id="5541" min="12" max="36" chance="92.2179" /> <!-- Tallum Glaive Edge -->
-				</group>
-				<group chance="65.97840118408203">
-					<item id="6578" min="1" max="1" chance="9.6386" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="730" min="1" max="3" chance="90.3614" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
 			</death>
 		</drop_lists>
 		<collision>
@@ -5158,8 +4956,6 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<item id="9816" min="1" max="3" chance="72" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="72" /> <!-- Destruction Tombstone -->
 				<group chance="73.60040283203125">
 					<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots -->
 					<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets -->

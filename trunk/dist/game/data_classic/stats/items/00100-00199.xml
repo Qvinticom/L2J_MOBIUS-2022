@@ -82,60 +82,6 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="104" type="Armor" name="Shield of Victory">
-		<set name="icon" val="icon.shield_small_shield_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="6400" />
-		<set name="price" val="83800" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
-		</for>
-	</item>
-	<item id="105" type="Armor" name="Implosion Shield">
-		<set name="icon" val="icon.shield_doom_shield_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="DAMASCUS" />
-		<set name="weight" val="4800" />
-		<set name="price" val="83800" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
-		</for>
-	</item>
-	<item id="106" type="Armor" name="Dark Dragon Shield">
-		<set name="icon" val="icon.shield_dark_dragon_shield_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="12" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="DAMASCUS" />
-		<set name="weight" val="4800" />
-		<set name="price" val="129960" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
-		</for>
-	</item>
 	<item id="107" type="Armor" name="Compound Shield">
 		<set name="icon" val="icon.shield_composite_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -172,24 +118,6 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="109" type="Armor" name="Shield of Solar Eclipse">
-		<set name="icon" val="icon.shield_shield_of_sola_eclipse_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="4800" />
-		<set name="price" val="83800" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
-		</for>
-	</item>
 	<item id="110" type="Armor" name="Doom Shield">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -205,24 +133,6 @@
 			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
-		</for>
-	</item>
-	<item id="111" type="Armor" name="Shield of Pledge">
-		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="4800" />
-		<set name="price" val="83800" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="216" />
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
@@ -745,117 +655,6 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="136" type="EtcItem" name="(Not in Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14075,1,1,100" />
-	</item>
-	<item id="137" type="EtcItem" name="(Not in Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14076,1,1,100" />
-	</item>
-	<item id="138" type="EtcItem" name="(Not in Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14077,1,1,100" />
-	</item>
-	<item id="139" type="EtcItem" name="Agathion - Angry Devil Pack (7-day)">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14093,1,1,100" />
-	</item>
-	<item id="140" type="EtcItem" name="Agathion - Shiny Pack (7-day)">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14094,1,1,100" />
-	</item>
-	<item id="141" type="EtcItem" name="Agathion - Sobbing Pack (7-day)">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14095,1,1,100" />
-	</item>
-	<item id="142" type="Weapon" name="Keshanberk">
-		<set name="icon" val="icon.weapon_kshanberk_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="119" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="1370" />
-		<set name="price" val="1336100" />
-		<set name="change_weaponId" val="9304" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<set stat="pAtk" val="175" />
-			<set stat="mAtk" val="91" />
-			<set stat="rCrit" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
 	<item id="143" type="Weapon" name="Sword of Mystic">
 		<set name="icon" val="icon.weapon_sword_of_mystic_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -964,33 +763,6 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="147" type="Weapon" name="Tear of Darkness">
-		<set name="icon" val="icon.weapon_shamshir_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="976" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="830" />
-		<set name="price" val="18300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="170" />
-			<set stat="mAtk" val="143" />
-			<set stat="rCrit" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
 	<item id="148" type="Weapon" name="Sword of Valhalla">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1013,88 +785,6 @@
 		<for>
 			<set stat="pAtk" val="140" />
 			<set stat="mAtk" val="122" />
-			<set stat="rCrit" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="149" type="Weapon" name="Corroded Sword of Life">
-		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="976" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="840" />
-		<set name="price" val="18300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="170" />
-			<set stat="mAtk" val="143" />
-			<set stat="rCrit" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="150" type="Weapon" name="Elemental Sword">
-		<set name="icon" val="icon.weapon_elemental_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="751" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="830" />
-		<set name="price" val="14098000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="170" />
-			<set stat="mAtk" val="143" />
-			<set stat="rCrit" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="151" type="Weapon" name="Sword of Miracles">
-		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1106" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="840" />
-		<set name="price" val="20741000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<for>
-			<set stat="pAtk" val="186" />
-			<set stat="mAtk" val="152" />
 			<set stat="rCrit" val="8" />
 			<set stat="pAtkSpd" val="379" />
 			<enchant val="0" stat="pAtk" />
@@ -1379,75 +1069,6 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="163" type="EtcItem" name="(Not in Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="13026,1,1,100" />
-	</item>
-	<item id="164" type="Weapon" name="Elysian">
-		<set name="icon" val="icon.weapon_elysian_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1106" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="1580" />
-		<set name="price" val="20741000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<for>
-			<set stat="pAtk" val="232" />
-			<set stat="mAtk" val="114" />
-			<set stat="rCrit" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="165" type="Weapon" name="Yablonski's Hammer">
-		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1129" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1570" />
-		<set name="price" val="35300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<set stat="pAtk" val="251" />
-			<set stat="mAtk" val="121" />
-			<set stat="rCrit" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
 	<item id="166" type="Weapon" name="Heavy Mace">
 		<set name="icon" val="icon.weapon_heavy_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1555,20 +1176,6 @@
 			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
 		</for>
-	</item>
-	<item id="170" type="EtcItem" name="Agathion - Angry Devil Pack (7-day) (Event)">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14101,1,1,100" />
 	</item>
 	<item id="171" type="Weapon" name="Deadman's Glory">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />

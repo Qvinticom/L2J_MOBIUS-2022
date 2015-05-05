@@ -165,31 +165,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2915" type="Weapon" name="Old Knight Sword">
-		<set name="icon" val="icon.weapon_long_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="3200" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<for>
-			<set stat="pAtk" val="24" />
-			<set stat="mAtk" val="17" />
-			<set stat="rCrit" val="8" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
-	</item>
 	<item id="2916" type="EtcItem" name="Broken Teleport Device">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="immediate_effect" val="true" />

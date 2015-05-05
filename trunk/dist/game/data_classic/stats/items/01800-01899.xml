@@ -97,68 +97,6 @@
 		<set name="handler" val="Recipes" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="1808" type="EtcItem" name="Recipe: Soulshot (S-Grade)">
-		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="450000" />
-		<set name="recipe_id" val="24" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="1809" type="EtcItem" name="Recipe: Durable Stem">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1810" type="EtcItem" name="Recipe: Wooden Frame">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1811" type="EtcItem" name="Recipe: Bark of Treant">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1812" type="EtcItem" name="Recipe: Coarse Bone Powder">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1813" type="EtcItem" name="Recipe: Refined Steel">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="1814" type="EtcItem" name="Recipe: Leather">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -170,26 +108,6 @@
 		<set name="recipe_id" val="25" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
-	</item>
-	<item id="1815" type="EtcItem" name="Recipe: Bowstring">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1816" type="EtcItem" name="Recipe: Steel Frame">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1817" type="EtcItem" name="Recipe: Cord">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
@@ -203,76 +121,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1818" type="EtcItem" name="Recipe: Refined Bronze">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1819" type="EtcItem" name="Recipe: Treant Potion">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1820" type="EtcItem" name="Recipe: Spell Paper">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1821" type="EtcItem" name="Recipe: Flaming Oil">
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1822" type="EtcItem" name="Recipe: Magic Powder">
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1823" type="EtcItem" name="Recipe: Refined Mithril">
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1824" type="EtcItem" name="Recipe: Reinforced Steel">
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="1825" type="EtcItem" name="Recipe: Oriharukon">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -284,36 +132,6 @@
 		<set name="recipe_id" val="27" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
-	</item>
-	<item id="1826" type="EtcItem" name="Recipe: Spell Solution">
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1827" type="EtcItem" name="Recipe: Metal Frame">
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1828" type="EtcItem" name="Recipe: Steel of Highest Grade">
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1829" type="EtcItem" name="Scroll of Escape: Clan Hall">
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />

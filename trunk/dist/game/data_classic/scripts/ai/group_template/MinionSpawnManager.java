@@ -40,20 +40,6 @@ public final class MinionSpawnManager extends AbstractNpcAI
 	
 	static
 	{
-		NPC.add(18344); // Ancient Egg
-		NPC.add(18352); // Kamael Guard
-		NPC.add(18353); // Guardian of Records
-		NPC.add(18354); // Guardian of Observation
-		NPC.add(18355); // Spicula's Guard
-		NPC.add(18356); // Harkilgamed's Gatekeeper
-		NPC.add(18357); // Rodenpicula's Gatekeeper
-		NPC.add(18359); // Arviterre's Guardian
-		NPC.add(18360); // Katenar's Gatekeeper
-		NPC.add(18361); // Guardian of Prediction
-		NPC.add(18484); // Naia Failan
-		NPC.add(18491); // Lock
-		NPC.add(18547); // Ancient Experiment
-		NPC.add(18551); // Cruma Phantom
 		NPC.add(35375); // Bloody Lord Nurka
 		NPC.add(20376); // Varikan Brigand Leader
 		NPC.add(20398); // Vrykolakas
@@ -87,55 +73,8 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(21078); // Magus Valac
 		NPC.add(21081); // Power Angel Amon
 		NPC.add(21090); // Bloody Guardian
-		NPC.add(21312); // Eye of Ruler
-		NPC.add(21343); // Ketra Commander
-		NPC.add(21345); // Ketra's Head Shaman
-		NPC.add(21347); // Ketra Prophet
-		NPC.add(21369); // Varka's Commander
-		NPC.add(21371); // Varka's Head Magus
-		NPC.add(21373); // Varka's Prophet
 		NPC.add(21432); // Chakram Beetle
 		NPC.add(21434); // Seer of Blood
-		NPC.add(21512); // Splinter Stakato Drone
-		NPC.add(21517); // Needle Stakato Drone
-		NPC.add(21541); // Pilgrim of Splendor
-		NPC.add(21544); // Judge of Splendor
-		NPC.add(21596); // Requiem Lord
-		NPC.add(21599); // Requiem Priest
-		NPC.add(21652); // Scarlet Stakato Noble
-		NPC.add(21653); // Assassin Beetle
-		NPC.add(21654); // Necromancer of Destruction
-		NPC.add(21655); // Arimanes of Destruction
-		NPC.add(21656); // Ashuras of Destruction
-		NPC.add(21657); // Magma Drake
-		NPC.add(22028); // Vagabond of the Ruins
-		NPC.add(22080); // Massive Lost Bandersnatch
-		NPC.add(22084); // Panthera
-		NPC.add(22092); // Frost Iron Golem
-		NPC.add(22096); // Ursus
-		NPC.add(22100); // Freya's Gardener
-		NPC.add(22102); // Freya's Servant
-		NPC.add(22104); // Freya's Dog
-		NPC.add(22155); // Triol's High Priest
-		NPC.add(22159); // Triol's High Priest
-		NPC.add(22163); // Triol's High Priest
-		NPC.add(22167); // Triol's High Priest
-		NPC.add(22171); // Triol's High Priest
-		NPC.add(22188); // Andreas' Captain of the Royal Guard
-		NPC.add(22196); // Velociraptor
-		NPC.add(22198); // Velociraptor
-		NPC.add(22202); // Ornithomimus
-		NPC.add(22205); // Deinonychus
-		NPC.add(22210); // Pachycephalosaurus
-		NPC.add(22213); // Wild Strider
-		NPC.add(22223); // Velociraptor
-		NPC.add(22224); // Ornithomimus
-		NPC.add(22225); // Deinonychus
-		NPC.add(22275); // Gatekeeper Lohan
-		NPC.add(22277); // Gatekeeper Provo
-		NPC.add(22305); // Kechi's Captain
-		NPC.add(22306); // Kechi's Captain
-		NPC.add(22307); // Kechi's Captain
 		NPC.add(22320); // Junior Watchman
 		NPC.add(22321); // Junior Summoner
 		NPC.add(22346); // Quarry Foreman
@@ -143,18 +82,10 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(22370); // Passageway Captain
 		NPC.add(22377); // Master Zelos
 		NPC.add(22390); // Foundry Foreman
-		NPC.add(22416); // Kechi's Captain
 		NPC.add(22423); // Original Sin Warden
 		NPC.add(22431); // Original Sin Warden
 		NPC.add(22448); // Leodas
 		NPC.add(22449); // Amaskari
-		NPC.add(22621); // Male Spiked Stakato
-		NPC.add(22625); // Cannibalistic Stakato Leader
-		NPC.add(22630); // Spiked Stakato Nurse
-		NPC.add(22666); // Barif
-		NPC.add(22670); // Cursed Lord
-		NPC.add(22742); // Ornithomimus
-		NPC.add(22743); // Deinonychus
 		NPC.add(25001); // Greyclaw Kutus
 		NPC.add(25004); // Turek Mercenary Captain
 		NPC.add(25007); // Retreat Spider Cletu
@@ -304,62 +235,7 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(25493); // Eva's Spirit Niniel
 		NPC.add(25496); // Fafurion's Envoy Pingolpin
 		NPC.add(25498); // Fafurion's Henchman Istary
-		NPC.add(25501); // Boss Akata
-		NPC.add(25504); // Nellis' Vengeful Spirit
-		NPC.add(25506); // Rayito the Looter
-		NPC.add(25509); // Dark Shaman Varangka
-		NPC.add(25514); // Queen Shyeed
-		NPC.add(25524); // Flamestone Giant
-		NPC.add(25528); // Tiberias
-		NPC.add(25536); // Hannibal
-		NPC.add(25546); // Rhianna the Traitor
-		NPC.add(25549); // Tesla the Deceiver
-		NPC.add(25554); // Brutus the Obstinate
-		NPC.add(25557); // Ranger Karankawa
-		NPC.add(25560); // Sargon the Mad
-		NPC.add(25563); // Beautiful Atrielle
-		NPC.add(25566); // Nagen the Tomboy
-		NPC.add(25569); // Jax the Destroyer
-		NPC.add(25572); // Hager the Outlaw
-		NPC.add(25575); // All-Seeing Rango
-		NPC.add(25579); // Helsing
-		NPC.add(25582); // Gillien
-		NPC.add(25585); // Medici
-		NPC.add(25589); // Brand the Exile
-		NPC.add(25593); // Gerg the Hunter
-		NPC.add(25600); // Temenir
-		NPC.add(25601); // Draksius
-		NPC.add(25602); // Kiretcenah
-		NPC.add(25671); // Queen Shyeed
-		NPC.add(25674); // Gwindorr
-		NPC.add(25677); // Water Spirit Lian
-		NPC.add(25681); // Gorgolos
-		NPC.add(25684); // Last Titan Utenus
-		NPC.add(25687); // Hekaton Prime
-		NPC.add(25703); // Gigantic Golem
-		NPC.add(25710); // Lost Captain
 		NPC.add(25735); // Greyclaw Kutus
-		NPC.add(25738); // Lead Tracker Sharuk
-		NPC.add(25741); // Sukar Wererat Chief
-		NPC.add(25744); // Ikuntai
-		NPC.add(25747); // Zombie Lord Crowl
-		NPC.add(25750); // Zombie Lord Ferkel
-		NPC.add(25754); // Fire Lord Shadar
-		NPC.add(25757); // Soul Collector Acheron
-		NPC.add(25760); // Lord Ishka
-		NPC.add(25763); // Demon Kuri
-		NPC.add(25767); // Carnage Lord Gato
-		NPC.add(25770); // Ketra Commander Atis
-		NPC.add(25773); // Beacon of Blue Sky
-		NPC.add(25776); // Earth Protector Panathen
-		NPC.add(25779); // Betrayer of Urutu Freki
-		NPC.add(25782); // Nellis' Vengeful Spirit
-		NPC.add(25784); // Rayito the Looter
-		NPC.add(25787); // Ketra's Hero Hekaton
-		NPC.add(25790); // Varka's Hero Shadith
-		NPC.add(25794); // Kernon
-		NPC.add(25797); // Meanas Anor
-		NPC.add(25800); // Mammon Collector Talos
 		NPC.add(27036); // Calpico
 		NPC.add(27041); // Varangka's Messenger
 		NPC.add(27062); // Tanukia
@@ -375,25 +251,6 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(27186); // Fairy Tree of Star
 		NPC.add(27187); // Fairy Tree of Twilight
 		NPC.add(27188); // Fairy Tree of Abyss
-		NPC.add(27259); // Archangel Iconoclasis
-		NPC.add(27260); // Archangel Iconoclasis
-		NPC.add(27266); // Fallen Angel Haures
-		NPC.add(27267); // Fallen Angel Haures
-		NPC.add(27290); // White Wing Commander
-		NPC.add(29030); // Fenril Hound Kerinne
-		NPC.add(29033); // Fenril Hound Freki
-		NPC.add(29037); // Fenril Hound Kinaz
-		NPC.add(29040); // Wings of Flame, Ixion
-		NPC.add(29056); // Ice Fairy Sirra
-		NPC.add(29062); // Andreas Van Halter
-		NPC.add(29096); // Anais
-		NPC.add(29129); // Lost Captain
-		NPC.add(29132); // Lost Captain
-		NPC.add(29135); // Lost Captain
-		NPC.add(29138); // Lost Captain
-		NPC.add(29141); // Lost Captain
-		NPC.add(29144); // Lost Captain
-		NPC.add(29147); // Lost Captain
 	}
 	
 	private static final NpcStringId[] ON_ATTACK_MSG =

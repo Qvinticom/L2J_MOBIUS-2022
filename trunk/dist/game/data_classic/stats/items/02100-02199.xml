@@ -90,24 +90,6 @@
 		<set name="price" val="7134" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="2110" type="EtcItem" name="Heathen's Book Page">
-		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="7096" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2111" type="EtcItem" name="Hex Doll Fragment">
-		<set name="icon" val="icon.etc_bark_gold_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="7096" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="2112" type="EtcItem" name="Pa'agrian Axe Blade">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -207,69 +189,6 @@
 		<set name="price" val="8764" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="2123" type="EtcItem" name="Candle of Wisdom Model">
-		<set name="icon" val="icon.etc_mold_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2124" type="EtcItem" name="Blessed Branch Splinter">
-		<set name="icon" val="icon.etc_branch_blue_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2125" type="EtcItem" name="Phoenix Feather Piece">
-		<set name="icon" val="icon.etc_feather_gold_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2126" type="EtcItem" name="Cerberus Eye Fragment">
-		<set name="icon" val="icon.etc_eyeball_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2127" type="EtcItem" name="Scroll of Destruction Page">
-		<set name="icon" val="icon.etc_scroll_gray_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2128" type="EtcItem" name="Black Dragon Claw Piece">
-		<set name="icon" val="icon.etc_claw_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2129" type="EtcItem" name="Three Eyed Crow's Feather Piece">
-		<set name="icon" val="icon.etc_feather_black_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="8502" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="2130" type="EtcItem" name="Gemstone (D-grade)">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -294,24 +213,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="10000" />
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="GEMSTONE" />
-	</item>
-	<item id="2133" type="EtcItem" name="Gemstone (A-grade)">
-		<set name="icon" val="icon.etc_bead_red_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="price" val="30000" />
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="GEMSTONE" />
-	</item>
-	<item id="2134" type="EtcItem" name="Gemstone (S-grade)">
-		<set name="icon" val="icon.etc_bead_silver_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
