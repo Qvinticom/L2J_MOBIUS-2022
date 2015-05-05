@@ -2644,10 +2644,21 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String showHtmlFile(L2PcInstance player, String filename, L2Npc npc)
 	{
 		boolean questwindow = false;
-		final QuestState qs = getQuestState(player, false);
-		if (((qs != null) && (qs.getState() == State.CREATED)) || !filename.endsWith(".html"))
+		if (Config.SERVER_CLASSIC_SUPPORT)
 		{
-			questwindow = true;
+			if (filename.endsWith(".htm"))
+			{
+				questwindow = true;
+			}
+		}
+		else
+		{
+			// TODO: Fix all Ertheia quest htmls with above logic or find a better solution.
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && (qs.getState() == State.CREATED))
+			{
+				questwindow = true;
+			}
 		}
 		int questId = getId();
 		
