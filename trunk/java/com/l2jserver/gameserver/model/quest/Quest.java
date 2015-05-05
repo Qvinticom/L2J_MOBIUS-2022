@@ -2645,7 +2645,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	{
 		boolean questwindow = false;
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.getState() == State.CREATED))
+		if (((qs != null) && (qs.getState() == State.CREATED)) || !filename.endsWith(".html"))
 		{
 			questwindow = true;
 		}
