@@ -636,8 +636,6 @@ public class EnterWorld extends L2GameClientPacket
 			OfflineTradersTable.onTransaction(activeChar, true, false);
 		}
 		
-		activeChar.broadcastUserInfo();
-		
 		if (BeautyShopData.getInstance().hasBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType()))
 		{
 			activeChar.sendPacket(new ExBeautyItemList(activeChar));

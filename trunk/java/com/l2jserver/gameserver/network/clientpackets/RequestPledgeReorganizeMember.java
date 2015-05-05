@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
 
 /**
  * Format: (ch) dSdS
@@ -91,6 +92,8 @@ public final class RequestPledgeReorganizeMember extends L2GameClientPacket
 		member1.setPledgeType(_newPledgeType);
 		member2.setPledgeType(oldPledgeType);
 		clan.broadcastClanStatus();
+		activeChar.sendPacket(new PledgeSkillList(clan));
+		activeChar.broadcastUserInfo();
 	}
 	
 	@Override

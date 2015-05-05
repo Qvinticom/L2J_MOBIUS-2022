@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.PledgeInfo;
+import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
 
 public final class RequestPledgeInfo extends L2GameClientPacket
 {
@@ -63,6 +64,8 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new PledgeInfo(clan));
+		activeChar.sendPacket(new PledgeSkillList(clan));
+		activeChar.broadcastUserInfo();
 	}
 	
 	@Override

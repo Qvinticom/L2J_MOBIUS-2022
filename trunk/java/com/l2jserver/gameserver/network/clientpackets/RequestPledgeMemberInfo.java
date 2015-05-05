@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
+import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
 
 /**
  * Format: (ch) dS
@@ -63,6 +64,8 @@ public final class RequestPledgeMemberInfo extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new PledgeReceiveMemberInfo(member));
+		activeChar.sendPacket(new PledgeSkillList(clan));
+		activeChar.broadcastUserInfo();
 	}
 	
 	@Override

@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListAll;
+import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
 
 /**
  * This class ...
@@ -50,6 +51,8 @@ public final class RequestPledgeMemberList extends L2GameClientPacket
 		{
 			PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan);
 			activeChar.sendPacket(pm);
+			activeChar.sendPacket(new PledgeSkillList(clan));
+			activeChar.broadcastUserInfo();
 		}
 	}
 	
