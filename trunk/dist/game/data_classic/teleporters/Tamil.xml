@@ -3,7 +3,6 @@
 	<npc id="30576"> <!-- Tamil -->
 		<teleport type="NORMAL">
 			<location npcStringId="1010005" x="-12787" y="122779" z="-3112" feeCount="23000" /> <!-- The Town of Gludio -->
-			<location npcStringId="1010574" x="87130" y="-143514" z="-1291" feeCount="13000" /> <!-- Town of Schuttgart -->
 			<location npcStringId="1010156" x="9709" y="15566" z="-4568" feeCount="13000" /> <!-- Dark Elf Village -->
 			<location npcStringId="1010158" x="115120" y="-178224" z="-880" feeCount="17000" /> <!-- Dwarven Village -->
 			<location npcStringId="1010155" x="46951" y="51550" z="-2976" feeCount="18000" /> <!-- Elven Village -->
@@ -12,13 +11,11 @@
 			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeId="13722" feeCount="1" /> <!-- Gludin Arena -->
 			<location npcStringId="1010007" x="83551" y="147945" z="-3395" feeId="13722" feeCount="1" /> <!-- The Town of Giran -->
 			<location npcStringId="1010556" x="-25327" y="-131591" z="-697" feeId="13722" feeCount="1" /> <!-- Immortal Plateau, Northern Region -->
-			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeId="13722" feeCount="1" /> <!-- Coliseum -->
 		</teleport>
 		<teleport type="NOBLES_ADENA">
 			<location npcStringId="1010506" x="-87334" y="142252" z="-3645" feeCount="1000" /> <!-- Gludin Arena -->
 			<location npcStringId="1010007" x="83551" y="147945" z="-3395" feeCount="1000" /> <!-- The Town of Giran -->
 			<location npcStringId="1010556" x="-25327" y="-131591" z="-697" feeCount="1000" /> <!-- Immortal Plateau, Northern Region -->
-			<location npcStringId="1010053" x="146434" y="46712" z="-3433" feeCount="1000" /> <!-- Coliseum -->
 		</teleport>
 	</npc>
 </list>
