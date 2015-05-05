@@ -1659,7 +1659,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29068" level="99" type="L2GrandBoss" name="Antharas" title="Land Dragon">
+	<npc id="29068" level="79" type="L2GrandBoss" name="Antharas" title="Land Dragon">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
@@ -1723,7 +1723,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29069" level="99" type="L2Monster" name="Behemoth Dragon">
+	<npc id="29069" level="79" type="L2Monster" name="Behemoth Dragon">
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="PhysicalSpecial" id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
@@ -1769,7 +1769,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29070" level="99" type="L2Monster" name="Dragon Bomber">
+	<npc id="29070" level="79" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
