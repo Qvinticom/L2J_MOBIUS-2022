@@ -46,7 +46,7 @@ public interface IDropCalculationStrategy
 				}
 			}
 			
-			return Collections.singletonList(new ItemHolder(item.getItemId(), Rnd.get(item.getMin(victim), item.getMax(victim)) * amountMultiply));
+			return Collections.singletonList(new ItemHolder(item.getItemId(), Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer)) * amountMultiply));
 		}
 		
 		return null;

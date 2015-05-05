@@ -298,7 +298,7 @@ public class NpcViewMod implements IBypassHandler
 				if (generalGroupedDropItem.getItems().size() == 1)
 				{
 					final GeneralDropItem generalDropItem = generalGroupedDropItem.getItems().get(0);
-					addGeneralDropItem(activeChar, npc, amountFormat, chanceFormat, sb, new GeneralDropItem(generalDropItem.getItemId(), generalDropItem.getMin(), generalDropItem.getMax(), (generalDropItem.getChance() * generalGroupedDropItem.getChance()) / 100, generalDropItem.getAmountStrategy(), generalDropItem.getChanceStrategy(), generalGroupedDropItem.getPreciseStrategy(), generalGroupedDropItem.getKillerChanceModifierStrategy(), generalDropItem.getDropCalculationStrategy()));
+					addGeneralDropItem(activeChar, npc, amountFormat, chanceFormat, sb, new GeneralDropItem(generalDropItem.getItemId(), generalDropItem.getMin(), generalDropItem.getMax(), (generalDropItem.getChance(npc, activeChar) * generalGroupedDropItem.getChance()) / 100, generalDropItem.getAmountStrategy(), generalDropItem.getChanceStrategy(), generalGroupedDropItem.getPreciseStrategy(), generalGroupedDropItem.getKillerChanceModifierStrategy(), generalDropItem.getDropCalculationStrategy()));
 				}
 				else
 				{
@@ -322,7 +322,7 @@ public class NpcViewMod implements IBypassHandler
 						sb.append(item.getName());
 						sb.append("</font></td></tr><tr><td width=32></td><td width=259><table width=253 cellpadding=0 cellspacing=0>");
 						sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td><td width=205 align=center>");
-						MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc), generalDropItem.getMax(npc), generalDropItem.isPreciseCalculated());
+						MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc, activeChar), generalDropItem.getMax(npc, activeChar), generalDropItem.isPreciseCalculated());
 						final long min = minMax.min;
 						final long max = minMax.max;
 						if (min == max)
@@ -338,7 +338,7 @@ public class NpcViewMod implements IBypassHandler
 						
 						sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
 						sb.append("<td width=205 align=center>");
-						sb.append(chanceFormat.format(Math.min(generalDropItem.getChance(), 100)));
+						sb.append(chanceFormat.format(Math.min(generalDropItem.getChance(npc, activeChar), 100)));
 						sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=259>&nbsp;</td></tr></table>");
 						
 						height += 64;
@@ -401,7 +401,7 @@ public class NpcViewMod implements IBypassHandler
 		sb.append("</font></td></tr><tr><td width=32></td><td width=300><table width=295 cellpadding=0 cellspacing=0>");
 		sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td>");
 		sb.append("<td width=247 align=center>");
-		MinMax minMax = getPreciseMinMax(dropItem.getChance(npc, activeChar), dropItem.getMin(npc), dropItem.getMax(npc), dropItem.isPreciseCalculated());
+		MinMax minMax = getPreciseMinMax(dropItem.getChance(npc, activeChar), dropItem.getMin(npc, activeChar), dropItem.getMax(npc, activeChar), dropItem.isPreciseCalculated());
 		
 		final long min = minMax.min;
 		final long max = minMax.max;

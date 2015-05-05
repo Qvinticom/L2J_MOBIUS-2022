@@ -842,8 +842,6 @@ public final class Config
 	public static float PREMIUM_RATE_SP;
 	public static float PREMIUM_RATE_DROP_CHANCE;
 	public static float PREMIUM_RATE_DROP_AMOUNT;
-	public static float PREMIUM_RATE_SPOIL_CHANCE;
-	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_MULTIPLIER;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER;
 	public static boolean PC_BANG_ENABLED;
@@ -2626,8 +2624,6 @@ public final class Config
 			PREMIUM_RATE_SP = CustomSettings.getFloat("PremiumRateSp", 2);
 			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 1);
 			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 2);
-			PREMIUM_RATE_SPOIL_CHANCE = CustomSettings.getFloat("PremiumRateSpoilChance", 1);
-			PREMIUM_RATE_SPOIL_AMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmount", 2);
 			String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumDropChanceMultiplierByItemId", "").split(";");
 			PREMIUM_RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(premiumDropChanceMultiplier.length);
 			if (!premiumDropChanceMultiplier[0].isEmpty())
