@@ -42,6 +42,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.QuestList;
+import com.l2jserver.gameserver.network.serverpackets.TutorialEnableClientEvent;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jserver.gameserver.util.Util;
 
@@ -1260,5 +1261,10 @@ public final class QuestState
 	public void unsetQuestLocation()
 	{
 		unset("LOCATION_ID");
+	}
+	
+	public void onTutorialClientEvent(int number)
+	{
+		getPlayer().sendPacket(new TutorialEnableClientEvent(number));
 	}
 }

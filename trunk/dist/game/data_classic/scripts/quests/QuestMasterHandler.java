@@ -77,6 +77,7 @@ import quests.Q00230_TestOfTheSummoner.Q00230_TestOfTheSummoner;
 import quests.Q00231_TestOfTheMaestro.Q00231_TestOfTheMaestro;
 import quests.Q00232_TestOfTheLord.Q00232_TestOfTheLord;
 import quests.Q00233_TestOfTheWarSpirit.Q00233_TestOfTheWarSpirit;
+import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00257_TheGuardIsBusy.Q00257_TheGuardIsBusy;
 import quests.Q00258_BringWolfPelts.Q00258_BringWolfPelts;
 import quests.Q00259_RequestFromTheFarmOwner.Q00259_RequestFromTheFarmOwner;
@@ -203,6 +204,7 @@ public class QuestMasterHandler
 		Q00231_TestOfTheMaestro.class,
 		Q00232_TestOfTheLord.class,
 		Q00233_TestOfTheWarSpirit.class,
+		Q00255_Tutorial.class,
 		Q00257_TheGuardIsBusy.class,
 		Q00258_BringWolfPelts.class,
 		Q00259_RequestFromTheFarmOwner.class,

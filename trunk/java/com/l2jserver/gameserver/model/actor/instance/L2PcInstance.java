@@ -1472,7 +1472,11 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		if (getLastQuestNpcObject() > 0)
+		if (quest.getId() == 255)
+		{
+			quest.notifyEvent(event, null, this);
+		}
+		else if (getLastQuestNpcObject() > 0)
 		{
 			final L2Object object = L2World.getInstance().findObject(getLastQuestNpcObject());
 			if (object.isNpc() && isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))

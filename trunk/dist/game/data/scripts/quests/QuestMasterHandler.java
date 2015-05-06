@@ -92,6 +92,7 @@ import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
 import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 import quests.Q00254_LegendaryTales.Q00254_LegendaryTales;
+import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
 import quests.Q00279_TargetOfOpportunity.Q00279_TargetOfOpportunity;
@@ -305,6 +306,7 @@ public class QuestMasterHandler
 		Q00239_WontYouJoinUs.class,
 		Q00240_ImTheOnlyOneYouCanTrust.class,
 		Q00254_LegendaryTales.class,
+		Q00255_Tutorial.class,
 		Q00270_TheOneWhoEndsSilence.class,
 		Q00278_HomeSecurity.class,
 		Q00279_TargetOfOpportunity.class,

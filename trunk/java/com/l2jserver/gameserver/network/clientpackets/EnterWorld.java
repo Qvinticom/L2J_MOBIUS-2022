@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import quests.Q00255_Tutorial.Q00255_Tutorial;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -38,6 +40,7 @@ import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.instancemanager.PetitionManager;
+import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
@@ -57,6 +60,8 @@ import com.l2jserver.gameserver.model.entity.clanhall.AuctionableHall;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
@@ -426,6 +431,11 @@ public class EnterWorld extends L2GameClientPacket
 			}
 		}
 		
+		if (Config.SERVER_CLASSIC_SUPPORT)
+		{
+			loadTutorial(activeChar);
+		}
+		
 		if (Config.PLAYER_SPAWN_PROTECTION > 0)
 		{
 			activeChar.setProtection(true);
@@ -739,6 +749,22 @@ public class EnterWorld extends L2GameClientPacket
 				apprentice.sendPacket(msg);
 			}
 		}
+	}
+	
+	private void loadTutorial(L2PcInstance player)
+	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
+		QuestState qs = player.getQuestState(Q00255_Tutorial.class.getSimpleName());
+		if (qs == null)
+		{
+			qs = QuestManager.getInstance().getQuest(Q00255_Tutorial.class.getSimpleName()).newQuestState(player);
+			qs.setState(State.STARTED);
+		}
+		qs.getQuest().notifyEvent("user_connected", null, player);
 	}
 	
 	@Override
