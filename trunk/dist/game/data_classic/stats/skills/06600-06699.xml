@@ -620,28 +620,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6640" levels="1" name="Vitality Replenishing Aura">
-		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="castRange" val="2000" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="2000" />
-		<set name="icon" val="icon.skilltransform4" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="2000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<sub stat="vitalityConsumeRate" val="10" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="6641" levels="1" name="Holy Ball">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
@@ -748,28 +726,6 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="6649" levels="1" name="Transform Treykan">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="ONE" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="126" />
-			</effect>
-		</for>
 	</skill>
 	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
 		<set name="abnormalLvl" val="99" />
@@ -1281,28 +1237,6 @@
 		<for>
 			<effect name="Teleport">
 				<param x="-178244" y="153389" z="2472" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="6685" levels="1" name="Santa Claus's Gift">
-		<!-- Confirmed CT2.5 -->
-		<set name="coolTime" val="1000" />
-		<set name="hitTime" val="2700" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="17003" itemCount="1" />
 			</effect>
 		</for>
 	</skill>

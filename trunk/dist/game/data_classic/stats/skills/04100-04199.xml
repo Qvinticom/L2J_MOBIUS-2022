@@ -181,37 +181,6 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4107" levels="1" name="Antharas Stun">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
-		<!-- Antharas Tail from Behind -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="FLY_AWAY" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="affectRange" val="1500" />
-		<set name="coolTime" val="3000" />
-		<set name="effectPoint" val="-100" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="180" />
-		<set name="fanRange" val="0,180,1500,400" />
-		<set name="flyRadius" val="600" />
-		<set name="flyType" val="THROW_UP" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill4107" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="28600" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="BEHIND_AURA" />
-		<set name="trait" val="SHOCK" />
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="ThrowUp" />
-			<effect name="Stun" />
-		</for>
-	</skill>
 	<skill id="4108" levels="1" name="Antharas Fear">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->

@@ -813,29 +813,6 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5950" levels="1" name="Birthday Gift">
-		<!-- Confirmed CT2.5 -->
-		<!-- Birthday Skill -->
-		<set name="abnormalLvl" val="9" />
-		<set name="abnormalTime" val="43200" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1500" />
-		<set name="icon" val="icon.skill5950" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<sub stat="vitalityConsumeRate" val="10" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="5951" levels="1" name="Agathion's Blessing">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1231,68 +1208,6 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="5982" levels="1" name="Aura Bird - Falcon">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="-1" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="castRange" val="1500" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="2100" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0841" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-2" />
-		<set name="mpConsume" val="75" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<cond msgId="2721">
-			<player landingZone="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="8" />
-				<mul stat="reduceExpLostByPvp" val="0.1" />
-				<mul stat="reduceExpLostByMob" val="0.1" />
-				<mul stat="reduceExpLostByRaid" val="0.1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="5983" levels="1" name="Aura Bird - Owl">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="-1" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="castRange" val="1500" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="2100" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0842" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-2" />
-		<set name="mpConsume" val="75" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<cond msgId="2721">
-			<player landingZone="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="9" />
-				<mul stat="reduceExpLostByPvp" val="0.1" />
-				<mul stat="reduceExpLostByMob" val="0.1" />
-				<mul stat="reduceExpLostByRaid" val="0.1" />
-			</effect>
-		</for>
 	</skill>
 	<skill id="5984" levels="1" name="Hand of Death">
 		<set name="abnormalLvl" val="1" />

@@ -13,28 +13,6 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="5401" levels="1" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="2" />
-		<set name="abnormalType" val="FLY_AWAY" />
-		<set name="affectRange" val="300" />
-		<set name="effectPoint" val="-100" />
-		<set name="flyRadius" val="300" />
-		<set name="flyType" val="THROW_UP" />
-		<set name="hitTime" val="5800" />
-		<set name="icon" val="icon.skill0100" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
-		<set name="trait" val="SHOCK" />
-		<for>
-			<effect name="ThrowUp" />
-			<effect name="Stun" />
-		</for>
-	</skill>
 	<skill id="5402" levels="1" name="Presentation - Baylor 2">
 		<!-- Balor - Magic Skill1 -->
 		<set name="coolTime" val="500" />
@@ -1105,32 +1083,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5481" levels="1" name="Transformation Penalty">
-		<!-- You cannot be transformed while under this effect. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM_HANGOVER" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="5482" levels="1" name="Transformation Penalty">
-		<!-- You cannot be transformed while under this effect. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="480" />
-		<set name="abnormalType" val="TRANSFORM_HANGOVER" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-	</skill>
 	<skill id="5483" levels="1" name="Counter Aggression">
 		<set name="effectPoint" val="-662" />
 		<set name="magicLvl" val="76" />
@@ -1253,37 +1205,6 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
-		</for>
-	</skill>
-	<skill id="5493" levels="1" name="Naia Production">
-		<set name="castRange" val="800" />
-		<set name="channelingSkillId" val="5106" />
-		<set name="channelingSkillId" val="5106" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="1000" />
-		<set name="hitTime" val="25000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8764" /> <!-- Trap Stone -->
-		<set name="magicLvl" val="85" />
-		<set name="mpPerChanneling" val="15" />
-		<set name="operateType" val="CHANNELING_CONTINUOUS" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-	</skill>
-	<skill id="5494" levels="1" name="Gust">
-		<!-- Confirmed CT2.5 -->
-		<set name="effectPoint" val="1" />
-		<set name="flyRadius" val="300" />
-		<set name="flyType" val="THROW_UP" />
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="86" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="ThrowUp" />
 		</for>
 	</skill>
 	<skill id="5495" levels="1" name="Bleed">

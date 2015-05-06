@@ -9,17 +9,6 @@
 		<set name="mpConsume" val="10" />
 		<set name="reuseDelay" val="30000" />
 	</skill>
-	<skill id="15401" levels="1" name="Burning Blood">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Restored to full health from death. Buffs/ Debuffs remain even after death, but the Noblesse Blessing and Raid Blessing disappear. (Effect only applied at Kartia's Labyrinth - Tainted Dimension Attacker.) -->
-		<set name="icon" val="icon.skill5873" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
-	</skill>
 	<skill id="15402" levels="1" name="Wisp's Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. And M. Atk. increases temporarily. -->
@@ -99,19 +88,6 @@
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="15410" levels="1" name="Full Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls in PCs within range and inflicts damage. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="500" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="15411" levels="1" name="Soul Break">
 		<!-- AUTO GENERATED SKILL -->
@@ -233,17 +209,6 @@
 		<set name="coolTime" val="500" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<skill id="15428" levels="1" name="Knock Back">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- AoE Knock Back. -->
-		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="15429" levels="1" name="Yoke">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Aerial Yoke. -->
@@ -253,16 +218,6 @@
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15430" levels="1" name="Lindvior's Jump">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Ranged attack. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="5000" />
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="15431" levels="1" name="Supersonic Blaster">
@@ -618,14 +573,6 @@
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="15465" levels="15" name="Vitality Reward 1 (Quest)">
-		<!-- AUTO GENERATED SKILL -->
-		<table name="#castRanges"> 900 900 900 900 900 900 900 900 900 900 900 900 900 900 -1 </table>
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="#castRanges" />
 	</skill>
 	<skill id="15466" levels="1" name="Triol's CON Increase">
 		<!-- AUTO GENERATED SKILL -->

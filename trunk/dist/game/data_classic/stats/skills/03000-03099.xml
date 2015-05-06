@@ -777,38 +777,6 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="3050" levels="2" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 70 </table>
-		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="rCrit" val="61.6" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3051" levels="2" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 67 70 </table>
-		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="rCrit" val="67.3" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
@@ -923,42 +891,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3057" levels="4" name="Special Ability: Anger">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 67 70 80 </table>
-		<table name="#pAtk"> 31.3 32.05 32.05 78.33 </table>
-		<set name="icon" val="icon.skill1062" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pAtk" val="#pAtk" />
-				<mul stat="maxHp" val="0.85" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3058" levels="2" name="Special Ability: Anger">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 67 </table>
-		<table name="#pAtk"> 38.09 39 </table>
-		<set name="icon" val="icon.skill1062" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pAtk" val="#pAtk" />
-				<mul stat="maxHp" val="0.85" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="3059" levels="2" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
@@ -1046,88 +978,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3063" levels="2" name="Special Ability: Back Blow">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 70 </table>
-		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="rCrit" val="1.37">
-					<player behind="true" />
-				</mul>
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3064" levels="1" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="3.95" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3065" levels="1" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="5.41" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3066" levels="4" name="Special Ability: Critical Damage">
-		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 180.94 200.79 200.79 559 </table>
-		<table name="#magicLvl"> 64 67 70 80 </table>
-		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3067" levels="2" name="Special Ability: Critical Damage">
-		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 297.68 326.28 </table>
-		<table name="#magicLvl"> 64 67 </table>
-		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="3068" levels="3" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 64 70 </table>
@@ -1198,41 +1048,6 @@
 				<mul stat="pvpPhysDmg" val="#pvpBonus" />
 				<mul stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 				<mul stat="pvpMagicalDmg" val="#pvpBonus" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3072" levels="2" name="Special Ability: Empower">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 67 </table>
-		<table name="#mAtk"> 30.76 31.38 </table>
-		<set name="icon" val="icon.skill1059" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="#mAtk" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3073" levels="2" name="Special Ability: Magic Power">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 67 </table>
-		<table name="#mAtk"> 153.28 167.02 </table>
-		<set name="icon" val="icon.skill1059" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="#mAtk" />
-				<mul stat="MagicalMpConsumeRate" val="1.15" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>

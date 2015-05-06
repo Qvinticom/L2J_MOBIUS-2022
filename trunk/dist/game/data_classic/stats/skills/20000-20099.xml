@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="20000" levels="1" name="Block Checker Search">
-		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
-	</skill>
 	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
 		<!-- Slams down on the treasure chest with a hammer to open it. -->
 		<set name="operateType" val="PASSIVE" />
@@ -96,21 +91,5 @@
 				<param heal="true" />
 			</effect>
 		</for>
-	</skill>
-	<skill id="20007" levels="1" name="Block Invincibility">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 min., HP/MP Recovery Bonus increase, and Speed + 5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
-		<set name="icon" val="icon.skill11560" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="20008" levels="1" name="Clan Advent (Event)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When the clan leader logs in, clan members' P. Atk. / P. Def. / M. Def. + 5%, M. Atk. + 6%, HP/MP Recovery Bonus + 5, and XP gain + 100%. -->
-		<set name="icon" val="icon.skill19009" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
 	</skill>
 </list>

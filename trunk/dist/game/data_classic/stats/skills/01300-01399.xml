@@ -381,76 +381,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1312" levels="1" name="Unused Fishing">
-		<set name="icon" val="icon.skill1312" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<!-- TODO: Missing condition for "op_fishing_cast" -->
-		<cond msgId="113" addName="1">
-			<using kind="FISHINGROD" />
-		</cond>
-		<for>
-			<effect name="Fishing" />
-		</for>
-	</skill>
-	<skill id="1313" levels="27" name="Unused Pumping">
-		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
-		<set name="icon" val="icon.skill1313" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="2" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="2000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<!-- TODO: Missing condition for "op_fishing_pumping" -->
-		<cond msgId="113" addName="1">
-			<using kind="FISHINGROD" />
-		</cond>
-		<for>
-			<effect name="Pumping">
-				<param power="#power" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1314" levels="27" name="Unused Reeling">
-		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
-		<set name="icon" val="icon.skill1314" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="2" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="2000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<!-- TODO: Missing condition for "op_fishing_reeling" -->
-		<cond msgId="113" addName="1">
-			<using kind="FISHINGROD" />
-		</cond>
-		<for>
-			<effect name="Reeling">
-				<param power="#power" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1315" levels="27" name="Unused Fishing Expertise">
-		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
-		<set name="icon" val="icon.skill1315" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<set stat="fishingExpertise" val="#power" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
 		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill1316" />
@@ -532,57 +462,6 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="NoblesseBless" />
-		</for>
-	</skill>
-	<skill id="1324" levels="2" name="Summon CP Potion">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="20000" />
-		<set name="icon" val="icon.skill1324" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="50" />
-		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
-		<set name="magicLvl" val="-1" />
-		<set name="mpInitialConsume" val="412" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="5592" itemCount="20" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1325" levels="1" name="Noblesse Fortune">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="6" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="REDUCE_DROP_PENALTY" />
-		<set name="affectRange" val="1000" />
-		<set name="effectPoint" val="659" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1325" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeId" val="5806" /> <!-- Lucky Charm (A-Grade) -->
-		<set name="magicLvl" val="-1" />
-		<set name="mpConsume" val="220" />
-		<set name="mpInitialConsume" val="55" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
-		<for>
-			<effect name="Buff">
-				<mul stat="reduceDeathPenaltyByRaid" val="0" />
-			</effect>
 		</for>
 	</skill>
 	<skill id="1326" levels="1" name="Noblesse Harmony">

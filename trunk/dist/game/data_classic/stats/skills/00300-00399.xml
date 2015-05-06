@@ -839,60 +839,6 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
-		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			1344,700,30;1344,1400,50;1344,2800,20
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0323" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="1461" /> <!-- Crystal (A-Grade) -->
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="366" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
-	</skill>
-	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
-		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			1345,900,30;1345,1800,50;1345,3600,20
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0324" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="1462" /> <!-- Crystal (S-Grade) -->
-		<set name="magicLvl" val="72" />
-		<set name="mpConsume" val="398" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
-	</skill>
 	<skill id="325" levels="1" name="Strider Siege Assault">
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />

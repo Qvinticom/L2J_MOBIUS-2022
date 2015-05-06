@@ -1318,11 +1318,6 @@
 			<effect name="Petrification" />
 		</for>
 	</skill>
-	<skill id="6883" levels="1" name="Vitality Recovery Effect">
-		<!-- "For 5 minutes, energy is filled to stage 4. Returns to before as time goes on." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
-	</skill>
 	<skill id="6884" levels="1" name="Morale Boost">
 		<!-- none -->
 		<set name="abnormalTime" val="60" />

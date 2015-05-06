@@ -51,34 +51,6 @@
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="5000" />
 	</skill>
-	<skill id="16105" levels="6" name="Fatal Bomber">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Deals a powerful blow and knocks down the enemy. -->
-		<table name="#mpConsumes"> 50 65 80 95 110 125 </table>
-		<set name="icon" val="icon.skill10262" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16106" levels="5" name="Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<table name="#mpConsumes"> 50 65 80 95 110 </table>
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16107" levels="3" name="Fatal Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful blow on a vital spot. Possible to achieve Critical. -->
@@ -177,19 +149,6 @@
 		<set name="hitTime" val="300" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="16115" levels="2" name="Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="500" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16116" levels="2" name="Self-Devastation">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
@@ -233,18 +192,6 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="16120" levels="1" name="Magma Chain">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="500" />
-		<set name="coolTime" val="1000" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="16121" levels="5" name="Sleeping Cloud">
 		<!-- AUTO GENERATED SKILL -->
@@ -613,32 +560,6 @@
 		<set name="coolTime" val="500" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="16153" levels="5" name="Power Slam">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Deals a powerful blow and knocks back the enemy. -->
-		<set name="icon" val="icon.skill10262" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16154" levels="5" name="Mass Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target and nearby enemies toward you. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="84" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="500" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16155" levels="1" name="Charmed Kefensis">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
@@ -805,30 +726,6 @@
 		<set name="coolTime" val="700" />
 		<set name="reuseDelay" val="5000" />
 	</skill>
-	<skill id="16169" levels="1" name="Pull">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="95" />
-		<set name="castRange" val="1100" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="7000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16170" levels="1" name="Hellbound Tornado">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Fly away with the shock. -->
-		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
-		<set name="hitTime" val="7000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16171" levels="1" name="Summon Poison Zone">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
@@ -924,14 +821,6 @@
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="16182" levels="6" name="Decrease SP">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="16183" levels="1" name="Skill Reflect Barrier">
 		<!-- AUTO GENERATED SKILL -->

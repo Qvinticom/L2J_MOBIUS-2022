@@ -180,62 +180,6 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="16419" levels="2" name="Stocking Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., STR + 3, INT + 3, Speed + 7. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
-		<table name="#hitTimes"> 1000 0 </table>
-		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="#hitTimes" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="16420" levels="2" name="Tree Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., CON + 3, MEN + 3, P. Critical Rate + 30, M. Critical Rate + 30. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
-		<table name="#hitTimes"> 1000 0 </table>
-		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="#hitTimes" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="16421" levels="2" name="Snowman Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., DEX + 3, WIT + 3, Max HP/MP + 2013. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
-		<table name="#hitTimes"> 1000 0 </table>
-		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="#hitTimes" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="16422" levels="1" name="Winter Holiday Reward">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Receive a Santa's Mark when the blessing from the Stocking/Tree/Snowman Fairy expires. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="16423" levels="1" name="Noelle's Gift">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Recover Vitality for 6 hr. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
-		<set name="icon" val="icon.etc_whiteday_choco" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="16424" levels="1" name="Appearance Stone: Santa Hat">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
 	<skill id="16425" levels="1" name="Appearance Stone: Santa Suit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
@@ -313,33 +257,5 @@
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="16436" levels="1" name="Rush">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Charges into the enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="20" />
-		<set name="castRange" val="400" />
-		<set name="hitTime" val="500" />
-		<set name="coolTime" val="200" />
-	</skill>
-	<skill id="16437" levels="1" name="Master's Blessing - GM's Cheers">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- The GM is always with you. XP and SP increases by 100% for 1 hr. Cannot be stacked with Fall of the Dragon. -->
-		<set name="icon" val="icon.skill0919" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="1200" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="16468" levels="1" name="Tauti's Temporary Invincibility">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A temporary buff that makes Tauti immune to attacks when he's down. -->
-		<set name="icon" val="icon.skill1427" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
 	</skill>
 </list>

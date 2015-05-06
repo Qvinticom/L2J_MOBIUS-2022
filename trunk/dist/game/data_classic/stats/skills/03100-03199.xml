@@ -904,33 +904,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3134" levels="10" name="Item Skill: Duel Might">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
-		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="ABNORMAL_ITEM" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill3123" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="3135" levels="10" name="Item Skill: Shield">
 		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
@@ -982,38 +955,6 @@
 		<for>
 			<effect name="Buff">
 				<add stat="mDef" val="#mDef" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="3137" levels="10" name="Item Skill: Duel Weakness">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -440 -481 -521 -562 -602 -640 -677 -711 -743 -789 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
-		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="PVP_DMG_DOWN" />
-		<set name="activateRate" val="80" />
-		<set name="castRange" val="40" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill3123" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pvpPhysDmg" val="0.95" />
-				<mul stat="pvpPhysSkillsDmg" val="0.95" />
 			</effect>
 		</for>
 	</skill>

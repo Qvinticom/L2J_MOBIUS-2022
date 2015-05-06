@@ -900,37 +900,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="419" levels="4" name="Summon Treasure Key">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#extractableItems">
-			21746,1,100
-			21746,1,50;21746,2,50
-			21746,1,34;21746,2,33;21746,3,33
-			21746,1,25;21746,2,25;21746,3,25;21746,4,25
-		</table>
-		<table name="#magicLvl"> 46 58 66 74 </table>
-		<table name="#mpConsume"> 122 159 183 204 </table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0419" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="itemConsumeId" val="1661" /> <!-- Thief Key -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
-	</skill>
 	<skill id="420" levels="3" name="Zealot" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
@@ -1514,32 +1483,6 @@
 			<effect name="PhysicalMute" />
 		</for>
 	</skill>
-	<skill id="438" levels="4" name="Soul of the Phoenix">
-		<table name="#magicLvl"> 79 85 95 99 </table>
-		<table name="#reuseDelay"> 4500000 4200000 3900000 3600000 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
-		<set name="effectPoint" val="673" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0438" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8873" /> <!-- Phoenix Blood -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="200" />
-		<set name="mpInitialConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="ResurrectionSpecial">
-				<param power="100" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="439" levels="1" name="Shield of Revenge">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -1960,154 +1903,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="454" levels="1" name="Symbol of Defense">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0454" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13018" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="455" levels="1" name="Symbol of Noise">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0455" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="GROUND" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13019" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="456" levels="1" name="Symbol of Resistance">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0456" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13020" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="457" levels="1" name="Symbol of Honor">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0457" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13021" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="458" levels="1" name="Symbol of Energy">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0458" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13022" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="459" levels="1" name="Symbol of the Sniper">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0459" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13023" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="460" levels="1" name="Symbol of the Assassin">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0460" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8875" /> <!-- Battle Symbol -->
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="44" />
-		<set name="mpInitialConsume" val="36" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonNpc">
-				<param npcId="13024" npcCount="1" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="461" levels="2" name="Break Duress">
 		<table name="#chargeConsume"> 2 3 </table>
 		<table name="#dispelAbnormals"> ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 </table>
@@ -2340,48 +2135,6 @@
 				<mul stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
-	</skill>
-	<skill id="470" levels="7" name="Detect Trap">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 15 24 36 46 55 66 74 </table>
-		<table name="#mpConsume"> 14 18 27 36 44 54 60 </table>
-		<table name="#power"> 18 28 38 48 58 68 78 </table>
-		<set name="affectRange" val="300" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0470" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="TrapDetect">
-				<param power="#power" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="471" levels="7" name="Defuse Trap">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 15 24 36 46 55 66 74 </table>
-		<table name="#mpConsume"> 4 5 7 9 11 14 15 </table>
-		<table name="#power"> 18 28 38 48 58 68 78 </table>
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="500" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0471" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond msgId="109">
-			<target npcType="L2TrapInstance" />
-		</cond>
-		<effect name="TrapRemove">
-			<param power="#power" />
-		</effect>
 	</skill>
 	<skill id="472" levels="45" name="Ancient Sword Mastery" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->

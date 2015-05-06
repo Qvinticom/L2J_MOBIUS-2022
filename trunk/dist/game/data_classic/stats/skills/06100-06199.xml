@@ -212,65 +212,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6121" levels="1" name="Agathion's New Year's Gift 1">
-		<!-- Confirmed CT2.5 -->
-		<set name="coolTime" val="1000" />
-		<set name="hitTime" val="2700" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="86400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="14676" itemCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="6122" levels="1" name="Agathion's New Year's Gift 2">
-		<!-- Confirmed CT2.5 -->
-		<set name="coolTime" val="1000" />
-		<set name="hitTime" val="2700" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="86400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="14677" itemCount="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="6123" levels="1" name="Agathion's New Year's Wish">
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="coolTime" val="1000" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="86400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-	</skill>
 	<skill id="6124" levels="1" name="Agathion Cute Trick - Neolithica">
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -1211,20 +1152,6 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
-	</skill>
-	<skill id="6196" levels="1" name="Agathion Oink Oink's Ability">
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="coolTime" val="1000" />
-		<set name="icon" val="icon.skill_agathion_cute" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="72000000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink">
 		<set name="hitTime" val="3000" />

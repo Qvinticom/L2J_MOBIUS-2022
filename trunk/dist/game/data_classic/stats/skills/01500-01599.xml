@@ -314,30 +314,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1510" levels="1" name="Soul Cleanse">
-		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="611" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill1510" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="66" />
-		<set name="mpConsume" val="25" />
-		<set name="mpInitialConsume" val="7" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond msgId="113" addName="1">
-			<target race="KAMAEL" />
-		</cond>
-		<for>
-			<effect name="DispelByCategory">
-				<param slot="debuff" rate="100" max="3" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="1511" levels="8" name="Curse of Life Flow" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
@@ -710,81 +686,6 @@
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1520" levels="1" name="Inquisitor">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill1520" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="mpConsume" val="39" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="30000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="316" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1521" levels="1" name="Inquisitor">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill1520" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="mpConsume" val="39" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="30000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="317" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1522" levels="1" name="Inquisitor">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="21600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill1520" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="mpConsume" val="39" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="30000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="318" />
 			</effect>
 		</for>
 	</skill>
@@ -2033,93 +1934,6 @@
 				<add stat="maxMp" val="#ench1maxMp" />
 			</effect>
 		</enchant1for>
-	</skill>
-	<skill id="1566" levels="1" name="Class Change">
-		<!-- Change the class. -->
-		<set name="icon" val="icon.skill0810" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="3000" />
-		<cond>
-			<player canSwitchSubClass="0" />
-		</cond>
-		<for>
-			<effect name="ClassChange">
-				<param index="0" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1567" levels="1" name="Class Change">
-		<!-- Change the class. -->
-		<set name="icon" val="icon.skill0810" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="3000" />
-		<cond>
-			<player canSwitchSubClass="1" />
-		</cond>
-		<for>
-			<effect name="ClassChange">
-				<param index="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1568" levels="1" name="Class Change">
-		<!-- Change the class. -->
-		<set name="icon" val="icon.skill0810" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="3000" />
-		<cond>
-			<player canSwitchSubClass="2" />
-		</cond>
-		<for>
-			<effect name="ClassChange">
-				<param index="2" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1569" levels="1" name="Class Change">
-		<!-- Change the class. -->
-		<set name="icon" val="icon.skill0810" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="3000" />
-		<cond>
-			<player canSwitchSubClass="3" />
-		</cond>
-		<for>
-			<effect name="ClassChange">
-				<param index="3" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="1570" levels="1" name="Identity Crisis">
-		<!-- For 15 seconds, you are going through an Identity Crisis. Battle abilities are decreased and skills and items cannot be used. However, consumables items can still be used. Also, you cannot switch between main, dual, or sub classes while under the effect of Identity Crisis. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="CHANGE_CLASS" />
-		<set name="icon" val="icon.skill1570" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="33" />
-				<mul stat="pAtkSpd" val="0.65" />
-				<mul stat="mAtkSpd" val="0.65" />
-				<mul stat="pAtk" val="0.25" />
-				<mul stat="mAtk" val="0.25" />
-			</effect>
-			<effect name="Mute" />
-			<effect name="PhysicalMute" />
-		</for>
 	</skill>
 	<skill id="1571" levels="1" name="Inventory Increase">
 		<!-- AUTO GENERATED SKILL -->

@@ -391,33 +391,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1410" levels="1" name="Salvation">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1410" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="2" />
-		<set name="itemConsumeId" val="8874" /> <!-- Einhasad's Holy Water -->
-		<set name="magicLvl" val="79" />
-		<set name="mpConsume" val="69" />
-		<set name="mpInitialConsume" val="18" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ResurrectionSpecial">
-				<param power="100" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="1411" levels="1" name="Mystic Immunity">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
@@ -1720,52 +1693,6 @@
 		<for>
 			<effect name="Mute" />
 		</for>
-	</skill>
-	<skill id="1448" levels="1" name="Blink" enchantGroup1="2" enchantGroup2="2">
-		<!-- Confirmed CT2.5 -->
-		<table name="#ench1MpConsume"> 49 48 47 46 45 45 44 43 42 41 40 40 39 38 37 36 35 35 34 33 32 31 30 30 29 28 27 26 25 25 </table>
-		<table name="#ench2Radius"> 413 426 440 453 466 480 493 506 520 533 546 560 573 586 600 613 626 640 653 666 680 693 706 720 733 746 760 773 786 800 </table>
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="2" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="99" />
-		<set name="affectLimit" val="6-12" />
-		<set name="affectRange" val="150" />
-		<set name="basicProperty" val="CON" />
-		<set name="coolTime" val="200" />
-		<set name="effectPoint" val="-575" />
-		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
-		<set name="flyRadius" val="400" />
-		<set name="hitTime" val="300" />
-		<set name="icon" val="icon.skill1448" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="mpInitialConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="1" />
-		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="simultaneousCast" val="true" />
-		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="AURA" />
-		<set name="trait" val="SHOCK" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="mpInitialConsume" val="#ench1MpConsume" />
-		<enchant2 name="flyRadius" val="#ench2Radius" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<for>
-			<effect name="PhysicalSoulAttack" />
-			<effect name="Stun" />
-		</for>
-		<selfEffects>
-			<effect name="Blink" />
-		</selfEffects>
 	</skill>
 	<skill id="1449" levels="1" name="Transfer Soul">
 		<!-- Confirmed CT2.5 -->

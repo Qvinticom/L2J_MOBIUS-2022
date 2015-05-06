@@ -1856,95 +1856,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="771" levels="1" name="Flame Hawk">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="900" />
-		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="900" />
-		<set name="coolTime" val="1000" />
-		<set name="effectPoint" val="-686" />
-		<set name="effectRange" val="1400" />
-		<set name="fanRange" val="0,0,900,40" />
-		<set name="hitTime" val="3500" />
-		<set name="icon" val="icon.skill0771" />
-		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="160" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="overHit" val="true" />
-		<set name="power" val="8049" />
-		<set name="reuseDelay" val="75000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="CallSkill">
-				<param skillId="23298" skillLevel="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="772" levels="1" name="Arrow Rain">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="200" />
-		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="600" />
-		<set name="coolTime" val="1000" />
-		<set name="effectPoint" val="-686" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0772" />
-		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="160" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="overHit" val="true" />
-		<set name="power" val="7043" />
-		<set name="reuseDelay" val="75000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="CallSkill">
-				<param skillId="23299" skillLevel="1" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="773" levels="1" name="Ghost Piercing">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="900" />
-		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="900" />
-		<set name="coolTime" val="1000" />
-		<set name="effectPoint" val="-686" />
-		<set name="effectRange" val="1400" />
-		<set name="fanRange" val="0,0,900,100" />
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0773" />
-		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="160" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="overHit" val="true" />
-		<set name="power" val="8452" />
-		<set name="reuseDelay" val="75000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="CallSkill">
-				<param skillId="23300" skillLevel="1" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
@@ -2075,31 +1986,6 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-		</for>
-	</skill>
-	<skill id="778" levels="1" name="Golem Armor">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0778" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="mpConsume" val="44" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="259" />
-			</effect>
 		</for>
 	</skill>
 	<skill id="779" levels="1" name="Summon Smart Cubic">

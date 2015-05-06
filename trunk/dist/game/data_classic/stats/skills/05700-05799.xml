@@ -1343,23 +1343,6 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5774" levels="2" name="Replenish Pailaka Reward Vitality">
-		<!-- Confirmed CT2.5 -->
-		<table name="#value"> 10000 20000 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1400" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="VitalityPointUp">
-				<param value="#value" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="5775" levels="1" name="Greater Blessing of Pathfinder">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
@@ -1405,24 +1388,6 @@
 		<set name="magicLvl" val="7" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="5780" levels="9" name="Agathion Collection">
-		<set name="castRange" val="100" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="6000" />
-		<set name="icon" val="icon.skill_agathion_cute" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond msgId="2292">
-			<player agathionId="16061" />
-		</cond>
-		<cond msgId="109">
-			<target npcId="18678, 18679, 18680, 18681, 18682, 18683" />
-		</cond>
 	</skill>
 	<skill id="5781" levels="1" name="Presentation - Lindvior Approach">
 		<!-- Confirmed CT2.5 -->

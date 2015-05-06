@@ -95,20 +95,6 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -284,22 +270,6 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
-		<!-- Blessed Enchant -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
-		<!-- Blessed Enchant -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-	</skill>
 	<skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
 		<!-- Blessed Enchant -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -357,13 +327,6 @@
 				<param power="24" />
 			</effect>
 		</for>
-	</skill>
-	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2034" levels="1" name="Greater Wind Walk Potion">
 		<set name="abnormalLvl" val="2" />
@@ -1082,44 +1045,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
-		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="1466" itemCount="300" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
-		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="1467" itemCount="300" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1193,44 +1118,6 @@
 		<for>
 			<effect name="Restoration">
 				<param itemId="2512" itemCount="300" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
-		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="2513" itemCount="300" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
-		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="2514" itemCount="300" />
 			</effect>
 		</for>
 	</skill>
@@ -1310,44 +1197,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
-		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="3951" itemCount="300" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
-		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Restoration">
-				<param itemId="3952" itemCount="300" />
-			</effect>
-		</for>
-	</skill>
 	<skill id="2096" levels="1" name="Soul Crystal">
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-150" />
@@ -1360,40 +1209,6 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
-	</skill>
-	<skill id="2097" levels="3" name="Sowing">
-		<table name="#magicLvl"> 10 20 30 </table>
-		<table name="#mpConsume"> 4 6 8 </table>
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="1800" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Sow" />
-		</for>
-	</skill>
-	<skill id="2098" levels="1" name="Harvesting">
-		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="20" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="3" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CORPSE_MOB" />
-		<for>
-			<effect name="Harvesting" />
-		</for>
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
 		<set name="blockedInOlympiad" val="true" />

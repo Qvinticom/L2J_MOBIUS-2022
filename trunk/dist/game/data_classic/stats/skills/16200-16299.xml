@@ -371,18 +371,6 @@
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<skill id="16232" levels="4" name="Mass Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls nearby enemies to you. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16233" levels="4" name="Mass Fear">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Moving against your will due to Fear. -->
@@ -394,27 +382,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16234" levels="3" name="Raid Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- While effect lasts, Raid Point acquisition + 30%. -->
-		<set name="icon" val="icon.etc_i.etc_rp_point_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
-		<set name="castRange" val="40" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="16235" levels="1" name="Raid Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- No longer able to receive Raid Blessing. -->
-		<set name="icon" val="icon.etc_i.etc_rp_point_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
-		<set name="castRange" val="40" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 	</skill>

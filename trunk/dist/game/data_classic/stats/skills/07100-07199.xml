@@ -85,50 +85,6 @@
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="7109" levels="1" name="Summon Bratty Angma">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summon a Bratty Angma. -->
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="7110" levels="1" name="Summon Bratty Angma">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summon a Bratty Angma. -->
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="7111" levels="1" name="Summon Bratty Angma">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summon a Bratty Angma. -->
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="7112" levels="1" name="Summon Bratty Angma">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summon a Bratty Angma. -->
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
 	<skill id="7113" levels="1" name="Pet Invincibility Effect">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Invincibility Effect -->
@@ -139,13 +95,6 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="7114" levels="1" name="Spellbook: Clan Flag">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
-	</skill>
 	<skill id="7115" levels="1" name="Energy of Chaos">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Character's hair and cloak have been changed due to participation in the Ceremony of Chaos. -->
@@ -153,12 +102,5 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
-	</skill>
-	<skill id="7116" levels="1" name="Spellbook: Air Bike">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
 	</skill>
 </list>

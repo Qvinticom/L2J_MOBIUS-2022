@@ -333,7 +333,10 @@ public final class GameServer
 		PartyMatchWaitingList.getInstance();
 		PartyMatchRoomList.getInstance();
 		PetitionManager.getInstance();
-		AugmentationData.getInstance();
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			AugmentationData.getInstance();
+		}
 		CursedWeaponsManager.getInstance();
 		TransformData.getInstance();
 		BotReportTable.getInstance();

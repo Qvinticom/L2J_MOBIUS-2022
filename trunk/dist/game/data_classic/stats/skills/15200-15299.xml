@@ -1,67 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="15200" levels="1" name="Tauti Ultra Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being hurled away from shock. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="7000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15201" levels="1" name="Tauti Ultra Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being hurled away from shock. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="6000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15202" levels="1" name="Tauti Ultra Typhoon">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="7000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15203" levels="1" name="Tauti Ultra Typhoon">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="6000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15204" levels="1" name="Tauti Omega Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
-		<set name="icon" val="icon.skill10266" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15205" levels="1" name="Tauti Omega Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
-		<set name="icon" val="icon.skill10266" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="15206" levels="1" name="Explosion">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
@@ -83,56 +21,6 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="15209" levels="1" name="Pa'agrio's Gift 1">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="15210" levels="1" name="Pa'agrio's Gift 2">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="15211" levels="1" name="Pa'agrio's Gift 3">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="15212" levels="1" name="Pa'agrio's Gift 4">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="15213" levels="1" name="Guillotine's Advent">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Flying away due to the twisted space. -->
-		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="15214" levels="1" name="Tauti">
 		<!-- AUTO GENERATED SKILL -->
@@ -342,17 +230,6 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
-	<skill id="15235" levels="1" name="Dark Wind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Create a strong wind around you to push back enemies. -->
-		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="3000" />
-		<set name="reuseDelay" val="10000" />
-	</skill>
 	<skill id="15236" levels="1" name="Dark Thrust">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful attack on the target. -->
@@ -393,14 +270,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="5" />
 		<set name="reuseDelay" val="5000" />
-	</skill>
-	<skill id="15240" levels="1" name="Toad Cannon Explosion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A broken Toad Cannon sparks into explosion, knocking back nearby targets. -->
-		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
 	</skill>
 	<skill id="15241" levels="1" name="">
 		<!-- AUTO GENERATED SKILL -->
@@ -451,19 +320,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="5000" />
 	</skill>
-	<skill id="15247" levels="1" name="Nurka Strike">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on the target and knocks them down. -->
-		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="15248" levels="1" name="Nurka Howl">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Nurka's P. Atk. and Atk. Spd. increased and P. Def. decreased. -->
@@ -509,19 +365,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="15252" levels="1" name="With Nurka">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Target is pulled to Nurka. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="350" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="15253" levels="1" name="Earth-rumbling Nurka">
 		<!-- AUTO GENERATED SKILL -->
@@ -623,15 +466,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
 	</skill>
-	<skill id="15263" levels="1" name="Bombing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Wave Skill Damage -->
-		<set name="icon" val="icon.skill1296" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="1000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="15264" levels="1" name="Lindvior's Skill 4">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Skill Presentation -->
@@ -656,24 +490,6 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
-	</skill>
-	<skill id="15267" levels="1" name="Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Summon Whirlwind Skill Presentation -->
-		<set name="icon" val="icon.skill10263" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="100" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15268" levels="1" name="Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Whirlwind Knockback Skill -->
-		<set name="icon" val="icon.skill10263" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="100" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="15269" levels="1" name="Lindvior's Wrath">
 		<!-- AUTO GENERATED SKILL -->
@@ -705,17 +521,6 @@
 		<set name="coolTime" val="1000" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<skill id="15272" levels="1" name="Wind Breath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Landing Breath Skill -->
-		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="400" />
-		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="3000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="15273" levels="1" name="Tail Swipe">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Landing Range -->
@@ -735,16 +540,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="15275" levels="1" name="Tornado">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Takeoff Presentation -->
-		<set name="icon" val="icon.skill10263" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="7000" />
-		<set name="coolTime" val="2000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="15276" levels="1" name="Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleeding -->
@@ -754,17 +549,6 @@
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15277" levels="1" name="Knock Back">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Knock back -->
-		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="100" />
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="15278" levels="1" name="Yoke">
@@ -812,33 +596,6 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
-	</skill>
-	<skill id="15283" levels="1" name="Summon Jacquard">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons Jacquard, the Herald from the Fortress of the Dead. The Clan Hall Siege for the contestable Fortress of the Dead runs between 21:00 and 22:00 on the Thursday of the Castle Siege week. Jacquard teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
-		<set name="icon" val="icon.skill15283" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="1800000" />
-	</skill>
-	<skill id="15284" levels="1" name="Summon Brakel">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons Brakel, the Herald from the Fortress of Resistance. The Clan Hall Siege for the contestable Fortress of Resistance runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Brakel teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
-		<set name="icon" val="icon.skill15284" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="1800000" />
-	</skill>
-	<skill id="15285" levels="1" name="Summon Loken">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons Loken, the Herald from Devastated Castle. The Clan Hall Siege for the contestable Devastated Castle runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Loken teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
-		<set name="icon" val="icon.skill15285" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="1800000" />
 	</skill>
 	<skill id="15286" levels="1" name="Blood Siphon Master">
 		<!-- AUTO GENERATED SKILL -->

@@ -209,19 +209,6 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6024" levels="1" name="Weight Aerial Cleft">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="40" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="effectPoint" val="-10" />
-		<set name="icon" val="icon.skill6024" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="14" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-	</skill>
 	<skill id="6025" levels="1" name="not_used">
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="PASSIVE" />
@@ -297,46 +284,6 @@
 			<effect name="Invincible" />
 			<effect name="Stun" />
 			<effect name="ImmobileBuff" />
-		</for>
-	</skill>
-	<skill id="6035" levels="1" name="Transform Red Team">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="121" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="6036" levels="1" name="Transform Blue Team">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="122" />
-			</effect>
 		</for>
 	</skill>
 	<skill id="6037" levels="1" name="Soul Unleash">

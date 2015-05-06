@@ -159,15 +159,6 @@
 		<set name="coolTime" val="500" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<skill id="16322" levels="1" name="Orc Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Blown away. -->
-		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16323" levels="1" name="Orc Typhoon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blown away. -->
@@ -175,15 +166,6 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="10000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16324" levels="1" name="Orc Typhoon">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Blown away. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="500" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -332,15 +314,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="16339" levels="1" name="Vortex Chaos">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Knocked down. -->
-		<set name="icon" val="icon.skill11510" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16340" levels="1" name="Reaper's Seal">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Branded with a seal and targeted by the Undead of Dragon Valley. -->
@@ -457,17 +430,6 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="16351" levels="1" name="Kain's Sonic Star">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill10281" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16352" levels="1" name="Kain's Sonic Storm">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0007" />
@@ -500,17 +462,6 @@
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="5000" />
-	</skill>
-	<skill id="16355" levels="1" name="Sacred Blow Down">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill10281" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="16356" levels="1" name="Sacred Sphere">
 		<!-- AUTO GENERATED SKILL -->
@@ -696,17 +647,6 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="16375" levels="1" name="Dimensional Hammer">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Down. -->
-		<set name="icon" val="icon.skill0260" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isDebuff" val="true" />
-	</skill>
 	<skill id="16376" levels="1" name="Dimensional Bind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 100% of P. Atk. power and inflicts Hold for 5 sec. -->
@@ -714,17 +654,6 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16377" levels="1" name="Dimensional Chain">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 100% of P. Atk. power and pulls target toward self. -->
-		<set name="icon" val="icon.skill0403" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isDebuff" val="true" />
@@ -747,17 +676,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
-	</skill>
-	<skill id="16380" levels="1" name="Dimensional Recoil Shot">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Back. -->
-		<set name="icon" val="icon.skill10770" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="16381" levels="1" name="Dimensional Shield">
 		<!-- AUTO GENERATED SKILL -->
@@ -811,30 +729,6 @@
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
-	</skill>
-	<skill id="16386" levels="1" name="Dimensional Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks enemies to the front with 200% of P. Atk. power and inflicts Knock Down. -->
-		<set name="icon" val="icon.skill0777" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="16387" levels="1" name="Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="16388" levels="1" name="Kain's Wrath">
 		<!-- AUTO GENERATED SKILL -->
