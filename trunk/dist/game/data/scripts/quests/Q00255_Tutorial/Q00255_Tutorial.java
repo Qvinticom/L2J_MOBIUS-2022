@@ -18,13 +18,14 @@
  */
 package quests.Q00255_Tutorial;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * Tutorial Quest (Placeholder)
+ * Tutorial Quest
  * @author Mobius
  */
 public class Q00255_Tutorial extends Quest
@@ -47,9 +48,31 @@ public class Q00255_Tutorial extends Quest
 		String htmltext = null;
 		switch (event)
 		{
+			case "tutorial_02.html":
+			{
+				htmltext = event;
+				break;
+			}
 			case "user_connected":
 			{
-				// Do stuff on player login.
+				// Start Newbie Tutorial
+				if ((player.getLevel() < 6) && !qs.isCompleted())
+				{
+					startQuestTimer("start_newbie_tutorial", 5000, null, player);
+				}
+				break;
+			}
+			case "start_newbie_tutorial":
+			{
+				if (player.getRace() == Race.ERTHEIA)
+				{
+					htmltext = "tutorial_01_ertheia.html";
+				}
+				else
+				{
+					htmltext = "tutorial_01.html";
+				}
+				qs.exitQuest(false, false); // TODO: Continue with the tutorial.
 				break;
 			}
 		}

@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import quests.Q00255_Tutorial.Q00255_Tutorial;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -431,7 +429,7 @@ public class EnterWorld extends L2GameClientPacket
 			}
 		}
 		
-		if (Config.SERVER_CLASSIC_SUPPORT)
+		if (!Config.DISABLE_TUTORIAL)
 		{
 			loadTutorial(activeChar);
 		}
@@ -753,15 +751,10 @@ public class EnterWorld extends L2GameClientPacket
 	
 	private void loadTutorial(L2PcInstance player)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
-		QuestState qs = player.getQuestState(Q00255_Tutorial.class.getSimpleName());
+		QuestState qs = player.getQuestState("Q00255_Tutorial");
 		if (qs == null)
 		{
-			qs = QuestManager.getInstance().getQuest(Q00255_Tutorial.class.getSimpleName()).newQuestState(player);
+			qs = QuestManager.getInstance().getQuest("Q00255_Tutorial").newQuestState(player);
 			qs.setState(State.STARTED);
 		}
 		qs.getQuest().notifyEvent("user_connected", null, player);

@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import quests.Q00255_Tutorial.Q00255_Tutorial;
-
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
@@ -45,10 +43,10 @@ public class RequestTutorialClientEvent extends L2GameClientPacket
 			return;
 		}
 		
-		QuestState qs = player.getQuestState(Q00255_Tutorial.class.getSimpleName());
+		QuestState qs = player.getQuestState("Q00255_Tutorial");
 		if (qs != null)
 		{
-			qs.getQuest().notifyEvent("CE" + eventId + "", null, player);
+			qs.getQuest().notifyEvent("CE" + eventId, null, player);
 		}
 	}
 	
