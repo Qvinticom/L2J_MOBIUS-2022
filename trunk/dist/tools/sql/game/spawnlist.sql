@@ -50830,3 +50830,1013 @@ INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, 
 -- Renfad
 INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
 ('Wastelands', 1, 33524, -24569, 188865, -3942, 0, 0, 39437, 0, 0, 0, 0);
+
+-- Clean old Wasteland spawns
+DELETE FROM spawnlist WHERE npc_templateid = 20077;
+DELETE FROM spawnlist WHERE npc_templateid = 20074;
+DELETE FROM spawnlist WHERE npc_templateid = 20085; 
+DELETE FROM spawnlist WHERE npc_templateid = 21267;
+DELETE FROM spawnlist WHERE npc_templateid = 27100;
+DELETE FROM spawnlist WHERE npc_templateid = 21014;
+DELETE FROM spawnlist WHERE npc_templateid = 21011;
+DELETE FROM spawnlist WHERE npc_templateid = 21012;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -49061 AND locy = 178914 AND locz = -3630;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -43101 AND locy = 179679 AND locz = -3568;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -43028 AND locy = 186427 AND locz = -3628;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -42284 AND locy = 186054 AND locz = -3694;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -41913 AND locy = 184353 AND locz = -3465;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -40709 AND locy = 174686 AND locz = -2672;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -40306 AND locy = 175042 AND locz = -2798;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -21953 AND locy = 201368 AND locz = -3917;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -21836 AND locy = 199494 AND locz = -4115;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -20493 AND locy = 200560 AND locz = -4198;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -19451 AND locy = 202038 AND locz = -3919;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -18457 AND locy = 201574 AND locz = -3917;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -13727 AND locy = 172987 AND locz = -4091;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -13626 AND locy = 173165 AND locz = -4091;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -13388 AND locy = 200628 AND locz = -3465;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -9958 AND locy = 197182 AND locz = -3465;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -7543 AND locy = 196683 AND locz = -3465;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -5683 AND locy = 184881 AND locz = -3518;
+DELETE FROM spawnlist WHERE npc_templateid = 20068 AND locx = -4596 AND locy = 183716 AND locz = -3512;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -27711 AND locy = 198156 AND locz = -3723;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -25650 AND locy = 195633 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -24742 AND locy = 192645 AND locz = -4150;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -18186 AND locy = 197501 AND locz = -4176;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -15077 AND locy = 198830 AND locz = -3916;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -14740 AND locy = 197252 AND locz = -3916;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -13599 AND locy = 197253 AND locz = -3916;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -12918 AND locy = 179622 AND locz = -4183;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -10638 AND locy = 179801 AND locz = -4080;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -9879 AND locy = 182448 AND locz = -4184;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -6240 AND locy = 185983 AND locz = -3580;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -5926 AND locy = 185369 AND locz = -3570;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -5493 AND locy = 191098 AND locz = -3444;
+DELETE FROM spawnlist WHERE npc_templateid = 20190 AND locx = -4919 AND locy = 191878 AND locz = -3441;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -9185 AND locy = 190101 AND locz = -4305;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -9080 AND locy = 183043 AND locz = -4175;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -8744 AND locy = 181181 AND locz = -4253;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -8064 AND locy = 190541 AND locz = -3919;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -8060 AND locy = 186518 AND locz = -3441;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -7522 AND locy = 191695 AND locz = -3921;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -7370 AND locy = 186721 AND locz = -3560;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -6665 AND locy = 189117 AND locz = -3638;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -5584 AND locy = 186142 AND locz = -3302;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -26105 AND locy = 196670 AND locz = -3916;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -24621 AND locy = 196418 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -23759 AND locy = 198506 AND locz = -3672;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -22465 AND locy = 194493 AND locz = -4171;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -21811 AND locy = 193925 AND locz = -4175;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -21603 AND locy = 196918 AND locz = -4290;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -21006 AND locy = 193925 AND locz = -4175;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -20603 AND locy = 194281 AND locz = -4175;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -20599 AND locy = 198316 AND locz = -4185;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -19545 AND locy = 196694 AND locz = -4198;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -18914 AND locy = 200346 AND locz = -4006;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -18901 AND locy = 198398 AND locz = -4198;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -16421 AND locy = 180361 AND locz = -4202;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -15306 AND locy = 197000 AND locz = -3917;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -13729 AND locy = 181714 AND locz = -4269;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -12961 AND locy = 178428 AND locz = -4285;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -12723 AND locy = 181002 AND locz = -4269;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -12542 AND locy = 182196 AND locz = -4096;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -12190 AND locy = 176459 AND locz = -3964;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -11662 AND locy = 192258 AND locz = -3995;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -11259 AND locy = 192614 AND locz = -3995;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -11001 AND locy = 183608 AND locz = -4166;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -10933 AND locy = 190624 AND locz = -4204;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -10834 AND locy = 178643 AND locz = -4056;
+DELETE FROM spawnlist WHERE npc_templateid = 20191 AND locx = -9602 AND locy = 186587 AND locz = -3317;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -41164 AND locy = 182603 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -40819 AND locy = 185255 AND locz = -3629;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -38723 AND locy = 185252 AND locz = -3719;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -37266 AND locy = 185899 AND locz = -3630;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -36730 AND locy = 178768 AND locz = -4374;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -36427 AND locy = 179302 AND locz = -4374;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -35574 AND locy = 180113 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -34995 AND locy = 183969 AND locz = -3999;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -34790 AND locy = 179483 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -34495 AND locy = 178788 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -34363 AND locy = 177808 AND locz = -4399;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -34089 AND locy = 181052 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -33255 AND locy = 178214 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -33236 AND locy = 190814 AND locz = -3629;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -32974 AND locy = 176644 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -32816 AND locy = 175542 AND locz = -4212;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -32081 AND locy = 174827 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -32053 AND locy = 168727 AND locz = -3628;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -32029 AND locy = 172196 AND locz = -4419;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -31830 AND locy = 179363 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -31736 AND locy = 193160 AND locz = -3647;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -30955 AND locy = 173756 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -30836 AND locy = 191689 AND locz = -3647;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -30430 AND locy = 169059 AND locz = -3926;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -30155 AND locy = 168564 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -29952 AND locy = 169276 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -29075 AND locy = 168157 AND locz = -3756;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -29017 AND locy = 174043 AND locz = -4240;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -28704 AND locy = 171695 AND locz = -4346;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -28524 AND locy = 191447 AND locz = -3809;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -28091 AND locy = 179976 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -28010 AND locy = 189932 AND locz = -3643;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -24070 AND locy = 168864 AND locz = -3258;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -23836 AND locy = 170514 AND locz = -4285;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -23555 AND locy = 171202 AND locz = -3626;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -22554 AND locy = 173980 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20077 AND locx = -21446 AND locy = 172833 AND locz = -3615;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -39950 AND locy = 181551 AND locz = -4200;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -39942 AND locy = 179949 AND locz = -3933;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -39835 AND locy = 178474 AND locz = -3935;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -38116 AND locy = 186379 AND locz = -3629;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -37912 AND locy = 183683 AND locz = -3936;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -37595 AND locy = 189133 AND locz = -3719;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -37546 AND locy = 175270 AND locz = -3935;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -37518 AND locy = 177337 AND locz = -3935;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -37007 AND locy = 176438 AND locz = -3935;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -36942 AND locy = 175270 AND locz = -3935;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -36836 AND locy = 189055 AND locz = -3641;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -36829 AND locy = 190334 AND locz = -3635;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -35910 AND locy = 173152 AND locz = -4400;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -35724 AND locy = 186297 AND locz = -3212;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -35714 AND locy = 192111 AND locz = -3637;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -35179 AND locy = 189467 AND locz = -3719;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -34864 AND locy = 172613 AND locz = -3935;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -34113 AND locy = 171324 AND locz = -3946;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -32949 AND locy = 192577 AND locz = -3628;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -32285 AND locy = 170304 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -31061 AND locy = 168742 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -30516 AND locy = 190513 AND locz = -3647;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -30356 AND locy = 169276 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -30255 AND locy = 168742 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -29953 AND locy = 168920 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -29852 AND locy = 169098 AND locz = -4276;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -28927 AND locy = 191447 AND locz = -3809;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -27819 AND locy = 191625 AND locz = -3538;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -25959 AND locy = 169708 AND locz = -3690;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -25165 AND locy = 169804 AND locz = -3628;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -24440 AND locy = 170514 AND locz = -4285;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -23925 AND locy = 172880 AND locz = -3922;
+DELETE FROM spawnlist WHERE npc_templateid = 20074 AND locx = -22664 AND locy = 169276 AND locz = -3177;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -37889 AND locy = 189954 AND locz = -3639;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -37025 AND locy = 192088 AND locz = -3634;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -35195 AND locy = 184413 AND locz = -3992;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -33485 AND locy = 174462 AND locz = -4224;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -33093 AND locy = 178593 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -32794 AND locy = 188935 AND locz = -3929;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -32361 AND locy = 187407 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -31645 AND locy = 188733 AND locz = -3867;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -31627 AND locy = 172196 AND locz = -4419;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -31242 AND locy = 188733 AND locz = -3867;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -31241 AND locy = 189445 AND locz = -3867;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -31080 AND locy = 178936 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -30960 AND locy = 178599 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -30945 AND locy = 181034 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -30341 AND locy = 180678 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -29735 AND locy = 181746 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -29579 AND locy = 174695 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -29397 AND locy = 173685 AND locz = -4263;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -27206 AND locy = 173910 AND locz = -4342;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -27005 AND locy = 174978 AND locz = -4342;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -24846 AND locy = 189809 AND locz = -4149;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -24664 AND locy = 192089 AND locz = -4484;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -23872 AND locy = 188480 AND locz = -4167;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -23860 AND locy = 192089 AND locz = -4484;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -22954 AND locy = 176141 AND locz = -4282;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -22260 AND locy = 177476 AND locz = -4176;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -21870 AND locy = 191955 AND locz = -4061;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -21066 AND locy = 191955 AND locz = -4061;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -21065 AND locy = 192311 AND locz = -4061;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -20438 AND locy = 175251 AND locz = -4282;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -19657 AND locy = 185782 AND locz = -4208;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -19455 AND locy = 187206 AND locz = -4208;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -19253 AND locy = 186850 AND locz = -4208;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -18951 AND locy = 184892 AND locz = -4208;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -18750 AND locy = 184892 AND locz = -4208;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -18601 AND locy = 180213 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -18550 AND locy = 185604 AND locz = -4208;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -17073 AND locy = 187727 AND locz = -4269;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -15430 AND locy = 180271 AND locz = -4198;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -15299 AND locy = 188409 AND locz = -4273;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -13740 AND locy = 185473 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -13653 AND locy = 195389 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -13552 AND locy = 192148 AND locz = -4275;
+DELETE FROM spawnlist WHERE npc_templateid = 20085 AND locx = -12242 AND locy = 194889 AND locz = -3927;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -32996 AND locy = 174394 AND locz = -4221;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -32028 AND locy = 178444 AND locz = -4209;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -30341 AND locy = 180678 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -30341 AND locy = 181034 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -30039 AND locy = 180856 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -29637 AND locy = 180856 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -29536 AND locy = 181034 AND locz = -4411;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -29112 AND locy = 181168 AND locz = -4315;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -28730 AND locy = 178246 AND locz = -4321;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -26680 AND locy = 175661 AND locz = -4075;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -26073 AND locy = 184931 AND locz = -4418;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -25872 AND locy = 184931 AND locz = -4418;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -25771 AND locy = 185465 AND locz = -4418;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -24625 AND locy = 180317 AND locz = -4173;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -23401 AND locy = 189381 AND locz = -4666;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -23301 AND locy = 188847 AND locz = -4666;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -23200 AND locy = 189025 AND locz = -4666;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -23099 AND locy = 188491 AND locz = -4666;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -22697 AND locy = 188847 AND locz = -4666;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -22148 AND locy = 175073 AND locz = -4282;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -21969 AND locy = 182410 AND locz = -4034;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -21931 AND locy = 178186 AND locz = -4175;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -21745 AND locy = 175073 AND locz = -4282;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -21037 AND locy = 176766 AND locz = -4196;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -20060 AND locy = 186138 AND locz = -4083;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -19858 AND locy = 185782 AND locz = -4579;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -19858 AND locy = 186138 AND locz = -4093;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -19757 AND locy = 186316 AND locz = -4579;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -19255 AND locy = 185782 AND locz = -4579;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -19247 AND locy = 188286 AND locz = -4152;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -18471 AND locy = 185203 AND locz = -3903;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -16274 AND locy = 189492 AND locz = -4203;
+DELETE FROM spawnlist WHERE npc_templateid = 20745 AND locx = -13572 AND locy = 188967 AND locz = -4167;
+-- Addition of new monster spawns
+-- Weary Jaguar Scout
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 23025, -45768, 181281, -3644, 0, 0, 24736, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -45465, 181857, -3623, 0, 0, 45924, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -45326, 180725, -3721, 0, 0, 38267, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -45278, 182442, -3632, 0, 0, 35053, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -44766, 182556, -3651, 0, 0, 51332, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -44757, 181515, -3661, 0, 0, 60842, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -44612, 180439, -3655, 0, 0, 60057, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -44020, 188222, -3633, 0, 0, 18744, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -43909, 187740, -3657, 0, 0, 22070, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -43595, 187932, -3637, 0, 0, 59290, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -43017, 185122, -3632, 0, 0, 35955, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -43008, 186858, -3655, 0, 0, 24064, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -41853, 178085, -3622, 0, 0, 606, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -41498, 178055, -3594, 0, 0, 64656, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -41477, 177674, -3620, 0, 0, 49726, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -41203, 177896, -3595, 0, 0, 65024, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -40634, 177739, -3640, 0, 0, 21434, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -39346, 176313, -3743, 0, 0, 34797, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -39006, 176380, -3754, 0, 0, 41812, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -37469, 173615, -3850, 0, 0, 55481, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -37019, 173672, -3892, 0, 0, 1314, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -36925, 172106, -3831, 0, 0, 49864, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -36853, 173993, -3872, 0, 0, 11405, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -36709, 170781, -3816, 0, 0, 53996, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -36447, 170656, -3839, 0, 0, 60892, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -36008, 170226, -3883, 0, 0, 63905, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -35671, 190850, -3638, 0, 0, 25835, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -34187, 193379, -3629, 0, 0, 24301, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -33692, 191278, -3643, 0, 0, 28112, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -32842, 193062, -3640, 0, 0, 64437, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -32709, 191468, -3648, 0, 0, 30496, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -32334, 191385, -3661, 0, 0, 36499, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -31452, 173453, -4250, 0, 0, 17335, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -31379, 172378, -4286, 0, 0, 28265, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -31362, 172741, -4280, 0, 0, 12806, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -30946, 173487, -4236, 0, 0, 34378, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -30894, 172871, -4261, 0, 0, 2826, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -30851, 173256, -4225, 0, 0, 15223, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -30637, 193373, -3668, 0, 0, 6322, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -30042, 174012, -4230, 0, 0, 8832, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -30010, 192872, -3575, 0, 0, 52399, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -29910, 178026, -3252, 0, 0, 32460, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -29827, 177814, -3249, 0, 0, 53044, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -29695, 192891, -3596, 0, 0, 17251, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -28547, 177986, -3153, 0, 0, 39301, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -28254, 178198, -3162, 0, 0, 22725, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -28219, 174227, -4051, 0, 0, 57180, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -28032, 177879, -3155, 0, 0, 31699, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -27974, 174295, -3992, 0, 0, 2823, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -27971, 173844, -4050, 0, 0, 49221, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -27826, 178246, -3176, 0, 0, 30987, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -27672, 177842, -3164, 0, 0, 52950, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -27347, 173594, -3992, 0, 0, 18513, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -27043, 173218, -4047, 0, 0, 10959, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -26859, 171951, -4195, 0, 0, 60347, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -26820, 174855, -3959, 0, 0, 50370, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -26227, 191377, -4165, 0, 0, 12544, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -26104, 191565, -4161, 0, 0, 21327, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -26025, 191411, -4158, 0, 0, 1739, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -26016, 176394, -4189, 0, 0, 59464, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -25897, 191790, -4166, 0, 0, 17014, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -25685, 175240, -4130, 0, 0, 36000, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -25482, 175305, -4158, 0, 0, 42575, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -25470, 195966, -3941, 0, 0, 63709, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -25309, 175542, -4155, 0, 0, 44108, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -24944, 196034, -3932, 0, 0, 1340, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -24938, 195144, -3959, 0, 0, 46423, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -24585, 196394, -3931, 0, 0, 8206, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -24294, 194692, -3993, 0, 0, 53999, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -24255, 195979, -3931, 0, 0, 45828, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -23596, 195022, -4077, 0, 0, 9498, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -23479, 194608, -4150, 0, 0, 52024, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -23371, 194070, -4204, 0, 0, 18721, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -23322, 193855, -4205, 0, 0, 32875, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -21721, 175294, -4169, 0, 0, 58876, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -21524, 179195, -4053, 0, 0, 26769, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -21002, 174940, -4176, 0, 0, 49808, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20929, 177025, -4189, 0, 0, 17073, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20750, 177687, -4108, 0, 0, 11821, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20718, 179361, -4046, 0, 0, 16648, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20613, 177122, -4238, 0, 0, 3106, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20432, 177023, -4240, 0, 0, 60315, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20206, 175770, -4227, 0, 0, 60264, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -20141, 177940, -4206, 0, 0, 4106, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -19252, 179311, -4115, 0, 0, 39915, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -15347, 187092, -4327, 0, 0, 63102, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -13973, 186704, -4233, 0, 0, 44353, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -13864, 186924, -4225, 0, 0, 29321, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -13733, 187184, -4213, 0, 0, 11547, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -13657, 186853, -4216, 0, 0, 17935, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -13596, 186446, -4207, 0, 0, 18832, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -9938, 183510, -3684, 0, 0, 27978, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -9753, 182677, -3680, 0, 0, 47493, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -9532, 181779, -3668, 0, 0, 13061, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -8842, 183080, -3720, 0, 0, 2367, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -8758, 190232, -3681, 0, 0, 14464, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -8543, 184028, -3743, 0, 0, 9459, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -8261, 195835, -3679, 0, 0, 21758, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -8204, 183867, -3666, 0, 0, 16607, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -8102, 187433, -3701, 0, 0, 29525, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7881, 187362, -3666, 0, 0, 27635, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7820, 193415, -3670, 0, 0, 26209, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7803, 194948, -3686, 0, 0, 23416, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7696, 193036, -3689, 0, 0, 17508, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7687, 187258, -3633, 0, 0, 5886, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7145, 183749, -3629, 0, 0, 41206, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -7022, 194653, -3694, 0, 0, 64198, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -6753, 184111, -3577, 0, 0, 6802, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -6743, 182390, -3646, 0, 0, 69, 60, 0, 0, 0),
+('Wastelands', 1, 23025, -6733, 183889, -3601, 0, 0, 50089, 60, 0, 0, 0);
+-- Weary Jaguar
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 23024, -46216, 179783, -3726, 0, 0, 43038, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -45570, 181089, -3653, 0, 0, 18464, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -44888, 183131, -3654, 0, 0, 34704, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -44480, 180978, -3635, 0, 0, 14003, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -44411, 181736, -3626, 0, 0, 5928, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -44004, 183297, -3611, 0, 0, 61567, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -43724, 187435, -3656, 0, 0, 25308, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -43327, 187834, -3633, 0, 0, 61879, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -43077, 178950, -3621, 0, 0, 8848, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -43073, 188711, -3633, 0, 0, 4983, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -42940, 188460, -3633, 0, 0, 54234, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -42880, 178259, -3633, 0, 0, 55566, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -41389, 177904, -3607, 0, 0, 32319, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -40120, 177296, -3725, 0, 0, 62626, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -39754, 176638, -3725, 0, 0, 56723, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -37873, 174197, -3850, 0, 0, 50605, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -36964, 171290, -3783, 0, 0, 46149, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -36595, 169930, -3761, 0, 0, 26216, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -36484, 170301, -3808, 0, 0, 48068, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -36124, 169442, -3753, 0, 0, 47788, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -35055, 189756, -3641, 0, 0, 36940, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -33412, 191144, -3649, 0, 0, 34902, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -32256, 192816, -3627, 0, 0, 30826, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -30416, 184831, -4161, 0, 0, 9063, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -30244, 172068, -4279, 0, 0, 65219, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -30229, 172620, -4279, 0, 0, 16100, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -29887, 173723, -4240, 0, 0, 12449, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -29639, 178018, -3217, 0, 0, 43643, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -29478, 178294, -3190, 0, 0, 31728, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -28184, 171985, -4250, 0, 0, 8483, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -27804, 171595, -4188, 0, 0, 59268, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -27485, 175472, -4059, 0, 0, 8718, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -27461, 173474, -4012, 0, 0, 41227, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -27290, 175369, -4060, 0, 0, 60467, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -27161, 172115, -4212, 0, 0, 10520, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -27160, 175041, -4000, 0, 0, 53087, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -26404, 196450, -3931, 0, 0, 50822, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -26367, 191014, -4163, 0, 0, 11850, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -26024, 196064, -3917, 0, 0, 57262, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -25882, 191542, -4161, 0, 0, 64459, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -25644, 192322, -4174, 0, 0, 11753, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -24791, 195693, -3939, 0, 0, 1326, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -24476, 195055, -3986, 0, 0, 63737, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -24339, 196715, -3917, 0, 0, 9043, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -23721, 194861, -4077, 0, 0, 1436, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -23651, 193727, -4210, 0, 0, 16242, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -23447, 193716, -4207, 0, 0, 64974, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -23069, 193858, -4199, 0, 0, 3748, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -21725, 176138, -4204, 0, 0, 32567, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -21681, 174949, -4156, 0, 0, 50355, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -21517, 176134, -4225, 0, 0, 14949, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -21017, 175178, -4185, 0, 0, 60684, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -20938, 177285, -4147, 0, 0, 8534, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -20768, 176081, -4203, 0, 0, 6307, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -20704, 178808, -4018, 0, 0, 45766, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -16108, 197318, -4162, 0, 0, 21980, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -15590, 197984, -4147, 0, 0, 60558, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -14597, 199010, -3987, 0, 0, 5891, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -14457, 198444, -3998, 0, 0, 51108, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -14173, 186523, -4238, 0, 0, 46636, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -14051, 187019, -4247, 0, 0, 47165, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -13981, 187382, -4233, 0, 0, 62048, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -13891, 186301, -4206, 0, 0, 58579, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -13552, 186262, -4197, 0, 0, 64341, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -9933, 183163, -3683, 0, 0, 54894, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -9593, 181594, -3667, 0, 0, 21423, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -9314, 182971, -3691, 0, 0, 62398, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -9272, 195852, -3612, 0, 0, 12482, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -9197, 190054, -3644, 0, 0, 36785, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -8809, 183688, -3740, 0, 0, 3083, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -8408, 196210, -3674, 0, 0, 20280, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -8308, 186862, -3715, 0, 0, 12160, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -8302, 194857, -3665, 0, 0, 43671, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -8196, 183494, -3647, 0, 0, 22336, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -7717, 195370, -3679, 0, 0, 14287, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -7139, 192634, -3723, 0, 0, 29287, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -6923, 181510, -3644, 0, 0, 50806, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -6617, 182051, -3623, 0, 0, 52863, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -6388, 194705, -3664, 0, 0, 853, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -5899, 182795, -3620, 0, 0, 27722, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -5678, 183775, -3499, 0, 0, 51619, 60, 0, 0, 0),
+('Wastelands', 1, 23024, -5607, 191671, -3681, 0, 0, 23456, 60, 0, 0, 0);
+
+-- Granite Golem
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 23098, -39553, 185458, -3632, 0, 0, 35670, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -38696, 176970, -3698, 0, 0, 4720, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -38132, 188651, -3635, 0, 0, 14306, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -38060, 186131, -3634, 0, 0, 59515, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -37950, 174746, -3898, 0, 0, 57945, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -37842, 187294, -3653, 0, 0, 20065, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -37129, 176168, -3980, 0, 0, 19784, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -37035, 175890, -3946, 0, 0, 47455, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -36872, 184596, -3847, 0, 0, 53504, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -36352, 176235, -4223, 0, 0, 50771, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -36092, 175995, -4265, 0, 0, 57760, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35886, 176038, -4271, 0, 0, 5775, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35815, 188023, -3663, 0, 0, 42029, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35796, 189875, -3622, 0, 0, 31545, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35471, 189204, -3637, 0, 0, 53592, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35470, 190798, -3624, 0, 0, 5115, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35257, 192643, -3627, 0, 0, 32303, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -35122, 184089, -3963, 0, 0, 24031, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -34992, 191807, -3641, 0, 0, 54541, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -34916, 170439, -4211, 0, 0, 16750, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -34628, 170186, -4214, 0, 0, 58017, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -34008, 183716, -4136, 0, 0, 41572, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -33471, 192777, -3633, 0, 0, 37885, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -33299, 171229, -4213, 0, 0, 20854, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -33032, 169907, -4161, 0, 0, 64965, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -32933, 170428, -4182, 0, 0, 14425, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -30133, 189904, -3663, 0, 0, 28008, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -29627, 189199, -3699, 0, 0, 38439, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -29205, 180840, -4186, 0, 0, 2470, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -29183, 180570, -4207, 0, 0, 50000, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -28180, 185590, -4133, 0, 0, 40510, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -27513, 180049, -4199, 0, 0, 63178, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -27448, 186128, -4168, 0, 0, 49287, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -26230, 196860, -3932, 0, 0, 51432, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -26049, 188204, -4156, 0, 0, 38540, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -25971, 197484, -3952, 0, 0, 12280, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -25868, 196446, -3931, 0, 0, 46382, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -25018, 197130, -3916, 0, 0, 41438, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -24957, 196659, -3921, 0, 0, 50495, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -24544, 187295, -4002, 0, 0, 47844, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -24446, 197757, -3951, 0, 0, 30651, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -22391, 191762, -4119, 0, 0, 2009, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -22336, 192145, -4028, 0, 0, 63532, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -22089, 191138, -4200, 0, 0, 57054, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -21833, 186204, -4022, 0, 0, 20746, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -21536, 186540, -3989, 0, 0, 8833, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -21301, 179201, -4056, 0, 0, 64277, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -21083, 189801, -4188, 0, 0, 12578, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -20730, 196046, -4213, 0, 0, 32630, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -20707, 182665, -2903, 0, 0, 13495, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -20671, 182415, -2903, 0, 0, 31974, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -20655, 199938, -4151, 0, 0, 44306, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -20601, 183647, -2874, 0, 0, 10032, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -20431, 199035, -4126, 0, 0, 52776, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -20214, 178406, -4161, 0, 0, 8017, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -20107, 182372, -2906, 0, 0, 46482, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -19874, 200112, -4137, 0, 0, 38815, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -19821, 196585, -4204, 0, 0, 45505, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -19762, 178466, -4137, 0, 0, 1376, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -19439, 198156, -4192, 0, 0, 58049, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -19319, 190821, -4198, 0, 0, 21941, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -19101, 192869, -4175, 0, 0, 29272, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -18833, 195918, -4208, 0, 0, 64197, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -18626, 197218, -4175, 0, 0, 12086, 0, 0, 0, 0),
+('Wastelands', 1, 23098, -18491, 191252, -4215, 0, 0, 46270, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -17865, 187793, -4209, 0, 0, 49483, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -17530, 186771, -4306, 0, 0, 12302, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -17209, 186978, -4305, 0, 0, 5974, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -16258, 197646, -4150, 0, 0, 20857, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -16029, 198211, -4157, 0, 0, 8676, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -15936, 188907, -4261, 0, 0, 14479, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -15783, 188466, -4313, 0, 0, 41477, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -15506, 198434, -4143, 0, 0, 14459, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -15240, 188931, -4335, 0, 0, 14060, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13887, 191436, -4112, 0, 0, 12580, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13696, 191929, -4020, 0, 0, 12528, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13488, 195975, -3825, 0, 0, 18823, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13331, 195316, -3820, 0, 0, 11506, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13105, 194767, -3854, 0, 0, 55013, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13029, 189838, -4150, 0, 0, 42337, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -13025, 188332, -4131, 0, 0, 5525, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12925, 195904, -3882, 0, 0, 64227, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12740, 194571, -3897, 0, 0, 32977, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12682, 193336, -3906, 0, 0, 20535, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12609, 192928, -3903, 0, 0, 2751, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12538, 190976, -4204, 0, 0, 35803, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12487, 190546, -4180, 0, 0, 50383, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12440, 194859, -3922, 0, 0, 64287, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12378, 189858, -4148, 0, 0, 320, 60, 0, 0, 0),
+('Wastelands', 1, 23098, -12162, 191205, -4211, 0, 0, 47854, 60, 0, 0, 0);
+-- Lesser Basilisk
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20070, -53661, 175161, -3625, 0, 0, 26531, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -53487, 173283, -3649, 0, 0, 33768, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -53144, 173316, -3675, 0, 0, 48181, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -53131, 174800, -3637, 0, 0, 30510, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -52662, 172766, -3714, 0, 0, 59697, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -52433, 175542, -3636, 0, 0, 43647, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -52376, 175049, -3648, 0, 0, 50352, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -49665, 178278, -3711, 0, 0, 14244, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -47605, 177614, -3726, 0, 0, 33316, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -47461, 179152, -3665, 0, 0, 35337, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -47308, 177866, -3726, 0, 0, 44496, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -47185, 178123, -3725, 0, 0, 46777, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -47128, 178369, -3719, 0, 0, 54557, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -22453, 202525, -3801, 0, 0, 40097, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -20640, 200436, -4102, 0, 0, 31637, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -20108, 201049, -4037, 0, 0, 8928, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -19791, 203058, -3780, 0, 0, 45085, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -19542, 203651, -3745, 0, 0, 40024, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -16849, 180338, -4211, 0, 0, 43001, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -16363, 180314, -4205, 0, 0, 65021, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -16093, 180708, -4191, 0, 0, 10117, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -13881, 180379, -4214, 0, 0, 29544, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -13320, 198849, -3863, 0, 0, 47854, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -13312, 182052, -4153, 0, 0, 44293, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -13262, 181774, -4184, 0, 0, 41162, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -13137, 198233, -3912, 0, 0, 16140, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -13111, 181933, -4168, 0, 0, 59960, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12884, 173776, -4035, 0, 0, 31876, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12711, 178013, -4131, 0, 0, 26589, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12691, 173259, -4038, 0, 0, 49281, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12489, 177581, -4114, 0, 0, 59267, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12487, 173742, -4008, 0, 0, 33060, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12365, 177834, -4108, 0, 0, 11630, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -12202, 173750, -3983, 0, 0, 51771, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -11751, 176951, -4040, 0, 0, 54764, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -11482, 178931, -4172, 0, 0, 54116, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -11046, 198881, -3694, 0, 0, 60378, 60, 0, 0, 0),
+('Wastelands', 1, 20070, -10830, 177086, -4086, 0, 0, 57636, 60, 0, 0, 0);
+-- Basilisk
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20072, -27494, 199680, -3790, 0, 0, 26235, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -27139, 199302, -3761, 0, 0, 59751, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -25882, 200750, -3790, 0, 0, 46975, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -21430, 203126, -3737, 0, 0, 35457, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -20690, 200809, -4023, 0, 0, 17071, 0, 0, 0, 0),
+('Wastelands', 1, 20072, -18663, 199048, -4190, 0, 0, 63511, 0, 0, 0, 0),
+('Wastelands', 1, 20072, -18659, 202298, -3883, 0, 0, 46459, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -16659, 180622, -4205, 0, 0, 28589, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -15711, 180296, -4208, 0, 0, 34134, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -14244, 181963, -4066, 0, 0, 15148, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -10643, 197606, -3681, 0, 0, 32415, 60, 0, 0, 0),
+('Wastelands', 1, 20072, -9182, 197625, -3647, 0, 0, 19565, 60, 0, 0, 0);
+-- Monster Eye Watcher
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20067, -53104, 171852, -3690, 0, 0, 47329, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -52807, 173825, -3697, 0, 0, 17310, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -52421, 172182, -3726, 0, 0, 5607, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -52127, 176067, -3629, 0, 0, 20880, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -51989, 175767, -3646, 0, 0, 11810, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -50680, 176861, -3700, 0, 0, 42676, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -49013, 177263, -3726, 0, 0, 43546, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -47476, 177790, -3726, 0, 0, 9786, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -46824, 179487, -3718, 0, 0, 26130, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -46575, 179303, -3726, 0, 0, 45118, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -27833, 199735, -3785, 0, 0, 31708, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -27553, 200065, -3781, 0, 0, 32550, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -27225, 199673, -3778, 0, 0, 56419, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -26563, 201071, -3759, 0, 0, 29687, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -23633, 202634, -3762, 0, 0, 40138, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -23286, 202849, -3708, 0, 0, 28898, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -20386, 203219, -3689, 0, 0, 32870, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -19917, 202505, -3828, 0, 0, 21361, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -19520, 201814, -3947, 0, 0, 17623, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -19493, 200849, -4072, 0, 0, 54299, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -19227, 201455, -4000, 0, 0, 36427, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -18921, 201567, -3984, 0, 0, 5781, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -18776, 204169, -3729, 0, 0, 5688, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -18400, 204697, -3676, 0, 0, 42533, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -18330, 204256, -3724, 0, 0, 55213, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -18107, 200245, -4221, 0, 0, 46702, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -17961, 201175, -4177, 0, 0, 61494, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -17650, 203443, -3752, 0, 0, 59007, 0, 0, 0, 0),
+('Wastelands', 1, 20067, -16428, 202198, -3731, 0, 0, 22186, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -16123, 201676, -3728, 0, 0, 34107, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -15064, 201008, -3757, 0, 0, 25270, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -14697, 201042, -3772, 0, 0, 35896, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -14077, 201167, -3602, 0, 0, 64727, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -13979, 200961, -3624, 0, 0, 53783, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -13464, 174885, -4038, 0, 0, 43741, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -13185, 173411, -4038, 0, 0, 29654, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -13170, 180152, -4198, 0, 0, 48174, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -13123, 182428, -4128, 0, 0, 34665, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -12824, 182483, -4123, 0, 0, 59050, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -12533, 174516, -3994, 0, 0, 63303, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -12507, 178883, -4201, 0, 0, 3355, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -12484, 179836, -4190, 0, 0, 17291, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -12290, 174093, -3983, 0, 0, 54590, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -11766, 176631, -4052, 0, 0, 48663, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -11472, 178396, -4155, 0, 0, 49346, 60, 0, 0, 0),
+('Wastelands', 1, 20067, -11025, 176957, -4060, 0, 0, 38863, 60, 0, 0, 0);
+-- Sahara
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 23026, -40588, 185352, -3630, 0, 0, 38850, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -38331, 176812, -3708, 0, 0, 43432, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -38207, 177015, -3674, 0, 0, 957, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -38058, 188441, -3633, 0, 0, 36220, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -38032, 187015, -3646, 0, 0, 10309, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -37844, 175566, -3859, 0, 0, 53206, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -37781, 185519, -3594, 0, 0, 44324, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -37607, 175843, -3890, 0, 0, 9002, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -37093, 187912, -3638, 0, 0, 52821, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -36844, 176322, -4072, 0, 0, 24639, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -35925, 176289, -4260, 0, 0, 17991, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -35863, 176629, -4260, 0, 0, 14502, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -35657, 192714, -3612, 0, 0, 24831, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -35510, 176719, -4264, 0, 0, 2603, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -35026, 172086, -4213, 0, 0, 12068, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -35004, 183958, -3961, 0, 0, 26222, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -34852, 169877, -4215, 0, 0, 42609, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -34741, 190797, -3639, 0, 0, 6903, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -34539, 190446, -3637, 0, 0, 41856, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -34386, 191034, -3633, 0, 0, 6170, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -34323, 184153, -4061, 0, 0, 18986, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -34246, 175962, -4310, 0, 0, 54737, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -33898, 176792, -4239, 0, 0, 13435, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -33788, 193475, -3633, 0, 0, 32544, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -33754, 169613, -4192, 0, 0, 61714, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -33601, 193471, -3633, 0, 0, 14239, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -33599, 177471, -4200, 0, 0, 29500, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -33434, 169929, -4168, 0, 0, 8126, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -29915, 189797, -3666, 0, 0, 22356, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -29407, 189332, -3704, 0, 0, 23412, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -28611, 185742, -4167, 0, 0, 34444, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -28260, 185920, -4166, 0, 0, 18864, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -28258, 180463, -4212, 0, 0, 35808, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -28087, 180181, -4202, 0, 0, 54837, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -26536, 179406, -4190, 0, 0, 62480, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -26243, 188526, -4176, 0, 0, 17390, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -24379, 187764, -3984, 0, 0, 39691, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -24177, 187922, -3962, 0, 0, 58852, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -22906, 191179, -4173, 0, 0, 57820, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -22629, 191374, -4181, 0, 0, 4880, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -22589, 191795, -4106, 0, 0, 20301, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -22492, 191549, -4170, 0, 0, 9456, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -22491, 186609, -4017, 0, 0, 26514, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -22325, 197845, -3966, 0, 0, 36112, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -21945, 189448, -4186, 0, 0, 32606, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -21907, 185595, -4036, 0, 0, 9521, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -21833, 182759, -2898, 0, 0, 40141, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -21531, 195146, -4214, 0, 0, 8529, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -21071, 182973, -2903, 0, 0, 25443, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -20912, 196108, -4213, 0, 0, 43624, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -20862, 198445, -4136, 0, 0, 24445, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -20749, 188566, -4076, 0, 0, 34848, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -20457, 199122, -4120, 0, 0, 30884, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -19841, 175873, -4231, 0, 0, 2868, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19799, 193574, -4140, 0, 0, 57644, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19691, 183304, -2897, 0, 0, 32131, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19592, 176078, -4217, 0, 0, 7184, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19539, 196739, -4201, 0, 0, 14355, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -19506, 200353, -4116, 0, 0, 1975, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19415, 194474, -4185, 0, 0, 32742, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19403, 175850, -4220, 0, 0, 56371, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19256, 189172, -4161, 0, 0, 50091, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -19164, 198368, -4171, 0, 0, 8070, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -18986, 193871, -4193, 0, 0, 42790, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -18923, 190427, -4168, 0, 0, 54284, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -18745, 195813, -4213, 0, 0, 47856, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -18545, 194753, -4210, 0, 0, 53085, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -18521, 192667, -4225, 0, 0, 53160, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -18313, 191113, -4223, 0, 0, 58620, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -18144, 196551, -4197, 0, 0, 39964, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -18003, 191213, -4225, 0, 0, 3254, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -17918, 198622, -4200, 0, 0, 2040, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -17864, 188346, -4219, 0, 0, 53607, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -17837, 186573, -4285, 0, 0, 33973, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -17814, 190613, -4237, 0, 0, 56177, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -17265, 197133, -4174, 0, 0, 51085, 0, 0, 0, 0),
+('Wastelands', 1, 23026, -17053, 186664, -4319, 0, 0, 49860, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -17000, 190985, -4164, 0, 0, 22768, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -16735, 187987, -4255, 0, 0, 63133, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -16397, 189724, -4230, 0, 0, 18305, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -14087, 190912, -4139, 0, 0, 19843, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -13960, 195516, -3742, 0, 0, 34184, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -13724, 195119, -3766, 0, 0, 54746, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -13678, 196329, -3828, 0, 0, 31603, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -13638, 195560, -3784, 0, 0, 30014, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -13362, 189500, -4140, 0, 0, 7509, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12927, 190848, -4167, 0, 0, 18828, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12883, 192854, -3909, 0, 0, 8848, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12810, 195272, -3890, 0, 0, 22894, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12786, 189549, -4153, 0, 0, 885, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12763, 190161, -4166, 0, 0, 17840, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12344, 194625, -3916, 0, 0, 26897, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12240, 190687, -4202, 0, 0, 45796, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -12080, 191167, -4210, 0, 0, 3756, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -11840, 194307, -3931, 0, 0, 24060, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -11539, 194116, -3917, 0, 0, 3771, 60, 0, 0, 0),
+('Wastelands', 1, 23026, -11529, 191940, -4213, 0, 0, 53205, 60, 0, 0, 0);
+-- Ant Soldier
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20087, -38238, 186815, -3635, 0, 0, 18339, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -38110, 186780, -3643, 0, 0, 62751, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -37980, 185095, -3514, 0, 0, 341, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -37901, 188433, -3637, 0, 0, 18378, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -37295, 188146, -3650, 0, 0, 33189, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -37001, 188530, -3638, 0, 0, 52368, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -36991, 185105, -3756, 0, 0, 20967, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -36881, 184871, -3833, 0, 0, 30065, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -36143, 184682, -3914, 0, 0, 28526, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -36077, 184502, -3921, 0, 0, 53099, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -35738, 188384, -3633, 0, 0, 53759, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -33776, 183681, -4182, 0, 0, 42225, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -33098, 191732, -3642, 0, 0, 41457, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32779, 192083, -3645, 0, 0, 41539, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32547, 184003, -4212, 0, 0, 36245, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32494, 185505, -4181, 0, 0, 44456, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32397, 192510, -3635, 0, 0, 44648, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32235, 180654, -4214, 0, 0, 36464, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32179, 183498, -4213, 0, 0, 37346, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32162, 193490, -3628, 0, 0, 39925, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32158, 180150, -4189, 0, 0, 53167, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -32144, 179238, -4210, 0, 0, 26468, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31966, 185957, -4174, 0, 0, 27169, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31848, 184918, -4205, 0, 0, 30650, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31821, 182012, -4264, 0, 0, 33684, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31781, 180822, -4218, 0, 0, 12759, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31660, 181752, -4296, 0, 0, 61465, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31639, 192309, -3649, 0, 0, 19981, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31605, 179638, -4212, 0, 0, 6659, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31597, 183724, -4210, 0, 0, 43696, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31579, 192142, -3643, 0, 0, 21582, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31573, 185584, -4196, 0, 0, 12299, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31569, 183211, -4185, 0, 0, 60949, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31548, 193415, -3644, 0, 0, 25124, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31483, 181212, -4277, 0, 0, 22493, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31351, 181361, -4275, 0, 0, 8822, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31280, 180906, -4223, 0, 0, 16713, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -31048, 193546, -3665, 0, 0, 12641, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -30978, 193195, -3680, 0, 0, 38764, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -30700, 184155, -4190, 0, 0, 44095, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -30652, 194168, -3626, 0, 0, 29522, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -30628, 193672, -3664, 0, 0, 49656, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -30177, 194037, -3658, 0, 0, 34490, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -30100, 192713, -3531, 0, 0, 43779, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -29787, 194102, -3655, 0, 0, 41395, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -29714, 192590, -3535, 0, 0, 62318, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -29587, 192481, -3522, 0, 0, 58138, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -29430, 191407, -3629, 0, 0, 23941, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -29335, 191274, -3645, 0, 0, 50373, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -29317, 194613, -3650, 0, 0, 20093, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -25356, 172155, -4028, 0, 0, 47568, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -25350, 171580, -3916, 0, 0, 45002, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -25178, 172280, -4046, 0, 0, 6385, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -25071, 171665, -3947, 0, 0, 3687, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -24747, 171333, -3922, 0, 0, 48877, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -24307, 175039, -4210, 0, 0, 29735, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -24228, 172102, -4004, 0, 0, 14534, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -24182, 171648, -3965, 0, 0, 5304, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23987, 172150, -3989, 0, 0, 2050, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23939, 174447, -4194, 0, 0, 39095, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23727, 174362, -4183, 0, 0, 61558, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23637, 175375, -4221, 0, 0, 57608, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23297, 175554, -4215, 0, 0, 5054, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23269, 172854, -3917, 0, 0, 22094, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -23064, 174519, -4140, 0, 0, 55706, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -22958, 172273, -3954, 0, 0, 29823, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -22957, 171768, -3949, 0, 0, 49172, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -22578, 173594, -3855, 0, 0, 33113, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -22399, 174061, -4046, 0, 0, 17459, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -22225, 173653, -3958, 0, 0, 41760, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15685, 193040, -4523, 0, 0, 35012, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15662, 195239, -4328, 0, 0, 23550, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15461, 195909, -4239, 0, 0, 7404, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15450, 195663, -4276, 0, 0, 11547, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15406, 195582, -4288, 0, 0, 50890, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15317, 193693, -4499, 0, 0, 4147, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15264, 193132, -4499, 0, 0, 14197, 60, 0, 0, 0),
+('Wastelands', 1, 20087, -15049, 193640, -4491, 0, 0, 63499, 60, 0, 0, 0);
+-- Ant Warrior Captain
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20088, -37779, 188253, -3644, 0, 0, 47811, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -37741, 188547, -3638, 0, 0, 42691, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -37302, 186218, -3639, 0, 0, 45325, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -35871, 186620, -3674, 0, 0, 54180, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -32658, 180647, -4213, 0, 0, 48716, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -32555, 181223, -4237, 0, 0, 47862, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -32535, 181384, -4266, 0, 0, 37854, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -32256, 192816, -3627, 0, 0, 30826, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -32162, 193490, -3628, 0, 0, 39925, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -32072, 179404, -4207, 0, 0, 13601, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31965, 180314, -4199, 0, 0, 23013, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31890, 179194, -4213, 0, 0, 56600, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31526, 184354, -4211, 0, 0, 24500, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31499, 191995, -3622, 0, 0, 23263, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31478, 183718, -4208, 0, 0, 35515, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31401, 182049, -4210, 0, 0, 16158, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -31260, 181112, -4244, 0, 0, 52806, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -30800, 192671, -3641, 0, 0, 53779, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -30652, 193761, -3656, 0, 0, 60574, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -30588, 184589, -4178, 0, 0, 36419, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -30033, 193451, -3650, 0, 0, 60574, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -25328, 172338, -4060, 0, 0, 56711, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -24741, 171561, -3938, 0, 0, 62884, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -24340, 173853, -4164, 0, 0, 41643, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -24266, 171890, -3986, 0, 0, 19321, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -23932, 175679, -4215, 0, 0, 10855, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -23741, 175055, -4208, 0, 0, 48326, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -23326, 175072, -4210, 0, 0, 427, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -22681, 172227, -3949, 0, 0, 63444, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -22070, 173636, -3972, 0, 0, 16447, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -16388, 192009, -4481, 0, 0, 19724, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15950, 192856, -4520, 0, 0, 39098, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15760, 196001, -4231, 0, 0, 37120, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15654, 195752, -4253, 0, 0, 28477, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15570, 192308, -4512, 0, 0, 5546, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15567, 193588, -4518, 0, 0, 16417, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15451, 196138, -4220, 0, 0, 3834, 60, 0, 0, 0),
+('Wastelands', 1, 20088, -15333, 192853, -4523, 0, 0, 5265, 60, 0, 0, 0);
+-- Tyrant
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20192, -41580, 185309, -3629, 0, 0, 65498, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -40344, 185215, -3622, 0, 0, 36549, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -40276, 185285, -3628, 0, 0, 61443, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -37523, 186036, -3637, 0, 0, 42114, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -36084, 187027, -3670, 0, 0, 54361, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -35573, 190743, -3627, 0, 0, 55913, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -35469, 192535, -3634, 0, 0, 37682, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -34877, 190562, -3602, 0, 0, 60627, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -34156, 193147, -3604, 0, 0, 50537, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -33987, 190199, -3634, 0, 0, 61009, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -33813, 192529, -3633, 0, 0, 39312, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -27783, 174027, -3990, 0, 0, 8051, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -25914, 170875, -3900, 0, 0, 34795, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -24977, 187215, -4019, 0, 0, 46152, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -24681, 170913, -3900, 0, 0, 4678, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -24131, 172466, -4005, 0, 0, 20843, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -23505, 191695, -4086, 0, 0, 20612, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -23155, 172667, -3930, 0, 0, 10676, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -22768, 175787, -4179, 0, 0, 790, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -22531, 189655, -4205, 0, 0, 29226, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -22397, 194136, -4166, 0, 0, 64201, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -22182, 173482, -3955, 0, 0, 49531, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -21606, 192764, -3981, 0, 0, 5417, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -21541, 188602, -4124, 0, 0, 32294, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -20615, 195327, -4180, 0, 0, 27575, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -19527, 194096, -4178, 0, 0, 46147, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -19477, 195727, -4189, 0, 0, 53781, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -19476, 192087, -4156, 0, 0, 44014, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -19148, 190531, -4187, 0, 0, 28251, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -19011, 193625, -4218, 0, 0, 46710, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -18694, 194915, -4214, 0, 0, 7187, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -18648, 192981, -4240, 0, 0, 54505, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -18274, 187912, -4203, 0, 0, 49251, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -18210, 188681, -4214, 0, 0, 28997, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -17985, 191855, -4205, 0, 0, 11638, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -17316, 189157, -4244, 0, 0, 48918, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -17143, 188479, -4219, 0, 0, 7342, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -16086, 188404, -4263, 0, 0, 45046, 60, 0, 0, 0),
+('Wastelands', 1, 20192, -15911, 187226, -4330, 0, 0, 57758, 60, 0, 0, 0);
+-- Gigantopis
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20745, -41023, 182194, -3117, 0, 0, 3860, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -40812, 181628, -3122, 0, 0, 53877, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -40423, 182722, -3107, 0, 0, 10508, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -39433, 181195, -3153, 0, 0, 39732, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -39082, 180292, -3130, 0, 0, 37765, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -38893, 181935, -3172, 0, 0, 6115, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -38112, 182041, -3176, 0, 0, 13688, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -37993, 180672, -3169, 0, 0, 50509, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -23081, 188825, -4118, 0, 0, 46528, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -22039, 190130, -4120, 0, 0, 11388, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -20361, 191109, -4193, 0, 0, 43557, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -20349, 187787, -4030, 0, 0, 5986, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -20039, 190478, -4182, 0, 0, 37405, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -17499, 190957, -4197, 0, 0, 60589, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -17460, 189757, -4227, 0, 0, 49490, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -8112, 184128, -3671, 0, 0, 26320, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -7673, 196134, -3625, 0, 0, 4242, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -7404, 189885, -3722, 0, 0, 9687, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -7160, 184436, -3591, 0, 0, 14125, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -6809, 188564, -3660, 0, 0, 39456, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -5593, 191182, -3675, 0, 0, 7835, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -5578, 194435, -3449, 0, 0, 64159, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -5506, 182184, -3524, 0, 0, 6300, 60, 0, 0, 0),
+('Wastelands', 1, 20745, -5162, 191813, -3659, 0, 0, 3221, 60, 0, 0, 0);
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 20745, -32996, 174394, -4221, 0, 0, 47578, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -30341, 180678, -4411, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -30039, 180856, -4411, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -29536, 181034, -4411, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -28730, 178246, -4321, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -26073, 184931, -4418, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -25872, 184931, -4418, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -25771, 185465, -4418, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -23401, 189381, -4666, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -23301, 188847, -4666, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -23200, 189025, -4666, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -23099, 188491, -4666, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -22697, 188847, -4666, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -19757, 186316, -4579, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -19255, 185782, -4579, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -19247, 188286, -4152, 0, 0, 0, 55, 0, 0, 0),
+('Wastelands', 1, 20745, -18471, 185203, -3903, 0, 0, 0, 55, 0, 0, 0);
+-- Skeleton Marauder
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 23097, -45916, 180834, -3665, 0, 0, 26522, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -45598, 182993, -3633, 0, 0, 38624, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -45591, 182657, -3633, 0, 0, 14839, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -45441, 182028, -3622, 0, 0, 21970, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -45397, 181556, -3632, 0, 0, 50292, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -45214, 180355, -3705, 0, 0, 42440, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -44609, 181711, -3642, 0, 0, 2025, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -44189, 181066, -3610, 0, 0, 55172, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -44041, 180384, -3583, 0, 0, 42968, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -43873, 188264, -3633, 0, 0, 12641, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -43481, 183757, -3590, 0, 0, 46617, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -43475, 186536, -3638, 0, 0, 56918, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -43338, 187634, -3633, 0, 0, 48578, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -43317, 185907, -3633, 0, 0, 62180, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -15519, 201754, -3773, 0, 0, 22497, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -14817, 201034, -3770, 0, 0, 21512, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -14689, 200795, -3770, 0, 0, 27592, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -14194, 200527, -3767, 0, 0, 33182, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -13698, 199773, -3783, 0, 0, 48657, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -13644, 200579, -3632, 0, 0, 16489, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -13640, 200183, -3733, 0, 0, 14918, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -13488, 198552, -3927, 0, 0, 30096, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -13110, 198453, -3893, 0, 0, 34135, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -12883, 200138, -3610, 0, 0, 20952, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -12661, 199664, -3715, 0, 0, 27555, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -12182, 199014, -3733, 0, 0, 3371, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -12066, 198673, -3735, 0, 0, 31563, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -11747, 198636, -3701, 0, 0, 26521, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -11536, 198492, -3688, 0, 0, 32610, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -11230, 199092, -3703, 0, 0, 10456, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -10259, 197593, -3709, 0, 0, 21623, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -10055, 197022, -3677, 0, 0, 37522, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9994, 183487, -3683, 0, 0, 19212, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9762, 182557, -3680, 0, 0, 47878, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9708, 182997, -3672, 0, 0, 38715, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9497, 181411, -3675, 0, 0, 24206, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9370, 184048, -3740, 0, 0, 28279, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9353, 182216, -3676, 0, 0, 23288, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9332, 182679, -3679, 0, 0, 15911, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9327, 196040, -3605, 0, 0, 34564, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9314, 195745, -3617, 0, 0, 49611, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9301, 183255, -3707, 0, 0, 15823, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -9046, 197193, -3664, 0, 0, 31869, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8898, 189480, -3684, 0, 0, 47006, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8544, 197257, -3655, 0, 0, 30688, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8492, 191018, -3666, 0, 0, 25472, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8472, 195865, -3675, 0, 0, 22748, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8300, 195619, -3678, 0, 0, 18580, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8257, 197176, -3673, 0, 0, 6089, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8216, 195226, -3678, 0, 0, 13995, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -8032, 193564, -3663, 0, 0, 26378, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7979, 189116, -3754, 0, 0, 28169, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7975, 191530, -3623, 0, 0, 7391, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7753, 183259, -3634, 0, 0, 49032, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7739, 187632, -3665, 0, 0, 4017, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7654, 192648, -3667, 0, 0, 30692, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7606, 187410, -3635, 0, 0, 54781, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7556, 190066, -3748, 0, 0, 36292, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7553, 181422, -3664, 0, 0, 4327, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7469, 182966, -3636, 0, 0, 46663, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7442, 187572, -3650, 0, 0, 8128, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7388, 183299, -3630, 0, 0, 1138, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7315, 182182, -3674, 0, 0, 24989, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7165, 192315, -3719, 0, 0, 26848, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7117, 188012, -3667, 0, 0, 11783, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7053, 181940, -3654, 0, 0, 8376, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -7023, 182407, -3658, 0, 0, 22797, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -6679, 189321, -3666, 0, 0, 63566, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -6625, 183627, -3618, 0, 0, 40577, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -6567, 190034, -3680, 0, 0, 14758, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -6465, 192528, -3730, 0, 0, 3080, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -6235, 190541, -3685, 0, 0, 59213, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -5870, 184050, -3506, 0, 0, 13702, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -5776, 194150, -3470, 0, 0, 39030, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -5623, 182650, -3596, 0, 0, 24724, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -5458, 191486, -3676, 0, 0, 12024, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -5302, 195174, -3447, 0, 0, 22970, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -5243, 194069, -3447, 0, 0, 911, 60, 0, 0, 0),
+('Wastelands', 1, 23097, -4855, 194394, -3441, 0, 0, 7272, 60, 0, 0, 0);
+-- Weathered Rock
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 32368, -22015, 186488, -4025, 0, 0, 12868, 60, 0, 0, 0);
+-- Sakum
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 27453, -35980, 191724, -3642, 0, 0, 29319, 60, 0, 0, 0);
+-- NPC Selon
+INSERT INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `randomx`, `randomy`, `heading`, `respawn_delay`, `respawn_random`, `loc_id`, `periodOfDay`) VALUES
+('Wastelands', 1, 33518, -37133, 191973, -3599, 0, 0, 65246, 60, 0, 0, 0);
