@@ -99,7 +99,7 @@ public class MultiSellChoose extends L2GameClientPacket
 		}
 		
 		final L2Npc npc = player.getLastFolkNPC();
-		if (((npc != null) && !list.isNpcAllowed(npc.getId())) || ((npc == null) && list.isNpcOnly()))
+		if (!list.isNpcAllowed(-1) && (((npc != null) && !list.isNpcAllowed(npc.getId())) || ((npc == null) && list.isNpcOnly())))
 		{
 			player.setMultiSell(null);
 			return;

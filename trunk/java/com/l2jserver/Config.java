@@ -822,6 +822,7 @@ public final class Config
 	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
+	public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
 	public static int FACTION_MANAGER_NPCID;
@@ -2598,6 +2599,7 @@ public final class Config
 			COMMUNITYBOARD_ENABLE_BUFFS = CustomSettings.getBoolean("CommunityEnableBuffs", true);
 			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
+			COMMUNITYBOARD_COMBAT_DISABLED = CustomSettings.getBoolean("CommunityCombatDisabled", true);
 			
 			String[] tempString;
 			FACTION_SYSTEM_ENABLED = Boolean.valueOf(CustomSettings.getBoolean("EnableFactionSystem", false));

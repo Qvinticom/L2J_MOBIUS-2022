@@ -65,6 +65,12 @@ public final class HomeBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
+		if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_COMBAT_DISABLED && activeChar.isInCombat())
+		{
+			activeChar.sendMessage("You can't use the Community Board right now.");
+			return false;
+		}
+		
 		if (command.equals("_bbshome") || command.equals("_bbstop"))
 		{
 			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
@@ -95,6 +101,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
+			return true;
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbssell"))
 		{
@@ -103,6 +110,7 @@ public final class HomeBoard implements IParseBoardHandler
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar.getAdena(), 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
+			return true;
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_TELEPORTS && command.startsWith("_bbsteleport"))
 		{
@@ -150,7 +158,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
-		return true;
+		return false;
 	}
 	
 	/**

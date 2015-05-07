@@ -43,6 +43,7 @@ public final class RequestRefundItem extends L2GameClientPacket
 	private static final String _C__D0_75_REQUESTREFUNDITEM = "[C] D0:75 RequestRefundItem";
 	
 	private static final int BATCH_LENGTH = 4; // length of the one item
+	private static final int CUSTOM_CB_SELL_LIST = 423;
 	
 	private int _listId;
 	private int[] _items = null;
@@ -91,25 +92,19 @@ public final class RequestRefundItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2Object target = player.getTarget();
-		if (!player.isGM() && ((target == null) || !(target instanceof L2MerchantInstance) || (player.getInstanceId() != target.getInstanceId()) || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)))
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
+		final L2Object target = player.getTarget();
 		L2Character merchant = null;
-		if (target instanceof L2MerchantInstance)
+		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
+			if (!(target instanceof L2MerchantInstance) || (!player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)) || (player.getInstanceId() != target.getInstanceId()))
+			{
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
 			merchant = (L2Character) target;
 		}
-		else if (!player.isGM())
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
 		
-		if (merchant == null)
+		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -122,7 +117,7 @@ public final class RequestRefundItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!buyList.isNpcAllowed(merchant.getId()))
+		if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
