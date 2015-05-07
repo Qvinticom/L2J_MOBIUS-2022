@@ -1121,7 +1121,7 @@
 		<!-- STR + 1, Critical damage + 209, Hold Resistance + 5. -->
 		<!-- STR + 1, Critical damage + 209, Hold Resistance + 5, HP + 463. -->
 		<!-- STR + 1, Critical damage + 209, Hold Resistance + 5. P. Atk. + 155, P. Def. + 7%. HP + 463, resistance to 4 attributes + 10. -->
-		<table name="#cAtk"> 0 209 209 209 </table>
+		<table name="#cAtkAdd"> 0 209 209 209 </table>
 		<table name="#Trait"> 0 5 5 5 </table>
 		<table name="#maxHp"> 0 0 463 463 </table>
 		<table name="#pAtk"> 0 0 0 155 </table>
@@ -1134,7 +1134,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="1" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<add stat="pAtk" val="#pAtk" />
 				<mul stat="pDef" val="#pDef" />
@@ -1189,7 +1189,7 @@
 		<!-- STR + 2, CON -1, Critical damage + 242, Hold Resistance + 7. -->
 		<!-- STR + 2, CON -1, Critical damage + 242, Hold Resistance + 7. MP - 4% upon skill use. -->
 		<!-- STR + 2, CON -1, Critical damage + 242, Hold Resistance + 7. P. Atk. + 180, P. Def. + 7%, MP - 4% upon skill use. Resistance to 4 attributes + 10. -->
-		<table name="#cAtk"> 0 242 242 242 </table>
+		<table name="#cAtkAdd"> 0 242 242 242 </table>
 		<table name="#Trait"> 0 7 7 7 </table>
 		<table name="#mpConsumeRate"> 1 1 0.96 0.96 </table>
 		<table name="#pAtk"> 0 0 0 180 </table>
@@ -1203,7 +1203,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<sub stat="CON" val="1" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
 				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
@@ -1262,7 +1262,7 @@
 		<!-- STR + 3, CON -2, Critical damage + 281, Hold Resistance + 10. -->
 		<!-- STR + 3, CON -2, Critical damage + 281, Hold Resistance + 10. HP + 511. Skill Power + 6%. -->
 		<!-- STR + 3, CON -2, Critical damage + 281, Hold Resistance + 10. P. Atk. + 214, P. Def. + 7%, HP + 511. Skill Power+ 6%. Resistance to 4 attributes + 15. -->
-		<table name="#cAtk"> 0 281 281 281 </table>
+		<table name="#cAtkAdd"> 0 281 281 281 </table>
 		<table name="#Trait"> 0 10 10 10 </table>
 		<table name="#maxHp"> 0 10 10 10 </table>
 		<table name="#physicalSkillPower"> 0 0 1.06 1.06 </table>
@@ -1277,7 +1277,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="3" />
 				<sub stat="CON" val="2" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
 				<add stat="pAtk" val="#pAtk" />
@@ -1334,7 +1334,7 @@
 		<!-- STR + 3, CON -1, Critical damage + 298, Hold Resistance + 10. -->
 		<!-- STR + 3, CON -1, Critical damage + 298, Hold Resistance + 10. HP + 521. Absorbs 2% of inflicted damage as HP. -->
 		<!-- STR + 3, CON -1, Critical damage + 298, Hold Resistance + 10. P. Atk. + 246, P. Def. + 7%, HP + 521. Absorbs 2% of inflicted damage as HP with a certain probability. Resistance to 4 attributes + 15. -->
-		<table name="#cAtk"> 0 298 298 298 </table>
+		<table name="#cAtkAdd"> 0 298 298 298 </table>
 		<table name="#Trait"> 0 10 10 10 </table>
 		<table name="#maxHp"> 0 0 521 521 </table>
 		<table name="#absorbDam"> 1 1 1.02 1.02 </table>
@@ -1349,7 +1349,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="3" />
 				<sub stat="CON" val="1" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="absorbDam" val="#absorbDam" />
 				<add stat="pAtk" val="#pAtk" />
@@ -1504,7 +1504,7 @@
 		<table name="#maxHp"> 0 0 487 487 </table>
 		<table name="#pAtkSpd"> 1 1 1 1.03 </table>
 		<table name="#pAtkMul"> 1 1 1 1.07 </table>
-		<table name="#cAtk"> 0 0 0 242 </table>
+		<table name="#cAtkAdd"> 0 0 0 242 </table>
 		<table name="#resist"> 0 0 0 10 </table>
 		<mul stat="pAtkSpd" val="#pAtkSpd" />
 		<set name="icon" val="icon.armor_t602_u_i00" />
@@ -1523,7 +1523,7 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtkMul" />
 				<!-- TODO: add stat received heal amount -->
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="cAtkAdd" val="#cAtkAdd" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
