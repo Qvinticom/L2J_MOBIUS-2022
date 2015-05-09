@@ -62,11 +62,6 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		_npc = npc;
 		_abnormalVisualEffects = npc.getCurrentAbnormalVisualEffects();
 		
-		if (npc.getTemplate().getDisplayId() != npc.getTemplate().getId())
-		{
-			_masks[2] |= 0x10;
-		}
-		
 		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
 		
 		if (npc.getHeading() > 0)
