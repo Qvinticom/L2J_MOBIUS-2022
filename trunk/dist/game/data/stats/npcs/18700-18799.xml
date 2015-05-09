@@ -4086,30 +4086,15 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2420" max="4913" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.519599974155426">
-					<item id="6371" min="1" max="1" chance="0.2201" /> <!-- Demon Splinter -->
-					<item id="6695" min="1" max="1" chance="99.7799" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="2.845099925994873">
-					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
-				</group>
-			</death>
-			<corpse>
-				<item id="960" min="1" max="1" chance="0.5298" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="46.4713" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.3694" /> <!-- Sealed Dynasty Tunic Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="60" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6371" min="1" max="1" chance="0.003" /> <!-- Demon Splinter -->
+				<item id="6695" min="1" max="1" chance="0.3" /> <!-- Demon Splinter Blade -->
+			</death>
+		</drop_lists>
 	</npc>
 </list>

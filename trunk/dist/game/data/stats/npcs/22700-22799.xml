@@ -48,25 +48,21 @@
 				<clan>BARANKAD</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="44" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="854" max="1722" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04820000007748604">
-					<item id="9445" min="1" max="1" chance="0.3168" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.6832" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="7.055799961090088">
-					<item id="1895" min="1" max="1" chance="86.9292" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.085" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3863" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6013" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1129" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0528" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="6901" min="1" max="1" chance="0.3043" /> <!-- Recipe: Shining Arrow (100%) -->
-				</group>
+				<item id="57" min="156" max="365" chance="70" /> <!-- Adena -->
+				<item id="9445" min="1" max="1" chance="0.0009" /> <!-- Dynasty Bow -->
+				<item id="9619" min="1" max="1" chance="0.03" /> <!-- Dynasty Bow Piece -->
+				<item id="9530" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9543" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Gloves Piece -->
+				<item id="5282" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -100,15 +96,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9543" min="1" max="1" chance="1.6679" /> <!-- Sealed Dynasty Glove Piece -->
-				<item id="9530" min="1" max="1" chance="0.5077" /> <!-- Sealed Dynasty Breast Plate Piece -->
-				<item id="5282" min="1" max="1" chance="0.1549" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				<item id="36532" min="1" max="1" chance="1.700" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="44" />
-		</collision>
 	</npc>
 	<npc id="22702" level="82" type="L2Monster" name="Varangka's Destroyer">
 		<parameters>
@@ -160,25 +153,22 @@
 				<clan>BARANKAD</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="19" />
+			<height normal="32" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="791" max="1594" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04430000111460686">
-					<item id="9446" min="1" max="1" chance="0.3192" /> <!-- Dynasty Knife -->
-					<item id="9620" min="1" max="1" chance="99.6808" /> <!-- Dynasty Knife Piece -->
-				</group>
-				<group chance="6.524099826812744">
-					<item id="1895" min="1" max="1" chance="87.0764" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0953" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3903" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.604" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1164" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5291" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5157" min="1" max="1" chance="0.1356" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="134" max="312" chance="70" /> <!-- Adena -->
+				<item id="9446" min="1" max="1" chance="0.0009" /> <!-- Dynasty Knife -->
+				<item id="9620" min="1" max="1" chance="0.03" /> <!-- Dynasty Knife Piece -->
+				<item id="9530" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9621" min="1" max="1" chance="0.03" /> <!-- Dynasty Halberd Piece -->
+				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5157" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -212,15 +202,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9530" min="1" max="1" chance="0.4703" /> <!-- Sealed Dynasty Breast Plate Piece -->
-				<item id="1808" min="1" max="1" chance="0.1435" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9621" min="1" max="1" chance="0.1804" /> <!-- Dynasty Halberd Piece -->
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="19" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="22703" level="81" type="L2Monster" name="Contaminated Morek Warrior">
 		<parameters>
@@ -266,36 +253,24 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2291" max="4622" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1290999948978424">
-					<item id="9447" min="1" max="1" chance="0.3175" /> <!-- Dynasty Halberd -->
-					<item id="9621" min="1" max="1" chance="99.6825" /> <!-- Dynasty Halberd Piece -->
-				</group>
-				<group chance="18.90089988708496">
-					<item id="1895" min="1" max="1" chance="87.0764" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0953" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3903" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.604" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1164" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5291" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5162" min="1" max="1" chance="0.1356" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9630" min="1" max="1" chance="4.9236" /> <!-- Orichalcum -->
-				<item id="9617" min="1" max="1" chance="0.5201" /> <!-- Dynasty Blade Piece -->
-				<item id="9537" min="1" max="1" chance="3.3638" /> <!-- Sealed Dynasty Leather Helmet Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="28.8" grown="34.9" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="167" max="389" chance="70" /> <!-- Adena -->
+				<item id="5162" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.3" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) Piece -->
+			</death>
+			<corpse>
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) Piece -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22704" level="81" type="L2Monster" name="Contaminated Batur Warrior">
 		<parameters>
@@ -352,38 +327,26 @@
 				<clan>LEGENDORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2841" max="5731" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.8252999782562256">
-					<item id="9514" min="1" max="1" chance="0.0946" /> <!-- Sealed Dynasty Breast Plate -->
-					<item id="9515" min="1" max="1" chance="0.1513" /> <!-- Sealed Dynasty Gaiter -->
-					<item id="9530" min="1" max="1" chance="25.2036" /> <!-- Sealed Dynasty Breast Plate Piece -->
-					<item id="9531" min="1" max="1" chance="74.5505" /> <!-- Sealed Dynasty Gaiters Piece -->
-				</group>
-				<group chance="23.43939971923828">
-					<item id="1895" min="1" max="1" chance="87.0764" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0953" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3903" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.604" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1164" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5291" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5167" min="1" max="1" chance="0.1356" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1808" min="1" max="1" chance="0.5156" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9623" min="1" max="1" chance="0.6245" /> <!-- Dynasty Mace Piece -->
-				<item id="3036" min="1" max="1" chance="0.5156" /> <!-- Recipe: Spiritshot S -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="34.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="207" max="483" chance="70" /> <!-- Adena -->
+				<item id="1808" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="3036" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="5167" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) Piece -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22705" level="82" type="L2Monster" name="Contaminated Batur Commander">
 		<parameters>
@@ -440,38 +403,23 @@
 				<clan>LEGENDORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2933" max="5909" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6539999842643738">
-					<item id="9519" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Leather Armor -->
-					<item id="9520" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Leather Leggings -->
-					<item id="9535" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Leather Armor Piece -->
-					<item id="9536" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				</group>
-				<group chance="26.879100799560547">
-					<item id="1895" min="1" max="1" chance="78.3276" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.4829" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.5691" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.1382" /> <!-- Asofe -->
-					<item id="9573" min="1" max="1" chance="1.9038" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.4759" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0476" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9625" min="1" max="1" chance="0.0549" /> <!-- Giant's Codex - Oblivion -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9624" min="1" max="1" chance="0.6442" /> <!-- Dynasty Bagh-Nakh Piece -->
-				<item id="9630" min="1" max="1" chance="6.2984" /> <!-- Orichalcum -->
-				<item id="9628" min="1" max="1" chance="9.3859" /> <!-- Leonard -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="28.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="213" max="498" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.950" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+			</death>
+			<corpse>
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) Piece -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22706" level="82" type="L2Monster" name="Turka Subordinate's Ghost">
 		<parameters>
@@ -528,38 +476,24 @@
 				<clan>LEGENDORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3145" max="6334" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.701200008392334">
-					<item id="9524" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Tunic -->
-					<item id="9525" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Stockings -->
-					<item id="9540" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Tunic Piece -->
-					<item id="9541" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Stocking Piece -->
-				</group>
-				<group chance="28.81130027770996">
-					<item id="1895" min="1" max="1" chance="78.3419" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.4839" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.5699" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.1399" /> <!-- Asofe -->
-					<item id="9573" min="1" max="1" chance="1.9041" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.476" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0476" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9626" min="1" max="1" chance="0.0367" /> <!-- Giant's Codex - Discipline -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="45.0159" /> <!-- Crafted Leather -->
-				<item id="9623" min="1" max="1" chance="0.6906" /> <!-- Dynasty Mace Piece -->
-				<item id="5157" min="1" max="1" chance="0.5702" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="28.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="228" max="534" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="5157" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+			</death>
+			<corpse>
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) Piece -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22707" level="82" type="L2Monster" name="Turka Chieftain's Ghost" title="Graveyard Guardian Spirit">
 		<parameters>
@@ -615,37 +549,20 @@
 				<clan>LEGENDORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3043" max="6130" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.7692999839782715">
-					<item id="9452" min="1" max="1" chance="0.4382" /> <!-- Sealed Dynasty Earring -->
-					<item id="9453" min="1" max="1" chance="0.3286" /> <!-- Sealed Dynasty Necklace -->
-					<item id="9454" min="1" max="1" chance="0.6573" /> <!-- Sealed Dynasty Ring -->
-					<item id="9991" min="1" max="1" chance="31.0688" /> <!-- Sealed Dynasty Earring Gemstone -->
-					<item id="9992" min="1" max="1" chance="23.8445" /> <!-- Sealed Dynasty Necklace Gemstone -->
-					<item id="9993" min="1" max="1" chance="43.6626" /> <!-- Sealed Dynasty Ring Gemstone -->
-				</group>
-				<group chance="44.491798400878906">
-					<item id="1895" min="1" max="1" chance="78.5546" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.4988" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.5824" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.1647" /> <!-- Asofe -->
-					<item id="9546" min="1" max="1" chance="2.1995" /> <!-- Fire Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9624" min="1" max="1" chance="0.6683" /> <!-- Dynasty Bagh-Nakh Piece -->
-				<item id="5162" min="1" max="1" chance="0.5518" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.6683" /> <!-- Dynasty Cudgel Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="46.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="221" max="516" chance="70" /> <!-- Adena -->
+				<item id="5162" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="9546" min="1" max="1" chance="0.75" /> <!-- Fire Stone -->
+			</death>
+			<corpse>
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22708" level="81" type="L2Monster" name="Invader Warrior of Nightmare">
 		<parameters>
@@ -3316,32 +3233,22 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="395" max="797" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.021900000050663948">
-					<item id="9448" min="1" max="1" chance="0.0809" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="0.0809" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="0.0809" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="0.0809" /> <!-- Dynasty Crusher -->
-					<item id="9622" min="1" max="1" chance="24.4737" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="24.4737" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25.3646" /> <!-- Dynasty Staff Fragment -->
-					<item id="10547" min="1" max="1" chance="25.3644" /> <!-- Dynasty Crusher Fragment -->
-				</group>
-				<group chance="2.4416000843048096">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="36874" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36924" min="1" max="1" chance="0.03" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="36904" min="1" max="1" chance="0.03" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36892" min="1" max="1" chance="0.03" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-grade Life Stone - Lv. 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3368,15 +3275,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9536" min="1" max="1" chance="0.4245" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				<item id="9531" min="1" max="1" chance="0.6954" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="960" min="1" max="1" chance="0.0646" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="36532" min="1" max="1" chance="1.550" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="37.2" />
-		</collision>
 	</npc>
 	<npc id="22743" level="80" type="L2Monster" name="Deinonychus">
 		<parameters>
@@ -3429,26 +3333,24 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="395" max="797" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.022299999371170998">
-					<item id="9445" min="1" max="1" chance="0.3168" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.6832" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="2.4416000843048096">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
+				<item id="57" min="395" max="797" chance="70" /> <!-- Adena -->
+				<item id="36903" min="1" max="1" chance="0.3" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36931" min="1" max="1" chance="0.3" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="959" min="1" max="1" chance="2.8382" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36905" min="1" max="1" chance="0.3" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36858" min="1" max="1" chance="0.3" /> <!-- Recipe: Recipe: Leather - Upgrade -->
+				<item id="36892" min="1" max="1" chance="0.3" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="36890" min="1" max="1" chance="0.3" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3475,15 +3377,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9531" min="1" max="1" chance="0.6954" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="959" min="1" max="1" chance="0.0065" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="1875" min="1" max="1" chance="10.7617" /> <!-- Stone of Purity -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="14.3" />
-		</collision>
 	</npc>
 	<npc id="22744" level="80" type="L2Monster" name="Ornithomimus">
 		<parameters>
@@ -3530,32 +3429,23 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="395" max="797" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.021900000050663948">
-					<item id="9448" min="1" max="1" chance="0.0809" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="0.0809" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="0.0809" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="0.0809" /> <!-- Dynasty Crusher -->
-					<item id="9622" min="1" max="1" chance="24.4737" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="24.4737" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25.3646" /> <!-- Dynasty Staff Fragment -->
-					<item id="10547" min="1" max="1" chance="25.3644" /> <!-- Dynasty Crusher Fragment -->
-				</group>
-				<group chance="2.4416000843048096">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
+				<item id="57" min="395" max="797" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="60.3115" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="36932" min="1" max="1" chance="2.8382" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="960" min="1" max="1" chance="1.9046" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="36915" min="1" max="1" chance="2.513" /> <!--  Recipe: Weapon Fragment - Downgrade     -->
+				<item id="36904" min="1" max="1" chance="0.6282" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36891" min="1" max="1" chance="0.0628" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="36865" min="1" max="1" chance="0.0126" /> <!-- Recipe: Silver - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3582,15 +3472,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6901" min="1" max="1" chance="0.1614" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9630" min="1" max="1" chance="0.8496" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0646" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="36532" min="1" max="1" chance="1.550" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="37.2" />
-		</collision>
 	</npc>
 	<npc id="22745" level="80" type="L2Monster" name="Deinonychus">
 		<parameters>
@@ -3637,26 +3524,24 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="395" max="797" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.022299999371170998">
-					<item id="9445" min="1" max="1" chance="0.3168" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.6832" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="2.4416000843048096">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
+				<item id="57" min="395" max="797" chance="70" /> <!-- Adena -->
+				<item id="36916" min="1" max="1" chance="0.3" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="36939" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="959" min="1" max="1" chance="2.8382" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36905" min="1" max="1" chance="0.3" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36857" min="1" max="1" chance="0.3" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36892" min="1" max="1" chance="0.3" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="36866" min="1" max="1" chance="0.3" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3683,15 +3568,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9628" min="1" max="1" chance="1.2661" /> <!-- Leonard -->
-				<item id="959" min="1" max="1" chance="0.0065" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9630" min="1" max="1" chance="0.8496" /> <!-- Orichalcum -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="14.3" />
-		</collision>
 	</npc>
 	<npc id="22746" level="88" type="L2Monster" name="Bgurent">
 		<parameters>
@@ -3703,7 +3585,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1902457" sp="456" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="248627" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="149177" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -3740,43 +3622,25 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38976" max="80332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="9.420499801635742">
-					<item id="14105" min="1" max="1" chance="0.0905" /> <!-- Sealed Vesper Breastplate -->
-					<item id="15663" min="1" max="1" chance="38.2125" /> <!-- Sealed Vesper Breastplate Piece -->
-					<item id="14108" min="1" max="1" chance="0.1448" /> <!-- Sealed Vesper Gaiters -->
-					<item id="15666" min="1" max="1" chance="61.5522" /> <!-- Sealed Vesper Gaiter Piece -->
-				</group>
-				<group chance="40.32440185546875">
-					<item id="1879" min="14" max="42" chance="11.7461" /> <!-- Cokes -->
-					<item id="1885" min="3" max="9" chance="27.4075" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="15.4772" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="10.386" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="8.5798" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="9.5331" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.3804" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.238" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15486" min="1" max="1" chance="8.7704" /> <!-- Spirit Stone Fragment -->
-					<item id="1345" min="2400" max="7200" chance="5.4815" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15663" min="1" max="1" chance="14.6185" /> <!-- Sealed Vesper Breastplate Piece -->
-				<item id="15666" min="1" max="1" chance="23.5474" /> <!-- Sealed Vesper Gaiter Piece -->
-				<item id="959" min="1" max="1" chance="0.3231" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9628" min="1" max="1" chance="63.347" /> <!-- Leonard -->
-				<item id="15795" min="1" max="1" chance="1.7307" /> <!-- Recipe - Sealed Vesper Breastplate (60%) -->
-				<item id="15798" min="1" max="1" chance="2.769" /> <!-- Recipe - Sealed Vesper Gaiter (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="23" />
 			<height normal="30.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1767" max="4118" chance="70" /> <!-- Adena -->
+				<item id="17313" min="1" max="1" chance="0.075" /> <!-- Immortal Leather Gloves -->
+				<item id="36814" min="1" max="1" chance="16.57" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36527" min="1" max="1" chance="13.04" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="2.500" /> <!-- Metallic Fiber -->
+				<item id="36752" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="42.64" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.006" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22747" level="88" type="L2Monster" name="Brakian">
 		<parameters>
@@ -3788,7 +3652,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="497254" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="298353" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -3825,41 +3689,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38976" max="80332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="12.016599655151367">
-					<item id="14106" min="1" max="1" chance="0.0946" /> <!-- Sealed Vesper Leather Breastplate -->
-					<item id="14112" min="1" max="1" chance="0.1513" /> <!-- Sealed Vesper Leather Leggings -->
-					<item id="15664" min="1" max="1" chance="39.2558" /> <!-- Sealed Vesper Leather Breastplate Piece -->
-					<item id="15670" min="1" max="1" chance="60.4983" /> <!-- Sealed Vesper Leather Legging Piece -->
-				</group>
-				<group chance="48.138099670410156">
-					<item id="1879" min="15" max="45" chance="10.2039" /> <!-- Cokes -->
-					<item id="1885" min="2" max="6" chance="38.2647" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="14.4055" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="9.6669" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="7.9857" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="8.873" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.2156" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2216" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15486" min="1" max="1" chance="8.1631" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15664" min="1" max="1" chance="22.9943" /> <!-- Sealed Vesper Leather Breastplate Piece -->
-				<item id="15670" min="1" max="1" chance="35.4373" /> <!-- Sealed Vesper Leather Legging Piece -->
-				<item id="9630" min="1" max="1" chance="51.011" /> <!-- Orichalcum -->
-				<item id="15796" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Leather Breastplate (60%) -->
-				<item id="15799" min="1" max="1" chance="4.4305" /> <!-- Recipe - Sealed Vesper Leather Legging (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="28" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
+				<item id="36815" min="1" max="3" chance="10.52" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="36753" min="1" max="1" chance="1" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="55" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22748" level="88" type="L2Monster" name="Groikan">
 		<parameters>
@@ -3908,43 +3753,21 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38982" max="80346" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="12.018699645996094">
-					<item id="14107" min="1" max="1" chance="0.0946" /> <!-- Sealed Vesper Tunic -->
-					<item id="14115" min="1" max="1" chance="0.1513" /> <!-- Sealed Vesper Stockings -->
-					<item id="15665" min="1" max="1" chance="39.2558" /> <!-- Sealed Vesper Tunic Piece -->
-					<item id="15673" min="1" max="1" chance="60.4983" /> <!-- Sealed Vesper Stockings Piece -->
-				</group>
-				<group chance="36.694000244140625">
-					<item id="1879" min="14" max="42" chance="11.7368" /> <!-- Cokes -->
-					<item id="1885" min="3" max="9" chance="27.3859" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="15.465" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="10.3778" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="8.573" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="9.5255" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.3785" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2379" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0789" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="15486" min="1" max="1" chance="8.7635" /> <!-- Spirit Stone Fragment -->
-					<item id="1345" min="2400" max="7200" chance="5.4772" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15665" min="1" max="1" chance="22.9983" /> <!-- Sealed Vesper Tunic Piece -->
-				<item id="15673" min="1" max="1" chance="35.4435" /> <!-- Sealed Vesper Stockings Piece -->
-				<item id="9630" min="1" max="1" chance="51.0199" /> <!-- Orichalcum -->
-				<item id="15797" min="1" max="1" chance="2.7697" /> <!-- Recipe - Sealed Vesper Tunic (60%) -->
-				<item id="15800" min="1" max="1" chance="4.4312" /> <!-- Recipe - Sealed Vesper Stockings (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="32" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="36812" min="1" max="1" chance="11.50" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="36750" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Armor (60%) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="56.01" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22749" level="88" type="L2Monster" name="Treykan">
 		<parameters>
@@ -3956,7 +3779,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="497254" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="298353" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -3994,58 +3817,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="39200" max="80795" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="30.733400344848633">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="43.893798828125">
-					<item id="1879" min="15" max="45" chance="10.1295" /> <!-- Cokes -->
-					<item id="1885" min="2" max="6" chance="37.9857" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="14.3005" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="9.5964" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="7.9274" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="8.8083" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.1994" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2199" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="960" min="1" max="1" chance="0.7293" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="15486" min="1" max="1" chance="8.1036" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15667" min="1" max="1" chance="28.7295" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="28.7295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="28.7295" /> <!-- Sealed Vesper Gloves Piece -->
-				<item id="15668" min="1" max="1" chance="28.7295" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="28.7295" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="28.7295" /> <!-- Sealed Vesper Shoes Piece -->
-				<item id="9628" min="1" max="1" chance="29.4054" /> <!-- Leonard -->
-				<item id="15801" min="1" max="1" chance="3.2135" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="3.2135" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="3.2135" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-				<item id="15804" min="1" max="1" chance="3.2135" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="3.2135" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="3.2135" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="25" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="36813" min="1" max="1" chance="17.21" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="36751" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="55.39" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22750" level="89" type="L2Monster" name="Elite Bgurent" title="Bistakon">
 		<parameters>
@@ -4057,7 +3844,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2099838" sp="503" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="255553" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="153332" hpRegen="187.260794107867" mp="19880" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4099,47 +3886,27 @@
 				<clan>BESTACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.018400192260742">
-					<item id="13457" min="1" max="1" chance="0.0782" /> <!-- Vesper Cutter -->
-					<item id="13458" min="1" max="1" chance="0.0782" /> <!-- Vesper Slasher -->
-					<item id="13459" min="1" max="1" chance="0.0782" /> <!-- Vesper Buster -->
-					<item id="15634" min="1" max="1" chance="33.2749" /> <!-- Vesper Cutter Piece -->
-					<item id="15635" min="1" max="1" chance="33.2157" /> <!-- Vesper Slasher Piece -->
-					<item id="15636" min="1" max="1" chance="33.2748" /> <!-- Vesper Buster Piece -->
-				</group>
-				<group chance="46.000701904296875">
-					<item id="1895" min="72" max="216" chance="6.6179" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="13.3416" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="26.1601" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="17.5548" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="16.1131" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="4.0234" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.6671" /> <!-- Earth Crystal -->
-					<item id="15815" min="1" max="1" chance="0.2327" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
-					<item id="15816" min="1" max="1" chance="0.2327" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
-					<item id="15817" min="1" max="1" chance="0.2327" /> <!-- Recipe - Vesper Buster (60%) -->
-					<item id="15486" min="1" max="1" chance="14.8239" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15634" min="1" max="1" chance="8.722" /> <!-- Vesper Cutter Piece -->
-				<item id="15635" min="1" max="1" chance="8.7064" /> <!-- Vesper Slasher Piece -->
-				<item id="15636" min="1" max="1" chance="8.722" /> <!-- Vesper Buster Piece -->
-				<item id="9630" min="1" max="1" chance="77.2812" /> <!-- Orichalcum -->
-				<item id="15815" min="1" max="1" chance="1.0243" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
-				<item id="15816" min="1" max="1" chance="1.0243" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
-				<item id="15817" min="1" max="1" chance="1.0243" /> <!-- Recipe - Vesper Buster (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="23" />
 			<height normal="40.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1846" max="4303" chance="70" /> <!-- Adena -->
+				<item id="17313" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Gloves -->
+				<item id="36814" min="1" max="1" chance="16.57" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36527" min="1" max="1" chance="10.40" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="2" /> <!-- Metallic Fiber -->
+				<item id="36752" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="9551" min="1" max="1" chance="0.05" /> <!-- Holy Stone -->
+				<item id="9557" min="1" max="1" chance="0.025" /> <!-- Holy Crystal -->
+			</death>
+			<corpse>
+				<item id="36527" min="1" max="1" chance="71.65" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="13.50" /> <!-- Metallic Fiber -->
+				<item id="36894" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Leather Braid - Upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22751" level="89" type="L2Monster" name="Elite Brakian" title="Bistakon">
 		<parameters>
@@ -4151,7 +3918,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="19880" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4193,51 +3960,24 @@
 				<clan>BESTACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.997099876403809">
-					<item id="13463" min="1" max="1" chance="0.0589" /> <!-- Vesper Avenger -->
-					<item id="13464" min="1" max="1" chance="0.0589" /> <!-- Vesper Retributer -->
-					<item id="13465" min="1" max="1" chance="0.0589" /> <!-- Vesper Caster -->
-					<item id="13466" min="1" max="1" chance="0.0589" /> <!-- Vesper Singer -->
-					<item id="15640" min="1" max="1" chance="24.8524" /> <!-- Vesper Avenger Piece -->
-					<item id="15641" min="1" max="1" chance="25.1412" /> <!-- Vesper Retributer Piece -->
-					<item id="15642" min="1" max="1" chance="24.8524" /> <!-- Vesper Caster Piece -->
-					<item id="15643" min="1" max="1" chance="24.9184" /> <!-- Vesper Singer Piece -->
-				</group>
-				<group chance="42.26570129394531">
-					<item id="1895" min="72" max="216" chance="6.6025" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="13.3107" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="26.0993" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="17.514" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="16.0757" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="4.0141" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.6655" /> <!-- Earth Crystal -->
-					<item id="15821" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Avenger (60%) -->
-					<item id="15822" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Retributer (60%) -->
-					<item id="15823" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Caster (60%) -->
-					<item id="15824" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Singer (60%) -->
-					<item id="15486" min="1" max="1" chance="14.7898" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15640" min="1" max="1" chance="7.5665" /> <!-- Vesper Avenger Piece -->
-				<item id="15641" min="1" max="1" chance="7.6544" /> <!-- Vesper Retributer Piece -->
-				<item id="15642" min="1" max="1" chance="7.5665" /> <!-- Vesper Caster Piece -->
-				<item id="15643" min="1" max="1" chance="7.5867" /> <!-- Vesper Singer Piece -->
-				<item id="15821" min="1" max="1" chance="0.8962" /> <!-- Recipe - Vesper Avenger (60%) -->
-				<item id="15822" min="1" max="1" chance="0.8962" /> <!-- Recipe - Vesper Retributer (60%) -->
-				<item id="15823" min="1" max="1" chance="0.8962" /> <!-- Recipe - Vesper Caster (60%) -->
-				<item id="15824" min="1" max="1" chance="0.8962" /> <!-- Recipe - Vesper Singer (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="35" />
 			<height normal="41.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
+				<item id="36815" min="1" max="3" chance="15" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
+				<item id="36753" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="9555" min="1" max="1" chance="0.03" /> <!-- Wind Crystal -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="57.59" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="10.54" /> <!-- Synthetic Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22752" level="89" type="L2Monster" name="Elite Groikan" title="Bistakon">
 		<parameters>
@@ -4249,7 +3989,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="19880" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4291,38 +4031,22 @@
 				<clan>BESTACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82570" max="170185" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.976500034332275">
-					<item id="13461" min="1" max="1" chance="0.2363" /> <!-- Vesper Fighter -->
-					<item id="15638" min="1" max="1" chance="99.7637" /> <!-- Vesper Fighter Piece -->
-				</group>
-				<group chance="43.30419921875">
-					<item id="1895" min="72" max="216" chance="8.5822" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="17.3017" /> <!-- Mold Lubricant -->
-					<item id="9628" min="3" max="9" chance="4.8464" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="22.7654" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="20.8958" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="5.2176" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.8651" /> <!-- Earth Crystal -->
-					<item id="15819" min="1" max="1" chance="0.3017" /> <!-- Recipe - Vesper Fighter (60%) -->
-					<item id="15486" min="1" max="1" chance="19.2241" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15638" min="1" max="1" chance="15.1155" /> <!-- Vesper Fighter Piece -->
-				<item id="959" min="1" max="1" chance="1.0266" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9628" min="1" max="5" chance="67.1007" /> <!-- Leonard -->
-				<item id="15819" min="1" max="1" chance="1.7904" /> <!-- Recipe - Vesper Fighter (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="40" />
 			<height normal="47" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="36812" min="1" max="1" chance="15" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="36750" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Armor (60%) -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="17527" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22753" level="89" type="L2Monster" name="Elite Treykan" title="Bistakon">
 		<parameters>
@@ -4334,7 +4058,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="19880" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4376,36 +4100,22 @@
 				<clan>BESTACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.046299934387207">
-					<item id="13467" min="1" max="1" chance="0.2333" /> <!-- Vesper Thrower -->
-					<item id="15644" min="1" max="1" chance="99.7667" /> <!-- Vesper Thrower Piece -->
-				</group>
-				<group chance="48.35210037231445">
-					<item id="1895" min="72" max="216" chance="8.6571" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="17.4527" /> <!-- Mold Lubricant -->
-					<item id="9628" min="3" max="9" chance="4.8887" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="22.964" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="21.0781" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="5.2632" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="15825" min="1" max="1" chance="0.3044" /> <!-- Recipe - Vesper Thrower (60%) -->
-					<item id="15486" min="1" max="1" chance="19.3918" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15644" min="1" max="1" chance="20.4362" /> <!-- Vesper Thrower Piece -->
-				<item id="959" min="1" max="1" chance="1.3705" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15825" min="1" max="1" chance="2.3899" /> <!-- Recipe - Vesper Thrower (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="36813" min="1" max="3" chance="11.56" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36751" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="59.29" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="11.59" /> <!-- Synthetic Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22754" level="88" type="L2Monster" name="Turtlelian">
 		<parameters>
@@ -4418,7 +4128,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="497254" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="298353" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4456,57 +4166,24 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38976" max="80332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="30.55739974975586">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="40.32440185546875">
-					<item id="1879" min="14" max="42" chance="11.7461" /> <!-- Cokes -->
-					<item id="1885" min="3" max="9" chance="27.4075" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="15.4772" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="10.386" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="8.5798" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="9.5331" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.3804" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.238" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15486" min="1" max="1" chance="8.7704" /> <!-- Spirit Stone Fragment -->
-					<item id="1345" min="2400" max="7200" chance="5.4815" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15667" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Gloves Piece -->
-				<item id="15668" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Shoes Piece -->
-				<item id="15801" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-				<item id="15804" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="28" />
 			<height normal="28.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="36807" min="1" max="1" chance="15.64" /> <!-- Immortal Gaiter Ingredient -->
+				<item id="36562" min="1" max="1" chance="0.75" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="36745" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Gaiters (60%) -->
+				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="57.64" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22755" level="88" type="L2Monster" name="Krajian">
 		<parameters>
@@ -4518,7 +4195,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="497254" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="298353" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4555,52 +4232,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38976" max="80332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="21.808500289916992">
-					<item id="13143" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Helmet -->
-					<item id="13144" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Leather Helmet -->
-					<item id="13145" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Circlet -->
-					<item id="14111" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Shield -->
-					<item id="13887" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Sigil -->
-					<item id="15660" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Helmet Piece -->
-					<item id="15661" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Leather Helmet Piece -->
-					<item id="15662" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Circlet Piece -->
-					<item id="15669" min="1" max="1" chance="24.7544" /> <!-- Sealed Vesper Verteidiger Piece -->
-					<item id="15691" min="1" max="1" chance="24.7546" /> <!-- Sealed Vesper Sigil Piece -->
-				</group>
-				<group chance="48.138099670410156">
-					<item id="1879" min="15" max="45" chance="10.2039" /> <!-- Cokes -->
-					<item id="1885" min="2" max="6" chance="38.2647" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="14.4055" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="9.6669" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="7.9857" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="8.873" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.2156" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2216" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15486" min="1" max="1" chance="8.1631" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15660" min="1" max="1" chance="22.2296" /> <!-- Sealed Vesper Helmet Piece -->
-				<item id="15661" min="1" max="1" chance="22.2296" /> <!-- Sealed Vesper Leather Helmet Piece -->
-				<item id="15662" min="1" max="1" chance="22.2296" /> <!-- Sealed Vesper Circlet Piece -->
-				<item id="15669" min="1" max="1" chance="32.8546" /> <!-- Sealed Vesper Verteidiger Piece -->
-				<item id="15691" min="1" max="1" chance="32.8546" /> <!-- Sealed Vesper Sigil Piece -->
-				<item id="15792" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Helmet (60%) -->
-				<item id="15793" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Leather Helmet (60%) -->
-				<item id="15794" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
-				<item id="15808" min="1" max="1" chance="3.956" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
-				<item id="15807" min="1" max="1" chance="3.956" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="26" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="17294" min="1" max="1" chance="0.03" /> <!-- Requiem Fighter -->
+				<item id="36798" min="1" max="1" chance="1.671" /> <!-- Requiem Fighter Fragment -->
+				<item id="36736" min="1" max="1" chance="0.03" /> <!-- Recipe: Requiem Fighter (60%) -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="55.09" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22756" level="88" type="L2Monster" name="Tardyon">
 		<parameters>
@@ -4612,7 +4260,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1902457" sp="456" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="248627" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="149177" hpRegen="187.410040552143" mp="29286" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4649,50 +4297,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38982" max="80346" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="28.32550048828125">
-					<item id="14160" min="1" max="1" chance="0.0822" /> <!-- Sealed Vesper Earring -->
-					<item id="14161" min="1" max="1" chance="0.0617" /> <!-- Sealed Vesper Necklace -->
-					<item id="14162" min="1" max="1" chance="0.1234" /> <!-- Sealed Vesper Ring -->
-					<item id="15770" min="1" max="1" chance="29.4685" /> <!-- Sealed Vesper Earring Gem -->
-					<item id="15771" min="1" max="1" chance="21.2014" /> <!-- Sealed Vesper Necklace Gem -->
-					<item id="15769" min="1" max="1" chance="49.0628" /> <!-- Sealed Vesper Ring Gem -->
-				</group>
-				<group chance="41.50619888305664">
-					<item id="1879" min="14" max="42" chance="8.1526" /> <!-- Cokes -->
-					<item id="1885" min="3" max="9" chance="19.0227" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="10.7422" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="7.2086" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="5.9549" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="6.6166" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="1.6522" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.1652" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0548" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="15809" min="1" max="1" chance="1.8031" /> <!-- Recipe - Sealed Vesper Ring (70%) -->
-					<item id="15810" min="1" max="1" chance="1.2021" /> <!-- Recipe - Sealed Vesper Earring (70%) -->
-					<item id="15811" min="1" max="1" chance="0.9015" /> <!-- Recipe - Sealed Vesper Necklace (70%) -->
-					<item id="15486" min="1" max="1" chance="6.0873" /> <!-- Spirit Stone Fragment -->
-					<item id="1345" min="300" max="900" chance="30.4362" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15770" min="1" max="1" chance="43.548" /> <!-- Sealed Vesper Earring Gem -->
-				<item id="15771" min="1" max="1" chance="31.3309" /> <!-- Sealed Vesper Necklace Gem -->
-				<item id="15769" min="1" max="1" chance="72.504" /> <!-- Sealed Vesper Ring Gem -->
-				<item id="9630" min="1" max="1" chance="36.4428" /> <!-- Orichalcum -->
-				<item id="15810" min="1" max="1" chance="6.077" /> <!-- Recipe - Sealed Vesper Earring (70%) -->
-				<item id="15811" min="1" max="1" chance="4.5577" /> <!-- Recipe - Sealed Vesper Necklace (70%) -->
-				<item id="15809" min="1" max="1" chance="9.1155" /> <!-- Recipe - Sealed Vesper Ring (70%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1767" max="4118" chance="70" /> <!-- Adena -->
+				<item id="17320" min="1" max="1" chance="0.03" /> <!-- Immortal Sigil -->
+				<item id="36821" min="1" max="1" chance="14.93" /> <!-- Immortal Sigil Ingredient -->
+				<item id="36759" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Sigil (60%) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="42.73" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.005" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22757" level="89" type="L2Monster" name="Elite Turtlelian" title="Reptilikon">
 		<parameters>
@@ -4705,7 +4325,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="19880" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4748,37 +4368,26 @@
 				<clan>RAPTILICON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.024799823760986">
-					<item id="13460" min="1" max="1" chance="0.2343" /> <!-- Vesper Shaper -->
-					<item id="15637" min="1" max="1" chance="99.7657" /> <!-- Vesper Shaper Piece -->
-				</group>
-				<group chance="43.354698181152344">
-					<item id="1895" min="72" max="216" chance="8.5822" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="17.3017" /> <!-- Mold Lubricant -->
-					<item id="9628" min="3" max="9" chance="4.8464" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="22.7654" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="20.8958" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="5.2176" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.8651" /> <!-- Earth Crystal -->
-					<item id="15818" min="1" max="1" chance="0.3017" /> <!-- Recipe - Vesper Shaper (60%) -->
-					<item id="15486" min="1" max="1" chance="19.2241" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15637" min="1" max="1" chance="20.3512" /> <!-- Vesper Shaper Piece -->
-				<item id="9630" min="1" max="3" chance="90.1613" /> <!-- Orichalcum -->
-				<item id="15818" min="1" max="1" chance="2.3899" /> <!-- Recipe - Vesper Shaper (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="38" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="36844" min="1" max="1" chance="8.701" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="36562" min="1" max="1" chance="0.75" /> <!-- Greater Cokes -->
+				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="9552" min="1" max="1" chance="0.03" /> <!-- Fire Crystal -->
+				<item id="30423" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="36782" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+			</death>
+			<corpse>
+				<item id="36518" min="1" max="1" chance="6.506" /> <!-- Greater Cokes -->
+				<item id="36519" min="1" max="1" chance="1.210" /> <!-- Synthetic Cokes -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22758" level="89" type="L2Monster" name="Elite Krajian" title="Reptilikon">
 		<parameters>
@@ -4790,7 +4399,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="19880" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4832,37 +4441,23 @@
 				<clan>RAPTILICON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82570" max="170185" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.033999919891357">
-					<item id="13462" min="1" max="1" chance="0.2336" /> <!-- Vesper Stormer -->
-					<item id="15639" min="1" max="1" chance="99.7664" /> <!-- Vesper Stormer Piece -->
-				</group>
-				<group chance="43.30419921875">
-					<item id="1895" min="72" max="216" chance="8.5822" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="17.3017" /> <!-- Mold Lubricant -->
-					<item id="9628" min="3" max="9" chance="4.8464" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="22.7654" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="20.8958" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="5.2176" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.8651" /> <!-- Earth Crystal -->
-					<item id="15820" min="1" max="1" chance="0.3017" /> <!-- Recipe - Vesper Stormer (60%) -->
-					<item id="15486" min="1" max="1" chance="19.2241" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15639" min="1" max="1" chance="20.3881" /> <!-- Vesper Stormer Piece -->
-				<item id="9630" min="1" max="3" chance="90.0563" /> <!-- Orichalcum -->
-				<item id="15820" min="1" max="1" chance="2.3872" /> <!-- Recipe - Vesper Stormer (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="26" />
 			<height normal="48" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="17294" min="1" max="1" chance="0.03" /> <!-- Requiem Fighter -->
+				<item id="36798" min="1" max="1" chance="2.404" /> <!-- Requiem Fighter Fragment -->
+				<item id="36736" min="1" max="1" chance="0.075" /> <!-- Recipe: Requiem Fighter (60%)-->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="57.76" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="11.50" /> <!-- Synthetic Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22759" level="89" type="L2Monster" name="Elite Tardyon" title="Reptilikon">
 		<parameters>
@@ -4874,7 +4469,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2099838" sp="503" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="255553" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="153332" hpRegen="187.260794107867" mp="29820" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4916,37 +4511,25 @@
 				<clan>RAPTILICON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.9822998046875">
-					<item id="13461" min="1" max="1" chance="0.2363" /> <!-- Vesper Fighter -->
-					<item id="15638" min="1" max="1" chance="99.7637" /> <!-- Vesper Fighter Piece -->
-				</group>
-				<group chance="43.354698181152344">
-					<item id="1895" min="72" max="216" chance="8.5822" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="17.3017" /> <!-- Mold Lubricant -->
-					<item id="9628" min="3" max="9" chance="4.8464" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="22.7654" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="20.8958" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="5.2176" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.8651" /> <!-- Earth Crystal -->
-					<item id="15819" min="1" max="1" chance="0.3017" /> <!-- Recipe - Vesper Fighter (60%) -->
-					<item id="15486" min="1" max="1" chance="19.2241" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15638" min="1" max="1" chance="20.1775" /> <!-- Vesper Fighter Piece -->
-				<item id="1894" min="1" max="25" chance="92.4732" /> <!-- Crafted Leather -->
-				<item id="15819" min="1" max="1" chance="2.3899" /> <!-- Recipe - Vesper Fighter (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1846" max="4303" chance="70" /> <!-- Adena -->
+				<item id="17320" min="1" max="1" chance="0.3" /> <!-- Immortal Sigil -->
+				<item id="36821" min="1" max="1" chance="16.79" /> <!-- Immortal Sigil Ingredient -->
+				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
+				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
+				<item id="9556" min="1" max="1" chance="0.03" /> <!-- Dark Crystal -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="32.76" /> <!-- Thin Braid -->
+				<item id="9556" min="1" max="1" chance="0.3" /> <!-- Dark Crystal -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22760" level="88" type="L2Monster" name="Kanibi">
 		<parameters>
@@ -4959,7 +4542,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1902457" sp="456" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="248627" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="149177" hpRegen="187.410040552143" mp="29286" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4997,57 +4580,24 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38976" max="80332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="30.55739974975586">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="43.64250183105469">
-					<item id="1879" min="15" max="45" chance="10.1295" /> <!-- Cokes -->
-					<item id="1885" min="2" max="6" chance="37.9857" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="14.3005" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="9.5964" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="7.9274" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="8.8083" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.1994" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2199" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="960" min="1" max="1" chance="0.7293" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="15486" min="1" max="1" chance="8.1036" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15667" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Gloves Piece -->
-				<item id="15668" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="30.9454" /> <!-- Sealed Vesper Shoes Piece -->
-				<item id="15801" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-				<item id="15804" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="3.4614" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="22" />
 			<height normal="45.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1767" max="4118" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="13.04" /> <!-- Synthetic Fiber -->
+				<item id="36849" min="1" max="1" chance="4.6" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36528" min="1" max="1" chance="2.500" /> <!-- Metallic Fiber -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36787" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Stockings (60%) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="43.64" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.006" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22761" level="88" type="L2Monster" name="Kiriona">
 		<parameters>
@@ -5096,54 +4646,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38976" max="80332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="21.808500289916992">
-					<item id="13143" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Helmet -->
-					<item id="13144" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Leather Helmet -->
-					<item id="13145" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Circlet -->
-					<item id="14111" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Shield -->
-					<item id="13887" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Sigil -->
-					<item id="15660" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Helmet Piece -->
-					<item id="15661" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Leather Helmet Piece -->
-					<item id="15662" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Circlet Piece -->
-					<item id="15669" min="1" max="1" chance="24.7544" /> <!-- Sealed Vesper Verteidiger Piece -->
-					<item id="15691" min="1" max="1" chance="24.7546" /> <!-- Sealed Vesper Sigil Piece -->
-				</group>
-				<group chance="36.687599182128906">
-					<item id="1879" min="14" max="42" chance="11.7368" /> <!-- Cokes -->
-					<item id="1885" min="3" max="9" chance="27.3859" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="15.465" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="10.3778" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="8.573" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="9.5255" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.3785" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2379" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0789" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="15486" min="1" max="1" chance="8.7635" /> <!-- Spirit Stone Fragment -->
-					<item id="1345" min="2400" max="7200" chance="5.4772" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15660" min="1" max="1" chance="22.2296" /> <!-- Sealed Vesper Helmet Piece -->
-				<item id="15661" min="1" max="1" chance="22.2296" /> <!-- Sealed Vesper Leather Helmet Piece -->
-				<item id="15662" min="1" max="1" chance="22.2296" /> <!-- Sealed Vesper Circlet Piece -->
-				<item id="15669" min="1" max="1" chance="32.8546" /> <!-- Sealed Vesper Verteidiger Piece -->
-				<item id="15691" min="1" max="1" chance="32.8546" /> <!-- Sealed Vesper Sigil Piece -->
-				<item id="15792" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Helmet (60%) -->
-				<item id="15793" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Leather Helmet (60%) -->
-				<item id="15794" min="1" max="1" chance="2.7692" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
-				<item id="15808" min="1" max="1" chance="3.956" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
-				<item id="15807" min="1" max="1" chance="3.956" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="33" />
 			<height normal="33" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="17322" min="1" max="1" chance="0.3" /> <!-- Immortal Earring -->
+				<item id="36823" min="1" max="3" chance="11.12" /> <!-- Immortal Earring Gem -->
+				<item id="36761" min="1" max="1" chance="1" /> <!-- Recipe: Immortal Earring (60%) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="56.37" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22762" level="88" type="L2Monster" name="Kaiona">
 		<parameters>
@@ -5155,7 +4673,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="497254" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+			<vitals hp="298353" hpRegen="187.410040552143" mp="29286" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -5192,49 +4710,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="38982" max="80346" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="28.32550048828125">
-					<item id="14160" min="1" max="1" chance="0.0822" /> <!-- Sealed Vesper Earring -->
-					<item id="14161" min="1" max="1" chance="0.0617" /> <!-- Sealed Vesper Necklace -->
-					<item id="14162" min="1" max="1" chance="0.1234" /> <!-- Sealed Vesper Ring -->
-					<item id="15770" min="1" max="1" chance="29.4685" /> <!-- Sealed Vesper Earring Gem -->
-					<item id="15771" min="1" max="1" chance="21.2014" /> <!-- Sealed Vesper Necklace Gem -->
-					<item id="15769" min="1" max="1" chance="49.0628" /> <!-- Sealed Vesper Ring Gem -->
-				</group>
-				<group chance="48.9281005859375">
-					<item id="1879" min="3" max="9" chance="34.757" /> <!-- Cokes -->
-					<item id="1885" min="2" max="6" chance="26.0678" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="9.8138" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="6.5855" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="5.4402" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="6.0447" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="1.5094" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.1509" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="960" min="1" max="1" chance="0.5005" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="15809" min="1" max="1" chance="1.6473" /> <!-- Recipe - Sealed Vesper Ring (70%) -->
-					<item id="15810" min="1" max="1" chance="1.0982" /> <!-- Recipe - Sealed Vesper Earring (70%) -->
-					<item id="15811" min="1" max="1" chance="0.8236" /> <!-- Recipe - Sealed Vesper Necklace (70%) -->
-					<item id="15486" min="1" max="1" chance="5.5611" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15770" min="1" max="1" chance="43.548" /> <!-- Sealed Vesper Earring Gem -->
-				<item id="15771" min="1" max="1" chance="31.3309" /> <!-- Sealed Vesper Necklace Gem -->
-				<item id="15769" min="1" max="1" chance="72.504" /> <!-- Sealed Vesper Ring Gem -->
-				<item id="9628" min="1" max="1" chance="54.3069" /> <!-- Leonard -->
-				<item id="15810" min="1" max="1" chance="6.077" /> <!-- Recipe - Sealed Vesper Earring (70%) -->
-				<item id="15811" min="1" max="1" chance="4.5577" /> <!-- Recipe - Sealed Vesper Necklace (70%) -->
-				<item id="15809" min="1" max="1" chance="9.1155" /> <!-- Recipe - Sealed Vesper Ring (70%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="32" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
+				<item id="36822" min="1" max="3" chance="16.42" /> <!-- Immortal Necklace Gem -->
+				<item id="36760" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Necklace (60%) -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="40205" min="1" max="1" chance="56.37" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22763" level="89" type="L2Monster" name="Elite Kanibi" title="Kokracon">
 		<parameters>
@@ -5247,7 +4738,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4276415" sp="1026" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="511107" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="306665" hpRegen="187.260794107867" mp="29820" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -5290,47 +4781,26 @@
 				<clan>COCRACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.018400192260742">
-					<item id="13457" min="1" max="1" chance="0.0782" /> <!-- Vesper Cutter -->
-					<item id="13458" min="1" max="1" chance="0.0782" /> <!-- Vesper Slasher -->
-					<item id="13459" min="1" max="1" chance="0.0782" /> <!-- Vesper Buster -->
-					<item id="15634" min="1" max="1" chance="33.2749" /> <!-- Vesper Cutter Piece -->
-					<item id="15635" min="1" max="1" chance="33.2157" /> <!-- Vesper Slasher Piece -->
-					<item id="15636" min="1" max="1" chance="33.2748" /> <!-- Vesper Buster Piece -->
-				</group>
-				<group chance="46.000701904296875">
-					<item id="1895" min="72" max="216" chance="6.6179" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="13.3416" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="26.1601" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="17.5548" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="16.1131" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="4.0234" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.6671" /> <!-- Earth Crystal -->
-					<item id="15815" min="1" max="1" chance="0.2327" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
-					<item id="15816" min="1" max="1" chance="0.2327" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
-					<item id="15817" min="1" max="1" chance="0.2327" /> <!-- Recipe - Vesper Buster (60%) -->
-					<item id="15486" min="1" max="1" chance="14.8239" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15634" min="1" max="1" chance="8.722" /> <!-- Vesper Cutter Piece -->
-				<item id="15635" min="1" max="1" chance="8.7064" /> <!-- Vesper Slasher Piece -->
-				<item id="15636" min="1" max="1" chance="8.722" /> <!-- Vesper Buster Piece -->
-				<item id="9628" min="1" max="3" chance="57.582" /> <!-- Leonard -->
-				<item id="15815" min="1" max="1" chance="1.0243" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
-				<item id="15816" min="1" max="1" chance="1.0243" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
-				<item id="15817" min="1" max="1" chance="1.0243" /> <!-- Recipe - Vesper Buster (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="32" />
 			<height normal="69.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1846" max="4303" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="12.70" /> <!-- Synthetic Fiber -->
+				<item id="36848" min="1" max="1" chance="4" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36528" min="1" max="1" chance="2.200" /> <!-- Metallic Fiber -->
+				<item id="9547" min="1" max="1" chance="0.3" /> <!-- Water Stone -->
+				<item id="9553" min="1" max="1" chance="0.03" /> <!-- Water Crystal -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36786" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Tunic (60%) -->
+			</death>
+			<corpse>
+				<item id="36527" min="1" max="1" chance="71.08" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="25" /> <!-- Metallic Fiber -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22764" level="89" type="L2Monster" name="Elite Kiriona" title="Kokracon">
 		<parameters>
@@ -5342,7 +4812,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="29820" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -5384,52 +4854,24 @@
 				<clan>COCRACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82570" max="170185" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.991300106048584">
-					<item id="13463" min="1" max="1" chance="0.0589" /> <!-- Vesper Avenger -->
-					<item id="13464" min="1" max="1" chance="0.0589" /> <!-- Vesper Retributer -->
-					<item id="13465" min="1" max="1" chance="0.0589" /> <!-- Vesper Caster -->
-					<item id="13466" min="1" max="1" chance="0.0589" /> <!-- Vesper Singer -->
-					<item id="15640" min="1" max="1" chance="24.8524" /> <!-- Vesper Avenger Piece -->
-					<item id="15641" min="1" max="1" chance="25.1412" /> <!-- Vesper Retributer Piece -->
-					<item id="15642" min="1" max="1" chance="24.8524" /> <!-- Vesper Caster Piece -->
-					<item id="15643" min="1" max="1" chance="24.9184" /> <!-- Vesper Singer Piece -->
-				</group>
-				<group chance="42.216400146484375">
-					<item id="1895" min="72" max="216" chance="6.6025" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="13.3107" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="26.0993" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="17.514" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="16.0757" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="4.0141" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="9554" min="1" max="1" chance="0.6655" /> <!-- Earth Crystal -->
-					<item id="15821" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Avenger (60%) -->
-					<item id="15822" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Retributer (60%) -->
-					<item id="15823" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Caster (60%) -->
-					<item id="15824" min="1" max="1" chance="0.2321" /> <!-- Recipe - Vesper Singer (60%) -->
-					<item id="15486" min="1" max="1" chance="14.7898" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15640" min="1" max="1" chance="6.718" /> <!-- Vesper Avenger Piece -->
-				<item id="15641" min="1" max="1" chance="6.796" /> <!-- Vesper Retributer Piece -->
-				<item id="15642" min="1" max="1" chance="6.718" /> <!-- Vesper Caster Piece -->
-				<item id="15643" min="1" max="1" chance="6.7358" /> <!-- Vesper Singer Piece -->
-				<item id="9630" min="1" max="1" chance="60.0375" /> <!-- Orichalcum -->
-				<item id="15821" min="1" max="1" chance="0.7957" /> <!-- Recipe - Vesper Avenger (60%) -->
-				<item id="15822" min="1" max="1" chance="0.7957" /> <!-- Recipe - Vesper Retributer (60%) -->
-				<item id="15823" min="1" max="1" chance="0.7957" /> <!-- Recipe - Vesper Caster (60%) -->
-				<item id="15824" min="1" max="1" chance="0.7957" /> <!-- Recipe - Vesper Singer (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="48" />
 			<height normal="46" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="17322" min="1" max="1" chance="0.3" /> <!-- Immortal Earring -->
+				<item id="36823" min="1" max="3" chance="14.50" /> <!-- Immortal Earring Gem -->
+				<item id="36761" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Earring (60%) -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="32815" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="11.54" /> <!-- Synthetic Braid -->
+				<item id="9554" min="1" max="1" chance="0.3" /> <!-- Earth Crystal -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22765" level="89" type="L2Monster" name="Elite Kaiona" title="Kokracon">
 		<parameters>
@@ -5441,7 +4883,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7481982" sp="1795" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1022215" hpRegen="187.260794107867" mp="1846.8" mpRegen="3" />
+			<vitals hp="613329" hpRegen="187.260794107867" mp="29820" mpRegen="3" />
 			<attack physical="11740.1011965289" magical="8513.53762826717" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -5483,37 +4925,22 @@
 				<clan>COCRACON_ELITE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82667" max="170383" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.046299934387207">
-					<item id="13467" min="1" max="1" chance="0.2333" /> <!-- Vesper Thrower -->
-					<item id="15644" min="1" max="1" chance="99.7667" /> <!-- Vesper Thrower Piece -->
-				</group>
-				<group chance="48.35210037231445">
-					<item id="1895" min="72" max="216" chance="8.6571" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="17.4527" /> <!-- Mold Lubricant -->
-					<item id="9628" min="3" max="9" chance="4.8887" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="22.964" /> <!-- Orichalcum -->
-					<item id="16160" min="1" max="1" chance="21.0781" /> <!-- Life Stone - Level 85 -->
-					<item id="16161" min="1" max="1" chance="5.2632" /> <!-- Mid-Grade Life Stone - Level 85 -->
-					<item id="15825" min="1" max="1" chance="0.3044" /> <!-- Recipe - Vesper Thrower (60%) -->
-					<item id="15486" min="1" max="1" chance="19.3918" /> <!-- Spirit Stone Fragment -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15644" min="1" max="1" chance="15.3272" /> <!-- Vesper Thrower Piece -->
-				<item id="959" min="1" max="1" chance="1.0278" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9628" min="1" max="5" chance="67.179" /> <!-- Leonard -->
-				<item id="15825" min="1" max="1" chance="1.7925" /> <!-- Recipe - Vesper Thrower (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="35" />
 			<height normal="49.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
+				<item id="36822" min="3" max="9" chance="7.290" /> <!-- Immortal Necklace Gem -->
+				<item id="36760" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Necklace (60%) -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="55.49" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="11.54" /> <!-- Synthetic Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22766" level="85" type="L2Monster" name="Mithril Millipede">
 		<race>BUG</race>
@@ -7780,29 +7207,18 @@
 				<clan>SOLINA_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="949" max="1916" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0568000003695488">
-					<item id="13457" min="1" max="1" chance="0.0782" /> <!-- Vesper Cutter -->
-					<item id="13458" min="1" max="1" chance="0.0782" /> <!-- Vesper Slasher -->
-					<item id="13459" min="1" max="1" chance="0.0782" /> <!-- Vesper Buster -->
-					<item id="15634" min="1" max="1" chance="33.2749" /> <!-- Vesper Cutter Piece -->
-					<item id="15635" min="1" max="1" chance="33.2157" /> <!-- Vesper Slasher Piece -->
-					<item id="15636" min="1" max="1" chance="33.2748" /> <!-- Vesper Buster Piece -->
-				</group>
-				<group chance="7.766499996185303">
-					<item id="1895" min="1" max="1" chance="87.8639" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1505" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4119" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6185" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="1.4856" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.371" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0371" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="9557" min="1" max="1" chance="0.0615" /> <!-- Holy Crystal -->
-				</group>
+				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="9557" min="1" max="1" chance="0.003" /> <!-- Holy Crystal -->
+				<item id="14168" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="0.20000000298023224">
 					<item id="15690" min="1" max="1" chance="50" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="50" /> <!-- Unlit Torchlight -->
@@ -7840,19 +7256,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15634" min="1" max="1" chance="0.0987" /> <!-- Vesper Cutter Piece -->
-				<item id="15635" min="1" max="1" chance="0.0986" /> <!-- Vesper Slasher Piece -->
-				<item id="15636" min="1" max="1" chance="0.0987" /> <!-- Vesper Buster Piece -->
-				<item id="1894" min="1" max="1" chance="5.8327" /> <!-- Crafted Leather -->
-				<item id="15815" min="1" max="1" chance="0.0116" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
-				<item id="15816" min="1" max="1" chance="0.0116" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
-				<item id="15817" min="1" max="1" chance="0.0116" /> <!-- Recipe - Vesper Buster (60%) -->
+				<item id="9551" min="1" max="1" chance="0.0987" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="23.4" />
-		</collision>
 	</npc>
 	<npc id="22790" level="83" type="L2Monster" name="Solina Seeker">
 		<parameters>
@@ -7902,31 +7308,18 @@
 				<clan>SOLINA_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="25.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1047" max="2114" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06239999830722809">
-					<item id="13463" min="1" max="1" chance="0.0589" /> <!-- Vesper Avenger -->
-					<item id="13464" min="1" max="1" chance="0.0589" /> <!-- Vesper Retributer -->
-					<item id="13465" min="1" max="1" chance="0.0589" /> <!-- Vesper Caster -->
-					<item id="13466" min="1" max="1" chance="0.0589" /> <!-- Vesper Singer -->
-					<item id="15640" min="1" max="1" chance="24.8524" /> <!-- Vesper Avenger Piece -->
-					<item id="15641" min="1" max="1" chance="25.1412" /> <!-- Vesper Retributer Piece -->
-					<item id="15642" min="1" max="1" chance="24.8524" /> <!-- Vesper Caster Piece -->
-					<item id="15643" min="1" max="1" chance="24.9184" /> <!-- Vesper Singer Piece -->
-				</group>
-				<group chance="8.56659984588623">
-					<item id="1895" min="1" max="1" chance="87.8639" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1505" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4119" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6185" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="1.4856" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.371" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0371" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="9557" min="1" max="1" chance="0.0615" /> <!-- Holy Crystal -->
-				</group>
+				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="9557" min="1" max="1" chance="0.003" /> <!-- Holy Crystal -->
+				<item id="14168" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="0.20000000298023224">
 					<item id="15690" min="1" max="1" chance="50" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="50" /> <!-- Unlit Torchlight -->
@@ -7964,20 +7357,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15640" min="1" max="1" chance="0.0945" /> <!-- Vesper Avenger Piece -->
-				<item id="15641" min="1" max="1" chance="0.0956" /> <!-- Vesper Retributer Piece -->
-				<item id="15642" min="1" max="1" chance="0.0945" /> <!-- Vesper Caster Piece -->
-				<item id="15643" min="1" max="1" chance="0.0947" /> <!-- Vesper Singer Piece -->
-				<item id="15821" min="1" max="1" chance="0.0112" /> <!-- Recipe - Vesper Avenger (60%) -->
-				<item id="15822" min="1" max="1" chance="0.0112" /> <!-- Recipe - Vesper Retributer (60%) -->
-				<item id="15823" min="1" max="1" chance="0.0112" /> <!-- Recipe - Vesper Caster (60%) -->
-				<item id="15824" min="1" max="1" chance="0.0112" /> <!-- Recipe - Vesper Singer (60%) -->
+				<item id="9551" min="1" max="1" chance="0.0987" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="25.4" />
-		</collision>
 	</npc>
 	<npc id="22791" level="83" type="L2Monster" name="Solina Savior">
 		<parameters>
@@ -8026,25 +7408,19 @@
 				<clan>SOLINA_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="15.6" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1021" max="2062" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06069999933242798">
-					<item id="13461" min="1" max="1" chance="0.2363" /> <!-- Vesper Fighter -->
-					<item id="15638" min="1" max="1" chance="99.7637" /> <!-- Vesper Fighter Piece -->
-				</group>
-				<group chance="9.300999641418457">
-					<item id="1895" min="1" max="1" chance="78.9458" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.5262" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6052" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.2103" /> <!-- Asofe -->
-					<item id="14166" min="1" max="1" chance="1.3348" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.3333" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0333" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0111" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 84 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="14168" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="0.20000000298023224">
 					<item id="15690" min="1" max="1" chance="50" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="50" /> <!-- Unlit Torchlight -->
@@ -8082,16 +7458,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15638" min="1" max="1" chance="0.1843" /> <!-- Vesper Fighter Piece -->
-				<item id="959" min="1" max="1" chance="0.0125" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.1252" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="15819" min="1" max="1" chance="0.0218" /> <!-- Recipe - Vesper Fighter (60%) -->
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="15.6" />
-		</collision>
 	</npc>
 	<npc id="22792" level="83" type="L2Monster" name="Solina Disciple">
 		<parameters>
@@ -8141,25 +7510,20 @@
 				<clan>SOLINA_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1033" max="2086" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.062199998646974564">
-					<item id="13467" min="1" max="1" chance="0.2333" /> <!-- Vesper Thrower -->
-					<item id="15644" min="1" max="1" chance="99.7667" /> <!-- Vesper Thrower Piece -->
-				</group>
-				<group chance="9.409899711608887">
-					<item id="1895" min="1" max="1" chance="78.9458" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.5262" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6052" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.2103" /> <!-- Asofe -->
-					<item id="14166" min="1" max="1" chance="1.3348" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.3333" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0333" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0111" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="57" min="28" max="66" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.003" /> <!-- Holy Stone -->
+				<item id="14166" min="1" max="1" chance="0.0055" /> <!-- Life Stone - Lv. 84 -->
+				<item id="14167" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="15644" min="1" max="1" chance="0.0055" /> <!-- Vesper Thrower Piece -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="14168" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="13467" min="1" max="1" chance="0.0009" /> <!-- Vesper Thrower -->
 				<group chance="0.20000000298023224">
 					<item id="15690" min="1" max="1" chance="50" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="50" /> <!-- Unlit Torchlight -->
@@ -8197,15 +7561,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15644" min="1" max="1" chance="0.2519" /> <!-- Vesper Thrower Piece -->
-				<item id="9628" min="1" max="1" chance="3.3117" /> <!-- Leonard -->
-				<item id="15825" min="1" max="1" chance="0.0295" /> <!-- Recipe - Vesper Thrower (60%) -->
+				<item id="15644" min="1" max="1" chance="0.03" /> <!-- Vesper Thrower Piece -->
+				<item id="15825" min="1" max="1" chance="0.0009" /> <!-- Recipe - Vesper Thrower (60%) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="30" />
-		</collision>
 	</npc>
 	<npc id="22793" level="83" type="L2Monster" name="Solina Ascetic">
 		<parameters>
@@ -8253,25 +7612,19 @@
 				<clan>SOLINA_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1076" max="2172" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06449999660253525">
-					<item id="13460" min="1" max="1" chance="0.2343" /> <!-- Vesper Shaper -->
-					<item id="15637" min="1" max="1" chance="99.7657" /> <!-- Vesper Shaper Piece -->
-				</group>
-				<group chance="8.809599876403809">
-					<item id="1895" min="1" max="1" chance="87.8099" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1467" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4105" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6175" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="1.4847" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.3707" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0371" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="960" min="1" max="1" chance="0.1229" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
+				<item id="57" min="79" max="184" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 84 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="14168" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="0.20000000298023224">
 					<item id="15690" min="1" max="1" chance="50" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="50" /> <!-- Unlit Torchlight -->
@@ -8309,15 +7662,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15637" min="1" max="1" chance="0.2612" /> <!-- Vesper Shaper Piece -->
-				<item id="959" min="1" max="1" chance="0.0176" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15818" min="1" max="1" chance="0.0307" /> <!-- Recipe - Vesper Shaper (60%) -->
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="23.4" />
-		</collision>
 	</npc>
 	<npc id="22794" level="84" type="L2Monster" name="Divinity Judge">
 		<parameters>
@@ -8368,25 +7715,19 @@
 				<clan>DIVINE_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13.5" grown="16" />
+			<height normal="36.5" grown="42.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="5594" max="11432" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.33899998664855957">
-					<item id="13462" min="1" max="1" chance="0.2336" /> <!-- Vesper Stormer -->
-					<item id="15639" min="1" max="1" chance="99.7664" /> <!-- Vesper Stormer Piece -->
-				</group>
-				<group chance="46.179500579833984">
-					<item id="1895" min="1" max="1" chance="87.8099" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1467" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4105" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6175" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="1.4847" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.3707" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0371" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="960" min="1" max="1" chance="0.1229" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
+				<item id="57" min="420" max="980" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="14167" min="1" max="1" chance="0.075" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="959" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="14168" min="1" max="1" chance="0.0055" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
@@ -8394,15 +7735,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15639" min="1" max="1" chance="1.3732" /> <!-- Vesper Stormer Piece -->
-				<item id="959" min="1" max="1" chance="0.0922" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15820" min="1" max="1" chance="0.1608" /> <!-- Recipe - Vesper Stormer (60%) -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13.5" grown="16" />
-			<height normal="36.5" grown="42.5" />
-		</collision>
 	</npc>
 	<npc id="22795" level="84" type="L2Monster" name="Divinity Manager">
 		<parameters>
@@ -8452,30 +7787,17 @@
 				<clan>DIVINE_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="80" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="5832" max="11919" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4013999700546265">
-					<item id="14105" min="1" max="1" chance="0.0905" /> <!-- Sealed Vesper Breastplate -->
-					<item id="15663" min="1" max="1" chance="38.2125" /> <!-- Sealed Vesper Breastplate Piece -->
-					<item id="14108" min="1" max="1" chance="0.1448" /> <!-- Sealed Vesper Gaiters -->
-					<item id="15666" min="1" max="1" chance="61.5522" /> <!-- Sealed Vesper Gaiter Piece -->
-				</group>
-				<group chance="29.52560043334961">
-					<item id="1879" min="1" max="1" chance="60.7454" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.3727" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8586" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9183" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5847" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="1.7607" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.4397" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.044" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15795" min="1" max="1" chance="0.0781" /> <!-- Recipe - Sealed Vesper Breastplate (60%) -->
-					<item id="15798" min="1" max="1" chance="0.125" /> <!-- Recipe - Sealed Vesper Gaiter (60%) -->
-					<item id="9557" min="1" max="1" chance="0.0728" /> <!-- Holy Crystal -->
-				</group>
+				<item id="57" min="437" max="1019" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="14168" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
@@ -8483,17 +7805,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15663" min="1" max="1" chance="2.6096" /> <!-- Sealed Vesper Breastplate Piece -->
-				<item id="15666" min="1" max="1" chance="4.2035" /> <!-- Sealed Vesper Gaiter Piece -->
-				<item id="9628" min="1" max="1" chance="11.3082" /> <!-- Leonard -->
-				<item id="15795" min="1" max="1" chance="0.3089" /> <!-- Recipe - Sealed Vesper Breastplate (60%) -->
-				<item id="15798" min="1" max="1" chance="0.4943" /> <!-- Recipe - Sealed Vesper Gaiter (60%) -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
 	</npc>
 	<npc id="22796" level="84" type="L2Monster" name="Divinity Supervisor">
 		<parameters>
@@ -8541,30 +7855,17 @@
 				<clan>DIVINE_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="47" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="6469" max="13222" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.9830000400543213">
-					<item id="14106" min="1" max="1" chance="0.0946" /> <!-- Sealed Vesper Leather Breastplate -->
-					<item id="14112" min="1" max="1" chance="0.1513" /> <!-- Sealed Vesper Leather Leggings -->
-					<item id="15664" min="1" max="1" chance="39.2558" /> <!-- Sealed Vesper Leather Breastplate Piece -->
-					<item id="15670" min="1" max="1" chance="60.4983" /> <!-- Sealed Vesper Leather Legging Piece -->
-				</group>
-				<group chance="32.77619934082031">
-					<item id="1879" min="1" max="1" chance="60.7043" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.3522" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8567" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.917" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5836" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="1.7595" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.4394" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0439" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15796" min="1" max="1" chance="0.1041" /> <!-- Recipe - Sealed Vesper Leather Breastplate (60%) -->
-					<item id="15799" min="1" max="1" chance="0.1665" /> <!-- Recipe - Sealed Vesper Leather Legging (60%) -->
-					<item id="9557" min="1" max="1" chance="0.0728" /> <!-- Holy Crystal -->
-				</group>
+				<item id="57" min="486" max="1135" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="14168" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
@@ -8572,17 +7873,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15664" min="1" max="1" chance="3.7946" /> <!-- Sealed Vesper Leather Breastplate Piece -->
-				<item id="15670" min="1" max="1" chance="5.8481" /> <!-- Sealed Vesper Leather Legging Piece -->
-				<item id="9630" min="1" max="1" chance="8.4181" /> <!-- Orichalcum -->
-				<item id="15796" min="1" max="1" chance="0.457" /> <!-- Recipe - Sealed Vesper Leather Breastplate (60%) -->
-				<item id="15799" min="1" max="1" chance="0.7311" /> <!-- Recipe - Sealed Vesper Leather Legging (60%) -->
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="47" />
-		</collision>
 	</npc>
 	<npc id="22797" level="84" type="L2Monster" name="Divinity Worshipper">
 		<parameters>
@@ -8629,28 +7922,17 @@
 				<clan>DIVINE_N</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="49" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="6033" max="12331" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.8494000434875488">
-					<item id="14107" min="1" max="1" chance="0.0946" /> <!-- Sealed Vesper Tunic -->
-					<item id="14115" min="1" max="1" chance="0.1513" /> <!-- Sealed Vesper Stockings -->
-					<item id="15665" min="1" max="1" chance="39.2558" /> <!-- Sealed Vesper Tunic Piece -->
-					<item id="15673" min="1" max="1" chance="60.4983" /> <!-- Sealed Vesper Stockings Piece -->
-				</group>
-				<group chance="44.32339859008789">
-					<item id="1895" min="1" max="1" chance="87.7174" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1402" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4079" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6158" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="1.4831" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.3703" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.037" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15797" min="1" max="1" chance="0.0877" /> <!-- Recipe - Sealed Vesper Tunic (60%) -->
-					<item id="15800" min="1" max="1" chance="0.1406" /> <!-- Recipe - Sealed Vesper Stockings (60%) -->
-				</group>
+				<item id="57" min="449" max="1049" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="14168" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
@@ -8658,17 +7940,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15665" min="1" max="1" chance="3.539" /> <!-- Sealed Vesper Tunic Piece -->
-				<item id="15673" min="1" max="1" chance="5.4541" /> <!-- Sealed Vesper Stockings Piece -->
-				<item id="9628" min="1" max="1" chance="11.6995" /> <!-- Leonard -->
-				<item id="15797" min="1" max="1" chance="0.4262" /> <!-- Recipe - Sealed Vesper Tunic (60%) -->
-				<item id="15800" min="1" max="1" chance="0.6819" /> <!-- Recipe - Sealed Vesper Stockings (60%) -->
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="24" />
-			<height normal="49" />
-		</collision>
 	</npc>
 	<npc id="22798" level="84" type="L2Monster" name="Divinity Protector">
 		<parameters>
@@ -8724,33 +7998,17 @@
 				<clan>N_DIVINE</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="44" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="11026" max="22534" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="7.965199947357178">
-					<item id="14160" min="1" max="1" chance="0.0822" /> <!-- Sealed Vesper Earring -->
-					<item id="14161" min="1" max="1" chance="0.0617" /> <!-- Sealed Vesper Necklace -->
-					<item id="14162" min="1" max="1" chance="0.1234" /> <!-- Sealed Vesper Ring -->
-					<item id="15770" min="1" max="1" chance="29.4685" /> <!-- Sealed Vesper Earring Gem -->
-					<item id="15771" min="1" max="1" chance="21.2014" /> <!-- Sealed Vesper Necklace Gem -->
-					<item id="15769" min="1" max="1" chance="49.0628" /> <!-- Sealed Vesper Ring Gem -->
-				</group>
-				<group chance="36.05690002441406">
-					<item id="1879" min="1" max="3" chance="43.104" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="43.104" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="4.0568" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="2.7224" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="2.2489" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="2.4988" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.6239" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0624" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15809" min="1" max="1" chance="0.6809" /> <!-- Recipe - Sealed Vesper Ring (70%) -->
-					<item id="15810" min="1" max="1" chance="0.454" /> <!-- Recipe - Sealed Vesper Earring (70%) -->
-					<item id="15811" min="1" max="1" chance="0.3405" /> <!-- Recipe - Sealed Vesper Necklace (70%) -->
-					<item id="9557" min="1" max="1" chance="0.1034" /> <!-- Holy Crystal -->
-				</group>
+				<item id="57" min="843" max="1970" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="1.165" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="14168" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
@@ -8758,18 +8016,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15770" min="1" max="1" chance="14.2869" /> <!-- Sealed Vesper Earring Gem -->
-				<item id="15771" min="1" max="1" chance="10.2788" /> <!-- Sealed Vesper Necklace Gem -->
-				<item id="15769" min="1" max="1" chance="23.7865" /> <!-- Sealed Vesper Ring Gem -->
-				<item id="15810" min="1" max="1" chance="1.9937" /> <!-- Recipe - Sealed Vesper Earring (70%) -->
-				<item id="15811" min="1" max="1" chance="1.4953" /> <!-- Recipe - Sealed Vesper Necklace (70%) -->
-				<item id="15809" min="1" max="1" chance="2.9905" /> <!-- Recipe - Sealed Vesper Ring (70%) -->
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="18" />
-			<height normal="44" />
-		</collision>
 	</npc>
 	<npc id="22799" level="84" type="L2Monster" name="Divinity Fighter">
 		<parameters>
@@ -8819,41 +8068,17 @@
 				<clan>N_DIVINE</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="49" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="11191" max="22872" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="8.723400115966797">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="45.23059844970703">
-					<item id="1879" min="1" max="1" chance="59.7897" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.8949" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8136" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8881" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5597" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="1.733" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.4327" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0433" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15801" min="1" max="1" chance="0.3075" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-					<item id="15802" min="1" max="1" chance="0.3075" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-					<item id="15803" min="1" max="1" chance="0.3075" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-					<item id="15804" min="1" max="1" chance="0.3075" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-					<item id="15805" min="1" max="1" chance="0.3075" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-					<item id="15806" min="1" max="1" chance="0.3075" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-				</group>
+				<item id="57" min="844" max="1972" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="1.100" /> <!-- Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="14167" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="14168" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 84 -->
 				<group chance="7">
 					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
 					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
@@ -8861,24 +8086,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15667" min="1" max="1" chance="8.1546" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="8.1546" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="8.1546" /> <!-- Sealed Vesper Gloves Piece -->
-				<item id="15668" min="1" max="1" chance="8.1546" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="8.1546" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="8.1546" /> <!-- Sealed Vesper Shoes Piece -->
-				<item id="9630" min="1" max="1" chance="5.6009" /> <!-- Orichalcum -->
-				<item id="15801" min="1" max="1" chance="0.9121" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="0.9121" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="0.9121" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-				<item id="15804" min="1" max="1" chance="0.9121" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="0.9121" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="0.9121" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="24" />
-			<height normal="49" />
-		</collision>
 	</npc>
 </list>

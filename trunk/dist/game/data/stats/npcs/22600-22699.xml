@@ -1199,41 +1199,24 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4323" max="8709" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.24240000545978546">
-					<item id="9442" min="1" max="1" chance="0.1063" /> <!-- Dynasty Sword -->
-					<item id="9443" min="1" max="1" chance="0.1063" /> <!-- Dynasty Blade -->
-					<item id="9444" min="1" max="1" chance="0.1063" /> <!-- Dynasty Phantom -->
-					<item id="9616" min="1" max="1" chance="33.227" /> <!-- Dynasty Sword Piece -->
-					<item id="9617" min="1" max="1" chance="33.227" /> <!-- Dynasty Blade Piece -->
-					<item id="9618" min="1" max="1" chance="33.2271" /> <!-- Dynasty Phantom Piece -->
-				</group>
-				<group chance="37.40230178833008">
-					<item id="1879" min="1" max="1" chance="43.0197" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="21.5099" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.0245" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.3585" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.1223" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="1.7925" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.4481" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0448" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="1345" min="60" max="180" chance="28.6797" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9630" min="1" max="1" chance="9.2833" /> <!-- Orichalcum -->
-				<item id="9617" min="1" max="1" chance="0.9807" /> <!-- Dynasty Blade Piece -->
-				<item id="9537" min="1" max="1" chance="6.3422" /> <!-- Sealed Dynasty Leather Helmet Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="43.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="247" max="578" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="1.550" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="2.600" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22618" level="82" type="L2Monster" name="Spiked Stakato Worker">
 		<parameters>
@@ -1282,43 +1265,26 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4323" max="8709" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.23880000412464142">
-					<item id="9448" min="1" max="1" chance="0.0809" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="0.0809" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="0.0809" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="0.0809" /> <!-- Dynasty Crusher -->
-					<item id="9622" min="1" max="1" chance="24.4737" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="24.4737" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25.3646" /> <!-- Dynasty Staff Fragment -->
-					<item id="10547" min="1" max="1" chance="25.3644" /> <!-- Dynasty Crusher Fragment -->
-				</group>
-				<group chance="26.694700241088867">
-					<item id="1879" min="1" max="1" chance="60.2755" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1377" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8365" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9034" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5724" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.5115" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6279" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9625" min="1" max="1" chance="0.0723" /> <!-- Giant's Codex - Oblivion -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1808" min="1" max="1" chance="0.7839" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9623" min="1" max="1" chance="0.9494" /> <!-- Dynasty Mace Piece -->
-				<item id="3036" min="1" max="1" chance="0.7839" /> <!-- Recipe: Spiritshot S -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="22" />
 			<height normal="48.3" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="157" max="367" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="1808" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="3036" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.622" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22619" level="82" type="L2Monster" name="Spiked Stakato Guard">
 		<parameters>
@@ -1455,36 +1421,26 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4459" max="8983" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2515999972820282">
-					<item id="9445" min="1" max="1" chance="0.3168" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.6832" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="41.737998962402344">
-					<item id="1895" min="1" max="1" chance="76.6877" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.3681" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.4735" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="8.9469" /> <!-- Asofe -->
-					<item id="9573" min="1" max="1" chance="1.8639" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.466" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0466" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9546" min="1" max="1" chance="2.1473" /> <!-- Fire Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9992" min="1" max="1" chance="3.2739" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="3957" min="1" max="1" chance="0.8086" /> <!-- Recipe: Blessed Spiritshot S -->
-				<item id="9537" min="1" max="1" chance="6.5418" /> <!-- Sealed Dynasty Leather Helmet Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="162" max="378" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="3957" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.700" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22621" level="82" type="L2Monster" name="Male Spiked Stakato">
 		<parameters>
@@ -1540,36 +1496,26 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4224" max="8509" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.23659999668598175">
-					<item id="9446" min="1" max="1" chance="0.3192" /> <!-- Dynasty Knife -->
-					<item id="9620" min="1" max="1" chance="99.6808" /> <!-- Dynasty Knife Piece -->
-				</group>
-				<group chance="39.53770065307617">
-					<item id="1895" min="1" max="1" chance="76.6877" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.3681" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.4735" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="8.9469" /> <!-- Asofe -->
-					<item id="9573" min="1" max="1" chance="1.8639" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.466" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0466" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9547" min="1" max="1" chance="2.1473" /> <!-- Water Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5157" min="1" max="1" chance="0.766" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.9277" /> <!-- Dynasty Cudgel Piece -->
-				<item id="9628" min="1" max="1" chance="13.517" /> <!-- Leonard -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="153" max="358" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="5157" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="9547" min="1" max="1" chance="0.03" /> <!-- Water Stone -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.600" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22622" level="83" type="L2Monster" name="Male Spiked Stakato">
 		<parameters>
@@ -1705,39 +1651,26 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4172" max="8403" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.210800051689148">
-					<item id="9514" min="1" max="1" chance="0.0946" /> <!-- Sealed Dynasty Breast Plate -->
-					<item id="9515" min="1" max="1" chance="0.1513" /> <!-- Sealed Dynasty Gaiter -->
-					<item id="9530" min="1" max="1" chance="25.2036" /> <!-- Sealed Dynasty Breast Plate Piece -->
-					<item id="9531" min="1" max="1" chance="74.5505" /> <!-- Sealed Dynasty Gaiters Piece -->
-				</group>
-				<group chance="26.484699249267578">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9549" min="1" max="1" chance="2.8138" /> <!-- Wind Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9992" min="1" max="1" chance="3.0626" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="5167" min="1" max="1" chance="0.7564" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				<item id="9530" min="1" max="1" chance="2.4787" /> <!-- Sealed Dynasty Breast Plate Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="24" />
 			<height normal="43.6" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="152" max="354" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="5167" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind stone -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22624" level="82" type="L2Monster" name="Cannibalistic Stakato Subordinate">
 		<parameters>
@@ -1791,38 +1724,25 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4224" max="8509" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9419000148773193">
-					<item id="9519" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Leather Armor -->
-					<item id="9520" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Leather Leggings -->
-					<item id="9535" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Leather Armor Piece -->
-					<item id="9536" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				</group>
-				<group chance="13.50979995727539">
-					<item id="1894" min="1" max="1" chance="27.5621" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="26.184" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="6.8306" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="26.184" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.455" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9550" min="1" max="1" chance="6.2841" /> <!-- Dark Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="60.4709" /> <!-- Crafted Leather -->
-				<item id="1894" min="1" max="1" chance="60.4709" /> <!-- Crafted Leather -->
-				<item id="9530" min="1" max="1" chance="2.51" /> <!-- Sealed Dynasty Breast Plate Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="29.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="153" max="358" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22625" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
 		<parameters>
@@ -1879,38 +1799,27 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4534" max="9153" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0125999450683594">
-					<item id="9524" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Tunic -->
-					<item id="9525" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Stockings -->
-					<item id="9540" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Tunic Piece -->
-					<item id="9541" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Stocking Piece -->
-				</group>
-				<group chance="42.50550079345703">
-					<item id="1895" min="1" max="1" chance="76.6877" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.3681" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.4735" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="8.9469" /> <!-- Asofe -->
-					<item id="9573" min="1" max="1" chance="1.8639" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.466" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0466" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9551" min="1" max="1" chance="2.1473" /> <!-- Holy Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5272" min="1" max="1" chance="0.8235" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="9619" min="1" max="1" chance="1.0371" /> <!-- Dynasty Bow Piece -->
-				<item id="5277" min="1" max="1" chance="0.8235" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="34" grown="44" />
 			<height normal="48.8" grown="59.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="166" max="386" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+				<item id="5277" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.800" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22626" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
 		<parameters>
@@ -2047,46 +1956,25 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4326" max="8732" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.092600107192993">
-					<item id="9517" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Gauntlets -->
-					<item id="9518" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Boots -->
-					<item id="9522" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Leather Gloves -->
-					<item id="9523" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Leather Boots -->
-					<item id="9527" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Gloves -->
-					<item id="9528" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Shoes -->
-					<item id="9533" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Gauntlet Piece -->
-					<item id="9534" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Boot Piece -->
-					<item id="9538" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Leather Glove Piece -->
-					<item id="9539" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Leather Boots Piece -->
-					<item id="9543" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Glove Piece -->
-					<item id="9544" min="1" max="1" chance="16.5907" /> <!-- Sealed Dynasty Shoes Piece -->
-				</group>
-				<group chance="13.028200149536133">
-					<item id="1894" min="1" max="1" chance="29.312" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.8464" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2643" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.8464" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.8013" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4503" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.145" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="960" min="1" max="1" chance="0.3343" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="62.0178" /> <!-- Crafted Leather -->
-				<item id="9624" min="1" max="1" chance="0.9514" /> <!-- Dynasty Bagh-Nakh Piece -->
-				<item id="6901" min="1" max="1" chance="1.7675" /> <!-- Recipe: Shining Arrow (100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="43.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="158" max="368" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.622" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22628" level="83" type="L2Monster" name="Spiked Stakato Drone">
 		<parameters>
@@ -2135,44 +2023,25 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4326" max="8732" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2236000299453735">
-					<item id="9516" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Helmet -->
-					<item id="9529" min="1" max="1" chance="0.1481" /> <!-- Sealed Dynasty Shield -->
-					<item id="13886" min="1" max="1" chance="0.1481" /> <!-- Sealed Dynasty Sigil -->
-					<item id="9521" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9526" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Circlet -->
-					<item id="9532" min="1" max="1" chance="25.5801" /> <!-- Sealed Dynasty Helmet Piece -->
-					<item id="9521" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9542" min="1" max="1" chance="25.5801" /> <!-- Sealed Dynasty Circlet Piece -->
-					<item id="9545" min="1" max="1" chance="30.4907" /> <!-- Sealed Dynasty Shield Piece -->
-					<item id="10114" min="1" max="1" chance="17.6381" /> <!-- Sealed Dynasty Sigil Piece -->
-				</group>
-				<group chance="13.033100128173828">
-					<item id="1894" min="1" max="1" chance="29.3011" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.8361" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2616" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.8361" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.7992" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4498" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.145" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5272" min="1" max="1" chance="0.3711" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9992" min="1" max="1" chance="3.1806" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9624" min="1" max="1" chance="0.9514" /> <!-- Dynasty Bagh-Nakh Piece -->
-				<item id="9530" min="1" max="1" chance="2.5742" /> <!-- Sealed Dynasty Breast Plate Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="28" />
 			<height normal="47.3" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="158" max="368" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.600" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22629" level="83" type="L2Monster" name="Spiked Stakato Guard Captain">
 		<parameters>
@@ -2306,41 +2175,26 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4272" max="8623" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.23980000615119934">
-					<item id="9442" min="1" max="1" chance="0.1063" /> <!-- Dynasty Sword -->
-					<item id="9443" min="1" max="1" chance="0.1063" /> <!-- Dynasty Blade -->
-					<item id="9444" min="1" max="1" chance="0.1063" /> <!-- Dynasty Phantom -->
-					<item id="9616" min="1" max="1" chance="33.227" /> <!-- Dynasty Sword Piece -->
-					<item id="9617" min="1" max="1" chance="33.227" /> <!-- Dynasty Blade Piece -->
-					<item id="9618" min="1" max="1" chance="33.2271" /> <!-- Dynasty Phantom Piece -->
-				</group>
-				<group chance="26.440399169921875">
-					<item id="1879" min="1" max="1" chance="60.2222" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1111" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.834" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9018" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.571" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.5093" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6273" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0627" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5282" min="1" max="1" chance="0.1606" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9622" min="1" max="1" chance="0.9396" /> <!-- Dynasty Cudgel Piece -->
-				<item id="1808" min="1" max="1" chance="0.7758" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9530" min="1" max="1" chance="2.5421" /> <!-- Sealed Dynasty Breast Plate Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="26" />
 			<height normal="43.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="156" max="364" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="1808" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5282" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.600" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22631" level="83" type="L2Monster" name="Spiked Stakato Nurse">
 		<parameters>
@@ -2485,42 +2339,26 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4835" max="9740" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2671000063419342">
-					<item id="9448" min="1" max="1" chance="0.0809" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="0.0809" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="0.0809" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="0.0809" /> <!-- Dynasty Crusher -->
-					<item id="9622" min="1" max="1" chance="24.4737" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="24.4737" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25.3646" /> <!-- Dynasty Staff Fragment -->
-					<item id="10547" min="1" max="1" chance="25.3644" /> <!-- Dynasty Crusher Fragment -->
-				</group>
-				<group chance="39.85639953613281">
-					<item id="1895" min="1" max="1" chance="87.0764" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0953" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3903" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.604" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1164" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5291" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5157" min="1" max="1" chance="0.1356" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="69.2161" /> <!-- Crafted Leather -->
-				<item id="9623" min="1" max="1" chance="1.0619" /> <!-- Dynasty Mace Piece -->
-				<item id="3957" min="1" max="1" chance="0.8767" /> <!-- Recipe: Blessed Spiritshot S -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="176" max="410" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="3957" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="5157" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.760" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
+				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22633" level="83" type="L2Monster" name="Spiked Stakato Shaman">
 		<parameters>
@@ -2655,33 +2493,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1883" max="3706" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3961000144481659">
-					<item id="6371" min="1" max="1" chance="0.2201" /> <!-- Demon Splinter -->
-					<item id="6695" min="1" max="1" chance="99.7799" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="23.802799224853516">
-					<item id="1895" min="1" max="1" chance="89.4913" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2644" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4566" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6485" /> <!-- Orichalcum -->
-					<item id="5167" min="1" max="1" chance="0.1392" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="35.4245" /> <!-- Crafted Leather -->
-				<item id="1894" min="1" max="1" chance="35.4245" /> <!-- Crafted Leather -->
-				<item id="9992" min="1" max="1" chance="1.8168" /> <!-- Sealed Dynasty Necklace Gemstone -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22635" level="78" type="L2Monster" name="Scarlet Stakato Soldier">
 		<parameters>
@@ -2727,35 +2555,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1839" max="3620" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.39750000834465027">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="23.227699279785156">
-					<item id="1895" min="1" max="1" chance="89.5598" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2692" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4585" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6498" /> <!-- Orichalcum -->
-					<item id="9625" min="1" max="1" chance="0.0627" /> <!-- Giant's Codex - Oblivion -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5162" min="1" max="1" chance="0.4382" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="6701" min="1" max="1" chance="5.2494" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6702" min="1" max="1" chance="6.7573" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="242" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22636" level="78" type="L2Monster" name="Scarlet Stakato Noble">
 		<parameters>
@@ -2801,39 +2617,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1900" max="3739" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.785099983215332">
-					<item id="6676" min="1" max="1" chance="0.4284" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6677" min="1" max="1" chance="0.4284" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6681" min="1" max="1" chance="0.4284" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6682" min="1" max="1" chance="0.4284" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6685" min="1" max="1" chance="0.4284" /> <!-- Sealed Major Arcana Glove -->
-					<item id="6686" min="1" max="1" chance="0.4284" /> <!-- Sealed Major Arcana Boots -->
-					<item id="6703" min="1" max="1" chance="97.4296" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				</group>
-				<group chance="16.772600173950195">
-					<item id="1879" min="1" max="1" chance="62.2849" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1425" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9311" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9669" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6248" /> <!-- Adamantine -->
-					<item id="9626" min="1" max="1" chance="0.0498" /> <!-- Giant's Codex - Discipline -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6688" min="1" max="1" chance="2.2016" /> <!-- Forgotten Blade Edge -->
-				<item id="6696" min="1" max="1" chance="2.2366" /> <!-- Heavens Divider Edge -->
-				<item id="6711" min="1" max="1" chance="5.0468" /> <!-- Sealed Major Arcana Robe Part -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="108" max="250" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22637" level="78" type="L2Monster" name="Tepra Scorpion">
 		<parameters>
@@ -2879,33 +2679,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1883" max="3706" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4083000123500824">
-					<item id="7575" min="1" max="1" chance="0.2135" /> <!-- Draconic Bow -->
-					<item id="7579" min="1" max="1" chance="99.7865" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="24.366100311279297">
-					<item id="1895" min="1" max="1" chance="87.4224" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1196" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3998" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6104" /> <!-- Orichalcum -->
-					<item id="9546" min="1" max="1" chance="2.4478" /> <!-- Fire Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6694" min="1" max="1" chance="2.2218" /> <!-- Saint Spear Blade -->
-				<item id="5272" min="1" max="1" chance="0.4487" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="6691" min="1" max="1" chance="2.1822" /> <!-- Angel Slayer Blade -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="24" />
 			<height normal="52.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22638" level="78" type="L2Monster" name="Tepra Scarab">
 		<parameters>
@@ -2951,34 +2741,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1883" max="3706" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.40380001068115234">
-					<item id="6367" min="1" max="1" chance="0.2159" /> <!-- Angel Slayer -->
-					<item id="6691" min="1" max="1" chance="99.7841" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="17.11370086669922">
-					<item id="1879" min="1" max="1" chance="60.5061" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.2531" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8473" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9107" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5784" /> <!-- Adamantine -->
-					<item id="9547" min="1" max="1" chance="2.9044" /> <!-- Water Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5277" min="1" max="1" chance="0.4487" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				<item id="6689" min="1" max="1" chance="2.1411" /> <!-- Basalt Battlehammer Head -->
-				<item id="6690" min="1" max="1" chance="2.1864" /> <!-- Imperial Staff Head -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.075" /> <!-- Water Stone -->
+				<item id="5277" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22639" level="78" type="L2Monster" name="Assassin Beetle">
 		<parameters>
@@ -3025,38 +2804,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1892" max="3724" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.7486000061035156">
-					<item id="6679" min="1" max="1" chance="0.1277" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="0.1277" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="0.1277" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6678" min="1" max="1" chance="0.1825" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="13885" min="1" max="1" chance="0.1217" /> <!-- Sealed Arcana Sigil -->
-					<item id="6706" min="1" max="1" chance="49.6563" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="1" max="1" chance="49.6564" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-				</group>
-				<group chance="27.24799919128418">
-					<item id="1895" min="1" max="1" chance="78.5546" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.4988" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.5824" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.1647" /> <!-- Asofe -->
-					<item id="9548" min="1" max="1" chance="2.1995" /> <!-- Earth Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6695" min="1" max="1" chance="2.1515" /> <!-- Demon Splinter Blade -->
-				<item id="7579" min="1" max="1" chance="2.2182" /> <!-- Draconic Bow Shaft -->
-				<item id="5282" min="1" max="1" chance="0.4509" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="19" />
 			<height normal="54.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="5282" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22640" level="78" type="L2Monster" name="Mercenary of Destruction">
 		<parameters>
@@ -3104,33 +2868,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1843" max="3629" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.387800008058548">
-					<item id="6371" min="1" max="1" chance="0.2201" /> <!-- Demon Splinter -->
-					<item id="6695" min="1" max="1" chance="99.7799" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="23.854700088500977">
-					<item id="1895" min="1" max="1" chance="87.4224" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1196" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3998" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6104" /> <!-- Orichalcum -->
-					<item id="9549" min="1" max="1" chance="2.4478" /> <!-- Wind Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5529" min="1" max="1" chance="2.7117" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.4393" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5533" min="1" max="1" chance="2.7112" /> <!-- Elysian Head -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="104" max="273" chance="70" /> <!-- Adena -->
+				<item id="9549" min="1" max="1" chance="0.75" /> <!-- Wind Stone -->
+				<item id="1808" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22641" level="78" type="L2Monster" name="Knight of Destruction">
 		<parameters>
@@ -3176,36 +2930,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1890" max="3720" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.40849998593330383">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="17.175899505615234">
-					<item id="1879" min="1" max="1" chance="60.5061" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.2531" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8473" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9107" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5784" /> <!-- Adamantine -->
-					<item id="9550" min="1" max="1" chance="2.9044" /> <!-- Dark Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6703" min="1" max="1" chance="14.4268" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				<item id="6704" min="1" max="1" chance="14.4268" /> <!-- Sealed Imperial Crusader Boots Design -->
-				<item id="5277" min="1" max="1" chance="0.4503" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="5277" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22642" level="78" type="L2Monster" name="Lavastone Golem">
 		<parameters>
@@ -3252,33 +2993,25 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2427" max="4777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.529699981212616">
-					<item id="6370" min="1" max="1" chance="0.2121" /> <!-- Saint Spear -->
-					<item id="6694" min="1" max="1" chance="99.7879" /> <!-- Saint Spear Blade -->
-				</group>
-				<group chance="11.381400108337402">
-					<item id="1894" min="1" max="1" chance="29.6224" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="28.1413" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.3412" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="28.1413" /> <!-- Thons -->
-					<item id="9551" min="1" max="1" chance="6.7538" /> <!-- Holy Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="3036" min="1" max="1" chance="0.5783" /> <!-- Recipe: Spiritshot S -->
-				<item id="959" min="1" max="1" chance="0.052" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="3957" min="1" max="1" chance="0.5783" /> <!-- Recipe: Blessed Spiritshot S -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="137" max="320" chance="70" /> <!-- Adena -->
+				<item id="3036" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="3957" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.350" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22643" level="78" type="L2Monster" name="Magma Golem">
 		<parameters>
@@ -3325,34 +3058,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2554" max="5027" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2554999589920044">
-					<item id="6684" min="1" max="1" chance="0.2585" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="1" max="1" chance="99.7415" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="39.3380012512207">
-					<item id="1895" min="1" max="1" chance="61.1984" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="4.2839" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="3.5699" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="7.1398" /> <!-- Asofe -->
-					<item id="959" min="1" max="1" chance="0.0086" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="1345" min="60" max="180" chance="23.7994" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6688" min="1" max="1" chance="2.9596" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="0.5477" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="48.0429" /> <!-- Crafted Leather -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="145" max="337" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.550" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22644" level="78" type="L2Monster" name="Arimanes of Destruction">
 		<parameters>
@@ -3399,37 +3121,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2576" max="5071" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5529999732971191">
-					<item id="6365" min="1" max="1" chance="0.0719" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="0.0719" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="0.0719" /> <!-- Dragon Hunter Axe -->
-					<item id="6689" min="1" max="1" chance="32.6218" /> <!-- Basalt Battlehammer Head -->
-					<item id="6690" min="1" max="1" chance="33.3116" /> <!-- Imperial Staff Head -->
-					<item id="6693" min="1" max="1" chance="33.8509" /> <!-- Dragon Hunter Axe Blade -->
-				</group>
-				<group chance="32.56520080566406">
-					<item id="1895" min="1" max="1" chance="89.5037" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2653" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.457" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6488" /> <!-- Orichalcum -->
-					<item id="960" min="1" max="1" chance="0.1252" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6708" min="1" max="1" chance="19.6689" /> <!-- Sealed Draconic Leather Gloves Fabric -->
-				<item id="6709" min="1" max="1" chance="19.6689" /> <!-- Sealed Draconic Leather Boots Design -->
-				<item id="5157" min="1" max="1" chance="0.614" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="57.75" grown="69" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="140" max="340" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5157" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.550" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22645" level="78" type="L2Monster" name="Balor of Destruction">
 		<parameters>
@@ -3477,33 +3185,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2445" max="4813" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5144000053405762">
-					<item id="6371" min="1" max="1" chance="0.2201" /> <!-- Demon Splinter -->
-					<item id="6695" min="1" max="1" chance="99.7799" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="10.737199783325195">
-					<item id="1894" min="1" max="1" chance="31.6406" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="30.0586" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8414" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="30.0586" /> <!-- Thons -->
-					<item id="5272" min="1" max="1" chance="0.4008" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6712" min="1" max="1" chance="18.6681" /> <!-- Sealed Major Arcana Gloves fabric -->
-				<item id="5162" min="1" max="1" chance="0.5827" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="6713" min="1" max="1" chance="18.6681" /> <!-- Sealed Major Arcana Boots Design -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="139" max="322" chance="70" /> <!-- Adena -->
+				<item id="5162" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade)  -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.350" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22646" level="78" type="L2Monster" name="Ashuras of Destruction">
 		<parameters>
@@ -3550,32 +3248,22 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2514" max="4949" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2360999584197998">
-					<item id="6680" min="1" max="1" chance="0.2585" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="1" max="1" chance="99.7415" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="35.454498291015625">
-					<item id="1895" min="1" max="1" chance="80.2211" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6155" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6796" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3591" /> <!-- Asofe -->
-					<item id="5277" min="1" max="1" chance="0.1247" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6706" min="1" max="1" chance="32.8015" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="6710" min="1" max="1" chance="32.8015" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="49" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="285" max="663" chance="70" /> <!-- Adena -->
+				<item id="5277" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="3.010" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22647" level="78" type="L2Monster" name="Lavasillisk">
 		<parameters>
@@ -3619,35 +3307,22 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2631" max="5178" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5906000137329102">
-					<item id="6674" min="1" max="1" chance="0.1281" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="0.2049" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="1" max="1" chance="43.5747" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="1" max="1" chance="56.0923" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="23.2549991607666">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="5282" min="1" max="1" chance="0.1659" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6706" min="1" max="1" chance="34.3236" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="6710" min="1" max="1" chance="34.3236" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="5282" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="3.126" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22648" level="78" type="L2Monster" name="Blazing Ifrit">
 		<parameters>
@@ -3691,33 +3366,23 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2575" max="5068" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5620999932289124">
-					<item id="6370" min="1" max="1" chance="0.2121" /> <!-- Saint Spear -->
-					<item id="6694" min="1" max="1" chance="99.7879" /> <!-- Saint Spear Blade -->
-				</group>
-				<group chance="32.60710144042969">
-					<item id="1895" min="1" max="1" chance="89.3358" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2535" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4524" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6457" /> <!-- Orichalcum -->
-					<item id="6901" min="1" max="1" chance="0.3126" /> <!-- Recipe: Shining Arrow (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5282" min="1" max="1" chance="0.6136" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				<item id="5529" min="1" max="1" chance="3.7877" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.6136" /> <!-- Recipe: Soulshot (S-Grade) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="296" max="679" chance="70" /> <!-- Adena -->
+				<item id="1808" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5282" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="3.010" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22649" level="78" type="L2Monster" name="Magma Drake">
 		<parameters>
@@ -3761,37 +3426,22 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2658" max="5232" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.701499938964844">
-					<item id="6724" min="1" max="1" chance="0.1141" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="0.1711" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="0.0855" /> <!-- Sealed Tateossian Necklace -->
-					<item id="6698" min="1" max="1" chance="36.6403" /> <!-- Sealed Tateossian Earring Part -->
-					<item id="6699" min="1" max="1" chance="40.6573" /> <!-- Sealed Tateossian Ring Gem -->
-					<item id="6700" min="1" max="1" chance="22.3317" /> <!-- Sealed Tateossian Necklace Chain -->
-				</group>
-				<group chance="37.48550033569336">
-					<item id="1895" min="1" max="1" chance="80.2211" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6155" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6796" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3591" /> <!-- Asofe -->
-					<item id="5157" min="1" max="1" chance="0.1247" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5533" min="1" max="1" chance="3.9094" /> <!-- Elysian Head -->
-				<item id="1894" min="1" max="1" chance="50.0089" /> <!-- Crafted Leather -->
-				<item id="1894" min="1" max="1" chance="50.0089" /> <!-- Crafted Leather -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="29" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="301" max="701" chance="70" /> <!-- Adena -->
+				<item id="5157" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot Compressed Package (S-grade)) -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="2.200" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22650" level="83" type="L2Monster" name="Mucrokian Fanatic">
 		<parameters>
@@ -3836,23 +3486,23 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="41" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1476" max="2979" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.0829">
-					<item id="10216" min="1" max="1" chance="0.0009" /> <!-- Icarus Disperser -->
-					<item id="10398" min="1" max="1" chance="0.0500" /> <!-- Icarus Disperser Piece -->
-				</group>
-				<group chance="21.1594">
-					<item id="1895" min="1" max="1" chance="80.2211" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6155" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6796" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3591" /> <!-- Asofe -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="10549" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Rune -->
-				</group>
+				<item id="57" min="71" max="166" chance="70" /> <!-- Adena -->
+				<item id="10216" min="1" max="1" chance="0.0009" /> <!-- Icarus Disperser -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36543" min="1" max="1" chance="0.0055" /> <!-- Adamantite Wire -->
+				<item id="3036" min="1" max="1" chance="0.0009" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3886,15 +3536,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="959" min="1" max="1" chance="0.0241" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="3036" min="1" max="1" chance="0.268" /> <!-- Recipe: Spiritshot S -->
-				<item id="10397" min="1" max="1" chance="0.2585" /> <!-- Icarus Sawsword Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="25" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="22651" level="83" type="L2Monster" name="Mucrokian Ascetic">
 		<parameters>
@@ -3939,28 +3586,26 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="41" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1477" max="3449" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.0845">
-					<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
-					<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
-					<item id="10218" min="1" max="1" chance="0.0009" /> <!-- Icarus Heavy Arms -->
-					<item id="10397" min="1" max="1" chance="0.0500" /> <!-- Icarus Sawsword Piece -->
-					<item id="10399" min="1" max="1" chance="0.0500" /> <!-- Icarus Spirit Piece -->
-					<item id="10400" min="1" max="1" chance="0.0500" /> <!-- Icarus Heavy Arms Piece -->
-				</group>
-				<group chance="13.7237">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="10550" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Elemental -->
-				</group>
+				<item id="57" min="81" max="190" chance="70" /> <!-- Adena -->
+				<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
+				<item id="10216" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
+				<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Heavy Arms -->
+				<item id="36517" min="1" max="1" chance="0.03" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.055" /> <!-- Silver -->
+				<item id="36552" min="1" max="1" chance="0.0055" /> <!-- Armor Fragment -->
+				<item id="36547" min="1" max="1" chance="0.0055" /> <!-- Weapon Fragment -->
+				<item id="5167" min="1" max="1" chance="0.0009" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36857" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Downgrade-->
+				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3994,15 +3639,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10405" min="1" max="1" chance="0.2666" /> <!-- Icarus Spitter Piece -->
-				<item id="9630" min="1" max="1" chance="3.2839" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.025" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="25" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="22652" level="84" type="L2Monster" name="Mucrokian Savior">
 		<parameters>
@@ -4047,39 +3689,32 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="41" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1500" max="3065" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.0653">
-					<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Circlet -->
-					<item id="15646" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15645" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Circlet Piece -->
-				</group>
-				<group chance="4.548">
-					<item id="1894" min="1" max="1" chance="29.3611" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.8930" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2764" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.8930" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.8110" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="14219" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Magician's Will -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
+				<item id="57" min="142" max="332" chance="70" /> <!-- Adena -->
+				<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.0009" /> <!--  Sealed Moirai Leather Helmet  -->
+				<item id="15697" min="1" max="1" chance="0.0009" /> <!--  Sealed Moirai Circlet  -->
+				<item id="9532" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Helmet Piece -->
+				<item id="15645" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="36518" min="1" max="1" chance="0.055" /> <!-- Durable Leather -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantine -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
 				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+					<item id="8603" min="1" max="1" chance="0" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="0" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="0" /> <!-- Superior Herb of Mana -->
 				</group>
 				<group chance="25.0">
 					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
@@ -4104,15 +3739,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9532" min="1" max="1" chance="2.2224" /> <!-- Sealed Dynasty Helmet Piece -->
-				<item id="9630" min="1" max="1" chance="3.2529" /> <!-- Orichalcum -->
-				<item id="10402" min="1" max="1" chance="0.2641" /> <!-- Icarus Hammer Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="25" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="22653" level="84" type="L2Monster" name="Mucrokian Prophet">
 		<parameters>
@@ -4157,30 +3789,22 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="41" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1500" max="3065" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.0653">
-					<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Circlet -->
-					<item id="15646" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15645" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Circlet Piece -->
-				</group>
-				<group chance="4.548">
-					<item id="1894" min="1" max="1" chance="29.3611" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.8930" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2764" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.8930" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.8110" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="14219" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Magician's Will -->
-				</group>
+				<item id="57" min="162" max="378" chance="70" /> <!-- Adena -->
+				<item id="10220" min="1" max="1" chance="0.0009" /> <!-- Icarus Hammer -->
+				<item id="10222" min="1" max="1" chance="0.0009" /> <!-- Icarus Hall -->
+				<item id="36527" min="1" max="1" chance="0.75" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36557" min="1" max="1" chance="0.055" /> <!-- Accessory Gem -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4214,15 +3838,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10397" min="1" max="1" chance="0.2742" /> <!-- Icarus Sawsword Piece -->
-				<item id="10403" min="1" max="1" chance="0.2733" /> <!-- Icarus Hand Piece -->
-				<item id="10400" min="1" max="1" chance="0.2733" /> <!-- Icarus Heavy Arms Piece -->
+				<item id="36532" min="1" max="1" chance="1.800" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="25" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="22654" level="83" type="L2Monster" name="Contaminated Mucrokian">
 		<parameters>
@@ -4266,29 +3887,24 @@
 		<ai aggroRange="300" clanHelpRange="300">
 			<skill primaryId="5909" shortRangeId="4067" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="29" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="535" max="1080" chance="100.0000" />	<!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="10223" min="1" max="1" chance="0.0009" /> <!-- Icarus Spitter -->
-					<item id="10405" min="1" max="1" chance="0.0500" /> <!-- Icarus Spitter Piece -->
-				</group>
-				<group chance="10.2401">
-					<item id="1879" min="1" max="1" chance="17.5259" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="8.7629" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="0.8247" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="0.5534" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="0.4572" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="0.7302" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.1826" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0183" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="9546" min="1" max="1" chance="0.8412" /> <!-- Fire Stone -->
-					<item id="1345" min="10" max="30" chance="70.1036" /> <!-- Shining Arrow -->
-					<item id="6622" min="1" max="1" chance="0.0500" /> <!-- Giant's Codex -->
-					<item id="10551" min="1" max="1" chance="0.0500" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
+				<item id="57" min="25" max="57" chance="70" /> <!-- Adena -->
+				<item id="10223" min="1" max="1" chance="0.0009" /> <!-- Icarus Spitter -->
+				<item id="9542" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Circlet Piece -->
+				<item id="9991" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36523" min="1" max="1" chance="0.0055" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="36874" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4322,15 +3938,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9542" min="1" max="1" chance="0.786" /> <!-- Sealed Dynasty Circlet Piece -->
-				<item id="9630" min="1" max="1" chance="1.1505" /> <!-- Orichalcum -->
-				<item id="9991" min="1" max="1" chance="0.5125" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="18" />
-			<height normal="29" />
-		</collision>
 	</npc>
 	<npc id="22655" level="84" type="L2Monster" name="Awakened Mucrokian">
 		<parameters>
@@ -4374,31 +3987,29 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4072" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="30" />
+			<height normal="52" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="2702" max="5522" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.1537">
-					<item id="15703" min="1" max="1" chance="0.0050" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0050" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0050" /> <!-- Sealed Moirai Gloves -->
-					<item id="15654" min="1" max="1" chance="1.0000" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="1.0000" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="1.0000" /> <!-- Sealed Moirai Gloves Piece -->
-				</group>
-				<group chance="8.7275">
-					<item id="1894" min="1" max="1" chance="27.5621" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="26.1840" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="6.8306" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="26.1840" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.4550" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="9547" min="1" max="1" chance="6.2841" /> <!-- Water Stone -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="14219" min="1" max="1" chance="0.5000" /> <!-- Forgotten Scroll - Magician's Will -->
-				</group>
+				<item id="57" min="130" max="303" chance="70" /> <!-- Adena -->
+				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15704" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gloves -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
+				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlets Piece -->
+				<item id="9542" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Circlet Piece -->
+				<item id="9530" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="36537" min="1" max="1" chance="0.075" /> <!-- Leather Braid -->
+				<item id="36557" min="1" max="1" chance="0.075" /> <!-- Accessory Gem -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="36890" min="1" max="1" chance="0.009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
+				<item id="36931" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4432,15 +4043,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9542" min="1" max="1" chance="4.0033" /> <!-- Sealed Dynasty Circlet Piece -->
-				<item id="1808" min="1" max="1" chance="0.4948" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9530" min="1" max="1" chance="1.6215" /> <!-- Sealed Dynasty Breast Plate Piece -->
+				<item id="36532" min="1" max="1" chance="1.400" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="30" />
-			<height normal="52" />
-		</collision>
 	</npc>
 	<npc id="22656" level="83" type="L2Monster" name="Suppressor">
 		<parameters>
@@ -4485,30 +4093,27 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="23.5" />
+			<height normal="41.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1476" max="2979" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.429">
-					<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
-					<item id="15702" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Stockings -->
-					<item id="15650" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Tunic Piece -->
-					<item id="15653" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Stockings Piece -->
-				</group>
-				<group chance="9.3838">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="9548" min="1" max="1" chance="2.8138" /> <!-- Earth Stone -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="10549" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Rune -->
-				</group>
+				<item id="57" min="65" max="152" chance="70" /> <!-- Adena -->
+				<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
+				<item id="15702" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Stockings -->
+				<item id="10114" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Sigil Piece -->
+				<item id="15653" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Stockings Piece -->
+				<item id="15650" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="36558" min="1" max="1" chance="0.0055" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36538" min="1" max="1" chance="0.0055" /> <!-- Durable Leather Braid -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4542,15 +4147,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6901" min="1" max="1" chance="0.603" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="10114" min="1" max="1" chance="1.4951" /> <!-- Sealed Dynasty Sigil Piece -->
-				<item id="960" min="1" max="1" chance="0.2412" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23.5" />
-			<height normal="41.5" />
-		</collision>
 	</npc>
 	<npc id="22657" level="84" type="L2Monster" name="Executioner">
 		<parameters>
@@ -4595,32 +4197,27 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="41" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1500" max="3065" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.3378">
-					<item id="15706" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shoes -->
-					<item id="15657" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="9.6178">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="9549" min="1" max="1" chance="2.8138" /> <!-- Wind Stone -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="10551" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
+				<item id="57" min="143" max="333" chance="70" /> <!-- Adena -->
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
+				<item id="9532" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Helmet Piece -->
+				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="36537" min="1" max="1" chance="0.3" /> <!-- Leather Braid -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36892" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="36931" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4654,15 +4251,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9532" min="1" max="1" chance="2.2224" /> <!-- Sealed Dynasty Helmet Piece -->
-				<item id="10399" min="1" max="1" chance="0.265" /> <!-- Icarus Spirit Piece -->
-				<item id="10401" min="1" max="1" chance="0.2641" /> <!-- Icarus Trident Piece -->
+				<item id="36532" min="1" max="1" chance="1.400" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="22658" level="83" type="L2Monster" name="Sentinel Waterspirit">
 		<parameters>
@@ -4707,29 +4301,23 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5910" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="41" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1372" max="3204" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.341">
-					<item id="9524" min="1" max="1" chance="0.0050" /> <!-- Sealed Dynasty Tunic -->
-					<item id="9525" min="1" max="1" chance="0.0050" /> <!-- Sealed Dynasty Stockings -->
-					<item id="9540" min="1" max="1" chance="1.0000" /> <!-- Sealed Dynasty Tunic Piece -->
-					<item id="9541" min="1" max="1" chance="1.0000" /> <!-- Sealed Dynasty Stocking Piece -->
-				</group>
-				<group chance="4.8911">
-					<item id="1894" min="1" max="1" chance="27.5621" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="26.1840" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="6.8306" /> <!-- Mold Hardene r-->
-					<item id="4044" min="1" max="1" chance="26.1840" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.4550" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="10550" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="9550" min="1" max="1" chance="6.2841" /> <!-- Dark Stone -->
-				</group>
+				<item id="57" min="75" max="175" chance="70" /> <!-- Adena -->
+				<item id="15709" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Sigil -->
+				<item id="15710" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shield -->
+				<item id="15692" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="15693" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shield Fragment  -->
+				<item id="36538" min="1" max="1" chance="0.03" /> <!-- Durable Leather Braid -->
+				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes  -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4763,15 +4351,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10399" min="1" max="1" chance="0.2675" /> <!-- Icarus Spirit Piece -->
-				<item id="10398" min="1" max="1" chance="0.2675" /> <!-- Icarus Disperser Piece -->
-				<item id="10404" min="1" max="1" chance="0.2666" /> <!-- Icarus Hall Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="22659" level="84" type="L2Monster" name="Guardian Waterspirit">
 		<parameters>
@@ -4817,30 +4402,27 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="5910" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70.0">
-					<item id="57" min="1552" max="3172" chance="100.0000" /> <!-- Adena -->
-				</group>
-				<group chance="0.3962">
-					<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
-					<item id="15702" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Stockings -->
-					<item id="15650" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Tunic Piece -->
-					<item id="15653" min="1" max="1" chance="0.5000" /> <!-- Sealed Moirai Stockings Piece -->
-				</group>
-				<group chance="9.9518">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone -  Level 80 -->
-					<item id="9551" min="1" max="1" chance="2.8138" /> <!-- Divine Stone -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
-					<item id="14219" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Magician's Will -->
-				</group>
+				<item id="57" min="150" max="349" chance="70" /> <!-- Adena -->
+				<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
+				<item id="15702" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Stockings -->
+				<item id="9991" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="15650" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="15653" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Stockings Piece -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36857" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36892" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4874,15 +4456,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9630" min="1" max="1" chance="3.3659" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.0256" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9991" min="1" max="1" chance="1.4995" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22660" level="81" type="L2Monster" name="Lesser Giant">
 		<race>GIANT</race>
@@ -6266,24 +5845,14 @@
 				<clan>ROBBER</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="695" max="1401" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03889999911189079">
-					<item id="9446" min="1" max="1" chance="0.3192" /> <!-- Dynasty Knife -->
-					<item id="9620" min="1" max="1" chance="99.6808" /> <!-- Dynasty Knife Piece -->
-				</group>
-				<group chance="18.653900146484375">
-					<item id="1879" min="1" max="1" chance="17.8345" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="8.9172" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="0.8393" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="0.5632" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="0.4652" /> <!-- Adamantine -->
-					<item id="960" min="1" max="1" chance="0.0428" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="1345" min="10" max="30" chance="71.3378" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="80" max="186" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6312,15 +5881,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9992" min="1" max="1" chance="0.5104" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="5167" min="1" max="1" chance="0.1261" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				<item id="9530" min="1" max="1" chance="0.4131" /> <!-- Sealed Dynasty Breast Plate Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22679" level="82" type="L2Monster" name="Grave Robber Wizard" title="Lunatic">
 		<parameters>
@@ -6379,23 +5945,14 @@
 				<clan>ROBBER</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="713" max="1437" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04019999876618385">
-					<item id="9447" min="1" max="1" chance="0.3175" /> <!-- Dynasty Halberd -->
-					<item id="9621" min="1" max="1" chance="99.6825" /> <!-- Dynasty Halberd Piece -->
-				</group>
-				<group chance="6.402599811553955">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="5272" min="1" max="1" chance="0.1659" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="82" max="191" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6424,15 +5981,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9540" min="1" max="1" chance="0.5208" /> <!-- Sealed Dynasty Tunic Piece -->
-				<item id="9628" min="1" max="1" chance="2.2831" /> <!-- Leonard -->
-				<item id="9536" min="1" max="1" chance="0.7655" /> <!-- Sealed Dynasty Leather Leggings Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22680" level="81" type="L2Monster" name="Grave Robber Worker" title="Lunatic">
 		<parameters>
@@ -6477,25 +6031,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="6145" shortRangeId="5082" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="728" max="1468" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.21150000393390656">
-					<item id="9514" min="1" max="1" chance="0.0946" /> <!-- Sealed Dynasty Breast Plate -->
-					<item id="9515" min="1" max="1" chance="0.1513" /> <!-- Sealed Dynasty Gaiter -->
-					<item id="9530" min="1" max="1" chance="25.2036" /> <!-- Sealed Dynasty Breast Plate Piece -->
-					<item id="9531" min="1" max="1" chance="74.5505" /> <!-- Sealed Dynasty Gaiters Piece -->
-				</group>
-				<group chance="18.97570037841797">
-					<item id="1894" min="1" max="1" chance="4.5125" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="4.2869" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="1.1183" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="4.2869" /> <!-- Thons -->
-					<item id="5277" min="1" max="1" chance="0.0572" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-					<item id="1345" min="10" max="30" chance="85.7382" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="84" max="195" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6524,15 +6067,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5272" min="1" max="1" chance="0.1321" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="9619" min="1" max="1" chance="0.1664" /> <!-- Dynasty Bow Piece -->
-				<item id="5277" min="1" max="1" chance="0.1321" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22681" level="82" type="L2Monster" name="Grave Robber Warrior" title="Lunatic">
 		<parameters>
@@ -6580,25 +6120,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="6145" shortRangeId="6168" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="748" max="1506" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.16670000553131104">
-					<item id="9519" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Leather Armor -->
-					<item id="9520" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Leather Leggings -->
-					<item id="9535" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Leather Armor Piece -->
-					<item id="9536" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				</group>
-				<group chance="6.709400177001953">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="5282" min="1" max="1" chance="0.1659" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6627,15 +6156,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9992" min="1" max="1" chance="0.5489" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9628" min="1" max="1" chance="2.3925" /> <!-- Leonard -->
-				<item id="9545" min="1" max="1" chance="1.3074" /> <!-- Sealed Dynasty Shield Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22682" level="82" type="L2Monster" name="Grave Robber Berserker" title="Lunatic">
 		<parameters>
@@ -6683,24 +6209,14 @@
 		<ai aggroRange="300" clanHelpRange="300">
 			<skill primaryId="6145" shortRangeId="4643" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="827" max="1666" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.18440000712871552">
-					<item id="9524" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Tunic -->
-					<item id="9525" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Stockings -->
-					<item id="9540" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Tunic Piece -->
-					<item id="9541" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Stocking Piece -->
-				</group>
-				<group chance="3.704400062561035">
-					<item id="1894" min="1" max="1" chance="31.4829" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="29.9088" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8023" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="29.9088" /> <!-- Thons -->
-					<item id="6901" min="1" max="1" chance="0.8972" /> <!-- Recipe: Shining Arrow (100%) -->
-				</group>
+				<item id="57" min="95" max="221" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6729,15 +6245,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9540" min="1" max="1" chance="0.6036" /> <!-- Sealed Dynasty Tunic Piece -->
-				<item id="3957" min="1" max="1" chance="0.1499" /> <!-- Recipe: Blessed Spiritshot S -->
-				<item id="9622" min="1" max="1" chance="0.1816" /> <!-- Dynasty Cudgel Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22683" level="81" type="L2Monster" name="Servitor of Darkness">
 		<parameters>
@@ -6781,27 +6294,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill shortRangeId="4643" />
 		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="777" max="1567" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1965000033378601">
-					<item id="9452" min="1" max="1" chance="0.4382" /> <!-- Sealed Dynasty Earring -->
-					<item id="9453" min="1" max="1" chance="0.3286" /> <!-- Sealed Dynasty Necklace -->
-					<item id="9454" min="1" max="1" chance="0.6573" /> <!-- Sealed Dynasty Ring -->
-					<item id="9991" min="1" max="1" chance="31.0688" /> <!-- Sealed Dynasty Earring Gemstone -->
-					<item id="9992" min="1" max="1" chance="23.8445" /> <!-- Sealed Dynasty Necklace Gemstone -->
-					<item id="9993" min="1" max="1" chance="43.6626" /> <!-- Sealed Dynasty Ring Gemstone -->
-				</group>
-				<group chance="20.24570083618164">
-					<item id="1894" min="1" max="1" chance="4.5125" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="4.2869" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="1.1183" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="4.2869" /> <!-- Thons -->
-					<item id="5157" min="1" max="1" chance="0.0572" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-					<item id="1345" min="10" max="30" chance="85.7382" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
+				<item id="5157" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6830,15 +6330,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5157" min="1" max="1" chance="0.1409" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="9535" min="1" max="1" chance="0.5674" /> <!-- Sealed Dynasty Leather Armor Piece -->
-				<item id="1894" min="1" max="1" chance="11.1275" /> <!-- Crafted Leather -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="7" />
-			<height normal="33" />
-		</collision>
 	</npc>
 	<npc id="22684" level="81" type="L2Monster" name="Servitor of Darkness">
 		<parameters>
@@ -6882,33 +6379,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4573" />
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="728" max="1468" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.35190001130104065">
-					<item id="9517" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Gauntlets -->
-					<item id="9518" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Boots -->
-					<item id="9522" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Leather Gloves -->
-					<item id="9523" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Leather Boots -->
-					<item id="9527" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Gloves -->
-					<item id="9528" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Shoes -->
-					<item id="9533" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Gauntlet Piece -->
-					<item id="9534" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Boot Piece -->
-					<item id="9538" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Leather Glove Piece -->
-					<item id="9539" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Leather Boots Piece -->
-					<item id="9543" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Glove Piece -->
-					<item id="9544" min="1" max="1" chance="16.5907" /> <!-- Sealed Dynasty Shoes Piece -->
-				</group>
-				<group chance="6.537799835205078">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="5162" min="1" max="1" chance="0.1659" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="84" max="195" chance="70" /> <!-- Adena -->
+				<item id="5162" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6937,15 +6415,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1894" min="1" max="1" chance="10.4295" /> <!-- Crafted Leather -->
-				<item id="9620" min="1" max="1" chance="0.1651" /> <!-- Dynasty Knife Piece -->
-				<item id="5162" min="1" max="1" chance="0.1321" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="25" />
-		</collision>
 	</npc>
 	<npc id="22685" level="82" type="L2Monster" name="Servitor of Darkness">
 		<parameters>
@@ -6989,31 +6464,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4573" />
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="748" max="1506" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.21119999885559082">
-					<item id="9516" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Helmet -->
-					<item id="9529" min="1" max="1" chance="0.1481" /> <!-- Sealed Dynasty Shield -->
-					<item id="13886" min="1" max="1" chance="0.1481" /> <!-- Sealed Dynasty Sigil -->
-					<item id="9521" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9526" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Circlet -->
-					<item id="9532" min="1" max="1" chance="25.5801" /> <!-- Sealed Dynasty Helmet Piece -->
-					<item id="9521" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9542" min="1" max="1" chance="25.5801" /> <!-- Sealed Dynasty Circlet Piece -->
-					<item id="9545" min="1" max="1" chance="30.4907" /> <!-- Sealed Dynasty Shield Piece -->
-					<item id="10114" min="1" max="1" chance="17.6381" /> <!-- Sealed Dynasty Sigil Piece -->
-				</group>
-				<group chance="6.709400177001953">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="5167" min="1" max="1" chance="0.1659" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
+				<item id="5167" min="1" max="1" chance="0.075" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7042,15 +6500,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9531" min="1" max="1" chance="1.3141" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="5167" min="1" max="1" chance="0.1356" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.1642" /> <!-- Dynasty Cudgel Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="22686" level="82" type="L2Monster" name="Servitor of Darkness">
 		<parameters>
@@ -7093,28 +6548,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4573" />
 		</ai>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="748" max="1506" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04190000146627426">
-					<item id="9442" min="1" max="1" chance="0.1063" /> <!-- Dynasty Sword -->
-					<item id="9443" min="1" max="1" chance="0.1063" /> <!-- Dynasty Blade -->
-					<item id="9444" min="1" max="1" chance="0.1063" /> <!-- Dynasty Phantom -->
-					<item id="9616" min="1" max="1" chance="33.227" /> <!-- Dynasty Sword Piece -->
-					<item id="9617" min="1" max="1" chance="33.227" /> <!-- Dynasty Blade Piece -->
-					<item id="9618" min="1" max="1" chance="33.2271" /> <!-- Dynasty Phantom Piece -->
-				</group>
-				<group chance="20.056900024414062">
-					<item id="1879" min="1" max="1" chance="17.8383" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="8.9191" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="0.8394" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="0.5633" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="0.4653" /> <!-- Adamantine -->
-					<item id="9625" min="1" max="1" chance="0.0214" /> <!-- Giant's Codex - Oblivion -->
-					<item id="1345" min="10" max="30" chance="71.3532" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7143,15 +6584,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9541" min="1" max="1" chance="0.8022" /> <!-- Sealed Dynasty Stocking Piece -->
-				<item id="1894" min="1" max="1" chance="10.7033" /> <!-- Crafted Leather -->
-				<item id="9530" min="1" max="1" chance="0.4443" /> <!-- Sealed Dynasty Breast Plate Piece -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12.5" />
-			<height normal="33.5" />
-		</collision>
 	</npc>
 	<npc id="22687" level="81" type="L2Monster" name="Phantoms of the Mine">
 		<parameters>
@@ -7199,29 +6637,21 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4032" shortRangeId="4034" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="27.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="829" max="1673" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04600000008940697">
-					<item id="9448" min="1" max="1" chance="0.1211" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="0.1211" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="0.1211" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="0.1211" /> <!-- Dynasty Crusher -->
-					<item id="9622" min="1" max="1" chance="24.4341" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="24.4341" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25.3236" /> <!-- Dynasty Staff Fragment -->
-					<item id="10547" min="1" max="1" chance="25.3238" /> <!-- Dynasty Crusher Fragment -->
-				</group>
-				<group chance="28.43269920349121">
-					<item id="1895" min="1" max="1" chance="27.9423" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="1.956" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="1.63" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="3.2599" /> <!-- Asofe -->
-					<item id="9626" min="1" max="1" chance="0.013" /> <!-- Giant's Codex - Discipline -->
-					<item id="1345" min="10" max="30" chance="65.1988" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="15" max="36" chance="70" /> <!-- Adena -->
+				<item id="9448" min="1" max="1" chance="0.0009" /> <!-- Dynasty Cudgel -->
+				<item id="9449" min="1" max="1" chance="0.0009" /> <!-- Dynasty Mace -->
+				<item id="10252" min="1" max="1" chance="0.0009" /> <!-- Dynasty Staff -->
+				<item id="10253" min="1" max="1" chance="0.0009" /> <!-- Dynasty Crusher -->
+				<item id="9622" min="1" max="1" chance="0.003" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9623" min="1" max="1" chance="0.003" /> <!-- Dynasty Mace Piece -->
+				<item id="10546" min="1" max="1" chance="0.003" /> <!-- Dynasty Staff Fragment -->
+				<item id="10547" min="1" max="1" chance="0.003" /> <!-- Dynasty Crusher Fragment -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7250,15 +6680,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5272" min="1" max="1" chance="0.1505" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="9623" min="1" max="1" chance="0.1823" /> <!-- Dynasty Mace Piece -->
-				<item id="5277" min="1" max="1" chance="0.1505" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+				<item id="5272" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+				<item id="9623" min="1" max="1" chance="0.003" /> <!-- Dynasty Mace Piece -->
+				<item id="5277" min="1" max="1" chance="0.0055" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="27.5" />
-		</collision>
 	</npc>
 	<npc id="22688" level="82" type="L2Monster" name="Evil Spirits of the Mine">
 		<parameters>
@@ -7306,25 +6732,17 @@
 		<ai aggroRange="300" clanHelpRange="300">
 			<skill shortRangeId="4582" shortRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="852" max="1716" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.046300001442432404">
-					<item id="9450" min="1" max="1" chance="0.4933" /> <!-- Dynasty Bagh-Nakh -->
-					<item id="9624" min="1" max="1" chance="99.5067" /> <!-- Dynasty Bagh-Nakh Piece -->
-				</group>
-				<group chance="2.5576999187469482">
-					<item id="1894" min="1" max="1" chance="29.3611" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.893" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2764" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.893" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.811" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9625" min="1" max="1" chance="0.1674" /> <!-- Giant's Codex - Oblivion -->
-				</group>
+				<item id="57" min="57" max="133" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.075" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.0055" /> <!-- High-grade Life Stone - Lv. 80 -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7353,15 +6771,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9620" min="1" max="1" chance="0.1931" /> <!-- Dynasty Knife Piece -->
-				<item id="960" min="1" max="1" chance="0.139" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9991" min="1" max="1" chance="0.815" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="22689" level="82" type="L2Monster" name="Spelunking Bug">
 		<parameters>
@@ -7407,26 +6822,17 @@
 		<ai aggroRange="300" clanHelpRange="300">
 			<skill primaryId="6145" />
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="9" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="394" max="794" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.022299999371170998">
-					<item id="9445" min="1" max="1" chance="0.4745" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.5255" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="2.4326000213623047">
-					<item id="1879" min="1" max="1" chance="60.29" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.145" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8372" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9039" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5728" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.5121" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.628" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9626" min="1" max="1" chance="0.0482" /> <!-- Giant's Codex - Discipline -->
-				</group>
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.075" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.0055" /> <!-- High-grade Life Stone - Lv. 80 -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7455,15 +6861,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9618" min="1" max="1" chance="0.0894" /> <!-- Dynasty Phantom Piece -->
-				<item id="9621" min="1" max="1" chance="0.0898" /> <!-- Dynasty Halberd Piece -->
-				<item id="6901" min="1" max="1" chance="0.1608" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="9" />
-		</collision>
 	</npc>
 	<npc id="22690" level="82" type="L2Monster" name="Earth Wyrm's Descendant">
 		<parameters>
@@ -7509,27 +6912,17 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<skill shortRangeId="4582" shortRangeChance="15" longRangeId="4035" longRangeChance="15" />
 		</ai>
+		<collision>
+			<radius normal="35" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="894" max="1800" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.05009999871253967">
-					<item id="9446" min="1" max="1" chance="0.3192" /> <!-- Dynasty Knife -->
-					<item id="9620" min="1" max="1" chance="99.6808" /> <!-- Dynasty Knife Piece -->
-				</group>
-				<group chance="17.079500198364258">
-					<item id="1879" min="1" max="1" chance="17.5259" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="8.7629" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="0.8247" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="0.5534" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="0.4572" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="0.7302" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.1826" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0183" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9546" min="1" max="1" chance="0.8412" /> <!-- Fire Stone -->
-					<item id="1345" min="10" max="30" chance="70.1036" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="102" max="239" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.075" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.0055" /> <!-- High-grade Life Stone - Lv. 80 -->
 				<group chance="52.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7558,15 +6951,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1894" min="1" max="1" chance="12.7926" /> <!-- Crafted Leather -->
-				<item id="9620" min="1" max="1" chance="0.2025" /> <!-- Dynasty Knife Piece -->
-				<item id="5162" min="1" max="1" chance="0.162" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="22691" level="81" type="L2Monster" name="Ragna Orc" title="Spirit Infested">
 		<parameters>
@@ -7614,26 +7004,20 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.25" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="829" max="1673" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04670000076293945">
-					<item id="9447" min="1" max="1" chance="0.3175" /> <!-- Dynasty Halberd -->
-					<item id="9621" min="1" max="1" chance="99.6825" /> <!-- Dynasty Halberd Piece -->
-				</group>
-				<group chance="5.270400047302246">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9547" min="1" max="1" chance="2.8138" /> <!-- Water Stone -->
-				</group>
+				<item id="57" min="149" max="348" chance="70" /> <!-- Adena -->
+				<item id="9447" min="1" max="1" chance="0.0009" /> <!-- Dynasty Halberd -->
+				<item id="9621" min="1" max="1" chance="0.075" /> <!-- Dynasty Halberd Piece -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9547" min="1" max="1" chance="0.0055" /> <!-- Water Stone -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7667,15 +7051,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="959" min="1" max="1" chance="0.0135" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9628" min="1" max="1" chance="2.6563" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="1.7825" /> <!-- Orichalcum -->
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="25.25" />
-		</collision>
 	</npc>
 	<npc id="22692" level="82" type="L2Monster" name="Ragna Orc Warrior" title="Spirit Infested">
 		<parameters>
@@ -7726,27 +7107,23 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="24" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="880" max="1772" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.25540000200271606">
-					<item id="9514" min="1" max="1" chance="0.0946" /> <!-- Sealed Dynasty Breast Plate -->
-					<item id="9515" min="1" max="1" chance="0.1513" /> <!-- Sealed Dynasty Gaiter -->
-					<item id="9530" min="1" max="1" chance="25.2036" /> <!-- Sealed Dynasty Breast Plate Piece -->
-					<item id="9531" min="1" max="1" chance="74.5505" /> <!-- Sealed Dynasty Gaiters Piece -->
-				</group>
-				<group chance="2.813999891281128">
-					<item id="1894" min="1" max="1" chance="27.5621" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="26.184" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="6.8306" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="26.184" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.455" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9548" min="1" max="1" chance="6.2841" /> <!-- Earth Stone -->
-				</group>
+				<item id="57" min="154" max="359" chance="70" /> <!-- Adena -->
+				<item id="9514" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Breastplate -->
+				<item id="9515" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Gaiters -->
+				<item id="9530" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9531" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9533" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Gauntlets Piece -->
+				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7780,15 +7157,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9533" min="1" max="1" chance="1.7174" /> <!-- Sealed Dynasty Gauntlet Piece -->
-				<item id="1808" min="1" max="1" chance="0.1595" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9531" min="1" max="1" chance="1.5464" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="36532" min="1" max="1" chance="1.600" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="24" />
-		</collision>
 	</npc>
 	<npc id="22693" level="82" type="L2Monster" name="Ragna Orc Hero" title="Spirit Infested">
 		<parameters>
@@ -7848,28 +7222,22 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="28" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="880" max="1772" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.19619999825954437">
-					<item id="9519" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Leather Armor -->
-					<item id="9520" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Leather Leggings -->
-					<item id="9535" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Leather Armor Piece -->
-					<item id="9536" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				</group>
-				<group chance="5.58620023727417">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9549" min="1" max="1" chance="2.8138" /> <!-- Wind Stone -->
-				</group>
+				<item id="57" min="154" max="359" chance="70" /> <!-- Adena -->
+				<item id="9519" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Leather Armor -->
+				<item id="9520" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Leather Leggings -->
+				<item id="9535" min="1" max="1" chance="0.3" /> <!--  Sealed Dynasty Leather Armor Fragment -->
+				<item id="9536" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Leather Leggings Piece -->
+				<item id="3036" min="1" max="1" chance="0.003" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="9549" min="1" max="1" chance="0.0055" /> <!-- Wind Stone -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7903,15 +7271,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="3036" min="1" max="1" chance="0.1595" /> <!-- Recipe: Spiritshot S -->
-				<item id="9536" min="1" max="1" chance="0.944" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				<item id="1894" min="1" max="1" chance="12.5956" /> <!-- Crafted Leather -->
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="28" />
-		</collision>
 	</npc>
 	<npc id="22694" level="82" type="L2Monster" name="Ragna Orc Commander" title="Spirit Infested">
 		<parameters>
@@ -7973,28 +7338,26 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="27.6" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="852" max="1716" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1899999976158142">
-					<item id="9524" min="1" max="1" chance="0.1642" /> <!-- Sealed Dynasty Tunic -->
-					<item id="9525" min="1" max="1" chance="0.2627" /> <!-- Sealed Dynasty Stockings -->
-					<item id="9540" min="1" max="1" chance="40.3139" /> <!-- Sealed Dynasty Tunic Piece -->
-					<item id="9541" min="1" max="1" chance="59.2592" /> <!-- Sealed Dynasty Stocking Piece -->
-				</group>
-				<group chance="5.40880012512207">
-					<item id="1879" min="1" max="1" chance="58.6218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.3109" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9550" min="1" max="1" chance="2.8138" /> <!-- Dark Stone -->
-				</group>
+				<item id="57" min="160" max="375" chance="70" /> <!-- Adena -->
+				<item id="9524" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Tunic -->
+				<item id="9525" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Stockings -->
+				<item id="9540" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Tunic Piece -->
+				<item id="9541" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Stocking Piece -->
+				<item id="9532" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Helmet Piece -->
+				<item id="9533" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Gauntlets Piece -->
+				<item id="9540" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Tunic Piece -->
+				<item id="9532" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Helmet Piece-->
+				<item id="3957" min="1" max="1" chance="0.003" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="9550" min="1" max="1" chance="0.0055" /> <!-- Dark Stone -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8028,15 +7391,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9532" min="1" max="1" chance="1.2498" /> <!-- Sealed Dynasty Helmet Piece -->
-				<item id="9533" min="1" max="1" chance="1.6628" /> <!-- Sealed Dynasty Gauntlet Piece -->
-				<item id="3957" min="1" max="1" chance="0.1545" /> <!-- Recipe: Blessed Spiritshot S -->
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="27.6" />
-		</collision>
 	</npc>
 	<npc id="22695" level="81" type="L2Monster" name="Ragna Orc Healer" title="Spirit Infested">
 		<parameters>
@@ -8088,30 +7448,26 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="20.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="834" max="1681" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.21089999377727509">
-					<item id="9452" min="1" max="1" chance="0.4382" /> <!-- Sealed Dynasty Earring -->
-					<item id="9453" min="1" max="1" chance="0.3286" /> <!-- Sealed Dynasty Necklace -->
-					<item id="9454" min="1" max="1" chance="0.6573" /> <!-- Sealed Dynasty Ring -->
-					<item id="9991" min="1" max="1" chance="31.0688" /> <!-- Sealed Dynasty Earring Gemstone -->
-					<item id="9992" min="1" max="1" chance="23.8445" /> <!-- Sealed Dynasty Necklace Gemstone -->
-					<item id="9993" min="1" max="1" chance="43.6626" /> <!-- Sealed Dynasty Ring Gemstone -->
-				</group>
-				<group chance="14.790399551391602">
-					<item id="1894" min="1" max="1" chance="4.4193" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="4.1983" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="1.0952" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="4.1983" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="0.8746" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.2187" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0219" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9551" min="1" max="1" chance="1.0076" /> <!-- Holy Stone -->
-					<item id="1345" min="10" max="30" chance="83.9661" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="167" max="389" chance="70" /> <!-- Adena -->
+				<item id="9452" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9454" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Ring -->
+				<item id="9991" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9992" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="9534" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Boots Piece -->
+				<item id="9622" min="1" max="1" chance="0.03" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9551" min="1" max="1" chance="0.0055" /> <!-- Holy Stone -->
+				<item id="5157" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8145,15 +7501,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9534" min="1" max="1" chance="1.6282" /> <!-- Sealed Dynasty Boot Piece -->
-				<item id="5157" min="1" max="1" chance="0.1513" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.1832" /> <!-- Dynasty Cudgel Piece -->
+				<item id="36532" min="1" max="1" chance="1.800" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="20.8" />
-		</collision>
 	</npc>
 	<npc id="22696" level="81" type="L2Monster" name="Ragna Orc Shaman" title="Spirit Infested">
 		<parameters>
@@ -8206,36 +7559,30 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="20.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="827" max="1669" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4000000059604645">
-					<item id="9517" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Gauntlets -->
-					<item id="9518" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Boots -->
-					<item id="9522" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Leather Gloves -->
-					<item id="9523" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Leather Boots -->
-					<item id="9527" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Gloves -->
-					<item id="9528" min="1" max="1" chance="0.0758" /> <!-- Sealed Dynasty Shoes -->
-					<item id="9533" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Gauntlet Piece -->
-					<item id="9534" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Boot Piece -->
-					<item id="9538" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Leather Glove Piece -->
-					<item id="9539" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Leather Boots Piece -->
-					<item id="9543" min="1" max="1" chance="16.5909" /> <!-- Sealed Dynasty Glove Piece -->
-					<item id="9544" min="1" max="1" chance="16.5907" /> <!-- Sealed Dynasty Shoes Piece -->
-				</group>
-				<group chance="5.110300064086914">
-					<item id="1879" min="1" max="1" chance="60.3104" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1552" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8381" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9045" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.5129" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="959" min="1" max="1" chance="0.0146" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="57" min="151" max="351" chance="70" /> <!-- Adena -->
+				<item id="9517" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Gauntlets -->
+				<item id="9518" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Boots -->
+				<item id="9522" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Leather Gloves -->
+				<item id="9523" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Leather Boots -->
+				<item id="9527" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Gloves -->
+				<item id="9528" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Shoes -->
+				<item id="9533" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Gauntlet Piece -->
+				<item id="9534" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Boot Piece -->
+				<item id="9538" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Leather Glove Piece -->
+				<item id="9539" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Leather Boots Piece -->
+				<item id="9543" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Glove Piece -->
+				<item id="9544" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Shoes Piece -->
+				<item id="9993" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8269,15 +7616,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1894" min="1" max="1" chance="11.8546" /> <!-- Crafted Leather -->
-				<item id="1894" min="1" max="1" chance="11.8546" /> <!-- Crafted Leather -->
-				<item id="9993" min="1" max="1" chance="1.1133" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="20.8" />
-		</collision>
 	</npc>
 	<npc id="22697" level="82" type="L2Monster" name="Ragna Orc Priest" title="Spirit Infested">
 		<parameters>
@@ -8337,34 +7681,29 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="27" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="766" max="1544" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.21649999916553497">
-					<item id="9516" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Helmet -->
-					<item id="9529" min="1" max="1" chance="0.1481" /> <!-- Sealed Dynasty Shield -->
-					<item id="13886" min="1" max="1" chance="0.1481" /> <!-- Sealed Dynasty Sigil -->
-					<item id="9521" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9526" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Circlet -->
-					<item id="9532" min="1" max="1" chance="25.5801" /> <!-- Sealed Dynasty Helmet Piece -->
-					<item id="9521" min="1" max="1" chance="0.1037" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9542" min="1" max="1" chance="25.5801" /> <!-- Sealed Dynasty Circlet Piece -->
-					<item id="9545" min="1" max="1" chance="30.4907" /> <!-- Sealed Dynasty Shield Piece -->
-					<item id="10114" min="1" max="1" chance="17.6381" /> <!-- Sealed Dynasty Sigil Piece -->
-				</group>
-				<group chance="4.736000061035156">
-					<item id="1879" min="1" max="1" chance="60.2319" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.116" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8344" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9021" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5713" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.5097" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6274" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0627" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="960" min="1" max="1" chance="0.1445" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
+				<item id="57" min="127" max="296" chance="70" /> <!-- Adena -->
+				<item id="9516" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Helmet -->
+				<item id="9529" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Shield -->
+				<item id="13886" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Sigil -->
+				<item id="9521" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Leather Helmet -->
+				<item id="9526" min="1" max="1" chance="0.0009" /> <!-- Sealed Dynasty Circlet -->
+				<item id="9532" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Helmet Piece -->
+				<item id="9521" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Leather Helmet -->
+				<item id="9542" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Circlet Piece -->
+				<item id="9545" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Shield Piece -->
+				<item id="10114" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Sigil Piece -->
+				<item id="5167" min="1" max="1" chance="0.003" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="5162" min="1" max="1" chance="0.003" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8398,15 +7737,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5162" min="1" max="1" chance="0.139" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="9542" min="1" max="1" chance="1.1244" /> <!-- Sealed Dynasty Circlet Piece -->
-				<item id="5167" min="1" max="1" chance="0.139" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="36532" min="1" max="1" chance="1.350" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="27" />
-		</collision>
 	</npc>
 	<npc id="22698" level="81" type="L2Monster" name="Ragna Orc Archer" title="Spirit Infested">
 		<parameters>
@@ -8455,29 +7791,25 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="26" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="855" max="1724" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0478999987244606">
-					<item id="9442" min="1" max="1" chance="0.1063" /> <!-- Dynasty Sword -->
-					<item id="9443" min="1" max="1" chance="0.1063" /> <!-- Dynasty Blade -->
-					<item id="9444" min="1" max="1" chance="0.1063" /> <!-- Dynasty Phantom -->
-					<item id="9616" min="1" max="1" chance="33.227" /> <!-- Dynasty Sword Piece -->
-					<item id="9617" min="1" max="1" chance="33.227" /> <!-- Dynasty Blade Piece -->
-					<item id="9618" min="1" max="1" chance="33.2271" /> <!-- Dynasty Phantom Piece -->
-				</group>
-				<group chance="2.5731000900268555">
-					<item id="1894" min="1" max="1" chance="29.3011" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.8361" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2616" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.8361" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.7992" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4498" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.145" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5272" min="1" max="1" chance="0.3711" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="157" max="365" chance="70" /> <!-- Adena -->
+				<item id="9442" min="1" max="1" chance="0.0009" /> <!-- Dynasty Sword -->
+				<item id="9443" min="1" max="1" chance="0.0009" /> <!-- Dynasty Blade -->
+				<item id="9444" min="1" max="1" chance="0.0009" /> <!-- Dynasty Phantom -->
+				<item id="9616" min="1" max="1" chance="0.03" /> <!-- Dynasty Sword Piece -->
+				<item id="9617" min="1" max="1" chance="0.03" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="1" max="1" chance="0.03" /> <!-- Dynasty Phantom Piece -->
+				<item id="9533" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Gauntlets Piece -->
+				<item id="9541" min="1" max="1" chance="0.075" /> <!-- Sealed Dynasty Stockings Piece -->
+				<item id="9573" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="5272" min="1" max="1" chance="0.3711" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8511,15 +7843,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9541" min="1" max="1" chance="0.9177" /> <!-- Sealed Dynasty Stocking Piece -->
-				<item id="1894" min="1" max="1" chance="12.2443" /> <!-- Crafted Leather -->
-				<item id="9533" min="1" max="1" chance="1.6695" /> <!-- Sealed Dynasty Gauntlet Piece -->
+				<item id="36532" min="1" max="1" chance="1.700" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="26" />
-		</collision>
 	</npc>
 	<npc id="22699" level="82" type="L2Monster" name="Ragna Orc Sniper" title="Spirit Infested">
 		<parameters>
@@ -8567,31 +7896,28 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="26" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="878" max="1768" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.048500001430511475">
-					<item id="9448" min="1" max="1" chance="0.0809" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="0.0809" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="0.0809" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="0.0809" /> <!-- Dynasty Crusher -->
-					<item id="9622" min="1" max="1" chance="24.4737" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="24.4737" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25.3646" /> <!-- Dynasty Staff Fragment -->
-					<item id="10547" min="1" max="1" chance="25.3644" /> <!-- Dynasty Crusher Fragment -->
-				</group>
-				<group chance="2.640700101852417">
-					<item id="1894" min="1" max="1" chance="29.3011" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.8361" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2616" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.8361" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.7992" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4498" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.145" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="5277" min="1" max="1" chance="0.3711" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="156" max="364" chance="70" /> <!-- Adena -->
+				<item id="9448" min="1" max="1" chance="0.0009" /> <!-- Dynasty Cudgel -->
+				<item id="9449" min="1" max="1" chance="0.0009" /> <!-- Dynasty Mace -->
+				<item id="10252" min="1" max="1" chance="0.0009" /> <!-- Dynasty Staff -->
+				<item id="10253" min="1" max="1" chance="0.0009" /> <!-- Dynasty Crusher -->
+				<item id="9622" min="1" max="1" chance="0.03" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9623" min="1" max="1" chance="0.03" /> <!-- Dynasty Mace Piece -->
+				<item id="10546" min="1" max="1" chance="0.03" /> <!-- Dynasty Staff Fragment -->
+				<item id="10547" min="1" max="1" chance="0.03" /> <!-- Dynasty Crusher Fragment -->
+				<item id="9531" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9620" min="1" max="1" chance="0.03" /> <!-- Dynasty Knife Piece -->
+				<item id="5272" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="5277" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8625,14 +7951,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="9620" min="1" max="1" chance="0.199" /> <!-- Dynasty Knife Piece -->
-				<item id="5272" min="1" max="1" chance="0.1592" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="9531" min="1" max="1" chance="1.5428" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="36532" min="1" max="1" chance="1.600" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="26" />
-		</collision>
 	</npc>
 </list>

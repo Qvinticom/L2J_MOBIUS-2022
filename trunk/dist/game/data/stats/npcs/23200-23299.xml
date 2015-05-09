@@ -5,7 +5,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1198919" hpRegen="7.5" mp="1198919" mpRegen="2.7" />
+			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2016" magical="1710" />
 			<attribute>
@@ -29,13 +29,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20173" max="46689" chance="70" />
-				<item id="35296" min="1" max="1" chance="0.4" />
-				<item id="35420" min="1" max="1" chance="0.03" />
+				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
+				<item id="35296" min="1" max="1" chance="0.75" /> <!-- Specter Shaper Fragment-->
+				<item id="35420" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Shaper (60%) -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="72.37" />
-				<item id="36534" min="1" max="1" chance="6.805" />
+				<item id="36533" min="1" max="1" chance="32.83" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="2.999" /> <!-- Durable Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -44,7 +44,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="12348772" sp="33498" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1084381" hpRegen="7.5" mp="1084381" mpRegen="2.7" />
+			<vitals hp="650630" hpRegen="7.5" mp="22058" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1280" magical="1650" />
 			<attribute>
@@ -68,16 +68,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="18958" max="44286" chance="70" />
-				<item id="36558" min="1" max="1" chance="4.4" />
-				<item id="35312" min="1" max="1" chance="1.38" />
-				<item id="36559" min="1" max="1" chance="0.42017" />
-				<item id="17401" min="1" max="1" chance="0.04299" />
-				<item id="35436" min="1" max="1" chance="0.022" />
+				<item id="57" min="9219" max="21502" chance="70" /> <!-- Adena -->
+				<item id="35312" min="1" max="1" chance="0.75" /> <!-- Seraph Shield Ingredient -->
+				<item id="17401" min="1" max="1" chance="0.03" /> <!-- Seraph Shield -->
+				<item id="35436" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Shield (60%) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="32.74" />
-				<item id="36559" min="1" max="1" chance="3.032" />
+				<item id="36558" min="1" max="1" chance="15" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.340" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -86,7 +84,7 @@
 		<race>BEAST</race>
 		<acquire exp="12663060" sp="34626" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1086370" hpRegen="7.5" mp="1086370" mpRegen="2.7" />
+			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
 			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1968" magical="1680" />
 			<attribute>
@@ -112,12 +110,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="19442" max="45306" chance="70" />
-				<item id="35314" min="1" max="1" chance="0.75188" />
-				<item id="35438" min="1" max="1" chance="0.013" />
+				<item id="57" min="9418" max="21995" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="18.42" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.814" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36559" min="1" max="1" chance="6.027" />
+				<item id="36559" min="1" max="1" chance="2.735" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -126,7 +124,7 @@
 		<race>ANIMAL</race>
 		<acquire exp="12348772" sp="33498" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1084381" hpRegen="7.5" mp="1084381" mpRegen="2.7" />
+			<vitals hp="650630" hpRegen="7.5" mp="22058" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
 			<attribute>
@@ -150,16 +148,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="19444" max="43963" chance="70" />
-				<item id="36558" min="1" max="1" chance="4.4" />
-				<item id="35300" min="1" max="1" chance="0.3096" />
-				<item id="36559" min="1" max="1" chance="0.3003" />
-				<item id="35424" min="1" max="1" chance="0.006" />
-				<item id="17386" min="1" max="1" chance="0.003" />
+				<item id="57" min="9219" max="21502" chance="70" /> <!-- Adena -->
+				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter fragment -->
+				<item id="35424" min="1" max="1" chance="0.03" /> <!-- recipe: Specter Fighter (60%) -->
+				<item id="17386" min="1" max="1" chance="0.003" /> <!-- Specter Fighter -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="32.96" />
-				<item id="36559" min="1" max="1" chance="2.989" />
+				<item id="36558" min="1" max="1" chance="13.86" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.305" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -168,7 +164,7 @@
 		<race>ANIMAL</race>
 		<acquire exp="12348772" sp="33498" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1084381" hpRegen="7.5" mp="1084381" mpRegen="2.7" />
+			<vitals hp="650630" hpRegen="7.5" mp="22058" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
 			<attribute>
@@ -192,13 +188,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="18966" max="44194" chance="70" />
-				<item id="35316" min="1" max="1" chance="1.5" />
-				<item id="35440" min="1" max="1" chance="0.07502" />
-				<item id="17405" min="1" max="1" chance="0.03" />
+				<item id="57" min="9219" max="21502" chance="70" /> <!-- Adena -->
+				<item id="35316" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35440" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="17405" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Gloves -->
 			</death>
 			<corpse>
-				<item id="36559" min="1" max="1" chance="5.914" />
+				<item id="36559" min="1" max="1" chance="2.700" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -207,7 +203,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1198919" hpRegen="7.5" mp="1198919" mpRegen="2.7" />
+			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2016" magical="1710" />
 			<attribute>
@@ -231,12 +227,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20081" max="46671" chance="70" />
-				<item id="35320" min="1" max="1" chance="0.86207" />
-				<item id="35444" min="1" max="1" chance="0.03" />
+				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
+				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="68.56" />
+				<item id="36558" min="1" max="1" chance="29.56" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -245,7 +240,7 @@
 		<race>GIANT</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1198919" hpRegen="7.5" mp="1198919" mpRegen="2.7" />
+			<vitals hp="79353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1710" />
 			<attribute>
@@ -269,13 +264,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20071" max="46798" chance="70" />
-				<item id="35323" min="1" max="1" chance="1.6" />
-				<item id="35447" min="1" max="1" chance="0.09497" />
-				<item id="17412" min="1" max="1" chance="0.046" />
+				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
+				<item id="35323" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35447" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="66.91" />
+				<item id="36558" min="1" max="1" chance="30.91" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -284,7 +279,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="12663060" sp="34626" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1086370" hpRegen="7.5" mp="1086370" mpRegen="2.7" />
+			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
 			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="400" distance="80" width="120" />
 			<defence physical="1968" magical="1680" />
 			<attribute>
@@ -309,12 +304,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="19656" max="44639" chance="70" />
-				<item id="35302" min="1" max="1" chance="0.86207" />
-				<item id="35426" min="1" max="1" chance="0.03" />
+				<item id="57" min="9418" max="21995" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="15" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.340" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36563" min="1" max="1" chance="16.69" />
+				<item id="36563" min="1" max="1" chance="7.200" /> <!-- Synthetic Cokes -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -350,12 +345,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="19440" max="45305" chance="70" />
-				<item id="35319" min="1" max="1" chance="0.70922" />
-				<item id="35443" min="1" max="1" chance="0.018" />
+				<item id="57" min="9418" max="21995" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="18" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.662" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="19440" min="1" max="1" chance="8.43799" />
+				<item id="19440" min="1" max="1" chance="3.750" /> <!-- Gemstone (R-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -364,7 +359,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1198919" hpRegen="7.5" mp="1198919" mpRegen="2.7" />
+			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2016" magical="1710" />
 			<attribute>
@@ -388,16 +383,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20097" max="46650" chance="70" />
-				<item id="36558" min="1" max="1" chance="4.7" />
-				<item id="35315" min="1" max="1" chance="1.18" />
-				<item id="36559" min="1" max="1" chance="0.3003" />
-				<item id="35439" min="1" max="1" chance="0.03" />
+				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="20.64" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.785" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="22.03" />
-				<item id="36559" min="1" max="1" chance="2.134" />
-				<item id="36893" min="1" max="1" chance="0.3003" />
+				<item id="36558" min="1" max="1" chance="10.47" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36893" min="1" max="1" chance="0.0055" /> <!-- Recipe: Durable Leather Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -406,7 +399,7 @@
 		<race>PLANT</race>
 		<acquire exp="5340345" sp="22864" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<vitals hp="334154" hpRegen="7.5" mp="22058" mpRegen="2.7" />
 			<attack physical="40000" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1280" magical="1650" />
 			<attribute>
@@ -431,13 +424,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="4746" max="11062" chance="70" />
-				<item id="36558" min="1" max="1" chance="9.65" />
-				<item id="36559" min="1" max="1" chance="0.6993" />
+				<item id="57" min="2305" max="5376" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.712" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="8.03399" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="3.670" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -446,7 +439,7 @@
 		<race>PLANT</race>
 		<acquire exp="5340345" sp="22864" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<vitals hp="334154" hpRegen="7.5" mp="22058" mpRegen="2.7" />
 			<attack physical="40000" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1280" magical="1650" />
 			<attribute>
@@ -471,14 +464,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="4742" max="11070" chance="70" />
-				<item id="36558" min="1" max="1" chance="9.25" />
-				<item id="36559" min="1" max="1" chance="0.9009" />
+				<item id="57" min="2305" max="5376" chance="70" /> <!-- Adena) -->
+				<item id="36558" min="1" max="1" chance="5.100" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="5.364" />
-				<item id="36559" min="1" max="1" chance="0.3003" />
-				<item id="36911" min="1" max="1" chance="0.3003" />
+				<item id="36558" min="1" max="1" chance="2.265" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36911" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Combination -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1673,7 +1666,7 @@
 		<race>PLANT</race>
 		<acquire exp="4844514" sp="20741" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
+			<vitals hp="334154" hpRegen="7.5" mp="22058" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1280" magical="1650" />
 			<attribute>
@@ -1697,14 +1690,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="6162" max="14394" chance="70" />
-				<item id="36558" min="1" max="1" chance="11" />
-				<item id="36559" min="1" max="1" chance="1" />
+				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="6" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="6.885" />
-				<item id="19440" min="1" max="1" chance="0.75188" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="3.116" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1737,14 +1730,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="6162" max="14394" chance="70" />
-				<item id="36558" min="1" max="1" chance="10.9" />
-				<item id="36559" min="1" max="1" chance="1.05" />
+				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="6" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="6.935" />
-				<item id="19440" min="1" max="1" chance="0.75188" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="3.116" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1753,7 +1746,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1198919" hpRegen="7.5" mp="1198919" mpRegen="2.7" />
+			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1710" />
 			<attribute>
@@ -1777,14 +1770,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="26094" max="60839" chance="70" />
-				<item id="35318" min="1" max="1" chance="0.82645" />
-				<item id="35442" min="1" max="1" chance="0.07502" />
-				<item id="17407" min="1" max="1" chance="0.03" />
+				<item id="57" min="12657" max="29546" chance="70" /> <!-- Adena -->
+				<item id="35318" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35442" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="17407" min="1" max="1" chance="0.03" /> <!-- Seraph Circlet -->
 			</death>
 			<corpse>
-				<item id="36534" min="1" max="1" chance="8.904" />
-				<item id="36886" min="1" max="1" chance="0.3003" />
+				<item id="36534" min="1" max="1" chance="4" /> <!-- Durable Braid -->
+				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1793,7 +1786,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1198919" hpRegen="7.5" mp="1198919" mpRegen="2.7" />
+			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2016" magical="1710" />
 			<attribute>
@@ -1817,13 +1810,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="26108" max="60828" chance="70" />
-				<item id="35307" min="1" max="1" chance="1.65" />
-				<item id="35431" min="1" max="1" chance="0.07502" />
-				<item id="17396" min="1" max="1" chance="0.03" />
+				<item id="57" min="12657" max="29546" chance="70" /> <!-- Adena -->
+				<item id="35307" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35431" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="17396" min="1" max="1" chance="0.03" /> <!-- Seraph Helmet -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="5" chance="65.32" />
+				<item id="36533" min="1" max="5" chance="89.32" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1832,7 +1825,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="12928248" sp="34626" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1086370" hpRegen="7.5" mp="1086370" mpRegen="2.7" />
+			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
 			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1710" />
 			<attribute>
@@ -1856,14 +1849,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="25794" max="60146" chance="70" />
-				<item id="35305" min="1" max="1" chance="1" />
-				<item id="35429" min="1" max="1" chance="0.03" />
-				<item id="17391" min="1" max="1" chance="0.003" />
+				<item id="57" min="12512" max="29208" chance="70" /> <!-- Adena -->
+				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35444" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Stockings (60%) -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="91.175" />
-				<item id="19440" min="1" max="1" chance="5.606" />
+				<item id="36533" min="1" max="1" chance="42" /> <!-- Synthetic Braid -->
+				<item id="19440" min="1" max="1" chance="2.514" /> <!-- Gemstone (R-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1872,7 +1864,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="13015848" sp="36629" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1086370" hpRegen="7.5" mp="1086370" mpRegen="2.7" />
+			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
 			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="400" distance="80" width="120" />
 			<defence physical="1968" magical="1680" />
 			<attribute>
@@ -1897,14 +1889,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="25577" max="59523" chance="70" />
-				<item id="35304" min="1" max="1" chance="1.35" />
-				<item id="35428" min="1" max="1" chance="0.03" />
-				<item id="17390" min="1" max="1" chance="0.003" />
+				<item id="57" min="12385" max="28925" chance="70" /> <!-- Adena -->
+				<item id="35319" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35443" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Tunic (60%) -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="93.63" />
-				<item id="36534" min="1" max="1" chance="8.729" />
+				<item id="36533" min="1" max="1" chance="42.63" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="9.729" /> <!-- Durable Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>

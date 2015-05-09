@@ -45,31 +45,16 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2420" max="4913" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2144999504089355">
-					<item id="6680" min="1" max="1" chance="0.2585" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="1" max="1" chance="99.7415" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="2.845099925994873">
-					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
-				</group>
-			</death>
-			<corpse>
-				<item id="960" min="1" max="1" chance="0.5298" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="46.4713" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.3694" /> <!-- Sealed Dynasty Tunic Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6680" min="1" max="1" chance="0.0055" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6707" min="1" max="1" chance="1.350" /> <!-- Sealed Draconic Leather Armor Part -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18801" level="77" type="L2Monster" name="Adult Lavasaurus">
 		<parameters>
@@ -116,31 +101,16 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2420" max="4913" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5392000079154968">
-					<item id="6370" min="1" max="1" chance="0.2121" /> <!-- Saint Spear -->
-					<item id="6694" min="1" max="1" chance="99.7879" /> <!-- Saint Spear Blade -->
-				</group>
-				<group chance="2.845099925994873">
-					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
-				</group>
-			</death>
-			<corpse>
-				<item id="960" min="1" max="1" chance="0.5298" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="46.4713" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.3694" /> <!-- Sealed Dynasty Tunic Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="60" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6370" min="1" max="1" chance="0.03" /> <!-- Saint Spear -->
+				<item id="6694" min="1" max="1" chance="0.003" /> <!-- Saint Spear Blade -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18802" level="78" type="L2Monster" name="Elderly Lavasaurus">
 		<parameters>
@@ -187,33 +157,18 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2540" max="5000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5358999967575073">
-					<item id="6674" min="1" max="1" chance="0.1281" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="0.2049" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="1" max="1" chance="43.5747" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="1" max="1" chance="56.0923" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="2.9260001182556152">
-					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
-				</group>
-			</death>
-			<corpse>
-				<item id="960" min="1" max="1" chance="0.5448" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="47.7927" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.4368" /> <!-- Sealed Dynasty Tunic Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="1" max="1" chance="1.350" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6702" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18803" level="78" type="L2Monster" name="Ancient Lavasaurus">
 		<parameters>
@@ -260,33 +215,18 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2540" max="5000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5358999967575073">
-					<item id="6674" min="1" max="1" chance="0.1281" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="0.2049" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="1" max="1" chance="43.5747" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="1" max="1" chance="56.0923" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="2.9260001182556152">
-					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
-				</group>
-			</death>
-			<corpse>
-				<item id="960" min="1" max="1" chance="0.5448" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="47.7927" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.4368" /> <!-- Sealed Dynasty Tunic Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="1" max="1" chance="1.267" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6702" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18804" level="78" type="L2Monster" name="Tar Beetle">
 		<race>BUG</race>
@@ -3221,24 +3161,18 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="6" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="475" max="959" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4514000117778778">
-					<item id="15766" min="1" max="1" chance="0.1289" /> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="0.0859" /> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="0.0644" /> <!-- Sealed Moirai Necklace -->
-					<item id="15772" min="1" max="1" chance="48.7164" /> <!-- Sealed Moirai Ring Gem -->
-					<item id="15773" min="1" max="1" chance="27.3794" /> <!-- Sealed Moirai Earring Gem -->
-					<item id="15774" min="1" max="1" chance="23.625" /> <!-- Sealed Moirai Necklace Gem -->
-				</group>
-				<group chance="0.2822999954223633">
-					<item id="9573" min="1" max="1" chance="78.4314" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="19.6078" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="1.9608" /> <!-- High-Grade Life Stone - Level 80 -->
-				</group>
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3271,19 +3205,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15772" min="1" max="1" chance="1.3393" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.7527" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.6495" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.1772" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.1181" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.0886" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="6" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="18874" level="83" type="L2FeedableBeast" name="Young Kookaburra">
 		<parameters>
@@ -3332,31 +3254,18 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1494" max="3016" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3456000089645386">
-					<item id="15703" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Gloves -->
-					<item id="15654" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="33.2447" /> <!-- Sealed Moirai Gloves Piece -->
-				</group>
-				<group chance="12.333399772644043">
-					<item id="1895" min="1" max="1" chance="87.0882" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0962" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3907" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6043" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1167" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5292" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="960" min="1" max="1" chance="0.1218" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!--Giant's Codex-->
-					<item id="10550" min="1" max="1" chance="0.1000" /> <!--Forgotten Scroll - Protection of Elemental-->
-				</group>
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
+				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3389,25 +3298,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15654" min="1" max="1" chance="1.3628" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="1.3628" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="1.3628" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="1.3628" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="1.3628" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="1.3628" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="15784" min="1" max="1" chance="0.1813" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.1813" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.1813" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.1813" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.1813" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.1813" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="18875" level="83" type="L2FeedableBeast" name="Young Kookaburra">
 		<parameters>
@@ -3543,33 +3434,14 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="26.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4199" max="8477" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3600000143051147">
-					<item id="15698" min="1" max="1" chance="0.2461" /> <!-- Sealed Moirai Leather Breastplate -->
-					<item id="15649" min="1" max="1" chance="99.7539" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-				</group>
-				<group chance="20.375">
-					<item id="1879" min="1" max="1" chance="49.3865" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.6932" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3241" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5596" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2883" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9509" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5239" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="8.9794" /> <!-- Synthetic Cokes -->
-					<item id="17030" min="1" max="1" chance="0.4939" /> <!-- Forgotten Scroll - Create Item Lv 10 -->
-					<item id="9555" min="1" max="1" chance="0.0593" /> <!-- Wind Crystal -->
-					<item id="10483" min="1" max="1" chance="2.0578" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5144" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0514" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15779" min="1" max="1" chance="0.1173" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!--Giant's Codex-->
-					<item id="10549" min="1" max="1" chance="1.0000" /> <!--Forgotten Scroll - Protection of Rune-->
-				</group>
+				<item id="15698" min="1" max="1" chance="0.0055" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15649" min="1" max="1" chance="1" /> <!-- Sealed Moirai Leather Breastplate Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3602,16 +3474,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15649" min="1" max="1" chance="5.5084" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-				<item id="1894" min="1" max="1" chance="60.2057" /> <!-- Crafted Leather -->
-				<item id="15782" min="1" max="1" chance="1.0871" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="8" />
-			<height normal="26.4" />
-		</collision>
 	</npc>
 	<npc id="18877" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
 		<parameters>
@@ -3749,39 +3612,20 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="10" grown="13" />
+			<height normal="33" grown="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4416" max="8914" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.1217000484466553">
-					<item id="10215" min="1" max="1" chance="0.0054" /> <!-- Icarus Sawsword -->
-					<item id="10217" min="1" max="1" chance="0.0054" /> <!-- Icarus Spirit -->
-					<item id="10397" min="1" max="1" chance="1.7938" /> <!-- Icarus Sawsword Piece -->
-					<item id="10399" min="1" max="1" chance="1.7938" /> <!-- Icarus Spirit Piece -->
-					<item id="14109" min="1" max="1" chance="0.0717" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0717" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0717" /> <!-- Sealed Vesper Gloves -->
-					<item id="15667" min="1" max="1" chance="32.0621" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="32.0621" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="32.0623" /> <!-- Sealed Vesper Gloves Piece -->
-				</group>
-				<group chance="21.30270004272461">
-					<item id="1879" min="1" max="1" chance="49.6711" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.8355" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3375" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5686" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2958" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9737" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.55" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="9.0311" /> <!-- Synthetic Cokes -->
-					<item id="10483" min="1" max="1" chance="2.0696" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5174" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0517" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="10373" min="1" max="1" chance="0.0192" /> <!-- Recipe - Icarus Sawsword (60%) -->
-					<item id="10375" min="1" max="1" chance="0.0192" /> <!-- Recipe - Icarus Spirit (60%) -->
-					<item id="9553" min="1" max="1" chance="0.0596" /> <!-- Water Crystal -->
-				</group>
+				<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
+				<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
+				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gloves -->
+				<item id="15667" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3814,23 +3658,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="10397" min="1" max="1" chance="0.2321" /> <!-- Icarus Sawsword Piece -->
-				<item id="10399" min="1" max="1" chance="0.2321" /> <!-- Icarus Spirit Piece -->
-				<item id="10400" min="1" max="1" chance="0.2313" /> <!-- Icarus Heavy Arms Piece -->
-				<item id="9628" min="1" max="1" chance="4.2455" /> <!-- Leonard -->
-				<item id="10373" min="1" max="1" chance="0.0349" /> <!-- Recipe - Icarus Sawsword (60%) -->
-				<item id="10375" min="1" max="1" chance="0.0349" /> <!-- Recipe - Icarus Spirit (60%) -->
-				<item id="10376" min="1" max="1" chance="0.0349" /> <!-- Recipe - Icarus Heavy Arms (60%) -->
-				<item id="15801" min="1" max="1" chance="0.464" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="0.464" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="0.464" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" grown="13" />
-			<height normal="33" grown="40" />
-		</collision>
 	</npc>
 	<npc id="18879" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
 		<parameters>
@@ -3962,24 +3790,18 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="475" max="959" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4514000117778778">
-					<item id="15766" min="1" max="1" chance="0.1289" /> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="0.0859" /> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="0.0644" /> <!-- Sealed Moirai Necklace -->
-					<item id="15772" min="1" max="1" chance="48.7164" /> <!-- Sealed Moirai Ring Gem -->
-					<item id="15773" min="1" max="1" chance="27.3794" /> <!-- Sealed Moirai Earring Gem -->
-					<item id="15774" min="1" max="1" chance="23.625" /> <!-- Sealed Moirai Necklace Gem -->
-				</group>
-				<group chance="0.2822999954223633">
-					<item id="9573" min="1" max="1" chance="78.4314" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="19.6078" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="1.9608" /> <!-- High-Grade Life Stone - Level 80 -->
-				</group>
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4012,19 +3834,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15772" min="1" max="1" chance="1.3393" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.7527" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.6495" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.1772" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.1181" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.0886" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="8" />
-			<height normal="15.7" />
-		</collision>
 	</npc>
 	<npc id="18881" level="83" type="L2FeedableBeast" name="Young Cougar">
 		<parameters>
@@ -4073,31 +3883,18 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1494" max="3016" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3456000089645386">
-					<item id="15706" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Shoes -->
-					<item id="15657" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="33.2447" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="12.333399772644043">
-					<item id="1895" min="1" max="1" chance="87.0882" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0962" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3907" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6043" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.1167" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5292" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="960" min="1" max="1" chance="0.1218" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!--Giant's Codex-->
-				  	<item id="10550" min="1" max="1" chance="0.1000" /> <!--Forgotten Scroll - Protection of Elemental-->
-				</group>
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
+				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4130,26 +3927,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15654" min="1" max="1" chance="1.2579" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="1.2579" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="1.2579" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="1.2579" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="1.2579" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="1.2579" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="960" min="1" max="1" chance="0.0564" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="15784" min="1" max="1" chance="0.1674" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.1674" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.1674" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.1674" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.1674" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.1674" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="18882" level="83" type="L2FeedableBeast" name="Young Cougar">
 		<parameters>
@@ -4285,33 +4063,14 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4199" max="8477" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0053000450134277">
-					<item id="15697" min="1" max="1" chance="0.2497" /> <!-- Sealed Moirai Breastplate -->
-					<item id="15648" min="1" max="1" chance="99.7503" /> <!-- Sealed Moirai Breastplate Piece -->
-				</group>
-				<group chance="20.36910057067871">
-					<item id="1879" min="1" max="1" chance="49.4009" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.7005" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3248" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.56" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2887" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9521" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5253" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="8.982" /> <!-- Synthetic Cokes -->
-					<item id="17030" min="1" max="1" chance="0.494" /> <!-- Forgotten Scroll - Create Item Lv 10 -->
-					<item id="9555" min="1" max="1" chance="0.0593" /> <!-- Wind Crystal -->
-					<item id="10483" min="1" max="1" chance="2.0584" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5146" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0515" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15778" min="1" max="1" chance="0.0879" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
-					<item id="6622" min="1" max="1" chance="0.5000" /> <!--Giant's Codex-->
-				  	<item id="10549" min="1" max="1" chance="1.0000" /> <!--Forgotten Scroll - Protection of Rune-->
-				</group>
+				<item id="15697" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Breastplate -->
+				<item id="15648" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Breastplate Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4344,19 +4103,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15648" min="1" max="1" chance="2.0354" /> <!-- Sealed Moirai Breastplate Piece -->
-				<item id="15651" min="1" max="1" chance="3.4113" /> <!-- Sealed Moirai Gaiter Piece -->
-				<item id="959" min="1" max="1" chance="0.0343" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9630" min="1" max="1" chance="4.5154" /> <!-- Orichalcum -->
-				<item id="15778" min="1" max="1" chance="0.2548" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
-				<item id="15781" min="1" max="1" chance="0.4076" /> <!-- Recipe - Sealed Moirai Gaiter (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="16" />
-			<height normal="17.2" />
-		</collision>
 	</npc>
 	<npc id="18884" level="83" type="L2FeedableBeast" name="Adult Cougar">
 		<parameters>
@@ -4494,36 +4241,19 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="34" />
+			<height normal="28" grown="34" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4416" max="8914" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.6038999557495117">
-					<item id="10222" min="1" max="1" chance="0.0055" /> <!-- Icarus Hall -->
-					<item id="10404" min="1" max="1" chance="1.8209" /> <!-- Icarus Hall Piece -->
-					<item id="14110" min="1" max="1" chance="0.073" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.073" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.073" /> <!-- Sealed Vesper Shoes -->
-					<item id="15668" min="1" max="1" chance="32.6515" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="32.6515" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="32.6516" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="22.937000274658203">
-					<item id="1879" min="1" max="1" chance="49.6806" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.8403" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3379" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5689" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.296" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9744" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5509" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="9.0328" /> <!-- Synthetic Cokes -->
-					<item id="10483" min="1" max="1" chance="2.07" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5175" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0518" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="10380" min="1" max="1" chance="0.0192" /> <!-- Recipe - Icarus Hall (60%) -->
-					<item id="9553" min="1" max="1" chance="0.0597" /> <!-- Water Crystal -->
-				</group>
+				<item id="10222" min="1" max="1" chance="0.0009" /> <!-- Icarus Hall -->
+				<item id="14110" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Shoes -->
+				<item id="15668" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shoes Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4556,21 +4286,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="10404" min="1" max="1" chance="0.2892" /> <!-- Icarus Hall Piece -->
-				<item id="10402" min="1" max="1" chance="0.2892" /> <!-- Icarus Hammer Piece -->
-				<item id="9628" min="1" max="1" chance="5.3068" /> <!-- Leonard -->
-				<item id="10380" min="1" max="1" chance="0.0436" /> <!-- Recipe - Icarus Hall (60%) -->
-				<item id="10378" min="1" max="1" chance="0.0436" /> <!-- Recipe - Icarus Hammer (60%) -->
-				<item id="15804" min="1" max="1" chance="0.5799" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="0.5799" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="0.5799" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="34" />
-			<height normal="28" grown="34" />
-		</collision>
 	</npc>
 	<npc id="18886" level="83" type="L2FeedableBeast" name="Full Grown Cougar">
 		<parameters>
@@ -4702,27 +4418,18 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="511" max="1045" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.48969998955726624">
-					<item id="15766" min="1" max="1" chance="0.1289" /> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="0.0859" /> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="0.0644" /> <!-- Sealed Moirai Necklace -->
-					<item id="15772" min="1" max="1" chance="48.7164" /> <!-- Sealed Moirai Ring Gem -->
-					<item id="15773" min="1" max="1" chance="27.3794" /> <!-- Sealed Moirai Earring Gem -->
-					<item id="15774" min="1" max="1" chance="23.625" /> <!-- Sealed Moirai Necklace Gem -->
-				</group>
-				<group chance="0.2214999943971634">
-					<item id="9573" min="1" max="1" chance="54.2208" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="13.5552" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="1.3555" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="15812" min="1" max="1" chance="14.2478" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-					<item id="15813" min="1" max="1" chance="9.4974" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-					<item id="15814" min="1" max="1" chance="7.1233" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-				</group>
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4755,18 +4462,58 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15772" min="1" max="1" chance="1.4529" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.8165" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.7046" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.1922" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.1281" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.0961" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</corpse>
 		</drop_lists>
+	</npc>
+	<npc id="18888" level="84" type="L2FeedableBeast" name="Young Buffalo">
+		<parameters>
+			<param name="my_type" value="3" />
+			<param name="my_grade" value="2" />
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="6556" level="17" /> <!-- NPC water attack -->
+			<skill name="Buff" id="4028" level="2" /> <!-- NPC Might -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="56458" sp="13" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<attack type="WATER" value="170" />
+				<defence fire="100" water="180" wind="140" earth="140" holy="140" dark="140" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="110" />
+			</speed>
+			<hit_time>480</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4028" level="2" /> <!-- NPC Might -->
+			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="15" />
+			<radius normal="16" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="18888" level="84" type="L2FeedableBeast" name="Young Buffalo">
@@ -4818,34 +4565,12 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1585" max="3238" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4391000270843506">
-					<item id="15703" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Gloves -->
-					<item id="15654" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="33.2447" /> <!-- Sealed Moirai Gloves Piece -->
-				</group>
-				<group chance="8.283499717712402">
-					<item id="1895" min="1" max="1" chance="85.3382" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.9737" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3426" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.572" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.0742" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5185" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0519" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="15784" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-					<item id="15785" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-					<item id="15786" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-					<item id="15787" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-					<item id="15788" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-					<item id="15789" min="1" max="1" chance="0.3549" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-					<item id="6622" min="1" max="1" chance="0.1000" /> <!--Giant's Codex-->
-				  	<item id="10552" min="1" max="1" chance="0.0500" /> <!--Forgotten Scroll - Fighter's Will-->
-				</group>
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
+				<item id="15654" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gloves Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4878,21 +4603,6 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15654" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="960" min="1" max="1" chance="0.0603" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="15784" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-			</corpse>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -5033,33 +4743,14 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="25.2" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4472" max="9140" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4605000019073486">
-					<item id="15699" min="1" max="1" chance="0.2461" /> <!-- Sealed Moirai Tunic -->
-					<item id="15650" min="1" max="1" chance="99.7539" /> <!-- Sealed Moirai Tunic Piece -->
-				</group>
-				<group chance="21.881399154663086">
-					<item id="1879" min="1" max="1" chance="49.3865" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.6932" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3241" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5596" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2883" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9509" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5239" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="8.9794" /> <!-- Synthetic Cokes -->
-					<item id="17030" min="1" max="1" chance="0.4939" /> <!-- Forgotten Scroll - Create Item Lv 10 -->
-					<item id="9556" min="1" max="1" chance="0.0593" /> <!-- Dark Crystal -->
-					<item id="10483" min="1" max="1" chance="2.0578" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5144" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0514" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15780" min="1" max="1" chance="0.1173" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
-					<item id="6622" min="1" max="1" chance="0.0500" /> <!--Giant's Codex-->
-				  	<item id="10552" min="1" max="1" chance="1.1160" /> <!--Forgotten Scroll - Fighter's Will-->
-				</group>
+				<item id="15699" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Tunic -->
+				<item id="15650" min="1" max="1" chance="2.150" /> <!-- Sealed Moirai Tunic Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5092,16 +4783,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15653" min="1" max="1" chance="9.5975" /> <!-- Sealed Moirai Stockings Piece -->
-				<item id="959" min="1" max="1" chance="0.0737" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15783" min="1" max="1" chance="1.1675" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="16" />
-			<height normal="25.2" />
-		</collision>
 	</npc>
 	<npc id="18891" level="84" type="L2FeedableBeast" name="Adult Buffalo">
 		<parameters>
@@ -5239,32 +4921,16 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4692" max="9589" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.19439999759197235">
-					<item id="10221" min="1" max="1" chance="0.1263" /> <!-- Icarus Hand -->
-					<item id="10403" min="1" max="1" chance="41.8824" /> <!-- Icarus Hand Piece -->
-					<item id="13457" min="1" max="1" chance="0.1367" /> <!-- Vesper Cutter -->
-					<item id="13461" min="1" max="1" chance="0.1367" /> <!-- Vesper Fighter -->
-					<item id="15638" min="1" max="1" chance="57.7179" /> <!-- Vesper Fighter Piece -->
-				</group>
-				<group chance="26.609899520874023">
-					<item id="1879" min="1" max="1" chance="49.7102" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.8551" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3393" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5698" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2968" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9768" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5536" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="9.0382" /> <!-- Synthetic Cokes -->
-					<item id="10483" min="1" max="1" chance="2.0713" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5178" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0518" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="10379" min="1" max="1" chance="0.0193" /> <!-- Recipe - Icarus Hand (60%) -->
-				</group>
+				<item id="10221" min="1" max="1" chance="0.003" /> <!-- Icarus Hand -->
+				<item id="13457" min="1" max="1" chance="0.0009" /> <!-- Vesper Cutter -->
+				<item id="13461" min="1" max="1" chance="0.0009" /> <!-- Vesper Fighter -->
+				<item id="15638" min="1" max="1" chance="0.3" /> <!-- Vesper Fighter Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5297,17 +4963,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="10403" min="1" max="1" chance="0.6197" /> <!-- Icarus Hand Piece -->
-				<item id="1894" min="1" max="1" chance="50.8785" /> <!-- Crafted Leather -->
-				<item id="10379" min="1" max="1" chance="0.0935" /> <!-- Recipe - Icarus Hand (60%) -->
-				<item id="15819" min="1" max="1" chance="0.1011" /> <!-- Recipe - Vesper Fighter (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="22" grown="27" />
-			<height normal="31" grown="38" />
-		</collision>
 	</npc>
 	<npc id="18893" level="84" type="L2FeedableBeast" name="Full Grown Buffalo">
 		<parameters>
@@ -5438,27 +5094,18 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="12.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="511" max="1045" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.48969998955726624">
-					<item id="15766" min="1" max="1" chance="0.1289" /> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="0.0859" /> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="0.0644" /> <!-- Sealed Moirai Necklace -->
-					<item id="15772" min="1" max="1" chance="48.7164" /> <!-- Sealed Moirai Ring Gem -->
-					<item id="15773" min="1" max="1" chance="27.3794" /> <!-- Sealed Moirai Earring Gem -->
-					<item id="15774" min="1" max="1" chance="23.625" /> <!-- Sealed Moirai Necklace Gem -->
-				</group>
-				<group chance="0.2214999943971634">
-					<item id="9573" min="1" max="1" chance="54.2208" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="13.5552" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="1.3555" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="15812" min="1" max="1" chance="14.2478" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-					<item id="15813" min="1" max="1" chance="9.4974" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-					<item id="15814" min="1" max="1" chance="7.1233" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-				</group>
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5491,19 +5138,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15772" min="1" max="1" chance="1.4529" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.8165" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.7046" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.1922" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.1281" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.0961" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="12.5" />
-		</collision>
 	</npc>
 	<npc id="18895" level="84" type="L2FeedableBeast" name="Young Grendel">
 		<parameters>
@@ -5551,36 +5186,18 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="12.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1585" max="3238" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4391000270843506">
-					<item id="15706" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0885" /> <!-- Sealed Moirai Shoes -->
-					<item id="15657" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="33.2449" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="33.2447" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="8.283499717712402">
-					<item id="1895" min="1" max="1" chance="85.3382" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.9737" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3426" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.572" /> <!-- Orichalcum -->
-					<item id="9573" min="1" max="1" chance="2.0742" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5185" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0519" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="15784" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-					<item id="15785" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-					<item id="15786" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-					<item id="15787" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-					<item id="15788" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-					<item id="15789" min="1" max="1" chance="0.3549" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-					<item id="6622" min="1" max="1" chance="0.1000" /> <!--Giant's Codex-->
-				  	<item id="10552" min="1" max="1" chance="0.5000" /> <!--Forgotten Scroll - Fighter's Will-->
-				</group>
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
+				<item id="15657" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Shoes Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5613,26 +5230,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15654" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="1.3453" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="960" min="1" max="1" chance="0.0603" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="15784" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.179" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="12.5" />
-		</collision>
 	</npc>
 	<npc id="18896" level="84" type="L2FeedableBeast" name="Young Grendel">
 		<parameters>
@@ -5767,33 +5365,13 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4472" max="9140" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.19509999454021454">
-					<item id="10216" min="1" max="1" chance="0.2998" /> <!-- Icarus Disperser -->
-					<item id="10398" min="1" max="1" chance="99.7002" /> <!-- Icarus Disperser Piece -->
-				</group>
-				<group chance="21.859899520874023">
-					<item id="1879" min="1" max="1" chance="49.435" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.7175" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3264" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5611" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2896" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9548" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5284" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="8.9882" /> <!-- Synthetic Cokes -->
-					<item id="17030" min="1" max="1" chance="0.4944" /> <!-- Forgotten Scroll - Create Item Lv 10 -->
-					<item id="9556" min="1" max="1" chance="0.0593" /> <!-- Dark Crystal -->
-					<item id="10483" min="1" max="1" chance="2.0598" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5149" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0515" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="10374" min="1" max="1" chance="0.0191" /> <!-- Recipe - Icarus Disperser (60%) -->
-					<item id="6622" min="1" max="1" chance="0.0500" /> <!--Giant's Codex-->
-				  	<item id="10552" min="1" max="1" chance="1.1410" /> <!--Forgotten Scroll - Fighter's Will-->
-				</group>
+				<item id="10216" min="1" max="1" chance="0.0055" /> <!-- Icarus Disperser -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5826,16 +5404,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="10398" min="1" max="1" chance="0.79" /> <!-- Icarus Disperser Piece -->
-				<item id="959" min="1" max="1" chance="0.0737" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="10374" min="1" max="1" chance="0.1188" /> <!-- Recipe - Icarus Disperser (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" grown="18" />
-			<height normal="39" grown="47.5" />
-		</collision>
 	</npc>
 	<npc id="18898" level="84" type="L2FeedableBeast" name="Adult Grendel">
 		<parameters>
@@ -5972,31 +5541,15 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="34" />
+			<height normal="32.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4692" max="9589" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2443999946117401">
-					<item id="10223" min="1" max="1" chance="0.1256" /> <!-- Icarus Spitter -->
-					<item id="10405" min="1" max="1" chance="41.6312" /> <!-- Icarus Spitter Piece -->
-					<item id="13467" min="1" max="1" chance="0.1359" /> <!-- Vesper Thrower -->
-					<item id="15644" min="1" max="1" chance="58.1073" /> <!-- Vesper Thrower Piece -->
-				</group>
-				<group chance="26.609899520874023">
-					<item id="1879" min="1" max="1" chance="49.7102" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="24.8551" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.3393" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5698" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.2968" /> <!-- Adamantine -->
-					<item id="5550" min="1" max="1" chance="3.9768" /> <!-- Durable Metal Plate -->
-					<item id="1890" min="1" max="1" chance="4.5536" /> <!-- Mithril Alloy -->
-					<item id="1888" min="1" max="1" chance="9.0382" /> <!-- Synthetic Cokes -->
-					<item id="10483" min="1" max="1" chance="2.0713" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5178" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0518" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="10381" min="1" max="1" chance="0.0193" /> <!-- Recipe - Icarus Spitter (60%) -->
-				</group>
+				<item id="10223" min="1" max="1" chance="0.003" /> <!-- Icarus Spitter -->
+				<item id="13467" min="1" max="1" chance="0.003" /> <!-- Vesper Thrower -->
+				<item id="15644" min="1" max="1" chance="0.3" /> <!-- Vesper Thrower Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6029,17 +5582,6 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="10405" min="1" max="1" chance="0.4957" /> <!-- Icarus Spitter Piece -->
-				<item id="1894" min="1" max="1" chance="40.7028" /> <!-- Crafted Leather -->
-				<item id="9628" min="1" max="1" chance="9.0983" /> <!-- Leonard -->
-				<item id="10381" min="1" max="1" chance="0.0748" /> <!-- Recipe - Icarus Spitter (60%) -->
-				<item id="15825" min="1" max="1" chance="0.0809" /> <!-- Recipe - Vesper Thrower (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="34" />
-			<height normal="32.5" />
-		</collision>
 	</npc>
 </list>

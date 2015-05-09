@@ -355,35 +355,24 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="29" />
+			<height normal="37" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="686" max="1402" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6238999962806702">
-					<item id="15703" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Shoes -->
-					<item id="15654" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15657" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="16.6228" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="4.810500144958496">
-					<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -416,26 +405,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15654" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="9630" min="1" max="1" chance="0.3434" /> <!-- Orichalcum -->
-				<item id="15784" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
 	</npc>
 	<npc id="18907" level="84" type="L2Monster" name="Beast Devourer">
 		<parameters>
@@ -479,33 +449,22 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="27" />
+			<height normal="31" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="725" max="1481" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5767999887466431">
-					<item id="15694" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Circlet -->
-					<item id="15710" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Shield -->
-					<item id="15709" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Sigil -->
-					<item id="15645" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Circlet Piece -->
-					<item id="15693" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Shield Piece -->
-					<item id="15692" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Sigil Piece -->
-				</group>
-				<group chance="5.081299781799316">
-					<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Sigil -->
+				<item id="15645" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15693" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shield Piece -->
+				<item id="15692" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Sigil Piece -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -538,23 +497,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-			<corpse>
-				<item id="15645" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="0.9532" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="0.9532" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="15775" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-				<item id="15776" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-				<item id="15777" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-				<item id="15791" min="1" max="1" chance="0.1014" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="0.1014" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
 	</npc>
 	<npc id="18908" level="83" type="L2Monster" name="Sel Mahum Chef">
 		<parameters>
@@ -654,62 +597,26 @@
 				<clan>N_SOLINA</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1170" max="2361" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9041000008583069">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="4.732900142669678">
-					<item id="1879" min="1" max="1" chance="59.2169" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.6085" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7867" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.87" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5448" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4674" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6168" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0617" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="15801" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-					<item id="15802" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-					<item id="15803" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-					<item id="15804" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-					<item id="15805" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-					<item id="15806" min="1" max="1" chance="0.3047" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15667" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Gloves Piece -->
-				<item id="15668" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Shoes Piece -->
-				<item id="9630" min="1" max="1" chance="0.5805" /> <!-- Orichalcum -->
-				<item id="15801" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-				<item id="15804" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="28.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="14109" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15668" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18910" level="83" type="L2Monster" name="Solina Knight Captain">
 		<parameters>
@@ -756,54 +663,26 @@
 				<clan>N_SOLINA</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1730" max="3492" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3371000289916992">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="18.134199142456055">
-					<item id="1895" min="1" max="1" chance="78.3705" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.4859" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.5716" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.1432" /> <!-- Asofe -->
-					<item id="10483" min="1" max="1" chance="1.9048" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.4762" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0478" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="15667" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Gloves Piece -->
-				<item id="15668" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Shoes Piece -->
-				<item id="15801" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-				<item id="15802" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<item id="15803" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-				<item id="15804" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-				<item id="15805" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-				<item id="15806" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="31.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15668" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18911" level="84" type="L2Monster" name="Abbey Treasure Chest">
 		<race>CONSTRUCT</race>
@@ -2053,9 +1932,9 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6599" level="12" />	<!--NPC earth attack-->
-			<skill id="6705" level="1" />	<!--Stun-->
-			<skill id="6262" level="1" />	<!--EMP Power-->
+			<skill id="6599" level="12" /> <!--NPC earth attack-->
+			<skill id="6705" level="1" /> <!--Stun-->
+			<skill id="6262" level="1" /> <!--EMP Power-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2133,10 +2012,10 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6494" level="28" />	<!--NPC holy attack-->
-			<skill id="6705" level="1" />	<!--Stun-->
-			<skill id="6710" level="1" />	<!--Etis Haste-->
-			<skill id="6711" level="1" />	<!--Etis Power Up-->
+			<skill id="6494" level="28" /> <!--NPC holy attack-->
+			<skill id="6705" level="1" /> <!--Stun-->
+			<skill id="6710" level="1" /> <!--Etis Haste-->
+			<skill id="6711" level="1" /> <!--Etis Power Up-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2164,10 +2043,10 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6494" level="28" />	<!--NPC holy attack-->
-			<skill id="6705" level="1" />	<!--Stun-->
-			<skill id="6710" level="1" />	<!--Etis Haste-->
-			<skill id="6711" level="1" />	<!--Etis Power Up-->
+			<skill id="6494" level="28" /> <!--NPC holy attack-->
+			<skill id="6705" level="1" /> <!--Stun-->
+			<skill id="6710" level="1" /> <!--Etis Haste-->
+			<skill id="6711" level="1" /> <!--Etis Power Up-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2195,10 +2074,10 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6494" level="28" />	<!--NPC holy attack-->
-			<skill id="6705" level="1" />	<!--Stun-->
-			<skill id="6710" level="1" />	<!--Etis Haste-->
-			<skill id="6711" level="1" />	<!--Etis Power Up-->
+			<skill id="6494" level="28" /> <!--NPC holy attack-->
+			<skill id="6705" level="1" /> <!--Stun-->
+			<skill id="6710" level="1" /> <!--Etis Haste-->
+			<skill id="6711" level="1" /> <!--Etis Power Up-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2226,10 +2105,10 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6494" level="28" />	<!--NPC holy attack-->
-			<skill id="6705" level="1" />	<!--Stun-->
-			<skill id="6710" level="1" />	<!--Etis Haste-->
-			<skill id="6711" level="1" />	<!--Etis Power Up-->
+			<skill id="6494" level="28" /> <!--NPC holy attack-->
+			<skill id="6705" level="1" /> <!--Stun-->
+			<skill id="6710" level="1" /> <!--Etis Haste-->
+			<skill id="6711" level="1" /> <!--Etis Power Up-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2257,9 +2136,9 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6709" level="1" />	<!--Multi Shot-->
-			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1" />	<!--Decrease Speed-->
+			<skill id="6709" level="1" /> <!--Multi Shot-->
+			<skill id="5024" level="1" /> <!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" /> <!--Decrease Speed-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2287,9 +2166,9 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6709" level="1" />	<!--Multi Shot-->
-			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1" />	<!--Decrease Speed-->
+			<skill id="6709" level="1" /> <!--Multi Shot-->
+			<skill id="5024" level="1" /> <!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" /> <!--Decrease Speed-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2317,9 +2196,9 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6709" level="1" />	<!--Multi Shot-->
-			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1" />	<!--Decrease Speed-->
+			<skill id="6709" level="1" /> <!--Multi Shot-->
+			<skill id="5024" level="1" /> <!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" /> <!--Decrease Speed-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />
@@ -2347,9 +2226,9 @@
 			</clan_list>
 		</ai>
 		<skill_list>
-			<skill id="6709" level="1" />	<!--Multi Shot-->
-			<skill id="5024" level="1" />	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1" />	<!--Decrease Speed-->
+			<skill id="6709" level="1" /> <!--Multi Shot-->
+			<skill id="5024" level="1" /> <!--Decrease Atk. Spd.-->
+			<skill id="4153" level="1" /> <!--Decrease Speed-->
 		</skill_list>
 		<collision>
 			<radius normal="25" />

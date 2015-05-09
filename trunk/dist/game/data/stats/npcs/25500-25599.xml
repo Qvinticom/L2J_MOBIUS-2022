@@ -1130,32 +1130,25 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="42.5105" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="49.456298828125">
-					<item id="6724" min="1" max="1" chance="5.9961" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="8.9942" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="4.4961" /> <!-- Sealed Tateossian Necklace -->
-					<item id="6698" min="81" max="243" chance="11.8869" /> <!-- Sealed Tateossian Earring Part -->
-					<item id="6699" min="40" max="120" chance="26.71" /> <!-- Sealed Tateossian Ring Gem -->
-					<item id="6700" min="14" max="42" chance="41.9167" /> <!-- Sealed Tateossian Necklace Chain -->
+					<item id="6724" min="1" max="1" chance="5" /> <!-- Sealed Tateossian Earring -->
+					<item id="6725" min="1" max="1" chance="7.408" /> <!-- Sealed Tateossian Ring -->
+					<item id="6726" min="1" max="1" chance="3.700" /> <!-- Sealed Tateossian Necklace -->
 				</group>
 				<group chance="68.7123031616211">
 					<item id="6365" min="1" max="1" chance="0.3713" /> <!-- Basalt Battlehammer -->
 					<item id="6366" min="1" max="1" chance="0.3713" /> <!-- Imperial Staff -->
 					<item id="6369" min="1" max="1" chance="0.3713" /> <!-- Dragon Hunter Axe -->
 					<item id="6579" min="1" max="1" chance="0.3713" /> <!-- Arcana Mace -->
-					<item id="6689" min="2" max="6" chance="42.0931" /> <!-- Basalt Battlehammer Head -->
-					<item id="6690" min="11" max="31" chance="8.1873" /> <!-- Imperial Staff Head -->
-					<item id="6693" min="6" max="18" chance="14.5597" /> <!-- Dragon Hunter Axe Blade -->
-					<item id="6697" min="3" max="7" chance="33.6747" /> <!-- Arcana Mace Head -->
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="30" />
-			<height normal="42.5105" />
-		</collision>
 	</npc>
 	<npc id="25528" level="22" type="L2RaidBoss" name="Tiberias" title="Prime Inspector">
 		<parameters>

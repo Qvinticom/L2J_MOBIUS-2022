@@ -1481,7 +1481,7 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-		<hit_time>370</hit_time>
+			<hit_time>370</hit_time>
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
@@ -1532,7 +1532,7 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-		<hit_time>370</hit_time>
+			<hit_time>370</hit_time>
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
@@ -2067,39 +2067,80 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="23487" level="98" type="L2Npc" name="Magma Ailith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23487" level="98" type="L2Monster" name="Magma Ailith">
+		<!-- Source http://l2on.net/en/?c=npc&id=23487 -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="7035705" sp="4502" />
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
+			<vitals hp="327214" hpRegen="7.5" mp="287000" mpRegen="3.2" />
+			<attack physical="51200" magical="32870" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1970" magical="1815" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="190" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4282" level="1" />
+			<skill id="0141" level="4" />
+			<skill id="0142" level="14" />
+			<skill id="4379" level="5" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
-			<radius normal="34" />
-			<height normal="35" />
+			<radius normal="21" />
+			<height normal="54" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="20055" max="46740" chance="70" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="24.94" />
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23488" level="98" type="L2Npc" name="Magma Apophis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23488" level="98" type="L2Monster" name="Magma Apophis">
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="13065603" sp="8361" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="47347" magical="49170" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1970" magical="1815" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4282" level="5" />
+			<skill id="141" level="3" />
+			<skill id="142" level="5" />
+			<skill id="4413" level="22" />
+			<skill id="4379" level="5" />
+		</skill_list>
 		<collision>
 			<radius normal="30" />
 			<height normal="31.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="20055" max="46740" chance="70" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="24.94" />
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23489" level="98" type="L2Npc" name="Lava Wyrm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2186,35 +2227,60 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23494" level="99" type="L2Npc" name="Magma Salamander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23494" level="99" type="L2Monster" name="Magma Salamander">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="7180454" sp="11488" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<attack physical="41347" magical="25170" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1970" magical="1815" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4282" level="1" />
+			<skill id="0141" level="4" />
+			<skill id="0142" level="14" />
+			<skill id="4379" level="5" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="20055" max="46740" chance="70" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="24.94" />
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23495" level="99" type="L2Npc" name="Magma Dre Vanul">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23495" level="99" type="L2Monster" name="Magma Dre Vanul">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="6648482" sp="10637" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197398" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4282" level="1" />
+			<skill id="4411" level="22" />
+			<skill id="4379" level="5" />
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="32.5" />

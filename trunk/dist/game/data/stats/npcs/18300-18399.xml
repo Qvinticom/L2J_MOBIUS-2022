@@ -2287,22 +2287,24 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="45" />
+			<height normal="67" />
+		</collision>
 		<drop_lists>
 			<death>
+				<item id="57" min="711" max="1659" chance="70" /> <!-- Adena -->
 				<group chance="39.7599983215332">
 					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
 				</group>
 			</death>
 			<corpse>
-				<item id="960" min="1" max="1" chance="0.0931" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="8.168" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="7.7596" /> <!-- Mold Glue -->
+				<item id="36532" min="1" max="1" chance="0.03" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="45" />
-			<height normal="67" />
-		</collision>
 	</npc>
 	<npc id="18346" level="78" type="L2Monster" name="Sprigant">
 		<parameters>
@@ -2344,22 +2346,24 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="45" />
+			<height normal="67" />
+		</collision>
 		<drop_lists>
 			<death>
+				<item id="57" min="711" max="1659" chance="70" /> <!-- Adena -->
 				<group chance="39.7599983215332">
 					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
 				</group>
 			</death>
 			<corpse>
-				<item id="6701" min="1" max="1" chance="0.6885" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6901" min="1" max="1" chance="0.2328" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="6702" min="1" max="1" chance="0.8863" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="36532" min="1" max="1" chance="0.03" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="45" />
-			<height normal="67" />
-		</collision>
 	</npc>
 	<npc id="18347" level="20" type="L2Monster" name="Garden Guard">
 		<parameters>

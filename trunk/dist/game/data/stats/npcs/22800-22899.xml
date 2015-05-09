@@ -152,21 +152,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="23.5" />
+			<height normal="34.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1294" max="2643" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.00039999998989515007">
-					<item id="6364" min="1" max="1" chance="50" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="50" /> <!-- Heaven's Divider -->
-				</group>
-				<group chance="8.449999809265137">
-					<item id="1895" min="1" max="1" chance="80.3213" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6225" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6854" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3708" /> <!-- Asofe -->
-				</group>
+				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -200,16 +194,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5162" min="1" max="1" chance="0.0858" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="6701" min="1" max="1" chance="1.0276" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6702" min="1" max="1" chance="1.3228" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				<item id="9630" min="1" max="1" chance="1.0158" /> <!-- Orichalcum -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23.5" />
-			<height normal="34.7" />
-		</collision>
 	</npc>
 	<npc id="22802" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<parameters>
@@ -248,23 +235,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="23.5" />
+			<height normal="34.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="894" max="1826" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0003000000142492354">
-					<item id="6366" min="1" max="1" chance="25" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="25" /> <!-- Dragon Hunter Axe -->
-					<item id="6365" min="1" max="1" chance="25" /> <!-- Basalt Battlehammer -->
-					<item id="6579" min="1" max="1" chance="25" /> <!-- Arcana Mace -->
-				</group>
-				<group chance="1.813099980354309">
-					<item id="1894" min="1" max="1" chance="31.768" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="30.1796" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8729" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="30.1795" /> <!-- Thons -->
-				</group>
+				<item id="57" min="38" max="88" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
+				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -298,15 +277,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6688" min="1" max="1" chance="0.3844" /> <!-- Forgotten Blade Edge -->
-				<item id="6696" min="1" max="1" chance="0.3905" /> <!-- Heavens Divider Edge -->
-				<item id="6711" min="1" max="1" chance="0.8811" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23.5" />
-			<height normal="34.7" />
-		</collision>
 	</npc>
 	<npc id="22803" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<parameters>
@@ -343,20 +316,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="23.5" />
+			<height normal="34.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1178" max="2406" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.00039999998989515007">
-					<item id="6371" min="1" max="1" chance="100" /> <!-- Demon Splinter -->
-				</group>
-				<group chance="2.388400077819824">
-					<item id="1894" min="1" max="1" chance="31.768" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="30.1796" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8729" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="30.1795" /> <!-- Thons -->
-				</group>
+				<item id="57" min="50" max="115" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -390,16 +358,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6694" min="1" max="1" chance="0.3866" /> <!-- Saint Spear Blade -->
-				<item id="5272" min="1" max="1" chance="0.0781" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="6691" min="1" max="1" chance="0.3798" /> <!-- Angel Slayer Blade -->
-				<item id="959" min="1" max="1" chance="0.007" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23.5" />
-			<height normal="34.7" />
-		</collision>
 	</npc>
 	<npc id="22804" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<parameters>
@@ -441,21 +402,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1336" max="2721" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0005000000237487257">
-					<item id="7575" min="1" max="1" chance="100" /> <!-- Draconic Bow -->
-				</group>
-				<group chance="6.969799995422363">
-					<item id="1895" min="1" max="1" chance="80.3123" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6219" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6849" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3698" /> <!-- Asofe -->
-					<item id="959" min="1" max="1" chance="0.0111" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="57" min="56" max="130" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -489,15 +444,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5277" min="1" max="1" chance="0.1179" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				<item id="6689" min="1" max="1" chance="0.5626" /> <!-- Basalt Battlehammer Head -->
-				<item id="6690" min="1" max="1" chance="0.5745" /> <!-- Imperial Staff Head -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23" />
-			<height normal="32.8" />
-		</collision>
 	</npc>
 	<npc id="22805" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<parameters>
@@ -536,21 +485,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="924" max="1880" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0003000000142492354">
-					<item id="6367" min="1" max="1" chance="100" /> <!-- Angel Slayer -->
-				</group>
-				<group chance="1.4958000183105469">
-					<item id="1894" min="1" max="1" chance="31.7565" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="30.1686" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8701" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="30.1686" /> <!-- Thons -->
-					<item id="959" min="1" max="1" chance="0.0362" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -584,15 +527,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6695" min="1" max="1" chance="0.3888" /> <!-- Demon Splinter Blade -->
-				<item id="7579" min="1" max="1" chance="0.4009" /> <!-- Draconic Bow Shaft -->
-				<item id="5282" min="1" max="1" chance="0.0815" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23" />
-			<height normal="32.8" />
-		</collision>
 	</npc>
 	<npc id="22806" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<parameters>
@@ -629,21 +566,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1217" max="2477" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.00039999998989515007">
-					<item id="6370" min="1" max="1" chance="100" /> <!-- Saint Spear -->
-				</group>
-				<group chance="1.9704999923706055">
-					<item id="1894" min="1" max="1" chance="31.7565" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="30.1686" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8701" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="30.1686" /> <!-- Thons -->
-					<item id="959" min="1" max="1" chance="0.0362" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="57" min="51" max="119" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -677,16 +608,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5529" min="1" max="1" chance="0.4969" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.0805" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5533" min="1" max="1" chance="0.4968" /> <!-- Elysian Head -->
-				<item id="959" min="1" max="1" chance="0.0072" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="23" />
-			<height normal="32.8" />
-		</collision>
 	</npc>
 	<npc id="22807" level="72" type="L2Monster" name="Scout-type Golem No. 28">
 		<parameters>
@@ -726,21 +650,15 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="23" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1266" max="2585" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0019000000320374966">
-					<item id="6674" min="1" max="1" chance="38.4612" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="61.5388" /> <!-- Sealed Imperial Crusader Gaiters -->
-				</group>
-				<group chance="8.264699935913086">
-					<item id="1895" min="1" max="1" chance="80.3213" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6225" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6854" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3708" /> <!-- Asofe -->
-				</group>
+				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
+				<item id="36910" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -774,15 +692,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6703" min="1" max="1" chance="3.5837" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				<item id="6704" min="1" max="1" chance="3.5837" /> <!-- Sealed Imperial Crusader Boots Design -->
-				<item id="5277" min="1" max="1" chance="0.1119" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="23" />
-		</collision>
 	</npc>
 	<npc id="22808" level="72" type="L2Monster" name="Scout-type Golem No. 2">
 		<parameters>
@@ -827,20 +739,15 @@
 				<clan>GOLEM_P</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="5" />
+			<height normal="19" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="716" max="1461" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.000699999975040555">
-					<item id="6680" min="1" max="1" chance="100" /> <!-- Sealed Draconic Leather Armor -->
-				</group>
-				<group chance="1.4505000114440918">
-					<item id="1894" min="1" max="1" chance="31.768" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="30.1796" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.8729" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="30.1795" /> <!-- Thons -->
-				</group>
+				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
+				<item id="36910" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -874,15 +781,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="3036" min="1" max="1" chance="0.0632" /> <!-- Recipe: Spiritshot S -->
-				<item id="959" min="1" max="1" chance="0.0057" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="3957" min="1" max="1" chance="0.0632" /> <!-- Recipe: Blessed Spiritshot S -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="5" />
-			<height normal="19" />
-		</collision>
 	</npc>
 	<npc id="22809" level="73" type="L2Monster" name="Guard Golem">
 		<parameters>
@@ -927,32 +828,21 @@
 				<clan>GOLEM_P</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2675" max="5446" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0024999999441206455">
-					<item id="6684" min="1" max="1" chance="100" /> <!-- Sealed Major Arcana Robe -->
-				</group>
-				<group chance="12.516300201416016">
-					<item id="1895" min="1" max="1" chance="89.5037" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2653" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.457" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6488" /> <!-- Orichalcum -->
-					<item id="960" min="1" max="1" chance="0.1252" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6688" min="1" max="1" chance="1.1477" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="0.2124" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="18.63" /> <!-- Crafted Leather -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="37.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="112" max="261" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="47.46" /> <!-- Iron Ore -->
+				<item id="36522" min="1" max="1" chance="1" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22810" level="72" type="L2Monster" name="Micro Scout Golem">
 		<parameters>
@@ -998,33 +888,21 @@
 				<clan>GOLEM_P</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2171" max="4432" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.010599999688565731">
-					<item id="6724" min="1" max="1" chance="30.7709" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="46.1563" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="23.0728" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-				<group chance="12.701399803161621">
-					<item id="1895" min="1" max="1" chance="89.616" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2731" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.46" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6509" /> <!-- Orichalcum -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6708" min="1" max="1" chance="6.1449" /> <!-- Sealed Draconic Leather Gloves Fabric -->
-				<item id="6709" min="1" max="1" chance="6.1449" /> <!-- Sealed Draconic Leather Boots Design -->
-				<item id="5157" min="1" max="1" chance="0.1918" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="43.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="38.46" /> <!-- Iron Ore -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22811" level="73" type="L2Monster" name="Great Chaos Golem">
 		<parameters>
@@ -1067,37 +945,21 @@
 				<clan>GOLEM_P</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3802" max="7740" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.017400000244379044">
-					<item id="6676" min="1" max="1" chance="16.6667" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6681" min="1" max="1" chance="16.6667" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6685" min="1" max="1" chance="16.6667" /> <!-- Sealed Major Arcana Glove -->
-					<item id="6677" min="1" max="1" chance="16.6667" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6682" min="1" max="1" chance="16.6667" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6686" min="1" max="1" chance="16.6665" /> <!-- Sealed Major Arcana Boots -->
-				</group>
-				<group chance="19.845699310302734">
-					<item id="1895" min="1" max="1" chance="80.2311" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6162" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6801" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3603" /> <!-- Asofe -->
-					<item id="960" min="1" max="1" chance="0.1123" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6712" min="1" max="1" chance="10.7447" /> <!-- Sealed Major Arcana Gloves fabric -->
-				<item id="5162" min="1" max="1" chance="0.3354" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="6713" min="1" max="1" chance="10.7447" /> <!-- Sealed Major Arcana Boots Design -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="35" />
 			<height normal="46.3765" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="159" max="371" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="66.46" /> <!-- Iron Ore -->
+				<item id="36522" min="1" max="1" chance="1.500" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22812" level="72" type="L2Monster" name="Boom Golem">
 		<parameters>
@@ -1139,34 +1001,21 @@
 				<clan>GOLEM_P</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2164" max="4418" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0071000000461936">
-					<item id="6679" min="1" max="1" chance="18.5838" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="18.5838" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="18.5838" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6678" min="1" max="1" chance="26.5491" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="13885" min="1" max="1" chance="17.6995" /> <!-- Sealed Arcana Sigil -->
-				</group>
-				<group chance="14.126299858093262">
-					<item id="1895" min="1" max="1" chance="80.3213" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6225" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6854" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3708" /> <!-- Asofe -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6706" min="1" max="1" chance="10.4685" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="6710" min="1" max="1" chance="10.4685" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="6" />
 			<height normal="13" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="36.92" /> <!-- Iron Ore -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22838" level="85" type="L2Monster" name="Maluk Leader">
 		<parameters>

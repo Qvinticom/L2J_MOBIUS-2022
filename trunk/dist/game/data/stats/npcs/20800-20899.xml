@@ -1419,7 +1419,7 @@
 			<corpse>
 				<item id="1875" min="1" max="1" chance="38.4494" /> <!-- Stone of Purity -->
 				<item id="4617" min="1" max="1" chance="0.7955" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
-				<item id="4613" min="1" max="1" chance="0.7955" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
+					<item id="4613" min="1" max="1" chance="0.7955" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -1960,7 +1960,7 @@
 			</death>
 			<corpse>
 				<item id="4620" min="1" max="1" chance="0.8386" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
-				<item id="4105" min="1" max="1" chance="3.479" /> <!-- Heavy War Axe Head -->
+					<item id="4105" min="1" max="1" chance="3.479" /> <!-- Heavy War Axe Head -->
 				<item id="4077" min="1" max="1" chance="27.3487" /> <!-- Doom Shield Fragment -->
 			</corpse>
 		</drop_lists>
@@ -3180,36 +3180,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="430" max="872" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="3.1166999340057373">
-					<item id="1125" min="1" max="1" chance="0.3879" /> <!-- Assault Boots -->
-					<item id="1957" min="1" max="1" chance="16.2787" /> <!-- Assault Boots Part -->
-					<item id="2427" min="1" max="1" chance="0.3879" /> <!-- Salamander Skin Boots -->
-					<item id="2931" min="1" max="1" chance="16.2787" /> <!-- Salamander Skin Boot Lining -->
-					<item id="2428" min="1" max="1" chance="0.3879" /> <!-- Plate Boots -->
-					<item id="2932" min="1" max="1" chance="16.2787" /> <!-- Plate Boots Design -->
-					<item id="61" min="1" max="1" chance="0.3879" /> <!-- Mithril Plate Gloves -->
-					<item id="1949" min="1" max="1" chance="16.2787" /> <!-- Mithril Gloves Design -->
-					<item id="607" min="1" max="1" chance="0.3879" /> <!-- Ogre Power Gauntlets -->
-					<item id="1963" min="1" max="1" chance="16.2787" /> <!-- Ogre Power Gauntlets Part -->
-					<item id="2451" min="1" max="1" chance="0.3879" /> <!-- Sage's Worn Gloves -->
-					<item id="2933" min="1" max="1" chance="16.2791" /> <!-- Sage's Worn Gloves Lining -->
+				<group chance="21.2012996673584">
+					<item id="36518" min="1" max="1" chance="26.13" /> <!-- Durable Leather -->
 				</group>
-				<group chance="17.840200424194336">
-					<item id="1865" min="1" max="1" chance="43.6807" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="43.6807" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.2801" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.912" /> <!-- Stone of Purity -->
-					<item id="2162" min="1" max="1" chance="2.1102" /> <!-- Recipe: Aquastone Necklace -->
-					<item id="5159" min="1" max="1" chance="0.1456" /> <!-- Recipe: Spiritshot (C) Compressed Package (100%) -->
-					<item id="2312" min="1" max="1" chance="0.1907" /> <!-- Recipe: Crystallized Ice Bow -->
+				<group chance="18.427400588989258">
+					<item id="1882" min="3" max="9" chance="22.72" /> <!-- Corroded Leather -->
 				</group>
 			</death>
 			<corpse>
-				<item id="5231" min="1" max="1" chance="7.7593" /> <!-- Recipe: Metal Hardener (100%) -->
-				<item id="1902" min="1" max="1" chance="11.0061" /> <!-- Elven Earring Beads -->
-				<item id="1825" min="1" max="1" chance="7.7593" /> <!-- Recipe: Oriharukon -->
+				<item id="1882" min="1" max="3" chance="46.71" /> <!-- Corroded Leather -->
+				<item id="36518" min="1" max="1" chance="16.29" /> <!-- Durable Leather -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3272,30 +3254,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="475" max="974" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.20520000159740448">
-					<item id="281" min="1" max="1" chance="1.5765" /> <!-- Crystallized Ice Bow -->
-					<item id="2074" min="1" max="1" chance="98.4235" /> <!-- Crystallized Ice Bow Shaft -->
+				<group chance="22.902099609375">
+					<item id="36518" min="1" max="1" chance="27.87" /> <!-- Durable Leather -->
 				</group>
-				<group chance="15.708000183105469">
-					<item id="1872" min="1" max="1" chance="44.018" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="44.018" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.4018" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2009" /> <!-- Stone of Purity -->
-					<item id="2209" min="1" max="1" chance="2.4822" /> <!-- Recipe: Eldarake -->
-					<item id="2205" min="1" max="1" chance="1.0447" /> <!-- Recipe: Chain Gaiters -->
-					<item id="2299" min="1" max="1" chance="0.1442" /> <!-- Recipe: Big Hammer -->
-					<item id="8723" min="1" max="1" chance="1.3205" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3301" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.033" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0066" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<group chance="19.060100555419922">
+					<item id="1882" min="3" max="9" chance="24.01" /> <!-- Corroded Leather -->
 				</group>
 			</death>
 			<corpse>
-				<item id="1874" min="1" max="1" chance="8.0465" /> <!-- Oriharukon Ore -->
-				<item id="1875" min="1" max="1" chance="8.0465" /> <!-- Stone of Purity -->
-				<item id="1905" min="1" max="1" chance="11.741" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="1882" min="1" max="3" chance="45.80" /> <!-- Corroded Leather -->
+				<item id="36518" min="1" max="1" chance="16.30" /> <!-- Durable Leather -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3439,35 +3409,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="392" max="796" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="1.0174000263214111">
-					<item id="439" min="1" max="1" chance="0.7904" /> <!-- Karmian Tunic -->
-					<item id="1962" min="1" max="1" chance="36.8033" /> <!-- Karmian Tunic Pattern -->
-					<item id="471" min="1" max="1" chance="1.2632" /> <!-- Karmian Stockings -->
-					<item id="1954" min="1" max="1" chance="61.1431" /> <!-- Karmian Stocking Design -->
+				<group chance="18.427400588989258">
+					<item id="36557" min="1" max="1" chance="22.30" /> <!-- Accessory Gem -->
 				</group>
-				<group chance="8.22070026397705">
-					<item id="1865" min="1" max="1" chance="40.6664" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="40.6664" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="6.7777" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.7111" /> <!-- Stone of Purity -->
-					<item id="4040" min="1" max="1" chance="0.8133" /> <!-- Mold Lubricant -->
-					<item id="3000" min="1" max="1" chance="2.6068" /> <!-- Recipe: Dwarven Chain Shield -->
-					<item id="2303" min="1" max="1" chance="0.1776" /> <!-- Recipe: Skull Graver -->
-					<item id="2990" min="1" max="1" chance="3.2275" /> <!-- Recipe: Chain Boots -->
-					<item id="3033" min="1" max="1" chance="0.1356" /> <!-- Recipe: Spiritshot C -->
-					<item id="3954" min="1" max="1" chance="0.1356" /> <!-- Recipe: Blessed Spiritshot C -->
-					<item id="8723" min="1" max="1" chance="1.6267" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.4067" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0407" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0079" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<group chance="3.3392999172210693">
+					<item id="36558" min="1" max="1" chance=" 4.100" /> <!-- Accessory Gem (Mid-grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="3" chance="49.5145" /> <!-- Charcoal -->
-				<item id="1879" min="1" max="1" chance="16.5048" /> <!-- Cokes -->
-				<item id="1906" min="1" max="1" chance="13.6122" /> <!-- Mithril Ring Wire -->
+				<item id="36557" min="1" max="1" chance="14.28" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="2.665" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3531,33 +3484,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="822" max="1686" chance="100" /> <!-- Adena -->
+					<item id="57" min="2324" max="5426" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.3928000032901764">
-					<item id="96" min="1" max="1" chance="0.4753" /> <!-- Scythe -->
-					<item id="2062" min="1" max="1" chance="32.858" /> <!-- Scythe Edge -->
-					<item id="298" min="1" max="1" chance="0.4753" /> <!-- Orcish Glaive -->
-					<item id="2075" min="1" max="1" chance="32.858" /> <!-- Orcish Glaive Blade -->
-					<item id="302" min="1" max="1" chance="0.4753" /> <!-- Body Slasher -->
-					<item id="2076" min="1" max="1" chance="32.8581" /> <!-- Body Slasher Blade -->
+				<group chance="25.88360023498535">
+					<item id="36527" min="3" max="9" chance="31.63" /> <!-- Synthetic Fiber -->
 				</group>
-				<group chance="30.492399215698242">
-					<item id="1872" min="1" max="1" chance="43.1776" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="43.1776" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.3178" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.1589" /> <!-- Stone of Purity -->
-					<item id="2251" min="1" max="1" chance="5.3972" /> <!-- Recipe: Steel Arrow -->
-					<item id="2319" min="1" max="1" chance="0.1128" /> <!-- Recipe: Raid Sword -->
-					<item id="8723" min="1" max="1" chance="1.2953" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3238" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0324" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0066" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<group chance="7.518700122833252">
+					<item id="36528" min="2" max="6" chance="9.256" /> <!-- Metallic Fiber -->
 				</group>
 			</death>
 			<corpse>
-				<item id="1874" min="1" max="1" chance="13.9288" /> <!-- Oriharukon Ore -->
-				<item id="1875" min="1" max="1" chance="13.9288" /> <!-- Stone of Purity -->
-				<item id="1875" min="1" max="1" chance="13.9288" /> <!-- Stone of Purity -->
+				<item id="36527" min="1" max="3" chance="62.57" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="22.77" /> <!-- Metallic Fiber -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3808,35 +3746,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="453" max="926" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="2.1760001182556152">
-					<item id="631" min="1" max="1" chance="0.816" /> <!-- Eldarake -->
-					<item id="1964" min="1" max="1" chance="33.6273" /> <!-- Eldarake Temper -->
-					<item id="2495" min="1" max="1" chance="0.816" /> <!-- Chain Shield -->
-					<item id="2945" min="1" max="1" chance="33.6273" /> <!-- Chain Shield Fragment -->
-					<item id="2413" min="1" max="1" chance="0.5712" /> <!-- Chain Hood -->
-					<item id="2936" min="1" max="1" chance="30.5422" /> <!-- Chain Hood Pattern -->
+				<group chance="22.943599700927734">
+					<item id="36522" min="1" max="3" chance="27.81" /> <!-- Silver -->
 				</group>
-				<group chance="15.26710033416748">
-					<item id="1867" min="1" max="1" chance="39.5431" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="39.5431" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="6.5905" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="1.0406" /> <!-- Crafted Leather -->
-					<item id="4042" min="1" max="1" chance="0.4943" /> <!-- Enria -->
-					<item id="2230" min="1" max="1" chance="0.5748" /> <!-- Recipe: Theca Leather Gaiters -->
-					<item id="2326" min="1" max="1" chance="0.1033" /> <!-- Recipe: Horn of Glory -->
-					<item id="6668" min="1" max="1" chance="10.5919" /> <!-- Deluxe Chest Key - Grade 4 -->
-					<item id="8723" min="1" max="1" chance="1.1863" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.2966" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0297" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0058" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<group chance="8.550800323486328">
+					<item id="36523" min="1" max="1" chance="10.397" /> <!-- Adamantite -->
 				</group>
 			</death>
 			<corpse>
-				<item id="2320" min="1" max="1" chance="0.4006" /> <!-- Recipe: Cursed Staff -->
-				<item id="2066" min="1" max="1" chance="0.9017" /> <!-- Heavy Doom Hammer Head -->
-				<item id="1908" min="1" max="1" chance="10.8867" /> <!-- Moonstone Earring Wire -->
+				<item id="36522" min="1" max="1" chance="33.50" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="6.627" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3901,32 +3822,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="468" max="955" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.1770000010728836">
-					<item id="227" min="1" max="1" chance="0.6719" /> <!-- Stiletto -->
-					<item id="2083" min="1" max="1" chance="49.3281" /> <!-- Stiletto Edge -->
-					<item id="242" min="1" max="1" chance="0.6719" /> <!-- Soulfire Dirk -->
-					<item id="2084" min="1" max="1" chance="49.3281" /> <!-- Soulfire Dirk Blade -->
+				<group chance="5.792900085449219">
+					<item id="36547" min="1" max="1" chance="7.096" /> <!-- Weapon Fragment -->
 				</group>
-				<group chance="12.748600006103516">
-					<item id="1868" min="1" max="1" chance="74.9591" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="14.9918" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.748" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.4986" /> <!-- Compound Braid -->
-					<item id="4044" min="1" max="1" chance="1.2493" /> <!-- Thons -->
-					<item id="2229" min="1" max="1" chance="0.4543" /> <!-- Recipe: Theca Leather Armor -->
-					<item id="952" min="1" max="1" chance="0.4997" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="8724" min="1" max="1" chance="1.2493" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.3123" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0312" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0064" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<group chance="1.1972999572753906">
+					<item id="36548" min="1" max="1" chance="1.447" /> <!-- Weapon Fragment (Mid-grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="2328" min="1" max="1" chance="0.2759" /> <!-- Recipe: Sword of Delusion -->
-				<item id="1967" min="1" max="1" chance="6.4698" /> <!-- Plated Leather Gaiters Material -->
-				<item id="2166" min="1" max="1" chance="4.0211" /> <!-- Recipe: Earrings of Binding (100%) -->
+				<item id="36547" min="1" max="1" chance="0.2759" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="6.4698" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3994,33 +3901,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="482" max="980" chance="100" /> <!-- Adena -->
+					<item id="57" min="437" max="1019" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.18940000236034393">
-					<item id="282" min="1" max="1" chance="0.6457" /> <!-- Elemental Bow -->
-					<item id="2085" min="1" max="1" chance="49.3543" /> <!-- Crossbow Shaft -->
-					<item id="285" min="1" max="1" chance="0.6457" /> <!-- Noble Elven Bow -->
-					<item id="2086" min="1" max="1" chance="49.3543" /> <!-- Noble Elven Bow Shaft -->
+				<group chance="1.3554999828338623">
+					<item id="36547" min="1" max="1" chance="1.659" /> <!-- Weapon Fragment -->
 				</group>
-				<group chance="14.442000389099121">
-					<item id="1869" min="1" max="1" chance="31.181" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="62.3619" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.1181" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4157" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="1.0394" /> <!-- Asofe -->
-					<item id="2348" min="1" max="1" chance="0.0725" /> <!-- Recipe: Heathen's Book -->
-					<item id="2351" min="1" max="1" chance="0.0652" /> <!-- Recipe: Scorpion -->
-					<item id="952" min="1" max="1" chance="0.4157" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="8724" min="1" max="1" chance="1.0394" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.2598" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.026" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0053" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<group chance="0.10029999911785126">
+					<item id="36548" min="1" max="1" chance="0.5" /> <!-- Weapon Fragment (Mid-grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="4438" min="1" max="1" chance="0.8698" /> <!-- Knuckle Duster Edge -->
-				<item id="951" min="1" max="1" chance="0.2217" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="1911" min="1" max="1" chance="9.0711" /> <!-- Earring of Protection Gemstone -->
+				<item id="36547" min="1" max="1" chance="1.070" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.1" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4085,33 +3977,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="459" max="937" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="2.1252999305725098">
-					<item id="853" min="1" max="1" chance="0.5374" /> <!-- Earring of Protection -->
-					<item id="1911" min="1" max="1" chance="30.08" /> <!-- Earring of Protection Gemstone -->
-					<item id="916" min="1" max="1" chance="0.4032" /> <!-- Necklace of Protection -->
-					<item id="1913" min="1" max="1" chance="24.5926" /> <!-- Necklace of Protection Gemstone -->
-					<item id="884" min="1" max="1" chance="0.8064" /> <!-- Ring of Protection -->
-					<item id="1912" min="1" max="1" chance="43.5804" /> <!-- Ring of Protection Gemstone -->
+				<group chance="16.75909996032715">
+					<item id="36557" min="1" max="1" chance="20.69" /> <!-- Accessory Gem -->
 				</group>
-				<group chance="11.289799690246582">
-					<item id="1870" min="1" max="1" chance="45.676" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="45.676" /> <!-- Varnish -->
-					<item id="1874" min="1" max="1" chance="3.0451" /> <!-- Oriharukon Ore -->
-					<item id="4043" min="1" max="1" chance="1.5225" /> <!-- Asofe -->
-					<item id="4039" min="1" max="1" chance="1.5225" /> <!-- Mold Glue -->
-					<item id="952" min="1" max="1" chance="0.609" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="8724" min="1" max="1" chance="1.5225" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.3806" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0381" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0077" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<group chance="3.455899953842163">
+					<item id="36558" min="1" max="1" chance="4.212" /> <!-- Accessory Gem (Mid-grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="2335" min="1" max="1" chance="0.2707" /> <!-- Recipe: War Axe -->
-				<item id="1976" min="1" max="1" chance="7.0772" /> <!-- Rind Leather Gaiters Material -->
-				<item id="2167" min="1" max="1" chance="5.938" /> <!-- Recipe: Ring of Ages -->
+				<item id="36557" min="1" max="1" chance="14.27" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="2.626" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4178,31 +4055,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="583" max="1184" chance="100" /> <!-- Adena -->
+					<item id="57" min="361" max="842" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.17260000109672546">
-					<item id="283" min="1" max="1" chance="1.068" /> <!-- Akat Long Bow -->
-					<item id="2109" min="1" max="1" chance="98.932" /> <!-- Akat Longbow Shaft -->
+				<group chance="3.4505999088287354">
+					<item id="36557" min="1" max="1" chance="4.206" /> <!-- Accessory Gem -->
 				</group>
-				<group chance="9.144499778747559">
-					<item id="1871" min="1" max="1" chance="55.5052" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="37.0034" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="2.2202" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.4827" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="1.1101" /> <!-- Mold Lubricant -->
-					<item id="2357" min="1" max="1" chance="0.0905" /> <!-- Recipe: Crystal Dagger -->
-					<item id="3014" min="1" max="1" chance="1.5504" /> <!-- Recipe: Full Plate Boots -->
-					<item id="4188" min="1" max="1" chance="0.0639" /> <!-- Recipe: Hell Knife (100%) -->
-					<item id="8725" min="1" max="1" chance="1.5418" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.3855" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0385" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0078" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<group chance="0.5012000203132629">
+					<item id="36558" min="1" max="1" chance="1" /> <!-- Accessory Gem (Mid-grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="4601" min="1" max="1" chance="0.3273" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-				<item id="1539" min="1" max="1" chance="32.7301" /> <!-- Greater Healing Potion -->
-				<item id="1914" min="1" max="1" chance="8.2745" /> <!-- Earring of Seal Gemstone -->
+				<item id="36557" min="1" max="1" chance="2.632" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.5" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4267,35 +4131,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="521" max="1058" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="1.7192000150680542">
-					<item id="854" min="1" max="1" chance="0.4653" /> <!-- Earring of Seal -->
-					<item id="1914" min="1" max="1" chance="29.614" /> <!-- Earring of Seal Gemstone -->
-					<item id="917" min="1" max="1" chance="0.349" /> <!-- Necklace of Mermaid -->
-					<item id="1916" min="1" max="1" chance="22.431" /> <!-- Necklace of Mermaid Teardrop -->
-					<item id="885" min="1" max="1" chance="0.6977" /> <!-- Ring of Ages -->
-					<item id="1915" min="1" max="1" chance="46.443" /> <!-- Ring of Ages Gemstone -->
+				<group chance="4.257400035858154">
+					<item id="36562" min="1" max="1" chance="5.208" /> <!-- Greater Cokes -->
 				</group>
-				<group chance="13.219099998474121">
-					<item id="1872" min="1" max="1" chance="45.7092" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="45.7092" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.5709" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2855" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.2981" /> <!-- Mold Hardener -->
-					<item id="4601" min="1" max="1" chance="0.0762" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="4609" min="1" max="1" chance="0.0762" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-					<item id="2355" min="1" max="1" chance="0.0559" /> <!-- Recipe: Ghoul's Staff -->
-					<item id="8725" min="1" max="1" chance="0.9523" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.2381" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0238" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0046" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<group chance="0.5012000203132629">
+					<item id="36563" min="1" max="1" chance="1" /> <!-- Synthetic Cokes -->
 				</group>
 			</death>
 			<corpse>
-				<item id="4603" min="1" max="1" chance="0.2922" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-				<item id="1539" min="1" max="1" chance="29.2227" /> <!-- Greater Healing Potion -->
-				<item id="4041" min="1" max="1" chance="1.1435" /> <!-- Mold Hardener -->
+				<item id="36562" min="1" max="1" chance="3.363" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.5" /> <!-- Synthetic Cokes -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4361,43 +4208,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="712" max="1439" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.20419999957084656">
-					<item id="75" min="1" max="1" chance="0.1831" /> <!-- Caliburs -->
-					<item id="2089" min="1" max="1" chance="16.4836" /> <!-- Caliburs Edge -->
-					<item id="76" min="1" max="1" chance="0.1831" /> <!-- Sword of Delusion -->
-					<item id="2090" min="1" max="1" chance="16.4836" /> <!-- Delusional Blade -->
-					<item id="77" min="1" max="1" chance="0.1831" /> <!-- Tsurugi -->
-					<item id="2091" min="1" max="1" chance="16.4836" /> <!-- Tsurugi Blade -->
-					<item id="84" min="1" max="1" chance="0.1831" /> <!-- Homunkulus's Sword -->
-					<item id="2092" min="1" max="1" chance="16.4836" /> <!-- Homunkulus's Sword Blade -->
-					<item id="134" min="1" max="1" chance="0.1831" /> <!-- Sword of Nightmare -->
-					<item id="2095" min="1" max="1" chance="16.4836" /> <!-- Sword of Nightmare Blade -->
-					<item id="145" min="1" max="1" chance="0.1831" /> <!-- Sword of Whispering Death -->
-					<item id="2096" min="1" max="1" chance="16.4834" /> <!-- Sword of Whispering Death Blade -->
+				<group chance="21.188499450683594">
+					<item id="36522" min="1" max="3" chance="26.06" /> <!-- Silver -->
 				</group>
-				<group chance="17.10099983215332">
-					<item id="1873" min="1" max="1" chance="12.3817" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="61.9083" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="6.1908" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="8.844" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="0.5159" /> <!-- Enria -->
-					<item id="4608" min="1" max="1" chance="0.0688" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
-					<item id="3017" min="1" max="1" chance="0.8646" /> <!-- Recipe: Divine Gloves -->
-					<item id="5155" min="1" max="1" chance="0.0619" /> <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
-					<item id="3017" min="1" max="1" chance="0.8646" /> <!-- Recipe: Divine Gloves -->
-					<item id="6669" min="1" max="1" chance="7.1986" /> <!-- Deluxe Chest Key - Grade 5 -->
-					<item id="8725" min="1" max="1" chance="0.8598" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.215" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0215" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0045" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<group chance="8.478799819946289">
+					<item id="36523" min="1" max="1" chance="10.361" /> <!-- Adamantite -->
 				</group>
 			</death>
 			<corpse>
-				<item id="2100" min="1" max="1" chance="1.0102" /> <!-- Paradia Staff Head -->
-				<item id="2354" min="1" max="1" chance="0.2923" /> <!-- Recipe: Deadman's Staff -->
-				<item id="4042" min="1" max="1" chance="2.9868" /> <!-- Enria -->
+				<item id="36522" min="1" max="1" chance="34.78" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="6.628" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4467,35 +4289,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="626" max="1271" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.70169997215271">
-					<item id="400" min="1" max="1" chance="0.4366" /> <!-- Theca Leather Armor -->
-					<item id="1984" min="1" max="1" chance="29.7131" /> <!-- Theca Leather Armor Pattern -->
-					<item id="401" min="1" max="1" chance="0.2067" /> <!-- Drake Leather Armor -->
-					<item id="1987" min="1" max="1" chance="21.1476" /> <!-- Drake Leather Armor Texture -->
-					<item id="420" min="1" max="1" chance="0.6988" /> <!-- Theca Leather Gaiters -->
-					<item id="1985" min="1" max="1" chance="47.7972" /> <!-- Theca Leather Gaiters Pattern -->
+				<group chance="3.7527999877929688">
+					<item id="36547" min="1" max="1" chance="6.4" /> <!-- Weapon Fragment -->
 				</group>
-				<group chance="10.673700332641602">
-					<item id="1870" min="1" max="1" chance="45.5637" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="45.5637" /> <!-- Varnish -->
-					<item id="1874" min="1" max="1" chance="3.0376" /> <!-- Oriharukon Ore -->
-					<item id="4043" min="1" max="1" chance="1.5188" /> <!-- Asofe -->
-					<item id="4039" min="1" max="1" chance="1.5188" /> <!-- Mold Glue -->
-					<item id="4133" min="1" max="1" chance="0.2191" /> <!-- Recipe: Zubei's Breastplate (100%) -->
-					<item id="4959" min="1" max="1" chance="0.8779" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
-					<item id="4941" min="1" max="1" chance="0.3505" /> <!-- Recipe: Zubei's Gaiters (60%) -->
-					<item id="8726" min="1" max="1" chance="1.0547" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.2637" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0264" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0051" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<group chance="0.5072000026702881">
+					<item id="36548" min="1" max="1" chance="1.2" /> <!-- Weapon Fragment (Mid-grade) -->
 				</group>
 			</death>
 			<corpse>
-				<item id="2955" min="1" max="1" chance="10.0037" /> <!-- Theca Leather Gloves Texture -->
-				<item id="4042" min="1" max="1" chance="2.6343" /> <!-- Enria -->
-				<item id="1918" min="1" max="1" chance="6.8453" /> <!-- Nassen's Earring Gemstone -->
+				<item id="36547" min="1" max="1" chance="5.1" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.8" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4566,43 +4371,18 @@
 		<drop_lists>
 			<death>
 				<group chance="70">
-					<item id="57" min="597" max="1215" chance="100" /> <!-- Adena -->
+					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="1.6116000413894653">
-					<item id="2436" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Boots -->
-					<item id="2954" min="1" max="1" chance="15.652" /> <!-- Theca Leather Boots Texture -->
-					<item id="2437" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Boots -->
-					<item id="2960" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Boots Design -->
-					<item id="2438" min="1" max="1" chance="0.1798" /> <!-- Full Plate Boots -->
-					<item id="2961" min="1" max="1" chance="13.4659" /> <!-- Full Plate Boots Part -->
-					<item id="2460" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Gloves -->
-					<item id="2955" min="1" max="1" chance="15.652" /> <!-- Theca Leather Gloves Texture -->
-					<item id="2461" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Gloves -->
-					<item id="2962" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Gloves Design -->
-					<item id="2462" min="1" max="1" chance="0.1798" /> <!-- Full Plate Gauntlets -->
-					<item id="2963" min="1" max="1" chance="13.4659" /> <!-- Full Plate Gauntlets Part -->
-					<item id="2463" min="1" max="1" chance="0.1798" /> <!-- Divine Gloves -->
-					<item id="2964" min="1" max="1" chance="13.466" /> <!-- Divine Gloves Pattern -->
+				<group chance="20.804100036621094">
+					<item id="36522" min="1" max="3" chance="25.72" /> <!-- Silver -->
 				</group>
-				<group chance="19.060100555419922">
-					<item id="1864" min="1" max="1" chance="48.7823" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="24.3911" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="9.7565" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="15.0099" /> <!-- Cord -->
-					<item id="4039" min="1" max="1" chance="0.813" /> <!-- Mold Glue -->
-					<item id="4178" min="1" max="1" chance="0.4475" /> <!-- Recipe: Zubei's Shield (100%) -->
-					<item id="4184" min="1" max="1" chance="0.0281" /> <!-- Recipe: Sprite's Staff (100%) -->
-					<item id="5160" min="1" max="1" chance="0.0488" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-					<item id="8726" min="1" max="1" chance="0.5646" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1412" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0141" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0029" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<group chance="8.478799819946289">
+					<item id="36523" min="1" max="1" chance="10.365" /> <!-- Adamantite -->
 				</group>
 			</death>
 			<corpse>
-				<item id="1985" min="1" max="1" chance="5.21" /> <!-- Theca Leather Gaiters Pattern -->
-				<item id="4937" min="1" max="1" chance="2.4933" /> <!-- Recipe: Adamantite Earrings (70%) -->
-				<item id="1806" min="1" max="1" chance="0.3022" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="36522" min="1" max="1" chance="35.52" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="6.619" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4801,7 +4581,7 @@
 			</death>
 			<corpse>
 				<item id="4469" min="1" max="1" chance="0.8784" /> <!-- Dye of STR <Str+1 Con-1> -->
-				<item id="1956" min="1" max="1" chance="17.4488" /> <!-- Square Shield Fragment -->
+					<item id="1956" min="1" max="1" chance="17.4488" /> <!-- Square Shield Fragment -->
 				<item id="1805" min="1" max="1" chance="0.5124" /> <!-- Recipe: Soulshot (C-Grade) -->
 			</corpse>
 		</drop_lists>

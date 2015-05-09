@@ -255,7 +255,7 @@
 			<corpse>
 				<item id="1895" min="1" max="7" chance="77.2457" /> <!-- Metallic Fiber -->
 				<item id="4617" min="1" max="1" chance="1.4916" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
-				<item id="4056" min="1" max="1" chance="19.5736" /> <!-- Zubei's Breastplate Part -->
+					<item id="4056" min="1" max="1" chance="19.5736" /> <!-- Zubei's Breastplate Part -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -7250,39 +7250,27 @@
 				<clan>VELOCIRAPTOR</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3342" max="6823" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2732999920845032">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="7.685500144958496">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6688" min="1" max="1" chance="1.4653" /> <!-- Forgotten Blade Edge -->
-				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="13099" min="1" max="1" chance="9.454" /> <!-- Sealed Arcana Sigil Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="2.979" /> <!-- Synthetic Fiber -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+				<item id="9573" min="1" max="1" chance="0.2" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22197" level="80" type="L2Monster" name="Velociraptor">
 		<parameters>
@@ -7334,39 +7322,27 @@
 				<clan>VELOCIRAPTOR</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3342" max="6823" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2732999920845032">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="7.685500144958496">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6689" min="1" max="1" chance="1.4377" /> <!-- Basalt Battlehammer Head -->
-				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="6690" min="1" max="1" chance="1.4681" /> <!-- Imperial Staff Head -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="2.979" /> <!-- Silver Wire -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+				<item id="9573" min="1" max="1" chance="0.2" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22198" level="80" type="L2Monster" name="Velociraptor">
 		<parameters>
@@ -7423,38 +7399,27 @@
 				<clan>VELOCIRAPTOR</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3342" max="6823" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2732999920845032">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="7.685500144958496">
-					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8382" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9046" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.513" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="959" min="1" max="1" chance="0.0407" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="13099" min="1" max="1" chance="14.181" /> <!-- Sealed Arcana Sigil Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 80 -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22199" level="80" type="L2Monster" name="Pterosaur">
 		<parameters>
@@ -7519,19 +7484,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="36" />
+			<height normal="43.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="3342" max="6823" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.2362000942230225">
-					<item id="6724" min="1" max="1" chance="0.1141" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="0.1711" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="0.0855" /> <!-- Sealed Tateossian Necklace -->
-					<item id="6698" min="1" max="1" chance="36.6403" /> <!-- Sealed Tateossian Earring Part -->
-					<item id="6699" min="1" max="1" chance="40.6573" /> <!-- Sealed Tateossian Ring Gem -->
-					<item id="6700" min="1" max="1" chance="22.3317" /> <!-- Sealed Tateossian Necklace Chain -->
-				</group>
+				<item id="57" min="395" max="797" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid-->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 80 -->
 				<group chance="7.685500144958496">
 					<item id="1879" min="1" max="1" chance="60.3115" /> <!-- Cokes -->
 					<item id="1885" min="1" max="1" chance="30.1558" /> <!-- High-Grade Suede -->
@@ -7545,14 +7510,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6691" min="1" max="1" chance="1.4653" /> <!-- Angel Slayer Blade -->
-				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="6693" min="1" max="1" chance="1.4918" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="36" />
-			<height normal="43.7" />
-		</collision>
 	</npc>
 </list>
