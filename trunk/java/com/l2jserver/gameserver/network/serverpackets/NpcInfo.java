@@ -89,7 +89,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.EQUIPPED);
 		}
 		
-		if ((npc.getTeam() != Team.NONE) || (Config.L2JMOD_SHOW_CHAMPION_AURA && npc.isChampion()))
+		if (npc.getTeam() != Team.NONE)
 		{
 			addComponentType(NpcInfoType.TEAM);
 		}

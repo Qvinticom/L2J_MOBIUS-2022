@@ -1708,7 +1708,7 @@ public class L2Attackable extends L2Npc
 	public void setChampion(boolean champ)
 	{
 		_champion = champ;
-		if (champ)
+		if (champ && Config.L2JMOD_SHOW_CHAMPION_AURA)
 		{
 			setTeam(Team.RED);
 		}
