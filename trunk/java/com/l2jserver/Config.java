@@ -697,6 +697,7 @@ public final class Config
 	public static boolean L2JMOD_CHAMPION_PASSIVE;
 	public static int L2JMOD_CHAMPION_FREQUENCY;
 	public static String L2JMOD_CHAMP_TITLE;
+	public static boolean L2JMOD_SHOW_CHAMPION_AURA;
 	public static int L2JMOD_CHAMP_MIN_LVL;
 	public static int L2JMOD_CHAMP_MAX_LVL;
 	public static int L2JMOD_CHAMPION_HP;
@@ -2220,6 +2221,7 @@ public final class Config
 			L2JMOD_CHAMPION_PASSIVE = CustomSettings.getBoolean("ChampionPassive", false);
 			L2JMOD_CHAMPION_FREQUENCY = CustomSettings.getInt("ChampionFrequency", 0);
 			L2JMOD_CHAMP_TITLE = CustomSettings.getString("ChampionTitle", "Champion");
+			L2JMOD_SHOW_CHAMPION_AURA = CustomSettings.getBoolean("ChampionAura", true);
 			L2JMOD_CHAMP_MIN_LVL = CustomSettings.getInt("ChampionMinLevel", 20);
 			L2JMOD_CHAMP_MAX_LVL = CustomSettings.getInt("ChampionMaxLevel", 60);
 			L2JMOD_CHAMPION_HP = CustomSettings.getInt("ChampionHp", 7);

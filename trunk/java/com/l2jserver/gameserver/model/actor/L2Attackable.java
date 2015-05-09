@@ -41,6 +41,7 @@ import com.l2jserver.gameserver.datatables.EventDroplist.DateDrop;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.InstanceType;
+import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
@@ -1707,6 +1708,10 @@ public class L2Attackable extends L2Npc
 	public void setChampion(boolean champ)
 	{
 		_champion = champ;
+		if (champ)
+		{
+			setTeam(Team.RED);
+		}
 	}
 	
 	@Override

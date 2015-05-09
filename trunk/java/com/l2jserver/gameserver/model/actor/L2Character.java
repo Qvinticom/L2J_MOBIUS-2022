@@ -3140,6 +3140,19 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final String getTitle()
 	{
+		if (isChampion())
+		{
+			return Config.L2JMOD_CHAMP_TITLE;
+		}
+		if (Config.SHOW_NPC_LVL && isMonster())
+		{
+			String t = "Lv " + getLevel();
+			if (_title != null)
+			{
+				t += " " + _title;
+			}
+			return t;
+		}
 		return _title != null ? _title : "";
 	}
 	

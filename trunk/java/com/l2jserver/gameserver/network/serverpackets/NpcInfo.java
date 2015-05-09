@@ -67,7 +67,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			_masks[2] |= 0x10;
 		}
 		
-		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
 		
 		if (npc.getHeading() > 0)
 		{
@@ -89,7 +89,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.EQUIPPED);
 		}
 		
-		if (npc.getTeam() != Team.NONE)
+		if ((npc.getTeam() != Team.NONE) || (Config.L2JMOD_SHOW_CHAMPION_AURA && npc.isChampion()))
 		{
 			addComponentType(NpcInfoType.TEAM);
 		}
@@ -129,9 +129,14 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.CURRENT_MP);
 		}
 		
-		if (npc.getTemplate().getDisplayId() != npc.getTemplate().getId())
+		if (npc.getTemplate().isUsingServerSideName())
 		{
 			addComponentType(NpcInfoType.NAME);
+		}
+		
+		if (npc.getTemplate().isUsingServerSideTitle() || (Config.SHOW_NPC_LVL && npc.isMonster()) || npc.isChampion())
+		{
+			addComponentType(NpcInfoType.TITLE);
 		}
 		
 		if (!_abnormalVisualEffects.isEmpty())
