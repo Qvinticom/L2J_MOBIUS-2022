@@ -71,6 +71,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.TimeStamp;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.knownlist.CharKnownList;
@@ -3146,7 +3147,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		if (Config.SHOW_NPC_LVL && isMonster())
 		{
-			String t = "Lv " + getLevel();
+			String t = "Lv " + getLevel() + (((L2MonsterInstance) this).isAggressive() ? "*" : "");
 			if (_title != null)
 			{
 				t += " " + _title;
