@@ -2180,24 +2180,15 @@
 				<clan>CROC2</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
+		<collision>
+			<radius normal="28" />
+			<height normal="11.5" />
+		</collision>
+				<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="390" max="779" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.249099999666214">
-					<item id="261" min="1" max="1" chance="1.8063" /> <!-- Bich'Hwa -->
-					<item id="2039" min="1" max="1" chance="98.1937" /> <!-- Bich'Hwa Edge -->
-				</group>
-				<group chance="20.96660041809082">
-					<item id="1867" min="1" max="1" chance="43.8981" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="43.8981" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="7.3164" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="1.1552" /> <!-- Crafted Leather -->
-					<item id="2296" min="1" max="1" chance="0.1829" /> <!-- Recipe: Atuba Mace -->
-					<item id="2286" min="1" max="1" chance="0.1829" /> <!-- Recipe: Bonebreaker -->
-					<item id="2985" min="1" max="1" chance="3.3664" /> <!-- Recipe: Plate Boots -->
-				</group>
+				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2231,15 +2222,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2038" min="1" max="1" chance="0.9877" /> <!-- Maingauche Edge -->
-				<item id="5231" min="1" max="1" chance="6.677" /> <!-- Recipe: Metal Hardener (100%) -->
-				<item id="1882" min="1" max="1" chance="20.7728" /> <!-- Leather -->
+				<item id="36531" min="1" max="1" chance="5.550" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="28" />
-			<height normal="11.5" />
-		</collision>
 	</npc>
 	<npc id="20136" level="50" type="L2Monster" name="Death Knight">
 		<parameters>
