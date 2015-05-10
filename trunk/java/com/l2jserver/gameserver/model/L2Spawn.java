@@ -676,6 +676,16 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			}
 		}
 		
+		// Set custom Npc server side name and title
+		if (mob.getTemplate().isUsingServerSideName())
+		{
+			mob.setName(mob.getTemplate().getName());
+		}
+		if (mob.getTemplate().isUsingServerSideTitle())
+		{
+			mob.setTitle(mob.getTemplate().getTitle());
+		}
+		
 		// Reset summoner
 		mob.setSummoner(null);
 		// Reset summoned list
