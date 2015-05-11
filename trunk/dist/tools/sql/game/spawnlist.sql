@@ -46195,6 +46195,11 @@ INSERT INTO `spawnlist` VALUES ('26_20', '1', '33956', '207236', '86780', '-1028
 -- Anghel Waterfall Portal to Arcan
 INSERT INTO `spawnlist` VALUES ('25_20', '1', '32910', '175148', '90632', '-2202', '0', '0', '0', '60', '0', '0', '0');
 
+-- Arms of Timiniel (Fairy Settlement)
+INSERT INTO `spawnlist` VALUES ('Fairy Settlement', '0', '33560', '214328', '79635', '826', '0', '0', '7579', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Fairy Settlement', '0', '32921', '214499', '79671', '826', '0', '0', '26856', '0', '0', '0', '0');
+INSERT INTO `spawnlist` VALUES ('Fairy Settlement', '0', '30370', '215678', '80911', '826', '0', '0', '38971', '0', '0', '0', '0');
+
 -- Correct spawns for Hunters Village npc Managers
 DELETE FROM `spawnlist` WHERE (npc_templateid='33463' AND locx='116963' AND locy='77253' AND locz='-2688');
 DELETE FROM `spawnlist` WHERE (npc_templateid='32327' AND locx='116935' AND locy='77258' AND locz='-2688');
