@@ -1760,7 +1760,7 @@
 			<and>
 				<player canSummonServitor="true" />
 				<player canSummonSiegeGolem="true" />
-				<player hasFreeSummonPoints="0" />
+				<player hasFreeSummonPoints="4" />
 			</and>
 		</cond>
 		<for>
@@ -1768,6 +1768,7 @@
 				<param npcId="14839" />
 				<param consumeItemId="2132" consumeItemCount="13" />
 				<param lifeTime="1200" />
+				<param summonPoints="4" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -1775,6 +1776,7 @@
 				<param npcId="#ench1npcId" />
 				<param consumeItemId="2132" consumeItemCount="13" />
 				<param lifeTime="1200" />
+				<param summonPoints="4" />
 			</effect>
 		</enchant1for>
 	</skill>

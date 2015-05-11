@@ -175,7 +175,7 @@ public class PetInfo extends L2GameServerPacket
 		writeD(0x00); // TODO: Find me
 		writeD(_summon.getFormId()); // Transformation ID - Confirmed
 		
-		writeC(_summon.getOwner().getSummonPoints()); // Used Summon Points
+		writeC(_summon.getOwner().getUsedSummonPoints()); // Used Summon Points
 		writeC(_summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
 		
 		final Set<AbnormalVisualEffect> aves = _summon.getCurrentAbnormalVisualEffects();

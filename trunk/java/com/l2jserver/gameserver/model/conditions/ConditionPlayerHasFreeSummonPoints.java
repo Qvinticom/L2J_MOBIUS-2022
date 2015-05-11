@@ -53,7 +53,7 @@ public class ConditionPlayerHasFreeSummonPoints extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_S1_SKILL_DUE_TO_INSUFFICIENT_SUMMON_POINTS);
 			canSummon = false;
 		}
-		else if ((player.getSummonPoints() + _summonPoints) > player.getMaxSummonPoints())
+		else if ((player.getUsedSummonPoints() + _summonPoints) > player.getMaxSummonPoints())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_THE_S1_SKILL_DUE_TO_INSUFFICIENT_SUMMON_POINTS);
 			sm.addSkillName(skill);

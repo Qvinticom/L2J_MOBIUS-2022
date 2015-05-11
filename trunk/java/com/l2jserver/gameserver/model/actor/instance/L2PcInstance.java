@@ -609,6 +609,7 @@ public final class L2PcInstance extends L2Playable
 	private L2Summon _pet = null;
 	/** Servitors of the L2PcInstance */
 	private volatile Map<Integer, L2Summon> _servitors = null;
+	private int _usedSummonPoints = 0;
 	/** The L2Decoy of the L2PcInstance */
 	private L2Decoy _decoy = null;
 	/** The L2Trap of the L2PcInstance */
@@ -15036,15 +15037,21 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public int getMaxSummonPoints()
 	{
-		return (int) getStat().calcStat(Stats.MAX_SUMMON_POINTS, 0, null, null);
+		// return (int) getStat().calcStat(Stats.MAX_SUMMON_POINTS, 0, null, null);
+		return 4;
 	}
 	
 	/**
 	 * @return the amount of points that player used
 	 */
-	public int getSummonPoints()
+	public int getUsedSummonPoints()
 	{
-		return getServitors().values().stream().mapToInt(L2Summon::getSummonPoints).sum();
+		return _usedSummonPoints;
+	}
+	
+	public void setUsedSummonPoints(int points)
+	{
+		_usedSummonPoints = points;
 	}
 	
 	/**

@@ -269,7 +269,7 @@
 		<cond>
 		    <and>
 				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="0" />
+				<player hasFreeSummonPoints="4" />
 			</and>
 		</cond>
 		<for>
@@ -277,6 +277,7 @@
 				<param npcId="14836" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -284,6 +285,7 @@
 				<param npcId="#ench1npcId" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -309,7 +311,7 @@
 		<cond>
 		    <and>
 				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="0" />
+				<player hasFreeSummonPoints="4" />
 			</and>
 		</cond>
 		<for>
@@ -317,6 +319,7 @@
 				<param npcId="14837" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -324,6 +327,7 @@
 				<param npcId="#ench1npcId" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -351,7 +355,7 @@
 		<cond>
 		    <and>
 				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="0" />
+				<player hasFreeSummonPoints="4" />
 			</and>
 		</cond>
 		<for>
@@ -359,6 +363,7 @@
 				<param npcId="14838" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -366,6 +371,7 @@
 				<param npcId="#ench1npcId" />
 				<param consumeItemId="3031" consumeItemCount="11" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</enchant1for>
 	</skill>

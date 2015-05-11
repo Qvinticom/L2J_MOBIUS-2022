@@ -392,6 +392,7 @@ public abstract class L2Summon extends L2Playable
 			{
 				party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
 			}
+			owner.setUsedSummonPoints(owner.getUsedSummonPoints() - _summonPoints);
 		}
 		
 		// pet will be deleted along with all his items
@@ -473,6 +474,7 @@ public abstract class L2Summon extends L2Playable
 						owner.disableAutoShot(itemId);
 					}
 				}
+				owner.setUsedSummonPoints(owner.getUsedSummonPoints() - _summonPoints);
 			}
 		}
 	}

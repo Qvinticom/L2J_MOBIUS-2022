@@ -341,7 +341,7 @@
 		<cond>
 		    <and>
 				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="0" />
+				<player hasFreeSummonPoints="4" />
 			</and>
 		</cond>
 		<for>
@@ -349,6 +349,7 @@
 				<param npcId="14918" />
 				<param consumeItemId="1461" consumeItemCount="1" />
 				<param lifeTime="3600" />
+				<param summonPoints="4" />
 			</effect>
 		</for>
 	</skill>

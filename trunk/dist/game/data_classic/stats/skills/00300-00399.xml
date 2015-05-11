@@ -20,7 +20,7 @@
 		<cond>
 		    <and>
 				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="0" />
+				<player hasFreeSummonPoints="4" />
 			</and>
 		</cond>
 		<for>
@@ -29,6 +29,7 @@
 				<param consumeItemId="1458" consumeItemCount="5" />
 				<param lifeTime="1200" />
 				<param expMultiplier="0.7" />
+				<param summonPoints="4" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -37,6 +38,7 @@
 				<param consumeItemId="1458" consumeItemCount="5" />
 				<param lifeTime="1200" />
 				<param expMultiplier="#ench1expPenalty" />
+				<param summonPoints="4" />
 			</effect>
 		</enchant1for>
 	</skill>

@@ -110,6 +110,8 @@ public final class Summon extends AbstractEffect
 		{
 			player.addServitor(summon);
 		}
+		player.setUsedSummonPoints(player.getUsedSummonPoints() + _summonPoints);
+		
 		summon.setShowSummonAnimation(true);
 		summon.setRunning();
 		summon.spawnMe();
