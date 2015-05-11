@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
 import com.l2jserver.gameserver.network.serverpackets.ShowBoard;
@@ -65,7 +66,7 @@ public final class HomeBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
-		if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_COMBAT_DISABLED && activeChar.isInCombat())
+		if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_COMBAT_DISABLED && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP)))
 		{
 			activeChar.sendMessage("You can't use the Community Board right now.");
 			return false;
