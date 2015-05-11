@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14700" level="85" type="L2Pet" name="Mechanic Golem">
+	<npc id="14700" level="85" type="L2Servitor" name="Mechanic Golem">
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" /> <!-- Mechanical Cannon -->
 			<param name="step1_action01" value="48" />
@@ -41,7 +41,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14701" level="85" type="L2Pet" name="Mechanic Golem">
+	<npc id="14701" level="85" type="L2Servitor" name="Mechanic Golem">
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" /> <!-- Mechanical Cannon -->
 			<param name="step1_action01" value="48" />
@@ -82,7 +82,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14702" level="60" type="L2Pet" name="Big Boom">
+	<npc id="14702" level="60" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="6" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -122,7 +122,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14703" level="64" type="L2Pet" name="Big Boom">
+	<npc id="14703" level="64" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="6" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -162,7 +162,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14704" level="68" type="L2Pet" name="Big Boom">
+	<npc id="14704" level="68" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="6" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -201,7 +201,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14705" level="72" type="L2Pet" name="Big Boom">
+	<npc id="14705" level="72" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="7" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -240,7 +240,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14706" level="76" type="L2Pet" name="Big Boom">
+	<npc id="14706" level="76" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="7" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -279,7 +279,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14707" level="78" type="L2Pet" name="Big Boom">
+	<npc id="14707" level="78" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="8" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -318,7 +318,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14708" level="78" type="L2Pet" name="Big Boom">
+	<npc id="14708" level="78" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="8" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -357,7 +357,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14709" level="78" type="L2Pet" name="Big Boom">
+	<npc id="14709" level="78" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="8" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -396,7 +396,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14710" level="78" type="L2Pet" name="Big Boom">
+	<npc id="14710" level="78" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="8" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -435,7 +435,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14711" level="79" type="L2Pet" name="Big Boom">
+	<npc id="14711" level="79" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="8" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -474,7 +474,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14712" level="79" type="L2Pet" name="Big Boom">
+	<npc id="14712" level="79" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="8" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -513,7 +513,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14713" level="79" type="L2Pet" name="Big Boom">
+	<npc id="14713" level="79" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="9" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -552,7 +552,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14714" level="79" type="L2Pet" name="Big Boom">
+	<npc id="14714" level="79" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="9" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -591,7 +591,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14715" level="80" type="L2Pet" name="Big Boom">
+	<npc id="14715" level="80" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="9" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -630,7 +630,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14716" level="80" type="L2Pet" name="Big Boom">
+	<npc id="14716" level="80" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="9" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -669,7 +669,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14717" level="80" type="L2Pet" name="Big Boom">
+	<npc id="14717" level="80" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="9" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -708,7 +708,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14718" level="80" type="L2Pet" name="Big Boom">
+	<npc id="14718" level="80" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="9" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -747,7 +747,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14719" level="81" type="L2Pet" name="Big Boom">
+	<npc id="14719" level="81" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="10" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -786,7 +786,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14720" level="81" type="L2Pet" name="Big Boom">
+	<npc id="14720" level="81" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="10" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -825,7 +825,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14721" level="81" type="L2Pet" name="Big Boom">
+	<npc id="14721" level="81" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="10" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -864,7 +864,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14722" level="81" type="L2Pet" name="Big Boom">
+	<npc id="14722" level="81" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="10" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -903,7 +903,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14723" level="82" type="L2Pet" name="Big Boom">
+	<npc id="14723" level="82" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="10" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -942,7 +942,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14724" level="82" type="L2Pet" name="Big Boom">
+	<npc id="14724" level="82" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="10" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -981,7 +981,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14725" level="82" type="L2Pet" name="Big Boom">
+	<npc id="14725" level="82" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="11" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1020,7 +1020,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14726" level="82" type="L2Pet" name="Big Boom">
+	<npc id="14726" level="82" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="11" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1059,7 +1059,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14727" level="83" type="L2Pet" name="Big Boom">
+	<npc id="14727" level="83" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="11" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1098,7 +1098,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14728" level="83" type="L2Pet" name="Big Boom">
+	<npc id="14728" level="83" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="11" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1137,7 +1137,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14729" level="83" type="L2Pet" name="Big Boom">
+	<npc id="14729" level="83" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="11" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1176,7 +1176,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14730" level="83" type="L2Pet" name="Big Boom">
+	<npc id="14730" level="83" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="11" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1215,7 +1215,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14731" level="84" type="L2Pet" name="Big Boom">
+	<npc id="14731" level="84" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="12" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1254,7 +1254,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14732" level="84" type="L2Pet" name="Big Boom">
+	<npc id="14732" level="84" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="12" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1293,7 +1293,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14733" level="84" type="L2Pet" name="Big Boom">
+	<npc id="14733" level="84" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="12" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1332,7 +1332,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14734" level="85" type="L2Pet" name="Big Boom">
+	<npc id="14734" level="85" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="12" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1371,7 +1371,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14735" level="85" type="L2Pet" name="Big Boom">
+	<npc id="14735" level="85" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="12" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -1410,7 +1410,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14736" level="85" type="L2Pet" name="Big Boom">
+	<npc id="14736" level="85" type="L2Servitor" name="Big Boom">
 		<parameters>
 			<skill name="DDMagic" id="4139" level="12" /> <!-- Boom Attack -->
 			<param name="step1_action01" value="44" />
@@ -3774,7 +3774,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="14799" level="42" type="L2Pet" name="Dark Panther">
+	<npc id="14799" level="42" type="L2Servitor" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="1" /> <!-- Panther Dark Claw -->
 			<param name="step_skill_target01" value="0" />
