@@ -395,13 +395,13 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
-		<set name="abnormalTime" val="3600" />		
+		<set name="abnormalTime" val="3600" />
 		<for>
 			<effect name="Buff">
 				<add stat="bonusExp" val="3" />
-				<add stat="bonusSp" val="3" />				
+				<add stat="bonusSp" val="3" />
 			</effect>
-		</for>		
+		</for>
 	</skill>
 	<skill id="19037" levels="1" name="Cloak of Radiant Light">
 		<!-- TODO: Confirm me -->
@@ -459,21 +459,21 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-			<for>
-				<effect name="Buff">
-					<mul stat="pvpPhysDef" val="1.05" />
-					<mul stat="pvpMagicalDef" val="1.05" />
-					<mul stat="pvpPhysSkillsDef" val="1.05" />
-					<add stat="STR" val="2" />
-					<add stat="DEX" val="2" />
-					<add stat="CON" val="2" />
-					<add stat="INT" val="2" />
-					<add stat="WIT" val="2" />
-					<add stat="MEN" val="2" />
-					<add stat="pDef" val="50.0" />
-					<add stat="mDef" val="40.0" />
-				</effect>
-			</for>
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDef" val="1.05" />
+				<mul stat="pvpMagicalDef" val="1.05" />
+				<mul stat="pvpPhysSkillsDef" val="1.05" />
+				<add stat="STR" val="2" />
+				<add stat="DEX" val="2" />
+				<add stat="CON" val="2" />
+				<add stat="INT" val="2" />
+				<add stat="WIT" val="2" />
+				<add stat="MEN" val="2" />
+				<add stat="pDef" val="50.0" />
+				<add stat="mDef" val="40.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19040" levels="1" name="Cloak of Darkness">
 		<!-- TODO: Confirm me -->
@@ -621,34 +621,97 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="19088" levels="4" name="Summon Siege Golem">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a siege weapon. Requires 400 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#npcIds"> 15054 15055 15056 15057 </table>
 		<set name="icon" val="icon.skill0013" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="530" />
+		<set name="itemConsumeCount" val="400" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-Grade) -->
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="SUMMON" />
 		<set name="hitTime" val="180000" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player canSummonSiegeGolem="true" />
+				<player hasFreeSummonPoints="4" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="1200" />
+				<param summonPoints="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19089" levels="4" name="Summon Wild Hog Cannon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 seconds. Requires 100 R-grade Crystals. Automatically acquired by Maestro class at level 85. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#npcIds"> 15058 15059 15060 15061 </table>
 		<set name="icon" val="icon.skill0299" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="530" />
+		<set name="itemConsumeCount" val="100" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-Grade) -->
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="SUMMON" />
 		<set name="hitTime" val="30000" />
 		<set name="reuseDelay" val="1200000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player canSummonSiegeGolem="true" />
+				<player hasFreeSummonPoints="4" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="1200" />
+				<param summonPoints="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19090" levels="4" name="Summon Swoop Cannon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Swoop Cannon. Requires 500 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#npcIds"> 15062 15063 15064 15065 </table>
 		<set name="icon" val="icon.skill0448" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="530" />
+		<set name="itemConsumeCount" val="500" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-Grade) -->
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="SUMMON" />
 		<set name="hitTime" val="10000" />
-		<set name="reuseDelay" val="7200000" />
+		<set name="reuseDelay" val="1200000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player canSummonSiegeGolem="true" />
+				<player hasFreeSummonPoints="4" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="1200" />
+				<param summonPoints="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19091" levels="1" name="Increase Item Drop Rate">
 		<!-- AUTO GENERATED SKILL -->

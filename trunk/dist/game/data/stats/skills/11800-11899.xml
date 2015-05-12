@@ -183,14 +183,20 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11818" levels="1" name="Price of Summoning">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Healing abilities are decreased as a price for summoning Lumi. -->
 		<set name="icon" val="icon.skill1100" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="180" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isDebuff" val="true" />
+		<set name="canBeDispeled" val="false" />
+		<effect name="Debuff">
+			<div stat="healEffect" val="1.4" />
+		</effect>
 	</skill>
 	<skill id="11819" levels="1" name="Party Return">
 		<!-- AUTO GENERATED SKILL -->

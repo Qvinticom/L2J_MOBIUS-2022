@@ -1533,32 +1533,45 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10040" levels="6" name="Summon Golden Lion">
-		<table name="#mpConsume">154 156 164 173 181 189</table>
-		<table name="#magicLvl">85 86 89 92 95 98</table>
-		<table name="#summonLifeTime"> 1200 1200 1200 1200 3600 3600 3600</table>
-		<table name="#ench1MpConsume">189 189 189 189 189 189 189 189 189 189</table>
-		<table name="#npcIds">14936 14937 14938 14939 14974 14975</table>
-		<table name="#enchantNpcId">14976 14977 14978 14979 14980 14981 14982 14983 14984 14985</table>
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="mpConsume" val="#mpConsume" />
+	<skill id="10040" levels="6" name="Summon Golden Lion" enchantGroup1="10">
+		<table name="#magicLvl"> 85 86 89 92 95 98 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#mpConsume"> 154 156 164 173 181 189 </table>
+		<table name="#npcIds"> 14936 14937 14938 14939 14974 14975 </table>
+		<table name="#ench1npcId"> 14976 14977 14978 14979 14980 14981 14982 14983 14984 14985 </table>
+		<set name="icon" val="icon.skill10787" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="skillType" val="SUMMON" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="skillToCast" val="10061" />
-		<set name="skillToCastLevel" val="1" />
-		<enchant1 name="npcId" val="#enchantNpcId" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<set name="hitTime" val="3000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param lifeTime="1200" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
 			</effect>
 		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="10041" levels="4" name="Summon Cubic of Despair">
 		<!-- AUTO GENERATED SKILL -->
@@ -1911,14 +1924,20 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="10061" levels="1" name="Price of Summoning">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. is intentionally decreased as price for summoning a lion. -->
 		<set name="icon" val="icon.skill1100" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="180" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isDebuff" val="true" />
+		<set name="canBeDispeled" val="false" />
+		<effect name="Debuff">
+			<sub stat="pDef" val="607" />
+		</effect>
 	</skill>
 	<skill id="10062" levels="4" name="Phoenix Spirit">
 		<table name="#magicLvl">85 90 95 99</table>
@@ -2034,16 +2053,34 @@
 		</for>
 	</skill>
 	<skill id="10068" levels="4" name="Summon Blood Panther">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Blood Panther to fight with you. -->
-		<table name="#mpConsumes"> 154 156 164 173 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 154 156 164 173 </table>
+		<table name="#npcIds"> 15138 15139 15140 15141 </table>
 		<set name="icon" val="icon.skill11853" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="skillType" val="SUMMON" />
 		<set name="hitTime" val="3500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10069" levels="4" name="Vampirism">
 		<!-- AUTO GENERATED SKILL -->

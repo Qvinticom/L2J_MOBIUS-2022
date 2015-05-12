@@ -704,19 +704,45 @@
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11774" levels="4" name="Summon Tree of Life">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11774" levels="4" name="Summon Tree of Life" enchantGroup1="10">
 		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
-		<table name="#mpConsumes"> 185 205 225 243 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#mpConsume"> 185 205 225 243 </table>
+		<table name="#npcIds"> 14933 14943 15010 15011 </table>
+		<table name="#ench1npcId"> 15012 15013 15014 15015 15016 15017 15018 15019 15020 15021 </table>
 		<set name="icon" val="icon.skill11774" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="skillType" val="SUMMON" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="2000" />
 		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11775" levels="1" name="Return">
 		<!-- AUTO GENERATED SKILL -->
@@ -729,27 +755,47 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11776" levels="4" name="Summon Lumi">
+	<skill id="11776" levels="4" name="Summon Lumi" enchantGroup1="10">
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#mpConsume"> 96 106 117 127 </table>
+		<table name="#npcIds"> 14925 14944 14945 14946 </table>
+		<table name="#ench1npcId"> 15000 15001 15002 15003 15004 15005 15006 15007 15008 15009 </table>
+		<set name="icon" val="icon.skill11776" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonGroupReplace" val="aeore_healer" />
+		<set name="skillToCast" val="11818" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
-		<table name="#mpConsume">77 85 94 102</table>
-		<table name="#mpInitialConsume">19 21 23 25</table>
-		<table name="#npcId">14925 14944 14945 14946</table>
-		<table name="#enchantNpcId">15000 15001 15002 15003 15004 15005 15006 15007 15008 15009</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="summonGroupReplace" val="aeore_healer" />
-		<set name="skillToCast" val="11818" />
-		<set name="skillToCastLevel" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SUMMON" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="npcId" val="#npcId" />
-		<enchant1 name="npcId" val="#enchantNpcId" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<!-- set name="analog_skills" value="1359;1358;1361;1360"/ -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11777" levels="5" name="Mark of Lumi">
 		<set name="hitTime" val="1500" />
