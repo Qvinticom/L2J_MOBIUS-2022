@@ -294,12 +294,18 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8527" levels="1" name="Release Agathion's Seal - Magmeld Fairy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Removes the Agathion's seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="16080" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8528" levels="1" name="Release Agathion's Seal">
 		<!-- AUTO GENERATED SKILL -->

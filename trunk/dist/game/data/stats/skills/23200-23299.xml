@@ -737,8 +737,14 @@
 	</skill>
 	<skill id="23250" levels="1" name="Agathion Cute Trick - Cow">
 		<!-- You can see the summoned spirit's cute tricks. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1596" />
+		</cond>
 	</skill>
 	<skill id="23251" levels="1" name="Agathion Cute Trick - Makeshift Bat">
 		<!-- You can see the summoned spirit's cute tricks. -->

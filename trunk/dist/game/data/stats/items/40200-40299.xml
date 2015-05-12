@@ -228,7 +228,17 @@
 		<!-- Summons Freya agathion. 30-day. Cannot be used in the Olymipad.\n(Active Skill)\n1. Freya's Scroll of Escape: Town of Aden / Town of Rune / Talking Island Village. Cooldown is 30 min.\n\n(Passive SKill)\n1. Freya's Mind: Mental/Paralysis Resistance + 10%, Water Resistance + 10.\n\n2. Freya's Strength: STR/INT/CON/DEX/WIT/MEN + 1.\n\n3. Freya's Magic: P./M. Skill MP Consumption - 3%. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="time" val="2592000" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="3267-1;18133-1;18135-1" />
+		<set name="time" val="43200" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="40238" name="Freya's Supply Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain a Transformation Scroll: Anakim / Zaken / Kechi / Saber Tooth Tiger / Doll Blader. Cannot be used in the Olympiad. -->

@@ -4,7 +4,15 @@
 		<!-- Bracelet that can summon a level 7 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="3267-1;21273-1;23346-1" />
 	</item>
 	<item id="22401" name="Root of Evolution" additionalName="" type="EtcItem">
 		<!-- The Root of Evolution is a necessary ingredient for evolving a Valakas Agathion. Double-click to summon the evolution deliverer. -->

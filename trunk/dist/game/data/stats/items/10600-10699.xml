@@ -61,14 +61,18 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5537-1;3425-1;3267-1" />
 	</item>
-	<item id="10607" type="EtcItem" name="Agathion - Rudolph">
+	<item id="10607" type="Armor" name="Agathion - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="5537-1;3425-1;3267-1" />
 	</item>
 	<item id="10608" type="EtcItem" name="Forgotten Scroll: Chant of Combat">
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />

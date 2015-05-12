@@ -257,28 +257,43 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="18133" levels="1" name="Release Agathion's Seal - Freya">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13446" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18134" levels="1" name="Freya's Cuteness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cuteness. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<cond msgId="2292">
+			<player agathionId="13446" />
+		</cond>
 	</skill>
 	<skill id="18135" levels="1" name="Freya's Cute Trick">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<cond msgId="2292">
+			<player agathionId="13446" />
+		</cond>
 	</skill>
 	<skill id="18136" levels="1" name="Freya's Scroll of Escape: Town of Rune">
 		<!-- AUTO GENERATED SKILL -->

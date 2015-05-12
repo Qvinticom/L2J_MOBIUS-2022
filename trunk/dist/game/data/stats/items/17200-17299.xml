@@ -545,26 +545,37 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="8521-1;6916-1;3267-1" />
 	</item>
 	<item id="17270" type="Armor" name="Agathion Seal Bracelet - Nevit's Messenger Kanna">
 		<!-- Description: Bracelet that summons a Nevit's messenger Kanna Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="3267-1;8522-1" />
 	</item>
 	<item id="17271" type="Armor" name="Agathion - Guardian of Dawn Kallesin">
 		<!-- Description: Bracelet that summons a Guardian of the Dawn Kallesin Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="3267-1;8523-1" />
 	</item>
 	<item id="17272" type="EtcItem" name="Agathion - Antharas Pack">
 		<!-- Description: Special gift that commemorates the conquest of Dragon Valley. When used, you can obtain an Antharas Agathion seal bracelet. -->

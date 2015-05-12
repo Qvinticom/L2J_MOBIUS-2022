@@ -24,12 +24,16 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="14102" levels="1" name="Agathion Cute Trick - Magmeld Fairy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See the summoned spirit perform cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<cond msgId="2292">
+			<player agathionId="16080" />
+		</cond>
 	</skill>
 	<skill id="14103" levels="1" name="Agathion Return - Magmeld Fairy">
 		<!-- AUTO GENERATED SKILL -->

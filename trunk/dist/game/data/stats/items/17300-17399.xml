@@ -1331,11 +1331,19 @@
 		<!-- Letter containing secret information. Bring it to the fairy by Timiniel's side. -->
 		<set name="icon" val="icon.fairy_encounter_letter" />
 	</item>
-	<item id="17380" name="Agathion - Fairy" additionalName="" type="Armor">
+	<item id="17380" name="Agathion - Fairy" type="Armor">
 		<!-- When equipped, you can summon a fairy Agathion. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="unequip_skill" val="3267-1" />
+		<set name="item_skill" val="3267-1;8527-1;14102-1" />
 	</item>
 	<item id="17381" name="Teredor Poison Antidote" additionalName="" type="EtcItem">
 		<!-- Potion that cancels the Teredor Poison . -->
