@@ -416,83 +416,118 @@
 		</for>
 	</skill>
 	<skill id="11323" levels="8" name="Feline Aggression">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Provokes nearby enemies. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
+		</for>
 	</skill>
 	<skill id="11324" levels="8" name="Feline Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Temporarily Stuns nearby enemies. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="11325" levels="8" name="Feline Bite">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<set name="icon" val="icon.skill0121" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="40" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11326" levels="8" name="Feline Pounce">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 8406 8920 9497 10043 10588 11134 11680 12225 </table>
 		<set name="icon" val="icon.skill0121" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11327" levels="8" name="Feline Touch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<set name="icon" val="icon.skill1234" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11328" levels="8" name="Feline Power">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#power"> 11558 12309 13059 13809 14559 15309 16060 16810 </table>
 		<set name="icon" val="icon.skill1171" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2900" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11329" levels="8" name="Summon Wynn Merrow">
 		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
@@ -579,83 +614,118 @@
 		</for>
 	</skill>
 	<skill id="11332" levels="8" name="Unicorn's Aggression">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Provokes nearby enemies. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
+		</for>
 	</skill>
 	<skill id="11333" levels="8" name="Unicorn's Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Temporarily Stuns nearby enemies. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="11334" levels="8" name="Unicorn's Bite">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<set name="icon" val="icon.skill0121" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="40" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11335" levels="8" name="Unicorn's Pounce">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 8406 8920 9497 10043 10588 11134 11680 12225 </table>
 		<set name="icon" val="icon.skill0121" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11336" levels="8" name="Unicorn's Touch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<set name="icon" val="icon.skill1234" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11337" levels="8" name="Unicorn's Power">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#power"> 11558 12309 13059 13809 14559 15309 16060 16810 </table>
 		<set name="icon" val="icon.skill1171" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2900" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11338" levels="8" name="Summon Wynn Nightshade">
 		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
@@ -742,83 +812,118 @@
 		</for>
 	</skill>
 	<skill id="11341" levels="8" name="Phantom Aggression">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Provokes nearby enemies. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
+		</for>
 	</skill>
 	<skill id="11342" levels="8" name="Phantom Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Temporarily Stuns nearby enemies. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="11343" levels="8" name="Phantom Bite">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<set name="icon" val="icon.skill0121" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="40" />
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11344" levels="8" name="Phantom Pounce">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 8406 8920 9497 10043 10588 11134 11680 12225 </table>
 		<set name="icon" val="icon.skill0121" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11345" levels="8" name="Phantom Touch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 48 50 52 54 56 58 60 62 </table>
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<set name="icon" val="icon.skill1234" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11346" levels="8" name="Phantom Power">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
-		<table name="#mpConsumes"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#magicLevel"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 76 79 81 84 87 90 93 </table>
+		<table name="#power"> 11558 12309 13059 13809 14559 15309 16060 16810 </table>
 		<set name="icon" val="icon.skill1171" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2900" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="11347" levels="4" name="Greater Servitor Haste">
 		<!-- AUTO GENERATED SKILL -->
