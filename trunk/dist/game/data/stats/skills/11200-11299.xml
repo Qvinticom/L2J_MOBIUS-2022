@@ -172,44 +172,122 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="11256" levels="8" name="Summon Cute Bear">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11256" levels="8" name="Summon Cute Bear" enchantGroup1="10">
 		<!-- Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. -->
-		<table name="#mpConsumes"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 14929 14947 14948 14949 14950 14951 14952 14953 </table>
+		<table name="#ench1npcId"> 15022 15023 15024 15025 15026 15027 15028 15029 15030 15031 </table>
 		<set name="icon" val="icon.skill11256" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="3800" />
+		<set name="hitTime" val="3799" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="11257" levels="8" name="Summon Saber Tooth Cougar">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11257" levels="8" name="Summon Saber Tooth Cougar" enchantGroup1="10">
 		<!-- Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. -->
-		<table name="#mpConsumes"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 14930 14954 14955 14956 14957 14958 14959 14960 </table>
+		<table name="#ench1npcId"> 15032 15033 15034 15035 15036 15037 15038 15039 15040 15041 </table>
 		<set name="icon" val="icon.skill11257" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="3800" />
+		<set name="hitTime" val="3799" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</enchant1for>
 	</skill>
-	<skill id="11258" levels="8" name="Summon Grim Reaper">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11258" levels="8" name="Summon Grim Reaper" enchantGroup1="10">
 		<!-- Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. -->
-		<table name="#mpConsumes"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 14931 14961 14962 14963 14964 14965 14966 14967 </table>
+		<table name="#ench1npcId"> 15042 15043 15044 15045 15046 15047 15048 15049 15050 15051 </table>
 		<set name="icon" val="icon.skill11258" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="3800" />
+		<set name="hitTime" val="3799" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Summon">
+				<param npcId="#ench1npcId" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11259" levels="8" name="Mark of Weakness">
 		<!-- AUTO GENERATED SKILL -->
