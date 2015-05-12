@@ -1,76 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11600" levels="1" name="Frenzied Prevailing Sonata">
+	<skill id="11600" levels="1" name="Frenzied Prevailing Sonata" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases clan members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="PREV_SONATA" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="abnormalType" val="PREV_SONATA" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
-		<set name="abnormalTime" val="420" />
 		<set name="reuseDelay" val="2000" />
-		<set name="effectRange" val="1200" />
-		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.15" />
 				<mul stat="mAtkSpd" val="1.30" />
 				<mul stat="maxHp" val="1.30" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<!--<mul stat="magicFailureRate" val="0.80" />-->
+				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<sub stat="cancel" val="50" /> <!-- Guess -->
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="11601" levels="1" name="Frenzied Daring Sonata">
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
+	<skill id="11601" levels="1" name="Frenzied Daring Sonata" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases CLAN members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="DARING_SONATA" />
 		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11601" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
-		<set name="effectRange" val="1200" />
-		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
-				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pDef" val="0.97" />
-				<mul stat="mDef" val="0.89" />
+				<mul stat="mDef" val="0.97" />
 				<sub stat="rEvas" val="4" />
 				<add stat="absorbDam" val="8" />
-				<add stat="reflectDam" val="10" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="11602" levels="1" name="Frenzied Refreshing Sonata">
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+	<skill id="11602" levels="1" name="Frenzied Refreshing Sonata" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases clan members' HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="REF_SONATA" />
-		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
 		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11602" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
-		<set name="effectRange" val="1200" />
-		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="regHp" val="1.20" />
 				<add stat="accCombat" val="4" />
 				<add stat="rEvas" val="3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="mReuse" val="0.9" />
-				<mul stat="pReuse" val="0.9" />
+				<mul stat="PhysicalMpConsumeRate" val="0.80" />
+				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="mReuse" val="0.90" />
+				<mul stat="pReuse" val="0.90" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
 			</effect>
 		</for>
 	</skill>
@@ -166,113 +225,269 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11607" levels="1" name="Prevailing Song">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 minutes, increases party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases magic skill MP Consumption - 10% and the magic cancel rate. -->
+	<skill id="11607" levels="1" name="Prevailing Song" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="PREV_SONATA" />
+		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11607" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
-		<set name="hitTime" val="700" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="2000" />
-	</skill>
-	<skill id="11608" levels="1" name="Daring Song">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
-		<set name="icon" val="icon.skill11608" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
-		<set name="hitTime" val="700" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="2000" />
-	</skill>
-	<skill id="11609" levels="1" name="Refreshing Song">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
-		<set name="icon" val="icon.skill11609" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
-		<set name="hitTime" val="700" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="2000" />
-	</skill>
-	<skill id="11610" levels="1" name="Prevailing Dance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 minutes, increases party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases magic skill MP Consumption - 10% and the magic cancel rate. -->
-		<set name="icon" val="icon.skill11610" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="PARTY" />
-		<set name="abnormalTime" val="300" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
-		<set name="effectRange" val="1200" />
-		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.15" />
 				<mul stat="mAtkSpd" val="1.30" />
 				<mul stat="maxHp" val="1.30" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="MagicalMpConsumeRate" val="0.80" />
-				<mul stat="PhysicalMpConsumeRate" val="0.90" />
+				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<sub stat="cancel" val="50" /> <!-- Guess -->
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="11611" levels="1" name="Daring Dance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
-		<set name="icon" val="icon.skill11611" />
+	<skill id="11608" levels="1" name="Daring Song" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="DARING_SONATA" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11608" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
-		<set name="abnormalTime" val="300" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
-		<set name="effectRange" val="1200" />
-		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
-				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pDef" val="0.97" />
-				<mul stat="mDef" val="0.89" />
+				<mul stat="mDef" val="0.97" />
 				<sub stat="rEvas" val="4" />
 				<add stat="absorbDam" val="8" />
-				<add stat="reflectDam" val="10" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="11612" levels="1" name="Refreshing Dance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
-		<set name="icon" val="icon.skill11612" />
+	<skill id="11609" levels="1" name="Refreshing Song" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases party members' HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="REF_SONATA" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11609" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="PARTY" />
-		<set name="abnormalTime" val="300" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
-		<set name="effectRange" val="1200" />
-		<set name="castRange" val="900" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="regHp" val="1.20" />
 				<add stat="accCombat" val="4" />
 				<add stat="rEvas" val="3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="mReuse" val="0.9" />
-				<mul stat="pReuse" val="0.9" />
+				<mul stat="PhysicalMpConsumeRate" val="0.80" />
+				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="mReuse" val="0.90" />
+				<mul stat="pReuse" val="0.90" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11610" levels="1" name="Prevailing Dance" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="PREV_SONATA" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11610" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="PARTY" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="mAtkSpd" val="1.30" />
+				<mul stat="maxHp" val="1.30" />
+				<mul stat="regMp" val="1.20" />
+				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<sub stat="cancel" val="50" /> <!-- Guess -->
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11611" levels="1" name="Daring Dance" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="DARING_SONATA" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11611" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="PARTY" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pDef" val="0.97" />
+				<mul stat="mDef" val="0.97" />
+				<sub stat="rEvas" val="4" />
+				<add stat="absorbDam" val="8" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11612" levels="1" name="Refreshing Dance" enchantGroup1="10" enchantGroup2="10">
+		<!-- Increases party members' HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 330 360 390 420 450 480 510 540 570 600 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<set name="affectRange" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="REF_SONATA" />
+		<set name="abnormalTime" val="300" />
+		<set name="icon" val="icon.skill11612" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="PARTY" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.20" />
+				<add stat="accCombat" val="4" />
+				<add stat="rEvas" val="3" />
+				<add stat="runSpd" val="20" />
+				<mul stat="PhysicalMpConsumeRate" val="0.80" />
+				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="mReuse" val="0.90" />
+				<mul stat="pReuse" val="0.90" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
 			</effect>
 		</for>
 	</skill>

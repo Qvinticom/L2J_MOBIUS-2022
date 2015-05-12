@@ -1185,7 +1185,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11529" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
 		<set name="hitTime" val="700" />
@@ -1340,6 +1340,8 @@
 		<table name="#magicLvl">87 90 93 96 99</table>
 		<table name="#mpInitialConsume">14 15 16 17 18</table>
 		<table name="#mpConsume">56 60 64 68 72</table>
+		<set name="abnormalType" val="ABNORMAL_INVINCIBILITY" />
+		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2033,6 +2035,8 @@
 		<table name="#ench2abnormalTime">130 140 150 160 170 180 190 200 210 220</table>
 		<table name="#ench3runSpd">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="magicLvl" val="85" />
+		<set name="abnormalType" val="DANCE_OF_SHADOW" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="targetType" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="abnormalTime" val="120" />
@@ -2045,13 +2049,13 @@
 		<set name="canBeDispeled" val="false" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
-			<effect abnormalLvl="3" abnormalTime="120" abnormalType="dance_of_shadow" abnormalVisualEffect="stealth" name="SilentMove" removed="ON_ATTACK_BUFF" val="0"></effect>
+			<effect abnormalLvl="3" abnormalTime="120" abnormalType="DANCE_OF_SHADOW" abnormalVisualEffect="STEALTH" name="SilentMove" removed="ON_ATTACK_BUFF" val="0" />
 		</for>
 		<enchant2for>
-			<effect abnormalLvl="3" abnormalTime="#ench2abnormalTime" abnormalType="dance_of_shadow" abnormalVisualEffect="stealth" name="SilentMove" removed="ON_ATTACK_BUFF" val="0"></effect>
+			<effect abnormalLvl="3" abnormalTime="#ench2abnormalTime" abnormalType="DANCE_OF_SHADOW" abnormalVisualEffect="STEALTH" name="SilentMove" removed="ON_ATTACK_BUFF" val="0" />
 		</enchant2for>
 		<enchant3for>
-			<effect abnormalLvl="3" abnormalTime="120" abnormalType="dance_of_shadow" abnormalVisualEffect="stealth" name="SilentMove" removed="ON_ATTACK_BUFF" val="0">
+			<effect abnormalLvl="3" abnormalTime="120" abnormalType="DANCE_OF_SHADOW" abnormalVisualEffect="STEALTH" name="SilentMove" removed="ON_ATTACK_BUFF" val="0">
 				<add stat="runSpd" val="#ench3runSpd" />
 			</effect>
 		</enchant3for>
@@ -2389,113 +2393,568 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="11589" levels="4" name="Horn Frenzy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., clan members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
+	<skill id="11589" levels="4" name="Horn Frenzy" enchantGroup1="10" enchantGroup2="10">
+		<!-- For 30 minutes, clan members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
+		<table name="#ench1MpConsume"> 138 132 126 120 115 109 103 97 92 86 </table>
+		<table name="#ench1MpInitialConsume"> 35 34 32 31 29 28 26 25 23 22 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<table name="#mpInitialConsumes"> 28 31 34 37 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#pAtk"> 1.17 1.19 1.21 1.23 </table>
+		<table name="#pDef"> 1.15 1.15 1.15 1.15 </table>
+		<table name="#mAtk"> 1.79 1.83 1.87 1.91 </table>
+		<table name="#mDef"> 1.30 1.30 1.30 1.30 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="MELODY_HORN" />
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill11589" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpInitialConsume" val="#mpInitialConsumes" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mDef" val="#mDef" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;MA_UP;MD_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;MA_UP;MD_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="11590" levels="4" name="Drum Frenzy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., clan members' Max MP + 20%, HP Recovery Bonus + 20%, and M. Critical Rate + 20. During a standard attack, P. Atk. and Debuff Resistance + 10%, and Critical Damage, P. Def., Atk. Spd., M. Atk., M. Def., and Casting Spd. + 20%. When hit with a critical attack, received damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon/bow/crossbow who receives more than a certain amount of damage. -->
+	<skill id="11590" levels="4" name="Drum Frenzy" enchantGroup1="10" enchantGroup2="10">
+		<!-- For 30 minutes, clan members' Max MP + 20%, HP Recovery Bonus + 20%, and M. Critical Rate + 20. During a standard attack, P. Atk. and Debuff Resistance + 10%, and Critical Damage, P. Def., Atk. Spd., M. Atk., M. Def., and Casting Spd. + 20%. When hit with a critical attack, received damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon/bow/crossbow who receives more than a certain amount of damage. -->
+		<table name="#ench1MpConsume"> 138 132 126 120 115 109 103 97 92 86 </table>
+		<table name="#ench1MpInitialConsume"> 35 34 32 31 29 28 26 25 23 22 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#abnormalLvls"> 1 2 3 4</table>
 		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<table name="#mpInitialConsumes"> 28 31 34 37 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#maxMp"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#regHp"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#mCritRate"> 20 20 20 20 </table>
+		<table name="#cAtk"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#pAtk"> 1.10 1.10 1.10 1.10 </table>
+		<table name="#pDef"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#pAtkSpd"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#mAtk"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#mDef"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#mAtkSpd"> 1.20 1.20 1.20 1.20 </table>
+		<table name="#debuffVuln"> 1.10 1.10 1.10 1.10 </table>
+		<table name="#defCritDamage"> 1.30 1.30 1.30 1.30 </table>
+		<table name="#runSpd"> 0.85 0.90 0.95 1.0 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="MELODY_DRUM" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill11590" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpInitialConsume" val="#mpInitialConsumes" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="regHp" val="#regHp" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<add stat="cAtk" val="#cAtk" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mDef" val="#mDef" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="runSpd" val="#runSpd" />
+				<mul stat="debuffVuln" val="#debuffVuln" />
+				<mul stat="defCritDamage" val="#defCritDamage" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="300" />
+				<param chance="25" />
+				<param skillId="11569" skillLevel="1" /> <!-- Critical Damage Increase -->
+				<param targetType="SELF" />
+				<param allowWeapons="SWORD,BLUNT,DAGGER,DUALDAGGER,DUAL,DUALFIST,POLE,ANCIENTSWORD,RAPIER,BOW,CROSSBOW,DUALBLUNT" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="MAX_MP_UP;HP_REGEN_UP;MAGIC_CRITICAL_UP;PA_UP;PD_UP;ATTACK_TIME_DOWN;MA_UP;MD_UP;CASTING_TIME_DOWN;SPEED_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP;COUNTER_CRITICAL" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="MAX_MP_UP;HP_REGEN_UP;MAGIC_CRITICAL_UP;PA_UP;PD_UP;ATTACK_TIME_DOWN;MA_UP;MD_UP;CASTING_TIME_DOWN;SPEED_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP;COUNTER_CRITICAL" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="11591" levels="4" name="Pipe Organ Frenzy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., clan members' Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
+	<skill id="11591" levels="4" name="Pipe Organ Frenzy" enchantGroup1="10" enchantGroup2="10">
+		<!-- For 30 minutes, clan members' Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
+		<table name="#ench1MpConsume"> 138 132 126 120 115 109 103 97 92 86 </table>
+		<table name="#ench1MpInitialConsume"> 35 34 32 31 29 28 26 25 23 22 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<table name="#mpInitialConsumes"> 28 31 34 37 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#maxHp"> 1.37 1.39 1.41 1.43 </table>
+		<table name="#maxMp"> 1.37 1.39 1.41 1.43 </table>
+		<table name="#maxCp"> 1.37 1.39 1.41 1.43 </table>
+		<table name="#regHp"> 1.20 1.20 1.20 1.20 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="MELODY_PIPE" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill11591" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpInitialConsume" val="#mpInitialConsumes" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="maxCp" val="#maxCp" />
+				<mul stat="regHp" val="#regHp" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;IMPROVE_HP_MP_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;IMPROVE_HP_MP_UP" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="11592" levels="4" name="Guitar Frenzy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., clan members' P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
+	<skill id="11592" levels="4" name="Guitar Frenzy" enchantGroup1="10" enchantGroup2="10">
+		<!-- For 30 minutes, clan members' P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
+		<table name="#ench1MpConsume"> 138 132 126 120 115 109 103 97 92 86 </table>
+		<table name="#ench1MpInitialConsume"> 35 34 32 31 29 28 26 25 23 22 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<table name="#mpInitialConsumes"> 28 31 34 37 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#rCrit"> 1.32 1.34 1.36 1.38 </table>
+		<table name="#cAtk"> 1.35 1.35 1.35 1.35 </table>
+		<table name="#mCritRate"> 20 20 20 20 </table>
+		<table name="#magicMpConsumeRate"> 0.90 0.90 0.90 0.90 </table>
+		<table name="#physMpConsumeRate"> 0.80 0.80 0.80 0.80 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="MELODY_GUITAR" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill11592" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpInitialConsume" val="#mpInitialConsumes" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="cAtk" val="#cAtk" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<mul stat="MagicalMpConsumeRate" val="#magicMpConsumeRate" />
+				<mul stat="PhysicalMpConsumeRate" val="#physMpConsumeRate" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="11593" levels="4" name="Harp Frenzy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., clan members' P. Accuracy and P. Evasion/ M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
+	<skill id="11593" levels="4" name="Harp Frenzy" enchantGroup1="10" enchantGroup2="10">
+		<!-- For 30 minutes, clan members' P. Accuracy and P. Evasion/ M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
+		<table name="#ench1MpConsume"> 138 132 126 120 115 109 103 97 92 86 </table>
+		<table name="#ench1MpInitialConsume"> 35 34 32 31 29 28 26 25 23 22 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<table name="#mpInitialConsumes"> 28 31 34 37 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#accCombat"> 5 6 7 8 </table>
+		<table name="#rEvas"> 5 6 7 8 </table>
+		<table name="#mEvas"> 5 6 7 8 </table>
+		<table name="#runSpd"> 34 35 36 37 </table>
+		<table name="#defCritDamage"> 1.30 1.30 1.30 1.30 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="MELODY_HARP" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill11593" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpInitialConsume" val="#mpInitialConsumes" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="#accCombat" />
+				<add stat="rEvas" val="#rEvas" />
+				<add stat="mEvas" val="#mEvas" />
+				<add stat="runSpd" val="#runSpd" />
+				<mul stat="defCritDamage" val="#defCritDamage" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="AVOID_UP;HIT_UP;SPEED_UP;CRITICAL_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="AVOID_UP;HIT_UP;SPEED_UP;CRITICAL_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="11594" levels="4" name="Lute Frenzy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., clan members' Atk. Spd. + 34% and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage effect. -->
+	<skill id="11594" levels="4" name="Lute Frenzy" enchantGroup1="10" enchantGroup2="10">
+		<!-- For 30 minutes, clan members' Atk. Spd. + 34% and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage effect. -->
+		<table name="#ench1MpConsume"> 138 132 126 120 115 109 103 97 92 86 </table>
+		<table name="#ench1MpInitialConsume"> 35 34 32 31 29 28 26 25 23 22 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#mpConsumes"> 140 151 170 181 </table>
+		<table name="#mpInitialConsumes"> 28 31 34 37 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#pAtkSpd"> 1.34 1.35 1.36 1.37 </table>
+		<table name="#mAtkSpd"> 1.31 1.32 1.33 1.34 </table>
+		<table name="#absorbDam"> 9 9 9 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="MELODY_LUTE" />
+		<set name="abnormalTime" val="1800" />
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill11594" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpInitialConsume" val="#mpInitialConsumes" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.34" />
+				<mul stat="mAtkSpd" val="1.31" />
+				<add stat="absorbDam" val="9" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="11595" levels="1" name="Knight's Frenzied Harmony">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11595" levels="1" name="Knight's Frenzied Harmony" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
 		<!-- For 30 minutes, increases clan members' P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
-		<set name="icon" val="icon.skill11596" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="700" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="2000" />
-	</skill>
-	<skill id="11596" levels="1" name="Warrior's Frenzied Harmony">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 minutes, increases clan members' P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="HARMONY" />
 		<set name="icon" val="icon.skill11595" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.12" />
+				<mul stat="pDef" val="1.45" />
+				<mul stat="rShld" val="1.30" />
+				<mul stat="sDef" val="1.50" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" />
+			</effect>
+		</for>
+		<enchant3for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.12" />
+				<mul stat="pDef" val="1.45" />
+				<mul stat="rShld" val="1.30" />
+				<mul stat="sDef" val="1.50" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2.00" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SHOCK="#enchTraits" />
+			</effect>
+		</enchant3for>
 	</skill>
-	<skill id="11597" levels="1" name="Wizard's Frenzied Harmony">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11596" levels="1" name="Warrior's Frenzied Harmony" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10">
+		<!-- For 30 minutes, increases clan members' P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="HARMONY" />
+		<set name="icon" val="icon.skill11596" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="CLAN" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="700" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2.00" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" />
+			</effect>
+		</for>
+		<enchant3for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2.00" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" />
+			</effect>
+			<effect name="AttackTrait">
+				<param KNOCKDOWN="#enchTraits" />
+			</effect>
+		</enchant3for>
+		<enchant4for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2.00" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" />
+			</effect>
+			<effect name="AttackTrait">
+				<param POISON="#enchTraits" />
+			</effect>
+		</enchant4for>
+		<enchant5for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2.00" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" />
+			</effect>
+			<effect name="AttackTrait">
+				<param BLEED="#enchTraits" />
+			</effect>
+		</enchant5for>
+	</skill>
+	<skill id="11597" levels="1" name="Wizard's Frenzied Harmony" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
 		<!-- For 30 minutes, increases clan members' M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Spd. + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. Decreases magic skill MP Consumption - 15%, physical skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
+		<table name="#ench1MpConsume"> 107 103 98 94 89 85 80 76 71 67 </table>
+		<table name="#ench1MpInitialConsume"> 26 25 24 23 22 21 20 19 17 16 </table>
+		<table name="#ench2AbnormalTime"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="HARMONY" />
 		<set name="icon" val="icon.skill11597" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill-->
+		<set name="magicLvl" val="85" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.40" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mDef" val="1.14" />
+				<mul stat="mCritRate" val="2.00" />
+				<mul stat="regMp" val="1.20" />
+				<mul stat="runSpd" val="1.08" />
+				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="mReuse" val="0.80" />
+				<mul stat="pReuse" val="0.80" />
+				<mul stat="dReuse" val="0.80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
+			</effect>
+		</for>
+		<enchant3for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.40" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mDef" val="1.14" />
+				<mul stat="mCritRate" val="2.00" />
+				<mul stat="regMp" val="1.20" />
+				<mul stat="runSpd" val="1.08" />
+				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="mReuse" val="0.80" />
+				<mul stat="pReuse" val="0.80" />
+				<mul stat="dReuse" val="0.80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SLEEP="#enchTraits" />
+			</effect>
+		</enchant3for>
+		<enchant4for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.40" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mDef" val="1.14" />
+				<mul stat="mCritRate" val="2.00" />
+				<mul stat="regMp" val="1.20" />
+				<mul stat="runSpd" val="1.08" />
+				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="mReuse" val="0.80" />
+				<mul stat="pReuse" val="0.80" />
+				<mul stat="dReuse" val="0.80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
+			</effect>
+			<effect name="AttackTrait">
+				<param DERANGEMENT="#enchTraits" />
+			</effect>
+		</enchant4for>
 	</skill>
 	<skill id="11598" levels="4" name="Greater Freezing Flame">
 		<!-- AUTO GENERATED SKILL -->
