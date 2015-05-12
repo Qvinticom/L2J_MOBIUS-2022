@@ -175,6 +175,7 @@
 				<xs:attribute type="xs:byte" name="cubicSkillChance" use="optional" />
 				<xs:attribute type="xs:string" name="cubicPower" use="optional" />
 				<xs:attribute type="xs:string" name="npcId" use="optional" />
+				<xs:attribute type="xs:string" name="summonPoints" use="optional" />
 				<xs:attribute type="xs:string" name="consumeItemId" use="optional" />
 				<xs:attribute type="xs:string" name="consumeItemCount" use="optional" />
 				<xs:attribute type="xs:string" name="lifeTime" use="optional" />
