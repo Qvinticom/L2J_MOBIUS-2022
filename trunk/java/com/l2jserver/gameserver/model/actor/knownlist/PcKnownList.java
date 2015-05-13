@@ -157,11 +157,19 @@ public class PcKnownList extends PlayableKnownList
 		{
 			return 3500;
 		}
-		if (knownlistSize <= 70)
+		
+		// Old custom/wrong method.
+		// if (knownlistSize <= 70)
+		// {
+		// return 2910;
+		// }
+		// return 2310;
+		
+		if (knownlistSize > 300)
 		{
-			return 2910;
+			return 2100; // Siege, etc
 		}
-		return 2310;
+		return 3100;
 	}
 	
 	@Override
@@ -193,7 +201,6 @@ public class PcKnownList extends PlayableKnownList
 		{
 			return 1700; // Siege, etc
 		}
-		
 		return 2500; // Retail seems to have a larger value than this.
 	}
 }
