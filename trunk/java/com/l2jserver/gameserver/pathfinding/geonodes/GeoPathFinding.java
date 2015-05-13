@@ -27,7 +27,6 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -399,7 +398,7 @@ public class GeoPathFinding extends PathFinding
 		{
 			_log.info("Path Engine: - Loading Path Nodes...");
 			//@formatter:off
-			Files.lines(Paths.get(Config.PATHNODE_DIR.getPath(), "pn_index.txt"), StandardCharsets.UTF_8)
+			Files.lines(Config.PATHNODE_PATH.resolve("pn_index.txt"), StandardCharsets.UTF_8)
 				.map(String::trim)
 				.filter(l -> !l.isEmpty())
 				.forEach(line -> {
@@ -434,7 +433,7 @@ public class GeoPathFinding extends PathFinding
 			return;
 		}
 		short regionoffset = getRegionOffset(rx, ry);
-		File file = new File(Config.PATHNODE_DIR, rx + "_" + ry + ".pn");
+		File file = new File(Config.PATHNODE_PATH.toString(), rx + "_" + ry + ".pn");
 		_log.info("Path Engine: - Loading: " + file.getName() + " -> region offset: " + regionoffset + " X: " + rx + " Y: " + ry);
 		int node = 0, size, index = 0;
 		

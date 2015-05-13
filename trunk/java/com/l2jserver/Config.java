@@ -1137,7 +1137,7 @@ public final class Config
 	
 	// GeoData Settings
 	public static int PATHFINDING;
-	public static File PATHNODE_DIR;
+	public static Path PATHNODE_PATH;
 	public static String PATHFIND_BUFFERS;
 	public static float LOW_WEIGHT;
 	public static float MEDIUM_WEIGHT;
@@ -2880,16 +2880,7 @@ public final class Config
 			
 			final PropertiesParser geoData = new PropertiesParser(GEODATA_FILE);
 			
-			try
-			{
-				PATHNODE_DIR = new File(geoData.getString("PathnodeDirectory", "pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
-			}
-			catch (IOException e)
-			{
-				_log.log(Level.WARNING, "Error setting pathnode directory!", e);
-				PATHNODE_DIR = new File("pathnode");
-			}
-			
+			PATHNODE_PATH = Paths.get(Config.DATAPACK_ROOT.getPath() + "/" + geoData.getString("PathnodePath", "pathnode"));
 			PATHFINDING = geoData.getInt("PathFinding", 0);
 			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
 			LOW_WEIGHT = geoData.getFloat("LowWeight", 0.5f);
