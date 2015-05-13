@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jserver.gameserver.data.sql.impl.SummonEffectsTable;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -498,5 +499,11 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		
 		sendPacket(new SetSummonRemainTime(getLifeTime(), _lifeTimeRemaining));
 		updateEffectIcons();
+		
+		// Using same task to check if owner is in visible range
+		if (calculateDistance(getOwner(), true, false) > 2000)
+		{
+			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getOwner());
+		}
 	}
 }
