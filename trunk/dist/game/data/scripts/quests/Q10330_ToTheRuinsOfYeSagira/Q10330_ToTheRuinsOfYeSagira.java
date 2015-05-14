@@ -51,9 +51,9 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 		super(10330, Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "To the Ruins of Ye Sagira");
 		addStartNpc(ATRAN);
 		addTalkId(ATRAN, LAKCIS);
-		addCondMinLevel(MIN_LEVEL, "33448-05.htm");
-		addCondMaxLevel(MAX_LEVEL, "33448-05.htm");
-		addCondCompletedQuest(Q10329_BackupSeekers.class.getSimpleName(), "33448-05.htm");
+		addCondMinLevel(MIN_LEVEL, "33448-05.html");
+		addCondMaxLevel(MAX_LEVEL, "33448-05.html");
+		addCondCompletedQuest(Q10329_BackupSeekers.class.getSimpleName(), "33448-05.html");
 	}
 	
 	@Override
@@ -69,18 +69,18 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 		switch (event)
 		{
 			case "33448-02.htm":
-			case "32977-02.htm":
+			case "32977-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33448-03.htm":
+			case "33448-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32977-03.htm":
+			case "32977-03.html":
 			{
 				if (qs.isStarted())
 				{
@@ -109,17 +109,17 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-01.htm" : "32977-04.htm";
+				htmltext = npc.getId() == ATRAN ? "33448-01.htm" : "32977-04.html";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-04.htm" : "32977-01.htm";
+				htmltext = npc.getId() == ATRAN ? "33448-04.html" : "32977-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-06.htm" : "32977-05.htm";
+				htmltext = npc.getId() == ATRAN ? "33448-06.html" : "32977-05.html";
 				break;
 			}
 		}

@@ -50,9 +50,9 @@ public class Q10746_SeeTheWorld extends Quest
 		super(10746, Q10746_SeeTheWorld.class.getSimpleName(), "See The World");
 		addStartNpc(KARLA);
 		addTalkId(KARLA, ASTIEL, LEVIAN);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33933-noLevel.htm");
-		addCondRace(Race.ERTHEIA, "33933-no.htm");
-		addCondCompletedQuest(Q10745_TheSecretIngredients.class.getSimpleName(), "restriction.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33933-noLevel.html");
+		addCondRace(Race.ERTHEIA, "33933-no.html");
+		addCondCompletedQuest(Q10745_TheSecretIngredients.class.getSimpleName(), "restriction.html");
 	}
 	
 	@Override
@@ -67,13 +67,13 @@ public class Q10746_SeeTheWorld extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33933-02.htm":
+			case "33933-02.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33948-02.htm":
+			case "33948-02.html":
 			{
 				if (qs.isCond(1))
 				{
@@ -108,7 +108,7 @@ public class Q10746_SeeTheWorld extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "33933-02.htm";
+					htmltext = "33933-02.html";
 				}
 				break;
 			}
@@ -118,7 +118,7 @@ public class Q10746_SeeTheWorld extends Quest
 				{
 					case 1:
 					{
-						htmltext = "33948-01.htm";
+						htmltext = "33948-01.html";
 						break;
 					}
 				}
@@ -142,7 +142,7 @@ public class Q10746_SeeTheWorld extends Quest
 						}
 						showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 						qs.exitQuest(false, true);
-						htmltext = "30037-01.htm";
+						htmltext = "30037-01.html";
 						break;
 					}
 				}

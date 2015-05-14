@@ -62,8 +62,8 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, THEODORE);
 		addEnterZoneId(TALKING_ISLAND_PRESENTATION_MOVIE_ZONE);
-		addCondMaxLevel(MAX_LEVEL, "32972-01a.htm");
-		addCondNotRace(Race.ERTHEIA, "32972-01b.htm");
+		addCondMaxLevel(MAX_LEVEL, "32972-01a.html");
+		addCondNotRace(Race.ERTHEIA, "32972-01b.html");
 	}
 	
 	@Override
@@ -78,7 +78,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32972-03.htm":
+			case "32972-03.html":
 			{
 				qs.startQuest();
 				qs.setCond(2); // Show arrow hack
@@ -92,7 +92,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32975-02.htm":
+			case "32975-02.html":
 			{
 				giveAdena(player, 30, true);
 				addExpAndSp(player, 30, 5);
@@ -115,17 +115,17 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-01.htm" : "32975-04.htm";
+				htmltext = npc.getId() == PANTHEON ? "32972-01.htm" : "32975-04.html";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-04.htm" : "32975-01.htm";
+				htmltext = npc.getId() == PANTHEON ? "32972-04.html" : "32975-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-05.htm" : "32975-03.htm";
+				htmltext = npc.getId() == PANTHEON ? "32972-05.html" : "32975-03.html";
 				break;
 			}
 		}

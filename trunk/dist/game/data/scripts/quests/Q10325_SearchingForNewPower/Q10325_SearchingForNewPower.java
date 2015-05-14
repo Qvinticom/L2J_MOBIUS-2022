@@ -53,8 +53,8 @@ public class Q10325_SearchingForNewPower extends Quest
 		super(10325, Q10325_SearchingForNewPower.class.getSimpleName(), "Searching For New Power");
 		addStartNpc(GALLINT);
 		addTalkId(GALLINT, TALBOT, CIDNET, BLACK, HERTZ, KINCAID, XONIA);
-		addCondMaxLevel(MAX_LEVEL, "32980-12.htm");
-		addCondCompletedQuest(Q10324_FindingMagisterGallint.class.getSimpleName(), "32980-12.htm");
+		addCondMaxLevel(MAX_LEVEL, "32980-12.html");
+		addCondCompletedQuest(Q10324_FindingMagisterGallint.class.getSimpleName(), "32980-12.html");
 	}
 	
 	@Override
@@ -76,7 +76,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
-					htmltext = "32980-06.htm";
+					htmltext = "32980-06.html";
 					qs.setCond(2);
 					break;
 				}
@@ -84,7 +84,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
-					htmltext = "32980-07.htm";
+					htmltext = "32980-07.html";
 					qs.setCond(3);
 					break;
 				}
@@ -92,7 +92,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
-					htmltext = "32980-08.htm";
+					htmltext = "32980-08.html";
 					qs.setCond(4);
 					break;
 				}
@@ -100,7 +100,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
-					htmltext = "32980-09.htm";
+					htmltext = "32980-09.html";
 					qs.setCond(5);
 					break;
 				}
@@ -108,7 +108,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
-					htmltext = "32980-10.htm";
+					htmltext = "32980-10.html";
 					qs.setCond(6);
 					break;
 				}
@@ -116,7 +116,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					qs.startQuest();
 					qs.setMemoState(1);
-					htmltext = "32980-11.htm";
+					htmltext = "32980-11.html";
 					qs.setCond(7);
 					break;
 				}
@@ -163,13 +163,13 @@ public class Q10325_SearchingForNewPower extends Quest
 							}
 							addExpAndSp(player, 4654, 5);
 							giveAdena(player, 120, true);
-							htmltext = "32980-04.htm";
+							htmltext = "32980-04.html";
 							qs.exitQuest(false, true);
 							break;
 						}
 						else if (qs.isMemoState(1))
 						{
-							htmltext = "32980-03.htm";
+							htmltext = "32980-03.html";
 						}
 						break;
 					}
@@ -179,14 +179,14 @@ public class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(2)))
 							{
-								htmltext = "32156-01.htm";
+								htmltext = "32156-01.html";
 								qs.setCond(8);
 								break;
 							}
-							htmltext = "32156-02.htm";
+							htmltext = "32156-02.html";
 							break;
 						}
-						htmltext = "32156-04.htm";
+						htmltext = "32156-04.html";
 						break;
 					}
 					case CIDNET:
@@ -195,14 +195,14 @@ public class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(3)))
 							{
-								htmltext = "32148-01.htm";
+								htmltext = "32148-01.html";
 								qs.setCond(8);
 								break;
 							}
-							htmltext = "32148-02.htm";
+							htmltext = "32148-02.html";
 							break;
 						}
-						htmltext = "32148-04.htm";
+						htmltext = "32148-04.html";
 						break;
 					}
 					case BLACK:
@@ -211,14 +211,14 @@ public class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(4)))
 							{
-								htmltext = "32161-01.htm";
+								htmltext = "32161-01.html";
 								qs.setCond(8);
 								break;
 							}
-							htmltext = "32161-02.htm";
+							htmltext = "32161-02.html";
 							break;
 						}
-						htmltext = "32161-04.htm";
+						htmltext = "32161-04.html";
 						break;
 					}
 					case HERTZ:
@@ -227,14 +227,14 @@ public class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(5)))
 							{
-								htmltext = "32151-01.htm";
+								htmltext = "32151-01.html";
 								qs.setCond(8);
 								break;
 							}
-							htmltext = "32151-02.htm";
+							htmltext = "32151-02.html";
 							break;
 						}
-						htmltext = "32151-04.htm";
+						htmltext = "32151-04.html";
 						break;
 					}
 					case KINCAID:
@@ -243,14 +243,14 @@ public class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(6)))
 							{
-								htmltext = "32159-01.htm";
+								htmltext = "32159-01.html";
 								qs.setCond(8);
 								break;
 							}
-							htmltext = "32159-02.htm";
+							htmltext = "32159-02.html";
 							break;
 						}
-						htmltext = "32159-04.htm";
+						htmltext = "32159-04.html";
 						break;
 					}
 					case XONIA:
@@ -259,14 +259,14 @@ public class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(7)))
 							{
-								htmltext = "32144-01.htm";
+								htmltext = "32144-01.html";
 								qs.setCond(8);
 								break;
 							}
-							htmltext = "32144-02.htm";
+							htmltext = "32144-02.html";
 							break;
 						}
-						htmltext = "32144-04.htm";
+						htmltext = "32144-04.html";
 						break;
 					}
 				}
@@ -278,7 +278,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					case GALLINT:
 					{
-						htmltext = "32980-05.htm";
+						htmltext = "32980-05.html";
 						break;
 					}
 					case TALBOT:
@@ -288,7 +288,7 @@ public class Q10325_SearchingForNewPower extends Quest
 					case KINCAID:
 					case XONIA:
 					{
-						htmltext = npc.getId() + "-03.htm";
+						htmltext = npc.getId() + "-03.html";
 						break;
 					}
 				}

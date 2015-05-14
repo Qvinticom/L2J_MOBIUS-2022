@@ -87,8 +87,8 @@ public class Q10329_BackupSeekers extends Quest
 		addTalkId(KAKAI, ATRAN);
 		addSpawnId(BART);
 		addMoveFinishedId(BART);
-		addCondMaxLevel(MAX_LEVEL, "30565-05.htm");
-		addCondCompletedQuest(Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "30565-05.htm");
+		addCondMaxLevel(MAX_LEVEL, "30565-05.html");
+		addCondCompletedQuest(Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "30565-05.html");
 	}
 	
 	@Override
@@ -108,7 +108,7 @@ public class Q10329_BackupSeekers extends Quest
 				htmltext = event;
 				break;
 			}
-			case "30565-03.htm":
+			case "30565-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -118,7 +118,7 @@ public class Q10329_BackupSeekers extends Quest
 				startQuestTimer("MOVE_DELAY", 500, bart, player);
 				break;
 			}
-			case "33448-02.htm":
+			case "33448-02.html":
 			{
 				if (qs.isStarted())
 				{
@@ -279,12 +279,12 @@ public class Q10329_BackupSeekers extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == KAKAI ? "30565-04.htm" : "33448-01.htm";
+				htmltext = npc.getId() == KAKAI ? "30565-04.html" : "33448-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == KAKAI ? "30565-06.htm" : "33448-03.htm";
+				htmltext = npc.getId() == KAKAI ? "30565-06.html" : "33448-03.html";
 				break;
 			}
 		}

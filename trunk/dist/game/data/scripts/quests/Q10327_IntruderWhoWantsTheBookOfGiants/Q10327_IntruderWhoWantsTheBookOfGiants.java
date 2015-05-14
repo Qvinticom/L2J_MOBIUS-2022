@@ -48,8 +48,8 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON);
 		registerQuestItems(THE_WAR_OF_GODS_AND_GIANTS);
-		addCondMaxLevel(MAX_LEVEL, "no_level.htm");
-		addCondCompletedQuest(Q10326_RespectYourElders.class.getSimpleName(), "no_level.htm");
+		addCondMaxLevel(MAX_LEVEL, "no_level.html");
+		addCondCompletedQuest(Q10326_RespectYourElders.class.getSimpleName(), "no_level.html");
 	}
 	
 	@Override
@@ -69,13 +69,13 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32972-03.htm":
+			case "32972-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32972-06.htm":
+			case "32972-06.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -108,17 +108,17 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					htmltext = "32972-05.htm";
+					htmltext = "32972-05.html";
 				}
 				else
 				{
-					htmltext = "32972-04.htm";
+					htmltext = "32972-04.html";
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = "32972-07.htm";
+				htmltext = "32972-07.html";
 				break;
 			}
 		}

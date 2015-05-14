@@ -44,8 +44,8 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		super(10324, Q10324_FindingMagisterGallint.class.getSimpleName(), "Finding Magister Gallint");
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, GALLINT);
-		addCondMaxLevel(MAX_LEVEL, "32974-01a.htm");
-		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.htm");
+		addCondMaxLevel(MAX_LEVEL, "32974-01a.html");
+		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.html");
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32974-03.htm":
+			case "32974-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -71,7 +71,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32980-02.htm":
+			case "32980-02.html":
 			{
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				giveAdena(player, 110, true);
@@ -101,7 +101,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 				}
 				else if (npc.getId() == GALLINT)
 				{
-					htmltext = "32980-04.htm";
+					htmltext = "32980-04.html";
 					break;
 				}
 			}
@@ -109,12 +109,12 @@ public final class Q10324_FindingMagisterGallint extends Quest
 			{
 				if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-04.htm";
+					htmltext = "32974-04.html";
 					break;
 				}
 				else if (npc.getId() == GALLINT)
 				{
-					htmltext = "32980-01.htm";
+					htmltext = "32980-01.html";
 					break;
 				}
 			}
@@ -122,12 +122,12 @@ public final class Q10324_FindingMagisterGallint extends Quest
 			{
 				if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-05.htm";
+					htmltext = "32974-05.html";
 					break;
 				}
 				else if (npc.getId() == GALLINT)
 				{
-					htmltext = "32980-03.htm";
+					htmltext = "32980-03.html";
 					break;
 				}
 			}

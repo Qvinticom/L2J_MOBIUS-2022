@@ -52,7 +52,7 @@ public class Q10743_StrangeFungus extends Quest
 		addTalkId(LEIRA, MILONE);
 		addKillId(GROWLER, ROBUST_GROWLER, EVOLVED_GROWLER);
 		registerQuestItems(PECULIAR_MUSHROOM_SPORE);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
 	}
 	
 	@Override
@@ -68,18 +68,18 @@ public class Q10743_StrangeFungus extends Quest
 		switch (event)
 		{
 			case "33952-02.htm":
-			case "33953-02.htm":
+			case "33953-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33952-03.htm":
+			case "33952-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33953-03.htm":
+			case "33953-03.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -117,7 +117,7 @@ public class Q10743_StrangeFungus extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "33952-03.htm";
+					htmltext = "33952-03.html";
 				}
 				break;
 			}
@@ -125,7 +125,7 @@ public class Q10743_StrangeFungus extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = "33953-01.htm";
+					htmltext = "33953-01.html";
 				}
 				break;
 			}

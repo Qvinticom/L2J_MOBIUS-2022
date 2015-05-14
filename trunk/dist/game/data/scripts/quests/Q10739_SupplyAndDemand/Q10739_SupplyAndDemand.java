@@ -59,9 +59,9 @@ public class Q10739_SupplyAndDemand extends Quest
 		addStartNpc(EVNA);
 		addTalkId(EVNA, DENYA, PELU, CERI, SIVANTHE);
 		registerQuestItems(WEAPON_SUPPLY_BOX.getId(), ARMOR_SUPPLY_BOX.getId(), GROCERY_SUPPLY_BOX.getId(), ACCESSORY_SUPPLY_BOX.getId());
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33935-05.htm");
-		addCondRace(Race.ERTHEIA, "33935-05.htm");
-		addCondCompletedQuest(Q10738_AnInnerBeauty.class.getSimpleName(), "33935-05.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33935-05.html");
+		addCondRace(Race.ERTHEIA, "33935-05.html");
+		addCondCompletedQuest(Q10738_AnInnerBeauty.class.getSimpleName(), "33935-05.html");
 	}
 	
 	@Override
@@ -76,14 +76,14 @@ public class Q10739_SupplyAndDemand extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33935-03.htm":
+			case "33935-03.html":
 			{
 				qs.startQuest();
 				giveItems(player, WEAPON_SUPPLY_BOX);
 				htmltext = event;
 				break;
 			}
-			case "33934-02.htm":
+			case "33934-02.html":
 			{
 				if (qs.isCond(1))
 				{
@@ -93,7 +93,7 @@ public class Q10739_SupplyAndDemand extends Quest
 				}
 				break;
 			}
-			case "33936-02.htm":
+			case "33936-02.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -103,7 +103,7 @@ public class Q10739_SupplyAndDemand extends Quest
 				}
 				break;
 			}
-			case "33937-02.htm":
+			case "33937-02.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -143,40 +143,40 @@ public class Q10739_SupplyAndDemand extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "33935-04.htm";
+					htmltext = "33935-04.html";
 				}
 				break;
 			
 			case DENYA:
 				if (qs.isCond(1))
 				{
-					htmltext = "33934-01.htm";
+					htmltext = "33934-01.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "33934-03.htm";
+					htmltext = "33934-03.html";
 				}
 				break;
 			
 			case PELU:
 				if (qs.isCond(2))
 				{
-					htmltext = "33936-01.htm";
+					htmltext = "33936-01.html";
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = "33936-03.htm";
+					htmltext = "33936-03.html";
 				}
 				break;
 			
 			case CERI:
 				if (qs.isCond(3))
 				{
-					htmltext = "33937-01.htm";
+					htmltext = "33937-01.html";
 				}
 				else if (qs.isCond(4))
 				{
-					htmltext = "33937-03.htm";
+					htmltext = "33937-03.html";
 				}
 				break;
 			
@@ -191,7 +191,7 @@ public class Q10739_SupplyAndDemand extends Quest
 					addExpAndSp(player, 8136, 0);
 					qs.exitQuest(false, true);
 					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-					htmltext = "33951-01.htm";
+					htmltext = "33951-01.html";
 				}
 				break;
 		}

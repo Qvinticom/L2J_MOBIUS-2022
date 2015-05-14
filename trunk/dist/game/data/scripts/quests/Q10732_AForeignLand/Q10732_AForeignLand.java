@@ -59,14 +59,14 @@ public class Q10732_AForeignLand extends Quest
 		
 		switch (event)
 		{
-			case "33931-03.htm":
+			case "33931-03.html":
 			{
 				qs.startQuest();
 				player.sendPacket(ExShowUsm.ERTHEIA_FIRST_QUEST);
 				htmltext = event;
 				break;
 			}
-			case "33932-02.htm":
+			case "33932-02.html":
 			{
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				giveAdena(player, 3000, true);
@@ -99,7 +99,7 @@ public class Q10732_AForeignLand extends Quest
 				}
 				else if (st.isStarted())
 				{
-					htmltext = "33931-04.htm";
+					htmltext = "33931-04.html";
 				}
 				else if (st.isCompleted())
 				{
@@ -111,7 +111,7 @@ public class Q10732_AForeignLand extends Quest
 			{
 				if (st.isStarted())
 				{
-					htmltext = "33932-01.htm";
+					htmltext = "33932-01.html";
 				}
 				else if (st.isCompleted())
 				{

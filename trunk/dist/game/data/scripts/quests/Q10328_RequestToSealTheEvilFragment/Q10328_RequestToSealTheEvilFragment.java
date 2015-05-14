@@ -46,9 +46,9 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 		super(10328, Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "Request to Seal the Evil Fragment");
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, KAKAI);
-		addCondMaxLevel(MAX_LEVEL, "32972-06.htm");
+		addCondMaxLevel(MAX_LEVEL, "32972-06.html");
 		registerQuestItems(EVIL_FRAGMENT);
-		addCondCompletedQuest(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "32972-06.htm");
+		addCondCompletedQuest(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "32972-06.html");
 	}
 	
 	@Override
@@ -63,7 +63,7 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32972-04.htm":
+			case "32972-04.html":
 			{
 				qs.startQuest();
 				qs.giveItems(EVIL_FRAGMENT, 1);
@@ -72,12 +72,12 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 			}
 			case "32972-02.htm":
 			case "32972-03.htm":
-			case "30565-02.htm":
+			case "30565-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30565-03.htm":
+			case "30565-03.html":
 			{
 				if (qs.isStarted())
 				{
@@ -112,12 +112,12 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-05.htm" : "30565-01.htm";
+				htmltext = npc.getId() == PANTHEON ? "32972-05.html" : "30565-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-07.htm" : "30565-04.htm";
+				htmltext = npc.getId() == PANTHEON ? "32972-07.html" : "30565-04.html";
 				break;
 			}
 		}

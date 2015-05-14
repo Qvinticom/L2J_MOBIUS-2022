@@ -58,8 +58,8 @@ public class Q10323_TrainLikeItsReal extends Quest
 		addStartNpc(EVAIN);
 		addTalkId(HOLDEN, EVAIN, SHANNON);
 		addKillId(TRAINING_GOLEM);
-		addCondMaxLevel(MAX_LEVEL, "33464-05.htm");
-		addCondCompletedQuest(Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "33464-05.htm");
+		addCondMaxLevel(MAX_LEVEL, "33464-05.html");
+		addCondCompletedQuest(Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "33464-05.html");
 	}
 	
 	@Override
@@ -76,7 +76,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 		switch (event)
 		{
 			case "33464-02.htm":
-			case "33194-02.htm":
+			case "33194-02.html":
 			{
 				htmltext = event;
 				break;
@@ -91,13 +91,13 @@ public class Q10323_TrainLikeItsReal extends Quest
 				showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
 				break;
 			}
-			case "33464-03.htm":
+			case "33464-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33194-03.htm":
+			case "33194-03.html":
 			{
 				if (qs.isCond(1))
 				{
@@ -106,7 +106,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				}
 				break;
 			}
-			case "33194-05.htm":
+			case "33194-05.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -131,7 +131,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				}
 				break;
 			}
-			case "33194-08.htm":
+			case "33194-08.html":
 			{
 				if (qs.isCond(8))
 				{
@@ -140,7 +140,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				}
 				break;
 			}
-			case "32974-02.htm":
+			case "32974-02.html":
 			{
 				if (qs.isCond(9))
 				{
@@ -173,7 +173,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				}
 				else if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-03.htm";
+					htmltext = "32974-03.html";
 					break;
 				}
 			}
@@ -181,7 +181,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 			{
 				if (npc.getId() == EVAIN)
 				{
-					htmltext = "33464-03.htm";
+					htmltext = "33464-03.html";
 					break;
 				}
 				else if (npc.getId() == HOLDEN)
@@ -190,29 +190,29 @@ public class Q10323_TrainLikeItsReal extends Quest
 					{
 						case 1:
 						{
-							htmltext = "33194-01.htm";
+							htmltext = "33194-01.html";
 							break;
 						}
 						case 3:
 						{
-							htmltext = "33194-04.htm";
+							htmltext = "33194-04.html";
 							break;
 						}
 						case 4:
 						{
-							htmltext = "33194-06.htm";
+							htmltext = "33194-06.html";
 							qs.setCond(6, true);
 							break;
 						}
 						case 5:
 						{
-							htmltext = "33194-06.htm";
+							htmltext = "33194-06.html";
 							qs.setCond(7, true);
 							break;
 						}
 						case 8:
 						{
-							htmltext = "33194-07.htm";
+							htmltext = "33194-07.html";
 							break;
 						}
 					}
@@ -222,7 +222,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				{
 					if (qs.isCond(9))
 					{
-						htmltext = "32974-01.htm";
+						htmltext = "32974-01.html";
 						break;
 					}
 				}
@@ -231,12 +231,12 @@ public class Q10323_TrainLikeItsReal extends Quest
 			{
 				if (npc.getId() == EVAIN)
 				{
-					htmltext = "33464-04.htm";
+					htmltext = "33464-04.html";
 					break;
 				}
 				else if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-05.htm";
+					htmltext = "32974-05.html";
 					break;
 				}
 			}

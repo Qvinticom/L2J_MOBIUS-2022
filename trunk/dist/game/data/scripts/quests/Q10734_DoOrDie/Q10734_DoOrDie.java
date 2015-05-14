@@ -65,9 +65,9 @@ public class Q10734_DoOrDie extends Quest
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, ADVENTURER_S_GUIDE_APPRENTICE);
 		addKillId(TRAINING_DUMMY);
-		addCondMaxLevel(MAX_LEVEL, "33942-08.htm");
-		addCondRace(Race.ERTHEIA, "33942-08.htm");
-		addCondCompletedQuest(Q10733_TheTestForSurvival.class.getSimpleName(), "33942-08.htm");
+		addCondMaxLevel(MAX_LEVEL, "33942-08.html");
+		addCondRace(Race.ERTHEIA, "33942-08.html");
+		addCondCompletedQuest(Q10733_TheTestForSurvival.class.getSimpleName(), "33942-08.html");
 	}
 	
 	@Override
@@ -82,8 +82,8 @@ public class Q10734_DoOrDie extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33943-03.htm":
-			case "33942-03.htm":
+			case "33943-03.html":
+			case "33942-03.html":
 			{
 				qs.startQuest();
 				showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 4500);
@@ -94,11 +94,11 @@ public class Q10734_DoOrDie extends Quest
 			{
 				if (player.isMageClass())
 				{
-					htmltext = "33950-03.htm";
+					htmltext = "33950-03.html";
 				}
 				else
 				{
-					htmltext = "33950-05.htm";
+					htmltext = "33950-05.html";
 				}
 				
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));
@@ -118,13 +118,13 @@ public class Q10734_DoOrDie extends Quest
 					}
 					if (player.isMageClass())
 					{
-						htmltext = "33950-06.htm";
+						htmltext = "33950-06.html";
 						npc.setTarget(player);
 						npc.doCast(WIZARD_HARMONY.getSkill());
 					}
 					else
 					{
-						htmltext = "33950-04.htm";
+						htmltext = "33950-04.html";
 						npc.setTarget(player);
 						npc.doCast(WARRIOR_HARMONY.getSkill());
 					}
@@ -133,7 +133,7 @@ public class Q10734_DoOrDie extends Quest
 			}
 			case "33943-02.htm":
 			case "33942-02.htm":
-			case "33950-02.htm":
+			case "33950-02.html":
 			{
 				htmltext = event;
 				break;
@@ -167,7 +167,7 @@ public class Q10734_DoOrDie extends Quest
 						}
 						else
 						{
-							htmltext = "33943-08.htm";
+							htmltext = "33943-08.html";
 						}
 						break;
 					}
@@ -175,7 +175,7 @@ public class Q10734_DoOrDie extends Quest
 					{
 						if (!player.isMageClass())
 						{
-							htmltext = "33943-04.htm";
+							htmltext = "33943-04.html";
 						}
 						break;
 					}
@@ -183,12 +183,12 @@ public class Q10734_DoOrDie extends Quest
 					{
 						showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 4500);
 						qs.setCond(5, true);
-						htmltext = "33943-05.htm";
+						htmltext = "33943-05.html";
 						break;
 					}
 					case 5:
 					{
-						htmltext = "33943-06.htm";
+						htmltext = "33943-06.html";
 						break;
 					}
 					case 8:
@@ -196,7 +196,7 @@ public class Q10734_DoOrDie extends Quest
 						giveAdena(player, 7000, true);
 						addExpAndSp(player, 805, 2);
 						qs.exitQuest(false, true);
-						htmltext = "33943-07.htm";
+						htmltext = "33943-07.html";
 						break;
 					}
 				}
@@ -214,7 +214,7 @@ public class Q10734_DoOrDie extends Quest
 						}
 						else
 						{
-							htmltext = "33942-08.htm";
+							htmltext = "33942-08.html";
 						}
 						break;
 					}
@@ -222,7 +222,7 @@ public class Q10734_DoOrDie extends Quest
 					{
 						if (player.isMageClass())
 						{
-							htmltext = "33942-04.htm";
+							htmltext = "33942-04.html";
 						}
 						break;
 					}
@@ -230,12 +230,12 @@ public class Q10734_DoOrDie extends Quest
 					{
 						showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 4500);
 						qs.setCond(4, true);
-						htmltext = "33942-05.htm";
+						htmltext = "33942-05.html";
 						break;
 					}
 					case 4:
 					{
-						htmltext = "33942-06.htm";
+						htmltext = "33942-06.html";
 						break;
 					}
 					case 7:
@@ -243,7 +243,7 @@ public class Q10734_DoOrDie extends Quest
 						giveAdena(player, 7000, true);
 						addExpAndSp(player, 805, 2);
 						qs.exitQuest(false, true);
-						htmltext = "33942-07.htm";
+						htmltext = "33942-07.html";
 						break;
 					}
 				}
@@ -256,18 +256,18 @@ public class Q10734_DoOrDie extends Quest
 					case 4:
 					case 5:
 					{
-						htmltext = "33950-01.htm";
+						htmltext = "33950-01.html";
 						break;
 					}
 					case 6:
 					{
 						if (player.isMageClass())
 						{
-							htmltext = "33950-06.htm";
+							htmltext = "33950-06.html";
 						}
 						else
 						{
-							htmltext = "33950-04.htm";
+							htmltext = "33950-04.html";
 						}
 						break;
 					}

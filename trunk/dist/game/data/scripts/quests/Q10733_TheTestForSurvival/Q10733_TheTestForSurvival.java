@@ -49,9 +49,9 @@ public class Q10733_TheTestForSurvival extends Quest
 		addStartNpc(GERETH);
 		addTalkId(GERETH, DIA, KATALIN, AYANTHE);
 		registerQuestItems(GERETH_RECOMMENDATION);
-		addCondMaxLevel(MAX_LEVEL, "33932-04.htm");
-		addCondRace(Race.ERTHEIA, "33932-04.htm");
-		addCondCompletedQuest(Q10732_AForeignLand.class.getSimpleName(), "33932-04.htm");
+		addCondMaxLevel(MAX_LEVEL, "33932-04.html");
+		addCondRace(Race.ERTHEIA, "33932-04.html");
+		addCondCompletedQuest(Q10732_AForeignLand.class.getSimpleName(), "33932-04.html");
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public class Q10733_TheTestForSurvival extends Quest
 		
 		switch (event)
 		{
-			case "33932-02.htm":
+			case "33932-02.html":
 			{
 				qs.startQuest();
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
@@ -74,28 +74,28 @@ public class Q10733_TheTestForSurvival extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34005-03.htm":
+			case "34005-03.html":
 			{
 				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
-			case "34005-06.htm":
+			case "34005-06.html":
 			{
 				qs.setCond(3, true);
 				htmltext = event;
 				break;
 			}
-			case "33942-01.htm":
-			case "33943-01.htm":
-			case "34005-02.htm":
-			case "34005-05.htm":
+			case "33942-01.html":
+			case "33943-01.html":
+			case "34005-02.html":
+			case "34005-05.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33942-02.htm":
-			case "33943-02.htm":
+			case "33942-02.html":
+			case "33943-02.html":
 			{
 				if (qs.isCond(2) || qs.isCond(3))
 				{
@@ -126,7 +126,7 @@ public class Q10733_TheTestForSurvival extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "33932-03.htm";
+					htmltext = "33932-03.html";
 				}
 				else if (qs.isCompleted())
 				{
@@ -140,11 +140,11 @@ public class Q10733_TheTestForSurvival extends Quest
 				{
 					if (player.getClassId() == ClassId.ERTHEIA_FIGHTER)
 					{
-						htmltext = "34005-01.htm";
+						htmltext = "34005-01.html";
 					}
 					else if (player.getClassId() == ClassId.ERTHEIA_WIZARD)
 					{
-						htmltext = "34005-04.htm";
+						htmltext = "34005-04.html";
 					}
 				}
 				break;
@@ -153,7 +153,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			{
 				if (qs.isCond(2) && qs.hasQuestItems(GERETH_RECOMMENDATION))
 				{
-					htmltext = "33943-01.htm";
+					htmltext = "33943-01.html";
 				}
 				break;
 			}
@@ -161,7 +161,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			{
 				if (qs.isCond(3) && qs.hasQuestItems(GERETH_RECOMMENDATION))
 				{
-					htmltext = "33942-01.htm";
+					htmltext = "33942-01.html";
 				}
 				break;
 			}

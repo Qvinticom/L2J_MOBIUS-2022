@@ -48,8 +48,8 @@ public class Q10737_GrakonsWarehouse extends Quest
 		super(10737, Q10737_GrakonsWarehouse.class.getSimpleName(), "Grakon's Warehouse");
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, GRAKON);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.htm");
-		addCondRace(Race.ERTHEIA, "fixme.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
+		addCondRace(Race.ERTHEIA, "fixme.html");
 		registerQuestItems(APPRENTICE_SUPPORT_BOX.getId());
 	}
 	
@@ -65,16 +65,16 @@ public class Q10737_GrakonsWarehouse extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33942-03.htm":
-			case "33943-03.htm":
+			case "33942-03.html":
+			case "33943-03.html":
 			{
 				qs.startQuest();
 				giveItems(player, APPRENTICE_SUPPORT_BOX);
 				htmltext = event;
 				break;
 			}
-			case "33947-04.htm":
-			case "33947-08.htm":
+			case "33947-04.html":
+			case "33947-08.html":
 			{
 				if (qs.isStarted())
 				{
@@ -95,10 +95,10 @@ public class Q10737_GrakonsWarehouse extends Quest
 			}
 			case "33942-02.htm":
 			case "33943-02.htm":
-			case "33947-02.htm":
-			case "33947-03.htm":
-			case "33947-06.htm":
-			case "33947-07.htm":
+			case "33947-02.html":
+			case "33947-03.html":
+			case "33947-06.html":
+			case "33947-07.html":
 			{
 				htmltext = event;
 				break;
@@ -129,7 +129,7 @@ public class Q10737_GrakonsWarehouse extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = npc.getId() + "-03.htm";
+					htmltext = npc.getId() + "-03.html";
 				}
 				break;
 			}
@@ -139,11 +139,11 @@ public class Q10737_GrakonsWarehouse extends Quest
 				{
 					if (player.getClassId() == ClassId.ERTHEIA_FIGHTER)
 					{
-						htmltext = "33947-01.htm";
+						htmltext = "33947-01.html";
 					}
 					else if (player.getClassId() == ClassId.ERTHEIA_WIZARD)
 					{
-						htmltext = "33947-05.htm";
+						htmltext = "33947-05.html";
 					}
 				}
 				break;

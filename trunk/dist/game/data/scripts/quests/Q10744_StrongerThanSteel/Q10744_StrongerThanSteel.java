@@ -48,8 +48,8 @@ public class Q10744_StrongerThanSteel extends Quest
 		addTalkId(MILONE, DOLKIN);
 		addKillId(TREANT, LEAFIE);
 		registerQuestItems(TREANT_LEAF, LEAFIE_LEAF);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.htm");
-		addCondRace(Race.ERTHEIA, "fixme.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
+		addCondRace(Race.ERTHEIA, "fixme.html");
 	}
 	
 	@Override
@@ -65,18 +65,18 @@ public class Q10744_StrongerThanSteel extends Quest
 		switch (event)
 		{
 			case "33953-02.htm":
-			case "33954-02.htm":
+			case "33954-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33953-03.htm":
+			case "33953-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33954-03.htm":
+			case "33954-03.html":
 			{
 				if (qs.isCond(1))
 				{
@@ -109,7 +109,7 @@ public class Q10744_StrongerThanSteel extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "33953-03.htm";
+					htmltext = "33953-03.html";
 				}
 				break;
 			}
@@ -117,11 +117,11 @@ public class Q10744_StrongerThanSteel extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "33954-01.htm";
+					htmltext = "33954-01.html";
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = "33954-04.htm";
+					htmltext = "33954-04.html";
 					giveAdena(player, 34000, true);
 					addExpAndSp(player, 112001, 5);
 					qs.exitQuest(false, true);

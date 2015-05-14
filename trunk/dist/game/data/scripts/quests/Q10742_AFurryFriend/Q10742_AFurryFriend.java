@@ -76,12 +76,12 @@ public class Q10742_AFurryFriend extends Quest
 		switch (event)
 		{
 			case "33952-02.htm":
-			case "33952-05.htm":
+			case "33952-05.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33952-03.htm":
+			case "33952-03.html":
 			{
 				qs.startQuest();
 				final L2Npc ricky = addSpawn(RICKY, RICKY_SPAWN);
@@ -98,7 +98,7 @@ public class Q10742_AFurryFriend extends Quest
 				npc.setScriptValue(0);
 				break;
 			}
-			case "33995-03.htm":
+			case "33995-03.html":
 			{
 				if (qs.isStarted())
 				{
@@ -194,7 +194,7 @@ public class Q10742_AFurryFriend extends Quest
 					giveAdena(player, 2500, true);
 					addExpAndSp(player, 52516, 5);
 					qs.exitQuest(false, true);
-					htmltext = "33952-04.htm";
+					htmltext = "33952-04.html";
 				}
 				break;
 			}
@@ -204,13 +204,13 @@ public class Q10742_AFurryFriend extends Quest
 				{
 					if (getRandomBoolean())
 					{
-						htmltext = "33995-01.htm";
+						htmltext = "33995-01.html";
 					}
 					else
 					{
 						addAttackPlayerDesire(addSpawn(KIKU, player.getLocation(), true, 120000), player);
 						showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
-						htmltext = "33995-02.htm";
+						htmltext = "33995-02.html";
 					}
 				}
 				break;

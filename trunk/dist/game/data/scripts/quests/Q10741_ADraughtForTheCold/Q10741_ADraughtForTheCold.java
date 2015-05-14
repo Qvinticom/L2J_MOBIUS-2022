@@ -52,8 +52,8 @@ public class Q10741_ADraughtForTheCold extends Quest
 		addTalkId(SIVANTHE, LEIRA);
 		addKillId(HONEY_BEE, KIKU, ROBUST_HONEY_BEE);
 		registerQuestItems(EMPTY_HONEY_JAR, SWEET_HONEY, NUTRITIOUS_MEAT);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-07.htm");
-		addCondRace(Race.ERTHEIA, "33951-07.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-07.html");
+		addCondRace(Race.ERTHEIA, "33951-07.html");
 	}
 	
 	@Override
@@ -68,7 +68,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33951-03.htm":
+			case "33951-03.html":
 			{
 				qs.startQuest();
 				giveItems(player, EMPTY_HONEY_JAR, 10);
@@ -80,7 +80,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33952-02.htm":
+			case "33952-02.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -116,7 +116,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "33951-04.htm";
+					htmltext = "33951-04.html";
 				}
 				break;
 			}
@@ -124,7 +124,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = "33952-01.htm";
+					htmltext = "33952-01.html";
 				}
 				break;
 			}

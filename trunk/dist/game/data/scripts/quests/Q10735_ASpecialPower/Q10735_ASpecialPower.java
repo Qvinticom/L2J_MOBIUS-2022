@@ -62,10 +62,10 @@ public class Q10735_ASpecialPower extends Quest
 		addStartNpc(AYANTHE);
 		addTalkId(AYANTHE, AYANTHE_2);
 		addKillId(FLOATO, RATEL);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.htm");
-		addCondRace(Race.ERTHEIA, "fixme.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
+		addCondRace(Race.ERTHEIA, "fixme.html");
 		addCondClassId(ClassId.ERTHEIA_WIZARD, "fixme.html");
-		addCondCompletedQuest(Q10734_DoOrDie.class.getSimpleName(), "fixme.htm");
+		addCondCompletedQuest(Q10734_DoOrDie.class.getSimpleName(), "fixme.html");
 	}
 	
 	@Override
@@ -80,13 +80,13 @@ public class Q10735_ASpecialPower extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33942-02.htm":
+			case "33942-02.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33944-03.htm":
+			case "33944-03.html":
 			{
 				htmltext = event;
 				showOnScreenMsg(player, NpcStringId.ATTACK_THE_MONSTER, ExShowScreenMessage.TOP_CENTER, 4500);
@@ -97,7 +97,7 @@ public class Q10735_ASpecialPower extends Quest
 				showOnScreenMsg(player, NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
 				break;
 			}
-			case "33944-07.htm":
+			case "33944-07.html":
 			{
 				if (qs.isCond(5))
 				{
@@ -141,7 +141,7 @@ public class Q10735_ASpecialPower extends Quest
 						{
 							case 1:
 							{
-								htmltext = "33942-02.htm";
+								htmltext = "33942-02.html";
 								break;
 							}
 							case 2:
@@ -150,12 +150,12 @@ public class Q10735_ASpecialPower extends Quest
 							case 5:
 							case 6:
 							{
-								htmltext = "33942-04.htm";
+								htmltext = "33942-04.html";
 								break;
 							}
 							case 7:
 							{
-								htmltext = "33942-03.htm";
+								htmltext = "33942-03.html";
 								giveAdena(player, 900, true);
 								rewardItems(player, SPIRITSHOTS_REWARD);
 								addExpAndSp(player, 3154, 0);
@@ -178,14 +178,14 @@ public class Q10735_ASpecialPower extends Quest
 						qs.setCond(2, true);
 						addSpawn(FLOATO, MOB_1, false, 0, false, player.getInstanceId());
 						addSpawn(FLOATO, MOB_2, false, 0, false, player.getInstanceId());
-						htmltext = "33944-01.htm";
+						htmltext = "33944-01.html";
 						break;
 					}
 					case 2:
 					case 4:
 					case 6:
 					{
-						htmltext = "33944-02.htm";
+						htmltext = "33944-02.html";
 						break;
 					}
 					case 3:
@@ -195,7 +195,7 @@ public class Q10735_ASpecialPower extends Quest
 							addSpawn(FLOATO, MOB_1, false, 0, false, player.getInstanceId());
 							addSpawn(FLOATO, MOB_2, false, 0, false, player.getInstanceId());
 							showOnScreenMsg(player, NpcStringId.ATTACK_THE_MONSTER, ExShowScreenMessage.TOP_CENTER, 4500);
-							htmltext = "33944-05.htm";
+							htmltext = "33944-05.html";
 							qs.setCond(4, true);
 						}
 						else
@@ -204,20 +204,20 @@ public class Q10735_ASpecialPower extends Quest
 							showOnScreenMsg(player, NpcStringId.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 							startQuestTimer("showscreen_1", 4500, npc, player);
 							player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_003_bullet_01.htm", TutorialShowHtml.LARGE_WINDOW));
-							htmltext = "33944-04.htm";
+							htmltext = "33944-04.html";
 							qs.set("ss", 1);
 						}
 						break;
 					}
 					case 5:
 					{
-						htmltext = "33944-06.htm";
+						htmltext = "33944-06.html";
 						player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
 						break;
 					}
 					case 7:
 					{
-						htmltext = "33944-08.htm";
+						htmltext = "33944-08.html";
 						break;
 					}
 				}

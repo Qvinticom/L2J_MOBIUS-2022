@@ -57,8 +57,8 @@ public class Q10740_NeverForget extends Quest
 		addTalkId(SIVANTHE, REMEMBERANCE_TOWER);
 		registerQuestItems(UNNAMED_RELICS);
 		addKillId(MOBS);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-07.htm");
-		addCondRace(Race.ERTHEIA, "33951-07.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-07.html");
+		addCondRace(Race.ERTHEIA, "33951-07.html");
 	}
 	
 	@Override
@@ -73,13 +73,13 @@ public class Q10740_NeverForget extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33951-03.htm":
+			case "33951-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33989-02.htm":
+			case "33989-02.html":
 			{
 				if (qs.isCond(2) && (qs.getQuestItemsCount(UNNAMED_RELICS) >= 20))
 				{
@@ -123,12 +123,12 @@ public class Q10740_NeverForget extends Quest
 					{
 						case 1:
 						{
-							htmltext = "33951-04.htm";
+							htmltext = "33951-04.html";
 							break;
 						}
 						case 2:
 						{
-							htmltext = "33951-05.htm";
+							htmltext = "33951-05.html";
 							break;
 						}
 						case 3:
@@ -139,7 +139,7 @@ public class Q10740_NeverForget extends Quest
 							addExpAndSp(player, 16851, 0);
 							qs.exitQuest(false, true);
 							showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-							htmltext = "33951-06.htm";
+							htmltext = "33951-06.html";
 							break;
 						}
 					}
@@ -152,12 +152,12 @@ public class Q10740_NeverForget extends Quest
 				{
 					case 2:
 					{
-						htmltext = "33989-01.htm";
+						htmltext = "33989-01.html";
 						break;
 					}
 					case 3:
 					{
-						htmltext = "33989-03.htm";
+						htmltext = "33989-03.html";
 						break;
 					}
 				}
