@@ -6486,26 +6486,14 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="298" max="595" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4192999601364136">
-					<item id="849" min="1" max="1" chance="2.6765" /> <!-- Tiger's Eye Earring -->
-					<item id="1901" min="1" max="1" chance="91.3106" /> <!-- Tiger's Eye Earring Stone -->
-					<item id="912" min="1" max="1" chance="2.0063" /> <!-- Near Forest Necklace -->
-					<item id="880" min="1" max="1" chance="4.0066" /> <!-- Black Pearl Ring -->
-				</group>
-				<group chance="16.020200729370117">
-					<item id="1872" min="1" max="1" chance="44.6227" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="44.6227" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.4623" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2311" /> <!-- Stone of Purity -->
-					<item id="2154" min="1" max="1" chance="3.5832" /> <!-- Recipe: Elven Earring -->
-					<item id="2274" min="1" max="1" chance="0.239" /> <!-- Recipe: Skull Breaker -->
-					<item id="2270" min="1" max="1" chance="0.239" /> <!-- Recipe: Goat Head Staff -->
-				</group>
+				<item id="57" min="12" max="28" chance="70" /> <!-- Adena -->
+				<item id="241" min="1" max="1" chance="0.03" /> <!-- Shilen Knife -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6539,15 +6527,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="351" min="1" max="1" chance="0.0904" /> <!-- Blast Plate -->
-				<item id="2030" min="1" max="1" chance="0.8256" /> <!-- Tome of Blood Page -->
-				<item id="2154" min="1" max="1" chance="7.5575" /> <!-- Recipe: Elven Earring -->
+				<item id="36521" min="1" max="1" chance="5.100" /> <!-- Iron Ore -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="20578" level="36" type="L2Monster" name="Leto Lizardman Archer">
 		<parameters>
@@ -6595,23 +6579,14 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="30" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="324" max="649" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.24889999628067017">
-					<item id="278" min="1" max="1" chance="2.2054" /> <!-- Gastraphetes -->
-					<item id="2029" min="1" max="1" chance="97.7946" /> <!-- Gastraphetes Shaft -->
-				</group>
-				<group chance="31.112300872802734">
-					<item id="1868" min="1" max="1" chance="43.7272" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="8.7454" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="2.1864" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="1.4576" /> <!-- Compound Braid -->
-					<item id="2273" min="1" max="1" chance="0.1562" /> <!-- Recipe: Tarbar -->
-					<item id="6037" min="1" max="1" chance="43.7272" /> <!-- Waking Scroll -->
-				</group>
+				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
+				<item id="279" min="1" max="1" chance="0.03" /> <!-- Reinforced Longbow -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6645,15 +6620,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1882" min="1" max="1" chance="17.0581" /> <!-- Leather -->
-				<item id="1939" min="1" max="1" chance="6.7424" /> <!-- Mithril Banded Gaiters Material -->
-				<item id="1901" min="1" max="1" chance="10.6024" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="7.080" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid-->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="30" />
-		</collision>
 	</npc>
 	<npc id="20579" level="37" type="L2Monster" name="Leto Lizardman Soldier">
 		<parameters>
@@ -6702,38 +6672,14 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="338" max="675" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.8673999309539795">
-					<item id="1124" min="1" max="1" chance="0.3142" /> <!-- Boots of Power -->
-					<item id="1948" min="1" max="1" chance="12.1858" /> <!-- Boots of Power Pattern -->
-					<item id="2424" min="1" max="1" chance="0.3142" /> <!-- Manticore Skin Boots -->
-					<item id="2923" min="1" max="1" chance="12.1858" /> <!-- Manticore Skin Boot Lining -->
-					<item id="2425" min="1" max="1" chance="0.3142" /> <!-- Brigandine Boots -->
-					<item id="2924" min="1" max="1" chance="12.1858" /> <!-- Brigandine Boots Design -->
-					<item id="2426" min="1" max="1" chance="0.3142" /> <!-- Elven Mithril Boots -->
-					<item id="2925" min="1" max="1" chance="12.1858" /> <!-- Elven Mithril Boots Design -->
-					<item id="606" min="1" max="1" chance="0.3142" /> <!-- Rip Gauntlets -->
-					<item id="1946" min="1" max="1" chance="12.1858" /> <!-- Rip Gauntlets Pattern -->
-					<item id="2448" min="1" max="1" chance="0.3142" /> <!-- Manticore Skin Gloves -->
-					<item id="2926" min="1" max="1" chance="12.1858" /> <!-- Manticore Skin Gloves Lining -->
-					<item id="2449" min="1" max="1" chance="0.3142" /> <!-- Brigandine Gauntlets -->
-					<item id="2927" min="1" max="1" chance="12.1858" /> <!-- Brigandine Gauntlets Pattern -->
-					<item id="2450" min="1" max="1" chance="0.3142" /> <!-- Mithril Gloves -->
-					<item id="2928" min="1" max="1" chance="12.1858" /> <!-- Mithril Gloves Design -->
-				</group>
-				<group chance="17.735300064086914">
-					<item id="1868" min="1" max="1" chance="66.649" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="13.3298" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.3325" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.2216" /> <!-- Compound Braid -->
-					<item id="2146" min="1" max="1" chance="2.3803" /> <!-- Recipe: Artisan's frame -->
-					<item id="2286" min="1" max="1" chance="0.1851" /> <!-- Recipe: Bonebreaker -->
-					<item id="6668" min="1" max="1" chance="11.9017" /> <!-- Deluxe Chest Key - Grade 4 -->
-				</group>
+				<item id="57" min="14" max="32" chance="70" /> <!-- Adena -->
+				<item id="124" min="1" max="1" chance="0.03" /> <!-- Two-handed Sword -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6767,15 +6713,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1943" min="1" max="1" chance="6.357" /> <!-- Manticore Skin Gaiters Pattern -->
-				<item id="1946" min="1" max="1" chance="10.8154" /> <!-- Rip Gauntlets Pattern -->
-				<item id="1889" min="1" max="1" chance="5.3356" /> <!-- Compound Braid -->
+				<item id="36516" min="1" max="1" chance="15" /> <!-- Worn Leather -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.055" /> <!-- Durable Leather -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="20580" level="38" type="L2Monster" name="Leto Lizardman Warrior">
 		<parameters>
@@ -6825,25 +6767,14 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="649" max="1296" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.648400068283081">
-					<item id="395" min="1" max="1" chance="0.8713" /> <!-- Manticore Skin Shirt -->
-					<item id="1942" min="1" max="1" chance="38.2206" /> <!-- Manticore Skin Shirt Texture -->
-					<item id="417" min="1" max="1" chance="1.3915" /> <!-- Manticore Skin Gaiters -->
-					<item id="1943" min="1" max="1" chance="59.5166" /> <!-- Manticore Skin Gaiters Pattern -->
-				</group>
-				<group chance="35.38370132446289">
-					<item id="1868" min="1" max="1" chance="74.7811" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="14.9562" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.7391" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.4927" /> <!-- Compound Braid -->
-					<item id="2194" min="1" max="1" chance="3.8232" /> <!-- Recipe: Mithril Gloves -->
-					<item id="2288" min="1" max="1" chance="0.2077" /> <!-- Recipe: Ghost Staff -->
-				</group>
+				<item id="57" min="26" max="60" chance="70" /> <!-- Adena -->
+				<item id="352" min="1" max="1" chance="0.3" /> <!-- Brigandine -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -6877,15 +6808,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2031" min="1" max="1" chance="1.5545" /> <!-- Morning Star Head -->
-				<item id="1881" min="1" max="1" chance="20.4752" /> <!-- Coarse Bone Powder -->
-				<item id="1868" min="1" max="7" chance="76.7821" /> <!-- Thread -->
+				<item id="36551" min="1" max="1" chance="1.300" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="7" chance="0.0055" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="20581" level="39" type="L2Monster" name="Leto Lizardman Shaman">
 		<parameters>
@@ -6939,26 +6866,16 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="368" max="733" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.26429998874664307">
-					<item id="279" min="1" max="1" chance="1.584" /> <!-- Reinforced Long Bow -->
-					<item id="2040" min="1" max="1" chance="98.416" /> <!-- Reinforced Long Bow Shaft -->
-				</group>
-				<group chance="18.9596004486084">
-					<item id="1875" min="1" max="1" chance="1.7565" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="4.3913" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="2.1956" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="0.3513" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="2.6348" /> <!-- Metallic Thread -->
-					<item id="2287" min="1" max="1" chance="0.1464" /> <!-- Recipe: Atuba Hammer -->
-					<item id="2293" min="1" max="1" chance="0.1464" /> <!-- Recipe: Glaive -->
-					<item id="2198" min="1" max="1" chance="0.5524" /> <!-- Recipe: Sage's Rag -->
-					<item id="1341" min="10" max="30" chance="87.8253" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
+				<item id="850" min="1" max="1" chance="0.3" /> <!-- Elven Earring -->
+				<item id="881" min="1" max="1" chance="0.3" /> <!-- Elven Ring -->
+				<item id="913" min="1" max="1" chance="0.075" /> <!-- Elven Necklace -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6992,15 +6909,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2202" min="1" max="1" chance="8.893" /> <!-- Recipe: Assault Boots -->
-				<item id="2036" min="1" max="1" chance="0.8804" /> <!-- Skull Breaker Head -->
-				<item id="1902" min="1" max="1" chance="8.8119" /> <!-- Elven Earring Beads -->
+				<item id="36531" min="1" max="1" chance="8" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid-->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="20582" level="40" type="L2Monster" name="Leto Lizardman Overlord">
 		<parameters>
@@ -7050,28 +6962,14 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1449" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.024600028991699">
-					<item id="629" min="1" max="1" chance="0.9888" /> <!-- Kite Shield -->
-					<item id="1947" min="1" max="1" chance="42.9244" /> <!-- Kite Shield Fragment -->
-					<item id="2493" min="1" max="1" chance="0.9888" /> <!-- Brigandine Shield -->
-					<item id="2929" min="1" max="1" chance="42.9244" /> <!-- Brigandine Shield Fragment -->
-					<item id="2411" min="1" max="1" chance="0.6925" /> <!-- Brigandine Helmet -->
-					<item id="2922" min="1" max="1" chance="11.4811" /> <!-- Brigandine Helmet Design -->
-				</group>
-				<group chance="45.5713996887207">
-					<item id="1869" min="1" max="1" chance="28.1745" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="3" chance="18.783" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="2.8174" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.3757" /> <!-- Durable Metal Plate -->
-					<item id="2987" min="1" max="1" chance="2.7354" /> <!-- Recipe: Plate Shield -->
-					<item id="3020" min="1" max="1" chance="0.1565" /> <!-- Recipe: Elven Long Sword -->
-					<item id="1341" min="20" max="60" chance="46.9575" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="2411" min="1" max="1" chance="0.75" /> <!-- Brigandine Helmet -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -7105,15 +7003,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1942" min="1" max="1" chance="8.8686" /> <!-- Manticore Skin Shirt Texture -->
-				<item id="1894" min="1" max="1" chance="6.1006" /> <!-- Crafted Leather -->
-				<item id="1825" min="1" max="1" chance="12.4192" /> <!-- Recipe: Oriharukon -->
+				<item id="36531" min="1" max="1" chance="11" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid-->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="20583" level="40" type="L2Monster" name="Timak Orc">
 		<parameters>

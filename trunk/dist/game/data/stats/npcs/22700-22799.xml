@@ -5093,35 +5093,26 @@
 		<ai aggroRange="300" clanHelpRange="300" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="666" max="1341" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.028699999675154686">
-					<item id="10216" min="1" max="1" chance="0.1501" /> <!-- Icarus Disperser -->
-					<item id="10398" min="1" max="1" chance="49.9299" /> <!-- Icarus Disperser Piece -->
-					<item id="10221" min="1" max="1" chance="0.1501" /> <!-- Icarus Hand -->
-					<item id="10403" min="1" max="1" chance="49.7699" /> <!-- Icarus Hand Piece -->
-				</group>
-				<group chance="13.803600311279297">
-					<item id="1895" min="1" max="1" chance="27.7032" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="1.9392" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="1.616" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="3.232" /> <!-- Asofe -->
-					<item id="10483" min="1" max="1" chance="0.6733" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.1683" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0168" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="959" min="1" max="1" chance="0.0039" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="10379" min="1" max="1" chance="0.0062" /> <!-- Recipe - Icarus Hand (60%) -->
-					<item id="1345" min="10" max="30" chance="64.6411" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="38" max="89" chance="70" /> <!-- Adena -->
+				<item id="10216" min="1" max="1" chance="0.0009" /> <!-- Icarus Disperser -->
+				<item id="10221" min="1" max="1" chance="0.0009" /> <!-- Icarus Hand -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="10483" min="1" max="1" chance="0.003" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
 			</death>
 			<corpse>
-				<item id="10398" min="1" max="1" chance="0.0582" /> <!-- Icarus Disperser Piece -->
-				<item id="959" min="1" max="1" chance="0.0054" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="4.7666" /> <!-- Crafted Leather -->
-				<item id="10374" min="1" max="1" chance="0.0088" /> <!-- Recipe - Icarus Disperser (60%) -->
-				<item id="10379" min="1" max="1" chance="0.0088" /> <!-- Recipe - Icarus Hand (60%) -->
-				<item id="10403" min="1" max="1" chance="0.0581" /> <!-- Icarus Hand Piece -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Item 36532.jpg Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Item 36533.jpg Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Item 36882.jpg Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Item 36881.jpg Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5176,36 +5167,27 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="885" max="1786" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03830000013113022">
-					<item id="10215" min="1" max="1" chance="0.1" /> <!-- Icarus Sawsword -->
-					<item id="10217" min="1" max="1" chance="0.1" /> <!-- Icarus Spirit -->
-					<item id="10218" min="1" max="1" chance="0.1" /> <!-- Icarus Heavy Arms -->
-					<item id="10397" min="1" max="1" chance="33.2689" /> <!-- Icarus Sawsword Piece -->
-					<item id="10399" min="1" max="1" chance="33.2689" /> <!-- Icarus Spirit Piece -->
-					<item id="10400" min="1" max="1" chance="33.1622" /> <!-- Icarus Heavy Arms Piece -->
-				</group>
-				<group chance="7.303500175476074">
-					<item id="1895" min="1" max="1" chance="87.0882" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0962" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3907" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6043" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.1167" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5292" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="960" min="1" max="1" chance="0.1218" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
+				<item id="57" min="51" max="119" chance="70" /> <!-- Adena -->
+				<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
+				<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
+				<item id="10218" min="1" max="1" chance="0.0009" /> <!-- Icarus Heavy Arms -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36537" min="1" max="1" chance="0.03" /> <!-- Leather Braid -->
+				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
+				<item id="10483" min="1" max="1" chance="0.0055" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
 			</death>
 			<corpse>
-				<item id="10397" min="1" max="1" chance="0.0664" /> <!-- Icarus Sawsword Piece -->
-				<item id="10399" min="1" max="1" chance="0.0664" /> <!-- Icarus Spirit Piece -->
-				<item id="10400" min="1" max="1" chance="0.0662" /> <!-- Icarus Heavy Arms Piece -->
-				<item id="9628" min="1" max="1" chance="1.2152" /> <!-- Leonard -->
-				<item id="10373" min="1" max="1" chance="0.01" /> <!-- Recipe - Icarus Sawsword (60%) -->
-				<item id="10375" min="1" max="1" chance="0.01" /> <!-- Recipe - Icarus Spirit (60%) -->
-				<item id="10376" min="1" max="1" chance="0.01" /> <!-- Recipe - Icarus Heavy Arms (60%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Item 36532.jpg Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Item 36533.jpg Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Item 36882.jpg Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Item 36881.jpg Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5259,49 +5241,39 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1445" max="2953" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.1497999429702759">
-					<item id="15694" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Circlet -->
-					<item id="15710" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Shield -->
-					<item id="15709" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Sigil -->
-					<item id="15645" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Circlet Piece -->
-					<item id="15693" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Shield Piece -->
-					<item id="15692" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Sigil Piece -->
-				</group>
-				<group chance="5.889500141143799">
-					<item id="1879" min="1" max="1" chance="59.281" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.6405" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7897" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.872" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5465" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.47" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6175" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0618" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="9554" min="1" max="1" chance="0.0711" /> <!-- Earth Crystal -->
-					<item id="15775" min="1" max="1" chance="0.2817" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-					<item id="15776" min="1" max="1" chance="0.2817" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-					<item id="15777" min="1" max="1" chance="0.2817" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-					<item id="15791" min="1" max="1" chance="0.4024" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-					<item id="15790" min="1" max="1" chance="0.4024" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-				</group>
+				<item id="57" min="167" max="390" chance="70" /> <!-- Adena -->
+				<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Sigil -->
+				<item id="15645" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15693" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shield Piece -->
+				<item id="15692" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="36538" min="1" max="1" chance="0.03" /> <!-- Durable Leather Braid -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.0055" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36874" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="15775" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
+				<item id="15776" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
+				<item id="15777" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
+				<item id="15791" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
+				<item id="15790" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
 			</death>
 			<corpse>
-				<item id="15645" min="1" max="1" chance="1.06" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="1.06" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="1.06" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="1.9" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="1.9" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="15775" min="1" max="1" chance="0.1414" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-				<item id="15776" min="1" max="1" chance="0.1414" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-				<item id="15777" min="1" max="1" chance="0.1414" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-				<item id="15791" min="1" max="1" chance="0.2021" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="0.2021" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
+				<item id="36532" min="1" max="1" chance="1.700" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5355,39 +5327,33 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1488" max="3042" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2734000086784363">
-					<item id="10222" min="1" max="1" chance="0.0178" /> <!-- Icarus Hall -->
-					<item id="10220" min="1" max="1" chance="0.0178" /> <!-- Icarus Hammer -->
-					<item id="10404" min="1" max="1" chance="5.9179" /> <!-- Icarus Hall Piece -->
-					<item id="10402" min="1" max="1" chance="5.9179" /> <!-- Icarus Hammer Piece -->
-					<item id="15697" min="1" max="1" chance="0.0822" /> <!-- Sealed Moirai Breastplate -->
-					<item id="15700" min="1" max="1" chance="0.1316" /> <!-- Sealed Moirai Gaiter -->
-					<item id="15648" min="1" max="1" chance="32.8537" /> <!-- Sealed Moirai Breastplate Piece -->
-					<item id="15651" min="1" max="1" chance="55.0611" /> <!-- Sealed Moirai Gaiter Piece -->
-				</group>
-				<group chance="7.614699840545654">
-					<item id="1879" min="1" max="1" chance="60.1076" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.0538" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8286" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8981" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.568" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5045" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6261" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0626" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="9554" min="1" max="1" chance="0.0721" /> <!-- Earth Crystal -->
-					<item id="15778" min="1" max="1" chance="0.1071" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
-					<item id="15781" min="1" max="1" chance="0.1715" /> <!-- Recipe - Sealed Moirai Gaiter (60%) -->
-				</group>
+				<item id="57" min="172" max="402" chance="70" /> <!-- Adena -->
+				<item id="10222" min="1" max="1" chance="0.0009" /> <!-- Icarus Hall -->
+				<item id="10220" min="1" max="1" chance="0.0009" /> <!-- Icarus Hammer -->
+				<item id="15697" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Breastplate -->
+				<item id="15700" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gaiter -->
+				<item id="15648" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Breastplate Piece -->
+				<item id="15651" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gaiter Piece -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36874" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36857" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="15778" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
+				<item id="15781" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Gaiter (60%) -->
 			</death>
 			<corpse>
-				<item id="10404" min="1" max="1" chance="0.1572" /> <!-- Icarus Hall Piece -->
-				<item id="10402" min="1" max="1" chance="0.1572" /> <!-- Icarus Hammer Piece -->
-				<item id="9630" min="1" max="1" chance="1.9365" /> <!-- Orichalcum -->
-				<item id="10380" min="1" max="1" chance="0.0237" /> <!-- Recipe - Icarus Hall (60%) -->
-				<item id="10378" min="1" max="1" chance="0.0237" /> <!-- Recipe - Icarus Hammer (60%) -->
+				<item id="36532" min="1" max="1" chance="1.850" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5442,44 +5408,33 @@
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="945" max="1907" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6808000206947327">
-					<item id="10223" min="1" max="1" chance="0.0045" /> <!-- Icarus Spitter -->
-					<item id="10405" min="1" max="1" chance="1.4869" /> <!-- Icarus Spitter Piece -->
-					<item id="15766" min="1" max="1" chance="0.127" /> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="0.0846" /> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="0.0635" /> <!-- Sealed Moirai Necklace -->
-					<item id="15772" min="1" max="1" chance="47.9898" /> <!-- Sealed Moirai Ring Gem -->
-					<item id="15773" min="1" max="1" chance="26.971" /> <!-- Sealed Moirai Earring Gem -->
-					<item id="15774" min="1" max="1" chance="23.2727" /> <!-- Sealed Moirai Necklace Gem -->
-				</group>
-				<group chance="17.25469970703125">
-					<item id="1895" min="1" max="1" chance="28.6202" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="2.0034" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="0.7857" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="0.5272" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="0.6956" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.1739" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0174" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15812" min="1" max="1" chance="0.1828" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-					<item id="15813" min="1" max="1" chance="0.1218" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-					<item id="15814" min="1" max="1" chance="0.0914" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-					<item id="1345" min="10" max="30" chance="66.7806" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
+				<item id="10223" min="1" max="1" chance="0.0009" /> <!-- Icarus Spitter -->
+				<item id="15766" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Necklace Gem -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36543" min="1" max="1" chance="0.003" /> <!-- Adamantite Wire -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
+				<item id="10483" min="1" max="1" chance="0.003" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="15812" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
+				<item id="15813" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
+				<item id="15814" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
 			</death>
 			<corpse>
-				<item id="10405" min="1" max="1" chance="0.0495" /> <!-- Icarus Spitter Piece -->
-				<item id="959" min="1" max="1" chance="0.0046" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="4.0627" /> <!-- Crafted Leather -->
-				<item id="10381" min="1" max="1" chance="0.0075" /> <!-- Recipe - Icarus Spitter (60%) -->
-				<item id="15772" min="1" max="1" chance="1.5971" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.8976" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.7745" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.2113" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.1408" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.1056" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5535,53 +5490,40 @@
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="939" max="1895" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.8463000059127808">
-					<item id="15703" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Shoes -->
-					<item id="15654" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15657" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="16.6228" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="14.012200355529785">
-					<item id="1895" min="1" max="1" chance="27.5158" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="1.9261" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="1.6051" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="3.2102" /> <!-- Asofe -->
-					<item id="10483" min="1" max="1" chance="0.6688" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.1672" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0167" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15784" min="1" max="1" chance="0.1144" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-					<item id="15785" min="1" max="1" chance="0.1144" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-					<item id="15786" min="1" max="1" chance="0.1144" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-					<item id="15787" min="1" max="1" chance="0.1144" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-					<item id="15788" min="1" max="1" chance="0.1144" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-					<item id="15789" min="1" max="1" chance="0.1144" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-					<item id="1345" min="10" max="30" chance="64.2037" /> <!-- Shining Arrow -->
-				</group>
+				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
+				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="36522" min="1" max="1" chance="0.03" /> <!-- Silver -->
+				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
+				<item id="36547" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment -->
+				<item id="36892" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="10483" min="1" max="1" chance="0.003" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="15784" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
+				<item id="15785" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
+				<item id="15786" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
+				<item id="15787" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
+				<item id="15788" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
+				<item id="15789" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
+				<item id="36857" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
 			</death>
 			<corpse>
-				<item id="15654" min="1" max="1" chance="0.8561" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="0.8561" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.8561" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="0.8561" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.8561" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.8561" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="15784" min="1" max="1" chance="0.1139" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.1139" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.1139" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.1139" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.1139" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.1139" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5636,42 +5578,35 @@
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1628" max="3326" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6973000168800354">
-					<item id="15698" min="1" max="1" chance="0.0469" /> <!-- Sealed Moirai Leather Breastplate -->
-					<item id="15701" min="1" max="1" chance="0.0751" /> <!-- Sealed Moirai Leather Legging -->
-					<item id="15649" min="1" max="1" chance="19.02" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-					<item id="15652" min="1" max="1" chance="30.858" /> <!-- Sealed Moirai Leather Legging Piece -->
-					<item id="15699" min="1" max="1" chance="0.0469" /> <!-- Sealed Moirai Tunic -->
-					<item id="15650" min="1" max="1" chance="19.02" /> <!-- Sealed Moirai Tunic Piece -->
-					<item id="15702" min="1" max="1" chance="0.0751" /> <!-- Sealed Moirai Stockings -->
-					<item id="15653" min="1" max="1" chance="30.858" /> <!-- Sealed Moirai Stockings Piece -->
-				</group>
-				<group chance="7.66349983215332">
-					<item id="1879" min="1" max="1" chance="59.8729" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.9365" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8175" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.8907" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5619" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.4947" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6237" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0624" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15780" min="1" max="1" chance="0.1422" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
-					<item id="15783" min="1" max="1" chance="0.2276" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
-					<item id="15779" min="1" max="1" chance="0.1422" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
-					<item id="15782" min="1" max="1" chance="0.2277" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
-				</group>
+				<item id="57" min="188" max="440" chance="70" /> <!-- Adena -->
+				<item id="15698" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15701" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Legging -->
+				<item id="15649" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="15652" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Legging Piece -->
+				<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
+				<item id="15650" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="15702" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Stockings -->
+				<item id="15653" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Stockings Piece -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="15780" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
+				<item id="15783" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
+				<item id="15779" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
+				<item id="15782" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
 			</death>
 			<corpse>
-				<item id="15649" min="1" max="1" chance="0.9227" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-				<item id="15652" min="1" max="1" chance="1.4969" /> <!-- Sealed Moirai Leather Legging Piece -->
-				<item id="9630" min="1" max="1" chance="1.5127" /> <!-- Orichalcum -->
-				<item id="15779" min="1" max="1" chance="0.1138" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
-				<item id="15782" min="1" max="1" chance="0.1821" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
-				<item id="15780" min="1" max="1" chance="0.1138" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
-				<item id="15783" min="1" max="1" chance="0.1821" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5727,27 +5662,21 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1029" max="2103" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.33239999413490295">
-					<item id="15697" min="1" max="1" chance="0.0933" /> <!-- Sealed Moirai Breastplate -->
-					<item id="15700" min="1" max="1" chance="0.1493" /> <!-- Sealed Moirai Gaiter -->
-					<item id="15648" min="1" max="1" chance="37.2793" /> <!-- Sealed Moirai Breastplate Piece -->
-					<item id="15651" min="1" max="1" chance="62.4781" /> <!-- Sealed Moirai Gaiter Piece -->
-				</group>
-				<group chance="6.861299991607666">
-					<item id="1895" min="1" max="1" chance="86.9789" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0885" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3877" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6022" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.1141" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5285" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0529" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="959" min="1" max="1" chance="0.0122" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="15778" min="1" max="1" chance="0.0904" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
-					<item id="15781" min="1" max="1" chance="0.1446" /> <!-- Recipe - Sealed Moirai Gaiter (60%) -->
-				</group>
+				<item id="57" min="353" max="824" chance="70" /> <!-- Adena -->
+				<item id="15697" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Breastplate -->
+				<item id="15700" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gaiters -->
+				<item id="15648" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Breastplate Piece -->
+				<item id="15651" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gaiters Piece -->
+				<item id="1895" min="1" max="1" chance="0.3" /> <!-- Leather Braid -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="15778" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Breastplate (60%) -->
+				<item id="15781" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Gaiters (60%)) -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36931" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5781,11 +5710,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15648" min="1" max="1" chance="0.6036" /> <!-- Sealed Moirai Breastplate Piece -->
-				<item id="15651" min="1" max="1" chance="1.0116" /> <!-- Sealed Moirai Gaiter Piece -->
-				<item id="1894" min="1" max="1" chance="8.9267" /> <!-- Crafted Leather -->
-				<item id="15778" min="1" max="1" chance="0.0756" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
-				<item id="15781" min="1" max="1" chance="0.1209" /> <!-- Recipe - Sealed Moirai Gaiter (60%) -->
+				<item id="36532" min="1" max="1" chance="3.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5839,28 +5767,23 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1542" max="3152" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6606000065803528">
-					<item id="15698" min="1" max="1" chance="0.0938" /> <!-- Sealed Moirai Leather Breastplate -->
-					<item id="15701" min="1" max="1" chance="0.1501" /> <!-- Sealed Moirai Leather Legging -->
-					<item id="15649" min="1" max="1" chance="38.04" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-					<item id="15652" min="1" max="1" chance="61.7161" /> <!-- Sealed Moirai Leather Legging Piece -->
-				</group>
-				<group chance="9.360099792480469">
-					<item id="1895" min="1" max="1" chance="86.858" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0801" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3843" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.1111" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5278" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0528" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="9552" min="1" max="1" chance="0.0608" /> <!-- Fire Crystal -->
-					<item id="959" min="1" max="1" chance="0.0122" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="15779" min="1" max="1" chance="0.1204" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
-					<item id="15782" min="1" max="1" chance="0.1925" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
-				</group>
+				<item id="57" min="548" max="1280" chance="70" /> <!-- Adena -->
+				<item id="15698" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15701" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Leggings -->
+				<item id="15649" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="15652" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Leggings Piece -->
+				<item id="36538" min="1" max="1" chance="0.75" /> <!-- Durable Leather Braid -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36932" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36866" min="1" max="1" chance="0.003" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.75" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="15779" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
+				<item id="15782" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Leather Leggings (60%) -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5894,11 +5817,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15649" min="1" max="1" chance="1.2239" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-				<item id="15652" min="1" max="1" chance="1.9856" /> <!-- Sealed Moirai Leather Legging Piece -->
-				<item id="1894" min="1" max="1" chance="13.3768" /> <!-- Crafted Leather -->
-				<item id="15779" min="1" max="1" chance="0.151" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
-				<item id="15782" min="1" max="1" chance="0.2415" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
+				<item id="36532" min="1" max="1" chance="5.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.100" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5954,27 +5876,17 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1029" max="2103" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4408999979496002">
-					<item id="15699" min="1" max="1" chance="0.0938" /> <!-- Sealed Moirai Tunic -->
-					<item id="15702" min="1" max="1" chance="0.1501" /> <!-- Sealed Moirai Stockings -->
-					<item id="15650" min="1" max="1" chance="38.04" /> <!-- Sealed Moirai Tunic Piece -->
-					<item id="15653" min="1" max="1" chance="61.7161" /> <!-- Sealed Moirai Stockings Piece -->
-				</group>
-				<group chance="6.869999885559082">
-					<item id="1895" min="1" max="1" chance="86.8685" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0808" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3846" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6002" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.1114" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5278" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0528" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="9552" min="1" max="1" chance="0.0608" /> <!-- Fire Crystal -->
-					<item id="15780" min="1" max="1" chance="0.1204" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
-					<item id="15783" min="1" max="1" chance="0.1927" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
-				</group>
+				<item id="57" min="64" max="149" chance="70" /> <!-- Adena -->
+				<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
+				<item id="15702" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Stockings -->
+				<item id="15650" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="15653" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Stockings Piece -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="9552" min="1" max="1" chance="0.0009" /> <!-- Fire Crystal -->
+				<item id="15780" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
+				<item id="15783" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6008,11 +5920,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15650" min="1" max="1" chance="0.8167" /> <!-- Sealed Moirai Tunic Piece -->
-				<item id="15653" min="1" max="1" chance="1.3251" /> <!-- Sealed Moirai Stockings Piece -->
-				<item id="1894" min="1" max="1" chance="8.9267" /> <!-- Crafted Leather -->
-				<item id="15780" min="1" max="1" chance="0.1007" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
-				<item id="15783" min="1" max="1" chance="0.1612" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
+				<item id="15650" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="15780" min="1" max="1" chance="0.03" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
+				<item id="15783" min="1" max="1" chance="0.03" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6064,30 +5974,24 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1029" max="2103" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9857000112533569">
-					<item id="15766" min="1" max="1" chance="0.1289" /> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="0.0859" /> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="0.0644" /> <!-- Sealed Moirai Necklace -->
-					<item id="15772" min="1" max="1" chance="48.7164" /> <!-- Sealed Moirai Ring Gem -->
-					<item id="15773" min="1" max="1" chance="27.3794" /> <!-- Sealed Moirai Earring Gem -->
-					<item id="15774" min="1" max="1" chance="23.625" /> <!-- Sealed Moirai Necklace Gem -->
-				</group>
-				<group chance="6.304800033569336">
-					<item id="1895" min="1" max="1" chance="86.0512" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0236" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3622" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5852" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.0915" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5229" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0523" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="960" min="1" max="1" chance="0.1205" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="15812" min="1" max="1" chance="0.5496" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-					<item id="15813" min="1" max="1" chance="0.3664" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-					<item id="15814" min="1" max="1" chance="0.2746" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-				</group>
+				<item id="57" min="353" max="824" chance="70" /> <!-- Adena -->
+				<item id="15766" min="1" max="1" chance="0.0055" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
+				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
+				<item id="36874" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36553" min="1" max="1" chance="0.0055" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="960" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="15812" min="1" max="1" chance="0.03" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
+				<item id="15813" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
+				<item id="15814" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6121,12 +6025,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15772" min="1" max="1" chance="2.9243" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="1.6435" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="1.4181" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.3869" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.2579" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.1934" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
+				<item id="36532" min="1" max="1" chance="3.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6180,39 +6082,33 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1008" max="2061" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.916700005531311">
-					<item id="15703" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Shoes -->
-					<item id="15654" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15657" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="16.6228" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="4.899899959564209">
-					<item id="1895" min="1" max="1" chance="85.2364" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.9665" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3398" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5701" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.0717" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5179" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0518" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="960" min="1" max="1" chance="0.1193" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="15784" min="1" max="1" chance="0.3544" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-					<item id="15785" min="1" max="1" chance="0.3544" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-					<item id="15786" min="1" max="1" chance="0.3544" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-					<item id="15787" min="1" max="1" chance="0.3544" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-					<item id="15788" min="1" max="1" chance="0.3544" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-					<item id="15789" min="1" max="1" chance="0.3545" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-				</group>
+				<item id="57" min="349" max="814" chance="70" /> <!-- Adena -->
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
+				<item id="36557" min="1" max="1" chance="0.075" /> <!-- Accessory Gem -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="960" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="15784" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
+				<item id="15785" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
+				<item id="15786" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
+				<item id="15787" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
+				<item id="15788" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
+				<item id="15789" min="1" max="1" chance="0.0055" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6246,18 +6142,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15654" min="1" max="1" chance="0.9273" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="0.9273" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.9273" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="0.9273" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.9273" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.9273" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="15784" min="1" max="1" chance="0.1234" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.1234" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.1234" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.1234" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.1234" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.1234" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
+				<item id="36532" min="1" max="1" chance="3.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6312,35 +6200,29 @@
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="346" max="699" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2732999920845032">
-					<item id="15694" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Circlet -->
-					<item id="15710" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Shield -->
-					<item id="15709" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Sigil -->
-					<item id="15645" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Circlet Piece -->
-					<item id="15693" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Shield Piece -->
-					<item id="15692" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Sigil Piece -->
-				</group>
-				<group chance="0.7200000286102295">
-					<item id="1894" min="1" max="1" chance="28.3096" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="26.8941" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.0159" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="26.8941" /> <!-- Thons -->
-					<item id="10483" min="1" max="1" chance="5.6029" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="1.4007" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.1401" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15775" min="1" max="1" chance="0.639" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-					<item id="15776" min="1" max="1" chance="0.639" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-					<item id="15777" min="1" max="1" chance="0.639" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-					<item id="15791" min="1" max="1" chance="0.9128" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-					<item id="15790" min="1" max="1" chance="0.9128" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-				</group>
+				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
+				<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Sigil -->
+				<item id="15645" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15693" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Shield Piece -->
+				<item id="15692" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.0055" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="15775" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
+				<item id="15776" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
+				<item id="15777" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
+				<item id="15791" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
+				<item id="15790" min="1" max="1" chance="0.0009" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
 				<group chance="50.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6348,17 +6230,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15645" min="1" max="1" chance="0.229" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="0.229" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="0.229" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="0.4106" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="0.4106" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="960" min="1" max="1" chance="0.0154" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="15775" min="1" max="1" chance="0.0306" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-				<item id="15776" min="1" max="1" chance="0.0306" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-				<item id="15777" min="1" max="1" chance="0.0306" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-				<item id="15791" min="1" max="1" chance="0.0437" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="0.0437" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.055" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6413,27 +6288,16 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="457" max="933" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.019899999722838402">
-					<item id="10215" min="1" max="1" chance="0.1" /> <!-- Icarus Sawsword -->
-					<item id="10217" min="1" max="1" chance="0.1" /> <!-- Icarus Spirit -->
-					<item id="10218" min="1" max="1" chance="0.1" /> <!-- Icarus Heavy Arms -->
-					<item id="10397" min="1" max="1" chance="33.2689" /> <!-- Icarus Sawsword Piece -->
-					<item id="10399" min="1" max="1" chance="33.2689" /> <!-- Icarus Spirit Piece -->
-					<item id="10400" min="1" max="1" chance="33.1622" /> <!-- Icarus Heavy Arms Piece -->
-				</group>
-				<group chance="3.200900077819824">
-					<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="57" min="26" max="62" chance="70" /> <!-- Adena -->
+				<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
+				<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
+				<item id="10218" min="1" max="1" chance="0.0009" /> <!-- Icarus Heavy Arms -->
+				<item id="10397" min="1" max="1" chance="0.003" /> <!-- Icarus Sawsword Piece -->
+				<item id="10399" min="1" max="1" chance="0.003" /> <!-- Icarus Spirit Piece -->
+				<item id="10400" min="1" max="1" chance="0.003" /> <!-- Icarus Heavy Arms Piece -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
 				<group chance="50.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6441,13 +6305,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10397" min="1" max="1" chance="0.0346" /> <!-- Icarus Sawsword Piece -->
-				<item id="10399" min="1" max="1" chance="0.0346" /> <!-- Icarus Spirit Piece -->
-				<item id="10400" min="1" max="1" chance="0.0345" /> <!-- Icarus Heavy Arms Piece -->
-				<item id="9630" min="1" max="1" chance="0.4244" /> <!-- Orichalcum -->
-				<item id="10373" min="1" max="1" chance="0.0052" /> <!-- Recipe - Icarus Sawsword (60%) -->
-				<item id="10375" min="1" max="1" chance="0.0052" /> <!-- Recipe - Icarus Spirit (60%) -->
-				<item id="10376" min="1" max="1" chance="0.0052" /> <!-- Recipe - Icarus Heavy Arms (60%) -->
+				<item id="10399" min="1" max="1" chance="0.03" /> <!-- Icarus Spirit Piece -->
+				<item id="10400" min="1" max="1" chance="0.03" /> <!-- Icarus Heavy Arms Piece -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6502,24 +6361,17 @@
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="346" max="699" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.01489999983459711">
-					<item id="10222" min="1" max="1" chance="0.1504" /> <!-- Icarus Hall -->
-					<item id="10220" min="1" max="1" chance="0.1504" /> <!-- Icarus Hammer -->
-					<item id="10404" min="1" max="1" chance="49.8496" /> <!-- Icarus Hall Piece -->
-					<item id="10402" min="1" max="1" chance="49.8496" /> <!-- Icarus Hammer Piece -->
-				</group>
-				<group chance="1.187999963760376">
-					<item id="1894" min="1" max="1" chance="29.4103" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.9398" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2886" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.9398" /> <!-- Thons -->
-					<item id="10483" min="1" max="1" chance="5.8208" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="1.4552" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.1455" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
+				<item id="10222" min="1" max="1" chance="0.0009" /> <!-- Icarus Hall -->
+				<item id="10220" min="1" max="1" chance="0.0009" /> <!-- Icarus Hammer -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36553" min="1" max="1" chance="0.0055" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="10483" min="1" max="1" chance="0.003" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
 				<group chance="50.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6527,11 +6379,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10404" min="1" max="1" chance="0.0363" /> <!-- Icarus Hall Piece -->
-				<item id="10402" min="1" max="1" chance="0.0363" /> <!-- Icarus Hammer Piece -->
-				<item id="9630" min="1" max="1" chance="0.4469" /> <!-- Orichalcum -->
-				<item id="10380" min="1" max="1" chance="0.0055" /> <!-- Recipe - Icarus Hall (60%) -->
-				<item id="10378" min="1" max="1" chance="0.0055" /> <!-- Recipe - Icarus Hammer (60%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.055" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6586,23 +6437,16 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="333" max="680" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.014499999582767487">
-					<item id="10221" min="1" max="1" chance="0.3007" /> <!-- Icarus Hand -->
-					<item id="10403" min="1" max="1" chance="99.6993" /> <!-- Icarus Hand Piece -->
-				</group>
-				<group chance="2.3338000774383545">
-					<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="57" min="70" max="163" chance="70" /> <!-- Adena -->
+				<item id="10221" min="1" max="1" chance="0.0009" /> <!-- Icarus Hand -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36904" min="1" max="1" chance="0.03" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36932" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.0009" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0009" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
 				<group chance="50.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6610,10 +6454,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10403" min="1" max="1" chance="0.044" /> <!-- Icarus Hand Piece -->
-				<item id="959" min="1" max="1" chance="0.0041" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="3.6096" /> <!-- Crafted Leather -->
-				<item id="10379" min="1" max="1" chance="0.0066" /> <!-- Recipe - Icarus Hand (60%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.055" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6666,22 +6510,15 @@
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="346" max="699" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.01489999983459711">
-					<item id="10223" min="1" max="1" chance="0.3007" /> <!-- Icarus Spitter -->
-					<item id="10405" min="1" max="1" chance="99.6993" /> <!-- Icarus Spitter Piece -->
-				</group>
-				<group chance="1.187999963760376">
-					<item id="1894" min="1" max="1" chance="29.4103" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.9398" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2886" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.9398" /> <!-- Thons -->
-					<item id="10483" min="1" max="1" chance="5.8208" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="1.4552" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.1455" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
+				<item id="10223" min="1" max="1" chance="0.0009" /> <!-- Icarus Spitter -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber-->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="10483" min="1" max="1" chance="0.0055" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
 				<group chance="50.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6689,10 +6526,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10405" min="1" max="1" chance="0.0454" /> <!-- Icarus Spitter Piece -->
-				<item id="1894" min="1" max="1" chance="3.7238" /> <!-- Crafted Leather -->
-				<item id="960" min="1" max="1" chance="0.0425" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="10381" min="1" max="1" chance="0.0068" /> <!-- Recipe - Icarus Spitter (60%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.055" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6745,22 +6582,13 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="160" max="326" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.007000000216066837">
-					<item id="10216" min="1" max="1" chance="0.2998" /> <!-- Icarus Disperser -->
-					<item id="10398" min="1" max="1" chance="99.7002" /> <!-- Icarus Disperser Piece -->
-				</group>
-				<group chance="0.5525000095367432">
-					<item id="1894" min="1" max="1" chance="29.4103" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="27.9398" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.2886" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="27.9398" /> <!-- Thons -->
-					<item id="10483" min="1" max="1" chance="5.8208" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="1.4552" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.1455" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="57" min="37" max="86" chance="70" /> <!-- Adena -->
+				<item id="10216" min="1" max="1" chance="0.0009" /> <!-- Icarus Disperser -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="10483" min="1" max="1" chance="0.0055" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
 				<group chance="50.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6768,9 +6596,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10398" min="1" max="1" chance="0.0282" /> <!-- Icarus Disperser Piece -->
-				<item id="1894" min="1" max="1" chance="2.3092" /> <!-- Crafted Leather -->
-				<item id="10374" min="1" max="1" chance="0.0042" /> <!-- Recipe - Icarus Disperser (60%) -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.055" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6828,22 +6657,15 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="826" max="1689" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.035999998450279236">
-					<item id="10219" min="1" max="1" chance="0.3007" /> <!-- Icarus Trident -->
-					<item id="10401" min="1" max="1" chance="99.6993" /> <!-- Icarus Trident Piece -->
-				</group>
-				<group chance="7.851799964904785">
-					<item id="1895" min="1" max="1" chance="87.1945" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.1036" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3936" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6062" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.1193" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5298" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.053" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
+				<item id="57" min="262" max="612" chance="70" /> <!-- Adena -->
+				<item id="10219" min="1" max="1" chance="0.0009" /> <!-- Icarus Trident -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36538" min="1" max="1" chance="0.03" /> <!-- Durable Leather Braid -->
+				<item id="36563" min="1" max="1" chance="0.0055" /> <!-- Synthetic Cokes -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 82 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6880,9 +6702,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="10401" min="1" max="1" chance="0.1455" /> <!-- Icarus Trident Piece -->
-				<item id="1894" min="1" max="1" chance="11.9474" /> <!-- Crafted Leather -->
-				<item id="10377" min="1" max="1" chance="0.0219" /> <!-- Recipe - Icarus Trident (60%) -->
+				<item id="36532" min="1" max="1" chance="2.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6940,38 +6763,32 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="826" max="1689" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.7512999773025513">
-					<item id="15703" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Shoes -->
-					<item id="15654" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15657" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="16.6228" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="4.319799900054932">
-					<item id="1895" min="1" max="1" chance="85.3382" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.9737" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3426" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.572" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.0742" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5185" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0519" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15784" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-					<item id="15785" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-					<item id="15786" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-					<item id="15787" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-					<item id="15788" min="1" max="1" chance="0.3548" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-					<item id="15789" min="1" max="1" chance="0.3549" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-				</group>
+				<item id="57" min="262" max="612" chance="70" /> <!-- Adena -->
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
+				<item id="36857" min="1" max="1" chance="0.0009" /> <!--Recipe: Leather - Downgrade -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="15784" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
+				<item id="15785" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
+				<item id="15786" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
+				<item id="15787" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
+				<item id="15788" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
+				<item id="15789" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7008,19 +6825,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15654" min="1" max="1" chance="0.7016" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="0.7016" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.7016" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="0.7016" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.7016" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.7016" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="960" min="1" max="1" chance="0.0314" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="15784" min="1" max="1" chance="0.0933" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.0933" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.0933" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.0933" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.0933" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.0933" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
+				<item id="36532" min="1" max="1" chance="2.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -7076,35 +6884,28 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="826" max="1689" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6575999855995178">
-					<item id="15694" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Circlet -->
-					<item id="15710" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Shield -->
-					<item id="15709" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Sigil -->
-					<item id="15645" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Circlet Piece -->
-					<item id="15693" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Shield Piece -->
-					<item id="15692" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Sigil Piece -->
-				</group>
-				<group chance="4.644999980926514">
-					<item id="1895" min="1" max="1" chance="85.9774" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.0184" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3602" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5838" /> <!-- Orichalcum -->
-					<item id="10483" min="1" max="1" chance="2.0897" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.5224" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0522" /> <!-- High-Grade Life Stone - Level 82 -->
-					<item id="15775" min="1" max="1" chance="0.2383" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-					<item id="15776" min="1" max="1" chance="0.2383" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-					<item id="15777" min="1" max="1" chance="0.2383" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-					<item id="15791" min="1" max="1" chance="0.3404" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-					<item id="15790" min="1" max="1" chance="0.3406" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-				</group>
+				<item id="57" min="262" max="612" chance="70" /> <!-- Adena -->
+				<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.0009 " /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Sigil -->
+				<item id="15645" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15693" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shield Piece -->
+				<item id="15692" min="1" max="1" chance="0.3" /> <!--  Sealed Moirai Sigil Piece -->
+				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
+				<item id="36858" min="1" max="1" chance="0.003" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="15775" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
+				<item id="15776" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
+				<item id="15777" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
+				<item id="15791" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
+				<item id="15790" min="1" max="1" chance="0.003" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7141,17 +6942,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="15645" min="1" max="1" chance="0.5511" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="0.5511" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="0.5511" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="0.9879" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="0.9879" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="1894" min="1" max="1" chance="3.2584" /> <!-- Crafted Leather -->
-				<item id="15775" min="1" max="1" chance="0.0735" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-				<item id="15776" min="1" max="1" chance="0.0735" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-				<item id="15777" min="1" max="1" chance="0.0735" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-				<item id="15791" min="1" max="1" chance="0.1051" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="0.1051" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
+				<item id="36532" min="1" max="1" chance="2.750" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
