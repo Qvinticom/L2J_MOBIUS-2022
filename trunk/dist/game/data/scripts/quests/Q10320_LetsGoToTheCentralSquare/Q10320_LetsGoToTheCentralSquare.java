@@ -81,6 +81,8 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 			case "32972-03.htm":
 			{
 				qs.startQuest();
+				qs.setCond(2); // Show arrow hack
+				qs.setCond(1);
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				htmltext = event;
 				break;
