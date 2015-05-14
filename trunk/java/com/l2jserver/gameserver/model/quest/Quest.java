@@ -2643,23 +2643,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String showHtmlFile(L2PcInstance player, String filename, L2Npc npc)
 	{
-		boolean questwindow = false;
-		if (Config.SERVER_CLASSIC_SUPPORT)
-		{
-			if (filename.endsWith(".htm"))
-			{
-				questwindow = true;
-			}
-		}
-		else
-		{
-			// TODO: Fix all Ertheia quest htmls with above logic or find a better solution.
-			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && (qs.getState() == State.CREATED))
-			{
-				questwindow = true;
-			}
-		}
+		boolean questwindow = !filename.endsWith(".html");
 		int questId = getId();
 		
 		// Create handler to file linked to the quest
