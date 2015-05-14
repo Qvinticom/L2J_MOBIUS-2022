@@ -84,6 +84,10 @@ public class QuestLink implements IBypassHandler
 	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
+		final StringBuilder qStarted = StringUtil.startAppend(150, "");
+		final StringBuilder qCanStart = StringUtil.startAppend(150, "");
+		final StringBuilder qCannotstart = StringUtil.startAppend(150, "");
+		final StringBuilder qComplete = StringUtil.startAppend(150, "");
 		String state = "";
 		String color = "";
 		
@@ -121,33 +125,70 @@ public class QuestLink implements IBypassHandler
 				state = quest.isCustomQuest() ? " (Done)" : "03";
 				color = "787878";
 			}
-			StringUtil.append(sb, "<font color=\"" + color + "\">");
-			StringUtil.append(sb, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
 			
-			if (quest.isCustomQuest())
+			switch (color)
 			{
-				StringUtil.append(sb, quest.getDescr(), state);
-			}
-			else
-			{
-				int questId = quest.getId();
-				if (questId > 10000)
+				case "ffdd66": // started
 				{
-					questId -= 5000;
+					StringUtil.append(qStarted, "<font color=\"" + color + "\">");
+					StringUtil.append(qStarted, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					appendToText(quest, qStarted, state);
+					break;
 				}
-				else if (questId == 146)
+				case "bbaa88": // can start
 				{
-					questId = 640;
+					StringUtil.append(qCanStart, "<font color=\"" + color + "\">");
+					StringUtil.append(qCanStart, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					appendToText(quest, qCanStart, state);
+					break;
 				}
-				
-				StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
+				case "a62f31": // cannot start
+				{
+					StringUtil.append(qCannotstart, "<font color=\"" + color + "\">");
+					StringUtil.append(qCannotstart, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					appendToText(quest, qCannotstart, state);
+					break;
+				}
+				case "787878": // complete
+				{
+					StringUtil.append(qComplete, "<font color=\"" + color + "\">");
+					StringUtil.append(qComplete, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					appendToText(quest, qComplete, state);
+					break;
+				}
 			}
-			sb.append("</button></font>");
 		}
+		sb.append(qStarted);
+		sb.append(qCanStart);
+		sb.append(qCannotstart);
+		sb.append(qComplete);
 		sb.append("</body></html>");
 		
 		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
 		npc.insertObjectIdAndShowChatWindow(player, sb.toString());
+	}
+	
+	private static void appendToText(Quest quest, StringBuilder sb, String state)
+	{
+		if (quest.isCustomQuest())
+		{
+			StringUtil.append(sb, quest.getDescr(), state);
+		}
+		else
+		{
+			int questId = quest.getId();
+			if (questId > 10000)
+			{
+				questId -= 5000;
+			}
+			else if (questId == 146)
+			{
+				questId = 640;
+			}
+			
+			StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
+		}
+		sb.append("</button></font>");
 	}
 	
 	/**
