@@ -363,18 +363,59 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11264" levels="4" name="Strong Will">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11264" levels="4" name="Strong Will" enchantGroup1="10" enchantGroup2="10">
 		<!-- Consume HP to recover 200 MP. Dispels debuffs and escapes immobility. -->
-		<table name="#hpConsumes"> 400 420 440 460 </table>
-		<set name="icon" val="icon.skill11264" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hpConsume" val="#hpConsumes" />
-		<set name="hitTime" val="1200" />
+		<table name="#dispelAbnormals"> POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 </table>
+		<table name="#effectPoints"> 235 438 582 720 </table>
+		<table name="#enchDispelAbnormals"> POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 </table>
+		<table name="#enchHpConsume"> 450 440 430 420 410 400 390 380 370 360 </table>
+		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
+		<table name="#enchManaHealOverTime"> 5 10 15 20 25 30 35 40 45 50 </table>
+		<table name="#hpConsume"> 400 420 440 460 </table>
+		<table name="#magicLvl"> 89 92 95 98 </table>
+		<table name="#manaHeal"> 200 210 220 230 </table>
 		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="60000" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="hitTime" val="1200" />
+		<set name="hpConsume" val="#hpConsume" />
+		<set name="icon" val="icon.skill11264" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<enchant1 name="hpConsume" val="#enchHpConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="hpConsume" val="#enchHpConsume" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="#dispelAbnormals" />
+			</effect>
+			<effect name="ManaHeal">
+				<param power="#manaHeal" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="DispelBySlot">
+				<param dispel="#enchDispelAbnormals" />
+			</effect>
+			<effect name="ManaHeal">
+				<param power="230" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="DispelBySlot">
+				<param dispel="#enchDispelAbnormals" />
+			</effect>
+			<effect name="ManaHeal">
+				<param power="230" />
+			</effect>
+			<effect name="ManaHealOverTime" ticks="5">
+				<param power="#enchManaHealOverTime" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="11265" levels="1" name="Summon Team Mate">
 		<!-- AUTO GENERATED SKILL -->
