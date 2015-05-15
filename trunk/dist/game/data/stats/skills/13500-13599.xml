@@ -312,11 +312,23 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13541" levels="1" name="Octavis' Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2. Speed + 7. Dark Resistance + 30. -->
 		<set name="icon" val="icon.istina_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+				<add stat="DEX" val="1" />
+				<add stat="CON" val="2" />
+				<add stat="INT" val="2" />
+				<add stat="WIT" val="1" />
+				<add stat="MEN" val="2" />
+				<add stat="runSpd" val="7" />
+				<add stat="darkRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13542" levels="1" name="Lindvior's Earring">
 		<!-- AUTO GENERATED SKILL -->

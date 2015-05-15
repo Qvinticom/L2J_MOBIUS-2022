@@ -311,88 +311,148 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="13240" levels="1" name="Immortal Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 301. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="301" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13241" levels="1" name="Immortal Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 148. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxMp" val="148" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13242" levels="1" name="Immortal Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 811. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="811" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13243" levels="1" name="Twilight Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 316. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="316" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13244" levels="1" name="Twilight Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 162. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxMp" val="162" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13245" levels="1" name="Twilight Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 851. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="851" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13246" levels="1" name="Seraph Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 332. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="332" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13247" levels="1" name="Seraph Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 176. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxMp" val="176" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13248" levels="1" name="Seraph Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 894. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="894" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13249" levels="1" name="Eternal Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 339. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="339" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13250" levels="1" name="Eternal Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 182. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxMp" val="182" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13251" levels="1" name="Eternal Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 912. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="912" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13252" levels="1" name="One-handed Sword Special Ability">
 		<!-- AUTO GENERATED SKILL -->

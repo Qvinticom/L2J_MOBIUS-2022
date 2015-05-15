@@ -483,14 +483,18 @@
 		<!-- When equipped with Istina's Shirt, STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7 and Water Resistance + 30. -->
 		<set name="icon" val="icon.istina_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="54" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="2540000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13324-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="48.0" />
+			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -577,15 +581,18 @@
 		<!-- When equipped with Octavis' Shirt, STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7 and Dark Resistance + 30. -->
 		<set name="icon" val="icon.octavis_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="54" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="2540000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13541-1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="48.0" />
+			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -692,14 +699,17 @@
 	<item id="19472" name="Immortal Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="85" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="3997000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="38.0" />
+			<add order="0" stat="pDef" val="38.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -737,14 +747,17 @@
 	<item id="19475" name="Twilight Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="254" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="11941000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="42.0" />
+			<add order="0" stat="pDef" val="42.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -782,14 +795,17 @@
 	<item id="19478" name="Seraph Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="crystal_count" val="582" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="27296000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="46.0" />
+			<add order="0" stat="pDef" val="46.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -827,14 +843,17 @@
 	<item id="19481" name="Eternal Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1517" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="71132000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="48.0" />
+			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

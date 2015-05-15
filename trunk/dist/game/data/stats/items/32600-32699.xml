@@ -76,15 +76,18 @@
 		<!-- Increases Max HP by 301 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="85" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="3997000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13240-1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="38.0" />
+			<add order="0" stat="pDef" val="38.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -92,14 +95,18 @@
 		<!-- Increases Max MP by 148 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="85" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="3997000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13241-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="38.0" />
+			<add order="0" stat="pDef" val="38.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -107,15 +114,18 @@
 		<!-- Increases Max CP by 811 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r1_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="85" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="3997000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13242-1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="38.0" />
+			<add order="0" stat="pDef" val="38.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -123,14 +133,18 @@
 		<!-- Increases Max HP by 316 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="254" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="11941000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13243-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="42.0" />
+			<add order="0" stat="pDef" val="42.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -138,14 +152,18 @@
 		<!-- Increases Max MP by 162 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="254" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="11941000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13244-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="42.0" />
+			<add order="0" stat="pDef" val="42.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -153,14 +171,18 @@
 		<!-- Increases Max CP by 851 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r2_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="254" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="11941000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13245-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="42.0" />
+			<add order="0" stat="pDef" val="42.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -168,14 +190,18 @@
 		<!-- Increases Max HP by 332 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="crystal_count" val="582" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="27296000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13246-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="46.0" />
+			<add order="0" stat="pDef" val="46.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -183,14 +209,18 @@
 		<!-- Increases Max MP by 176 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="crystal_count" val="582" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="27296000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13247-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="46.0" />
+			<add order="0" stat="pDef" val="46.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -198,14 +228,18 @@
 		<!-- Increases Max CP by 894 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r95_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="crystal_count" val="582" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="27296000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13248-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="46.0" />
+			<add order="0" stat="pDef" val="46.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -213,14 +247,18 @@
 		<!-- Increases Max HP by 339 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1517" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="71132000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13249-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="48.0" />
+			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -228,14 +266,18 @@
 		<!-- Increases Max MP by 182 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1517" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="71132000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13250-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="48.0" />
+			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -243,14 +285,18 @@
 		<!-- Increases Max CP by 912 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.r991_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1517" />
-		<set name="enchant_enabled" val="1" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="price" val="71132000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13251-1" />
+		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="48.0" />
+			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
