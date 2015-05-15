@@ -2184,7 +2184,7 @@
 			<radius normal="28" />
 			<height normal="11.5" />
 		</collision>
-				<drop_lists>
+		<drop_lists>
 			<death>
 				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
 				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
@@ -3781,30 +3781,23 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="643" max="1305" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1451999992132187">
-					<item id="266" min="1" max="1" chance="0.8756" /> <!-- Great Pata -->
-					<item id="2120" min="1" max="1" chance="99.1244" /> <!-- Great Pata Blade -->
-				</group>
-				<group chance="13.274800300598145">
-					<item id="1867" min="1" max="1" chance="40.1372" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="40.1372" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="6.6895" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="1.0562" /> <!-- Crafted Leather -->
-					<item id="4042" min="1" max="1" chance="0.5017" /> <!-- Enria -->
-					<item id="1806" min="1" max="1" chance="0.0602" /> <!-- Recipe: Soulshot (B-Grade) -->
-					<item id="5165" min="1" max="1" chance="0.0602" /> <!-- Recipe: Blessed Spiritshot (B) Compressed Package (100%) -->
-					<item id="4180" min="1" max="1" chance="3.3448" /> <!-- Recipe: Silver Arrow (100%) -->
-					<item id="3955" min="1" max="1" chance="0.0602" /> <!-- Recipe: Blessed Spiritshot B -->
-					<item id="5280" min="1" max="1" chance="0.0602" /> <!-- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%) -->
-					<item id="6669" min="1" max="1" chance="7.0007" /> <!-- Deluxe Chest Key - Grade 5 -->
-					<item id="8726" min="1" max="1" chance="0.6968" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1742" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0174" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0035" /> <!-- Top-Grade Life Stone - Level 55 -->
-				</group>
+				<item id="57" min="27" max="63" chance="70" /> <!-- Adena -->
+				<item id="61" min="1" max="1" chance="0.03" /> <!-- Mithril Gloves -->
+				<item id="2429" min="1" max="1" chance="0.03" /> <!-- Chain Boots -->
+				<item id="2428" min="1" max="1" chance="0.03" /> <!-- Plate Boots -->
+				<item id="2387" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="2387" min="1" max="1" chance="0.03" /> <!-- Ogre Power Gauntlets -->
+				<item id="381" min="1" max="1" chance="0.03" /> <!-- Chain Gaiters -->
+				<item id="380" min="1" max="1" chance="0.03" /> <!-- Plate Gaiters -->
+				<item id="62" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Boots -->
+				<item id="2452" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gloves -->
+				<item id="354" min="1" max="1" chance="0.03" /> <!--  Chain Mail Shirt -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!--  Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!--  Weapon Fragment (Mid-grade) -->
+				<item id="8726" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0055" /> <!-- Mid-Grade Life Stone - Level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 55 -->
+				<item id="8756" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 55 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3838,9 +3831,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1984" min="1" max="1" chance="3.48" /> <!-- Theca Leather Armor Pattern -->
-				<item id="1806" min="1" max="1" chance="0.3247" /> <!-- Recipe: Soulshot (B-Grade) -->
-				<item id="1872" min="1" max="5" chance="72.1517" /> <!-- Animal Bone -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.003" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
