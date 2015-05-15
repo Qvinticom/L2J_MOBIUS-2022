@@ -2745,22 +2745,13 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="8" max="12" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="9.411999702453613">
-					<item id="112" min="1" max="1" chance="30.627" /> <!-- Apprentice's Earring -->
-					<item id="116" min="1" max="1" chance="46.553" /> <!-- Magic Ring -->
-					<item id="118" min="1" max="1" chance="22.82" /> <!-- Necklace of Magic -->
-				</group>
-				<group chance="1.7525999546051025">
-					<item id="1864" min="1" max="1" chance="31.25" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="15.625" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.4167" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.25" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="31.25" /> <!-- Thread -->
-					<item id="1666" min="1" max="1" chance="5.2083" /> <!-- Recipe: Wooden Arrow -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="0.3" /> <!-- Worn Leather -->
+				<item id="36526" min="1" max="1" chance="0.3" /> <!-- Fiber -->
+				<item id="36521" min="1" max="1" chance="0.075" /> <!-- Iron Ore -->
+				<item id="36536" min="1" max="1" chance="0.03" /> <!-- Worn Leather Braid -->
+				<item id="36546" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="0.03" /> <!-- Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2794,9 +2785,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="1" chance="3.1786" /> <!-- Stem -->
-				<item id="1666" min="1" max="1" chance="0.5298" /> <!-- Recipe: Wooden Arrow -->
-				<item id="1786" min="1" max="1" chance="1.2714" /> <!-- Recipe: Broad Sword -->
+				<item id="36531" min="1" max="1" chance="0.3" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -2842,19 +2831,9 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="8" max="12" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.7683000564575195">
-					<item id="21" min="1" max="1" chance="38.587" /> <!-- Shirt -->
-					<item id="28" min="1" max="1" chance="61.413" /> <!-- Pants -->
-				</group>
-				<group chance="3.0671000480651855">
-					<item id="1871" min="1" max="1" chance="13.3929" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="8.9286" /> <!-- Suede -->
-					<item id="1786" min="1" max="1" chance="10.7143" /> <!-- Recipe: Broad Sword -->
-					<item id="17" min="10" max="30" chance="66.9642" /> <!-- Not Found -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Worn Leather Braid -->
+				<item id="36551" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2888,9 +2867,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="1.5893" /> <!-- Charcoal -->
-				<item id="1866" min="1" max="1" chance="1.0595" /> <!-- Suede -->
-				<item id="1787" min="1" max="1" chance="1.2714" /> <!-- Recipe: Willow Staff -->
+				<item id="36531" min="1" max="1" chance="0.3" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -2936,18 +2913,9 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="8" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="10.566399574279785">
-					<item id="18" min="1" max="1" chance="58.3333" /> <!-- Leather Shield -->
-					<item id="41" min="1" max="1" chance="41.6667" /> <!-- Cloth Cap -->
-				</group>
-				<group chance="1.7258000373840332">
-					<item id="1870" min="1" max="1" chance="35.7143" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="35.7143" /> <!-- Varnish -->
-					<item id="1787" min="1" max="1" chance="28.5714" /> <!-- Recipe: Willow Staff -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="36541" min="1" max="1" chance="0.075" /> <!-- Steel Wire -->
+				<item id="36556" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2981,9 +2949,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1788" min="1" max="1" chance="1.4309" /> <!-- Recipe: Bow -->
-				<item id="1870" min="1" max="1" chance="1.7886" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="1.7886" /> <!-- Varnish -->
+				<item id="36531" min="1" max="1" chance="0.3" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3029,18 +2995,10 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="13" max="20" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9484000205993652">
-					<item id="13" min="1" max="1" chance="100" /> <!-- Short Bow -->
-				</group>
-				<group chance="3.2795000076293945">
-					<item id="1866" min="1" max="1" chance="14.218" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="21.327" /> <!-- Charcoal -->
-					<item id="1788" min="1" max="1" chance="17.0616" /> <!-- Recipe: Bow -->
-					<item id="1060" min="1" max="1" chance="47.3934" /> <!-- Lesser Healing Potion -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="0.75" /> <!-- Healing Potion -->
+				<item id="36546" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="0.03" /> <!-- Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3074,9 +3032,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1666" min="1" max="1" chance="0.902" /> <!-- Recipe: Wooden Arrow -->
-				<item id="1786" min="1" max="1" chance="2.1649" /> <!-- Recipe: Broad Sword -->
-				<item id="1866" min="1" max="1" chance="1.8041" /> <!-- Suede -->
+				<item id="36531" min="1" max="1" chance="0.75" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3122,18 +3078,9 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="19" max="29" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="9.138299942016602">
-					<item id="21" min="1" max="1" chance="38.587" /> <!-- Shirt -->
-					<item id="28" min="1" max="1" chance="61.413" /> <!-- Pants -->
-				</group>
-				<group chance="4.4274001121521">
-					<item id="1864" min="1" max="1" chance="60" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="30" /> <!-- Iron Ore -->
-					<item id="1666" min="1" max="1" chance="10" /> <!-- Recipe: Wooden Arrow -->
-				</group>
+				<item id="57" min="1" max="2" chance="5.3" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="0.9" /> <!-- Worn Leather -->
+				<item id="36551" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3167,9 +3114,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="1" chance="7.7083" /> <!-- Stem -->
-				<item id="1787" min="1" max="1" chance="3.0833" /> <!-- Recipe: Willow Staff -->
-				<item id="1788" min="1" max="1" chance="3.0833" /> <!-- Recipe: Bow -->
+				<item id="36531" min="1" max="1" chance="0.8" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3215,17 +3160,10 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="30" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.9611999988555908">
-					<item id="13" min="1" max="1" chance="100" /> <!-- Short Bow -->
-				</group>
-				<group chance="5.400000095367432">
-					<item id="1870" min="1" max="1" chance="35.7143" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="35.7143" /> <!-- Varnish -->
-					<item id="1786" min="1" max="1" chance="28.5714" /> <!-- Recipe: Broad Sword -->
-				</group>
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="0.3" /> <!-- Iron Ore -->
+				<item id="36541" min="1" max="1" chance="0.3" /> <!-- Steel Wire -->
+				<item id="36556" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3259,9 +3197,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1874" min="1" max="1" chance="0.3731" /> <!-- Oriharukon Ore -->
-				<item id="4043" min="1" max="1" chance="0.1865" /> <!-- Asofe -->
-				<item id="1666" min="1" max="1" chance="1.8654" /> <!-- Recipe: Wooden Arrow -->
+				<item id="36531" min="1" max="1" chance="1.024" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5391,7 +5327,7 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
-        		<drop_lists>
+		<drop_lists>
 			<death>
 				<group chance="70">
 					<item id="57" min="1778" max="3566" chance="100" /> <!-- Adena -->

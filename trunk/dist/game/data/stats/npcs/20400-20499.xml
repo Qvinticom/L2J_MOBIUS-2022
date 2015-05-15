@@ -1759,21 +1759,9 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="8" max="12" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5579000115394592">
-					<item id="11" min="1" max="1" chance="100" /> <!-- Bone Dagger -->
-				</group>
-				<group chance="2.79010009765625">
-					<item id="1864" min="1" max="1" chance="16.8539" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="8.427" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="5.618" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="3.3708" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="16.8539" /> <!-- Thread -->
-					<item id="1787" min="1" max="1" chance="6.7416" /> <!-- Recipe: Willow Staff -->
-					<item id="17" min="10" max="30" chance="42.1348" /> <!-- Not Found -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="11" min="1" max="1" chance="0.3" /> <!-- Bone Dagger -->
+				<item id="1787" min="1" max="1" chance="0.03" /> <!-- Recipe: Willow Staff -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1807,9 +1795,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="1.592" /> <!-- Charcoal -->
-				<item id="1871" min="1" max="1" chance="1.592" /> <!-- Charcoal -->
-				<item id="1873" min="1" max="1" chance="0.6368" /> <!-- Silver Nugget -->
+				<item id="36556" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Low-grade) -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -2524,19 +2510,10 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="30" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.9644999504089355">
-					<item id="4" min="1" max="1" chance="50" /> <!-- Club -->
-					<item id="7" min="1" max="1" chance="50" /> <!-- Apprentice's Rod -->
-				</group>
-				<group chance="11.880399703979492">
-					<item id="1868" min="1" max="1" chance="24.3902" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="4.878" /> <!-- Silver Nugget -->
-					<item id="1787" min="1" max="1" chance="9.7561" /> <!-- Recipe: Willow Staff -->
-					<item id="17" min="10" max="30" chance="60.9757" /> <!-- Not Found -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="1787" min="1" max="1" chance="0.3" /> <!-- Recipe: Willow Staff -->
+				<item id="4" min="1" max="1" chance="0.3" /> <!-- Club -->
+				<item id="7" min="1" max="1" chance="0.3" /> <!-- Apprentice's Rod -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2570,9 +2547,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1786" min="1" max="1" chance="4.4845" /> <!-- Recipe: Broad Sword -->
-				<item id="1864" min="1" max="1" chance="11.2112" /> <!-- Stem -->
-				<item id="5549" min="1" max="1" chance="0.5606" /> <!-- Metallic Thread -->
+				<item id="1786" min="1" max="1" chance="0.8" /> <!-- Recipe: Broad Sword -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3399,18 +3374,9 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="19" max="29" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3530000448226929">
-					<item id="308" min="1" max="1" chance="100" /> <!-- Buffalo's Horn -->
-				</group>
-				<group chance="8.182100296020508">
-					<item id="1868" min="1" max="1" chance="24.3902" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="4.878" /> <!-- Silver Nugget -->
-					<item id="1788" min="1" max="1" chance="9.7561" /> <!-- Recipe: Bow -->
-					<item id="17" min="10" max="30" chance="60.9757" /> <!-- Not Found -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="1788" min="1" max="1" chance="0.075" /> <!-- Recipe: Bow -->
+				<item id="308" min="1" max="1" chance="0.3" /> <!-- Buffalo's Horn -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3444,9 +3410,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1872" min="1" max="1" chance="5.1475" /> <!-- Animal Bone -->
-				<item id="1788" min="1" max="1" chance="3.0885" /> <!-- Recipe: Bow -->
-				<item id="1868" min="1" max="1" chance="7.7212" /> <!-- Thread -->
+				<item id="1788" min="1" max="1" chance="0.3" /> <!-- Recipe: Bow -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -4913,17 +4877,9 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="19" max="29" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3530000448226929">
-					<item id="253" min="1" max="1" chance="100" /> <!-- Spiked Gloves -->
-				</group>
-				<group chance="4.257400035858154">
-					<item id="1868" min="1" max="1" chance="62.5" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="12.5" /> <!-- Silver Nugget -->
-					<item id="1786" min="1" max="1" chance="25" /> <!-- Recipe: Broad Sword -->
-				</group>
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36556" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36546" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4957,9 +4913,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="426" min="1" max="1" chance="6.8329" /> <!-- Tunic -->
-				<item id="1786" min="1" max="1" chance="3.0885" /> <!-- Recipe: Broad Sword -->
-				<item id="1873" min="1" max="1" chance="1.5442" /> <!-- Silver Nugget -->
+				<item id="36531" min="1" max="1" chance="0.8" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5497,19 +5451,10 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="8" max="12" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.774600028991699">
-					<item id="426" min="1" max="1" chance="38.587" /> <!-- Tunic -->
-					<item id="462" min="1" max="1" chance="61.413" /> <!-- Stockings -->
-				</group>
-				<group chance="3.374000072479248">
-					<item id="1868" min="1" max="1" chance="24.3902" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="4.878" /> <!-- Silver Nugget -->
-					<item id="1786" min="1" max="1" chance="9.7561" /> <!-- Recipe: Broad Sword -->
-					<item id="17" min="10" max="30" chance="60.9757" /> <!-- Not Found -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="426" min="1" max="1" chance="0.8" /> <!-- Tunic -->
+				<item id="462" min="1" max="1" chance="0.8" /> <!-- Stockings -->
+				<item id="1786" min="1" max="1" chance="0.03" /> <!-- Recipe: Broad Sword -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5543,9 +5488,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1788" min="1" max="1" chance="1.2736" /> <!-- Recipe: Bow -->
-				<item id="1786" min="1" max="1" chance="1.2736" /> <!-- Recipe: Broad Sword -->
-				<item id="1868" min="1" max="1" chance="3.1839" /> <!-- Thread -->
+				<item id="1786" min="1" max="1" chance="0.075" /> <!-- Recipe: Broad Sword -->
+				<item id="1788" min="1" max="1" chance="0.075" /> <!-- Recipe: Bow -->
 			</corpse>
 		</drop_lists>
 		<collision>

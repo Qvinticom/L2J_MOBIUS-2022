@@ -124,22 +124,8 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="30" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="33.52899932861328">
-					<item id="112" min="1" max="1" chance="30.627" /> <!-- Apprentice's Earring -->
-					<item id="118" min="1" max="1" chance="22.8201" /> <!-- Necklace of Magic -->
-					<item id="116" min="1" max="1" chance="46.5529" /> <!-- Magic Ring -->
-				</group>
-				<group chance="6.698800086975098">
-					<item id="1864" min="1" max="1" chance="29.1262" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="14.5631" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="9.7087" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="5.8252" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="29.1262" /> <!-- Thread -->
-					<item id="1788" min="1" max="1" chance="11.6506" /> <!-- Recipe: Bow -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="112" min="1" max="1" chance="13.04" /> <!-- Apprentice's Earring -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -173,9 +159,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="5.6617" /> <!-- Charcoal -->
-				<item id="116" min="1" max="1" chance="45.2932" /> <!-- Magic Ring -->
-				<item id="1786" min="1" max="1" chance="4.5293" /> <!-- Recipe: Broad Sword -->
+				<item id="116" min="1" max="1" chance="11.78" /> <!-- Magic Ring -->
+				<item id="1786" min="1" max="1" chance="0.3" /> <!-- Recipe: Broad Sword -->
 			</corpse>
 		</drop_lists>
 		<collision>

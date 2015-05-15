@@ -2145,13 +2145,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="57" min="7" max="13" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="10" />
 			<height normal="15" />

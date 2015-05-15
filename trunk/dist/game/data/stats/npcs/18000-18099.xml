@@ -198,8 +198,11 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
+			<death>
+				<item id="36531" min="1" max="1" chance="0.3" /> <!-- Thread -->
+			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="0.9797" /> <!-- Charcoal -->
+				<item id="36531" min="1" max="1" chance="0.075" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 		<collision>
