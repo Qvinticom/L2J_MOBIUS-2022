@@ -16,42 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.model.zone;
+package com.l2jserver.gameserver.network.serverpackets;
+
+import com.l2jserver.gameserver.model.actor.L2Character;
 
 /**
- * Zone Ids.
- * @author Zoey76
+ * @author Mobius
  */
-public enum ZoneId
+public class ExAutoFishAvailable extends L2GameServerPacket
 {
-	PVP,
-	PEACE,
-	SIEGE,
-	MOTHER_TREE,
-	CLAN_HALL,
-	LANDING,
-	NO_LANDING,
-	WATER,
-	FISHING,
-	JAIL,
-	MONSTER_TRACK,
-	CASTLE,
-	SWAMP,
-	NO_SUMMON_FRIEND,
-	FORT,
-	NO_STORE,
-	TOWN,
-	SCRIPT,
-	HQ,
-	DANGER_AREA,
-	ALTERED,
-	NO_BOOKMARK,
-	NO_ITEM_DROP,
-	NO_RESTART,
-	JUMP;
+	private final L2Character _activeChar;
 	
-	public static int getZoneCount()
+	public ExAutoFishAvailable(L2Character character)
 	{
-		return values().length;
+		_activeChar = character;
+	}
+	
+	@Override
+	protected void writeImpl()
+	{
+		writeC(0xFE);
+		writeH(0x179);
+		writeD(_activeChar.getObjectId());
 	}
 }

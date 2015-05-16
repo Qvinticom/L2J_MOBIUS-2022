@@ -16,42 +16,41 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.model.zone;
+package com.l2jserver.gameserver.network.clientpackets;
+
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 /**
- * Zone Ids.
- * @author Zoey76
+ * @author Mobius
  */
-public enum ZoneId
+public class RequestExAutoFish extends L2GameClientPacket
 {
-	PVP,
-	PEACE,
-	SIEGE,
-	MOTHER_TREE,
-	CLAN_HALL,
-	LANDING,
-	NO_LANDING,
-	WATER,
-	FISHING,
-	JAIL,
-	MONSTER_TRACK,
-	CASTLE,
-	SWAMP,
-	NO_SUMMON_FRIEND,
-	FORT,
-	NO_STORE,
-	TOWN,
-	SCRIPT,
-	HQ,
-	DANGER_AREA,
-	ALTERED,
-	NO_BOOKMARK,
-	NO_ITEM_DROP,
-	NO_RESTART,
-	JUMP;
+	private final static SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
 	
-	public static int getZoneCount()
+	public RequestExAutoFish()
 	{
-		return values().length;
+	}
+	
+	@Override
+	protected void readImpl()
+	{
+	}
+	
+	@Override
+	protected void runImpl()
+	{
+		final L2PcInstance activeChar = getActiveChar();
+		if ((activeChar == null) || activeChar.isFishing())
+		{
+			return;
+		}
+		activeChar.useMagic(FISHING_SKILL.getSkill(), false, true);
+	}
+	
+	@Override
+	public String getType()
+	{
+		return getClass().getSimpleName();
 	}
 }

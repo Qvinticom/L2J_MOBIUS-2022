@@ -18,15 +18,29 @@
  */
 package com.l2jserver.gameserver.model.zone.type;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Future;
+
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.network.serverpackets.ExAutoFishAvailable;
 
 /**
  * A fishing zone
- * @author durgus
+ * @author durgus, Darky999
  */
 public class L2FishingZone extends L2ZoneType
 {
+	private final Map<Integer, Future<?>> _task = new HashMap<>();
+	int _fishx = 0;
+	int _fishy = 0;
+	int _fishz = 0;
+	
 	public L2FishingZone(int id)
 	{
 		super(id);
@@ -35,11 +49,50 @@ public class L2FishingZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
+		if (character.isPlayer())
+		{
+			character.setInsideZone(ZoneId.FISHING, true);
+		}
+		
+		if (character.isPlayer() && !Config.SERVER_CLASSIC_SUPPORT)
+		{
+			final L2PcInstance plr = (L2PcInstance) character;
+			stopTask(plr);
+			_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FishReq(plr), 100, 7000));
+		}
 	}
 	
 	@Override
 	protected void onExit(L2Character character)
 	{
+		if (character.isPlayer())
+		{
+			character.setInsideZone(ZoneId.FISHING, false);
+		}
+		stopTask(character);
+		_task.remove(character.getObjectId());
+	}
+	
+	@Override
+	public void onDieInside(L2Character character)
+	{
+		onExit(character);
+	}
+	
+	@Override
+	public void onReviveInside(L2Character character)
+	{
+		onEnter(character);
+	}
+	
+	protected void stopTask(L2Character character)
+	{
+		_task.remove(character.getObjectId());
+		Future<?> t = _task.get(character.getObjectId());
+		if (t != null)
+		{
+			t.cancel(false);
+		}
 	}
 	
 	/*
@@ -48,5 +101,24 @@ public class L2FishingZone extends L2ZoneType
 	public int getWaterZ()
 	{
 		return getZone().getHighZ();
+	}
+	
+	class FishReq implements Runnable
+	{
+		private final L2PcInstance player;
+		
+		FishReq(L2PcInstance pl)
+		{
+			player = pl;
+		}
+		
+		@Override
+		public void run()
+		{
+			if (!player.isFishing())
+			{
+				player.sendPacket(new ExAutoFishAvailable(player));
+			}
+		}
 	}
 }

@@ -20,7 +20,6 @@ package com.l2jserver.gameserver.model.fishing;
 
 import java.util.concurrent.Future;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.FishingMonstersData;
 import com.l2jserver.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -104,12 +103,15 @@ public class L2Fishing implements Runnable
 		_fisher.broadcastPacket(new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, lureType, _deceptiveMode));
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01", 0, 0, 0, 0, 0));
 		// Succeeded in getting a bite
-		_fisher.sendPacket(SystemMessageId.YOU_VE_GOT_A_BITE);
+		// _fisher.sendPacket(SystemMessageId.YOU_VE_GOT_A_BITE);
 		
-		if (_fishAiTask == null)
-		{
-			_fishAiTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(this, 1000, 1000);
-		}
+		// if (_fishAiTask == null)
+		// {
+		// _fishAiTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(this, 1000, 1000);
+		// }
+		
+		// TODO: New fishing system?
+		doDie(true);
 	}
 	
 	public void changeHp(int hp, int pen)

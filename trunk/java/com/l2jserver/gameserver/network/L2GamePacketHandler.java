@@ -1663,7 +1663,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								// msg = new ExSendClientINI();
 								break;
 							case 0x104:
-								// msg = new RequestExAutoFish();
+								msg = new RequestExAutoFish();
 								break;
 							default:
 								printDebugDoubleOpcode(opcode, id2, buf, state, client);
