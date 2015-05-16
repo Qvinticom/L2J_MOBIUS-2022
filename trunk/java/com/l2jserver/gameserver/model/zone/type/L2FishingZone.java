@@ -26,6 +26,11 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.EtcItemType;
+import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.serverpackets.ExAutoFishAvailable;
@@ -117,6 +122,20 @@ public class L2FishingZone extends L2ZoneType
 		{
 			if (Config.ALLOWFISHING && !player.isFishing() && !player.isInsideZone(ZoneId.WATER) && !player.isInBoat() && !player.isInCraftMode() && !player.isInStoreMode() && !player.isTransformed())
 			{
+				// check for equiped fishing rod
+				L2Weapon equipedWeapon = player.getActiveWeaponItem();
+				if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
+				{
+					return;
+				}
+				
+				// check for equiped lure
+				L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+				if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
+				{
+					return;
+				}
+				
 				player.sendPacket(new ExAutoFishAvailable(player));
 			}
 		}
