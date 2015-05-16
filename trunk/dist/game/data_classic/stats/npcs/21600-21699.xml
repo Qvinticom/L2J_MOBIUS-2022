@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21602" level="92" type="L2Monster" name="Zaken's Pikeman">
+	<npc id="21602" level="43" type="L2Monster" name="Zaken's Pikeman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -18,9 +18,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- rhand: Pike -->
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4432" sp="300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="112.611442266143" />
 			<attribute>
@@ -93,7 +93,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="21603" level="92" type="L2Monster" name="Zaken's Pikeman">
+	<npc id="21603" level="43" type="L2Monster" name="Zaken's Pikeman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -111,9 +111,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- rhand: Pike -->
-		<acquire exp="13973" sp="3" />
+		<acquire exp="6276" sp="425" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="112.611442266143" />
 			<attribute>
@@ -186,7 +186,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="21604" level="92" type="L2Monster" name="Zaken's Elite Pikeman">
+	<npc id="21604" level="43" type="L2Monster" name="Zaken's Elite Pikeman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -201,9 +201,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- rhand: Pike -->
-		<acquire exp="42789" sp="10" />
+		<acquire exp="10148" sp="686" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="112.611442266143" />
 			<attribute>
@@ -267,7 +267,7 @@
 			<height normal="33.6" />
 		</collision>
 	</npc>
-	<npc id="21605" level="92" type="L2Monster" name="Zaken's Archer">
+	<npc id="21605" level="44" type="L2Monster" name="Zaken's Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -284,9 +284,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4930" sp="337" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="173.43552" magical="115.475328468187" />
 			<attribute>
@@ -349,7 +349,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21606" level="92" type="L2Monster" name="Zaken's Archer">
+	<npc id="21606" level="44" type="L2Monster" name="Zaken's Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -366,9 +366,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
-		<acquire exp="13973" sp="3" />
+		<acquire exp="6982" sp="478" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="173.43552" magical="115.475328468187" />
 			<attribute>
@@ -431,7 +431,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21607" level="92" type="L2Monster" name="Zaken's Elite Archer">
+	<npc id="21607" level="44" type="L2Monster" name="Zaken's Elite Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -445,9 +445,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
-		<acquire exp="42789" sp="10" />
+		<acquire exp="10910" sp="746" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="173.43552" magical="115.475328468187" />
 			<attribute>
@@ -512,7 +512,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="21608" level="92" type="L2Monster" name="Zaken's Watchman">
+	<npc id="21608" level="45" type="L2Monster" name="Zaken's Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -529,9 +529,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4039" sp="281" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="118.372898457316" />
 			<attribute>
@@ -598,7 +598,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21609" level="92" type="L2Monster" name="Zaken's Watchman">
+	<npc id="21609" level="45" type="L2Monster" name="Zaken's Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -615,9 +615,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="5719" sp="397" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="118.372898457316" />
 			<attribute>
@@ -684,7 +684,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21610" level="92" type="L2Monster" name="Zaken's Senior Watchman">
+	<npc id="21610" level="45" type="L2Monster" name="Zaken's High Grade Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -698,9 +698,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="10439" sp="726" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="118.372898457316" />
 			<attribute>
@@ -764,7 +764,7 @@
 			<height normal="33.6" />
 		</collision>
 	</npc>
-	<npc id="21611" level="92" type="L2Monster" name="Dismal Humming">
+	<npc id="21611" level="46" type="L2Monster" name="Unpleasant Humming">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -781,9 +781,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4689" sp="332" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="121.302932993263" />
 			<attribute>
@@ -851,7 +851,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="21612" level="92" type="L2Monster" name="Dismal Humming">
+	<npc id="21612" level="46" type="L2Monster" name="Unpleasant Humming">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -868,9 +868,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="6640" sp="470" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="121.302932993263" />
 			<attribute>
@@ -938,7 +938,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="21613" level="92" type="L2Monster" name="Dismal shout">
+	<npc id="21613" level="46" type="L2Monster" name="Unpleasant Shout">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -952,9 +952,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="11332" sp="803" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="121.302932993263" />
 			<attribute>
@@ -1020,7 +1020,7 @@
 			<height normal="31.2" />
 		</collision>
 	</npc>
-	<npc id="21614" level="92" type="L2Monster" name="Death Flyer">
+	<npc id="21614" level="47" type="L2Monster" name="Death Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1037,9 +1037,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4842" sp="347" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="124.264149144103" />
 			<attribute>
@@ -1106,7 +1106,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="21615" level="92" type="L2Monster" name="Death Flyer">
+	<npc id="21615" level="47" type="L2Monster" name="Death Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1123,9 +1123,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="6857" sp="492" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="124.264149144103" />
 			<attribute>
@@ -1192,7 +1192,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="21616" level="92" type="L2Monster" name="Gigantic Flyer">
+	<npc id="21616" level="47" type="L2Monster" name="Gigantic Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1206,9 +1206,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="12517" sp="898" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="124.264149144103" />
 			<attribute>
@@ -1277,7 +1277,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21617" level="92" type="L2Monster" name="Fiend Archer">
+	<npc id="21617" level="48" type="L2Monster" name="Fiend Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1293,9 +1293,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4924" sp="360" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="191.12803" magical="127.255200286259" />
 			<attribute>
@@ -1360,7 +1360,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="21618" level="92" type="L2Monster" name="Fiend Archer">
+	<npc id="21618" level="48" type="L2Monster" name="Fiend Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1376,9 +1376,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="6973" sp="510" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="191.12803" magical="127.255200286259" />
 			<attribute>
@@ -1443,7 +1443,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="21619" level="92" type="L2Monster" name="Pit Archer">
+	<npc id="21619" level="48" type="L2Monster" name="Pit Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1456,9 +1456,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="12728" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="191.12803" magical="127.255200286259" />
 			<attribute>
@@ -1523,7 +1523,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="21620" level="92" type="L2Monster" name="Musveren">
+	<npc id="21620" level="49" type="L2Monster" name="Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1540,9 +1540,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="4742" sp="350" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="130.274648808072" />
 			<attribute>
@@ -1610,7 +1610,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21621" level="92" type="L2Monster" name="Musveren">
+	<npc id="21621" level="49" type="L2Monster" name="Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1627,9 +1627,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="6715" sp="497" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="130.274648808072" />
 			<attribute>
@@ -1697,7 +1697,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21622" level="92" type="L2Monster" name="Greater Musveren">
+	<npc id="21622" level="49" type="L2Monster" name="Greater Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1711,9 +1711,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="12256" sp="906" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="130.274648808072" />
 			<attribute>
@@ -1783,7 +1783,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21623" level="92" type="L2Monster" name="Zaken's Royal Guard">
+	<npc id="21623" level="50" type="L2Monster" name="Zaken's Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1801,9 +1801,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="225" lhand="945" /> <!-- rhand: Mithril Dagger lhand: Skeleton Buckler -->
-		<acquire exp="376395" sp="90" />
+		<acquire exp="5993" sp="451" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="316048" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" shield="100" shieldRate="20" />
 			<attribute>
@@ -1870,7 +1870,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21624" level="92" type="L2Monster" name="Zaken's Royal Guard">
+	<npc id="21624" level="50" type="L2Monster" name="Zaken's Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1888,9 +1888,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="225" lhand="945" /> <!-- rhand: Mithril Dagger lhand: Skeleton Buckler -->
-		<acquire exp="237087" sp="56" />
+		<acquire exp="8486" sp="640" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="316048" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" shield="100" shieldRate="20" />
 			<attribute>
@@ -1957,7 +1957,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21625" level="92" type="L2Monster" name="Zaken's Elite Royal Guard">
+	<npc id="21625" level="50" type="L2Monster" name="Zaken's Elite Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1972,9 +1972,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="225" lhand="945" /> <!-- rhand: Mithril Dagger lhand: Skeleton Buckler -->
-		<acquire exp="725986" sp="174" />
+		<acquire exp="13722" sp="1033" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1264193" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" shield="100" shieldRate="20" />
 			<attribute>
@@ -2016,7 +2016,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="21626" level="92" type="L2Monster" name="Kaim Vanul">
+	<npc id="21626" level="51" type="L2Monster" name="Kaim Vanul">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2033,9 +2033,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="5344" sp="408" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="204.85194" magical="136.392732777413" />
 			<attribute>
@@ -2105,7 +2105,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21627" level="92" type="L2Monster" name="Kaim Vanul">
+	<npc id="21627" level="51" type="L2Monster" name="Kaim Vanul">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2122,9 +2122,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="7568" sp="577" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="204.85194" magical="136.392732777413" />
 			<attribute>
@@ -2194,7 +2194,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21628" level="92" type="L2Monster" name="Kaim Vanul Lad">
+	<npc id="21628" level="51" type="L2Monster" name="Kaim Vanul Lad">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2208,9 +2208,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="13814" sp="1054" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="204.85194" magical="136.392732777413" />
 			<attribute>
@@ -2290,7 +2290,7 @@
 			<height normal="48" />
 		</collision>
 	</npc>
-	<npc id="21629" level="92" type="L2Monster" name="Pirate Zombie Captain">
+	<npc id="21629" level="52" type="L2Monster" name="Pirate Zombie Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2308,9 +2308,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
-		<acquire exp="26879" sp="6" />
+		<acquire exp="8073" sp="624" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="139.488165444537" />
 			<attribute>
@@ -2385,7 +2385,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21630" level="92" type="L2Monster" name="Pirate Zombie Captain">
+	<npc id="21630" level="52" type="L2Monster" name="Pirate Zombie Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2403,9 +2403,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
-		<acquire exp="21250" sp="5" />
+		<acquire exp="11431" sp="884" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="139.488165444537" />
 			<attribute>
@@ -2480,7 +2480,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21631" level="92" type="L2Monster" name="Zombie Captain's Spiritual Body">
+	<npc id="21631" level="52" type="L2Monster" name="Zombie Captain's Spiritual Body">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2495,9 +2495,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
-		<acquire exp="65107" sp="15" />
+		<acquire exp="18953" sp="1466" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="139.488165444537" />
 			<attribute>
@@ -2567,7 +2567,7 @@
 			<height normal="33.6" />
 		</collision>
 	</npc>
-	<npc id="21632" level="92" type="L2Monster" name="Doll Blader">
+	<npc id="21632" level="53" type="L2Monster" name="Doll Blader">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2585,9 +2585,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
-		<acquire exp="22184" sp="5" />
+		<acquire exp="6407" sp="504" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="142.605626325743" shield="94" />
 			<attribute>
@@ -2659,7 +2659,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21633" level="92" type="L2Monster" name="Doll Blader">
+	<npc id="21633" level="53" type="L2Monster" name="Doll Blader">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2677,9 +2677,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
-		<acquire exp="13973" sp="3" />
+		<acquire exp="9072" sp="713" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="142.605626325743" shield="94" />
 			<attribute>
@@ -2751,7 +2751,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21634" level="92" type="L2Monster" name="Crimson Doll Blader">
+	<npc id="21634" level="53" type="L2Monster" name="Crimson Doll Blader">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2766,9 +2766,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
-		<acquire exp="42789" sp="10" />
+		<acquire exp="16560" sp="1302" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="142.605626325743" shield="94" />
 			<attribute>
@@ -2837,7 +2837,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="21635" level="92" type="L2Monster" name="Veil Master">
+	<npc id="21635" level="54" type="L2Monster" name="Vale Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2857,9 +2857,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
+		<acquire exp="6111" sp="487" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="145.743350252286" />
 			<attribute>
@@ -2940,7 +2940,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21636" level="92" type="L2Monster" name="Veil Master">
+	<npc id="21636" level="54" type="L2Monster" name="Vale Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2960,9 +2960,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
+		<acquire exp="8654" sp="690" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="145.743350252286" />
 			<attribute>
@@ -3043,7 +3043,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21637" level="92" type="L2Monster" name="Crimson Veil Master">
+	<npc id="21637" level="54" type="L2Monster" name="Crimson Vale Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -3060,9 +3060,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="42789" sp="10" />
+		<acquire exp="15797" sp="1260" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="145.743350252286" />
 			<attribute>

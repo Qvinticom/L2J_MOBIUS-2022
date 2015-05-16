@@ -1292,7 +1292,7 @@
 	<npc id="35428" level="73" type="L2Defender" name="Oel Mahum Berserker">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6394" sp="1" />
+		<acquire exp="6394" sp="247" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70386.6449027313" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
 			<attack physical="293.998763258434" magical="625.529276102317" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1330,7 +1330,7 @@
 	<npc id="35429" level="73" type="L2Defender" name="Oel Mahum Scout">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6394" sp="1" />
+		<acquire exp="6394" sp="247" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="31673.9902062291" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
 			<attack physical="293.998763258434" magical="625.529276102317" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1368,7 +1368,7 @@
 	<npc id="35430" level="73" type="L2Defender" name="Oel Mahum Prefect">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6394" sp="1" />
+		<acquire exp="6394" sp="247" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="35193.3224513656" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
 			<attack physical="293.998763258434" magical="625.529276102317" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1405,7 +1405,7 @@
 	<npc id="35431" level="73" type="L2Defender" name="Oel Mahum Cleric">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6394" sp="1" />
+		<acquire exp="6394" sp="247" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="35193.3224513656" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
 			<attack physical="293.998763258434" magical="625.529276102317" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1442,7 +1442,7 @@
 	<npc id="35432" level="73" type="L2Defender" name="Oel Mahum Thief">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6394" sp="1" />
+		<acquire exp="6394" sp="247" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="28154.6579610925" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
 			<attack physical="293.998763258434" magical="625.529276102317" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3134,12 +3134,12 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="35470" level="99" type="L2Defender" name="Astair van Halter" title="King">
+	<npc id="35470" level="85" type="L2Defender" name="Astair van Halter">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- rhand: Tallum Blade -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="854199" hpRegen="8.5" mp="5540.4" mpRegen="3" />
+			<vitals hp="42340.6312688557" hpRegen="8.5" mp="5540.4" mpRegen="3" />
 			<attack physical="3566.61778497004" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
 			<attribute>
@@ -3152,15 +3152,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="16" /> <!--HP Increase (8x) -->
+			<skill id="4409" level="11" /> <!--MP Increase (3x) -->
+			<skill id="4410" level="18" /> <!--Extremely Strong P. Atk. -->
+			<skill id="4411" level="18" /> <!--Extremely Strong M. Atk. -->
+			<skill id="4412" level="18" /> <!--Extremely Strong P. Def. -->
+			<skill id="4413" level="18" /> <!--Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
@@ -3175,12 +3176,12 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35471" level="95" type="L2Defender" name="Royal Knight" title="Rune">
+	<npc id="35471" level="81" type="L2Defender" name="Royal Knight">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="299399" hpRegen="8.5" mp="5126.4" mpRegen="3" />
+			<vitals hp="34617.7253215841" hpRegen="8.5" mp="5126.4" mpRegen="3" />
 			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<attribute>
@@ -3193,15 +3194,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="11" /> <!--HP Increase (3x) -->
+			<skill id="4409" level="11" /> <!--MP Increase (3x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
@@ -3216,7 +3218,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35472" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35472" level="79" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -3224,7 +3226,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
+			<vitals hp="31278.2459333516" hpRegen="8.5" mp="4923.0" mpRegen="3" />
 			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3237,16 +3239,17 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4114" level="1" /> <!-- Aden Flame -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4114" level="1" /> <!--Aden Flame -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3260,7 +3263,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35473" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35473" level="79" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -3268,7 +3271,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="92" /> <!-- rhand: Sprite's Staff -->
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
+			<vitals hp="31278.2459333516" hpRegen="8.5" mp="4923.0" mpRegen="3" />
 			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3281,16 +3284,17 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4115" level="1" /> <!-- Aden Heal -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4115" level="1" /> <!--Aden Heal -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3304,12 +3308,12 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35474" level="93" type="L2Defender" name="Royal Guard" title="Rune">
+	<npc id="35474" level="79" type="L2Defender" name="Court Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
+			<vitals hp="31278.2459333516" hpRegen="8.5" mp="4923.0" mpRegen="3" />
 			<attack physical="2789.79244295546" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3322,15 +3326,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3344,12 +3349,12 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35475" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35475" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3362,15 +3367,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3384,12 +3390,12 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35476" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35476" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3402,15 +3408,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3424,12 +3431,12 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35477" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35477" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3442,15 +3449,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="9" /> <!--Bows -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3464,12 +3472,12 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35478" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35478" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3482,15 +3490,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3504,12 +3513,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35479" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35479" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3522,15 +3531,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3544,12 +3554,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35480" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35480" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3562,15 +3572,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="9" /> <!--Bows -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3584,12 +3595,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35481" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35481" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3602,15 +3613,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3624,12 +3636,12 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35482" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35482" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3642,15 +3654,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3664,12 +3677,12 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35483" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35483" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3682,15 +3695,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="9" /> <!--Bows -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3704,12 +3718,12 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35484" level="95" type="L2Defender" name="Royal Knight" title="Rune">
+	<npc id="35484" level="81" type="L2Defender" name="Royal Knight">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="633" /> <!-- rhand: Keshanberk lhand: Zubei's Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="299399" hpRegen="8.5" mp="5126.4" mpRegen="3" />
+			<vitals hp="34617.7253215841" hpRegen="8.5" mp="5126.4" mpRegen="3" />
 			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<attribute>
@@ -3722,15 +3736,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="11" /> <!--HP Increase (3x) -->
+			<skill id="4409" level="11" /> <!--MP Increase (3x) -->
+			<skill id="4410" level="15" /> <!--Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
@@ -3745,7 +3760,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35485" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35485" level="79" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -3753,7 +3768,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- rhand: Heathen's Book -->
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="162521" hpRegen="8.5" mp="4923.0" mpRegen="3" />
+			<vitals hp="31278.2459333516" hpRegen="8.5" mp="4923.0" mpRegen="3" />
 			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3766,16 +3781,17 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4114" level="1" /> <!-- Aden Flame -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4114" level="1" /> <!--Aden Flame -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3789,7 +3805,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35486" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35486" level="79" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -3797,7 +3813,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="162521" hpRegen="8.5" mp="4923.0" mpRegen="3" />
+			<vitals hp="31278.2459333516" hpRegen="8.5" mp="4923.0" mpRegen="3" />
 			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3810,16 +3826,17 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4115" level="1" /> <!-- Aden Heal -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4115" level="1" /> <!--Aden Heal -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3833,12 +3850,12 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35487" level="93" type="L2Defender" name="Royal Guard" title="Rune">
+	<npc id="35487" level="79" type="L2Defender" name="Court Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
+			<vitals hp="31278.2459333516" hpRegen="8.5" mp="4923.0" mpRegen="3" />
 			<attack physical="2789.79244295546" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3851,15 +3868,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3873,12 +3891,12 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35488" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35488" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3891,15 +3909,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3913,12 +3932,12 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35489" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35489" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3931,15 +3950,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3953,12 +3973,12 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35490" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35490" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="285" /> <!-- rhand: Noble Elven Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="159665" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3971,15 +3991,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="9" /> <!--Bows -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -3993,12 +4014,12 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35491" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35491" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -4011,15 +4032,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -4033,12 +4055,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35492" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35492" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -4051,15 +4073,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -4073,12 +4096,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35493" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35493" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -4091,15 +4114,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="9" /> <!--Bows -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -4113,12 +4137,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35494" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35494" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -4131,15 +4155,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="11" /> <!--Spears -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -4153,12 +4178,12 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35495" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35495" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -4171,15 +4196,16 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="22" /> <!-- Defending Army -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
+			<skill id="4412" level="11" /> <!--Average P. Def. -->
+			<skill id="4413" level="11" /> <!--Average M. Def. -->
+			<skill id="4414" level="2" /> <!--Standard Type -->
+			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4416" level="22" /> <!--Defending Army -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
@@ -4193,12 +4219,12 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35496" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35496" level="78" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
+			<vitals hp="29743.5686398316" hpRegen="8.5" mp="4822.2" mpRegen="3" />
 			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -4211,10 +4237,11 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!--Average P. Atk. -->
+			<skill id="4411" level="11" /> <!--Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->

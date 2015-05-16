@@ -82,16 +82,16 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="31844" level="99" type="L2Monster" name="Aracna">
+	<npc id="31844" level="50" type="L2Monster" name="Aracna" title="Count">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="3000" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<attribute>
@@ -126,16 +126,16 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31845" level="99" type="L2FriendlyMob" name="Bloody Pixy">
+	<npc id="31845" level="80" type="L2FriendlyMob" name="Bloody Pixy" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -170,7 +170,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31846" level="99" type="L2Monster" name="Satyros">
+	<npc id="31846" level="80" type="L2Monster" name="Satyros" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -178,9 +178,9 @@
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- rhand: Trident -->
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -215,7 +215,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31847" level="99" type="L2Monster" name="Pan">
+	<npc id="31847" level="80" type="L2Monster" name="Pan" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -225,7 +225,7 @@
 		<equipment rhand="291" /> <!-- rhand: Trident -->
 		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -260,16 +260,16 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31848" level="99" type="L2FriendlyMob" name="Pixy">
+	<npc id="31848" level="80" type="L2FriendlyMob" name="Pixy" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="84843" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -304,16 +304,16 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31849" level="99" type="L2Monster" name="Red Arachne">
+	<npc id="31849" level="80" type="L2Monster" name="Red Arachne" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -348,16 +348,16 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31850" level="99" type="L2FriendlyMob" name="Blight Treant">
+	<npc id="31850" level="80" type="L2FriendlyMob" name="Blight Treant" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -393,16 +393,16 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="31851" level="99" type="L2FriendlyMob" name="Treant">
+	<npc id="31851" level="80" type="L2FriendlyMob" name="Treant" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="84843" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -482,16 +482,16 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31853" level="99" type="L2FriendlyMob" name="Treant Bremec">
+	<npc id="31853" level="80" type="L2FriendlyMob" name="Treant Bremec" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="11761" sp="2" />
+		<acquire exp="7680" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="50907" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -526,7 +526,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="31854" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31854" level="70" type="L2Npc" name="Event Manager" title="Schuttgart">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -562,7 +562,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="31855" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31855" level="70" type="L2Npc" name="Event Manager" title="Schuttgart">
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -598,7 +598,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31856" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31856" level="70" type="L2Npc" name="Event Manager" title="Schuttgart">
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -634,7 +634,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31857" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31857" level="70" type="L2Npc" name="Event Manager" title="Schuttgart">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -670,7 +670,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="31858" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31858" level="70" type="L2Npc" name="Event Manager" title="Schuttgart">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -706,7 +706,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31859" level="70" type="L2Npc" name="Teleportation Cubic">
+	<npc id="31859" level="70" type="L2Npc" name="Teleportation Cubic" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -747,7 +747,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="31860" level="70" type="L2Npc" name="Puss the Cat" title="Event Manager">
+	<npc id="31860" level="70" type="L2Npc" name="Buzz the Cat" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -788,7 +788,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31861" level="56" type="L2Teleporter" name="Gatekeeper">
+	<npc id="31861" level="56" type="L2Teleporter" name="Gatekeeper" title="Schuttgart">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="313" sp="10" />
@@ -829,7 +829,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31862" level="70" type="L2Npc" name="Angelic Vortex">
+	<npc id="31862" level="70" type="L2Npc" name="Angelic Vortex" title="Schuttgart">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />

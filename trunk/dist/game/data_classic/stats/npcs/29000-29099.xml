@@ -3,7 +3,7 @@
 	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2179535" sp="523" raidPoints="1680" />
+		<acquire exp="2179535" sp="140740" raidPoints="1680" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="96596" hpRegen="208" mp="300.8" mpRegen="2.1" />
 			<attack physical="105" magical="8" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -280,7 +280,7 @@
 	<npc id="29006" level="50" type="L2GrandBoss" name="Core">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="2041407" sp="489" raidPoints="1508" />
+		<acquire exp="2041407" sp="153786" raidPoints="1508" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -710,7 +710,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="12776400" sp="3066" raidPoints="1508" />
+		<acquire exp="2041407" sp="153786" raidPoints="1508" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="81144002" hpRegen="441.65" mp="1708.8" mpRegen="20" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -986,7 +986,7 @@
 	<npc id="29019" level="79" type="L2GrandBoss" name="Antharas">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="262720918" sp="63053" raidPoints="30780" />
+		<acquire exp="262720918" sp="29116376" raidPoints="30780" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="7500000" hpRegen="1100" mp="18000.0" mpRegen="99" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1063,12 +1063,12 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29020" level="78" type="L2GrandBoss" name="Baium">
+	<npc id="29020" level="75" type="L2GrandBoss" name="Baium">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="11090077" sp="2661" raidPoints="13008" />
+		<acquire exp="10253400" sp="1081544" raidPoints="13008" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="127007999" hpRegen="750" mp="18000.0" mpRegen="99" />
+			<vitals hp="1709400" hpRegen="750" mp="18000.0" mpRegen="99" />
 			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3300" magical="2200" />
 			<attribute>
@@ -1113,7 +1113,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
-		<acquire exp="9856" sp="2" />
+		<acquire exp="6571" sp="343" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="186915" hpRegen="158" mp="1475.0" mpRegen="3" />
 			<attack physical="1395" magical="371" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -1155,7 +1155,7 @@
 	<npc id="29022" level="60" type="L2GrandBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4879745" sp="1171" raidPoints="10448" />
+		<acquire exp="4879745" sp="423589" raidPoints="10448" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="360722" hpRegen="346.8" mp="180000.0" mpRegen="100" />
 			<attack physical="3616" magical="1520" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1371,11 +1371,11 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="29025" level="78" type="L2Npc" name="Baium">
+	<npc id="29025" level="75" type="L2Npc" name="Baium">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="4070081" hpRegen="718" mp="18000.0" mpRegen="99" />
+			<vitals hp="1709400" hpRegen="718" mp="18000.0" mpRegen="99" />
 			<attack physical="1874.18" magical="1596.95" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3300" magical="2200" evasion="-18" />
 			<attribute>

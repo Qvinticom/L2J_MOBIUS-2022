@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35010" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35010" level="67" type="L2Defender" name="Mercenary" title="Support Unit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" lhand="628" /> <!-- rhand: Knight's Sword lhand: Hoplon -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" shieldRate="20" />
 			<attribute>
@@ -41,13 +41,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35011" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35011" level="67" type="L2Defender" name="Mercenary" title="Support Unit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
-		<acquire exp="722" sp="1" />
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -82,13 +82,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35012" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35012" level="67" type="L2Defender" name="Mercenary" title="Support Unit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -123,16 +123,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35013" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35013" level="67" type="L2Defender" name="Mercenary" title="Archer">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -168,16 +168,16 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35014" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35014" level="67" type="L2Defender" name="Mercenary" title="Archer">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -213,13 +213,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35015" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35015" level="67" type="L2Defender" name="Mercenary" title="Officer's Barracks">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" lhand="628" /> <!-- rhand: Knight's Sword lhand: Hoplon -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" shieldRate="20" />
 			<attribute>
@@ -254,13 +254,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35016" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35016" level="67" type="L2Defender" name="Mercenary" title="Officer's Barracks">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
-		<acquire exp="722" sp="1" />
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -295,13 +295,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35017" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35017" level="67" type="L2Defender" name="Mercenary" title="Monastic Fortress">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -336,16 +336,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35018" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35018" level="67" type="L2Defender" name="Mercenary">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -381,16 +381,16 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35019" level="85" type="L2Defender" name="Mercenary">
+	<npc id="35019" level="67" type="L2Defender" name="Mercenary">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="448" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="22816" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -426,13 +426,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35020" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35020" level="80" type="L2Defender" name="Mercenary of Dawn">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -467,13 +467,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35021" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35021" level="80" type="L2Defender" name="Mercenary of Dawn" title="Gludio">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- rhand: Lance -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -508,13 +508,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35022" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35022" level="80" type="L2Defender" name="Mercenary of Dawn" title="Gludio">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -549,16 +549,16 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35023" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35023" level="80" type="L2Defender" name="Mercenary of Dawn" title="Dion">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -594,16 +594,16 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35024" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35024" level="80" type="L2Defender" name="Mercenary of Dawn" title="Giran">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- rhand: Stick of Eternity -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -639,13 +639,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35025" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35025" level="80" type="L2Defender" name="Mercenary of Dawn" title="Oren">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -680,13 +680,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35026" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35026" level="80" type="L2Defender" name="Mercenary of Dawn" title="Aden">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- rhand: Lance -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -721,13 +721,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35027" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35027" level="80" type="L2Defender" name="Mercenary of Dawn" title="Aden">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -762,16 +762,16 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35028" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35028" level="80" type="L2Defender" name="Mercenary of Dawn" title="Innadril">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -807,16 +807,16 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35029" level="94" type="L2Defender" name="Mercenary of Dawn">
+	<npc id="35029" level="80" type="L2Defender" name="Mercenary of Dawn" title="Goddard">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- rhand: Stick of Eternity -->
-		<acquire exp="883" sp="1" />
+		<acquire exp="640" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="15101" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
 			<attribute>
@@ -852,13 +852,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35030" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35030" level="76" type="L2Defender" name="Elite Mercenary Guild Member">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -893,13 +893,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35031" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35031" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Gludio">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="301" /> <!-- rhand: Scorpion -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -934,13 +934,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35032" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35032" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Dion">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -975,16 +975,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35033" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35033" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Giran">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1020,16 +1020,16 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35034" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35034" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Oren">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1065,13 +1065,13 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35035" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35035" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Aden">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1106,13 +1106,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35036" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35036" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Innadril">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="301" /> <!-- rhand: Scorpion -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1147,13 +1147,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35037" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35037" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Goddard">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1188,16 +1188,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35038" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35038" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Rune">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1233,16 +1233,16 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35039" level="90" type="L2Defender" name="Elite Mercenary">
+	<npc id="35039" level="76" type="L2Defender" name="Elite Mercenary Guild Member" title="Schuttgart">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="810" sp="1" />
+		<acquire exp="577" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="24024" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -1278,13 +1278,13 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35040" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35040" level="72" type="L2Defender" name="Greater Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" lhand="20" /> <!-- rhand: Gladius lhand: Buckler -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" shieldRate="20" />
 			<attribute>
@@ -1319,13 +1319,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35041" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35041" level="72" type="L2Defender" name="Greater Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1360,13 +1360,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35042" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35042" level="72" type="L2Defender" name="Greater Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="274" /> <!-- rhand: Reinforced Bow -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1401,16 +1401,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35043" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35043" level="72" type="L2Defender" name="Greater Recruit">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1446,16 +1446,16 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35044" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35044" level="72" type="L2Defender" name="Greater Recruit">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="154" /> <!-- rhand: Dwarven Mace -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1491,13 +1491,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35045" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35045" level="72" type="L2Defender" name="Greater Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" lhand="20" /> <!-- rhand: Gladius lhand: Buckler -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" shieldRate="20" />
 			<attribute>
@@ -1532,13 +1532,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35046" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35046" level="72" type="L2Defender" name="Greater Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1573,13 +1573,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35047" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35047" level="72" type="L2Defender" name="Greater Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="274" /> <!-- rhand: Reinforced Bow -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1614,16 +1614,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35048" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35048" level="72" type="L2Defender" name="Greater Recruit">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1659,16 +1659,16 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35049" level="86" type="L2Defender" name="Elite Recruit">
+	<npc id="35049" level="72" type="L2Defender" name="Greater Recruit">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="154" /> <!-- rhand: Dwarven Mace -->
-		<acquire exp="739" sp="1" />
+		<acquire exp="518" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13761" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -1704,13 +1704,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35050" level="85" type="L2Defender" name="Recruit">
+	<npc id="35050" level="64" type="L2Defender" name="Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" /> <!-- rhand: Gladius -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1745,13 +1745,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35051" level="85" type="L2Defender" name="Recruit">
+	<npc id="35051" level="64" type="L2Defender" name="Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1786,13 +1786,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35052" level="85" type="L2Defender" name="Recruit">
+	<npc id="35052" level="64" type="L2Defender" name="Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1827,16 +1827,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35053" level="85" type="L2Defender" name="Recruit">
+	<npc id="35053" level="64" type="L2Defender" name="Recruit">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6" /> <!-- rhand: Apprentice's Wand -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1872,16 +1872,16 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35054" level="85" type="L2Defender" name="Recruit">
+	<npc id="35054" level="64" type="L2Defender" name="Recruit">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1917,13 +1917,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35055" level="85" type="L2Defender" name="Recruit">
+	<npc id="35055" level="64" type="L2Defender" name="Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" /> <!-- rhand: Gladius -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1958,13 +1958,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35056" level="85" type="L2Defender" name="Recruit">
+	<npc id="35056" level="64" type="L2Defender" name="Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1999,13 +1999,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35057" level="85" type="L2Defender" name="Recruit">
+	<npc id="35057" level="64" type="L2Defender" name="Recruit">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -2040,16 +2040,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35058" level="85" type="L2Defender" name="Recruit">
+	<npc id="35058" level="64" type="L2Defender" name="Recruit">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6" /> <!-- rhand: Apprentice's Wand -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -2085,16 +2085,16 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35059" level="85" type="L2Defender" name="Recruit">
+	<npc id="35059" level="64" type="L2Defender" name="Recruit">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
-		<acquire exp="722" sp="1" />
+		<acquire exp="409" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="13690" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -2130,7 +2130,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35060" level="99" type="L2Npc" name="Nephilim Mercenary">
+	<npc id="35060" level="85" type="L2Npc" name="Nephilim Mercenary">
 		<parameters>
 			<skill name="PhysicalSpecial" id="5112" level="7" /> <!-- Stun -->
 			<skill name="Dispel" id="5113" level="7" /> <!-- Castle Self AE Dispell Buff -->
@@ -2138,9 +2138,9 @@
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6377" /> <!-- rhand: Dark Legion's Edge lhand: Imperial Crusader Shield -->
-		<acquire exp="980" sp="1" />
+		<acquire exp="722" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1269336" hpRegen="981" mp="1662.64929543826" mpRegen="3" />
+			<vitals hp="596964.367482148" hpRegen="981" mp="1662.64929543826" mpRegen="3" />
 			<attack physical="2920.46741860649" magical="5982.90187463237" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
 			<attribute>
@@ -2179,7 +2179,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35061" level="96" type="L2Npc" name="Nephilim Mercenary">
+	<npc id="35061" level="82" type="L2Npc" name="Nephilim Mercenary" title="Rune">
 		<parameters>
 			<skill name="DDMagic" id="5052" level="6" /> <!-- Castle Long AE Fire -->
 			<skill name="Hold" id="5114" level="7" /> <!-- Hold -->
@@ -2187,9 +2187,9 @@
 		<race>MERCENARY</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
-		<acquire exp="921" sp="1" />
+		<acquire exp="672" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="1140061" hpRegen="989" mp="1561.39135959339" mpRegen="3" />
+			<vitals hp="585703.507797897" hpRegen="989" mp="1561.39135959339" mpRegen="3" />
 			<attack physical="2704.10327154869" magical="5539.65578417714" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -2228,7 +2228,7 @@
 			<height normal="21.957" />
 		</collision>
 	</npc>
-	<npc id="35062" level="1" type="L2Npc" name="Headquarters">
+	<npc id="35062" level="1" type="L2Npc" name="Headquarters" title="Schuttgart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2268,7 +2268,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="35063" level="20" type="L2Artefact" name="Gludio Holy Artifact">
+	<npc id="35063" level="20" type="L2Artefact" name="Gludio Holy Artifact" title="Gludio">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2304,13 +2304,13 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35064" level="97" type="L2Defender" name="Baron Lewin Waldner">
+	<npc id="35064" level="83" type="L2Defender" name="Baron Lewin Waldner" title="Dion">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
-		<acquire exp="940" sp="1" />
+		<acquire exp="688" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="845779" hpRegen="8.5" mp="5332.2" mpRegen="3" />
+			<vitals hp="38355.9060587002" hpRegen="8.5" mp="5332.2" mpRegen="3" />
 			<attack physical="3298.27085008098" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -2346,13 +2346,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35065" level="95" type="L2Defender" name="Cronenberg" title="Royal Guard Captain">
+	<npc id="35065" level="81" type="L2Defender" name="Cronenberg" title="Gludio">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
-		<acquire exp="902" sp="1" />
+		<acquire exp="656" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="199599" hpRegen="8.5" mp="5126.4" mpRegen="3" />
+			<vitals hp="34617.7253215841" hpRegen="8.5" mp="5126.4" mpRegen="3" />
 			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<attribute>
@@ -2388,13 +2388,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35066" level="93" type="L2Defender" name="Royal Knight" title="Gludio">
+	<npc id="35066" level="79" type="L2Defender" name="Royal Knight" title="Oren">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
-		<acquire exp="864" sp="1" />
+		<acquire exp="624" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="120142" hpRegen="8.5" mp="1641.0" mpRegen="3" />
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641.0" mpRegen="3" />
 			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
 			<attribute>
@@ -2430,16 +2430,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35067" level="91" type="L2Defender" name="Royal Wizard" title="Gludio">
+	<npc id="35067" level="77" type="L2Defender" name="Court Sorcerer" title="Dion">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -2476,16 +2476,16 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35068" level="91" type="L2Defender" name="Royal Wizard" title="Gludio">
+	<npc id="35068" level="77" type="L2Defender" name="Court Sorcerer" title="Giran">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -2522,13 +2522,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35069" level="91" type="L2Defender" name="Royal Guard" title="Gludio">
+	<npc id="35069" level="77" type="L2Defender" name="Court Guard" title="Dion">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -2564,13 +2564,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35070" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35070" level="75" type="L2Defender" name="Guard" title="Oren">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2606,13 +2606,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35071" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35071" level="75" type="L2Defender" name="Guard" title="Oren">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2648,13 +2648,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35072" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35072" level="75" type="L2Defender" name="Guard" title="Giran">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2690,13 +2690,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35073" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35073" level="75" type="L2Defender" name="Guard" title="Aden">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2732,13 +2732,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35074" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35074" level="75" type="L2Defender" name="Guard" title="Oren">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2774,13 +2774,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35075" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35075" level="75" type="L2Defender" name="Guard" title="Goddard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2816,13 +2816,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35076" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35076" level="75" type="L2Defender" name="Guard" title="Aden">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2858,13 +2858,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35077" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35077" level="75" type="L2Defender" name="Guard" title="Giran">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2900,13 +2900,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35078" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35078" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2942,13 +2942,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35079" level="93" type="L2Defender" name="Royal Knight" title="Gludio">
+	<npc id="35079" level="79" type="L2Defender" name="Royal Knight" title="Giran">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
-		<acquire exp="864" sp="1" />
+		<acquire exp="624" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="120142" hpRegen="8.5" mp="1641.0" mpRegen="3" />
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641.0" mpRegen="3" />
 			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
 			<attribute>
@@ -2984,16 +2984,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35080" level="91" type="L2Defender" name="Royal Wizard" title="Gludio">
+	<npc id="35080" level="77" type="L2Defender" name="Court Sorcerer" title="Rune">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="195646" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -3030,16 +3030,16 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35081" level="91" type="L2Defender" name="Royal Wizard" title="Gludio">
+	<npc id="35081" level="77" type="L2Defender" name="Court Sorcerer" title="Goddard">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="195646" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -3076,13 +3076,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35082" level="91" type="L2Defender" name="Royal Guard" title="Gludio">
+	<npc id="35082" level="77" type="L2Defender" name="Court Guard" title="Rune">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -3118,13 +3118,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35083" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35083" level="75" type="L2Defender" name="Guard" title="Schuttgart">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
-		<acquire exp="792" sp="1" />
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3160,13 +3160,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35084" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35084" level="75" type="L2Defender" name="Guard" title="Aden">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3202,13 +3202,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35085" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35085" level="75" type="L2Defender" name="Guard" title="Shanty Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="191170" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3244,13 +3244,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35086" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35086" level="75" type="L2Defender" name="Guard" title="Southern Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3286,13 +3286,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35087" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35087" level="75" type="L2Defender" name="Guard" title="Hive Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3328,13 +3328,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35088" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35088" level="75" type="L2Defender" name="Guard" title="Valley Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3370,13 +3370,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35089" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35089" level="75" type="L2Defender" name="Guard" title="Ivory Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3412,13 +3412,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35090" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35090" level="75" type="L2Defender" name="Guard" title="Narsell Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -3454,13 +3454,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35091" level="89" type="L2Defender" name="Escort" title="Gludio">
+	<npc id="35091" level="75" type="L2Defender" name="Guard" title="Bayou Fortress">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>

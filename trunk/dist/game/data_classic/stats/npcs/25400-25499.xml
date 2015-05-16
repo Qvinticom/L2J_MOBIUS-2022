@@ -54,7 +54,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="215" /> <!-- rhand: Doom Dagger -->
-		<acquire exp="392538" sp="94" raidPoints="456" />
+		<acquire exp="1962691" sp="119633" raidPoints="456" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="59258.1847978112" hpRegen="23.5043088957683" mp="358.32" mpRegen="1.8" />
 			<attack physical="130.100600458143" magical="10.4063066607834" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -205,7 +205,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="231" /> <!-- rhand: Grace Dagger -->
-		<acquire exp="386511" sp="92" raidPoints="476" />
+		<acquire exp="1932559" sp="127255" raidPoints="476" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="62398.1465210939" hpRegen="24.5170941308607" mp="372.96" mpRegen="1.8" />
 			<attack physical="140.55752969624" magical="11.194506287274" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -366,7 +366,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
-		<acquire exp="1367516" sp="328" raidPoints="1240" />
+		<acquire exp="2735032" sp="394692" raidPoints="1240" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="221100.02497493" hpRegen="72.9643823396131" mp="1036.8" mpRegen="2.4" />
 			<attack physical="785.177450040489" magical="133.511957686818" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -529,7 +529,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- rhand: Morning Star -->
-		<acquire exp="3818045" sp="916" raidPoints="632" />
+		<acquire exp="2030965" sp="181264" raidPoints="632" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -639,7 +639,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="946" /> <!-- rhand: Skeleton Dagger lhand: Skeleton Dagger -->
-		<acquire exp="1102832" sp="264" raidPoints="820" />
+		<acquire exp="2205664" sp="257531" raidPoints="820" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="134366.203995058" hpRegen="47.4740881903858" mp="665.0" mpRegen="2.1" />
 			<attack physical="380.236376471706" magical="42.8987594363472" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -796,7 +796,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3818045" sp="916" raidPoints="632" />
+		<acquire exp="2030965" sp="181264" raidPoints="632" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -943,7 +943,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25418" level="57" type="L2RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
+	<npc id="25418" level="44" type="L2RaidBoss" name="Dread Avenger Kraven" title="Magister">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25419" count="3" respawnTime="360" weightPoint="1" /> <!-- Dread Panther -->
@@ -954,9 +954,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- rhand: Caliburs -->
-		<acquire exp="6407453" sp="1537" raidPoints="736" />
+		<acquire exp="2030766" sp="217826" raidPoints="736" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="965705" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
+			<vitals hp="114863.791375267" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
 			<attack physical="312.062128648025" magical="32.6327246088761" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="520.30656" magical="253.82" evasion="-18" />
 			<attribute>
@@ -1085,7 +1085,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="9638941" sp="2313" raidPoints="848" />
+		<acquire exp="2266583" sp="270998" raidPoints="848" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="141171.403298766" hpRegen="49.5883641293912" mp="692.4" mpRegen="2.1" />
 			<attack physical="405.199402916013" magical="47.8437317184333" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1241,7 +1241,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="35970059" sp="8632" raidPoints="1276" />
+		<acquire exp="2601295" sp="380861" raidPoints="1276" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="226767.438196184" hpRegen="74.4686933653732" mp="1066.8" mpRegen="2.7" />
 			<attack physical="822.13654045578" magical="150.225645962671" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1406,7 +1406,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2615583" sp="627" raidPoints="320" />
+		<acquire exp="2541012" sp="79280" raidPoints="320" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="43316.3085364372" hpRegen="18.4385313667577" mp="259.2" mpRegen="1.5" />
 			<attack physical="74.2223188804512" magical="4.67967242276365" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1548,7 +1548,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="2615583" sp="627" raidPoints="320" />
+		<acquire exp="2541012" sp="79280" raidPoints="320" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="43316.3085364372" hpRegen="18.4385313667577" mp="259.2" mpRegen="1.5" />
 			<attack physical="74.2223188804512" magical="4.67967242276365" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1664,7 +1664,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="3818045" sp="916" raidPoints="736" />
+		<acquire exp="2030766" sp="217826" raidPoints="736" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="114863.791375267" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
 			<attack physical="312.062128648025" magical="32.6327246088761" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1818,7 +1818,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="121" /> <!-- rhand: Sword of Watershadow -->
-		<acquire exp="22247944" sp="5339" raidPoints="1068" />
+		<acquire exp="2477106" sp="327038" raidPoints="1068" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
 			<attack physical="610.439011291351" magical="93.5186493178929" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1977,7 +1977,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="145" /> <!-- rhand: Sword of Whispering Death -->
-		<acquire exp="5918766" sp="1420" raidPoints="764" />
+		<acquire exp="2085509" sp="229987" raidPoints="764" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="242366.202507064" hpRegen="108.35639820142" mp="610.8" mpRegen="2.1" />
 			<attack physical="667.348949019213" magical="142.928040387499" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2049,7 +2049,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="239" /> <!-- rhand: Mystic Knife -->
-		<acquire exp="3818045" sp="916" raidPoints="736" />
+		<acquire exp="2030766" sp="217826" raidPoints="736" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="114863.791375267" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
 			<attack physical="312.062128648025" magical="32.6327246088761" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2202,7 +2202,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="5918766" sp="1420" raidPoints="764" />
+		<acquire exp="2085509" sp="229987" raidPoints="764" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="121183.101253532" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
 			<attack physical="333.674474509607" magical="35.7320100968747" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2352,7 +2352,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2780577" sp="667" raidPoints="1412" />
+		<acquire exp="2780577" sp="429547" raidPoints="1412" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="247116.172387501" hpRegen="79.6115910136094" mp="1188.8" mpRegen="2.7" />
 			<attack physical="973.344775145867" magical="175.351426223128" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2483,7 +2483,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
-		<acquire exp="3074084" sp="737" raidPoints="1608" />
+		<acquire exp="3074084" sp="495533" raidPoints="1608" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="271409.0955071" hpRegen="85.2293587663441" mp="1377.8" mpRegen="3" />
 			<attack physical="1194.92418292309" magical="231.088899947572" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2622,7 +2622,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- rhand: Lance -->
-		<acquire exp="5390002" sp="1293" raidPoints="3404" />
+		<acquire exp="5390002" sp="1205333" raidPoints="3404" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="414903.39163531" hpRegen="127.691727959173" mp="1641.0" mpRegen="3" />
 			<attack physical="2633.52325550856" magical="947.573725160725" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2760,7 +2760,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="226669890" sp="1103" raidPoints="2884" />
+		<acquire exp="4596479" sp="802604" raidPoints="2884" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="373386.071242416" hpRegen="117.68436242886" mp="1345.8" mpRegen="2.7" />
 			<attack physical="2154.88111713047" magical="717.403871261232" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2901,7 +2901,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="6829345" sp="1639" raidPoints="880" />
+		<acquire exp="2328069" sp="284981" raidPoints="880" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="148076.094026853" hpRegen="51.7193112926872" mp="720.0" mpRegen="2.1" />
 			<attack physical="431.283359498593" magical="51.9275982726895" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3094,7 +3094,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="194" /> <!-- rhand: Heavy Doom Axe -->
-		<acquire exp="7336176" sp="1760" raidPoints="940" />
+		<acquire exp="2256714" sp="285537" raidPoints="940" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="162046.294593743" hpRegen="55.9818993783759" mp="775.8" mpRegen="2.4" />
 			<attack physical="486.776561681345" magical="67.954249090525" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3258,7 +3258,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="23103634" sp="5544" raidPoints="1104" />
+		<acquire exp="2529799" sp="340561" raidPoints="1104" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="196306.513055728" hpRegen="66.0848830657008" mp="918.8" mpRegen="2.4" />
 			<attack physical="643.78480571784" magical="100.162908399054" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3452,7 +3452,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="2736355" sp="656" raidPoints="1376" />
+		<acquire exp="2736355" sp="417632" raidPoints="1376" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="242374.623236392" hpRegen="78.4516811865918" mp="1158.0" mpRegen="2.7" />
 			<attack physical="935.281402739188" magical="169.895221587679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3582,7 +3582,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3938" /> <!-- rhand: Giant Rod -->
-		<acquire exp="2826357" sp="678" raidPoints="1444" />
+		<acquire exp="2826357" sp="441301" raidPoints="1444" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="251638.068337927" hpRegen="80.6954937948534" mp="1219.8" mpRegen="2.7" />
 			<attack physical="1011.35162185326" magical="180.852206414908" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3726,7 +3726,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="160" /> <!-- rhand: Battle Axe -->
-		<acquire exp="7607887" sp="1825" raidPoints="972" />
+		<acquire exp="2313339" sp="287521" raidPoints="972" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="169041.653947489" hpRegen="58.0887964751743" mp="804.0" mpRegen="2.4" />
 			<attack physical="516.151201981136" magical="73.272738413325" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3840,7 +3840,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="145" /> <!-- rhand: Sword of Whispering Death -->
-		<acquire exp="22247944" sp="5339" raidPoints="1068" />
+		<acquire exp="2477106" sp="327038" raidPoints="1068" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
 			<attack physical="610.439011291351" magical="93.5186493178929" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4001,7 +4001,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="230" /> <!-- rhand: Wolverine Needle -->
-		<acquire exp="106892354" sp="25654" raidPoints="1412" />
+		<acquire exp="2780577" sp="429547" raidPoints="1412" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="247116.172387501" hpRegen="79.6115910136094" mp="1188.8" mpRegen="2.7" />
 			<attack physical="973.344775145867" magical="175.351426223128" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -4137,7 +4137,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
-		<acquire exp="1184052" sp="284" raidPoints="1004" />
+		<acquire exp="2368104" sp="300304" raidPoints="1004" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="175997.603312156" hpRegen="60.1633937196702" mp="832.4" mpRegen="2.4" />
 			<attack physical="546.57712453747" magical="80.622272933299" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4295,7 +4295,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="160" /> <!-- rhand: Battle Axe -->
-		<acquire exp="1194883" sp="286" raidPoints="908" />
+		<acquire exp="2389767" sp="281312" raidPoints="908" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="155046.064475059" hpRegen="53.8546339421093" mp="747.8" mpRegen="2.1" />
 			<attack physical="458.480434603136" magical="56.5276785347001" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4456,7 +4456,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="406193" sp="97" raidPoints="632" />
+		<acquire exp="2030965" sp="181264" raidPoints="632" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4632,7 +4632,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="21732" /> <!-- rhand: Sword of Revolution - Event -->
-		<acquire exp="406193" sp="97" raidPoints="632" />
+		<acquire exp="2030965" sp="181264" raidPoints="632" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4775,7 +4775,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1238553" sp="297" raidPoints="1068" />
+		<acquire exp="2477106" sp="327038" raidPoints="1068" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
 			<attack physical="610.439011291351" magical="93.5186493178929" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -4926,7 +4926,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1156669" sp="277" raidPoints="972" />
+		<acquire exp="2313339" sp="287521" raidPoints="972" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="169041.653947489" hpRegen="58.0887964751743" mp="804.0" mpRegen="2.4" />
 			<attack physical="516.151201981136" magical="73.272738413325" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -5044,7 +5044,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5131" /> <!-- rhand: Parhit Staff -->
-		<acquire exp="5918766" sp="1420" raidPoints="764" />
+		<acquire exp="2085509" sp="229987" raidPoints="764" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="121183.101253532" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
 			<attack physical="333.674474509607" magical="35.7320100968747" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />

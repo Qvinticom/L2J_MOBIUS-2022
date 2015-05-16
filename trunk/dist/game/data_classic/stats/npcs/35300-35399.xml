@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35300" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35300" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -42,13 +42,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35301" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35301" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="191170" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -84,13 +84,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35302" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35302" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -126,13 +126,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35303" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35303" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -168,13 +168,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35304" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35304" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -210,13 +210,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35305" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35305" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -252,13 +252,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35306" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35306" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -294,13 +294,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35307" level="89" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35307" level="75" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1030,13 +1030,13 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="35324" level="95" type="L2Defender" name="Heinz" title="Royal Guard Captain">
+	<npc id="35324" level="81" type="L2Defender" name="Heinz">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
-		<acquire exp="902" sp="1" />
+		<acquire exp="656" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="199599" hpRegen="8.5" mp="5126.4" mpRegen="3" />
+			<vitals hp="34617.7253215841" hpRegen="8.5" mp="5126.4" mpRegen="3" />
 			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<attribute>
@@ -1072,13 +1072,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35325" level="97" type="L2Defender" name="Duke Mora Ken Abygail">
+	<npc id="35325" level="83" type="L2Defender" name="Duke Mora Ken Abygail">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
-		<acquire exp="940" sp="1" />
+		<acquire exp="688" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="845779" hpRegen="8.5" mp="5332.2" mpRegen="3" />
+			<vitals hp="38355.9060587002" hpRegen="8.5" mp="5332.2" mpRegen="3" />
 			<attack physical="3298.27085008098" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -1114,13 +1114,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35326" level="93" type="L2Defender" name="Royal Knight" title="Goddard">
+	<npc id="35326" level="79" type="L2Defender" name="Royal Knight">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
-		<acquire exp="864" sp="1" />
+		<acquire exp="624" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="120142" hpRegen="8.5" mp="1641.0" mpRegen="3" />
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641.0" mpRegen="3" />
 			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
 			<attribute>
@@ -1156,16 +1156,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35327" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35327" level="77" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -1202,16 +1202,16 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35328" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35328" level="77" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -1248,13 +1248,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35329" level="91" type="L2Defender" name="Royal Guard" title="Goddard">
+	<npc id="35329" level="77" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -1290,13 +1290,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35330" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35330" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
-		<acquire exp="792" sp="1" />
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1321,7 +1321,7 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>DOOR</clan>
 				<clan>GODAD_SIEGE</clan>
@@ -1332,13 +1332,13 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35331" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35331" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1374,13 +1374,13 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35332" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35332" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1416,13 +1416,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35333" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35333" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1458,13 +1458,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35334" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35334" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1500,13 +1500,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35335" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35335" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1542,13 +1542,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35336" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35336" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1584,13 +1584,13 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35337" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35337" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1626,13 +1626,13 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35338" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35338" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1668,13 +1668,13 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35339" level="93" type="L2Defender" name="Royal Knight" title="Goddard">
+	<npc id="35339" level="79" type="L2Defender" name="Royal Knight">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
-		<acquire exp="864" sp="1" />
+		<acquire exp="624" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="120142" hpRegen="8.5" mp="1641.0" mpRegen="3" />
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641.0" mpRegen="3" />
 			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
 			<attribute>
@@ -1710,16 +1710,16 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35340" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35340" level="77" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="195646" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -1756,16 +1756,16 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35341" level="91" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35341" level="77" type="L2Defender" name="Court Sorcerer">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="22" int="41" dex="21" wit="20" con="27" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -1802,13 +1802,13 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35342" level="91" type="L2Defender" name="Royal Guard" title="Goddard">
+	<npc id="35342" level="77" type="L2Defender" name="Guard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
-		<acquire exp="828" sp="1" />
+		<acquire exp="592" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="117394" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -1844,13 +1844,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35343" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35343" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
-		<acquire exp="792" sp="1" />
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1886,13 +1886,13 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35344" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35344" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1928,13 +1928,13 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35345" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35345" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -1970,13 +1970,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35346" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35346" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2012,13 +2012,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35347" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35347" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2054,13 +2054,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35348" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35348" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2096,13 +2096,13 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35349" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35349" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2138,13 +2138,13 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35350" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35350" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" /> <!-- rhand: Sword of Delusion -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114703" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
@@ -2180,13 +2180,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35351" level="89" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35351" level="75" type="L2Defender" name="Bodyguard">
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="191170" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="319.24623" magical="233.61053" />
 			<attribute>
