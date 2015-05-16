@@ -902,10 +902,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3564" levels="3" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 75 80 84 </table>
-		<table name="#pAtkSpd"> 1.07 1.1 1.11 </table>
+	<skill id="3564" levels="8" name="Special Ability: Haste">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 84 85 90 94 97 99 </table>
+		<table name="#pAtkSpd"> 1.07 1.08 1.09 1.11 1.12 1.13 1.14 1.15 </table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -919,10 +919,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3565" levels="5" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 75 80 84 85 86 </table>
-		<table name="#rCrit"> 80.6 107 123.5 129 129 </table>
+	<skill id="3565" levels="10" name="Special Ability: Focus">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 84 85 86 85 90 94 97 99 </table>
+		<table name="#rCrit"> 80.6 107 123 129 129 75.4 75.5 75.7 76.0 76.3 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -936,10 +936,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3566" levels="5" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 75 80 84 85 86 </table>
-		<table name="#rCrit"> 84.3 111.5 133.3 134.4 134.4 </table>
+	<skill id="3566" levels="10" name="Special Ability: Focus">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 84 85 86 85 90 94 97 99 </table>
+		<table name="#rCrit"> 84.3 111 131 134 134 78.5 78.7 78.9 79.2 79.5 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -953,10 +953,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3567" levels="5" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 75 80 84 85 86 </table>
-		<table name="#rCrit"> 88.1 116 133.9 139.9 139.9 </table>
+	<skill id="3567" levels="10" name="Special Ability: Focus">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 84 85 86 85 90 94 97 99 </table>
+		<table name="#rCrit"> 88.1 116 133 139 139 81.7 81.9 82.1 82.3 82.7 </table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1061,10 +1061,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3573" levels="3" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 5.27 5.32 7.5 </table>
-		<table name="#magicLvl"> 75 80 84 </table>
+	<skill id="3573" levels="8" name="Special Ability: Guidance">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#accCombat"> 5.27 6.12 7.21 7.6 7.7 7.8 7.9 8 </table>
+		<table name="#magicLvl"> 75 80 84 85 90 95 97 99 </table>
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />

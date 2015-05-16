@@ -14,10 +14,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2523.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="2523.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39603" name="Dimensional Antharas Slasher" additionalName="" type="Weapon">
@@ -26,10 +26,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3509.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="3509.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39604" name="Dimensional Antharas Thrower" additionalName="" type="Weapon">
@@ -38,10 +38,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="5678.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="5678.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39605" name="Dimensional Antharas Buster" additionalName="" type="Weapon">
@@ -50,10 +50,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2307.0" />
-			<add stat="mAtk" val="1676.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2307.0" />
+			<set stat="mAtk" val="1676.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39606" name="Dimensional Antharas Cutter" additionalName="" type="Weapon">
@@ -62,10 +62,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2884.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2884.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39607" name="Dimensional Antharas Stormer" additionalName="" type="Weapon">
@@ -74,10 +74,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="pAtk" val="2884.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2884.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39608" name="Dimensional Antharas Fighter" additionalName="" type="Weapon">
@@ -86,11 +86,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1550" />
 		<for>
-			<add stat="pAtk" val="3509.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="3509.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="39609" name="Dimensional Antharas Avenger" additionalName="" type="Weapon">
@@ -99,11 +99,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="2884.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="2884.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="39610" name="Dimensional Antharas Dual Blunt" additionalName="" type="Weapon">
@@ -112,11 +112,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3509.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="3509.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="39611" name="Dimensional Antharas Dualsword" additionalName="" type="Weapon">
@@ -125,10 +125,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="3509.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="3509.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39612" name="Dimensional Valakas Shaper" additionalName="" type="Weapon">
@@ -137,10 +137,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2523.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="2523.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39613" name="Dimensional Valakas Cutter" additionalName="" type="Weapon">
@@ -149,10 +149,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2884.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2884.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39614" name="Dimensional Valakas Slasher" additionalName="" type="Weapon">
@@ -161,10 +161,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3509.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="3509.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39615" name="Dimensional Valakas Thrower" additionalName="" type="Weapon">
@@ -173,10 +173,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="5678.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="5678.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39616" name="Dimensional Valakas Buster" additionalName="" type="Weapon">
@@ -185,10 +185,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2307.0" />
-			<add stat="mAtk" val="1676.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2307.0" />
+			<set stat="mAtk" val="1676.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39617" name="Dimensional Valakas Caster" additionalName="" type="Weapon">
@@ -197,11 +197,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="2307.0" />
-			<add stat="mAtk" val="1676.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="2307.0" />
+			<set stat="mAtk" val="1676.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="39621" name="Dimensional Valakas Retributer" additionalName="" type="Weapon">
@@ -210,12 +210,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1080" />
 		<for>
-			<add stat="pAtk" val="2809.0" />
-			<add stat="mAtk" val="1843.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="2809.0" />
+			<set stat="mAtk" val="1843.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="39622" name="Dimensional Lindvior Shaper" additionalName="" type="Weapon">
@@ -224,10 +224,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2523.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="2523.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39623" name="Dimensional Lindvior Thrower" additionalName="" type="Weapon">
@@ -236,10 +236,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="5678.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="5678.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39624" name="Dimensional Lindvior Slasher" additionalName="" type="Weapon">
@@ -248,10 +248,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="pAtk" val="3509.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="3509.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39625" name="Dimensional Lindvior Caster" additionalName="" type="Weapon">
@@ -260,10 +260,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2307.0" />
-			<add stat="mAtk" val="1676.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2307.0" />
+			<set stat="mAtk" val="1676.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39626" name="Dimensional Lindvior Cutter" additionalName="" type="Weapon">
@@ -272,10 +272,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="pAtk" val="2884.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="2884.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="39627" name="Dimensional Lindvior Shooter" additionalName="" type="Weapon">
@@ -284,10 +284,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="pAtk" val="5113.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="5113.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39628" name="Dimensional Lindvior Dual Dagger" additionalName="" type="Weapon">
@@ -296,10 +296,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="pAtk" val="2884.0" />
-			<add stat="mAtk" val="1257.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="2884.0" />
+			<set stat="mAtk" val="1257.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="39629" name="Fortune Pocket - Stage 1" additionalName="" type="EtcItem">

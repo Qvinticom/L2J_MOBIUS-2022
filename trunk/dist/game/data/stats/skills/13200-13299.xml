@@ -454,13 +454,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="13252" levels="1" name="One-handed Sword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13252" levels="3" name="One-handed Sword Special Ability">
+		<!-- Ertheia skill -->
 		<!-- Accuracy + 2 and P. Critical Rate + 27. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="rCrit" val="27" />
+				<add stat="accCombat" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13253" levels="1" name="One-handed Blunt Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -694,13 +700,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13282" levels="1" name="Dagger Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13282" levels="3" name="Dagger Special Ability">
+		<!-- Ertheia skill -->
 		<!-- P. Critical Damage + 844. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="cAtkAdd" val="884" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13283" levels="1" name="Dagger Special Ability">
 		<!-- AUTO GENERATED SKILL -->

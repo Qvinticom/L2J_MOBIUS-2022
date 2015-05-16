@@ -30,10 +30,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="454.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="454.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18002" name="Blessed Apocalypse Cutter" additionalName="" type="Weapon">
@@ -51,10 +51,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="519.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="519.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18003" name="Blessed Apocalypse Slasher" additionalName="" type="Weapon">
@@ -72,10 +72,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="632.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="632.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18004" name="Blessed Apocalypse Avenger" additionalName="" type="Weapon">
@@ -93,11 +93,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="519.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="519.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18005" name="Blessed Apocalypse Fighter" additionalName="" type="Weapon">
@@ -115,11 +115,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="632.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="632.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18006" name="Blessed Apocalypse Stormer" additionalName="" type="Weapon">
@@ -137,10 +137,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="519.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="519.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18007" name="Blessed Apocalypse Thrower" additionalName="" type="Weapon">
@@ -159,10 +159,10 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BOW" />
 		<for>
-			<add stat="pAtk" val="1022.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1022.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18008" name="Blessed Apocalypse Shooter" additionalName="" type="Weapon">
@@ -181,10 +181,10 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<for>
-			<add stat="pAtk" val="920.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="920.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18009" name="Blessed Apocalypse Buster" additionalName="" type="Weapon">
@@ -202,10 +202,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="415.0" />
-			<add stat="mAtk" val="301.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="415.0" />
+			<set stat="mAtk" val="301.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18010" name="Blessed Apocalypse Caster" additionalName="" type="Weapon">
@@ -223,11 +223,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="415.0" />
-			<add stat="mAtk" val="301.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="415.0" />
+			<set stat="mAtk" val="301.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18011" name="Blessed Apocalypse Retributer" additionalName="" type="Weapon">
@@ -245,12 +245,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="505.0" />
-			<add stat="mAtk" val="332.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="505.0" />
+			<set stat="mAtk" val="332.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18012" name="Blessed Apocalypse Dualsword" additionalName="" type="Weapon">
@@ -269,10 +269,10 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<for>
-			<add stat="pAtk" val="632.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="632.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18013" name="Blessed Apocalypse Dual Dagger" additionalName="" type="Weapon">
@@ -291,10 +291,10 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<for>
-			<add stat="pAtk" val="519.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="519.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18014" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="" type="Weapon">
@@ -312,11 +312,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="632.0" />
-			<add stat="mAtk" val="226.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="632.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18015" name="Blessed Twilight Helmet" additionalName="Heavy Armor" type="Armor">
@@ -663,10 +663,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="526.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="526.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18036" name="Blessed Specter Cutter" additionalName="" type="Weapon">
@@ -684,10 +684,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="602.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="602.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18037" name="Blessed Specter Slasher" additionalName="" type="Weapon">
@@ -705,10 +705,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="732.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="732.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18038" name="Blessed Specter Avenger" additionalName="" type="Weapon">
@@ -726,11 +726,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="602.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="602.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18039" name="Blessed Specter Fighter" additionalName="" type="Weapon">
@@ -748,11 +748,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="732.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="732.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18040" name="Blessed Specter Stormer" additionalName="" type="Weapon">
@@ -770,10 +770,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="602.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="602.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18041" name="Blessed Specter Thrower" additionalName="" type="Weapon">
@@ -791,10 +791,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="1185.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1185.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18042" name="Blessed Specter Shooter" additionalName="" type="Weapon">
@@ -812,10 +812,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="1067.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1067.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18043" name="Blessed Specter Buster" additionalName="" type="Weapon">
@@ -833,10 +833,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="481.0" />
-			<add stat="mAtk" val="349.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="481.0" />
+			<set stat="mAtk" val="349.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18044" name="Blessed Specter Caster" additionalName="" type="Weapon">
@@ -854,11 +854,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="481.0" />
-			<add stat="mAtk" val="349.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="481.0" />
+			<set stat="mAtk" val="349.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18045" name="Blessed Specter Retributer" additionalName="" type="Weapon">
@@ -876,12 +876,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="586.0" />
-			<add stat="mAtk" val="384.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="586.0" />
+			<set stat="mAtk" val="384.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18046" name="Blessed Specter Dualsword" additionalName="" type="Weapon">
@@ -899,10 +899,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="732.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="732.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18047" name="Blessed Specter Dual Dagger" additionalName="" type="Weapon">
@@ -920,10 +920,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="602.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="602.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18048" name="Blessed Specter Dual Blunt Weapon" additionalName="" type="Weapon">
@@ -941,11 +941,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="732.0" />
-			<add stat="mAtk" val="262.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="732.0" />
+			<set stat="mAtk" val="262.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18049" name="Blessed Seraph Helmet" additionalName="Heavy Armor" type="Armor">
@@ -1292,10 +1292,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="575.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="575.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18070" name="Blessed Amaranthine Cutter" additionalName="" type="Weapon">
@@ -1313,10 +1313,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="658.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="658.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18071" name="Blessed Amaranthine Slasher" additionalName="" type="Weapon">
@@ -1334,10 +1334,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="800.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="800.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18072" name="Blessed Amaranthine Avenger" additionalName="" type="Weapon">
@@ -1355,11 +1355,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="658.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="658.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18073" name="Blessed Amaranthine Fighter" additionalName="" type="Weapon">
@@ -1377,11 +1377,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="800.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="800.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18074" name="Blessed Amaranthine Stormer" additionalName="" type="Weapon">
@@ -1399,10 +1399,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="658.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="658.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18075" name="Blessed Amaranthine Thrower" additionalName="" type="Weapon">
@@ -1420,10 +1420,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="1295.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1295.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18076" name="Blessed Amaranthine Shooter" additionalName="" type="Weapon">
@@ -1441,10 +1441,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="1166.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1166.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18077" name="Blessed Amaranthine Buster" additionalName="" type="Weapon">
@@ -1462,10 +1462,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="526.0" />
-			<add stat="mAtk" val="382.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="526.0" />
+			<set stat="mAtk" val="382.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18078" name="Blessed Amaranthine Caster" additionalName="" type="Weapon">
@@ -1483,11 +1483,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="526.0" />
-			<add stat="mAtk" val="382.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="526.0" />
+			<set stat="mAtk" val="382.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18079" name="Blessed Amaranthine Retributer" additionalName="" type="Weapon">
@@ -1505,12 +1505,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="640.0" />
-			<add stat="mAtk" val="420.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="640.0" />
+			<set stat="mAtk" val="420.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18080" name="Blessed Amaranthine Dualsword" additionalName="" type="Weapon">
@@ -1528,10 +1528,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="800.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="800.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="18081" name="Blessed Amaranthine Dual Dagger" additionalName="" type="Weapon">
@@ -1549,10 +1549,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="658.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="658.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="18082" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="" type="Weapon">
@@ -1570,11 +1570,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="800.0" />
-			<add stat="mAtk" val="286.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="800.0" />
+			<set stat="mAtk" val="286.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="18083" name="Blessed Eternal Helmet" additionalName="Heavy Armor" type="Armor">

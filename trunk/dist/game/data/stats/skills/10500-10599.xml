@@ -162,17 +162,17 @@
 		</enchant1for>
 	</skill>
 	<skill id="10505" levels="1" name="Superior Critical Mastery">
-		<table name="#ench1cAtk">574 609 644 679 715 750 785 820 855 891</table>
+		<table name="#ench1cAtkAdd">574 609 644 679 715 750 785 820 855 891</table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="PASSIVE" />
-		<enchant1 name="cAtk" val="#ench1cAtk" />
+		<enchant1 name="cAtkAdd" val="#ench1cAtkAdd" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<mul stat="rCrit" val="1.6" />
-				<add stat="cAtk" val="539">
+				<add stat="cAtkAdd" val="539">
 					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 			</effect>
@@ -181,7 +181,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<mul stat="rCrit" val="1.6" />
-				<add stat="cAtk" val="539">
+				<add stat="cAtkAdd" val="539">
 					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 			</effect>
@@ -1699,7 +1699,7 @@
 				<param allowWeapons="ALL" />
 			</effect>
 			<effect name="Buff">
-				<add stat="cAtk" val="609">
+				<add stat="cAtkAdd" val="609">
 					<using kind="DAGGER,DUALDAGGER" />
 				</add>
 				<mul stat="blowRate" val="1.1">

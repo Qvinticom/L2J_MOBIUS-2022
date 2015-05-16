@@ -306,10 +306,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="5.0" />
-			<add stat="mAtk" val="5.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="5.0" />
+			<set stat="mAtk" val="5.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30330" name="Top-grade Gludio Water Resistance Necklace" additionalName="" type="Armor">
@@ -1011,10 +1011,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="881.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="881.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30393" name="Infinity Cutter" additionalName="" type="Weapon">
@@ -1026,10 +1026,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="1007.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30394" name="Infinity Slasher" additionalName="" type="Weapon">
@@ -1041,10 +1041,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1225.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="1225.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30395" name="Infinity Avenger" additionalName="" type="Weapon">
@@ -1056,11 +1056,11 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="1007.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30396" name="Infinity Fighter" additionalName="" type="Weapon">
@@ -1072,11 +1072,11 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1225.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="1225.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30397" name="Infinity Stormer" additionalName="" type="Weapon">
@@ -1088,10 +1088,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="1007.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30398" name="Infinity Thrower" additionalName="" type="Weapon">
@@ -1103,10 +1103,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1983.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1983.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="293.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30399" name="Infinity Shooter" additionalName="" type="Weapon">
@@ -1118,10 +1118,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1786.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1786.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 </list>

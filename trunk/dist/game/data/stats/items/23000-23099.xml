@@ -476,10 +476,10 @@
 		<set name="weight" val="1520" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="396.0" />
-			<add stat="mAtk" val="176.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="396.0" />
+			<set stat="mAtk" val="176.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="23094" name="Vesper Slasher of Fortune" additionalName="90-day" type="Weapon">
@@ -492,10 +492,10 @@
 		<set name="weight" val="1740" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="482.0" />
-			<add stat="mAtk" val="176.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="482.0" />
+			<set stat="mAtk" val="176.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="23095" name="Vesper Buster of Fortune" additionalName="90-day" type="Weapon">
@@ -508,10 +508,10 @@
 		<set name="weight" val="1520" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="317.0" />
-			<add stat="mAtk" val="234.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="317.0" />
+			<set stat="mAtk" val="234.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="23096" name="Vesper Shaper of Fortune" additionalName="90-day" type="Weapon">
@@ -524,10 +524,10 @@
 		<set name="weight" val="1520" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="346.0" />
-			<add stat="mAtk" val="176.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="346.0" />
+			<set stat="mAtk" val="176.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="23097" name="Vesper Fighter of Fortune" additionalName="90-day" type="Weapon">
@@ -540,11 +540,11 @@
 		<set name="weight" val="1550" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="482.0" />
-			<add stat="mAtk" val="176.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="482.0" />
+			<set stat="mAtk" val="176.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="4.0" />
+			<set stat="rCrit" val="4.0" />
 		</for>
 	</item>
 	<item id="23098" name="Vesper Stormer of Fortune" additionalName="90-day" type="Weapon">
@@ -557,10 +557,10 @@
 		<set name="weight" val="2010" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="396.0" />
-			<add stat="mAtk" val="176.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="396.0" />
+			<set stat="mAtk" val="176.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="23099" name="Vesper Avenger of Fortune" additionalName="90-day" type="Weapon">
@@ -573,11 +573,11 @@
 		<set name="weight" val="1740" />
 		<set name="time" val="7776000" />
 		<for>
-			<add stat="pAtk" val="396.0" />
-			<add stat="mAtk" val="176.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="396.0" />
+			<set stat="mAtk" val="176.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="4.0" />
+			<set stat="rCrit" val="4.0" />
 		</for>
 	</item>
 </list>

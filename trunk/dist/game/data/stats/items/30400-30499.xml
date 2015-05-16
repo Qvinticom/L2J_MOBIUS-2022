@@ -9,10 +9,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="805.0" />
-			<add stat="mAtk" val="696.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="805.0" />
+			<set stat="mAtk" val="696.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30401" name="Infinity Caster" additionalName="" type="Weapon">
@@ -24,11 +24,11 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="805.0" />
-			<add stat="mAtk" val="696.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="805.0" />
+			<set stat="mAtk" val="696.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30402" name="Infinity Retributer" additionalName="" type="Weapon">
@@ -40,12 +40,12 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="981.0" />
-			<add stat="mAtk" val="765.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="981.0" />
+			<set stat="mAtk" val="765.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30403" name="Infinity Dualsword" additionalName="" type="Weapon">
@@ -57,10 +57,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1225.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="1225.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30404" name="Infinity Dual Dagger" additionalName="" type="Weapon">
@@ -72,10 +72,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1007.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="1007.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30405" name="Infinity Dual Blunt Weapon" additionalName="" type="Weapon">
@@ -87,11 +87,11 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="pAtk" val="1225.0" />
-			<add stat="mAtk" val="521.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="1225.0" />
+			<set stat="mAtk" val="521.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30406" name="Internal test type stone Pack" additionalName="" type="EtcItem">
@@ -363,11 +363,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="90.0" />
-			<add stat="mAtk" val="79.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="90.0" />
+			<set stat="mAtk" val="79.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30441" name="Bound Ghost Staff" additionalName="" type="Weapon">
@@ -379,11 +379,11 @@
 		<set name="crystal_type" val="D" />
 		<set name="price" val="69350" />
 		<for>
-			<add stat="pAtk" val="90.0" />
-			<add stat="mAtk" val="79.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="90.0" />
+			<set stat="mAtk" val="79.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30442" name="Bound Hoplon" additionalName="" type="Weapon">
@@ -439,10 +439,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="111.0" />
-			<add stat="mAtk" val="101.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="111.0" />
+			<set stat="mAtk" val="101.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30446" name="Bound Homunkulus' Sword" additionalName="Acumen" type="Weapon">
@@ -458,10 +458,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="111.0" />
-			<add stat="mAtk" val="101.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="111.0" />
+			<set stat="mAtk" val="101.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30447" name="Bound Homunkulus' Sword" additionalName="Conversion" type="Weapon">
@@ -477,10 +477,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="111.0" />
-			<add stat="mAtk" val="101.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="111.0" />
+			<set stat="mAtk" val="101.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30448" name="Bound Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
@@ -496,10 +496,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="111.0" />
-			<add stat="mAtk" val="101.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="111.0" />
+			<set stat="mAtk" val="101.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30449" name="Bound Sage's Blood" additionalName="" type="Weapon">
@@ -514,10 +514,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="51.0" />
-			<add stat="mAtk" val="52.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="51.0" />
+			<set stat="mAtk" val="52.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30450" name="Bound Sage's Staff" additionalName="" type="Weapon">
@@ -533,11 +533,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="135.0" />
-			<add stat="mAtk" val="111.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="135.0" />
+			<set stat="mAtk" val="111.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30451" name="Bound Sage's Staff" additionalName="Magic Hold" type="Weapon">
@@ -553,11 +553,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="135.0" />
-			<add stat="mAtk" val="111.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="135.0" />
+			<set stat="mAtk" val="111.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30452" name="Bound Sage's Staff" additionalName="Magic Poison" type="Weapon">
@@ -573,11 +573,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="135.0" />
-			<add stat="mAtk" val="111.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="135.0" />
+			<set stat="mAtk" val="111.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30453" name="Bound Sage's Staff" additionalName="Magic Weakness" type="Weapon">
@@ -593,11 +593,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="135.0" />
-			<add stat="mAtk" val="111.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="135.0" />
+			<set stat="mAtk" val="111.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30454" name="Bound Sage's Ring" additionalName="" type="Armor">
@@ -680,10 +680,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="148.0" />
-			<add stat="mAtk" val="68.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="148.0" />
+			<set stat="mAtk" val="68.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30460" name="Bound Sword of Revolution*Elven Long Sword" additionalName="" type="Weapon">
@@ -699,10 +699,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="155.0" />
-			<add stat="mAtk" val="70.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="155.0" />
+			<set stat="mAtk" val="70.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30461" name="Bound Sword of Revolution" additionalName="" type="Weapon">
@@ -718,10 +718,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="79.0" />
-			<add stat="mAtk" val="47.0" />
-			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="79.0" />
+			<set stat="mAtk" val="47.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30462" name="Bound Helmet" additionalName="" type="Armor">
@@ -751,10 +751,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="122.0" />
-			<add stat="mAtk" val="122.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="122.0" />
+			<set stat="mAtk" val="122.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30464" name="Bound Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
@@ -770,10 +770,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="122.0" />
-			<add stat="mAtk" val="122.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="122.0" />
+			<set stat="mAtk" val="122.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30465" name="Bound Twilight Knife" additionalName="Magic Mental Shield" type="Weapon">
@@ -789,10 +789,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="122.0" />
-			<add stat="mAtk" val="122.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="122.0" />
+			<set stat="mAtk" val="122.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30466" name="Bound Twilight Knife" additionalName="Magic Weakness" type="Weapon">
@@ -808,10 +808,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="122.0" />
-			<add stat="mAtk" val="122.0" />
-			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<set stat="pAtk" val="122.0" />
+			<set stat="mAtk" val="122.0" />
+			<set stat="pAtkSpd" val="433.0" />
+			<set stat="rCrit" val="12.0" />
 		</for>
 	</item>
 	<item id="30467" name="Bound Hell Hound" additionalName="" type="Weapon">
@@ -827,10 +827,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="245.0" />
-			<add stat="mAtk" val="99.0" />
-			<add stat="pAtkSpd" val="303.0" />
-			<add stat="rCrit" val="10.0" />
+			<set stat="pAtk" val="245.0" />
+			<set stat="mAtk" val="99.0" />
+			<set stat="pAtkSpd" val="303.0" />
+			<set stat="rCrit" val="10.0" />
 		</for>
 	</item>
 	<item id="30468" name="Bound Hell Hound" additionalName="Guidance" type="Weapon">
@@ -846,10 +846,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="245.0" />
-			<add stat="mAtk" val="99.0" />
-			<add stat="pAtkSpd" val="303.0" />
-			<add stat="rCrit" val="10.0" />
+			<set stat="pAtk" val="245.0" />
+			<set stat="mAtk" val="99.0" />
+			<set stat="pAtkSpd" val="303.0" />
+			<set stat="rCrit" val="10.0" />
 		</for>
 	</item>
 	<item id="30469" name="Bound Hell Hound" additionalName="Quick Recovery" type="Weapon">
@@ -865,10 +865,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="245.0" />
-			<add stat="mAtk" val="99.0" />
-			<add stat="pAtkSpd" val="303.0" />
-			<add stat="rCrit" val="10.0" />
+			<set stat="pAtk" val="245.0" />
+			<set stat="mAtk" val="99.0" />
+			<set stat="pAtkSpd" val="303.0" />
+			<set stat="rCrit" val="10.0" />
 		</for>
 	</item>
 	<item id="30470" name="Bound Hell Hound" additionalName="Cheap Shot" type="Weapon">
@@ -884,10 +884,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="245.0" />
-			<add stat="mAtk" val="99.0" />
-			<add stat="pAtkSpd" val="303.0" />
-			<add stat="rCrit" val="10.0" />
+			<set stat="pAtk" val="245.0" />
+			<set stat="mAtk" val="99.0" />
+			<set stat="pAtkSpd" val="303.0" />
+			<set stat="rCrit" val="10.0" />
 		</for>
 	</item>
 	<item id="30471" name="Bound Heavy Mace" additionalName="" type="Weapon">
@@ -903,11 +903,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="40.0" />
-			<add stat="mAtk" val="26.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="40.0" />
+			<set stat="mAtk" val="26.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30472" name="Bound Heavy War Axe" additionalName="" type="Weapon">
@@ -923,11 +923,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="175.0" />
-			<add stat="mAtk" val="91.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="175.0" />
+			<set stat="mAtk" val="91.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30473" name="Bound Heavy War Axe" additionalName="Anger" type="Weapon">
@@ -943,11 +943,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="175.0" />
-			<add stat="mAtk" val="91.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="175.0" />
+			<set stat="mAtk" val="91.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30474" name="Bound Heavy War Axe" additionalName="Health" type="Weapon">
@@ -963,11 +963,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="175.0" />
-			<add stat="mAtk" val="91.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="175.0" />
+			<set stat="mAtk" val="91.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30475" name="Bound Heavy War Axe" additionalName="Rsk. Focus" type="Weapon">
@@ -983,11 +983,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="175.0" />
-			<add stat="mAtk" val="91.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="175.0" />
+			<set stat="mAtk" val="91.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30476" name="Bound Heavy Sword" additionalName="" type="Weapon">
@@ -1003,10 +1003,10 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="49.0" />
-			<add stat="mAtk" val="26.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="49.0" />
+			<set stat="mAtk" val="26.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30477" name="Bound Heavy Bone Club" additionalName="" type="Weapon">
@@ -1022,11 +1022,11 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<for>
-			<add stat="pAtk" val="79.0" />
-			<add stat="mAtk" val="47.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="79.0" />
+			<set stat="mAtk" val="47.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30478" name="Bound Heavy Doom Hammer" additionalName="" type="Weapon">
@@ -1042,11 +1042,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30479" name="Bound Heavy Doom Hammer" additionalName="Magic Regeneration" type="Weapon">
@@ -1062,11 +1062,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30480" name="Bound Heavy Doom Hammer" additionalName="Magic Mental Shield" type="Weapon">
@@ -1082,11 +1082,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30481" name="Bound Heavy Doom Hammer" additionalName="Magic Hold" type="Weapon">
@@ -1102,11 +1102,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30482" name="Bound Heavy Doom Axe" additionalName="" type="Weapon">
@@ -1122,11 +1122,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30483" name="Bound Heavy Doom Axe" additionalName="Magic Poison" type="Weapon">
@@ -1142,11 +1142,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30484" name="Bound Heavy Doom Axe" additionalName="Magic Weakness" type="Weapon">
@@ -1162,11 +1162,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30485" name="Bound Heavy Doom Axe" additionalName="Magic Chaos" type="Weapon">
@@ -1182,11 +1182,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="103.0" />
-			<add stat="mAtk" val="89.0" />
-			<add stat="pAtkSpd" val="325.0" />
+			<set stat="pAtk" val="103.0" />
+			<set stat="mAtk" val="89.0" />
+			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30486" name="Bound Heaven's Divider" additionalName="" type="Weapon">
@@ -1202,10 +1202,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="342.0" />
-			<add stat="mAtk" val="132.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="342.0" />
+			<set stat="mAtk" val="132.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30487" name="Bound Heaven's Divider" additionalName="Haste" type="Weapon">
@@ -1221,10 +1221,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="342.0" />
-			<add stat="mAtk" val="132.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="342.0" />
+			<set stat="mAtk" val="132.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30488" name="Bound Heaven's Divider" additionalName="Health" type="Weapon">
@@ -1240,10 +1240,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="342.0" />
-			<add stat="mAtk" val="132.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="342.0" />
+			<set stat="mAtk" val="132.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30489" name="Bound Heaven's Divider" additionalName="Focus" type="Weapon">
@@ -1259,10 +1259,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="342.0" />
-			<add stat="mAtk" val="132.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="342.0" />
+			<set stat="mAtk" val="132.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30490" name="Bound Field Gun" additionalName="" type="Weapon">
@@ -1278,10 +1278,10 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="51.0" />
-			<add stat="mAtk" val="26.0" />
-			<add stat="pAtkSpd" val="303.0" />
-			<add stat="rCrit" val="10.0" />
+			<set stat="pAtk" val="51.0" />
+			<set stat="mAtk" val="26.0" />
+			<set stat="pAtkSpd" val="303.0" />
+			<set stat="rCrit" val="10.0" />
 		</for>
 	</item>
 	<item id="30491" name="Bound Field Sword" additionalName="" type="Weapon">
@@ -1297,11 +1297,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="69.0" />
-			<add stat="mAtk" val="39.0" />
-			<add stat="pAtkSpd" val="350.0" />
+			<set stat="pAtk" val="69.0" />
+			<set stat="mAtk" val="39.0" />
+			<set stat="pAtkSpd" val="350.0" />
 			<add stat="accCombat" val="2.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30492" name="Bound Ring of Devotion" additionalName="" type="Armor">
@@ -1345,10 +1345,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="213.0" />
-			<add stat="mAtk" val="107.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="213.0" />
+			<set stat="mAtk" val="107.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30495" name="Bound Halberd" additionalName="Haste" type="Weapon">
@@ -1364,10 +1364,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="213.0" />
-			<add stat="mAtk" val="107.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="213.0" />
+			<set stat="mAtk" val="107.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30496" name="Bound Halberd" additionalName="Critical Stun" type="Weapon">
@@ -1383,10 +1383,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="213.0" />
-			<add stat="mAtk" val="107.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="213.0" />
+			<set stat="mAtk" val="107.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30497" name="Bound Halberd" additionalName="Wide Blow" type="Weapon">
@@ -1402,10 +1402,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<for>
-			<add stat="pAtk" val="213.0" />
-			<add stat="mAtk" val="107.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="213.0" />
+			<set stat="mAtk" val="107.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<set stat="rCrit" val="8.0" />
 		</for>
 	</item>
 	<item id="30498" name="Bound Hand Axe" additionalName="" type="Weapon">
@@ -1421,11 +1421,11 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="40.0" />
-			<add stat="mAtk" val="26.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="40.0" />
+			<set stat="mAtk" val="26.0" />
+			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<set stat="rCrit" val="6.0" />
 		</for>
 	</item>
 	<item id="30499" name="Bound Hand Crossbow" additionalName="" type="Weapon">
@@ -1441,10 +1441,10 @@
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
 		<for>
-			<add stat="pAtk" val="64.0" />
-			<add stat="mAtk" val="32.0" />
-			<add stat="pAtkSpd" val="303.0" />
-			<add stat="rCrit" val="10.0" />
+			<set stat="pAtk" val="64.0" />
+			<set stat="mAtk" val="32.0" />
+			<set stat="pAtkSpd" val="303.0" />
+			<set stat="rCrit" val="10.0" />
 		</for>
 	</item>
 </list>
