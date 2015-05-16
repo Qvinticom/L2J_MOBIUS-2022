@@ -50205,10 +50205,13 @@ INSERT INTO `spawnlist` VALUES
 ('Wasteland', 1, 33179, -16276, 208841, -3664, 0, 0, 36991, 60, 0, 0, 0);
 -- Renfad
 INSERT INTO `spawnlist` VALUES
-('Wasteland', 1, 33524, -24569, 188865, -3942, 0, 0, 39437, 0, 0, 0, 0);
+('Wasteland', 1, 33524, -24569, 188865, -3942, 0, 0, 39437, 60, 0, 0, 0);
 -- Selon
 INSERT INTO `spawnlist` VALUES
 ('Wasteland', 1, 33518, -37133, 191973, -3599, 0, 0, 65246, 60, 0, 0, 0);
+-- Walking Guard
+INSERT INTO `spawnlist` VALUES
+('Wasteland', 1, 33429, -15364, 209802, -3665, 0, 0, 44789, 60, 0, 0, 0);
 
 -- Clean old Wasteland spawns
 DELETE FROM spawnlist WHERE npc_templateid = 20077;

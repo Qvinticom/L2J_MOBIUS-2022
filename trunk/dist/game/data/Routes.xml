@@ -1357,4 +1357,15 @@
 		<point X="206534" Y="87582" Z="-1104" delay="0" run="false" />
 		<point X="206167" Y="87839" Z="-1096" delay="0" run="false" />
 	</route>
+	<!-- Guard Wasteland Entrance (Grocery) -->
+	<route name="wa_guard" repeat="true" repeatStyle="back">
+		<target id="33429" spawnX="-15364" spawnY="209802" spawnZ="-3665" />
+		<point X="-15364" Y="209802" Z="-3665" delay="0" run="false" />
+		<point X="-15339" Y="209566" Z="-3665" delay="0" run="false" />
+		<point X="-16199" Y="209215" Z="-3665" delay="0" run="false" />
+		<point X="-16551" Y="209053" Z="-3664" delay="0" run="false" />
+		<point X="-16855" Y="208593" Z="-3665" delay="0" run="false" />
+		<point X="-17031" Y="208742" Z="-3665" delay="0" run="false" />
+		<point X="-17095" Y="208967" Z="-3665" delay="0" run="false" />
+	</route>
 </routes>

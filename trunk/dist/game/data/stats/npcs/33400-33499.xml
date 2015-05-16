@@ -678,6 +678,7 @@
 	</npc>
 	<npc id="33428" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
+		<equipment rhand="129" lhand="102"/> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -691,7 +692,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="14" />
 		</skill_list>
@@ -702,6 +703,7 @@
 	</npc>
 	<npc id="33429" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
+		<equipment rhand="129" lhand="102"/> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -715,7 +717,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="14" />
 		</skill_list>
