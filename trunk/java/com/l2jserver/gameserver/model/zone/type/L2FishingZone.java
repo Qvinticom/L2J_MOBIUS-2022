@@ -115,7 +115,7 @@ public class L2FishingZone extends L2ZoneType
 		@Override
 		public void run()
 		{
-			if (!player.isFishing())
+			if (Config.ALLOWFISHING && !player.isFishing() && !player.isInsideZone(ZoneId.WATER) && !player.isInBoat() && !player.isInCraftMode() && !player.isInStoreMode())
 			{
 				player.sendPacket(new ExAutoFishAvailable(player));
 			}
