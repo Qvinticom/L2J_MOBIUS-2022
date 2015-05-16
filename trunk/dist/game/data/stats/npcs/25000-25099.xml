@@ -4558,6 +4558,10 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="63" />
+		</collision>
 		<drop_lists>
 			<death>
 				<item id="9817" min="2" max="4" chance="74" /> <!-- Nonliving Nucleus -->
@@ -4565,24 +4569,16 @@
 				<group chance="55.15010070800781">
 					<item id="355" min="1" max="1" chance="29.2819" /> <!-- Dwarven Chain Mail Shirt -->
 					<item id="382" min="1" max="1" chance="46.8492" /> <!-- Dwarven Chain Gaiters -->
-					<item id="1968" min="53" max="157" chance="16.6485" /> <!-- Dwarven Chain Mail Shirt Material -->
-					<item id="1969" min="192" max="576" chance="7.2204" /> <!-- Dwarven Chain Gaiters Material -->
 				</group>
 				<group chance="45.75529861450195">
 					<item id="227" min="1" max="1" chance="11.8715" /> <!-- Stiletto -->
 					<item id="242" min="1" max="1" chance="11.8715" /> <!-- Soulfire Dirk -->
-					<item id="2083" min="24" max="72" chance="18.1564" /> <!-- Stiletto Edge -->
-					<item id="2084" min="8" max="22" chance="58.1006" /> <!-- Soulfire Dirk Blade -->
 				</group>
 				<group chance="10.372699737548828">
 					<item id="6573" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="63" />
-		</collision>
 	</npc>
 	<npc id="25089" level="59" type="L2RaidBoss" name="Soulless Wild Boar" title="Raid Boss">
 		<parameters>

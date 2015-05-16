@@ -102,7 +102,7 @@
 			</death>
 			<corpse>
 				<item id="4613" min="1" max="1" chance="0.8164" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-					<item id="4129" min="1" max="1" chance="6.4055" /> <!-- Recipe: Earrings of Black Ore (100%) -->
+				<item id="4129" min="1" max="1" chance="6.4055" /> <!-- Recipe: Earrings of Black Ore (100%) -->
 				<item id="4049" min="1" max="1" chance="31.0449" /> <!-- Adamantite Earring Gemstone -->
 			</corpse>
 		</drop_lists>
@@ -3407,7 +3407,7 @@
 			</death>
 			<corpse>
 				<item id="4469" min="1" max="1" chance="1.4471" /> <!-- Dye of STR <Str+1 Con-1> -->
-					<item id="1905" min="1" max="1" chance="24.6339" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="1905" min="1" max="1" chance="24.6339" /> <!-- Omen Beast's Eye Earring Gemstone -->
 				<item id="1805" min="1" max="1" chance="0.8441" /> <!-- Recipe: Soulshot (C-Grade) -->
 			</corpse>
 		</drop_lists>
@@ -3668,7 +3668,7 @@
 			</death>
 			<corpse>
 				<item id="4601" min="1" max="1" chance="0.7887" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="1539" min="1" max="1" chance="78.8726" /> <!-- Greater Healing Potion -->
+				<item id="1539" min="1" max="1" chance="78.8726" /> <!-- Greater Healing Potion -->
 				<item id="1914" min="1" max="1" chance="19.9397" /> <!-- Earring of Seal Gemstone -->
 			</corpse>
 		</drop_lists>
@@ -3930,7 +3930,7 @@
 			</death>
 			<corpse>
 				<item id="4613" min="1" max="1" chance="0.6564" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-					<item id="4049" min="1" max="1" chance="24.9606" /> <!-- Adamantite Earring Gemstone -->
+				<item id="4049" min="1" max="1" chance="24.9606" /> <!-- Adamantite Earring Gemstone -->
 				<item id="4129" min="1" max="1" chance="5.1501" /> <!-- Recipe: Earrings of Black Ore (100%) -->
 			</corpse>
 		</drop_lists>
@@ -4995,7 +4995,7 @@
 			</death>
 			<corpse>
 				<item id="4613" min="1" max="1" chance="0.7283" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-					<item id="4049" min="1" max="1" chance="27.6943" /> <!-- Adamantite Earring Gemstone -->
+				<item id="4049" min="1" max="1" chance="27.6943" /> <!-- Adamantite Earring Gemstone -->
 				<item id="4129" min="1" max="1" chance="5.7142" /> <!-- Recipe: Earrings of Black Ore (100%) -->
 			</corpse>
 		</drop_lists>
@@ -5109,28 +5109,16 @@
 		<ai aggroRange="500" clanHelpRange="1000" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="654" max="1329" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.188400000333786">
-					<item id="231" min="1" max="1" chance="0.5492" /> <!-- Grace Dagger -->
-					<item id="2106" min="1" max="1" chance="49.4508" /> <!-- Grace Dagger Edge -->
-					<item id="233" min="1" max="1" chance="0.5492" /> <!-- Dark Screamer -->
-					<item id="2107" min="1" max="1" chance="49.4508" /> <!-- Dark Screamer Edge -->
-				</group>
-				<group chance="21.184999465942383">
-					<item id="1869" min="1" max="1" chance="29.3362" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="58.6725" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="2.9336" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.3911" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="0.9779" /> <!-- Asofe -->
-					<item id="2231" min="1" max="1" chance="0.1264" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8725" min="1" max="1" chance="0.8149" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.2037" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0204" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0041" /> <!-- Top-Grade Life Stone - Level 52 -->
-					<item id="1539" min="1" max="1" chance="6.5192" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="27" max="64" chance="70" /> <!-- Adena -->
+				<item id="630" min="1" max="1" chance="0.075" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.03" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.03" /> <!--Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.003" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.003" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.003" /> <!-- Mysterious Sword -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36538" min="1" max="1" chance="0.0055" /> <!-- Durable Leather Braid -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5164,9 +5152,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2169" min="1" max="1" chance="2.9259" /> <!-- Recipe: Necklace of Seal -->
-				<item id="1914" min="1" max="1" chance="9.2873" /> <!-- Earring of Seal Gemstone -->
-				<item id="2170" min="1" max="1" chance="3.8989" /> <!-- Recipe: Nassen's Earring -->
+				<item id="36531" min="1" max="1" chance="10.500" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5227,26 +5215,16 @@
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="879" max="1786" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.18860000371932983">
-					<item id="228" min="1" max="1" chance="0.9226" /> <!-- Crystal Dagger -->
-					<item id="2119" min="1" max="1" chance="99.0774" /> <!-- Crystal Dagger Blade -->
-				</group>
-				<group chance="25.372900009155273">
-					<item id="1869" min="1" max="1" chance="29.3873" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="58.7746" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="2.9387" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.3918" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="0.9796" /> <!-- Asofe -->
-					<item id="2231" min="1" max="1" chance="0.1267" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8726" min="1" max="1" chance="0.6803" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1701" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.017" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 55 -->
-					<item id="1539" min="1" max="1" chance="6.5305" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="27" max="64" chance="70" /> <!-- Adena -->
+				<item id="630" min="1" max="1" chance="0.075" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.075" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.075" /> <!--Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.003" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.003" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.003" /> <!-- Mysterious Sword -->
+				<item id="36543" min="1" max="1" chance="0.0055" /> <!-- Adamantite Wire -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber-->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5280,9 +5258,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2169" min="1" max="1" chance="3.9317" /> <!-- Recipe: Necklace of Seal -->
-				<item id="1914" min="1" max="1" chance="12.4797" /> <!-- Earring of Seal Gemstone -->
-				<item id="2170" min="1" max="1" chance="5.2391" /> <!-- Recipe: Nassen's Earring -->
+				<item id="36531" min="1" max="1" chance="11.500" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5343,26 +5321,16 @@
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1233" max="2512" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.26489999890327454">
-					<item id="228" min="1" max="1" chance="0.9226" /> <!-- Crystal Dagger -->
-					<item id="2119" min="1" max="1" chance="99.0774" /> <!-- Crystal Dagger Blade -->
-				</group>
-				<group chance="35.64120101928711">
-					<item id="1869" min="1" max="1" chance="29.3873" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="58.7746" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="2.9387" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.3918" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="0.9796" /> <!-- Asofe -->
-					<item id="2231" min="1" max="1" chance="0.1267" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8726" min="1" max="1" chance="0.6803" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1701" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.017" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 55 -->
-					<item id="1539" min="1" max="1" chance="6.5305" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
+				<item id="630" min="1" max="1" chance="0.3" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.075" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.075" /> <!--Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.003" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.003" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.003" /> <!-- Mysterious Sword -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36538" min="1" max="1" chance="0.0055" /> <!-- Durable Leather Braid-->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5396,9 +5364,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2169" min="1" max="1" chance="5.5228" /> <!-- Recipe: Necklace of Seal -->
-				<item id="1914" min="1" max="1" chance="17.5302" /> <!-- Earring of Seal Gemstone -->
-				<item id="2170" min="1" max="1" chance="7.3594" /> <!-- Recipe: Nassen's Earring -->
+				<item id="36531" min="1" max="1" chance="0.075" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0055" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5460,28 +5428,16 @@
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1704" max="3471" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.36090001463890076">
-					<item id="229" min="1" max="1" chance="0.2643" /> <!-- Kris -->
-					<item id="4109" min="1" max="1" chance="49.7357" /> <!-- Kris Edge -->
-					<item id="243" min="1" max="1" chance="0.2643" /> <!-- Hell Knife -->
-					<item id="4110" min="1" max="1" chance="49.7357" /> <!-- Hell Knife Edge -->
-				</group>
-				<group chance="39.37910079956055">
-					<item id="1869" min="1" max="1" chance="29.4222" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="58.8443" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="2.9422" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.3923" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="0.9807" /> <!-- Asofe -->
-					<item id="2231" min="1" max="1" chance="0.1268" /> <!-- Recipe: Full Plate Armor -->
-					<item id="8727" min="1" max="1" chance="0.5884" /> <!-- Life Stone - Level 58 -->
-					<item id="8737" min="1" max="1" chance="0.1471" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8747" min="1" max="1" chance="0.0147" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8757" min="1" max="1" chance="0.0029" /> <!-- Top-Grade Life Stone - Level 58 -->
-					<item id="1539" min="1" max="1" chance="6.5384" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="59" max="138" chance="70" /> <!-- Adena -->
+				<item id="630" min="1" max="1" chance="0.3" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.3" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.3" /> <!--Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.0055" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.0055" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.0055" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.0055" /> <!-- Mysterious Sword -->
+				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5515,9 +5471,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2169" min="1" max="1" chance="7.6366" /> <!-- Recipe: Necklace of Seal -->
-				<item id="1914" min="1" max="1" chance="24.2396" /> <!-- Earring of Seal Gemstone -->
-				<item id="2170" min="1" max="1" chance="10.1761" /> <!-- Recipe: Nassen's Earring -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 		<collision>
