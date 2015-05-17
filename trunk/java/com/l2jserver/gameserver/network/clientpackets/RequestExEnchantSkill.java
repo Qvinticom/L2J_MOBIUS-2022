@@ -48,12 +48,16 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 	private static final String _C__D0_0F_REQUESTEXENCHANTSKILL = "[C] D0:0F RequestExEnchantSkill";
 	private static final Logger _logEnchant = Logger.getLogger("enchant");
 	
+	@SuppressWarnings("unused")
+	private int _type; // TODO: Fix this.
+	
 	private int _skillId;
 	private int _skillLvl;
 	
 	@Override
 	protected void readImpl()
 	{
+		_type = readD();
 		_skillId = readD();
 		_skillLvl = readD();
 	}
