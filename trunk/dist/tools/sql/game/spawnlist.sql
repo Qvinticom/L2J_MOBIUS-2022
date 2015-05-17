@@ -51676,8 +51676,16 @@ INSERT INTO `spawnlist` VALUES
 
 -- Hermuncus Minions
 INSERT INTO `spawnlist` VALUES
-("Hermuncus Minion", 1, 33564, 208097, 84374, -936, 0, 0, 22517, 60, 0, 0, 0),
-("Hermuncus Minion", 1, 33565, 207036, 111212, -2032, 0, 0, 0, 60, 0, 0, 0),
-("Hermuncus Minion", 1, 33566, 214341, 79639, 824, 0, 0, 7699, 60, 0, 0, 0),
-("Hermuncus Minion", 1, 33567, 187542, 20693, -3608, 0, 0, 43672, 60, 0, 0, 0),
-("Hermuncus Minion", 1, 33779, -74114, 53727, -3680, 0, 0, 35258, 60, 0, 0, 0);
+('Hermuncus Minion', 1, 33564, 208097, 84374, -936, 0, 0, 22517, 60, 0, 0, 0),
+('Hermuncus Minion', 1, 33565, 207036, 111212, -2032, 0, 0, 0, 60, 0, 0, 0),
+('Hermuncus Minion', 1, 33566, 214341, 79639, 824, 0, 0, 7699, 60, 0, 0, 0),
+('Hermuncus Minion', 1, 33567, 187542, 20693, -3608, 0, 0, 43672, 60, 0, 0, 0),
+('Hermuncus Minion', 1, 33779, -74114, 53727, -3680, 0, 0, 35258, 60, 0, 0, 0);
+
+-- Remove all old Classmaster spawns
+DELETE FROM spawnlist WHERE npc_templateid in (31756, 31757);
+-- Classmaster spawns at Talking Island
+-- visible only when AllowClassMasters is enabled at Character.properties
+INSERT INTO `spawnlist` VALUES
+('Test Server Helper', 1, 31756, -114330, 256693, -1260, 0, 0, 51210, 60, 0, 0, 0),
+('Test Server Helper', 1, 31757, -114410, 256693, -1260, 0, 0, 49151, 60, 0, 0, 0);
