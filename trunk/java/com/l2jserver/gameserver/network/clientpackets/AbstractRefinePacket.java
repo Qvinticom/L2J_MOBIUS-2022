@@ -201,17 +201,23 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		_lifeStones.put(16167, new LifeStone(GRADE_TOP, 14));
 		_lifeStones.put(16178, new LifeStone(GRADE_ACC, 14));
 		
+		_lifeStones.put(18563, new LifeStone(GRADE_NONE, 15));
 		_lifeStones.put(18564, new LifeStone(GRADE_MID, 15));
 		_lifeStones.put(18565, new LifeStone(GRADE_HIGH, 15));
 		_lifeStones.put(18566, new LifeStone(GRADE_TOP, 15));
+		_lifeStones.put(19166, new LifeStone(GRADE_ACC, 15));
 		
-		_lifeStones.put(22629, new LifeStone(GRADE_MID, 16));
-		_lifeStones.put(22630, new LifeStone(GRADE_HIGH, 16));
-		_lifeStones.put(22631, new LifeStone(GRADE_TOP, 16));
+		_lifeStones.put(18568, new LifeStone(GRADE_NONE, 16));
+		_lifeStones.put(18569, new LifeStone(GRADE_MID, 16));
+		_lifeStones.put(18570, new LifeStone(GRADE_HIGH, 16));
+		_lifeStones.put(18571, new LifeStone(GRADE_TOP, 16));
+		_lifeStones.put(19167, new LifeStone(GRADE_ACC, 16));
 		
-		_lifeStones.put(22632, new LifeStone(GRADE_MID, 17));
-		_lifeStones.put(22633, new LifeStone(GRADE_HIGH, 17));
-		_lifeStones.put(22634, new LifeStone(GRADE_TOP, 17));
+		_lifeStones.put(18573, new LifeStone(GRADE_NONE, 17));
+		_lifeStones.put(18574, new LifeStone(GRADE_MID, 17));
+		_lifeStones.put(18575, new LifeStone(GRADE_HIGH, 17));
+		_lifeStones.put(18576, new LifeStone(GRADE_TOP, 17));
+		_lifeStones.put(19168, new LifeStone(GRADE_ACC, 17));
 	}
 	
 	protected static final LifeStone getLifeStone(int itemId)

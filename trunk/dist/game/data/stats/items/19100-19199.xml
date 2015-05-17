@@ -1089,24 +1089,41 @@
 	<item id="19166" name="Life Stone: Accessory (R-grade)" additionalName="" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 85 or above when augmenting items. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="59616" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="19167" name="Life Stone: Accessory (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 95 or above when augmenting items. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="119232" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="19168" name="Life Stone: Accessory (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 95 or above when augmenting items. -->
 		<set name="icon" val="icon.r99_mineral_unique_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="238464" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="19169" name="Unidentified Requiem Shaper Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Shaper. -->
