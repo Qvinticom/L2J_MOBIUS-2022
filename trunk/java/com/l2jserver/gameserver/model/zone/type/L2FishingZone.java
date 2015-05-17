@@ -64,7 +64,7 @@ public class L2FishingZone extends L2ZoneType
 			final L2PcInstance plr = (L2PcInstance) character;
 			if (!_task.containsKey(plr.getObjectId()))
 			{
-				_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FishReq(plr), 100, 2000));
+				_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FishReq(plr), 500, 2000));
 			}
 		}
 	}

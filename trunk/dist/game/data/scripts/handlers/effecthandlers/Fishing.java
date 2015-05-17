@@ -134,7 +134,7 @@ public final class Fishing extends AbstractEffect
 			return;
 		}
 		
-		if (player.getLevel() < 85)
+		if (!Config.SERVER_CLASSIC_SUPPORT && (player.getLevel() < 85))
 		{
 			player.sendMessage("You must be level 85 or higher to fish.");
 			return;
