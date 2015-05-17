@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAutoFishAvailable;
 
 /**
@@ -63,8 +62,10 @@ public class L2FishingZone extends L2ZoneType
 		if (character.isPlayer() && !Config.SERVER_CLASSIC_SUPPORT)
 		{
 			final L2PcInstance plr = (L2PcInstance) character;
-			stopTask(plr);
-			_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FishReq(plr), 100, 7000));
+			if (!_task.containsKey(plr.getObjectId()))
+			{
+				_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FishReq(plr), 100, 2000));
+			}
 		}
 	}
 	
@@ -123,34 +124,25 @@ public class L2FishingZone extends L2ZoneType
 		{
 			if (Config.ALLOWFISHING && !player.isFishing() && !player.isInsideZone(ZoneId.WATER) && !player.isInBoat() && !player.isInCraftMode() && !player.isInStoreMode() && !player.isTransformed())
 			{
+				// check for equiped fishing rod
+				final L2Weapon equipedWeapon = player.getActiveWeaponItem();
+				
+				if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
 				{
-					if (player.getLevel() < 85)
-					{
-						player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
-						player.sendMessage("You must be level 85 or higher to fish.");
-						return;
-					}
-					
-					// check for equiped fishing rod
-					final L2Weapon equipedWeapon = player.getActiveWeaponItem();
-					
-					if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
-					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
-						stopTask(player);
-					}
-					
-					// check for equiped lure
-					final L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-					
-					if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
-					{
-						player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
-						stopTask(player);
-					}
-					
-					player.sendPacket(new ExAutoFishAvailable(player));
+					stopTask(player);
+					return;
 				}
+				
+				// check for equiped lure
+				final L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+				
+				if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
+				{
+					stopTask(player);
+					return;
+				}
+				
+				player.sendPacket(new ExAutoFishAvailable(player));
 			}
 		}
 	}

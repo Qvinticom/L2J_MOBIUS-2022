@@ -134,6 +134,12 @@ public final class Fishing extends AbstractEffect
 			return;
 		}
 		
+		if (player.getLevel() < 85)
+		{
+			player.sendMessage("You must be level 85 or higher to fish.");
+			return;
+		}
+		
 		// calculate a position in front of the player with a random distance
 		int distance = Rnd.get(MIN_BAIT_DISTANCE, MAX_BAIT_DISTANCE);
 		final double angle = Util.convertHeadingToDegree(player.getHeading());
