@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -178,7 +179,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 		
 		final ClassId classId = player.getClassId();
-		if (getMinLevel(classId.level()) > player.getLevel())
+		if (getMinLevel(classId.level(), player) > player.getLevel())
 		{
 			return;
 		}
@@ -286,7 +287,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			}
 			else
 			{
-				final int minLevel = getMinLevel(currentClassId.level());
+				final int minLevel = getMinLevel(currentClassId.level(), player);
 				if ((player.getLevel() >= minLevel) || Config.ALLOW_ENTIRE_TREE)
 				{
 					final StringBuilder menu = new StringBuilder(100);
@@ -311,7 +312,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 					else
 					{
 						html.setFile(player.getHtmlPrefix(), "html/classmaster/comebacklater.htm");
-						html.replace("%level%", String.valueOf(getMinLevel(level - 1)));
+						html.replace("%level%", String.valueOf(getMinLevel(level - 1, player)));
 					}
 				}
 				else
@@ -337,7 +338,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	private static final void showTutorialHtml(L2PcInstance player)
 	{
 		final ClassId currentClassId = player.getClassId();
-		if ((getMinLevel(currentClassId.level()) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
+		if ((getMinLevel(currentClassId.level(), player) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
 		{
 			return;
 		}
@@ -366,7 +367,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	private static final boolean checkAndChangeClass(L2PcInstance player, int val)
 	{
 		final ClassId currentClassId = player.getClassId();
-		if ((getMinLevel(currentClassId.level()) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
+		if ((getMinLevel(currentClassId.level(), player) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
 		{
 			return false;
 		}
@@ -433,10 +434,25 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	
 	/**
 	 * @param level - current skillId level (0 - start, 1 - first, etc)
+	 * @param player L2PcInstance
 	 * @return minimum player level required for next class transfer
 	 */
-	private static final int getMinLevel(int level)
+	private static final int getMinLevel(int level, L2PcInstance player)
 	{
+		if (player.getRace() == Race.ERTHEIA)
+		{
+			switch (level)
+			{
+				case 0:
+					return 40;
+				case 1:
+					return 76;
+				case 2:
+					return 85;
+				default:
+					return Integer.MAX_VALUE;
+			}
+		}
 		switch (level)
 		{
 			case 0:
