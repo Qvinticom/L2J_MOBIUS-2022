@@ -2127,88 +2127,124 @@
 		</for>
 	</item>
 	<item id="30196" name="Amaranthine Slasher" additionalName="Focus + Damage" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13794" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="646636000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13261-3" />
+		<set name="item_skill" val="13062-4;3566-7" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="777.0" />
 			<set stat="mAtk" val="278.0" />
-			<set stat="pAtkSpd" val="325.0" />
 			<set stat="rCrit" val="8.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30197" name="Amaranthine Slasher" additionalName="Damage Up + Haste" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13794" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="646636000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13261-3" />
+		<set name="item_skill" val="13062-4;3564-8" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="777.0" />
 			<set stat="mAtk" val="278.0" />
-			<set stat="pAtkSpd" val="325.0" />
 			<set stat="rCrit" val="8.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30198" name="Amaranthine Slasher" additionalName="Haste + Focus" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13794" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="646636000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13261-3" />
+		<set name="item_skill" val="3566-7;3564-8" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
 			<set stat="pAtk" val="777.0" />
 			<set stat="mAtk" val="278.0" />
-			<set stat="pAtkSpd" val="325.0" />
 			<set stat="rCrit" val="8.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30199" name="Amaranthine Avenger" additionalName="Haste + Critical Damage" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. P. Atk. + 1232 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="13794" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="646636000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13256-3" />
+		<set name="item_skill" val="3564-8;3572-9" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="638.0" />
 			<set stat="mAtk" val="278.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<add stat="accCombat" val="8.0" />
 			<set stat="rCrit" val="6.0" />
+			<add stat="accCombat" val="8.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 </list>

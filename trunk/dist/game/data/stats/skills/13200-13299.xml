@@ -492,13 +492,19 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13256" levels="1" name="One-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13256" levels="3" name="One-handed Blunt Special Ability">
+		<!-- Ertheia skill -->
 		<!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="cAtkAdd" val="388" />
+				<add stat="accCombat" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13257" levels="1" name="One-handed Blunt Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -532,13 +538,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13261" levels="1" name="Two-handed Sword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13261" levels="3" name="Two-handed Sword Special Ability">
+		<!-- Ertheia skill -->
 		<!-- P. Atk. + 96. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="96" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13262" levels="1" name="Two-handed Sword Special Ability">
 		<!-- AUTO GENERATED SKILL -->
