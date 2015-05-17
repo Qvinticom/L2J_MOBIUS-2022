@@ -109,6 +109,7 @@ import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
+import handlers.bypasshandlers.AlternateClassMaster;
 import handlers.bypasshandlers.ArcanCityMovie;
 import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
@@ -409,6 +410,7 @@ public class MasterHandler
 		},
 		{
 			// Bypass Handlers
+			AlternateClassMaster.class,
 			ArcanCityMovie.class,
 			Augment.class,
 			Buy.class,

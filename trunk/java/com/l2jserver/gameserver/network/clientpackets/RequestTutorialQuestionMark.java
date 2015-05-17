@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2ClassMasterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.QuestState;
 
 public class RequestTutorialQuestionMark extends L2GameClientPacket
 {
@@ -44,6 +45,12 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 		}
 		
 		L2ClassMasterInstance.onTutorialQuestionMark(player, _number);
+		
+		final QuestState qs = player.getQuestState("Q00255_Tutorial");
+		if (qs != null)
+		{
+			qs.getQuest().notifyEvent("QM" + _number + "", null, player);
+		}
 	}
 	
 	@Override

@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2ClassMasterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.QuestState;
 
 public class RequestTutorialLinkHtml extends L2GameClientPacket
 {
@@ -52,6 +53,12 @@ public class RequestTutorialLinkHtml extends L2GameClientPacket
 		else
 		{
 			L2ClassMasterInstance.onTutorialLink(player, _bypass);
+			
+			final QuestState qs = player.getQuestState("Q00255_Tutorial");
+			if (qs != null)
+			{
+				qs.getQuest().notifyEvent(_bypass, null, player);
+			}
 		}
 	}
 	

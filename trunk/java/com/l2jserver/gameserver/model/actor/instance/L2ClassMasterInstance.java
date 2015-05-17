@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialCloseHtml;
-import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.util.StringUtil;
@@ -81,6 +80,10 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		else if (command.startsWith("3rdClass"))
 		{
 			showHtmlMenu(player, getObjectId(), 3);
+		}
+		else if (command.startsWith("4thClass"))
+		{
+			showHtmlMenu(player, getObjectId(), 4);
 		}
 		else if (command.startsWith("change_class"))
 		{
@@ -136,7 +139,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	
 	public static final void onTutorialLink(L2PcInstance player, String request)
 	{
-		if (!Config.ALTERNATE_CLASS_MASTER || (request == null) || !request.startsWith("CO"))
+		if (!Config.ALTERNATE_CLASS_MASTER || (request == null) || !request.startsWith("AlternateClassMaster"))
 		{
 			return;
 		}
@@ -148,7 +151,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		try
 		{
-			int val = Integer.parseInt(request.substring(2));
+			int val = Integer.parseInt(request.substring(21));
 			checkAndChangeClass(player, val);
 		}
 		catch (NumberFormatException e)
@@ -216,6 +219,10 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 					{
 						sb.append("Come back after your second occupation change.<br>");
 					}
+					else if (Config.CLASS_MASTER_SETTINGS.isAllowed(4))
+					{
+						sb.append("Come back after your third occupation change.<br>");
+					}
 					else
 					{
 						sb.append("I can't change your occupation.<br>");
@@ -230,6 +237,10 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 					{
 						sb.append("Come back after your second occupation change.<br>");
 					}
+					else if (Config.CLASS_MASTER_SETTINGS.isAllowed(4))
+					{
+						sb.append("Come back after your third occupation change.<br>");
+					}
 					else
 					{
 						sb.append("I can't change your occupation.<br>");
@@ -240,12 +251,26 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 					{
 						sb.append("Come back here when you reached level 76 to change your class.<br>");
 					}
+					else if (Config.CLASS_MASTER_SETTINGS.isAllowed(4))
+					{
+						sb.append("Come back here when you reached level 85 to change your class.<br>");
+					}
 					else
 					{
 						sb.append("I can't change your occupation.<br>");
 					}
 					break;
 				case 3:
+					if (Config.CLASS_MASTER_SETTINGS.isAllowed(4))
+					{
+						sb.append("Come back here when you reached level 85 to change your class.<br>");
+					}
+					else
+					{
+						sb.append("I can't change your occupation.<br>");
+					}
+					break;
+				case 4:
 					sb.append("There is no class change available for you anymore.<br>");
 					break;
 			}
@@ -329,13 +354,13 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			}
 			if (validateClassId(currentClassId, cid))
 			{
-				StringUtil.append(menu, "<a action=\"link CO", String.valueOf(cid.getId()), "\">", ClassListData.getInstance().getClass(cid).getEscapedClientCode(), "</a><br>");
+				StringUtil.append(menu, "<a action=\"bypass -h AlternateClassMaster ", String.valueOf(cid.getId()), "\">", ClassListData.getInstance().getClass(cid).getEscapedClientCode(), "</a><br>");
 			}
 		}
 		
 		msg = msg.replaceAll("%menu%", menu.toString());
 		msg = msg.replace("%req_items%", getRequiredItems(currentClassId.level() + 1));
-		player.sendPacket(new TutorialShowHtml(msg));
+		player.sendPacket(new NpcHtmlMessage(msg));
 	}
 	
 	private static final boolean checkAndChangeClass(L2PcInstance player, int val)
@@ -398,7 +423,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		player.broadcastUserInfo();
 		
-		if (Config.CLASS_MASTER_SETTINGS.isAllowed(player.getClassId().level() + 1) && Config.ALTERNATE_CLASS_MASTER && (((player.getClassId().level() == 1) && (player.getLevel() >= 40)) || ((player.getClassId().level() == 2) && (player.getLevel() >= 76))))
+		if (Config.CLASS_MASTER_SETTINGS.isAllowed(player.getClassId().level() + 1) && Config.ALTERNATE_CLASS_MASTER && (((player.getClassId().level() == 1) && (player.getLevel() >= 40)) || ((player.getClassId().level() == 2) && (player.getLevel() >= 76)) || ((player.getClassId().level() == 3) && (player.getLevel() >= 85))))
 		{
 			showQuestionMark(player);
 		}
@@ -420,6 +445,8 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 				return 40;
 			case 2:
 				return 76;
+			case 3:
+				return 85;
 			default:
 				return Integer.MAX_VALUE;
 		}
