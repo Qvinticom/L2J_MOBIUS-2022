@@ -168,32 +168,72 @@
 	<item id="22629" name="High-grade Life Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nHigh-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are level 85 or above. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="22630" name="Top-grade Life Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nTop-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are level 85 or above. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="22631" name="High-grade Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nHigh-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 95. -->
 		<set name="icon" val="icon.r95_mineral_rare_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="22632" name="Top-grade Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nTop-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 95. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="22633" name="High-grade Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nHigh-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 99. -->
 		<set name="icon" val="icon.r99_mineral_rare_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="22634" name="Top-grade Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nTop-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 99. -->

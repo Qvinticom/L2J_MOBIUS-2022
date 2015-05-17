@@ -383,6 +383,9 @@
 		<set name="price" val="29808" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="18564" name="Mid-grade Life Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting at level 85 or above. -->
@@ -391,6 +394,9 @@
 		<set name="price" val="119376" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="18565" name="High-grade Life Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting at level 85 or above. -->
@@ -399,6 +405,9 @@
 		<set name="price" val="596880" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="18566" name="Top-grade Life Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon augmentation at level 85 or above. Can be exchanged or dropped. -->
@@ -407,6 +416,9 @@
 		<set name="price" val="2985120" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="18567" name="Legendary Life Stone (R-grade)" additionalName="" type="EtcItem">
 		<!-- This is a legendary mineral, having been petrified by a creature's physical or magical force. May be used as an ingredient in weapon augmentation by characters higher than level 85. -->
@@ -414,6 +426,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5970240" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>		
 	</item>
 	<item id="18568" name="Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 95. -->
@@ -422,6 +437,9 @@
 		<set name="price" val="59616" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="18569" name="Mid-grade Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 95. -->
@@ -430,6 +448,9 @@
 		<set name="price" val="238752" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="18570" name="High-grade Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 95. -->
@@ -438,6 +459,9 @@
 		<set name="price" val="1193760" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="18571" name="Top-grade Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 95. -->
@@ -446,6 +470,9 @@
 		<set name="price" val="5970240" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="18572" name="Legendary Life Stone (R95-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 95. -->
@@ -453,6 +480,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="11940480" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113">
+			<player level="95" />
+		</cond>
 	</item>
 	<item id="18573" name="Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 99. -->
@@ -461,6 +491,9 @@
 		<set name="price" val="71540" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="18574" name="Mid-grade Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 99. -->
@@ -469,6 +502,9 @@
 		<set name="price" val="286500" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="18575" name="High-grade Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 99. -->
@@ -477,6 +513,9 @@
 		<set name="price" val="1432500" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="18576" name="Top-grade Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 99. -->
@@ -485,6 +524,9 @@
 		<set name="price" val="7164300" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="18577" name="Legendary Life Stone (R99-grade)" additionalName="" type="EtcItem">
 		<!-- Legendary mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting by characters above level 99. -->
@@ -492,6 +534,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="14328600" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="18578" name="Requiem Shaper" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
