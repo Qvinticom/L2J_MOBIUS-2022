@@ -523,8 +523,18 @@
 	<item id="45492" name="Normal Fishing Rod" additionalName="30-day" type="Weapon">
 		<!-- A 30-day fishing rod. Consumes 1 Fishing Shot. -->
 		<set name="icon" val="icon.NOIMAGE" />
-		<set name="default_action" val="EQUIP" />
+                <set name="default_action" val="EQUIP" />
+                <set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="1" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="price" val="5000000" />
+		<set name="weight" val="1000" />
 		<set name="time" val="2592000" />
+		<set name="is_stackable" val="false" />
 		<for>
 			<add stat="pAtk" val="1.0" />
 			<add stat="mAtk" val="1.0" />
@@ -542,6 +552,15 @@
 		<!-- A sturdy fishing rod. Consumes 1 Fishing Shot. -->
 		<set name="icon" val="icon.NOIMAGE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="1" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="38800000" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
 		<for>
 			<add stat="pAtk" val="1.0" />
