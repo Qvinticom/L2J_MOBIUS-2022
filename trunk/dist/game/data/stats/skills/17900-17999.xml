@@ -159,201 +159,499 @@
 		<set name="reuseDelay" val="1200000" />
 	</skill>
 	<skill id="17920" levels="4" name="Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Windy Healing Potion. Elementary Alchemy. -->
+		<table name="#alchemyTransmuteIngredients">
+			1540,2;39461,2
+			39471,2;39461,2
+			39472,2;39461,2
+			39473,2;39461,2
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39471,1
+			39472,1
+			39473,1
+			39474,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17921" levels="4" name="Windy Quick Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Windy Quick Healing Potion. Elementary Alchemy. -->
+		<table name="#alchemyTransmuteIngredients">
+			1061,2;39461,1
+			39466,2;39461,1
+			39467,2;39461,1
+			39468,2;39461,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39466,3
+			39467,2
+			39468,2
+			39469,2
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17922" levels="4" name="Low-grade Love Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Low-grade Love Potion. Elementary Alchemy. -->
+		<table name="#alchemyTransmuteIngredients">
+			6035,3;735,2;39461,20
+			39476,2;39461,2
+			32316,2;39461,3
+			39478,2;39461,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39476,1
+			39477,1
+			39478,1
+			39479,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.love_potion" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17923" levels="1" name="Super Elixir">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Super Elixir. Intermediate Alchemy. -->
+		<table name="#alchemyTransmuteIngredients">
+			37097,3;37098,2;37099,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39481,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.super_elixir_potion" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17924" levels="3" name="Supreme Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Supreme Windy Healing Potion. Master Alchemy. -->
 		<table name="#icons"> icon.etc_potion_scarlet_i00 icon.etc_potion_gold_i00 icon.love_potion </table>
+		<table name="#alchemyTransmuteIngredients">
+			39469,2;39592,1
+			39474,2;39592,2
+			37041,3;39479,1;39592,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39470,50
+			39475,10
+			39480,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="17925" levels="2" name="Giant's Scroll: Enchant Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Giant's Scroll: Enchant Weapon (R-grade). Elementary Alchemy. -->
 		<table name="#icons"> icon.giant_scrl_of_ench_am_r icon.giant_scrl_of_ench_wp_r </table>
+		<table name="#alchemyTransmuteIngredients">
+			17527,2;39461,3
+			17526,2;39461,3
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			36389,1
+			36386,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17926" levels="2" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Giant's Lucky Enchant Stone: Armor (R-grade). Advanced Alchemy. -->
 		<table name="#icons"> icon.giant_ench_armor_stone_r_i01 icon.giant_ench_wp_stone_r_i01 </table>
+		<table name="#alchemyTransmuteIngredients">
+			36389,2;39461,3
+			36386,2;39461,2
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39462,1
+			39463,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17927" levels="2" name="Windy Lucky Enchant Stone: Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Windy Lucky Enchant Stone: Armor (R-grade). Master Alchemy. -->
 		<table name="#icons"> icon.giant_ench_armor_stone_r_i02 icon.giant_ench_wp_stone_r_i02 </table>
+		<table name="#alchemyTransmuteIngredients">
+			39462,2;39592,2
+			39463,2;39592,2
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39464,1
+			39465,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="86400000" />
 	</skill>
 	<skill id="17928" levels="6" name="Lv. 1 Legendary MEN Dye (Luck)">
 		<!-- Can convert to Lv. 1 Legendary MEN Dye (Luck). Elementary Alchemy. -->
 		<table name="#icons"> icon.lv1_unique_dye_men_luc icon.lv1_unique_dye_con_luc icon.lv1_unique_dye_wit_luc icon.lv1_unique_dye_dex_luc icon.lv1_unique_dye_int_luc icon.lv1_unique_dye_str_luc </table>
-		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
 		<table name="#alchemyTransmuteIngredients">
 			17642,3;39386,2;39461,100
-			17642,3;39386,2;39461,100
-			17642,3;39386,2;39461,100
-			17642,3;39386,2;39461,100
-			17642,3;39386,2;39461,100
-			17642,3;39386,2;39461,100
+			17639,3;39386,2;39461,100
+			17641,3;39386,2;39461,100
+			17638,3;39386,2;39461,100
+			17640,3;39386,2;39461,100
+			17637,3;39386,2;39461,100
 		</table>
 		<table name="#alchemyTransmuteProduction">
 			39426,1
-			39426,1
-			39426,1
-			39426,1
-			39426,1
-			39426,1
+			39423,1
+			39425,1
+			39422,1
+			39424,1
+			39421,1
 		</table>
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
+		<set name="icon" val="#icons" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17929" levels="6" name="Lv. 2 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 2 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
 		<table name="#icons"> icon.lv2_unique_dye_men_luc icon.lv2_unique_dye_con_luc icon.lv2_unique_dye_wit_luc icon.lv2_unique_dye_dex_luc icon.lv2_unique_dye_int_luc icon.lv2_unique_dye_str_luc </table>
+		<table name="#alchemyTransmuteIngredients">
+			17660,3;39387,2;39461,100
+			17657,3;39387,2;39461,100
+			17659,3;39387,2;39461,100
+			17656,3;39387,2;39461,100
+			17658,3;39387,2;39461,100
+			17655,3;39387,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39432,1
+			39429,1
+			39431,1
+			39428,1
+			39430,1
+			39427,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17930" levels="6" name="Lv. 3 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 3 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
 		<table name="#icons"> icon.lv3_unique_dye_men_luc icon.lv3_unique_dye_con_luc icon.lv3_unique_dye_wit_luc icon.lv3_unique_dye_dex_luc icon.lv3_unique_dye_int_luc icon.lv3_unique_dye_str_luc </table>
+		<table name="#alchemyTransmuteIngredients">
+			17678,3;39388,2;39461,100
+			17675,3;39388,2;39461,100
+			17677,3;39388,2;39461,100
+			17674,3;39388,2;39461,100
+			17676,3;39388,2;39461,100
+			17673,3;39388,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39438,1
+			39435,1
+			39437,1
+			39434,1
+			39436,1
+			39433,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17931" levels="6" name="Lv. 4 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 4 Legendary MEN Dye (Luck). Advanced Alchemy. -->
 		<table name="#icons"> icon.lv4_unique_dye_men_luc icon.lv4_unique_dye_con_luc icon.lv4_unique_dye_wit_luc icon.lv4_unique_dye_dex_luc icon.lv4_unique_dye_int_luc icon.lv4_unique_dye_str_luc </table>
+		<table name="#alchemyTransmuteIngredients">
+			17696,3;39389,2;39461,100
+			17693,3;39389,2;39461,100
+			17695,3;39389,2;39461,100
+			17692,3;39389,2;39461,100
+			17694,3;39389,2;39461,100
+			17691,3;39389,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39444,1
+			39441,1
+			39443,1
+			39440,1
+			39442,1
+			39439,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17932" levels="6" name="Lv. 1 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Legendary MEN Dye (Charisma). Elementary Alchemy. -->
 		<table name="#icons"> icon.lv1_unique_dye_men_cha icon.lv1_unique_dye_con_cha icon.lv1_unique_dye_wit_cha icon.lv1_unique_dye_dex_cha icon.lv1_unique_dye_int_cha icon.lv1_unique_dye_str_cha </table>
+		<table name="#alchemyTransmuteIngredients">
+			17642,3;39381,2;39461,100
+			17639,3;39381,2;39461,100
+			17641,3;39381,2;39461,100
+			17638,3;39381,2;39461,100
+			17640,3;39381,2;39461,100
+			17637,3;39381,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39396,1
+			39393,1
+			39395,1
+			39392,1
+			39394,1
+			39391,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17933" levels="6" name="Lv. 2 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 2 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
 		<table name="#icons"> icon.lv2_unique_dye_men_cha icon.lv2_unique_dye_con_cha icon.lv2_unique_dye_wit_cha icon.lv2_unique_dye_dex_cha icon.lv2_unique_dye_int_cha icon.lv2_unique_dye_str_cha </table>
+		<table name="#alchemyTransmuteIngredients">
+			17660,3;39382,2;39461,100
+			17657,3;39382,2;39461,100
+			17659,3;39382,2;39461,100
+			17656,3;39382,2;39461,100
+			17658,3;39382,2;39461,100
+			17655,3;39382,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39402,1
+			39399,1
+			39401,1
+			39398,1
+			39400,1
+			39397,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17934" levels="6" name="Lv. 3 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 3 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
 		<table name="#icons"> icon.lv3_unique_dye_men_cha icon.lv3_unique_dye_con_cha icon.lv3_unique_dye_wit_cha icon.lv3_unique_dye_dex_cha icon.lv3_unique_dye_int_cha icon.lv3_unique_dye_str_cha </table>
+		<table name="#alchemyTransmuteIngredients">
+			17678,3;39383,2;39461,100
+			17675,3;39383,2;39461,100
+			17677,3;39383,2;39461,100
+			17674,3;39383,2;39461,100
+			17676,3;39383,2;39461,100
+			17673,3;39383,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39408,1
+			39405,1
+			39407,1
+			39404,1
+			39406,1
+			39403,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17935" levels="6" name="Lv. 4 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 4 Legendary MEN Dye (Charisma). Advanced Alchemy. -->
 		<table name="#icons"> icon.lv4_unique_dye_men_cha icon.lv4_unique_dye_con_cha icon.lv4_unique_dye_wit_cha icon.lv4_unique_dye_dex_cha icon.lv4_unique_dye_int_cha icon.lv4_unique_dye_str_cha </table>
+		<table name="#alchemyTransmuteIngredients">
+			17696,3;39384,2;39461,100
+			17693,3;39384,2;39461,100
+			17695,3;39384,2;39461,100
+			17692,3;39384,2;39461,100
+			17694,3;39384,2;39461,100
+			17691,3;39384,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39414,1
+			39411,1
+			39413,1
+			39410,1
+			39412,1
+			39409,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17936" levels="14" name="Lv. 5 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 5 Legendary MEN Dye (Luck). Master Alchemy. -->
 		<table name="#icons"> icon.lv5_unique_dye_men_luc icon.lv5_unique_dye_con_luc icon.lv5_unique_dye_wit_luc icon.lv5_unique_dye_dex_luc icon.lv5_unique_dye_int_luc icon.lv5_unique_dye_str_luc icon.lv5_unique_dye_men_cha icon.lv5_unique_dye_con_cha icon.lv5_unique_dye_wit_cha icon.lv5_unique_dye_dex_cha icon.lv5_unique_dye_int_cha icon.lv5_unique_dye_str_cha icon.lv5_unique_dye_cha_luc icon.lv5_unique_dye_luc_cha </table>
+		<table name="#alchemyTransmuteIngredients">
+			17714,3;39390,2;39592,1
+			17711,3;39390,2;39592,1
+			17713,3;39390,2;39592,1
+			17710,3;39390,2;39592,1
+			17712,3;39390,2;39592,1
+			17709,3;39390,2;39592,1
+			17714,3;39385,2;39592,1
+			17711,3;39385,2;39592,1
+			17713,3;39385,2;39592,1
+			17710,3;39385,2;39592,1
+			17712,3;39385,2;39592,1
+			17709,3;39385,2;39592,1
+			39385,3;39390,2;39592,1
+			39390,3;39385,2;39592,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39450,1
+			39447,1
+			39449,1
+			39446,1
+			39448,1
+			39445,1
+			39420,1
+			39417,1
+			39419,1
+			39416,1
+			39418,1
+			39415,1
+			39455,1
+			39460,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="7200000" />
 	</skill>
 	<skill id="17937" levels="3" name="Mid-grade Life Stone (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Mid-grade Life Stone (R-grade). Elementary Alchemy. -->
 		<table name="#icons"> icon.r_mineral_special_i00 icon.r_mineral_rare_i00 icon.r_mineral_unique_i00 </table>
+		<table name="#alchemyTransmuteIngredients">
+			18563,2;39461,3
+			18564,2;39461,2
+			18565,2;39461,3
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			18564,2
+			18565,1
+			18566,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17938" levels="3" name="Mid-grade Life Stone (R95-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Mid-grade Life Stone (R95-grade). Intermediate Alchemy. -->
 		<table name="#icons"> icon.r95_mineral_special_i00 icon.r95_mineral_rare_i00 icon.r95_mineral_unique_i00 </table>
+		<table name="#alchemyTransmuteIngredients">
+			18568,2;39461,2
+			18569,2;39461,2
+			18570,2;39461,3
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			18569,1
+			18570,1
+			18571,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17939" levels="3" name="Mid-grade Life Stone (R99-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Mid-grade Life Stone (R99-grade). Advanced Alchemy. -->
 		<table name="#icons"> icon.r99_mineral_special_i00 icon.r99_mineral_rare_i00 icon.r99_mineral_unique_i00 </table>
+		<table name="#alchemyTransmuteIngredients">
+			18573,2;39461,2
+			18574,2;39461,2
+			18575,2;39461,3
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			18574,1
+			18575,1
+			18576,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17940" levels="1" name="Life Stone: Giant's Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Life Stone: Giant's Power. Master Alchemy. -->
+		<table name="#alchemyTransmuteIngredients">
+			18576,3;36515,10;39592,50
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			36731,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="604800000" />
 	</skill>
 	<skill id="17941" levels="4" name="Lv. 1 Windy CHA Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Windy CHA Dye (Luck). Elementary Alchemy. -->
 		<table name="#icons"> icon.lv1_unique_dye_cha_luc icon.lv2_unique_dye_cha_luc icon.lv3_unique_dye_cha_luc icon.lv4_unique_dye_cha_luc </table>
+		<table name="#alchemyTransmuteIngredients">
+			39381,3;39386,2;39461,100
+			39382,3;39387,2;39461,100
+			39383,3;39388,2;39461,100
+			39384,3;39389,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39451,1
+			39452,1
+			39453,1
+			39454,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17942" levels="4" name="Lv. 1 Windy LUC Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Windy LUC Dye (Charisma). Elementary Alchemy. -->
 		<table name="#icons"> icon.lv1_unique_dye_luc_cha icon.lv2_unique_dye_luc_cha icon.lv3_unique_dye_luc_cha icon.lv4_unique_dye_luc_cha </table>
+		<table name="#alchemyTransmuteIngredients">
+			39386,3;39381,2;39461,100
+			39387,3;39382,2;39461,100
+			39388,3;39383,2;39461,100
+			39389,3;39384,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39456,1
+			39457,1
+			39458,1
+			39459,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />

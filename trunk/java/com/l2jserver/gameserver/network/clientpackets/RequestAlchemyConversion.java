@@ -18,16 +18,14 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.model.L2AlchemySkill;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExAlchemyConversion;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.util.Rnd;
 
@@ -49,7 +47,7 @@ public class RequestAlchemyConversion extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_skillUseCount = readD();
-		_unk = readH(); // Unk = 10; xs is
+		_unk = readH(); // Unk = 10;
 		_skillId = readD();
 		_skillLevel = readD();
 		readB(new byte[28]);
@@ -58,19 +56,17 @@ public class RequestAlchemyConversion extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
-		Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
-		L2ItemInstance invitem = null;
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
+		final L2AlchemySkill alchemySkill = skill.getAlchemySkill();
 		
-		if ((activeChar == null) || (activeChar.getRace() != Race.ERTHEIA))
+		if ((activeChar == null) || (activeChar.getRace() != Race.ERTHEIA) || (_skillUseCount < 0))
 		{
 			return;
 		}
 		
-		double chance = 100; // 100% ?
-		
 		boolean hasIngidients = true;
-		for (ItemHolder item : skill.getAlchemySkill().getIngridientItems())
+		for (ItemHolder item : alchemySkill.getIngridientItems())
 		{
 			if ((activeChar.getInventory().getInventoryItemCount(item.getId(), -1) * _skillUseCount) < (item.getCount() * _skillUseCount))
 			{
@@ -84,43 +80,39 @@ public class RequestAlchemyConversion extends L2GameClientPacket
 			return;
 		}
 		
+		final double chance = 80; // 80% ?
 		for (int i = 0; i < _skillUseCount; i++)
 		{
 			boolean ok = Rnd.get(1, 100) < chance;
-			skill.getAlchemySkill().getIngridientItems().forEach(holder -> activeChar.getInventory().destroyItemByItemId("Alchemy", holder.getId(), holder.getCount(), activeChar, null));
 			
 			if (ok)
 			{
-				_resultItemCount = skill.getAlchemySkill().getTransmutedItem().getCount() * _skillUseCount;
+				_resultItemCount += alchemySkill.getTransmutedItem().getCount();
 			}
 			else
 			{
-				_resultFailCount++; // ?
+				_resultFailCount++;
 			}
-		}
-		if (_resultItemCount > 0)
-		{
-			invitem = activeChar.getInventory().addItem("Alchemy", skill.getAlchemySkill().getTransmutedItem().getId(), _resultItemCount, activeChar, null);
+			
+			alchemySkill.getIngridientItems().forEach(holder -> activeChar.getInventory().destroyItemByItemId("Alchemy", holder.getId(), holder.getCount(), activeChar, null));
 		}
 		
-		if (_resultFailCount > 0) // ?
+		if (_resultItemCount > 0)
 		{
-			invitem = activeChar.getInventory().destroyItemByItemId("Alchemy", skill.getAlchemySkill().getTransmutedItem().getId(), _resultFailCount, activeChar, null);
+			activeChar.addItem("Alchemy", alchemySkill.getTransmutedItem(), activeChar, true);
+		}
+		if (_resultFailCount > 0)
+		{
+			for (ItemHolder item : alchemySkill.getIngridientItems())
+			{
+				activeChar.getInventory().destroyItemByItemId("Alchemy", item.getId(), _resultFailCount, activeChar, null);
+				break; // FIXME: Take only 1st ingridient.
+			}
 			activeChar.sendPacket(SystemMessageId.FAILURE_TO_TRANSMUTE_WILL_DESTROY_SOME_INGREDIENTS);
 		}
 		
 		activeChar.sendPacket(new ExAlchemyConversion((int) _resultItemCount, (int) _resultFailCount));
-		
-		if (Config.FORCE_INVENTORY_UPDATE)
-		{
-			activeChar.sendPacket(new ItemList(activeChar, false));
-		}
-		else
-		{
-			InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(invitem);
-			sendPacket(playerIU);
-		}
+		activeChar.sendPacket(new ItemList(activeChar, false));
 	}
 	
 	@Override

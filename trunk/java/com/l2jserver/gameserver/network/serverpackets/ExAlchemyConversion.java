@@ -19,16 +19,16 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
- * @author GenCloud
+ * @author Mobius
  */
 public class ExAlchemyConversion extends L2GameServerPacket
 {
 	private final int _itemCount;
 	private final int _failCount;
 	
-	public ExAlchemyConversion(int _resultItemCount, int failCount)
+	public ExAlchemyConversion(int itemCount, int failCount)
 	{
-		_itemCount = _resultItemCount;
+		_itemCount = itemCount;
 		_failCount = failCount;
 	}
 	

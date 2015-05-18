@@ -37,36 +37,84 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="26906" levels="4" name="Sayha's Rune: Growth Pack Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Master Alchemy. Transmutes Sayha's Rune: Growth Pack Lv. 1. -->
+		<table name="#alchemyTransmuteIngredients">
+			17371,2;39461,20
+			24368,2;39461,1
+			24369,2;39461,1
+			24370,2;39461,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			24368,1
+			24369,1
+			24370,1
+			24371,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="604800000" />
 	</skill>
 	<skill id="26907" levels="4" name="Sayha's Rune: Skill Pack Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Master Alchemy. Transmutes Sayha's Rune: Skill Pack Lv. 1. -->
+		<table name="#alchemyTransmuteIngredients">
+			17371,2;39461,20
+			24372,2;39461,1
+			24373,2;39461,1
+			24374,2;39461,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			24372,1
+			24373,1
+			24374,1
+			24375,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="604800000" />
 	</skill>
 	<skill id="26908" levels="4" name="Sayha's Rune: Luck Pack Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Master Alchemy. Transmutes Sayha's Rune: Luck Pack Lv. 1. -->
+		<table name="#alchemyTransmuteIngredients">
+			17371,2;39461,20
+			24376,2;39461,1
+			24377,2;39461,1
+			24378,2;39461,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			24376,1
+			24377,1
+			24378,1
+			24379,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="604800000" />
 	</skill>
 	<skill id="26909" levels="4" name="Sayha's Rune Pack Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Master Alchemy. Transmutes Sayha's Rune Pack Lv. 1. -->
+		<table name="#alchemyTransmuteIngredients">
+			24368,3;24372,1;24376,1
+			24369,3;24373,1;24377,1
+			24370,3;24374,1;24378,1
+			24371,3;24375,1;24379,1
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			24380,1
+			24381,1
+			24382,1
+			24383,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="604800000" />
 	</skill>
 	<skill id="26910" levels="1" name="Luck Box 2">
 		<!-- AUTO GENERATED SKILL -->
