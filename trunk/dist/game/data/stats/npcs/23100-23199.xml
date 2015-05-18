@@ -617,12 +617,18 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
-				<item id="8" min="1" max="1" chance="0.075" /> <!-- Willow Staff -->
+				<item id="57" min="6" max="14" chance="70" />
+				<item id="1061" min="1" max="1" chance="5.5" />
+				<item id="18" min="1" max="1" chance="3.5" />
+				<item id="35" min="1" max="1" chance="3" />
+				<item id="36" min="1" max="1" chance="2.15" />
+				<item id="48" min="1" max="1" chance="2" />
+				<item id="41" min="1" max="1" chance="1.75" />
+				<item id="112" min="1" max="1" chance="1.75" />
+				<item id="2386" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="0.3" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.009" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="3.959" />
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2702,7 +2708,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="869224" sp="3455" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="46945" hpRegen="7.5" mp="46945" mpRegen="2.7" />
+			<vitals hp="42254" hpRegen="7.5" mp="1952" mpRegen="2.7" />
 			<attack physical="27225" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1089" magical="1056" />
 			<attribute>
@@ -2834,7 +2840,7 @@
 		<race>BEAST</race>
 		<acquire exp="785438" sp="3122" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="46945" hpRegen="7.5" mp="46945" mpRegen="2.7" />
+			<vitals hp="42254" hpRegen="7.5" mp="1952" mpRegen="2.7" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
 			<attribute>
@@ -2874,7 +2880,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="835507" sp="3364" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<vitals hp="43014" hpRegen="7.5" mp="1988" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1020" magical="1078" />
 			<attribute>
@@ -2915,7 +2921,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="823699" sp="3317" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
+			<vitals hp="43014" hpRegen="7.5" mp="1988" mpRegen="2.7" />
 			<attack physical="28050" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1020" magical="980" />
 			<attribute>
@@ -2959,7 +2965,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="844337" sp="3438" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+			<vitals hp="43244" hpRegen="7.5" mp="3035" mpRegen="2.7" />
 			<attack physical="33688" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1300" magical="1250" />
 			<attribute>
@@ -3008,7 +3014,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="877465" sp="3573" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+			<vitals hp="43244" hpRegen="7.5" mp="3035" mpRegen="2.7" />
 			<attack physical="33688" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1300" magical="1375" />
 			<attribute>
@@ -3056,7 +3062,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="899338" sp="3662" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+			<vitals hp="43244" hpRegen="7.5" mp="2023" mpRegen="2.7" />
 			<attack physical="37056" magical="21875" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="1430" magical="1250" />
 			<attribute>
@@ -3099,7 +3105,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="934589" sp="3806" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="13886" hpRegen="7.5" mp="13886" mpRegen="2.7" />
+			<vitals hp="43244" hpRegen="7.5" mp="3035" mpRegen="2.7" />
 			<attack physical="37056" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1430" magical="1375" />
 			<attribute>
@@ -3141,7 +3147,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="648733" sp="2477" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="45632" hpRegen="7.5" mp="45632" mpRegen="2.7" />
+			<vitals hp="41071" hpRegen="7.5" mp="1846" mpRegen="2.7" />
 			<attack physical="20475" magical="18150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="900" magical="900" />
 			<attribute>
@@ -3168,15 +3174,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="786" max="1831" chance="70" />
-				<item id="36803" min="1" max="1" chance="0.35971" />
-				<item id="17527" min="1" max="1" chance="0.025" />
-				<item id="36741" min="1" max="1" chance="0.007" />
-				<item id="17299" min="1" max="1" chance="0.003" />
+				<item id="57" min="381" max="889" chance="70" /> <!-- Adena -->
+				<item id="36803" min="1" max="1" chance="0.3" /> <!-- Requiem Caster Fragment -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36741" min="1" max="1" chance="0.0055" /> <!-- Recipe: Requiem Caster (60%) -->
+				<item id="17299" min="1" max="1" chance="0.003" /> <!-- Requiem Caster -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="21.2714" />
-				<item id="36533" min="1" max="1" chance="3.58598" />
+				<item id="36532" min="1" max="1" chance="6.800" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.350" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3184,7 +3190,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="807392" sp="3083" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="45632" hpRegen="7.5" mp="45632" mpRegen="2.7" />
+			<vitals hp="26378" hpRegen="7.5" mp="2770" mpRegen="2.7" />
 			<attack physical="22500" magical="18150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="990" />
 			<attribute>
@@ -3208,33 +3214,23 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="827" max="1927" chance="70" />
-				<item id="36802" min="1" max="1" chance="0.4" />
-				<item id="36552" min="1" max="1" chance="0.17007" />
-				<item id="36553" min="1" max="1" chance="0.04" />
-				<item id="17527" min="1" max="1" chance="0.012" />
-				<item id="17298" min="1" max="1" chance="0.003" />
-				<item id="36740" min="1" max="1" chance="0.0015" />
+				<item id="17527" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
-			<corpse>
-				<item id="36552" min="1" max="1" chance="2.04262" />
-				<item id="36553" min="1" max="1" chance="0.35461" />
-				<item id="36886" min="1" max="1" chance="0.3003" />
-			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23176" level="86" type="L2Monster" name="Mutated Cerberos">
 		<race>ANIMAL</race>
 		<acquire exp="747757" sp="2896" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="45868" hpRegen="7.5" mp="45868" mpRegen="2.7" />
+			<vitals hp="41282" hpRegen="7.5" mp="1881" mpRegen="2.7" />
 			<attack physical="23250" magical="15500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="930" magical="920" />
 			<attribute>
@@ -3259,15 +3255,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="806" max="1879" chance="70" />
-				<item id="36806" min="1" max="1" chance="3.13" />
-				<item id="36744" min="1" max="1" chance="0.042" />
-				<item id="17527" min="1" max="1" chance="0.03" />
+				<item id="57" min="391" max="911" chance="70" /> <!-- Adena -->
+				<item id="36806" min="1" max="1" chance="1.700" /> <!-- Immortal Breastplate Ingredient -->
+				<item id="36744" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Breastplate (60%) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="10.1307" />
-				<item id="36533" min="1" max="1" chance="1.79738" />
-				<item id="36886" min="1" max="1" chance="0.9009" />
+				<item id="36532" min="1" max="1" chance="4.500" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36886" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3275,7 +3271,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="893488" sp="3411" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="45632" hpRegen="7.5" mp="45632" mpRegen="2.7" />
+			<vitals hp="41071" hpRegen="7.5" mp="1846" mpRegen="2.7" />
 			<attack physical="27225" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1089" magical="1089" />
 			<attribute>
@@ -3303,16 +3299,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="806" max="1878" chance="70" />
-				<item id="36819" min="1" max="1" chance="4.8" />
-				<item id="36757" min="1" max="1" chance="0.1" />
-				<item id="17318" min="1" max="1" chance="0.04" />
-				<item id="30423" min="1" max="1" chance="0.02" />
-				<item id="17526" min="1" max="1" chance="0.003" />
+				<item id="57" min="391" max="912" chance="70" /> <!-- Adena -->
+				<item id="36819" min="1" max="1" chance="2.500" /> <!-- Immortal Glove Ingredient -->
+				<item id="36757" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Gloves (60%) -->
+				<item id="17318" min="1" max="1" chance="0.03" /> <!-- Immortal Gloves -->
+				<item id="30423" min="1" max="1" chance="0.0055" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="19.83" />
-				<item id="32814" min="1" max="1" chance="0.3003" />
+				<item id="40205" min="1" max="1" chance="9.600" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3320,7 +3316,7 @@
 		<race>ANIMAL</race>
 		<acquire exp="765498" sp="3011" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<vitals hp="42033" hpRegen="7.5" mp="1917" mpRegen="2.7" />
 			<attack physical="24000" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="960" magical="940" />
 			<attribute>
@@ -3345,14 +3341,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="829" max="1934" chance="70" />
-				<item id="36522" min="1" max="1" chance="13" />
-				<item id="36523" min="1" max="1" chance="2.6" />
-				<item id="17526" min="1" max="1" chance="0.01" />
+				<item id="57" min="403" max="938" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="7" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="1.400" /> <!-- Adamantite -->
+				<item id="17526" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
 			<corpse>
-				<item id="36522" min="1" max="1" chance="18.38" />
-				<item id="36523" min="1" max="1" chance="3.454" />
+				<item id="36522" min="1" max="1" chance="8.200" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="1.570" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3360,7 +3356,7 @@
 		<race>DRAGON</race>
 		<acquire exp="843804" sp="3319" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<vitals hp="42033" hpRegen="7.5" mp="1917" mpRegen="2.7" />
 			<attack physical="31920" magical="19360" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="960" magical="940" />
 			<attribute>
@@ -3387,16 +3383,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="829" max="1934" chance="70" />
-				<item id="36823" min="1" max="1" chance="6.8" />
-				<item id="36761" min="1" max="1" chance="0.11299" />
-				<item id="17322" min="1" max="1" chance="0.036" />
-				<item id="30423" min="1" max="1" chance="0.012" />
-				<item id="17526" min="1" max="1" chance="0.0016" />
+				<item id="57" min="403" max="938" chance="70" /> <!-- Adena -->
+				<item id="36823" min="1" max="1" chance="4.750" /> <!-- Immortal Earring Gem -->
+				<item id="36761" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Earring (60%) -->
+				<item id="17322" min="1" max="1" chance="0.03" /> <!-- Immortal Earring -->
+				<item id="30423" min="1" max="1" chance="0.0055" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="14.99" />
-				<item id="36533" min="1" max="1" chance="3.091" />
+				<item id="40205" min="1" max="1" chance="9.800" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3404,7 +3400,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="914811" sp="3598" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="46699" hpRegen="7.5" mp="46699" mpRegen="2.7" />
+			<vitals hp="42033" hpRegen="7.5" mp="1917" mpRegen="2.7" />
 			<attack physical="26400" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1162" magical="1137" />
 			<attribute>
@@ -3432,13 +3428,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="850" max="1983" chance="70" />
-				<item id="36804" min="1" max="1" chance="1.13" />
-				<item id="36742" min="1" max="1" chance="0.03" />
+				<item id="57" min="413" max="962" chance="70" /> <!-- Adena -->
+				<item id="36804" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer Fragment -->
+				<item id="36742" min="1" max="1" chance="0.03" /> <!-- Recipe: Requiem Retributer (60%) -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="16.04" />
-				<item id="36533" min="1" max="1" chance="3.16" />
+				<item id="36532" min="1" max="1" chance="7.250" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.450" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
