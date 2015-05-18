@@ -26,11 +26,6 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.items.L2Weapon;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.EtcItemType;
-import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.serverpackets.ExAutoFishAvailable;
@@ -64,7 +59,7 @@ public class L2FishingZone extends L2ZoneType
 			final L2PcInstance plr = (L2PcInstance) character;
 			if (!_task.containsKey(plr.getObjectId()))
 			{
-				_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FishReq(plr), 500, 2000));
+				_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new fishingAvailable(plr), 500, 2000));
 			}
 		}
 	}
@@ -76,8 +71,12 @@ public class L2FishingZone extends L2ZoneType
 		{
 			character.setInsideZone(ZoneId.FISHING, false);
 		}
-		stopTask(character);
 		_task.remove(character.getObjectId());
+		Future<?> t = _task.get(character.getObjectId());
+		if (t != null)
+		{
+			t.cancel(false);
+		}
 	}
 	
 	@Override
@@ -92,16 +91,6 @@ public class L2FishingZone extends L2ZoneType
 		onEnter(character);
 	}
 	
-	protected void stopTask(L2Character character)
-	{
-		_task.remove(character.getObjectId());
-		Future<?> t = _task.get(character.getObjectId());
-		if (t != null)
-		{
-			t.cancel(false);
-		}
-	}
-	
 	/*
 	 * getWaterZ() this added function returns the Z value for the water surface. In effect this simply returns the upper Z value of the zone. This required some modification of L2ZoneForm, and zone form extentions.
 	 */
@@ -110,11 +99,11 @@ public class L2FishingZone extends L2ZoneType
 		return getZone().getHighZ();
 	}
 	
-	class FishReq implements Runnable
+	class fishingAvailable implements Runnable
 	{
 		private final L2PcInstance player;
 		
-		FishReq(L2PcInstance pl)
+		fishingAvailable(L2PcInstance pl)
 		{
 			player = pl;
 		}
@@ -122,26 +111,8 @@ public class L2FishingZone extends L2ZoneType
 		@Override
 		public void run()
 		{
-			if (Config.ALLOWFISHING && !player.isFishing() && !player.isInsideZone(ZoneId.WATER) && !player.isInBoat() && !player.isInCraftMode() && !player.isInStoreMode() && !player.isTransformed())
+			if (Config.ALLOWFISHING && !player.isFishing() && player.isInsideZone(ZoneId.FISHING) && !player.isInsideZone(ZoneId.WATER) && !player.isInBoat() && !player.isInCraftMode() && !player.isInStoreMode() && !player.isTransformed())
 			{
-				// check for equiped fishing rod
-				final L2Weapon equipedWeapon = player.getActiveWeaponItem();
-				
-				if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
-				{
-					stopTask(player);
-					return;
-				}
-				
-				// check for equiped lure
-				final L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-				
-				if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
-				{
-					stopTask(player);
-					return;
-				}
-				
 				player.sendPacket(new ExAutoFishAvailable(player));
 			}
 		}
