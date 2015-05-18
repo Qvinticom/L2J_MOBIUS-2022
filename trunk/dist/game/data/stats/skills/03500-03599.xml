@@ -1044,10 +1044,10 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="3572" levels="9" name="Special Ability: Critical Damage">
+	<skill id="3572" levels="8" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#cAtkAdd"> 265 906 999 1059 1108 1158 1199 1232 1281 </table>
-		<table name="#magicLvl"> 75 84 85 86 85 90 94 97 99 </table>
+		<table name="#cAtkAdd"> 265 906 999 1059 1108 1158 1199 1232 </table>
+		<table name="#magicLvl"> 76 80 80 85 85 90 95 99 </table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />

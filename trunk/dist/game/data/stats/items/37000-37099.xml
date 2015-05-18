@@ -782,18 +782,58 @@
 		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="19039-1;19041-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player isClanLeader="true" />
+				<player isOnSide="LIGHT" />
+				<player cloakStatus="true" />
+			</and>
+		</cond>
 		<for>
 			<add stat="pDef" val="50.0" />
 			<add stat="mDef" val="40.0" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="37093" name="Dimensional Cloak of Darkness" additionalName="" type="Armor">
 		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="19040-1;19041-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<cond msgId="1518">
+			<and>
+				<player castle="-1" />
+				<player isClanLeader="true" />
+				<player isOnSide="DARK" />
+				<player cloakStatus="true" />
+			</and>
+		</cond>
 		<for>
 			<add stat="pDef" val="50.0" />
 			<add stat="mDef" val="40.0" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="37094" name="Dimensional Treasure Chest (Low-grade)" additionalName="" type="EtcItem">

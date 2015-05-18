@@ -1957,10 +1957,15 @@
 		<!-- Glorious T-shirt. HP increases by 465. -->
 		<set name="icon" val="icon.honor_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
+		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
 			<add stat="pDef" val="60.0" />
+			<add stat="maxHp" val="465" />
 		</for>
 	</item>
 	<item id="35292" name="Scroll of Escape: Guillotine Fortress" additionalName="" type="EtcItem">

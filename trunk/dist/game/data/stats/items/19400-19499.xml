@@ -401,65 +401,77 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="19451" name="Istina's Ring" additionalName="" type="Armor">
-		<!-- MP + 37, Accuracy + 3, Critical + 54.4, Water Resistance + 20. Only one effect is applied when two of the same Ring are equipped. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13320-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="103.0" />
+			<add order="0" stat="mDef" val="103.0" />
+			<add stat="maxMp" val="37" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="19452" name="Istina's Earring" additionalName="" type="Armor">
-		<!-- MP + 56, Stun Resistance + 30%, Shock attack + 30%, Vampiric Rage, Wind Resistance. Only one effect is applied when two of the same Earring are equipped. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13321-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="154.0" />
+			<add order="0" stat="mDef" val="154.0" />
+			<add stat="maxMp" val="56" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="19453" name="Istina's Necklace" additionalName="" type="Armor">
-		<!-- MP + 74, Holy Resistance + 35, skill cooldown decrease, Damage Shield effect. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13322-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="205.0" />
+			<add order="0" stat="mDef" val="205.0" />
+			<add stat="maxMp" val="74" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="19454" name="Istina's Belt" additionalName="" type="Armor">
-		<!-- HP Recovery increases, item slot + 6. -->
 		<set name="icon" val="icon.istina_belt_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13323-1" />
 		<for>
-			<add stat="pDef" val="32.0" />
+			<add order="0" stat="pDef" val="32" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -480,7 +492,6 @@
 		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="19456" name="Istina's Shirt" additionalName="" type="Armor">
-		<!-- When equipped with Istina's Shirt, STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7 and Water Resistance + 30. -->
 		<set name="icon" val="icon.istina_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -499,65 +510,77 @@
 		</for>
 	</item>
 	<item id="19457" name="Octavis' Ring" additionalName="" type="Armor">
-		<!-- MP + 37, increases P. Critical Damage, Fire Resistance + 20. Only one effect is applied when two of the same Ring are equipped. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13325-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="103.0" />
+			<add order="0" stat="mDef" val="103.0" />
+			<add stat="maxMp" val="37" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="19458" name="Octavis' Earring" additionalName="" type="Armor">
-		<!-- MP + 56, Hold/Sleep Resistance + 40%, hold/Sleep attack + 40%, Earth Resistance 30. Only one effect is applied when two of the same Earring are equipped. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13326-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="154.0" />
+			<add order="0" stat="mDef" val="154.0" />
+			<add stat="maxMp" val="56" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="19459" name="Octavis' Necklace" additionalName="" type="Armor">
-		<!-- MP + 74, Dark Resistance + 35, P. Skill Power increase. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13327-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="205.0" />
+			<add order="0" stat="mDef" val="205.0" />
+			<add stat="maxMp" val="74" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="19460" name="Octavis' Belt" additionalName="" type="Armor">
-		<!-- MP Recovery increase, increased weight by 13000. -->
 		<set name="icon" val="icon.octavis_belt_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="40" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13328-1" />
 		<for>
-			<add stat="pDef" val="32.0" />
+			<add order="0" stat="pDef" val="32" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -578,7 +601,6 @@
 		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="19462" name="Octavis' Shirt" additionalName="" type="Armor">
-		<!-- When equipped with Octavis' Shirt, STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7 and Dark Resistance + 30. -->
 		<set name="icon" val="icon.octavis_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -608,7 +630,7 @@
 		<set name="price" val="3700000" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="170.0" />
+			<add order="0" stat="mDef" val="170" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

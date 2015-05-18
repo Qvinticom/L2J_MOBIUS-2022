@@ -162,35 +162,69 @@
 		<set name="reuseDelay" val="7200000" />
 	</skill>
 	<skill id="13320" levels="1" name="Istina's Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Critical rate + 54.4, accuracy + 3, and Water Resistance + 20. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_ring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<add stat="accCombat" val="3" />
+			<add stat="rCrit" val="54.4" />
+			<add stat="waterRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13321" levels="1" name="Istina's Earring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Wind Resistance + 30, Stun Resistance + 30%, stun attack bonus + 30%, and additional 5% vampiric rage with a certain probability. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_earring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="5" />
+				<add stat="windRes" val="30" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SHOCK="30" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13322" levels="1" name="Istina's Necklace">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Holy Resistance + 35 and skill delay - 10%. Additionally, damage is incurred, 3% is reflected. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_necklace_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="35" />
+				<mul stat="mReuse" val="0.9" />
+				<mul stat="pReuse" val="0.9" />
+				<add stat="reflectDam" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13323" levels="1" name="Istina's Belt">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- HP recovery speed + 3.48 and item slot + 6. -->
 		<set name="icon" val="icon.istina_belt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.0348" />
+				<add stat="inventoryLimit" val="6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13324" levels="1" name="Istina's Shirt">
-		<!-- STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7, and Water Resistance + 30. -->
 		<set name="icon" val="icon.istina_shirt_i00" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
@@ -209,32 +243,66 @@
 		</for>
 	</skill>
 	<skill id="13325" levels="1" name="Octavis' Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Fire Resistance + 20 and Critical Damage + 15%. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_ring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="cAtk" val="1.15" />
+			<add stat="fireRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13326" levels="1" name="Octavis' Earring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Earth Resistance + 30, Hold/Sleep Resistance + 40%, hold/sleep attack bonus + 40%. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_earring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="5" />
+				<add stat="earthRes" val="30" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SLEEP="40" />
+				<param HOLD="40" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SLEEP="40" />
+				<param HOLD="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13327" levels="1" name="Octavis' Necklace">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Dark Resistance + 35, Skill Power + 5%. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="physicalSkillPower" val="1.05" />
+			<add stat="darkRes" val="35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13328" levels="1" name="Octavis' Belt">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- MP Recovery Rate + 2.3 and weight limit + 13000. -->
 		<set name="icon" val="icon.octavis_belt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.023" />
+				<add stat="weightPenalty" val="13000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13329" levels="1" name="Bestow Fire Weapon">
 		<!-- AUTO GENERATED SKILL -->
