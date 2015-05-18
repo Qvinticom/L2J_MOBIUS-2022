@@ -11961,11 +11961,13 @@ public final class L2PcInstance extends L2Playable
 			case 7808: // purple for beginners
 			case 7809: // yellow for beginners
 			case 8486: // prize-winning for beginners
+			case 45495: // normal Bait
 				return 0;
 			case 8485: // prize-winning luminous
 			case 8506: // green luminous
 			case 8509: // purple luminous
 			case 8512: // yellow luminous
+			case 8484: // prize-winning fishing lure
 				return 2;
 			default:
 				return 1;
@@ -12253,6 +12255,7 @@ public final class L2PcInstance extends L2Playable
 		_lure = null;
 		// Ends fishing
 		broadcastPacket(new ExFishingEnd(win, this));
+		addExpAndSp(_fish.getExp(), _fish.getSp()); // Reward Player with Exp and Sp
 		sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING);
 		setIsImmobilized(false);
 		stopLookingForFishTask();

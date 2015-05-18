@@ -43,6 +43,8 @@ public class L2Fish implements Cloneable
 	private final double _gutsCheckProbability;
 	private final double _cheatingProb;
 	private final int _fishGrade;
+	private static long _fishExp;
+	private static long _fishSp;
 	
 	public L2Fish(StatsSet set)
 	{
@@ -63,6 +65,8 @@ public class L2Fish implements Cloneable
 		_gutsCheckProbability = set.getDouble("gutsCheckProbability"); // TODO: Support needed.
 		_cheatingProb = set.getDouble("cheatingProb"); // TODO: Support needed.
 		_fishGrade = getGradeId(set.getString("fishGrade"));
+		_fishExp = set.getLong("fishExp");
+		_fishSp = set.getLong("fishSp");
 	}
 	
 	@Override
@@ -220,6 +224,22 @@ public class L2Fish implements Cloneable
 	public void setFishGroup(int fg)
 	{
 		_fishGroup = fg;
+	}
+	
+	/**
+	 * @return the fish Exp.
+	 */
+	public Long getExp()
+	{
+		return _fishExp;
+	}
+	
+	/**
+	 * @return the fish Sp.
+	 */
+	public Long getSp()
+	{
+		return _fishSp;
 	}
 	
 	/**

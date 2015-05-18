@@ -53,6 +53,8 @@
 						<xs:attribute name="itemId" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="itemName" type="xs:normalizedString" use="required" />
 						<xs:attribute name="startCombatTime" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishExp" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishSp" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
