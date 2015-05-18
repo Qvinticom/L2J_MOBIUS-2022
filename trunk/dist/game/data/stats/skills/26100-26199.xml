@@ -105,103 +105,241 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="26116" levels="6" name="Zodiac Agathion Stat Boost">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 1. -->
-		<set name="icon" val="icon.skill_agathion_special" />
+		<table name="#men"> 1 1 1 1 1 1 </table>
+		<table name="#con"> 0 1 1 1 1 1 </table>
+		<table name="#wit"> 0 0 1 1 1 1 </table>
+		<table name="#dex"> 0 0 0 1 1 1 </table>
+		<table name="#int"> 0 0 0 0 1 1 </table>
+		<table name="#str"> 0 0 0 0 0 1 </table>
+		<set name="icon" val="icon.skill_agathion_special" />		
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="#men" />
+				<add stat="CON" val="#con" />
+				<add stat="WIT" val="#wit" />
+				<add stat="DEX" val="#dex" />
+				<add stat="INT" val="#int" />
+				<add stat="STR" val="#str" />																			
+			</effect>
+		</for>		
 	</skill>
 	<skill id="26117" levels="6" name="Zodiac Agathion Attribute Enchant">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attribute Resistance + 5. -->
-		<set name="icon" val="icon.skill_agathion_special" />
+		<table name="#windpower"> 5 10 15 20 25 30 </table>
+		<table name="#earthpower"> 5 10 15 20 25 30 </table>
+		<table name="#firepower"> 5 10 15 20 25 30 </table>
+		<table name="#waterpower"> 5 10 15 20 25 30 </table>
+		<table name="#darkpower"> 5 10 15 20 25 30 </table>
+		<table name="#holypower"> 5 10 15 20 25 30 </table>
+		<table name="#windres"> 5 10 15 20 25 30 </table>
+		<table name="#earthres"> 5 10 15 20 25 30 </table>
+		<table name="#fireres"> 5 10 15 20 25 30 </table>
+		<table name="#waterres"> 5 10 15 20 25 30 </table>
+		<table name="#darkres"> 5 10 15 20 25 30 </table>
+		<table name="#holyres"> 5 10 15 20 25 30 </table>	
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<set name="icon" val="icon.skill_agathion_special" />		
+		<for>
+			<effect name="Buff">
+				<add stat="windPower" val="#windpower" />
+				<add stat="earthPower" val="#earthpower" />
+				<add stat="firePower" val="#firepower" />
+				<add stat="waterPower" val="#waterpower" />
+				<add stat="darkPower" val="#darkpower" />
+				<add stat="holyPower" val="#holypower" />
+				<add stat="windRes" val="#windres" />
+				<add stat="earthRes" val="#earthres" />
+				<add stat="fireRes" val="#fireres" />
+				<add stat="waterRes" val="#waterres" />
+				<add stat="darkRes" val="#darkres" />
+				<add stat="holyRes" val="#holyres" />					
+			</effect>
+		</for>			
 	</skill>
 	<skill id="26118" levels="12" name="Healing Light">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores entire party's HP/MP/CP with a chance to cancel debuffs. -->
 		<table name="#reuseDelays"> 2250000 2100000 1950000 1800000 1650000 1500000 1350000 1200000 1050000 900000 750000 600000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="200" />
+		<set name="staticReuse" val="true" />
+		<set name="affectRange" val="1000" />	
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->				
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="reuseDelay" val="#reuseDelays" />
+		<cond msgId="2292">
+			<player agathionId="13410" />
+		</cond>			
+		<for>
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="25" max="10" />
+			</effect>
+		</for>		
 	</skill>
 	<skill id="26119" levels="12" name="Skipping Kid">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- This skill uses the old "Warp Style" teleportation because the new fly packets skills are not implemented yet.           //TODO -->
 		<!-- Teleports 600 grids forward. -->
 		<table name="#reuseDelays"> 118000 110000 102000 94000 86000 78000 70000 62000 54000 46000 38000 30000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_dec_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="coolTime" val="400" />
+		<set name="staticReuse" val="true" />	
+		<set name="flyCourse" val="180" /> <!-- Teleport to Front -->
+		<set name="flyRadius" val="600" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->				
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />	
+		<set name="simultaneousCast" val="true" />		
 		<set name="reuseDelay" val="#reuseDelays" />
+		<cond msgId="2292">
+			<player agathionId="13412" />
+		</cond>			
+		<for>
+			<effect name="Blink" />
+		</for>
 	</skill>
 	<skill id="26120" levels="12" name="Scale of Life">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Equalizes entire party's HP and restores 333 HP/second for 15 sec. -->
 		<table name="#reuseDelays"> 118000 110000 102000 94000 86000 78000 70000 62000 54000 46000 38000 30000 </table>
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00" />			
+		<set name="targetType" val="PARTY" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="#reuseDelays" />
-		<set name="isMagic" val="1" />
+		<set name="staticReuse" val="true" />			
+		<set name="affectRange" val="1000" />
+		<set name="effectPoint" val="398" />
+		<set name="abnormalTime" val="15" />			
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />			
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="reuseDelay" val="#reuseDelays" />	
+		<cond msgId="2292">
+			<player agathionId="13415" />
+		</cond>			
+		<for>
+			<effect name="RebalanceHP" />
+			<effect name="HealOverTime" ticks="1">
+				<param power="333" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="26121" levels="12" name="Rocky Camouflage">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- This skill uses a random transformation, the effect of avoid being targeted is not working and restriction to cannot be used when Disparition is active not done.           //TODO -->
 		<!-- For 15 sec., transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
 		<table name="#reuseDelays"> 225000 210000 195000 180000 165000 150000 135000 120000 105000 90000 75000 60000 </table>
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
+		<set name="staticReuse" val="true" />			
+		<set name="abnormalTime" val="15" />			
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="#reuseDelays" />
-		<set name="isMagic" val="1" />
+		<cond msgId="2292">
+			<player agathionId="13411" />
+		</cond>			
+		<cond>
+			<player canTransform="true" />
+		</cond>		
+		<for>
+			<effect name="Transformation">
+				<param id="219" />
+				<mul stat="runSpd" val="0.5" />
+			</effect>	
+		</for>
 	</skill>
 	<skill id="26122" levels="12" name="Mad Cow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., P./M. Atk., and Atk./Casting Spd. x 2. -->
 		<table name="#reuseDelays"> 2250000 2100000 1950000 1800000 1650000 1500000 1350000 1200000 1050000 900000 750000 600000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_skill_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="staticReuse" val="true" />			
+		<set name="abnormalTime" val="30" />			
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />			
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="reuseDelay" val="#reuseDelays" />		
+		<cond msgId="2292">
+			<player agathionId="13418" />
+		</cond>				
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="2" />
+				<mul stat="pAtkSpd" val="2" />
+				<mul stat="mAtk" val="2" />
+				<mul stat="mAtkSpd" val="2" />				
+			</effect>
+		</for>			
 	</skill>
 	<skill id="26123" levels="12" name="Maiden's Prayer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Invincible for 10 sec. -->
 		<table name="#reuseDelays"> 2250000 2100000 1950000 1800000 1650000 1500000 1350000 1200000 1050000 900000 750000 600000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_july_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
+		<set name="staticReuse" val="true" />		
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->	
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="#reuseDelays" />
-		<set name="isMagic" val="1" />
+		<cond msgId="2292">
+			<player agathionId="13414" />
+		</cond>			
+		<for>
+			<effect name="Invincible" />
+		</for>
 	</skill>
 	<skill id="26124" levels="12" name="Bountiful Resurrection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resurrect from death with full health restored. Buff/Debuffs remain after death. Noblesse Blessing and Lucky Charm are an exception. -->
 		<table name="#reuseDelays"> 13500000 12600000 11700000 10800000 9900000 9000000 8100000 7200000 6300000 5400000 4500000 3600000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_may_skill_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="4000" />		
+		<set name="abnormalTime" val="1200" />	
+		<set name="abnormalType" val="RESURRECTION_SPECIAL" />		
+		<set name="staticReuse" val="true" />		
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="#reuseDelays" />
-		<set name="isMagic" val="1" />
+		<cond msgId="2292">
+			<player agathionId="13413" />
+		</cond>		
+		<for>
+			<effect name="ResurrectionSpecial">
+				<param power="100" />
+			</effect>
+		</for>		
 	</skill>
 	<skill id="26125" levels="12" name="Scorpion's Mass Exile">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose 282 HP/second. -->
 		<table name="#reuseDelays"> 118000 110000 102000 94000 86000 78000 70000 62000 54000 46000 38000 30000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_oct_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="3000" />
@@ -209,6 +347,9 @@
 		<set name="reuseDelay" val="#reuseDelays" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<cond msgId="2292">
+			<player agathionId="13417" />
+		</cond>			
 	</skill>
 	<skill id="26126" levels="12" name="Mass Binding Flood">
 		<!-- AUTO GENERATED SKILL -->
@@ -221,37 +362,82 @@
 		<set name="hitTime" val="10000" />
 		<set name="reuseDelay" val="#reuseDelays" />
 		<set name="isDebuff" val="true" />
+		<cond msgId="2292">
+			<player agathionId="13408" />
+		</cond>			
 	</skill>
 	<skill id="26127" levels="12" name="Slippery Scale">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Needs to resist 5 times and once someone cast debuffs on u 5 times it should dissapear.              //TODO -->
 		<!-- For 60 sec., defends against debuffs 5 times. -->
 		<table name="#reuseDelays"> 2250000 2100000 1950000 1800000 1650000 1500000 1350000 1200000 1050000 900000 750000 600000 </table>
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="200" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="staticReuse" val="true" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="#reuseDelays" />
+		<cond msgId="2292">
+			<player agathionId="13407" />
+		</cond>			
+		<for>
+			<effect name="Buff">
+				<set stat="debuffImmunity" val="1" />
+			</effect>
+		</for>				
 	</skill>
 	<skill id="26128" levels="12" name="Archer's Call">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Should summon them even if they are in combat mode.             //TODO -->
 		<!-- Summons all party members to you. -->
 		<table name="#reuseDelays"> 6750000 6300000 5850000 5400000 4950000 4500000 4050000 3600000 3150000 2700000 2250000 1800000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_nov_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="15000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="staticReuse" val="true" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="#reuseDelays" />
-		<set name="isMagic" val="4" />
+		<cond msgId="2292">
+			<player agathionId="13416" />
+		</cond>			
+		<cond>
+			<player callPc="true" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
+		<for>
+			<effect name="CallParty" />
+		</for>
 	</skill>
 	<skill id="26129" levels="12" name="Exoskeletal Shield">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- It gives normal reflect damage old High Five. Reflect Damage acording to GOD needs to be fixed.              //TODO -->
 		<!-- Reflects 20% of received damage. -->
 		<table name="#reuseDelays"> 4500000 4200000 3900000 3600000 3300000 3000000 2700000 2400000 2100000 1800000 1500000 1200000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_june_skill_i00" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<set name="abnormalTime" val="1200" />	
+		<set name="abnormalType" val="DMG_SHIELD" />		
+		<set name="hitTime" val="1000" />		
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="staticReuse" val="true" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelay" val="#reuseDelays" />
+		<cond msgId="2292">
+			<player agathionId="13409" />
+		</cond>			
+		<for>
+			<effect name="Buff">
+				<add stat="reflectDam" val="20" />
+			</effect>
+		</for>		
 	</skill>
 	<skill id="26130" levels="1" name="Dark Assassin's Move">
 		<!-- AUTO GENERATED SKILL -->

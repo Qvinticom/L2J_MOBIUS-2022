@@ -71,196 +71,340 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="17610" levels="1" name="Release Agathion's Seal - Virgo">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />		
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13410" />
+			</effect>
+		</for>		
 	</skill>
 	<skill id="17611" levels="1" name="Release Agathion's Seal - Capricorn">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13412" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17612" levels="1" name="Release Agathion's Seal - Libra">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13415" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17613" levels="1" name="Release Agathion's Seal - Aries">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13411" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17614" levels="1" name="Release Agathion's Seal - Taurus">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13418" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17615" levels="1" name="Release Agathion's Seal - Leo">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13414" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17616" levels="1" name="Release Agathion's Seal - Gemini">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13413" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17617" levels="1" name="Release Agathion's Seal - Scorpio">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13417" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17618" levels="1" name="Release Agathion's Seal - Aquarius">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13408" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17619" levels="1" name="Release Agathion's Seal - Pisces">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13407" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17620" levels="1" name="Release Agathion's Seal - Sagittarius">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13416" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17621" levels="1" name="Release Agathion's Seal - Cancer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Release Agathion's Seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />		
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion">
+				<param npcId="13409" />
+			</effect>
+		</for>	
 	</skill>
 	<skill id="17622" levels="1" name="Agathion Cute Trick - Virgo">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13410" />
+		</cond>		
 	</skill>
 	<skill id="17623" levels="1" name="Agathion Cute Trick - Capricorn">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13412" />
+		</cond>	
 	</skill>
 	<skill id="17624" levels="1" name="Agathion Cute Trick - Libra">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13415" />
+		</cond>	
 	</skill>
 	<skill id="17625" levels="1" name="Agathion Cute Trick - Aries">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13411" />
+		</cond>	
 	</skill>
 	<skill id="17626" levels="1" name="Agathion Cute Trick - Taurus">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13418" />
+		</cond>	
 	</skill>
 	<skill id="17627" levels="1" name="Agathion Cute Trick - Leo">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13414" />
+		</cond>	
 	</skill>
 	<skill id="17628" levels="1" name="Agathion Cute Trick - Gemini">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13412" />
+		</cond>	
 	</skill>
 	<skill id="17629" levels="1" name="Agathion Cute Trick - Scorpio">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13417" />
+		</cond>	
 	</skill>
 	<skill id="17630" levels="1" name="Agathion Cute Trick - Aquarius">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13408" />
+		</cond>	
 	</skill>
 	<skill id="17631" levels="1" name="Agathion Cute Trick - Pisces">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13407" />
+		</cond>	
 	</skill>
 	<skill id="17632" levels="1" name="Agathion Cute Trick - Sagittarius">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13416" />
+		</cond>	
 	</skill>
 	<skill id="17633" levels="1" name="Agathion Cute Trick - Cancer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="hitTime" val="3000" />		
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />		
+		<cond msgId="2292">
+			<player agathionId="13409" />
+		</cond>	
 	</skill>
 	<skill id="17634" levels="1" name="Virgo Agathion Teleport: Town of Aden">
 		<!-- AUTO GENERATED SKILL -->
