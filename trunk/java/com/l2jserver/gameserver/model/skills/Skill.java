@@ -39,6 +39,7 @@ import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
+import com.l2jserver.gameserver.model.L2AlchemySkill;
 import com.l2jserver.gameserver.model.L2ExtractableProductItem;
 import com.l2jserver.gameserver.model.L2ExtractableSkill;
 import com.l2jserver.gameserver.model.L2Object;
@@ -208,6 +209,7 @@ public final class Skill implements IIdentifiable
 	private final boolean _simultaneousCast;
 	
 	private L2ExtractableSkill _extractableItems = null;
+	private L2AlchemySkill _transmutedItems = null;
 	
 	private final String _icon;
 	
@@ -383,6 +385,13 @@ public final class Skill implements IIdentifiable
 			}
 			
 			_extractableItems = parseExtractableSkill(_id, _level, capsuled_items);
+		}
+		
+		String alchemyTransmuteIngredients = set.getString("alchemyTransmuteIngredients", null);
+		String alchemyTransmuteProducts = set.getString("alchemyTransmuteProduction", null);
+		if ((alchemyTransmuteIngredients != null) && (alchemyTransmuteProducts != null))
+		{
+			_transmutedItems = parseAlchemySkill(_id, _level, alchemyTransmuteIngredients, alchemyTransmuteProducts);
 		}
 		
 		_icon = set.getString("icon", "icon.skill0000");
@@ -1707,6 +1716,46 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
+	 * Parse an Alchemy transmute skill.
+	 * @param skillId the skill Id
+	 * @param skillLvl the skill level
+	 * @param alchemyTransmuteIngredients the values to parse
+	 * @param alchemyTransmuteProducts the values to parse
+	 * @return the parsed transmute skill
+	 */
+	private L2AlchemySkill parseAlchemySkill(int skillId, int skillLvl, String alchemyTransmuteIngredients, String alchemyTransmuteProducts)
+	{
+		final String[] ingrLists = alchemyTransmuteIngredients.split(";");
+		final String[] prodLists = alchemyTransmuteProducts.split(";");
+		List<ItemHolder> ingridients = new ArrayList<>();
+		ItemHolder product = null;
+		
+		String[] ingrData;
+		for (String ingrList : ingrLists)
+		{
+			ingrData = ingrList.split(",");
+			if (ingrData.length < 2)
+			{
+				_log.warning("Alchemy skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
+			}
+			ingridients.add(new ItemHolder(Integer.parseInt(ingrData[0]), Integer.parseInt(ingrData[1])));
+		}
+		
+		String[] prodData;
+		for (String prodList : prodLists)
+		{
+			prodData = prodList.split(",");
+			if (prodData.length < 2)
+			{
+				_log.warning("Alchemy skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
+			}
+			product = new ItemHolder(Integer.parseInt(prodData[0]), Integer.parseInt(prodData[1]));
+		}
+		
+		return new L2AlchemySkill(ingridients, product);
+	}
+	
+	/**
 	 * Parses all the abnormal visual effects.
 	 * @param abnormalVisualEffects the abnormal visual effects list
 	 */
@@ -1739,6 +1788,11 @@ public final class Skill implements IIdentifiable
 	public L2ExtractableSkill getExtractableSkill()
 	{
 		return _extractableItems;
+	}
+	
+	public L2AlchemySkill getAlchemySkill()
+	{
+		return _transmutedItems;
 	}
 	
 	/**

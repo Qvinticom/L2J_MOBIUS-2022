@@ -1303,6 +1303,16 @@ public abstract class DocumentBase
 		set.set("capsuled_items_skill", value);
 	}
 	
+	protected void setAlchemyTransmuteIngredientData(StatsSet set, String value)
+	{
+		set.set("alchemyTransmuteIngredients", value);
+	}
+	
+	protected void setAlchemyTransmuteProductData(StatsSet set, String value)
+	{
+		set.set("alchemyTransmuteProduction", value);
+	}
+	
 	protected String getValue(String value, Object template)
 	{
 		// is it a table?

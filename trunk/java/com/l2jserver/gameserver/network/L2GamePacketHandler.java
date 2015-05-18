@@ -1651,10 +1651,10 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestAlchemySkillList();
 								break;
 							case 0x100:
-								// msg = new RequestAlchemyTryMixCube();
+								msg = new RequestAlchemyTryMixCube();
 								break;
 							case 0x101:
-								// msg = new RequestAlchemyConversion();
+								msg = new RequestAlchemyConversion();
 								break;
 							case 0x102:
 								// msg = new SendExecutedUIEventsCount();

@@ -235,6 +235,40 @@ public class DocumentSkill extends DocumentBase
 				}
 			}
 		}
+		for (int i = 1; i <= lastLvl; i++)
+		{
+			for (n = first; n != null; n = n.getNextSibling())
+			{
+				if ("set".equalsIgnoreCase(n.getNodeName()))
+				{
+					if ("alchemyTransmuteIngredients".equalsIgnoreCase(n.getAttributes().getNamedItem("name").getNodeValue()))
+					{
+						setAlchemyTransmuteIngredientData(_currentSkill.sets[i - 1], getTableValue("#alchemyTransmuteIngredients", i));
+					}
+					else
+					{
+						parseBeanSet(n, _currentSkill.sets[i - 1], i);
+					}
+				}
+			}
+		}
+		for (int i = 1; i <= lastLvl; i++)
+		{
+			for (n = first; n != null; n = n.getNextSibling())
+			{
+				if ("set".equalsIgnoreCase(n.getNodeName()))
+				{
+					if ("alchemyTransmuteProduction".equalsIgnoreCase(n.getAttributes().getNamedItem("name").getNodeValue()))
+					{
+						setAlchemyTransmuteProductData(_currentSkill.sets[i - 1], getTableValue("#alchemyTransmuteProduction", i));
+					}
+					else
+					{
+						parseBeanSet(n, _currentSkill.sets[i - 1], i);
+					}
+				}
+			}
+		}
 		for (int i = 0; i < enchantLevels1; i++)
 		{
 			_currentSkill.enchsets1[i] = new StatsSet();

@@ -221,12 +221,29 @@
 		<set name="reuseDelay" val="86400000" />
 	</skill>
 	<skill id="17928" levels="6" name="Lv. 1 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Legendary MEN Dye (Luck). Elementary Alchemy. -->
 		<table name="#icons"> icon.lv1_unique_dye_men_luc icon.lv1_unique_dye_con_luc icon.lv1_unique_dye_wit_luc icon.lv1_unique_dye_dex_luc icon.lv1_unique_dye_int_luc icon.lv1_unique_dye_str_luc </table>
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#alchemyTransmuteIngredients">
+			17642,3;39386,2;39461,100
+			17642,3;39386,2;39461,100
+			17642,3;39386,2;39461,100
+			17642,3;39386,2;39461,100
+			17642,3;39386,2;39461,100
+			17642,3;39386,2;39461,100
+		</table>
+		<table name="#alchemyTransmuteProduction">
+			39426,1
+			39426,1
+			39426,1
+			39426,1
+			39426,1
+			39426,1
+		</table>
+		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
+		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 	</skill>
 	<skill id="17929" levels="6" name="Lv. 2 Legendary MEN Dye (Luck)">
 		<!-- AUTO GENERATED SKILL -->
