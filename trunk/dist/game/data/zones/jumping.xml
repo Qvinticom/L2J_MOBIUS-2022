@@ -108,4 +108,24 @@
 		<stat name="trackId" val="25" />
 		<node X="45075" Y="154690" />
 	</zone>
+	<zone name="Nornil's Cave -> Kamael Village" type="JumpZone" shape="Cylinder" minZ="-2670" maxZ="-2620" rad="50">
+		<stat name="trackId" val="40" />
+		<node X="-90543" Y="45418" />
+	</zone>	
+	<zone name="Raider's Crossroads -> Rightward Outpost / Leftward Outpost" type="JumpZone" shape="Cylinder" minZ="-1756" maxZ="-1706" rad="50">
+		<stat name="trackId" val="41" />
+		<node X="20544" Y="-129705" />
+	</zone>	
+	<zone name="Gainak Village -> Raiders Crossroads / Land of Chaos" type="JumpZone" shape="Cylinder" minZ="-1144" maxZ="-1094" rad="50">
+		<stat name="trackId" val="42" />
+		<node X="15036" Y="-120142" />
+	</zone>	
+	<zone name="Land of Chaos -> Leftward Outpost / Rightward Outpost" type="JumpZone" shape="Cylinder" minZ="-2010" maxZ="-1960" rad="50">
+		<stat name="trackId" val="43" />
+		<node X="-26688" Y="-107677" />
+	</zone>	
+	<zone name="Beleth's Magic Circle / Desert Quarry" type="JumpZone" shape="Cylinder" minZ="-2231" maxZ="-2181" rad="50">
+		<stat name="trackId" val="44" />
+		<node X="-25342" Y="254455" />
+	</zone>		
 </list>

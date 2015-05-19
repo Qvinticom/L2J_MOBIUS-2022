@@ -484,5 +484,104 @@
 		<way id="10"><jumpLoc next="11" x="-87890" y="40798" z="-1581" /></way>
 		<way id="11"><jumpLoc next="12" x="-86589" y="37047" z="-1689" /></way>
 		<way id="12"><jumpLoc next="-1" x="-86079" y="37178" z="-2048" /></way>
-	</track>     
+	</track>
+	<!-- <FlyToLocation ToX="-90543" ToY="45418" ToZ="-2640" Type="2"/> -->	
+	<track trackId="40" zone="Nornil's Cave -> Kamael Village" ToX="-90543" ToY="45418" ToZ="-2640">
+		<way id="0"><jumpLoc next="1" x="-92115" y="45043" z="-1449" /></way>
+		<way id="1"><jumpLoc next="2" x="-95692" y="46620" z="-1180" /></way>
+		<way id="2"><jumpLoc next="3" x="-100557" y="45170" z="-338" /></way>
+		<way id="3"><jumpLoc next="4" x="-102453" y="45504" z="108" /></way>
+		<way id="4"><jumpLoc next="5" x="-107755" y="46119" z="-480" /></way>
+		<way id="5"><jumpLoc next="6" x="-110482" y="48160" z="-87" /></way>
+		<way id="6"><jumpLoc next="7" x="-114240" y="51312" z="1616" /></way>
+		<way id="7"><jumpLoc next="8" x="-116400" y="48016" z="688" /></way>
+		<way id="8"><jumpLoc next="-1" x="-116957" y="46724" z="363" /></way>
+	</track>
+	<!-- <FlyToLocation ToX="20384" ToY="-129596" ToZ="-1720" Type="2"/> -->		
+	<track trackId="41" zone="Raider's Crossroads -> Rightward Outpost / Leftward Outpost" ToX="20544" ToY="-129705" ToZ="-1726">
+		<way id="0">
+			<jumpLoc next="1" x="21503" y="-132446" z="-1291" />
+			<jumpLoc next="6" x="15572" y="-133816" z="-1248" />
+			<jumpLoc next="-1" x="20528" y="-129562" z="-1728" />
+		</way>
+		<way id="1"><jumpLoc next="2" x="22125" y="-135468" z="299" /></way>
+		<way id="2"><jumpLoc next="3" x="21033" y="-138123" z="-80" /></way>
+		<way id="3"><jumpLoc next="4" x="21000" y="-141109" z="334" /></way>
+		<way id="4"><jumpLoc next="5" x="20211" y="-143912" z="458" /></way>
+		<way id="5"><jumpLoc next="-1" x="17827" y="-145369" z="-601" /></way>
+		<way id="6"><jumpLoc next="7" x="13111" y="-134227" z="-345" /></way>
+		<way id="7"><jumpLoc next="8" x="11211" y="-135335" z="-279" /></way>
+		<way id="8"><jumpLoc next="9" x="8482" y="-137258" z="-712" /></way>
+		<way id="9"><jumpLoc next="10" x="7102" y="-139278" z="226" /></way>
+		<way id="10"><jumpLoc next="11" x="5878" y="-141731" z="-99" /></way>
+		<way id="11"><jumpLoc next="-1" x="6268" y="-143087" z="-598" /></way>
+	</track>	
+	<!-- <FlyToLocation ToX="15264" ToY="-120144" ToZ="-1112" Type="2"/> -->	
+	<track trackId="42" zone="Gainak Village -> Raider's Crossroads / Land of Chaos" ToX="15036" ToY="-120142" ToZ="-1114">
+		<way id="0">
+			<jumpLoc next="1" x="17944" y="-121144" z="-36" />
+			<jumpLoc next="6" x="10161" y="-118838" z="-671" />
+			<jumpLoc next="-1" x="15264" y="-120144" z="-1112" />
+		</way>
+		<way id="1"><jumpLoc next="2" x="20096" y="-122968" z="-88" /></way>
+		<way id="2"><jumpLoc next="3" x="20736" y="-126328" z="-452" /></way>
+		<way id="3"><jumpLoc next="4" x="21964" y="-129124" z="-764" /></way>
+		<way id="4"><jumpLoc next="5" x="21138" y="-130316" z="-784" /></way>
+		<way id="5"><jumpLoc next="-1" x="20384" y="-129596" z="-1720" /></way>
+		<way id="6"><jumpLoc next="7" x="6158" y="-117357" z="-767" /></way>
+		<way id="7"><jumpLoc next="8" x="1297" y="-119818" z="1674" /></way>
+		<way id="8"><jumpLoc next="9" x="-2333" y="-120098" z="-1781" /></way>
+		<way id="9"><jumpLoc next="10" x="-9817" y="-115840" z="-1704" /></way>
+		<way id="10"><jumpLoc next="11" x="-11212" y="-117121" z="-2049" /></way>
+		<way id="11"><jumpLoc next="12" x="-14434" y="-113000" z="-2780" /></way>
+		<way id="12"><jumpLoc next="13" x="-22979" y="-111601" z="-2500" /></way>
+		<way id="13"><jumpLoc next="14" x="-26288" y="-106295" z="-1713" /></way>
+		<way id="14"><jumpLoc next="-1" x="-26818" y="-107737" z="-1968" /></way>
+	</track>
+	<!-- <FlyToLocation ToX="-26818" ToY="-107737" ToZ="-1968" Type="2"/> -->	
+	<track trackId="43" zone="Land of Chaos -> Leftward Outpost / Rightward Outpost" ToX="-26688" ToY="-107677" ToZ="-1980">
+		<way id="0">
+			<jumpLoc next="1" x="-30099" y="-124846" z="-1184" />
+			<jumpLoc next="2" x="-11223" y="-117210" z="2053" />
+			<jumpLoc next="-1" x="-26818" y="-107737" z="-1968" />
+		</way>
+		<way id="1">
+			<jumpLoc next="3" x="-18988" y="-116596" z="889" />
+			<jumpLoc next="-1" x="-30932" y="-124751" z="-1882" />
+		</way>
+		<way id="2">
+			<jumpLoc next="3" x="-18988" y="-116596" z="889" />
+			<jumpLoc next="-1" x="-11182" y="-117453" z="-3131" />
+		</way>
+		<way id="3"><jumpLoc next="-1" x="-18068" y="-111964" z="-3768" /></way>
+	</track>	
+	<!-- <FlyToLocation ToX="-25342" ToY="254452" ToZ="-2192" Type="2"/> -->
+	<track trackId="44" zone="Beleth's Magic Circle / Desert Quarry" ToX="-25342" ToY="254455" ToZ="-2201">
+		<way id="0">
+			<jumpLoc next="1" x="-25889" y="253399" z="-1664" />
+			<jumpLoc next="13" x="-24676" y="256516" z="-1616" />
+			<jumpLoc next="-1" x="-25342" y="254452" z="-2192" />
+		</way>
+		<way id="1"><jumpLoc next="2" x="-24198" y="250635" z="-2888" /></way>
+		<way id="2"><jumpLoc next="3" x="-23957" y="248986" z="-2728" /></way>
+		<way id="3"><jumpLoc next="4" x="-22615" y="247526" z="-2456" /></way>
+		<way id="4"><jumpLoc next="5" x="-21101" y="246229" z="-1544" /></way>
+		<way id="5">
+			<jumpLoc next="6" x="-22572" y="244798" z="-1984" />
+			<jumpLoc next="8" x="-19367" y="245501" z="-728" />	
+		</way>
+		<way id="6"><jumpLoc next="7" x="-21624" y="242909" z="-3144" /></way>
+		<way id="7"><jumpLoc next="-1" x="-21624" y="242909" z="-3144" /></way>
+		<way id="8"><jumpLoc next="9" x="-16448" y="244901" z="224" /></way>
+		<way id="9"><jumpLoc next="10" x="-13784" y="245750" z="1944" /></way>
+		<way id="10"><jumpLoc next="11" x="-9962" y="244105" z="328" /></way>
+		<way id="11"><jumpLoc next="12" x="-8417" y="241208" z="-887" /></way>
+		<way id="12"><jumpLoc next="-1" x="-9209" y="241301" z="-1936" /></way>
+		<way id="13"><jumpLoc next="14" x="-23472" y="255040" z="-2388" /></way>
+		<way id="14"><jumpLoc next="15" x="-19786" y="253847" z="-2824" /></way>
+		<way id="15"><jumpLoc next="16" x="-18344" y="254697" z="-2736" /></way>
+		<way id="16"><jumpLoc next="17" x="-16171" y="253571" z="-2928" /></way>
+		<way id="17"><jumpLoc next="18" x="-15214" y="252636" z="-3432" /></way>
+		<way id="18"><jumpLoc next="-1" x="-15214" y="252636" z="-3432" /></way>
+	</track>	
 </list>
