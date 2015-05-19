@@ -33,6 +33,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.StampedLock;
 import java.util.logging.Level;
@@ -263,7 +264,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** This creature's target. */
 	private L2Object _target;
 	
-	// set by the start of attack, in game ticks
+	/** Represents the time where the attack should end, in nanoseconds. */
 	private volatile long _attackEndTime;
 	private int _disableBowAttackEndTime;
 	private int _disableCrossBowAttackEndTime;
@@ -1093,7 +1094,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final int timeAtk = calculateTimeBetweenAttacks(target, weaponItem);
 			// the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
 			final int timeToHit = timeAtk / 2;
-			_attackEndTime = System.currentTimeMillis() + timeAtk;
+			_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
 			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGrade().ordinal() : 0;
 			// Create a Server->Client packet Attack
 			Attack attack = new Attack(this, target, wasSSCharged, ssGrade);
@@ -4061,11 +4062,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * @return True if the L2Character is attacking.
+	 * Verifies if the creature is attacking now.
+	 * @return {@code true} if the creature is attacking now, {@code false} otherwise
 	 */
 	public final boolean isAttackingNow()
 	{
-		return _attackEndTime > System.currentTimeMillis();
+		return _attackEndTime > System.nanoTime();
 	}
 	
 	/**
@@ -5539,9 +5541,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if ((targets.length > 0) && (escapeRange > 0))
 		{
-			int _skiprange = 0;
-			int _skipgeo = 0;
-			int _skippeace = 0;
+			int skipRange = 0;
+			int skipLOS = 0;
+			int skipPeaceZone = 0;
 			final List<L2Object> targetList = new ArrayList<>();
 			for (L2Object target : targets)
 			{
@@ -5549,21 +5551,25 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					if (!isInsideRadius(target.getX(), target.getY(), target.getZ(), escapeRange + getTemplate().getCollisionRadius(), true, false))
 					{
-						_skiprange++;
+						skipRange++;
 						continue;
 					}
-					if ((escapeRange > 0) && !GeoData.getInstance().canSeeTarget(this, target))
+					
+					// Healing party members should ignore LOS.
+					if (((skill.getTargetType() != L2TargetType.PARTY) || !skill.hasEffectType(L2EffectType.HEAL)) //
+						&& !GeoData.getInstance().canSeeTarget(this, target))
 					{
-						_skipgeo++;
+						skipLOS++;
 						continue;
 					}
+					
 					if (skill.isBad())
 					{
 						if (isPlayer())
 						{
 							if (((L2Character) target).isInsidePeaceZone(getActingPlayer()))
 							{
-								_skippeace++;
+								skipPeaceZone++;
 								continue;
 							}
 						}
@@ -5571,7 +5577,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						{
 							if (((L2Character) target).isInsidePeaceZone(this, target))
 							{
-								_skippeace++;
+								skipPeaceZone++;
 								continue;
 							}
 						}
@@ -5583,15 +5589,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (isPlayer())
 				{
-					if (_skiprange > 0)
+					if (skipRange > 0)
 					{
 						sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 					}
-					else if (_skipgeo > 0)
+					else if (skipLOS > 0)
 					{
 						sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 					}
-					else if (_skippeace > 0)
+					else if (skipPeaceZone > 0)
 					{
 						sendPacket(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
 					}

@@ -696,9 +696,9 @@ public class PcStat extends PlayableStat
 		}
 	}
 	
-	public synchronized void updateVitalityPoints(int points, boolean useRates, boolean quiet)
+	public synchronized void updateVitalityPoints(int _value, boolean useRates, boolean quiet)
 	{
-		if ((points == 0) || !Config.ENABLE_VITALITY)
+		if ((_value == 0) || !Config.ENABLE_VITALITY)
 		{
 			return;
 		}
@@ -710,7 +710,7 @@ public class PcStat extends PlayableStat
 				return;
 			}
 			
-			if (points < 0) // vitality consumed
+			if (_value < 0) // vitality consumed
 			{
 				int stat = (int) calcStat(Stats.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
 				
@@ -720,37 +720,37 @@ public class PcStat extends PlayableStat
 				}
 				if (stat < 0)
 				{
-					points = -points;
+					_value = -_value;
 				}
 			}
 			
-			if (points > 0)
+			if (_value > 0)
 			{
 				// vitality increased
-				points *= Config.RATE_VITALITY_GAIN;
+				_value *= Config.RATE_VITALITY_GAIN;
 			}
 			else
 			{
 				// vitality decreased
-				points *= Config.RATE_VITALITY_LOST;
+				_value *= Config.RATE_VITALITY_LOST;
 			}
 		}
 		
-		if (points > 0)
+		if (_value > 0)
 		{
-			points = Math.min(getActiveChar().getVitalityPoints() + points, MAX_VITALITY_POINTS);
+			_value = Math.min(getActiveChar().getVitalityPoints() + _value, MAX_VITALITY_POINTS);
 		}
 		else
 		{
-			points = Math.max(getActiveChar().getVitalityPoints() + points, MIN_VITALITY_POINTS);
+			_value = Math.max(getActiveChar().getVitalityPoints() + _value, MIN_VITALITY_POINTS);
 		}
 		
-		if (Math.abs(points - getActiveChar().getVitalityPoints()) <= 1e-6)
+		if (Math.abs(_value - getActiveChar().getVitalityPoints()) <= 1e-6)
 		{
 			return;
 		}
 		
-		getActiveChar().setVitalityPoints(points);
+		getActiveChar().setVitalityPoints(_value);
 	}
 	
 	public double getVitalityMultiplier()

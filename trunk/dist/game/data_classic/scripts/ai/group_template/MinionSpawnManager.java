@@ -251,6 +251,7 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(27186); // Fairy Tree of Star
 		NPC.add(27187); // Fairy Tree of Twilight
 		NPC.add(27188); // Fairy Tree of Abyss
+		NPC.add(29001); // Queen Ant
 	}
 	
 	private static final NpcStringId[] ON_ATTACK_MSG =

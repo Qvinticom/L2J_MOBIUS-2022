@@ -437,6 +437,17 @@ public class GeoData
 	}
 	
 	/**
+	 * Verifies if the is a path between origin's location and destination, if not returns the closest location.
+	 * @param origin the origin
+	 * @param destination the destination
+	 * @return the destination if there is a path or the closes location
+	 */
+	public Location moveCheck(ILocational origin, ILocational destination)
+	{
+		return moveCheck(origin.getX(), origin.getY(), origin.getZ(), destination.getX(), destination.getY(), destination.getZ(), origin.getInstanceId());
+	}
+	
+	/**
 	 * Move check.
 	 * @param x the x coordinate
 	 * @param y the y coordinate

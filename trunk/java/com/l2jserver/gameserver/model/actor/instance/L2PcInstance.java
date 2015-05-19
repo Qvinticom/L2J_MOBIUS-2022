@@ -30,14 +30,15 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
@@ -407,7 +408,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
 	
-	private final List<IEventListener> _eventListeners = new CopyOnWriteArrayList<>();
+	private final Queue<IEventListener> _eventListeners = new ConcurrentLinkedQueue<>();
 	
 	private L2GameClient _client;
 	
@@ -9038,6 +9039,7 @@ public final class L2PcInstance extends L2Playable
 			case AURA:
 			case FRONT_AURA:
 			case BEHIND_AURA:
+			case AREA_SUMMON:
 			case GROUND:
 			case SELF:
 				break;
@@ -14667,16 +14669,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public void removeEventListener(Class<? extends IEventListener> clazz)
 	{
-		final Iterator<IEventListener> it = _eventListeners.iterator();
-		IEventListener event;
-		while (it.hasNext())
-		{
-			event = it.next();
-			if (event.getClass() == clazz)
-			{
-				it.remove();
-			}
-		}
+		_eventListeners.removeIf(e -> e.getClass() == clazz);
 	}
 	
 	public Collection<IEventListener> getEventListeners()
