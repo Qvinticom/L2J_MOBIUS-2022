@@ -50,7 +50,7 @@ public class LookingForFishTask implements Runnable
 		{
 			if (System.currentTimeMillis() >= _endTaskTime)
 			{
-				_player.endFishing(false);
+				_player.endFishing(false, true);
 				return;
 			}
 			if (_fishGroup == -1)

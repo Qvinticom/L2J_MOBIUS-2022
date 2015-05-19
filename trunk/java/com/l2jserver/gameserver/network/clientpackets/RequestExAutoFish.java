@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * @author Mobius
@@ -41,11 +42,19 @@ public class RequestExAutoFish extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getActiveChar();
-		if ((activeChar == null) || activeChar.isFishing())
+		if (activeChar == null)
 		{
 			return;
 		}
-		activeChar.useMagic(FISHING_SKILL.getSkill(), false, true);
+		if (activeChar.isFishing())
+		{
+			activeChar.endFishing(true, false);// TODO: Correct Animation
+		}
+		else
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
+			activeChar.useMagic(FISHING_SKILL.getSkill(), false, true);
+		}
 	}
 	
 	@Override

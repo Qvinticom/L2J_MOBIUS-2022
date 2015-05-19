@@ -217,6 +217,7 @@ import com.l2jserver.gameserver.model.fishing.L2Fish;
 import com.l2jserver.gameserver.model.fishing.L2Fishing;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.holders.PlayerEventHolder;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.holders.SkillUseHolder;
 import com.l2jserver.gameserver.model.interfaces.IEventListener;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
@@ -302,7 +303,6 @@ import com.l2jserver.gameserver.network.serverpackets.ObservationMode;
 import com.l2jserver.gameserver.network.serverpackets.ObservationReturn;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowUpdate;
 import com.l2jserver.gameserver.network.serverpackets.PetInventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jserver.gameserver.network.serverpackets.PrivateStoreListBuy;
@@ -752,6 +752,7 @@ public final class L2PcInstance extends L2Playable
 	private int _fishx = 0;
 	private int _fishy = 0;
 	private int _fishz = 0;
+	private final static SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
 	
 	private volatile Set<Integer> _transformAllowedSkills;
 	private ScheduledFuture<?> _taskRentPet;
@@ -11899,20 +11900,20 @@ public final class L2PcInstance extends L2Playable
 		if ((fish == null) || fish.isEmpty())
 		{
 			sendMessage("Error - Fish are not defined");
-			endFishing(false);
+			endFishing(false, false);
 			return;
 		}
 		// Use a copy constructor else the fish data may be over-written below
 		_fish = fish.get(Rnd.get(fish.size())).clone();
 		fish.clear();
-		sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
+		// sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
 		if (!GameTimeController.getInstance().isNight() && _lure.isNightLure())
 		{
 			_fish.setFishGroup(-1);
 		}
 		// sendMessage("Hook x,y: " + _x + "," + _y + " - Water Z, Player Z:" + _z + ", " + getZ()); //debug line, uncoment to show coordinates used in fishing.
 		broadcastPacket(new ExFishingStart(this, _fish.getFishGroup(), _x, _y, _z, _lure.isNightLure()));
-		sendPacket(new PlaySound(1, "SF_P_01", 0, 0, 0, 0, 0));
+		// sendPacket(new PlaySound(1, "SF_P_01", 0, 0, 0, 0, 0));
 		startLookingForFishTask();
 	}
 	
@@ -11951,7 +11952,7 @@ public final class L2PcInstance extends L2Playable
 					checkDelay = _fish.getGutsCheckTime() * 66;
 				}
 			}
-			_taskforfish = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new LookingForFishTask(this, _fish.getStartCombatTime(), _fish.getFishGuts(), _fish.getFishGroup(), isNoob, isUpperGrade), 10000, checkDelay);
+			_taskforfish = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new LookingForFishTask(this, _fish.getStartCombatTime(), _fish.getFishGuts(), _fish.getFishGroup(), isNoob, isUpperGrade), Rnd.get(10000, 40000), checkDelay);
 		}
 	}
 	
@@ -12242,7 +12243,7 @@ public final class L2PcInstance extends L2Playable
 		_fishCombat = new L2Fishing(this, _fish, isNoob, isUpperGrade, _lure.getId());
 	}
 	
-	public void endFishing(boolean win)
+	public void endFishing(boolean win, boolean continueFishing)
 	{
 		_fishing = false;
 		_fishx = 0;
@@ -12256,11 +12257,21 @@ public final class L2PcInstance extends L2Playable
 		_fishCombat = null;
 		_lure = null;
 		// Ends fishing
-		broadcastPacket(new ExFishingEnd(win, this));
-		addExpAndSp(_fish.getExp(), _fish.getSp()); // Reward Player with Exp and Sp
-		sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING);
-		setIsImmobilized(false);
+		if (win && continueFishing)
+		{
+			addExpAndSp(_fish.getExp(), _fish.getSp()); // Reward Player with Exp and Sp
+		}
+		broadcastPacket(new ExFishingEnd(continueFishing ? (win ? 1 : 0) : 2, this));
 		stopLookingForFishTask();
+		if (!continueFishing)
+		{
+			sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING);
+			setIsImmobilized(false);
+		}
+		else
+		{
+			useMagic(FISHING_SKILL.getSkill(), false, true);
+		}
 	}
 	
 	public L2Fishing getFishCombat()

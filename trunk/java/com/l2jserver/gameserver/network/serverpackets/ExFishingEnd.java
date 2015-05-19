@@ -22,14 +22,14 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * @author -Wooden-
+ * @author Mobius
  */
 public class ExFishingEnd extends L2GameServerPacket
 {
-	private final boolean _win;
+	private final int _win;
 	private final L2Character _activeChar;
 	
-	public ExFishingEnd(boolean win, L2PcInstance character)
+	public ExFishingEnd(int win, L2PcInstance character)
 	{
 		_win = win;
 		_activeChar = character;
@@ -41,6 +41,6 @@ public class ExFishingEnd extends L2GameServerPacket
 		writeC(0xFE);
 		writeH(0x1F);
 		writeD(_activeChar.getObjectId());
-		writeC(_win ? 1 : 0);
+		writeC(_win); // lose 0 - win 1 - quit 2
 	}
 }

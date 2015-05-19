@@ -93,7 +93,7 @@ public final class Fishing extends AbstractEffect
 			}
 			else
 			{
-				player.endFishing(false);
+				player.endFishing(false, false);
 			}
 			
 			player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
@@ -134,7 +134,7 @@ public final class Fishing extends AbstractEffect
 			return;
 		}
 		
-		if (!Config.SERVER_CLASSIC_SUPPORT && (player.getLevel() < 85))
+		if (player.getLevel() < 85)
 		{
 			player.sendMessage("You must be level 85 or higher to fish.");
 			return;
