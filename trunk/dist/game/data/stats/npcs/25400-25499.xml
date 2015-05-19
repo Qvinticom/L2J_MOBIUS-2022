@@ -1137,8 +1137,8 @@
 				<group chance="77.25279998779297">
 					<item id="442" min="1" max="1" chance="9.548" /> <!-- Divine Tunic -->
 					<item id="473" min="1" max="1" chance="15.2716" /> <!-- Divine Stockings -->
-					<item id="1988" min="8" max="22" chance="50.4506" /> <!-- Divine Tunic Fabric -->
-					<item id="1989" min="24" max="72" chance="24.7298" /> <!-- Divine Stocking Pattern -->
+					<item id="1988" min="60" max="180" chance="50.4506" /> <!-- Divine Tunic Fabric -->
+					<item id="1989" min="216" max="648" chance="24.7298" /> <!-- Divine Stocking Pattern -->
 				</group>
 				<group chance="76.95099639892578">
 					<item id="266" min="1" max="1" chance="5.0332" /> <!-- Great Pata -->
@@ -1146,9 +1146,9 @@
 				</group>
 				<group chance="49.9281005859375">
 					<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
-					<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
-					<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
-					<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+					<item id="4605" min="1" max="1" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+					<item id="4606" min="1" max="1" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+					<item id="952" min="3" max="9" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 				</group>
 			</death>
 		</drop_lists>
