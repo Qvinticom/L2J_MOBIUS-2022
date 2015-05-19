@@ -523,8 +523,8 @@
 	<item id="45492" name="Normal Fishing Rod" additionalName="30-day" type="Weapon">
 		<!-- A 30-day fishing rod. Consumes 1 Fishing Shot. -->
 		<set name="icon" val="icon.NOIMAGE" />
-                <set name="default_action" val="EQUIP" />
-                <set name="weapon_type" val="FISHINGROD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="1" />
 		<set name="attack_range" val="80" />

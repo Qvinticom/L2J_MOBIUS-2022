@@ -676,57 +676,57 @@
 		<node X="-115424" Y="-150965" />
 	</zone>
 	<zone name="gainak_peace_zone_main" type="PeaceZone" shape="NPoly" minZ="-200" maxZ="-500"> <!-- [20_14] -->
-		<node X="16824" Y="-114248"/>
-		<node X="16648" Y="-114360"/>
-		<node X="16552" Y="-114424"/>
-		<node X="16376" Y="-114488"/>
-		<node X="16280" Y="-114536"/>
-		<node X="16232" Y="-114440"/>
-		<node X="15992" Y="-113960"/>
-		<node X="15944" Y="-113864"/>
-		<node X="16024" Y="-113816"/>
-		<node X="16200" Y="-113720"/>
-		<node X="16296" Y="-113656"/>
-		<node X="16472" Y="-113608"/>
+		<node X="16824" Y="-114248" />
+		<node X="16648" Y="-114360" />
+		<node X="16552" Y="-114424" />
+		<node X="16376" Y="-114488" />
+		<node X="16280" Y="-114536" />
+		<node X="16232" Y="-114440" />
+		<node X="15992" Y="-113960" />
+		<node X="15944" Y="-113864" />
+		<node X="16024" Y="-113816" />
+		<node X="16200" Y="-113720" />
+		<node X="16296" Y="-113656" />
+		<node X="16472" Y="-113608" />
 	</zone>
 	<zone name="refugee_camp_peace" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-3000"> <!-- [19_25] -->
-		<node X="-29163" Y="253328"/>
-		<node X="-29912" Y="254568"/>
-		<node X="-29921" Y="257134"/>
-		<node X="-29810" Y="257882"/>
-		<node X="-29165" Y="258521"/>
-		<node X="-28244" Y="258243"/>
-		<node X="-27576" Y="255784"/>
-		<node X="-27464" Y="255192"/>
-		<node X="-27720" Y="254296"/>
-		<node X="-28616" Y="253608"/>			
+		<node X="-29163" Y="253328" />
+		<node X="-29912" Y="254568" />
+		<node X="-29921" Y="257134" />
+		<node X="-29810" Y="257882" />
+		<node X="-29165" Y="258521" />
+		<node X="-28244" Y="258243" />
+		<node X="-27576" Y="255784" />
+		<node X="-27464" Y="255192" />
+		<node X="-27720" Y="254296" />
+		<node X="-28616" Y="253608" />			
 	</zone>
 	<zone name="tamiel_hug" type="PeaceZone" shape="Cylinder" minZ="200" maxZ="1000" rad="2000">
-		<node X="214800" Y="80360"/>
+		<node X="214800" Y="80360" />
 	</zone>	
 	<zone name="arcan_city_center" type="PeaceZone" shape="Cylinder" minZ="-2000" maxZ="-200" rad="4500">
 		<node X="207096" Y="88696" />
 	</zone>
 	<zone name="arcan_city_enter" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-200">
-		<node X="202840" Y="87656"/>
-		<node X="203032" Y="87512"/>
-		<node X="202120" Y="86136"/>
-		<node X="201928" Y="86280"/>
+		<node X="202840" Y="87656" />
+		<node X="203032" Y="87512" />
+		<node X="202120" Y="86136" />
+		<node X="201928" Y="86280" />
 	</zone>		
 	<zone name="arcan_city_enter_circle" type="PeaceZone" shape="Cylinder" minZ="-1500" maxZ="-500" rad="1000">
 		<node X="201832" Y="85928" />
 	</zone>
 	<zone name="arcan_city_east_1" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-800">
-		<node X="208296" Y="84600"/>
-		<node X="208184" Y="84360"/>
-		<node X="209464" Y="83576"/>
-		<node X="209512" Y="83656"/>
+		<node X="208296" Y="84600" />
+		<node X="208184" Y="84360" />
+		<node X="209464" Y="83576" />
+		<node X="209512" Y="83656" />
 	</zone>	
 	<zone name="arcan_city_west_1" type="PeaceZone" shape="NPoly" minZ="-2000" maxZ="-800">
-		<node X="207576" Y="84408"/>
-		<node X="207752" Y="84264"/>
-		<node X="206888" Y="83064"/>
-		<node X="206728" Y="83112"/>
+		<node X="207576" Y="84408" />
+		<node X="207752" Y="84264" />
+		<node X="206888" Y="83064" />
+		<node X="206728" Y="83112" />
 	</zone>
 	<zone name="arcan_city_shuttle_1_circle" type="PeaceZone" shape="Cylinder" minZ="-1900" maxZ="-700" rad="700">
 		<node X="206580" Y="82700" />
@@ -735,18 +735,18 @@
 		<node X="209885" Y="83357" />
 	</zone>	
 	<zone name="arcan_city_area_east" type="PeaceZone" shape="NPoly" minZ="-500" maxZ="-50">
-		<node X="211160" Y="82648"/>
-		<node X="210312" Y="83112"/>
-		<node X="210168" Y="83048"/>
-		<node X="211032" Y="82456"/>
+		<node X="211160" Y="82648" />
+		<node X="210312" Y="83112" />
+		<node X="210168" Y="83048" />
+		<node X="211032" Y="82456" />
 	</zone>	
 	<zone name="arcan_city_area_east_circle" type="PeaceZone" shape="Cylinder" minZ="-500" maxZ="-50" rad="1000">
 		<node X="211368" Y="82360" />
 	</zone>	
 	<zone name="arcan_city_area_west" type="PeaceZone" shape="NPoly" minZ="-500" maxZ="-50">
-		<node X="205864" Y="81432"/>
-		<node X="206440" Y="82296"/>
-		<node X="206328" Y="82296"/>
-		<node X="205672" Y="81560"/>
+		<node X="205864" Y="81432" />
+		<node X="206440" Y="82296" />
+		<node X="206328" Y="82296" />
+		<node X="205672" Y="81560" />
 	</zone>	
 </list>

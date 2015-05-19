@@ -313,15 +313,15 @@
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
-		<set name="bodypart" val="rbracelet"/>
+		<set name="bodypart" val="rbracelet" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="item_skill" val="13378-1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
+		<set name="item_skill" val="13378-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<for>
-			<add stat="maxMp" val="216"/>
+			<add stat="maxMp" val="216" />
 		</for>
 	</item>
 	<item id="34860" name="Enhanced Octavis' Bracelet" additionalName="" type="Armor">
@@ -330,14 +330,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
 		<set name="crystal_type" val="R" />
-		<set name="bodypart" val="rbracelet"/>
+		<set name="bodypart" val="rbracelet" />
 		<set name="weight" val="150" />
-		<set name="item_skill" val="13379-1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
+		<set name="item_skill" val="13379-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<for>
-			<add stat="maxMp" val="216"/>
+			<add stat="maxMp" val="216" />
 		</for>
 	</item>
 	<item id="34861" name="Ingredient and Hardener Pouch (R-grade)" additionalName="" type="EtcItem">

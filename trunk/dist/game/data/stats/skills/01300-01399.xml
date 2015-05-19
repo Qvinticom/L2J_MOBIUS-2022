@@ -793,7 +793,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -837,7 +837,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -881,7 +881,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -925,7 +925,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>

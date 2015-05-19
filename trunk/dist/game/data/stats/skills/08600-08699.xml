@@ -82,7 +82,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
-	    <set name="isMagic" val="1" />
+		<set name="isMagic" val="1" />
 		<cond>
 			<player canTransform="true" />
 		</cond>
@@ -121,7 +121,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-	    <set name="blockedInOlympiad" val="true" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="10000" />
 		<set name="mpConsume" val="40" />

@@ -192,7 +192,7 @@
 		</for>		
 	</skill>
 	<skill id="26119" levels="12" name="Skipping Kid">
-		<!-- This skill uses the old "Warp Style" teleportation because the new fly packets skills are not implemented yet.           //TODO -->
+		<!-- This skill uses the old "Warp Style" teleportation because the new fly packets skills are not implemented yet.		   //TODO -->
 		<!-- Teleports 600 grids forward. -->
 		<table name="#reuseDelays"> 118000 110000 102000 94000 86000 78000 70000 62000 54000 46000 38000 30000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_dec_i00" />
@@ -240,7 +240,7 @@
 		</for>
 	</skill>
 	<skill id="26121" levels="12" name="Rocky Camouflage">
-		<!-- This skill uses a random transformation, the effect of avoid being targeted is not working and restriction to cannot be used when Disparition is active not done.           //TODO -->
+		<!-- This skill uses a random transformation, the effect of avoid being targeted is not working and restriction to cannot be used when Disparition is active not done.		   //TODO -->
 		<!-- For 15 sec., transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
 		<table name="#reuseDelays"> 225000 210000 195000 180000 165000 150000 135000 120000 105000 90000 75000 60000 </table>
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
@@ -367,7 +367,7 @@
 		</cond>			
 	</skill>
 	<skill id="26127" levels="12" name="Slippery Scale">
-		<!-- Needs to resist 5 times and once someone cast debuffs on u 5 times it should dissapear.              //TODO -->
+		<!-- Needs to resist 5 times and once someone cast debuffs on u 5 times it should dissapear.			  //TODO -->
 		<!-- For 60 sec., defends against debuffs 5 times. -->
 		<table name="#reuseDelays"> 2250000 2100000 1950000 1800000 1650000 1500000 1350000 1200000 1050000 900000 750000 600000 </table>
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
@@ -389,7 +389,7 @@
 		</for>				
 	</skill>
 	<skill id="26128" levels="12" name="Archer's Call">
-		<!-- Should summon them even if they are in combat mode.             //TODO -->
+		<!-- Should summon them even if they are in combat mode.			 //TODO -->
 		<!-- Summons all party members to you. -->
 		<table name="#reuseDelays"> 6750000 6300000 5850000 5400000 4950000 4500000 4050000 3600000 3150000 2700000 2250000 1800000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_nov_i00" />
@@ -416,7 +416,7 @@
 		</for>
 	</skill>
 	<skill id="26129" levels="12" name="Exoskeletal Shield">
-		<!-- It gives normal reflect damage old High Five. Reflect Damage acording to GOD needs to be fixed.              //TODO -->
+		<!-- It gives normal reflect damage old High Five. Reflect Damage acording to GOD needs to be fixed.			  //TODO -->
 		<!-- Reflects 20% of received damage. -->
 		<table name="#reuseDelays"> 4500000 4200000 3900000 3600000 3300000 3000000 2700000 2400000 2100000 1800000 1500000 1200000 </table>
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_june_skill_i00" />

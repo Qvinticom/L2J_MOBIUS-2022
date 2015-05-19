@@ -98,7 +98,7 @@
 	</skill>
 	<skill id="13004" levels="4" name="Vesper Noble Light Armor Set">
 		<!-- Increases MP Recovery Rate by 5%. -->
-        <!-- Increases MP Recovery Rate by 5%, Max MP + 354, Evasion + 3. -->
+		<!-- Increases MP Recovery Rate by 5%, Max MP + 354, Evasion + 3. -->
 		<!-- Increases MP Recovery Rate by 5%, Max MP + 354, Evasion + 3, P. Atk by 5.57%, Critical Damage + 172. -->
 		<!-- Increases MP Recovery Rate by 5%, Max MP + 354, Evasion + 3, P. Atk by 5.57%, Critical Damage + 172, P. Atk Speed by 5%, Paralysis Resistance by 50%. Can wear cloak. STR+ 1, CON-2, DEX+ 1. -->
 		<table name="#base">0 0 0 1</table>
@@ -1982,8 +1982,8 @@
 		<!-- WIT + 3, MEN -1. Casting Spd. + 15%. M. Atk. + 15%. received heal amount + 10%. MP + 228. Stun Resistance + 10. MP recovery + 0.9. Mental Attack Bonus + 15. Heal amount + 108. Resistance to 4 attributes + 15. -->
 		<table name="#mAtkSpd"> 1.03 1.03 1.03 1.15 </table>
 		<table name="#maxMp"> 0 228 228 228 </table>
-    	<table name="#defTrait"> 0 10 10 10 </table>
-        <table name="#atkTrait"> 0 0 15 15 </table>
+		<table name="#defTrait"> 0 10 10 10 </table>
+		<table name="#atkTrait"> 0 0 15 15 </table>
 		<table name="#regMp"> 0 0 0.9 0.9 </table>
 		<table name="#mAtk"> 1 1 1 1.15 </table>
 		<table name="#healEffect"> 0 0 0 108 </table>

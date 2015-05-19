@@ -1226,9 +1226,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 		<!--	<effect name="TriggerSkillByAttack">
-                <param skillId="10537" skillLevel="1" /> 
-                <param chance="#power" />
-                <param targetType="ONE" />
+				<param skillId="10537" skillLevel="1" /> 
+				<param chance="#power" />
+				<param targetType="ONE" />
 				<mul stat="defCritDamage" val="#ModifyCritical" />
 				<mul stat="cAtk" val="#cAtk">
 					<using kind="DAGGER,DUALDAGGER" />
