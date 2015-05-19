@@ -93,13 +93,6 @@ public class L2NpcAction implements IActionHandler
 			}
 			else if (!target.isAutoAttackable(activeChar))
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
-				{
-					final Location destination = GeoData.getInstance().moveCheck(activeChar, target);
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
-					return true;
-				}
-				
 				// Calculate the distance between the L2PcInstance and the L2Npc
 				if (!((L2Npc) target).canInteract(activeChar))
 				{
