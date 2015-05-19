@@ -12229,9 +12229,9 @@ public final class L2PcInstance extends L2Playable
 		else
 		{
 			randomlvl = skilllvl + 1;
-			if (randomlvl > 27)
+			if (randomlvl > 35)
 			{
-				randomlvl = 27;
+				randomlvl = 35;
 			}
 		}
 		
