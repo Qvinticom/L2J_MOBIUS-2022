@@ -971,9 +971,9 @@
 		</for>
 	</skill>
 	<skill id="3568" levels="2" name="Special Ability: HP Drain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<table name="#absorbDam"> 3 4 </table>
-		<table name="#magicLvl"> 75 84 </table>
+		<table name="#magicLvl"> 75 80 </table>
 		<set name="icon" val="icon.skill1268" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1586,14 +1586,14 @@
 		</for>
 	</skill>
 	<skill id="3599" levels="1" name="Polearm Multi-attack">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<set name="icon" val="icon.skill0216" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="atkCountMax" val="2" />
+				<add stat="atkCountMax" val="3" />
 			</effect>
 		</for>
 	</skill>

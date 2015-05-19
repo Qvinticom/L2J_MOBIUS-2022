@@ -254,14 +254,14 @@
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<mul stat="rCrit" val="1.25" />
-				<add stat="cAtk" val="774" />
+				<add stat="cAtkAdd" val="774" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<mul stat="rCrit" val="1.25" />
-				<add stat="cAtk" val="#ench1cAtk" />
+				<add stat="cAtkAdd" val="#ench1cAtk" />
 			</effect>
 		</enchant1for>
 	</skill>

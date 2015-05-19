@@ -1049,11 +1049,21 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13061" levels="1" name="Special Ability: Long Blow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases bow/crossbow range. Inflicts additional damage during PvP. -->
 		<set name="icon" val="icon.skill0113" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtkRange" val="50">
+					<mul stat="pvpPhysDmg" val="1.05" />
+					<mul stat="pvpPhysSkillsDmg" val="1.05" />
+					<mul stat="pvpMagicalDmg" val="1.05" />
+					<using kind="BOW" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="13062" levels="5" name="Special Ability: Damage Up">
 		<!-- Increases P. Atk. Inflicts additional damage during PvP. -->

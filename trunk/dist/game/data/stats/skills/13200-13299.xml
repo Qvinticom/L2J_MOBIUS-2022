@@ -455,7 +455,6 @@
 		</for>
 	</skill>
 	<skill id="13252" levels="3" name="One-handed Sword Special Ability">
-		<!-- Ertheia skill -->
 		<!-- Accuracy + 2 and P. Critical Rate + 27. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="magicLvl" val="1" />
@@ -493,7 +492,6 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="13256" levels="3" name="One-handed Blunt Special Ability">
-		<!-- Ertheia skill -->
 		<!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="magicLvl" val="1" />
@@ -539,7 +537,6 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="13261" levels="3" name="Two-handed Sword Special Ability">
-		<!-- Ertheia skill -->
 		<!-- P. Atk. + 96. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="magicLvl" val="1" />
@@ -559,13 +556,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13263" levels="1" name="Spear Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13263" levels="3" name="Spear Special Ability">
 		<!-- Increases the number of enemies that can be attacked at the same time. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="atkCountMax" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13264" levels="1" name="Fist Weapon Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -591,13 +592,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13267" levels="1" name="Fist Weapon Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13267" levels="3" name="Fist Weapon Special Ability">
 		<!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="18" />
+				<mul stat="pAtkSpd" val="1.034" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13268" levels="1" name="Fist Weapon Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -712,7 +718,6 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="13282" levels="3" name="Dagger Special Ability">
-		<!-- Ertheia skill -->
 		<!-- P. Critical Damage + 844. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="magicLvl" val="1" />
