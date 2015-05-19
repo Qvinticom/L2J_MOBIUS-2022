@@ -259,21 +259,22 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="397" max="925" chance="70" />
-				<item id="8725" min="1" max="1" chance="0.64103" />
-				<item id="36522" min="1" max="1" chance="0.4" />
-				<item id="36557" min="1" max="1" chance="0.12005" />
-				<item id="36547" min="1" max="1" chance="0.07502" />
-				<item id="36889" min="1" max="1" chance="0.036" />
-				<item id="947" min="1" max="1" chance="0.006" />
-				<item id="36864" min="1" max="1" chance="0.003" />
-				<item id="36922" min="1" max="1" chance="0.001" />
+				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
+				<item id="7898" min="1" max="1" chance="0.003" /> <!-- Karik Horn -->
+				<item id="7882" min="1" max="1" chance="0.003" /> <!-- Pa'agrian Sword -->
+				<item id="200" min="1" max="1" chance="0.003" /> <!-- Sage's Staff -->
+				<item id="199" min="1" max="1" chance="0.003" /> <!-- Pa'agrio Hammer -->
+				<item id="198" min="1" max="1" chance="0.003" /> <!-- Inferno Staff -->
+				<item id="197" min="1" max="1" chance="0.003" /> <!-- Paradia Staff -->
+				<item id="195" min="1" max="1" chance="0.003" /> <!-- Cursed Staff -->
+				<item id="299" min="1" max="1" chance="0.0009" /> <!-- Orcish Poleaxe -->
+				<item id="5286" min="1" max="1" chance="0.0009" /> <!-- Berserker Blade -->
+				<item id="7883" min="1" max="1" chance="0.0009" /> <!-- Guardian's Sword -->
+				<item id="78" min="1" max="1" chance="0.0009" /> <!-- Great Sword -->
+				<item id="36524" min="1" max="1" chance="0.0009" /> <!-- Orichalcum -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="87.2832" />
-				<item id="36532" min="1" max="1" chance="1.92678" />
-				<item id="36880" min="1" max="1" chance="0.54945" />
-				<item id="36666" min="1" max="1" chance="0.19268" />
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -305,19 +306,18 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="423" max="987" chance="70" />
-				<item id="36547" min="1" max="1" chance="0.13605" />
-				<item id="2172" min="1" max="1" chance="0.06998" />
-				<item id="36902" min="1" max="1" chance="0.027" />
-				<item id="3955" min="1" max="1" chance="0.014" />
-				<item id="36864" min="1" max="1" chance="0.003" />
-				<item id="36922" min="1" max="1" chance="0.003" />
+				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
+				<item id="498" min="1" max="1" chance="0.03" /> <!-- Steel Plate Helmet -->
+				<item id="499" min="1" max="1" chance="0.03" /> <!-- Mithril Helmet -->
+				<item id="500" min="1" max="1" chance="0.03" /> <!-- Great Helmet -->
+				<item id="517" min="1" max="1" chance="0.03" /> <!-- Compound Helmet -->
+				<item id="1149" min="1" max="1" chance="0.03" /> <!-- Shining Circlet -->
+				<item id="2413" min="1" max="1" chance="0.03" /> <!-- Chain Hood -->
+				<item id="36549" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (High-grade) -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="92.2646" />
-				<item id="36532" min="1" max="1" chance="1.79372" />
-				<item id="36880" min="1" max="1" chance="0.54945" />
-				<item id="36666" min="1" max="1" chance="0.11211" />
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -349,27 +349,24 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="383" max="895" chance="70" />
-				<item id="1539" min="1" max="1" chance="2.55" />
-				<item id="36902" min="1" max="1" chance="0.3003" />
-				<item id="8724" min="1" max="1" chance="0.27027" />
-				<item id="4565" min="1" max="1" chance="0.05999" />
-				<item id="4573" min="1" max="1" chance="0.05999" />
-				<item id="4571" min="1" max="1" chance="0.05999" />
-				<item id="4569" min="1" max="1" chance="0.05999" />
-				<item id="4567" min="1" max="1" chance="0.05999" />
-				<item id="4577" min="1" max="1" chance="0.05" />
-				<item id="4585" min="1" max="1" chance="0.05" />
-				<item id="4581" min="1" max="1" chance="0.05" />
-				<item id="36562" min="1" max="1" chance="0.04" />
-				<item id="4589" min="1" max="1" chance="0.03" />
-				<item id="4593" min="1" max="1" chance="0.03" />
-				<item id="4597" min="1" max="1" chance="0.03" />
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="64" min="1" max="1" chance="0.03" /> <!-- Compound Boots -->
+				<item id="2437" min="1" max="1" chance="0.03" /> <!-- Drake Leather Boots -->
+				<item id="2436" min="1" max="1" chance="0.03" /> <!-- Theca Leather Boots -->
+				<item id="2435" min="1" max="1" chance="0.03" /> <!-- Demon's Boots -->
+				<item id="2434" min="1" max="1" chance="0.03" /> <!-- Rind Leather Boots -->
+				<item id="1128" min="1" max="1" chance="0.03" /> <!-- Adamantite Boots -->
+				<item id="1127" min="1" max="1" chance="0.03" /> <!-- Forgotten Boots -->
+				<item id="1126" min="1" max="1" chance="0.03" /> <!-- Crimson Boots -->
+				<item id="603" min="1" max="1" chance="0.03" /> <!-- Divine Boots -->
+				<item id="2438" min="1" max="1" chance="0.03" /> <!-- Full Plate Boots -->
+				<item id="1539" min="1" max="1" chance="0.75" /> <!-- Major Healing Potion -->
+				<item id="8724" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 49 -->
+				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="84.5668" />
-				<item id="36532" min="1" max="1" chance="1.62454" />
-				<item id="36880" min="1" max="1" chance="0.54945" />
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -401,22 +398,20 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="423" max="987" chance="70" />
-				<item id="36526" min="1" max="3" chance="18" />
-				<item id="36516" min="1" max="3" chance="12" />
-				<item id="36551" min="1" max="1" chance="1.7" />
-				<item id="36561" min="1" max="1" chance="1.33" />
-				<item id="4605" min="1" max="1" chance="0.05" />
-				<item id="4601" min="1" max="1" chance="0.05" />
-				<item id="4609" min="1" max="1" chance="0.05" />
-				<item id="36930" min="1" max="1" chance="0.003" />
-				<item id="36872" min="1" max="1" chance="0.003" />
-				<item id="36901" min="1" max="1" chance="0.0009" />
+				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
+				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
+				<item id="2433" min="1" max="1" chance="0.3" /> <!-- Boots of Seal -->
+				<item id="554" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Boots -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="93.473" />
-				<item id="36532" min="1" max="1" chance="2.25624" />
-				<item id="36880" min="1" max="1" chance="0.54945" />
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.003" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -448,24 +443,29 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="423" max="987" chance="70" />
-				<item id="36521" min="1" max="1" chance="13.2" />
-				<item id="36556" min="1" max="1" chance="5.3" />
-				<item id="36546" min="1" max="1" chance="1.9" />
-				<item id="8735" min="1" max="1" chance="0.14993" />
-				<item id="948" min="1" max="1" chance="0.08" />
-				<item id="36888" min="1" max="1" chance="0.03" />
-				<item id="36856" min="1" max="1" chance="0.03" />
-				<item id="4603" min="1" max="1" chance="0.03" />
-				<item id="4607" min="1" max="1" chance="0.03" />
-				<item id="4611" min="1" max="1" chance="0.03" />
-				<item id="36914" min="1" max="1" chance="0.03" />
+				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
+				<item id="107" min="1" max="1" chance="0.03" /> <!-- Compound Shield -->
+				<item id="2463" min="1" max="1" chance="0.3" /> <!-- Divine Gloves -->
+				<item id="2462" min="1" max="1" chance="0.03" /> <!--  Full Plate Gauntlets -->
+				<item id="2461" min="1" max="1" chance="0.03" /> <!--  Drake Leather Gloves -->
+				<item id="2460" min="1" max="1" chance="0.03" /> <!-- Theca Leather Gloves -->
+				<item id="2459" min="1" max="1" chance="0.03" /> <!-- Demon's Gloves -->
+				<item id="2458" min="1" max="1" chance="0.03" /> <!-- Rind Leather Gloves -->
+				<item id="2457" min="1" max="1" chance="0.03" /> <!-- Gloves of Seal -->
+				<item id="2456" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Gloves -->
+				<item id="2455" min="1" max="1" chance="0.03" /> <!-- Plated Leather Gloves -->
+				<item id="2453" min="1" max="1" chance="0.03" /> <!-- Chain Gloves -->
+				<item id="608" min="1" max="1" chance="0.03" /> <!-- Mithril Gauntlets -->
+				<item id="2464" min="1" max="1" chance="0.0055" /> <!-- Sealed Avadon Gloves -->
+  				<item id="948" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="36523" min="1" max="1" chance="0.0055" /> <!-- Adamantite -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="93.1834" />
-				<item id="36532" min="1" max="1" chance="2.24877" />
-				<item id="36880" min="1" max="1" chance="0.54945" />
-				<item id="36667" min="1" max="1" chance="0.14045" />
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.003" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -497,20 +497,32 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="519" max="1212" chance="70" />
-				<item id="36516" min="1" max="3" chance="21.6" />
-				<item id="36526" min="4" max="12" chance="9" />
-				<item id="36551" min="1" max="1" chance="3" />
-				<item id="36561" min="1" max="1" chance="2.4" />
-				<item id="36872" min="1" max="1" chance="0.04" />
-				<item id="36901" min="1" max="1" chance="0.04" />
-				<item id="36930" min="1" max="1" chance="0.04" />
+				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
+				<item id="2502" min="1" max="1" chance="0.003" /> <!-- Dwarven War Hammer -->
+				<item id="91" min="1" max="1" chance="0.0009" /> <!-- Heavy War Axe -->
+				<item id="206" min="1" max="1" chance="0.0009" /> <!-- Demon's Staff -->
+				<item id="210" min="1" max="1" chance="0.0009" /> <!-- Staff of Evil Spirits -->
+				<item id="2503" min="1" max="1" chance="0.0009" /> <!-- Yaksa Mace -->
+				<item id="7891" min="1" max="1" chance="0.0009" /> <!-- Ecliptic Axe -->
+				<item id="7892" min="1" max="1" chance="0.0009" /> <!-- Spell Breaker -->
+				<item id="7893" min="1" max="1" chance="0.0009" /> <!-- Kaim Vanul's Bones -->
+				<item id="7900" min="1" max="1" chance="0.0009" /> <!-- Ice Storm Hammer -->
+				<item id="205" min="1" max="1" chance="0.0009" /> <!-- Ghoul's Staff -->
+				<item id="204" min="1" max="1" chance="0.0009" /> <!-- Deadman's Staff -->
+				<item id="92" min="1" max="1" chance="0.0009" /> <!-- Spirit's Staff -->
+				<item id="171" min="1" max="1" chance="0.0009" /> <!-- Deadman's Glory -->
+				<item id="174" min="1" max="1" chance="0.0009" /> <!-- Nirvana Axe -->
+				<item id="175" min="1" max="1" chance="0.0009" /> <!-- Art of Battle Axe -->
+				<item id="196" min="1" max="1" chance="0.0009" /> <!-- Stick of Eternity -->
+				<item id="201" min="1" max="1" chance="0.0009" /> <!-- Club of Nature -->
+				<item id="202" min="1" max="1" chance="0.0009" /> <!-- Mace of Underworld -->
+				<item id="203" min="1" max="1" chance="0.0009" /> <!-- Pa'agrio Axe -->
+				<item id="7901" min="1" max="1" chance="0.0009" /> <!-- Star Buster -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="3" chance="58.2986" />
-				<item id="36532" min="1" max="1" chance="1.78465" />
-				<item id="36880" min="1" max="1" chance="0.54945" />
-				<item id="36667" min="1" max="1" chance="0.11891" />
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>

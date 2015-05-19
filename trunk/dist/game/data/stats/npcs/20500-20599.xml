@@ -4454,23 +4454,13 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="383" max="764" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5805000066757202">
-					<item id="395" min="1" max="1" chance="0.8713" /> <!-- Manticore Skin Shirt -->
-					<item id="1942" min="1" max="1" chance="38.2206" /> <!-- Manticore Skin Shirt Texture -->
-					<item id="417" min="1" max="1" chance="1.3915" /> <!-- Manticore Skin Gaiters -->
-					<item id="1943" min="1" max="1" chance="59.5166" /> <!-- Manticore Skin Gaiters Pattern -->
-				</group>
-				<group chance="25.952699661254883">
-					<item id="1869" min="1" max="1" chance="30.4228" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="60.8455" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.0423" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4056" /> <!-- Durable Metal Plate -->
-					<item id="5473" min="1" max="1" chance="2.1731" /> <!-- Recipe: Durable Metal Plate(100%) -->
-					<item id="2208" min="1" max="1" chance="3.1107" /> <!-- Recipe: Ogre Power Gauntlets -->
-				</group>
+				<item id="57" min="27" max="63" chance="70" /> <!-- Adena -->
+				<item id="884" min="1" max="1" chance="0.075" /> <!-- Ring of Protection -->
+				<item id="853" min="1" max="1" chance="0.03" /> <!-- Earring of Protection -->
+				<item id="916" min="1" max="1" chance="0.03" /> <!-- Necklace of Protection -->
+				<item id="173" min="1" max="1" chance="0.003" /> <!-- Skull Graver -->
+				<item id="263" min="1" max="1" chance="0.003" /> <!-- Chakram -->
+				<item id="952" min="1" max="1" chance="0.2" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4504,9 +4494,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1903" min="1" max="1" chance="15.2869" /> <!-- Elven Ring Piece -->
-				<item id="2296" min="1" max="1" chance="0.5091" /> <!-- Recipe: Atuba Mace -->
-				<item id="1878" min="1" max="1" chance="36.6579" /> <!-- Braided Hemp -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 		<collision>
