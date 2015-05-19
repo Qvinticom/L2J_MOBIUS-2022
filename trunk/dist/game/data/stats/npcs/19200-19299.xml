@@ -422,7 +422,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="6374840" sp="48480" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="41807" hpRegen="7.5" mp="41807" mpRegen="2.7" />
+			<vitals hp="26378" hpRegen="7.5" mp="2770" mpRegen="2.7" />
 			<attack physical="36225" magical="32100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1314" magical="1314" />
 			<attribute>
@@ -453,9 +453,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="17527" min="1" max="1" chance="1.48148" />
-				<item id="17526" min="1" max="1" chance="0.3003" />
-			</death>
+				<item id="17527" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+ 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="19217" level="99" type="L2Npc" name="Earth Wyrm Trasken" title="Hell's Gate">
