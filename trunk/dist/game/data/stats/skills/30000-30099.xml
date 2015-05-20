@@ -159,6 +159,7 @@
 		<set name="icon" val="icon.skill30008" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />	
+		<set name="abnormalVisualEffect" val="WIND_BLEND" />			
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -169,8 +170,7 @@
 		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect name="Invincible" time="10" val="0" />
-			<effect name="Buff" time="10" val="0">
+			<effect name="Hide">
 				<add stat="runSpd" val="#spd" />
 			</effect>
 		</for>
@@ -179,25 +179,35 @@
 		<!-- For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon. -->
 		<table name="#mpConsumes"> 77 78 79 80 81 82 82 83 83 84 </table>
 		<set name="icon" val="icon.skill30009" />
+		<set name="abnormalTime" val="5" />	
+		<set name="abnormalVisualEffect" val="DECEPTIVE_BLINK" />			
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<set name="removedOnAnyActionExceptMove" val="true" />		
 		<set name="mpConsume" val="#mpConsumes" />
-		<set name="abnormalTime" val="5" />
 		<set name="hitTime" val="1000" />
+		<set name="effectPoint" val="-575" />
+		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
+		<set name="flyRadius" val="400" />		
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
-		<effect name="Buff">
+		<set name="simultaneousCast" val="true" />			
+		<for>
+		<effect name="Hide">
 			<add stat="runSpd" val="100" />
 		</effect>
+		<effect name="Blink"/>
+		</for>		
 	</skill>
 	<skill id="30010" levels="1" name="Windy Refuge">
 		<!-- Cancels all debuffs and recovers HP/MP for 10 sec. inside a refuge of wind. Cannot move. -->
 		<set name="icon" val="icon.skill30010" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="10" />	
+		<set name="abnormalVisualEffect" val="WIND_HIDE" />	
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -205,13 +215,14 @@
 		<set name="isMagic" val="1" />
 		<set name="castRange" val="0" />
 		<for>
-			<effect name="Buff">
+			<effect name="Paralyze">
 				<add stat="regHp" val="266" /> <!-- Retail Value -->
 				<add stat="regMp" val="74" /> <!-- Retail Value -->
 			</effect>
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="10" />
-			</effect>
+			</effect>	
+			<effect name="Hide"/>				
 		</for>
 	</skill>
 	<skill id="30011" levels="12" name="Threatening Wind">
@@ -296,7 +307,7 @@
 		<table name="#mpConsume"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
 		<set name="icon" val="icon.skill30014" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1200" />
@@ -345,6 +356,8 @@
 		<table name="#mpConsume"> 18 37 40 </table>
 		<set name="icon" val="icon.skill30017" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalTime" val="600" />		
+		<set name="abnormalVisualEffect" val="SQUALL" />			
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
@@ -353,10 +366,12 @@
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Removes all debuffs and becomes invincible against targeting for 10 sec. -->
 	<skill id="30018" levels="1" name="Windy Illusion">
+		<!-- Level 1 : Removes all debuffs and becomes invincible against targeting for 10 sec. -->
 		<set name="icon" val="icon.skill30018" />
 		<set name="magicLvl" val="93" />
+		<set name="abnormalTime" val="10" />	
+		<set name="abnormalVisualEffect" val="WIND_ILLUSION" />			
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="41" />
 		<set name="effectRange" val="600" />
@@ -365,6 +380,11 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>				
+		</for>		
 	</skill>
 	<skill id="30019" levels="8" name="Sayha's Word">
 		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
@@ -394,6 +414,8 @@
 	<skill id="30020" levels="1" name="Sayha's Fury">
 		<!-- For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
 		<set name="icon" val="icon.skill30020" />
+		<set name="abnormalTime" val="30" />	
+		<set name="abnormalVisualEffect" val="SAYHA_FURY" />			
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="targetType" val="SELF" />
@@ -405,7 +427,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="fury">
+			<effect name="Buff" val="0" stackOrder="1" stackType="fury">
 				<add stat="runSpd" val="1.5" />
 				<mul stat="mCritRate" val="0.50" />
 				<mul stat="rCrit" val="0.50" />
