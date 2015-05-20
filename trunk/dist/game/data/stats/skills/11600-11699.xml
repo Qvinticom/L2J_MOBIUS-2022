@@ -539,54 +539,73 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : For 30 min., selected party member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 	<skill id="11615" levels="1" name="Battle Ditty">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., selected party member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11615" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="181" />
-		<set name="castRange" val="900" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : For 30 min., selected party member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 	<skill id="11616" levels="1" name="Protective Ditty">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., selected party member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11616" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="181" />
-		<set name="abnormalTime" val="1800" />
-		<set name="castRange" val="900" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : For 30 min., selected clan member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 	<skill id="11617" levels="1" name="Frezied Battle Ditty">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., selected clan member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11617" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="181" />
-		<set name="castRange" val="900" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : For 30 min., selected clan member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 	<skill id="11618" levels="1" name="Frenzied Protective Ditty">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., selected clan member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<set name="icon" val="icon.skill11618" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="181" />
-		<set name="castRange" val="900" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11619" levels="3" name="Soul Ditty">
 		<!-- AUTO GENERATED SKILL -->

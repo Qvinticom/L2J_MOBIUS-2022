@@ -144,19 +144,44 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
+	<!-- Level 2 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
+	<!-- Level 3 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
+	<!-- Level 4 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
+	<!-- Level 5 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
+	<!-- Level 101 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
+	<!-- Level 102 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
+	<!-- Level 103 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
+	<!-- Level 104 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
+	<!-- Level 105 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
+	<!-- Level 106 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
+	<!-- Level 107 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
+	<!-- Level 108 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
+	<!-- Level 109 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
+	<!-- Level 110 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
+	<!-- Level 201 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 6 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 1 Time | Increases the effect's duration.) -->
+	<!-- Level 202 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 12 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 2 Time | Increases the effect's duration.) -->
+	<!-- Level 203 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 18 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 3 Time | Increases the effect's duration.) -->
+	<!-- Level 204 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 24 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 4 Time | Increases the effect's duration.) -->
+	<!-- Level 205 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 30 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 5 Time | Increases the effect's duration.) -->
+	<!-- Level 206 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 36 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 6 Time | Increases the effect's duration.) -->
+	<!-- Level 207 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 42 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 7 Time | Increases the effect's duration.) -->
+	<!-- Level 208 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 48 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 8 Time | Increases the effect's duration.) -->
+	<!-- Level 209 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 54 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 9 Time | Increases the effect's duration.) -->
+	<!-- Level 210 : Summons a fairy that follows and periodically heals the selected party member for 2 minutes. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 10 Time | Increases the effect's duration.) -->
 	<skill id="11754" levels="5" name="Fairy of Life">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
-		<table name="#mpConsumes"> 43 46 48 52 55 </table>
+		<table name="#magicLvl"> 85 88 91 94 97 </table>
+		<table name="#mpConsume"> 43 46 48 52 55 </table>
 		<set name="icon" val="icon.skill11754" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11755" levels="8" name="Radiant Heal" enchantGroup1="10">
 		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
@@ -245,28 +270,28 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : Renders the selected party member invincible for 10 seconds. -->
 	<skill id="11758" levels="1" name="Celestial Protection">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Renders the selected party member invincible for 10 seconds. -->
 		<set name="icon" val="icon.skill11758" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="17" />
-		<set name="castRange" val="600" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11759" levels="1" name="Celestial Party Protection">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Renders all party members invincible for 10 seconds. -->
-		<set name="icon" val="icon.skill11759" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Level 1 : Renders all party members invincible for 10 seconds. -->
+	<skill id="11759" levels="1" name="Celestial Party Protection">
+		<set name="icon" val="icon.skill11759" />
+		<set name="magicLvl" val="87" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="PARTY" />
 	</skill>
 	<skill id="11760" levels="8" name="Radiant Recharge" enchantGroup1="10">
 		<!-- Instantly recovers target's MP with a maximum of 166 Power depending on target's level. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
@@ -508,19 +533,77 @@
 		<enchant4 name="element" val="5" />
 		<enchant4 name="elementPower" val="#enchelementPower" />
 	</skill>
+	<!-- Level 1 : Inflicts damage on target and nearby enemies with 117 Power and decreases aggression toward yourself. -->
+	<!-- Level 2 : Inflicts damage on target and nearby enemies with 119 Power and decreases aggression toward yourself. -->
+	<!-- Level 3 : Inflicts damage on target and nearby enemies with 123 Power and decreases aggression toward yourself. -->
+	<!-- Level 4 : Inflicts damage on target and nearby enemies with 126 Power and decreases aggression toward yourself. -->
+	<!-- Level 5 : Inflicts damage on target and nearby enemies with 129 Power and decreases aggression toward yourself. -->
+	<!-- Level 6 : Inflicts damage on target and nearby enemies with 133 Power and decreases aggression toward yourself. -->
+	<!-- Level 7 : Inflicts damage on target and nearby enemies with 136 Power and decreases aggression toward yourself. -->
+	<!-- Level 8 : Inflicts damage on target and nearby enemies with 139 Power and decreases aggression toward yourself. -->
+	<!-- Level 101 : Inflicts damage on target and nearby enemies with 143 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Inflicts damage on target and nearby enemies with 144 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Inflicts damage on target and nearby enemies with 146 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Inflicts damage on target and nearby enemies with 148 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Inflicts damage on target and nearby enemies with 150 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Inflicts damage on target and nearby enemies with 151 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Inflicts damage on target and nearby enemies with 153 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Inflicts damage on target and nearby enemies with 155 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Inflicts damage on target and nearby enemies with 156 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Inflicts damage on target and nearby enemies with 158 Power and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Inflicts damage on target and nearby enemies with 143 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 1 Duel | Increases Power during PvP.) -->
+	<!-- Level 202 : Inflicts damage on target and nearby enemies with 144 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 2 Duel | Increases Power during PvP.) -->
+	<!-- Level 203 : Inflicts damage on target and nearby enemies with 146 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 3 Duel | Increases Power during PvP.) -->
+	<!-- Level 204 : Inflicts damage on target and nearby enemies with 148 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 4 Duel | Increases Power during PvP.) -->
+	<!-- Level 205 : Inflicts damage on target and nearby enemies with 150 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 5 Duel | Increases Power during PvP.) -->
+	<!-- Level 206 : Inflicts damage on target and nearby enemies with 151 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 6 Duel | Increases Power during PvP.) -->
+	<!-- Level 207 : Inflicts damage on target and nearby enemies with 153 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 7 Duel | Increases Power during PvP.) -->
+	<!-- Level 208 : Inflicts damage on target and nearby enemies with 155 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 8 Duel | Increases Power during PvP.) -->
+	<!-- Level 209 : Inflicts damage on target and nearby enemies with 156 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 9 Duel | Increases Power during PvP.) -->
+	<!-- Level 210 : Inflicts damage on target and nearby enemies with 158 Power and decreases aggression toward yourself. Enchant Duel: Increases PvP Power. (+ 10 Duel | Increases Power during PvP.) -->
+	<!-- Level 301 : Inflicts damage on target and nearby enemies with 143 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 1 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 302 : Inflicts damage on target and nearby enemies with 144 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 2 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 303 : Inflicts damage on target and nearby enemies with 146 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 3 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 304 : Inflicts damage on target and nearby enemies with 148 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 4 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 305 : Inflicts damage on target and nearby enemies with 150 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 5 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 306 : Inflicts damage on target and nearby enemies with 151 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 6 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 307 : Inflicts damage on target and nearby enemies with 153 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 7 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 308 : Inflicts damage on target and nearby enemies with 155 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 8 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 309 : Inflicts damage on target and nearby enemies with 156 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 9 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 310 : Inflicts damage on target and nearby enemies with 158 Power and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy. (+ 10 Holy Attack | Increases Holy damage.) -->
+	<!-- Level 401 : Inflicts damage on target and nearby enemies with 143 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 1 Dark Attack | Increases dark damage.) -->
+	<!-- Level 402 : Inflicts damage on target and nearby enemies with 144 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 2 Dark Attack | Increases dark damage.) -->
+	<!-- Level 403 : Inflicts damage on target and nearby enemies with 146 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 3 Dark Attack | Increases dark damage.) -->
+	<!-- Level 404 : Inflicts damage on target and nearby enemies with 148 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 4 Dark Attack | Increases dark damage.) -->
+	<!-- Level 405 : Inflicts damage on target and nearby enemies with 150 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 5 Dark Attack | Increases dark damage.) -->
+	<!-- Level 406 : Inflicts damage on target and nearby enemies with 151 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 6 Dark Attack | Increases dark damage.) -->
+	<!-- Level 407 : Inflicts damage on target and nearby enemies with 153 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 7 Dark Attack | Increases dark damage.) -->
+	<!-- Level 408 : Inflicts damage on target and nearby enemies with 155 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 8 Dark Attack | Increases dark damage.) -->
+	<!-- Level 409 : Inflicts damage on target and nearby enemies with 156 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 9 Dark Attack | Increases dark damage.) -->
+	<!-- Level 410 : Inflicts damage on target and nearby enemies with 158 Power and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark. (+ 10 Dark Attack | Increases dark damage.) -->
+	<!-- Level 901 : Inflicts damage on target and nearby enemies with 143 Power and decreases aggression toward yourself. (+ 1 Recovery | Decreases Cooldown.) -->
+	<!-- Level 902 : Inflicts damage on target and nearby enemies with 144 Power and decreases aggression toward yourself. (+ 2 Recovery | Decreases Cooldown.) -->
+	<!-- Level 903 : Inflicts damage on target and nearby enemies with 146 Power and decreases aggression toward yourself. (+ 3 Recovery | Decreases Cooldown.) -->
+	<!-- Level 904 : Inflicts damage on target and nearby enemies with 148 Power and decreases aggression toward yourself. (+ 4 Recovery | Decreases Cooldown.) -->
+	<!-- Level 905 : Inflicts damage on target and nearby enemies with 150 Power and decreases aggression toward yourself. (+ 5 Recovery | Decreases Cooldown.) -->
+	<!-- Level 906 : Inflicts damage on target and nearby enemies with 151 Power and decreases aggression toward yourself. (+ 6 Recovery | Decreases Cooldown.) -->
+	<!-- Level 907 : Inflicts damage on target and nearby enemies with 153 Power and decreases aggression toward yourself. (+ 7 Recovery | Decreases Cooldown.) -->
+	<!-- Level 908 : Inflicts damage on target and nearby enemies with 155 Power and decreases aggression toward yourself. (+ 8 Recovery | Decreases Cooldown.) -->
+	<!-- Level 909 : Inflicts damage on target and nearby enemies with 156 Power and decreases aggression toward yourself. (+ 9 Recovery | Decreases Cooldown.) -->
+	<!-- Level 910 : Inflicts damage on target and nearby enemies with 158 Power and decreases aggression toward yourself. (+ 10 Recovery | Decreases Cooldown.) -->
 	<skill id="11767" levels="8" name="Mass Dark Veil">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on target and nearby enemies with 117 Power and decreases aggression toward yourself. -->
-		<table name="#mpConsumes"> 423 432 450 468 487 506 526 547 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<table name="#mpConsume"> 423 432 450 468 487 506 526 547 </table>
 		<set name="icon" val="icon.skill11767" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3780" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="3779" />
 		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="6700" />
+		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="11768" levels="1" name="Rebirth" enchantGroup1="10" enchantGroup2="10">
 		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
@@ -696,13 +779,14 @@
 			</effect>
 		</enchant3for>
 	</skill>
+	<!-- Level 1 : Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
+	<!-- Level 2 : Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
 	<skill id="11773" levels="2" name="Lakcis Disc">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
 		<set name="icon" val="icon.skill11773" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11774" levels="4" name="Summon Tree of Life" enchantGroup1="10">
 		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
@@ -851,19 +935,55 @@
 			</effect>
 		</enchant3for>
 	</skill>
+	<!-- Level 1 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+	<!-- Level 2 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+	<!-- Level 3 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+	<!-- Level 4 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+	<!-- Level 5 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+	<!-- Level 6 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+	<!-- Level 101 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 901 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 1 Recovery | Decreases Cooldown.) -->
+	<!-- Level 902 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 2 Recovery | Decreases Cooldown.) -->
+	<!-- Level 903 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 3 Recovery | Decreases Cooldown.) -->
+	<!-- Level 904 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 4 Recovery | Decreases Cooldown.) -->
+	<!-- Level 905 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 5 Recovery | Decreases Cooldown.) -->
+	<!-- Level 906 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 6 Recovery | Decreases Cooldown.) -->
+	<!-- Level 907 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 7 Recovery | Decreases Cooldown.) -->
+	<!-- Level 908 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 8 Recovery | Decreases Cooldown.) -->
+	<!-- Level 909 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 9 Recovery | Decreases Cooldown.) -->
+	<!-- Level 910 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. (+ 10 Recovery | Decreases Cooldown.) -->
+	<!-- Level 201 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
 	<skill id="11778" levels="6" name="Fatal Sleep">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
-		<table name="#mpConsumes"> 26 26 27 30 31 33 </table>
+		<table name="#magicLvl"> 85 86 89 92 95 98 </table>
+		<table name="#mpConsume"> 26 26 27 30 31 33 </table>
 		<set name="icon" val="icon.skill11778" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11779" levels="5" name="Yoked status">
 		<table name="#spd">0.5 0.4 0.3 0.2 0.1</table>
@@ -947,16 +1067,16 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : Restarts target's debuff timers. -->
 	<skill id="11783" levels="1" name="Reset">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Restarts target's debuff timers. -->
 		<set name="icon" val="icon.skill11783" />
+		<set name="magicLvl" val="97" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="6000" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11784" levels="4" name="Blessed Resurrection">
 		<!-- Resurrects a dead target and restores 85% of the XP lost. -->

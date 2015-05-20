@@ -943,25 +943,29 @@
 			<effect name="TargetMe" />
 		</for>
 	</skill>
+	<!-- Level 1 : Transfer the aggression of nearby enemies around target to another party member. -->
+	<!-- Level 101 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
 	<skill id="10778" levels="1" name="Diversion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Transfer the aggression of nearby enemies around target to another party member. -->
 		<set name="icon" val="icon.skill10778" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="85" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="60000" />
-		<set name="mpConsume" val="51" />
-		<table name="#ench1mpConsume">81 78 74 71 68 64 61 57 54 51</table>
-		<set name="targetType" val="ONE" />
-		<set name="magicLvl" val="85" />
 		<set name="skillRadius" val="1100" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="effectRange" val="1100" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<!--<for>
-			<effect name="ShiftTarget" val="0" />
-		</for>-->
+		<set name="reuseDelay" val="60000" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="10779" levels="4" name="Quick Fire">
 		<set name="hitTime" val="800" />
@@ -1265,23 +1269,19 @@
 			</effect>
 		</enchant1for>
 	</skill>
+	<!-- Level 1 : Remotely controls a trap to set it off. -->
 	<skill id="10788" levels="1" name="Remote Control">
+		<set name="icon" val="icon.skill10788" />
+		<set name="magicLvl" val="91" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="800" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="10000" />
-		<set name="mpConsume" val="10" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="10000" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<cond addName="1" msgId="113">
 			<target active_effect_id="10786" />
 		</cond>
-		<!--<for>
-			<effect name="RemoteControl" noicon="1" val="0" />
-			<effect chanceType="ONE" name="TriggerSkillByAttack" noicon="1" triggeredId="10803" triggeredLevel="1" val="0" />
-		</for>-->
 	</skill>
 	<skill id="10789" levels="1" name="Flash Trap">
 		<!-- AUTO GENERATED SKILL -->

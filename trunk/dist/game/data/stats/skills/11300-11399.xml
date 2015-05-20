@@ -306,16 +306,16 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Summons 1900 Beast Soulshots. Consumes 1 Crystal (R-grade). -->
 	<skill id="11316" levels="1" name="Summon Soulshots">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons 1900 Beast Soulshots. Consumes 1 Crystal (R-grade). -->
 		<set name="icon" val="icon.skill11316" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="398" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11317" levels="8" name="Servitor Group Heal">
 		<!-- AUTO GENERATED SKILL -->
@@ -925,61 +925,91 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
+	<!-- Level 1 : For 30 min., all servitors' Atk. Spd. + 10%. -->
+	<!-- Level 2 : For 30 min., all servitors' Atk. Spd. + 12%. -->
+	<!-- Level 3 : For 30 min., all servitors' Atk. Spd. + 15%. -->
+	<!-- Level 4 : For 30 min., all servitors' Atk. Spd. + 20%. -->
 	<skill id="11347" levels="4" name="Greater Servitor Haste">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., all servitors' Atk. Spd. + 10%. -->
-		<table name="#mpConsumes"> 61 67 73 79 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 61 67 73 79 </table>
+		<table name="#pAtkSpd"> 1.1 1.12 1.15 1.2 </table>
 		<set name="icon" val="icon.skill11347" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11348" levels="4" name="Servitor Death Whisper">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., all servitors' Critical Damage + 10%. -->
-		<table name="#mpConsumes"> 61 67 73 79 </table>
-		<set name="icon" val="icon.skill11348" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11349" levels="4" name="Greater Servitor Might">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., all servitors' P. Atk. + 10%. -->
-		<table name="#mpConsumes"> 61 67 73 79 </table>
-		<set name="icon" val="icon.skill11349" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11350" levels="4" name="Arcane Rage">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Use Arcana Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-		<table name="#mpConsumes"> 53 60 67 70 </table>
-		<set name="icon" val="icon.skill11350" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="2780" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Level 1 : For 30 min., all servitors' Critical Damage + 10%. -->
+	<!-- Level 2 : For 30 min., all servitors' Critical Damage + 12%. -->
+	<!-- Level 3 : For 30 min., all servitors' Critical Damage + 15%. -->
+	<!-- Level 4 : For 30 min., all servitors' Critical Damage + 20%. -->
+	<skill id="11348" levels="4" name="Servitor Death Whisper">
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 61 67 73 79 </table>
+		<set name="icon" val="icon.skill11348" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Level 1 : For 30 min., all servitors' P. Atk. + 10%. -->
+	<!-- Level 2 : For 30 min., all servitors' P. Atk. + 12%. -->
+	<!-- Level 3 : For 30 min., all servitors' P. Atk. + 15%. -->
+	<!-- Level 4 : For 30 min., all servitors' P. Atk. + 20%. -->
+	<skill id="11349" levels="4" name="Greater Servitor Might">
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 61 67 73 79 </table>
+		<table name="#pAtk"> 1.1 1.12 1.15 1.2 </table>
+		<set name="icon" val="icon.skill11349" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="3500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="10000" />
+		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Level 1 : Use Arcana Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
+	<!-- Level 2 : Use Arcana Wrath to inflict severe damage on a target with 202 Power added to M. Atk. -->
+	<!-- Level 3 : Use Arcana Wrath to inflict severe damage on a target with 215 Power added to M. Atk. -->
+	<!-- Level 4 : Use Arcana Wrath to inflict severe damage on a target with 227 Power added to M. Atk. -->
+	<skill id="11350" levels="4" name="Arcane Rage">
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#power"> 188 202 215 227 </table>
+		<table name="#mpConsume"> 53 60 67 70 </table>
+		<set name="icon" val="icon.skill11350" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2779" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2400" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11351" levels="5" name="Arcane Link">
 		<!-- AUTO GENERATED SKILL -->
@@ -998,19 +1028,25 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
+	<!-- Level 2 : Use Elemental Wrath to inflict severe damage on a target with 202 Power added to M. Atk. -->
+	<!-- Level 3 : Use Elemental Wrath to inflict severe damage on a target with 215 Power added to M. Atk. -->
+	<!-- Level 4 : Use Elemental Wrath to inflict severe damage on a target with 227 Power added to M. Atk. -->
 	<skill id="11353" levels="4" name="Elemental Rage">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-		<table name="#mpConsumes"> 53 60 67 70 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#power"> 188 202 215 227 </table>
+		<table name="#mpConsume"> 53 60 67 70 </table>
 		<set name="icon" val="icon.skill11353" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="2780" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2779" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2400" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11354" levels="5" name="Elemental Link">
 		<!-- AUTO GENERATED SKILL -->
@@ -1029,19 +1065,25 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
+	<!-- Level 2 : Use Spectral Wrath to inflict severe damage on a target with 202 Power added to M. Atk. -->
+	<!-- Level 3 : Use Spectral Wrath to inflict severe damage on a target with 215 Power added to M. Atk. -->
+	<!-- Level 4 : Use Spectral Wrath to inflict severe damage on a target with 227 Power added to M. Atk. -->
 	<skill id="11356" levels="4" name="Spectral Rage">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-		<table name="#mpConsumes"> 53 60 67 70 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#power"> 188 202 215 227 </table>
+		<table name="#mpConsume"> 53 60 67 70 </table>
 		<set name="icon" val="icon.skill11356" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="2780" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2779" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2400" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11357" levels="5" name="Spectral Link">
 		<!-- AUTO GENERATED SKILL -->
@@ -1060,18 +1102,21 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
+	<!-- Level 2 : Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
+	<!-- Level 3 : Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
 	<skill id="11359" levels="3" name="Summon Protection Stone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
-		<table name="#mpConsumes"> 137 132 137 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 137 132 137 </table>
 		<set name="icon" val="icon.skill11359" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="400000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11360" levels="3" name="Arcane Protection">
 		<!-- AUTO GENERATED SKILL -->
@@ -1085,16 +1130,19 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="isMagic" val="4" />
 	</skill>
+	<!-- Level 1 : Summons an instant Moving Portal for 30 sec. Consumes 5 Spirit Ores. -->
+	<!-- Level 2 : Summons an instant Moving Portal for 30 sec. -->
+	<!-- Level 3 : Summons an instant Moving Portal for 30 sec. -->
 	<skill id="11361" levels="3" name="Summon Moving Portal">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons an instant Moving Portal for 30 sec. Consumes 5 Spirit Ores. -->
+		<table name="#magicLvl"> 99 99 99 </table>
 		<set name="icon" val="icon.skill11361" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="128" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="50000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11362" levels="3" name="Summon Moving Portal">
 		<!-- AUTO GENERATED SKILL -->
@@ -1103,16 +1151,19 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Teleports using the Moving Portal summoned. Consumes 1 Spirit Ore. -->
+	<!-- Level 2 : Teleports using the Moving Portal summoned. -->
+	<!-- Level 3 : Teleports using the Moving Portal summoned. -->
 	<skill id="11363" levels="3" name="Instant Teleport">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Teleports using the Moving Portal summoned. Consumes 1 Spirit Ore. -->
-		<table name="#mpConsumes"> 108 104 108 </table>
+		<table name="#magicLvl"> 99 99 99 </table>
+		<table name="#mpConsume"> 108 104 108 </table>
 		<set name="icon" val="icon.skill11363" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11364" levels="3" name="Elemental Dash">
 		<!-- AUTO GENERATED SKILL -->
@@ -1125,20 +1176,30 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
+	<!-- Level 1 : Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores. -->
+	<!-- Level 2 : Attacks target with 506 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. -->
+	<!-- Level 3 : Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. -->
 	<skill id="11365" levels="3" name="Summon Demonic Crucifix">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores. -->
-		<table name="#mpConsumes"> 394 382 394 </table>
+		<table name="#magicLvl"> 99 99 99 </table>
+		<table name="#power"> 518 506 518 </table>
+		<table name="#mpConsume"> 394 382 394 </table>
 		<set name="icon" val="icon.skill11365" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11366" levels="3" name="Spectral Curse">
 		<!-- AUTO GENERATED SKILL -->

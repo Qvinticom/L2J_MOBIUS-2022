@@ -72,17 +72,26 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
+	<!-- Level 1 : Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
+	<!-- Level 2 : Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
+	<!-- Level 3 : Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
+	<!-- Level 4 : Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
 	<skill id="19109" levels="4" name="Siege Golem's Spirit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill19109" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="70" />
 		<set name="hitTime" val="10000" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="19110" levels="5" name="Clan Resilience">
 		<!-- AUTO GENERATED SKILL -->

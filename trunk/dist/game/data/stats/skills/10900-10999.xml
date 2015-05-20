@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<!-- Level 1 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Skill Power + 5%, and received M. Critical Damage - 5%. -->
+	<!-- Level 2 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 6%, Skill Power + 6%, and received M. Critical Damage - 7%. -->
+	<!-- Level 3 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 7%, Skill Power + 7%, and received M. Critical Damage - 10%. -->
+	<!-- Level 4 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 10%, Skill Power + 10%, and received M. Critical Damage - 15%. -->
 	<skill id="10903" levels="4" name="Hawk Eye">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Skill Power + 5%, and received M. Critical Damage - 5%. -->
-		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 62 69 76 83 </table>
+		<table name="#pAtk"> 1.05 1.06 1.07 1.1 </table>
 		<set name="icon" val="icon.skill11872" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : Skill power + 5%. -->
+	<!-- Level 2 : Skill power + 6%. -->
+	<!-- Level 3 : Skill power + 7%. -->
+	<!-- Level 4 : Skill power + 10%. -->
 	<skill id="10904" levels="4" name="Superior Skill Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Skill power + 5%. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11874" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -32,24 +46,44 @@
 		<set name="coolTime" val="250" />
 		<set name="reuseDelay" val="30000" />
 	</skill>
+	<!-- Level 1 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, PvP damage + 5%, received magic skill damage during PvP - 5%. -->
+	<!-- Level 2 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 6%, PvP damage + 6%, received magic skill damage during PvP - 6%. -->
+	<!-- Level 3 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 7%, PvP damage + 7%, received magic skill damage during PvP - 7%. -->
+	<!-- Level 4 : For 30 minutes when a bow or crossbow is equipped, P. Atk. + 10%, PvP damage + 10%, received magic skill damage during PvP - 10%. -->
 	<skill id="10950" levels="4" name="Vengeful Sniper">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, PvP damage + 5%, received magic skill damage during PvP - 5%. -->
-		<table name="#mpConsumes"> 62 69 76 83 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 62 69 76 83 </table>
+		<table name="#pAtk"> 1.05 1.06 1.07 1.1 </table>
 		<set name="icon" val="icon.skill11873" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
+	<!-- Level 1 : PvP damage + 5%, and P. Atk. + 5% when equipped with a crossbow. -->
+	<!-- Level 2 : PvP damage + 7%, and P. Atk. + 7% when equipped with a crossbow. -->
+	<!-- Level 3 : PvP damage + 10%, and P. Atk. + 10% when equipped with a crossbow. -->
+	<!-- Level 4 : PvP damage + 15%, and P. Atk. + 15% when equipped with a crossbow. -->
 	<skill id="10951" levels="4" name="Superior Instinct Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 5%, and P. Atk. + 5% when equipped with a crossbow. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#pAtk"> 1.05 1.07 1.1 1.15 </table>
 		<set name="icon" val="icon.skill10951" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10997" levels="1" name="Archer - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->

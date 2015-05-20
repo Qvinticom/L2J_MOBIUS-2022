@@ -300,13 +300,13 @@
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
+	<!-- Level 1 : Casts Sigel Force on entire party, which increases P Atk. by 1%. -->
 	<skill id="1927" levels="1" name="Sigel Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Sigel Force on entire party, which increases P Atk. by 1%. -->
 		<set name="icon" val="icon.icon_sigel" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="1928" levels="1" name="Sigel Force">
@@ -318,13 +318,13 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 	</skill>
+	<!-- Level 1 : Casts Tyrr Force on entire party, which increases P. Critical Rate by 1%. -->
 	<skill id="1929" levels="1" name="Tyrr Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Tyrr Force on entire party, which increases P. Critical Rate by 1%. -->
 		<set name="icon" val="icon.icon_tir" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="1930" levels="1" name="Tyrr Force">
@@ -336,14 +336,19 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 	</skill>
+	<!-- Level 1 : Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
 	<skill id="1931" levels="1" name="Othell Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
 		<set name="icon" val="icon.icon_othel" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1932" levels="1" name="Othell Force">
 		<!-- AUTO GENERATED SKILL -->
@@ -354,14 +359,19 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 	</skill>
+	<!-- Level 1 : Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
 	<skill id="1933" levels="1" name="Yul Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
 		<set name="icon" val="icon.icon_yr" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1934" levels="1" name="Yul Force">
 		<!-- AUTO GENERATED SKILL -->
@@ -372,14 +382,19 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 	</skill>
+	<!-- Level 1 : Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
 	<skill id="1935" levels="1" name="Feoh Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
 		<set name="icon" val="icon.icon_feoh" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1936" levels="1" name="Feoh Force">
 		<!-- AUTO GENERATED SKILL -->
@@ -390,14 +405,14 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 	</skill>
+	<!-- Level 1 : Casts Wynn Force on entire party, which decreases P./M. Skill MP Consumption by 3%. -->
 	<skill id="1937" levels="1" name="Wynn Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Wynn Force on entire party, which decreases P./M. Skill MP Consumption by 3%. -->
 		<set name="icon" val="icon.icon_wynn" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1938" levels="1" name="Wynn Force">
 		<!-- AUTO GENERATED SKILL -->
@@ -408,14 +423,19 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 	</skill>
+	<!-- Level 1 : Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
 	<skill id="1939" levels="1" name="Aeore Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
 		<set name="icon" val="icon.icon_eolh" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1940" levels="1" name="Aeore Force">
 		<!-- AUTO GENERATED SKILL -->

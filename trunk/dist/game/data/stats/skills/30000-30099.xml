@@ -266,32 +266,44 @@
 			<param targetType="ONE" />
 		</effect>
 	</skill>
+	<!-- Level 1 : Trades places with target. Requires a sword or blunt weapon. PC targets only. -->
 	<skill id="30013" levels="1" name="Switch Places">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Trades places with target. Requires a sword or blunt weapon. PC targets only. -->
 		<set name="icon" val="icon.skill30005" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="ONE" />
 		<set name="mpConsume" val="705" />
-		<set name="castRange" val="900" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 2 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 3 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 4 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 5 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 6 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 7 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 8 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 9 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 10 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 11 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+	<!-- Level 12 : Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
 	<skill id="30014" levels="12" name="Compelling Wind">
-		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
-		<table name="#mpConsumes"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
+		<table name="#magicLvl"> 76 78 80 82 84 86 88 90 92 94 96 98 </table>
+		<table name="#mpConsume"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
 		<set name="icon" val="icon.skill30014" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="abnormalTime" val="5" />
-		<set name="castRange" val="900" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="30015" levels="1" name="Mass Compelling Wind">
 		<!-- AUTO GENERATED SKILL -->
@@ -325,33 +337,34 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
+	<!-- Level 2 : For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. Speed + 7. -->
+	<!-- Level 3 : Removes all debuffs, and for 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. Speed + 7. -->
 	<skill id="30017" levels="3" name="Squall">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
-		<table name="#mpConsumes"> 18 37 40 </table>
+		<table name="#magicLvl"> 40 76 85 </table>
+		<table name="#mpConsume"> 18 37 40 </table>
 		<set name="icon" val="icon.skill30017" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="abnormalTime" val="600" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="30018" levels="1" name="Windy Illusion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Removes all debuffs and becomes invincible against targeting for 10 sec. -->
-		<set name="icon" val="icon.skill30018" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="abnormalTime" val="10" />		
+	</skill>
+	<!-- Level 1 : Removes all debuffs and becomes invincible against targeting for 10 sec. -->
+	<skill id="30018" levels="1" name="Windy Illusion">
+		<set name="icon" val="icon.skill30018" />
+		<set name="magicLvl" val="93" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="41" />
-		<set name="castRange" val="600" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="30019" levels="8" name="Sayha's Word">
 		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->

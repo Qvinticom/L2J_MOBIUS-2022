@@ -156,31 +156,59 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0" />
 		</for>
 	</skill>
+	<!-- Level 1 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 2 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 3 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 4 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 5 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 6 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 7 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 8 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 9 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 10 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 11 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 12 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 13 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 14 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 15 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 16 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+	<!-- Level 17 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 18 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 19 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 20 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 21 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 22 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 23 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
+	<!-- Level 24 : Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 30%. Requires a fist weapon. -->
 	<skill id="30508" levels="24" name="Right Sidestep">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
-		<table name="#mpConsumes"> 7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31 </table>
+		<table name="#magicLvl"> 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31 </table>
 		<set name="icon" val="icon.skill30508" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="ONE" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="300" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="300" />
 		<set name="hitTime" val="100" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="7000" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="ONE" />
 	</skill>
+	<!-- Level 1 : Disables targeting and retreats backwards, recovering 10% HP. Requires a Fist Weapon. -->
+	<!-- Level 2 : Disables targeting and retreats backwards, recovering 20% HP. Requires a Fist Weapon. -->
+	<!-- Level 3 : Disables targeting and retreats backwards, recovering 30% HP. Requires a Fist Weapon. -->
+	<!-- Level 4 : Disables targeting and retreats backwards, recovering 40% HP. Requires a Fist Weapon. -->
 	<skill id="30509" levels="4" name="Back Step">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Disables targeting and retreats backwards, recovering 10% HP. Requires a Fist Weapon. -->
-		<table name="#mpConsumes"> 27 30 35 44 </table>
+		<table name="#magicLvl"> 76 89 93 97 </table>
+		<table name="#mpConsume"> 27 30 35 44 </table>
 		<set name="icon" val="icon.skill30509" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="280" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="280" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="60000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="30510" levels="1" name="Infighter">
 		<!-- AUTO GENERATED SKILL -->
@@ -214,17 +242,16 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
 	<skill id="30512" levels="1" name="Distortion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
 		<set name="icon" val="icon.skill30512" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="41" />
-		<set name="abnormalTime" val="60" />	
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="180000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="30514" levels="2" name="Fluid Weave">
 		<!-- AUTO GENERATED SKILL -->
@@ -247,51 +274,65 @@
 			<add stat="mEvas" val="#mEvas" />
 		</effect>
 	</skill>
+	<!-- Level 1 : Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon. -->
 	<skill id="30515" levels="1" name="Spallation">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon. -->
 		<set name="icon" val="icon.skill30515" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="31" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
-	</skill>
-	<skill id="30516" levels="1" name="Gravity Barrier">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Cancels all debuffs and becomes invincible against all debuffs and damage. -->
-		<set name="icon" val="icon.skill30516" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Level 1 : Cancels all debuffs and becomes invincible against all debuffs and damage. -->
+	<skill id="30516" levels="1" name="Gravity Barrier">
+		<set name="icon" val="icon.skill30516" />
+		<set name="magicLvl" val="93" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="30" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 2 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 3 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 4 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 5 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 6 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 7 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+	<!-- Level 8 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
 	<skill id="30517" levels="8" name="Heavy Hand">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-		<table name="#mpConsumes"> 73 74 75 75 75 76 76 77 </table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 73 74 75 75 75 76 76 77 </table>
 		<set name="icon" val="icon.skill30517" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="AURA" />
-		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="30518" levels="8" name="Reverse Weight">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
-		<table name="#mpConsumes"> 1479 1487 1500 1510 1516 1523 1532 1544 </table>
-		<table name="#power">6466 6916 7390 7888 28134 30832 34221 38446</table>
-		<set name="icon" val="icon.skill30518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AREA" />
-		<set name="skillType" val="PDAM" />
-		<set name="mpConsume" val="#mpConsumes" />
+	</skill>
+	<!-- Level 1 : Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 2 : Attacks nearby enemies with 20582 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 3 : Attacks nearby enemies with 22701 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 4 : Attacks nearby enemies with 25350 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 5 : Attacks nearby enemies with 28648 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 6 : Attacks nearby enemies with 32757 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 7 : Attacks nearby enemies with 37894 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<!-- Level 8 : Attacks nearby enemies with 44352 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+	<skill id="30518" levels="8" name="Reverse Weight">
+		<table name="#power"> 19693 20582 22701 25350 28648 32757 37894 44352 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<table name="#mpConsume"> 1479 1487 1500 1510 1516 1523 1532 1544 </table>
+		<set name="icon" val="icon.skill30518" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="power" val="#power" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2500" />
 		<set name="skillRadius" val="250" />	
 		<set name="coolTime" val="500" />
@@ -299,17 +340,18 @@
 		<set name="nextAction" val="attack" />
 		<set name="isMagic" val="6" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
 	</skill>
+	<!-- Level 1 : Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
 	<skill id="30519" levels="1" name="Warped Space">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
 		<set name="icon" val="icon.skill30519" />
+		<set name="magicLvl" val="98" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="772" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="30520" levels="2" name="Steel Mind">
 		<!-- AUTO GENERATED SKILL -->
@@ -344,10 +386,10 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
+	<!-- Level 1 : Speed has a chance to increase every time you receive damage. -->
 	<skill id="30522" levels="1" name="Eminent Attack Movement">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Speed has a chance to increase every time you receive damage. -->
 		<set name="icon" val="icon.skill30522" />
+		<set name="magicLvl" val="40" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -367,10 +409,10 @@
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 	</skill>
+	<!-- Level 1 : Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate. -->
 	<skill id="30526" levels="1" name="Heavy Punch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate. -->
 		<set name="icon" val="icon.skill30526" />
+		<set name="magicLvl" val="76" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -389,18 +431,28 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
+	<!-- Level 1 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 2 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 3 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 4 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 5 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 6 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 7 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 8 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 9 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 10 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 11 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+	<!-- Level 12 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
 	<skill id="30530" levels="12" name="Crushing Air">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
 		<table name="#Power">11159 11936 12714 13941 14269 15046 15824 16601 16638 16679 17000 17059</table>
-		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
-		<table name="#mpConsumes"> 34 35 35 36 36 37 37 37 37 38 38 38 </table>
+		<table name="#magicLvl"> 76 78 80 82 84 86 88 90 92 94 96 98 </table>
+		<table name="#mpConsume"> 34 35 35 36 36 37 37 37 37 38 38 38 </table>
 		<set name="icon" val="icon.skill30530" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="castRange" val="600" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="600" />
 		<set name="nextAction" val="attack" />
 		<set name="power" val="#Power" />
 		<set name="hitTime" val="1000" />
@@ -451,12 +503,29 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : When equipped with light armor, P. Def. + 14. -->
+	<!-- Level 2 : When equipped with light armor, P. Def. + 17, P. Evasion + 2, and Received P./M. Critical Rate - 15%. -->
+	<!-- Level 3 : When equipped with light armor, P. Def. + 34, P. Evasion + 3, and Received P./M. Critical Rate - 20%. -->
+	<!-- Level 4 : When equipped with light armor, P. Def. + 51, P. Evasion + 3, and Received P./M. Critical Rate - 20%. -->
+	<!-- Level 5 : When equipped with light armor, P. Def. + 69, P. Evasion + 3, and Received P./M. Critical Rate - 20%. -->
+	<!-- Level 6 : When equipped with light armor, P. Def. + 91, P. Evasion + 4, and Received P./M. Critical Rate - 25%. -->
+	<!-- Level 7 : When equipped with light armor, P. Def. + 99, P. Evasion + 4, M. Def. + 3%, M. Def. + 276, and Received P./M. Critical Rate - 25%. -->
+	<!-- Level 8 : When equipped with light armor, P. Def. + 1398, P. Evasion + 8, M. Def. + 5%, M. Def. + 552, and Received P./M. Critical Rate - 35%. -->
+	<!-- Level 9 : When equipped with light armor, P. Def. + 1520, P. Evasion + 8, M. Def. + 5%, M. Def. + 575, and Received P./M. Critical Rate - 35%. -->
+	<!-- Level 10 : When equipped with light armor, P. Def. + 1642, P. Evasion + 8, M. Def. + 5%, M. Def. + 598, and Received P./M. Critical Rate - 35%. -->
+	<!-- Level 11 : When equipped with light armor, P. Def. + 1807, P. Evasion + 8, M. Def. + 5%, M. Def. + 630, and Received P./M. Critical Rate - 35%. -->
 	<skill id="30541" levels="11" name="Eminent Light Armor Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When equipped with light armor, P. Def. + 14. -->
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 </table>
+		<table name="#pDef"> 14 17 34 51 69 91 99 1398 1520 1642 1807 </table>
 		<set name="icon" val="icon.skill10254" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pDef" val="#pDef" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30542" levels="7" name="Eminent Stability">
 		<!-- Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2. -->
@@ -497,17 +566,22 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : Hold/Mental Resistance + 30. -->
+	<!-- Level 2 : Hold / Mental / Pull / Knock Back / Knock Down Resistance + 30. -->
 	<skill id="30544" levels="2" name="Eminent Trait Resistance">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Hold/Mental Resistance + 30. -->
+		<table name="#magicLvl"> 76 85 </table>
 		<set name="icon" val="icon.skill10005" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : STR + 2. -->
+	<!-- Level 2 : STR + 4. Your STR can reset cooldown or double skill effect duration. -->
+	<!-- Level 3 : STR + 14. Your STR can reset cooldown or double skill effect duration. -->
 	<skill id="30545" levels="3" name="Eminent Ability">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- STR + 2. -->
+		<table name="#magicLvl"> 40 76 85 </table>
 		<set name="icon" val="icon.skill0430" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>

@@ -1716,19 +1716,16 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : For 30 sec., has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
 	<skill id="10558" levels="1" name="Elusive Mirage">
+		<set name="icon" val="icon.skill11861" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="72" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
-		<set name="mpConsume" val="72" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" />
-		<!--<for>
-			<effect abnormalLvl="1" abnormalTime="30" activationChance="80" chanceType="ON_ATTACKED" name="ChanceSkillTrigger" triggeredId="10559" triggeredLevel="1" val="0" />
-		</for>-->
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="10559" levels="1" name="Elusive Mirage">
 		<set name="magicLvl" val="85" />
@@ -1772,14 +1769,14 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : For 5 min., Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
 	<skill id="10562" levels="1" name="Critical Adventures">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
 		<set name="icon" val="icon.skill10562" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 </list>

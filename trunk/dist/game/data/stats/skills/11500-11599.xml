@@ -1166,12 +1166,27 @@
 			</effect>
 		</enchant4for>
 	</skill>
+	<!-- Level 1 : When a sword or blunt weapon is equipped, P. Atk. +20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
+	<!-- Level 101 : When a sword or blunt weapon is equipped, P. Atk. +21%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 1 Power | Increases the effect.) -->
+	<!-- Level 102 : When a sword or blunt weapon is equipped, P. Atk. +22%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 2 Power | Increases the effect.) -->
+	<!-- Level 103 : When a sword or blunt weapon is equipped, P. Atk. +23%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 3 Power | Increases the effect.) -->
+	<!-- Level 104 : When a sword or blunt weapon is equipped, P. Atk. +24%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 4 Power | Increases the effect.) -->
+	<!-- Level 105 : When a sword or blunt weapon is equipped, P. Atk. +25%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 5 Power | Increases the effect.) -->
+	<!-- Level 106 : When a sword or blunt weapon is equipped, P. Atk. +26%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 6 Power | Increases the effect.) -->
+	<!-- Level 107 : When a sword or blunt weapon is equipped, P. Atk. +27%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 7 Power | Increases the effect.) -->
+	<!-- Level 108 : When a sword or blunt weapon is equipped, P. Atk. +28%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 8 Power | Increases the effect.) -->
+	<!-- Level 109 : When a sword or blunt weapon is equipped, P. Atk. +29%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 9 Power | Increases the effect.) -->
+	<!-- Level 110 : When a sword or blunt weapon is equipped, P. Atk. +30%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 10 Power | Increases the effect.) -->
 	<skill id="11526" levels="1" name="Superior Sword/Blunt Weapon Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When a sword or blunt weapon is equipped, P. Atk. +20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
 		<set name="icon" val="icon.skill10001" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11529" levels="1" name="Prevailing Sonata" enchantGroup1="10" enchantGroup2="10">
 		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
@@ -1398,50 +1413,179 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
 	</skill>
+	<!-- Level 1 : Transforms target into a harmless creature and decrease its Speed by 20% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 2 : Transforms target into a harmless creature and decrease its Speed by 30% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 3 : Transforms target into a harmless creature and decrease its Speed by 40% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 4 : Transforms target into a harmless creature and decrease its Speed by 50% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 5 : Transforms target into a harmless creature and decrease its Speed by 60% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 6 : Transforms target into a harmless creature and decrease its Speed by 70% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 7 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+	<!-- Level 101 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 901 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 1 Recovery | Decreases Cooldown.) -->
+	<!-- Level 902 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 2 Recovery | Decreases Cooldown.) -->
+	<!-- Level 903 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 3 Recovery | Decreases Cooldown.) -->
+	<!-- Level 904 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 4 Recovery | Decreases Cooldown.) -->
+	<!-- Level 905 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 5 Recovery | Decreases Cooldown.) -->
+	<!-- Level 906 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 6 Recovery | Decreases Cooldown.) -->
+	<!-- Level 907 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 7 Recovery | Decreases Cooldown.) -->
+	<!-- Level 908 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 8 Recovery | Decreases Cooldown.) -->
+	<!-- Level 909 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 9 Recovery | Decreases Cooldown.) -->
+	<!-- Level 910 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. (+ 10 Recovery | Decreases Cooldown.) -->
+	<!-- Level 201 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : Transforms target into a harmless creature and decrease its Speed by 80% for 15 seconds. The effect is canceled if the transformed target is attacked. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
 	<skill id="11537" levels="7" name="Transform">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Transforms target into a harmless creature and decrease its Speed by 20% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
-		<table name="#mpConsumes"> 126 126 135 139 148 157 166 </table>
+		<table name="#magicLvl"> 85 86 88 91 94 97 99 </table>
+		<table name="#mpConsume"> 126 126 135 139 148 157 166 </table>
 		<set name="icon" val="icon.skill11537" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="11538" levels="4" name="Mass Giant Root">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts Hold on nearby enemies for 15 seconds. -->
-		<table name="#mpConsumes"> 252 558 612 666 </table>
-		<set name="icon" val="icon.skill11538" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
+	</skill>
+	<!-- Level 1 : Inflicts Hold on nearby enemies for 15 seconds. -->
+	<!-- Level 2 : Inflicts Hold on nearby enemies for 15 seconds. -->
+	<!-- Level 3 : Inflicts Hold on nearby enemies for 15 seconds. -->
+	<!-- Level 4 : Inflicts Hold on nearby enemies for 15 seconds. -->
+	<!-- Level 101 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Chance: Increases Success Rate. (+ 10 Chance | Increases the success rate.) -->
+	<!-- Level 301 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 1%. (+ 1 Hex | Decreases the target's P. Def. by 1%.) -->
+	<!-- Level 302 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 2%. (+ 2 Hex | Decreases the target's P. Def. by 2%.) -->
+	<!-- Level 303 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 3%. (+ 3 Hex | Decreases the target's P. Def. by 3%.) -->
+	<!-- Level 304 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 4%. (+ 4 Hex | Decreases the target's P. Def. by 4%.) -->
+	<!-- Level 305 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 5%. (+ 5 Hex | Decreases the target's P. Def. by 5%.) -->
+	<!-- Level 306 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 6%. (+ 6 Hex | Decreases the target's P. Def. by 6%.) -->
+	<!-- Level 307 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 7%. (+ 7 Hex | Decreases the target's P. Def. by 7%.) -->
+	<!-- Level 308 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 8%. (+ 8 Hex | Decreases the target's P. Def. by 8%.) -->
+	<!-- Level 309 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 9%. (+ 9 Hex | Decreases the target's P. Def. by 9%.) -->
+	<!-- Level 310 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Hex: Decreases target's P. Def. by 10%. (+ 10 Hex | Decreases the target's P. Def. by 10%.) -->
+	<!-- Level 401 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 1%. (+ 1 M. Def. | Decreases the target's M. Def. by 1%.) -->
+	<!-- Level 402 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 2%. (+ 2 M. Def. | Decreases the target's M. Def. by 2%.) -->
+	<!-- Level 403 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 3%. (+ 3 M. Def. | Decreases the target's M. Def. by 3%.) -->
+	<!-- Level 404 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 4%. (+ 4 M. Def. | Decreases the target's M. Def. by 4%.) -->
+	<!-- Level 405 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 5%. (+ 5 M. Def. | Decreases the target's M. Def. by 5%.) -->
+	<!-- Level 406 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 6%. (+ 6 M. Def. | Decreases the target's M. Def. by 6%.) -->
+	<!-- Level 407 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 7%. (+ 7 M. Def. | Decreases the target's M. Def. by 7%.) -->
+	<!-- Level 408 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 8%. (+ 8 M. Def. | Decreases the target's M. Def. by 8%.) -->
+	<!-- Level 409 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 9%. (+ 9 M. Def. | Decreases the target's M. Def. by 9%.) -->
+	<!-- Level 410 : Inflicts Hold on nearby enemies for 15 seconds. Enchant Mind: Decreases target's M. Def. by 10%. (+ 10 M. Def. | Decreases the target's M. Def. by 10%.) -->
+	<!-- Level 901 : Inflicts Hold on nearby enemies for 15 seconds. (+ 1 Recovery | Decreases Cooldown.) -->
+	<!-- Level 902 : Inflicts Hold on nearby enemies for 15 seconds. (+ 2 Recovery | Decreases Cooldown.) -->
+	<!-- Level 903 : Inflicts Hold on nearby enemies for 15 seconds. (+ 3 Recovery | Decreases Cooldown.) -->
+	<!-- Level 904 : Inflicts Hold on nearby enemies for 15 seconds. (+ 4 Recovery | Decreases Cooldown.) -->
+	<!-- Level 905 : Inflicts Hold on nearby enemies for 15 seconds. (+ 5 Recovery | Decreases Cooldown.) -->
+	<!-- Level 906 : Inflicts Hold on nearby enemies for 15 seconds. (+ 6 Recovery | Decreases Cooldown.) -->
+	<!-- Level 907 : Inflicts Hold on nearby enemies for 15 seconds. (+ 7 Recovery | Decreases Cooldown.) -->
+	<!-- Level 908 : Inflicts Hold on nearby enemies for 15 seconds. (+ 8 Recovery | Decreases Cooldown.) -->
+	<!-- Level 909 : Inflicts Hold on nearby enemies for 15 seconds. (+ 9 Recovery | Decreases Cooldown.) -->
+	<!-- Level 910 : Inflicts Hold on nearby enemies for 15 seconds. (+ 10 Recovery | Decreases Cooldown.) -->
+	<skill id="11538" levels="4" name="Mass Giant Root">
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 252 558 612 666 </table>
+		<set name="icon" val="icon.skill11538" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
 	</skill>
+	<!-- Level 1 : Petrifies target for 15 seconds. -->
+	<!-- Level 2 : Petrifies target for 15 seconds. -->
+	<!-- Level 3 : Petrifies target for 15 seconds. -->
+	<!-- Level 4 : Petrifies target for 15 seconds. -->
+	<!-- Level 5 : Petrifies target for 15 seconds. -->
+	<!-- Level 6 : Petrifies target for 15 seconds. -->
+	<!-- Level 7 : Petrifies target for 15 seconds. -->
+	<!-- Level 8 : Petrifies target for 15 seconds. -->
+	<!-- Level 101 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Petrifies target for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 901 : Petrifies target for 15 seconds. (+ 1 Recovery | Decreases Cooldown.) -->
+	<!-- Level 902 : Petrifies target for 15 seconds. (+ 2 Recovery | Decreases Cooldown.) -->
+	<!-- Level 903 : Petrifies target for 15 seconds. (+ 3 Recovery | Decreases Cooldown.) -->
+	<!-- Level 904 : Petrifies target for 15 seconds. (+ 4 Recovery | Decreases Cooldown.) -->
+	<!-- Level 905 : Petrifies target for 15 seconds. (+ 5 Recovery | Decreases Cooldown.) -->
+	<!-- Level 906 : Petrifies target for 15 seconds. (+ 6 Recovery | Decreases Cooldown.) -->
+	<!-- Level 907 : Petrifies target for 15 seconds. (+ 7 Recovery | Decreases Cooldown.) -->
+	<!-- Level 908 : Petrifies target for 15 seconds. (+ 8 Recovery | Decreases Cooldown.) -->
+	<!-- Level 909 : Petrifies target for 15 seconds. (+ 9 Recovery | Decreases Cooldown.) -->
+	<!-- Level 910 : Petrifies target for 15 seconds. (+ 10 Recovery | Decreases Cooldown.) -->
+	<!-- Level 201 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : Petrifies target for 15 seconds. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
 	<skill id="11539" levels="8" name="Petrify">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Petrifies target for 15 seconds. -->
-		<table name="#mpConsumes"> 70 72 76 78 82 85 88 92 </table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 70 72 76 78 82 85 88 92 </table>
 		<set name="icon" val="icon.skill11539" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1700" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11540" levels="4" name="Quick Escape">
 		<table name="#ench1MpConsume">71 68 65 62 59 56 53 50 47 44</table>
@@ -1799,10 +1943,10 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : Has a chance of recovering MP during a normal attack when equipped with a sword, blunt, dualsword, or dual blunt weapon. -->
 	<skill id="11549" levels="1" name="Superior Mana Steal">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Has a chance of recovering MP during a normal attack when equipped with a sword, blunt, dualsword, or dual blunt weapon. -->
 		<set name="icon" val="icon.skill11505" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -1894,44 +2038,124 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Level 1 : Disables nearby enemies' natural HP Recovery for 2 minutes. -->
+	<!-- Level 101 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
+	<!-- Level 301 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 1. (+ 1 Slow MP | Decreases MP Recovery by 1.) -->
+	<!-- Level 302 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 2.6. (+ 2 Slow MP | Decreases MP Recovery by 2.6.) -->
+	<!-- Level 303 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 4.2. (+ 3 Slow MP | Decreases MP Recovery by 4.2.) -->
+	<!-- Level 304 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 5.8. (+ 4 Slow MP | Decreases MP Recovery by 5.8.) -->
+	<!-- Level 305 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 7.4. (+ 5 Slow MP | Decreases MP Recovery by 7.4.) -->
+	<!-- Level 306 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 9. (+ 6 Slow MP | Decreases MP Recovery by 9.) -->
+	<!-- Level 307 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 10.6. (+ 7 Slow MP | Decreases MP Recovery by 10.6.) -->
+	<!-- Level 308 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 12.2. (+ 8 Slow MP | Decreases MP Recovery by 12.2.) -->
+	<!-- Level 309 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 13.8. (+ 9 Slow MP | Decreases MP Recovery by 13.8.) -->
+	<!-- Level 310 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow MP: Decreases MP Recovery by 15.4. (+ 10 Slow MP | Decreases MP Recovery by 15.4.) -->
+	<!-- Level 401 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 1. (+ 1 Slow CP | Decreases CP Recovery by 1.) -->
+	<!-- Level 402 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 3. (+ 2 Slow CP | Decreases CP Recovery by 3.) -->
+	<!-- Level 403 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 5. (+ 3 Slow CP | Decreases CP Recovery by 5.) -->
+	<!-- Level 404 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 7. (+ 4 Slow CP | Decreases CP Recovery by 7.) -->
+	<!-- Level 405 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 9. (+ 5 Slow CP | Decreases CP Recovery by 9.) -->
+	<!-- Level 406 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 11. (+ 6 Slow CP | Decreases CP Recovery by 11.) -->
+	<!-- Level 407 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 13. (+ 7 Slow CP | Decreases CP Recovery by 13.) -->
+	<!-- Level 408 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 15. (+ 8 Slow CP | Decreases CP Recovery by 15.) -->
+	<!-- Level 409 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 17. (+ 9 Slow CP | Decreases CP Recovery by 17.) -->
+	<!-- Level 410 : Disables nearby enemies' natural HP Recovery for 2 minutes. Enchant Slow CP: Decreases CP Recovery by 19. (+ 10 Slow CP | Decreases CP Recovery by 19.) -->
 	<skill id="11557" levels="1" name="Ultimate Scourge">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Disables nearby enemies' natural HP Recovery for 2 minutes. -->
 		<set name="icon" val="icon.skill11557" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="423" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="120000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="11558" levels="1" name="Ultimate Oblivion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Cancels nearby enemies' targets. -->
-		<set name="icon" val="icon.skill11558" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="423" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
 	</skill>
-	<skill id="11559" levels="1" name="Ultimate Suspension">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. -->
-		<set name="icon" val="icon.skill11559" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+	<!-- Level 1 : Cancels nearby enemies' targets. -->
+	<!-- Level 101 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Cancels nearby enemies' targets. Enchant Cost: Decreases MP consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 1 Distance | Increases the effect.) -->
+	<!-- Level 202 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 2 Distance | Increases the effect.) -->
+	<!-- Level 203 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 3 Distance | Increases the effect.) -->
+	<!-- Level 204 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 4 Distance | Increases the effect.) -->
+	<!-- Level 205 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 5 Distance | Increases the effect.) -->
+	<!-- Level 206 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 6 Distance | Increases the effect.) -->
+	<!-- Level 207 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 7 Distance | Increases the effect.) -->
+	<!-- Level 208 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 8 Distance | Increases the effect.) -->
+	<!-- Level 209 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 9 Distance | Increases the effect.) -->
+	<!-- Level 210 : Cancels nearby enemies' targets. Enchant Distance: Increases effect. (+ 10 Distance | Increases the effect.) -->
+	<skill id="11558" levels="1" name="Ultimate Oblivion">
+		<set name="icon" val="icon.skill11558" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="423" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<!-- Level 1 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. -->
+	<!-- Level 101 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Cost: Decreases MP consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
+	<skill id="11559" levels="1" name="Ultimate Suspension">
+		<set name="icon" val="icon.skill11559" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="423" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="120000" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="11560" levels="2" name="Celestial Aegis">
 		<table name="#ench1MpConsume">428 410 392 374 356 338 321 303 285 267</table>
@@ -2015,20 +2239,64 @@
 			</effect>
 		</enchant5for>
 	</skill>
+	<!-- Level 1 : Inflicts Hold on the enemy for 15 seconds. -->
+	<!-- Level 2 : Inflicts Hold on the enemy for 15 seconds. -->
+	<!-- Level 3 : Inflicts Hold on the enemy for 15 seconds. -->
+	<!-- Level 4 : Inflicts Hold on the enemy for 15 seconds. -->
+	<!-- Level 101 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Inflicts Hold on the enemy for 15 seconds. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
+	<!-- Level 202 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
+	<!-- Level 203 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
+	<!-- Level 204 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
+	<!-- Level 205 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
+	<!-- Level 206 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
+	<!-- Level 207 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
+	<!-- Level 208 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
+	<!-- Level 209 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
+	<!-- Level 210 : Inflicts Hold on the enemy for 15 seconds. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
+	<!-- Level 301 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 1%. (+ 1 Hex | Decreases the target's P. Def. by 1%.) -->
+	<!-- Level 302 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 2%. (+ 2 Hex | Decreases the target's P. Def. by 2%.) -->
+	<!-- Level 303 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 3%. (+ 3 Hex | Decreases the target's P. Def. by 3%.) -->
+	<!-- Level 304 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 4%. (+ 4 Hex | Decreases the target's P. Def. by 4%.) -->
+	<!-- Level 305 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 5%. (+ 5 Hex | Decreases the target's P. Def. by 5%.) -->
+	<!-- Level 306 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 6%. (+ 6 Hex | Decreases the target's P. Def. by 6%.) -->
+	<!-- Level 307 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 7%. (+ 7 Hex | Decreases the target's P. Def. by 7%.) -->
+	<!-- Level 308 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 8%. (+ 8 Hex | Decreases the target's P. Def. by 8%.) -->
+	<!-- Level 309 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 9%. (+ 9 Hex | Decreases the target's P. Def. by 9%.) -->
+	<!-- Level 310 : Inflicts Hold on the enemy for 15 seconds. Enchant Hex: Decreases target's P. Def. by 10%. (+ 10 Hex | Decreases the target's P. Def. by 10%.) -->
+	<!-- Level 401 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 1%. (+ 1 M. Def. | Decreases the target's M. Def. by 1%.) -->
+	<!-- Level 402 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 2%. (+ 2 M. Def. | Decreases the target's M. Def. by 2%.) -->
+	<!-- Level 403 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 3%. (+ 3 M. Def. | Decreases the target's M. Def. by 3%.) -->
+	<!-- Level 404 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 4%. (+ 4 M. Def. | Decreases the target's M. Def. by 4%.) -->
+	<!-- Level 405 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 5%. (+ 5 M. Def. | Decreases the target's M. Def. by 5%.) -->
+	<!-- Level 406 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 6%. (+ 6 M. Def. | Decreases the target's M. Def. by 6%.) -->
+	<!-- Level 407 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 7%. (+ 7 M. Def. | Decreases the target's M. Def. by 7%.) -->
+	<!-- Level 408 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 8%. (+ 8 M. Def. | Decreases the target's M. Def. by 8%.) -->
+	<!-- Level 409 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 9%. (+ 9 M. Def. | Decreases the target's M. Def. by 9%.) -->
+	<!-- Level 410 : Inflicts Hold on the enemy for 15 seconds. Enchant Mind: Decreases target's M. Def. by 10%. (+ 10 M. Def. | Decreases the target's M. Def. by 10%.) -->
 	<skill id="11561" levels="4" name="Giant Root">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts Hold on the enemy for 15 seconds. -->
-		<table name="#mpConsumes"> 126 139 153 166 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 126 139 153 166 </table>
 		<set name="icon" val="icon.skill11561" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="11562" levels="1" name="Devil's Movement">
 		<table name="#ench1MpConsume">57 55 52 50 48 45 43 40 38 36</table>
@@ -2060,9 +2328,8 @@
 			</effect>
 		</enchant3for>
 	</skill>
+	<!-- Level 1 : Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 	<skill id="11563" levels="1" name="Quick Return">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<set name="icon" val="icon.skill11819" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
@@ -2249,51 +2516,77 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Level 1 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. -->
+	<!-- Level 101 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
 	<skill id="11570" levels="1" name="Healing Melody">
-		<table name="#ench1MpConsume">148 142 136 130 124 117 111 105 99 93</table>
-		<table name="#healPercent">30;27;24;21;18;15;12;10;10;10;10</table>
-		<set name="skillRadius" val="300" />
-		<set name="castMagic" val="MAGIC" />
+		<set name="icon" val="icon.skill11570" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="AREA" />
-		<set name="healPercents" val="30;27;24;21;18;15;12;10;10;10;10" />
-		<set name="power" val="35" />
-		<set name="hitTime" val="2000" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="5000" />
 		<set name="mpConsume" val="582" />
-		<set name="mpInitialConsume" val="39" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<!--<effect name="HealPercent">
-				<param power="#healPercent" />
-		</effect>-->
-	</skill>
-	<skill id="11571" levels="1" name="Recovery Melody">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Restores target's CP by 1000. -->
-		<set name="icon" val="icon.skill11571" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Level 1 : Restores target's CP by 1000. -->
+	<!-- Level 101 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
+	<!-- Level 102 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
+	<!-- Level 103 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
+	<!-- Level 104 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
+	<!-- Level 105 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
+	<!-- Level 106 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
+	<!-- Level 107 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
+	<!-- Level 108 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
+	<!-- Level 109 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
+	<!-- Level 110 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
+	<!-- Level 201 : Restores target's CP by 1010. Enchant Power: Increases Effect. (+ 1 Power | Increases the effect.) -->
+	<!-- Level 202 : Restores target's CP by 1020. Enchant Power: Increases Effect. (+ 2 Power | Increases the effect.) -->
+	<!-- Level 203 : Restores target's CP by 1030. Enchant Power: Increases Effect. (+ 3 Power | Increases the effect.) -->
+	<!-- Level 204 : Restores target's CP by 1040. Enchant Power: Increases Effect. (+ 4 Power | Increases the effect.) -->
+	<!-- Level 205 : Restores target's CP by 1050. Enchant Power: Increases Effect. (+ 5 Power | Increases the effect.) -->
+	<!-- Level 206 : Restores target's CP by 1060. Enchant Power: Increases Effect. (+ 6 Power | Increases the effect.) -->
+	<!-- Level 207 : Restores target's CP by 1070. Enchant Power: Increases Effect. (+ 7 Power | Increases the effect.) -->
+	<!-- Level 208 : Restores target's CP by 1080. Enchant Power: Increases Effect. (+ 8 Power | Increases the effect.) -->
+	<!-- Level 209 : Restores target's CP by 1090. Enchant Power: Increases Effect. (+ 9 Power | Increases the effect.) -->
+	<!-- Level 210 : Restores target's CP by 1100. Enchant Power: Increases Effect. (+ 10 Power | Increases the effect.) -->
+	<skill id="11571" levels="1" name="Recovery Melody">
+		<set name="icon" val="icon.skill11571" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="120" />
-		<set name="castRange" val="900" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11580" levels="4" name="Mass Transform">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
-		<table name="#mpConsumes"> 126 139 153 166 </table>
-		<set name="icon" val="icon.skill11580" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="1410" />
+	</skill>
+	<!-- Level 1 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
+	<!-- Level 2 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
+	<!-- Level 3 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
+	<!-- Level 4 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
+	<skill id="11580" levels="4" name="Mass Transform">
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mpConsume"> 126 139 153 166 </table>
+		<set name="icon" val="icon.skill11580" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1409" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="120000" />
 		<set name="isDebuff" val="true" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11581" levels="4" name="Superior Advantage">
 		<!-- Skill Cooldown - 5%, Skill Power + 5%, MP Recovery Rate + 5, and Max HP, MP, and CP + 5%. Skill mastery effect + 10%. -->
@@ -2332,12 +2625,22 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="isDebuff" val="true" />
 	</skill>
+	<!-- Level 1 : P. Def./ M. Def. + 5%. Skill Power + 5%. -->
+	<!-- Level 2 : P. Def./ M. Def. + 7%. Skill Power + 5%. -->
+	<!-- Level 3 : P. Def./ M. Def. + 10%. Skill Power + 5%. -->
+	<!-- Level 4 : P. Def./ M. Def. + 15%. Skill Power + 5%. -->
 	<skill id="11583" levels="4" name="Superior Song of Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Def./ M. Def. + 5%. Skill Power + 5%. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mDef"> 1.05 1.07 1.1 1.15 </table>
 		<set name="icon" val="icon.skill0153" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#mDef" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11584" levels="4" name="Mass Medusa's Dance">
 		<!-- AUTO GENERATED SKILL -->
@@ -2352,12 +2655,22 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="isDebuff" val="true" />
 	</skill>
+	<!-- Level 1 : P. Atk./ M. Atk. + 5%. Skill Power + 5%. -->
+	<!-- Level 2 : P. Atk./ M. Atk. + 7%. Skill Power + 5%. -->
+	<!-- Level 3 : P. Atk./ M. Atk. + 10%. Skill Power + 5%. -->
+	<!-- Level 4 : P. Atk./ M. Atk. + 15%. Skill Power + 5%. -->
 	<skill id="11585" levels="4" name="Superior Dance of Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk./ M. Atk. + 5%. Skill Power + 5%. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#mAtk"> 1.05 1.07 1.1 1.15 </table>
 		<set name="icon" val="icon.skill0141" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="#mAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11586" levels="4" name="Pa'agrio's Bravery">
 		<!-- AUTO GENERATED SKILL -->
@@ -2386,12 +2699,22 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="isDebuff" val="true" />
 	</skill>
+	<!-- Level 1 : Max MP + 10%. -->
+	<!-- Level 2 : Max MP + 12%. -->
+	<!-- Level 3 : Max MP + 15%. -->
+	<!-- Level 4 : Max MP + 20%. -->
 	<skill id="11588" levels="4" name="Superior Wizard Mastery">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max MP + 10%. -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#maxMp"> 1.1 1.12 1.15 1.2 </table>
 		<set name="icon" val="icon.skill0164" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11589" levels="4" name="Horn Frenzy" enchantGroup1="10" enchantGroup2="10">
 		<!-- For 30 minutes, clan members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
