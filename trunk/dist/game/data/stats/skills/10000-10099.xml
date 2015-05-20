@@ -2082,25 +2082,39 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Has a 30% chance of recovering HP after a successful standard/ skill attack. -->
-	<!-- Level 2 : Has a 30% chance of recovering HP after a successful standard/ skill attack. -->
-	<!-- Level 3 : Has a 30% chance of recovering HP after a successful standard/ skill attack. -->
-	<!-- Level 4 : Has a 30% chance of recovering HP after a successful standard/ skill attack. -->
 	<skill id="10069" levels="4" name="Vampirism">
+		<set name="icon" val="icon.skill10069"/>
 		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skill10069" />
+		<table name="#skillLevel"> 1 2 3 4 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param chance="30" />
+				<param skillId="10070" skillLevel="#skillLevel" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10070" levels="4" name="Vampirism">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- HP Recovery -->
-		<set name="icon" val="icon.skill10069" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10070" />
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#amount"> 250 500 750 1000 </table> <!-- FixMe: Retail Value Needed -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="reuseDelay" val="10000" />
+		<set name="hitTime" val="1500"/>
+		<set name="rideState" val="NONE" />
+		<for>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : P. Def./ M. Def. + 2%. Has a 30% chance of increasing all party members' P. Def./ M. Def. and heal amount by 1% for 10 sec. when attacked. -->
 	<!-- Level 2 : P. Def./ M. Def. + 3%. Has a 30% chance of increasing all party members' P. Def./ M. Def. and heal amount by 2% for 10 sec. when attacked. -->
