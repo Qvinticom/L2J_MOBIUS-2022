@@ -42,6 +42,7 @@ import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.items.type.WeaponType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import com.l2jserver.gameserver.network.serverpackets.SkillCoolTime;
@@ -381,7 +382,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			// Apply skill, if weapon have "skills on unequip"
-			Skill unequipSkill = it.getUnequipSkill();
+			final Skill unequipSkill = it.getUnequipSkill();
 			if (unequipSkill != null)
 			{
 				L2PcInstance[] targets =
@@ -390,6 +391,14 @@ public abstract class Inventory extends ItemContainer
 				};
 				
 				unequipSkill.activateSkill(player, targets);
+			}
+			
+			// Remove itemEquip skill
+			final Skill itemEquipSkill = it.getEquipSkill();
+			if (itemEquipSkill != null)
+			{
+				final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(itemEquipSkill.getId());
+				player.getEffectList().remove(true, info);
 			}
 			
 			if (update)
@@ -477,6 +486,18 @@ public abstract class Inventory extends ItemContainer
 						_log.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + skillInfo + ".");
 					}
 				}
+			}
+			
+			// Apply itemEquip skill
+			final Skill itemEquipSkill = it.getEquipSkill();
+			if (itemEquipSkill != null)
+			{
+				L2PcInstance[] targets =
+				{
+					player
+				};
+				
+				itemEquipSkill.activateSkill(player, targets);
 			}
 			
 			if (update)

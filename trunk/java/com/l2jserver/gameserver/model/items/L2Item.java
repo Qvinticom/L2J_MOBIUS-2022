@@ -156,6 +156,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	protected List<Condition> _preConditions;
 	private SkillHolder[] _skillHolder;
 	private SkillHolder _unequipSkill = null;
+	private SkillHolder _equipSkill = null;
 	
 	private final int _useSkillDisTime;
 	private final int _reuseDelay;
@@ -279,6 +280,31 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				if ((id > 0) && (level > 0))
 				{
 					_unequipSkill = new SkillHolder(id, level);
+				}
+			}
+		}
+		
+		skills = set.getString("equip_skill", null);
+		if (skills != null)
+		{
+			String[] info = skills.split("-");
+			if ((info != null) && (info.length == 2))
+			{
+				int id = 0;
+				int level = 0;
+				try
+				{
+					id = Integer.parseInt(info[0]);
+					level = Integer.parseInt(info[1]);
+				}
+				catch (Exception nfe)
+				{
+					// Incorrect syntax, don't add new skill
+					_log.info(StringUtil.concat("Couldnt parse ", skills, " in item equip skill! item ", toString()));
+				}
+				if ((id > 0) && (level > 0))
+				{
+					_equipSkill = new SkillHolder(id, level);
 				}
 			}
 		}
@@ -779,6 +805,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public final Skill getUnequipSkill()
 	{
 		return _unequipSkill == null ? null : _unequipSkill.getSkill();
+	}
+	
+	/**
+	 * @return skill that activates, when player equips this item
+	 */
+	public final Skill getEquipSkill()
+	{
+		return _equipSkill == null ? null : _equipSkill.getSkill();
 	}
 	
 	public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage)
