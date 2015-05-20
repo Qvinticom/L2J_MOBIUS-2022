@@ -26,49 +26,94 @@
 		<set name="price" val="2233000" />
 	</item>
 	<item id="18205" name="Unidentified Amaranthine Shaper" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Shaper in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12114-1" />
 	</item>
 	<item id="18206" name="Unidentified Amaranthine Cutter" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Cutter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12115-1" />
 	</item>
 	<item id="18207" name="Unidentified Amaranthine Slasher" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Slasher in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12116-1" />
 	</item>
 	<item id="18208" name="Unidentified Amaranthine Avenger" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Avenger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12117-1" />
 	</item>
 	<item id="18209" name="Unidentified Amaranthine Fighter" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Fighter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / combat) -->
 		<set name="icon" val="icon.weapon_durga_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12118-1" />
 	</item>
 	<item id="18210" name="Unidentified Amaranthine Stormer" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Stormer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / spear) -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12119-1" />
 	</item>
 	<item id="18211" name="Unidentified Amaranthine Thrower" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Thrower in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / bow) -->
 		<set name="icon" val="icon.weapon_castron_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12120-1" />
 	</item>
 	<item id="18212" name="Unidentified Amaranthine Shooter" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Shooter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / crossbow / bow) -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12121-1" />
 	</item>
 	<item id="18213" name="Unidentified Amaranthine Buster" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Buster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12122-1" />
 	</item>
 	<item id="18214" name="Unidentified Amaranthine Caster" additionalName="" type="EtcItem">
 		<!-- An Amaranthine Caster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->

@@ -817,21 +817,30 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13294" levels="1" name="Crossbow Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13294" levels="3" name="Crossbow Special Ability">
 		<!-- P. Atk. Spd. + 3.1%. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.031" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="13295" levels="1" name="Magic Sword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13295" levels="3" name="Magic Sword Special Ability">
 		<!-- M. Critical Rate + 1 and M. Accuracy + 1. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritRate" val="1" />
+				<add stat="accMagic" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13296" levels="1" name="Magic One-handed Blunt Special Ability">
 		<!-- AUTO GENERATED SKILL -->

@@ -1067,7 +1067,7 @@
 		</for>
 	</skill>
 	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<set name="icon" val="icon.skill0413" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="PASSIVE" />
@@ -1079,6 +1079,11 @@
 				<param skillId="5686" skillLevel="1" /> <!-- PvP Weapon - Rapid Fire -->
 				<param targetType="SELF" />
 				<param allowWeapons="ALL" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
