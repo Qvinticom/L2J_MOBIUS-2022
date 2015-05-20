@@ -77,7 +77,7 @@ public class KaraphonHabitat extends AbstractInstance
 		addStartNpc(DOLKIN);
 		addTalkId(DOLKIN, DOLKIN_INSTANCE);
 	}
-
+	
 	@Override
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{

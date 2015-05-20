@@ -238,7 +238,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		if ((holder == null) && (instanceId > 0))
 		{
 			holder = new InstanceHolder();
-			this.instanceWorlds.put(Integer.valueOf(instanceId), holder);
+			instanceWorlds.put(Integer.valueOf(instanceId), holder);
 		}
 		player.stopAllEffectsExceptThoseThatLastThroughDeath();
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
