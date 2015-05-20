@@ -127,6 +127,22 @@ public final class ArmorSetsData implements IXmlReader
 									set.addEnchantSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumEnchant));
 									break;
 								}
+								case "enchant7skill":
+								{
+									final int skillId = parseInteger(attrs, "id");
+									final int skillLevel = parseInteger(attrs, "level");
+									final int minimumEnchant = parseInteger(attrs, "minimumEnchant", 7);
+									set.addEnchantSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumEnchant));
+									break;
+								}
+								case "enchant8skill":
+								{
+									final int skillId = parseInteger(attrs, "id");
+									final int skillLevel = parseInteger(attrs, "level");
+									final int minimumEnchant = parseInteger(attrs, "minimumEnchant", 8);
+									set.addEnchantSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumEnchant));
+									break;
+								}
 								case "con":
 								{
 									set.addCon(parseInteger(attrs, "val"));
