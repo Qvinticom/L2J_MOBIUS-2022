@@ -25,7 +25,7 @@
 	<skill id="30602" levels="1" name="Eviscerator Aura">
 		<set name="icon" val="icon.icon_lender" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
@@ -50,7 +50,7 @@
 	<skill id="30605" levels="1" name="Sayha's Seer Aura">
 		<set name="icon" val="icon.icon_Er_wizard" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />

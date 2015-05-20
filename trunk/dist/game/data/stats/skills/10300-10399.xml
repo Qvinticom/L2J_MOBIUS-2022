@@ -123,7 +123,7 @@
 	<skill id="10308" levels="1" name="Wild Roar">
 		<set name="icon" val="icon.skill11834" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -295,7 +295,7 @@
 	<skill id="10320" levels="1" name="Faceoff">
 		<set name="icon" val="icon.skll10319" />
 		<set name="magicLvl" val="90" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="mpConsume" val="43" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="300" />
@@ -313,7 +313,7 @@
 		<table name="#mpConsume"> 122 124 129 133 </table>
 		<set name="icon" val="icon.skll10321" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
@@ -328,7 +328,7 @@
 	<skill id="10322" levels="1" name="Wolf's Cry">
 		<set name="icon" val="icon.skll10320" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -439,7 +439,7 @@
 		<table name="#mpConsume"> 92 96 101 105 </table>
 		<set name="icon" val="icon.skill10330" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="40" />

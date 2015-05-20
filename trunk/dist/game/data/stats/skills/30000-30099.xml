@@ -296,7 +296,7 @@
 		<table name="#mpConsume"> 31 31 32 32 33 33 34 34 34 34 34 35 </table>
 		<set name="icon" val="icon.skill30014" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1200" />
@@ -345,7 +345,7 @@
 		<table name="#mpConsume"> 18 37 40 </table>
 		<set name="icon" val="icon.skill30017" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -357,7 +357,7 @@
 	<skill id="30018" levels="1" name="Windy Illusion">
 		<set name="icon" val="icon.skill30018" />
 		<set name="magicLvl" val="93" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="41" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />

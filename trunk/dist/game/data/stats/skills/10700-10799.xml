@@ -957,7 +957,7 @@
 	<skill id="10778" levels="1" name="Diversion">
 		<set name="icon" val="icon.skill10778" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="85" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -1273,7 +1273,7 @@
 	<skill id="10788" levels="1" name="Remote Control">
 		<set name="icon" val="icon.skill10788" />
 		<set name="magicLvl" val="91" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="800" />
 		<set name="coolTime" val="200" />

@@ -4,7 +4,7 @@
 	<skill id="10606" levels="1" name="Shadow Dodge">
 		<set name="icon" val="icon.skill11862" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -37,7 +37,7 @@
 	<skill id="10609" levels="1" name="Critical Chances">
 		<set name="icon" val="icon.skill10878" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -54,7 +54,7 @@
 	<skill id="10653" levels="1" name="Melee Reflect">
 		<set name="icon" val="icon.skill11863" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -87,7 +87,7 @@
 	<skill id="10656" levels="1" name="Critical Prowess">
 		<set name="icon" val="icon.skill10656" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />

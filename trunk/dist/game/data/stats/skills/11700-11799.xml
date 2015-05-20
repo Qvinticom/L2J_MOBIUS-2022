@@ -174,7 +174,7 @@
 		<table name="#mpConsume"> 43 46 48 52 55 </table>
 		<set name="icon" val="icon.skill11754" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2200" />
@@ -274,7 +274,7 @@
 	<skill id="11758" levels="1" name="Celestial Protection">
 		<set name="icon" val="icon.skill11758" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
@@ -286,7 +286,7 @@
 	<skill id="11759" levels="1" name="Celestial Party Protection">
 		<set name="icon" val="icon.skill11759" />
 		<set name="magicLvl" val="87" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="120000" />
@@ -976,7 +976,7 @@
 		<table name="#mpConsume"> 26 26 27 30 31 33 </table>
 		<set name="icon" val="icon.skill11778" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="1500" />

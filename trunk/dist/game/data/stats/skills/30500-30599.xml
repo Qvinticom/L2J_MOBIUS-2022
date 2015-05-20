@@ -246,7 +246,7 @@
 	<skill id="30512" levels="1" name="Distortion">
 		<set name="icon" val="icon.skill30512" />
 		<set name="magicLvl" val="76" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="41" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -278,7 +278,7 @@
 	<skill id="30515" levels="1" name="Spallation">
 		<set name="icon" val="icon.skill30515" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="31" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -289,7 +289,7 @@
 	<skill id="30516" levels="1" name="Gravity Barrier">
 		<set name="icon" val="icon.skill30516" />
 		<set name="magicLvl" val="93" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="30" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="300000" />
@@ -308,7 +308,7 @@
 		<table name="#mpConsume"> 73 74 75 75 75 76 76 77 </table>
 		<set name="icon" val="icon.skill30517" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -330,7 +330,7 @@
 		<table name="#mpConsume"> 1479 1487 1500 1510 1516 1523 1532 1544 </table>
 		<set name="icon" val="icon.skill30518" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2500" />

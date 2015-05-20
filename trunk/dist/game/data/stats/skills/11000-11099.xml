@@ -2353,7 +2353,7 @@
 		<table name="#mpConsume"> 210 231 255 276 </table>
 		<set name="icon" val="icon.skill11068" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="500" />
@@ -2564,7 +2564,7 @@
 	<skill id="11093" levels="1" name="Crystal Form">
 		<set name="icon" val="icon.skill11093" />
 		<set name="magicLvl" val="97" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="73" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="200" />
@@ -2623,7 +2623,7 @@
 		<table name="#mpConsume"> 70 72 77 82 87 92 </table>
 		<set name="icon" val="icon.skill11094" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="800" />

@@ -197,7 +197,7 @@
 		<table name="#mpConsume"> 87 91 95 98 102 107 111 116 </table>
 		<set name="icon" val="icon.skill11814" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="400" />
@@ -353,7 +353,7 @@
 	<skill id="11820" levels="1" name="Power of Saha">
 		<set name="icon" val="icon.skill11820" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -384,7 +384,7 @@
 	<skill id="11821" levels="1" name="Critical of Saha">
 		<set name="icon" val="icon.skill11821" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -412,7 +412,7 @@
 	<skill id="11822" levels="1" name="Force of Saha">
 		<set name="icon" val="icon.skill11822" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -441,7 +441,7 @@
 	<skill id="11823" levels="1" name="Speed of Saha">
 		<set name="icon" val="icon.skill11823" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -464,7 +464,7 @@
 	<skill id="11824" levels="1" name="Resistance of Saha">
 		<set name="icon" val="icon.skill11567" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -487,7 +487,7 @@
 	<skill id="11825" levels="1" name="Clarity of Saha">
 		<set name="icon" val="icon.skill11825" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -575,7 +575,7 @@
 	<skill id="11830" levels="1" name="Blessing of Saha">
 		<set name="icon" val="icon.skill11522" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="35" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -661,7 +661,7 @@
 		<table name="#mpConsume"> 52 52 54 60 62 66 </table>
 		<set name="icon" val="icon.skill1072" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="120000" />
@@ -932,7 +932,7 @@
 	<skill id="11861" levels="1" name="Elemental Resistance">
 		<set name="icon" val="icon.skill11861" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="82" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -945,7 +945,7 @@
 	<skill id="11862" levels="1" name="Limited Melee Weapon Resistance">
 		<set name="icon" val="icon.skill11862" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="82" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -958,7 +958,7 @@
 	<skill id="11863" levels="1" name="Limited Ranged Weapon Resistance">
 		<set name="icon" val="icon.skill11863" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="82" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />

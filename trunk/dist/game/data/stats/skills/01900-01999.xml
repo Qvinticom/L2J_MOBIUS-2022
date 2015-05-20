@@ -304,7 +304,7 @@
 	<skill id="1927" levels="1" name="Sigel Aura">
 		<set name="icon" val="icon.icon_sigel" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
@@ -322,7 +322,7 @@
 	<skill id="1929" levels="1" name="Tyrr Aura">
 		<set name="icon" val="icon.icon_tir" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
@@ -340,7 +340,7 @@
 	<skill id="1931" levels="1" name="Othell Aura">
 		<set name="icon" val="icon.icon_othel" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
@@ -363,7 +363,7 @@
 	<skill id="1933" levels="1" name="Yul Aura">
 		<set name="icon" val="icon.icon_yr" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
@@ -386,7 +386,7 @@
 	<skill id="1935" levels="1" name="Feoh Aura">
 		<set name="icon" val="icon.icon_feoh" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
@@ -409,7 +409,7 @@
 	<skill id="1937" levels="1" name="Wynn Aura">
 		<set name="icon" val="icon.icon_wynn" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
@@ -427,7 +427,7 @@
 	<skill id="1939" levels="1" name="Aeore Aura">
 		<set name="icon" val="icon.icon_eolh" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
