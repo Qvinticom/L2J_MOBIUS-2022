@@ -1051,27 +1051,11 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="115" max="195" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.027499999850988388">
-					<item id="176" min="1" max="1" chance="50" /> <!-- Apprentice's Staff -->
-					<item id="2501" min="1" max="1" chance="50" /> <!-- Bone Club -->
-				</group>
-				<group chance="12.523099899291992">
-					<item id="1869" min="1" max="1" chance="16.4895" /> <!-- Iron Ore -->
-					<item id="1870" min="1" max="1" chance="16.4895" /> <!-- Coal -->
-					<item id="1871" min="1" max="1" chance="16.4895" /> <!-- Charcoal -->
-					<item id="1872" min="1" max="1" chance="21.986" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="21.986" /> <!-- Animal Skin -->
-					<item id="1800" min="1" max="1" chance="5.1854" /> <!-- Recipe: Piece Bone Breastplate -->
-					<item id="735" min="1" max="1" chance="1.3741" /> <!-- Alacrity Potion -->
-				</group>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
 			</death>
 			<corpse>
-				<item id="734" min="1" max="1" chance="4.078" /> <!-- Haste Potion -->
-				<item id="2144" min="1" max="1" chance="4.8936" /> <!-- Recipe: Compound Braid -->
-				<item id="1897" min="1" max="1" chance="5.8257" /> <!-- Necklace of Wisdom Chain -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3149,24 +3133,11 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="92" max="127" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4668000042438507">
-					<item id="23" min="1" max="1" chance="23.7858" /> <!-- Wooden Breastplate -->
-					<item id="30" min="1" max="1" chance="38.1071" /> <!-- Hard Leather Pants -->
-					<item id="2386" min="1" max="1" chance="38.1071" /> <!-- Wooden Gaiters -->
-				</group>
-				<group chance="9.852299690246582">
-					<item id="1873" min="1" max="1" chance="13.7931" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="68.9655" /> <!-- Thread -->
-					<item id="736" min="1" max="1" chance="17.2414" /> <!-- Scroll of Escape -->
-				</group>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="3.475" /> <!-- Iron Ore -->
 			</death>
 			<corpse>
-				<item id="1873" min="1" max="1" chance="6.9008" /> <!-- Silver Nugget -->
-				<item id="1831" min="1" max="1" chance="46.0056" /> <!-- Antidote -->
-				<item id="1896" min="1" max="1" chance="7.3102" /> <!-- Necklace of Anguish Chain -->
+				<item id="36521" min="1" max="1" chance="3.600" /> <!-- Iron Ore -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -3217,28 +3188,11 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="99" max="159" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.14090000092983246">
-					<item id="272" min="1" max="1" chance="8.11" /> <!-- Forest Bow -->
-					<item id="2013" min="1" max="1" chance="91.89" /> <!-- Forest Bow Shaft -->
-				</group>
-				<group chance="9.705699920654297">
-					<item id="1864" min="1" max="1" chance="30.896" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="15.448" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.2987" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.1792" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="30.896" /> <!-- Thread -->
-					<item id="2143" min="1" max="1" chance="3.0896" /> <!-- Recipe: Synthetic Cokes -->
-					<item id="5158" min="1" max="1" chance="0.6179" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-					<item id="734" min="1" max="1" chance="2.5746" /> <!-- Haste Potion -->
-				</group>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
 			</death>
 			<corpse>
-				<item id="2173" min="1" max="1" chance="5.5023" /> <!-- Recipe: Hard Leather Shirt -->
-				<item id="1925" min="1" max="1" chance="13.3138" /> <!-- Leather Gloves Lining -->
-				<item id="1897" min="1" max="1" chance="4.8342" /> <!-- Necklace of Wisdom Chain -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 		<collision>

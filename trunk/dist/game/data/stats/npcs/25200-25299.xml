@@ -2045,26 +2045,14 @@
 		<drop_lists>
 			<death>
 				<item id="9815" min="1" max="4" chance="84" /> <!-- Dragon Heart -->
-				<item id="8176" min="1" max="2" chance="70" /> <!-- Destruction Tombstone -->
-				<group chance="72.89320373535156">
-					<item id="5289" min="1" max="1" chance="6.8459" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5292" min="1" max="1" chance="9.782" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5294" min="1" max="1" chance="6.8459" /> <!-- Sealed Tallum Helmet -->
-					<item id="5525" min="9" max="27" chance="39.2735" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5494" min="40" max="120" chance="12.0054" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5526" min="14" max="42" chance="25.2473" /> <!-- Sealed Tallum Helm Design -->
-				</group>
-				<group chance="51.03689956665039">
-					<item id="80" min="1" max="1" chance="2.0848" /> <!-- Tallum Blade -->
-					<item id="150" min="1" max="1" chance="2.0848" /> <!-- Elemental Sword -->
-					<item id="5548" min="4" max="12" chance="62.4981" /> <!-- Tallum Blade Edge -->
-					<item id="5547" min="8" max="22" chance="33.3323" /> <!-- Elemental Sword Edge -->
-				</group>
-				<group chance="62.080501556396484">
-					<item id="729" min="1" max="1" chance="11.6009" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="87.007" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="1.3921" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
+				<item id="8176" min="1" max="2" chance="68.90" /> <!-- Destruction Tombstone -->
+				<item id="5289" min="1" max="1" chance="3.450" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5292" min="1" max="1" chance="9.250" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5294" min="1" max="1" chance="3.250" /> <!-- Sealed Tallum Helmet -->
+				<item id="80" min="1" max="1" chance="1.250" /> <!-- Tallum Blade -->
+				<item id="150" min="1" max="1" chance="1.250" /> <!-- Elemental Sword -->
+				<item id="729" min="1" max="1" chance="1.600" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
 			</death>
 		</drop_lists>
 		<collision>

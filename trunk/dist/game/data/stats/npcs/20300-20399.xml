@@ -2315,32 +2315,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="91" max="122" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.7827999591827393">
-					<item id="37" min="1" max="1" chance="11.6541" /> <!-- Leather Shoes -->
-					<item id="1921" min="1" max="1" chance="76.6917" /> <!-- Leather Shoes Texture -->
-					<item id="49" min="1" max="1" chance="11.6542" /> <!-- Gloves -->
-				</group>
-				<group chance="13.166899681091309">
-					<item id="1864" min="1" max="1" chance="50.2463" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="25.1232" /> <!-- Iron Ore -->
-					<item id="1798" min="1" max="1" chance="24.6305" /> <!-- Recipe: Leather Helmet -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1866" min="1" max="1" chance="11.1988" /> <!-- Suede -->
-				<item id="1896" min="1" max="1" chance="7.1179" /> <!-- Necklace of Anguish Chain -->
-				<item id="1792" min="1" max="1" chance="1.2352" /> <!-- Recipe: Short Spear -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="3.350" /> <!-- Iron Ore -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="3.650" /> <!-- Iron Ore -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20331" level="10" type="L2Monster" name="Monster Eye Tracker">
 		<parameters>
@@ -2387,33 +2374,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="80" max="108" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.0436999797821045">
-					<item id="113" min="1" max="1" chance="31.0253" /> <!-- Mystic's Earring -->
-					<item id="906" min="1" max="1" chance="23.1755" /> <!-- Necklace of Knowledge -->
-					<item id="875" min="1" max="1" chance="45.7992" /> <!-- Ring of Knowledge -->
-				</group>
-				<group chance="7.518700122833252">
-					<item id="1865" min="1" max="1" chance="29.2011" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="29.2011" /> <!-- Coal -->
-					<item id="1796" min="1" max="1" chance="36.7309" /> <!-- Recipe: Leather Tunic -->
-					<item id="734" min="1" max="1" chance="4.8669" /> <!-- Haste Potion -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1871" min="1" max="1" chance="14.8657" /> <!-- Charcoal -->
-				<item id="2007" min="1" max="1" chance="1.0618" /> <!-- Bow Shaft -->
-				<item id="2005" min="1" max="1" chance="1.0618" /> <!-- Broadsword Blade -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="6" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="3" /> <!-- Iron Ore -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="3" /> <!-- Iron Ore -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20333" level="13" type="L2Monster" name="Greystone Golem">
 		<parameters>
@@ -3187,31 +3160,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="106" max="150" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9455000162124634">
-					<item id="20" min="1" max="1" chance="58.8462" /> <!-- Buckler -->
-					<item id="43" min="1" max="1" chance="41.1538" /> <!-- Wooden Helmet -->
-				</group>
-				<group chance="8.599300384521484">
-					<item id="1866" min="1" max="1" chance="30.7692" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="46.1538" /> <!-- Charcoal -->
-					<item id="736" min="1" max="1" chance="23.077" /> <!-- Scroll of Escape -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1869" min="1" max="1" chance="20.1546" /> <!-- Iron Ore -->
-				<item id="1803" min="1" max="1" chance="16.9366" /> <!-- Recipe: Necklace of Wisdom -->
-				<item id="1831" min="1" max="1" chance="53.7455" /> <!-- Antidote -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" grown="25" />
 			<height normal="31" grown="37.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20347" level="55" type="L2Monster" name="Doom Wraith">
 		<parameters>
@@ -6172,34 +6133,19 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="98" max="153" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3464000225067139">
-					<item id="945" min="1" max="1" chance="16.452" /> <!-- Skeleton Buckler -->
-					<item id="102" min="1" max="1" chance="7.9403" /> <!-- Round Shield -->
-					<item id="44" min="1" max="1" chance="5.5541" /> <!-- Leather Helmet -->
-					<item id="1924" min="1" max="1" chance="70.0536" /> <!-- Leather Helmet Design -->
-				</group>
-				<group chance="10.291099548339844">
-					<item id="1867" min="1" max="1" chance="37.8823" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="37.8823" /> <!-- Animal Bone -->
-					<item id="2175" min="1" max="1" chance="23.099" /> <!-- Recipe: Boots -->
-					<item id="5158" min="1" max="1" chance="1.1364" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="734" min="1" max="1" chance="3.2995" /> <!-- Haste Potion -->
-				<item id="2011" min="1" max="1" chance="0.4516" /> <!-- Short Spear Edge -->
-				<item id="1872" min="1" max="1" chance="26.3962" /> <!-- Animal Bone -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20390" level="18" type="L2Monster" name="Boogle Ratman Captain">
 		<parameters>
@@ -6243,35 +6189,19 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="101" max="167" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.08269999921321869">
-					<item id="2" min="1" max="1" chance="7.1749" /> <!-- Long Sword -->
-					<item id="120" min="1" max="1" chance="7.1749" /> <!-- Sword of Reflection -->
-					<item id="2012" min="1" max="1" chance="78.4753" /> <!-- Sword of Reflection Blade -->
-					<item id="121" min="1" max="1" chance="7.1749" /> <!-- Sword of Watershadow -->
-				</group>
-				<group chance="7.756199836730957">
-					<item id="1868" min="1" max="1" chance="64.2995" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="12.8599" /> <!-- Silver Nugget -->
-					<item id="1801" min="1" max="1" chance="16.1963" /> <!-- Recipe: Piece Bone Gaiters -->
-					<item id="5158" min="1" max="1" chance="1.286" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-					<item id="734" min="1" max="1" chance="5.3583" /> <!-- Haste Potion -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1881" min="1" max="1" chance="2.814" /> <!-- Coarse Bone Powder -->
-				<item id="1897" min="1" max="1" chance="5.0249" /> <!-- Necklace of Wisdom Chain -->
-				<item id="1873" min="1" max="1" chance="8.4419" /> <!-- Silver Nugget -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20391" level="2" type="L2Monster" name="Red Fox">
 		<parameters>

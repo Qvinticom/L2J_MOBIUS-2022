@@ -1222,32 +1222,19 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="121" max="195" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.02800000086426735">
-					<item id="176" min="1" max="1" chance="50" /> <!-- Apprentice's Staff -->
-					<item id="2501" min="1" max="1" chance="50" /> <!-- Bone Club -->
-				</group>
-				<group chance="11.326199531555176">
-					<item id="1869" min="1" max="1" chance="32.4572" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="64.9143" /> <!-- Stem -->
-					<item id="2254" min="1" max="1" chance="1.3302" /> <!-- Recipe: Composite Bow -->
-					<item id="5273" min="1" max="1" chance="1.2983" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1869" min="1" max="1" chance="24.8908" /> <!-- Iron Ore -->
-				<item id="2013" min="1" max="1" chance="0.5372" /> <!-- Forest Bow Shaft -->
-				<item id="1864" min="1" max="1" chance="49.7816" /> <!-- Stem -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20423" level="14" type="L2Monster" name="Akaste Skeleton Archer">
 		<parameters>
@@ -1292,29 +1279,19 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="98" max="145" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.05429999902844429">
-					<item id="271" min="1" max="1" chance="100" /> <!-- Hunting Bow -->
-				</group>
-				<group chance="15.069100379943848">
-					<item id="1872" min="1" max="1" chance="50" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="50" /> <!-- Animal Skin -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1792" min="1" max="1" chance="1.4067" /> <!-- Recipe: Short Spear -->
-				<item id="1921" min="1" max="1" chance="12.3424" /> <!-- Leather Shoes Texture -->
-				<item id="1793" min="1" max="1" chance="1.4067" /> <!-- Recipe: Sword of Reflection -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20424" level="19" type="L2Monster" name="Akaste Skeleton Lord">
 		<parameters>
@@ -1433,32 +1410,19 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="95" max="131" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.16979999840259552">
-					<item id="66" min="1" max="1" chance="9.9075" /> <!-- Gladius -->
-					<item id="1333" min="1" max="1" chance="9.9075" /> <!-- Brandish -->
-					<item id="2010" min="1" max="1" chance="80.185" /> <!-- Brandish Blade -->
-				</group>
-				<group chance="11.01830005645752">
-					<item id="1871" min="1" max="1" chance="31.7647" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="21.1765" /> <!-- Suede -->
-					<item id="1799" min="1" max="1" chance="47.0588" /> <!-- Recipe: Leather Gloves -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1869" min="1" max="1" chance="17.7731" /> <!-- Iron Ore -->
-				<item id="1831" min="1" max="1" chance="47.3949" /> <!-- Antidote -->
-				<item id="1831" min="1" max="1" chance="47.3949" /> <!-- Antidote -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="3.600" /> <!-- Iron Ore -->
+			</death>
+			<corpse>
+				<item id="36521" min="1" max="1" chance="3.600" /> <!-- Iron Ore -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20426" level="10" type="L2Monster" name="Evil Eye">
 		<parameters>
@@ -1941,31 +1905,19 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="98" max="149" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.23190000653266907">
-					<item id="216" min="1" max="1" chance="11.939" /> <!-- Dirk -->
-					<item id="2009" min="1" max="1" chance="88.061" /> <!-- Dirk Blade -->
-				</group>
-				<group chance="10.518099784851074">
-					<item id="1872" min="1" max="1" chance="48.6583" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="48.6583" /> <!-- Animal Skin -->
-					<item id="1794" min="1" max="1" chance="2.6834" /> <!-- Recipe: Forest Bow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1871" min="1" max="1" chance="19.4922" /> <!-- Charcoal -->
-				<item id="1793" min="1" max="1" chance="1.4332" /> <!-- Recipe: Sword of Reflection -->
-				<item id="1833" min="1" max="1" chance="51.9792" /> <!-- Bandage -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20436" level="23" type="L2Monster" name="Ol Mahum Supplier">
 		<parameters>
@@ -3019,33 +2971,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="116" max="177" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.559000015258789">
-					<item id="429" min="1" max="1" chance="4.3575" /> <!-- Leather Tunic -->
-					<item id="1922" min="1" max="1" chance="34.0148" /> <!-- Leather Tunic Pattern -->
-					<item id="464" min="1" max="1" chance="6.981" /> <!-- Leather Stockings -->
-					<item id="1923" min="1" max="1" chance="54.6467" /> <!-- Leather Stockings Pattern -->
-				</group>
-				<group chance="15.379500389099121">
-					<item id="1873" min="1" max="1" chance="11.8329" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="59.1647" /> <!-- Thread -->
-					<item id="1798" min="1" max="1" chance="29.0024" /> <!-- Recipe: Leather Helmet -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1873" min="1" max="1" chance="9.2414" /> <!-- Silver Nugget -->
-				<item id="115" min="1" max="1" chance="1.7114" /> <!-- Earring of Wisdom -->
-				<item id="1896" min="1" max="1" chance="9.7896" /> <!-- Necklace of Anguish Chain -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="13" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.03" /> <!-- Silver -->
+			</death>
+			<corpse>
+				<item id="36522" min="1" max="1" chance="0.03" /> <!-- Silver -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20450" level="9" type="L2Monster" name="Relic Werewolf">
 		<parameters>
@@ -5540,37 +5478,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="120" max="192" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2077000141143799">
-					<item id="845" min="1" max="1" chance="8.7774" /> <!-- Cat's Eye Earring -->
-					<item id="908" min="1" max="1" chance="6.5831" /> <!-- Necklace of Wisdom -->
-					<item id="1897" min="1" max="1" chance="71.4734" /> <!-- Necklace of Wisdom Chain -->
-					<item id="877" min="1" max="1" chance="13.1661" /> <!-- Ring of Wisdom -->
-				</group>
-				<group chance="13.064900398254395">
-					<item id="1864" min="1" max="1" chance="31.7125" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="15.8562" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.5708" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.3425" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="31.7125" /> <!-- Thread -->
-					<item id="2139" min="1" max="1" chance="3.1712" /> <!-- Recipe: Steel Mold -->
-					<item id="5268" min="1" max="1" chance="0.6343" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1868" min="1" max="1" chance="49.0926" /> <!-- Thread -->
-				<item id="1833" min="1" max="1" chance="65.4568" /> <!-- Bandage -->
-				<item id="1868" min="1" max="1" chance="49.0926" /> <!-- Thread -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="13" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20490" level="40" type="L2Monster" name="Death Doll">
 		<parameters>
