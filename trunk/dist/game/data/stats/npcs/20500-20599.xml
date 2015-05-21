@@ -6602,21 +6602,9 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="383" max="764" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.24420000612735748">
-					<item id="261" min="1" max="1" chance="1.8063" /> <!-- Bich'Hwa -->
-					<item id="2039" min="1" max="1" chance="98.1937" /> <!-- Bich'Hwa Edge -->
-				</group>
-				<group chance="17.10300064086914">
-					<item id="1870" min="1" max="1" chance="46.1646" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="46.1646" /> <!-- Varnish -->
-					<item id="1874" min="1" max="1" chance="3.0776" /> <!-- Oriharukon Ore -->
-					<item id="2160" min="1" max="1" chance="2.9784" /> <!-- Recipe: Moonstone Earring -->
-					<item id="2205" min="1" max="1" chance="1.4609" /> <!-- Recipe: Chain Gaiters -->
-					<item id="5154" min="1" max="1" chance="0.1539" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="15" max="36" chance="70" /> <!-- Adena -->
+				<item id="36537" min="1" max="1" chance="0.3" /> <!-- Leather Braid -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6650,9 +6638,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1944" min="1" max="1" chance="4.6746" /> <!-- Mithril Tunic Fabric -->
-				<item id="2157" min="1" max="1" chance="7.5739" /> <!-- Recipe: Omen Beast's Eye Earring -->
-				<item id="1903" min="1" max="1" chance="15.2869" /> <!-- Elven Ring Piece -->
+				<item id="36537" min="1" max="1" chance="0.3" /> <!-- Leather Braid -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6710,22 +6697,9 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="508" max="1017" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.27250000834465027">
-					<item id="280" min="1" max="1" chance="1.6661" /> <!-- Light Crossbow -->
-					<item id="2054" min="1" max="1" chance="98.3339" /> <!-- Light Crossbow Shaft -->
-				</group>
-				<group chance="19.34670066833496">
-					<item id="1871" min="1" max="1" chance="46.4927" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="30.9951" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="1.8597" /> <!-- Adamantite Nugget -->
-					<item id="2297" min="1" max="1" chance="0.203" /> <!-- Recipe: Flamberge -->
-					<item id="5154" min="1" max="1" chance="0.155" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
-					<item id="2994" min="1" max="1" chance="3.6899" /> <!-- Recipe: Boots of Seal -->
-					<item id="6668" min="1" max="1" chance="16.6046" /> <!-- Deluxe Chest Key - Grade 4 -->
-				</group>
+				<item id="57" min="28" max="67" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6759,9 +6733,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2988" min="1" max="1" chance="5.2906" /> <!-- Recipe: Reinforced Mithril Gaiters -->
-				<item id="2211" min="1" max="1" chance="2.8114" /> <!-- Recipe: Plated Leather Armor -->
-				<item id="1805" min="1" max="1" chance="0.418" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6820,30 +6793,9 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="498" max="1006" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.267300009727478">
-					<item id="159" min="1" max="1" chance="0.3349" /> <!-- Bonebreaker -->
-					<item id="2048" min="1" max="1" chance="19.2018" /> <!-- Bonebreaker Head -->
-					<item id="187" min="1" max="1" chance="0.3349" /> <!-- Atuba Hammer -->
-					<item id="2049" min="1" max="1" chance="19.2018" /> <!-- Atuba Hammer Head -->
-					<item id="188" min="1" max="1" chance="0.3349" /> <!-- Ghost Staff -->
-					<item id="2050" min="1" max="1" chance="20.3601" /> <!-- Ghost Staff Head -->
-					<item id="189" min="1" max="1" chance="0.3349" /> <!-- Staff of Life -->
-					<item id="2051" min="1" max="1" chance="20.3601" /> <!-- Staff of Life Shaft -->
-					<item id="190" min="1" max="1" chance="0.3349" /> <!-- Atuba Mace -->
-					<item id="2058" min="1" max="1" chance="19.2017" /> <!-- Atuba Mace Head -->
-				</group>
-				<group chance="4.226500034332275">
-					<item id="1875" min="1" max="1" chance="13.9891" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="34.9728" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="17.4864" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="2.7978" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="20.9837" /> <!-- Metallic Thread -->
-					<item id="2988" min="1" max="1" chance="8.8539" /> <!-- Recipe: Reinforced Mithril Gaiters -->
-					<item id="2303" min="1" max="1" chance="0.9163" /> <!-- Recipe: Skull Graver -->
-				</group>
+				<item id="57" min="20" max="48" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6877,9 +6829,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2204" min="1" max="1" chance="2.4481" /> <!-- Recipe: Chain Mail Shirt -->
-				<item id="2308" min="1" max="1" chance="0.5399" /> <!-- Recipe: Cursed Dagger -->
-				<item id="1905" min="1" max="1" chance="12.0264" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -6938,25 +6889,8 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="471" max="957" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.26570001244544983">
-					<item id="70" min="1" max="1" chance="0.8123" /> <!-- Claymore -->
-					<item id="2047" min="1" max="1" chance="49.5227" /> <!-- Claymore Blade -->
-					<item id="2499" min="1" max="1" chance="0.8123" /> <!-- Elven Long Sword -->
-					<item id="2967" min="1" max="1" chance="48.8527" /> <!-- Elven Long Sword Blade -->
-				</group>
-				<group chance="3.5862998962402344">
-					<item id="1895" min="1" max="1" chance="59.6129" /> <!-- Metallic Fiber -->
-					<item id="2164" min="1" max="1" chance="16.0496" /> <!-- Recipe: Ring of Protection -->
-					<item id="5154" min="1" max="1" chance="0.6955" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
-					<item id="2219" min="1" max="1" chance="12.9593" /> <!-- Recipe: Crimson Boots -->
-					<item id="8723" min="1" max="1" chance="8.3458" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="2.0865" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.2086" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0418" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
+				<item id="57" min="20" max="46" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6990,9 +6924,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="3954" min="1" max="1" chance="0.3974" /> <!-- Recipe: Blessed Spiritshot C -->
-				<item id="2314" min="1" max="1" chance="0.5206" /> <!-- Recipe: Body Slasher -->
-				<item id="1884" min="1" max="1" chance="73.359" /> <!-- Cord -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -7054,42 +6986,8 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="442" max="906" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2054000049829483">
-					<item id="89" min="1" max="1" chance="0.1832" /> <!-- Big Hammer -->
-					<item id="2061" min="1" max="1" chance="12.4818" /> <!-- Big Hammer Head -->
-					<item id="160" min="1" max="1" chance="0.1832" /> <!-- Battle Axe -->
-					<item id="2063" min="1" max="1" chance="12.4818" /> <!-- Battle Axe Head -->
-					<item id="161" min="1" max="1" chance="0.1832" /> <!-- Silver Axe -->
-					<item id="2064" min="1" max="1" chance="12.4818" /> <!-- Silver Axe Head -->
-					<item id="173" min="1" max="1" chance="0.1832" /> <!-- Skull Graver -->
-					<item id="2065" min="1" max="1" chance="12.4818" /> <!-- Skull Graver Head -->
-					<item id="191" min="1" max="1" chance="0.1832" /> <!-- Heavy Doom Hammer -->
-					<item id="2066" min="1" max="1" chance="12.6653" /> <!-- Heavy Doom Hammer Head -->
-					<item id="192" min="1" max="1" chance="0.1832" /> <!-- Crystal Staff -->
-					<item id="2067" min="1" max="1" chance="11.6384" /> <!-- Crystal Staff Head -->
-					<item id="193" min="1" max="1" chance="0.1832" /> <!-- Stick of Faith -->
-					<item id="2068" min="1" max="1" chance="11.6384" /> <!-- Stick of Faith Shaft -->
-					<item id="194" min="1" max="1" chance="0.1832" /> <!-- Heavy Doom Axe -->
-					<item id="2069" min="1" max="1" chance="12.6651" /> <!-- Heavy Doom Axe Blade -->
-				</group>
-				<group chance="25.35140037536621">
-					<item id="1864" min="1" max="1" chance="32.2129" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="16.1065" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.7376" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.4426" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="32.2129" /> <!-- Thread -->
-					<item id="2323" min="1" max="1" chance="0.0561" /> <!-- Recipe: Elemental Bow -->
-					<item id="2225" min="1" max="1" chance="0.3501" /> <!-- Recipe: Demon's Stockings -->
-					<item id="2321" min="1" max="1" chance="0.0561" /> <!-- Recipe: Stiletto -->
-					<item id="3003" min="1" max="1" chance="1.0004" /> <!-- Recipe: Gloves of Seal -->
-					<item id="8723" min="1" max="1" chance="0.6443" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.1611" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0161" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0033" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
+				<item id="57" min="18" max="43" chance="70" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7123,9 +7021,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2062" min="1" max="1" chance="0.8809" /> <!-- Scythe Edge -->
-				<item id="1953" min="1" max="1" chance="3.5975" /> <!-- Sage's Rag Lining -->
-				<item id="1875" min="1" max="1" chance="7.4876" /> <!-- Stone of Purity -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -7192,28 +7088,8 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="585" max="1188" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.27250000834465027">
-					<item id="71" min="1" max="1" chance="0.7275" /> <!-- Flamberge -->
-					<item id="2059" min="1" max="1" chance="47.6302" /> <!-- Flamberge Blade -->
-					<item id="72" min="1" max="1" chance="0.7275" /> <!-- Stormbringer -->
-					<item id="2060" min="1" max="1" chance="50.9148" /> <!-- Stormbringer Blade -->
-				</group>
-				<group chance="17.39579963684082">
-					<item id="1868" min="1" max="1" chance="73.0427" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="14.6085" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.6521" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.4348" /> <!-- Compound Braid -->
-					<item id="4044" min="1" max="1" chance="1.2174" /> <!-- Thons -->
-					<item id="3003" min="1" max="1" chance="2.2684" /> <!-- Recipe: Gloves of Seal -->
-					<item id="2214" min="1" max="1" chance="0.9062" /> <!-- Recipe: Dwarven Chain Gaiters -->
-					<item id="8723" min="1" max="1" chance="1.4609" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3652" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0365" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0073" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
+				<item id="57" min="24" max="57" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7247,8 +7123,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1959" min="1" max="1" chance="5.9745" /> <!-- Chain Mail Shirt Material -->
-				<item id="2324" min="1" max="1" chance="0.7728" /> <!-- Recipe: Noble Elven Bow -->
+				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
 			</corpse>
 		</drop_lists>
 		<collision>
