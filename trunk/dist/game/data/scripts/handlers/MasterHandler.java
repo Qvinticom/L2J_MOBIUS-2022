@@ -242,6 +242,7 @@ import handlers.usercommandhandlers.ChannelLeave;
 import handlers.usercommandhandlers.ClanPenalty;
 import handlers.usercommandhandlers.ClanWarsList;
 import handlers.usercommandhandlers.Dismount;
+import handlers.usercommandhandlers.ExperienceGain;
 import handlers.usercommandhandlers.InstanceZone;
 import handlers.usercommandhandlers.Loc;
 import handlers.usercommandhandlers.Mount;
@@ -513,6 +514,7 @@ public class MasterHandler
 			ClanPenalty.class,
 			ClanWarsList.class,
 			Dismount.class,
+			ExperienceGain.class,
 			Unstuck.class,
 			InstanceZone.class,
 			Loc.class,

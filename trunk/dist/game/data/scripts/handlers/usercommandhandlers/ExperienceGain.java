@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package custom.listeners.ExperienceGain;
+package handlers.usercommandhandlers;
 
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -33,28 +33,28 @@ public final class ExperienceGain implements IVoicedCommandHandler
 {
 	private final String[] COMMANDS = new String[]
 	{
-		"xpoff",
-		"xpon",
+		"expoff",
+		"expon",
 	};
 	
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
-		if (command.equals("xpoff"))
+		if (command.equals("expoff"))
 		{
-			if (!activeChar.getVariables().getBoolean("XPOFF", false))
+			if (!activeChar.getVariables().getBoolean("EXPOFF", false))
 			{
 				activeChar.addListener(new FunctionEventListener(activeChar, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), event.getNewExp() - event.getOldExp()), this));
-				activeChar.getVariables().set("XPOFF", true);
+				activeChar.getVariables().set("EXPOFF", true);
 				activeChar.sendMessage("Experience gain is disabled.");
 			}
 		}
-		else if (command.equals("xpon"))
+		else if (command.equals("expon"))
 		{
-			if (activeChar.getVariables().getBoolean("XPOFF", false))
+			if (activeChar.getVariables().getBoolean("EXPOFF", false))
 			{
 				activeChar.removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
-				activeChar.getVariables().set("XPOFF", false);
+				activeChar.getVariables().set("EXPOFF", false);
 				activeChar.sendMessage("Experience gain is enabled.");
 			}
 		}
