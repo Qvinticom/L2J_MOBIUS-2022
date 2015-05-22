@@ -93,7 +93,7 @@ public final class Fishing extends AbstractEffect
 			}
 			else
 			{
-				player.endFishing(false);
+				player.endFishing(false, false);
 			}
 			
 			player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);

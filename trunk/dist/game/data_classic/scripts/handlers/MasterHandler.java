@@ -109,6 +109,7 @@ import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
+import handlers.bypasshandlers.AlternateClassMaster;
 import handlers.bypasshandlers.ArcanCityMovie;
 import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
@@ -243,6 +244,7 @@ import handlers.usercommandhandlers.ChannelLeave;
 import handlers.usercommandhandlers.ClanPenalty;
 import handlers.usercommandhandlers.ClanWarsList;
 import handlers.usercommandhandlers.Dismount;
+import handlers.usercommandhandlers.ExperienceGain;
 import handlers.usercommandhandlers.InstanceZone;
 import handlers.usercommandhandlers.Loc;
 import handlers.usercommandhandlers.Mount;
@@ -411,6 +413,7 @@ public class MasterHandler
 		},
 		{
 			// Bypass Handlers
+			AlternateClassMaster.class,
 			ArcanCityMovie.class,
 			Augment.class,
 			Buy.class,
@@ -515,6 +518,7 @@ public class MasterHandler
 			ClanPenalty.class,
 			ClanWarsList.class,
 			Dismount.class,
+			ExperienceGain.class,
 			Unstuck.class,
 			InstanceZone.class,
 			Loc.class,
