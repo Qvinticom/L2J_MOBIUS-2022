@@ -677,13 +677,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13277" levels="1" name="Dualsword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13277" levels="3" name="Dualsword Special Ability">
 		<!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="18" />
+				<add stat="rCrit" val="27" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13278" levels="1" name="Dualsword Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -761,13 +766,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13287" levels="1" name="Dual Dagger Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13287" levels="3" name="Dual Dagger Special Ability">
 		<!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="18" />
+				<add stat="cAtkAdd" val="506" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13288" levels="1" name="Dual Dagger Special Ability">
 		<!-- AUTO GENERATED SKILL -->

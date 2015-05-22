@@ -1,46 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="9200" levels="1" name="Elixir: Lute Melody">
-		<set name="buffDuration" val="1800000" />
-		<set name="castMagic" val="STATIC" />
-		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.skill11518" />
+		<set name="isMagic" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
-		<set name="target" val="SELF" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalType" val="MELODY_LUTE" />
 		<for>
-			<effect name="Buff" val="0">
-				<add stat="absorbDam" val="9" />
+			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.34" />
 				<mul stat="mAtkSpd" val="1.31" />
+				<add stat="absorbDam" val="9" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="9201" levels="1" name="Elixir: Pipe Organ Melody">
-		<set name="buffDuration" val="1800000" />
-		<set name="castMagic" val="STATIC" />
-		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.skill11519" />
+		<set name="isMagic" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
-		<set name="target" val="SELF" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalType" val="MELODY_PIPE" />
 		<for>
 			<effect name="Buff" val="0">
 				<mul stat="maxHp" val="1.37" />
 				<mul stat="maxMp" val="1.37" />
-				<mul stat="regMp" val="1.20" />
 				<mul stat="maxCp" val="1.37" />
+				<mul stat="regMp" val="1.20" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="9202" levels="1" name="Elixir: Guitar Melody">
-		<set name="buffDuration" val="1800000" />
-		<set name="castMagic" val="STATIC" />
-		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.skill11520" />
+		<set name="isMagic" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
-		<set name="target" val="SELF" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalType" val="MELODY_GUITAR" />
 		<for>
 			<effect name="Buff" val="0">
 				<mul stat="rCrit" val="1.32" />
@@ -52,14 +49,14 @@
 		</for>
 	</skill>
 	<skill id="9203" levels="1" name="Elixir: Harp Melody">
-		<set name="buffDuration" val="1800000" />
-		<set name="castMagic" val="STATIC" />
-		<set name="magicLvl" val="85" />
+		<set name="icon" val="icon.skill11520" />
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
-		<set name="target" val="SELF" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalType" val="MELODY_HARP" />
 		<for>
-			<effect abnormalLvl="6" abnormalTime="1800" abnormalType="extend_hit_up" name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="accCombat" val="5" />
 				<add stat="runSpd" val="34" />
 				<add stat="rEvas" val="5" />
@@ -781,52 +778,144 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="9280" levels="2" name="Horn Melody - Heavenly Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<table name="#pAtk"> 1.17 1.19 </table>
+		<table name="#pDef"> 1.15 1.15 </table>
+		<table name="#mAtk"> 1.79 1.83 </table>
+		<table name="#mDef"> 1.30 1.30 </table>
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="abnormalType" val="MELODY_HORN" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mDef" val="#mDef" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9281" levels="2" name="Drum Melody - Heavenly Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 10%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. Buff remains even after death, and cannot be forcefully deleted. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<table name="#maxMp"> 1.20 1.20 </table>
+		<table name="#regHp"> 1.20 1.20 </table>
+		<table name="#mCritRate"> 20 20 </table>
+		<table name="#cAtk"> 1.20 1.20 </table>
+		<table name="#pAtk"> 1.10 1.10 </table>
+		<table name="#pDef"> 1.20 1.20 </table>
+		<table name="#pAtkSpd"> 1.20 1.20 </table>
+		<table name="#mAtk"> 1.20 1.20 </table>
+		<table name="#mDef"> 1.20 1.20 </table>
+		<table name="#mAtkSpd"> 1.20 1.20 </table>
+		<table name="#debuffVuln"> 1.10 1.10 </table>
+		<table name="#defCritDamage"> 1.30 1.30 </table>
+		<table name="#runSpd"> 0.85 0.90 </table>
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="abnormalType" val="MELODY_DRUM" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="regHp" val="#regHp" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<add stat="cAtk" val="#cAtk" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="mAtk" val="#mAtk" />
+				<mul stat="mDef" val="#mDef" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="runSpd" val="#runSpd" />
+				<mul stat="debuffVuln" val="#debuffVuln" />
+				<mul stat="defCritDamage" val="#defCritDamage" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9282" levels="2" name="Lute Melody - Heavenly Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. Buff remains even after death, and cannot be forcefully deleted. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<table name="#pAtkSpd"> 1.34 1.35 </table>
+		<table name="#mAtkSpd"> 1.31 1.32 </table>
+		<table name="#absorbDam"> 9 9 </table>
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="abnormalType" val="MELODY_LUTE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<add stat="absorbDam" val="#absorbDam" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9283" levels="2" name="Pipe Organ Melody - Heavenly Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<table name="#maxHp"> 1.37 1.39 </table>
+		<table name="#maxMp"> 1.37 1.39 </table>
+		<table name="#maxCp"> 1.37 1.39 </table>
+		<table name="#regHp"> 1.20 1.20 </table>
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="abnormalType" val="MELODY_PIPE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="maxCp" val="#maxCp" />
+				<mul stat="regHp" val="#regHp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9284" levels="2" name="Guitar Melody - Heavenly Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<table name="#rCrit"> 1.32 1.34 </table>
+		<table name="#cAtk"> 1.35 1.35 </table>
+		<table name="#mCritRate"> 20 20 </table>
+		<table name="#MagicalMpConsumeRate"> 0.90 0.90 </table>
+		<table name="#PhysicalMpConsumeRate"> 0.80 0.80 </table>
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="abnormalType" val="MELODY_GUITAR" />
+		<for>
+			<effect name="Buff">
+				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="cAtk" val="#cAtk" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9285" levels="2" name="Harp Melody - Heavenly Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<table name="#accCombat"> 5 6 </table>
+		<table name="#rEvas"> 5 6 </table>
+		<table name="#mEvas"> 5 6 </table>
+		<table name="#runSpd"> 34 35 </table>
+		<table name="#defCritDamage"> 1.30 1.30 </table>
+		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="abnormalType" val="MELODY_HARP" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="#accCombat" />
+				<add stat="rEvas" val="#rEvas" />
+				<add stat="mEvas" val="#mEvas" />
+				<add stat="runSpd" val="#runSpd" />
+				<mul stat="defCritDamage" val="#defCritDamage" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9286" levels="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
 		<!-- AUTO GENERATED SKILL -->

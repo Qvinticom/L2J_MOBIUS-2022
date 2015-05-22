@@ -1066,19 +1066,19 @@
 		</for>
 	</skill>
 	<skill id="13062" levels="5" name="Special Ability: Damage Up">
-		<!-- Increases P. Atk. Inflicts additional damage during PvP. -->
-		<table name="#Atk">288 332 377 415 468</table>
-		<table name="#Dmg">1.05 1.05 1.1 1.1 1.1</table>
+		<table name="#magicLvl"> 85 85 95 99 99 </table>
+		<table name="#Atk">288 332 377 415 457</table>
 		<set name="icon" val="icon.skill1068" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="#Atk" />
 				<add stat="mAtk" val="#Atk" />
-				<mul stat="pvpPhysDmg" val="#Dmg" />
-				<mul stat="pvpPhysSkillsDmg" val="#Dmg" />
-				<mul stat="pvpMagicalDmg" val="#Dmg" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>

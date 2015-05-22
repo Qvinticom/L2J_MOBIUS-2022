@@ -1103,10 +1103,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3575" levels="4" name="Special Ability: Empower">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 75 84 85 86 </table>
-		<table name="#mAtk"> 60.09 151.09 166.54 176.53 </table>
+	<skill id="3575" levels="9" name="Special Ability: Empower">
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 85 85 85 85 95 99 99 </table>
+		<table name="#mAtk"> 60.09 151.09 166.54 176.53 296 322 395 460 532 </table>
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1121,8 +1121,8 @@
 		</for>
 	</skill>
 	<skill id="3576" levels="4" name="Special Ability: MP Regeneration">
-		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 75 84 85 86 </table>
+		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 85 85 </table>
 		<table name="#regMp"> 0.54 1.95 2.04 2.05 </table>
 		<set name="icon" val="icon.skill1047" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1137,8 +1137,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3577" levels="2" name="Special Ability: Magic Hold">
+	<skill id="3577" levels="3" name="Special Ability: Magic Hold">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<table name="#magicLvl"> 75 80 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -1152,7 +1153,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />

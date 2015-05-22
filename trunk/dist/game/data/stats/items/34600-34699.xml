@@ -121,9 +121,19 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34620" name="Heavenly Cocktail" additionalName="" type="EtcItem">
-		<!-- For 60 minutes, it receives the following level 1 effects: Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, and Drum Melody. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="9280-1;9281-1;9282-1;9283-1;9284-1;9285-1;" />
 	</item>
 	<item id="34621" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Passive)" additionalName="" type="Armor">
 		<!-- Increases resistance to half-kill and lethal strike when equipped. Shadow weapon. -->

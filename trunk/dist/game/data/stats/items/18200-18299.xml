@@ -116,29 +116,54 @@
 		<set name="item_skill" val="12122-1" />
 	</item>
 	<item id="18214" name="Unidentified Amaranthine Caster" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Caster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12123-1" />
 	</item>
 	<item id="18215" name="Unidentified Amaranthine Retributer" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Retributer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="72342000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12124-1" />
 	</item>
 	<item id="18216" name="Unidentified Amaranthine Dualsword" additionalName="" type="EtcItem">
-		<!-- Amaranthine Dualsword in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword) -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="86810400" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12125-1" />
 	</item>
 	<item id="18217" name="Unidentified Amaranthine Dual Dagger" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Dual Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / dagger) -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="86810400" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12126-1" />
 	</item>
 	<item id="18218" name="Unidentified Amaranthine Dual Blunt Weapon" additionalName="" type="EtcItem">
-		<!-- An Amaranthine Dual Blunt Weapon in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / blunt) -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
 		<set name="price" val="86810400" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12127-1" />
 	</item>
 	<item id="18219" name="Unidentified Eternal Helmet" additionalName="Heavy Armor" type="EtcItem">
 		<!-- An Eternal Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / heavy armor) -->
