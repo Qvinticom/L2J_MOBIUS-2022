@@ -1372,34 +1372,28 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9816" min="3" max="7" chance="80" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
-				<group chance="52.422298431396484">
-					<item id="5304" min="1" max="1" chance="6.8601" /> <!-- Sealed Tallum Tunic -->
-					<item id="5305" min="1" max="1" chance="10.9721" /> <!-- Sealed Tallum Stockings -->
-					<item id="5308" min="1" max="1" chance="4.221" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5485" min="9" max="27" chance="42.8005" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="5489" min="28" max="84" chance="21.5934" /> <!-- Sealed Tallum Stockings Fabric -->
-					<item id="5486" min="20" max="60" chance="13.5529" /> <!-- Sealed Dark Crystal Robe Fabric -->
-				</group>
-				<group chance="73.33930206298828">
-					<item id="212" min="1" max="1" chance="2.0903" /> <!-- Dasparion's Staff -->
-					<item id="2504" min="1" max="1" chance="2.0903" /> <!-- Meteor Shower -->
-					<item id="5543" min="4" max="12" chance="62.6947" /> <!-- Dasparion's Staff Head -->
-					<item id="5532" min="8" max="22" chance="33.1247" /> <!-- Meteor Shower Head -->
-				</group>
-				<group chance="17.432199478149414">
-					<item id="6570" min="1" max="1" chance="89.2857" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="10.7143" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="72" />
 			<height normal="87" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9816" min="3" max="7" chance="81" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
+				<item id="5304" min="1" max="1" chance="6.100" /> <!-- Sealed Tallum Tunic -->
+				<item id="5305" min="1" max="1" chance="9.900" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="3.850" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5485" min="9" max="27" chance="38.500" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5489" min="36" max="108" chance="15.78" /> <!-- Sealed Tallum Stockings Fabric -->
+				<item id="5486" min="2" max="6" chance="95.50" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="212" min="1" max="1" chance="1.200" /> <!-- Dasparion's Staff -->
+				<item id="2504" min="1" max="1" chance="1.150" /> <!-- Meteor Shower -->
+				<item id="5543" min="3" max="9" chance="29" /> <!-- Dasparion's Staff Head -->
+				<item id="5532" min="4" max="12" chance="23.75" /> <!-- Meteor Shower Head -->
+				<item id="6570" min="1" max="1" chance="3.075" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25126" level="79" type="L2RaidBoss" name="Longhorn Golkonda" title="Raid Boss">
 		<parameters>
@@ -3408,36 +3402,30 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="44" />
+			<height normal="51.5" />
+		</collision>
 		<drop_lists>
 			<death>
 				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
 				<item id="9815" min="3" max="7" chance="81" /> <!-- Dragon Heart -->
 				<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
-				<group chance="67.74579620361328">
-					<item id="5320" min="1" max="1" chance="3.2901" /> <!-- Sealed Leather Armor of Nightmare -->
-					<item id="5323" min="1" max="1" chance="3.2901" /> <!-- Sealed Majestic Leather Armor -->
-					<item id="5480" min="4" max="12" chance="60.926" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-					<item id="5481" min="8" max="22" chance="32.4938" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				</group>
-				<group chance="42.730499267578125">
-					<item id="81" min="1" max="1" chance="1.6606" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="1" chance="1.6606" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="1" chance="1.6606" /> <!-- Dark Legion's Edge -->
-					<item id="5529" min="9" max="27" chance="26.2482" /> <!-- Dragon Slayer Edge -->
-					<item id="5546" min="5" max="15" chance="51.8961" /> <!-- Sword of Miracles Edge -->
-					<item id="5545" min="14" max="42" chance="16.8739" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="42.60810089111328">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="5320" min="1" max="1" chance="2.600" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="2.600" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5480" min="36" max="108" chance="15" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="12" max="36" chance="5.150" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="81" min="1" max="1" chance="0.75" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.75" /> <!-- Dark Legion's Edge -->
+				<item id="5529" min="2" max="6" chance="26.2482" /> <!-- Dragon Slayer Edge -->
+				<item id="5546" min="3" max="9" chance="23" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="19.25" /> <!-- Dark Legion's Edge Blade -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="7.500" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="44" />
-			<height normal="51.5" />
-		</collision>
 	</npc>
 	<npc id="25166" level="25" type="L2RaidBoss" name="Ikuntai" title="Raid Boss">
 		<parameters>
@@ -4854,27 +4842,21 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9816" min="1" max="2" chance="89" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="70" /> <!-- Destruction Tombstone -->
-				<group chance="63.08110046386719">
-					<item id="440" min="1" max="1" chance="26.2497" /> <!-- Robe of Seal -->
-					<item id="1970" min="12" max="36" chance="73.7503" /> <!-- Robe of Seal Fabric -->
-				</group>
-				<group chance="28.811599731445312">
-					<item id="325" min="1" max="1" chance="23.5602" /> <!-- Horn of Glory -->
-					<item id="2088" min="12" max="36" chance="76.4398" /> <!-- Horn of Glory Fragment -->
-				</group>
-				<group chance="55.554100036621094">
-					<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9816" min="1" max="2" chance="89" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="1" chance="70" /> <!-- Destruction Tombstone -->
+				<item id="440" min="1" max="1" chance="14.50" /> <!-- Robe of Seal -->
+				<item id="1970" min="3" max="27" chance="35.50" /> <!-- Robe of Seal Fabric -->
+				<item id="325" min="1" max="1" chance="30" /> <!-- Horn of Glory -->
+				<item id="2088" min="3" max="27" chance="10.50" /> <!-- Horn of Glory Fragment -->
+				<item id="6574" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25193" level="42" type="L2Monster" name="Panathen's Knight" title="Raid Fighter">
 		<parameters>

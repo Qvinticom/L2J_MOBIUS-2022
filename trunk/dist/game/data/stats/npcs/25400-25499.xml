@@ -3244,36 +3244,25 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
-				<group chance="49.10940170288086">
-					<item id="357" min="1" max="1" chance="3.9351" /> <!-- Zubei's Breastplate -->
-					<item id="383" min="1" max="1" chance="6.295" /> <!-- Zubei's Gaiters -->
-					<item id="2376" min="1" max="1" chance="3.9351" /> <!-- Avadon Breastplate -->
-					<item id="2379" min="1" max="1" chance="6.295" /> <!-- Avadon Gaiters -->
-					<item id="4056" min="16" max="48" chance="17.7615" /> <!-- Zubei's Breastplate Part -->
-					<item id="4057" min="60" max="180" chance="7.3199" /> <!-- Zubei's Gaiter Material -->
-					<item id="4064" min="23" max="67" chance="12.6304" /> <!-- Avadon Breastplate Part -->
-					<item id="4065" min="11" max="31" chance="41.828" /> <!-- Avadon Gaiters Material -->
-				</group>
-				<group chance="22.608800888061523">
-					<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe -->
-					<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head -->
-				</group>
-				<group chance="83.09259796142578">
-					<item id="4601" min="1" max="3" chance="40.0972" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="4602" min="2" max="4" chance="26.7315" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
-					<item id="4603" min="2" max="6" chance="20.0486" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-					<item id="951" min="3" max="7" chance="13.1227" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="45" />
 			<height normal="141" />
 		</collision>
+        		<drop_lists>
+			<death>
+				    <item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
+				    <item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
+					<item id="357" min="1" max="1" chance="1.150" /> <!-- Zubei's Breastplate -->
+					<item id="383" min="1" max="1" chance="7" /> <!-- Zubei's Gaiters -->
+					<item id="2376" min="1" max="1" chance="1.800" /> <!-- Avadon Breastplate -->
+					<item id="2379" min="1" max="1" chance="4.650" /> <!-- Avadon Gaiters -->
+					<item id="300" min="1" max="1" chance="5.50" /> <!-- Great Axe -->
+					<item id="4601" min="1" max="3" chance="6.600" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+					<item id="4602" min="1" max="1" chance="13.75" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+					<item id="4603" min="1" max="1" chance="13.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+					<item id="951" min="1" max="1" chance="11.25" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25461" level="50" type="L2Monster" name="Ereve's Knight" title="Raid Fighter">
 		<parameters>
@@ -5278,36 +5267,25 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<group chance="79.95780181884766">
-					<item id="854" min="1" max="1" chance="19.8956" /> <!-- Earring of Seal -->
-					<item id="885" min="1" max="1" chance="29.8368" /> <!-- Ring of Ages -->
-					<item id="917" min="1" max="1" chance="14.9233" /> <!-- Necklace of Mermaid -->
-					<item id="1914" min="81" max="243" chance="7.8172" /> <!-- Earring of Seal Gemstone -->
-					<item id="1915" min="280" max="840" chance="3.5465" /> <!-- Ring of Ages Gemstone -->
-					<item id="1916" min="20" max="60" chance="23.9806" /> <!-- Necklace of Mermaid Teardrop -->
-				</group>
-				<group chance="47.26750183105469">
-					<item id="231" min="1" max="1" chance="5.193" /> <!-- Grace Dagger -->
-					<item id="233" min="1" max="1" chance="5.193" /> <!-- Dark Screamer -->
-					<item id="2106" min="4" max="12" chance="58.4439" /> <!-- Grace Dagger Edge -->
-					<item id="2107" min="8" max="22" chance="31.1701" /> <!-- Dark Screamer Edge -->
-				</group>
-				<group chance="72.8364028930664">
-					<item id="4601" min="1" max="3" chance="40.0972" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="4602" min="2" max="4" chance="26.7315" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
-					<item id="4603" min="2" max="6" chance="20.0486" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-					<item id="951" min="3" max="7" chance="13.1227" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="24" />
 			<height normal="48" />
 		</collision>
+        		<drop_lists>
+			<death>
+			    	<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
+			    	<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
+					<item id="854" min="1" max="1" chance="3" /> <!-- Earring of Seal -->
+					<item id="885" min="1" max="1" chance="1.100" /> <!-- Ring of Ages -->
+					<item id="917" min="1" max="1" chance="1.500" /> <!-- Necklace of Mermaid -->
+					<item id="231" min="1" max="1" chance="3.750" /> <!-- Grace Dagger -->
+					<item id="233" min="1" max="1" chance="3.750" /> <!-- Dark Screamer -->
+					<item id="4601" min="1" max="3" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+					<item id="4602" min="2" max="4" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+					<item id="4603" min="2" max="6" chance="11.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+					<item id="951" min="3" max="7" chance="9.500" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25499" level="44" type="L2Monster" name="Alligator of Istary" title="Raid Fighter">
 		<parameters>

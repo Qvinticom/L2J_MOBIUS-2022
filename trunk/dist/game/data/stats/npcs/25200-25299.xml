@@ -589,29 +589,19 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="65.31099700927734">
-					<item id="851" min="6" max="18" chance="3.8396" /> <!-- Omen Beast's Eye Earring -->
-					<item id="882" min="5" max="15" chance="6.9113" /> <!-- Mithril Ring -->
-					<item id="914" min="1" max="1" chance="34.5564" /> <!-- Necklace of Darkness -->
-					<item id="1905" min="81" max="243" chance="12.9066" /> <!-- Omen Beast's Eye Earring Gemstone -->
-					<item id="1906" min="40" max="120" chance="36.9314" /> <!-- Mithril Ring Wire -->
-					<item id="1907" min="154" max="462" chance="4.8547" /> <!-- Necklace of Darkness Gem -->
-				</group>
-				<group chance="30.872900009155273">
-					<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr -->
-					<item id="2053" min="12" max="36" chance="70.4951" /> <!-- Scallop Jamadhr Edge -->
-				</group>
-				<group chance="5.459199905395508">
-					<item id="6573" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="26" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="851" min="1" max="1" chance="7.200" /> <!-- Omen Beast's Eye Earring -->
+				<item id="882" min="1" max="1" chance="3.400" /> <!-- Mithril Ring -->
+				<item id="914" min="1" max="1" chance="2.400" /> <!-- Necklace of Darkness -->
+				<item id="262" min="1" max="1" chance="0.75" /> <!-- Scallop Jamadhr -->
+				<item id="6573" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25212" level="35" type="L2Monster" name="Sebek's Priest" title="Raid Fighter">
 		<parameters>
@@ -2180,38 +2170,26 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9815" min="2" max="6" chance="81" /> <!-- Dragon Heart -->
-				<item id="8176" min="1" max="3" chance="81" /> <!-- Destruction Tombstone -->
-				<group chance="57.32040023803711">
-					<item id="357" min="1" max="1" chance="6.3496" /> <!-- Zubei's Breastplate -->
-					<item id="383" min="1" max="1" chance="10.1573" /> <!-- Zubei's Gaiters -->
-					<item id="2376" min="1" max="1" chance="6.3496" /> <!-- Avadon Breastplate -->
-					<item id="2379" min="1" max="1" chance="10.1573" /> <!-- Avadon Gaiters -->
-					<item id="4056" min="16" max="48" chance="28.6594" /> <!-- Zubei's Breastplate Part -->
-					<item id="4057" min="60" max="180" chance="11.8111" /> <!-- Zubei's Gaiter Material -->
-					<item id="4064" min="23" max="67" chance="20.38" /> <!-- Avadon Breastplate Part -->
-					<item id="4065" min="116" max="346" chance="6.1357" /> <!-- Avadon Gaiters Material -->
-				</group>
-				<group chance="48.1693000793457">
-					<item id="229" min="1" max="1" chance="5.4154" /> <!-- Kris -->
-					<item id="243" min="1" max="1" chance="5.4154" /> <!-- Hell Knife -->
-					<item id="4109" min="24" max="72" chance="21.2308" /> <!-- Kris Edge -->
-					<item id="4110" min="8" max="22" chance="67.9384" /> <!-- Hell Knife Edge -->
-				</group>
-				<group chance="75.8187026977539">
-					<item id="4619" min="5" max="15" chance="10.274" /> <!-- Greater Dye of INT <Int+4 Men-4> -->
-					<item id="4620" min="2" max="4" chance="34.2466" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
-					<item id="4621" min="2" max="6" chance="25.6849" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
-					<item id="947" min="1" max="1" chance="29.7945" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="53" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9815" min="2" max="6" chance="82.50" /> <!-- Dragon Heart -->
+				<item id="8176" min="1" max="3" chance="78.50" /> <!-- Destruction Tombstone -->
+				<item id="357" min="1" max="1" chance="3.400" /> <!-- Zubei's Breastplate -->
+				<item id="383" min="1" max="1" chance="1.880" /> <!-- Zubei's Gaiters -->
+				<item id="2376" min="1" max="1" chance="2.700" /> <!-- Avadon Breastplate -->
+				<item id="2379" min="1" max="1" chance="1.100" /> <!-- Avadon Gaiters -->
+				<item id="229" min="1" max="1" chance="3.300" /> <!-- Kris -->
+				<item id="243" min="1" max="1" chance="3.300" /> <!-- Twilight Knife -->
+				<item id="4619" min="5" max="15" chance="7.700" /> <!-- Greater Dye of INT <Int+4 Men-4> -->
+				<item id="4620" min="2" max="4" chance="15.50" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
+				<item id="4621" min="2" max="6" chance="15.25" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
+				<item id="947" min="1" max="1" chance="4.500" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25242" level="54" type="L2Monster" name="Tamash's Advisor" title="Raid Fighter">
 		<parameters>

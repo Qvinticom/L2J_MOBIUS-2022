@@ -3977,27 +3977,14 @@
 				<clan>LIENRIK</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="50" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="166" max="330" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.675000011920929">
-					<item id="395" min="1" max="1" chance="0.8713" /> <!-- Manticore Skin Shirt -->
-					<item id="1942" min="1" max="1" chance="38.2206" /> <!-- Manticore Skin Shirt Texture -->
-					<item id="417" min="1" max="1" chance="1.3915" /> <!-- Manticore Skin Gaiters -->
-					<item id="1943" min="1" max="1" chance="59.5166" /> <!-- Manticore Skin Gaiters Pattern -->
-				</group>
-				<group chance="1.4580999612808228">
-					<item id="1875" min="1" max="1" chance="11.5627" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="28.9067" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="14.4534" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="2.3125" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="17.344" /> <!-- Metallic Thread -->
-					<item id="2278" min="1" max="1" chance="1.2389" /> <!-- Recipe: Reinforced Long Bow -->
-					<item id="2286" min="1" max="1" chance="0.9636" /> <!-- Recipe: Bonebreaker -->
-					<item id="2977" min="1" max="1" chance="23.2182" /> <!-- Recipe: Brigandine Boots -->
-				</group>
+				<item id="57" min="7" max="15" chance="70" /> <!-- Adena -->
+				<item id="317" min="1" max="1" chance="0.03" /> <!-- Tome of Blood -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4031,15 +4018,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2026" min="1" max="1" chance="0.4711" /> <!-- Two-Handed Sword Edge -->
-				<item id="2155" min="1" max="1" chance="6.2822" /> <!-- Recipe: Elven Ring -->
-				<item id="5550" min="1" max="1" chance="0.5218" /> <!-- Durable Metal Plate -->
+				<item id="36531" min="1" max="1" chance="3.650" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="50" />
-		</collision>
 	</npc>
 	<npc id="21645" level="40" type="L2Monster" name="Lienrik Lad">
 		<parameters>
@@ -4093,30 +4075,14 @@
 				<clan>LIENRIK</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="50" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="301" max="600" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.3001999855041504">
-					<item id="850" min="1" max="1" chance="0.7508" /> <!-- Elven Earring -->
-					<item id="1902" min="1" max="1" chance="27.3465" /> <!-- Elven Earring Beads -->
-					<item id="913" min="1" max="1" chance="0.5635" /> <!-- Elven Necklace -->
-					<item id="1904" min="1" max="1" chance="25.1899" /> <!-- Elven Necklace Beads -->
-					<item id="881" min="1" max="1" chance="1.127" /> <!-- Elven Ring -->
-					<item id="1903" min="1" max="1" chance="45.0223" /> <!-- Elven Ring Piece -->
-				</group>
-				<group chance="20.7677001953125">
-					<item id="1875" min="1" max="1" chance="1.3287" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="3.3218" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="1.6609" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="0.2657" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="1.9931" /> <!-- Metallic Thread -->
-					<item id="2188" min="1" max="1" chance="1.4236" /> <!-- Recipe: Manticore Skin Gaiters -->
-					<item id="5473" min="1" max="1" chance="1.4236" /> <!-- Recipe: Durable Metal Plate(100%) -->
-					<item id="1832" min="1" max="1" chance="22.1456" /> <!-- Greater Antidote -->
-					<item id="1341" min="10" max="30" chance="66.437" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="7" max="15" chance="70" /> <!-- Adena -->
+				<item id="317" min="1" max="1" chance="0.03" /> <!-- Tome of Blood -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4150,15 +4116,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="72.0648" /> <!-- Coal -->
-				<item id="2029" min="1" max="1" chance="0.8596" /> <!-- Gastraphetes Shaft -->
-				<item id="5549" min="1" max="1" chance="7.2065" /> <!-- Metallic Thread -->
+				<item id="36531" min="1" max="1" chance="3" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="50" />
-		</collision>
 	</npc>
 	<npc id="21646" level="73" type="L2Monster" name="Grave Scarab">
 		<parameters>

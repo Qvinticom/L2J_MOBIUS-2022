@@ -2611,7 +2611,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="708857856" sp="170125" />
 		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="1262409" hpRegen="7.5" mp="1262409" mpRegen="2.7" />
+			<vitals hp="1262409" hpRegen="7.5" mp="2242" mpRegen="2.7" />
 			<attack physical="164000" magical="123000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6560" magical="6720" />
 			<attribute>
@@ -2643,25 +2643,25 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="17527" min="3" max="5" chance="22" />
-				<item id="17526" min="1" max="1" chance="11" />
-				<item id="17397" min="1" max="1" chance="0.3003" />
-				<item id="17409" min="1" max="1" chance="0.3003" />
-				<item id="17408" min="1" max="1" chance="0.3003" />
-				<item id="17404" min="1" max="1" chance="0.3003" />
-				<item id="17398" min="1" max="1" chance="0.3003" />
-				<item id="17403" min="1" max="1" chance="0.3003" />
-				<item id="17392" min="1" max="1" chance="0.07502" />
-				<item id="17391" min="1" max="1" chance="0.07502" />
-				<item id="17390" min="1" max="1" chance="0.07502" />
-				<item id="17389" min="1" max="1" chance="0.07502" />
-				<item id="17388" min="1" max="1" chance="0.07502" />
-				<item id="17387" min="1" max="1" chance="0.07502" />
-				<item id="17386" min="1" max="1" chance="0.07502" />
-				<item id="17384" min="1" max="1" chance="0.07502" />
-				<item id="17383" min="1" max="1" chance="0.07502" />
-				<item id="17382" min="1" max="1" chance="0.07502" />
-				<item id="17385" min="1" max="1" chance="0.07502" />
+				<item id="17527" min="3" max="9" chance="21" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17397" min="1" max="1" chance="0.3003" /> <!-- Seraph Breastplate -->
+				<item id="17409" min="1" max="1" chance="0.3003" /> <!-- Seraph Stockings -->
+				<item id="17408" min="1" max="1" chance="0.3003" /> <!-- Seraph Tunic -->
+				<item id="17404" min="1" max="1" chance="0.3003" /> <!-- Seraph Leather Leggings -->
+				<item id="17398" min="1" max="1" chance="0.3003" /> <!-- Seraph Gaiters -->
+				<item id="17403" min="1" max="1" chance="0.3003" /> <!-- Seraph Leather Armor -->
+				<item id="17392" min="1" max="1" chance="0.07502" /> <!-- Specter Retributer -->
+				<item id="17391" min="1" max="1" chance="0.07502" /> <!-- Specter Caster -->
+				<item id="17390" min="1" max="1" chance="0.07502" /> <!-- Specter Buster -->
+				<item id="17389" min="1" max="1" chance="0.07502" /> <!-- Specter Shooter -->
+				<item id="17388" min="1" max="1" chance="0.07502" /> <!-- Specter Thrower -->
+				<item id="17387" min="1" max="1" chance="0.07502" /> <!-- Specter Stormer -->
+				<item id="17386" min="1" max="1" chance="0.07502" /> <!-- Specter Fighter -->
+				<item id="17384" min="1" max="1" chance="0.07502" /> <!-- Specter Slasher -->
+				<item id="17383" min="1" max="1" chance="0.07502" /> <!-- Specter Cutter -->
+				<item id="17382" min="1" max="1" chance="0.07502" /> <!-- Specter Shaper -->
+				<item id="17385" min="1" max="1" chance="0.07502" /> <!-- Specter Avenger -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -2670,7 +2670,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="708857856" sp="170125" />
 		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="1262409" hpRegen="7.5" mp="1262409" mpRegen="2.7" />
+			<vitals hp="1262409" hpRegen="7.5" mp="2242" mpRegen="2.7" />
 			<attack physical="164000" magical="123000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6560" magical="6720" />
 			<attribute>
@@ -2702,25 +2702,25 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="17527" min="3" max="5" chance="22" />
-				<item id="17526" min="1" max="1" chance="11" />
-				<item id="17397" min="1" max="1" chance="0.3003" />
-				<item id="17409" min="1" max="1" chance="0.3003" />
-				<item id="17408" min="1" max="1" chance="0.3003" />
-				<item id="17404" min="1" max="1" chance="0.3003" />
-				<item id="17398" min="1" max="1" chance="0.3003" />
-				<item id="17403" min="1" max="1" chance="0.3003" />
-				<item id="17392" min="1" max="1" chance="0.07502" />
-				<item id="17391" min="1" max="1" chance="0.07502" />
-				<item id="17390" min="1" max="1" chance="0.07502" />
-				<item id="17389" min="1" max="1" chance="0.07502" />
-				<item id="17388" min="1" max="1" chance="0.07502" />
-				<item id="17387" min="1" max="1" chance="0.07502" />
-				<item id="17386" min="1" max="1" chance="0.07502" />
-				<item id="17384" min="1" max="1" chance="0.07502" />
-				<item id="17383" min="1" max="1" chance="0.07502" />
-				<item id="17382" min="1" max="1" chance="0.07502" />
-				<item id="17385" min="1" max="1" chance="0.07502" />
+				<item id="17527" min="3" max="9" chance="21" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17397" min="1" max="1" chance="0.3003" /> <!-- Seraph Breastplate -->
+				<item id="17409" min="1" max="1" chance="0.3003" /> <!-- Seraph Stockings -->
+				<item id="17408" min="1" max="1" chance="0.3003" /> <!-- Seraph Tunic -->
+				<item id="17404" min="1" max="1" chance="0.3003" /> <!-- Seraph Leather Leggings -->
+				<item id="17398" min="1" max="1" chance="0.3003" /> <!-- Seraph Gaiters -->
+				<item id="17403" min="1" max="1" chance="0.3003" /> <!-- Seraph Leather Armor -->
+				<item id="17392" min="1" max="1" chance="0.07502" /> <!-- Specter Retributer -->
+				<item id="17391" min="1" max="1" chance="0.07502" /> <!-- Specter Caster -->
+				<item id="17390" min="1" max="1" chance="0.07502" /> <!-- Specter Buster -->
+				<item id="17389" min="1" max="1" chance="0.07502" /> <!-- Specter Shooter -->
+				<item id="17388" min="1" max="1" chance="0.07502" /> <!-- Specter Thrower -->
+				<item id="17387" min="1" max="1" chance="0.07502" /> <!-- Specter Stormer -->
+				<item id="17386" min="1" max="1" chance="0.07502" /> <!-- Specter Fighter -->
+				<item id="17384" min="1" max="1" chance="0.07502" /> <!-- Specter Slasher -->
+				<item id="17383" min="1" max="1" chance="0.07502" /> <!-- Specter Cutter -->
+				<item id="17382" min="1" max="1" chance="0.07502" /> <!-- Specter Shaper -->
+				<item id="17385" min="1" max="1" chance="0.07502" /> <!-- Specter Avenger -->
 			</death>
 		</drop_lists>
 	</npc>

@@ -2251,42 +2251,27 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="3" chance="81" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="81" /> <!-- Destruction Tombstone -->
-				<group chance="71.66889953613281">
-					<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots -->
-					<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves -->
-					<item id="2437" min="1" max="1" chance="8.5" /> <!-- Drake Leather Boots -->
-					<item id="2438" min="1" max="1" chance="8.5" /> <!-- Full Plate Boots -->
-					<item id="2461" min="1" max="1" chance="8.5" /> <!-- Drake Leather Gloves -->
-					<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets -->
-					<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves -->
-					<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture -->
-					<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture -->
-					<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design -->
-					<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part -->
-					<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design -->
-					<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part -->
-					<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern -->
-				</group>
-				<group chance="70.55290222167969">
-					<item id="228" min="1" max="1" chance="5.2914" /> <!-- Crystal Dagger -->
-					<item id="2119" min="3" max="9" chance="94.7086" /> <!-- Crystal Dagger Blade -->
-				</group>
-				<group chance="48.125099182128906">
-					<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
-					<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
-					<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
-					<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9814" min="1" max="3" chance="77.50" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="1" chance="83.50" /> <!-- Destruction Tombstone -->
+				<item id="2436" min="1" max="1" chance="2.150" /> <!-- Theca Leather Boots -->
+				<item id="2460" min="1" max="1" chance="14" /> <!-- Theca Leather Gloves -->
+				<item id="2437" min="1" max="1" chance="5.500" /> <!-- Drake Leather Boots -->
+				<item id="2438" min="1" max="1" chance="6.100" /> <!-- Full Plate Boots -->
+				<item id="2461" min="1" max="1" chance="13.75" /> <!-- Drake Leather Gloves -->
+				<item id="2462" min="1" max="1" chance="4.450" /> <!-- Full Plate Gauntlets -->
+				<item id="2463" min="1" max="1" chance="3.850" /> <!-- Divine Gloves -->
+				<item id="228" min="1" max="1" chance="1.750" /> <!-- Crystal Dagger -->
+				<item id="4604" min="1" max="1" chance="16" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="1" max="1" chance="16" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="1" max="1" chance="16" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25045" level="46" type="L2Monster" name="Barion's Dark Wizard" title="Raid Fighter">
 		<parameters>
@@ -2418,42 +2403,28 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone -->
-				<group chance="77.13909912109375">
-					<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots -->
-					<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves -->
-					<item id="2437" min="1" max="1" chance="8.5" /> <!-- Drake Leather Boots -->
-					<item id="2438" min="1" max="1" chance="8.5" /> <!-- Full Plate Boots -->
-					<item id="2461" min="1" max="1" chance="8.5" /> <!-- Drake Leather Gloves -->
-					<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets -->
-					<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves -->
-					<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture -->
-					<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture -->
-					<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design -->
-					<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part -->
-					<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design -->
-					<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part -->
-					<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern -->
-				</group>
-				<group chance="75.93800354003906">
-					<item id="228" min="1" max="1" chance="5.2914" /> <!-- Crystal Dagger -->
-					<item id="2119" min="3" max="9" chance="94.7086" /> <!-- Crystal Dagger Blade -->
-				</group>
-				<group chance="91.41850280761719">
-					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
-					<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
-					<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
-					<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="47.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone -->
+				<item id="2436" min="1" max="1" chance="2.350" /> <!-- Theca Leather Boots -->
+				<item id="2460" min="1" max="1" chance="14.75" /> <!-- Theca Leather Gloves -->
+				<item id="2437" min="1" max="1" chance="8.500" /> <!-- Drake Leather Boots -->
+				<item id="2438" min="1" max="1" chance="5.500" /> <!-- Full Plate Boots -->
+				<item id="2461" min="1" max="1" chance="5.600" /> <!-- Drake Leather Gloves -->
+				<item id="2462" min="1" max="1" chance="4.700" /> <!-- Full Plate Gauntlets -->
+				<item id="2463" min="1" max="1" chance="4.100" /> <!-- Divine Gloves -->
+				<item id="228" min="1" max="1" chance="1.950" /> <!-- Crystal Dagger -->
+				<item id="4610" min="1" max="1" chance="14" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+				<item id="4611" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+				<item id="4612" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+				<item id="6574" min="1" max="1" chance="4.750" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25048" level="48" type="L2Monster" name="Karte's Chief Knight" title="Raid Fighter">
 		<parameters>
@@ -2582,34 +2553,24 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
-				<group chance="60.47779846191406">
-					<item id="2384" min="1" max="1" chance="5.6807" /> <!-- Zubei's Leather Shirt -->
-					<item id="2388" min="1" max="1" chance="9.0869" /> <!-- Zubei's Leather Gaiters -->
-					<item id="2390" min="1" max="1" chance="3.4942" /> <!-- Avadon Leather Armor -->
-					<item id="4066" min="9" max="27" chance="44.5318" /> <!-- Zubei's Leather Shirt Fabric -->
-					<item id="4067" min="40" max="120" chance="15.2133" /> <!-- Zubei's Leather Gaiter Texture -->
-					<item id="4068" min="14" max="42" chance="21.9931" /> <!-- Avadon Leather Armor Lining -->
-				</group>
-				<group chance="22.608800888061523">
-					<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe -->
-					<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head -->
-				</group>
-				<group chance="89.32340240478516">
-					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
-					<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
-					<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
-					<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="45" />
 			<height normal="141" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9814" min="1" max="3" chance="88" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
+				<item id="2384" min="1" max="1" chance="5" /> <!-- Zubei's Leather Shirt -->
+				<item id="2388" min="1" max="1" chance="2.900" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2390" min="1" max="1" chance="9" /> <!-- Avadon Leather Armor -->
+				<item id="300" min="1" max="1" chance="2.600" /> <!-- Great Axe -->
+				<item id="4610" min="1" max="1" chance="13.75" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+				<item id="4611" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+				<item id="4612" min="1" max="1" chance="13" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+				<item id="6574" min="1" max="1" chance="3.400" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25051" level="65" type="L2RaidBoss" name="Rahha" title="Raid Boss">
 		<parameters>
@@ -2963,34 +2924,23 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<group chance="76.56690216064453">
-					<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots -->
-					<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets -->
-					<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part -->
-					<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design -->
-				</group>
-				<group chance="47.26750183105469">
-					<item id="231" min="1" max="1" chance="5.193" /> <!-- Grace Dagger -->
-					<item id="233" min="1" max="1" chance="5.193" /> <!-- Dark Screamer -->
-					<item id="2106" min="4" max="12" chance="58.4439" /> <!-- Grace Dagger Edge -->
-					<item id="2107" min="8" max="22" chance="31.1701" /> <!-- Dark Screamer Edge -->
-				</group>
-				<group chance="94.43070220947266">
-					<item id="4604" min="2" max="6" chance="15.4639" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
-					<item id="4605" min="3" max="7" chance="12.3711" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
-					<item id="4606" min="3" max="9" chance="10.3093" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
-					<item id="952" min="3" max="9" chance="61.8557" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
+				<item id="64" min="1" max="1" chance="1.675" /> <!-- Composite Boots -->
+				<item id="608" min="1" max="1" chance="5.550" /> <!-- Mithril Gauntlets -->
+				<item id="231" min="1" max="1" chance="4.500" /> <!-- Grace Dagger -->
+				<item id="233" min="1" max="1" chance="4.500" /> <!-- Dark Screamer -->
+				<item id="4604" min="1" max="1" chance="15" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="1" max="1" chance="15" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="1" max="1" chance="16" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25058" level="44" type="L2Monster" name="Beacon's Shooter" title="Raid Fighter">
 		<parameters>
@@ -4620,38 +4570,26 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9816" min="1" max="4" chance="83" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="2" chance="70" /> <!-- Destruction Tombstone -->
-				<group chance="60.582698822021484">
-					<item id="864" min="1" max="1" chance="11.7667" /> <!-- Earring of Black Ore -->
-					<item id="895" min="1" max="1" chance="17.6501" /> <!-- Ring of Black Ore -->
-					<item id="926" min="1" max="1" chance="8.8251" /> <!-- Necklace of Black Ore -->
-					<item id="4052" min="81" max="243" chance="9.142" /> <!-- Earring of Black Ore Piece -->
-					<item id="4053" min="28" max="84" chance="32.0179" /> <!-- Ring of Black Ore Gemstone -->
-					<item id="4054" min="20" max="60" chance="20.5982" /> <!-- Necklace of Black Ore Beads -->
-				</group>
-				<group chance="67.44650268554688">
-					<item id="171" min="1" max="1" chance="1.117" /> <!-- Deadman's Glory -->
-					<item id="175" min="1" max="1" chance="1.117" /> <!-- Art of Battle Axe -->
-					<item id="210" min="1" max="1" chance="1.117" /> <!-- Staff of Evil Spirits -->
-					<item id="4116" min="5" max="15" chance="24.6292" /> <!-- Deadman's Glory Stone -->
-					<item id="4117" min="9" max="27" chance="13.6829" /> <!-- Art of Battle Axe Blade -->
-					<item id="4118" min="2" max="6" chance="58.3369" /> <!-- Evil Spirit Head -->
-				</group>
-				<group chance="65.07879638671875">
-					<item id="4616" min="1" max="3" chance="39.1645" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
-					<item id="4617" min="2" max="4" chance="26.1097" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
-					<item id="4618" min="2" max="6" chance="19.5822" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
-					<item id="6572" min="1" max="1" chance="15.1436" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="35" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9816" min="1" max="4" chance="86" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="2" chance="76" /> <!-- Destruction Tombstone -->
+				<item id="864" min="1" max="1" chance="6.850" /> <!-- Black Ore Earring -->
+				<item id="895" min="1" max="1" chance="3.850" /> <!-- Black Ore Ring -->
+				<item id="926" min="1" max="1" chance="3.050" /> <!-- Black Ore Necklace -->
+				<item id="171" min="1" max="1" chance="1.500" /> <!-- Deadman's Glory -->
+				<item id="175" min="1" max="1" chance="1.400" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="1.450" /> <!-- Staff of Evil Spirits -->
+				<item id="4616" min="1" max="1" chance="10.50" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
+				<item id="4617" min="1" max="1" chance="10.50" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
+				<item id="4618" min="1" max="1" chance="10.50" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
+				<item id="6572" min="1" max="1" chance="1.950" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25090" level="58" type="L2Monster" name="Soulless Wolf" title="Raid Fighter">
 		<parameters>
