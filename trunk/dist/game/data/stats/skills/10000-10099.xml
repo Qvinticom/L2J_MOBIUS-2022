@@ -2122,25 +2122,47 @@
 	<!-- Level 4 : P. Def./ M. Def. + 6%. Has a 30% chance of increasing all party members' P. Def./ M. Def. and heal amount by 4% for 10 sec. when attacked. -->
 	<skill id="10071" levels="4" name="Eva's Presence">
 		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mDef"> 1.02 1.03 1.04 1.06 </table>
+		<table name="#skillLevel"> 1 2 3 4 </table>
+		<table name="#pDef"> 1.02 1.03 1.04 1.06 </table>
 		<set name="icon" val="icon.skill10071" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mDef" val="#mDef" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mDef" val="#pDef" />
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="30" />
+				<param skillId="10072" skillLevel="#skillLevel" />
+				<param targetType="PARTY" />
+				<param allowWeapons="ALL" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10072" levels="4" name="Eva's Presence">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 10 sec., all party members' P. Def./ M. Def. and heal amount by 1%. -->
 		<set name="icon" val="icon.skill10071" />
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#pDef"> 1.02 1.03 1.04 1.06 </table>
+		<table name="#healEffect"> 1.01 1.02 1.03 1.04 </table>
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
+		<set name="abnormalTime" val="10" />
+		<set name="isMagic" val="2" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="4" />
+		<set name="hitTime" val="1500"/>
+		<set name="rideState" val="NONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mDef" val="#pDef" />
+				<mul stat="healEffect" val="#healEffect" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
 	<!-- Level 2 : Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
@@ -2176,6 +2198,11 @@
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CubicMastery">
+				<param cubicCount="3" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Shield Defense + 5%, Shield P. Def. + 2%. -->
 	<!-- Level 2 : Shield Defense + 7%, Shield P. Def. + 3%. -->
@@ -2184,6 +2211,7 @@
 	<skill id="10076" levels="4" name="Superior Guard Stance">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#pDef"> 1.02 1.03 1.04 1.05 </table>
+		<table name="#rShld"> 1.05 1.07 1.10 1.15 </table>
 		<set name="icon" val="icon.skill0288" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -2192,6 +2220,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="#pDef" />
+				<mul stat="rShld" val="#rShld" />
 			</effect>
 		</for>
 	</skill>
@@ -2456,20 +2485,41 @@
 	<skill id="10098" levels="4" name="Paladin's Frenzy">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 20 21 23 24 </table>
-		<table name="#pAtkSpd"> 1.1 1.2 1.25 1.3 </table>
+		<table name="#pDef"> 1.5 1.7 2 2.2 </table>
+		<table name="#mDef"> 1.5 1.7 2 2.2 </table>
 		<table name="#debuffVuln"> 1.1 1.2 1.25 1.3 </table>
+		<table name="#spd"> 10 20 25 30 </table>
+		<table name="#accCombat"> 4 6 8 10 </table>
+		<table name="#pAtkSpd"> 1.1 1.2 1.25 1.3 </table>
+		<table name="#rCrit"> 30 40 50 60 </table>
+		<table name="#cAtkAdd"> 1.3 1.4 1.5 1.6 </table>
 		<set name="icon" val="icon.skill10098" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mDef" val="#mDef" />
 				<mul stat="debuffVuln" val="#debuffVuln" />
+				<add stat="runSpd" val="#spd" />
+				<add stat="accCombat" val="#accCombat">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="pAtkSpd" val="#pAtkSpd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
+				<add stat="rCrit" val="#rCrit">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="cAtkAdd" val="#cAtkAdd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -2481,12 +2531,18 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 20 21 23 24 </table>
 		<table name="#pAtk"> 1.05 1.07 1.1 1.15 </table>
+		<table name="#pDef"> 1.5 1.65 1.8 2 </table>
 		<table name="#mDef"> 1.5 1.65 1.8 2 </table>
+		<table name="#spd"> 10 20 25 30 </table>
+		<table name="#accCombat"> 4 6 8 10 </table>
 		<table name="#pAtkSpd"> 1.1 1.15 1.2 1.25 </table>
+		<table name="#rCrit"> 30 40 50 60 </table>
+		<table name="#cAtkAdd"> 1.3 1.4 1.5 1.6 </table>
 		<set name="icon" val="icon.skill10099" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
@@ -2494,8 +2550,21 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="pDef" val="#pDef" />
 				<mul stat="mDef" val="#mDef" />
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<add stat="runSpd" val="#spd" />
+				<add stat="accCombat" val="#accCombat">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="pAtkSpd" val="#pAtkSpd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
+				<add stat="rCrit" val="#rCrit">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="cAtkAdd" val="#cAtkAdd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
 			</effect>
 		</for>
 	</skill>

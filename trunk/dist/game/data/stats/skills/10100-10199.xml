@@ -7,18 +7,46 @@
 	<skill id="10100" levels="4" name="Guardian's Frenzy">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 20 21 23 24 </table>
+		<table name="#pDef"> 1.5 1.7 2 2.2 </table>
+		<table name="#mDef"> 1.5 1.7 2 2.2 </table>
+		<table name="#aRes"> 10 20 25 30 </table>
+		<table name="#spd"> 10 20 25 30 </table>
+		<table name="#accCombat"> 4 6 8 10 </table>
 		<table name="#pAtkSpd"> 1.1 1.2 1.25 1.3 </table>
+		<table name="#rCrit"> 30 40 50 60 </table>
+		<table name="#cAtkAdd"> 1.3 1.4 1.5 1.6 </table>
 		<set name="icon" val="icon.skill10100" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="pDef" val="#pDef" />
+				<mul stat="mDef" val="#mDef" />
+				<mul stat="debuffVuln" val="#debuffVuln" />
+				<add stat="waterRes" val="#aRes" />
+				<add stat="fireRes" val="#aRes" />
+				<add stat="windRes" val="#aRes" />
+				<add stat="earthRes" val="#aRes" />
+				<add stat="holyRes" val="#aRes" />
+				<add stat="darkRes" val="#aRes" />
+				<add stat="accCombat" val="#accCombat">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="pAtkSpd" val="#pAtkSpd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
+				<add stat="rCrit" val="#rCrit">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="cAtkAdd" val="#cAtkAdd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -29,20 +57,41 @@
 	<skill id="10101" levels="4" name="Templar's Frenzy">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 20 21 23 24 </table>
+		<table name="#pPower"> 1.05 1.07 1.1 1.15 </table>
+		<table name="#pDef"> 1.5 1.65 1.8 2 </table>
 		<table name="#mDef"> 1.5 1.65 1.8 2 </table>
+		<table name="#spd"> 10 20 25 30 </table>
+		<table name="#accCombat"> 4 6 8 10 </table>
 		<table name="#pAtkSpd"> 1.1 1.15 1.2 1.25 </table>
+		<table name="#rCrit"> 30 40 50 60 </table>
+		<table name="#cAtkAdd"> 1.3 1.4 1.5 1.6 </table>
 		<set name="icon" val="icon.skill10101" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="#pPower" />
+				<mul stat="pDef" val="#pDef" />
 				<mul stat="mDef" val="#mDef" />
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<add stat="runSpd" val="#spd" />
+				<add stat="accCombat" val="#accCombat">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="pAtkSpd" val="#pAtkSpd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
+				<add stat="rCrit" val="#rCrit">
+					<using kind="SWORD,BLUNT" />
+				</add>
+				<mul stat="cAtkAdd" val="#cAtkAdd">
+					<using kind="SWORD,BLUNT" />
+				</mul>
 			</effect>
 		</for>
 	</skill>

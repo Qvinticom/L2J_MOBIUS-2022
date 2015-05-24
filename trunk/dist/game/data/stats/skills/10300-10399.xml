@@ -64,6 +64,10 @@
 		<set name="icon" val="icon.skill0430" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<effect name="Buff">
+			<mul stat="maxHp" val="2" />
+			<mul stat="maxCp" val="2" />
+		</effect>
 	</skill>
 	<!-- Level 1 : When a dualsword or dual blunt is equipped, P. Atk. + 2% and additional + 709. -->
 	<!-- Level 2 : When a dualsword or dual blunt is equipped, P. Atk. + 3% and additional + 825. -->
