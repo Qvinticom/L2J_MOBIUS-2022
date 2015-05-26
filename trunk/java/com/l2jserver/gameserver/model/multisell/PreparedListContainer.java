@@ -47,6 +47,12 @@ public class PreparedListContainer extends ListContainer
 			}
 		}
 		
+		setNewMultisell(false);
+		if (template.isNewMultisell())
+		{
+			setNewMultisell(true);
+		}
+		
 		if (inventoryOnly)
 		{
 			if (player == null)
