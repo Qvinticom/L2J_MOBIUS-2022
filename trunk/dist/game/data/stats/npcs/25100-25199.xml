@@ -1585,39 +1585,24 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="57.41669845581055">
-					<item id="851" min="6" max="18" chance="3.8396" /> <!-- Omen Beast's Eye Earring -->
-					<item id="882" min="5" max="15" chance="6.9113" /> <!-- Mithril Ring -->
-					<item id="914" min="1" max="1" chance="34.5564" /> <!-- Necklace of Darkness -->
-					<item id="1905" min="81" max="243" chance="12.9066" /> <!-- Omen Beast's Eye Earring Gemstone -->
-					<item id="1906" min="40" max="120" chance="36.9314" /> <!-- Mithril Ring Wire -->
-					<item id="1907" min="154" max="462" chance="4.8547" /> <!-- Necklace of Darkness Gem -->
-				</group>
-				<group chance="75.65409851074219">
-					<item id="159" min="1" max="1" chance="2.117" /> <!-- Bonebreaker -->
-					<item id="187" min="1" max="1" chance="2.117" /> <!-- Atuba Hammer -->
-					<item id="188" min="1" max="1" chance="2.117" /> <!-- Ghost Staff -->
-					<item id="189" min="1" max="1" chance="2.117" /> <!-- Staff of Life -->
-					<item id="190" min="1" max="1" chance="2.117" /> <!-- Atuba Mace -->
-					<item id="2048" min="2" max="6" chance="30.3479" /> <!-- Bonebreaker Head -->
-					<item id="2049" min="3" max="7" chance="24.2784" /> <!-- Atuba Hammer Head -->
-					<item id="2050" min="7" max="21" chance="9.1939" /> <!-- Ghost Staff Head -->
-					<item id="2051" min="12" max="36" chance="5.3631" /> <!-- Staff of Life Shaft -->
-					<item id="2058" min="3" max="9" chance="20.2317" /> <!-- Atuba Mace Head -->
-				</group>
-				<group chance="98.5562973022461">
-					<item id="951" min="1" max="1" chance="44.2696" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="3" max="9" chance="54.1072" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="6573" min="1" max="1" chance="1.6232" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="22" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="851" min="1" max="18" chance="2.200" /> <!-- Omen Beast's Eye Earring -->
+				<item id="882" min="1" max="1" chance="1.500" /> <!-- Mithril Ring -->
+				<item id="914" min="1" max="1" chance="1.100" /> <!-- Dark Necklace -->
+				<item id="159" min="1" max="1" chance="0.3" /> <!-- Bonebreaker -->
+				<item id="187" min="1" max="1" chance="3.700" /> <!-- Atuba Hammer -->
+				<item id="188" min="1" max="1" chance="3.700" /> <!-- Ghost Staff -->
+				<item id="189" min="1" max="1" chance="3.700" /> <!-- Staff of Life -->
+				<item id="190" min="1" max="1" chance="3.700" /> <!-- Atuba Mace -->
+				<item id="951" min="1" max="1" chance="13.50" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="0.2" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25129" level="32" type="L2Monster" name="Vuku Shaman" title="Raid Fighter">
 		<parameters>

@@ -5344,23 +5344,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="25" />
+			<height normal="31" grown="37.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="128" max="189" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.186500072479248">
-					<item id="114" min="1" max="1" chance="10.0297" /> <!-- Earring of Strength -->
-					<item id="115" min="1" max="1" chance="10.0297" /> <!-- Earring of Wisdom -->
-					<item id="907" min="1" max="1" chance="7.5223" /> <!-- Necklace of Anguish -->
-					<item id="1896" min="1" max="1" chance="57.3736" /> <!-- Necklace of Anguish Chain -->
-					<item id="876" min="1" max="1" chance="15.0447" /> <!-- Ring of Anguish -->
-				</group>
-				<group chance="13.520600318908691">
-					<item id="1872" min="1" max="1" chance="48.6583" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="48.6583" /> <!-- Animal Skin -->
-					<item id="1794" min="1" max="1" chance="2.6834" /> <!-- Recipe: Forest Bow -->
-				</group>
+				<item id="57" min="1" max="4" chance="70" /> <!-- Adena -->
+				<item id="114" min="1" max="1" chance="0.3" /> <!-- Earring of Strength -->
+				<item id="115" min="1" max="1" chance="0.3" /> <!-- Earring of Wisdom -->
+				<item id="907" min="1" max="1" chance="0.3" /> <!-- Necklace of Anguish -->
+				<item id="1896" min="1" max="1" chance="0.75" /> <!-- Necklace of Anguish Chain -->
+				<item id="876" min="1" max="1" chance="0.3" /> <!-- Ring of Anguish -->
+				<item id="1794" min="1" max="1" chance="0.03" /> <!-- Recipe: Forest Bow -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5394,15 +5390,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1792" min="1" max="1" chance="1.8424" /> <!-- Recipe: Short Spear -->
-				<item id="1871" min="1" max="1" chance="25.0564" /> <!-- Charcoal -->
-				<item id="1872" min="1" max="1" chance="33.4085" /> <!-- Animal Bone -->
+				<item id="1792" min="1" max="1" chance="0.3" /> <!-- Recipe: Short Spear -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="25" />
-			<height normal="31" grown="37.5" />
-		</collision>
 	</npc>
 	<npc id="20380" level="16" type="L2Monster" name="Stone Giant Guardian">
 		<parameters>
@@ -5451,20 +5441,16 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="25" />
+			<height normal="31" grown="37.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="132" max="206" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03009999915957451">
-					<item id="176" min="1" max="1" chance="50" /> <!-- Apprentice's Staff -->
-					<item id="2501" min="1" max="1" chance="50" /> <!-- Bone Club -->
-				</group>
-				<group chance="11.052000045776367">
-					<item id="1871" min="1" max="1" chance="47.5862" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="31.7241" /> <!-- Suede -->
-					<item id="2174" min="1" max="1" chance="20.6897" /> <!-- Recipe: Hard Leather Gaiters -->
-				</group>
+				<item id="57" min="2" max="4" chance="70" /> <!-- Adena -->
+				<item id="176" min="1" max="1" chance="0.055" /> <!-- Apprentice's Staff -->
+				<item id="2501" min="1" max="1" chance=".055" /> <!-- Bone Club -->
+				<item id="2174" min="1" max="1" chance="0.3" /> <!-- Recipe: Durable Leather Gaiters -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5498,15 +5484,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1869" min="1" max="1" chance="26.7071" /> <!-- Iron Ore -->
-				<item id="1873" min="1" max="1" chance="10.6828" /> <!-- Silver Nugget -->
-				<item id="1866" min="1" max="1" chance="17.8047" /> <!-- Suede -->
+				<item id="36546" min="1" max="1" chance="0.3" /> <!--Weapon Fragment (Low-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="25" />
-			<height normal="31" grown="37.5" />
-		</collision>
 	</npc>
 	<npc id="20381" level="10" type="L2Monster" name="Vaiss Orc">
 		<parameters>
@@ -6286,22 +6266,18 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="42" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="116" max="177" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6266000270843506">
-					<item id="23" min="1" max="1" chance="23.7858" /> <!-- Wooden Breastplate -->
-					<item id="30" min="1" max="1" chance="38.1071" /> <!-- Hard Leather Pants -->
-					<item id="2386" min="1" max="1" chance="38.1071" /> <!-- Wooden Gaiters -->
-				</group>
-				<group chance="19.57430076599121">
-					<item id="1869" min="1" max="1" chance="17.4757" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="34.9515" /> <!-- Stem -->
-					<item id="736" min="1" max="1" chance="8.7379" /> <!-- Scroll of Escape -->
-					<item id="1060" min="1" max="1" chance="38.8349" /> <!-- Lesser Healing Potion -->
-				</group>
+				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
+				<item id="23" min="1" max="1" chance="0.075" /> <!-- Wooden Breastplate -->
+				<item id="30" min="1" max="1" chance="0.3" /> <!-- Hard Leather Pants -->
+				<item id="2386" min="1" max="1" chance="0.3" /> <!-- Wooden Gaiters -->
+				<item id="736" min="1" max="1" chance="0.3" /> <!-- Scroll of Escape -->
+				<item id="1060" min="1" max="1" chance="0.3" /> <!-- Healing Potion -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6335,15 +6311,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1798" min="1" max="1" chance="22.7072" /> <!-- Recipe: Leather Helmet -->
-				<item id="1833" min="1" max="1" chance="61.7635" /> <!-- Bandage -->
-				<item id="1831" min="1" max="1" chance="61.7635" /> <!-- Antidote -->
+				<item id="1798" min="1" max="1" chance="0.75" /> <!-- Recipe: Leather Helmet -->
+				<item id="1833" min="1" max="1" chance="2" /> <!-- Bandage -->
+				<item id="1831" min="1" max="1" chance="1.100" /> <!-- Antidote -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="42" />
-		</collision>
 	</npc>
 	<npc id="20393" level="16" type="L2Monster" name="Red Scavenger Spider">
 		<parameters>

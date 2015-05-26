@@ -950,7 +950,7 @@
 		<sex>MALE</sex>
 		<acquire exp="739701575" sp="177528" raidPoints="3228" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="401886.766608773" hpRegen="124.302529182249" mp="1540.8" mpRegen="3" />
+			<vitals hp="956893.766608773" hpRegen="124.302529182249" mp="1540.8" mpRegen="3" />
 			<attack physical="2501.79548333906" magical="888.048862829437" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="971.35365" magical="473.86" evasion="-18" />
 			<attribute>
@@ -980,33 +980,27 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="70.61900329589844">
-					<item id="5311" min="1" max="1" chance="3.2538" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5316" min="1" max="1" chance="3.2538" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5522" min="4" max="12" chance="60.9733" /> <!-- Sealed Armor of Nightmare Pattern -->
-					<item id="5523" min="8" max="22" chance="32.5191" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				</group>
-				<group chance="58.73509979248047">
-					<item id="81" min="1" max="1" chance="1.6606" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="1" chance="1.6606" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="1" chance="1.6606" /> <!-- Dark Legion's Edge -->
-					<item id="5529" min="9" max="27" chance="26.2482" /> <!-- Dragon Slayer Edge -->
-					<item id="5546" min="5" max="15" chance="51.8961" /> <!-- Sword of Miracles Edge -->
-					<item id="5545" min="14" max="42" chance="16.8739" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="58.56679916381836">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="22" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5311" min="1" max="1" chance="2.500" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="2.675" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5522" min="36" max="108" chance="4.400" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="12" max="36" chance="16.50" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="81" min="1" max="1" chance="1.150" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="1" chance="1.050" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="1.150" /> <!-- Dark Legion's Edge -->
+				<item id="5529" min="2" max="6" chance="38" /> <!-- Dragon Slayer Edge -->
+				<item id="5546" min="3" max="9" chance="30" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="27.50" /> <!-- Dark Legion's Edge Blade -->
+				<item id="959" min="1" max="1" chance="1" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="10.25" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25525" level="75" type="L2Monster" name="Flame Spirit" title="Raid Fighter">
 		<parameters>

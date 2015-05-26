@@ -3070,20 +3070,15 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="25.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="122" max="197" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.028200000524520874">
-					<item id="256" min="1" max="1" chance="100" /> <!-- Cestus -->
-				</group>
-				<group chance="9.94729995727539">
-					<item id="1873" min="1" max="1" chance="14.9068" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="74.5342" /> <!-- Thread -->
-					<item id="2143" min="1" max="1" chance="7.4534" /> <!-- Recipe: Synthetic Cokes -->
-					<item id="6035" min="1" max="1" chance="3.1056" /> <!-- Magic Haste Potion -->
-				</group>
+				<item id="57" min="1" max="4" chance="70" /> <!-- Adena -->
+				<item id="256" min="1" max="1" chance="0.03" /> <!-- Cestus -->
+				<item id="6035" min="1" max="1" chance="0.03" /> <!-- Magic Haste Potion -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3117,15 +3112,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="50.1999" /> <!-- Thread -->
-				<item id="2254" min="1" max="1" chance="1.0287" /> <!-- Recipe: Composite Bow -->
-				<item id="1873" min="1" max="1" chance="10.04" /> <!-- Silver Nugget -->
+				<item id="2254" min="1" max="1" chance="0.3" /> <!-- Recipe: Compound Bow -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="25.5" />
-		</collision>
 	</npc>
 	<npc id="20035" level="26" type="L2Monster" name="Skeleton Tracker">
 		<parameters>

@@ -1036,27 +1036,14 @@
 				<clan>HATU</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="126" max="251" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.597599983215332">
-					<item id="348" min="1" max="1" chance="1.3287" /> <!-- Scale Mail -->
-					<item id="1935" min="1" max="1" chance="38.0434" /> <!-- Scale Mail Fragment -->
-					<item id="377" min="1" max="1" chance="2.1247" /> <!-- Scale Gaiters -->
-					<item id="1937" min="1" max="1" chance="58.5032" /> <!-- Scale Gaiters Fragment -->
-				</group>
-				<group chance="8.594400405883789">
-					<item id="1872" min="1" max="1" chance="31.5669" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="31.5669" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="3.1567" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="1.5783" /> <!-- Stone of Purity -->
-					<item id="2184" min="1" max="1" chance="2.4869" /> <!-- Recipe: Mithril Banded Gaiters -->
-					<item id="2274" min="1" max="1" chance="0.1691" /> <!-- Recipe: Skull Breaker -->
-					<item id="2978" min="1" max="1" chance="3.1694" /> <!-- Recipe: Elven Mithril Boots -->
-					<item id="1832" min="1" max="1" chance="26.3058" /> <!-- Greater Antidote -->
-				</group>
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1090,15 +1077,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2183" min="1" max="1" chance="1.9597" /> <!-- Recipe: Mithril Banded Mail -->
-				<item id="2025" min="1" max="1" chance="0.4126" /> <!-- Dwarven Trident Edge -->
-				<item id="2153" min="1" max="1" chance="4.6326" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="36531" min="1" max="1" chance="5.500" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="8" />
-			<height normal="24.5" />
-		</collision>
 	</npc>
 	<npc id="20929" level="32" type="L2Monster" name="Hatu Dire Wolf">
 		<parameters>
@@ -1149,23 +1130,14 @@
 				<clan>HATU</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="11" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="118" max="236" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.006200000178068876">
-					<item id="315" min="1" max="1" chance="100" /> <!-- Divine Tome -->
-				</group>
-				<group chance="10.353300094604492">
-					<item id="1865" min="1" max="1" chance="21.0723" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="21.0723" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="3.5121" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="1.4048" /> <!-- Stone of Purity -->
-					<item id="2250" min="1" max="1" chance="5.2681" /> <!-- Recipe: Bone Arrow -->
-					<item id="6387" min="1" max="1" chance="0.8429" /> <!-- Blessed Scroll of Resurrection for Pets -->
-					<item id="1060" min="1" max="1" chance="46.8275" /> <!-- Lesser Healing Potion -->
-				</group>
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1199,15 +1171,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="27.9467" /> <!-- Charcoal -->
-				<item id="1900" min="1" max="1" chance="3.0576" /> <!-- Enchanted Necklace Chain -->
-				<item id="956" min="1" max="1" chance="0.9316" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="36531" min="1" max="1" chance="5.100" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="11" />
-		</collision>
 	</npc>
 	<npc id="20930" level="34" type="L2Monster" name="Hatu Brown Bear">
 		<parameters>
@@ -1258,28 +1224,14 @@
 				<clan>HATU</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="21" />
+			<height normal="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="184" max="367" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.052400000393390656">
-					<item id="83" min="1" max="1" chance="2.676" /> <!-- Sword of Magic -->
-					<item id="144" min="1" max="1" chance="2.676" /> <!-- Sword of Occult -->
-					<item id="124" min="1" max="1" chance="1.9824" /> <!-- Two-Handed Sword -->
-					<item id="2026" min="1" max="1" chance="88.7007" /> <!-- Two-Handed Sword Edge -->
-					<item id="127" min="1" max="1" chance="1.9824" /> <!-- Crimson Sword -->
-					<item id="130" min="1" max="1" chance="1.9825" /> <!-- Elven Sword -->
-				</group>
-				<group chance="10.636199951171875">
-					<item id="1869" min="1" max="1" chance="31.1434" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="62.2868" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.1143" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4152" /> <!-- Durable Metal Plate -->
-					<item id="2279" min="1" max="1" chance="0.2225" /> <!-- Recipe: War Pick -->
-					<item id="8317" min="1" max="1" chance="0.2225" /> <!-- Recipe: Titan Hammer (100%) -->
-					<item id="735" min="1" max="1" chance="2.5953" /> <!-- Alacrity Potion -->
-				</group>
+				<item id="57" min="7" max="17" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1313,15 +1265,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2028" min="1" max="1" chance="0.5182" /> <!-- Shilen Knife Edge -->
-				<item id="2156" min="1" max="1" chance="3.4888" /> <!-- Recipe: Elven Necklace -->
-				<item id="2154" min="1" max="1" chance="4.6692" /> <!-- Recipe: Elven Earring -->
+				<item id="36531" min="1" max="1" chance="7.500" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="20931" level="36" type="L2Monster" name="Hatu Onyx Beast">
 		<parameters>
@@ -1372,24 +1318,14 @@
 				<clan>HATU</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="14.5" grown="18" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="204" max="409" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.006899999920278788">
-					<item id="293" min="1" max="1" chance="50" /> <!-- War Hammer -->
-					<item id="296" min="1" max="1" chance="50" /> <!-- Dwarven Pike -->
-				</group>
-				<group chance="8.341300010681152">
-					<item id="1865" min="1" max="1" chance="44.1112" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="44.1112" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.3519" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.9407" /> <!-- Stone of Purity -->
-					<item id="2276" min="1" max="1" chance="0.3151" /> <!-- Recipe: Maingauche -->
-					<item id="2286" min="1" max="1" chance="0.2451" /> <!-- Recipe: Bonebreaker -->
-					<item id="2197" min="1" max="1" chance="0.9248" /> <!-- Recipe: Salamander Skin Mail -->
-				</group>
+				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1423,15 +1359,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2271" min="1" max="1" chance="0.346" /> <!-- Recipe: Winged Spear -->
-				<item id="1940" min="1" max="1" chance="7.2301" /> <!-- Iron Boots Design -->
-				<item id="1901" min="1" max="1" chance="6.6909" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="9" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" grown="17" />
-			<height normal="14.5" grown="18" />
-		</collision>
 	</npc>
 	<npc id="20932" level="38" type="L2Monster" name="Hatu Crimson Bear">
 		<parameters>
@@ -1482,28 +1412,14 @@
 				<clan>HATU</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="19" />
+			<height normal="36" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="223" max="446" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.6865999698638916">
-					<item id="850" min="1" max="1" chance="0.7508" /> <!-- Elven Earring -->
-					<item id="1902" min="1" max="1" chance="27.3465" /> <!-- Elven Earring Beads -->
-					<item id="913" min="1" max="1" chance="0.5635" /> <!-- Elven Necklace -->
-					<item id="1904" min="1" max="1" chance="25.1899" /> <!-- Elven Necklace Beads -->
-					<item id="881" min="1" max="1" chance="1.127" /> <!-- Elven Ring -->
-					<item id="1903" min="1" max="1" chance="45.0223" /> <!-- Elven Ring Piece -->
-				</group>
-				<group chance="16.275299072265625">
-					<item id="1866" min="1" max="1" chance="15.9832" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="23.9748" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="0.959" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="1.9979" /> <!-- High-Grade Suede -->
-					<item id="2201" min="1" max="1" chance="2.3277" /> <!-- Recipe: Square Shield -->
-					<item id="2159" min="1" max="1" chance="1.4799" /> <!-- Recipe: Necklace of Darkness -->
-					<item id="1060" min="1" max="1" chance="53.2775" /> <!-- Lesser Healing Potion -->
-				</group>
+				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1537,15 +1453,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1825" min="1" max="1" chance="3.7742" /> <!-- Recipe: Oriharukon -->
-				<item id="2032" min="1" max="1" chance="0.4883" /> <!-- Goat Head Staff Head -->
-				<item id="5220" min="1" max="1" chance="2.1136" /> <!-- Metal Hardener -->
+				<item id="36531" min="1" max="1" chance="9.800" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="19" />
-			<height normal="36" />
-		</collision>
 	</npc>
 	<npc id="20933" level="40" type="L2Monster" name="Hatu Windsus">
 		<parameters>
@@ -1597,23 +1507,14 @@
 				<clan>HATU</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" />
+			<height normal="27" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="253" max="505" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.16169999539852142">
-					<item id="261" min="1" max="1" chance="1.8063" /> <!-- Bich'Hwa -->
-					<item id="2039" min="1" max="1" chance="98.1937" /> <!-- Bich'Hwa Edge -->
-				</group>
-				<group chance="12.018400192260742">
-					<item id="1865" min="1" max="1" chance="43.4891" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="43.4891" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.2482" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.8993" /> <!-- Stone of Purity -->
-					<item id="2159" min="1" max="1" chance="2.6845" /> <!-- Recipe: Necklace of Darkness -->
-					<item id="2298" min="1" max="1" chance="0.1898" /> <!-- Recipe: Stormbringer -->
-				</group>
+				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1647,15 +1548,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1879" min="1" max="1" chance="10.1112" /> <!-- Cokes -->
-				<item id="1894" min="1" max="1" chance="2.1287" /> <!-- Crafted Leather -->
-				<item id="1880" min="1" max="1" chance="6.0667" /> <!-- Steel -->
+				<item id="36531" min="1" max="1" chance="5.675" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" />
-			<height normal="27" />
-		</collision>
 	</npc>
 	<npc id="20934" level="35" type="L2Monster" name="Wasp Worker">
 		<parameters>
@@ -1702,22 +1598,14 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="32" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="138" max="276" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.038600001484155655">
-					<item id="436" min="1" max="1" chance="38.4858" /> <!-- Tunic of Knowledge -->
-					<item id="469" min="1" max="1" chance="61.5142" /> <!-- Stockings of Knowledge -->
-				</group>
-				<group chance="10.315500259399414">
-					<item id="1867" min="1" max="1" chance="44.9558" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="44.9558" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="7.4926" /> <!-- Leather -->
-					<item id="2190" min="1" max="1" chance="2.4083" /> <!-- Recipe: Mithril Stockings -->
-					<item id="3020" min="1" max="1" chance="0.1875" /> <!-- Recipe: Elven Long Sword -->
-				</group>
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1751,15 +1639,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="65.4152" /> <!-- Thread -->
-				<item id="2028" min="1" max="1" chance="0.3886" /> <!-- Shilen Knife Edge -->
-				<item id="1938" min="1" max="1" chance="2.1988" /> <!-- Mithril Banded Mail Material -->
+				<item id="36531" min="1" max="1" chance="6.075" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="8" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="20935" level="37" type="L2Monster" name="Wasp Captain">
 		<parameters>
@@ -1806,28 +1688,14 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai aggroRange="500" clanHelpRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="49" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="151" max="301" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.030500054359436">
-					<item id="629" min="1" max="1" chance="0.9888" /> <!-- Kite Shield -->
-					<item id="1947" min="1" max="1" chance="42.9244" /> <!-- Kite Shield Fragment -->
-					<item id="2493" min="1" max="1" chance="0.9888" /> <!-- Brigandine Shield -->
-					<item id="2929" min="1" max="1" chance="42.9244" /> <!-- Brigandine Shield Fragment -->
-					<item id="2411" min="1" max="1" chance="0.6925" /> <!-- Brigandine Helmet -->
-					<item id="2922" min="1" max="1" chance="11.4811" /> <!-- Brigandine Helmet Design -->
-				</group>
-				<group chance="7.2307000160217285">
-					<item id="1868" min="1" max="1" chance="72.8359" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="14.5672" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.6418" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.4279" /> <!-- Compound Braid -->
-					<item id="2148" min="1" max="1" chance="2.6013" /> <!-- Recipe: Crafted Leather -->
-					<item id="2984" min="1" max="1" chance="3.7237" /> <!-- Recipe: Salamander Skin Boots -->
-					<item id="2288" min="1" max="1" chance="0.2022" /> <!-- Recipe: Ghost Staff -->
-				</group>
+				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1861,15 +1729,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1872" min="1" max="1" chance="47.5451" /> <!-- Animal Bone -->
-				<item id="2040" min="1" max="1" chance="0.4126" /> <!-- Reinforced Long Bow Shaft -->
-				<item id="1825" min="1" max="1" chance="2.5471" /> <!-- Recipe: Oriharukon -->
+				<item id="36531" min="1" max="1" chance="6.675" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="16" />
-			<height normal="49" />
-		</collision>
 	</npc>
 	<npc id="20936" level="40" type="L2Monster" name="Tanor Silenos">
 		<parameters>

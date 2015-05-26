@@ -1809,23 +1809,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="33.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="113" max="160" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.3828999996185303">
-					<item id="429" min="1" max="1" chance="4.3575" /> <!-- Leather Tunic -->
-					<item id="1922" min="1" max="1" chance="34.0148" /> <!-- Leather Tunic Pattern -->
-					<item id="464" min="1" max="1" chance="6.981" /> <!-- Leather Stockings -->
-					<item id="1923" min="1" max="1" chance="54.6467" /> <!-- Leather Stockings Pattern -->
-				</group>
-				<group chance="6.8531999588012695">
-					<item id="1870" min="1" max="1" chance="46.3636" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="46.3636" /> <!-- Varnish -->
-					<item id="1794" min="1" max="1" chance="3.4091" /> <!-- Recipe: Forest Bow -->
-					<item id="735" min="1" max="1" chance="3.8637" /> <!-- Alacrity Potion -->
-				</group>
+				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
+				<item id="429" min="1" max="1" chance="0.075" /> <!-- Leather Tunic -->
+				<item id="464" min="1" max="1" chance="0.3" /> <!-- Leather Stockings -->
+				<item id="1922" min="1" max="1" chance="0.75" /> <!-- Leather Tunic Pattern -->
+				<item id="1923" min="1" max="1" chance="0.75" /> <!-- Leather Stockings Pattern -->
+				<item id="735" min="1" max="1" chance="0.03" /> <!-- Haste Potion -->
+				<item id="1794" min="1" max="1" chance="0.03" /> <!-- Recipe: Forest Bow -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1859,15 +1855,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="1" chance="43.027" /> <!-- Stem -->
-				<item id="1865" min="1" max="1" chance="21.5135" /> <!-- Varnish -->
-				<item id="1921" min="1" max="1" chance="13.8797" /> <!-- Leather Shoes Texture -->
+				<item id="1921" min="1" max="1" chance="6.950" /> <!-- Leather Shoes Texture -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="33.5" />
-		</collision>
 	</npc>
 	<npc id="20435" level="15" type="L2Monster" name="Opal Beast">
 		<parameters>
