@@ -46713,738 +46713,754 @@ INSERT INTO `spawnlist` VALUES
 ('altar_of_evil', 1, 33562, -15975, 30867, -3624, 0, 0, 44643, 60, 0, 0, 0), -- Hermuncus' Minion Dimension Keeper
 ('altar_of_evil', 1, 19216, -8698, 7276, -3424, 0, 0, 8205, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
 ('altar_of_evil', 1, 19216, -2770, 25407, -1544, 0, 0, 10539, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 31034, -26294, 25095, -3712, 0, 0, 11802, 60, 0, 0, 0), -- Sentry
-('altar_of_evil', 1, 31034, -19937, 30046, -2480, 0, 0, 54116, 60, 0, 0, 0), -- Sentry
-('altar_of_evil', 1, 31034, -19123, 21454, -3704, 0, 0, 16861, 60, 0, 0, 0), -- Sentry
-('altar_of_evil', 1, 31034, -15235, 10207, -3680, 0, 0, 40693, 60, 0, 0, 0), -- Sentry
-('altar_of_evil', 1, 31034, -11606, 27214, -3016, 0, 0, 22727, 60, 0, 0, 0), -- Sentry
 ('altar_of_evil', 1, 31118, -19888, 13504, -4899, 0, 0, 32500, 60, 0, 0, 0), -- Gatekeeper Ziggurat
 ('altar_of_evil', 1, 31124, -19072, 13504, -4897, 0, 0, 0, 60, 0, 0, 0), -- Gatekeeper Ziggurat
-('altar_of_evil', 1, 31506, -19309, 13210, -4927, 0, 0, 16000, 60, 0, 0, 0), -- Dimensional Doorkeeper
-('altar_of_evil', 1, 31845, -18245, 10122, -3320, 0, 0, 50725, 60, 0, 0, 0), -- Bloody Pixy
-('altar_of_evil', 1, 31845, -14748, 29766, -3576, 0, 0, 16977, 60, 0, 0, 0), -- Bloody Pixy
-('altar_of_evil', 1, 31850, -8547, 18117, -3384, 0, 0, 51896, 60, 0, 0, 0), -- Blight Treant
-('altar_of_evil', 1, 31850, -6151, 26309, -3344, 0, 0, 14324, 60, 0, 0, 0), -- Blight Treant
+('altar_of_evil', 1, 31506, -19309, 13210, -4927, 0, 0, 16000, 60, 0, 0, 0); -- Dimensional Doorkeeper
 -- Altar of Evil monsters
-('altar_of_evil', 1, 23174, -10058, 22136, -3656, 0, 0, 46091, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10181, 13053, -3504, 0, 0, 54455, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10212, 19221, -3704, 0, 0, 25233, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10395, 21992, -3632, 0, 0, 43738, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10398, 21333, -3672, 0, 0, 9295, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10426, 18064, -3712, 0, 0, 13597, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10511, 15662, -2960, 0, 0, 64871, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -10890, 19025, -3760, 0, 0, 13557, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11128, 32252, -3144, 0, 0, 36592, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11294, 30769, -2632, 0, 0, 23665, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11383, 30530, -2536, 0, 0, 62039, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11628, 27773, -2904, 0, 0, 4680, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11629, 12769, -3704, 0, 0, 61253, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11685, 30408, -2600, 0, 0, 63806, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11804, 30165, -2568, 0, 0, 26179, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11869, 15175, -3704, 0, 0, 43901, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -11948, 21399, -3776, 0, 0, 18259, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -12005, 19537, -3760, 0, 0, 56370, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -12007, 29154, -2768, 0, 0, 8920, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -12380, 31015, -2880, 0, 0, 25729, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -12733, 19395, -3760, 0, 0, 35084, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -13004, 29955, -2968, 0, 0, 45293, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -13079, 18799, -2952, 0, 0, 42235, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -13219, 20407, -3768, 0, 0, 8645, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -13366, 14846, -3776, 0, 0, 11444, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -13850, 30582, -3224, 0, 0, 43404, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -13850, 30769, -3224, 0, 0, 22900, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14139, 18268, -2896, 0, 0, 30517, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14139, 18976, -2984, 0, 0, 6658, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14475, 23976, -3648, 0, 0, 24146, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14492, 24517, -2744, 0, 0, 32667, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14594, 26291, -3696, 0, 0, 28496, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14722, 31025, -3488, 0, 0, 36809, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14866, 31891, -3536, 0, 0, 35831, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -14979, 17322, -3688, 0, 0, 45614, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15143, 25411, -3496, 0, 0, 44083, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15209, 16477, -3776, 0, 0, 52979, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15279, 24269, -3632, 0, 0, 22169, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15310, 17569, -3696, 0, 0, 40087, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15357, 11183, -3568, 0, 0, 23142, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15418, 14237, -3760, 0, 0, 51639, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15463, 32093, -3648, 0, 0, 22605, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15749, 12827, -3776, 0, 0, 43155, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -15760, 11886, -3768, 0, 0, 50698, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16001, 12174, -3744, 0, 0, 27275, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16141, 16700, -3696, 0, 0, 48228, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16148, 22297, -3712, 0, 0, 1219, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16238, 26241, -3312, 0, 0, 50421, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16282, 24084, -3776, 0, 0, 22060, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16398, 12354, -3608, 0, 0, 38099, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16449, 26351, -2728, 0, 0, 4583, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16587, 27878, -3184, 0, 0, 53368, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16697, 28130, -3168, 0, 0, 12328, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16976, 21927, -3704, 0, 0, 20488, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -16992, 26418, -3336, 0, 0, 52322, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -17609, 27670, -3048, 0, 0, 62254, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -17663, 18461, -3712, 0, 0, 21177, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -17804, 24737, -3544, 0, 0, 36133, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -17898, 24860, -3544, 0, 0, 16149, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18057, 29074, -2792, 0, 0, 10576, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18139, 13903, -3424, 0, 0, 924, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18239, 13711, -3400, 0, 0, 65520, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18251, 13673, -3392, 0, 0, 33791, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18319, 13666, -3392, 0, 0, 57348, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18647, 13389, -3344, 0, 0, 41675, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18733, 17433, -3768, 0, 0, 32475, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18845, 13105, -3320, 0, 0, 50583, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -18934, 29069, -2648, 0, 0, 37897, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -19241, 13673, -3352, 0, 0, 35476, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -19439, 14667, -3624, 0, 0, 38978, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -19637, 14809, -3776, 0, 0, 22812, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -19751, 27020, -2928, 0, 0, 16389, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -19926, 14125, -3440, 0, 0, 5953, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -20023, 30882, -2600, 0, 0, 7728, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -21468, 27656, -2472, 0, 0, 9093, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -22363, 27084, -2632, 0, 0, 43277, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -23772, 19807, -3544, 0, 0, 29598, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -24308, 18484, -3648, 0, 0, 27246, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -24413, 17817, -3632, 0, 0, 25071, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -24536, 28648, -3136, 0, 0, 6819, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -24705, 29636, -3184, 0, 0, 36952, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -24745, 17999, -3632, 0, 0, 23973, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -24847, 29820, -3032, 0, 0, 15803, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -25237, 15628, -3496, 0, 0, 25982, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -25480, 16758, -3616, 0, 0, 25389, 30, 30, 0, 0), -- Arbitor of Darkness
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23174, -27382, 16150, -3512, 0, 0, 27901, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -26785, 16666, -3568, 0, 0, 10575, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -26409, 29084, -2744, 0, 0, 61206, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -25989, 15118, -3416, 0, 0, 18737, 30, 30, 0, 0), -- Arbitor of Darkness
 ('altar_of_evil', 1, 23174, -25591, 14946, -3392, 0, 0, 44015, 30, 30, 0, 0), -- Arbitor of Darkness
 ('altar_of_evil', 1, 23174, -25591, 15462, -3464, 0, 0, 35485, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -25989, 15118, -3416, 0, 0, 18737, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -2638, 25829, -1352, 0, 0, 30229, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -26409, 29084, -2744, 0, 0, 61206, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -26785, 16666, -3568, 0, 0, 10575, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -27382, 16150, -3512, 0, 0, 27901, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -2944, 25617, -1472, 0, 0, 58379, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -3450, 25730, -1648, 0, 0, 61428, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -3461, 25866, -1664, 0, 0, 11892, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -3644, 24866, -2072, 0, 0, 25985, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -6960, 24588, -3416, 0, 0, 24122, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -7651, 29154, -3080, 0, 0, 41190, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -8104, 26349, -3552, 0, 0, 58871, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -8188, 28118, -3088, 0, 0, 53111, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -8935, 14693, -3248, 0, 0, 11570, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -9065, 15493, -3216, 0, 0, 40619, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -9081, 16775, -3576, 0, 0, 47860, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -9125, 16714, -3576, 0, 0, 12328, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -9326, 26527, -3448, 0, 0, 5563, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23174, -9575, 15709, -3440, 0, 0, 45961, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -25480, 16758, -3616, 0, 0, 25389, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -25237, 15628, -3496, 0, 0, 25982, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -24847, 29820, -3032, 0, 0, 15803, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -24745, 17999, -3632, 0, 0, 23973, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -24705, 29636, -3184, 0, 0, 36952, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -24536, 28648, -3136, 0, 0, 6819, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -24413, 17817, -3632, 0, 0, 25071, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -24308, 18484, -3648, 0, 0, 27246, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -23772, 19807, -3544, 0, 0, 29598, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -22363, 27084, -2632, 0, 0, 43277, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -21468, 27656, -2472, 0, 0, 9093, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -20023, 30882, -2600, 0, 0, 7728, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -19926, 14125, -3440, 0, 0, 5953, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -19751, 27020, -2928, 0, 0, 16389, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -19637, 14809, -3776, 0, 0, 22812, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -19439, 14667, -3624, 0, 0, 38978, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -19241, 13673, -3352, 0, 0, 35476, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18934, 29069, -2648, 0, 0, 37897, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18845, 13105, -3320, 0, 0, 50583, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18733, 17433, -3768, 0, 0, 32475, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18647, 13389, -3344, 0, 0, 41675, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18319, 13666, -3392, 0, 0, 57348, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18239, 13711, -3400, 0, 0, 65520, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18139, 13903, -3424, 0, 0, 924, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -18057, 29074, -2792, 0, 0, 10576, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -17898, 24860, -3544, 0, 0, 16149, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -17804, 24737, -3544, 0, 0, 36133, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -17663, 18461, -3712, 0, 0, 21177, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -17609, 27670, -3048, 0, 0, 62254, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16992, 26418, -3336, 0, 0, 52322, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16976, 21927, -3704, 0, 0, 20488, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16697, 28130, -3168, 0, 0, 12328, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16587, 27878, -3184, 0, 0, 53368, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16449, 26351, -2728, 0, 0, 4583, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16398, 12354, -3608, 0, 0, 38099, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16282, 24084, -3776, 0, 0, 22060, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16238, 26241, -3312, 0, 0, 50421, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16148, 22297, -3712, 0, 0, 1219, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16141, 16700, -3696, 0, 0, 48228, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -16001, 12174, -3744, 0, 0, 27275, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15760, 11886, -3768, 0, 0, 50698, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15749, 12827, -3776, 0, 0, 43155, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15463, 32093, -3648, 0, 0, 22605, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15418, 14237, -3760, 0, 0, 51639, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15357, 11183, -3568, 0, 0, 23142, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15310, 17569, -3696, 0, 0, 40087, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15279, 24269, -3632, 0, 0, 22169, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15209, 16477, -3776, 0, 0, 52979, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -15143, 25411, -3496, 0, 0, 44083, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14979, 17322, -3688, 0, 0, 45614, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14866, 31891, -3536, 0, 0, 35831, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14594, 26291, -3696, 0, 0, 28496, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14492, 24517, -2744, 0, 0, 32667, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14475, 23976, -3648, 0, 0, 24146, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14139, 18268, -2896, 0, 0, 30517, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -14139, 18976, -2984, 0, 0, 6658, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -13850, 30582, -3224, 0, 0, 43404, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -13366, 14846, -3776, 0, 0, 11444, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -13219, 20407, -3768, 0, 0, 8645, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -13079, 18799, -2952, 0, 0, 42235, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -13004, 29955, -2968, 0, 0, 45293, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -12733, 19395, -3760, 0, 0, 35084, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -12007, 29154, -2768, 0, 0, 8920, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -12005, 19537, -3760, 0, 0, 56370, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -11948, 21399, -3776, 0, 0, 18259, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -11869, 15175, -3704, 0, 0, 43901, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -11629, 12769, -3704, 0, 0, 61253, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -11628, 27773, -2904, 0, 0, 4680, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -11128, 32252, -3144, 0, 0, 36592, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10890, 19025, -3760, 0, 0, 13557, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10511, 15662, -2960, 0, 0, 64871, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10426, 18064, -3712, 0, 0, 13597, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10398, 21333, -3672, 0, 0, 9295, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10395, 21992, -3632, 0, 0, 43738, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10212, 19221, -3704, 0, 0, 25233, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10181, 13053, -3504, 0, 0, 54455, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -10058, 22136, -3656, 0, 0, 46091, 30, 30, 0, 0), -- Arbitor of Darkness
 ('altar_of_evil', 1, 23174, -9880, 19564, -3696, 0, 0, 18048, 30, 30, 0, 0), -- Arbitor of Darkness
-('altar_of_evil', 1, 23175, -10407, 15515, -3608, 0, 0, 61075, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -10528, 29473, -2288, 0, 0, 57996, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -10645, 13260, -3592, 0, 0, 50106, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -10729, 21394, -3712, 0, 0, 61462, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -10825, 15149, -3072, 0, 0, 12156, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -10950, 17180, -3760, 0, 0, 62025, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11011, 30577, -2472, 0, 0, 26328, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11068, 31417, -2880, 0, 0, 59053, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11089, 19835, -3768, 0, 0, 47941, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11221, 20721, -3728, 0, 0, 42319, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11240, 15644, -3720, 0, 0, 64929, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11492, 19418, -3768, 0, 0, 60390, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11502, 19749, -3776, 0, 0, 23095, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11613, 28469, -2760, 0, 0, 40348, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11626, 20322, -3760, 0, 0, 44100, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11763, 20254, -3760, 0, 0, 21689, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11862, 32078, -3016, 0, 0, 11041, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -11871, 13530, -3752, 0, 0, 3538, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12007, 28787, -2880, 0, 0, 32474, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12033, 23305, -3656, 0, 0, 10185, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12570, 14014, -3760, 0, 0, 42074, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12668, 29747, -2888, 0, 0, 21260, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12861, 30312, -2888, 0, 0, 31093, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12900, 19588, -3760, 0, 0, 61419, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12946, 12718, -3752, 0, 0, 48458, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12961, 24232, -3680, 0, 0, 7201, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -12968, 30731, -2984, 0, 0, 49603, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -13079, 18799, -2952, 0, 0, 31871, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -13251, 30995, -3104, 0, 0, 42720, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -13515, 13071, -3752, 0, 0, 21064, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -13560, 20025, -3720, 0, 0, 15509, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14014, 11555, -3712, 0, 0, 42324, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14119, 18176, -3304, 0, 0, 31290, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14134, 30021, -3288, 0, 0, 45505, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14139, 18976, -2984, 0, 0, 54609, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14216, 23962, -2736, 0, 0, 30914, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14418, 31517, -3464, 0, 0, 19304, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14492, 23407, -3768, 0, 0, 62705, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14702, 30582, -3448, 0, 0, 33765, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14725, 10903, -3704, 0, 0, 5760, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14866, 11787, -3760, 0, 0, 34554, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14925, 31743, -3552, 0, 0, 18698, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -14978, 31879, -3568, 0, 0, 59188, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15102, 11616, -3696, 0, 0, 953, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15161, 11320, -3600, 0, 0, 17936, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15161, 12416, -3760, 0, 0, 4716, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15182, 26084, -3512, 0, 0, 28036, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15209, 24173, -3640, 0, 0, 35851, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15308, 24026, -3664, 0, 0, 41942, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15357, 11457, -3696, 0, 0, 29948, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15357, 12279, -3768, 0, 0, 34633, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15596, 22482, -3760, 0, 0, 42258, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15596, 22667, -3760, 0, 0, 41973, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15665, 16813, -3744, 0, 0, 30728, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15762, 25874, -3360, 0, 0, 15101, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -15870, 16795, -3712, 0, 0, 45715, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -16187, 27070, -3256, 0, 0, 53603, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -16449, 26351, -2728, 0, 0, 47073, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -16493, 17459, -3704, 0, 0, 10232, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -16576, 27280, -3200, 0, 0, 38854, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -16700, 23592, -3720, 0, 0, 42513, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -17195, 18461, -3696, 0, 0, 34720, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -17250, 26759, -3272, 0, 0, 36673, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -17466, 27237, -3136, 0, 0, 10925, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -17745, 25504, -3400, 0, 0, 19276, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -17824, 24178, -3624, 0, 0, 52754, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18206, 13265, -3376, 0, 0, 38084, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18394, 13389, -3360, 0, 0, 10953, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18449, 14099, -3448, 0, 0, 29649, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18493, 28041, -2920, 0, 0, 2306, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18513, 14170, -3464, 0, 0, 61825, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18888, 30858, -2936, 0, 0, 47881, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -18903, 13375, -3320, 0, 0, 43580, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -19439, 15093, -3752, 0, 0, 20790, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -19736, 30964, -2712, 0, 0, 14632, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -19803, 27522, -2840, 0, 0, 0, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -20033, 14241, -3496, 0, 0, 5788, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -20358, 31456, -2688, 0, 0, 20985, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23174, -9575, 15709, -3440, 0, 0, 45961, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -9326, 26527, -3448, 0, 0, 5563, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -9125, 16714, -3576, 0, 0, 12328, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -9081, 16775, -3576, 0, 0, 47860, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -9065, 15493, -3216, 0, 0, 40619, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -8935, 14693, -3248, 0, 0, 11570, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -8188, 28118, -3088, 0, 0, 53111, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -8104, 26349, -3552, 0, 0, 58871, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -7651, 29154, -3080, 0, 0, 41190, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -6960, 24588, -3416, 0, 0, 24122, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -3644, 24866, -2072, 0, 0, 25985, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -3461, 25866, -1664, 0, 0, 11892, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -3450, 25730, -1648, 0, 0, 61428, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -2944, 25617, -1472, 0, 0, 58379, 30, 30, 0, 0), -- Arbitor of Darkness
+('altar_of_evil', 1, 23174, -2638, 25829, -1352, 0, 0, 30229, 30, 30, 0, 0); -- Arbitor of Darkness
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23175, -28026, 18789, -3632, 0, 0, 33588, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -26835, 28532, -3584, 0, 0, 29051, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -26744, 15561, -3440, 0, 0, 6711, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -26714, 29479, -3376, 0, 0, 63885, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -26586, 16322, -3520, 0, 0, 39820, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -25983, 30188, -2864, 0, 0, 61643, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -25630, 14957, -3408, 0, 0, 12986, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -25591, 31483, -2496, 0, 0, 60136, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -25061, 15988, -3512, 0, 0, 31361, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -25048, 19439, -3680, 0, 0, 16033, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -24989, 29820, -3056, 0, 0, 37496, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -24834, 28957, -3376, 0, 0, 25453, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -23823, 19090, -3728, 0, 0, 33475, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -23798, 19690, -3560, 0, 0, 22343, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -21680, 27677, -2448, 0, 0, 25821, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -21232, 27207, -2664, 0, 0, 16471, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
 ('altar_of_evil', 1, 23175, -21023, 14809, -3568, 0, 0, 57142, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
 ('altar_of_evil', 1, 23175, -21023, 15093, -3656, 0, 0, 49351, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -21232, 27207, -2664, 0, 0, 16471, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -21680, 27677, -2448, 0, 0, 25821, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -23798, 19690, -3560, 0, 0, 22343, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -23823, 19090, -3728, 0, 0, 33475, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -24834, 28957, -3376, 0, 0, 25453, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -24989, 29820, -3056, 0, 0, 37496, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -25048, 19439, -3680, 0, 0, 16033, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -25061, 15988, -3512, 0, 0, 31361, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -2541, 22965, -2896, 0, 0, 49934, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -25591, 31483, -2496, 0, 0, 60136, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -25630, 14957, -3408, 0, 0, 12986, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -25983, 30188, -2864, 0, 0, 61643, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -26586, 16322, -3520, 0, 0, 39820, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -26714, 29479, -3376, 0, 0, 63885, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -26744, 15561, -3440, 0, 0, 6711, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -26835, 28532, -3584, 0, 0, 29051, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -28026, 18789, -3632, 0, 0, 33588, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -3015, 23322, -2776, 0, 0, 59546, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -3674, 24701, -2056, 0, 0, 43188, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -3753, 24784, -2072, 0, 0, 31074, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -3930, 24461, -2064, 0, 0, 36931, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -6672, 23832, -3288, 0, 0, 1017, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -6721, 28060, -3048, 0, 0, 53138, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -7840, 28384, -3200, 0, 0, 33975, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -9331, 15743, -3344, 0, 0, 16206, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23175, -9876, 15533, -2896, 0, 0, 18106, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -20358, 31456, -2688, 0, 0, 20985, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -20033, 14241, -3496, 0, 0, 5788, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -19803, 27522, -2840, 0, 0, 0, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -19736, 30964, -2712, 0, 0, 14632, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -19439, 15093, -3752, 0, 0, 20790, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18903, 13375, -3320, 0, 0, 43580, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18888, 30858, -2936, 0, 0, 47881, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18513, 14170, -3464, 0, 0, 61825, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18493, 28041, -2920, 0, 0, 2306, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18449, 14099, -3448, 0, 0, 29649, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18394, 13389, -3360, 0, 0, 10953, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -18206, 13265, -3376, 0, 0, 38084, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -17824, 24178, -3624, 0, 0, 52754, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -17745, 25504, -3400, 0, 0, 19276, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -17466, 27237, -3136, 0, 0, 10925, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -17250, 26759, -3272, 0, 0, 36673, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -17195, 18461, -3696, 0, 0, 34720, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -16700, 23592, -3720, 0, 0, 42513, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -16576, 27280, -3200, 0, 0, 38854, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -16493, 17459, -3704, 0, 0, 10232, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -16449, 26351, -2728, 0, 0, 47073, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -16187, 27070, -3256, 0, 0, 53603, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15870, 16795, -3712, 0, 0, 45715, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15762, 25874, -3360, 0, 0, 15101, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15665, 16813, -3744, 0, 0, 30728, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15596, 22482, -3760, 0, 0, 42258, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15596, 22667, -3760, 0, 0, 41973, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15357, 11457, -3696, 0, 0, 29948, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15357, 12279, -3768, 0, 0, 34633, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15308, 24026, -3664, 0, 0, 41942, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15209, 24173, -3640, 0, 0, 35851, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15182, 26084, -3512, 0, 0, 28036, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15161, 11320, -3600, 0, 0, 17936, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15161, 12416, -3760, 0, 0, 4716, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -15102, 11616, -3696, 0, 0, 953, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14866, 11787, -3760, 0, 0, 34554, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14725, 10903, -3704, 0, 0, 5760, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14492, 23407, -3768, 0, 0, 62705, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14216, 23962, -2736, 0, 0, 30914, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14139, 18976, -2984, 0, 0, 54609, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14119, 18176, -3304, 0, 0, 31290, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -14014, 11555, -3712, 0, 0, 42324, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -13560, 20025, -3720, 0, 0, 15509, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -13515, 13071, -3752, 0, 0, 21064, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -13079, 18799, -2952, 0, 0, 31871, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -12961, 24232, -3680, 0, 0, 7201, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -12946, 12718, -3752, 0, 0, 48458, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -12900, 19588, -3760, 0, 0, 61419, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -12570, 14014, -3760, 0, 0, 42074, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -12033, 23305, -3656, 0, 0, 10185, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11871, 13530, -3752, 0, 0, 3538, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11763, 20254, -3760, 0, 0, 21689, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11626, 20322, -3760, 0, 0, 44100, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11502, 19749, -3776, 0, 0, 23095, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11492, 19418, -3768, 0, 0, 60390, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11240, 15644, -3720, 0, 0, 64929, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11221, 20721, -3728, 0, 0, 42319, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11089, 19835, -3768, 0, 0, 47941, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -10950, 17180, -3760, 0, 0, 62025, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -10825, 15149, -3072, 0, 0, 12156, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -10729, 21394, -3712, 0, 0, 61462, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -10645, 13260, -3592, 0, 0, 50106, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -10528, 29473, -2288, 0, 0, 57996, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -10407, 15515, -3608, 0, 0, 61075, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
 ('altar_of_evil', 1, 23175, -9980, 21701, -3624, 0, 0, 20514, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
-('altar_of_evil', 1, 23176, -10089, 22152, -3656, 0, 0, 56052, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10120, 20853, -3704, 0, 0, 22788, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10347, 15314, -3592, 0, 0, 31218, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10368, 21801, -3632, 0, 0, 3138, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10618, 31737, -2920, 0, 0, 19751, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10629, 21564, -3680, 0, 0, 63983, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10639, 19026, -3720, 0, 0, 30214, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10663, 31147, -2680, 0, 0, 54814, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10666, 13364, -3600, 0, 0, 63203, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -10779, 20502, -3696, 0, 0, 49882, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -11057, 19606, -3760, 0, 0, 21564, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -11395, 18671, -3768, 0, 0, 46321, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -11808, 15763, -3768, 0, 0, 47053, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -11860, 31958, -3000, 0, 0, 6126, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -11928, 31875, -2984, 0, 0, 38622, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -12143, 29534, -2728, 0, 0, 60638, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -12146, 30208, -2688, 0, 0, 36464, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -12166, 19721, -3728, 0, 0, 7379, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -12304, 31713, -2968, 0, 0, 30649, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -12430, 30956, -2880, 0, 0, 3943, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -12749, 20953, -3760, 0, 0, 9904, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13079, 18799, -2952, 0, 0, 61230, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13112, 11908, -3720, 0, 0, 37604, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13239, 15682, -3696, 0, 0, 11851, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13244, 29880, -3080, 0, 0, 27715, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13256, 19623, -3680, 0, 0, 16051, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13290, 13923, -3760, 0, 0, 372, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13388, 24147, -3576, 0, 0, 47025, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13388, 24332, -3704, 0, 0, 56025, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13566, 31704, -3216, 0, 0, 19391, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13743, 31245, -3264, 0, 0, 51831, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13850, 30395, -3224, 0, 0, 48780, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13850, 32078, -3304, 0, 0, 52367, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13908, 10964, -3696, 0, 0, 25796, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13956, 19617, -3704, 0, 0, 19717, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -13992, 19252, -3704, 0, 0, 15964, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14024, 23701, -3688, 0, 0, 46699, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14139, 18268, -2896, 0, 0, 51611, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14139, 18976, -2984, 0, 0, 23243, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14317, 24811, -3552, 0, 0, 58976, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14400, 24083, -3640, 0, 0, 26672, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14407, 11159, -3688, 0, 0, 23340, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14416, 11423, -3696, 0, 0, 20547, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14492, 24517, -2744, 0, 0, 21814, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14806, 16924, -3696, 0, 0, 9610, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -14828, 31673, -3520, 0, 0, 36758, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15184, 15763, -3768, 0, 0, 6257, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15294, 26091, -3480, 0, 0, 44628, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15313, 26155, -3464, 0, 0, 44805, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15458, 12372, -3768, 0, 0, 22047, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15566, 12231, -3768, 0, 0, 36538, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15589, 12068, -3768, 0, 0, 20200, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15688, 16408, -3104, 0, 0, 25605, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -15940, 17053, -2976, 0, 0, 55722, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -16095, 12169, -3696, 0, 0, 5441, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -16294, 26390, -3312, 0, 0, 62005, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -16533, 12005, -3496, 0, 0, 7941, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -17004, 24105, -3000, 0, 0, 30121, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -17158, 26357, -3336, 0, 0, 49361, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -17831, 19427, -3696, 0, 0, 43266, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -17890, 18941, -3688, 0, 0, 57345, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18150, 13791, -3408, 0, 0, 51056, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18348, 14010, -3440, 0, 0, 27150, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18439, 29097, -2728, 0, 0, 0, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18484, 13648, -3384, 0, 0, 44794, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18775, 29275, -2680, 0, 0, 31079, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18777, 27248, -3056, 0, 0, 34766, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -18873, 13543, -3344, 0, 0, 12568, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23175, -9876, 15533, -2896, 0, 0, 18106, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -9331, 15743, -3344, 0, 0, 16206, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -7840, 28384, -3200, 0, 0, 33975, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -6721, 28060, -3048, 0, 0, 53138, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -6672, 23832, -3288, 0, 0, 1017, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -3930, 24461, -2064, 0, 0, 36931, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -3753, 24784, -2072, 0, 0, 31074, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -3674, 24701, -2056, 0, 0, 43188, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -3015, 23322, -2776, 0, 0, 59546, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -2541, 22965, -2896, 0, 0, 49934, 30, 30, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -12153, 29758, -2704, 0, 0, 43656, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -11787, 30532, -2651, 0, 0, 33850, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -489, 9092, -3302, 0, 0, 46733, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -391, 9507, -3292, 0, 0, 34973, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -37, 9583, -3280, 0, 0, 49460, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, -5, 8961, -3296, 0, 0, 2122, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, 5842, 6158, -2916, 0, 0, 26090, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, 6099, 5349, -2845, 0, 0, 54004, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, 6418, 5944, -2860, 0, 0, 37897, 60, 0, 0, 0), -- Altar of Evil Spirit Offering Box
+('altar_of_evil', 1, 23175, 8173, 4159, -2606, 0, 0, 57182, 60, 0, 0, 0); -- Altar of Evil Spirit Offering Box
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23176, -10229, 27714, -2921, 0, 0, 16784, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -9164, 27156, -3233, 0, 0, 63049, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -89, 10787, -3176, 0, 0, 43480, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -53, 10124, -3226, 0, 0, 37111, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, 528, 8661, -3292, 0, 0, 3081, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, 1992, 6566, -3241, 0, 0, 14885, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, 6359, 4123, -2754, 0, 0, 24636, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, 6380, 5101, -2791, 0, 0, 16513, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, 7147, 3751, -2651, 0, 0, 13213, 60, 0, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -27278, 16493, -3536, 0, 0, 57695, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -26436, 18546, -3632, 0, 0, 49361, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -26409, 29084, -2744, 0, 0, 10975, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -26351, 16681, -3592, 0, 0, 34197, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -26090, 16108, -3520, 0, 0, 4139, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -25822, 18530, -3640, 0, 0, 12285, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -25699, 28532, -3592, 0, 0, 1937, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -25557, 28900, -3560, 0, 0, 27431, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24994, 16322, -3568, 0, 0, 10391, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24939, 15075, -3432, 0, 0, 17162, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24705, 30740, -2608, 0, 0, 29517, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24596, 17182, -3632, 0, 0, 35559, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24470, 30773, -2608, 0, 0, 27430, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24392, 29266, -3168, 0, 0, 14706, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -24251, 19057, -3712, 0, 0, 24552, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -23346, 27360, -2800, 0, 0, 57314, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -22936, 27213, -2688, 0, 0, 28977, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -22105, 27560, -2472, 0, 0, 23039, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -20429, 14951, -3656, 0, 0, 30507, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -20338, 26754, -2888, 0, 0, 28992, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -20038, 31105, -2656, 0, 0, 61770, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -20009, 27353, -2840, 0, 0, 42670, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -19238, 30991, -2848, 0, 0, 44317, 30, 30, 0, 0), -- Mutated Cerberos
 ('altar_of_evil', 1, 23176, -19043, 13957, -3408, 0, 0, 15620, 30, 30, 0, 0), -- Mutated Cerberos
 ('altar_of_evil', 1, 23176, -19043, 14383, -3512, 0, 0, 43695, 30, 30, 0, 0), -- Mutated Cerberos
 ('altar_of_evil', 1, 23176, -19043, 14667, -3584, 0, 0, 2954, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -19238, 30991, -2848, 0, 0, 44317, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -20009, 27353, -2840, 0, 0, 42670, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -20038, 31105, -2656, 0, 0, 61770, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -20338, 26754, -2888, 0, 0, 28992, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -20429, 14951, -3656, 0, 0, 30507, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -22105, 27560, -2472, 0, 0, 23039, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -22936, 27213, -2688, 0, 0, 28977, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -23346, 27360, -2800, 0, 0, 57314, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24251, 19057, -3712, 0, 0, 24552, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24392, 29266, -3168, 0, 0, 14706, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24470, 30773, -2608, 0, 0, 27430, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24596, 17182, -3632, 0, 0, 35559, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24705, 30740, -2608, 0, 0, 29517, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24939, 15075, -3432, 0, 0, 17162, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -24994, 16322, -3568, 0, 0, 10391, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -25557, 28900, -3560, 0, 0, 27431, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -25699, 28532, -3592, 0, 0, 1937, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -25822, 18530, -3640, 0, 0, 12285, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -26090, 16108, -3520, 0, 0, 4139, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -26351, 16681, -3592, 0, 0, 34197, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -26409, 29084, -2744, 0, 0, 10975, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -26436, 18546, -3632, 0, 0, 49361, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -2648, 25440, -1544, 0, 0, 53525, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -2717, 24847, -1720, 0, 0, 29603, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -27278, 16493, -3536, 0, 0, 57695, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -2765, 24914, -1712, 0, 0, 17168, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -2901, 25879, -1416, 0, 0, 15438, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -3272, 24642, -1976, 0, 0, 3478, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -7149, 24783, -3448, 0, 0, 11641, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -7651, 29154, -3080, 0, 0, 29661, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -7869, 28773, -3136, 0, 0, 10612, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -8040, 27935, -3160, 0, 0, 60932, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -8509, 28482, -2888, 0, 0, 5517, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -8886, 21218, -3560, 0, 0, 9825, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -8914, 14819, -3248, 0, 0, 56792, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -8935, 13325, -3216, 0, 0, 63752, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -9597, 15794, -3464, 0, 0, 32980, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23176, -9880, 15605, -2872, 0, 0, 27759, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18873, 13543, -3344, 0, 0, 12568, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18777, 27248, -3056, 0, 0, 34766, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18775, 29275, -2680, 0, 0, 31079, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18484, 13648, -3384, 0, 0, 44794, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18439, 29097, -2728, 0, 0, 0, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18348, 14010, -3440, 0, 0, 27150, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -18150, 13791, -3408, 0, 0, 51056, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -17890, 18941, -3688, 0, 0, 57345, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -17831, 19427, -3696, 0, 0, 43266, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -17158, 26357, -3336, 0, 0, 49361, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -17004, 24105, -3000, 0, 0, 30121, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -16533, 12005, -3496, 0, 0, 7941, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -16294, 26390, -3312, 0, 0, 62005, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -16095, 12169, -3696, 0, 0, 5441, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15940, 17053, -2976, 0, 0, 55722, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15688, 16408, -3104, 0, 0, 25605, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15589, 12068, -3768, 0, 0, 20200, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15566, 12231, -3768, 0, 0, 36538, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15458, 12372, -3768, 0, 0, 22047, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15313, 26155, -3464, 0, 0, 44805, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15294, 26091, -3480, 0, 0, 44628, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -15184, 15763, -3768, 0, 0, 6257, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14806, 16924, -3696, 0, 0, 9610, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14492, 24517, -2744, 0, 0, 21814, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14416, 11423, -3696, 0, 0, 20547, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14407, 11159, -3688, 0, 0, 23340, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14400, 24083, -3640, 0, 0, 26672, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14317, 24811, -3552, 0, 0, 58976, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14139, 18268, -2896, 0, 0, 51611, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14139, 18976, -2984, 0, 0, 23243, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -14024, 23701, -3688, 0, 0, 46699, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13992, 19252, -3704, 0, 0, 15964, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13956, 19617, -3704, 0, 0, 19717, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13908, 10964, -3696, 0, 0, 25796, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13850, 30395, -3224, 0, 0, 48780, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13850, 32078, -3304, 0, 0, 52367, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13566, 31704, -3216, 0, 0, 19391, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13388, 24147, -3576, 0, 0, 47025, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13388, 24332, -3704, 0, 0, 56025, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13290, 13923, -3760, 0, 0, 372, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13256, 19623, -3680, 0, 0, 16051, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13244, 29880, -3080, 0, 0, 27715, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13239, 15682, -3696, 0, 0, 11851, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13112, 11908, -3720, 0, 0, 37604, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -13079, 18799, -2952, 0, 0, 61230, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -12749, 20953, -3760, 0, 0, 9904, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -12304, 31713, -2968, 0, 0, 30649, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -12166, 19721, -3728, 0, 0, 7379, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -11928, 31875, -2984, 0, 0, 38622, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -11808, 15763, -3768, 0, 0, 47053, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -11395, 18671, -3768, 0, 0, 46321, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -11057, 19606, -3760, 0, 0, 21564, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10779, 20502, -3696, 0, 0, 49882, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10666, 13364, -3600, 0, 0, 63203, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10663, 31147, -2680, 0, 0, 54814, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10639, 19026, -3720, 0, 0, 30214, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10629, 21564, -3680, 0, 0, 63983, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10618, 31737, -2920, 0, 0, 19751, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10368, 21801, -3632, 0, 0, 3138, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10347, 15314, -3592, 0, 0, 31218, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10120, 20853, -3704, 0, 0, 22788, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -10089, 22152, -3656, 0, 0, 56052, 30, 30, 0, 0), -- Mutated Cerberos
 ('altar_of_evil', 1, 23176, -9928, 15090, -3512, 0, 0, 12531, 30, 30, 0, 0), -- Mutated Cerberos
-('altar_of_evil', 1, 23177, -10007, 8414, -3344, 0, 0, 27624, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -10203, 7378, -3448, 0, 0, 36177, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -10266, 7754, -3424, 0, 0, 37137, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -10266, 8414, -3384, 0, 0, 31229, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -12776, 7053, -3504, 0, 0, 28385, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23176, -9880, 15605, -2872, 0, 0, 27759, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -9597, 15794, -3464, 0, 0, 32980, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -8935, 13325, -3216, 0, 0, 63752, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -8914, 14819, -3248, 0, 0, 56792, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -8886, 21218, -3560, 0, 0, 9825, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -8509, 28482, -2888, 0, 0, 5517, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -8040, 27935, -3160, 0, 0, 60932, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -7869, 28773, -3136, 0, 0, 10612, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -7651, 29154, -3080, 0, 0, 29661, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -7149, 24783, -3448, 0, 0, 11641, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -3272, 24642, -1976, 0, 0, 3478, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -2901, 25879, -1416, 0, 0, 15438, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -2765, 24914, -1712, 0, 0, 17168, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -2717, 24847, -1720, 0, 0, 29603, 30, 30, 0, 0), -- Mutated Cerberos
+('altar_of_evil', 1, 23176, -2648, 25440, -1544, 0, 0, 53525, 30, 30, 0, 0); -- Mutated Cerberos
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23177, -14, 6065, -3258, 0, 0, 27962, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 141, 7505, -3214, 0, 0, 24995, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 232, 6751, -3228, 0, 0, 43753, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 395, 5862, -3252, 0, 0, 58593, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 529, 7147, -3257, 0, 0, 32956, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 979, 7651, -3270, 0, 0, 64590, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 1795, 3796, -3343, 0, 0, 27687, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 2312, 3574, -3327, 0, 0, 61305, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 2934, 3481, -3299, 0, 0, 43776, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 3346, 4534, -3206, 0, 0, 25202, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 3434, 3786, -3242, 0, 0, 62368, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 4006, 3837, -3149, 0, 0, 16936, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, 5138, 4712, -2935, 0, 0, 46395, 60, 0, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -29402, 26637, -3432, 0, 0, 5414, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -28809, 25968, -3720, 0, 0, 42217, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -28773, 26417, -3576, 0, 0, 31727, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -26169, 26518, -2976, 0, 0, 41749, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -25955, 26315, -3296, 0, 0, 1642, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -25495, 25890, -3656, 0, 0, 25419, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -25103, 26872, -3536, 0, 0, 616, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -23334, 27439, -2776, 0, 0, 27295, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -23169, 29295, -2592, 0, 0, 15409, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -22529, 28236, -2344, 0, 0, 44939, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -21829, 28165, -2296, 0, 0, 21929, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -21405, 17195, -3776, 0, 0, 22710, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -21092, 18158, -3696, 0, 0, 14018, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -21036, 12619, -3072, 0, 0, 31714, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -21034, 29602, -2016, 0, 0, 54104, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -21031, 29006, -2072, 0, 0, 9182, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20870, 26168, -2976, 0, 0, 60310, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20824, 14191, -3392, 0, 0, 1544, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20770, 13692, -3288, 0, 0, 28686, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20731, 29855, -2104, 0, 0, 55286, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20521, 15951, -3768, 0, 0, 51183, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20409, 29119, -2248, 0, 0, 46965, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20365, 14916, -3096, 0, 0, 42645, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -20095, 14372, -3552, 0, 0, 18288, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -19583, 16563, -3768, 0, 0, 18485, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -19409, 12377, -3240, 0, 0, 21350, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -19058, 10198, -3192, 0, 0, 55381, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -18314, 10239, -3304, 0, 0, 14018, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -18273, 10202, -3320, 0, 0, 20156, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -14334, 7175, -3480, 0, 0, 3742, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -14138, 6753, -3424, 0, 0, 62571, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -13979, 7009, -3456, 0, 0, 28405, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -13944, 7823, -3472, 0, 0, 50501, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -13556, 7288, -3504, 0, 0, 12477, 30, 30, 0, 0), -- Dartanion
 ('altar_of_evil', 1, 23177, -13362, 6646, -3472, 0, 0, 37343, 30, 30, 0, 0), -- Dartanion
 ('altar_of_evil', 1, 23177, -13362, 8037, -3432, 0, 0, 49153, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -13556, 7288, -3504, 0, 0, 12477, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -13944, 7823, -3472, 0, 0, 50501, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -13979, 7009, -3456, 0, 0, 28405, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -14138, 6753, -3424, 0, 0, 62571, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -14334, 7175, -3480, 0, 0, 3742, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -18273, 10202, -3320, 0, 0, 20156, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -18314, 10239, -3304, 0, 0, 14018, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -19058, 10198, -3192, 0, 0, 55381, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -19223, 12239, -3264, 0, 0, 39299, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -19409, 12377, -3240, 0, 0, 21350, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -19583, 16563, -3768, 0, 0, 18485, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -19825, 13964, -3384, 0, 0, 15026, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20095, 14372, -3552, 0, 0, 18288, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20365, 14916, -3096, 0, 0, 42645, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20409, 29119, -2248, 0, 0, 46965, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20521, 15951, -3768, 0, 0, 51183, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20731, 29855, -2104, 0, 0, 55286, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20770, 13692, -3288, 0, 0, 28686, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20824, 14191, -3392, 0, 0, 1544, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -20870, 26168, -2976, 0, 0, 60310, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -21031, 29006, -2072, 0, 0, 9182, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -21034, 29602, -2016, 0, 0, 54104, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -21036, 12619, -3072, 0, 0, 31714, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -21092, 18158, -3696, 0, 0, 14018, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -21405, 17195, -3776, 0, 0, 22710, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -21829, 28165, -2296, 0, 0, 21929, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -22529, 28236, -2344, 0, 0, 44939, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -23169, 29295, -2592, 0, 0, 15409, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -23334, 27439, -2776, 0, 0, 27295, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -25103, 26872, -3536, 0, 0, 616, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -25495, 25890, -3656, 0, 0, 25419, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -25955, 26315, -3296, 0, 0, 1642, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -26169, 26518, -2976, 0, 0, 41749, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -28773, 26417, -3576, 0, 0, 31727, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -28809, 25968, -3720, 0, 0, 42217, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -29402, 26637, -3432, 0, 0, 5414, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -5238, 28839, -2480, 0, 0, 31302, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -5271, 26632, -3008, 0, 0, 9873, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -6894, 29800, -2736, 0, 0, 44083, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -7269, 9790, -2800, 0, 0, 56070, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -7684, 11503, -2784, 0, 0, 34770, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -7739, 10331, -2840, 0, 0, 44257, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -7862, 11304, -2816, 0, 0, 24298, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -7902, 7967, -3232, 0, 0, 23612, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -8147, 29219, -2896, 0, 0, 60247, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -8709, 7372, -3416, 0, 0, 431, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -8747, 8216, -3272, 0, 0, 35288, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -8984, 10661, -2424, 0, 0, 42074, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -9055, 10607, -2776, 0, 0, 20125, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -9292, 8911, -3216, 0, 0, 21929, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -9299, 8279, -3296, 0, 0, 24234, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -9434, 8466, -3288, 0, 0, 17596, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23177, -9477, 28868, -2600, 0, 0, 12264, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -12776, 7053, -3504, 0, 0, 28385, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -10266, 7754, -3424, 0, 0, 37137, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -10266, 8414, -3384, 0, 0, 31229, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -10203, 7378, -3448, 0, 0, 36177, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -10007, 8414, -3344, 0, 0, 27624, 30, 30, 0, 0), -- Dartanion
 ('altar_of_evil', 1, 23177, -9489, 8414, -3296, 0, 0, 20327, 30, 30, 0, 0), -- Dartanion
-('altar_of_evil', 1, 23178, -16174, 20427, -3616, 0, 0, 3238, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -8845, 12451, -3160, 0, 0, 5449, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -9030, 12554, -3192, 0, 0, 42962, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -8931, 12276, -3152, 0, 0, 44457, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -18144, 19070, -3712, 0, 0, 53374, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -16427, 19434, -3616, 0, 0, 32909, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -17226, 19769, -3592, 0, 0, 49083, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23177, -9477, 28868, -2600, 0, 0, 12264, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -9434, 8466, -3288, 0, 0, 17596, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -9299, 8279, -3296, 0, 0, 24234, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -9292, 8911, -3216, 0, 0, 21929, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -9055, 10607, -2776, 0, 0, 20125, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -8984, 10661, -2424, 0, 0, 42074, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -8747, 8216, -3272, 0, 0, 35288, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -8709, 7372, -3416, 0, 0, 431, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -8147, 29219, -2896, 0, 0, 60247, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -7902, 7967, -3232, 0, 0, 23612, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -7862, 11304, -2816, 0, 0, 24298, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -7739, 10331, -2840, 0, 0, 44257, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -7684, 11503, -2784, 0, 0, 34770, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -7269, 9790, -2800, 0, 0, 56070, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -6894, 29800, -2736, 0, 0, 44083, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -5271, 26632, -3008, 0, 0, 9873, 30, 30, 0, 0), -- Dartanion
+('altar_of_evil', 1, 23177, -5238, 28839, -2480, 0, 0, 31302, 30, 30, 0, 0); -- Dartanion
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23178, -30381, 31404, -3352, 0, 0, 21980, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -29784, 31404, -3328, 0, 0, 4525, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -29416, 26734, -3432, 0, 0, 44446, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -29386, 30053, -3312, 0, 0, 36990, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -29291, 25394, -3424, 0, 0, 2894, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -29166, 27270, -3496, 0, 0, 899, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -28988, 30439, -3280, 0, 0, 40009, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -28645, 20530, -3512, 0, 0, 19746, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -28393, 24812, -3488, 0, 0, 9743, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -28190, 24374, -3504, 0, 0, 54984, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -27987, 25396, -3712, 0, 0, 51090, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -27784, 24666, -3640, 0, 0, 14426, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -27581, 24666, -3688, 0, 0, 26360, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -27396, 29667, -3280, 0, 0, 6251, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -27378, 24812, -3752, 0, 0, 50966, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -27280, 20530, -3608, 0, 0, 39088, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -26660, 24850, -3768, 0, 0, 17784, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -26310, 23546, -3672, 0, 0, 22980, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -26188, 20248, -3752, 0, 0, 57974, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -25867, 21232, -3744, 0, 0, 23723, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -25849, 21261, -3768, 0, 0, 19142, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -25442, 22860, -3760, 0, 0, 55286, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -25294, 28064, -3368, 0, 0, 18875, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -24823, 19543, -3688, 0, 0, 61136, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -24671, 26924, -3392, 0, 0, 62485, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -24670, 22278, -3744, 0, 0, 41308, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -24590, 20361, -3704, 0, 0, 26212, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -24294, 23342, -3704, 0, 0, 61491, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -24006, 26774, -3160, 0, 0, 44410, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -23667, 31184, -2616, 0, 0, 13777, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -23638, 18807, -3720, 0, 0, 26542, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -23614, 19899, -3576, 0, 0, 29083, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -23258, 30243, -2600, 0, 0, 22128, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -23070, 26827, -2768, 0, 0, 16907, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -22839, 17354, -3592, 0, 0, 28915, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -22303, 17239, -3664, 0, 0, 9030, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -21561, 23662, -3664, 0, 0, 20235, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -21430, 23108, -3760, 0, 0, 51622, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -21414, 28202, -2280, 0, 0, 50476, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -21164, 31010, -2280, 0, 0, 18913, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -21065, 18168, -3696, 0, 0, 34869, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20951, 26356, -2936, 0, 0, 1039, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20945, 30384, -2072, 0, 0, 25835, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20925, 29668, -2048, 0, 0, 62805, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20727, 13489, -3264, 0, 0, 44875, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20640, 26032, -3000, 0, 0, 8290, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20509, 23487, -3640, 0, 0, 21720, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20135, 11829, -3096, 0, 0, 17474, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -20042, 13952, -3376, 0, 0, 45435, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -19947, 16089, -3760, 0, 0, 36544, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -19523, 14798, -3704, 0, 0, 44165, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -19936, 10969, -3088, 0, 0, 62544, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -19742, 16334, -3768, 0, 0, 38262, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -19738, 17043, -3672, 0, 0, 18702, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -19523, 14798, -3704, 0, 0, 44165, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -19517, 16327, -3752, 0, 0, 9030, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20509, 23487, -3640, 0, 0, 21720, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -12163, 10503, -3592, 0, 0, 41071, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -8526, 11707, -3024, 0, 0, 17999, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -7381, 11154, -2664, 0, 0, 21219, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -10940, 9455, -3488, 0, 0, 56985, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -11284, 10160, -3592, 0, 0, 39481, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -11265, 9363, -3536, 0, 0, 56719, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -9948, 9222, -3304, 0, 0, 41354, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -8118, 9278, -3072, 0, 0, 30288, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -10488, 7856, -3424, 0, 0, 44142, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -10525, 8150, -3424, 0, 0, 28915, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -11544, 6757, -3480, 0, 0, 49392, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -9377, 6365, -3496, 0, 0, 21004, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -9180, 6757, -3456, 0, 0, 39264, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -7025, 7072, -3368, 0, 0, 24321, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -6796, 7274, -3328, 0, 0, 50426, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -7935, 7886, -3248, 0, 0, 55030, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -7676, 7754, -3256, 0, 0, 61402, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -11741, 5973, -3464, 0, 0, 57825, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -11150, 5973, -3464, 0, 0, 59145, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -10559, 5287, -3472, 0, 0, 10617, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -6338, 4648, -3640, 0, 0, 64842, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -6796, 5052, -3672, 0, 0, 34309, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -12780, 6860, -3504, 0, 0, 17052, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -13755, 7006, -3472, 0, 0, 17913, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -13944, 7288, -3496, 0, 0, 62694, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -13612, 7421, -3504, 0, 0, 42785, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -19413, 13144, -3272, 0, 0, 33290, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -18144, 19070, -3712, 0, 0, 53374, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -17818, 9951, -3384, 0, 0, 1142, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -17430, 8679, -3384, 0, 0, 52537, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -17236, 8838, -3408, 0, 0, 29640, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -17226, 19769, -3592, 0, 0, 49083, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -17133, 10403, -3472, 0, 0, 32813, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -16427, 19434, -3616, 0, 0, 32909, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -16337, 10231, -3568, 0, 0, 2483, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -16174, 20427, -3616, 0, 0, 3238, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -15740, 11091, -3656, 0, 0, 62944, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -15124, 8331, -3600, 0, 0, 39358, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -14830, 9459, -3648, 0, 0, 57173, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -14830, 10023, -3664, 0, 0, 61713, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -16337, 10231, -3568, 0, 0, 2483, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -14720, 8251, -3528, 0, 0, 46650, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -17236, 8838, -3408, 0, 0, 29640, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -17818, 9951, -3384, 0, 0, 1142, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -17430, 8679, -3384, 0, 0, 52537, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -17133, 10403, -3472, 0, 0, 32813, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -15740, 11091, -3656, 0, 0, 62944, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20135, 11829, -3096, 0, 0, 17474, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -19936, 10969, -3088, 0, 0, 62544, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20727, 13489, -3264, 0, 0, 44875, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -19413, 13144, -3272, 0, 0, 33290, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20042, 13952, -3376, 0, 0, 45435, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -22839, 17354, -3592, 0, 0, 28915, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -21065, 18168, -3696, 0, 0, 34869, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -22303, 17239, -3664, 0, 0, 9030, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -24590, 20361, -3704, 0, 0, 26212, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -23638, 18807, -3720, 0, 0, 26542, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -23614, 19899, -3576, 0, 0, 29083, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -26188, 20248, -3752, 0, 0, 57974, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -24823, 19543, -3688, 0, 0, 61136, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -28645, 20530, -3512, 0, 0, 19746, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -27280, 20530, -3608, 0, 0, 39088, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -24670, 22278, -3744, 0, 0, 41308, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -25867, 21232, -3744, 0, 0, 23723, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -25849, 21261, -3768, 0, 0, 19142, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -28190, 24374, -3504, 0, 0, 54984, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -25442, 22860, -3760, 0, 0, 55286, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -26310, 23546, -3672, 0, 0, 22980, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -29291, 25394, -3424, 0, 0, 2894, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -26660, 24850, -3768, 0, 0, 17784, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -27784, 24666, -3640, 0, 0, 14426, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -27987, 25396, -3712, 0, 0, 51090, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -28393, 24812, -3488, 0, 0, 9743, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -27581, 24666, -3688, 0, 0, 26360, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -27378, 24812, -3752, 0, 0, 50966, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -29166, 27270, -3496, 0, 0, 899, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -29416, 26734, -3432, 0, 0, 44446, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -29386, 30053, -3312, 0, 0, 36990, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -28988, 30439, -3280, 0, 0, 40009, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -27396, 29667, -3280, 0, 0, 6251, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -30381, 31404, -3352, 0, 0, 21980, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -29784, 31404, -3328, 0, 0, 4525, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -24671, 26924, -3392, 0, 0, 62485, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -25294, 28064, -3368, 0, 0, 18875, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -24006, 26774, -3160, 0, 0, 44410, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -23258, 30243, -2600, 0, 0, 22128, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -23667, 31184, -2616, 0, 0, 13777, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20945, 30384, -2072, 0, 0, 25835, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20925, 29668, -2048, 0, 0, 62805, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -21164, 31010, -2280, 0, 0, 18913, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -21414, 28202, -2280, 0, 0, 50476, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20951, 26356, -2936, 0, 0, 1039, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -20640, 26032, -3000, 0, 0, 8290, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -24294, 23342, -3704, 0, 0, 61491, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -23070, 26827, -2768, 0, 0, 16907, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -21430, 23108, -3760, 0, 0, 51622, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -21561, 23662, -3664, 0, 0, 20235, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -14733, 20016, -3688, 0, 0, 52802, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -14720, 8251, -3528, 0, 0, 46650, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -13944, 7288, -3496, 0, 0, 62694, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -13755, 7006, -3472, 0, 0, 17913, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -13612, 7421, -3504, 0, 0, 42785, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -12780, 6860, -3504, 0, 0, 17052, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -12163, 10503, -3592, 0, 0, 41071, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -11741, 5973, -3464, 0, 0, 57825, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -11544, 6757, -3480, 0, 0, 49392, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -11284, 10160, -3592, 0, 0, 39481, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -11265, 9363, -3536, 0, 0, 56719, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -11150, 5973, -3464, 0, 0, 59145, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -10940, 9455, -3488, 0, 0, 56985, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -10559, 5287, -3472, 0, 0, 10617, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -10525, 8150, -3424, 0, 0, 28915, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -10488, 7856, -3424, 0, 0, 44142, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -9948, 9222, -3304, 0, 0, 41354, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -9879, 29193, -2472, 0, 0, 34556, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -9377, 6365, -3496, 0, 0, 21004, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -9180, 6757, -3456, 0, 0, 39264, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -9030, 12554, -3192, 0, 0, 42962, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -8931, 12276, -3152, 0, 0, 44457, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -8845, 12451, -3160, 0, 0, 5449, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -8526, 11707, -3024, 0, 0, 17999, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -8118, 9278, -3072, 0, 0, 30288, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -7935, 7886, -3248, 0, 0, 55030, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -7676, 7754, -3256, 0, 0, 61402, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -7381, 11154, -2664, 0, 0, 21219, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -7268, 27334, -3392, 0, 0, 1802, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -5009, 25616, -2912, 0, 0, 26615, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23178, -4964, 26240, -2888, 0, 0, 46849, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -7025, 7072, -3368, 0, 0, 24321, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -6796, 5052, -3672, 0, 0, 34309, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -6796, 7274, -3328, 0, 0, 50426, 30, 30, 0, 0), -- Insane Phion
 ('altar_of_evil', 1, 23178, -6362, 28819, -2504, 0, 0, 61997, 30, 30, 0, 0), -- Insane Phion
-('altar_of_evil', 1, 23179, -10165, 5777, -3528, 0, 0, 34030, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10250, 5608, -3512, 0, 0, 3094, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10266, 8942, -3368, 0, 0, 22250, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10336, 9695, -3408, 0, 0, 32018, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10436, 30637, -2488, 0, 0, 62083, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10510, 8063, -3432, 0, 0, 38216, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10559, 6267, -3488, 0, 0, 18587, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10638, 9815, -3504, 0, 0, 44412, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10789, 9335, -3456, 0, 0, 39181, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -10953, 5385, -3440, 0, 0, 15958, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11061, 7744, -3504, 0, 0, 39747, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11217, 10126, -3592, 0, 0, 47094, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11242, 10175, -3592, 0, 0, 29784, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11393, 9575, -3576, 0, 0, 27292, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11393, 9695, -3584, 0, 0, 37823, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11426, 9792, -3584, 0, 0, 43684, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11479, 5805, -3456, 0, 0, 37408, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11498, 5735, -3448, 0, 0, 15431, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11544, 10055, -3592, 0, 0, 24282, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11544, 10295, -3592, 0, 0, 62360, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11544, 5875, -3456, 0, 0, 15796, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11558, 9918, -3592, 0, 0, 44128, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11585, 10549, -3592, 0, 0, 54586, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11695, 10415, -3592, 0, 0, 50611, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11695, 10895, -3560, 0, 0, 35012, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11721, 6946, -3488, 0, 0, 61152, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11846, 11015, -3512, 0, 0, 65380, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -11938, 6953, -3496, 0, 0, 41006, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -12067, 10136, -3592, 0, 0, 23586, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -12105, 10563, -3592, 0, 0, 10792, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -12148, 10295, -3592, 0, 0, 45728, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -12191, 10722, -3592, 0, 0, 35249, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23178, -6338, 4648, -3640, 0, 0, 64842, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -5009, 25616, -2912, 0, 0, 26615, 30, 30, 0, 0), -- Insane Phion
+('altar_of_evil', 1, 23178, -4964, 26240, -2888, 0, 0, 46849, 30, 30, 0, 0); -- Insane Phion
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23179, -9983, 27355, -3083, 0, 0, 11598, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -198, 6710, -3205, 0, 0, 24806, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 334, 6933, -3230, 0, 0, 26225, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 344, 6000, -3255, 0, 0, 51646, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 785, 6649, -3224, 0, 0, 3747, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 1258, 5300, -3251, 0, 0, 44394, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 1498, 6068, -3232, 0, 0, 61227, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 1802, 4639, -3320, 0, 0, 2458, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 2141, 4239, -3335, 0, 0, 56484, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 2267, 3546, -3329, 0, 0, 31859, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 2861, 3548, -3301, 0, 0, 42931, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 3404, 3940, -3239, 0, 0, 4836, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 4793, 3918, -3008, 0, 0, 42075, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 4980, 4150, -2971, 0, 0, 29932, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 7158, 4252, -2689, 0, 0, 36998, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 7617, 3407, -2611, 0, 0, 32140, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, 8151, 4618, -2611, 0, 0, 4726, 60, 0, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -30496, 29789, -3280, 0, 0, 16154, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -29993, 31373, -3344, 0, 0, 19619, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -29910, 29605, -3336, 0, 0, 339, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -29160, 30062, -3296, 0, 0, 9968, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -29084, 26878, -3472, 0, 0, 60120, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -28863, 24423, -3440, 0, 0, 15474, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -28304, 25973, -3768, 0, 0, 59341, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -28041, 25394, -3712, 0, 0, 30431, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -28033, 19971, -3592, 0, 0, 42307, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -27393, 29274, -3408, 0, 0, 21214, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -27051, 19540, -3632, 0, 0, 3693, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -27007, 19261, -3376, 0, 0, 53670, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26981, 19394, -3632, 0, 0, 12947, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26972, 23644, -2888, 0, 0, 45110, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26769, 23790, -3032, 0, 0, 53235, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26739, 20134, -3640, 0, 0, 3149, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26734, 19402, -3648, 0, 0, 39644, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26566, 24958, -3768, 0, 0, 56699, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26493, 23712, -3664, 0, 0, 36484, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26461, 19684, -3720, 0, 0, 18813, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -26169, 26518, -2976, 0, 0, 34829, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -25642, 21376, -3768, 0, 0, 35891, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -25096, 21376, -3768, 0, 0, 32125, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24997, 25305, -3664, 0, 0, 9151, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24823, 19402, -3680, 0, 0, 15714, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24823, 20953, -3760, 0, 0, 25964, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24787, 20201, -3712, 0, 0, 43756, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24309, 21160, -3704, 0, 0, 61860, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24243, 28548, -2864, 0, 0, 42255, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24130, 26986, -3176, 0, 0, 21695, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24004, 19543, -3680, 0, 0, 28252, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -24004, 20671, -3696, 0, 0, 45080, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -23993, 18879, -3720, 0, 0, 10223, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -23724, 27919, -2784, 0, 0, 45514, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -23334, 30559, -2600, 0, 0, 12981, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -22705, 17836, -3624, 0, 0, 43307, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -22585, 16799, -3208, 0, 0, 39585, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -22164, 29119, -2232, 0, 0, 30189, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -22060, 12969, -3136, 0, 0, 52187, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -21712, 17794, -3696, 0, 0, 17596, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -21579, 28399, -2216, 0, 0, 11575, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -21528, 12345, -3008, 0, 0, 19423, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -21389, 18024, -3696, 0, 0, 14051, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -21279, 18069, -3696, 0, 0, 5307, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -21246, 17033, -3760, 0, 0, 31682, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20923, 16869, -3712, 0, 0, 23478, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20896, 28264, -2344, 0, 0, 63146, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20823, 28450, -2280, 0, 0, 42140, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20800, 14018, -3352, 0, 0, 2892, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20799, 29599, -2096, 0, 0, 16891, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20789, 15951, -3768, 0, 0, 36342, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20500, 14100, -3368, 0, 0, 32747, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20095, 13692, -3320, 0, 0, 5458, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20095, 14236, -3472, 0, 0, 41445, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -20088, 11556, -3088, 0, 0, 21833, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -19911, 16191, -3768, 0, 0, 42224, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -19690, 14236, -3496, 0, 0, 13833, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -19690, 14508, -3608, 0, 0, 42103, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -19555, 14236, -3496, 0, 0, 13095, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -19487, 12410, -3232, 0, 0, 9272, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -18966, 14619, -3560, 0, 0, 21838, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -18594, 9792, -3248, 0, 0, 54368, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -18202, 11437, -3376, 0, 0, 58261, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -17818, 9792, -3376, 0, 0, 24944, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -17265, 9436, -3416, 0, 0, 13966, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -17091, 20052, -3152, 0, 0, 64040, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -16691, 10831, -3488, 0, 0, 49266, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -16574, 20120, -3096, 0, 0, 44887, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -16431, 10455, -3544, 0, 0, 17070, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -16022, 20120, -3632, 0, 0, 25910, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -15222, 9271, -2864, 0, 0, 5073, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -14340, 10399, -3304, 0, 0, 34001, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -12601, 10535, -3632, 0, 0, 46489, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -12473, 10119, -3616, 0, 0, 61389, 30, 30, 0, 0), -- Dimensional Rifter
 ('altar_of_evil', 1, 23179, -12450, 10055, -3616, 0, 0, 55888, 30, 30, 0, 0), -- Dimensional Rifter
 ('altar_of_evil', 1, 23179, -12450, 10415, -3608, 0, 0, 49609, 30, 30, 0, 0), -- Dimensional Rifter
 ('altar_of_evil', 1, 23179, -12450, 10535, -3608, 0, 0, 36859, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -12473, 10119, -3616, 0, 0, 61389, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -12601, 10535, -3632, 0, 0, 46489, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -14340, 10399, -3304, 0, 0, 34001, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -15222, 9271, -2864, 0, 0, 5073, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -16022, 20120, -3632, 0, 0, 25910, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -16431, 10455, -3544, 0, 0, 17070, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -16574, 20120, -3096, 0, 0, 44887, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -16691, 10831, -3488, 0, 0, 49266, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -17091, 20052, -3152, 0, 0, 64040, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -17265, 9436, -3416, 0, 0, 13966, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -17818, 9792, -3376, 0, 0, 24944, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -18202, 11437, -3376, 0, 0, 58261, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -18594, 9792, -3248, 0, 0, 54368, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -18966, 14619, -3560, 0, 0, 21838, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -19487, 12410, -3232, 0, 0, 9272, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -19555, 14236, -3496, 0, 0, 13095, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -19690, 14236, -3496, 0, 0, 13833, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -19690, 14508, -3608, 0, 0, 42103, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -19911, 16191, -3768, 0, 0, 42224, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20088, 11556, -3088, 0, 0, 21833, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20095, 13692, -3320, 0, 0, 5458, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20095, 14236, -3472, 0, 0, 41445, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20500, 14100, -3368, 0, 0, 32747, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20789, 15951, -3768, 0, 0, 36342, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20799, 29599, -2096, 0, 0, 16891, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20800, 14018, -3352, 0, 0, 2892, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20823, 28450, -2280, 0, 0, 42140, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20896, 28264, -2344, 0, 0, 63146, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -20923, 16869, -3712, 0, 0, 23478, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -21246, 17033, -3760, 0, 0, 31682, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -21279, 18069, -3696, 0, 0, 5307, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -21389, 18024, -3696, 0, 0, 14051, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -21528, 12345, -3008, 0, 0, 19423, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -21579, 28399, -2216, 0, 0, 11575, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -21712, 17794, -3696, 0, 0, 17596, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -22060, 12969, -3136, 0, 0, 52187, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -22164, 29119, -2232, 0, 0, 30189, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -22585, 16799, -3208, 0, 0, 39585, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -22705, 17836, -3624, 0, 0, 43307, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -23334, 30559, -2600, 0, 0, 12981, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -2371, 24797, -1768, 0, 0, 62216, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -23724, 27919, -2784, 0, 0, 45514, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -23993, 18879, -3720, 0, 0, 10223, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24004, 19543, -3680, 0, 0, 28252, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24004, 20671, -3696, 0, 0, 45080, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24130, 26986, -3176, 0, 0, 21695, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24243, 28548, -2864, 0, 0, 42255, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24309, 21160, -3704, 0, 0, 61860, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24787, 20201, -3712, 0, 0, 43756, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24823, 19402, -3680, 0, 0, 15714, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24823, 20953, -3760, 0, 0, 25964, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -24997, 25305, -3664, 0, 0, 9151, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -25096, 21376, -3768, 0, 0, 32125, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -25642, 21376, -3768, 0, 0, 35891, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26169, 26518, -2976, 0, 0, 34829, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26461, 19684, -3720, 0, 0, 18813, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26493, 23712, -3664, 0, 0, 36484, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26566, 24958, -3768, 0, 0, 56699, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26734, 19402, -3648, 0, 0, 39644, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26739, 20134, -3640, 0, 0, 3149, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26769, 23790, -3032, 0, 0, 53235, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26972, 23644, -2888, 0, 0, 45110, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -26981, 19394, -3632, 0, 0, 12947, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -27007, 19261, -3376, 0, 0, 53670, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -27051, 19540, -3632, 0, 0, 3693, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -27393, 29274, -3408, 0, 0, 21214, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -28033, 19971, -3592, 0, 0, 42307, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -28041, 25394, -3712, 0, 0, 30431, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -28304, 25973, -3768, 0, 0, 59341, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -28863, 24423, -3440, 0, 0, 15474, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -29084, 26878, -3472, 0, 0, 60120, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -29160, 30062, -3296, 0, 0, 9968, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -29910, 29605, -3336, 0, 0, 339, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -29993, 31373, -3344, 0, 0, 19619, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -30496, 29789, -3280, 0, 0, 16154, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -5684, 29169, -2216, 0, 0, 54047, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -5746, 27677, -3208, 0, 0, 27427, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -5804, 5259, -3624, 0, 0, 739, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -5862, 5018, -3648, 0, 0, 54295, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -6953, 5020, -3672, 0, 0, 8191, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -7059, 6004, -3552, 0, 0, 37899, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -7629, 30753, -3016, 0, 0, 49804, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -7706, 8145, -3208, 0, 0, 27778, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -8435, 8617, -3160, 0, 0, 59356, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -8614, 8618, -3168, 0, 0, 25548, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -8712, 8150, -3280, 0, 0, 21263, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -12191, 10722, -3592, 0, 0, 35249, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -12148, 10295, -3592, 0, 0, 45728, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -12105, 10563, -3592, 0, 0, 10792, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -12067, 10136, -3592, 0, 0, 23586, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11938, 6953, -3496, 0, 0, 41006, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11846, 11015, -3512, 0, 0, 65380, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11721, 6946, -3488, 0, 0, 61152, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11695, 10415, -3592, 0, 0, 50611, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11695, 10895, -3560, 0, 0, 35012, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11585, 10549, -3592, 0, 0, 54586, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11558, 9918, -3592, 0, 0, 44128, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11544, 5875, -3456, 0, 0, 15796, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11544, 10055, -3592, 0, 0, 24282, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11544, 10295, -3592, 0, 0, 62360, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11498, 5735, -3448, 0, 0, 15431, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11479, 5805, -3456, 0, 0, 37408, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11426, 9792, -3584, 0, 0, 43684, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11393, 9575, -3576, 0, 0, 27292, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11393, 9695, -3584, 0, 0, 37823, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11242, 10175, -3592, 0, 0, 29784, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11217, 10126, -3592, 0, 0, 47094, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -11061, 7744, -3504, 0, 0, 39747, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10953, 5385, -3440, 0, 0, 15958, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10789, 9335, -3456, 0, 0, 39181, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10638, 9815, -3504, 0, 0, 44412, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10559, 6267, -3488, 0, 0, 18587, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10510, 8063, -3432, 0, 0, 38216, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10436, 30637, -2488, 0, 0, 62083, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10336, 9695, -3408, 0, 0, 32018, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10266, 8942, -3368, 0, 0, 22250, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10250, 5608, -3512, 0, 0, 3094, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -10165, 5777, -3528, 0, 0, 34030, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -9771, 6659, -3456, 0, 0, 15792, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -9748, 8150, -3352, 0, 0, 20868, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -9508, 9178, -3232, 0, 0, 59842, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -9495, 6658, -3448, 0, 0, 44896, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -9416, 6624, -3464, 0, 0, 38227, 30, 30, 0, 0), -- Dimensional Rifter
 ('altar_of_evil', 1, 23179, -8971, 8150, -3296, 0, 0, 4151, 30, 30, 0, 0), -- Dimensional Rifter
 ('altar_of_evil', 1, 23179, -8971, 8546, -3224, 0, 0, 10709, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -9416, 6624, -3464, 0, 0, 38227, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -9495, 6658, -3448, 0, 0, 44896, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -9508, 9178, -3232, 0, 0, 59842, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -9748, 8150, -3352, 0, 0, 20868, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23179, -9771, 6659, -3456, 0, 0, 15792, 30, 30, 0, 0), -- Dimensional Rifter
-('altar_of_evil', 1, 23180, -10034, 5744, -3544, 0, 0, 32563, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10169, 5721, -3528, 0, 0, 4256, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10292, 5625, -3512, 0, 0, 46109, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10362, 5777, -3520, 0, 0, 20873, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10487, 9935, -3472, 0, 0, 59409, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10736, 9870, -3512, 0, 0, 55291, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10754, 9857, -3536, 0, 0, 65520, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10789, 10175, -3576, 0, 0, 34183, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10789, 9335, -3456, 0, 0, 28211, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10789, 9815, -3536, 0, 0, 55106, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -10940, 9455, -3488, 0, 0, 3807, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11091, 10175, -3592, 0, 0, 34729, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11124, 6659, -3472, 0, 0, 55909, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11216, 5908, -3464, 0, 0, 35111, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11242, 9815, -3584, 0, 0, 14575, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11297, 10502, -3592, 0, 0, 41982, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11348, 5796, -3456, 0, 0, 32767, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11407, 5777, -3456, 0, 0, 59729, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11491, 10166, -3592, 0, 0, 34053, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11519, 5751, -3448, 0, 0, 11097, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11668, 10080, -3592, 0, 0, 19541, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11689, 10207, -3592, 0, 0, 49144, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11695, 10055, -3592, 0, 0, 28457, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11724, 10079, -3592, 0, 0, 10900, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11806, 10168, -3592, 0, 0, 27213, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11846, 9575, -3584, 0, 0, 17450, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11938, 5875, -3456, 0, 0, 14975, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -11947, 9968, -3592, 0, 0, 4184, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12013, 6577, -3488, 0, 0, 15770, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12014, 6828, -3488, 0, 0, 49144, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12047, 6696, -3488, 0, 0, 11608, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23179, -8712, 8150, -3280, 0, 0, 21263, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -8614, 8618, -3168, 0, 0, 25548, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -8435, 8617, -3160, 0, 0, 59356, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -7706, 8145, -3208, 0, 0, 27778, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -7059, 6004, -3552, 0, 0, 37899, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -6953, 5020, -3672, 0, 0, 8191, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -5862, 5018, -3648, 0, 0, 54295, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -5804, 5259, -3624, 0, 0, 739, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -5746, 27677, -3208, 0, 0, 27427, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -5684, 29169, -2216, 0, 0, 54047, 30, 30, 0, 0), -- Dimensional Rifter
+('altar_of_evil', 1, 23179, -2371, 24797, -1768, 0, 0, 62216, 30, 30, 0, 0); -- Dimensional Rifter
+INSERT INTO `spawnlist` VALUES
+('altar_of_evil', 1, 23180, -30166, 30470, -3336, 0, 0, 45988, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -30166, 31218, -3344, 0, 0, 27795, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -30068, 29858, -3320, 0, 0, 63793, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -28192, 30632, -3072, 0, 0, 44646, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27881, 31032, -2920, 0, 0, 50812, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27827, 20225, -3592, 0, 0, 15079, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27794, 31018, -2888, 0, 0, 41626, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27553, 19684, -3616, 0, 0, 45797, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27453, 20161, -3608, 0, 0, 35756, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27280, 20107, -3112, 0, 0, 14290, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27175, 25688, -3696, 0, 0, 35568, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -27132, 20385, -3624, 0, 0, 38211, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26972, 23644, -2888, 0, 0, 59516, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26769, 23790, -3032, 0, 0, 50589, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26661, 20033, -3640, 0, 0, 35002, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26506, 24493, -3768, 0, 0, 1684, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26461, 19684, -3720, 0, 0, 59840, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26400, 23860, -3672, 0, 0, 34828, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26188, 21235, -3672, 0, 0, 47099, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -26188, 23588, -3672, 0, 0, 29004, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -25610, 21001, -3776, 0, 0, 19523, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -25369, 20671, -3768, 0, 0, 2400, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -25096, 20530, -3752, 0, 0, 27616, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -25096, 20671, -3768, 0, 0, 27359, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -24823, 20530, -3704, 0, 0, 19538, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -24746, 21220, -3752, 0, 0, 34423, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -24550, 19543, -3696, 0, 0, 2626, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -24550, 20389, -3704, 0, 0, 16157, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -24288, 18744, -3704, 0, 0, 41084, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -23731, 19543, -3592, 0, 0, 20317, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -23419, 17599, -3584, 0, 0, 17591, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -23289, 18559, -3336, 0, 0, 33194, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -16574, 20120, -3096, 0, 0, 24890, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15904, 11662, -3760, 0, 0, 32827, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15902, 10230, -3624, 0, 0, 55776, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15772, 21104, -3712, 0, 0, 29756, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15522, 11084, -3672, 0, 0, 61552, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15373, 9458, -3680, 0, 0, 25968, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15346, 7190, -3456, 0, 0, 43242, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15108, 7609, -3496, 0, 0, 17535, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -15026, 11151, -3552, 0, 0, 20446, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -14933, 6964, -3432, 0, 0, 25279, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -14735, 20731, -3736, 0, 0, 9346, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -14724, 20676, -3720, 0, 0, 33083, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -14708, 8897, -3544, 0, 0, 35432, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -14526, 8037, -3520, 0, 0, 2473, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -14138, 6738, -3424, 0, 0, 11681, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -13750, 6539, -3440, 0, 0, 59430, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -13520, 7373, -3504, 0, 0, 42465, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12974, 6753, -3488, 0, 0, 16697, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12346, 7272, -3504, 0, 0, 2450, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12299, 10895, -3608, 0, 0, 46452, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12244, 10759, -3592, 0, 0, 60045, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12198, 7609, -3512, 0, 0, 44399, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12148, 9695, -3592, 0, 0, 44072, 30, 30, 0, 0), -- Hellgate Fighting Dog
 ('altar_of_evil', 1, 23180, -12148, 10175, -3592, 0, 0, 0, 30, 30, 0, 0), -- Hellgate Fighting Dog
 ('altar_of_evil', 1, 23180, -12148, 10535, -3592, 0, 0, 11384, 30, 30, 0, 0), -- Hellgate Fighting Dog
 ('altar_of_evil', 1, 23180, -12148, 10895, -3584, 0, 0, 39350, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12148, 9695, -3592, 0, 0, 44072, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12198, 7609, -3512, 0, 0, 44399, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12244, 10759, -3592, 0, 0, 60045, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12299, 10895, -3608, 0, 0, 46452, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12346, 7272, -3504, 0, 0, 2450, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -12974, 6753, -3488, 0, 0, 16697, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -13520, 7373, -3504, 0, 0, 42465, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -13750, 6539, -3440, 0, 0, 59430, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -14138, 6738, -3424, 0, 0, 11681, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -14526, 8037, -3520, 0, 0, 2473, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -14708, 8897, -3544, 0, 0, 35432, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -14724, 20676, -3720, 0, 0, 33083, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -14735, 20731, -3736, 0, 0, 9346, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -14933, 6964, -3432, 0, 0, 25279, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15026, 11151, -3552, 0, 0, 20446, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15108, 7609, -3496, 0, 0, 17535, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15346, 7190, -3456, 0, 0, 43242, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15373, 9458, -3680, 0, 0, 25968, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15522, 11084, -3672, 0, 0, 61552, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15772, 21104, -3712, 0, 0, 29756, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15902, 10230, -3624, 0, 0, 55776, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -15904, 11662, -3760, 0, 0, 32827, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -16574, 20120, -3096, 0, 0, 24890, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -23289, 18559, -3336, 0, 0, 33194, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -23419, 17599, -3584, 0, 0, 17591, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -23731, 19543, -3592, 0, 0, 20317, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -24288, 18744, -3704, 0, 0, 41084, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -24550, 19543, -3696, 0, 0, 2626, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -24550, 20389, -3704, 0, 0, 16157, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -24746, 21220, -3752, 0, 0, 34423, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -24823, 20530, -3704, 0, 0, 19538, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -25096, 20530, -3752, 0, 0, 27616, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -25096, 20671, -3768, 0, 0, 27359, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -25369, 20671, -3768, 0, 0, 2400, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -25610, 21001, -3776, 0, 0, 19523, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26188, 21235, -3672, 0, 0, 47099, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26188, 23588, -3672, 0, 0, 29004, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26400, 23860, -3672, 0, 0, 34828, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26461, 19684, -3720, 0, 0, 59840, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26506, 24493, -3768, 0, 0, 1684, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26661, 20033, -3640, 0, 0, 35002, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26769, 23790, -3032, 0, 0, 50589, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -26972, 23644, -2888, 0, 0, 59516, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27132, 20385, -3624, 0, 0, 38211, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27175, 25688, -3696, 0, 0, 35568, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27280, 20107, -3112, 0, 0, 14290, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27453, 20161, -3608, 0, 0, 35756, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27553, 19684, -3616, 0, 0, 45797, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27794, 31018, -2888, 0, 0, 41626, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27827, 20225, -3592, 0, 0, 15079, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -27881, 31032, -2920, 0, 0, 50812, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -28192, 30632, -3072, 0, 0, 44646, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -30068, 29858, -3320, 0, 0, 63793, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -30166, 30470, -3336, 0, 0, 45988, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -30166, 31218, -3344, 0, 0, 27795, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -3793, 27319, -2344, 0, 0, 927, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -6014, 4722, -3640, 0, 0, 61761, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -6303, 4853, -3664, 0, 0, 64497, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -6755, 5293, -3640, 0, 0, 29283, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -7022, 5274, -3664, 0, 0, 34203, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -7071, 12438, -2640, 0, 0, 11235, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -7256, 11936, -2648, 0, 0, 56048, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -8560, 11181, -3016, 0, 0, 38902, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -9055, 10583, -2368, 0, 0, 18441, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -9377, 6659, -3448, 0, 0, 21859, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12047, 6696, -3488, 0, 0, 11608, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12014, 6828, -3488, 0, 0, 49144, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -12013, 6577, -3488, 0, 0, 15770, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11947, 9968, -3592, 0, 0, 4184, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11938, 5875, -3456, 0, 0, 14975, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11846, 9575, -3584, 0, 0, 17450, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11806, 10168, -3592, 0, 0, 27213, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11724, 10079, -3592, 0, 0, 10900, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11695, 10055, -3592, 0, 0, 28457, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11689, 10207, -3592, 0, 0, 49144, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11668, 10080, -3592, 0, 0, 19541, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11519, 5751, -3448, 0, 0, 11097, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11491, 10166, -3592, 0, 0, 34053, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11407, 5777, -3456, 0, 0, 59729, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11348, 5796, -3456, 0, 0, 32767, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11297, 10502, -3592, 0, 0, 41982, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11242, 9815, -3584, 0, 0, 14575, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11216, 5908, -3464, 0, 0, 35111, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11124, 6659, -3472, 0, 0, 55909, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -11091, 10175, -3592, 0, 0, 34729, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10940, 9455, -3488, 0, 0, 3807, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10789, 9335, -3456, 0, 0, 28211, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10789, 9815, -3536, 0, 0, 55106, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10789, 10175, -3576, 0, 0, 34183, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10754, 9857, -3536, 0, 0, 65520, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10736, 9870, -3512, 0, 0, 55291, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10487, 9935, -3472, 0, 0, 59409, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10362, 5777, -3520, 0, 0, 20873, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10292, 5625, -3512, 0, 0, 46109, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10169, 5721, -3528, 0, 0, 4256, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -10034, 5744, -3544, 0, 0, 32563, 30, 30, 0, 0), -- Hellgate Fighting Dog
 ('altar_of_evil', 1, 23180, -9574, 6169, -3512, 0, 0, 25487, 30, 30, 0, 0), -- Hellgate Fighting Dog
-('altar_of_evil', 1, 23180, -9574, 6463, -3472, 0, 0, 35657, 30, 30, 0, 0); -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -9574, 6463, -3472, 0, 0, 35657, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -9377, 6659, -3448, 0, 0, 21859, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -9055, 10583, -2368, 0, 0, 18441, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -8560, 11181, -3016, 0, 0, 38902, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -7256, 11936, -2648, 0, 0, 56048, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -7071, 12438, -2640, 0, 0, 11235, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -7022, 5274, -3664, 0, 0, 34203, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -6755, 5293, -3640, 0, 0, 29283, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -6303, 4853, -3664, 0, 0, 64497, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -6014, 4722, -3640, 0, 0, 61761, 30, 30, 0, 0), -- Hellgate Fighting Dog
+('altar_of_evil', 1, 23180, -3793, 27319, -2344, 0, 0, 927, 30, 30, 0, 0); -- Hellgate Fighting Dog
 INSERT INTO `spawnlist` VALUES
 -- Bloody Swampland NPCs
 ('bloody_swampland', 1, 30415, -11520, 57088, -3720, 0, 0, 18384, 60, 0, 0, 0), -- Charkeren
@@ -47453,441 +47469,384 @@ INSERT INTO `spawnlist` VALUES
 ('bloody_swampland', 1, 30662, -13742, 44298, -3592, 0, 0, 45056, 60, 0, 0, 0), -- Piper Longbow
 ('bloody_swampland', 1, 30668, -3826, 40264, -3672, 0, 0, 32768, 60, 0, 0, 0), -- Katari
 ('bloody_swampland', 1, 30977, -418, 44174, -3568, 0, 0, 0, 60, 0, 0, 0), -- Holy Ark of Secrecy 1
-('bloody_swampland', 1, 31034, -31869, 51778, -3440, 0, 0, 6787, 60, 0, 0, 0), -- Sentry
-('bloody_swampland', 1, 31034, -29594, 35490, -3352, 0, 0, 15240, 60, 0, 0, 0), -- Sentry
-('bloody_swampland', 1, 31034, -26542, 58877, -3648, 0, 0, 60560, 60, 0, 0, 0), -- Sentry
-('bloody_swampland', 1, 31034, -7862, 51205, -3696, 0, 0, 31875, 60, 0, 0, 0), -- Sentry
-('bloody_swampland', 1, 31034, -1904, 42441, -3680, 0, 0, 1390, 60, 0, 0, 0), -- Sentry
 ('bloody_swampland', 1, 31845, -26780, 60909, -3544, 0, 0, 62589, 60, 0, 0, 0), -- Bloody Pixy
 ('bloody_swampland', 1, 31845, -26112, 39757, -3088, 0, 0, 11933, 60, 0, 0, 0), -- Bloody Pixy
 ('bloody_swampland', 1, 31845, -22907, 54733, -3696, 0, 0, 16066, 60, 0, 0, 0), -- Bloody Pixy
 ('bloody_swampland', 1, 31845, -12007, 54903, -3584, 0, 0, 14202, 60, 0, 0, 0), -- Bloody Pixy
 ('bloody_swampland', 1, 31850, -28463, 51046, -3688, 0, 0, 24432, 60, 0, 0, 0), -- Blight Treant
 ('bloody_swampland', 1, 31850, -24067, 61347, -3632, 0, 0, 61932, 60, 0, 0, 0), -- Blight Treant
-('bloody_swampland', 1, 31850, -17384, 44082, -3696, 0, 0, 19231, 60, 0, 0, 0), -- Blight Treant
+('bloody_swampland', 1, 31850, -17384, 44082, -3696, 0, 0, 19231, 60, 0, 0, 0); -- Blight Treant
 -- Bloody Swampland monsters
-('bloody_swampland', 1, 23162, -10109, 36931, -3696, 0, 0, 28366, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -10175, 36858, -3696, 0, 0, 28207, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -10396, 35116, -3592, 0, 0, 47377, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -11332, 35604, -3592, 0, 0, 42779, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -11644, 36824, -3688, 0, 0, 15686, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -12123, 36533, -3696, 0, 0, 25177, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -12222, 34608, -3424, 0, 0, 55229, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -15636, 36958, -3528, 0, 0, 15047, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -16040, 34556, -3584, 0, 0, 64231, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -16716, 34566, -3536, 0, 0, 29205, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -17150, 37311, -3456, 0, 0, 6112, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -18166, 36180, -3128, 0, 0, 30836, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -18253, 34927, -3200, 0, 0, 13543, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -18256, 34858, -3216, 0, 0, 32334, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -18331, 35093, -3136, 0, 0, 8753, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -18930, 40038, -3560, 0, 0, 20990, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -19369, 37378, -3032, 0, 0, 12006, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -19416, 37257, -2992, 0, 0, 1480, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -19622, 41035, -3768, 0, 0, 17905, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -20072, 38917, -3168, 0, 0, 40460, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -20412, 40330, -3456, 0, 0, 23462, 30, 30, 0, 0), -- Corpse Devourer
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23162, -27912, 45277, -3648, 0, 0, 23574, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -27660, 45782, -3664, 0, 0, 6283, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -27130, 40844, -3272, 0, 0, 26229, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -26522, 44344, -3680, 0, 0, 32329, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -26296, 41072, -3208, 0, 0, 60990, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -25731, 39031, -3064, 0, 0, 17429, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -25439, 39063, -2976, 0, 0, 15207, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -25242, 42984, -3536, 0, 0, 2217, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -22757, 39833, -2952, 0, 0, 65015, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -22671, 40396, -3072, 0, 0, 13669, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -22206, 39995, -3032, 0, 0, 24801, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -22200, 39763, -2976, 0, 0, 63835, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -22137, 40309, -3096, 0, 0, 25504, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -21648, 39496, -3000, 0, 0, 18887, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -21648, 42276, -3568, 0, 0, 7385, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -21339, 40886, -3368, 0, 0, 27795, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -21095, 40560, -3384, 0, 0, 3834, 30, 30, 0, 0), -- Corpse Devourer
 ('bloody_swampland', 1, 23162, -21030, 39496, -3144, 0, 0, 48502, 30, 30, 0, 0), -- Corpse Devourer
 ('bloody_swampland', 1, 23162, -21030, 41442, -3456, 0, 0, 1896, 30, 30, 0, 0), -- Corpse Devourer
 ('bloody_swampland', 1, 23162, -21030, 42554, -3640, 0, 0, 25974, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -21095, 40560, -3384, 0, 0, 3834, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -21339, 40886, -3368, 0, 0, 27795, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -21648, 39496, -3000, 0, 0, 18887, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -21648, 42276, -3568, 0, 0, 7385, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -22137, 40309, -3096, 0, 0, 25504, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -22167, 39994, -3032, 0, 0, 47789, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -22200, 39763, -2976, 0, 0, 63835, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -22206, 39995, -3032, 0, 0, 24801, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -22671, 40396, -3072, 0, 0, 13669, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -22757, 39833, -2952, 0, 0, 65015, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -25242, 42984, -3536, 0, 0, 2217, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -25439, 39063, -2976, 0, 0, 15207, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -2548, 36846, -3688, 0, 0, 17528, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -25731, 39031, -3064, 0, 0, 17429, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -26296, 41072, -3208, 0, 0, 60990, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -26522, 44344, -3680, 0, 0, 32329, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -27130, 40844, -3272, 0, 0, 26229, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -27660, 45782, -3664, 0, 0, 6283, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -27912, 45277, -3648, 0, 0, 23574, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -3163, 36373, -3672, 0, 0, 42074, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -4321, 36888, -3608, 0, 0, 26816, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -4480, 38201, -3584, 0, 0, 24886, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -4483, 35863, -3656, 0, 0, 1722, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -20412, 40330, -3456, 0, 0, 23462, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -20072, 38917, -3168, 0, 0, 40460, 30, 30, 0, 0),-- Corpse Devourer
+('bloody_swampland', 1, 23162, -19622, 41035, -3768, 0, 0, 17905, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -19416, 37257, -2992, 0, 0, 1480, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -19369, 37378, -3032, 0, 0, 12006, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -18930, 40038, -3560, 0, 0, 20990, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -18331, 35093, -3136, 0, 0, 8753, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -18256, 34858, -3216, 0, 0, 32334, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -18253, 34927, -3200, 0, 0, 13543, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -18166, 36180, -3128, 0, 0, 30836, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -17150, 37311, -3456, 0, 0, 6112, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -16716, 34566, -3536, 0, 0, 29205, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -16040, 34556, -3584, 0, 0, 64231, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -15636, 36958, -3528, 0, 0, 15047, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -12222, 34608, -3424, 0, 0, 55229, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -12123, 36533, -3696, 0, 0, 25177, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -11644, 36824, -3688, 0, 0, 15686, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -11332, 35604, -3592, 0, 0, 42779, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -10396, 35116, -3592, 0, 0, 47377, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -10175, 36858, -3696, 0, 0, 28207, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -10109, 36931, -3696, 0, 0, 28366, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -9190, 37260, -3696, 0, 0, 59633, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -8882, 37888, -3704, 0, 0, 54273, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -8287, 37310, -3688, 0, 0, 27401, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -8144, 35963, -3664, 0, 0, 23409, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -7900, 35848, -3648, 0, 0, 15229, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -7726, 37696, -3704, 0, 0, 9481, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -7574, 36371, -3656, 0, 0, 6839, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -7503, 37246, -3704, 0, 0, 63452, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -6688, 36033, -3616, 0, 0, 41854, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -6638, 35597, -3648, 0, 0, 21073, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -6603, 35777, -3632, 0, 0, 53989, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -6253, 39917, -3664, 0, 0, 15177, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -5821, 40168, -3664, 0, 0, 9874, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -5523, 35889, -3632, 0, 0, 52591, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -5308, 39556, -3632, 0, 0, 15977, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -5067, 39476, -3616, 0, 0, 64469, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -5054, 35681, -3656, 0, 0, 24554, 30, 30, 0, 0), -- Corpse Devourer
 ('bloody_swampland', 1, 23162, -4756, 38743, -3600, 0, 0, 50084, 30, 30, 0, 0), -- Corpse Devourer
 ('bloody_swampland', 1, 23162, -4756, 39827, -3648, 0, 0, 18211, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -5054, 35681, -3656, 0, 0, 24554, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -5067, 39476, -3616, 0, 0, 64469, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -5308, 39556, -3632, 0, 0, 15977, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -5523, 35889, -3632, 0, 0, 52591, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -5821, 40168, -3664, 0, 0, 9874, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -6253, 39917, -3664, 0, 0, 15177, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -6603, 35777, -3632, 0, 0, 53989, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -6638, 35597, -3648, 0, 0, 21073, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -6688, 36033, -3616, 0, 0, 41854, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -7258, 36198, -3624, 0, 0, 49804, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -7503, 37246, -3704, 0, 0, 63452, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -7574, 36371, -3656, 0, 0, 6839, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -7726, 37696, -3704, 0, 0, 9481, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -7826, 37576, -3704, 0, 0, 22042, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -7900, 35848, -3648, 0, 0, 15229, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -8144, 35963, -3664, 0, 0, 23409, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -8287, 37310, -3688, 0, 0, 27401, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -8570, 37814, -3696, 0, 0, 4428, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -8882, 37888, -3704, 0, 0, 54273, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23162, -9190, 37260, -3696, 0, 0, 59633, 30, 30, 0, 0), -- Corpse Devourer
-('bloody_swampland', 1, 23163, -10396, 37068, -3696, 0, 0, 50986, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -10464, 37839, -3704, 0, 0, 14636, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -10593, 35978, -3648, 0, 0, 59764, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -10605, 37486, -3696, 0, 0, 40013, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -10649, 35080, -3568, 0, 0, 28376, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -10708, 37800, -3696, 0, 0, 15411, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -10994, 36264, -3648, 0, 0, 16668, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11020, 35848, -3616, 0, 0, 13936, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11024, 36472, -3656, 0, 0, 41549, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11091, 35673, -3600, 0, 0, 1896, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11207, 35639, -3592, 0, 0, 15984, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11293, 36425, -3656, 0, 0, 43098, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11471, 36846, -3688, 0, 0, 38367, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11547, 37662, -3680, 0, 0, 53752, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11644, 35604, -3592, 0, 0, 3352, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -11644, 38044, -3688, 0, 0, 43033, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -12363, 37733, -3688, 0, 0, 4557, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -12480, 36372, -3712, 0, 0, 12615, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -12558, 35443, -3592, 0, 0, 55883, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -12580, 35604, -3640, 0, 0, 44950, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -12892, 37068, -3688, 0, 0, 37797, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -12892, 38044, -3688, 0, 0, 28822, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -13362, 38260, -3688, 0, 0, 22242, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -13415, 38309, -3688, 0, 0, 3968, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -15636, 37257, -3536, 0, 0, 25778, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16016, 37616, -3560, 0, 0, 52400, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16304, 38496, -3680, 0, 0, 65520, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16457, 35387, -3456, 0, 0, 14378, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16696, 36632, -3432, 0, 0, 22545, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16696, 37616, -3544, 0, 0, 37166, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16716, 35463, -3440, 0, 0, 50436, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -16720, 39293, -3720, 0, 0, 29628, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17140, 34573, -3480, 0, 0, 26086, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17252, 35457, -3392, 0, 0, 679, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17256, 36659, -3376, 0, 0, 25784, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17402, 36374, -3352, 0, 0, 39833, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17606, 35087, -3288, 0, 0, 35002, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17688, 35558, -3320, 0, 0, 57345, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17733, 36486, -3256, 0, 0, 6132, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17796, 34656, -3328, 0, 0, 29628, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -17796, 36958, -3296, 0, 0, 39350, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18066, 39350, -3504, 0, 0, 18450, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18137, 36797, -3168, 0, 0, 63793, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18238, 35218, -3120, 0, 0, 11877, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18336, 37556, -3264, 0, 0, 42089, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18437, 37168, -3168, 0, 0, 57107, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18455, 40130, -3576, 0, 0, 58394, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18867, 40052, -3568, 0, 0, 30173, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -18939, 34753, -3176, 0, 0, 32083, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19076, 39256, -3400, 0, 0, 2003, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19146, 37855, -3152, 0, 0, 42791, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19151, 41126, -3760, 0, 0, 29966, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19209, 40596, -3688, 0, 0, 40768, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19269, 40517, -3648, 0, 0, 10900, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19296, 40568, -3664, 0, 0, 64649, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19378, 41008, -3768, 0, 0, 49606, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19448, 36161, -2920, 0, 0, 21784, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19686, 36360, -2888, 0, 0, 25943, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19756, 39584, -3048, 0, 0, 12922, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19756, 39912, -3456, 0, 0, 46617, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -19756, 40240, -3544, 0, 0, 64770, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20096, 40896, -3592, 0, 0, 40007, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20103, 39496, -3312, 0, 0, 26664, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20103, 40052, -3440, 0, 0, 19948, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20103, 41164, -3632, 0, 0, 3886, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20341, 38831, -3072, 0, 0, 35369, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20400, 37473, -2824, 0, 0, 58928, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20406, 40270, -3448, 0, 0, 15370, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20436, 40240, -3440, 0, 0, 49, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20721, 37550, -2744, 0, 0, 20254, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20721, 39218, -3112, 0, 0, 2980, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20721, 40330, -3424, 0, 0, 58533, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20721, 40608, -3456, 0, 0, 47717, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -20988, 40525, -3400, 0, 0, 32638, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21023, 40562, -3400, 0, 0, 41366, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21030, 39774, -3232, 0, 0, 13522, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21030, 40886, -3416, 0, 0, 48442, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21100, 42083, -3568, 0, 0, 60345, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21367, 41843, -3512, 0, 0, 44866, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21487, 38752, -2840, 0, 0, 5105, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23162, -4483, 35863, -3656, 0, 0, 1722, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -4480, 38201, -3584, 0, 0, 24886, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -4321, 36888, -3608, 0, 0, 26816, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -3163, 36373, -3672, 0, 0, 42074, 30, 30, 0, 0), -- Corpse Devourer
+('bloody_swampland', 1, 23162, -2548, 36846, -3688, 0, 0, 17528, 30, 30, 0, 0); -- Corpse Devourer
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23163, -27660, 44646, -3640, 0, 0, 47109, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -27598, 44722, -3648, 0, 0, 27345, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -27591, 42691, -3584, 0, 0, 60901, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -27365, 43615, -3656, 0, 0, 18930, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -27102, 43615, -3664, 0, 0, 13275, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26839, 43848, -3680, 0, 0, 62956, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26593, 42030, -3400, 0, 0, 30834, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26581, 39828, -3160, 0, 0, 62216, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26543, 44574, -3672, 0, 0, 60364, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26255, 40774, -3184, 0, 0, 7550, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26068, 44393, -3648, 0, 0, 3717, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -26059, 39429, -3080, 0, 0, 32083, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25958, 39638, -3064, 0, 0, 27182, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25582, 41132, -3184, 0, 0, 64025, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25422, 39591, -3000, 0, 0, 325, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25388, 41833, -3256, 0, 0, 26965, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25300, 44676, -3664, 0, 0, 39139, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25283, 39532, -2968, 0, 0, 2856, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -25261, 42217, -3320, 0, 0, 44727, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24928, 42852, -3520, 0, 0, 12349, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24814, 44033, -3616, 0, 0, 37812, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24472, 41984, -3320, 0, 0, 28951, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24383, 43627, -3608, 0, 0, 32453, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24322, 41459, -3192, 0, 0, 9079, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24209, 41518, -3248, 0, 0, 28270, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -24182, 44357, -3608, 0, 0, 41415, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -23946, 43848, -3608, 0, 0, 29642, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -23811, 40052, -2960, 0, 0, 65432, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -23117, 40898, -3136, 0, 0, 64287, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -23069, 42414, -3592, 0, 0, 33442, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22884, 41442, -3288, 0, 0, 47399, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22846, 41445, -3288, 0, 0, 834, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22799, 40471, -3096, 0, 0, 21995, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22681, 43623, -3680, 0, 0, 62680, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22657, 39542, -2872, 0, 0, 54132, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22602, 44014, -3728, 0, 0, 28213, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22575, 40052, -2984, 0, 0, 17485, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22509, 41225, -3264, 0, 0, 28832, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22341, 40866, -3184, 0, 0, 31244, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22319, 39385, -2888, 0, 0, 302, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -22198, 40643, -3168, 0, 0, 38350, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -21957, 41442, -3384, 0, 0, 39340, 30, 30, 0, 0), -- Corpse Absorber
 ('bloody_swampland', 1, 23163, -21648, 38384, -2712, 0, 0, 13128, 30, 30, 0, 0), -- Corpse Absorber
 ('bloody_swampland', 1, 23163, -21648, 38940, -2880, 0, 0, 59544, 30, 30, 0, 0), -- Corpse Absorber
 ('bloody_swampland', 1, 23163, -21648, 39774, -3088, 0, 0, 13738, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -21957, 41442, -3384, 0, 0, 39340, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22193, 39518, -2936, 0, 0, 36306, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22198, 40643, -3168, 0, 0, 38350, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22319, 39385, -2888, 0, 0, 302, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22341, 40866, -3184, 0, 0, 31244, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22509, 41225, -3264, 0, 0, 28832, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22551, 40602, -3120, 0, 0, 63566, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22575, 39496, -2872, 0, 0, 22505, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22575, 40052, -2984, 0, 0, 17485, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22602, 44014, -3728, 0, 0, 28213, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22657, 39542, -2872, 0, 0, 54132, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22681, 43623, -3680, 0, 0, 62680, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22697, 41113, -3208, 0, 0, 4499, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22799, 40471, -3096, 0, 0, 21995, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22846, 41445, -3288, 0, 0, 834, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -22884, 41442, -3288, 0, 0, 47399, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -23069, 42414, -3592, 0, 0, 33442, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -23117, 40898, -3136, 0, 0, 64287, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -23811, 40052, -2960, 0, 0, 65432, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -23946, 43848, -3608, 0, 0, 29642, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24046, 43627, -3616, 0, 0, 32689, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24182, 44357, -3608, 0, 0, 41415, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24209, 41518, -3248, 0, 0, 28270, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24322, 41459, -3192, 0, 0, 9079, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24383, 43627, -3608, 0, 0, 32453, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24472, 41984, -3320, 0, 0, 28951, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24814, 44033, -3616, 0, 0, 37812, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24927, 43194, -3576, 0, 0, 13911, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -24928, 42852, -3520, 0, 0, 12349, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25261, 42217, -3320, 0, 0, 44727, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25283, 39532, -2968, 0, 0, 2856, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25300, 44676, -3664, 0, 0, 39139, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25388, 41833, -3256, 0, 0, 26965, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25422, 39591, -3000, 0, 0, 325, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25582, 41132, -3184, 0, 0, 64025, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -25958, 39638, -3064, 0, 0, 27182, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26059, 39429, -3080, 0, 0, 32083, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26068, 44393, -3648, 0, 0, 3717, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26255, 40774, -3184, 0, 0, 7550, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26543, 44574, -3672, 0, 0, 60364, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26581, 39828, -3160, 0, 0, 62216, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26593, 42030, -3400, 0, 0, 30834, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -26839, 43848, -3680, 0, 0, 62956, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -2689, 38311, -3632, 0, 0, 27076, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -27102, 43615, -3664, 0, 0, 13275, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -27365, 43615, -3656, 0, 0, 18930, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -27591, 42691, -3584, 0, 0, 60901, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -27598, 44722, -3648, 0, 0, 27345, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -27660, 44646, -3640, 0, 0, 47109, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -2785, 38952, -3664, 0, 0, 54056, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -2855, 36553, -3680, 0, 0, 38907, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -3100, 37659, -3616, 0, 0, 25060, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -3148, 36593, -3672, 0, 0, 6530, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -3250, 37222, -3640, 0, 0, 13008, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -3618, 37497, -3608, 0, 0, 56763, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -3652, 39556, -3648, 0, 0, 24670, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -3653, 39236, -3640, 0, 0, 37083, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4046, 35889, -3664, 0, 0, 49719, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4188, 38543, -3592, 0, 0, 63036, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4204, 36575, -3640, 0, 0, 35555, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4228, 36057, -3656, 0, 0, 25499, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4282, 36222, -3648, 0, 0, 19067, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4304, 38100, -3584, 0, 0, 24256, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4480, 36575, -3632, 0, 0, 13473, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4640, 36587, -3624, 0, 0, 63721, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4719, 39951, -3648, 0, 0, 10645, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4738, 41224, -3672, 0, 0, 2684, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4756, 37659, -3584, 0, 0, 4446, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4795, 39534, -3616, 0, 0, 44240, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4866, 39402, -3608, 0, 0, 12091, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4955, 37532, -3592, 0, 0, 26306, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -4984, 38288, -3608, 0, 0, 55963, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5019, 40658, -3696, 0, 0, 12291, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5187, 38298, -3624, 0, 0, 14244, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5190, 39576, -3632, 0, 0, 49144, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5374, 36809, -3608, 0, 0, 5085, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5410, 39525, -3632, 0, 0, 1812, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5444, 38504, -3640, 0, 0, 27292, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5510, 39426, -3640, 0, 0, 20197, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5584, 39556, -3640, 0, 0, 20401, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5671, 40443, -3696, 0, 0, 61306, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5785, 40117, -3664, 0, 0, 49144, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5818, 40427, -3696, 0, 0, 62367, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5904, 40062, -3664, 0, 0, 2986, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -5961, 38022, -3648, 0, 0, 24662, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6134, 40119, -3672, 0, 0, 36090, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6136, 39285, -3688, 0, 0, 19238, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6136, 40098, -3672, 0, 0, 20384, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6273, 37907, -3672, 0, 0, 27355, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6304, 36820, -3640, 0, 0, 38682, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6358, 39337, -3688, 0, 0, 47116, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -6365, 35387, -3672, 0, 0, 1648, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -21367, 41843, -3512, 0, 0, 44866, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -21100, 42083, -3568, 0, 0, 60345, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -21030, 39774, -3232, 0, 0, 13522, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -21030, 40886, -3416, 0, 0, 48442, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -21023, 40562, -3400, 0, 0, 41366, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20721, 37550, -2744, 0, 0, 20254, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20721, 39218, -3112, 0, 0, 2980, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20721, 40330, -3424, 0, 0, 58533, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20436, 40240, -3440, 0, 0, 49, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20406, 40270, -3448, 0, 0, 15370, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20400, 37473, -2824, 0, 0, 58928, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20341, 38831, -3072, 0, 0, 35369, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20103, 39496, -3312, 0, 0, 26664, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20103, 40052, -3440, 0, 0, 19948, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20103, 41164, -3632, 0, 0, 3886, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -20096, 40896, -3592, 0, 0, 40007, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19756, 39584, -3048, 0, 0, 12922, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19756, 39912, -3456, 0, 0, 46617, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19756, 40240, -3544, 0, 0, 64770, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19686, 36360, -2888, 0, 0, 25943, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19448, 36161, -2920, 0, 0, 21784, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19378, 41008, -3768, 0, 0, 49606, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19269, 40517, -3648, 0, 0, 10900, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19209, 40596, -3688, 0, 0, 40768, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19151, 41126, -3760, 0, 0, 29966, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19146, 37855, -3152, 0, 0, 42791, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -19076, 39256, -3400, 0, 0, 2003, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18939, 34753, -3176, 0, 0, 32083, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18867, 40052, -3568, 0, 0, 30173, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18455, 40130, -3576, 0, 0, 58394, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18437, 37168, -3168, 0, 0, 57107, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18336, 37556, -3264, 0, 0, 42089, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18238, 35218, -3120, 0, 0, 11877, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18137, 36797, -3168, 0, 0, 63793, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -18066, 39350, -3504, 0, 0, 18450, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17796, 34656, -3328, 0, 0, 29628, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17796, 36958, -3296, 0, 0, 39350, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17733, 36486, -3256, 0, 0, 6132, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17688, 35558, -3320, 0, 0, 57345, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17606, 35087, -3288, 0, 0, 35002, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17402, 36374, -3352, 0, 0, 39833, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17256, 36659, -3376, 0, 0, 25784, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17252, 35457, -3392, 0, 0, 679, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -17140, 34573, -3480, 0, 0, 26086, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16720, 39293, -3720, 0, 0, 29628, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16716, 35463, -3440, 0, 0, 50436, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16696, 36632, -3432, 0, 0, 22545, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16696, 37616, -3544, 0, 0, 37166, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16457, 35387, -3456, 0, 0, 14378, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16304, 38496, -3680, 0, 0, 65520, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -16016, 37616, -3560, 0, 0, 52400, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -15636, 37257, -3536, 0, 0, 25778, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -13415, 38309, -3688, 0, 0, 3968, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -13362, 38260, -3688, 0, 0, 22242, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -12892, 37068, -3688, 0, 0, 37797, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -12892, 38044, -3688, 0, 0, 28822, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -12580, 35604, -3640, 0, 0, 44950, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -12558, 35443, -3592, 0, 0, 55883, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -12480, 36372, -3712, 0, 0, 12615, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -12363, 37733, -3688, 0, 0, 4557, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11644, 35604, -3592, 0, 0, 3352, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11644, 38044, -3688, 0, 0, 43033, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11547, 37662, -3680, 0, 0, 53752, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11471, 36846, -3688, 0, 0, 38367, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11293, 36425, -3656, 0, 0, 43098, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11207, 35639, -3592, 0, 0, 15984, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -11020, 35848, -3616, 0, 0, 13936, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -10708, 37800, -3696, 0, 0, 15411, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -10649, 35080, -3568, 0, 0, 28376, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -10605, 37486, -3696, 0, 0, 40013, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -10593, 35978, -3648, 0, 0, 59764, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -10396, 37068, -3696, 0, 0, 50986, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -9410, 38200, -3336, 0, 0, 41534, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -9293, 36327, -3704, 0, 0, 21163, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -9250, 38395, -3736, 0, 0, 51271, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -9178, 38623, -3760, 0, 0, 21525, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -9079, 39010, -3752, 0, 0, 24570, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -9043, 38324, -3744, 0, 0, 48869, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8700, 36966, -3704, 0, 0, 54603, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8653, 37190, -3696, 0, 0, 57034, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8575, 37272, -3688, 0, 0, 47132, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8524, 38532, -3728, 0, 0, 53175, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8461, 37704, -3688, 0, 0, 22408, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8331, 36839, -3712, 0, 0, 16041, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -8281, 35963, -3680, 0, 0, 46012, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7860, 36214, -3648, 0, 0, 56891, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7640, 37335, -3712, 0, 0, 11344, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7598, 36673, -3688, 0, 0, 47337, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7588, 36824, -3696, 0, 0, 16174, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7535, 38410, -3680, 0, 0, 59613, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7402, 37469, -3688, 0, 0, 25276, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -7372, 36064, -3632, 0, 0, 41605, 30, 30, 0, 0), -- Corpse Absorber
 ('bloody_swampland', 1, 23163, -6688, 36033, -3616, 0, 0, 63395, 30, 30, 0, 0), -- Corpse Absorber
 ('bloody_swampland', 1, 23163, -6688, 38743, -3696, 0, 0, 45978, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7302, 36348, -3632, 0, 0, 37356, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7372, 36064, -3632, 0, 0, 41605, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7402, 37469, -3688, 0, 0, 25276, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7535, 38410, -3680, 0, 0, 59613, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7541, 38390, -3688, 0, 0, 59692, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7588, 36092, -3640, 0, 0, 27586, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7588, 36824, -3696, 0, 0, 16174, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7598, 36673, -3688, 0, 0, 47337, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7640, 37335, -3712, 0, 0, 11344, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7860, 36214, -3648, 0, 0, 56891, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -7900, 37800, -3704, 0, 0, 20554, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8020, 37286, -3696, 0, 0, 40196, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8056, 37491, -3696, 0, 0, 32921, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8281, 35963, -3680, 0, 0, 46012, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8331, 36839, -3712, 0, 0, 16041, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8335, 37870, -3688, 0, 0, 29917, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8461, 37704, -3688, 0, 0, 22408, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8524, 38532, -3728, 0, 0, 53175, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8575, 37272, -3688, 0, 0, 47132, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8653, 37190, -3696, 0, 0, 57034, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -8700, 36966, -3704, 0, 0, 54603, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9043, 38324, -3744, 0, 0, 48869, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9079, 39010, -3752, 0, 0, 24570, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9178, 38623, -3760, 0, 0, 21525, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9250, 38395, -3736, 0, 0, 51271, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9293, 36327, -3704, 0, 0, 21163, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9410, 38200, -3336, 0, 0, 41534, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23163, -9460, 36336, -3704, 0, 0, 2207, 30, 30, 0, 0), -- Corpse Absorber
-('bloody_swampland', 1, 23164, -10038, 38960, -3728, 0, 0, 12677, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -10164, 39059, -3728, 0, 0, 23233, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -10182, 39377, -3760, 0, 0, 41773, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -10352, 37630, -3704, 0, 0, 61949, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -10666, 37250, -2888, 0, 0, 41287, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -10879, 37186, -3688, 0, 0, 27814, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -12024, 37192, -3688, 0, 0, 41331, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -12236, 37440, -3696, 0, 0, 20974, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -16016, 37288, -3528, 0, 0, 25245, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -16356, 36304, -3464, 0, 0, 14570, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -16356, 36632, -3456, 0, 0, 25686, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -17036, 38600, -3616, 0, 0, 29265, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -17339, 37478, -3440, 0, 0, 60757, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -17376, 38928, -3120, 0, 0, 17896, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -17716, 38600, -3496, 0, 0, 1942, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -18056, 38272, -3392, 0, 0, 26219, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -18417, 39807, -3504, 0, 0, 8969, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -19049, 38972, -3352, 0, 0, 34536, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -19076, 39584, -3472, 0, 0, 14034, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -19322, 40577, -3672, 0, 0, 63729, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -19416, 40896, -3760, 0, 0, 22557, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23163, -6365, 35387, -3672, 0, 0, 1648, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -6358, 39337, -3688, 0, 0, 47116, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -6304, 36820, -3640, 0, 0, 38682, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -6273, 37907, -3672, 0, 0, 27355, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -6136, 39285, -3688, 0, 0, 19238, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -6136, 40098, -3672, 0, 0, 20384, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -6134, 40119, -3672, 0, 0, 36090, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5961, 38022, -3648, 0, 0, 24662, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5904, 40062, -3664, 0, 0, 2986, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5785, 40117, -3664, 0, 0, 49144, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5671, 40443, -3696, 0, 0, 61306, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5584, 39556, -3640, 0, 0, 20401, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5510, 39426, -3640, 0, 0, 20197, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5410, 39525, -3632, 0, 0, 1812, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5374, 36809, -3608, 0, 0, 5085, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5190, 39576, -3632, 0, 0, 49144, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -5187, 38298, -3624, 0, 0, 14244, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4984, 38288, -3608, 0, 0, 55963, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4955, 37532, -3592, 0, 0, 26306, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4866, 39402, -3608, 0, 0, 12091, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4795, 39534, -3616, 0, 0, 44240, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4756, 37659, -3584, 0, 0, 4446, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4738, 41224, -3672, 0, 0, 2684, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4719, 39951, -3648, 0, 0, 10645, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4640, 36587, -3624, 0, 0, 63721, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4480, 36575, -3632, 0, 0, 13473, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4304, 38100, -3584, 0, 0, 24256, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4282, 36222, -3648, 0, 0, 19067, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4228, 36057, -3656, 0, 0, 25499, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4204, 36575, -3640, 0, 0, 35555, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4188, 38543, -3592, 0, 0, 63036, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -4046, 35889, -3664, 0, 0, 49719, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -3653, 39236, -3640, 0, 0, 37083, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -3652, 39556, -3648, 0, 0, 24670, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -3618, 37497, -3608, 0, 0, 56763, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -3250, 37222, -3640, 0, 0, 13008, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -3148, 36593, -3672, 0, 0, 6530, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -3100, 37659, -3616, 0, 0, 25060, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -2855, 36553, -3680, 0, 0, 38907, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -2785, 38952, -3664, 0, 0, 54056, 30, 30, 0, 0), -- Corpse Absorber
+('bloody_swampland', 1, 23163, -2689, 38311, -3632, 0, 0, 27076, 30, 30, 0, 0); -- Corpse Absorber
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23164, -7910, 37211, -3708, 0, 0, 53939, 35, 0, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -27293, 44918, -3656, 0, 0, 43641, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -27234, 43536, -3656, 0, 0, 57075, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -27210, 43765, -3656, 0, 0, 34453, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -27003, 43506, -3656, 0, 0, 32767, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -26955, 43778, -3672, 0, 0, 58145, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -26797, 43814, -3680, 0, 0, 23011, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -25787, 44780, -3672, 0, 0, 30928, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -25599, 44112, -3632, 0, 0, 49206, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -25327, 43686, -3632, 0, 0, 62440, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -25304, 43985, -3632, 0, 0, 54184, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24950, 44271, -3616, 0, 0, 48119, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24947, 41815, -3256, 0, 0, 21948, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24894, 42958, -3528, 0, 0, 10900, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24735, 42450, -3400, 0, 0, 17272, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24694, 43320, -3624, 0, 0, 10136, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24505, 42123, -3344, 0, 0, 28643, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24472, 42916, -3592, 0, 0, 37033, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -24472, 44314, -2856, 0, 0, 52450, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -23812, 43519, -3632, 0, 0, 11337, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -23791, 43233, -3680, 0, 0, 32230, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -23683, 42450, -3568, 0, 0, 1505, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -23574, 43576, -3656, 0, 0, 39131, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -23457, 43047, -3744, 0, 0, 25315, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -22909, 43562, -3680, 0, 0, 42727, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -21796, 41880, -3496, 0, 0, 11167, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -20323, 41107, -3552, 0, 0, 37637, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -19756, 39584, -3048, 0, 0, 22562, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -19756, 39912, -3456, 0, 0, 33765, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -19756, 40240, -3544, 0, 0, 25430, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -19756, 40568, -3568, 0, 0, 61985, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -20323, 41107, -3552, 0, 0, 37637, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -20352, 41199, -3568, 0, 0, 49144, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -20484, 40303, -3416, 0, 0, 55676, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -21796, 41880, -3496, 0, 0, 11167, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -22909, 43562, -3680, 0, 0, 42727, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -23457, 43047, -3744, 0, 0, 25315, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -23574, 43576, -3656, 0, 0, 39131, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -23683, 42450, -3568, 0, 0, 1505, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -23791, 43233, -3680, 0, 0, 32230, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -23812, 43519, -3632, 0, 0, 11337, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24431, 41470, -3192, 0, 0, 18415, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24472, 42217, -3344, 0, 0, 11337, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24472, 42916, -3592, 0, 0, 37033, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24472, 44314, -2856, 0, 0, 52450, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24505, 42123, -3344, 0, 0, 28643, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24694, 43320, -3624, 0, 0, 10136, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24735, 42450, -3400, 0, 0, 17272, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24894, 42958, -3528, 0, 0, 10900, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24947, 41815, -3256, 0, 0, 21948, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -24950, 44271, -3616, 0, 0, 48119, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -25094, 42970, -3528, 0, 0, 12316, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -25304, 43985, -3632, 0, 0, 54184, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -25327, 43686, -3632, 0, 0, 62440, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -25599, 44112, -3632, 0, 0, 49206, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -25787, 44780, -3672, 0, 0, 30928, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -26797, 43814, -3680, 0, 0, 23011, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -26955, 43778, -3672, 0, 0, 58145, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -27003, 43506, -3656, 0, 0, 32767, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -27210, 43765, -3656, 0, 0, 34453, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -27234, 43536, -3656, 0, 0, 57075, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -27293, 44918, -3656, 0, 0, 43641, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -3219, 39236, -3656, 0, 0, 27592, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -3653, 38384, -3592, 0, 0, 21890, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -3870, 39520, -3640, 0, 0, 12236, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -3870, 40372, -3672, 0, 0, 64341, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -3935, 37742, -3592, 0, 0, 40823, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4087, 38952, -3608, 0, 0, 27912, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4087, 40656, -3664, 0, 0, 50327, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4098, 39733, -3632, 0, 0, 8188, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4220, 38919, -3600, 0, 0, 54603, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4235, 40831, -3664, 0, 0, 46223, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4304, 38100, -3584, 0, 0, 16697, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4304, 38952, -3600, 0, 0, 43599, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4304, 41224, -3664, 0, 0, 36857, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4521, 38952, -3600, 0, 0, 4436, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4521, 40656, -3664, 0, 0, 41191, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4687, 38697, -3600, 0, 0, 14388, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4730, 39979, -3648, 0, 0, 21817, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4738, 37816, -3584, 0, 0, 35274, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4738, 42076, -3696, 0, 0, 62394, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4797, 40721, -3672, 0, 0, 27920, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4826, 38803, -3600, 0, 0, 6693, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4848, 40686, -3680, 0, 0, 7340, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4880, 39869, -3648, 0, 0, 45159, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4910, 41422, -3680, 0, 0, 49153, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4953, 40798, -3680, 0, 0, 63090, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4955, 37532, -3592, 0, 0, 18374, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4955, 40372, -3680, 0, 0, 42447, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4955, 41508, -3688, 0, 0, 15783, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -4985, 38813, -3608, 0, 0, 64859, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5076, 39936, -3656, 0, 0, 27298, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5129, 40843, -3696, 0, 0, 41148, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5156, 39777, -3640, 0, 0, 35683, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5172, 37532, -3600, 0, 0, 51049, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5172, 40940, -3696, 0, 0, 16436, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5178, 38384, -3624, 0, 0, 12935, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5293, 38589, -3640, 0, 0, 54356, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5389, 40940, -3720, 0, 0, 26489, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5499, 39461, -3632, 0, 0, 58886, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5564, 40172, -3664, 0, 0, 23397, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -19416, 40896, -3760, 0, 0, 22557, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -19322, 40577, -3672, 0, 0, 63729, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -19076, 39584, -3472, 0, 0, 14034, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -19049, 38972, -3352, 0, 0, 34536, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -18417, 39807, -3504, 0, 0, 8969, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -18056, 38272, -3392, 0, 0, 26219, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -17716, 38600, -3496, 0, 0, 1942, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -17376, 38928, -3120, 0, 0, 17896, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -17339, 37478, -3440, 0, 0, 60757, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -17036, 38600, -3616, 0, 0, 29265, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -16356, 36304, -3464, 0, 0, 14570, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -16356, 36632, -3456, 0, 0, 25686, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -16016, 37288, -3528, 0, 0, 25245, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -12236, 37440, -3696, 0, 0, 20974, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -12024, 37192, -3688, 0, 0, 41331, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -10879, 37186, -3688, 0, 0, 27814, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -10666, 37250, -2888, 0, 0, 41287, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -10352, 37630, -3704, 0, 0, 61949, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -10182, 39377, -3760, 0, 0, 41773, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -10164, 39059, -3728, 0, 0, 23233, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -10038, 38960, -3728, 0, 0, 12677, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -9878, 39344, -3760, 0, 0, 33105, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -9649, 37169, -3696, 0, 0, 49639, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -9410, 38200, -3336, 0, 0, 48953, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -9259, 37576, -3696, 0, 0, 38119, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -9236, 38874, -3760, 0, 0, 29875, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -9096, 38200, -3744, 0, 0, 51658, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8787, 37827, -3688, 0, 0, 63535, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8782, 39720, -3760, 0, 0, 52645, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8612, 36922, -3704, 0, 0, 32767, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8596, 39597, -3760, 0, 0, 32284, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8576, 39017, -3752, 0, 0, 34461, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8572, 39896, -3760, 0, 0, 19142, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8468, 39530, -3760, 0, 0, 42271, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -8154, 37820, -3696, 0, 0, 20099, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -7928, 40115, -3712, 0, 0, 22415, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -7840, 39720, -3688, 0, 0, 26207, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -7820, 39738, -3688, 0, 0, 33723, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -7719, 38325, -3704, 0, 0, 13134, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -7636, 39870, -3696, 0, 0, 59375, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -7468, 38304, -3688, 0, 0, 5441, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6691, 39236, -3696, 0, 0, 197, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6676, 39870, -3680, 0, 0, 24205, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6474, 40372, -2680, 0, 0, 17689, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6474, 40656, -3128, 0, 0, 24873, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6382, 39336, -3688, 0, 0, 41920, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6327, 38811, -3704, 0, 0, 54017, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6146, 40255, -3680, 0, 0, 832, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -6040, 38384, -3648, 0, 0, 28551, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5942, 39912, -3656, 0, 0, 13923, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5823, 37248, -3632, 0, 0, 41311, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5823, 37532, -3632, 0, 0, 14892, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5708, 39924, -3648, 0, 0, 52287, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -5606, 37248, -3616, 0, 0, 3149, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -5606, 38952, -3648, 0, 0, 21997, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -5606, 39236, -3648, 0, 0, 17011, 30, 30, 0, 0), -- Corpse Shredder
 ('bloody_swampland', 1, 23164, -5606, 39804, -3640, 0, 0, 25867, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5606, 40656, -3712, 0, 0, 16921, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5634, 39647, -3648, 0, 0, 30443, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5708, 39924, -3648, 0, 0, 52287, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5817, 40059, -3656, 0, 0, 47387, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5823, 37248, -3632, 0, 0, 41311, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5823, 37532, -3632, 0, 0, 14892, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5823, 39236, -3672, 0, 0, 42484, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -5942, 39912, -3656, 0, 0, 13923, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6040, 38384, -3648, 0, 0, 28551, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6146, 40255, -3680, 0, 0, 832, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6327, 38811, -3704, 0, 0, 54017, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6382, 39336, -3688, 0, 0, 41920, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6389, 39044, -3704, 0, 0, 46686, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6474, 40372, -2680, 0, 0, 17689, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6474, 40656, -3128, 0, 0, 24873, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6676, 39870, -3680, 0, 0, 24205, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -6691, 39236, -3696, 0, 0, 197, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7414, 38408, -3680, 0, 0, 26195, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7426, 38357, -3688, 0, 0, 32767, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7468, 38304, -3688, 0, 0, 5441, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7475, 38519, -3680, 0, 0, 58229, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7636, 39870, -3696, 0, 0, 59375, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7719, 38325, -3704, 0, 0, 13134, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7727, 38373, -3704, 0, 0, 57444, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7737, 38350, -3704, 0, 0, 52293, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7820, 39738, -3688, 0, 0, 33723, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7840, 39720, -3688, 0, 0, 26207, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7928, 40115, -3712, 0, 0, 22415, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -7991, 38220, -3712, 0, 0, 4775, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8118, 37252, -3696, 0, 0, 55324, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8154, 37630, -3696, 0, 0, 62914, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8154, 37820, -3696, 0, 0, 20099, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8154, 38200, -3704, 0, 0, 19708, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8468, 37440, -3688, 0, 0, 42654, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8468, 39530, -3760, 0, 0, 42271, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8572, 39896, -3760, 0, 0, 19142, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8576, 39017, -3752, 0, 0, 34461, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8596, 39597, -3760, 0, 0, 32284, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8612, 36922, -3704, 0, 0, 32767, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8642, 37573, -3688, 0, 0, 40950, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8676, 37150, -3696, 0, 0, 65520, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8782, 39720, -3760, 0, 0, 52645, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -8787, 37827, -3688, 0, 0, 63535, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -9096, 38200, -3744, 0, 0, 51658, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -9236, 38874, -3760, 0, 0, 29875, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -9259, 37576, -3696, 0, 0, 38119, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -9410, 38200, -3336, 0, 0, 48953, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -9649, 37169, -3696, 0, 0, 49639, 30, 30, 0, 0), -- Corpse Shredder
-('bloody_swampland', 1, 23164, -9878, 39344, -3760, 0, 0, 33105, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5178, 38384, -3624, 0, 0, 12935, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5172, 37532, -3600, 0, 0, 51049, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5172, 40940, -3696, 0, 0, 16436, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -5076, 39936, -3656, 0, 0, 27298, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4985, 38813, -3608, 0, 0, 64859, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4955, 37532, -3592, 0, 0, 18374, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4955, 40372, -3680, 0, 0, 42447, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4955, 41508, -3688, 0, 0, 15783, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4910, 41422, -3680, 0, 0, 49153, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4826, 38803, -3600, 0, 0, 6693, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4797, 40721, -3672, 0, 0, 27920, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4738, 37816, -3584, 0, 0, 35274, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4738, 42076, -3696, 0, 0, 62394, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4304, 38100, -3584, 0, 0, 16697, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4304, 38952, -3600, 0, 0, 43599, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4304, 41224, -3664, 0, 0, 36857, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4098, 39733, -3632, 0, 0, 8188, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4087, 38952, -3608, 0, 0, 27912, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -4087, 40656, -3664, 0, 0, 50327, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -3935, 37742, -3592, 0, 0, 40823, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -3870, 39520, -3640, 0, 0, 12236, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -3870, 40372, -3672, 0, 0, 64341, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -3653, 38384, -3592, 0, 0, 21890, 30, 30, 0, 0), -- Corpse Shredder
+('bloody_swampland', 1, 23164, -3219, 39236, -3656, 0, 0, 27592, 30, 30, 0, 0); -- Corpse Shredder
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23165, -15244, 44539, -3674, 0, 0, 44919, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -15222, 45680, -3680, 0, 0, 34687, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -14583, 45727, -3677, 0, 0, 31969, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -14371, 43570, -3605, 0, 0, 53788, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -13980, 44851, -3593, 0, 0, 29361, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -13853, 45671, -3593, 0, 0, 21980, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -13730, 43685, -3603, 0, 0, 1851, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -13587, 46404, -3640, 0, 0, 65435, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -13580, 45212, -3589, 0, 0, 12972, 60, 0, 0, 2), -- Plagueworm (Night)
+('bloody_swampland', 1, 23165, -13076, 44844, -3621, 0, 0, 8948, 60, 0, 0, 2), -- Plagueworm (Night)
 ('bloody_swampland', 1, 23165, -10572, 36002, -3648, 0, 0, 29505, 30, 30, 0, 2), -- Plagueworm (Night)
 ('bloody_swampland', 1, 23165, -12961, 45449, -3648, 0, 0, 2201, 30, 30, 0, 2), -- Plagueworm (Night)
 ('bloody_swampland', 1, 23165, -13194, 46282, -3632, 0, 0, 5959, 30, 30, 0, 2), -- Plagueworm (Night)
@@ -47940,577 +47899,560 @@ INSERT INTO `spawnlist` VALUES
 ('bloody_swampland', 1, 23165, -4795, 39534, -3616, 0, 0, 0, 30, 30, 0, 2), -- Plagueworm (Night)
 ('bloody_swampland', 1, 23165, -5547, 39514, -3640, 0, 0, 21453, 30, 30, 0, 2), -- Plagueworm (Night)
 ('bloody_swampland', 1, 23165, -5785, 40117, -3664, 0, 0, 0, 30, 30, 0, 2), -- Plagueworm (Night)
-('bloody_swampland', 1, 23165, -8434, 36932, -3704, 0, 0, 25147, 30, 30, 0, 2), -- Plagueworm (Night)
-('bloody_swampland', 1, 23166, -10179, 43152, -3704, 0, 0, 12549, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -10427, 42240, -3696, 0, 0, 10841, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -10440, 44352, -3688, 0, 0, 14319, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23165, -8434, 36932, -3704, 0, 0, 25147, 30, 30, 0, 2); -- Plagueworm (Night)
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23166, -16532, 42916, -3763, 0, 0, 35832, 60, 0, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8862, 49934, -3702, 0, 0, 36306, 60, 0, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -7778, 49923, -3722, 0, 0, 21035, 60, 0, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -7618, 49021, -3697, 0, 0, 67, 60, 0, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -28526, 49871, -3672, 0, 0, 20745, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -28340, 49704, -3672, 0, 0, 15853, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -27868, 48206, -3672, 0, 0, 16969, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -27820, 50594, -3768, 0, 0, 56048, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -27506, 48060, -3704, 0, 0, 30127, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -27435, 50526, -3768, 0, 0, 63206, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -27160, 49781, -3696, 0, 0, 58755, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -27032, 50413, -3760, 0, 0, 30856, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -26778, 50514, -3776, 0, 0, 50535, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -26608, 49229, -3768, 0, 0, 16206, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -26302, 48601, -3760, 0, 0, 52835, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -26275, 49005, -3760, 0, 0, 46091, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -25463, 48969, -3744, 0, 0, 37291, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -25059, 48102, -3680, 0, 0, 41969, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -22980, 46157, -3768, 0, 0, 63319, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -20091, 42831, -3712, 0, 0, 14978, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -19492, 43155, -3768, 0, 0, 5675, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -18057, 40617, -3680, 0, 0, 44972, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -17770, 41886, -3704, 0, 0, 13441, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -17436, 45832, -3760, 0, 0, 10944, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -16688, 41436, -3768, 0, 0, 3833, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -16335, 41886, -3768, 0, 0, 47291, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -16226, 41790, -3776, 0, 0, 64154, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -15537, 39008, -3664, 0, 0, 18134, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -15497, 39167, -3672, 0, 0, 43686, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -15189, 38114, -3656, 0, 0, 62261, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -15187, 38079, -3656, 0, 0, 21791, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -13050, 40352, -3720, 0, 0, 52261, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -13026, 43318, -3496, 0, 0, 30467, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -12866, 45920, -3648, 0, 0, 28820, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -12360, 47119, -3744, 0, 0, 42837, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -12267, 43152, -3736, 0, 0, 42811, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -12104, 51308, -3760, 0, 0, 21298, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -11962, 44029, -3760, 0, 0, 33119, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -11960, 43170, -3776, 0, 0, 31600, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -11418, 39626, -3728, 0, 0, 8929, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -11180, 49974, -3768, 0, 0, 59811, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -11144, 51046, -3720, 0, 0, 21323, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -11089, 47159, -3728, 0, 0, 924, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -10759, 50822, -3696, 0, 0, 20514, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -10729, 47932, -3768, 0, 0, 45522, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -10671, 50735, -3688, 0, 0, 16365, 30, 30, 0, 0), -- Contaminated Rotten Root
 ('bloody_swampland', 1, 23166, -10663, 42815, -3696, 0, 0, 51344, 30, 30, 0, 0), -- Contaminated Rotten Root
 ('bloody_swampland', 1, 23166, -10663, 48135, -3776, 0, 0, 53983, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -10671, 50735, -3688, 0, 0, 16365, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -10729, 47932, -3768, 0, 0, 45522, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -10759, 50822, -3696, 0, 0, 20514, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -10770, 48128, -3776, 0, 0, 10134, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11089, 47159, -3728, 0, 0, 924, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11144, 51046, -3720, 0, 0, 21323, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11180, 49974, -3768, 0, 0, 59811, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11418, 39626, -3728, 0, 0, 8929, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11747, 48898, -3704, 0, 0, 21323, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11960, 43170, -3776, 0, 0, 31600, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -11962, 44029, -3760, 0, 0, 33119, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -12104, 51308, -3760, 0, 0, 21298, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -12267, 43152, -3736, 0, 0, 42811, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -12360, 47119, -3744, 0, 0, 42837, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -12866, 45920, -3648, 0, 0, 28820, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -12943, 43203, -3496, 0, 0, 48343, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -12992, 48669, -3736, 0, 0, 17666, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -13026, 43318, -3496, 0, 0, 30467, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -13050, 40352, -3720, 0, 0, 52261, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -13960, 46084, -3648, 0, 0, 34530, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -13979, 48348, -3768, 0, 0, 46891, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -14079, 46456, -3648, 0, 0, 58071, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -14462, 46439, -3656, 0, 0, 4485, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -14570, 46543, -3664, 0, 0, 14507, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -14634, 46845, -3032, 0, 0, 45449, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -15187, 38079, -3656, 0, 0, 21791, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -15189, 38114, -3656, 0, 0, 62261, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -15497, 39167, -3672, 0, 0, 43686, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -15537, 39008, -3664, 0, 0, 18134, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -16226, 41790, -3776, 0, 0, 64154, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -16335, 41886, -3768, 0, 0, 47291, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -16688, 41436, -3768, 0, 0, 3833, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -17436, 45832, -3760, 0, 0, 10944, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -17770, 41886, -3704, 0, 0, 13441, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -18057, 40617, -3680, 0, 0, 44972, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -19492, 43155, -3768, 0, 0, 5675, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -20091, 42831, -3712, 0, 0, 14978, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -2235, 41837, -3712, 0, 0, 9292, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -22980, 46157, -3768, 0, 0, 63319, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -25059, 48102, -3680, 0, 0, 41969, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -25463, 48969, -3744, 0, 0, 37291, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -26275, 49005, -3760, 0, 0, 46091, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -26302, 48601, -3760, 0, 0, 52835, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -26608, 49229, -3768, 0, 0, 16206, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -26778, 50514, -3776, 0, 0, 50535, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -27032, 50413, -3760, 0, 0, 30856, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -27160, 49781, -3696, 0, 0, 58755, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -27435, 50526, -3768, 0, 0, 63206, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -27506, 48060, -3704, 0, 0, 30127, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -27820, 50594, -3768, 0, 0, 56048, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -27868, 48206, -3672, 0, 0, 16969, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -28340, 49704, -3672, 0, 0, 15853, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -28526, 49871, -3672, 0, 0, 20745, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -3201, 45665, -3656, 0, 0, 4421, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -4116, 44950, -3592, 0, 0, 45797, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -4416, 45583, -3600, 0, 0, 26950, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -4576, 45616, -3600, 0, 0, 14188, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -4619, 41427, -3672, 0, 0, 34180, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -5160, 46735, -3632, 0, 0, 53937, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -5340, 45790, -3616, 0, 0, 18854, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -5883, 47443, -3616, 0, 0, 4177, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -5903, 44833, -3592, 0, 0, 7197, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -6479, 45093, -3600, 0, 0, 924, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -10440, 44352, -3688, 0, 0, 14319, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -10427, 42240, -3696, 0, 0, 10841, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -10179, 43152, -3704, 0, 0, 12549, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9931, 45657, -3760, 0, 0, 14988, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9918, 44352, -3728, 0, 0, 12366, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9877, 49237, -3656, 0, 0, 52343, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9826, 46205, -3760, 0, 0, 14324, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9771, 41158, -3752, 0, 0, 44187, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9651, 39168, -3760, 0, 0, 4449, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9633, 42752, -3704, 0, 0, 96, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9545, 48530, -3664, 0, 0, 42074, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9529, 47992, -3760, 0, 0, 24947, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9396, 42352, -3696, 0, 0, 33097, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9219, 50855, -3712, 0, 0, 35516, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -9012, 40008, -3760, 0, 0, 29133, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8951, 40373, -3768, 0, 0, 32590, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8822, 42158, -3704, 0, 0, 60431, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8679, 44531, -3752, 0, 0, 16366, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8641, 44478, -3760, 0, 0, 7453, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8619, 47851, -3712, 0, 0, 45604, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8613, 39552, -3760, 0, 0, 23907, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -8502, 46252, -3720, 0, 0, 37371, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -7710, 42595, -3768, 0, 0, 24142, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -6905, 42780, -3728, 0, 0, 3273, 30, 30, 0, 0), -- Contaminated Rotten Root
 ('bloody_swampland', 1, 23166, -6796, 42630, -3088, 0, 0, 14293, 30, 30, 0, 0), -- Contaminated Rotten Root
 ('bloody_swampland', 1, 23166, -6796, 43193, -3360, 0, 0, 5997, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -6905, 42780, -3728, 0, 0, 3273, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -7710, 42595, -3768, 0, 0, 24142, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8502, 46252, -3720, 0, 0, 37371, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8613, 39552, -3760, 0, 0, 23907, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8619, 47851, -3712, 0, 0, 45604, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8641, 44478, -3760, 0, 0, 7453, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8679, 44531, -3752, 0, 0, 16366, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8822, 42158, -3704, 0, 0, 60431, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8951, 40373, -3768, 0, 0, 32590, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -8981, 48865, -3664, 0, 0, 37605, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9012, 40008, -3760, 0, 0, 29133, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9219, 50855, -3712, 0, 0, 35516, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9240, 49971, -3680, 0, 0, 19406, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9396, 42352, -3696, 0, 0, 33097, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9409, 49364, -3656, 0, 0, 1775, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9529, 47992, -3760, 0, 0, 24947, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9545, 48530, -3664, 0, 0, 42074, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9633, 42752, -3704, 0, 0, 96, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9651, 39168, -3760, 0, 0, 4449, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9771, 41158, -3752, 0, 0, 44187, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9826, 46205, -3760, 0, 0, 14324, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9877, 49237, -3656, 0, 0, 52343, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9918, 44352, -3728, 0, 0, 12366, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23166, -9931, 45657, -3760, 0, 0, 14988, 30, 30, 0, 0), -- Contaminated Rotten Root
-('bloody_swampland', 1, 23167, -10420, 41062, -3696, 0, 0, 33189, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -10572, 40630, -3696, 0, 0, 34027, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -10855, 47942, -3768, 0, 0, 9337, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -10956, 48498, -3776, 0, 0, 20093, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -10960, 41742, -3728, 0, 0, 21334, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -11024, 52058, -3672, 0, 0, 62318, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23166, -6479, 45093, -3600, 0, 0, 924, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -5903, 44833, -3592, 0, 0, 7197, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -5883, 47443, -3616, 0, 0, 4177, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -5340, 45790, -3616, 0, 0, 18854, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -5160, 46735, -3632, 0, 0, 53937, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -4619, 41427, -3672, 0, 0, 34180, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -4576, 45616, -3600, 0, 0, 14188, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -4416, 45583, -3600, 0, 0, 26950, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -4116, 44950, -3592, 0, 0, 45797, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -3201, 45665, -3656, 0, 0, 4421, 30, 30, 0, 0), -- Contaminated Rotten Root
+('bloody_swampland', 1, 23166, -2235, 41837, -3712, 0, 0, 9292, 30, 30, 0, 0); -- Contaminated Rotten Root
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23167, -28467, 51025, -3696, 0, 0, 47277, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -28107, 51107, -3768, 0, 0, 43540, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -28025, 48805, -3688, 0, 0, 18545, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -27178, 48837, -3760, 0, 0, 40850, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -26793, 50102, -3768, 0, 0, 56709, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -25978, 48815, -3760, 0, 0, 2404, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -24624, 47670, -3680, 0, 0, 63881, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -24091, 48057, -3688, 0, 0, 12829, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -23522, 47991, -3696, 0, 0, 2018, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -22843, 47171, -3760, 0, 0, 936, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -22227, 48404, -3768, 0, 0, 6335, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -22136, 46663, -3680, 0, 0, 44690, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -21707, 47312, -3720, 0, 0, 28272, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -20860, 47522, -3616, 0, 0, 63038, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -19834, 45621, -3680, 0, 0, 13997, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -18632, 43003, -3672, 0, 0, 35551, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -18344, 41040, -3760, 0, 0, 2515, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -18243, 40306, -3632, 0, 0, 37200, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -18053, 50864, -3704, 0, 0, 36091, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -17990, 40537, -3664, 0, 0, 40294, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -17780, 42523, -3672, 0, 0, 26320, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -17466, 45843, -3760, 0, 0, 38235, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -17250, 43544, -3672, 0, 0, 43923, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -17076, 42109, -3696, 0, 0, 22763, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16968, 51292, -3672, 0, 0, 9226, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16800, 46530, -3768, 0, 0, 21665, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16669, 51270, -3688, 0, 0, 10657, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16614, 51908, -3704, 0, 0, 44177, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16372, 43558, -3760, 0, 0, 38685, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16048, 43578, -3752, 0, 0, 32900, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -16042, 51627, -3760, 0, 0, 40961, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -15904, 50484, -3760, 0, 0, 24488, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -15603, 39325, -3744, 0, 0, 51050, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -15450, 39696, -3760, 0, 0, 21336, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -15446, 50276, -3760, 0, 0, 18812, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -15430, 50026, -3760, 0, 0, 36482, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -15165, 38116, -3656, 0, 0, 183, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -14832, 51203, -3704, 0, 0, 34457, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -14567, 49642, -3728, 0, 0, 3026, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -14315, 46678, -3672, 0, 0, 2960, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -14183, 48168, -3760, 0, 0, 28633, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -13959, 51281, -3696, 0, 0, 38185, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -13726, 50917, -3688, 0, 0, 20118, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -13370, 39787, -3688, 0, 0, 16907, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -13311, 40352, -3728, 0, 0, 40553, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -13177, 47352, -3696, 0, 0, 25467, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -13073, 43031, -3512, 0, 0, 38495, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -12935, 43480, -3496, 0, 0, 61940, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -12360, 48903, -3728, 0, 0, 34293, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -12107, 50053, -3752, 0, 0, 43526, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -12088, 39014, -3752, 0, 0, 47175, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -12057, 39054, -3752, 0, 0, 51456, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -11949, 46854, -3744, 0, 0, 4835, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -11862, 47158, -3760, 0, 0, 22439, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -11506, 46811, -3760, 0, 0, 45403, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -11483, 42127, -3672, 0, 0, 27534, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -11480, 38699, -3696, 0, 0, 7504, 30, 30, 0, 0), -- Decayed Spore
 ('bloody_swampland', 1, 23167, -11288, 43622, -3016, 0, 0, 53131, 30, 30, 0, 0), -- Decayed Spore
 ('bloody_swampland', 1, 23167, -11288, 44124, -3776, 0, 0, 33540, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -11480, 38699, -3696, 0, 0, 7504, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -11483, 42127, -3672, 0, 0, 27534, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -11506, 46811, -3760, 0, 0, 45403, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -11862, 47158, -3760, 0, 0, 22439, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -11949, 46854, -3744, 0, 0, 4835, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -12057, 39054, -3752, 0, 0, 51456, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -12088, 39014, -3752, 0, 0, 47175, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -12107, 50053, -3752, 0, 0, 43526, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -12360, 48903, -3728, 0, 0, 34293, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -12935, 43480, -3496, 0, 0, 61940, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -13073, 43031, -3512, 0, 0, 38495, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -13177, 47352, -3696, 0, 0, 25467, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -13311, 40352, -3728, 0, 0, 40553, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -13370, 39787, -3688, 0, 0, 16907, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -13726, 50917, -3688, 0, 0, 20118, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -13959, 51281, -3696, 0, 0, 38185, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -14183, 48168, -3760, 0, 0, 28633, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -14315, 46678, -3672, 0, 0, 2960, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -14567, 49642, -3728, 0, 0, 3026, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -14832, 51203, -3704, 0, 0, 34457, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15165, 38116, -3656, 0, 0, 183, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15430, 50026, -3760, 0, 0, 36482, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15446, 50276, -3760, 0, 0, 18812, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15450, 39696, -3760, 0, 0, 21336, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15603, 39325, -3744, 0, 0, 51050, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15884, 50137, -3760, 0, 0, 53478, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -15904, 50484, -3760, 0, 0, 24488, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16042, 51627, -3760, 0, 0, 40961, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16048, 43578, -3752, 0, 0, 32900, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16372, 43558, -3760, 0, 0, 38685, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16614, 51908, -3704, 0, 0, 44177, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16669, 51270, -3688, 0, 0, 10657, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16800, 46530, -3768, 0, 0, 21665, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -16968, 51292, -3672, 0, 0, 9226, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -17076, 42109, -3696, 0, 0, 22763, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -17250, 43544, -3672, 0, 0, 43923, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -17466, 45843, -3760, 0, 0, 38235, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -17780, 42523, -3672, 0, 0, 26320, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -17990, 40537, -3664, 0, 0, 40294, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -18053, 50864, -3704, 0, 0, 36091, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -18243, 40306, -3632, 0, 0, 37200, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -18344, 41040, -3760, 0, 0, 2515, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -18632, 43003, -3672, 0, 0, 35551, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -19834, 45621, -3680, 0, 0, 13997, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -20860, 47522, -3616, 0, 0, 63038, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -21707, 47312, -3720, 0, 0, 28272, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -22136, 46663, -3680, 0, 0, 44690, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -22227, 48404, -3768, 0, 0, 6335, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -22843, 47171, -3760, 0, 0, 936, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -23522, 47991, -3696, 0, 0, 2018, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -24091, 48057, -3688, 0, 0, 12829, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -24624, 47670, -3680, 0, 0, 63881, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -25978, 48815, -3760, 0, 0, 2404, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -26793, 50102, -3768, 0, 0, 56709, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -27178, 48837, -3760, 0, 0, 40850, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -28025, 48805, -3688, 0, 0, 18545, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -28107, 51107, -3768, 0, 0, 43540, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -28467, 51025, -3696, 0, 0, 47277, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -3284, 45429, -3648, 0, 0, 22690, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -3770, 44079, -3648, 0, 0, 50773, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -4085, 43365, -3656, 0, 0, 6709, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -5187, 43489, -3664, 0, 0, 38187, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -5282, 43023, -3704, 0, 0, 42538, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -5482, 46565, -3624, 0, 0, 60561, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -5774, 44653, -3608, 0, 0, 46793, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -5977, 43675, -3680, 0, 0, 32557, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -6494, 46034, -3616, 0, 0, 3355, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -6745, 45399, -3616, 0, 0, 45928, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -6755, 47103, -3648, 0, 0, 30770, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -6794, 48682, -3640, 0, 0, 20401, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -6796, 43193, -3360, 0, 0, 65015, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -6935, 46294, -3632, 0, 0, 49778, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -7045, 45909, -3624, 0, 0, 21454, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -7120, 45619, -3632, 0, 0, 6147, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -7130, 44830, -3680, 0, 0, 15752, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -8617, 45536, -3680, 0, 0, 35711, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -8641, 46033, -3712, 0, 0, 36992, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -8653, 45554, -3680, 0, 0, 31384, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9292, 40406, -3696, 0, 0, 26354, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9369, 47517, -3760, 0, 0, 1068, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9392, 46610, -3752, 0, 0, 34782, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9415, 42017, -3768, 0, 0, 27398, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9548, 42156, -3744, 0, 0, 25217, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9634, 42176, -3728, 0, 0, 60704, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9677, 41614, -3232, 0, 0, 33384, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9682, 44539, -3752, 0, 0, 24575, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9718, 44090, -3720, 0, 0, 56904, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23167, -9856, 43622, -3736, 0, 0, 37645, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -11024, 52058, -3672, 0, 0, 62318, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -10960, 41742, -3728, 0, 0, 21334, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -10956, 48498, -3776, 0, 0, 20093, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -10855, 47942, -3768, 0, 0, 9337, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -10572, 40630, -3696, 0, 0, 34027, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -10420, 41062, -3696, 0, 0, 33189, 30, 30, 0, 0), -- Decayed Spore
 ('bloody_swampland', 1, 23167, -9918, 43152, -3768, 0, 0, 60478, 30, 30, 0, 0), -- Decayed Spore
-('bloody_swampland', 1, 23168, -10063, 40956, -3704, 0, 0, 6532, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10214, 42869, -3696, 0, 0, 59562, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10214, 43120, -3704, 0, 0, 41899, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10328, 41091, -3704, 0, 0, 54015, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10357, 43064, -3696, 0, 0, 12343, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10366, 44925, -3776, 0, 0, 48214, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10393, 41363, -3752, 0, 0, 17002, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10393, 44375, -3688, 0, 0, 11286, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10432, 45108, -3760, 0, 0, 46830, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10465, 42231, -3696, 0, 0, 2630, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -10690, 42752, -3696, 0, 0, 63966, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -11109, 43371, -2912, 0, 0, 4878, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -11476, 43018, -3768, 0, 0, 44839, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -11724, 48560, -3704, 0, 0, 22339, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -12034, 49467, -3752, 0, 0, 53679, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -12300, 48495, -3760, 0, 0, 61448, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -12776, 48940, -3568, 0, 0, 32648, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -13028, 49455, -3760, 0, 0, 34167, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -13124, 49653, -3744, 0, 0, 64204, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -13769, 52732, -3672, 0, 0, 50894, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -14200, 52857, -3672, 0, 0, 59356, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -14309, 50059, -3672, 0, 0, 49539, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -14890, 50102, -3752, 0, 0, 35720, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15241, 49692, -3736, 0, 0, 19145, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15475, 49877, -3744, 0, 0, 64765, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15477, 55197, -3712, 0, 0, 30777, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15530, 49740, -3752, 0, 0, 56142, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15572, 55754, -3696, 0, 0, 56506, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15590, 51636, -3768, 0, 0, 24244, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15599, 51086, -3760, 0, 0, 63599, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15633, 49954, -3752, 0, 0, 16305, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15670, 53560, -3696, 0, 0, 24931, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15776, 55574, -3696, 0, 0, 15375, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15899, 56802, -3672, 0, 0, 20831, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15916, 51090, -3768, 0, 0, 32827, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -15921, 50314, -3760, 0, 0, 45870, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16079, 50141, -3744, 0, 0, 14365, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16115, 50986, -3768, 0, 0, 49153, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16146, 50841, -3768, 0, 0, 576, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16250, 57409, -3672, 0, 0, 15511, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16322, 52210, -3696, 0, 0, 44351, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16400, 51219, -3736, 0, 0, 17781, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16404, 51380, -3752, 0, 0, 44282, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16706, 52526, -3688, 0, 0, 26634, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16724, 44386, -3680, 0, 0, 43028, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -16742, 57715, -3688, 0, 0, 46430, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17135, 53176, -3696, 0, 0, 61761, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17161, 58065, -3704, 0, 0, 60392, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17175, 51514, -3664, 0, 0, 38816, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17185, 44090, -3688, 0, 0, 44592, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17201, 57569, -3664, 0, 0, 61253, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17296, 43538, -3664, 0, 0, 65520, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17408, 50424, -3704, 0, 0, 61596, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17420, 57856, -3704, 0, 0, 33158, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17428, 41695, -3704, 0, 0, 27230, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17428, 41902, -3704, 0, 0, 14025, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17439, 51369, -3664, 0, 0, 32847, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17604, 41695, -3704, 0, 0, 50241, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17604, 42109, -3688, 0, 0, 10498, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17637, 45026, -3696, 0, 0, 40037, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17669, 49101, -3736, 0, 0, 38277, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17696, 47551, -3136, 0, 0, 37483, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17724, 51466, -3664, 0, 0, 61889, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17774, 51388, -3672, 0, 0, 31039, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17799, 44909, -3688, 0, 0, 42850, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17802, 58895, -3688, 0, 0, 8959, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17850, 44870, -3688, 0, 0, 41398, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17874, 50628, -3696, 0, 0, 28036, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -17889, 49080, -3696, 0, 0, 36809, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23167, -9856, 43622, -3736, 0, 0, 37645, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9718, 44090, -3720, 0, 0, 56904, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9682, 44539, -3752, 0, 0, 24575, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9677, 41614, -3232, 0, 0, 33384, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9634, 42176, -3728, 0, 0, 60704, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9548, 42156, -3744, 0, 0, 25217, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9415, 42017, -3768, 0, 0, 27398, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9392, 46610, -3752, 0, 0, 34782, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9369, 47517, -3760, 0, 0, 1068, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -9292, 40406, -3696, 0, 0, 26354, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -8653, 45554, -3680, 0, 0, 31384, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -8641, 46033, -3712, 0, 0, 36992, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -8617, 45536, -3680, 0, 0, 35711, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -7130, 44830, -3680, 0, 0, 15752, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -7120, 45619, -3632, 0, 0, 6147, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -7045, 45909, -3624, 0, 0, 21454, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -6796, 43193, -3360, 0, 0, 65015, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -6794, 48682, -3640, 0, 0, 20401, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -6755, 47103, -3648, 0, 0, 30770, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -6745, 45399, -3616, 0, 0, 45928, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -6494, 46034, -3616, 0, 0, 3355, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -5977, 43675, -3680, 0, 0, 32557, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -5774, 44653, -3608, 0, 0, 46793, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -5482, 46565, -3624, 0, 0, 60561, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -5282, 43023, -3704, 0, 0, 42538, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -5187, 43489, -3664, 0, 0, 38187, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -4085, 43365, -3656, 0, 0, 6709, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -3770, 44079, -3648, 0, 0, 50773, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -3284, 45429, -3648, 0, 0, 22690, 30, 30, 0, 0), -- Decayed Spore
+('bloody_swampland', 1, 23167, -1785, 42742, -3666, 0, 0, 9056, 60, 0, 0, 0); -- Decayed Spore
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23168, -27843, 52888, -3640, 0, 0, 42892, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -27169, 49810, -3712, 0, 0, 39191, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -26004, 52400, -3768, 0, 0, 22193, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -25566, 48736, -3768, 0, 0, 21141, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -24909, 59616, -3688, 0, 0, 25985, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -24878, 47370, -3680, 0, 0, 33467, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -24699, 47661, -3680, 0, 0, 3380, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -24685, 49942, -3720, 0, 0, 1154, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -24658, 47822, -3680, 0, 0, 28712, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -24464, 47720, -3680, 0, 0, 11478, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23959, 61064, -3624, 0, 0, 16208, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23789, 47665, -3688, 0, 0, 58487, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23627, 47477, -3696, 0, 0, 49770, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23547, 47204, -3760, 0, 0, 65073, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23524, 48495, -3688, 0, 0, 38011, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23463, 60115, -3656, 0, 0, 58481, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23143, 47652, -3728, 0, 0, 62570, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23140, 60670, -3632, 0, 0, 2807, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -23094, 48025, -3728, 0, 0, 62870, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -22895, 61019, -3632, 0, 0, 39867, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -22670, 48239, -3784, 0, 0, 60426, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -22581, 47650, -3768, 0, 0, 54636, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -22350, 48597, -3776, 0, 0, 10786, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -22346, 60318, -3640, 0, 0, 14578, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -21719, 47107, -3720, 0, 0, 34194, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -21613, 58924, -3744, 0, 0, 28381, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -21503, 46287, -3688, 0, 0, 14431, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -21482, 57605, -3752, 0, 0, 21219, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -20982, 48207, -3736, 0, 0, 58697, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -20887, 45556, -3680, 0, 0, 13170, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -20860, 47522, -3616, 0, 0, 8003, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -20212, 59815, -3040, 0, 0, 37902, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -20064, 57977, -3712, 0, 0, 1077, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -19892, 59566, -3632, 0, 0, 26289, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -19866, 60093, -3608, 0, 0, 45456, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -19763, 55411, -3784, 0, 0, 53298, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -19720, 58250, -3768, 0, 0, 58409, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -19624, 45882, -3664, 0, 0, 36219, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -19561, 47850, -3648, 0, 0, 49438, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18932, 59566, -3680, 0, 0, 19748, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18802, 51079, -3776, 0, 0, 64440, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18660, 42937, -3672, 0, 0, 26175, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18612, 58819, -3664, 0, 0, 28152, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18582, 40305, -3600, 0, 0, 20889, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18344, 50195, -3768, 0, 0, 17202, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -18308, 42730, -3664, 0, 0, 30287, 30, 30, 0, 0), -- Swamp Tracker
 ('bloody_swampland', 1, 23168, -17956, 41902, -3232, 0, 0, 33828, 30, 30, 0, 0), -- Swamp Tracker
 ('bloody_swampland', 1, 23168, -17956, 42937, -3672, 0, 0, 41850, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18308, 42730, -3664, 0, 0, 30287, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18344, 50195, -3768, 0, 0, 17202, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18582, 40305, -3600, 0, 0, 20889, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18612, 58819, -3664, 0, 0, 28152, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18660, 42937, -3672, 0, 0, 26175, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18802, 51079, -3776, 0, 0, 64440, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -18932, 59566, -3680, 0, 0, 19748, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -19561, 47850, -3648, 0, 0, 49438, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -19624, 45882, -3664, 0, 0, 36219, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -19720, 58250, -3768, 0, 0, 58409, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -19763, 55411, -3784, 0, 0, 53298, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -19866, 60093, -3608, 0, 0, 45456, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -19892, 59566, -3632, 0, 0, 26289, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -20064, 57977, -3712, 0, 0, 1077, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -20212, 59815, -3040, 0, 0, 37902, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -20860, 47522, -3616, 0, 0, 8003, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -20887, 45556, -3680, 0, 0, 13170, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -20982, 48207, -3736, 0, 0, 58697, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -21482, 57605, -3752, 0, 0, 21219, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -21503, 46287, -3688, 0, 0, 14431, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -21613, 58924, -3744, 0, 0, 28381, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -21719, 47107, -3720, 0, 0, 34194, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -22346, 60318, -3640, 0, 0, 14578, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -22350, 48597, -3776, 0, 0, 10786, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -22581, 47650, -3768, 0, 0, 54636, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -22670, 48239, -3784, 0, 0, 60426, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -22895, 61019, -3632, 0, 0, 39867, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23094, 48025, -3728, 0, 0, 62870, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23140, 60670, -3632, 0, 0, 2807, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23143, 47652, -3728, 0, 0, 62570, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23463, 60115, -3656, 0, 0, 58481, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23524, 48495, -3688, 0, 0, 38011, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23547, 47204, -3760, 0, 0, 65073, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23627, 47477, -3696, 0, 0, 49770, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23789, 47665, -3688, 0, 0, 58487, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -23959, 61064, -3624, 0, 0, 16208, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -24464, 47720, -3680, 0, 0, 11478, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -24658, 47822, -3680, 0, 0, 28712, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -24685, 49942, -3720, 0, 0, 1154, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -24699, 47661, -3680, 0, 0, 3380, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -24878, 47370, -3680, 0, 0, 33467, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -24909, 59616, -3688, 0, 0, 25985, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -25566, 48736, -3768, 0, 0, 21141, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -26004, 52400, -3768, 0, 0, 22193, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -27169, 49810, -3712, 0, 0, 39191, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -27843, 52888, -3640, 0, 0, 42892, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -5750, 46229, -3624, 0, 0, 32533, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -5780, 46643, -3616, 0, 0, 1154, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -5984, 43635, -3688, 0, 0, 39831, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6031, 44977, -3592, 0, 0, 6388, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6072, 45360, -3600, 0, 0, 5300, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6164, 45688, -3608, 0, 0, 1937, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6538, 45556, -3608, 0, 0, 24287, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6545, 44735, -3640, 0, 0, 1650, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6651, 44204, -3680, 0, 0, 62981, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -6761, 46103, -3632, 0, 0, 13828, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7030, 46569, -3648, 0, 0, 52929, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7372, 46185, -3632, 0, 0, 57562, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7414, 46044, -3632, 0, 0, 22259, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7726, 46213, -3648, 0, 0, 40182, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7837, 45002, -3672, 0, 0, 40303, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7843, 46783, -3688, 0, 0, 51155, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7879, 47437, -3704, 0, 0, 11519, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -7910, 46733, -3688, 0, 0, 63119, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8041, 47760, -3704, 0, 0, 23648, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8169, 47114, -3696, 0, 0, 29209, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8229, 47833, -3696, 0, 0, 1741, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8236, 47374, -3688, 0, 0, 45772, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8439, 47116, -3752, 0, 0, 51666, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8602, 46935, -3632, 0, 0, 14978, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8861, 43333, -3768, 0, 0, 64958, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -8911, 45784, -3744, 0, 0, 42811, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9300, 43734, -3744, 0, 0, 40135, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9319, 43371, -3736, 0, 0, 28107, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9498, 42618, -3568, 0, 0, 11244, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9498, 44124, -3752, 0, 0, 44511, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9603, 41733, -3768, 0, 0, 6874, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17889, 49080, -3696, 0, 0, 36809, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17874, 50628, -3696, 0, 0, 28036, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17850, 44870, -3688, 0, 0, 41398, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17802, 58895, -3688, 0, 0, 8959, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17799, 44909, -3688, 0, 0, 42850, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17774, 51388, -3672, 0, 0, 31039, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17724, 51466, -3664, 0, 0, 61889, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17696, 47551, -3136, 0, 0, 37483, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17669, 49101, -3736, 0, 0, 38277, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17637, 45026, -3696, 0, 0, 40037, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17604, 41695, -3704, 0, 0, 50241, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17604, 42109, -3688, 0, 0, 10498, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17439, 51369, -3664, 0, 0, 32847, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17428, 41695, -3704, 0, 0, 27230, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17428, 41902, -3704, 0, 0, 14025, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17420, 57856, -3704, 0, 0, 33158, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17408, 50424, -3704, 0, 0, 61596, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17296, 43538, -3664, 0, 0, 65520, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17201, 57569, -3664, 0, 0, 61253, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17185, 44090, -3688, 0, 0, 44592, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17175, 51514, -3664, 0, 0, 38816, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17161, 58065, -3704, 0, 0, 60392, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -17135, 53176, -3696, 0, 0, 61761, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16742, 57715, -3688, 0, 0, 46430, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16724, 44386, -3680, 0, 0, 43028, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16706, 52526, -3688, 0, 0, 26634, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16404, 51380, -3752, 0, 0, 44282, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16322, 52210, -3696, 0, 0, 44351, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16250, 57409, -3672, 0, 0, 15511, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16146, 50841, -3768, 0, 0, 576, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16115, 50986, -3768, 0, 0, 49153, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -16079, 50141, -3744, 0, 0, 14365, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15921, 50314, -3760, 0, 0, 45870, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15916, 51090, -3768, 0, 0, 32827, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15899, 56802, -3672, 0, 0, 20831, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15776, 55574, -3696, 0, 0, 15375, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15670, 53560, -3696, 0, 0, 24931, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15633, 49954, -3752, 0, 0, 16305, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15599, 51086, -3760, 0, 0, 63599, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15590, 51636, -3768, 0, 0, 24244, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15477, 55197, -3712, 0, 0, 30777, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15475, 49877, -3744, 0, 0, 64765, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -15241, 49692, -3736, 0, 0, 19145, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -14890, 50102, -3752, 0, 0, 35720, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -14309, 50059, -3672, 0, 0, 49539, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -14200, 52857, -3672, 0, 0, 59356, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -13124, 49653, -3744, 0, 0, 64204, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -13028, 49455, -3760, 0, 0, 34167, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -12776, 48940, -3568, 0, 0, 32648, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -12034, 49467, -3752, 0, 0, 53679, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -11476, 43018, -3768, 0, 0, 44839, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -11109, 43371, -2912, 0, 0, 4878, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10690, 42752, -3696, 0, 0, 63966, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10465, 42231, -3696, 0, 0, 2630, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10432, 45108, -3760, 0, 0, 46830, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10393, 41363, -3752, 0, 0, 17002, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10393, 44375, -3688, 0, 0, 11286, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10366, 44925, -3776, 0, 0, 48214, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10357, 43064, -3696, 0, 0, 12343, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10328, 41091, -3704, 0, 0, 54015, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10214, 42869, -3696, 0, 0, 59562, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10214, 43120, -3704, 0, 0, 41899, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -10063, 40956, -3704, 0, 0, 6532, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -9890, 42088, -3760, 0, 0, 21115, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -9856, 43873, -3696, 0, 0, 53999, 30, 30, 0, 0), -- Swamp Tracker
 ('bloody_swampland', 1, 23168, -9677, 43873, -3736, 0, 0, 42629, 30, 30, 0, 0), -- Swamp Tracker
 ('bloody_swampland', 1, 23168, -9677, 44124, -3752, 0, 0, 17939, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9856, 43873, -3696, 0, 0, 53999, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23168, -9890, 42088, -3760, 0, 0, 21115, 30, 30, 0, 0), -- Swamp Tracker
-('bloody_swampland', 1, 23169, -12777, 52437, -3672, 0, 0, 9671, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -13848, 52169, -3760, 0, 0, 37357, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -14060, 52990, -3688, 0, 0, 56052, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -14336, 53302, -3688, 0, 0, 8302, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -14711, 53321, -3680, 0, 0, 13093, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15085, 48448, -3760, 0, 0, 2927, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15202, 55519, -3720, 0, 0, 62148, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15212, 48199, -3760, 0, 0, 49431, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15222, 53357, -3680, 0, 0, 20868, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15231, 52453, -3728, 0, 0, 49778, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15276, 53932, -3704, 0, 0, 3397, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15276, 55412, -3712, 0, 0, 38436, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15300, 48169, -3760, 0, 0, 18545, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15323, 50120, -3760, 0, 0, 58928, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15332, 55555, -3712, 0, 0, 45403, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15373, 53872, -3696, 0, 0, 57234, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15702, 52278, -3704, 0, 0, 6968, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -15831, 48448, -3768, 0, 0, 44773, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16204, 48149, -3768, 0, 0, 31751, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16236, 53932, -3688, 0, 0, 12560, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16445, 53617, -3760, 0, 0, 5045, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16561, 52013, -3680, 0, 0, 63766, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16652, 49798, -3768, 0, 0, 44036, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16667, 55811, -3720, 0, 0, 57267, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16674, 56581, -3696, 0, 0, 30008, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16735, 48153, -3768, 0, 0, 27274, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16763, 54857, -3744, 0, 0, 64963, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16793, 46310, -3768, 0, 0, 11305, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16834, 58055, -3680, 0, 0, 6861, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16943, 49420, -3768, 0, 0, 33190, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -16949, 57594, -3680, 0, 0, 24674, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17063, 55314, -3768, 0, 0, 9817, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17085, 56388, -3760, 0, 0, 56806, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17172, 47197, -3760, 0, 0, 56067, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17181, 56327, -3768, 0, 0, 47099, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17193, 53512, -3728, 0, 0, 17693, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17218, 55069, -3776, 0, 0, 55286, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17283, 49824, -3736, 0, 0, 20717, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17305, 55317, -3760, 0, 0, 41626, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17316, 49447, -3768, 0, 0, 16804, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17485, 58863, -3688, 0, 0, 3422, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17492, 55573, -3680, 0, 0, 64600, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17509, 53812, -3776, 0, 0, 13557, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17696, 47551, -3136, 0, 0, 28546, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17746, 55742, -3672, 0, 0, 10308, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17760, 57407, -3712, 0, 0, 23683, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17871, 56822, -3768, 0, 0, 7379, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17922, 55103, -3696, 0, 0, 4648, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -17972, 59317, -3192, 0, 0, 1294, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18015, 54100, -3784, 0, 0, 18794, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18027, 52826, -3664, 0, 0, 694, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18069, 47551, -3672, 0, 0, 24680, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18143, 48724, -3648, 0, 0, 5162, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18187, 47155, -3656, 0, 0, 22163, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18203, 49473, -3688, 0, 0, 35662, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18222, 56200, -3760, 0, 0, 1722, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18304, 54848, -3696, 0, 0, 9671, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18345, 55513, -3688, 0, 0, 64488, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18387, 52853, -3760, 0, 0, 34993, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18519, 55790, -3736, 0, 0, 11501, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18562, 54032, -3776, 0, 0, 20682, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18590, 53956, -3768, 0, 0, 35844, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18657, 49385, -3672, 0, 0, 45497, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18726, 47159, -3624, 0, 0, 51253, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18737, 57991, -3712, 0, 0, 41960, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18740, 51747, -3760, 0, 0, 30276, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18844, 59802, -3664, 0, 0, 34813, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18861, 54212, -3768, 0, 0, 12609, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18896, 55149, -3760, 0, 0, 62279, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18904, 57444, -3688, 0, 0, 17646, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18930, 53061, -3776, 0, 0, 31613, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18935, 49413, -3688, 0, 0, 33190, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18937, 53426, -3776, 0, 0, 14096, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -18976, 53620, -3768, 0, 0, 65528, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19022, 55355, -3768, 0, 0, 14006, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19124, 60346, -3632, 0, 0, 48380, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19126, 60227, -3632, 0, 0, 39378, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19188, 50840, -3760, 0, 0, 33739, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19209, 59724, -3664, 0, 0, 46645, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19234, 47530, -3616, 0, 0, 15857, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19342, 55297, -3776, 0, 0, 29941, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19349, 60164, -3616, 0, 0, 27369, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19355, 57449, -3688, 0, 0, 63807, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19559, 51170, -3760, 0, 0, 65432, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19561, 47551, -3648, 0, 0, 26698, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19561, 49345, -3672, 0, 0, 27879, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19572, 60064, -3608, 0, 0, 40109, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19591, 53900, -3760, 0, 0, 64958, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19775, 60017, -3608, 0, 0, 55156, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19825, 52951, -3768, 0, 0, 59325, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19875, 55684, -3784, 0, 0, 10917, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19884, 51550, -3680, 0, 0, 38281, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -19987, 58279, -3768, 0, 0, 21214, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20126, 53647, -3760, 0, 0, 54486, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20202, 59885, -3016, 0, 0, 46027, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20217, 57120, -3696, 0, 0, 25647, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20221, 57533, -3696, 0, 0, 3465, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20226, 57521, -3696, 0, 0, 15390, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20503, 48022, -3768, 0, 0, 44457, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20571, 59608, -3616, 0, 0, 10800, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20614, 51658, -3672, 0, 0, 56426, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20797, 57667, -3720, 0, 0, 25323, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20825, 51747, -3672, 0, 0, 43194, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -20833, 53065, -3760, 0, 0, 29080, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21338, 59321, -3640, 0, 0, 48840, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21355, 53020, -3696, 0, 0, 60113, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21469, 59488, -3624, 0, 0, 58415, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21675, 50276, -3776, 0, 0, 20065, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21754, 50084, -3728, 0, 0, 62554, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21754, 53064, -3000, 0, 0, 17621, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21799, 48747, -3768, 0, 0, 17145, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -21846, 51323, -3760, 0, 0, 28992, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22162, 58998, -3768, 0, 0, 400, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22166, 49937, -3712, 0, 0, 55387, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22267, 57789, -3752, 0, 0, 57198, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22270, 57509, -3760, 0, 0, 53294, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22336, 57934, -3760, 0, 0, 41022, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22346, 60680, -3632, 0, 0, 55031, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22373, 58640, -3768, 0, 0, 17117, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22426, 58553, -3776, 0, 0, 55574, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22445, 60593, -3632, 0, 0, 63498, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22448, 58774, -3768, 0, 0, 63233, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22461, 59258, -3760, 0, 0, 46951, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22462, 58953, -3768, 0, 0, 2201, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22535, 59461, -3688, 0, 0, 49309, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22568, 50956, -3776, 0, 0, 31613, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22573, 50106, -3712, 0, 0, 58423, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22655, 49988, -3704, 0, 0, 39483, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22676, 57799, -3760, 0, 0, 3010, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22694, 58861, -3728, 0, 0, 19276, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22785, 58798, -3728, 0, 0, 51104, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22853, 49999, -3712, 0, 0, 34869, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -22888, 57368, -3760, 0, 0, 36718, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23013, 58261, -3712, 0, 0, 13337, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23031, 57679, -3360, 0, 0, 11716, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23050, 49358, -3768, 0, 0, 12351, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23055, 57682, -3344, 0, 0, 6654, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23080, 57733, -3000, 0, 0, 64004, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23123, 57731, -3040, 0, 0, 64239, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23148, 57722, -3056, 0, 0, 33190, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23162, 48107, -3712, 0, 0, 32767, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23418, 60414, -3640, 0, 0, 25734, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23528, 60825, -3624, 0, 0, 20751, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23598, 59530, -3752, 0, 0, 15476, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23694, 51760, -3680, 0, 0, 15021, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23699, 51472, -3744, 0, 0, 17015, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23744, 57737, -3736, 0, 0, 3694, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23867, 51297, -3776, 0, 0, 54968, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23890, 51104, -3776, 0, 0, 45550, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23920, 58328, -3696, 0, 0, 4784, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23953, 50342, -3760, 0, 0, 33570, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -23986, 50796, -3768, 0, 0, 52919, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24031, 58508, -3696, 0, 0, 30759, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24056, 50448, -3760, 0, 0, 16067, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24129, 57636, -3752, 0, 0, 42441, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24138, 60857, -3624, 0, 0, 10770, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24147, 59886, -3680, 0, 0, 33085, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24258, 55774, -3688, 0, 0, 34202, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24265, 57448, -3704, 0, 0, 1005, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24267, 51984, -3768, 0, 0, 16804, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24340, 57986, -3760, 0, 0, 44511, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24370, 57578, -3736, 0, 0, 42253, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24652, 48710, -3736, 0, 0, 23945, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24660, 50537, -3768, 0, 0, 29196, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24695, 50836, -3768, 0, 0, 39384, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24740, 54413, -3704, 0, 0, 41255, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24827, 54067, -3688, 0, 0, 18803, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -24946, 53885, -3704, 0, 0, 57051, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25031, 53869, -3704, 0, 0, 59260, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25056, 49756, -3696, 0, 0, 34993, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23168, -9603, 41733, -3768, 0, 0, 6874, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -9498, 42618, -3568, 0, 0, 11244, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -9498, 44124, -3752, 0, 0, 44511, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -9319, 43371, -3736, 0, 0, 28107, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -9300, 43734, -3744, 0, 0, 40135, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8911, 45784, -3744, 0, 0, 42811, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8861, 43333, -3768, 0, 0, 64958, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8602, 46935, -3632, 0, 0, 14978, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8439, 47116, -3752, 0, 0, 51666, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8236, 47374, -3688, 0, 0, 45772, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8229, 47833, -3696, 0, 0, 1741, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8169, 47114, -3696, 0, 0, 29209, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -8041, 47760, -3704, 0, 0, 23648, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -7910, 46733, -3688, 0, 0, 63119, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -7879, 47437, -3704, 0, 0, 11519, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -7837, 45002, -3672, 0, 0, 40303, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -7726, 46213, -3648, 0, 0, 40182, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -7372, 46185, -3632, 0, 0, 57562, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -7030, 46569, -3648, 0, 0, 52929, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6761, 46103, -3632, 0, 0, 13828, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6651, 44204, -3680, 0, 0, 62981, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6545, 44735, -3640, 0, 0, 1650, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6538, 45556, -3608, 0, 0, 24287, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6164, 45688, -3608, 0, 0, 1937, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6072, 45360, -3600, 0, 0, 5300, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -6031, 44977, -3592, 0, 0, 6388, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -5984, 43635, -3688, 0, 0, 39831, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -5780, 46643, -3616, 0, 0, 1154, 30, 30, 0, 0), -- Swamp Tracker
+('bloody_swampland', 1, 23168, -5750, 46229, -3624, 0, 0, 32533, 30, 30, 0, 0); -- Swamp Tracker
+INSERT INTO `spawnlist` VALUES
+('bloody_swampland', 1, 23169, -28176, 51043, -3744, 0, 0, 25319, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -28078, 54379, -3648, 0, 0, 33031, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -27580, 51345, -3448, 0, 0, 33985, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -26988, 50778, -3768, 0, 0, 24835, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -26768, 54731, -3760, 0, 0, 50192, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -26225, 51729, -3744, 0, 0, 34552, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -26133, 60001, -3600, 0, 0, 15545, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25893, 58850, -3672, 0, 0, 55387, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25750, 53332, -3760, 0, 0, 15229, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25648, 53098, -3736, 0, 0, 36855, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25638, 53044, -3752, 0, 0, 5289, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25577, 53389, -3720, 0, 0, 49882, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25461, 49940, -3736, 0, 0, 41942, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25400, 48901, -3760, 0, 0, 10424, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25396, 49506, -3696, 0, 0, 52631, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25379, 57060, -3752, 0, 0, 37423, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25353, 53652, -3704, 0, 0, 13358, 30, 30, 0, 0), -- Swamp Assassin
 ('bloody_swampland', 1, 23169, -25148, 53729, -3704, 0, 0, 50398, 30, 30, 0, 0), -- Swamp Assassin
 ('bloody_swampland', 1, 23169, -25148, 54138, -3704, 0, 0, 6711, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25353, 53652, -3704, 0, 0, 13358, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25379, 57060, -3752, 0, 0, 37423, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25396, 49506, -3696, 0, 0, 52631, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25400, 48901, -3760, 0, 0, 10424, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25461, 49940, -3736, 0, 0, 41942, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25577, 53389, -3720, 0, 0, 49882, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25638, 53044, -3752, 0, 0, 5289, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25648, 53098, -3736, 0, 0, 36855, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25750, 53332, -3760, 0, 0, 15229, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -25893, 58850, -3672, 0, 0, 55387, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -26133, 60001, -3600, 0, 0, 15545, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -26225, 51729, -3744, 0, 0, 34552, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -26768, 54731, -3760, 0, 0, 50192, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -26988, 50778, -3768, 0, 0, 24835, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -27580, 51345, -3448, 0, 0, 33985, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -28078, 54379, -3648, 0, 0, 33031, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23169, -28176, 51043, -3744, 0, 0, 25319, 30, 30, 0, 0), -- Swamp Assassin
-('bloody_swampland', 1, 23170, -17921, 55567, -3688, 0, 0, 27571, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -18682, 52615, -3784, 0, 0, 25729, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -18867, 55837, -3760, 0, 0, 7391, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19094, 60826, -3640, 0, 0, 48923, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19125, 60632, -3648, 0, 0, 49732, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19139, 60820, -3640, 0, 0, 49034, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19217, 56341, -3680, 0, 0, 19367, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19632, 55793, -3784, 0, 0, 33990, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19757, 49860, -3664, 0, 0, 23630, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19810, 49161, -3680, 0, 0, 48805, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19876, 51616, -2920, 0, 0, 29100, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -19909, 55359, -3200, 0, 0, 65121, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20189, 52896, -3760, 0, 0, 34405, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20238, 53318, -3760, 0, 0, 20071, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20273, 52965, -3760, 0, 0, 34052, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20418, 55276, -3736, 0, 0, 26289, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20438, 58046, -3704, 0, 0, 59741, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20801, 55808, -3744, 0, 0, 38567, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -20923, 56870, -3768, 0, 0, 15144, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -22142, 52435, -3656, 0, 0, 29362, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -22265, 51508, -3768, 0, 0, 28452, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -22714, 58450, -3776, 0, 0, 10589, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23040, 57737, -2960, 0, 0, 52755, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23194, 58117, -3696, 0, 0, 1922, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23210, 59394, -3760, 0, 0, 18431, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23216, 57343, -3760, 0, 0, 45794, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23392, 57343, -3768, 0, 0, 30808, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23537, 50642, -3760, 0, 0, 53550, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23736, 50965, -3776, 0, 0, 55796, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23772, 59242, -3760, 0, 0, 11756, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -23867, 50530, -3752, 0, 0, 49075, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -24129, 50889, -3776, 0, 0, 5042, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -24207, 50836, -3776, 0, 0, 38917, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -24965, 56885, -3696, 0, 0, 49144, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -25225, 54004, -3704, 0, 0, 5875, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -25276, 53753, -3704, 0, 0, 8608, 30, 30, 0, 0), -- Swamp Watcher
-('bloody_swampland', 1, 23170, -26406, 55372, -3760, 0, 0, 278, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23169, -25056, 49756, -3696, 0, 0, 34993, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -25031, 53869, -3704, 0, 0, 59260, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24946, 53885, -3704, 0, 0, 57051, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24827, 54067, -3688, 0, 0, 18803, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24740, 54413, -3704, 0, 0, 41255, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24695, 50836, -3768, 0, 0, 39384, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24660, 50537, -3768, 0, 0, 29196, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24652, 48710, -3736, 0, 0, 23945, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24370, 57578, -3736, 0, 0, 42253, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24340, 57986, -3760, 0, 0, 44511, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24267, 51984, -3768, 0, 0, 16804, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24265, 57448, -3704, 0, 0, 1005, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24258, 55774, -3688, 0, 0, 34202, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24147, 59886, -3680, 0, 0, 33085, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24138, 60857, -3624, 0, 0, 10770, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24129, 57636, -3752, 0, 0, 42441, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24056, 50448, -3760, 0, 0, 16067, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -24031, 58508, -3696, 0, 0, 30759, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23986, 50796, -3768, 0, 0, 52919, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23953, 50342, -3760, 0, 0, 33570, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23920, 58328, -3696, 0, 0, 4784, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23890, 51104, -3776, 0, 0, 45550, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23867, 51297, -3776, 0, 0, 54968, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23744, 57737, -3736, 0, 0, 3694, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23699, 51472, -3744, 0, 0, 17015, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23694, 51760, -3680, 0, 0, 15021, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23598, 59530, -3752, 0, 0, 15476, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23528, 60825, -3624, 0, 0, 20751, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23418, 60414, -3640, 0, 0, 25734, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23162, 48107, -3712, 0, 0, 32767, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23123, 57731, -3040, 0, 0, 64239, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23080, 57733, -3000, 0, 0, 64004, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23055, 57682, -3344, 0, 0, 6654, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23050, 49358, -3768, 0, 0, 12351, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23031, 57679, -3360, 0, 0, 11716, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -23013, 58261, -3712, 0, 0, 13337, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22888, 57368, -3760, 0, 0, 36718, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22853, 49999, -3712, 0, 0, 34869, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22785, 58798, -3728, 0, 0, 51104, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22694, 58861, -3728, 0, 0, 19276, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22655, 49988, -3704, 0, 0, 39483, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22573, 50106, -3712, 0, 0, 58423, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22568, 50956, -3776, 0, 0, 31613, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22535, 59461, -3688, 0, 0, 49309, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22462, 58953, -3768, 0, 0, 2201, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22461, 59258, -3760, 0, 0, 46951, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22448, 58774, -3768, 0, 0, 63233, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22445, 60593, -3632, 0, 0, 63498, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22346, 60680, -3632, 0, 0, 55031, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22336, 57934, -3760, 0, 0, 41022, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22270, 57509, -3760, 0, 0, 53294, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22267, 57789, -3752, 0, 0, 57198, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -22166, 49937, -3712, 0, 0, 55387, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21846, 51323, -3760, 0, 0, 28992, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21799, 48747, -3768, 0, 0, 17145, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21754, 50084, -3728, 0, 0, 62554, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21754, 53064, -3000, 0, 0, 17621, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21675, 50276, -3776, 0, 0, 20065, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21469, 59488, -3624, 0, 0, 58415, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21355, 53020, -3696, 0, 0, 60113, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -21338, 59321, -3640, 0, 0, 48840, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20833, 53065, -3760, 0, 0, 29080, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20825, 51747, -3672, 0, 0, 43194, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20797, 57667, -3720, 0, 0, 25323, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20614, 51658, -3672, 0, 0, 56426, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20571, 59608, -3616, 0, 0, 10800, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20503, 48022, -3768, 0, 0, 44457, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20226, 57521, -3696, 0, 0, 15390, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20221, 57533, -3696, 0, 0, 3465, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20217, 57120, -3696, 0, 0, 25647, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20202, 59885, -3016, 0, 0, 46027, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -20126, 53647, -3760, 0, 0, 54486, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19987, 58279, -3768, 0, 0, 21214, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19884, 51550, -3680, 0, 0, 38281, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19875, 55684, -3784, 0, 0, 10917, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19825, 52951, -3768, 0, 0, 59325, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19775, 60017, -3608, 0, 0, 55156, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19591, 53900, -3760, 0, 0, 64958, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19572, 60064, -3608, 0, 0, 40109, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19561, 47551, -3648, 0, 0, 26698, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19561, 49345, -3672, 0, 0, 27879, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19559, 51170, -3760, 0, 0, 65432, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19355, 57449, -3688, 0, 0, 63807, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19349, 60164, -3616, 0, 0, 27369, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19342, 55297, -3776, 0, 0, 29941, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19234, 47530, -3616, 0, 0, 15857, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19209, 59724, -3664, 0, 0, 46645, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19188, 50840, -3760, 0, 0, 33739, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19126, 60227, -3632, 0, 0, 39378, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19124, 60346, -3632, 0, 0, 48380, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -19022, 55355, -3768, 0, 0, 14006, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18976, 53620, -3768, 0, 0, 65528, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18937, 53426, -3776, 0, 0, 14096, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18935, 49413, -3688, 0, 0, 33190, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18930, 53061, -3776, 0, 0, 31613, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18904, 57444, -3688, 0, 0, 17646, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18896, 55149, -3760, 0, 0, 62279, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18861, 54212, -3768, 0, 0, 12609, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18844, 59802, -3664, 0, 0, 34813, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18740, 51747, -3760, 0, 0, 30276, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18737, 57991, -3712, 0, 0, 41960, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18726, 47159, -3624, 0, 0, 51253, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18657, 49385, -3672, 0, 0, 45497, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18590, 53956, -3768, 0, 0, 35844, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18562, 54032, -3776, 0, 0, 20682, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18519, 55790, -3736, 0, 0, 11501, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18387, 52853, -3760, 0, 0, 34993, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18345, 55513, -3688, 0, 0, 64488, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18304, 54848, -3696, 0, 0, 9671, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18222, 56200, -3760, 0, 0, 1722, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18203, 49473, -3688, 0, 0, 35662, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18187, 47155, -3656, 0, 0, 22163, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18143, 48724, -3648, 0, 0, 5162, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18069, 47551, -3672, 0, 0, 24680, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18027, 52826, -3664, 0, 0, 694, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -18015, 54100, -3784, 0, 0, 18794, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17972, 59317, -3192, 0, 0, 1294, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17871, 56822, -3768, 0, 0, 7379, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17760, 57407, -3712, 0, 0, 23683, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17746, 55742, -3672, 0, 0, 10308, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17696, 47551, -3136, 0, 0, 28546, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17509, 53812, -3776, 0, 0, 13557, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17492, 55573, -3680, 0, 0, 64600, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17485, 58863, -3688, 0, 0, 3422, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17316, 49447, -3768, 0, 0, 16804, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17283, 49824, -3736, 0, 0, 20717, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17218, 55069, -3776, 0, 0, 55286, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17193, 53512, -3728, 0, 0, 17693, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17181, 56327, -3768, 0, 0, 47099, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -17172, 47197, -3760, 0, 0, 56067, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16949, 57594, -3680, 0, 0, 24674, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16943, 49420, -3768, 0, 0, 33190, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16834, 58055, -3680, 0, 0, 6861, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16793, 46310, -3768, 0, 0, 11305, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16763, 54857, -3744, 0, 0, 64963, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16735, 48153, -3768, 0, 0, 27274, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16674, 56581, -3696, 0, 0, 30008, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16667, 55811, -3720, 0, 0, 57267, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16652, 49798, -3768, 0, 0, 44036, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16561, 52013, -3680, 0, 0, 63766, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16445, 53617, -3760, 0, 0, 5045, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16236, 53932, -3688, 0, 0, 12560, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -16204, 48149, -3768, 0, 0, 31751, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15831, 48448, -3768, 0, 0, 44773, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15702, 52278, -3704, 0, 0, 6968, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15373, 53872, -3696, 0, 0, 57234, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15332, 55555, -3712, 0, 0, 45403, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15323, 50120, -3760, 0, 0, 58928, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15300, 48169, -3760, 0, 0, 18545, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15276, 53932, -3704, 0, 0, 3397, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15231, 52453, -3728, 0, 0, 49778, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15222, 53357, -3680, 0, 0, 20868, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15212, 48199, -3760, 0, 0, 49431, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15202, 55519, -3720, 0, 0, 62148, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -15085, 48448, -3760, 0, 0, 2927, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -14711, 53321, -3680, 0, 0, 13093, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -14336, 53302, -3688, 0, 0, 8302, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -14060, 52990, -3688, 0, 0, 56052, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -13848, 52169, -3760, 0, 0, 37357, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -12777, 52437, -3672, 0, 0, 9671, 30, 30, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -13824, 50120, -3669, 0, 0, 19739, 60, 0, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -13433, 52883, -3681, 0, 0, 40265, 60, 0, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -12635, 48361, -3743, 0, 0, 17669, 60, 0, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -12432, 52956, -3711, 0, 0, 27414, 60, 0, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -12362, 49420, -3767, 0, 0, 16887, 60, 0, 0, 0), -- Swamp Assassin
+('bloody_swampland', 1, 23169, -11718, 48787, -3708, 0, 0, 6897, 60, 0, 0, 0); -- Swamp Assassin
+INSERT INTO `spawnlist` VALUES
 ('bloody_swampland', 1, 23170, -26918, 54506, -3752, 0, 0, 34095, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -26406, 55372, -3760, 0, 0, 278, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -25276, 53753, -3704, 0, 0, 8608, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -25225, 54004, -3704, 0, 0, 5875, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -24965, 56885, -3696, 0, 0, 49144, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -24207, 50836, -3776, 0, 0, 38917, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -24129, 50889, -3776, 0, 0, 5042, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23867, 50530, -3752, 0, 0, 49075, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23772, 59242, -3760, 0, 0, 11756, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23736, 50965, -3776, 0, 0, 55796, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23537, 50642, -3760, 0, 0, 53550, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23392, 57343, -3768, 0, 0, 30808, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23210, 59394, -3760, 0, 0, 18431, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23194, 58117, -3696, 0, 0, 1922, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -23040, 57737, -2960, 0, 0, 52755, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -22714, 58450, -3776, 0, 0, 10589, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -22265, 51508, -3768, 0, 0, 28452, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -22142, 52435, -3656, 0, 0, 29362, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20923, 56870, -3768, 0, 0, 15144, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20801, 55808, -3744, 0, 0, 38567, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20438, 58046, -3704, 0, 0, 59741, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20418, 55276, -3736, 0, 0, 26289, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20273, 52965, -3760, 0, 0, 34052, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20238, 53318, -3760, 0, 0, 20071, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -20189, 52896, -3760, 0, 0, 34405, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19909, 55359, -3200, 0, 0, 65121, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19876, 51616, -2920, 0, 0, 29100, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19810, 49161, -3680, 0, 0, 48805, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19757, 49860, -3664, 0, 0, 23630, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19632, 55793, -3784, 0, 0, 33990, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19217, 56341, -3680, 0, 0, 19367, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19139, 60820, -3640, 0, 0, 49034, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19125, 60632, -3648, 0, 0, 49732, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -19094, 60826, -3640, 0, 0, 48923, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -18867, 55837, -3760, 0, 0, 7391, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -18682, 52615, -3784, 0, 0, 25729, 30, 30, 0, 0), -- Swamp Watcher
+('bloody_swampland', 1, 23170, -17921, 55567, -3688, 0, 0, 27571, 30, 30, 0, 0); -- Swamp Watcher
+INSERT INTO `spawnlist` VALUES
 ('bloody_swampland', 1, 23171, -16263, 47497, -3760, 0, 0, 45354, 30, 30, 0, 0), -- Corpse Collector
 ('bloody_swampland', 1, 23171, -16597, 46865, -3760, 0, 0, 43193, 30, 30, 0, 0), -- Corpse Collector
 ('bloody_swampland', 1, 23171, -19273, 54994, -3768, 0, 0, 18422, 30, 30, 0, 0), -- Corpse Collector
