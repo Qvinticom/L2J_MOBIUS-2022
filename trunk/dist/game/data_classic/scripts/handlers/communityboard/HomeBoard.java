@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.network.serverpackets.ShowBoard;
 
 /**
  * Home board.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public final class HomeBoard implements IParseBoardHandler
 {
@@ -66,10 +66,18 @@ public final class HomeBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
-		if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_COMBAT_DISABLED && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP)))
+		if (Config.CUSTOM_CB_ENABLED)
 		{
-			activeChar.sendMessage("You can't use the Community Board right now.");
-			return false;
+			if (Config.COMMUNITYBOARD_COMBAT_DISABLED && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP)))
+			{
+				activeChar.sendMessage("You can't use the Community Board right now.");
+				return false;
+			}
+			if (Config.COMMUNITYBOARD_KARMA_DISABLED && (activeChar.getKarma() > 0))
+			{
+				activeChar.sendMessage("Players with Karma cannot use the Community Board.");
+				return false;
+			}
 		}
 		
 		if (command.equals("_bbshome") || command.equals("_bbstop"))
