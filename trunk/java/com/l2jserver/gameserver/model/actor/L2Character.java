@@ -5006,7 +5006,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					// Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
 					double reflectPercent = target.getStat().calcStat(Stats.REFLECT_DAMAGE_PERCENT, 0, null, null);
-					
 					if (reflectPercent > 0)
 					{
 						reflectedDamage = (int) ((reflectPercent / 100.) * damage);
@@ -5015,6 +5014,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						{
 							reflectedDamage = target.getMaxHp();
 						}
+					}
+					
+					// Reflect resistance
+					double reflectResistance = target.getStat().calcStat(Stats.REFLECT_DAMAGE_RESISTANCE, 0, null, null);
+					if (reflectResistance > 0)
+					{
+						reflectedDamage -= reflectResistance;
 					}
 				}
 			}
@@ -6472,13 +6478,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void reduceCurrentHp(double i, L2Character attacker, boolean awake, boolean isDOT, Skill skill)
 	{
+		// Damage modifier
+		final double damage = getStat().calcStat(Stats.RECEIVED_DAMAGE_MODIFIER, i, null, null);
+		
 		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && (Config.L2JMOD_CHAMPION_HP != 0))
 		{
-			getStatus().reduceHp(i / Config.L2JMOD_CHAMPION_HP, attacker, awake, isDOT, false);
+			getStatus().reduceHp((damage / Config.L2JMOD_CHAMPION_HP), attacker, awake, isDOT, false);
 		}
 		else
 		{
-			getStatus().reduceHp(i, attacker, awake, isDOT, false);
+			getStatus().reduceHp(damage, attacker, awake, isDOT, false);
 		}
 	}
 	

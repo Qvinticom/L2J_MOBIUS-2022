@@ -313,11 +313,13 @@
 			<xs:enumeration value="transDamToPlayer" />
 			<xs:enumeration value="vengeancePdam" />
 			<xs:enumeration value="physicalSkillPower" />
+			<xs:enumeration value="physicalSkillPowerAdd" />
 			<xs:enumeration value="vengeanceMdam" />
 			<xs:enumeration value="maxSouls" />
 			<xs:enumeration value="BowMpConsumeRate" />
 			<xs:enumeration value="fishingExpertise" />
 			<xs:enumeration value="mCritPower" />
+			<xs:enumeration value="mCritPowerAdd" />
 			<xs:enumeration value="maxRecoverableCp" />
 			<xs:enumeration value="maxRecoverableHp" />
 			<xs:enumeration value="whLimit" />
@@ -384,6 +386,8 @@
 			<xs:enumeration value="waterRes" />
 			<xs:enumeration value="windRes" />
 			<xs:enumeration value="magicSuccRes" />
+			<xs:enumeration value="reflectDamageRes" />
+			<xs:enumeration value="receivedDamageModifier" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">

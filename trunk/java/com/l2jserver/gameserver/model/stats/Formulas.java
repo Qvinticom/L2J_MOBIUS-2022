@@ -827,6 +827,13 @@ public final class Formulas
 				}
 			}
 		}
+		
+		// Physical skill dmg add
+		if (skill != null)
+		{
+			damage += attacker.calcStat(Stats.PHYSICAL_SKILL_POWER_ADD, 0, null, null);
+		}
+		
 		return damage;
 	}
 	
@@ -936,6 +943,13 @@ public final class Formulas
 				}
 			}
 		}
+		
+		// Magical Crit dmg add
+		if (mcrit)
+		{
+			damage += attacker.calcStat(Stats.MAGIC_CRIT_DMG_ADD, 0, null, null);
+		}
+		
 		return damage;
 	}
 	

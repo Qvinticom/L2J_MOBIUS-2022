@@ -915,10 +915,9 @@
 		<set name="reuseDelay" val="1200000" />
 	</skill>
 	<skill id="17978" levels="1" name="Equip Talisman - Insanity">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman pulsates with power. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
 	</skill>

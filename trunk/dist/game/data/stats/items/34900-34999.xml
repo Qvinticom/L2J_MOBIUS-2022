@@ -572,7 +572,18 @@
 		<!-- Increases Max HP/MP/CP by 100, P. Accuracy and M. Accuracy by 1, P. Evasion and M. Evasion by 1 Vampiric Rage Effect by 2%, and Atk. Spd. and Casting Spd. by 10. -->
 		<set name="icon" val="icon.accessory_immortal_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="13384-1" />
+		<set name="item_skill" val="8864-1" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="34985" name="Talisman - Destruction" additionalName="" type="Armor">
 		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
@@ -586,6 +597,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="13385-1" />
 		<set name="item_skill" val="8864-2" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -593,25 +605,69 @@
 		<!-- Increases Max HP/MP/CP by 300, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 3%, Atk. Spd. and Casting Spd. by 20, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="13386-1" />
+		<set name="item_skill" val="8864-3" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="34987" name="Talisman - Hellfire" additionalName="" type="Armor">
 		<!-- When equipped, increases Max HP, MP, and CP by 400, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 30, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, M. Atk. by 156, Skill Power by 1%, Damage Reflect Resistance by 10, and P. and M. Def. by 20. -->
 		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="13387-1" />
+		<set name="item_skill" val="8864-4" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="34988" name="Talisman - Desire" additionalName="" type="Armor">
 		<!-- When equipped, increases Max HP, MP, and CP by 500, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 40, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 203, M. Atk. by 256, Skill Power by 2%, Damage Reflect Resistance by 20, and P. and M. Def. by 40. MP consumption decreases by 1%. -->
 		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="13388-1" />
+		<set name="item_skill" val="8864-5" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="34989" name="Talisman - Longing" additionalName="" type="Armor">
 		<!-- When equipped, increases Max HP, MP, and CP by 600, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 50, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 303, M. Atk. by 356, Skill Power by 4%, Damage Reflect Resistance by 30, and P. M. Def. by 60, and STR/INT/CON/MEN/DEX/WIT by 2. MP consumption decreases by 3%. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="13389-1" />
+		<set name="item_skill" val="8864-6" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="34990" name="Corroded Weapon Fragment" additionalName="" type="EtcItem">
 		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->

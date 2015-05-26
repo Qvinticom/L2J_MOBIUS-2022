@@ -47,6 +47,7 @@ public enum Stats
 	POWER_ATTACK("pAtk"),
 	MAGIC_ATTACK("mAtk"),
 	PHYSICAL_SKILL_POWER("physicalSkillPower"),
+	PHYSICAL_SKILL_POWER_ADD("physicalSkillPowerAdd"),
 	POWER_ATTACK_SPEED("pAtkSpd"),
 	MAGIC_ATTACK_SPEED("mAtkSpd"), // Magic Skill Casting Time Rate
 	ATK_REUSE("atkReuse"), // Bows Hits Reuse Rate
@@ -57,6 +58,7 @@ public enum Stats
 	CRITICAL_DAMAGE("cAtk"),
 	CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
 	MAGIC_CRIT_DMG("mCritPower"),
+	MAGIC_CRIT_DMG_ADD("mCritPowerAdd"),
 	
 	// PVP BONUS
 	PVP_PHYSICAL_DMG("pvpPhysDmg"),
@@ -147,6 +149,7 @@ public enum Stats
 	REFLECT_DAMAGE_PERCENT("reflectDam"),
 	REFLECT_SKILL_MAGIC("reflectSkillMagic"),
 	REFLECT_SKILL_PHYSIC("reflectSkillPhysic"),
+	REFLECT_DAMAGE_RESISTANCE("reflectDamageRes"),
 	VENGEANCE_SKILL_MAGIC_DAMAGE("vengeanceMdam"),
 	VENGEANCE_SKILL_PHYSICAL_DAMAGE("vengeancePdam"),
 	ABSORB_DAMAGE_PERCENT("absorbDam"),
@@ -154,6 +157,7 @@ public enum Stats
 	MANA_SHIELD_PERCENT("manaShield"),
 	TRANSFER_DAMAGE_TO_PLAYER("transDamToPlayer"),
 	ABSORB_MANA_DAMAGE_PERCENT("absorbDamMana"),
+	RECEIVED_DAMAGE_MODIFIER("receivedDamageModifier"),
 	
 	WEIGHT_LIMIT("weightLimit"),
 	WEIGHT_PENALTY("weightPenalty"),

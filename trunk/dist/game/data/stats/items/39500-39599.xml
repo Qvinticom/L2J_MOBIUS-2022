@@ -381,7 +381,18 @@
 		<!-- Max HP/MP/CP + 800, P./M. Accuracy + 2, P./M. Evasion + 2, Atk./Casting Spd. + 60, P. Critical Rate + 30, M. Critical Rate + 10, P. Atk. + 638, M. Atk. + 742, Skill Power + 5%, Damage Reflect Resistance + 30, P. Def. + 563, M. Def. + 368, Fixed Damage Resistance + 10%, Vampiric Rage + 5, STR/INT/CON/MEN/DEX/WIT/CHA/LUC + 2. Skill MP Consumption - 3%, Skill Cooldown - 3%. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="equip_skill" val="17978-1" />
+		<set name="item_skill" val="8864-7" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="39573" name="Sealed Talisman - Insanity" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Insanity. Cannot be exchanged, dropped, or sold in a private store once open. Lv. 85 or above. -->

@@ -448,14 +448,75 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="8864" levels="7" name="Talisman - Infinity">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max HP/MP/CP by 100, P. Accuracy and M. Accuracy by 1, P. Evasion and M. Evasion by 1, Vampiric Rage by 2%, and Atk. Spd. And Casting Spd. By 10 when equipped. -->
+	<skill id="8864" levels="7" name="Talisman">
+		<!-- Level 1 : Talisman - Infinity : Increases Max HP/MP/CP by 100, P. Accuracy and M. Accuracy by 1, P. Evasion and M. Evasion by 1, Vampiric Rage by 2%, and Atk. Spd. And Casting Spd. By 10 when equipped. -->
+		<!-- Level 2 : Talisman - Destruction : Increases Max HP/MP/CP by 100, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage by 2%, Atk. Spd. And Casting Spd. By 10, P. Critical Rate by 30, and M. Critical Rate by 10 when equipped. -->
+		<!-- Level 3 : Talisman - Annihilation : Increases Max HP/MP/CP by 300, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage by 3%, Atk. Spd. And Casting Spd. By 20, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. By 103, and M. Atk. by 156 when equipped. -->
+		<!-- Level 4 : Talisman - Hellfire : Increases Max HP/MP/CP by 400, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage by 3%, Atk. Spd. And Casting Spd. By 30, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. By 103, M. Atk. by 156, Skill Attacks by 1%, Damage Reflect Resistance by 10, and P. Def. and M. Def. by 20 when equipped. -->
+		<!-- Level 5 : Talisman - Desire : Increases Max HP/MP/CP by 500, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage by 3%, Atk. Spd. And Casting Spd. By 40, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. By 203, M. Atk. by 256, Skill Attacks by 2%, Damage Reflect Resistance by 20, and P. Def. and M. Def. by 40, and decreases MP Consumption for skills by 1%  when equipped. -->
+		<!-- Level 6 : Talisman - Longing : Increases Max HP/MP/CP by 600, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage by 3%, Atk. Spd. And Casting Spd. By 50, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. By 303, M. Atk. by 356, Skill Attacks by 4%, Damage Reflect Resistance by 30, P. Def. and M. Def. by 60, and STR/INT/CON/MEN/DEX/WIT by 2, and decreases MP Consumption for skills by 3%  when equipped. -->
+		<!-- Level 7 : Talisman - Insanity : Max HP/MP/CP + 800, P./M. Accuracy + 2, P./M. Evasion + 2, Vampiric Rage + 5,  Atk. Spd. + 60, Casting Spd. + 60, P. Critical Rate + 30, M. Critical Rate + 10, P. Atk. + 638, M. Atk. + 742, Skill Power + 5%, Damage Reflect Resistance + 30, P. Def. + 563, M. Def. + 368, All Stats + 2, and Fixed Damage Resistance + 10%. Skill MP Consumption - 3%, and Skill Cooldown - 3%. -->
 		<table name="#icons"> icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.accessory_punishment_talisman_i01 </table>
+		<table name="#abnormalVisualEffect"> TALISMAN_DECO_DARK_PURPLE TALISMAN_DECO_DARK_PURPLE TALISMAN_DECO_GOLD TALISMAN_DECO_ORANGE TALISMAN_DECO_BLUE TALISMAN_DECO_LIGHT_PURPLE TALISMAN_DECO_DARK_PURPLE </table>
+		<table name="#maxHpMpCp"> 100 100 300 400 500 600 800 </table>
+		<table name="#addAccEvas"> 1 2 2 2 2 2 2 </table>
+		<table name="#absorbDam"> 2 2 3 3 3 3 5 </table>
+		<table name="#atkSpeed"> 10 10 20 30 40 50 60 </table>
+		<table name="#rCrit"> 0 30 30 30 30 30 30 </table>
+		<table name="#mCritRate"> 0 10 10 10 10 10 10 </table>
+		<table name="#pAtk"> 0 0 103 103 203 303 638 </table>
+		<table name="#mAtk"> 0 0 156 156 256 356 742 </table>
+		<table name="#physicalSkillPower"> 1 1 1 1.01 1.02 1.04 1.05 </table>
+		<table name="#reflectDamageRes"> 0 0 0 10 20 30 30 </table>
+		<table name="#pDef"> 0 0 0 20 40 60 563 </table>
+		<table name="#mDef"> 0 0 0 20 40 60 368 </table>
+		<table name="#mpConsumeRate"> 1 1 1 1 0.99 0.97 0.97 </table>
+		<table name="#statAdd"> 0 0 0 0 0 2 2 </table>
+		<table name="#statAdd2"> 0 0 0 0 0 0 2 </table>
+		<table name="#receivedDamageModifier"> 1 1 1 1 1 1 0.9 </table>
+		<table name="#reuse"> 1 1 1 1 1 1 0.97 </table>
 		<set name="icon" val="#icons" />
+		<set name="abnormalVisualEffect" val="#abnormalVisualEffect" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxCp" val="#maxHpMpCp" />
+				<add stat="maxCp" val="#maxHpMpCp" />
+				<add stat="maxCp" val="#maxHpMpCp" />
+				<add stat="accCombat" val="#addAccEvas" />
+				<add stat="accMagic" val="#addAccEvas" />
+				<add stat="pSkillEvas" val="#addAccEvas" />
+				<add stat="mEvas" val="#addAccEvas" />
+				<add stat="absorbDam" val="#absorbDam" />
+				<add stat="pAtkSpd" val="#atkSpeed" />
+				<add stat="mAtkSpd" val="#atkSpeed" />
+				<add stat="rCrit" val="#rCrit" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<add stat="pAtk" val="#pAtk" />
+				<add stat="mAtk" val="#mAtk" />
+				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
+				<add stat="reflectDamageRes" val="#reflectDamageRes" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="mDef" val="#mDef" />
+				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<add stat="STR" val="#statAdd" />
+				<add stat="INT" val="#statAdd" />
+				<add stat="CON" val="#statAdd" />
+				<add stat="MEN" val="#statAdd" />
+				<add stat="WIT" val="#statAdd" />
+				<add stat="DEX" val="#statAdd" />
+				<add stat="LUC" val="#statAdd2" />
+				<add stat="CHA" val="#statAdd2" />
+				<mul stat="receivedDamageModifier" val="#receivedDamageModifier" />
+				<mul stat="pReuse" val="#reuse" />
+				<mul stat="mReuse" val="#reuse" />
+				<mul stat="dReuse" val="#reuse" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8870" levels="1" name="Tauti's Ring">
 		<!-- AUTO GENERATED SKILL -->
