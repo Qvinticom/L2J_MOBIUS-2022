@@ -6880,25 +6880,16 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="197" max="391" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.8220000267028809">
-					<item id="848" min="1" max="1" chance="4.7174" /> <!-- Enchanted Earring -->
-					<item id="911" min="1" max="1" chance="3.5407" /> <!-- Enchanted Necklace -->
-					<item id="1900" min="1" max="1" chance="84.6442" /> <!-- Enchanted Necklace Chain -->
-					<item id="879" min="1" max="1" chance="7.0977" /> <!-- Enchanted Ring -->
-				</group>
-				<group chance="19.124799728393555">
-					<item id="1871" min="1" max="1" chance="22.167" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="14.778" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="0.8867" /> <!-- Adamantite Nugget -->
-					<item id="955" min="1" max="1" chance="0.0887" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="2193" min="1" max="1" chance="2.9675" /> <!-- Recipe: Boots of Power -->
-					<item id="1831" min="1" max="1" chance="59.1121" /> <!-- Antidote -->
-				</group>
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="2.500" /> <!-- Major Healing Potion -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="1831" min="1" max="1" chance="11" /> <!-- Antidote -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6932,15 +6923,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1061" min="1" max="1" chance="28.2105" /> <!-- Greater Healing Potion -->
-				<item id="348" min="1" max="1" chance="0.0908" /> <!-- Scale Mail -->
-				<item id="2153" min="1" max="1" chance="7.2391" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="36531" min="1" max="1" chance="2.950" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
 	</npc>
 	<npc id="20076" level="29" type="L2Monster" name="Ol Mahum Commander">
 		<parameters>
@@ -7314,26 +7301,14 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="224" max="448" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9376000165939331">
-					<item id="848" min="1" max="1" chance="4.7174" /> <!-- Enchanted Earring -->
-					<item id="911" min="1" max="1" chance="3.5407" /> <!-- Enchanted Necklace -->
-					<item id="1900" min="1" max="1" chance="84.6442" /> <!-- Enchanted Necklace Chain -->
-					<item id="879" min="1" max="1" chance="7.0977" /> <!-- Enchanted Ring -->
-				</group>
-				<group chance="14.697199821472168">
-					<item id="1872" min="1" max="1" chance="37.6047" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="37.6047" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="3.7605" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="1.8802" /> <!-- Stone of Purity -->
-					<item id="2183" min="1" max="1" chance="1.8555" /> <!-- Recipe: Mithril Banded Mail -->
-					<item id="2278" min="1" max="1" chance="0.2015" /> <!-- Recipe: Reinforced Long Bow -->
-					<item id="1061" min="1" max="1" chance="17.0929" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7367,15 +7342,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1866" min="1" max="1" chance="35.3985" /> <!-- Suede -->
-				<item id="2266" min="1" max="1" chance="0.5491" /> <!-- Recipe: Shilen Knife -->
-				<item id="1881" min="1" max="1" chance="7.0797" /> <!-- Coarse Bone Powder -->
+				<item id="36531" min="1" max="1" chance="2.950" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="20080" level="31" type="L2Monster" name="Ant Captain">
 		<parameters>
@@ -7423,22 +7394,14 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="243" max="485" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.01269999984651804">
-					<item id="259" min="1" max="1" chance="100" /> <!-- Single-Edged Jamadhr -->
-				</group>
-				<group chance="21.774499893188477">
-					<item id="1864" min="1" max="1" chance="48.1303" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="24.0652" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="9.6261" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="14.8093" /> <!-- Cord -->
-					<item id="737" min="1" max="1" chance="2.4065" /> <!-- Scroll of Resurrection -->
-					<item id="6387" min="1" max="1" chance="0.9626" /> <!-- Blessed Scroll of Resurrection for Pets -->
-				</group>
+				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7472,15 +7435,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2268" min="1" max="1" chance="0.595" /> <!-- Recipe: Tome of Blood -->
-				<item id="2021" min="1" max="1" chance="0.7264" /> <!-- Spinebone Sword Blade -->
-				<item id="1878" min="1" max="1" chance="23.0138" /> <!-- Braided Hemp -->
+				<item id="36531" min="1" max="1" chance="2.950" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="20081" level="32" type="L2Monster" name="Ant Overseer">
 		<parameters>
@@ -7531,26 +7490,15 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="406" max="814" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.6998000144958496">
-					<item id="848" min="1" max="1" chance="4.7174" /> <!-- Enchanted Earring -->
-					<item id="911" min="1" max="1" chance="3.5407" /> <!-- Enchanted Necklace -->
-					<item id="1900" min="1" max="1" chance="84.6442" /> <!-- Enchanted Necklace Chain -->
-					<item id="879" min="1" max="1" chance="7.0977" /> <!-- Enchanted Ring -->
-				</group>
-				<group chance="9.064200401306152">
-					<item id="1874" min="1" max="1" chance="5.527" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="33.1619" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="51.0184" /> <!-- Cord -->
-					<item id="1889" min="1" max="1" chance="5.527" /> <!-- Compound Braid -->
-					<item id="5220" min="1" max="1" chance="3.3162" /> <!-- Metal Hardener -->
-					<item id="2267" min="1" max="1" chance="0.8573" /> <!-- Recipe: Gastraphetes -->
-					<item id="2274" min="1" max="1" chance="0.5922" /> <!-- Recipe: Skull Breaker -->
-				</group>
+				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="7.550" /> <!-- Major Healing Potion -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7584,15 +7532,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1061" min="1" max="1" chance="58.34" /> <!-- Greater Healing Potion -->
-				<item id="1933" min="1" max="1" chance="11.3248" /> <!-- Dark Stockings Fabric -->
-				<item id="1061" min="1" max="1" chance="58.34" /> <!-- Greater Healing Potion -->
+				<item id="36531" min="1" max="1" chance="2.950" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="20082" level="33" type="L2Monster" name="Ant Recruit">
 		<parameters>
@@ -7642,30 +7586,15 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="245" max="491" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.7936000227928162">
-					<item id="553" min="1" max="1" chance="2.8426" /> <!-- Iron Boots -->
-					<item id="1940" min="1" max="1" chance="82.9444" /> <!-- Iron Boots Design -->
-					<item id="2422" min="1" max="1" chance="2.8426" /> <!-- Reinforced Leather Boots -->
-					<item id="2423" min="1" max="1" chance="2.8426" /> <!-- Boots of Knowledge -->
-					<item id="63" min="1" max="1" chance="2.8426" /> <!-- Gauntlets -->
-					<item id="2446" min="1" max="1" chance="2.8426" /> <!-- Reinforced Leather Gloves -->
-					<item id="2447" min="1" max="1" chance="2.8426" /> <!-- Gloves of Knowledge -->
-				</group>
-				<group chance="6.6356000900268555">
-					<item id="1875" min="1" max="1" chance="3.8769" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="9.6921" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="4.8461" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="0.7754" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="5.8153" /> <!-- Metallic Thread -->
-					<item id="2154" min="1" max="1" chance="6.2262" /> <!-- Recipe: Elven Earring -->
-					<item id="2190" min="1" max="1" chance="4.1538" /> <!-- Recipe: Mithril Stockings -->
-					<item id="1832" min="1" max="1" chance="64.6142" /> <!-- Greater Antidote -->
-				</group>
+				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
+				<item id="1832" min="1" max="1" chance="8.620" /> <!-- Greater Antidote -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7699,15 +7628,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1884" min="1" max="1" chance="35.7298" /> <!-- Cord -->
-				<item id="2275" min="1" max="1" chance="0.4147" /> <!-- Recipe: Heavy Bone Club -->
-				<item id="1901" min="1" max="1" chance="8.0195" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="3.600" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="20084" level="34" type="L2Monster" name="Ant Patrol">
 		<parameters>
@@ -7758,25 +7683,14 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="280" max="558" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1459999978542328">
-					<item id="628" min="1" max="1" chance="58.8353" /> <!-- Hoplon -->
-					<item id="47" min="1" max="1" chance="41.1647" /> <!-- Helmet -->
-				</group>
-				<group chance="18.00589942932129">
-					<item id="1876" min="1" max="1" chance="4.8906" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="2.4453" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="0.9781" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="3.2604" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="5.434" /> <!-- Leather -->
-					<item id="2269" min="1" max="1" chance="0.1747" /> <!-- Recipe: Morning Star -->
-					<item id="2971" min="1" max="1" chance="1.3076" /> <!-- Recipe: Mithril Scale Gaiters -->
-					<item id="1341" min="10" max="30" chance="81.5093" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7810,15 +7724,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1885" min="1" max="1" chance="5.5207" /> <!-- High-Grade Suede -->
-				<item id="2978" min="1" max="1" chance="8.8686" /> <!-- Recipe: Elven Mithril Boots -->
-				<item id="1938" min="1" max="1" chance="4.4537" /> <!-- Mithril Banded Mail Material -->
+				<item id="36531" min="1" max="1" chance="4.050" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="20085" level="34" type="L2Monster" name="Puncher">
 		<parameters>
@@ -7987,24 +7897,14 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="248" max="496" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06949999928474426">
-					<item id="436" min="1" max="1" chance="38.4858" /> <!-- Tunic of Knowledge -->
-					<item id="469" min="1" max="1" chance="61.5142" /> <!-- Stockings of Knowledge -->
-				</group>
-				<group chance="5.581900119781494">
-					<item id="1874" min="1" max="1" chance="5.3362" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="32.017" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="49.2569" /> <!-- Cord -->
-					<item id="1889" min="1" max="1" chance="5.3362" /> <!-- Compound Braid -->
-					<item id="5220" min="1" max="1" chance="3.2017" /> <!-- Metal Hardener -->
-					<item id="2972" min="1" max="1" chance="4.2803" /> <!-- Recipe: Brigandine Gaiters -->
-					<item id="8307" min="1" max="1" chance="0.5717" /> <!-- Recipe: Priest Mace (100%) -->
-				</group>
+				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8038,15 +7938,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="3" chance="58.8224" /> <!-- Thread -->
-				<item id="469" min="1" max="1" chance="0.1607" /> <!-- Stockings of Knowledge -->
-				<item id="1939" min="1" max="1" chance="5.1667" /> <!-- Mithril Banded Gaiters Material -->
+				<item id="36531" min="1" max="1" chance="3.600" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="20087" level="35" type="L2Monster" name="Ant Soldier">
 		<parameters>
@@ -8319,27 +8215,14 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="24" />
+			<height normal="48" grown="57" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="276" max="551" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.1276999711990356">
-					<item id="395" min="1" max="1" chance="0.8713" /> <!-- Manticore Skin Shirt -->
-					<item id="1942" min="1" max="1" chance="38.2206" /> <!-- Manticore Skin Shirt Texture -->
-					<item id="417" min="1" max="1" chance="1.3915" /> <!-- Manticore Skin Gaiters -->
-					<item id="1943" min="1" max="1" chance="59.5166" /> <!-- Manticore Skin Gaiters Pattern -->
-				</group>
-				<group chance="2.475800037384033">
-					<item id="1875" min="1" max="1" chance="11.3769" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="28.4422" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="14.2211" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="2.2754" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="17.0653" /> <!-- Metallic Thread -->
-					<item id="1825" min="1" max="1" chance="12.1895" /> <!-- Recipe: Oriharukon -->
-					<item id="2205" min="1" max="1" chance="5.4004" /> <!-- Recipe: Chain Gaiters -->
-					<item id="2989" min="1" max="1" chance="9.0292" /> <!-- Recipe: Chain Hood -->
-				</group>
+				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8373,15 +8256,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1884" min="1" max="1" chance="40.2384" /> <!-- Cord -->
-				<item id="2159" min="1" max="1" chance="4.0363" /> <!-- Recipe: Necklace of Darkness -->
-				<item id="1902" min="1" max="1" chance="6.6249" /> <!-- Elven Earring Beads -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="24" />
-			<height normal="48" grown="57" />
-		</collision>
 	</npc>
 	<npc id="20090" level="38" type="L2Monster" name="Noble Ant Captain">
 		<parameters>
@@ -8432,29 +8311,14 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="24" />
+			<height normal="48" grown="57" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="608" max="1214" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.0088999271392822">
-					<item id="352" min="1" max="1" chance="0.5372" /> <!-- Brigandine Tunic -->
-					<item id="1941" min="1" max="1" chance="24.5361" /> <!-- Brigandine Temper -->
-					<item id="2377" min="1" max="1" chance="0.8593" /> <!-- Mithril Scale Gaiters -->
-					<item id="2918" min="1" max="1" chance="36.6041" /> <!-- Mithril Scale Gaiters Material -->
-					<item id="2378" min="1" max="1" chance="0.8593" /> <!-- Brigandine Gaiters -->
-					<item id="2919" min="1" max="1" chance="36.604" /> <!-- Brigandine Gaiters Material -->
-				</group>
-				<group chance="39.26580047607422">
-					<item id="1876" min="1" max="1" chance="4.7348" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="2.3674" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="0.947" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="3.1565" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="5.2608" /> <!-- Leather -->
-					<item id="2158" min="1" max="1" chance="2.9299" /> <!-- Recipe: Mithril Ring -->
-					<item id="5472" min="1" max="1" chance="1.691" /> <!-- Recipe: Metallic Thread(100%) -->
-					<item id="1341" min="10" max="30" chance="78.9126" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="24" max="57" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -8488,15 +8352,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2197" min="1" max="1" chance="3.016" /> <!-- Recipe: Salamander Skin Mail -->
-				<item id="1868" min="1" max="7" chance="71.9317" /> <!-- Thread -->
-				<item id="1825" min="1" max="1" chance="10.276" /> <!-- Recipe: Oriharukon -->
+				<item id="36531" min="1" max="1" chance="9" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="24" />
-			<height normal="48" grown="57" />
-		</collision>
 	</npc>
 	<npc id="20091" level="1" type="L2Monster" name="Young Fox">
 		<parameters>

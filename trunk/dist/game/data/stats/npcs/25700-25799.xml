@@ -210,7 +210,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3429146" sp="822" raidPoints="442" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="402092.518544389" hpRegen="172.748301603872" mp="15408.0" mpRegen="300" />
+			<vitals hp="957383" hpRegen="172.748301603872" mp="15408.0" mpRegen="300" />
 			<attack physical="9037.418752" magical="896.946049858317" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="971.35365" magical="473.86" evasion="-18" />
 			<attribute>
@@ -243,28 +243,22 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="0.9563999772071838">
-					<item id="6364" min="1" max="1" chance="50" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="50" /> <!-- Heaven's Divider -->
-				</group>
-				<group chance="1.4347000122070312">
-					<item id="6366" min="1" max="1" chance="25" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="25" /> <!-- Dragon Hunter Axe -->
-					<item id="6365" min="1" max="1" chance="25" /> <!-- Basalt Battlehammer -->
-					<item id="6579" min="1" max="1" chance="25" /> <!-- Arcana Mace -->
-				</group>
-				<group chance="43.737098693847656">
-					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="31" />
 			<height normal="51.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
+				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
+				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
+				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
+				<item id="959" min="1" max="1" chance="7.750" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25704" level="75" type="L2Monster" name="Gigantic Golem Subordinate" title="Chaos">
 		<parameters>
