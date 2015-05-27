@@ -637,13 +637,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13272" levels="1" name="Dual Blunt Weapon Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13272" levels="3" name="Dual Blunt Weapon Special Ability">
 		<!-- P. Atk. + 54 and Skill Power + 118. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="54" />
+				<add stat="physicalSkillPowerAdd" val="118" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13273" levels="1" name="Dual Blunt Weapon Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -811,13 +816,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13292" levels="1" name="Bow Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13292" levels="3" name="Bow Special Ability">
 		<!-- P. Skill Power + 338. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="physicalSkillPowerAdd" val="338" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13293" levels="1" name="Bow Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -876,12 +885,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13299" levels="1" name="Magic One-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13299" levels="3" name="Magic One-handed Blunt Special Ability">
 		<!-- M. Critical Damage + 381 and M. Accuracy + 1. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritPowerAdd" val="381" />
+				<add stat="accMagic" val="1.0" />
+			</effect>
+		</for>
 	</skill>
 </list>
