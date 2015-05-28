@@ -20,7 +20,10 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Hills of Gold AI.
@@ -29,6 +32,10 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 public class HillsOfGold extends AbstractNpcAI
 {
 	// Npcs
+	private static final int GOLEM_OF_REPAIRS = 19309;
+	private static final int EXCAVATOR_GOLEM = 19312;
+	private static final int SPICULA_1 = 23246;
+	private static final int SPICULA_2 = 23247;
 	private static final int[] GOLEMS =
 	{
 		23255,
@@ -43,13 +50,43 @@ public class HillsOfGold extends AbstractNpcAI
 	public HillsOfGold()
 	{
 		super(HillsOfGold.class.getSimpleName(), "ai/group_template");
+		addSpawnId(SPICULA_1, SPICULA_2);
 		addSpawnId(GOLEMS);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("SPICULA_AGGRO") && (npc != null) && !npc.isDead())
+		{
+			for (L2Character nearby : npc.getKnownList().getKnownCharactersInRadius(npc.getAggroRange()))
+			{
+				if (npc.isInCombat())
+				{
+					break;
+				}
+				if (nearby.isMonster() && ((nearby.getId() == GOLEM_OF_REPAIRS) || (nearby.getId() == EXCAVATOR_GOLEM)))
+				{
+					((L2MonsterInstance) npc).addDamage(nearby, 1, null);
+					break;
+				}
+			}
+			startQuestTimer("SPICULA_AGGRO", 10000, npc, null);
+		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		npc.setState(1);
+		if ((npc.getId() == SPICULA_1) || (npc.getId() == SPICULA_1))
+		{
+			startQuestTimer("SPICULA_AGGRO", 5000, npc, null);
+		}
+		else
+		{
+			npc.setState(1);
+		}
 		return super.onSpawn(npc);
 	}
 	
