@@ -166,7 +166,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (25378,-54096,84288,-3512,0,129600,86400,87696,426), -- Madness Beast (20)
 (25380,-47367,51548,-5904,0,129600,86400,90169,455), -- Kaysha Herald Of Icarus (21)
 (25383,51632,153920,-3552,0,129600,86400,156584,860), -- Revenant Of Sir Calibus (34)
-(25385,53600,143472,-3872,0,129600,86400,174646,927), -- Evil Spirit Tempest (36)
+-- (25385,53600,143472,-3872,0,129600,86400,174646,927), -- Evil Spirit Tempest (36) (Not spawned anymore in Ertheia)
 (25388,40128,101920,-1241,0,129600,86400,165289,893), -- Red Eye Captain Trakia (35)
 (25391,45600,120592,-2455,0,129600,86400,297015,827), -- Nurka's Messenger (33)
 (25392,29928,107160,-3708,0,129600,86400,141034,795), -- Captain Of Queen's Royal Guards (32)
