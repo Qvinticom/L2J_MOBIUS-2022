@@ -457,7 +457,6 @@
 		<!-- Level 6 : Talisman - Longing : Increases Max HP/MP/CP by 600, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage by 3%, Atk. Spd. And Casting Spd. By 50, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. By 303, M. Atk. by 356, Skill Attacks by 4%, Damage Reflect Resistance by 30, P. Def. and M. Def. by 60, and STR/INT/CON/MEN/DEX/WIT by 2, and decreases MP Consumption for skills by 3%  when equipped. -->
 		<!-- Level 7 : Talisman - Insanity : Max HP/MP/CP + 800, P./M. Accuracy + 2, P./M. Evasion + 2, Vampiric Rage + 5,  Atk. Spd. + 60, Casting Spd. + 60, P. Critical Rate + 30, M. Critical Rate + 10, P. Atk. + 638, M. Atk. + 742, Skill Power + 5%, Damage Reflect Resistance + 30, P. Def. + 563, M. Def. + 368, All Stats + 2, and Fixed Damage Resistance + 10%. Skill MP Consumption - 3%, and Skill Cooldown - 3%. -->
 		<table name="#icons"> icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.r85_talisman_pa_up_passive icon.accessory_punishment_talisman_i01 </table>
-		<table name="#abnormalVisualEffect"> TALISMAN_DECO_DARK_PURPLE TALISMAN_DECO_DARK_PURPLE TALISMAN_DECO_GOLD TALISMAN_DECO_ORANGE TALISMAN_DECO_BLUE TALISMAN_DECO_LIGHT_PURPLE TALISMAN_DECO_DARK_PURPLE </table>
 		<table name="#maxHpMpCp"> 100 100 300 400 500 600 800 </table>
 		<table name="#addAccEvas"> 1 2 2 2 2 2 2 </table>
 		<table name="#absorbDam"> 2 2 3 3 3 3 5 </table>
@@ -476,7 +475,6 @@
 		<table name="#receivedDamageModifier"> 1 1 1 1 1 1 0.9 </table>
 		<table name="#reuse"> 1 1 1 1 1 1 0.97 </table>
 		<set name="icon" val="#icons" />
-		<set name="abnormalVisualEffect" val="#abnormalVisualEffect" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />

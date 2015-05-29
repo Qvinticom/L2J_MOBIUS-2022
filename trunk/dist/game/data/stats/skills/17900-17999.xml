@@ -917,6 +917,7 @@
 	<skill id="17978" levels="1" name="Equip Talisman - Insanity">
 		<!-- The Talisman pulsates with power. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
+		<set name="abnormalVisualEffect" val="TALISMAN_DECO_DARK_PURPLE" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
