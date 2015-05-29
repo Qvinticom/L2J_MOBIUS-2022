@@ -467,13 +467,18 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="13253" levels="1" name="One-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13253" levels="3" name="One-handed Blunt Special Ability">
 		<!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="cAtkAdd" val="338" />
+				<add stat="accCombat" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13254" levels="1" name="One-handed Blunt Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -483,13 +488,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13255" levels="1" name="One-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13255" levels="3" name="One-handed Blunt Special Ability">
 		<!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="cAtkAdd" val="338" />
+				<add stat="accCombat" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13256" levels="3" name="One-handed Blunt Special Ability">
 		<!-- Accuracy + 3 and P. Critical Damage + 338. -->
@@ -499,8 +509,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="388" />
-				<add stat="accCombat" val="2" />
+				<add stat="cAtkAdd" val="338" />
+				<add stat="accCombat" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -512,13 +522,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13258" levels="1" name="Two-handed Sword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13258" levels="3" name="Two-handed Sword Special Ability">
 		<!-- P. Atk. + 96. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="96" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13259" levels="1" name="Two-handed Sword Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -528,13 +542,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13260" levels="1" name="Two-handed Sword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13260" levels="3" name="Two-handed Sword Special Ability">
 		<!-- P. Atk. + 96. -->
 		<set name="icon" val="icon.weapon_skia_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="96" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13261" levels="3" name="Two-handed Sword Special Ability">
 		<!-- P. Atk. + 96. -->
@@ -584,13 +602,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13266" levels="1" name="Fist Weapon Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13266" levels="3" name="Fist Weapon Special Ability">
 		<!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="18" />
+				<mul stat="pAtkSpd" val="1.034" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13267" levels="3" name="Fist Weapon Special Ability">
 		<!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
@@ -629,13 +652,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13271" levels="1" name="Dual Blunt Weapon Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13271" levels="3" name="Dual Blunt Weapon Special Ability">
 		<!-- P. Atk. + 54 and Skill Power + 118. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="54" />
+				<add stat="physicalSkillPowerAdd" val="118" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13272" levels="3" name="Dual Blunt Weapon Special Ability">
 		<!-- P. Atk. + 54 and Skill Power + 118. -->
@@ -658,13 +686,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13274" levels="1" name="Dualsword Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13274" levels="3" name="Dualsword Special Ability">
 		<!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="18" />
+				<add stat="rCrit" val="27" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13275" levels="1" name="Dualsword Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -703,13 +736,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13279" levels="1" name="Dagger Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13279" levels="3" name="Dagger Special Ability">
 		<!-- P. Critical Damage + 844. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="cAtkAdd" val="884" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13280" levels="1" name="Dagger Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -719,13 +756,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13281" levels="1" name="Dagger Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13281" levels="3" name="Dagger Special Ability">
 		<!-- P. Critical Damage + 844. -->
 		<set name="icon" val="icon.weapon_ignicion_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="cAtkAdd" val="884" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13282" levels="3" name="Dagger Special Ability">
 		<!-- P. Critical Damage + 844. -->
@@ -763,13 +804,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13286" levels="1" name="Dual Dagger Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13286" levels="3" name="Dual Dagger Special Ability">
 		<!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="pAtk" val="18" />
+				<add stat="cAtkAdd" val="506" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13287" levels="3" name="Dual Dagger Special Ability">
 		<!-- P. Atk. + 18 and P. Critical Damage + 506. -->
@@ -808,13 +854,17 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13291" levels="1" name="Bow Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13291" levels="3" name="Bow Special Ability">
 		<!-- P. Skill Power + 338. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="physicalSkillPowerAdd" val="338" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13292" levels="3" name="Bow Special Ability">
 		<!-- P. Skill Power + 338. -->
@@ -877,13 +927,18 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13298" levels="1" name="Magic One-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13298" levels="3" name="Magic One-handed Blunt Special Ability">
 		<!-- M. Critical Damage + 381 and M. Accuracy + 1. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritPowerAdd" val="381" />
+				<add stat="accMagic" val="1.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13299" levels="3" name="Magic One-handed Blunt Special Ability">
 		<!-- M. Critical Damage + 381 and M. Accuracy + 1. -->

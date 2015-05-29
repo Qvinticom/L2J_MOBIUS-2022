@@ -389,74 +389,144 @@
 		<set name="price" val="1035000" />
 	</item>
 	<item id="18171" name="Unidentified Specter Shaper" additionalName="" type="EtcItem">
-		<!-- A Specter Shaper in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="icon" val="icon.weapon_ignicion_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12080-1" />
 	</item>
 	<item id="18172" name="Unidentified Specter Cutter" additionalName="" type="EtcItem">
-		<!-- A Specter Cutter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_ninfea_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12081-1" />
 	</item>
 	<item id="18173" name="Unidentified Specter Slasher" additionalName="" type="EtcItem">
-		<!-- A Specter Slasher in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_skia_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12082-1" />
 	</item>
 	<item id="18174" name="Unidentified Specter Avenger" additionalName="" type="EtcItem">
-		<!-- A Specter Avenger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12083-1" />
 	</item>
 	<item id="18175" name="Unidentified Specter Fighter" additionalName="" type="EtcItem">
-		<!-- A Specter Fighter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / combat) -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12084-1" />
 	</item>
 	<item id="18176" name="Unidentified Specter Stormer" additionalName="" type="EtcItem">
-		<!-- A Specter Stormer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / spear) -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12085-1" />
 	</item>
 	<item id="18177" name="Unidentified Specter Thrower" additionalName="" type="EtcItem">
-		<!-- A Specter Thrower in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / bow) -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12086-1" />
 	</item>
 	<item id="18178" name="Unidentified Specter Shooter" additionalName="" type="EtcItem">
-		<!-- A Specter Shooter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / crossbow / bow) -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12087-1" />
 	</item>
 	<item id="18179" name="Unidentified Specter Buster" additionalName="" type="EtcItem">
-		<!-- A Specter Buster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_zihel_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12088-1" />
 	</item>
 	<item id="18180" name="Unidentified Specter Caster" additionalName="" type="EtcItem">
-		<!-- A Specter Caster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12089-1" />
 	</item>
 	<item id="18181" name="Unidentified Specter Retributer" additionalName="" type="EtcItem">
-		<!-- A Specter Retributer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="32828000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12090-1" />
 	</item>
 	<item id="18182" name="Unidentified Specter Dualsword" additionalName="" type="EtcItem">
-		<!-- A Specter Dualsword in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword) -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="39393600" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12091-1" />
 	</item>
 	<item id="18183" name="Unidentified Specter Dual Dagger" additionalName="" type="EtcItem">
-		<!-- A Specter Dual Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / dagger) -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="39393600" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12092-1" />
 	</item>
 	<item id="18184" name="Unidentified Specter Dual Blunt Weapon" additionalName="" type="EtcItem">
-		<!-- A Specter Dual Blunt Weapon in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / blunt) -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R95" />
 		<set name="price" val="39393600" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12093-1" />
 	</item>
 	<item id="18185" name="Unidentified Seraph Helmet" additionalName="Heavy Armor" type="EtcItem">
 		<!-- A Seraph Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / heavy armor) -->

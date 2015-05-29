@@ -24,13 +24,19 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="false" />
 	</skill>
-	<skill id="13303" levels="1" name="Magic Two-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13303" levels="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mAtk" val="44" />
+				<add stat="mCritPowerAdd" val="381" />
+				<mul stat="mAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13304" levels="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
