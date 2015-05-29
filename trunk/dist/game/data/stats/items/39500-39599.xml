@@ -385,7 +385,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -398,6 +397,11 @@
 		<!-- Double-click to obtain a Talisman - Insanity. Cannot be exchanged, dropped, or sold in a private store once open. Lv. 85 or above. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
 		<set name="weight" val="100" />
+		<set name="icon" val="icon.weapon_ignicion_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="17980-1" />
 	</item>
 	<item id="39574" name="Scroll of Escape: Town of Oren" additionalName="" type="EtcItem">
 		<!-- Teleports you to Town of Oren. -->

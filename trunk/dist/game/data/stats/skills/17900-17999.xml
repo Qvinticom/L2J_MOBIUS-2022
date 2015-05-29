@@ -929,13 +929,26 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17980" levels="1" name="Unseal Talisman - Insanity">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<table name="#extractableItems">39572,1,100</table>
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="3000" />
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="1" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17981" levels="1" name="Scroll of Escape: Gludin Village">
 		<!-- AUTO GENERATED SKILL -->

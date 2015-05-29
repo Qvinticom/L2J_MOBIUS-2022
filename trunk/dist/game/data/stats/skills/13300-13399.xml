@@ -182,9 +182,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-			<add stat="accCombat" val="3" />
-			<add stat="rCrit" val="54.4" />
-			<add stat="waterRes" val="20" />
+				<add stat="accCombat" val="3" />
+				<add stat="rCrit" val="54.4" />
+				<add stat="waterRes" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -263,8 +263,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-			<mul stat="cAtk" val="1.15" />
-			<add stat="fireRes" val="20" />
+				<mul stat="cAtk" val="1.15" />
+				<add stat="fireRes" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -299,8 +299,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-			<mul stat="physicalSkillPower" val="1.05" />
-			<add stat="darkRes" val="35" />
+				<mul stat="physicalSkillPower" val="1.05" />
+				<add stat="darkRes" val="35" />
 			</effect>
 		</for>
 	</skill>
