@@ -36,6 +36,8 @@ public class HillsOfGold extends AbstractNpcAI
 	private static final int EXCAVATOR_GOLEM = 19312;
 	private static final int SPICULA_1 = 23246;
 	private static final int SPICULA_2 = 23247;
+	private static final int YIN_FRAGMENT = 19308;
+	private static final int SPICULA_ELITE_GUARD = 23303;
 	private static final int[] GOLEMS =
 	{
 		23255,
@@ -50,6 +52,7 @@ public class HillsOfGold extends AbstractNpcAI
 	public HillsOfGold()
 	{
 		super(HillsOfGold.class.getSimpleName(), "ai/group_template");
+		addAttackId(YIN_FRAGMENT);
 		addSpawnId(SPICULA_1, SPICULA_2);
 		addSpawnId(GOLEMS);
 	}
@@ -74,6 +77,21 @@ public class HillsOfGold extends AbstractNpcAI
 			startQuestTimer("SPICULA_AGGRO", 10000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
+	}
+	
+	@Override
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	{
+		L2Npc mob1 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
+		((L2MonsterInstance) mob1).addDamage(attacker, 1, null);
+		L2Npc mob2 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
+		((L2MonsterInstance) mob2).addDamage(attacker, 1, null);
+		L2Npc mob3 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
+		((L2MonsterInstance) mob3).addDamage(attacker, 1, null);
+		L2Npc mob4 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
+		((L2MonsterInstance) mob4).addDamage(attacker, 1, null);
+		npc.deleteMe();
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
