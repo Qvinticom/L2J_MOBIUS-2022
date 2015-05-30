@@ -55,8 +55,8 @@ public class NpcKnownList extends CharKnownList
 		{
 			final L2Npc npc = (L2Npc) getActiveObject();
 			
-			// Npc Walkers broadcast position fix.
-			if (object.isPlayer() && npc.isMoving())
+			// Broadcast correct walking NPC position.
+			if (object.isPlayer() && npc.isMoving() && !npc.isInCombat())
 			{
 				((L2Character) object).broadcastPacket(new MoveToLocation(npc));
 			}
