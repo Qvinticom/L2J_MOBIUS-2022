@@ -1368,4 +1368,13 @@
 		<point X="-17031" Y="208742" Z="-3665" delay="0" run="false" />
 		<point X="-17095" Y="208967" Z="-3665" delay="0" run="false" />
 	</route>
+	<!-- Dwarf Isle of Souls -->
+	<route name="Dwarf_Isle_Of_Souls" repeat="true" repeatStyle="cycle">
+		<target id="8520" spawnX="-105272" spawnY="48788" spawnZ="-1786" />
+		<point X="-105272" Y="48788" Z="-1786" delay="0" run="true" />
+		<point X="-105642" Y="48987" Z="-1769" delay="0" run="true" />
+		<point X="-105655" Y="49458" Z="-1793" delay="0" run="true" />
+		<point X="-105397" Y="49657" Z="-1817" delay="0" run="true" />
+		<point X="-105033" Y="49581" Z="-1792" delay="0" run="true" />
+	</route>
 </routes>

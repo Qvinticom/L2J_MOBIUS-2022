@@ -473,8 +473,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="8520" level="90" type="L2Npc" name="Ruben" title="Spectator of Influence">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="8520" level="90" type="L2Npc" name="Ruben">
 		<race>DWARF</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
@@ -484,12 +483,12 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
+				<walk ground="100" />
 				<run ground="120" />
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="18" />
 		</skill_list>
