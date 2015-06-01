@@ -41,191 +41,230 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37507" name="Enhanced Octavis' Ring" additionalName="Warrior" type="Armor">
-		<!-- MP + 37, Atk. Spd. + 3%, P. Critical Rate + 10, and P. Critical Damage + 15%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13527-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="103.0" />
+			<add order="0" stat="mDef" val="103.0" />
+			<add stat="maxMp" val="37" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37508" name="Enhanced Octavis' Earring" additionalName="Warrior" type="Armor">
-		<!-- MP + 56, Def. + 3%, P. Skill MP consumption - 5%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13528-1" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="154.0" />
+			<add order="0" stat="mDef" val="154.0" />
+			<add stat="maxMp" val="56" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37509" name="Enhanced Octavis' Necklace" additionalName="Warrior" type="Armor">
-		<!-- MP + 74, P. Atk. + 3%, P. Skill Cooldown - 10%, and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13529-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="205.0" />
+			<add order="0" stat="mDef" val="205.0" />
+			<add stat="maxMp" val="74" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37510" name="Enhanced Istina's Ring" additionalName="Warrior" type="Armor">
-		<!-- MP + 37, Atk. Spd. + 2%, P. Critical Rate + 10, and P. Critical Damage + 10%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13530-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="103.0" />
+			<add order="0" stat="mDef" val="103.0" />
+			<add stat="maxMp" val="37" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37511" name="Enhanced Istina's Earring" additionalName="Warrior" type="Armor">
-		<!-- MP + 56, Def. + 2%, P. Skill MP consumption - 3%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13531-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="154.0" />
+			<add order="0" stat="mDef" val="154.0" />
+			<add stat="maxMp" val="56" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37512" name="Enhanced Istina's Necklace" additionalName="Warrior" type="Armor">
-		<!-- MP + 74, P. Atk. + 2%, P. Skill Cooldown - 5%, and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13532-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="205.0" />
+			<add order="0" stat="mDef" val="205.0" />
+			<add stat="maxMp" val="74" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37513" name="Enhanced Octavis' Ring" additionalName="Wizard" type="Armor">
-		<!-- MP + 37, Casting Spd. + 2%, M. Critical Rate + 10, and M. Critical Damage + 10%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13533-1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="103.0" />
+			<add order="0" stat="mDef" val="103.0" />
+			<add stat="maxMp" val="37" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37514" name="Enhanced Octavis' Earring" additionalName="Wizard" type="Armor">
-		<!-- MP + 56, M. Def. + 2%, M. Skill MP consumption - 3%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13534-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="154.0" />
+			<add order="0" stat="mDef" val="154.0" />
+			<add stat="maxMp" val="56" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37515" name="Enhanced Octavis' Necklace" additionalName="Wizard" type="Armor">
-		<!-- MP + 74, M. Atk. + 3%, M. Skill Cooldown - 5%, and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13535-1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="205.0" />
+			<add order="0" stat="mDef" val="205.0" />
+			<add stat="maxMp" val="74" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37516" name="Enhanced Istina's Ring" additionalName="Wizard" type="Armor">
-		<!-- MP + 37, Casting Spd. + 3%, M. Critical Rate + 10, and M. Critical Damage + 15%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13536-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="103.0" />
+			<add order="0" stat="mDef" val="103.0" />
+			<add stat="maxMp" val="37" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37517" name="Enhanced Istina's Earring" additionalName="Wizard" type="Armor">
-		<!-- MP + 56, M. Def. + 3%, M. Skill MP consumption - 5%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13537-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="154.0" />
+			<add order="0" stat="mDef" val="154.0" />
+			<add stat="maxMp" val="56" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37518" name="Enhanced Istina's Necklace" additionalName="Wizard" type="Armor">
-		<!-- MP + 74, M. Atk. + 5%, M. Skill Cooldown - 10% and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13538-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="205.0" />
+			<add order="0" stat="mDef" val="205.0" />
+			<add stat="maxMp" val="74" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

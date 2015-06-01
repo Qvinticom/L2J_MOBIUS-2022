@@ -214,88 +214,184 @@
 		<set name="reuseDelay" val="7200000" />
 	</skill>
 	<skill id="13527" levels="1" name="Enhanced Octavis' Ring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Atk. Spd. + 3%, P. Critical Rate + 10, P. Critical Damage + 15%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_ring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="pAtkSpd" val="1.03" />
+			<mul stat="cAtk" val="1.15" />
+			<add stat="rCrit" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13528" levels="1" name="Enhanced Octavis' Earring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Def. + 3%, P. Skill MP Consumption - 5%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_earring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="pDef" val="1.03" />
+			<mul stat="PhysicalMpConsumeRate" val="0.95" />
+			<add stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13529" levels="1" name="Enhanced Octavis' Necklace (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 3%, P. Skill Cooldown - 10%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="pAtk" val="1.03" />
+			<mul stat="pReuse" val="0.9" />
+			<add stat="reflectDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13530" levels="1" name="Enhanced Istina' Ring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Atk. Spd. + 2%, P. Critical Rate + 10, P. Critical Damage + 10%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_ring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="pAtkSpd" val="1.02" />
+			<mul stat="cAtk" val="1.10" />
+			<add stat="rCrit" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13531" levels="1" name="Enhanced Istina' Earring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Def. + 2%, P. Skill MP Consumption - 3%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_earring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="pDef" val="1.02" />
+			<mul stat="PhysicalMpConsumeRate" val="0.97" />
+			<add stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13532" levels="1" name="Enhanced Istina' Necklace (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 2%, P. Skill Cooldown - 5%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_necklace_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="pAtk" val="1.02" />
+			<mul stat="pReuse" val="0.95" />
+			<add stat="reflectDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13533" levels="1" name="Enhanced Octavis' Ring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casting Spd. + 2%, M. Critical Rate + 10, M. Critical Damage + 10%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_ring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="mAtkSpd" val="1.02" />
+			<mul stat="mCritPower" val="1.10" />
+			<add stat="mCritRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13534" levels="1" name="Enhanced Octavis' Earring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Def. + 2%, M. Skill MP Consumption - 3%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_earring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="mDef" val="1.02" />
+			<mul stat="MagicalMpConsumeRate" val="0.97" />
+			<add stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13535" levels="1" name="Enhanced Octavis' Necklace (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Atk. + 3%, M. Skill Cooldown - 5%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="mAtk" val="1.03" />
+			<mul stat="mReuse" val="0.95" />
+			<add stat="reflectDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13536" levels="1" name="Enhanced Istina' Ring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casting Spd. + 3%, M. Critical Rate + 10, M. Critical Damage + 15%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_ring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="mAtkSpd" val="1.03" />
+			<mul stat="mCritPower" val="1.15" />
+			<add stat="mCritRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13537" levels="1" name="Enhanced Istina' Earring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Def. + 3%, M. Skill MP Consumption - 5%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_earring_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="mDef" val="1.03" />
+			<mul stat="MagicalMpConsumeRate" val="0.95" />
+			<add stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13538" levels="1" name="Enhanced Istina' Necklace (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Atk. + 5%, M. Skill Cooldown - 10%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
+		<!-- Updated to Ertheia -->
+		<!-- Boss Jewel Skill -->
 		<set name="icon" val="icon.istina_necklace_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			<mul stat="mAtk" val="1.05" />
+			<mul stat="mReuse" val="0.9" />
+			<add stat="reflectDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13539" levels="1" name="Baium's Soul Ring">
 		<!-- AUTO GENERATED SKILL -->

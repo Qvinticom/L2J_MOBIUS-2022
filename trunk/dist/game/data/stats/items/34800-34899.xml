@@ -309,33 +309,33 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34859" name="Enhanced Istina's Bracelet" additionalName="" type="Armor">
-		<!-- Istina's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Con + 1, and Men + 1. -->
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="item_skill" val="13378-1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13378-1" />
 		<for>
 			<add stat="maxMp" val="216" />
 		</for>
 	</item>
 	<item id="34860" name="Enhanced Octavis' Bracelet" additionalName="" type="Armor">
-		<!-- Octavis' Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, and Wit + 1. -->
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="item_skill" val="13379-1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13379-1" />
 		<for>
 			<add stat="maxMp" val="216" />
 		</for>

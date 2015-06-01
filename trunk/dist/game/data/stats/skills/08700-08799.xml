@@ -606,46 +606,64 @@
 		<set name="reuseDelay" val="320000" />
 	</skill>
 	<skill id="8775" levels="1" name="Immortal Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Talisman can be equipped. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8776" levels="1" name="Twilight Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Talisman can be equipped. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8777" levels="1" name="Seraph Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Talisman can be equipped. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8778" levels="1" name="Eternal Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Talisman can be equipped. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8779" levels="1" name="Istina's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Talisman can be equipped. -->
-		<set name="icon" val="icon.istina_bracelet_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8780" levels="1" name="Octavis' Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Talisman can be equipped. -->
-		<set name="icon" val="icon.octavis_bracelet_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8781" levels="1" name="Equip Shield">
 		<!-- AUTO GENERATED SKILL -->

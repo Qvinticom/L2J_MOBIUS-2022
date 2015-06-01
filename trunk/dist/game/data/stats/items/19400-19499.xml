@@ -476,20 +476,20 @@
 		</for>
 	</item>
 	<item id="19455" name="Istina's Bracelet" additionalName="" type="Armor">
-		<!-- MP + 216. Activates 5 talisman slots when equipped. -->
 		<set name="icon" val="icon.istina_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rbracelet" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="75" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="3556000" />
+		<set name="item_skill" val="8779-1" />
 		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="19456" name="Istina's Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.istina_shirt_i00" />
@@ -585,20 +585,20 @@
 		</for>
 	</item>
 	<item id="19461" name="Octavis' Bracelet" additionalName="" type="Armor">
-		<!-- MP + 216. Activates 5 talisman slots when equipped. -->
 		<set name="icon" val="icon.octavis_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R" />
-		<set name="crystal_count" val="75" />
-		<set name="enchant_enabled" val="1" />
 		<set name="bodypart" val="rbracelet" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="75" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="3556000" />
+		<set name="item_skill" val="8780-1" />
 		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="19462" name="Octavis' Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.octavis_shirt_i00" />
@@ -703,20 +703,20 @@
 		</for>
 	</item>
 	<item id="19471" name="Immortal Bracelet" additionalName="" type="Armor">
-		<!-- MP + 187. Activates 5 Talisman slots when equipped. -->
 		<set name="icon" val="icon.r1_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R" />
-		<set name="crystal_count" val="227" />
-		<set name="enchant_enabled" val="1" />
 		<set name="bodypart" val="rbracelet" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="227" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="10668000" />
+		<set name="item_skill" val="8775-1" />
 		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="187" />
+		</for>
 	</item>
 	<item id="19472" name="Immortal Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r1_shirt_i00" />
@@ -752,19 +752,20 @@
 		</for>
 	</item>
 	<item id="19474" name="Twilight Bracelet" additionalName="" type="Armor">
-		<!-- MP + 204. Activates 5 Talisman slots when equipped. -->
 		<set name="icon" val="icon.r2_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R" />
-		<set name="crystal_count" val="250" />
-		<set name="enchant_enabled" val="1" />
 		<set name="bodypart" val="rbracelet" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="250" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="11735000" />
+		<set name="item_skill" val="8776-1" />
+		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="204" />
+		</for>
 	</item>
 	<item id="19475" name="Twilight Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r2_shirt_i00" />
@@ -800,19 +801,20 @@
 		</for>
 	</item>
 	<item id="19477" name="Seraph Bracelet" additionalName="" type="Armor">
-		<!-- MP + 216. Activates 5 Talisman slots when equipped. -->
 		<set name="icon" val="icon.r95_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R95" />
-		<set name="crystal_count" val="262" />
-		<set name="enchant_enabled" val="1" />
 		<set name="bodypart" val="rbracelet" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="262" />
+		<set name="crystal_type" val="R95" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="12322000" />
+		<set name="item_skill" val="8777-1" />
+		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="19478" name="Seraph Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r95_shirt_i00" />
@@ -848,19 +850,20 @@
 		</for>
 	</item>
 	<item id="19480" name="Eternal Bracelet" additionalName="" type="Armor">
-		<!-- MP + 225. Activates 5 Talisman slots when equipped. -->
 		<set name="icon" val="icon.r991_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="crystal_type" val="R99" />
-		<set name="crystal_count" val="276" />
-		<set name="enchant_enabled" val="1" />
 		<set name="bodypart" val="rbracelet" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="276" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="12938000" />
+		<set name="item_skill" val="8778-1" />
+		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="225" />
+		</for>
 	</item>
 	<item id="19481" name="Eternal Shirt" additionalName="" type="Armor">
 		<set name="icon" val="icon.r991_shirt_i00" />

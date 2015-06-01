@@ -1962,10 +1962,10 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="8871-1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<for>
-			<add stat="pDef" val="60.0" />
-			<add stat="maxHp" val="465" />
+			<add order="0" stat="pDef" val="60.0" />
 		</for>
 	</item>
 	<item id="35292" name="Scroll of Escape: Guillotine Fortress" additionalName="" type="EtcItem">
@@ -1978,18 +1978,34 @@
 		<!-- MP + 216. Activates 5 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_bracelet_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="8863-1" />
 		<set name="commissionItemType" val="BRACELET" />
+		<for>
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="35294" name="Enhanced Tauti's Bracelet" additionalName="" type="Armor">
 		<!-- Tauti's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="8804-1" />
+		<for>
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="35295" name="Bottle of Tauti's Soul" additionalName="" type="EtcItem">
 		<!-- Bottle containing Tauti's Soul. Tauti's Soul can be bestowed on Tauti's Bracelet. -->

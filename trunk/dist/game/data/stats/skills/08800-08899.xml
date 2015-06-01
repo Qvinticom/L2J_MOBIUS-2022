@@ -29,11 +29,19 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8804" levels="1" name="Enhanced Tauti's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Can equip 5 Talismans. STR + 1, INT + 1 -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="1" />
+				<add stat="INT" val="1" />
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8805" levels="1" name="Dark Eternal Helmet">
 		<!-- AUTO GENERATED SKILL -->
@@ -442,11 +450,15 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8863" levels="1" name="Tauti's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Can equip 5 talismans. -->
 		<set name="icon" val="icon.accessory_bracelet_of_tauti_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8864" levels="7" name="Talisman">
 		<!-- Level 1 : Talisman - Infinity : Increases Max HP/MP/CP by 100, P. Accuracy and M. Accuracy by 1, P. Evasion and M. Evasion by 1, Vampiric Rage by 2%, and Atk. Spd. And Casting Spd. By 10 when equipped. -->
@@ -524,11 +536,15 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8871" levels="1" name="Glorious T-shirt">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max HP by 465. -->
 		<set name="icon" val="icon.skill0211" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="465" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8872" levels="1" name="Refined Romantic Chapeau containing the GM's Sincerity">
 		<!-- AUTO GENERATED SKILL -->

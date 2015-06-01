@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13300" levels="1" name="Magic One-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13300" levels="3" name="Magic One-handed Blunt Special Ability">
 		<!-- M. Critical Damage + 381 and M. Accuracy + 1. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritPowerAdd" val="381" />
+				<add stat="accMagic" val="1.0" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="13301" levels="1" name="Magic Two-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13301" levels="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mAtk" val="44" />
+				<add stat="mCritPowerAdd" val="381" />
+				<mul stat="mAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="13302" levels="1" name="Magic Two-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13302" levels="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mAtk" val="44" />
+				<add stat="mCritPowerAdd" val="381" />
+				<mul stat="mAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13303" levels="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
@@ -52,13 +69,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="13305" levels="1" name="Magic Two-handed Blunt Special Ability">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13305" levels="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<for>
+			<effect name="Buff">
+				<add stat="mAtk" val="44" />
+				<add stat="mCritPowerAdd" val="381" />
+				<mul stat="mAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13306" levels="1" name="Heavy Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -709,18 +732,34 @@
 		<set name="reuseDelay" val="5000" />
 	</skill>
 	<skill id="13378" levels="1" name="Enhanced Istina's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Can equip 5 talismans. CON + 1, MEN + 1. -->
 		<set name="icon" val="icon.istina_bangel" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="1" />
+				<add stat="MEN" val="1" />
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13379" levels="1" name="Enhanced Octavis' Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Can equip 5 talismans. DEX + 1, WIT + 1. -->
 		<set name="icon" val="icon.octavis_bangel" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="1" />
+				<add stat="WIT" val="1" />
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13380" levels="1" name="Seal Agathion - XP Bottle">
 		<!-- AUTO GENERATED SKILL -->

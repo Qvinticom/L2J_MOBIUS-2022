@@ -219,74 +219,144 @@
 		<set name="price" val="427000" />
 	</item>
 	<item id="18137" name="Unidentified Apocalypse Shaper" additionalName="" type="EtcItem">
-		<!-- Apocalypse Shaper in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="icon" val="icon.weapon_phasian_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12046-1" />
 	</item>
 	<item id="18138" name="Unidentified Apocalypse Cutter" additionalName="" type="EtcItem">
-		<!-- Apocalypse Cutter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_pasis_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12047-1" />
 	</item>
 	<item id="18139" name="Unidentified Apocalypse Slasher" additionalName="" type="EtcItem">
-		<!-- Apocalypse Slasher in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_volver_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12048-1" />
 	</item>
 	<item id="18140" name="Unidentified Apocalypse Avenger" additionalName="" type="EtcItem">
-		<!-- Apocalypse Avenger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_raksilion_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12049-1" />
 	</item>
 	<item id="18141" name="Unidentified Apocalypse Fighter" additionalName="" type="EtcItem">
-		<!-- Apocalypse Fighter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / combat) -->
 		<set name="icon" val="icon.weapon_kirche_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12050-1" />
 	</item>
 	<item id="18142" name="Unidentified Apocalypse Stormer" additionalName="" type="EtcItem">
-		<!-- Apocalypse Stormer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / spear) -->
 		<set name="icon" val="icon.weapon_grave_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12051-1" />
 	</item>
 	<item id="18143" name="Unidentified Apocalypse Thrower" additionalName="" type="EtcItem">
-		<!-- Apocalypse Thrower in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / bow) -->
 		<set name="icon" val="icon.weapon_spina_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12052-1" />
 	</item>
 	<item id="18144" name="Unidentified Apocalypse Shooter" additionalName="" type="EtcItem">
-		<!-- Apocalypse Shooter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / crossbow / bow) -->
 		<set name="icon" val="icon.weapon_medianox_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12053-1" />
 	</item>
 	<item id="18145" name="Unidentified Apocalypse Buster" additionalName="" type="EtcItem">
-		<!-- Apocalypse Buster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_imerose_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12054-1" />
 	</item>
 	<item id="18146" name="Unidentified Apocalypse Caster" additionalName="" type="EtcItem">
-		<!-- Apocalypse Caster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_yuke_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12055-1" />
 	</item>
 	<item id="18147" name="Unidentified Apocalypse Retributer" additionalName="" type="EtcItem">
-		<!-- Apocalypse Retributer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="15219000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12056-1" />
 	</item>
 	<item id="18148" name="Unidentified Apocalypse Dualsword" additionalName="" type="EtcItem">
-		<!-- Apocalypse Dualsword in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / Dualsword) -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="18262800" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12057-1" />
 	</item>
 	<item id="18149" name="Unidentified Apocalypse Dual Dagger" additionalName="" type="EtcItem">
-		<!-- Apocalypse Dual Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / dagger) -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="18262800" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12058-1" />
 	</item>
 	<item id="18150" name="Unidentified Apocalypse Dual Blunt Weapon" additionalName="" type="EtcItem">
-		<!-- Apocalypse Dual Blunt Weapon in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / blunt) -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="price" val="18262800" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="12059-1" />
 	</item>
 	<item id="18151" name="Unidentified Twilight Helmet" additionalName="Heavy Armor" type="EtcItem">
 		<!-- A Twilight Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / heavy armor) -->
