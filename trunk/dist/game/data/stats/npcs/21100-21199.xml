@@ -929,32 +929,17 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1137" max="2310" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4555000066757202">
-					<item id="12222" min="1" max="1" chance="4.5113" /> <!-- Common Item - Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="26.1184" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="12230" min="1" max="1" chance="2.7732" /> <!-- Common Item - Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="18.3787" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="12228" min="1" max="1" chance="7.2233" /> <!-- Common Item - Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="40.9951" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
-				<group chance="13.516599655151367">
-					<item id="1871" min="1" max="1" chance="57.0951" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="38.0634" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="2.2838" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.4965" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="1.1419" /> <!-- Mold Lubricant -->
-					<item id="3956" min="1" max="1" chance="0.0761" /> <!-- Recipe: Blessed Spiritshot A -->
-					<item id="8487" min="1" max="1" chance="0.0312" /> <!-- Recipe: Destroyer Hammer (60%) -->
-					<item id="8730" min="1" max="1" chance="0.6344" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.1586" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0159" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0031" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
+				<item id="1807" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (A-grade) -->
+				<item id="3035" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (A-grade) -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -988,15 +973,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1807" min="1" max="1" chance="0.3832" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5479" min="1" max="1" chance="1.7005" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="0.3832" /> <!-- Recipe: Spiritshot A -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="21111" level="70" type="L2Monster" name="Lava Wyrm">
 		<parameters>
@@ -1043,33 +1024,17 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" />
+		<collision>
+			<radius normal="29" />
+			<height normal="72" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1191" max="2424" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.477400004863739">
-					<item id="12222" min="1" max="1" chance="4.5113" /> <!-- Common Item - Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="26.1184" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="12230" min="1" max="1" chance="2.7732" /> <!-- Common Item - Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="18.3787" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="12228" min="1" max="1" chance="7.2233" /> <!-- Common Item - Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="40.9951" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
-				<group chance="26.093700408935547">
-					<item id="1865" min="1" max="1" chance="28.4136" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="28.4136" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="4.7356" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="1.8942" /> <!-- Stone of Purity -->
-					<item id="4040" min="1" max="1" chance="0.5683" /> <!-- Mold Lubricant -->
-					<item id="5166" min="1" max="1" chance="0.0379" /> <!-- Recipe: Blessed Spiritshot (A) Compressed Package (100%) -->
-					<item id="8487" min="1" max="1" chance="0.0155" /> <!-- Recipe: Destroyer Hammer (60%) -->
-					<item id="8730" min="1" max="1" chance="0.3157" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.0789" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0079" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0016" /> <!-- Top-Grade Life Stone - Level 67 -->
-					<item id="1344" min="10" max="30" chance="35.5172" /> <!-- Mithril Arrow -->
-				</group>
+				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
+				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1103,15 +1068,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5482" min="1" max="1" chance="3.9755" /> <!-- Sealed Dark Crystal Leggings Design -->
-				<item id="4041" min="1" max="1" chance="2.6191" /> <!-- Mold Hardener -->
-				<item id="5479" min="1" max="1" chance="1.7822" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="29" />
-			<height normal="72" />
-		</collision>
 	</npc>
 	<npc id="21112" level="71" type="L2Monster" name="Hames Orc Foot Soldier">
 		<parameters>
@@ -1163,33 +1124,17 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1445" max="2946" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5032999515533447">
-					<item id="12224" min="1" max="1" chance="3.9179" /> <!-- Common Item - Sealed Dark Crystal Boots -->
-					<item id="5496" min="1" max="1" chance="21.0821" /> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="12231" min="1" max="1" chance="3.9179" /> <!-- Common Item - Sealed Tallum Boots -->
-					<item id="5497" min="1" max="1" chance="21.0821" /> <!-- Sealed Tallum Boots Lining -->
-					<item id="12221" min="1" max="1" chance="3.9179" /> <!-- Common Item - Sealed Dark Crystal Gloves -->
-					<item id="5508" min="1" max="1" chance="21.0821" /> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="12229" min="1" max="1" chance="3.9179" /> <!-- Common Item - Sealed Tallum Gloves -->
-					<item id="5509" min="1" max="1" chance="21.0821" /> <!-- Sealed Tallum Gloves Design -->
-				</group>
-				<group chance="31.552900314331055">
-					<item id="1873" min="1" max="1" chance="13.7083" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="68.5416" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="6.8542" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="9.7917" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="0.5712" /> <!-- Enria -->
-					<item id="5281" min="1" max="1" chance="0.0457" /> <!-- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%) -->
-					<item id="8730" min="1" max="1" chance="0.3808" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.0952" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0095" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0018" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="61" max="141" chance="70" /> <!-- Adena -->
+				<item id="3956" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (A-grade) -->
+				<item id="5281" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (A-grade) -->
+				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1223,15 +1168,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5485" min="1" max="1" chance="2.4627" /> <!-- Sealed Tallum Tunic Texture -->
-				<item id="3956" min="1" max="1" chance="0.3905" /> <!-- Recipe: Blessed Spiritshot A -->
-				<item id="5486" min="1" max="1" chance="1.7329" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="29" />
-		</collision>
 	</npc>
 	<npc id="21113" level="72" type="L2Monster" name="Hames Orc Sniper">
 		<parameters>
@@ -1281,32 +1222,18 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1613" max="3293" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6481000185012817">
-					<item id="12222" min="1" max="1" chance="4.5113" /> <!-- Common Item - Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="26.1184" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="12230" min="1" max="1" chance="2.7732" /> <!-- Common Item - Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="18.3787" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="12228" min="1" max="1" chance="7.2233" /> <!-- Common Item - Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="40.9951" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
-				<group chance="47.367698669433594">
-					<item id="1864" min="1" max="3" chance="23.1789" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="23.1789" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="9.2715" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="14.2639" /> <!-- Cord -->
-					<item id="4039" min="1" max="1" chance="0.7726" /> <!-- Mold Glue -->
-					<item id="3035" min="1" max="1" chance="0.0309" /> <!-- Recipe: Spiritshot A -->
-					<item id="8730" min="1" max="1" chance="0.2575" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.0644" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0064" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0013" /> <!-- Top-Grade Life Stone - Level 67 -->
-					<item id="1344" min="10" max="30" chance="28.9737" /> <!-- Mithril Arrow -->
-				</group>
+				<item id="57" min="68" max="158" chance="70" /> <!-- Adena -->
+				<item id="3035" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (A-grade) -->
+				<item id="5156" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (A-grade) -->
+				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1340,15 +1267,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5156" min="1" max="1" chance="0.4361" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-				<item id="5489" min="1" max="1" chance="4.3172" /> <!-- Sealed Tallum Stockings Fabric -->
-				<item id="5166" min="1" max="1" chance="0.4361" /> <!-- Recipe: Blessed Spiritshot (A) Compressed Package (100%) -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="27" />
-		</collision>
 	</npc>
 	<npc id="21115" level="74" type="L2Monster" name="Hames Orc Shaman">
 		<parameters>
@@ -1403,32 +1326,18 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1342" max="2736" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5389999747276306">
-					<item id="12232" min="1" max="1" chance="4.5113" /> <!-- Common Item - Sealed Tallum Tunic -->
-					<item id="5485" min="1" max="1" chance="26.1184" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="12223" min="1" max="1" chance="2.7732" /> <!-- Common Item - Sealed Dark Crystal Robe -->
-					<item id="5486" min="1" max="1" chance="18.3787" /> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="12235" min="1" max="1" chance="7.2233" /> <!-- Common Item - Sealed Tallum Stockings -->
-					<item id="5489" min="1" max="1" chance="40.9951" /> <!-- Sealed Tallum Stockings Fabric -->
-				</group>
-				<group chance="17.559600830078125">
-					<item id="1866" min="1" max="1" chance="34.6682" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="52.0023" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="2.0801" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="4.3335" /> <!-- High-Grade Suede -->
-					<item id="4041" min="1" max="1" chance="0.4522" /> <!-- Mold Hardener -->
-					<item id="5281" min="1" max="1" chance="0.0693" /> <!-- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%) -->
-					<item id="6671" min="1" max="1" chance="5.778" /> <!-- Deluxe Chest Key - Grade 7 -->
-					<item id="8731" min="1" max="1" chance="0.4815" /> <!-- Life Stone - Level 70 -->
-					<item id="8741" min="1" max="1" chance="0.1204" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8751" min="1" max="1" chance="0.012" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8761" min="1" max="1" chance="0.0025" /> <!-- Top-Grade Life Stone - Level 70 -->
-				</group>
+				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
+				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
+				<item id="5281" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (A-grade) -->
+				<item id="36858" min="1" max="1" chance="0.003" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36932" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1462,15 +1371,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5496" min="1" max="1" chance="6.3784" /> <!-- Sealed Dark Crystal Boots Lining -->
-				<item id="5166" min="1" max="1" chance="0.3627" /> <!-- Recipe: Blessed Spiritshot (A) Compressed Package (100%) -->
-				<item id="5497" min="1" max="1" chance="6.3784" /> <!-- Sealed Tallum Boots Lining -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="23" />
-		</collision>
 	</npc>
 	<npc id="21116" level="75" type="L2Monster" name="Hames Orc Prefect">
 		<parameters>
@@ -1528,32 +1433,17 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="24" grown="28.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="2125" max="4335" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.6465001106262207">
-					<item id="12345" min="1" max="1" chance="3.8667" /> <!-- Common Item - Sealed Phoenix Earring -->
-					<item id="6341" min="1" max="1" chance="27.6997" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="12344" min="1" max="1" chance="2.9028" /> <!-- Common Item - Sealed Phoenix Necklace -->
-					<item id="6343" min="1" max="1" chance="21.4129" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="12346" min="1" max="1" chance="5.8057" /> <!-- Common Item - Sealed Phoenix Ring -->
-					<item id="6345" min="1" max="1" chance="38.3122" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-				<group chance="42.74549865722656">
-					<item id="1867" min="1" max="1" chance="45.0945" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="45.0945" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="7.5157" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="1.1867" /> <!-- Crafted Leather -->
-					<item id="4042" min="1" max="1" chance="0.5637" /> <!-- Enria -->
-					<item id="729" min="1" max="1" chance="0.0038" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="4987" min="1" max="1" chance="0.1403" /> <!-- Recipe: Tunic of Doom (60%) -->
-					<item id="8731" min="1" max="1" chance="0.3132" /> <!-- Life Stone - Level 70 -->
-					<item id="8741" min="1" max="1" chance="0.0783" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8751" min="1" max="1" chance="0.0078" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8761" min="1" max="1" chance="0.0015" /> <!-- Top-Grade Life Stone - Level 70 -->
-				</group>
+				<item id="57" min="89" max="207" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="36924" min="1" max="1" chance="0.003" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1587,15 +1477,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="729" min="1" max="1" chance="0.0479" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="5480" min="1" max="1" chance="1.9326" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="5481" min="1" max="1" chance="1.9326" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="24" grown="28.8" />
-		</collision>
 	</npc>
 	<npc id="21117" level="19" type="L2Monster" name="Kasha Imp">
 		<parameters>

@@ -1731,7 +1731,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="3394764000" sp="0" />
 		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="41235567" hpRegen="7.5" mp="41235567" mpRegen="2.7" />
+			<vitals hp="41235567" hpRegen="7.5" mp="37636" mpRegen="2.7" />
 			<attack physical="46500" magical="31000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1860" magical="1840" />
 			<attribute>
@@ -1756,102 +1756,49 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36513" min="1" max="4" chance="88" />
-				<item id="36979" min="1" max="1" chance="7" />
-				<item id="36855" min="1" max="5" chance="3.5" />
-				<item id="36847" min="1" max="5" chance="3.3" />
-				<item id="36848" min="1" max="5" chance="3.3" />
-				<item id="36849" min="1" max="5" chance="3.3" />
-				<item id="36850" min="1" max="5" chance="3.3" />
-				<item id="36851" min="1" max="5" chance="3.3" />
-				<item id="36852" min="1" max="5" chance="3.3" />
-				<item id="36854" min="1" max="5" chance="3.3" />
-				<item id="36846" min="1" max="5" chance="3.3" />
-				<item id="36845" min="1" max="5" chance="3.3" />
-				<item id="36836" min="1" max="5" chance="3.3" />
-				<item id="36837" min="1" max="5" chance="3.3" />
-				<item id="36838" min="1" max="5" chance="3.3" />
-				<item id="36839" min="1" max="5" chance="3.3" />
-				<item id="36840" min="1" max="5" chance="3.3" />
-				<item id="36841" min="1" max="5" chance="3.3" />
-				<item id="36842" min="1" max="5" chance="3.3" />
-				<item id="36843" min="1" max="5" chance="3.3" />
-				<item id="36844" min="1" max="5" chance="3.3" />
-				<item id="36792" min="1" max="2" chance="3.2" />
-				<item id="36791" min="1" max="2" chance="3.2" />
-				<item id="36790" min="1" max="2" chance="3.2" />
-				<item id="36789" min="1" max="2" chance="3.2" />
-				<item id="36788" min="1" max="2" chance="3.2" />
-				<item id="36787" min="1" max="2" chance="3.2" />
-				<item id="36786" min="1" max="2" chance="3.2" />
-				<item id="36785" min="1" max="2" chance="3.2" />
-				<item id="36784" min="1" max="2" chance="3.2" />
-				<item id="36793" min="1" max="2" chance="3.2" />
-				<item id="36763" min="1" max="2" chance="3.2" />
-				<item id="36764" min="1" max="2" chance="3.2" />
-				<item id="36772" min="1" max="2" chance="3.2" />
-				<item id="36771" min="1" max="2" chance="3.2" />
-				<item id="36770" min="1" max="2" chance="3.2" />
-				<item id="36769" min="1" max="2" chance="3.2" />
-				<item id="36768" min="1" max="2" chance="3.2" />
-				<item id="36767" min="1" max="2" chance="3.2" />
-				<item id="36766" min="1" max="2" chance="3.2" />
-				<item id="36765" min="1" max="2" chance="3.2" />
-				<item id="36773" min="1" max="2" chance="3.2" />
-				<item id="36783" min="1" max="2" chance="3.2" />
-				<item id="36833" min="1" max="5" chance="3.2" />
-				<item id="36832" min="1" max="5" chance="3.2" />
-				<item id="36831" min="1" max="5" chance="3.2" />
-				<item id="36830" min="1" max="5" chance="3.2" />
-				<item id="36829" min="1" max="5" chance="3.2" />
-				<item id="36828" min="1" max="5" chance="3.2" />
-				<item id="36827" min="1" max="5" chance="3.2" />
-				<item id="36826" min="1" max="5" chance="3.2" />
-				<item id="36825" min="1" max="5" chance="3.2" />
-				<item id="36834" min="1" max="5" chance="3.2" />
-				<item id="36835" min="1" max="5" chance="3.2" />
-				<item id="36782" min="1" max="2" chance="3.2" />
-				<item id="36781" min="1" max="2" chance="3.2" />
-				<item id="36780" min="1" max="2" chance="3.2" />
-				<item id="36779" min="1" max="2" chance="3.2" />
-				<item id="36778" min="1" max="2" chance="3.2" />
-				<item id="36777" min="1" max="2" chance="3.2" />
-				<item id="36776" min="1" max="2" chance="3.2" />
-				<item id="36775" min="1" max="2" chance="3.2" />
-				<item id="36774" min="1" max="2" chance="3.2" />
-				<item id="36853" min="1" max="5" chance="3.1" />
-				<item id="36978" min="1" max="1" chance="3" />
-				<item id="17356" min="1" max="1" chance="2" />
-				<item id="17324" min="1" max="1" chance="2" />
-				<item id="17325" min="1" max="1" chance="2" />
-				<item id="17326" min="1" max="1" chance="2" />
-				<item id="17327" min="1" max="1" chance="2" />
-				<item id="17328" min="1" max="1" chance="2" />
-				<item id="17357" min="1" max="1" chance="2" />
-				<item id="17329" min="1" max="1" chance="2" />
-				<item id="17330" min="1" max="1" chance="2" />
-				<item id="17331" min="1" max="1" chance="2" />
-				<item id="17332" min="1" max="1" chance="2" />
-				<item id="17333" min="1" max="1" chance="2" />
-				<item id="17334" min="1" max="1" chance="2" />
-				<item id="17346" min="1" max="1" chance="2" />
-				<item id="17355" min="1" max="1" chance="2" />
-				<item id="17354" min="1" max="1" chance="2" />
-				<item id="17339" min="1" max="1" chance="2" />
-				<item id="17340" min="1" max="1" chance="2" />
-				<item id="17341" min="1" max="1" chance="2" />
-				<item id="17342" min="1" max="1" chance="2" />
-				<item id="17343" min="1" max="1" chance="2" />
-				<item id="17344" min="1" max="1" chance="2" />
-				<item id="17345" min="1" max="1" chance="2" />
-				<item id="17347" min="1" max="1" chance="2" />
-				<item id="17348" min="1" max="1" chance="2" />
-				<item id="17349" min="1" max="1" chance="2" />
-				<item id="17350" min="1" max="1" chance="2" />
-				<item id="17351" min="1" max="1" chance="2" />
-				<item id="17352" min="1" max="1" chance="2" />
-				<item id="17353" min="1" max="1" chance="2" />
-				<item id="17338" min="1" max="1" chance="2" />
+				<item id="17311" min="1" max="1" chance="18.50" /> <!-- Immortal Leather Armor -->
+				<item id="17314" min="1" max="1" chance="18.50" /> <!-- Immortal Leather Boots -->
+				<item id="17310" min="1" max="1" chance="17.50" /> <!-- Immortal Leather Helmet -->
+				<item id="17312" min="1" max="1" chance="17.50" /> <!-- Immortal Leather Leggings -->
+				<item id="17313" min="1" max="1" chance="17.50" /> <!-- Immortal Leather Gloves -->
+				<item id="17309" min="1" max="1" chance="16.50" /> <!-- Immortal Shield -->
+				<item id="17308" min="1" max="1" chance="16.50" /> <!-- Immortal Boots -->
+				<item id="17316" min="1" max="1" chance="15.50" /> <!-- Immortal Tunic -->
+				<item id="17319" min="1" max="1" chance="15.50" /> <!-- Immortal Shoes -->
+				<item id="17320" min="1" max="1" chance="15.50" /> <!-- Immortal Sigil -->
+				<item id="17315" min="1" max="1" chance="15.50" /> <!-- Immortal Circlet -->
+				<item id="17318" min="1" max="1" chance="15.50" /> <!-- Immortal Gloves -->
+				<item id="17304" min="1" max="1" chance="15.50" /> <!-- Immortal Helmet -->
+				<item id="17317" min="1" max="1" chance="15.50" /> <!-- Immortal Stockings -->
+				<item id="17306" min="1" max="1" chance="15.50" /> <!-- Immortal Gaiters -->
+				<item id="17307" min="1" max="1" chance="15.50" /> <!-- Immortal Gauntlets -->
+				<item id="17305" min="1" max="1" chance="15.50" /> <!-- Immortal Breastplate -->
+				<item id="17298" min="1" max="1" chance="4.600" /> <!-- Requiem Buster -->
+				<item id="17290" min="1" max="1" chance="4.600" /> <!-- Requiem Shaper -->
+				<item id="17300" min="1" max="1" chance="4.600" /> <!-- Requiem Retributer -->
+				<item id="17297" min="1" max="1" chance="4.600" /> <!-- Requiem Shooter -->
+				<item id="17295" min="1" max="1" chance="4.600" /> <!-- Requiem Stormer -->
+				<item id="17292" min="1" max="1" chance="4.600" /> <!-- Requiem Slasher -->
+				<item id="17299" min="1" max="1" chance="4.600" /> <!-- Requiem Caster -->
+				<item id="17294" min="1" max="1" chance="4.600" /> <!-- Requiem Fighter -->
+				<item id="17291" min="1" max="1" chance="4.600" /> <!-- Requiem Cutter -->
+				<item id="17296" min="1" max="1" chance="4.600" /> <!-- Requiem Thrower -->
+				<item id="17293" min="1" max="1" chance="4.600" /> <!-- Requiem Avenger -->
+				<item id="19448" min="1" max="1" chance="80" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="37779" min="1" max="1" chance="36.50" /> <!-- Scroll of Blessing: Armor (R-grade) -->
+				<item id="45937" min="1" max="1" chance="34.50" /> <!-- Spirit Stone: Hair Accessory -->
+				<item id="19447" min="1" max="1" chance="19.12" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17701" min="1" max="1" chance="17.50" /> <!-- Lv. 5 Giant WIT Dye -->
+				<item id="17699" min="1" max="1" chance="17.50" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17697" min="1" max="1" chance="17.50" /> <!-- Lv. 5 Giant STR Dye -->
+				<item id="17702" min="1" max="1" chance="17.50" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="17698" min="1" max="1" chance="17.50" /> <!-- Lv. 5 Giant DEX Dye -->
+				<item id="17700" min="1" max="1" chance="17.50" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="36978" min="1" max="1" chance="15.50" /> <!-- Scroll: Enchant Hair Accessory -->
+				<item id="37770" min="1" max="1" chance="14.50" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
+				<item id="19504" min="1" max="1" chance="11" /> <!-- Purple Soul Crystal (R-grade) -->
+				<item id="19503" min="1" max="1" chance="9.500" /> <!-- Teal Soul Crystal (R-grade) -->
+				<item id="19502" min="1" max="1" chance="10" /> <!-- Yellow Soul Crystal (R-grade) -->
 			</death>
 		</drop_lists>
 	</npc>
