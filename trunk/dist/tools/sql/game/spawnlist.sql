@@ -51632,7 +51632,8 @@ INSERT INTO `spawnlist` VALUES
 ('Test Server Helper', 1, 31756, -114330, 256693, -1260, 0, 0, 51210, 60, 0, 0, 0),
 ('Test Server Helper', 1, 31757, -114410, 256693, -1260, 0, 0, 49151, 60, 0, 0, 0);
 
--- Kamael Isle Of Souls Spawns NPC's
+-- Kamael Isle Of Souls Spawns NPCs
+DELETE FROM spawnlist WHERE npc_templateid in (22240, 22241); -- Remove Muertos Scout and Colossos
 DELETE FROM `spawnlist` WHERE (npc_templateid='22256' AND locx='-81966' AND locy='52069' AND locz='-4600');
 DELETE FROM `spawnlist` WHERE (npc_templateid='32184' AND locx='-95500' AND locy='52164' AND locz='-2024');
 DELETE FROM `spawnlist` WHERE (npc_templateid='32185' AND locx='-95571' AND locy='52496' AND locz='-2024');
