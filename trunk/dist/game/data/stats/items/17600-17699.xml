@@ -123,12 +123,17 @@
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="15192000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13317-1;13318-1;13319-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="108.0" />
+			<add order="0" stat="mDef" val="108" />
+			<add stat="maxMp" val="38" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

@@ -491,14 +491,18 @@
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="987" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13441-1" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79" />
+			<add stat="maxMp" val="31" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -507,14 +511,18 @@
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1481" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13442-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="118.0" />
+			<add order="0" stat="mDef" val="118" />
+			<add stat="maxMp" val="46" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -528,14 +536,18 @@
 		<set name="icon" val="icon.accessary_blessed_lilith" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1975" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="92622000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13443-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158" />
+			<add stat="maxMp" val="62" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

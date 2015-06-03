@@ -285,13 +285,18 @@
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="36" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="1730000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13539-1" />
+		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79" />
+			<add stat="maxMp" val="31" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -300,14 +305,18 @@
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="73" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3450000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13540-1" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158" />
+			<add stat="maxMp" val="62" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

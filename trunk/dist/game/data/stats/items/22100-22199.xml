@@ -1032,6 +1032,7 @@
 		<set name="price" val="123200" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3562-1" /> <!-- Guess -->
+		<set name="commissionItemType" val="RING" />
 		<for>
 			<add order="0" stat="mDef" val="48" />
 			<add stat="maxMp" val="21" />
@@ -1050,6 +1051,8 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3559-2" /> <!-- Guess -->
+		<set name="price" val="11394000" />
+		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />

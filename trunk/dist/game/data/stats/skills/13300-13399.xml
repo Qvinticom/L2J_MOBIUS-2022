@@ -140,61 +140,168 @@
 		<set name="isDebuff" val="false" />
 	</skill>
 	<skill id="13313" levels="1" name="Blessed Antharas' Earring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Increases P. Def./M. Def. Increases Holy/Dark Resistance and bleed/stun/mental attacks, bleed/stun/mental attack bonus, and the effectiveness of HP recovery magic. Decreases MP Consumption and restores HP by using some of the damage inflicted upon the enemy with a certain probability. CON+ 3, MEN+ 3 -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.15" />
+				<mul stat="pDef" val="1.15" />
+				<add stat="earthRes" val="30" />
+				<add stat="holyRes" val="15" />
+				<mul stat="healEffect" val="1.4" />
+				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="PhysicalMpConsumeRate" val="0.9" />
+				<add stat="absorbDam" val="4" />
+				<add stat="CON" val="3" />
+				<add stat="MEN" val="3" />
+			</effect>
+			<effect name="AttackTrait">
+				<param BLEED="50" />
+				<param SHOCK="40" />
+				<param DERANGEMENT="40" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param BLEED="50" />
+				<param SHOCK="40" />
+				<param DERANGEMENT="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13314" levels="1" name="Blessed Antharas' Earring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- For 5 seconds, cancels stun and receives Stun Resistance. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="5" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="7200000" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="STUN,10" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13315" levels="1" name="Blessed Valakas' Necklace">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Increases Fire/Dark Resistance, Sleep Resistance, sleep attack bonus, Max HP/ P. Atk./ M. Atk. and magic damage Critical Rate. Decreases skill Cooldown. Redirects some of the physical damage received back upon the enemy. STR+ 3, INT+ 3 -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="30" />
+				<add stat="darkRes" val="20" />
+				<add stat="maxHp" val="625" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="mAtk" val="1.2" />
+				<add stat="mCritRate" val="2" />
+				<mul stat="pReuse" val="0.9" />
+				<mul stat="mReuse" val="0.9" />
+				<mul stat="physicalSkillPower" val="1.05" />
+				<add stat="reflectDam" val="5" />
+				<add stat="STR" val="3" />
+				<add stat="INT" val="3" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SLEEP="50" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SLEEP="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13316" levels="1" name="Blessed Valakas' Necklace">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- For 5 seconds, cancels hold and receives hold resistance. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="5" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="7200000" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="ROOT_PHYSICALLY,10" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="ROOT_MAGICALLY,10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13317" levels="1" name="Earth Wyrm Heart Ring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Increases Wind/Water Resistance, Physical/Mental/Poison Resistance, Knock Back/Knock Down/Pulling Resistance, poison attack bonus, Critical Damage, Accuracy/Atk. Spd./Casting Spd./and MP recovery speed. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="15" />
+				<add stat="windRes" val="15" />
+				<!-- <add stat="KnockBackRes" val="20" /> -->
+				<!-- <add stat="KnockDownRes" val="20" /> -->
+				<!-- <add stat="PullingRes" val="20" /> -->
+				<mul stat="pDef" val="1.15" />
+				<mul stat="regMp" val="1.05" />
+				<mul stat="rCrit" val="1.15">
+				<add stat="accCombat" val="4" />
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="mAtkSpd" val="1.05" />
+			</effect>
+			<effect name="AttackTrait">
+				<param POISON="50" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param POISON="50" />
+				<param DERANGEMENT="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13318" levels="1" name="Earth Wyrm Heart Ring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Increases all party members' Atk. Spd./Casting Spd. by 5% for 5 minutes. In addition, 2% vampiric rate applies with a certain probability. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="affectRange" val="1000" />
+		<set name="abnormalTime" val="300" />
+		<set name="targetType" val="PARTY" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="7200000" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="mAtkSpd" val="1.05" />
+				<add stat="absorbDam" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13319" levels="1" name="Earth Wyrm Heart Ring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Removes poison effect. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="7200000" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="POISON,10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13320" levels="1" name="Istina's Ring">
 		<!-- Updated to Ertheia -->
@@ -808,7 +915,6 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="13386" levels="1" name="Equip Talisman - Annihilation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Talisman - Annihilation burns with power. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="abnormalVisualEffect" val="TALISMAN_DECO_GOLD" />
@@ -817,7 +923,6 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="13387" levels="1" name="Equip Talisman - Hellfire">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Talisman - Hellfire burns with power. -->
 		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
 		<set name="abnormalVisualEffect" val="TALISMAN_DECO_ORANGE" />
@@ -826,7 +931,6 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="13388" levels="1" name="Equip Talisman - Desire">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Talisman - Desire burns with power. -->
 		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
 		<set name="abnormalVisualEffect" val="TALISMAN_DECO_BLUE" />
@@ -835,7 +939,6 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="13389" levels="1" name="Equip Talisman - Longing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Talisman - Longing burns with power. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="abnormalVisualEffect" val="TALISMAN_DECO_LIGHT_PURPLE" />

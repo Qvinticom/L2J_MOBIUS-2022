@@ -288,25 +288,79 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13441" levels="1" name="Queen Ant's Soul Ring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Stun/Poison/Bleed Resistance + 25%, Stun/Poison/Bleed Attack Rate + 25%, P./M. Critical Damage + 15%, P./M. Critical Rate + 20, and P./M. Accuracy + 4. Equipping two will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="4" />
+				<add stat="accMagic" val="4" />
+				<add stat="rCrit" val="20" />
+				<add stat="mCritRate" val="20" />
+				<mul stat="cAtk" val="1.15" />
+				<mul stat="mCritPower" val="1.15" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SHOCK="25" />
+				<param POISON="25" />
+				<param BLEED="25" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="25" />
+				<param POISON="25" />
+				<param BLEED="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13442" levels="1" name="Orfen's Soul Earring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Sleep/Paralysis/Mental Attack Resistance + 25%, Sleep/Paralysis/Mental Attack Rate + 25%, Received Heal Amount + 10%, MP Consumption + 5%, and 4% Vampiric Rage effect. Equipping two will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="healEffect" val="1.1" />
+				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<add stat="absorbDam" val="4" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SLEEP="25" />
+				<param PARALYZE="25" />
+				<param DERANGEMENT="25" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SLEEP="25" />
+				<param PARALYZE="25" />
+				<param DERANGEMENT="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13443" levels="1" name="Lilith' Soul Necklace">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- M. Critical Rate + 20, Paralysis/Mental Attack Resistance + 20%, Mental/ Paralysis Attack Rate + 20%. -->
 		<set name="icon" val="icon.accessary_blessed_lilith" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritRate" val="20" />
+			</effect>
+			<effect name="AttackTrait">
+				<param PARALYZE="20" />
+				<param DERANGEMENT="20" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param PARALYZE="20" />
+				<param DERANGEMENT="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13444" levels="1" name="Earth Resistance Ring">
 		<!-- AUTO GENERATED SKILL -->

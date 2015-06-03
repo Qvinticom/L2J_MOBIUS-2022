@@ -623,14 +623,18 @@
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="78" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3700000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13313-1;13314-1" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
 			<add order="0" stat="mDef" val="170" />
+			<add stat="maxMp" val="59" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -639,13 +643,18 @@
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="105" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="4940000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13315-1;13316-1" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="226.0" />
+			<add order="0" stat="mDef" val="226" />
+			<add stat="maxMp" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

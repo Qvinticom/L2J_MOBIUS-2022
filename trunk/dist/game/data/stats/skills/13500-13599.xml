@@ -394,18 +394,62 @@
 		</for>
 	</skill>
 	<skill id="13539" levels="1" name="Baium's Soul Ring">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Stun/Hold/Mental Resistance + 25%, Stun/Hold/Mental Attack Rate + 25%, P./ M. Critical Damage + 15%, Atk./Casting Spd. + 5%, P. Accuracy/M. Accuracy + 4. Wearing two of the items will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="4" />
+				<add stat="accMagic" val="4" />
+				<mul stat="cAtk" val="1.15" />
+				<mul stat="mCritPower" val="1.15" />
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="mAtkSpd" val="1.05" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SHOCK="25" />
+				<param HOLD="25" />
+				<param DERANGEMENT="25" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="25" />
+				<param HOLD="25" />
+				<param DERANGEMENT="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13540" levels="1" name="Frintezza's Soul Necklace">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Ertheia -->
 		<!-- Poison/Bleed/Stun/Hold/Paralyze Resistance + 20%, Poison/Bleed/Stun/Hold/Paralyze Attack Rate + 20%, Damage Reflect + 5%, Speed + 5. Cooldown - 10%. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mReuse" val="0.9" />
+				<mul stat="pReuse" val="0.9" />
+				<add stat="reflectDam" val="5" />
+				<add stat="runSpd" val="5" />
+			</effect>
+			<effect name="AttackTrait">
+				<param POISON="20" />
+				<param BLEED="20" />
+				<param PARALYZE="20" />
+				<param SHOCK="20" />
+				<param HOLD="20" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param POISON="20" />
+				<param BLEED="20" />
+				<param PARALYZE="20" />
+				<param SHOCK="20" />
+				<param HOLD="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13541" levels="1" name="Octavis' Shirt">
 		<set name="icon" val="icon.istina_shirt_i00" />
