@@ -2072,7 +2072,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="7035705" sp="4502" />
 		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="287000" mpRegen="3.2" />
+			<vitals hp="196331" hpRegen="7.5" mp="2317" mpRegen="3.2" />
 			<attack physical="51200" magical="32870" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1970" magical="1815" />
 			<attribute>
@@ -2085,9 +2085,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4282" level="1" />
-			<skill id="0141" level="4" />
-			<skill id="0142" level="14" />
+			<skill id="4416" level="9" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="17" />
+			<skill id="4412" level="13" />
 			<skill id="4379" level="5" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2097,10 +2098,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20055" max="46740" chance="70" />
+				<item id="57" min="845" max="1969" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
+				<item id="35347" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="24.94" />
+				<item id="36518" min="1" max="1" chance="8.500" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2109,7 +2115,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="13065603" sp="8361" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="196331" hpRegen="7.5" mp="2317" mpRegen="2.7" />
 			<attack physical="47347" magical="49170" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1970" magical="1815" />
 			<attribute>
@@ -2122,10 +2128,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4282" level="5" />
-			<skill id="141" level="3" />
-			<skill id="142" level="5" />
-			<skill id="4413" level="22" />
+			<skill id="4416" level="9" />
+			<skill id="5456" level="1" />
+			<skill id="4410" level="19" />
+			<skill id="4412" level="16" />
+			<skill id="4413" level="16" />
 			<skill id="4379" level="5" />
 		</skill_list>
 		<collision>
@@ -2134,10 +2141,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20055" max="46740" chance="70" />
+				<item id="57" min="1689" max="3937" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.75" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.075" /> <!-- Quality Leather Braid -->
+				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="24.94" />
+				<item id="36543" min="1" max="1" chance="3" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2146,51 +2159,113 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2445" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<!-- <skill id="5465" level="1" /> -->
+			<!-- <skill id="4410" level="17" /> -->
+			<!-- <skill id="4412" level="13" /> -->
+			<!-- <skill id="4379" level="5" /> -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="29" />
 			<height normal="72" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
+				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23490" level="98" type="L2Npc" name="Lava Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="196331" hpRegen="7.5" mp="2317" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="38" />
 			<height normal="63" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="845" max="1669" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
+				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</death>
+			<corpse>
+				<item id="36518" min="1" max="1" chance="8.700" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23491" level="98" type="L2Npc" name="Lava Wendigo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="196331" hpRegen="7.5" mp="2317" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="3" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="26" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="845" max="1969" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
+				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</death>
+			<corpse>
+				<item id="36518" min="1" max="1" chance="8.500" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23492" level="98" type="L2Npc" name="Lava Stone Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2214,17 +2289,36 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="327214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="196331" hpRegen="7.5" mp="2317" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="845" max="1969" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="1.250" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+			</death>
+			<corpse>
+				<item id="36538" min="1" max="1" chance="2.225" /> <!-- Durable Leather Braid  -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23494" level="99" type="L2Monster" name="Magma Salamander">
 		<race>DIVINE</race>
@@ -2244,9 +2338,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4282" level="1" />
-			<skill id="0141" level="4" />
-			<skill id="0142" level="14" />
+			<skill id="4416" level="7" />
+			<skill id="5462" level="1" />
+			<skill id="4410" level="17" />
+			<skill id="4412" level="13" />
 			<skill id="4379" level="5" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2256,10 +2351,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20055" max="46740" chance="70" />
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
+				<item id="35348" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="24.94" />
+				<item id="36538" min="1" max="1" chance="2.200" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2268,7 +2368,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="6648482" sp="10637" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="197398" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2276,81 +2376,190 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4282" level="1" />
-			<skill id="4411" level="22" />
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="4411" level="17" />
 			<skill id="4379" level="5" />
 		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="32.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
+				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+			<corpse>
+				<item id="36538" min="1" max="1" chance="2.200" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23496" level="99" type="L2Npc" name="Magma Ifrit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4410" level="19" />
+			<skill id="4412" level="16" />
+			<skill id="4413" level="16" />
+			<skill id="4379" level="5" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1743" max="4060" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.75" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.075" /> <!-- Quality Leather Braid -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35452" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Cutter (60%) -->
+			</death>
+			<corpse>
+				<item id="36543" min="1" max="1" chance="3.200" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23497" level="99" type="L2Npc" name="Blazing Saurus" title="Flaming Stigma">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2179" max="5075" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
+				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="36549" min="1" max="1" chance="0.0055" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</death>
+			<corpse>
+				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23498" level="99" type="L2Npc" name="Blazing Wizard" title="Flaming Stigma">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5462" level="1" />
+			<skill id="4411" level="19" />
+			<skill id="4412" level="16" />
+			<skill id="4413" level="16" />
+			<skill id="4379" level="5" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2179" max="5075" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Fragment -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Buster (60%) -->
+				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</death>
+			<corpse>
+				<item id="36539" min="1" max="1" chance="0.75" /> <!--Quality Leather Braid -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23499" level="99" type="L2Npc" name="Flame Preta">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="37" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Amaranthine Caster Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
+			</death>
+			<corpse>
+				<item id="36518" min="1" max="1" chance="8.900" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 </list>

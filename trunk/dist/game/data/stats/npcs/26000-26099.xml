@@ -187,12 +187,11 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="26011" level="88" type="L2Npc" name="Bloody Earth Dragon Gagia" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26011" level="88" type="L2RaidBoss" name="Bloody Earth Dragon Gagia" title="Raid Boss">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="38196049" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="38196052" hpRegen="7.5" mp="58572" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -203,8 +202,58 @@
 			<radius normal="50" />
 			<height normal="60" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17309" min="1" max="1" chance="12.50" /> <!-- Immortal Shield -->
+				<item id="17304" min="1" max="1" chance="12.50" /> <!-- Immortal Helmet -->
+				<item id="17320" min="1" max="1" chance="12.50" /> <!-- Immortal Sigil -->
+				<item id="17307" min="1" max="1" chance="12.50" /> <!-- Immortal Gauntlets -->
+				<item id="17308" min="1" max="1" chance="11.50" /> <!-- Immortal Boots -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="34" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="32" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye-->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17680" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="16" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="38572" min="1" max="1" chance="8.300" /> <!-- Apparition Stone (Lv. 88) -->
+				<item id="37975" min="2" max="2" chance="4.750" /> <!-- Immortal Gloves Crafting Pack -->
+				<item id="37977" min="2" max="2" chance="4.750" /> <!-- Immortal Sigil Crafting Pack -->
+				<item id="37969" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Leggings Crafting Pack -->
+				<item id="37964" min="2" max="2" chance="4.750" /> <!-- Immortal Gauntlets Crafting Pack -->
+				<item id="37968" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Armor Crafting Pack -->
+				<item id="37971" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Boots Crafting Pack -->
+				<item id="37966" min="2" max="2" chance="4.750" /> <!-- Immortal Shield Crafting Pack -->
+				<item id="37970" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Gloves Crafting Pack -->
+				<item id="37972" min="2" max="2" chance="4.750" /> <!-- Immortal Circlet Crafting Pack -->
+				<item id="37965" min="2" max="2" chance="4.750" /> <!-- Immortal Boots Crafting Pack -->
+				<item id="37963" min="2" max="2" chance="4.750" /> <!-- Immortal Gaiters Crafting Pack -->
+				<item id="37967" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Helmet Crafting Pack -->
+				<item id="37961" min="2" max="2" chance="4.750" /> <!-- Immortal Helmet Crafting Pack -->
+				<item id="37976" min="2" max="2" chance="4.750" /> <!-- Immortal Shoes Crafting Pack -->
+				<item id="37962" min="2" max="2" chance="4.750" /> <!-- Immortal Breastplate Crafting Pack -->
+				<item id="37973" min="2" max="2" chance="4.750" /> <!-- Immortal Tunic Crafting Pack -->
+				<item id="37974" min="2" max="2" chance="4.750" /> <!-- Immortal Stockings Crafting Pack -->
+				<item id="37959" min="1" max="1" chance="3.650" /> <!-- Requiem Caster Crafting Pack -->
+				<item id="37957" min="1" max="1" chance="3.650" /> <!-- Requiem Shooter Crafting Pack -->
+				<item id="37951" min="1" max="1" chance="3.650" /> <!-- Requiem Cutter Crafting Pack -->
+				<item id="37955" min="1" max="1" chance="3.650" /> <!-- Requiem Stormer Crafting Pack -->
+				<item id="37956" min="1" max="1" chance="3.650" /> <!-- Requiem Thrower Crafting Pack -->
+				<item id="37960" min="1" max="1" chance="3.650" /> <!-- Requiem Retributer Crafting Pack -->
+				<item id="37954" min="1" max="1" chance="3.650" /> <!-- Requiem Fighter Crafting Pack -->
+				<item id="37952" min="1" max="1" chance="3.650" /> <!-- Requiem Slasher Crafting Pack -->
+				<item id="37958" min="1" max="1" chance="3.650" /> <!-- Requiem Buster Crafting Pack -->
+				<item id="37950" min="1" max="1" chance="3.650" /> <!-- Requiem Shaper Crafting Pack -->
+				<item id="37953" min="1" max="1" chance="3.650" /> <!-- Requiem Avenger Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="26012" level="88" type="L2Npc" name="Demon Fardune" title="Raid Boss">
+	<npc id="26012" level="88" type="L2RaidBoss" name="Demon Fardune" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -238,12 +287,11 @@
 			<height normal="40.6" />
 		</collision>
 	</npc>
-	<npc id="26014" level="88" type="L2Npc" name="Demon Bedukel" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26014" level="88" type="L2RaidBoss" name="Demon Bedukel" title="Raid Boss">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="26737234" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="26737234" hpRegen="7.5" mp="58572" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -254,6 +302,56 @@
 			<radius normal="20" />
 			<height normal="56" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17309" min="1" max="1" chance="12.50" /> <!-- Immortal Shield -->
+				<item id="17304" min="1" max="1" chance="12.50" /> <!-- Immortal Helmet -->
+				<item id="17320" min="1" max="1" chance="12.50" /> <!-- Immortal Sigil -->
+				<item id="17307" min="1" max="1" chance="12.50" /> <!-- Immortal Gauntlets -->
+				<item id="17308" min="1" max="1" chance="11.50" /> <!-- Immortal Boots -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="34" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="32" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye-->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17680" min="3" max="3" chance="16" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="16" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="38572" min="1" max="1" chance="8.300" /> <!-- Apparition Stone (Lv. 88) -->
+				<item id="37975" min="2" max="2" chance="4.750" /> <!-- Immortal Gloves Crafting Pack -->
+				<item id="37977" min="2" max="2" chance="4.750" /> <!-- Immortal Sigil Crafting Pack -->
+				<item id="37969" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Leggings Crafting Pack -->
+				<item id="37964" min="2" max="2" chance="4.750" /> <!-- Immortal Gauntlets Crafting Pack -->
+				<item id="37968" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Armor Crafting Pack -->
+				<item id="37971" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Boots Crafting Pack -->
+				<item id="37966" min="2" max="2" chance="4.750" /> <!-- Immortal Shield Crafting Pack -->
+				<item id="37970" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Gloves Crafting Pack -->
+				<item id="37972" min="2" max="2" chance="4.750" /> <!-- Immortal Circlet Crafting Pack -->
+				<item id="37965" min="2" max="2" chance="4.750" /> <!-- Immortal Boots Crafting Pack -->
+				<item id="37963" min="2" max="2" chance="4.750" /> <!-- Immortal Gaiters Crafting Pack -->
+				<item id="37967" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Helmet Crafting Pack -->
+				<item id="37961" min="2" max="2" chance="4.750" /> <!-- Immortal Helmet Crafting Pack -->
+				<item id="37976" min="2" max="2" chance="4.750" /> <!-- Immortal Shoes Crafting Pack -->
+				<item id="37962" min="2" max="2" chance="4.750" /> <!-- Immortal Breastplate Crafting Pack -->
+				<item id="37973" min="2" max="2" chance="4.750" /> <!-- Immortal Tunic Crafting Pack -->
+				<item id="37974" min="2" max="2" chance="4.750" /> <!-- Immortal Stockings Crafting Pack -->
+				<item id="37959" min="1" max="1" chance="3.650" /> <!-- Requiem Caster Crafting Pack -->
+				<item id="37957" min="1" max="1" chance="3.650" /> <!-- Requiem Shooter Crafting Pack -->
+				<item id="37951" min="1" max="1" chance="3.650" /> <!-- Requiem Cutter Crafting Pack -->
+				<item id="37955" min="1" max="1" chance="3.650" /> <!-- Requiem Stormer Crafting Pack -->
+				<item id="37956" min="1" max="1" chance="3.650" /> <!-- Requiem Thrower Crafting Pack -->
+				<item id="37960" min="1" max="1" chance="3.650" /> <!-- Requiem Retributer Crafting Pack -->
+				<item id="37954" min="1" max="1" chance="3.650" /> <!-- Requiem Fighter Crafting Pack -->
+				<item id="37952" min="1" max="1" chance="3.650" /> <!-- Requiem Slasher Crafting Pack -->
+				<item id="37958" min="1" max="1" chance="3.650" /> <!-- Requiem Buster Crafting Pack -->
+				<item id="37950" min="1" max="1" chance="3.650" /> <!-- Requiem Shaper Crafting Pack -->
+				<item id="37953" min="1" max="1" chance="3.650" /> <!-- Requiem Avenger Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="26015" level="88" type="L2Npc" name="Bloody Witch Rumilla" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -272,12 +370,11 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="26016" level="88" type="L2Npc" name="Shilen's Priest Sasia" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26016" level="88" type="L2RaidBoss" name="Shilen's Priest Sasia" title="Raid Boss">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="26737234" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="26737237" hpRegen="7.5" mp="58772" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -288,6 +385,56 @@
 			<radius normal="37" />
 			<height normal="98" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17309" min="1" max="1" chance="12.50" /> <!-- Immortal Shield -->
+				<item id="17315" min="1" max="1" chance="12.50" /> <!-- Immortal Circlet -->
+				<item id="17320" min="1" max="1" chance="12.50" /> <!-- Immortal Sigil -->
+				<item id="17318" min="1" max="1" chance="12.50" /> <!-- Immortal Gloves -->
+				<item id="17319" min="1" max="1" chance="11.50" /> <!-- Immortal Shoes -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="34" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="32" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye-->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17680" min="3" max="3" chance="16" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="16" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="38572" min="1" max="1" chance="8.300" /> <!-- Apparition Stone (Lv. 88) -->
+				<item id="37975" min="2" max="2" chance="4.750" /> <!-- Immortal Gloves Crafting Pack -->
+				<item id="37977" min="2" max="2" chance="4.750" /> <!-- Immortal Sigil Crafting Pack -->
+				<item id="37969" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Leggings Crafting Pack -->
+				<item id="37964" min="2" max="2" chance="4.750" /> <!-- Immortal Gauntlets Crafting Pack -->
+				<item id="37968" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Armor Crafting Pack -->
+				<item id="37971" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Boots Crafting Pack -->
+				<item id="37966" min="2" max="2" chance="4.750" /> <!-- Immortal Shield Crafting Pack -->
+				<item id="37970" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Gloves Crafting Pack -->
+				<item id="37972" min="2" max="2" chance="4.750" /> <!-- Immortal Circlet Crafting Pack -->
+				<item id="37965" min="2" max="2" chance="4.750" /> <!-- Immortal Boots Crafting Pack -->
+				<item id="37963" min="2" max="2" chance="4.750" /> <!-- Immortal Gaiters Crafting Pack -->
+				<item id="37967" min="2" max="2" chance="4.750" /> <!-- Immortal Leather Helmet Crafting Pack -->
+				<item id="37961" min="2" max="2" chance="4.750" /> <!-- Immortal Helmet Crafting Pack -->
+				<item id="37976" min="2" max="2" chance="4.750" /> <!-- Immortal Shoes Crafting Pack -->
+				<item id="37962" min="2" max="2" chance="4.750" /> <!-- Immortal Breastplate Crafting Pack -->
+				<item id="37973" min="2" max="2" chance="4.750" /> <!-- Immortal Tunic Crafting Pack -->
+				<item id="37974" min="2" max="2" chance="4.750" /> <!-- Immortal Stockings Crafting Pack -->
+				<item id="37959" min="1" max="1" chance="3.650" /> <!-- Requiem Caster Crafting Pack -->
+				<item id="37957" min="1" max="1" chance="3.650" /> <!-- Requiem Shooter Crafting Pack -->
+				<item id="37951" min="1" max="1" chance="3.650" /> <!-- Requiem Cutter Crafting Pack -->
+				<item id="37955" min="1" max="1" chance="3.650" /> <!-- Requiem Stormer Crafting Pack -->
+				<item id="37956" min="1" max="1" chance="3.650" /> <!-- Requiem Thrower Crafting Pack -->
+				<item id="37960" min="1" max="1" chance="3.650" /> <!-- Requiem Retributer Crafting Pack -->
+				<item id="37954" min="1" max="1" chance="3.650" /> <!-- Requiem Fighter Crafting Pack -->
+				<item id="37952" min="1" max="1" chance="3.650" /> <!-- Requiem Slasher Crafting Pack -->
+				<item id="37958" min="1" max="1" chance="3.650" /> <!-- Requiem Buster Crafting Pack -->
+				<item id="37950" min="1" max="1" chance="3.650" /> <!-- Requiem Shaper Crafting Pack -->
+				<item id="37953" min="1" max="1" chance="3.650" /> <!-- Requiem Avenger Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="26017" level="88" type="L2Npc" name="Demon Collector" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

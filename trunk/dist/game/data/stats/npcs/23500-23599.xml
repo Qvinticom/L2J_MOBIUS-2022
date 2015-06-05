@@ -1,88 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23500" level="99" type="L2Npc" name="Flame Crow">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="39.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</death>
+			<corpse>
+				<item id="36543" min="1" max="1" chance="1.600" /> <!-- Item 36543.jpg Adamantite Wire -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Item 36519.jpg Quality Leather -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23501" level="99" type="L2Npc" name="Flame Rael">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4411" level="13" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35332" min="1" max="1" chance="0.03" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</death>
+			<corpse>
+				<item id="36538" min="1" max="1" chance="2.275" /> <!-- Durable Leather Braid -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23502" level="99" type="L2Npc" name="Flame Salamander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="7" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Amaranthine Buster Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</death>
+			<corpse>
+				<item id="36518" min="1" max="1" chance="9" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23503" level="99" type="L2Npc" name="Flame Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="4411" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Amaranthine Caster Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
+			</death>
+			<corpse>
+				<item id="36543" min="1" max="1" chance="1.500" /> <!-- Adamantite Wire -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23504" level="99" type="L2Npc" name="Flame Votis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328874" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="13" />
+			<skill id="5465" level="1" />
+			<skill id="4410" level="16" />
+			<skill id="4379" level="4" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</death>
+			<corpse>
+				<item id="36538" min="1" max="1" chance="2.250" /> <!-- Durable Leather Braid -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+			</corpse>
+		</drop_lists>
 	</npc>
 </list>
