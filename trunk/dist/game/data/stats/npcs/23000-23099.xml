@@ -3062,7 +3062,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="15967403" sp="69467" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="2462992" hpRegen="7.5" mp="2462992" mpRegen="2.7" />
+			<vitals hp="1477796" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3360" magical="3420" />
 			<attribute>
@@ -3087,11 +3087,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="17607" min="2" max="2" chance="100" />
-				<item id="57" min="25090" max="58629" chance="70" />
-				<item id="30425" min="1" max="1" chance="0.5" />
-				<item id="30297" min="1" max="1" chance="0.2" />
+				<item id="57" min="6211" max="14499" chance="70" /> <!-- Adena  -->
+				<item id="30297" min="1" max="1" chance="0.75" /> <!-- Superior Giant's Codex  -->
 			</death>
+            <corpse>
+				<item id="36533" min="1" max="1" chance="11.75" /> <!-- Synthetic Braid -->
+				<item id="30425" min="1" max="1" chance="1.110" /> <!-- Recipe: Blessed Spiritshot (R-grade) (for dwarves) -->
+			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23091" level="97" type="L2Monster" name="Hall Guard Warrior">
@@ -3099,7 +3101,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="5213131" sp="22680" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449 " hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3360" magical="3420" />
 			<attribute>
@@ -3124,9 +3126,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="14188" max="33154" chance="70" />
-				<item id="30300" min="1" max="1" chance="0.1" />
+				<item id="57" min="3511" max="8196" chance="70" /> <!-- Adena -->
+				<item id="30297" min="1" max="1" chance="0.3" /> <!-- Superior Giant's Codex -->
 			</death>
+            <corpse>
+				<item id="36533" min="1" max="1" chance="11.75" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="1.110" /> <!-- Durable Braid -->
+			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23092" level="97" type="L2Monster" name="Hall Guard Warrior">
@@ -3134,7 +3140,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="5213131" sp="22680" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3360" magical="3420" />
 			<attribute>
@@ -3159,9 +3165,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="14188" max="33154" chance="70" />
-				<item id="17526" min="1" max="1" chance="0.05" />
+				<item id="57" min="3511" max="8196" chance="70" /> <!-- Adena -->
+				<item id="30297" min="1" max="1" chance="0.3" /> <!-- Superior Giant's Codex -->
 			</death>
+            <corpse>
+				<item id="36533" min="1" max="1" chance="11.50" /> <!-- Synthetic Braid -->
+				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23093" level="97" type="L2Monster" name="Hall Guard Healer">
@@ -3169,7 +3179,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="5213131" sp="22680" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3360" magical="3420" />
 			<attribute>
@@ -3194,9 +3204,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="14188" max="33154" chance="70" />
-				<item id="17527" min="1" max="1" chance="0.25" />
+				<item id="57" min="3511" max="8196" chance="70" /> <!-- Adena -->
+				<item id="17527" min="1" max="1" chance="1.650" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</death>
+            <corpse>
+				<item id="36533" min="1" max="1" chance="11.75" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="1.110" /> <!-- Durable Braid -->
+			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23094" level="22" type="L2Monster" name="Poisonous Spider">
