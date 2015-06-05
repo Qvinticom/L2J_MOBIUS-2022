@@ -2027,7 +2027,6 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="STR" val="2" />
 				<mul stat="mAtkSpd" val="1.15" />
 			</effect>
 		</for>
