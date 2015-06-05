@@ -1343,7 +1343,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4879745" sp="1171" raidPoints="10448" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="360722" hpRegen="346.8" mp="180000.0" mpRegen="100" />
+			<vitals hp="858881" hpRegen="346.8" mp="180000.0" mpRegen="100" />
 			<attack physical="3616" magical="1520" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1981" magical="966.39" evasion="-18" />
 			<attribute>
@@ -1371,101 +1371,59 @@
 		<corpse_time>300</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="30">
-					<item id="135" min="1" max="1" chance="16" /> <!-- Samurai Longsword -->
-					<item id="204" min="1" max="1" chance="4" /> <!-- Deadman's Staff -->
-					<item id="205" min="1" max="1" chance="4" /> <!-- Ghoul's Staff -->
-					<item id="206" min="1" max="1" chance="5" /> <!-- Demon's Staff -->
-					<item id="228" min="1" max="1" chance="16" /> <!-- Crystal Dagger -->
-					<item id="266" min="1" max="1" chance="10" /> <!-- Great Pata -->
-					<item id="286" min="1" max="1" chance="13" /> <!-- Eminence Bow -->
-					<item id="299" min="1" max="1" chance="10" /> <!-- Orcish Poleaxe -->
-					<item id="2503" min="1" max="1" chance="12" /> <!-- Yaksa Mace -->
-					<item id="5286" min="1" max="1" chance="10" /> <!-- Berserker Blade -->
-				</group>
-				<group chance="10">
-					<item id="78" min="1" max="1" chance="10" /> <!-- Great Sword -->
-					<item id="91" min="1" max="1" chance="12" /> <!-- Heavy War Axe -->
-					<item id="92" min="1" max="1" chance="13" /> <!-- Sprite's Staff -->
-					<item id="142" min="1" max="1" chance="8" /> <!-- Keshanberk -->
-					<item id="148" min="1" max="1" chance="8" /> <!-- Sword of Valhalla -->
-					<item id="229" min="1" max="1" chance="8" /> <!-- Kris -->
-					<item id="243" min="1" max="1" chance="8" /> <!-- Hell Knife -->
-					<item id="267" min="1" max="1" chance="10" /> <!-- Arthro Nail -->
-					<item id="284" min="1" max="1" chance="13" /> <!-- Dark Elven Long Bow -->
-					<item id="300" min="1" max="1" chance="10" /> <!-- Great Axe -->
-				</group>
-				<group chance="20">
-					<item id="357" min="1" max="1" chance="25" /> <!-- Zubei's Breastplate -->
-					<item id="2384" min="1" max="1" chance="25" /> <!-- Zubei's Leather Shirt -->
-					<item id="2376" min="1" max="1" chance="25" /> <!-- Avadon Breastplate -->
-					<item id="2397" min="1" max="1" chance="25" /> <!-- Tunic of Zubei -->
-				</group>
-				<group chance="20">
-					<item id="383" min="1" max="1" chance="25" /> <!-- Zubei's Gaiters -->
-					<item id="2379" min="1" max="1" chance="25" /> <!-- Avadon Gaiters -->
-					<item id="2388" min="1" max="1" chance="25" /> <!-- Zubei's Leather Gaiters -->
-					<item id="2402" min="1" max="1" chance="25" /> <!-- Stockings of Zubei -->
-				</group>
-				<group chance="20">
-					<item id="2390" min="1" max="1" chance="50" /> <!-- Avadon Leather Armor -->
-					<item id="2406" min="1" max="1" chance="50" /> <!-- Avadon Robe -->
-				</group>
-				<group chance="30">
-					<item id="503" min="1" max="1" chance="10" /> <!-- Zubei's Helmet -->
-					<item id="554" min="1" max="1" chance="10" /> <!-- Sealed Zubei's Boots -->
-					<item id="600" min="1" max="1" chance="10" /> <!-- Sealed Avadon Boots -->
-					<item id="612" min="1" max="1" chance="10" /> <!-- Sealed Zubei's Gauntlets -->
-					<item id="633" min="1" max="1" chance="10" /> <!-- Zubei's Shield -->
-					<item id="673" min="1" max="1" chance="10" /> <!-- Avadon Shield -->
-					<item id="2415" min="1" max="1" chance="10" /> <!-- Avadon Circlet -->
-					<item id="2464" min="1" max="1" chance="10" /> <!-- Sealed Avadon Gloves -->
-					<item id="947" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="85">
-					<item id="6659" min="1" max="1" chance="100" /> <!-- Earring of Zaken -->
-				</group>
-				<group chance="100">
-					<item id="8747" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8748" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 61 -->
-					<item id="8757" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 58 -->
-					<item id="8758" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 61 -->
-				</group>
-				<group chance="1">
-					<item id="8922" min="1" max="1" chance="100" /> <!-- Pirate Hat -->
-				</group>
-				<group chance="1.0">
-					<item id="10295" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Zaken -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="180000"  max="1540000" chance="100" /> <!-- Adena -->
+				<item id="6659" min="1" max="1" chance="86" /> <!-- Zaken's Earring -->
+				<item id="2390" min="1" max="1" chance="10" /> <!-- Avadon Leather Armor -->
+				<item id="2406" min="1" max="1" chance="10" /> <!-- Avadon Robe -->
+				<item id="2388" min="1" max="1" chance="5" /> <!-- Zubei's Leather Gaiters -->
+				<item id="357" min="1" max="1" chance="5" /> <!-- Zubei's Breastplate -->
+				<item id="383" min="1" max="1" chance="5" /> <!-- Zubei's Gaiters -->
+				<item id="2384" min="1" max="1" chance="5" /> <!-- Zubei's Leather Shirt -->
+				<item id="2376" min="1" max="1" chance="5" /> <!-- Avadon Breastplate -->
+				<item id="2384" min="1" max="1" chance="5" /> <!-- Zubei's Leather Shirt -->
+				<item id="2379" min="1" max="1" chance="5" /> <!-- Avadon Gaiters -->
+				<item id="2397" min="1" max="1" chance="5" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="5" /> <!-- Stockings of Zubei -->
+				<item id="228" min="1" max="1" chance="5" /> <!-- Crystal Dagger -->
+				<item id="135" min="1" max="1" chance="5" /> <!-- Samurai Longsword -->
+				<item id="286" min="1" max="1" chance="4" /> <!-- Eminence Bow -->
+				<item id="2503" min="1" max="1" chance="4" /> <!-- Yaksa Mace -->
+				<item id="600" min="1" max="1" chance="3" /> <!-- Sealed Avadon Boots -->
+				<item id="503" min="1" max="1" chance="3" /> <!-- Zubei's Helmet -->
+				<item id="612" min="1" max="1" chance="3" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="554" min="1" max="1" chance="3" /> <!-- Sealed Zubei's Boots -->
+				<item id="266" min="1" max="1" chance="3" /> <!-- Great Pata -->
+				<item id="2464" min="1" max="1" chance="3" /> <!-- Sealed Avadon Gloves -->
+				<item id="5286" min="1" max="1" chance="3" /> <!-- Berserker Blade -->
+				<item id="299" min="1" max="1" chance="3" /> <!-- Orcish Poleaxe -->
+				<item id="633" min="1" max="1" chance="3" /> <!-- Zubei's Shield -->
+				<item id="673" min="1" max="1" chance="3" /> <!-- Avadon Shield -->
+				<item id="2415" min="1" max="1" chance="3" /> <!-- Avadon Circlet -->
+				<item id="206" min="1" max="1" chance="1.500" /> <!-- Demon's Staff -->
+				<item id="92" min="1" max="1" chance="1.500" /> <!-- Sprite's Staff -->
+				<item id="284" min="1" max="1" chance="1.500" /> <!-- Dark Elven Long Bow -->
+				<item id="91" min="1" max="1" chance="1.500" /> <!-- Heavy War Axe -->
+				<item id="204" min="1" max="1" chance="1.500" /> <!-- Deadman's Staff -->
+				<item id="205" min="1" max="1" chance="1.500" /> <!-- Ghoul's Staff -->
+				<item id="78" min="1" max="1" chance="0.75" /> <!-- Great Sword -->
+				<item id="300" min="1" max="1" chance="0.75" /> <!-- Great Axe -->
+				<item id="267" min="1" max="1" chance="0.75" /> <!-- Arthro Nail -->
+				<item id="243" min="1" max="1" chance="0.75" /> <!-- Twilight Knife -->
+				<item id="229" min="1" max="1" chance="0.75" /> <!-- Kris -->
+				<item id="148" min="1" max="1" chance="0.75" /> <!-- Sword of Valhalla -->
+				<item id="142" min="1" max="1" chance="0.75" /> <!-- Keshanberk -->
+				<item id="8922" min="1" max="1" chance="0.75" /> <!-- Pirate Hat -->
+				<item id="45929" min="2" max="12" chance="46" /> <!-- Spirit Stone -->
+				<item id="947" min="1" max="1" chance="5.932" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="10295" min="1" max="1" chance="0.75" /> <!-- Transformation Sealbook: Zaken -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29023" level="58" type="L2Monster" name="Doll Blader">
 		<parameters>
