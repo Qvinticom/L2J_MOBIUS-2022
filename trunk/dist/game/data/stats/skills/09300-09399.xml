@@ -534,40 +534,117 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="9376" levels="1" name="Mentor's Knight's Harmony">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., selected mentee's P. Atk. + 12% P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="icon" val="icon.skill11523" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
+		<set name="abnormalType" val="HARMONY" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="700" />
+		<set name="icon" val="icon.skill11523" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.12" />
+				<mul stat="pDef" val="1.45" />
+				<mul stat="rShld" val="1.30" />
+				<mul stat="sDef" val="1.50" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9377" levels="1" name="Mentor's Wizard's Harmony">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., selected mentee's M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Speed + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. M. Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, and Skill Cooldown - 20%. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="icon" val="icon.skill11525" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
+		<set name="abnormalType" val="HARMONY" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="700" />
+		<set name="icon" val="icon.skill11525" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.40" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mDef" val="1.14" />
+				<mul stat="mCritRate" val="2" />
+				<mul stat="regMp" val="1.20" />
+				<add stat="runSpd" val="8" />
+				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="mReuse" val="0.80" />
+				<mul stat="pReuse" val="0.80" />
+				<mul stat="dReuse" val="0.80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="MA_UP;PA_UP;CASTING_TIME_DOWN;ATTACK_TIME_DOWN;MD_UP;MAGIC_CRITICAL_UP;MP_REGEN_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9378" levels="1" name="Mentor's Warrior's Harmony">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., selected mentee's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, and Speed + 8. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="icon" val="icon.skill11524" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="140" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
+		<set name="abnormalType" val="HARMONY" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="700" />
+		<set name="icon" val="icon.skill11524" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="140" />
+		<set name="mpInitialConsume" val="28" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.35" />
+				<mul stat="cAtk" val="1.35" />
+				<mul stat="rCrit" val="2" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;PD_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;ATTACK_TIME_DOWN;MA_UP;CASTING_TIME_DOWN;SPEED_UP" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9379" levels="1" name="Mentee's Mentor Summon">
 		<!-- AUTO GENERATED SKILL -->

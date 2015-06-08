@@ -581,28 +581,93 @@
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="17082" levels="1" name="Mentor's Prevailing Sonata">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mentor's assistance. Atk. Spd. + 10%, Casting Spd. + 20%, Max HP + 20%, and MP Recovery Bonus + 10%. M. Skill MP Consumption - 5%, and decreases chance of cancellation while casting. Applied only when mentor is logged in. Lasts 5 min. after mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11529" />
+		<set name="abnormalType" val="PREV_SONATA" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.1" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<mul stat="maxHp" val="1.2" />
+				<mul stat="regMp" val="1.1" />
+				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<sub stat="cancel" val="50" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;MAX_HP_UP;MP_REGEN_UP;MP_COST_DOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17083" levels="1" name="Mentor's Daring Sonata">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mentor's assistance. P. Atk. + 5%, M. Atk. + 10%, and Atk./Casting Spd. + 5%. P. Def./M. Def. - 4%, and P. Evasion - 4. Has a chance of 5% Vampiric Rage effect, and reflects 10% of received damage back to enemy. Applied only when mentor is logged in. Lasts 5 min. after mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11530" />
+		<set name="abnormalType" val="DARING_SONATA" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" />
+				<mul stat="mAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.05" />
+				<mul stat="mAtkSpd" val="1.05" />
+				<mul stat="pDef" val="0.96" />
+				<mul stat="mDef" val="0.96" />
+				<sub stat="rEvas" val="4" />
+				<add stat="absorbDam" val="5" />
+				<add stat="reflectDam" val="10" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17084" levels="1" name="Mentor's Refreshing Sonata">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mentor's assistance. HP Recovery Bonus + 10%, P. Accuracy + 2, P. Evasion + 2, and Speed + 10. Skill MP Consumption - 10%, and Skill Cooldown - 5%. Applied only when mentor is logged in. Lasts 5 min. after mentor logs out. -->
+		<set name="abnormalTime" val="-1" />
+		<set name="canBeDispeled" val="false" />
 		<set name="icon" val="icon.skill11532" />
+		<set name="abnormalType" val="REF_SONATA" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<set name="isMentoring" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.1" />
+				<add stat="accCombat" val="2" />
+				<add stat="rEvas" val="2" />
+				<add stat="runSpd" val="10" />
+				<mul stat="PhysicalMpConsumeRate" val="0.90" />
+				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<mul stat="mReuse" val="0.95" />
+				<mul stat="pReuse" val="0.95" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="HP_REGEN_UP;HIT_UP;AVOID_UP;SPEED_UP;MP_COST_DOWN;REUSE_DELAY_DOWN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17085" levels="1" name="Kisung's Power Up">
 		<!-- AUTO GENERATED SKILL -->

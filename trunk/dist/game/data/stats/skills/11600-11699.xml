@@ -301,9 +301,10 @@
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pDef" val="0.97" />
-				<mul stat="mDef" val="0.97" />
+				<mul stat="mDef" val="0.89" />
 				<sub stat="rEvas" val="4" />
 				<add stat="absorbDam" val="8" />
+				<add stat="reflectDam" val="10" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />
@@ -434,9 +435,10 @@
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pDef" val="0.97" />
-				<mul stat="mDef" val="0.97" />
+				<mul stat="mDef" val="0.89" />
 				<sub stat="rEvas" val="4" />
 				<add stat="absorbDam" val="8" />
+				<add stat="reflectDam" val="10" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />

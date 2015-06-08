@@ -806,6 +806,9 @@
 				<add stat="mCritRate" val="#mCritRate" />
 				<mul stat="MagicalMpConsumeRate" val="#magicMpConsumeRate" />
 				<mul stat="PhysicalMpConsumeRate" val="#physMpConsumeRate" />
+				<mul stat="MagicalMpConsumeRate" val="0.8">
+					<player class_id_restriction="171,172,173,174,175" />
+				</mul>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" rate="100" />
@@ -1099,7 +1102,7 @@
 				<mul stat="mDef" val="1.14" />
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="runSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
 				<mul stat="MagicalMpConsumeRate" val="0.85" />
 				<mul stat="PhysicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
@@ -1122,7 +1125,7 @@
 				<mul stat="mDef" val="1.14" />
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="runSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
 				<mul stat="MagicalMpConsumeRate" val="0.85" />
 				<mul stat="PhysicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
@@ -1148,7 +1151,7 @@
 				<mul stat="mDef" val="1.14" />
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="runSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
 				<mul stat="MagicalMpConsumeRate" val="0.85" />
 				<mul stat="PhysicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
@@ -1264,9 +1267,10 @@
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtkSpd" val="1.08" />
 				<mul stat="pDef" val="0.97" />
-				<mul stat="mDef" val="0.97" />
+				<mul stat="mDef" val="0.89" />
 				<sub stat="rEvas" val="4" />
 				<add stat="absorbDam" val="8" />
+				<add stat="reflectDam" val="10" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;MA_UP;ATTACK_TIME_DOWN;CASTING_TIME_DOWN;PD_UP;MD_UP;AVOID_UP;VAMPIRIC_ATTACK" rate="100" />
