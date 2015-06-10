@@ -456,11 +456,32 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="15145" levels="1" name="Ruler's Authority">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- SKILL NOT DONE -->
 		<!-- Max CP/HP/MP + 1000, Weight + 25600, Damage + 8%, Received Damage - 9%, Damage Reflect Resistance + 5%, Inventory Slot + 36, and all Attribute Resistance + 15. -->
 		<set name="icon" val="icon.skill0332" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="1000" />
+				<add stat="maxCp" val="1000" />
+				<add stat="maxMp" val="1000" />
+				<add stat="weightPenalty" val="25600" />
+				<add stat="inventoryLimit" val="36" />
+				<!--<mul stat="PhysDmg" val="1.08" /> -->
+				<!--<mul stat="PhysSkillsDmg" val="1.08" /> -->
+				<!--<mul stat="MagicalDmg" val="1.08" /> -->
+				<mul stat="defCritDamage" val="1.09" />
+				<mul stat="receivedDamageModifier" val="0.95" />
+				<add stat="darkRes" val="15" />
+				<add stat="earthRes" val="15" />
+				<add stat="fireRes" val="15" />
+				<add stat="holyRes" val="15" />
+				<add stat="waterRes" val="15" />
+				<add stat="windRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="15146" levels="1" name="Mysterious Belt">
 		<!-- AUTO GENERATED SKILL -->

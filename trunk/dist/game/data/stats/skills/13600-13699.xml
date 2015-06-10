@@ -365,18 +365,46 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13652" levels="1" name="Tiat's Belt">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- SKILL NOT DONE -->
 		<!-- Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slots + 18. Received damage - 6%. -->
 		<set name="icon" val="icon.octavis_belt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="398" />
+				<add stat="maxCp" val="398" />
+				<add stat="maxMp" val="176" />
+				<add stat="weightPenalty" val="12800" />
+				<add stat="inventoryLimit" val="18" />
+				<!--<mul stat="PhysDmg" val="1.05" /> -->
+				<!--<mul stat="PhysSkillsDmg" val="1.05" /> -->
+				<!--<mul stat="MagicalDmg" val="1.05" /> -->
+				<mul stat="defCritDamage" val="1.06" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13653" levels="1" name="Ekimus' Belt">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- SKILL NOT DONE -->
 		<!-- Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slots + 18. Received damage - 6%. -->
 		<set name="icon" val="icon.octavis_belt_i00" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="398" />
+				<add stat="maxCp" val="398" />
+				<add stat="maxMp" val="176" />
+				<add stat="weightPenalty" val="12800" />
+				<add stat="inventoryLimit" val="18" />
+				<!--<mul stat="PhysDmg" val="1.05" /> -->
+				<!--<mul stat="PhysSkillsDmg" val="1.05" /> -->
+				<!--<mul stat="MagicalDmg" val="1.05" /> -->
+				<mul stat="defCritDamage" val="1.06" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13654" levels="1" name="Grey Talisman - High-grade Fishing">
 		<!-- AUTO GENERATED SKILL -->

@@ -1,135 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30100" name="Blessed Apocalypse Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 332. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="6051" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="283641045" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13285-3" />
+		<set name="item_skill" val="13062-2;3566-9" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<cond msgId="1518">
+			<and>
+				<player level="85" />
+				<player categoryType="DAGGER_MASTER" />
+			</and>
+		</cond>
 		<for>
 			<set stat="pAtk" val="519.0" />
 			<set stat="mAtk" val="226.0" />
-			<set stat="pAtkSpd" val="433.0" />
 			<set stat="rCrit" val="12.0" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30101" name="Blessed Apocalypse Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5 and Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="6051" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="283641045" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13285-3" />
+		<set name="item_skill" val="3566-10;3573-5" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<cond msgId="1518">
+			<and>
+				<player level="85" />
+				<player categoryType="DAGGER_MASTER" />
+			</and>
+		</cond>
 		<for>
 			<set stat="pAtk" val="519.0" />
 			<set stat="mAtk" val="226.0" />
-			<set stat="pAtkSpd" val="433.0" />
 			<set stat="rCrit" val="12.0" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30102" name="Blessed Apocalypse Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.8 and P. Atk. by 332. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="6051" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="283641045" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13285-3" />
+		<set name="item_skill" val="3573-6;13062-2" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<cond msgId="1518">
+			<and>
+				<player level="85" />
+				<player categoryType="DAGGER_MASTER" />
+			</and>
+		</cond>
 		<for>
 			<set stat="pAtk" val="519.0" />
 			<set stat="mAtk" val="226.0" />
-			<set stat="pAtkSpd" val="433.0" />
 			<set stat="rCrit" val="12.0" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30103" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 76.3 and Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="6051" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="283641045" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<for>
-			<set stat="pAtk" val="632.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
-		</for>
-	</item>
-	<item id="30104" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.7 and P. Atk. by 332. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
-		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="crystal_type" val="R" />
-		<set name="crystal_count" val="6051" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1740" />
-		<set name="price" val="283641045" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<for>
-			<set stat="pAtk" val="632.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
-		</for>
-	</item>
-	<item id="30105" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
-		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="crystal_type" val="R" />
-		<set name="crystal_count" val="6051" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1740" />
-		<set name="price" val="283641045" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="enchant4_skill" val="13270-3" />
+		<set name="item_skill" val="3565-10;3573-5" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<for>
 			<set stat="pAtk" val="632.0" />
 			<set stat="mAtk" val="226.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<add stat="accCombat" val="8.0" />
 			<set stat="rCrit" val="6.0" />
+			<add stat="accCombat" val="8.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
+	</item>
+	<item id="30104" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
+		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="6051" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="283641045" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13270-3" />
+		<set name="item_skill" val="3573-5;13062-2" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<for>
+			<set stat="pAtk" val="632.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="rCrit" val="6.0" />
+			<add stat="accCombat" val="8.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
+	</item>
+	<item id="30105" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
+		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="6051" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="283641045" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="13270-3" />
+		<set name="item_skill" val="13062-3;3566-9" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<for>
+			<set stat="pAtk" val="632.0" />
+			<set stat="mAtk" val="226.0" />
+			<set stat="rCrit" val="6.0" />
+			<add stat="accCombat" val="8.0" />
+			<set stat="pAtkSpd" val="325.0" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
 	<item id="30106" name="Specter Shaper" additionalName="Guidance + Haste" type="Weapon">

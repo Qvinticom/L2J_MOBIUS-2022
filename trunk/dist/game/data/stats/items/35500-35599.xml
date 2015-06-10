@@ -408,12 +408,18 @@
 		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflect Resistance by 5%. Increases the number of inventory slots by 36, and Attribute Resistance by 15. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="15145-1" />
 		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="50.0" />
+			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

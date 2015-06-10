@@ -584,11 +584,17 @@
 		<!-- Belt instilled with Tiat's power. Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slot + 18. Received damage - 6%. -->
 		<set name="icon" val="icon.belt_of_tiat" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13652-1" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -596,11 +602,17 @@
 		<!-- Belt instilled with Ekimus' power. Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slot + 18. Received damage - 6%. -->
 		<set name="icon" val="icon.belt_of_echimus" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="13653-1" />
+		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
