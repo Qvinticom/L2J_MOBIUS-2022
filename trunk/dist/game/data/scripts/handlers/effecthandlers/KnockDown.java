@@ -25,6 +25,8 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.effects.EffectFlag;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
@@ -51,6 +53,18 @@ public final class KnockDown extends AbstractEffect
 			_delay = params.getInt("delay", 0);
 			_animationSpeed = params.getInt("animationSpeed", 0);
 		}
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.STUNNED.getMask();
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.STUN;
 	}
 	
 	@Override

@@ -589,25 +589,58 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8878" levels="1" name="Tauti's Special Ability: One-handed Axe">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max HP, P. Atk., Atk. Spd., Critical Rate, and damage inflicted during PvP. -->
+		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+				<add stat="rCrit" val="150" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8879" levels="1" name="Tauti's Special Ability: Axe">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max HP, P. Atk., Atk. Spd., Critical Rate, and damage inflicted during PvP. -->
+		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+				<add stat="rCrit" val="150" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8880" levels="1" name="Tauti's Special Ability: Two-handed Axe">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max HP, P. Atk., Atk. Spd., Critical Rate, and damage inflicted during PvP. -->
+		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_dual_axe_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+				<add stat="rCrit" val="150" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8881" levels="1" name="Top-grade Resistance Earring - Stun">
 		<!-- AUTO GENERATED SKILL -->

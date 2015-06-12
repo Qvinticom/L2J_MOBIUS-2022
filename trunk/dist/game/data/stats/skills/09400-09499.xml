@@ -426,16 +426,36 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="9459" levels="1" name="Tauti's Wrath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Tauti's Wrath. Inflicts 27557 damage and Knocks Down nearby enemies. -->
+		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="191" />
-		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="-1500" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="191" />
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="2" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="basicProperty" val="CON" />
+		<set name="power" val="27557" />
 		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="skillRadius" val="80" />
+		<set name="targetType" val="AURA" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="KNOCKDOWN" />
+		<cond msgId="113" addName="1">
+			<using kind="POLE,DUALBLUNT,BLUNT" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="KnockDown" />
+		</for>
 	</skill>
 	<skill id="9460" levels="1" name="Tauti's Authority">
 		<!-- AUTO GENERATED SKILL -->

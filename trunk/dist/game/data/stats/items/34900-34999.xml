@@ -764,39 +764,55 @@
 		</for>
 	</item>
 	<item id="34998" name="Tauti's One-handed Axe" additionalName="" type="Weapon">
-		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Rage skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, crystallization, augmentation or modification is impossible. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="9459-1;8878-1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<for>
-			<add stat="pAtk" val="629.0" />
-			<add stat="mAtk" val="322.0" />
-			<add stat="pAtkSpd" val="379.0" />
+			<set stat="pAtk" val="629.0" />
+			<set stat="mAtk" val="322.0" />
+			<set stat="rCrit" val="8.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtkSpd" val="379.0" />
+			<add stat="darkPower" val="450" />
 		</for>
 	</item>
 	<item id="34999" name="Tauti's Axe" additionalName="" type="Weapon">
-		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Rage skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, crystallization, augmentation or modification is impossible. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="9459-1;8879-1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<for>
-			<add stat="pAtk" val="766.0" />
-			<add stat="mAtk" val="322.0" />
-			<add stat="pAtkSpd" val="325.0" />
-			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="8.0" />
+			<set stat="pAtk" val="766.0" />
+			<set stat="mAtk" val="322.0" />
+			<set stat="rCrit" val="8.0" />
+			<add stat="accCombat" val="8" />
+			<set stat="pAtkSpd" val="325.0" />
+			<add stat="darkPower" val="450" />
 		</for>
 	</item>
 </list>
