@@ -286,7 +286,7 @@ public class TopicBBSManager extends BaseBBSManager
 		
 		int nbp;
 		nbp = forum.getTopicSize() / 8;
-		if ((nbp * 8) != ClanTable.getInstance().getClans().length)
+		if ((nbp * 8) != ClanTable.getInstance().getClanCount())
 		{
 			nbp++;
 		}

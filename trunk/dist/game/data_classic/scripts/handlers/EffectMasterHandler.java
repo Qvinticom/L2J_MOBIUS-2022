@@ -157,6 +157,7 @@ public final class EffectMasterHandler
 		Resurrection.class,
 		ResurrectionSpecial.class,
 		Root.class,
+		RunAway.class,
 		ServitorShare.class,
 		SetSkill.class,
 		ShilensBreath.class,

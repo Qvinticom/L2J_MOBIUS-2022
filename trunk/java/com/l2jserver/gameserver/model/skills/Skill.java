@@ -459,11 +459,6 @@ public final class Skill implements IIdentifiable
 		return _isSuicideAttack;
 	}
 	
-	public boolean allowOnTransform()
-	{
-		return isPassive();
-	}
-	
 	/**
 	 * Return the power of the skill.
 	 * @param activeChar

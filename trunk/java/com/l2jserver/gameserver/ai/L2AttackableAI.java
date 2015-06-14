@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -56,6 +57,7 @@ import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableFactionCall;
 import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableHate;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
@@ -67,30 +69,53 @@ import com.l2jserver.util.Rnd;
  */
 public class L2AttackableAI extends L2CharacterAI implements Runnable
 {
+	/**
+	 * Fear task.
+	 * @author Zoey76
+	 */
+	public static class FearTask implements Runnable
+	{
+		private final L2Character _effected;
+		private final L2Character _effector;
+		private boolean _start;
+		
+		public FearTask(L2Character effected, L2Character effector, boolean start)
+		{
+			_effected = effected;
+			_effector = effector;
+			_start = start;
+		}
+		
+		@Override
+		public void run()
+		{
+			final int fearTimeLeft = ((L2AttackableAI) _effected.getAI()).getFearTime() - FEAR_TICKS;
+			((L2AttackableAI) _effected.getAI()).setFearTime(fearTimeLeft);
+			_effected.getAI().onEvtAfraid(_effector, _start);
+			_start = false;
+		}
+	}
+	
+	protected static final int FEAR_TICKS = 5;
 	private static final int RANDOM_WALK_RATE = 30; // confirmed
 	// private static final int MAX_DRIFT_RANGE = 300;
 	private static final int MAX_ATTACK_TIMEOUT = 1200; // int ticks, i.e. 2min
-	/**
-	 * The L2Attackable AI task executed every 1s (call onEvtThink method).
-	 */
+	/** The L2Attackable AI task executed every 1s (call onEvtThink method). */
 	private Future<?> _aiTask;
-	/**
-	 * The delay after which the attacked is stopped.
-	 */
+	/** The delay after which the attacked is stopped. */
 	private int _attackTimeout;
-	/**
-	 * The L2Attackable aggro counter.
-	 */
+	/** The L2Attackable aggro counter. */
 	private int _globalAggro;
-	/**
-	 * The flag used to indicate that a thinking action is in progress, to prevent recursive thinking.
-	 */
+	/** The flag used to indicate that a thinking action is in progress, to prevent recursive thinking. */
 	private boolean _thinking;
 	
-	private int timepass = 0;
-	private int chaostime = 0;
+	private int _timePass = 0;
+	private int _chaosTime = 0;
 	private final L2NpcTemplate _skillrender;
-	int lastBuffTick;
+	private int _lastBuffTick;
+	// Fear parameters
+	private int _fearTime;
+	private Future<?> _fearTask = null;
 	
 	/**
 	 * Constructor of L2AttackableAI.
@@ -376,7 +401,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
 		
 		// self and buffs
-		if ((lastBuffTick + 30) < GameTimeController.getInstance().getGameTicks())
+		if ((_lastBuffTick + 30) < GameTimeController.getInstance().getGameTicks())
 		{
 			for (Skill sk : _skillrender.getAISkills(AISkillScope.BUFF))
 			{
@@ -385,11 +410,33 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					break;
 				}
 			}
-			lastBuffTick = GameTimeController.getInstance().getGameTicks();
+			_lastBuffTick = GameTimeController.getInstance().getGameTicks();
 		}
 		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		super.onIntentionAttack(target);
+	}
+	
+	@Override
+	protected void onEvtAfraid(L2Character effector, boolean start)
+	{
+		if ((_fearTime > 0) && (_fearTask == null))
+		{
+			_fearTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FearTask(_actor, effector, start), 0, FEAR_TICKS, TimeUnit.SECONDS);
+			_actor.startAbnormalVisualEffect(AbnormalVisualEffect.TURN_FLEE);
+		}
+		else
+		{
+			super.onEvtAfraid(effector, start);
+			
+			if ((_fearTime <= 0) && (_fearTask != null))
+			{
+				_fearTask.cancel(true);
+				_fearTask = null;
+				_actor.stopAbnormalVisualEffect(AbnormalVisualEffect.TURN_FLEE);
+				setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			}
+		}
 	}
 	
 	protected void thinkCast()
@@ -898,29 +945,29 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// BOSS/Raid Minion Target Reconsider
 		if (npc.isRaid() || npc.isRaidMinion())
 		{
-			chaostime++;
+			_chaosTime++;
 			if (npc instanceof L2RaidBossInstance)
 			{
 				if (!((L2MonsterInstance) npc).hasMinions())
 				{
-					if (chaostime > Config.RAID_CHAOS_TIME)
+					if (_chaosTime > Config.RAID_CHAOS_TIME)
 					{
 						if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 100) / npc.getMaxHp())))
 						{
 							aggroReconsider();
-							chaostime = 0;
+							_chaosTime = 0;
 							return;
 						}
 					}
 				}
 				else
 				{
-					if (chaostime > Config.RAID_CHAOS_TIME)
+					if (_chaosTime > Config.RAID_CHAOS_TIME)
 					{
 						if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 200) / npc.getMaxHp())))
 						{
 							aggroReconsider();
-							chaostime = 0;
+							_chaosTime = 0;
 							return;
 						}
 					}
@@ -928,25 +975,25 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			else if (npc instanceof L2GrandBossInstance)
 			{
-				if (chaostime > Config.GRAND_CHAOS_TIME)
+				if (_chaosTime > Config.GRAND_CHAOS_TIME)
 				{
 					double chaosRate = 100 - ((npc.getCurrentHp() * 300) / npc.getMaxHp());
 					if (((chaosRate <= 10) && (Rnd.get(100) <= 10)) || ((chaosRate > 10) && (Rnd.get(100) <= chaosRate)))
 					{
 						aggroReconsider();
-						chaostime = 0;
+						_chaosTime = 0;
 						return;
 					}
 				}
 			}
 			else
 			{
-				if (chaostime > Config.MINION_CHAOS_TIME)
+				if (_chaosTime > Config.MINION_CHAOS_TIME)
 				{
 					if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 200) / npc.getMaxHp())))
 					{
 						aggroReconsider();
-						chaostime = 0;
+						_chaosTime = 0;
 						return;
 					}
 				}
@@ -2692,7 +2739,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	 */
 	public void setTimepass(int TP)
 	{
-		timepass = TP;
+		_timePass = TP;
 	}
 	
 	/**
@@ -2700,11 +2747,21 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	 */
 	public int getTimepass()
 	{
-		return timepass;
+		return _timePass;
 	}
 	
 	public L2Attackable getActiveChar()
 	{
 		return (L2Attackable) _actor;
+	}
+	
+	public int getFearTime()
+	{
+		return _fearTime;
+	}
+	
+	public void setFearTime(int fearTime)
+	{
+		_fearTime = fearTime;
 	}
 }

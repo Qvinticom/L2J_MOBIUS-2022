@@ -23,9 +23,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -68,13 +69,7 @@ import com.l2jserver.util.EnumIntBitmask;
 public class ClanTable
 {
 	private static final Logger _log = Logger.getLogger(ClanTable.class.getName());
-	
-	private final Map<Integer, L2Clan> _clans = new HashMap<>();
-	
-	public L2Clan[] getClans()
-	{
-		return _clans.values().toArray(new L2Clan[_clans.size()]);
-	}
+	private final Map<Integer, L2Clan> _clans = new ConcurrentHashMap<>();
 	
 	protected ClanTable()
 	{
@@ -113,6 +108,24 @@ public class ClanTable
 	}
 	
 	/**
+	 * Gets the clans.
+	 * @return the clans
+	 */
+	public Collection<L2Clan> getClans()
+	{
+		return _clans.values();
+	}
+	
+	/**
+	 * Gets the clan count.
+	 * @return the clan count
+	 */
+	public int getClanCount()
+	{
+		return _clans.size();
+	}
+	
+	/**
 	 * @param clanId
 	 * @return
 	 */
@@ -123,15 +136,7 @@ public class ClanTable
 	
 	public L2Clan getClanByName(String clanName)
 	{
-		for (L2Clan clan : getClans())
-		{
-			if (clan.getName().equalsIgnoreCase(clanName))
-			{
-				return clan;
-			}
-			
-		}
-		return null;
+		return getClans().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
 	}
 	
 	/**

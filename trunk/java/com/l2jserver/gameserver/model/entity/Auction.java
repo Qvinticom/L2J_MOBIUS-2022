@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 public class Auction
@@ -288,23 +289,37 @@ public class Auction
 	}
 	
 	/**
-	 * Return Item in WHC
-	 * @param Clan
-	 * @param quantity
-	 * @param penalty
+	 * Returns the item to the clan warehouse.
+	 * @param clanName the clan name
+	 * @param quantity the Adena value
+	 * @param penalty if {@code true} fees are applied
 	 */
-	private void returnItem(String Clan, long quantity, boolean penalty)
+	private void returnItem(String clanName, long quantity, boolean penalty)
 	{
 		if (penalty)
 		{
 			quantity *= 0.9; // take 10% tax fee if needed
 		}
 		
+		final L2Clan clan = ClanTable.getInstance().getClanByName(clanName);
+		if (clan == null)
+		{
+			_log.warning("Clan " + clanName + " doesn't exist!");
+			return;
+		}
+		
+		final ItemContainer cwh = clan.getWarehouse();
+		if (cwh == null)
+		{
+			_log.warning("There has been a problem with " + clanName + "'s clan warehouse!");
+			return;
+		}
+		
 		// avoid overflow on return
-		final long limit = MAX_ADENA - ClanTable.getInstance().getClanByName(Clan).getWarehouse().getAdena();
+		final long limit = MAX_ADENA - cwh.getAdena();
 		quantity = Math.min(quantity, limit);
 		
-		ClanTable.getInstance().getClanByName(Clan).getWarehouse().addItem("Outbidded", ADENA_ID, quantity, null, null);
+		cwh.addItem("Outbidded", ADENA_ID, quantity, null, null);
 	}
 	
 	/**

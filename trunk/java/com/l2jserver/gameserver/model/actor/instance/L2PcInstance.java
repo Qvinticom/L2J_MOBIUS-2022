@@ -29,7 +29,6 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -37,6 +36,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ConcurrentSkipListMap;
@@ -215,6 +215,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.mentoring.OnP
 import com.l2jserver.gameserver.model.events.impl.character.player.mentoring.OnPlayerMentorStatus;
 import com.l2jserver.gameserver.model.fishing.L2Fish;
 import com.l2jserver.gameserver.model.fishing.L2Fishing;
+import com.l2jserver.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.holders.PlayerEventHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -521,6 +522,7 @@ public final class L2PcInstance extends L2Playable
 	private long _offlineShopStart = 0;
 	
 	private Transform _transformation;
+	private volatile Map<Integer, Skill> _transformSkills;
 	
 	/** The table containing all L2RecipeList of the L2PcInstance */
 	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new ConcurrentHashMap<>();
@@ -754,7 +756,6 @@ public final class L2PcInstance extends L2Playable
 	private int _fishz = 0;
 	private final static SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
 	
-	private volatile Set<Integer> _transformAllowedSkills;
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
 	
@@ -7727,7 +7728,7 @@ public final class L2PcInstance extends L2Playable
 					
 					final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
 					statement.setLong(5, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
-					statement.setDouble(6, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
+					statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
 					
 					statement.setInt(7, 0); // Store type 0, active buffs/debuffs.
 					statement.setInt(8, getClassIndex());
@@ -7758,7 +7759,7 @@ public final class L2PcInstance extends L2Playable
 						statement.setInt(3, t.getSkillLvl());
 						statement.setInt(4, -1);
 						statement.setLong(5, t.getReuse());
-						statement.setDouble(6, t.getStamp());
+						statement.setLong(6, t.getStamp());
 						statement.setInt(7, 1); // Restore type 1, skill reuse.
 						statement.setInt(8, getClassIndex());
 						statement.setInt(9, ++buff_index);
@@ -7793,7 +7794,7 @@ public final class L2PcInstance extends L2Playable
 						ps2.setInt(2, ts.getItemId());
 						ps2.setInt(3, ts.getItemObjectId());
 						ps2.setLong(4, ts.getReuse());
-						ps2.setDouble(5, ts.getStamp());
+						ps2.setLong(5, ts.getStamp());
 						ps2.execute();
 					}
 				}
@@ -10228,7 +10229,7 @@ public final class L2PcInstance extends L2Playable
 				continue;
 			}
 			
-			if ((_transformation != null) && (!hasTransformSkill(s.getId()) && !s.allowOnTransform()))
+			if ((_transformation != null) && !s.isPassive())
 			{
 				continue;
 			}
@@ -10258,7 +10259,48 @@ public final class L2PcInstance extends L2Playable
 			
 			sl.addSkill(s.getDisplayId(), s.getDisplayLevel(), s.isPassive(), isDisabled, isEnchantable);
 		}
-		
+		if (_transformation != null)
+		{
+			Map<Integer, Integer> ts = new TreeMap<>();
+			
+			for (SkillHolder holder : _transformation.getTemplate(this).getSkills())
+			{
+				ts.putIfAbsent(holder.getSkillId(), holder.getSkillLvl());
+				
+				if (ts.get(holder.getSkillId()) < holder.getSkillLvl())
+				{
+					ts.put(holder.getSkillId(), holder.getSkillLvl());
+				}
+				addTransformSkill(holder.getSkill());
+			}
+			
+			for (AdditionalSkillHolder holder : _transformation.getTemplate(this).getAdditionalSkills())
+			{
+				if (getLevel() >= holder.getMinLevel())
+				{
+					ts.putIfAbsent(holder.getSkillId(), holder.getSkillLvl());
+					if (ts.get(holder.getSkillId()) < holder.getSkillLvl())
+					{
+						ts.put(holder.getSkillId(), holder.getSkillLvl());
+					}
+					addTransformSkill(holder.getSkill());
+				}
+			}
+			
+			// Add collection skills.
+			for (L2SkillLearn skill : SkillTreesData.getInstance().getCollectSkillTree().values())
+			{
+				if (getKnownSkill(skill.getSkillId()) != null)
+				{
+					addTransformSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+				}
+			}
+			
+			for (Entry<Integer, Integer> transformSkill : ts.entrySet())
+			{
+				sl.addSkill(transformSkill.getKey(), transformSkill.getValue(), false, false, false);
+			}
+		}
 		sendPacket(sl);
 	}
 	
@@ -12857,29 +12899,34 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public void addTransformSkill(int id)
+	public void addTransformSkill(Skill sk)
 	{
-		if (_transformAllowedSkills == null)
+		if (_transformSkills == null)
 		{
 			synchronized (this)
 			{
-				if (_transformAllowedSkills == null)
+				if (_transformSkills == null)
 				{
-					_transformAllowedSkills = new HashSet<>();
+					_transformSkills = new HashMap<>();
 				}
 			}
 		}
-		_transformAllowedSkills.add(id);
+		_transformSkills.put(sk.getId(), sk);
+	}
+	
+	public Skill getTransformSkill(int id)
+	{
+		return _transformSkills.get(id);
 	}
 	
 	public boolean hasTransformSkill(int id)
 	{
-		return (_transformAllowedSkills != null) && _transformAllowedSkills.contains(id);
+		return _transformSkills.containsKey(id);
 	}
 	
 	public synchronized void removeAllTransformSkills()
 	{
-		_transformAllowedSkills = null;
+		_transformSkills = null;
 	}
 	
 	protected void startFeed(int npcId)

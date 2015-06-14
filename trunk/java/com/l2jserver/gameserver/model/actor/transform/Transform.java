@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.AdditionalItemHolder;
@@ -224,38 +223,6 @@ public final class Transform implements IIdentifiable
 				player.getAppearance().setVisibleTitle(getTitle());
 			}
 			
-			// Add common skills.
-			for (SkillHolder holder : template.getSkills())
-			{
-				if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLvl())
-				{
-					player.addSkill(holder.getSkill(), false);
-				}
-				player.addTransformSkill(holder.getSkillId());
-			}
-			
-			// Add skills depending on level.
-			for (AdditionalSkillHolder holder : template.getAdditionalSkills())
-			{
-				if (player.getLevel() >= holder.getMinLevel())
-				{
-					if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLvl())
-					{
-						player.addSkill(holder.getSkill(), false);
-					}
-					player.addTransformSkill(holder.getSkillId());
-				}
-			}
-			
-			// Add collection skills.
-			for (L2SkillLearn skill : SkillTreesData.getInstance().getCollectSkillTree().values())
-			{
-				if (player.getKnownSkill(skill.getSkillId()) != null)
-				{
-					player.addTransformSkill(skill.getSkillId());
-				}
-			}
-			
 			// Set inventory blocks if needed.
 			if (!template.getAdditionalItems().isEmpty())
 			{
@@ -376,7 +343,7 @@ public final class Transform implements IIdentifiable
 						if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLvl())
 						{
 							player.addSkill(holder.getSkill(), false);
-							player.addTransformSkill(holder.getSkillId());
+							player.addTransformSkill(holder.getSkill());
 						}
 					}
 				}

@@ -31,6 +31,7 @@ import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -58,6 +59,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.AutoAttackStop;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
+import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -89,6 +91,8 @@ public class L2CharacterAI extends AbstractAI
 			return _crtlIntention;
 		}
 	}
+	
+	protected static final int FEAR_RANGE = 500;
 	
 	/**
 	 * Cast Task
@@ -276,7 +280,7 @@ public class L2CharacterAI extends AbstractAI
 				stopFollow();
 				
 				// Launch the Think Event
-				notifyEvent(CtrlEvent.EVT_THINK, null);
+				notifyEvent(CtrlEvent.EVT_THINK);
 				
 			}
 			else
@@ -295,7 +299,7 @@ public class L2CharacterAI extends AbstractAI
 			stopFollow();
 			
 			// Launch the Think Event
-			notifyEvent(CtrlEvent.EVT_THINK, null);
+			notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
 	
@@ -341,7 +345,7 @@ public class L2CharacterAI extends AbstractAI
 		changeIntention(AI_INTENTION_CAST, skill, target);
 		
 		// Launch the Think Event
-		notifyEvent(CtrlEvent.EVT_THINK, null);
+		notifyEvent(CtrlEvent.EVT_THINK);
 	}
 	
 	/**
@@ -953,6 +957,34 @@ public class L2CharacterAI extends AbstractAI
 	protected void onEvtFinishCasting()
 	{
 		// do nothing
+	}
+	
+	@Override
+	protected void onEvtAfraid(L2Character effector, boolean start)
+	{
+		double radians = Math.toRadians(start ? Util.calculateAngleFrom(effector, _actor) : Util.convertHeadingToDegree(_actor.getHeading()));
+		
+		int posX = (int) (_actor.getX() + (FEAR_RANGE * Math.cos(radians)));
+		int posY = (int) (_actor.getY() + (FEAR_RANGE * Math.sin(radians)));
+		int posZ = _actor.getZ();
+		
+		if (!_actor.isPet())
+		{
+			_actor.setRunning();
+		}
+		
+		// If pathfinding enabled the creature will go to the defined destination (retail like).
+		// Otherwise it will go to the nearest obstacle.
+		final Location destination;
+		if (Config.PATHFINDING > 0)
+		{
+			destination = new Location(posX, posY, posZ, _actor.getInstanceId());
+		}
+		else
+		{
+			destination = GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId());
+		}
+		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
 	
 	protected boolean maybeMoveToPosition(ILocational worldPosition, int offset)

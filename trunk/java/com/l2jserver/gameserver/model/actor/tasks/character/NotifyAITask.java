@@ -41,7 +41,7 @@ public final class NotifyAITask implements Runnable
 	{
 		if (_character != null)
 		{
-			_character.getAI().notifyEvent(_event, null);
+			_character.getAI().notifyEvent(_event);
 		}
 	}
 }

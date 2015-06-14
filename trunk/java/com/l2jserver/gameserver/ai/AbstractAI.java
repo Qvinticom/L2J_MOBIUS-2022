@@ -328,11 +328,9 @@ public abstract class AbstractAI implements Ctrl
 	/**
 	 * Launch the L2CharacterAI onEvt method corresponding to the Event. <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</B></FONT>
 	 * @param evt The event whose the AI must be notified
-	 * @param arg0 The first parameter of the Event (optional target)
-	 * @param arg1 The second parameter of the Event (optional target)
 	 */
 	@Override
-	public final void notifyEvent(CtrlEvent evt, Object arg0, Object arg1)
+	public final void notifyEvent(CtrlEvent evt, Object... args)
 	{
 		if ((!_actor.isVisible() && !_actor.isTeleporting()) || !_actor.hasAI())
 		{
@@ -345,31 +343,31 @@ public abstract class AbstractAI implements Ctrl
 				onEvtThink();
 				break;
 			case EVT_ATTACKED:
-				onEvtAttacked((L2Character) arg0);
+				onEvtAttacked((L2Character) args[0]);
 				break;
 			case EVT_AGGRESSION:
-				onEvtAggression((L2Character) arg0, ((Number) arg1).intValue());
+				onEvtAggression((L2Character) args[0], ((Number) args[1]).intValue());
 				break;
 			case EVT_STUNNED:
-				onEvtStunned((L2Character) arg0);
+				onEvtStunned((L2Character) args[0]);
 				break;
 			case EVT_PARALYZED:
-				onEvtParalyzed((L2Character) arg0);
+				onEvtParalyzed((L2Character) args[0]);
 				break;
 			case EVT_SLEEPING:
-				onEvtSleeping((L2Character) arg0);
+				onEvtSleeping((L2Character) args[0]);
 				break;
 			case EVT_ROOTED:
-				onEvtRooted((L2Character) arg0);
+				onEvtRooted((L2Character) args[0]);
 				break;
 			case EVT_CONFUSED:
-				onEvtConfused((L2Character) arg0);
+				onEvtConfused((L2Character) args[0]);
 				break;
 			case EVT_MUTED:
-				onEvtMuted((L2Character) arg0);
+				onEvtMuted((L2Character) args[0]);
 				break;
 			case EVT_EVADED:
-				onEvtEvaded((L2Character) arg0);
+				onEvtEvaded((L2Character) args[0]);
 				break;
 			case EVT_READY_TO_ACT:
 				if (!_actor.isCastingNow() && !_actor.isCastingSimultaneouslyNow())
@@ -378,7 +376,7 @@ public abstract class AbstractAI implements Ctrl
 				}
 				break;
 			case EVT_USER_CMD:
-				onEvtUserCmd(arg0, arg1);
+				onEvtUserCmd(args[0], args[1]);
 				break;
 			case EVT_ARRIVED:
 				// happens e.g. from stopmove but we don't process it if we're casting
@@ -395,10 +393,10 @@ public abstract class AbstractAI implements Ctrl
 				}
 				break;
 			case EVT_ARRIVED_BLOCKED:
-				onEvtArrivedBlocked((Location) arg0);
+				onEvtArrivedBlocked((Location) args[0]);
 				break;
 			case EVT_FORGET_OBJECT:
-				onEvtForgetObject((L2Object) arg0);
+				onEvtForgetObject((L2Object) args[0]);
 				break;
 			case EVT_CANCEL:
 				onEvtCancel();
@@ -412,6 +410,11 @@ public abstract class AbstractAI implements Ctrl
 			case EVT_FINISH_CASTING:
 				onEvtFinishCasting();
 				break;
+			case EVT_AFRAID:
+			{
+				onEvtAfraid((L2Character) args[0], (Boolean) args[1]);
+				break;
+			}
 		}
 		
 		// Do next action.
@@ -478,6 +481,8 @@ public abstract class AbstractAI implements Ctrl
 	protected abstract void onEvtFakeDeath();
 	
 	protected abstract void onEvtFinishCasting();
+	
+	protected abstract void onEvtAfraid(L2Character effector, boolean start);
 	
 	/**
 	 * Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor. <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>

@@ -70,9 +70,13 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					_log.warning("Skill Id " + _magicId + " not found in player!");
-					return;
+					skill = activeChar.getTransformSkill(_magicId);
+					if (skill == null)
+					{
+						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+						_log.warning("Skill Id " + _magicId + " not found in player : " + activeChar);
+						return;
+					}
 				}
 			}
 		}

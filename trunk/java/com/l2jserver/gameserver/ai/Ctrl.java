@@ -100,8 +100,7 @@ public interface Ctrl
 	/**
 	 * Notify an event.
 	 * @param evt the event
-	 * @param arg0 the arg0
-	 * @param arg1 the arg1
+	 * @param args the args
 	 */
-	void notifyEvent(CtrlEvent evt, Object arg0, Object arg1);
+	void notifyEvent(CtrlEvent evt, Object... args);
 }

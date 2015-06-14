@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
@@ -59,8 +60,8 @@ public final class UseItem extends L2GameClientPacket
 	/** Weapon Equip Task */
 	private static class WeaponEquipTask implements Runnable
 	{
-		L2ItemInstance item;
-		L2PcInstance activeChar;
+		private final L2ItemInstance item;
+		private final L2PcInstance activeChar;
 		
 		protected WeaponEquipTask(L2ItemInstance it, L2PcInstance character)
 		{
@@ -71,12 +72,6 @@ public final class UseItem extends L2GameClientPacket
 		@Override
 		public void run()
 		{
-			// If character is still engaged in strike we should not change weapon
-			if (activeChar.isAttackingNow())
-			{
-				return;
-			}
-			
 			// Equip or unEquip
 			activeChar.useEquippableItem(item, false);
 		}
@@ -139,8 +134,10 @@ public final class UseItem extends L2GameClientPacket
 			return;
 		}
 		
+		_itemId = item.getId();
+		
 		// Char cannot use item when dead
-		if (activeChar.isDead() || !activeChar.getInventory().canManipulateWithItemId(item.getId()))
+		if (activeChar.isDead() || !activeChar.getInventory().canManipulateWithItemId(_itemId))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item);
@@ -153,7 +150,6 @@ public final class UseItem extends L2GameClientPacket
 			return;
 		}
 		
-		_itemId = item.getId();
 		if (activeChar.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
@@ -352,7 +348,7 @@ public final class UseItem extends L2GameClientPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new WeaponEquipTask(item, activeChar), activeChar.getAttackEndTime() - System.currentTimeMillis());
+				ThreadPoolManager.getInstance().scheduleGeneral(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
 			}
 			else
 			{

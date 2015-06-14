@@ -86,9 +86,9 @@ public final class HomeBoard implements IParseBoardHandler
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
 			
 			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/" + customPath + "home.html");
-			html = html.replaceAll("%fav_count%", String.valueOf(getFavoriteCount(activeChar)));
-			html = html.replaceAll("%region_count%", String.valueOf(getRegionCount(activeChar)));
-			html = html.replaceAll("%clan_count%", String.valueOf(getClansCount()));
+			html = html.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
+			html = html.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
+			html = html.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		else if (command.startsWith("_bbstop;"))
@@ -205,14 +205,5 @@ public final class HomeBoard implements IParseBoardHandler
 	private static int getRegionCount(L2PcInstance player)
 	{
 		return 0; // TODO: Implement.
-	}
-	
-	/**
-	 * Gets the clans count.
-	 * @return the clans count
-	 */
-	private static int getClansCount()
-	{
-		return ClanTable.getInstance().getClans().length;
 	}
 }

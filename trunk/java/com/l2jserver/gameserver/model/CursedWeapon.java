@@ -336,9 +336,9 @@ public class CursedWeapon implements INamable
 		
 		// Void Burst, Void Flow
 		_player.addSkill(CommonSkill.VOID_BURST.getSkill(), false);
-		_player.addTransformSkill(CommonSkill.VOID_BURST.getId());
+		_player.addTransformSkill(CommonSkill.VOID_BURST.getSkill());
 		_player.addSkill(CommonSkill.VOID_FLOW.getSkill(), false);
-		_player.addTransformSkill(CommonSkill.VOID_FLOW.getId());
+		_player.addTransformSkill(CommonSkill.VOID_FLOW.getSkill());
 		_player.sendSkillList();
 	}
 	

@@ -157,7 +157,12 @@ public final class AntiFeedManager
 		
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
 		
-		return connectionCount.getAndIncrement() < (max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0));
+		if ((connectionCount.get() + 1) <= (max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
+		{
+			connectionCount.incrementAndGet();
+			return true;
+		}
+		return false;
 	}
 	
 	/**
