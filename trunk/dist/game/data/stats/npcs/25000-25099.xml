@@ -2068,7 +2068,7 @@
 		<equipment rhand="221" lhand="109" /> <!-- rhand: Assassin Knife lhand: Shield of Solar Eclipse -->
 		<acquire exp="5476117" sp="1314" raidPoints="520" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="69449.5684546156" hpRegen="26.794392073316" mp="402.6" mpRegen="1.8" />
+			<vitals hp="109138" hpRegen="26.794392073316" mp="402.6" mpRegen="1.8" />
 			<attack physical="163.695648646951" magical="12.9299967753255" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="410.18844" magical="200.1" evasion="-18" shield="547" shieldRate="20" />
 			<attribute>
@@ -2098,35 +2098,22 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="78.27729797363281">
-					<item id="61" min="9" max="25" chance="1.3428" /> <!-- Mithril Plate Gloves -->
-					<item id="607" min="9" max="27" chance="1.2682" /> <!-- Ogre Power Gauntlets -->
-					<item id="1125" min="10" max="28" chance="1.2015" /> <!-- Assault Boots -->
-					<item id="2427" min="10" max="30" chance="1.1414" /> <!-- Salamander Skin Boots -->
-					<item id="2428" min="1" max="1" chance="22.8284" /> <!-- Plate Boots -->
-					<item id="2451" min="1" max="1" chance="22.8284" /> <!-- Sage's Worn Gloves -->
-					<item id="1949" min="112" max="336" chance="4.2767" /> <!-- Mithril Gloves Design -->
-					<item id="1963" min="203" max="607" chance="2.3654" /> <!-- Ogre Power Gauntlets Part -->
-					<item id="1957" min="320" max="960" chance="1.4968" /> <!-- Assault Boots Part -->
-					<item id="2931" min="28" max="82" chance="17.4178" /> <!-- Salamander Skin Boot Lining -->
-					<item id="2932" min="36" max="108" chance="13.3052" /> <!-- Plate Boots Design -->
-					<item id="2933" min="46" max="136" chance="10.5274" /> <!-- Sage's Worn Gloves Lining -->
-				</group>
-				<group chance="29.55190086364746">
-					<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr -->
-					<item id="2053" min="12" max="36" chance="70.4951" /> <!-- Scallop Jamadhr Edge -->
-				</group>
-				<group chance="44.79119873046875">
-					<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="76" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="61" min="1" max="1" chance="5.34" /> <!-- Mithril Plate Gloves -->
+				<item id="607" min="1" max="1" chance="2.26" /> <!-- Ogre Power Gauntlets -->
+				<item id="1125" min="1" max="1" chance="21.20" /> <!-- Assault Boots -->
+				<item id="2427" min="1" max="1" chance="17.50" /> <!-- Salamander Skin Boots -->
+				<item id="2428" min="1" max="1" chance="15" /> <!-- Plate Boots -->
+				<item id="2451" min="1" max="1" chance="12" /> <!-- Sage's Worn Gloves -->
+				<item id="262" min="1" max="1" chance="4.700" /> <!-- Scallop Jamadhr -->
+				<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25042" level="34" type="L2Monster" name="Remmel's Archer" title="Raid Fighter">
 		<parameters>

@@ -2850,22 +2850,80 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25978" level="97" type="L2Npc" name="Garamor's Herald Gariott" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25978" level="97" type="L2RaidBoss" name="Garamor's Herald Gariott" title="Raid Boss">
+		<!-- http://l2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="52069755" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="52069755" hpRegen="7.5" mp="68400" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- -->
+			<skill id="5467" level="1" /> <!-- -->
+			<skill id="4410" level="18" /> <!-- -->
+			<skill id="4414" level="1" /> <!-- -->
+			<skill id="4494" level="1" /> <!-- -->
+			<skill id="16274" level="1" /> <!-- -->
+		</skill_list>
 		<collision>
 			<radius normal="45" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17396" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet -->
+				<item id="17399" min="1" max="1" chance="0.75" /> <!-- Seraph Gauntlets -->
+				<item id="17400" min="1" max="1" chance="0.75" /> <!-- Seraph Boots -->
+				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield-->
+				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="1" max="1" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19511" min="1" max="1" chance="34" /> <!-- Yellow Soul Crystal Fragment (R95-grade) -->
+				<item id="19512" min="1" max="1" chance="33" /> <!-- Teal Soul Crystal Fragment (R95-grade) -->
+				<item id="19513" min="1" max="1" chance="33" /> <!-- Purple Soul Crystal Fragment (R95-grade) -->
+				<item id="17688" min="1" max="1" chance="17" /> <!-- Lv. 4 Ancient INT Dye -->
+				<item id="17690" min="1" max="1" chance="17" /> <!-- Lv. 4 Ancient MEN Dye -->
+				<item id="17689" min="1" max="1" chance="17" /> <!-- Lv. 4 Ancient WIT Dye -->
+				<item id="17687" min="1" max="1" chance="17" /> <!-- Lv. 4 Ancient CON Dye -->
+				<item id="17686" min="1" max="1" chance="16" /> <!-- Lv. 4 Ancient DEX Dye -->
+				<item id="17685" min="1" max="1" chance="16" /> <!-- Lv. 4 Ancient STR Dye -->
+				<item id="38574" min="1" max="1" chance="2.300" /> <!-- Apparition Stone (Lv. 98) -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.3" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.3" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25979" level="97" type="L2Npc" name="Varvacion" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

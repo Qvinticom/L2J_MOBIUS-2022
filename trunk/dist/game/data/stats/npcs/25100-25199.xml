@@ -3658,7 +3658,7 @@
 		<equipment rhand="223" /> <!-- rhand: Kukuri -->
 		<acquire exp="5476117" sp="1314" raidPoints="588" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="82089.0524454172" hpRegen="30.8726873073006" mp="447.96" mpRegen="1.8" />
+			<vitals hp="129000" hpRegen="30.8726873073006" mp="447.96" mpRegen="1.8" />
 			<attack physical="204.554218646784" magical="16.1476898312799" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="445.32861" magical="217.24" evasion="-18" />
 			<attribute>
@@ -3688,31 +3688,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="76.0425033569336">
-					<item id="631" min="6" max="16" chance="3.3742" /> <!-- Eldarake -->
-					<item id="2413" min="1" max="1" chance="25.9842" /> <!-- Chain Hood -->
-					<item id="2495" min="1" max="1" chance="37.1167" /> <!-- Chain Shield -->
-					<item id="1964" min="40" max="120" chance="19.1207" /> <!-- Eldarake Temper -->
-					<item id="2936" min="140" max="420" chance="4.9619" /> <!-- Chain Hood Pattern -->
-					<item id="2945" min="81" max="243" chance="9.4423" /> <!-- Chain Shield Fragment -->
-				</group>
-				<group chance="56.63840103149414">
-					<item id="226" min="1" max="1" chance="6.4873" /> <!-- Cursed Dagger -->
-					<item id="232" min="1" max="1" chance="6.4873" /> <!-- Dark Elven Dagger -->
-					<item id="2070" min="4" max="12" chance="56.7557" /> <!-- Cursed Dagger Blade -->
-					<item id="2072" min="8" max="22" chance="30.2697" /> <!-- Dark Elven Dagger Edge -->
-				</group>
-				<group chance="76.33329772949219">
-					<item id="951" min="1" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="30" grown="36" />
 			<height normal="63" grown="76" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="631" min="1" max="1" chance="1.250" /> <!-- Eldarake -->
+				<item id="2413" min="1" max="1" chance="2.500" /> <!-- Chain Hood -->
+				<item id="2495" min="1" max="1" chance="5.400" /> <!-- Chain Shield -->
+				<item id="226" min="1" max="1" chance="0.75" /> <!-- Cursed Dagger -->
+				<item id="232" min="1" max="1" chance="5.600" /> <!-- Dark Elven Dagger -->
+				<item id="951" min="1" max="1" chance="29.73" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25171" level="37" type="L2Monster" name="Hellion's Archers" title="Raid Fighter">
 		<parameters>
