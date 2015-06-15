@@ -3483,33 +3483,16 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="261" max="517" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.10509999841451645">
-					<item id="86" min="1" max="1" chance="1.2938" /> <!-- Tomahawk -->
-					<item id="179" min="1" max="1" chance="1.2938" /> <!-- Mace of Prayer -->
-					<item id="180" min="1" max="1" chance="1.2938" /> <!-- Mace of Judgment -->
-					<item id="2022" min="1" max="1" chance="49.929" /> <!-- Mace of Judgment Head -->
-					<item id="181" min="1" max="1" chance="1.2938" /> <!-- Mace of Miracle -->
-					<item id="182" min="1" max="1" chance="1.2938" /> <!-- Doom Hammer -->
-					<item id="183" min="1" max="1" chance="1.2938" /> <!-- Mystic Staff -->
-					<item id="184" min="1" max="1" chance="1.2938" /> <!-- Conjuror's Staff -->
-					<item id="2023" min="1" max="1" chance="39.7205" /> <!-- Conjuror's Staff Head -->
-					<item id="185" min="1" max="1" chance="1.2939" /> <!-- Staff of Mana -->
-				</group>
-				<group chance="21.2012996673584">
-					<item id="1864" min="1" max="1" chance="39.7162" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="19.8581" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="7.9432" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="12.2204" /> <!-- Cord -->
-					<item id="1829" min="1" max="1" chance="7.9432" /> <!-- Scroll of Escape: Clan Hall -->
-					<item id="2274" min="1" max="1" chance="0.1418" /> <!-- Recipe: Skull Breaker -->
-					<item id="2282" min="1" max="1" chance="0.1418" /> <!-- Recipe: Cursed Maingauche -->
-					<item id="1061" min="1" max="1" chance="12.0353" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="3.350" /> <!-- Major Healing Potion-->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather-->
+				<item id="36860" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Leather - Upgrade -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3543,15 +3526,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1879" min="1" max="1" chance="10.2726" /> <!-- Cokes -->
-				<item id="2024" min="1" max="1" chance="0.878" /> <!-- Elven Bow Shaft -->
-				<item id="2153" min="1" max="1" chance="9.5856" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="20" />
-		</collision>
 	</npc>
 	<npc id="20158" level="34" type="L2Monster" name="Medusa">
 		<parameters>
