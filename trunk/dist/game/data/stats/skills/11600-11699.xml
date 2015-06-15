@@ -166,18 +166,24 @@
 		<table name="#mpConsume">252 278 306 332</table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="AREA" />
-		<set name="isDebuff" val="true" />
-		<set name="skillType" val="CANCEL_CELESTIAL" />
-		<set name="hitTime" val="2110" />
-		<set name="coolTime" val="500" />
 		<set name="castRange" val="900" />
+		<set name="affectRange" val="900" />
+		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="2110" />
+		<set name="basicProperty" val="MEN" />
+		<set name="icon" val="icon.skill11604" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="120000" />
-		<set name="skillRadius" val="250" />
-		<cond>
-			<target playable="true" />
-		</cond>
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="DispelBySlotProbability">
+				<param dispel="INVINCIBILITY" rate="60" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11605" levels="1" name="Shield Song">
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />

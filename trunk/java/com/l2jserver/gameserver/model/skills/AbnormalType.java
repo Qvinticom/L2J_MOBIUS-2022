@@ -51,6 +51,7 @@ public enum AbnormalType
 	AVOID_SKILL,
 	AVOID_UP,
 	AVOID_UP_SPECIAL,
+	CHANGE_BODY,
 	BERSERKER,
 	BETRAYAL_MARK,
 	BIG_BODY,
@@ -358,7 +359,7 @@ public enum AbnormalType
 	WILL,
 	WIND_DOT,
 	WP_CHANGE_EVENT,
-	HARMONY, // Knight/Warrior/Wizard Harmony Buffs (GoD)
+	HARMONY,
 	MELODY_HORN,
 	MELODY_DRUM,
 	MELODY_PIPE,
@@ -370,9 +371,7 @@ public enum AbnormalType
 	REF_SONATA,
 	ELEMENTAL_RESISTANCE_ISS,
 	HOLY_ATTACK_RESISTANCE_ISS,
-	MENTAL_ATTACK_RESISTANCE_ISS,
-	CRIPPLING_ATTACK,
-	SHADOW_BLADE;
+	MENTAL_ATTACK_RESISTANCE_ISS;
 	
 	/**
 	 * Get the enumerate for the given String.

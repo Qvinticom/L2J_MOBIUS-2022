@@ -68,7 +68,8 @@ public enum TraitType
 	DUALBLUNT(42, 1),
 	KNOCKBACK(43, 3),
 	KNOCKDOWN(44, 3),
-	NONE(43, 0);
+	MUTE(45, 3),
+	NONE(46, 0);
 	
 	private final int _id;
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
