@@ -1682,7 +1682,8 @@ public final class Formulas
 				attack_attribute_mod = 0.06909;
 				defence_attribute_mod = 0.078;
 			}
-			else if (attack_attribute >= 350)
+			// On retail else if (attack_attribute >= 350), can be considered a typo
+			else if (defence_attribute >= 350)
 			{
 				attack_attribute_mod = 0.0887;
 				defence_attribute_mod = 0.1007;

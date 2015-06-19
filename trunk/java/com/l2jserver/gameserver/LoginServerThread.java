@@ -73,6 +73,7 @@ import com.l2jserver.gameserver.network.loginserverpackets.RequestCharacters;
 import com.l2jserver.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jserver.gameserver.network.serverpackets.LoginFail;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.util.Rnd;
 import com.l2jserver.util.Util;
 import com.l2jserver.util.crypt.NewCrypt;
 import com.l2jserver.util.network.BaseSendablePacket;
@@ -167,6 +168,11 @@ public class LoginServerThread extends Thread
 				
 				// init Blowfish
 				byte[] blowfishKey = Util.generateHex(40);
+				// Protect the new blowfish key what cannot begin with zero
+				if (blowfishKey[0] == 0)
+				{
+					blowfishKey[0] = (byte) Rnd.get(32, 64);
+				}
 				_blowfish = new NewCrypt("_;v.]05-31!|+-%xT!^[$\00");
 				while (!isInterrupted())
 				{
