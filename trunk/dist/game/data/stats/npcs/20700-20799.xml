@@ -950,7 +950,7 @@
 		<sex>MALE</sex>
 		<acquire exp="16578" sp="3" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+			<vitals hp="2102" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<attribute>
@@ -978,26 +978,14 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="14.5" grown="18" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="932" max="1883" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.458899974822998">
-					<item id="353" min="1" max="1" chance="0.7853" /> <!-- Half Plate Armor -->
-					<item id="1950" min="1" max="1" chance="38.3357" /> <!-- Half Plate Temper -->
-					<item id="380" min="1" max="1" chance="1.2565" /> <!-- Plate Gaiters -->
-					<item id="1951" min="1" max="1" chance="59.6225" /> <!-- Plate Gaiters Part -->
-				</group>
-				<group chance="43.79290008544922">
-					<item id="1868" min="1" max="1" chance="75.7896" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="15.1579" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.7895" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.5263" /> <!-- Compound Braid -->
-					<item id="2160" min="1" max="1" chance="2.4448" /> <!-- Recipe: Moonstone Earring -->
-					<item id="5159" min="1" max="1" chance="0.1263" /> <!-- Recipe: Spiritshot (C) Compressed Package (100%) -->
-					<item id="2312" min="1" max="1" chance="0.1656" /> <!-- Recipe: Crystallized Ice Bow -->
-				</group>
+				<item id="57" min="83" max="194" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment-->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1031,15 +1019,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1805" min="1" max="1" chance="0.7711" /> <!-- Recipe: Soulshot (C-Grade) -->
-				<item id="1905" min="1" max="1" chance="22.5036" /> <!-- Omen Beast's Eye Earring Gemstone -->
-				<item id="5549" min="1" max="1" chance="23.1337" /> <!-- Metallic Thread -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment-->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" grown="17" />
-			<height normal="14.5" grown="18" />
-		</collision>
 	</npc>
 	<npc id="20753" level="50" type="L2Monster" name="Dark Lord">
 		<parameters>
@@ -1109,40 +1091,15 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="15" grown="25" />
+			<height normal="45" grown="52" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1488" max="3024" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4284999966621399">
-					<item id="75" min="1" max="1" chance="0.1831" /> <!-- Caliburs -->
-					<item id="2089" min="1" max="1" chance="16.4836" /> <!-- Caliburs Edge -->
-					<item id="76" min="1" max="1" chance="0.1831" /> <!-- Sword of Delusion -->
-					<item id="2090" min="1" max="1" chance="16.4836" /> <!-- Delusional Blade -->
-					<item id="77" min="1" max="1" chance="0.1831" /> <!-- Tsurugi -->
-					<item id="2091" min="1" max="1" chance="16.4836" /> <!-- Tsurugi Blade -->
-					<item id="84" min="1" max="1" chance="0.1831" /> <!-- Homunkulus's Sword -->
-					<item id="2092" min="1" max="1" chance="16.4836" /> <!-- Homunkulus's Sword Blade -->
-					<item id="134" min="1" max="1" chance="0.1831" /> <!-- Sword of Nightmare -->
-					<item id="2095" min="1" max="1" chance="16.4836" /> <!-- Sword of Nightmare Blade -->
-					<item id="145" min="1" max="1" chance="0.1831" /> <!-- Sword of Whispering Death -->
-					<item id="2096" min="1" max="1" chance="16.4834" /> <!-- Sword of Whispering Death Blade -->
-				</group>
-				<group chance="43.86640167236328">
-					<item id="1868" min="1" max="3" chance="27.2771" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="10.9108" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="2.7277" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="1.8185" /> <!-- Compound Braid -->
-					<item id="4044" min="1" max="1" chance="0.9092" /> <!-- Thons -->
-					<item id="2355" min="1" max="1" chance="0.0445" /> <!-- Recipe: Ghoul's Staff -->
-					<item id="4609" min="1" max="1" chance="0.0606" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-					<item id="3019" min="1" max="1" chance="0.7274" /> <!-- Recipe: Full Plate Shield -->
-					<item id="8725" min="1" max="1" chance="0.7577" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.1894" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0189" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0038" /> <!-- Top-Grade Life Stone - Level 52 -->
-					<item id="1342" min="10" max="30" chance="54.5544" /> <!-- Steel Arrow -->
-				</group>
+				<item id="57" min="256" max="600" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
+				<item id="45929" min="1" max="4" chance="0.03" /> <!-- Spirit Stone -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1176,15 +1133,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1874" min="1" max="1" chance="25.0765" /> <!-- Oriharukon Ore -->
-				<item id="1875" min="1" max="1" chance="25.0765" /> <!-- Stone of Purity -->
-				<item id="4601" min="1" max="1" chance="0.8359" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" grown="25" />
-			<height normal="45" grown="52" />
-		</collision>
 	</npc>
 	<npc id="20754" level="48" type="L2Monster" name="Dark Knight">
 		<parameters>
@@ -1240,28 +1191,15 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1634" max="3323" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.637499988079071">
-					<item id="94" min="1" max="1" chance="1.3003" /> <!-- Bec de Corbin -->
-					<item id="2079" min="1" max="1" chance="98.6997" /> <!-- Bec De Corbin Blade -->
-				</group>
-				<group chance="37.983299255371094">
-					<item id="1869" min="1" max="1" chance="43.8372" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="3" chance="43.8372" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="4.3837" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.5845" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="1.4612" /> <!-- Asofe -->
-					<item id="2167" min="1" max="1" chance="2.2366" /> <!-- Recipe: Ring of Ages -->
-					<item id="3009" min="1" max="1" chance="1.7893" /> <!-- Recipe: Composite Boots -->
-					<item id="8724" min="1" max="1" chance="1.4612" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.3653" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0365" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0073" /> <!-- Top-Grade Life Stone - Level 49 -->
-				</group>
+				<item id="57" min="256" max="600" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
+				<item id="45929" min="1" max="4" chance="0.03" /> <!-- Spirit Stone -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1295,15 +1233,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1869" min="1" max="9" chance="82.6759" /> <!-- Iron Ore -->
-				<item id="1911" min="1" max="1" chance="30.746" /> <!-- Earring of Protection Gemstone -->
-				<item id="1967" min="1" max="1" chance="22.5459" /> <!-- Plated Leather Gaiters Material -->
+				<item id="36552" min="1" max="1" chance="0.75" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" grown="14.5" />
-			<height normal="31" grown="36" />
-		</collision>
 	</npc>
 	<npc id="20755" level="30" type="L2Monster" name="Talakin Commander">
 		<parameters>

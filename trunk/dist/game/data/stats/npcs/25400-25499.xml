@@ -534,7 +534,7 @@
 		<equipment rhand="88" /> <!-- rhand: Morning Star -->
 		<acquire exp="3818045" sp="916" raidPoints="632" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
+			<vitals hp="144477" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="469.65105" magical="229.12" evasion="-18" />
 			<attribute>
@@ -564,33 +564,22 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="2" chance="85" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone -->
-				<group chance="64.1427993774414">
-					<item id="852" min="1" max="1" chance="40.3267" /> <!-- Moonstone Earring -->
-					<item id="883" min="6" max="16" chance="5.5014" /> <!-- Aquastone Ring -->
-					<item id="915" min="1" max="1" chance="30.2577" /> <!-- Aquastone Necklace -->
-					<item id="1908" min="81" max="243" chance="14.0613" /> <!-- Moonstone Earring Wire -->
-					<item id="1909" min="480" max="1440" chance="3.3838" /> <!-- Aquastone Ring Wire -->
-					<item id="1910" min="140" max="420" chance="6.4691" /> <!-- Aquastone Necklace Chain -->
-				</group>
-				<group chance="59.526100158691406">
-					<item id="71" min="1" max="1" chance="6.6165" /> <!-- Flamberge -->
-					<item id="72" min="1" max="1" chance="6.6165" /> <!-- Stormbringer -->
-					<item id="2059" min="8" max="22" chance="28.8809" /> <!-- Flamberge Blade -->
-					<item id="2060" min="4" max="12" chance="57.8861" /> <!-- Stormbringer Blade -->
-				</group>
-				<group chance="6.000400066375732">
-					<item id="6573" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="21" />
 			<height normal="38" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="72" min="1" max="1" chance="6.6165" /> <!-- Stormbringer -->
+				<item id="852" min="1" max="1" chance="4.900" /> <!-- Moonstone Earring -->
+				<item id="883" min="1" max="1" chance="2.400" /> <!-- Aquastone Ring -->
+				<item id="915" min="1" max="1" chance="1.630" /> <!-- Aquastone Necklace -->
+				<item id="71" min="1" max="1" chance="0.75" /> <!-- Flamberge -->
+				<item id="9814" min="1" max="2" chance="89" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone -->
+				<item id="6573" min="1" max="1" chance="1.150" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25411" level="39" type="L2Monster" name="Road Scavenger Henchman" title="Raid Fighter">
 		<parameters>
@@ -3248,19 +3237,19 @@
 			<radius normal="45" />
 			<height normal="141" />
 		</collision>
-        		<drop_lists>
+		<drop_lists>
 			<death>
-				    <item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
-				    <item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
-					<item id="357" min="1" max="1" chance="1.150" /> <!-- Zubei's Breastplate -->
-					<item id="383" min="1" max="1" chance="7" /> <!-- Zubei's Gaiters -->
-					<item id="2376" min="1" max="1" chance="1.800" /> <!-- Avadon Breastplate -->
-					<item id="2379" min="1" max="1" chance="4.650" /> <!-- Avadon Gaiters -->
-					<item id="300" min="1" max="1" chance="5.50" /> <!-- Great Axe -->
-					<item id="4601" min="1" max="3" chance="6.600" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="4602" min="1" max="1" chance="13.75" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
-					<item id="4603" min="1" max="1" chance="13.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-					<item id="951" min="1" max="1" chance="11.25" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
+				<item id="357" min="1" max="1" chance="1.150" /> <!-- Zubei's Breastplate -->
+				<item id="383" min="1" max="1" chance="7" /> <!-- Zubei's Gaiters -->
+				<item id="2376" min="1" max="1" chance="1.800" /> <!-- Avadon Breastplate -->
+				<item id="2379" min="1" max="1" chance="4.650" /> <!-- Avadon Gaiters -->
+				<item id="300" min="1" max="1" chance="5.50" /> <!-- Great Axe -->
+				<item id="4601" min="1" max="3" chance="6.600" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+				<item id="4602" min="1" max="1" chance="13.75" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+				<item id="4603" min="1" max="1" chance="13.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+				<item id="951" min="1" max="1" chance="11.25" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -5271,19 +5260,19 @@
 			<radius normal="24" />
 			<height normal="48" />
 		</collision>
-        		<drop_lists>
+		<drop_lists>
 			<death>
-			    	<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
-			    	<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-					<item id="854" min="1" max="1" chance="3" /> <!-- Earring of Seal -->
-					<item id="885" min="1" max="1" chance="1.100" /> <!-- Ring of Ages -->
-					<item id="917" min="1" max="1" chance="1.500" /> <!-- Necklace of Mermaid -->
-					<item id="231" min="1" max="1" chance="3.750" /> <!-- Grace Dagger -->
-					<item id="233" min="1" max="1" chance="3.750" /> <!-- Dark Screamer -->
-					<item id="4601" min="1" max="3" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="4602" min="2" max="4" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
-					<item id="4603" min="2" max="6" chance="11.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-					<item id="951" min="3" max="7" chance="9.500" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
+				<item id="854" min="1" max="1" chance="3" /> <!-- Earring of Seal -->
+				<item id="885" min="1" max="1" chance="1.100" /> <!-- Ring of Ages -->
+				<item id="917" min="1" max="1" chance="1.500" /> <!-- Necklace of Mermaid -->
+				<item id="231" min="1" max="1" chance="3.750" /> <!-- Grace Dagger -->
+				<item id="233" min="1" max="1" chance="3.750" /> <!-- Dark Screamer -->
+				<item id="4601" min="1" max="3" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+				<item id="4602" min="2" max="4" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+				<item id="4603" min="2" max="6" chance="11.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+				<item id="951" min="3" max="7" chance="9.500" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</death>
 		</drop_lists>
 	</npc>

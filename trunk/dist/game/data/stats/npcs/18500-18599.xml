@@ -1855,7 +1855,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<vitals hp="9472" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<attribute>
@@ -1885,33 +1885,18 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="9.477100372314453">
-					<item id="354" min="1" max="1" chance="0.6196" /> <!-- Chain Mail Shirt -->
-					<item id="1959" min="1" max="1" chance="32.4262" /> <!-- Chain Mail Shirt Material -->
-					<item id="381" min="1" max="1" chance="0.9912" /> <!-- Chain Gaiters -->
-					<item id="1960" min="1" max="1" chance="65.963" /> <!-- Chain Gaiters Part -->
-				</group>
-				<group chance="37.48640060424805">
-					<item id="1871" min="4" max="12" chance="25.3632" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="3" chance="45.09" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="8.1162" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="1.7644" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="4.0581" /> <!-- Mold Lubricant -->
-					<item id="2164" min="1" max="1" chance="15.6081" /> <!-- Recipe: Ring of Protection -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1871" min="1" max="21" chance="87.7846" /> <!-- Charcoal -->
-				<item id="4553" min="1" max="1" chance="3.8625" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
-				<item id="1908" min="1" max="1" chance="91.4423" /> <!-- Moonstone Earring Wire -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="10" grown="18" />
 			<height normal="25" grown="30.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="354" min="1" max="1" chance="0.75" /> <!-- Chain Mail Shirt -->
+				<item id="1959" min="96" max="288" chance="36.36" /> <!-- Chain Mail Shirt Material -->
+				<item id="381" min="1" max="1" chance="1.200" /> <!-- Chain Gaiters -->
+				<item id="1960" min="105" max="315" chance="78.45" /> <!-- Chain Gaiter Fragment -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18546" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
 		<parameters>
@@ -1967,33 +1952,18 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="11.120499610900879">
-					<item id="226" min="1" max="1" chance="0.7043" /> <!-- Cursed Dagger -->
-					<item id="2070" min="1" max="1" chance="49.2957" /> <!-- Cursed Dagger Blade -->
-					<item id="232" min="1" max="1" chance="0.7043" /> <!-- Dark Elven Dagger -->
-					<item id="2072" min="1" max="1" chance="49.2957" /> <!-- Dark Elven Dagger Edge -->
-				</group>
-				<group chance="36.641998291015625">
-					<item id="1870" min="24" max="72" chance="26.1678" /> <!-- Coal -->
-					<item id="1865" min="52" max="156" chance="11.9624" /> <!-- Varnish -->
-					<item id="1874" min="4" max="12" chance="10.4671" /> <!-- Oriharukon Ore -->
-					<item id="4043" min="5" max="15" chance="4.1869" /> <!-- Asofe -->
-					<item id="4039" min="1" max="1" chance="41.8685" /> <!-- Mold Glue -->
-					<item id="2165" min="4" max="12" chance="5.3473" /> <!-- Recipe: Necklace of Protection -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2163" min="1" max="7" chance="74.5273" /> <!-- Recipe: Earring of Protection -->
-				<item id="1909" min="1" max="17" chance="87.6726" /> <!-- Aquastone Ring Wire -->
-				<item id="2164" min="1" max="9" chance="89.8914" /> <!-- Recipe: Ring of Protection -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" grown="25" />
 			<height normal="31" grown="37.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="226" min="1" max="1" chance="0.3" /> <!-- Cursed Dagger -->
+				<item id="2070" min="192" max="576" chance="7.608" /> <!-- Cursed Dagger Blade -->
+				<item id="232" min="1" max="1" chance="0.3" /> <!-- Dark Elven Dagger -->
+				<item id="2072" min="52" max="156" chance="7.608" /> <!-- Dark Elven Dagger Edge -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18547" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
 		<parameters>
@@ -2047,35 +2017,20 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="21.04170036315918">
-					<item id="71" min="1" max="1" chance="0.4797" /> <!-- Flamberge -->
-					<item id="2059" min="1" max="1" chance="31.4092" /> <!-- Flamberge Blade -->
-					<item id="72" min="1" max="1" chance="0.4797" /> <!-- Stormbringer -->
-					<item id="2060" min="1" max="1" chance="33.5752" /> <!-- Stormbringer Blade -->
-					<item id="7887" min="1" max="1" chance="0.4797" /> <!-- Mysterious Sword -->
-					<item id="8334" min="1" max="1" chance="33.5765" /> <!-- Mysterious Sword Blade -->
-				</group>
-				<group chance="42.8942985534668">
-					<item id="1866" min="60" max="180" chance="11.5233" /> <!-- Suede -->
-					<item id="1871" min="240" max="720" chance="4.3212" /> <!-- Charcoal -->
-					<item id="5220" min="4" max="12" chance="9.2186" /> <!-- Metal Hardener -->
-					<item id="1885" min="3" max="9" chance="24.6927" /> <!-- High-Grade Suede -->
-					<item id="4041" min="1" max="1" chance="18.0364" /> <!-- Mold Hardener -->
-					<item id="2213" min="1" max="1" chance="32.2078" /> <!-- Recipe: Dwarven Chain Mail Shirt -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1910" min="1" max="17" chance="94.5042" /> <!-- Aquastone Necklace Chain -->
-				<item id="1866" min="1" max="159" chance="94.1262" /> <!-- Suede -->
-				<item id="1871" min="1" max="237" chance="94.9172" /> <!-- Charcoal -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="71" min="1" max="1" chance="1.275" /> <!-- Flamberge -->
+				<item id="2059" min="14" max="42" chance="73.50" /> <!-- Flamberge Blade -->
+				<item id="72" min="1" max="1" chance="1.275" /> <!-- Stormbringer -->
+				<item id="2060" min="40" max="120" chance="87" /> <!-- Stormbringer Blade -->
+				<item id="7887" min="1" max="1" chance="1.275" /> <!-- Mysterious Sword -->
+				<item id="8334" min="81" max="243" chance="87" /> <!-- Mysterious Sword Blade -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18548" level="45" type="L2Monster" name="Ancient Giants' Experiment">
 		<parameters>
@@ -2121,35 +2076,20 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="5.445099830627441">
-					<item id="96" min="1" max="1" chance="0.4753" /> <!-- Scythe -->
-					<item id="2062" min="1" max="1" chance="32.858" /> <!-- Scythe Edge -->
-					<item id="298" min="1" max="1" chance="0.4753" /> <!-- Orcish Glaive -->
-					<item id="2075" min="1" max="1" chance="32.858" /> <!-- Orcish Glaive Blade -->
-					<item id="302" min="1" max="1" chance="0.4753" /> <!-- Body Slasher -->
-					<item id="2076" min="1" max="1" chance="32.8581" /> <!-- Body Slasher Blade -->
-				</group>
-				<group chance="49.58449935913086">
-					<item id="1864" min="21" max="63" chance="21.9081" /> <!-- Stem -->
-					<item id="1869" min="16" max="48" chance="14.3772" /> <!-- Iron Ore -->
-					<item id="1878" min="3" max="9" chance="30.6713" /> <!-- Braided Hemp -->
-					<item id="1884" min="22" max="66" chance="6.2916" /> <!-- Cord -->
-					<item id="4039" min="1" max="1" chance="15.3357" /> <!-- Mold Glue -->
-					<item id="2214" min="1" max="1" chance="11.4161" /> <!-- Recipe: Dwarven Chain Gaiters -->
-				</group>
-			</death>
-			<corpse>
-				<item id="4554" min="1" max="1" chance="11.5844" /> <!-- Greater Dye of STR <Str+1 Dex-1> -->
-				<item id="1954" min="1" max="3" chance="76.9829" /> <!-- Karmian Stocking Design -->
-				<item id="2165" min="1" max="3" chance="55.4808" /> <!-- Recipe: Necklace of Protection -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="96" min="1" max="1" chance="0.3" /> <!-- Scythe -->
+				<item id="2062" min="40" max="120" chance="23" /> <!-- Scythe Edge -->
+				<item id="298" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive -->
+				<item id="2075" min="81" max="243" chance="23" /> <!-- Orcish Glaive Blade -->
+				<item id="302" min="1" max="1" chance="0.3" /> <!-- Body Slasher -->
+				<item id="2076" min="14" max="42" chance="23" /> <!-- Body Slasher Blade -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18549" level="45" type="L2Monster" name="Ancient Giants' Experiment">
 		<parameters>
@@ -2200,47 +2140,32 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="13.203300476074219">
-					<item id="62" min="1" max="1" chance="0.2489" /> <!-- Reinforced Mithril Boots -->
-					<item id="1958" min="1" max="1" chance="10.8622" /> <!-- Reinforced Mithril Boots Design -->
-					<item id="2429" min="1" max="1" chance="0.2489" /> <!-- Chain Boots -->
-					<item id="2937" min="1" max="1" chance="10.8622" /> <!-- Chain Boots Part -->
-					<item id="2430" min="1" max="1" chance="0.2489" /> <!-- Karmian Boots -->
-					<item id="2938" min="1" max="1" chance="10.8622" /> <!-- Karmian Boots Fabric -->
-					<item id="2431" min="1" max="1" chance="0.2489" /> <!-- Plated Leather Boots -->
-					<item id="2939" min="1" max="1" chance="10.8622" /> <!-- Plate Leather Boots Lining -->
-					<item id="2432" min="1" max="1" chance="0.2489" /> <!-- Dwarven Chain Boots -->
-					<item id="2940" min="1" max="1" chance="10.8622" /> <!-- Dwarven Chain Boots Part -->
-					<item id="2433" min="1" max="1" chance="0.2489" /> <!-- Boots of Seal -->
-					<item id="2941" min="1" max="1" chance="10.8622" /> <!-- Boots of Seal Pattern -->
-					<item id="2452" min="1" max="1" chance="0.2489" /> <!-- Reinforced Mithril Gloves -->
-					<item id="2942" min="1" max="1" chance="10.8622" /> <!-- Reinforced Mithril Gloves Design -->
-					<item id="2453" min="1" max="1" chance="0.2489" /> <!-- Chain Gloves -->
-					<item id="2943" min="1" max="1" chance="10.8622" /> <!-- Chain Gloves Design -->
-					<item id="2454" min="1" max="1" chance="0.2489" /> <!-- Karmian Gloves -->
-					<item id="2944" min="1" max="1" chance="10.8623" /> <!-- Karmian Gloves Fabric -->
-				</group>
-				<group chance="46.87910079956055">
-					<item id="1870" min="1" max="3" chance="51.0514" /> <!-- Coal -->
-					<item id="1865" min="1" max="3" chance="34.0343" /> <!-- Varnish -->
-					<item id="1874" min="1" max="1" chance="6.8069" /> <!-- Oriharukon Ore -->
-					<item id="4043" min="1" max="1" chance="3.4034" /> <!-- Asofe -->
-					<item id="4039" min="1" max="1" chance="3.4034" /> <!-- Mold Glue -->
-					<item id="2215" min="1" max="1" chance="1.3006" /> <!-- Recipe: Robe of Seal -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1958" min="1" max="1" chance="54.6211" /> <!-- Reinforced Mithril Boots Design -->
-				<item id="2213" min="1" max="1" chance="9.4357" /> <!-- Recipe: Dwarven Chain Mail Shirt -->
-				<item id="1959" min="1" max="1" chance="16.3679" /> <!-- Chain Mail Shirt Material -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="62" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Boots -->
+				<item id="1958" min="1" max="1" chance="18" /> <!-- Reinforced Mithril Boots Design -->
+				<item id="2429" min="1" max="1" chance="0.3" /> <!-- Chain Boots -->
+				<item id="2937" min="1" max="1" chance="18" /> <!-- Chain Boots Part -->
+				<item id="2430" min="1" max="1" chance="0.3" /> <!-- Karmian Boots -->
+				<item id="2938" min="1" max="1" chance="18" /> <!-- Karmian Boots Fabric -->
+				<item id="2431" min="1" max="1" chance="0.3" /> <!-- Plated Leather Boots -->
+				<item id="2939" min="1" max="1" chance="18" /> <!-- Plate Leather Boots Lining -->
+				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
+				<item id="2940" min="1" max="1" chance="18" /> <!-- Dwarven Chain Boots Part -->
+				<item id="2433" min="1" max="1" chance="0.3" /> <!-- Boots of Seal -->
+				<item id="2941" min="1" max="1" chance="18" /> <!-- Boots of Seal Pattern -->
+				<item id="2452" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2942" min="1" max="1" chance="18" /> <!-- Reinforced Mithril Gloves Design -->
+				<item id="2453" min="1" max="1" chance="0.3" /> <!-- Chain Gloves -->
+				<item id="2943" min="1" max="1" chance="18" /> <!-- Chain Gloves Design -->
+				<item id="2454" min="1" max="1" chance="0.3" /> <!-- Karmian Gloves -->
+				<item id="2944" min="1" max="1" chance="18" /> <!-- Karmian Gloves Fabric -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18550" level="50" type="L2Monster" name="Cruma Phantom" title="Event Monster">
 		<parameters>

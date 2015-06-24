@@ -294,7 +294,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2041407" sp="489" raidPoints="1508" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20" />
+			<vitals hp="622755" hpRegen="441.65" mp="1708.8" mpRegen="20" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1602" magical="293" evasion="-18" />
 			<attribute>
@@ -325,63 +325,36 @@
 				<clan>CURMA_CORE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="40">
-					<item id="75" min="1" max="1" chance="12" /> <!-- Caliburs -->
-					<item id="84" min="1" max="1" chance="10" /> <!-- Homunkulus's Sword -->
-					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
-					<item id="174" min="1" max="1" chance="10" /> <!-- Nirvana Axe -->
-					<item id="200" min="1" max="1" chance="10" /> <!-- Sage's Staff -->
-					<item id="233" min="1" max="1" chance="12" /> <!-- Dark Screamer -->
-					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
-					<item id="283" min="1" max="1" chance="12" /> <!-- Akat Long Bow -->
-					<item id="301" min="1" max="1" chance="12" /> <!-- Scorpion -->
-				</group>
-				<group chance="60">
-					<item id="60" min="1" max="1" chance="20" /> <!-- Composite Armor -->
-					<item id="400" min="1" max="1" chance="20" /> <!-- Theca Leather Armor -->
-					<item id="420" min="1" max="1" chance="20" /> <!-- Theca Leather Gaiters -->
-					<item id="441" min="1" max="1" chance="20" /> <!-- Demon's Tunic -->
-					<item id="472" min="1" max="1" chance="20" /> <!-- Demon's Stockings -->
-				</group>
-				<group chance="70">
-					<item id="517" min="1" max="1" chance="20" /> <!-- Composite Helmet -->
-					<item id="2435" min="1" max="1" chance="20" /> <!-- Demon's Boots -->
-					<item id="2459" min="1" max="1" chance="20" /> <!-- Demon's Gloves -->
-					<item id="107" min="1" max="1" chance="20" /> <!-- Composite Shield -->
-					<item id="951" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
-					<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
-				</group>
-				<group chance="30">
-					<item id="6662" min="1" max="1" chance="100" /> <!-- Ring of Core -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="140" />
 			<height normal="75" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="100000" max="750000" chance="100" /> <!-- Adena -->
+				<item id="6662" min="1" max="1" chance="30.18" /> <!-- Ring of Core -->
+				<item id="2459" min="1" max="1" chance="13.75" /> <!-- Demon's Gloves -->
+				<item id="107" min="1" max="1" chance="13.75" /> <!-- Compound Shield -->
+				<item id="517" min="1" max="1" chance="13.75" /> <!-- Compound Helmet -->
+				<item id="2435" min="1" max="1" chance="13.50" /> <!-- Demon's Boots -->
+				<item id="400" min="1" max="1" chance="13.50" /> <!-- Theca Leather Armor -->
+				<item id="420" min="1" max="1" chance="13.50" /> <!-- Theca Leather Gaiters -->
+				<item id="441" min="1" max="1" chance="12" /> <!-- Demon's Tunic -->
+				<item id="60" min="1" max="1" chance="12" /> <!-- Compound Armor -->
+				<item id="472" min="1" max="1" chance="12" /> <!-- Demon's Stockings -->
+				<item id="75" min="1" max="1" chance="4.850" /> <!-- Caliburs -->
+				<item id="283" min="1" max="1" chance="4.850" /> <!-- Akat Long Bow -->
+				<item id="162" min="1" max="1" chance="4.850" /> <!-- War Axe -->
+				<item id="301" min="1" max="1" chance="4.850" /> <!-- Scorpion -->
+				<item id="233" min="1" max="1" chance="4.850" /> <!-- Dark Screamer -->
+				<item id="200" min="1" max="1" chance="4.050" /> <!-- Sage's Staff -->
+				<item id="265" min="1" max="1" chance="4.050" /> <!-- Fisted Blade -->
+				<item id="174" min="1" max="1" chance="4.050" /> <!-- Nirvana Axe -->
+				<item id="84" min="1" max="1" chance="4.050" /> <!-- Homunkulus's Sword -->
+				<item id="45929" min="2" max="12" chance="46" /> <!-- Spirit Stone -->
+				<item id="951" min="1" max="1" chance="14" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29007" level="50" type="L2Monster" name="Death Knight">
 		<parameters>

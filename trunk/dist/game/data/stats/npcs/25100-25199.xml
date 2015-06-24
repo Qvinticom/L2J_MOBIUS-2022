@@ -3794,7 +3794,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5918766" sp="1420" raidPoints="764" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="121183.101253532" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
+			<vitals hp="190435" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
 			<attack physical="333.674474509607" magical="35.7320100968747" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<attribute>
@@ -3824,32 +3824,23 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<group chance="76.56690216064453">
-					<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots -->
-					<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets -->
-					<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part -->
-					<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design -->
-				</group>
-				<group chance="23.959299087524414">
-					<item id="326" min="1" max="1" chance="20.4898" /> <!-- Heathen's Book -->
-					<item id="2110" min="12" max="36" chance="79.5102" /> <!-- Heathen's Book Page -->
-				</group>
-				<group chance="78.29810333251953">
-					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
-					<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
-					<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
-					<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="72" />
 			<height normal="87" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="64" min="1" max="1" chance="10.50" /> <!-- Compound Boots -->
+				<item id="608" min="1" max="1" chance="4.900" /> <!-- Mithril Gauntlets -->
+				<item id="326" min="1" max="1" chance="3.650" /> <!-- Heathen's Book -->
+				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
+				<item id="4610" min="1" max="1" chance="10.80" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+				<item id="4611" min="1" max="1" chance="10.80" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+				<item id="4612" min="1" max="1" chance="10.80" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+				<item id="6574" min="1" max="1" chance="2.840" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25174" level="44" type="L2Monster" name="Karuta's Follower" title="Raid Fighter">
 		<parameters>

@@ -50,7 +50,7 @@
 		<equipment rhand="8528" /> <!-- rhand: For Monsters Only (Doom Hammer) -->
 		<acquire exp="2417862" sp="580" raidPoints="416" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="53690.0336885106" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
+			<vitals hp="84373" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
 			<attack physical="111.218777383212" magical="7.21487767094488" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
@@ -80,32 +80,22 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="60.650001525878906">
-					<item id="395" min="1" max="1" chance="32.8894" /> <!-- Manticore Skin Shirt -->
-					<item id="417" min="4" max="12" chance="6.5657" /> <!-- Manticore Skin Gaiters -->
-					<item id="1942" min="53" max="157" chance="13.7404" /> <!-- Manticore Skin Shirt Texture -->
-					<item id="1943" min="24" max="72" chance="46.8045" /> <!-- Manticore Skin Gaiters Pattern -->
-				</group>
-				<group chance="61.69409942626953">
-					<item id="21731" min="1" max="1" chance="7.7671" /> <!-- Maingauche - Event -->
-					<item id="1660" min="1" max="1" chance="7.7671" /> <!-- Cursed Maingauche -->
-					<item id="2038" min="4" max="12" chance="55.0864" /> <!-- Maingauche Edge -->
-					<item id="2044" min="8" max="22" chance="29.3794" /> <!-- Cursed Maingauche Edge -->
-				</group>
-				<group chance="75.97879791259766">
-					<item id="4553" min="1" max="3" chance="43.9024" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
-					<item id="4554" min="2" max="4" chance="29.2683" /> <!-- Greater Dye of STR <Str+1 Dex-1> -->
-					<item id="4555" min="2" max="6" chance="21.9512" /> <!-- Greater Dye of CON <Con+1 Str-1> -->
-					<item id="6575" min="1" max="1" chance="4.8781" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="23.6" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="395" min="1" max="1" chance="3.750" /> <!-- Manticore Skin Shirt -->
+				<item id="417" min="1" max="1" chance="1.900" /> <!-- Manticore Skin Gaiters -->
+				<item id="224" min="1" max="1" chance="1.350" /> <!-- Maingauche -->
+				<item id="1660" min="1" max="1" chance="9.100" /> <!-- Cursed Maingauche -->
+				<item id="4553" min="1" max="1" chance="13.50" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
+				<item id="4554" min="1" max="1" chance="13.50" /> <!-- Greater Dye of STR <Str+1 Dex-1> -->
+				<item id="4555" min="1" max="1" chance="13.50" /> <!-- Greater Dye of CON <Con+1 Str-1> -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25502" level="30" type="L2Monster" name="Akata's Warrior" title="Raid Fighter">
 		<parameters>

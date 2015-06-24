@@ -2175,7 +2175,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="18029" sp="265" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="6991" hpRegen="7.5" mp="6991" mpRegen="2.7" />
+			<vitals hp="4413" hpRegen="7.5" mp="775" mpRegen="2.7" />
 			<attack physical="1563" magical="2513" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="365" />
 			<attribute>
@@ -2191,9 +2191,9 @@
 		<skill_list>
 			<skill id="4416" level="2" />
 			<skill id="4036" level="1" />
-			<!-- <skill id="4410" level="16" /> -->
-			<!-- <skill id="4411" level="18" /> -->
-			<!-- <skill id="4413" level="15" /> -->
+			<skill id="4410" level="16" />
+			<skill id="4411" level="18" />
+			<skill id="4413" level="15" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2202,23 +2202,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2269" max="5297" chance="70" />
-				<item id="36541" min="1" max="1" chance="7.5" />
-				<item id="36546" min="1" max="1" chance="2" />
-				<item id="632" min="1" max="1" chance="0.6993" />
-				<item id="4129" min="1" max="1" chance="0.07502" />
-				<item id="4162" min="1" max="1" chance="0.033" />
-				<item id="94" min="1" max="1" chance="0.03" />
-				<item id="951" min="1" max="1" chance="0.03" />
-				<item id="36872" min="1" max="1" chance="0.003" />
-				<item id="36930" min="1" max="1" chance="0.003" />
-				<item id="4194" min="1" max="1" chance="0.003" />
-				<item id="36864" min="1" max="1" chance="0.003" />
-				<item id="36922" min="1" max="1" chance="0.001" />
+				<item id="57" min="206" max="486" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="15" chance="93.0213" />
-				<item id="36880" min="1" max="1" chance="0.75188" />
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2226,7 +2216,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="17624" sp="262" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="7229" hpRegen="7.5" mp="7229" mpRegen="2.7" />
+			<vitals hp="4413" hpRegen="7.5" mp="775" mpRegen="2.7" />
 			<attack physical="1563" magical="2513" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="365" />
 			<attribute>
@@ -2242,9 +2232,9 @@
 		<skill_list>
 			<skill id="4416" level="2" />
 			<skill id="4032" level="1" />
-			<!-- <skill id="4410" level="16" /> -->
-			<!-- <skill id="4411" level="18" /> -->
-			<!-- <skill id="4413" level="15" /> -->
+			<skill id="4410" level="16" />
+			<skill id="4411" level="18" />
+			<skill id="4413" level="15" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2253,25 +2243,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2250" max="5246" chance="70" />
-				<item id="4084" min="1" max="1" chance="2.7" />
-				<item id="36546" min="1" max="1" chance="2.1" />
-				<item id="36551" min="1" max="1" chance="2" />
-				<item id="4121" min="1" max="1" chance="1" />
-				<item id="4116" min="1" max="1" chance="0.54945" />
-				<item id="4165" min="1" max="1" chance="0.03" />
-				<item id="4159" min="1" max="1" chance="0.03" />
-				<item id="5312" min="1" max="1" chance="0.03" />
-				<item id="4197" min="1" max="1" chance="0.003" />
-				<item id="36872" min="1" max="1" chance="0.003" />
-				<item id="36930" min="1" max="1" chance="0.003" />
-				<item id="36888" min="1" max="1" chance="0.001" />
-				<item id="36938" min="1" max="1" chance="0.001" />
+				<item id="57" min="192" max="462" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="11" chance="83.4613" />
-				<item id="36532" min="1" max="1" chance="11.933" />
-				<item id="36880" min="1" max="1" chance="0.3003" />
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2279,7 +2257,7 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="21954" sp="334" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="7469" hpRegen="7.5" mp="7469" mpRegen="2.7" />
+			<vitals hp="4413" hpRegen="7.5" mp="775" mpRegen="2.7" />
 			<attack physical="1855" magical="2075" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="375" magical="303" />
 			<attribute>
@@ -2295,10 +2273,10 @@
 		<skill_list>
 			<skill id="4416" level="2" />
 			<skill id="4032" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="18" /> -->
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="17" />
+			<skill id="4410" level="18" />
+			<skill id="4413" level="13" />
+			<skill id="4412" level="12" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2307,26 +2285,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2641" max="6158" chance="70" />
-				<item id="36516" min="1" max="3" chance="24" />
-				<item id="36556" min="1" max="1" chance="7.7" />
-				<item id="4085" min="1" max="1" chance="4" />
-				<item id="36551" min="1" max="1" chance="2.2" />
-				<item id="4117" min="1" max="1" chance="0.6993" />
-				<item id="4120" min="1" max="1" chance="0.6993" />
-				<item id="4164" min="1" max="1" chance="0.05999" />
-				<item id="36889" min="1" max="1" chance="0.03" />
-				<item id="4160" min="1" max="1" chance="0.03" />
-				<item id="5289" min="1" max="1" chance="0.015" />
-				<item id="947" min="1" max="1" chance="0.0055" />
-				<item id="4196" min="1" max="1" chance="0.003" />
-				<item id="36888" min="1" max="1" chance="0.003" />
-				<item id="36938" min="1" max="1" chance="0.001" />
+				<item id="57" min="221" max="521" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="5" /> <!-- Leather -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="13" chance="82.4903" />
-				<item id="36532" min="1" max="1" chance="13.2649" />
-				<item id="36880" min="1" max="1" chance="1" />
+				<item id="36517" min="1" max="1" chance="5" /> <!-- Leather -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2334,7 +2301,7 @@
 		<race>GIANT</race>
 		<acquire exp="22790" sp="352" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="7711" hpRegen="7.5" mp="7711" mpRegen="2.7" />
+			<vitals hp="4413" hpRegen="7.5" mp="775" mpRegen="2.7" />
 			<attack physical="1855" magical="2075" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="375" magical="303" />
 			<attribute>
@@ -2350,10 +2317,10 @@
 		<skill_list>
 			<skill id="4416" level="11" />
 			<skill id="4032" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="18" /> -->
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="17" />
+			<skill id="4410" level="18" />
+			<skill id="4413" level="13" />
+			<skill id="4412" level="12" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2362,25 +2329,17 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2726" max="6368" chance="70" />
-				<item id="36521" min="1" max="1" chance="18" />
-				<item id="36516" min="3" max="9" chance="8.7" />
-				<item id="36556" min="1" max="1" chance="7.5" />
-				<item id="36561" min="1" max="1" chance="1.6" />
-				<item id="5487" min="1" max="1" chance="1.25" />
-				<item id="4163" min="1" max="1" chance="0.05999" />
-				<item id="36889" min="1" max="1" chance="0.045" />
-				<item id="5313" min="1" max="1" chance="0.03" />
-				<item id="948" min="1" max="1" chance="0.015" />
-				<item id="4161" min="1" max="1" chance="0.015" />
-				<item id="8688" min="1" max="1" chance="0.003" />
-				<item id="4195" min="1" max="1" chance="0.003" />
-				<item id="36901" min="1" max="1" chance="0.001" />
+				<item id="57" min="221" max="521" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="3.850" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="1.500" /> <!-- Silver -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="13" chance="86.1824" />
-				<item id="36532" min="1" max="1" chance="12.6013" />
-				<item id="36880" min="1" max="1" chance="0.75188" />
+				<item id="36517" min="1" max="1" chance="3.900" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="1.600" /> <!-- Silver -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2388,7 +2347,7 @@
 		<race>GIANT</race>
 		<acquire exp="20870" sp="324" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="7955" hpRegen="7.5" mp="7955" mpRegen="2.7" />
+			<vitals hp="4413" hpRegen="7.5" mp="775" mpRegen="2.7" />
 			<attack physical="1719" magical="1419" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="454" magical="333" />
 			<attribute>
@@ -2404,10 +2363,10 @@
 		<skill_list>
 			<skill id="4416" level="11" />
 			<skill id="4036" level="1" />
-			<!-- <skill id="4410" level="17" /> -->
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4413" level="14" /> -->
-			<!-- <skill id="4412" level="14" /> -->
+			<skill id="4410" level="17" />
+			<skill id="4411" level="15" />
+			<skill id="4413" level="14" />
+			<skill id="4412" level="14" />
 			<skill id="4414" level="1" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2417,23 +2376,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2583" max="6026" chance="70" />
-				<item id="36521" min="1" max="1" chance="23" />
-				<item id="36526" min="3" max="9" chance="11.2" />
-				<item id="6344" min="1" max="1" chance="4.5" />
-				<item id="36561" min="1" max="1" chance="1.77" />
-				<item id="5488" min="1" max="1" chance="1.25" />
-				<item id="4129" min="1" max="1" chance="0.06502" />
-				<item id="5290" min="1" max="1" chance="0.035" />
-				<item id="4162" min="1" max="1" chance="0.03" />
-				<item id="36902" min="1" max="1" chance="0.01" />
-				<item id="4194" min="1" max="1" chance="0.0055" />
-				<item id="36901" min="1" max="1" chance="0.001" />
+				<item id="57" min="201" max="472" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="5.050" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="1.800" /> <!-- Silver -->
+				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="11" chance="93.8042" />
-				<item id="36532" min="1" max="1" chance="12.4411" />
-				<item id="36880" min="1" max="1" chance="0.3003" />
+				<item id="36527" min="1" max="1" chance="5.300" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="1.850" /> <!-- Silver -->
+				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2441,7 +2392,7 @@
 		<race>GIANT</race>
 		<acquire exp="25000" sp="394" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="10934" hpRegen="7.5" mp="10934" mpRegen="2.7" />
+			<vitals hp="5884" hpRegen="7.5" mp="775" mpRegen="2.7" />
 			<attack physical="1563" magical="2513" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="365" />
 			<attribute>
@@ -2456,10 +2407,10 @@
 		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" />
-			<!-- <skill id="4410" level="16" /> -->
-			<!-- <skill id="4411" level="18" /> -->
+			<skill id="4410" level="16" />
+			<skill id="4411" level="18" />
 			<skill id="4158" level="1" />
-			<!-- <skill id="4413" level="15" /> -->
+			<skill id="4413" level="15" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2468,21 +2419,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2570" max="5984" chance="70" />
-				<item id="36536" min="1" max="1" chance="20" />
-				<item id="36526" min="3" max="9" chance="13.5" />
-				<item id="6346" min="1" max="1" chance="9" />
-				<item id="5522" min="1" max="1" chance="1" />
-				<item id="36902" min="1" max="1" chance="0.75188" />
-				<item id="5422" min="1" max="1" chance="0.3003" />
-				<item id="5292" min="1" max="1" chance="0.07502" />
-				<item id="36856" min="1" max="1" chance="0.05501" />
-				<item id="36914" min="1" max="1" chance="0.03" />
+				<item id="57" min="192" max="452" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="7.275" /> <!-- Synthetic Fiber -->
+				<item id="36537" min="1" max="1" chance="1.700" /> <!-- Leather Braid -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="11" chance="95.0957" />
-				<item id="36532" min="1" max="1" chance="13.6364" />
-				<item id="36880" min="1" max="1" chance="0.3003" />
+				<item id="36527" min="1" max="1" chance="7.650850" /> <!-- Synthetic Fiber -->
+				<item id="36537" min="1" max="1" chance="1.715" /> <!-- Leather Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>

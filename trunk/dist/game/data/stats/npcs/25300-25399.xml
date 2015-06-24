@@ -1480,7 +1480,7 @@
 		<sex>MALE</sex>
 		<acquire exp="235387962" sp="56493" raidPoints="2940" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="378515.569000767" hpRegen="118.846913053688" mp="1377.8" mpRegen="3" />
+			<vitals hp="901247 " hpRegen="118.846913053688" mp="1377.8" mpRegen="3" />
 			<attack physical="2218.75550083933" magical="795.420449310881" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="901.96077" magical="440.02" evasion="-18" />
 			<attribute>
@@ -1511,35 +1511,29 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9814" min="3" max="7" chance="82" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="4" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="51.699501037597656">
-					<item id="5311" min="1" max="1" chance="3.2538" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5316" min="1" max="1" chance="3.2538" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5522" min="4" max="12" chance="60.9733" /> <!-- Sealed Armor of Nightmare Pattern -->
-					<item id="5523" min="8" max="22" chance="32.5191" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				</group>
-				<group chance="42.9994010925293">
-					<item id="81" min="1" max="1" chance="1.6606" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="1" chance="1.6606" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="1" chance="1.6606" /> <!-- Dark Legion's Edge -->
-					<item id="5529" min="9" max="27" chance="26.2482" /> <!-- Dragon Slayer Edge -->
-					<item id="5546" min="5" max="15" chance="51.8961" /> <!-- Sword of Miracles Edge -->
-					<item id="5545" min="14" max="42" chance="16.8739" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="66.39360046386719">
-					<item id="6578" min="1" max="1" chance="9.6386" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="730" min="1" max="3" chance="90.3614" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="25.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5311" min="1" max="1" chance="1.900" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="1.900" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="81" min="1" max="1" chance="0.75" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.75" /> <!-- Dark Legion's Edge -->
+				<item id="9814" min="3" max="7" chance="82" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="4" chance="82" /> <!-- Destruction Tombstone -->
+				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5529" min="2" max="6" chance="26.18" /> <!-- Dragon Slayer Edge -->
+				<item id="730" min="1" max="3" chance="24.35" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="5546" min="3" max="9" chance="21.50" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="18.50" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5522" min="36" max="108" chance="4.050" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="12" max="18" chance="12" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="6578" min="1" max="1" chance="1.275" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25329" level="70" type="L2Monster" name="Violet" title="Raid Fighter">
 		<parameters>
@@ -4976,14 +4970,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-					<item id="352" min="1" max="1" chance="1.600" /> <!-- Brigandine Tunic -->
-					<item id="2377" min="1" max="1" chance="6.900" /> <!-- Mithril Scale Gaiters -->
-					<item id="2378" min="1" max="1" chance="3.900" /> <!-- Brigandine Gaiters -->
-					<item id="279" min="1" max="1" chance="1.150" /> <!-- Reinforced Long Bow -->
-					<item id="4562" min="1" max="3" chance="6.700" /> <!-- Greater Dye of MEN <Men+1 Wit-1> -->
-					<item id="4563" min="1" max="1" chance="13.25" /> <!-- Greater Dye of WIT <Wit+1 Int-1> -->
-					<item id="4564" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+1 Men-1> -->
-					<item id="955" min="1" max="1" chance="13" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="352" min="1" max="1" chance="1.600" /> <!-- Brigandine Tunic -->
+				<item id="2377" min="1" max="1" chance="6.900" /> <!-- Mithril Scale Gaiters -->
+				<item id="2378" min="1" max="1" chance="3.900" /> <!-- Brigandine Gaiters -->
+				<item id="279" min="1" max="1" chance="1.150" /> <!-- Reinforced Long Bow -->
+				<item id="4562" min="1" max="3" chance="6.700" /> <!-- Greater Dye of MEN <Men+1 Wit-1> -->
+				<item id="4563" min="1" max="1" chance="13.25" /> <!-- Greater Dye of WIT <Wit+1 Int-1> -->
+				<item id="4564" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+1 Men-1> -->
+				<item id="955" min="1" max="1" chance="13" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -5116,7 +5110,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1042754" sp="250" raidPoints="764" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="121183.101253532" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
+			<vitals hp="190435" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
 			<attack physical="333.674474509607" magical="35.7320100968747" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<attribute>
@@ -5146,50 +5140,31 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9817" min="1" max="3" chance="75" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<group chance="72.05220031738281">
-					<item id="103" min="1" max="1" chance="18.9221" /> <!-- Tower Shield -->
-					<item id="107" min="1" max="1" chance="18.9221" /> <!-- Composite Shield -->
-					<item id="517" min="1" max="1" chance="13.2495" /> <!-- Composite Helmet -->
-					<item id="1149" min="1" max="1" chance="13.2495" /> <!-- Shining Circlet -->
-					<item id="1978" min="60" max="180" chance="10.022" /> <!-- Tower Shield Fragment -->
-					<item id="4055" min="116" max="346" chance="5.2062" /> <!-- Composite Shield Fragment -->
-					<item id="2957" min="192" max="576" chance="2.1429" /> <!-- Composite Helmet Design -->
-					<item id="1983" min="23" max="67" chance="18.2857" /> <!-- Shining Circlet Pattern -->
-				</group>
-				<group chance="64.97779846191406">
-					<item id="162" min="1" max="1" chance="0.9444" /> <!-- War Axe -->
-					<item id="174" min="1" max="1" chance="0.9444" /> <!-- Nirvana Axe -->
-					<item id="196" min="1" max="1" chance="0.9444" /> <!-- Stick of Eternity -->
-					<item id="197" min="1" max="1" chance="0.9444" /> <!-- Paradia Staff -->
-					<item id="199" min="1" max="1" chance="0.9444" /> <!-- Pa'agrian Hammer -->
-					<item id="200" min="1" max="1" chance="0.9444" /> <!-- Sage's Staff -->
-					<item id="201" min="1" max="1" chance="0.9444" /> <!-- Club of Nature -->
-					<item id="202" min="1" max="1" chance="0.9444" /> <!-- Mace of Underworld -->
-					<item id="2097" min="4" max="10" chance="11.9387" /> <!-- War Axe Blade -->
-					<item id="2098" min="4" max="12" chance="10.4464" /> <!-- Nirvana Axe Blade -->
-					<item id="2099" min="10" max="30" chance="4.3976" /> <!-- Stick of Eternity Shaft -->
-					<item id="2100" min="17" max="49" chance="2.6652" /> <!-- Paradia Staff Head -->
-					<item id="2102" min="3" max="9" chance="14.1329" /> <!-- Pa'agrian Hammer Head -->
-					<item id="2103" min="2" max="6" chance="21.988" /> <!-- Sage's Staff Head -->
-					<item id="2104" min="3" max="7" chance="17.5904" /> <!-- Club of Nature Head -->
-					<item id="2105" min="5" max="13" chance="9.2856" /> <!-- Mace of Underworld Head -->
-				</group>
-				<group chance="94.43070220947266">
-					<item id="4604" min="2" max="6" chance="15.4639" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
-					<item id="4605" min="3" max="7" chance="12.3711" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
-					<item id="4606" min="3" max="9" chance="10.3093" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
-					<item id="952" min="3" max="9" chance="61.8557" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="45" />
 			<height normal="72" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="103" min="1" max="1" chance="2.100" /> <!-- Tower Shield -->
+				<item id="162" min="1" max="1" chance="1.600" /> <!-- War Axe -->
+				<item id="201" min="1" max="1" chance="1.600" /> <!-- Club of Nature -->
+				<item id="197" min="1" max="1" chance="1.600" /> <!-- Paradia Staff -->
+				<item id="200" min="1" max="1" chance="1.600" /> <!-- Sage's Staff -->
+				<item id="202" min="1" max="1" chance="1.600" /> <!-- Mace of Underworld -->
+				<item id="196" min="1" max="1" chance="1.600" /> <!-- Stick of Eternity -->
+				<item id="174" min="1" max="1" chance="1.600" /> <!-- Nirvana Axe -->
+				<item id="199" min="1" max="1" chance="1.600" /> <!-- Pa'agrian Hammer -->
+				<item id="107" min="1" max="1" chance="1.200" /> <!-- Composite Shield -->
+				<item id="517" min="1" max="1" chance="0.75" /> <!-- Composite Helmet -->
+				<item id="1149" min="1" max="1" chance="0.3" /> <!-- Shining Circlet -->
+				<item id="9817" min="1" max="3" chance="75" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
+				<item id="4605" min="1" max="1" chance="15.50" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4604" min="1" max="1" chance="15.25" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4606" min="1" max="1" chance="15.25" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25396" level="44" type="L2Monster" name="Kusion Susceptor" title="Raid Fighter">
 		<parameters>
