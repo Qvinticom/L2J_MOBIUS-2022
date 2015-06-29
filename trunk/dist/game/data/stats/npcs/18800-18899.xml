@@ -364,33 +364,18 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="0.07940000295639038">
-					<item id="5311" min="1" max="1" chance="0.3313" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5522" min="1" max="1" chance="49.6687" /> <!-- Sealed Armor of Nightmare Pattern -->
-					<item id="5316" min="1" max="1" chance="0.3313" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5523" min="1" max="1" chance="49.6687" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				</group>
-				<group chance="2.0673999786376953">
-					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
-					<item id="5282" min="1" max="1" chance="0.1659" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9544" min="1" max="1" chance="0.4497" /> <!-- Sealed Dynasty Shoes Piece -->
-				<item id="9630" min="1" max="1" chance="0.4947" /> <!-- Orichalcum -->
-				<item id="9619" min="1" max="1" chance="0.0526" /> <!-- Dynasty Bow Piece -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="9" />
 			<height normal="21.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5311" min="1" max="1" chance="0.0009" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5522" min="1" max="1" chance="0.075" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5316" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5523" min="1" max="1" chance="0.075" /> <!-- Sealed Majestic Plate Armor Pattern -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18808" level="82" type="L2Monster" name="Dark Shaman Varangka">
 		<race>HUMANOID</race>

@@ -5694,22 +5694,15 @@
 				<clan>BUGBEAR</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="17" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="173" max="305" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.14810000360012054">
-					<item id="219" min="1" max="1" chance="8.0235" /> <!-- Sword Breaker -->
-					<item id="2015" min="1" max="1" chance="91.9765" /> <!-- Sword Breaker Edge -->
-				</group>
-				<group chance="17.087299346923828">
-					<item id="1872" min="1" max="1" chance="34.8634" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="34.8634" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="3.4863" /> <!-- Coarse Bone Powder -->
-					<item id="2258" min="1" max="1" chance="0.6393" /> <!-- Recipe: Temptation of Abyss -->
-					<item id="6666" min="1" max="1" chance="26.1476" /> <!-- Deluxe Chest Key - Grade 2 -->
-				</group>
+				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
+				<item id="87" min="1" max="1" chance="0.03" /> <!-- Iron Hammer -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5743,15 +5736,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2257" min="1" max="1" chance="0.9246" /> <!-- Recipe: Trident -->
-				<item id="27" min="1" max="1" chance="0.2663" /> <!-- Hard Leather Shirt -->
-				<item id="1929" min="1" max="1" chance="4.8793" /> <!-- Hard Leather Gaiters Material -->
+				<item id="36556" min="1" max="1" chance="1.025" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="17" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="20063" level="24" type="L2Monster" name="Ol Mahum Shooter">
 		<parameters>

@@ -2891,7 +2891,7 @@
 		<sex>MALE</sex>
 		<acquire exp="106892354" sp="25654" raidPoints="2592" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="688201.003654661" hpRegen="277.057601433902" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="1638609" hpRegen="277.057601433902" mp="1188.8" mpRegen="2.7" />
 			<attack physical="3631.01519545517" magical="2425.23781026179" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="815.67099" magical="397.92" evasion="-18" />
 			<attribute>
@@ -2924,32 +2924,26 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9817" min="3" max="7" chance="80" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
-				<group chance="52.422298431396484">
-					<item id="5297" min="1" max="1" chance="6.8601" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5298" min="1" max="1" chance="10.9721" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5301" min="1" max="1" chance="4.221" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5478" min="9" max="27" chance="42.8005" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5482" min="28" max="84" chance="21.5934" /> <!-- Sealed Dark Crystal Leggings Design -->
-					<item id="5479" min="20" max="60" chance="13.5529" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				</group>
-				<group chance="33.43349838256836">
-					<item id="269" min="1" max="1" chance="9.1705" /> <!-- Blood Tornado -->
-					<item id="5539" min="12" max="36" chance="90.8295" /> <!-- Blood Tornado Edge -->
-				</group>
-				<group chance="17.432199478149414">
-					<item id="6570" min="1" max="1" chance="89.2857" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="10.7143" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="37" />
 			<height normal="98" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="9817" min="3" max="7" chance="78.62" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="4" chance="78.62" /> <!-- Destruction Tombstone -->
+				<item id="5297" min="1" max="1" chance="7.650" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5298" min="1" max="1" chance="12.75" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5301" min="1" max="1" chance="4.700" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5478" min="9" max="27" chance="48.50" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5482" min="32" max="96" chance="22.15" /> <!-- Sealed Dark Crystal Leggings Design -->
+				<item id="5479" min="22" max="66" chance="13" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="269" min="1" max="1" chance="1.400" /> <!-- Blood Tornado -->
+				<item id="5539" min="3" max="9" chance="35.25" /> <!-- Blood Tornado Edge -->
+				<item id="6570" min="1" max="1" chance="3.100" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25256" level="60" type="L2RaidBoss" name="Taik High Prefect Arak" title="Raid Boss">
 		<parameters>

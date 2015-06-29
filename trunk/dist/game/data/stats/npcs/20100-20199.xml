@@ -2975,17 +2975,14 @@
 				<clan>GOBLIN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="156" max="278" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.146399974822998">
-					<item id="27" min="1" max="1" chance="3.1003" /> <!-- Hard Leather Shirt -->
-					<item id="1927" min="1" max="1" chance="35.1206" /> <!-- Hard Leather Shirt Pattern -->
-					<item id="33" min="1" max="1" chance="4.9744" /> <!-- Hard Leather Gaiters -->
-					<item id="1929" min="1" max="1" chance="56.8047" /> <!-- Hard Leather Gaiters Material -->
-				</group>
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="17.283100128173828">
 					<item id="1873" min="1" max="1" chance="11.6807" /> <!-- Silver Nugget -->
 					<item id="1868" min="1" max="1" chance="58.4035" /> <!-- Thread -->
@@ -3025,15 +3022,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="34.1721" /> <!-- Coal -->
-				<item id="1870" min="1" max="1" chance="34.1721" /> <!-- Coal -->
-				<item id="1876" min="1" max="1" chance="6.8344" /> <!-- Mithril Ore -->
+				<item id="36531" min="1" max="1" chance="3.150" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
 	</npc>
 	<npc id="20148" level="40" type="L2Monster" name="Starving Spirit">
 		<parameters>

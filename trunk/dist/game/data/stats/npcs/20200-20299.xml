@@ -37,22 +37,14 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="21" />
+			<height normal="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="124" max="215" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03009999915957451">
-					<item id="176" min="1" max="1" chance="50" /> <!-- Apprentice's Staff -->
-					<item id="2501" min="1" max="1" chance="50" /> <!-- Bone Club -->
-				</group>
-				<group chance="10.63290023803711">
-					<item id="1867" min="1" max="1" chance="39.6392" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="39.6392" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="6.6065" /> <!-- Leather -->
-					<item id="2174" min="1" max="1" chance="12.9258" /> <!-- Recipe: Hard Leather Gaiters -->
-					<item id="5273" min="1" max="1" chance="1.1893" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -86,15 +78,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1882" min="1" max="1" chance="5.9453" /> <!-- Leather -->
-				<item id="1882" min="1" max="1" chance="5.9453" /> <!-- Leather -->
-				<item id="1897" min="1" max="1" chance="6.37" /> <!-- Necklace of Wisdom Chain -->
+				<item id="36531" min="1" max="1" chance="2.550" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="20204" level="23" type="L2Monster" name="Bloody Bee">
 		<parameters>
@@ -247,20 +234,14 @@
 				<clan>WOLF</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="11" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="181" max="334" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.025599999353289604">
-					<item id="257" min="1" max="1" chance="100" /> <!-- Viper Fang -->
-				</group>
-				<group chance="26.62030029296875">
-					<item id="1868" min="1" max="1" chance="45.2034" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="9.0407" /> <!-- Silver Nugget -->
-					<item id="2255" min="1" max="1" chance="0.5526" /> <!-- Recipe: Saber -->
-					<item id="6037" min="1" max="1" chance="45.2033" /> <!-- Waking Scroll -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -294,15 +275,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="40.7376" /> <!-- Charcoal -->
-				<item id="1928" min="1" max="1" chance="5.9341" /> <!-- Piece Bone Gaiters Fragment -->
-				<item id="1868" min="1" max="1" chance="81.4752" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.700" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="11" />
-		</collision>
 	</npc>
 	<npc id="20206" level="25" type="L2Monster" name="Cardiff Werewolf">
 		<parameters>
@@ -2081,24 +2057,14 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="25" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="212" max="381" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.56659996509552">
-					<item id="27" min="1" max="1" chance="3.1003" /> <!-- Hard Leather Shirt -->
-					<item id="1927" min="1" max="1" chance="35.1206" /> <!-- Hard Leather Shirt Pattern -->
-					<item id="33" min="1" max="1" chance="4.9744" /> <!-- Hard Leather Gaiters -->
-					<item id="1929" min="1" max="1" chance="56.8047" /> <!-- Hard Leather Gaiters Material -->
-				</group>
-				<group chance="15.890600204467773">
-					<item id="1872" min="1" max="1" chance="46.2963" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="46.2963" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.6296" /> <!-- Coarse Bone Powder -->
-					<item id="5153" min="1" max="1" chance="1.3889" /> <!-- Recipe: Soulshot (D) Compressed Package (100%) -->
-					<item id="5268" min="1" max="1" chance="1.3889" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2132,15 +2098,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2178" min="1" max="1" chance="7.4717" /> <!-- Recipe: Dark Stockings -->
-				<item id="1865" min="1" max="1" chance="46.6983" /> <!-- Varnish -->
-				<item id="1898" min="1" max="1" chance="4.7969" /> <!-- Blue Diamond Necklace Gem -->
+				<item id="36531" min="1" max="1" chance="4.325" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" />
-			<height normal="25" />
-		</collision>
 	</npc>
 	<npc id="20225" level="25" type="L2Monster" name="Giant Mist Leech">
 		<parameters>
@@ -5341,22 +5302,14 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="21" />
+			<height normal="43" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="306" max="549" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2637999951839447">
-					<item id="219" min="1" max="1" chance="8.0235" /> <!-- Sword Breaker -->
-					<item id="2015" min="1" max="1" chance="91.9765" /> <!-- Sword Breaker Edge -->
-				</group>
-				<group chance="23.503599166870117">
-					<item id="1867" min="1" max="1" chance="45.1466" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="45.1466" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="7.5244" /> <!-- Leather -->
-					<item id="5158" min="1" max="1" chance="1.3544" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-					<item id="8294" min="1" max="1" chance="0.828" /> <!-- Recipe: Steel Sword (100%) -->
-				</group>
+				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -5390,15 +5343,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1866" min="1" max="1" chance="44.9035" /> <!-- Suede -->
-				<item id="2015" min="1" max="1" chance="0.8214" /> <!-- Sword Breaker Edge -->
-				<item id="1872" min="1" max="1" chance="89.8071" /> <!-- Animal Bone -->
+				<item id="36531" min="1" max="1" chance="6.200" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="21" />
-			<height normal="43" />
-		</collision>
 	</npc>
 	<npc id="20266" level="25" type="L2Monster" name="Monster Eye Gazer">
 		<parameters>
@@ -5452,21 +5400,14 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="21" />
+			<height normal="43" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="185" max="346" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.12710000574588776">
-					<item id="432" min="1" max="1" chance="38.4419" /> <!-- Cursed Tunic -->
-					<item id="465" min="1" max="1" chance="61.5581" /> <!-- Cursed Stockings -->
-				</group>
-				<group chance="3.075000047683716">
-					<item id="1874" min="1" max="1" chance="12.7666" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="76.5998" /> <!-- Braided Hemp -->
-					<item id="5220" min="1" max="1" chance="7.66" /> <!-- Metal Hardener -->
-					<item id="2260" min="1" max="1" chance="2.9736" /> <!-- Recipe: Mace of Judgment -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5500,15 +5441,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1866" min="1" max="1" chance="27.9792" /> <!-- Suede -->
-				<item id="2180" min="1" max="1" chance="3.1555" /> <!-- Recipe: Scale Mail -->
-				<item id="1878" min="1" max="1" chance="16.7875" /> <!-- Braided Hemp -->
+				<item id="36531" min="1" max="1" chance="3.900" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="21" />
-			<height normal="43" />
-		</collision>
 	</npc>
 	<npc id="20267" level="31" type="L2Monster" name="Breka Orc">
 		<parameters>
@@ -6944,17 +6880,15 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="23" grown="27.6" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="189" max="337" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3914999961853027">
-					<item id="27" min="1" max="1" chance="3.1003" /> <!-- Hard Leather Shirt -->
-					<item id="1927" min="1" max="1" chance="35.1206" /> <!-- Hard Leather Shirt Pattern -->
-					<item id="33" min="1" max="1" chance="4.9744" /> <!-- Hard Leather Gaiters -->
-					<item id="1929" min="1" max="1" chance="56.8047" /> <!-- Hard Leather Gaiters Material -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="734" min="1" max="1" chance="0.75" /> <!-- Wind Walk Potion -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="17.59939956665039">
 					<item id="1864" min="1" max="1" chance="55.693" /> <!-- Stem -->
 					<item id="1869" min="1" max="1" chance="27.8465" /> <!-- Iron Ore -->
@@ -6995,15 +6929,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1879" min="1" max="1" chance="6.913" /> <!-- Cokes -->
-				<item id="2255" min="1" max="1" chance="1.0141" /> <!-- Recipe: Saber -->
-				<item id="1898" min="1" max="1" chance="4.2607" /> <!-- Blue Diamond Necklace Gem -->
+				<item id="36531" min="1" max="1" chance="3.950" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" grown="12" />
-			<height normal="23" grown="27.6" />
-		</collision>
 	</npc>
 	<npc id="20292" level="20" type="L2Monster" name="Enku Orc Shaman">
 		<parameters>
@@ -7053,17 +6982,14 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="142" max="248" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5168999433517456">
-					<item id="845" min="1" max="1" chance="8.7774" /> <!-- Cat's Eye Earring -->
-					<item id="908" min="1" max="1" chance="6.5831" /> <!-- Necklace of Wisdom -->
-					<item id="1897" min="1" max="1" chance="71.4734" /> <!-- Necklace of Wisdom Chain -->
-					<item id="877" min="1" max="1" chance="13.1661" /> <!-- Ring of Wisdom -->
-				</group>
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="7.958099842071533">
 					<item id="1871" min="1" max="1" chance="57.2197" /> <!-- Charcoal -->
 					<item id="1866" min="1" max="1" chance="38.1465" /> <!-- Suede -->
@@ -7103,15 +7029,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2150" min="1" max="1" chance="14.4749" /> <!-- Recipe: Blue Diamond Necklace -->
-				<item id="2139" min="1" max="1" chance="6.1663" /> <!-- Recipe: Steel Mold -->
-				<item id="5220" min="1" max="1" chance="1.2333" /> <!-- Metal Hardener -->
+				<item id="36531" min="1" max="1" chance="2.800" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="22" />
-		</collision>
 	</npc>
 	<npc id="20293" level="20" type="L2Monster" name="Virud Lizardman">
 		<parameters>
