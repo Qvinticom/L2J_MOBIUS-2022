@@ -949,10 +949,12 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10022" levels="1" name="Ignore Death">
+	<skill id="10022" levels="1" name="Ignore Death" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10"> <!--enchantGroup9="10">-->
 		<table name="#ench1MpConsume">35 33 31 28 26 24 22 19 17 15</table>
 		<table name="#ench2abnormalTime">11 12 13 14 15 16 17 18 19 20</table>
 		<table name="#ench3HpHealPercent">1 2 3 4 5 6 7 8 9 10</table>
+		<!-- NEED CORRECT REUSE -->
+		<!--<table name="#ench9Reuse"> 1250000 1240000 1230000 1220000 1210000 1200000 1190000 1180000 1170000 1160000 </table>-->
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="1260000" />
@@ -963,16 +965,14 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
-		<!--<for>
-			<effect name="IgnoreDeath" val="0" />
+		<!-- <enchant9 name="reuseDelay" val="#ench9Reuse" /> -->
+		<for>
+			<effect name="IgnoreDeath"/>
 		</for>
-		<enchant2for>
-			<effect name="IgnoreDeath" val="0" />
-		</enchant2for>
 		<enchant3for>
-			<effect name="IgnoreDeath" val="0" />
+			<effect name="IgnoreDeath"/>
 			<effect name="HealPercent" noicon="1" val="#ench3HpHealPercent" />
-		</enchant3for >-->
+		</enchant3for>
 	</skill>
 	<skill id="10023" levels="2" name="King of Beasts">
 		<table name="#ench1MpConsume">133 124 116 107 99 90 82 73 65 56</table>
