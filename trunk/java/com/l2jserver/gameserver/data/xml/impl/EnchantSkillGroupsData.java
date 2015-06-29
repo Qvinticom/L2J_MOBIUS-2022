@@ -44,10 +44,15 @@ public class EnchantSkillGroupsData implements IXmlReader
 	public static final int NORMAL_ENCHANT_COST_MULTIPLIER = Config.NORMAL_ENCHANT_COST_MULTIPLIER;
 	public static final int SAFE_ENCHANT_COST_MULTIPLIER = Config.SAFE_ENCHANT_COST_MULTIPLIER;
 	
-	public static final int NORMAL_ENCHANT_BOOK = 6622;
-	public static final int SAFE_ENCHANT_BOOK = 9627;
-	public static final int CHANGE_ENCHANT_BOOK = 9626;
-	public static final int UNTRAIN_ENCHANT_BOOK = 9625;
+	public static final int NORMAL_ENCHANT_BOOK_OLD = 6622;
+	public static final int SAFE_ENCHANT_BOOK_OLD = 9627;
+	public static final int CHANGE_ENCHANT_BOOK_OLD = 9626;
+	public static final int UNTRAIN_ENCHANT_BOOK_OLD = 9625;
+	public static final int NORMAL_ENCHANT_BOOK = 30297;
+	public static final int SAFE_ENCHANT_BOOK = 30298;
+	public static final int CHANGE_ENCHANT_BOOK = 30299;
+	public static final int UNTRAIN_ENCHANT_BOOK = 30300;
+	public static final int IMMORTAL_SCROLL = 37044;
 	
 	private final Map<Integer, L2EnchantSkillGroup> _enchantSkillGroups = new HashMap<>();
 	private final Map<Integer, L2EnchantSkillLearn> _enchantSkillTrees = new HashMap<>();

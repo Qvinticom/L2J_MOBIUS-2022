@@ -48,8 +48,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 	private static final String _C__D0_0F_REQUESTEXENCHANTSKILL = "[C] D0:0F RequestExEnchantSkill";
 	private static final Logger _logEnchant = Logger.getLogger("enchant");
 	
-	@SuppressWarnings("unused")
-	private int _type; // TODO: Fix this.
+	private int _type; // enchant type: 0 - normal, 1 - safe, 2 - untrain, 3 - change route, 4 - 100%
 	
 	private int _skillId;
 	private int _skillLvl;
@@ -105,61 +104,411 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		{
 			return;
 		}
-		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
-		final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
-		if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
+		if (_type == 0) // enchant
 		{
-			return;
+			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+			if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
+			{
+				return;
+			}
+			
+			final int costMultiplier = EnchantSkillGroupsData.NORMAL_ENCHANT_COST_MULTIPLIER;
+			final int requiredSp = esd.getSpCost() * costMultiplier;
+			if (player.getSp() >= requiredSp)
+			{
+				// only first lvl requires book
+				final boolean usesBook = (_skillLvl % 100) == 1; // 101, 201, 301 ...
+				final int reqItemId;
+				if (player.getClassId().level() == 3)
+				{
+					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
+				}
+				else
+				{
+					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+				}
+				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+				
+				if (Config.ES_SP_BOOK_NEEDED && usesBook && (spb == null))
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				final int requiredAdena = (esd.getAdenaCost() * costMultiplier);
+				if (player.getInventory().getAdena() < requiredAdena)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				boolean check = player.getStat().removeExpAndSp(0, requiredSp, false);
+				if (Config.ES_SP_BOOK_NEEDED && usesBook)
+				{
+					check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
+				}
+				
+				check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requiredAdena, player, true);
+				if (!check)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				// ok. Destroy ONE copy of the book
+				final int rate = esd.getRate(player);
+				if (Rnd.get(100) <= rate)
+				{
+					if (Config.LOG_SKILL_ENCHANTS)
+					{
+						final LogRecord record = new LogRecord(Level.INFO, "Success");
+						record.setParameters(new Object[]
+						{
+							player,
+							skill,
+							spb,
+							rate
+						});
+						record.setLoggerName("skill");
+						_logEnchant.log(record);
+					}
+					
+					player.addSkill(skill, true);
+					player.sendPacket(ExEnchantSkillResult.valueOf(true));
+					
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+					sm.addSkillName(_skillId);
+					player.sendPacket(sm);
+					
+					if (Config.DEBUG)
+					{
+						_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requiredAdena + " Adena.");
+					}
+				}
+				else
+				{
+					player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
+					player.sendPacket(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
+					player.sendPacket(ExEnchantSkillResult.valueOf(false));
+					
+					if (Config.LOG_SKILL_ENCHANTS)
+					{
+						final LogRecord record = new LogRecord(Level.INFO, "Fail");
+						record.setParameters(new Object[]
+						{
+							player,
+							skill,
+							spb,
+							rate
+						});
+						record.setLoggerName("skill");
+						_logEnchant.log(record);
+					}
+				}
+				
+				player.sendPacket(new UserInfo(player));
+				player.sendSkillList();
+				final int afterEnchantSkillLevel = player.getSkillLevel(_skillId);
+				player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
+				player.sendPacket(new ExEnchantSkillInfoDetail(0, _skillId, afterEnchantSkillLevel + 1, player));
+				player.updateShortCuts(_skillId, afterEnchantSkillLevel);
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
+			}
 		}
-		
-		final int costMultiplier = EnchantSkillGroupsData.NORMAL_ENCHANT_COST_MULTIPLIER;
-		final int requiredSp = esd.getSpCost() * costMultiplier;
-		if (player.getSp() >= requiredSp)
+		else if (_type == 1) // safe enchant
 		{
-			// only first lvl requires book
-			final boolean usesBook = (_skillLvl % 100) == 1; // 101, 201, 301 ...
-			final int reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
-			final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+			int costMultiplier = EnchantSkillGroupsData.SAFE_ENCHANT_COST_MULTIPLIER;
+			final int reqItemId;
+			if (player.getClassId().level() == 3)
+			{
+				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
+			}
+			else
+			{
+				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+			}
+			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+			if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
+			{
+				return;
+			}
 			
-			if (Config.ES_SP_BOOK_NEEDED && usesBook && (spb == null)) // Haven't spellbook
+			int requiredSp = esd.getSpCost() * costMultiplier;
+			int requireditems = esd.getAdenaCost() * costMultiplier;
+			int rate = esd.getRate(player);
+			
+			if (player.getSp() >= requiredSp)
+			{
+				L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+				if (spb == null)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				if (player.getInventory().getAdena() < requireditems)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				boolean check = player.getStat().removeExpAndSp(0, requiredSp, false);
+				check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
+				
+				check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
+				
+				if (!check)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				if (Rnd.get(100) <= rate)
+				{
+					if (Config.LOG_SKILL_ENCHANTS)
+					{
+						LogRecord record = new LogRecord(Level.INFO, "Safe Success");
+						record.setParameters(new Object[]
+						{
+							player,
+							skill,
+							spb,
+							rate
+						});
+						record.setLoggerName("skill");
+						_logEnchant.log(record);
+					}
+					
+					player.addSkill(skill, true);
+					
+					if (Config.DEBUG)
+					{
+						_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requireditems + " Adena.");
+					}
+					
+					player.sendPacket(ExEnchantSkillResult.valueOf(true));
+					
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+					sm.addSkillName(_skillId);
+					player.sendPacket(sm);
+				}
+				else
+				{
+					if (Config.LOG_SKILL_ENCHANTS)
+					{
+						LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
+						record.setParameters(new Object[]
+						{
+							player,
+							skill,
+							spb,
+							rate
+						});
+						record.setLoggerName("skill");
+						_logEnchant.log(record);
+					}
+					
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
+					sm.addSkillName(_skillId);
+					player.sendPacket(sm);
+					player.sendPacket(ExEnchantSkillResult.valueOf(false));
+				}
+				
+				player.sendPacket(new UserInfo(player));
+				player.sendSkillList();
+				final int afterEnchantSkillLevel = player.getSkillLevel(_skillId);
+				player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
+				player.sendPacket(new ExEnchantSkillInfoDetail(1, _skillId, afterEnchantSkillLevel + 1, player));
+				player.updateShortCuts(_skillId, afterEnchantSkillLevel);
+			}
+			else
+			{
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
+				player.sendPacket(sm);
+			}
+		}
+		else if (_type == 2) // untrain
+		{
+			if ((_skillLvl % 100) == 0)
+			{
+				_skillLvl = s.getBaseLevel();
+			}
+			
+			final int reqItemId;
+			if (player.getClassId().level() == 3)
+			{
+				reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK_OLD;
+			}
+			else
+			{
+				reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
+			}
+			
+			final int beforeUntrainSkillLevel = player.getSkillLevel(_skillId);
+			if (((beforeUntrainSkillLevel - 1) != _skillLvl) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLvl != s.getBaseLevel())))
+			{
+				return;
+			}
+			
+			EnchantSkillHolder esd = s.getEnchantSkillHolder(beforeUntrainSkillLevel);
+			
+			int requiredSp = esd.getSpCost();
+			int requireditems = esd.getAdenaCost();
+			
+			L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+			if (Config.ES_SP_BOOK_NEEDED)
+			{
+				if (spb == null)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+			}
+			
+			if (player.getInventory().getAdena() < requireditems)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
 			
-			final int requiredAdena = (esd.getAdenaCost() * costMultiplier);
-			if (player.getInventory().getAdena() < requiredAdena)
-			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
-				return;
-			}
-			
-			boolean check = player.getStat().removeExpAndSp(0, requiredSp, false);
-			if (Config.ES_SP_BOOK_NEEDED && usesBook)
+			boolean check = true;
+			if (Config.ES_SP_BOOK_NEEDED)
 			{
 				check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
 			}
 			
-			check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requiredAdena, player, true);
+			check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
+			
 			if (!check)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
 			
-			// ok. Destroy ONE copy of the book
-			final int rate = esd.getRate(player);
-			if (Rnd.get(100) <= rate)
+			player.getStat().addSp((int) (requiredSp * 0.8));
+			
+			if (Config.LOG_SKILL_ENCHANTS)
 			{
+				LogRecord record = new LogRecord(Level.INFO, "Untrain");
+				record.setParameters(new Object[]
+				{
+					player,
+					skill,
+					spb
+				});
+				record.setLoggerName("skill");
+				_logEnchant.log(record);
+			}
+			
+			player.addSkill(skill, true);
+			player.sendPacket(ExEnchantSkillResult.valueOf(true));
+			
+			if (Config.DEBUG)
+			{
+				_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requireditems + " Adena.");
+			}
+			
+			player.sendPacket(new UserInfo(player));
+			
+			if (_skillLvl > 100)
+			{
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
+				sm.addSkillName(_skillId);
+				player.sendPacket(sm);
+			}
+			else
+			{
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
+				sm.addSkillName(_skillId);
+				player.sendPacket(sm);
+			}
+			player.sendSkillList();
+			final int afterUntrainSkillLevel = player.getSkillLevel(_skillId);
+			player.sendPacket(new ExEnchantSkillInfo(_skillId, afterUntrainSkillLevel));
+			player.sendPacket(new ExEnchantSkillInfoDetail(2, _skillId, afterUntrainSkillLevel - 1, player));
+			player.updateShortCuts(_skillId, afterUntrainSkillLevel);
+		}
+		else if (_type == 3) // change route
+		{
+			final int reqItemId;
+			if (player.getClassId().level() == 3)
+			{
+				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
+			}
+			else
+			{
+				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+			}
+			
+			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+			if (beforeEnchantSkillLevel <= 100)
+			{
+				return;
+			}
+			
+			int currentEnchantLevel = beforeEnchantSkillLevel % 100;
+			if (currentEnchantLevel != (_skillLvl % 100))
+			{
+				return;
+			}
+			EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+			
+			int requiredSp = esd.getSpCost();
+			int requireditems = esd.getAdenaCost();
+			
+			if (player.getSp() >= requiredSp)
+			{
+				L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+				if (Config.ES_SP_BOOK_NEEDED)
+				{
+					if (spb == null)
+					{
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_SKILL_ROUTE_CHANGE);
+						return;
+					}
+				}
+				
+				if (player.getInventory().getAdena() < requireditems)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				boolean check;
+				check = player.getStat().removeExpAndSp(0, requiredSp, false);
+				if (Config.ES_SP_BOOK_NEEDED)
+				{
+					check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
+				}
+				
+				check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
+				
+				if (!check)
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+				
+				int levelPenalty = Rnd.get(Math.min(4, currentEnchantLevel));
+				_skillLvl -= levelPenalty;
+				if ((_skillLvl % 100) == 0)
+				{
+					_skillLvl = s.getBaseLevel();
+				}
+				
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
-					final LogRecord record = new LogRecord(Level.INFO, "Success");
+					LogRecord record = new LogRecord(Level.INFO, "Route Change");
 					record.setParameters(new Object[]
 					{
 						player,
 						skill,
-						spb,
-						rate
+						spb
 					});
 					record.setLoggerName("skill");
 					_logEnchant.log(record);
@@ -168,46 +517,95 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				player.addSkill(skill, true);
 				player.sendPacket(ExEnchantSkillResult.valueOf(true));
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
-				sm.addSkillName(_skillId);
-				player.sendPacket(sm);
-				
 				if (Config.DEBUG)
 				{
-					_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requiredAdena + " Adena.");
+					_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requireditems + " Adena.");
 				}
+				
+				player.sendPacket(new UserInfo(player));
+				
+				if (levelPenalty == 0)
+				{
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
+					sm.addSkillName(_skillId);
+					player.sendPacket(sm);
+				}
+				else
+				{
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
+					sm.addSkillName(_skillId);
+					
+					if (_skillLvl > 100)
+					{
+						sm.addInt(_skillLvl % 100);
+					}
+					else
+					{
+						sm.addInt(0);
+					}
+					player.sendPacket(sm);
+				}
+				player.sendSkillList();
+				final int afterEnchantSkillLevel = player.getSkillLevel(_skillId);
+				player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
+				player.sendPacket(new ExEnchantSkillInfoDetail(3, _skillId, afterEnchantSkillLevel, player));
+				player.updateShortCuts(_skillId, afterEnchantSkillLevel);
 			}
 			else
 			{
-				player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
-				player.sendPacket(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
-				player.sendPacket(ExEnchantSkillResult.valueOf(false));
-				
-				if (Config.LOG_SKILL_ENCHANTS)
-				{
-					final LogRecord record = new LogRecord(Level.INFO, "Fail");
-					record.setParameters(new Object[]
-					{
-						player,
-						skill,
-						spb,
-						rate
-					});
-					record.setLoggerName("skill");
-					_logEnchant.log(record);
-				}
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
+				player.sendPacket(sm);
+			}
+		}
+		else if (_type == 4) // 100% enchant
+		{
+			int reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+			if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
+			{
+				return;
 			}
 			
+			L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+			if (spb == null)
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+				return;
+			}
+			
+			player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
+			
+			if (Config.LOG_SKILL_ENCHANTS)
+			{
+				LogRecord record = new LogRecord(Level.INFO, "100% Success");
+				record.setParameters(new Object[]
+				{
+					player,
+					skill,
+					spb,
+					100
+				});
+				record.setLoggerName("skill");
+				_logEnchant.log(record);
+			}
+			
+			player.addSkill(skill, true);
+			
+			if (Config.DEBUG)
+			{
+				_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + ".");
+			}
+			
+			player.sendPacket(ExEnchantSkillResult.valueOf(true));
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+			sm.addSkillName(_skillId);
+			player.sendPacket(sm);
 			player.sendPacket(new UserInfo(player));
 			player.sendSkillList();
 			final int afterEnchantSkillLevel = player.getSkillLevel(_skillId);
 			player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
-			player.sendPacket(new ExEnchantSkillInfoDetail(0, _skillId, afterEnchantSkillLevel + 1, player));
+			player.sendPacket(new ExEnchantSkillInfoDetail(1, _skillId, afterEnchantSkillLevel + 1, player));
 			player.updateShortCuts(_skillId, afterEnchantSkillLevel);
-		}
-		else
-		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 		}
 	}
 	

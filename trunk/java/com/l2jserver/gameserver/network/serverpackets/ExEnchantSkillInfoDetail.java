@@ -34,6 +34,7 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	private static final int TYPE_SAFE_ENCHANT = 1;
 	private static final int TYPE_UNTRAIN_ENCHANT = 2;
 	private static final int TYPE_CHANGE_ENCHANT = 3;
+	private static final int TYPE_IMMORTAL_ENCHANT = 4;
 	
 	private int bookId = 0;
 	private int reqCount = 0;
@@ -76,13 +77,22 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		{
 			multi = EnchantSkillGroupsData.SAFE_ENCHANT_COST_MULTIPLIER;
 		}
-		_chance = esd.getRate(ply);
-		_sp = esd.getSpCost();
-		if (type == TYPE_UNTRAIN_ENCHANT)
+		if (type != TYPE_IMMORTAL_ENCHANT)
 		{
-			_sp = (int) (0.8 * _sp);
+			_chance = esd.getRate(ply);
+			_sp = esd.getSpCost();
+			if (type == TYPE_UNTRAIN_ENCHANT)
+			{
+				_sp = (int) (0.8 * _sp);
+			}
+			_adenacount = esd.getAdenaCost() * multi;
 		}
-		_adenacount = esd.getAdenaCost() * multi;
+		else
+		{
+			_chance = 100;
+			_sp = 0;
+			_adenacount = 0;
+		}
 		_type = type;
 		_skillid = skillid;
 		_skilllvl = skilllvl;
@@ -90,19 +100,51 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		switch (type)
 		{
 			case TYPE_NORMAL_ENCHANT:
-				bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+				if (ply.getClassId().level() == 3)
+				{
+					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
+				}
+				else
+				{
+					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+				}
 				reqCount = (((_skilllvl % 100) > 1) ? 0 : 1);
 				break;
 			case TYPE_SAFE_ENCHANT:
-				bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+				if (ply.getClassId().level() == 3)
+				{
+					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
+				}
+				else
+				{
+					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+				}
 				reqCount = 1;
 				break;
 			case TYPE_UNTRAIN_ENCHANT:
-				bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
+				if (ply.getClassId().level() == 3)
+				{
+					bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK_OLD;
+				}
+				else
+				{
+					bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
+				}
 				reqCount = 1;
 				break;
 			case TYPE_CHANGE_ENCHANT:
-				bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+				if (ply.getClassId().level() == 3)
+				{
+					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
+				}
+				else
+				{
+					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+				}
+				reqCount = 1;
+				break;
+			case TYPE_IMMORTAL_ENCHANT:
+				bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
 				reqCount = 1;
 				break;
 			default:
