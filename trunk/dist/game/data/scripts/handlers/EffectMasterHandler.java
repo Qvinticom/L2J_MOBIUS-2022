@@ -195,6 +195,7 @@ public final class EffectMasterHandler
 		Transformation.class,
 		TrapDetect.class,
 		TrapRemove.class,
+		TriggerForce.class,
 		TriggerSkillByAttack.class,
 		TriggerSkillByAvoid.class,
 		TriggerSkillByDamage.class,
