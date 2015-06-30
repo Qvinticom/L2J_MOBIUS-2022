@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.BaseStats;
 import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -92,6 +93,13 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		
 		if (damage > 0)
 		{
+			// reduce damage if target has maxdamage buff
+			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			if (maxDamage > 0)
+			{
+				damage = (int) maxDamage;
+			}
+			
 			activeChar.sendDamageMessage(target, damage, false, crit, false);
 			target.reduceCurrentHp(damage, activeChar, info.getSkill());
 			target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit, false);

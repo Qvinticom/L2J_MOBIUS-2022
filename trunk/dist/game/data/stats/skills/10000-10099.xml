@@ -750,7 +750,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="10017" levels="4" name="Final Ultimate Defense">
+	<skill id="10017" levels="4" name="Final Ultimate Defense" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
 		<table name="#mpConsume">58 63 68 72</table>
 		<table name="#ench1MpConsume">67 63 59 54 50 46 41 37 33 28</table>
 		<table name="#ench2abnormalTime">31 32 33 34 35 36 37 38 39 40</table>
@@ -761,6 +761,7 @@
 		<table name="#reflectDam">40 60 80 100</table>
 		<table name="#magicLvl">85 90 95 99</table>
 		<table name="#maxSkillDamage">300 200 150 100</table>
+		<table name="#ench9Reuse"> 890000 880000 870000 860000 850000 840000 830000 820000 810000 800000 </table> <!-- NEED VERIFY -->
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalLvl" val="1" />
 		<set name="hitTime" val="1000" />
@@ -769,46 +770,37 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
+		<enchant9 name="reuseDelay" val="#ench9Reuse" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="pDef" val="#pDef" />
 				<add stat="mDef" val="#mDef" />
 				<add stat="reflectDam" val="#reflectDam" />
 				<add stat="cancelVuln" val="80" />
-				<!--<add stat="maxSkillDamage" val="#maxSkillDamage" />-->
+				<add stat="maxSkillDamage" val="#maxSkillDamage" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Buff" val="0">
-				<add stat="pDef" val="10000" />
-				<add stat="mDef" val="10000" />
-				<add stat="reflectDam" val="100" />
-				<add stat="cancelVuln" val="80" />
-				<!--<add stat="maxSkillDamage" val="100" />-->
-			</effect>
-		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="pDef" val="10000" />
 				<add stat="mDef" val="10000" />
 				<add stat="reflectDam" val="100" />
 				<add stat="cancelVuln" val="80" />
 				<add stat="runSpd" val="#ench3runSpd" />
-				<!--<add stat="maxSkillDamage" val="100" />-->
+				<add stat="maxSkillDamage" val="100" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="pDef" val="10000" />
 				<add stat="mDef" val="10000" />
 				<add stat="reflectDam" val="100" />
 				<add stat="cancelVuln" val="80" />
 				<param SHOCK="#ench4stunRes" />
-				<!--<add stat="maxSkillDamage" val="100" />-->
+				<add stat="maxSkillDamage" val="100" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -1019,7 +1011,7 @@
 			<effect abnormalLvl="1" abnormalTime="1" abnormalVisualEffect="sknockdown" effectPower="85"	effectType="KNOCK_DOWN" name="KnockDown" val="0" />
 		</for>
 	</skill>
-	<skill id="10024" levels="1" name="Party Rescue">
+	<skill id="10024" levels="1" name="Party Rescue" enchantGroup1="10" enchantGroup2="10">
 		<table name="#ench1MpConsume">92 88 84 80 76 72 69 65 61 57</table>
 		<table name="#ench2HpHealPercent">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="hitTime" val="3000" />
@@ -1038,18 +1030,18 @@
 			<using kind="SHIELD" />
 		</cond>
 		<for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
-				<!--<add stat="maxSkillDamage" val="10" />-->
+				<add stat="maxSkillDamage" val="10" />
 			</effect>
-			<effect name="JumpToFriend" noicon="1" val="0" />
+			<effect name="JumpToFriend" noicon="1" />
 		</for>
 		<enchant2for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
-				<!--<add stat="maxSkillDamage" val="10" />-->
+				<add stat="maxSkillDamage" val="10" />
 			</effect>
-			<effect name="JumpToFriend" noicon="1" val="0" />
+			<effect name="JumpToFriend" noicon="1" />
 			<effect name="HealPercent" noicon="1" val="#ench2HpHealPercent" />
 		</enchant2for>
 	</skill>

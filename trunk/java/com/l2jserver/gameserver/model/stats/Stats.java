@@ -206,7 +206,10 @@ public enum Stats
 	BROOCH_JEWELS("broochJewels"),
 	
 	// Summon Points
-	MAX_SUMMON_POINTS("summonPoints");
+	MAX_SUMMON_POINTS("summonPoints"),
+	
+	// Max Skill Damage Receive
+	MAX_SKILL_DAMAGE("maxSkillDamage");
 	
 	public static final int NUM_STATS = values().length;
 	
