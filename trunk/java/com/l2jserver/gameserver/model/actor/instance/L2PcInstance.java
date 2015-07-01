@@ -209,6 +209,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPKCha
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPChanged;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerRaidPointsChanged;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSubChange;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerTransform;
 import com.l2jserver.gameserver.model.events.impl.character.player.mentoring.OnPlayerMenteeStatus;
@@ -366,8 +367,8 @@ public final class L2PcInstance extends L2Playable
 	private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
 	
 	// Character Character SQL String Definitions:
-	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,reputation,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,clan_privs,wantspeace,base_class,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,reputation=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,pccafe_points=?,language=?,faction=? WHERE charId=?";
+	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,reputation,fame,raidpoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,clan_privs,wantspeace,base_class,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,reputation=?,fame=?,raidpoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,pccafe_points=?,language=?,faction=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Premium System String Definitions:
@@ -466,6 +467,9 @@ public final class L2PcInstance extends L2Playable
 	/** The Fame of this L2PcInstance */
 	private int _fame;
 	private ScheduledFuture<?> _fameTask;
+	
+	/** The Raid Points of this L2PcInstance */
+	private int _raidPoints;
 	
 	private volatile ScheduledFuture<?> _teleportWatchdog;
 	
@@ -2302,13 +2306,31 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Set the Fame of this L2PcInstane
+	 * Set the Fame of this L2PcInstance
 	 * @param fame
 	 */
 	public void setFame(int fame)
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, fame), this);
 		_fame = (fame > Config.MAX_PERSONAL_FAME_POINTS) ? Config.MAX_PERSONAL_FAME_POINTS : fame;
+	}
+	
+	/**
+	 * @return the Raid Points of this L2PcInstance
+	 */
+	public int getRaidPoints()
+	{
+		return _raidPoints;
+	}
+	
+	/**
+	 * Set the Raid Points of this L2PcInstance
+	 * @param raidPoints
+	 */
+	public void setRaidPoints(int raidPoints)
+	{
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerRaidPointsChanged(this, _raidPoints, raidPoints), this);
+		_raidPoints = raidPoints;
 	}
 	
 	/**
@@ -6947,23 +6969,24 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(17, getKarma());
 			statement.setInt(18, getReputation());
 			statement.setInt(19, getFame());
-			statement.setInt(20, getPvpKills());
-			statement.setInt(21, getPkKills());
-			statement.setInt(22, getClanId());
-			statement.setInt(23, getRace().ordinal());
-			statement.setInt(24, getClassId().getId());
-			statement.setLong(25, getDeleteTimer());
-			statement.setInt(26, hasDwarvenCraft() ? 1 : 0);
-			statement.setString(27, getTitle());
-			statement.setInt(28, getAppearance().getTitleColor());
-			statement.setInt(29, getAccessLevel().getLevel());
-			statement.setInt(30, isOnlineInt());
-			statement.setInt(31, getClanPrivileges().getBitmask());
-			statement.setInt(32, getWantsPeace());
-			statement.setInt(33, getBaseClass());
-			statement.setInt(34, isNoble() ? 1 : 0);
-			statement.setLong(35, 0);
-			statement.setDate(36, new Date(getCreateDate().getTimeInMillis()));
+			statement.setInt(20, getRaidPoints());
+			statement.setInt(21, getPvpKills());
+			statement.setInt(22, getPkKills());
+			statement.setInt(23, getClanId());
+			statement.setInt(24, getRace().ordinal());
+			statement.setInt(25, getClassId().getId());
+			statement.setLong(26, getDeleteTimer());
+			statement.setInt(27, hasDwarvenCraft() ? 1 : 0);
+			statement.setString(28, getTitle());
+			statement.setInt(29, getAppearance().getTitleColor());
+			statement.setInt(30, getAccessLevel().getLevel());
+			statement.setInt(31, isOnlineInt());
+			statement.setInt(32, getClanPrivileges().getBitmask());
+			statement.setInt(33, getWantsPeace());
+			statement.setInt(34, getBaseClass());
+			statement.setInt(35, isNoble() ? 1 : 0);
+			statement.setLong(36, 0);
+			statement.setDate(37, new Date(getCreateDate().getTimeInMillis()));
 			statement.executeUpdate();
 		}
 		catch (Exception e)
@@ -7017,6 +7040,7 @@ public final class L2PcInstance extends L2Playable
 					player.setKarma(rset.getInt("karma"));
 					player.setReputation(rset.getInt("reputation"));
 					player.setFame(rset.getInt("fame"));
+					player.setRaidPoints(rset.getInt("raidpoints"));
 					player.setPvpKills(rset.getInt("pvpkills"));
 					player.setPkKills(rset.getInt("pkkills"));
 					player.setOnlineTime(rset.getLong("onlinetime"));
@@ -7579,19 +7603,20 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(19, getKarma());
 			statement.setInt(20, getReputation());
 			statement.setInt(21, getFame());
-			statement.setInt(22, getPvpKills());
-			statement.setInt(23, getPkKills());
-			statement.setInt(24, getClanId());
-			statement.setInt(25, getRace().ordinal());
-			statement.setInt(26, getClassId().getId());
-			statement.setLong(27, getDeleteTimer());
-			statement.setString(28, getTitle());
-			statement.setInt(29, getAppearance().getTitleColor());
-			statement.setInt(30, getAccessLevel().getLevel());
-			statement.setInt(31, isOnlineInt());
-			statement.setInt(32, getClanPrivileges().getBitmask());
-			statement.setInt(33, getWantsPeace());
-			statement.setInt(34, getBaseClass());
+			statement.setInt(22, getRaidPoints());
+			statement.setInt(23, getPvpKills());
+			statement.setInt(24, getPkKills());
+			statement.setInt(25, getClanId());
+			statement.setInt(26, getRace().ordinal());
+			statement.setInt(27, getClassId().getId());
+			statement.setLong(28, getDeleteTimer());
+			statement.setString(29, getTitle());
+			statement.setInt(30, getAppearance().getTitleColor());
+			statement.setInt(31, getAccessLevel().getLevel());
+			statement.setInt(32, isOnlineInt());
+			statement.setInt(33, getClanPrivileges().getBitmask());
+			statement.setInt(34, getWantsPeace());
+			statement.setInt(35, getBaseClass());
 			
 			long totalOnlineTime = _onlineTime;
 			if (_onlineBeginTime > 0)
@@ -7599,21 +7624,21 @@ public final class L2PcInstance extends L2Playable
 				totalOnlineTime += (System.currentTimeMillis() - _onlineBeginTime) / 1000;
 			}
 			
-			statement.setLong(35, totalOnlineTime);
-			statement.setInt(36, isNoble() ? 1 : 0);
-			statement.setInt(37, getPowerGrade());
-			statement.setInt(38, getPledgeType());
-			statement.setInt(39, getLvlJoinedAcademy());
-			statement.setLong(40, getApprentice());
-			statement.setLong(41, getSponsor());
-			statement.setLong(42, getClanJoinExpiryTime());
-			statement.setLong(43, getClanCreateExpiryTime());
-			statement.setString(44, getName());
-			statement.setLong(45, 0); // unset
-			statement.setInt(46, getBookMarkSlot());
-			statement.setInt(47, _vitalityPoints); // unset
-			statement.setInt(48, getPcBangPoints());
-			statement.setString(49, getLang());
+			statement.setLong(36, totalOnlineTime);
+			statement.setInt(37, isNoble() ? 1 : 0);
+			statement.setInt(38, getPowerGrade());
+			statement.setInt(39, getPledgeType());
+			statement.setInt(40, getLvlJoinedAcademy());
+			statement.setLong(41, getApprentice());
+			statement.setLong(42, getSponsor());
+			statement.setLong(43, getClanJoinExpiryTime());
+			statement.setLong(44, getClanCreateExpiryTime());
+			statement.setString(45, getName());
+			statement.setLong(46, 0); // unset
+			statement.setInt(47, getBookMarkSlot());
+			statement.setInt(48, _vitalityPoints); // unset
+			statement.setInt(49, getPcBangPoints());
+			statement.setString(50, getLang());
 			
 			int factionId = 0;
 			if (isGood())
@@ -7624,9 +7649,9 @@ public final class L2PcInstance extends L2Playable
 			{
 				factionId = 2;
 			}
-			statement.setInt(50, factionId);
+			statement.setInt(51, factionId);
 			
-			statement.setInt(51, getObjectId());
+			statement.setInt(52, getObjectId());
 			statement.execute();
 		}
 		catch (Exception e)
@@ -11709,7 +11734,7 @@ public final class L2PcInstance extends L2Playable
 			catch (Exception e)
 			{
 				_log.log(Level.SEVERE, "deleteMe()", e);
-			}// returns pet to control item
+			} // returns pet to control item
 		}
 		
 		if (getClan() != null)

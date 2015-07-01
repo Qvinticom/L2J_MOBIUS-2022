@@ -965,7 +965,8 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestFortressSiegeInfo();
 								break;
 							case 0x3d:
-								msg = new RequestGetBossRecord();
+								// Unused
+								// msg = new RequestGetBossRecord();
 								break;
 							case 0x3e:
 								msg = new RequestRefine();

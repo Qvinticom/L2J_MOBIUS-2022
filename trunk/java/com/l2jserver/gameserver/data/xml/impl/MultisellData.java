@@ -56,6 +56,7 @@ public final class MultisellData implements IXmlReader
 	public static final int PC_BANG_POINTS = -100;
 	public static final int CLAN_REPUTATION = -200;
 	public static final int FAME = -300;
+	public static final int RAID_POINTS = -500;
 	// Misc
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
@@ -312,6 +313,12 @@ public final class MultisellData implements IXmlReader
 					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 					break;
 				}
+			case RAID_POINTS:
+				if (player.getRaidPoints() < amount)
+				{
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_RAID_POINTS);
+					break;
+				}
 				return true;
 		}
 		return false;
@@ -338,7 +345,10 @@ public final class MultisellData implements IXmlReader
 			case FAME:
 				player.setFame(player.getFame() - (int) amount);
 				player.sendPacket(new UserInfo(player));
-				// player.sendPacket(new ExBrExtraUserInfo(player));
+				return true;
+			case RAID_POINTS:
+				player.setRaidPoints(player.getRaidPoints() - (int) amount);
+				player.sendPacket(new UserInfo(player));
 				return true;
 		}
 		return false;
@@ -354,7 +364,10 @@ public final class MultisellData implements IXmlReader
 			case FAME:
 				player.setFame((int) (player.getFame() + amount));
 				player.sendPacket(new UserInfo(player));
-				// player.sendPacket(new ExBrExtraUserInfo(player));
+				break;
+			case RAID_POINTS:
+				player.setRaidPoints((int) (player.getRaidPoints() + amount));
+				player.sendPacket(new UserInfo(player));
 				break;
 		}
 	}
@@ -394,6 +407,7 @@ public final class MultisellData implements IXmlReader
 			case PC_BANG_POINTS:
 			case CLAN_REPUTATION:
 			case FAME:
+			case RAID_POINTS:
 				return true;
 			default:
 				return ing.getTemplate() != null;

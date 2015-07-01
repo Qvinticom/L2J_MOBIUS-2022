@@ -130,7 +130,6 @@ import com.l2jserver.gameserver.instancemanager.PetitionManager;
 import com.l2jserver.gameserver.instancemanager.PremiumManager;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.instancemanager.RaidBossPointsManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
@@ -263,7 +262,6 @@ public final class GameServer
 		CharNameTable.getInstance();
 		BeautyShopData.getInstance();
 		AdminData.getInstance();
-		RaidBossPointsManager.getInstance();
 		CharSummonTable.getInstance().init();
 		if (!Config.SERVER_CLASSIC_SUPPORT)
 		{

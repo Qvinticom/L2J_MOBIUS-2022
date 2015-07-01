@@ -302,17 +302,13 @@ public final class L2TeleporterInstance extends L2Npc
 		switch (itemId)
 		{
 			case MultisellData.PC_BANG_POINTS:
-			{
 				return "Player Commendation Points";
-			}
 			case MultisellData.CLAN_REPUTATION:
-			{
 				return "Clan Reputation Points";
-			}
 			case MultisellData.FAME:
-			{
 				return "Fame";
-			}
+			case MultisellData.RAID_POINTS:
+				return "Raid Points";
 		}
 		return "Unknown item: " + itemId;
 	}

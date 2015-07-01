@@ -535,12 +535,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				ps.execute();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_raid_points WHERE charId=?"))
-			{
-				ps.setInt(1, objid);
-				ps.execute();
-			}
-			
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_reco_bonus WHERE charId=?"))
 			{
 				ps.setInt(1, objid);

@@ -67,6 +67,7 @@ import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPKCha
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPChanged;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerRaidPointsChanged;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerRestore;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSelect;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
@@ -198,6 +199,7 @@ public enum EventType
 	ON_PLAYER_DLG_ANSWER(OnPlayerDlgAnswer.class, void.class, TerminateReturn.class),
 	ON_PLAYER_EQUIP_ITEM(OnPlayerEquipItem.class, void.class),
 	ON_PLAYER_FAME_CHANGED(OnPlayerFameChanged.class, void.class),
+	ON_PLAYER_RAID_POINTS_CHANGED(OnPlayerRaidPointsChanged.class, void.class),
 	// Henna events
 	ON_PLAYER_HENNA_ADD(OnPlayerHennaAdd.class, void.class),
 	ON_PLAYER_HENNA_REMOVE(OnPlayerHennaRemove.class, void.class),
