@@ -1900,15 +1900,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23246" level="93" type="L2Monster" name="Spicula 1">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1023772" sp="4301" />
+		<acquire exp="1023772" sp="245" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="50057" hpRegen="7.5" mp="50057" mpRegen="2.7" />
+			<vitals hp="30036" hpRegen="7.5" mp="2132" mpRegen="2.7" />
 			<attack physical="18150" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="353" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="924" magical="825" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -1921,12 +1920,16 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="13" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="13" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -1936,6 +1939,37 @@
 				<item id="57" min="974" max="2266" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -1945,15 +1979,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23247" level="93" type="L2Monster" name="Spicula 2">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1023772" sp="4301" />
+		<acquire exp="1023772" sp="245" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="50057" hpRegen="7.5" mp="50057" mpRegen="2.7" />
+			<vitals hp="30036" hpRegen="7.5" mp="2132" mpRegen="2.7" />
 			<attack physical="18150" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="353" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="924" magical="825" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -1966,12 +1999,16 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="13" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="13" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -1981,6 +2018,37 @@
 				<item id="57" min="974" max="2266" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -1990,15 +2058,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23248" level="95" type="L2Monster" name="Spicula 3">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1244208" sp="5326" />
+		<acquire exp="1244208" sp="298" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="76846" hpRegen="7.5" mp="76846" mpRegen="2.7" />
+			<vitals hp="46109" hpRegen="7.5" mp="3308" mpRegen="2.7" />
 			<attack physical="53200" magical="53100" random="30" critical="8" accuracy="4.75" attackSpeed="353" type="SWORD" range="400" distance="80" width="120" />
 			<defence physical="1056" magical="1045" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2010,13 +2077,17 @@
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -2026,6 +2097,37 @@
 				<item id="57" min="1502" max="3467" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -2035,15 +2137,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23249" level="95" type="L2Monster" name="Spicula 4">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1244208" sp="5326" />
+		<acquire exp="1244208" sp="298" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="76846" hpRegen="7.5" mp="76846" mpRegen="2.7" />
+			<vitals hp="46109" hpRegen="7.5" mp="3308" mpRegen="2.7" />
 			<attack physical="53200" magical="53100" random="30" critical="8" accuracy="4.75" attackSpeed="353" type="SWORD" range="400" distance="80" width="120" />
 			<defence physical="1056" magical="1045" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -2055,13 +2156,17 @@
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -2071,6 +2176,37 @@
 				<item id="57" min="1533" max="3474" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -2080,15 +2216,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23250" level="94" type="L2Monster" name="Spicula 5">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1318110" sp="5586" />
+		<acquire exp="1318110" sp="316" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="75502" hpRegen="7.5" mp="75502" mpRegen="2.7" />
+			<vitals hp="45302" hpRegen="7.5" mp="2169" mpRegen="2.7" />
 			<attack physical="17290" magical="26550" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1188" magical="1155" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2100,13 +2235,17 @@
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -2116,6 +2255,37 @@
 				<item id="57" min="1182" max="2757" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -2125,15 +2295,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23251" level="94" type="L2Monster" name="Spicula 6">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1318110" sp="5586" />
+		<acquire exp="1318110" sp="316" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="75502" hpRegen="7.5" mp="75502" mpRegen="2.7" />
+			<vitals hp="45302" hpRegen="7.5" mp="2169" mpRegen="2.7" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1848" magical="1485" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2145,13 +2314,17 @@
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -2161,6 +2334,37 @@
 				<item id="57" min="1181" max="2756" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -2191,12 +2395,16 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="12" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -2224,27 +2432,30 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="12" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="23254" level="93" type="L2Monster" name="Yin Spicula">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<acquire exp="1853594" sp="7788" />
+		<acquire exp="1853594" sp="444" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
+			<vitals hp="75089" hpRegen="7.5" mp="2132" mpRegen="2.7" />
 			<attack physical="18975" magical="28738" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1419" magical="1128" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2257,12 +2468,16 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4411" level="12" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -2272,6 +2487,37 @@
 				<item id="57" min="1418" max="3306" chance="70" />
 				<item id="36837" min="1" max="1" chance="1.5" />
 				<item id="36775" min="1" max="1" chance="0.03333" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="16" />
@@ -2280,15 +2526,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23255" level="94" type="L2Monster" name="Light Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1453348" sp="6160" />
+		<acquire exp="1453348" sp="348" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="75502" hpRegen="7.5" mp="75502" mpRegen="2.7" />
+			<vitals hp="45302" hpRegen="7.5" mp="2169" mpRegen="2.7" />
 			<attack physical="18786" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1265" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2300,13 +2545,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="47.5" />
@@ -2317,6 +2566,37 @@
 				<item id="36528" min="1" max="1" chance="4" />
 				<item id="36529" min="1" max="1" chance="1" />
 				<item id="9548" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -2373,15 +2653,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23257" level="95" type="L2Monster" name="Twosword Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1371630" sp="5872" />
+		<acquire exp="1371630" sp="329" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="76846" hpRegen="7.5" mp="76846" mpRegen="2.7" />
+			<vitals hp="46109" hpRegen="7.5" mp="2205" mpRegen="2.7" />
 			<attack physical="18786" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1265" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="53" />
@@ -2393,13 +2672,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="41.5" />
@@ -2411,6 +2694,37 @@
 				<item id="9546" min="1" max="1" chance="0.15015" />
 				<item id="36765" min="1" max="1" chance="0.01333" />
 				<item id="17326" min="1" max="1" chance="0.005" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36533" min="1" max="1" chance="10" />
@@ -2451,15 +2765,14 @@
 		</collision>
 	</npc>
 	<npc id="23259" level="96" type="L2Monster" name="Broken-bodied Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1402250" sp="6051" />
+		<acquire exp="1402250" sp="336" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="77279" hpRegen="7.5" mp="77279" mpRegen="2.7" />
+			<vitals hp="46371" hpRegen="7.5" mp="2242" mpRegen="2.7" />
 			<attack physical="26600" magical="35400" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1373" magical="1188" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2471,12 +2784,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" /> 
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="36" />
@@ -2488,6 +2806,37 @@
 				<item id="36774" min="1" max="1" chance="0.04" />
 				<item id="17338" min="1" max="1" chance="0.02" />
 				<item id="17526" min="1" max="1" chance="0.02" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="33" />
@@ -2540,15 +2889,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23261" level="96" type="L2Monster" name="Broken Berserk Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="2118106" sp="9141" />
+		<acquire exp="1494765" sp="358" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="128799" hpRegen="7.5" mp="128799" mpRegen="2.7" />
+			<vitals hp="61479" hpRegen="7.5" mp="2205" mpRegen="2.7" />
 			<attack physical="22943" magical="42038" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1419" magical="1128" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="18" />
@@ -2560,13 +2908,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="40.8" />
@@ -2577,19 +2929,49 @@
 				<item id="36839" min="1" max="1" chance="2.5" />
 				<item id="36777" min="1" max="1" chance="0.1" />
 				<item id="17341" min="1" max="1" chance="0.01333" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="23262" level="95" type="L2Monster" name="Spicula Elite Soldier">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1494765" sp="6399" />
+		<acquire exp="1494765" sp="358" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="102462" hpRegen="7.5" mp="102462" mpRegen="2.7" />
+			<vitals hp="61479" hpRegen="7.5" mp="2205" mpRegen="2.7" />
 			<attack physical="19950" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2601,13 +2983,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="800" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>SPICULA_AGGRO</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -2620,6 +3006,38 @@
 				<item id="9548" min="1" max="1" chance="0.4" />
 				<item id="9550" min="1" max="1" chance="0.4" />
 				<item id="36778" min="1" max="1" chance="0.04" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+				
 				<item id="17342" min="1" max="1" chance="0.02" />
 			</death>
 			<corpse>
@@ -2630,15 +3048,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23263" level="93" type="L2Monster" name="Broken Golem of Repairs">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1791830" sp="7529" />
+		<acquire exp="1791830" sp="430" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="100115" hpRegen="7.5" mp="100115" mpRegen="2.7" />
+			<vitals hp="60071" hpRegen="7.5" mp="2132" mpRegen="2.7" />
 			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="72" />
@@ -2650,12 +3067,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -2666,6 +3088,37 @@
 				<item id="36841" min="1" max="1" chance="2.5" />
 				<item id="36779" min="1" max="1" chance="0.05" />
 				<item id="17343" min="1" max="1" chance="0.025" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>	
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="33" />
@@ -2673,15 +3126,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23264" level="94" type="L2Monster" name="Broken Drill Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1833182" sp="7770" />
+		<acquire exp="1833182" sp="439" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="100669" hpRegen="7.5" mp="100669" mpRegen="2.7" />
+			<vitals hp="60403" hpRegen="7.5" mp="2169" mpRegen="2.7" />
 			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="72" />
@@ -2693,12 +3145,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -2709,6 +3166,37 @@
 				<item id="36830" min="1" max="1" chance="0.4" />
 				<item id="36768" min="1" max="1" chance="0.02" />
 				<item id="17329" min="1" max="1" chance="0.005" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="33" />
@@ -2758,15 +3246,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23266" level="95" type="L2Monster" name="Broken Pincer Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<acquire exp="1730317" sp="7408" />
+		<acquire exp="1730317" sp="415" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="102462" hpRegen="7.5" mp="102462" mpRegen="2.7" />
+			<vitals hp="61479" hpRegen="7.5" mp="2205" mpRegen="2.7" />
 			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="130" />
@@ -2778,12 +3265,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>GOLEM</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="30" />
@@ -2793,6 +3285,37 @@
 				<item id="57" min="1373" max="3206" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.5" />
 				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36528" min="1" max="1" chance="10" />
@@ -2801,15 +3324,14 @@
 		</drop_lists>
 	</npc>
 	<npc id="23267" level="94" type="L2Monster" name="Screw Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<acquire exp="1833182" sp="7770" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="100669" hpRegen="7.5" mp="100669" mpRegen="2.7" />
+			<vitals hp="60403" hpRegen="7.5" mp="2169" mpRegen="2.7" />
 			<attack physical="18786" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1265" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2821,13 +3343,17 @@
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
-		<ai aggroRange="300" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>GOLEMS</clan>
+			</clan_list>
+        </ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
@@ -2838,6 +3364,37 @@
 				<item id="36828" min="1" max="1" chance="0.4" />
 				<item id="36766" min="1" max="1" chance="0.02" />
 				<item id="17327" min="1" max="1" chance="0.005" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="10" />

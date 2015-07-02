@@ -34,6 +34,7 @@ public class HillsOfGold extends AbstractNpcAI
 	// Npcs
 	private static final int GOLEM_OF_REPAIRS = 19309;
 	private static final int EXCAVATOR_GOLEM = 19312;
+	private static final int DRILL_GOLEM = 19310;
 	private static final int SPICULA_1 = 23246;
 	private static final int SPICULA_2 = 23247;
 	private static final int YIN_FRAGMENT = 19308;
@@ -43,6 +44,7 @@ public class HillsOfGold extends AbstractNpcAI
 		23255,
 		23257,
 		23259,
+		23261,
 		23263,
 		23264,
 		23266,
@@ -68,7 +70,7 @@ public class HillsOfGold extends AbstractNpcAI
 				{
 					break;
 				}
-				if (nearby.isMonster() && ((nearby.getId() == GOLEM_OF_REPAIRS) || (nearby.getId() == EXCAVATOR_GOLEM)))
+				if (nearby.isMonster() && ((nearby.getId() == GOLEM_OF_REPAIRS) || (nearby.getId() == EXCAVATOR_GOLEM) || (nearby.getId() == DRILL_GOLEM)))
 				{
 					((L2MonsterInstance) npc).addDamage(nearby, 1, null);
 					break;
@@ -97,7 +99,7 @@ public class HillsOfGold extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc.getId() == SPICULA_1) || (npc.getId() == SPICULA_1))
+		if ((npc.getId() == SPICULA_1) || (npc.getId() == SPICULA_2))
 		{
 			startQuestTimer("SPICULA_AGGRO", 5000, npc, null);
 		}

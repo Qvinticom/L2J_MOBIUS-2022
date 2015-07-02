@@ -25,8 +25,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="8501" level="90" type="L2Npc" name="Ruben" title="Person of Influence">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="8501" level="90" type="L2Npc" name="Ruben">
 		<race>DWARF</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
@@ -41,7 +40,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="18" />
 		</skill_list>

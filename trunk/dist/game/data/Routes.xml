@@ -1368,13 +1368,29 @@
 		<point X="-17031" Y="208742" Z="-3665" delay="0" run="false" />
 		<point X="-17095" Y="208967" Z="-3665" delay="0" run="false" />
 	</route>
-	<!-- Dwarf Isle of Souls -->
-	<route name="Dwarf_Isle_Of_Souls" repeat="true" repeatStyle="cycle">
+	<!-- Dwarf 1 Isle of Souls -->
+	<route name="Dwarf_1_Isle_Of_Souls" repeat="true" repeatStyle="cycle">
 		<target id="8520" spawnX="-105272" spawnY="48788" spawnZ="-1786" />
 		<point X="-105272" Y="48788" Z="-1786" delay="0" run="true" />
 		<point X="-105642" Y="48987" Z="-1769" delay="0" run="true" />
 		<point X="-105655" Y="49458" Z="-1793" delay="0" run="true" />
 		<point X="-105397" Y="49657" Z="-1817" delay="0" run="true" />
 		<point X="-105033" Y="49581" Z="-1792" delay="0" run="true" />
+	</route>
+	<!-- Dwarf 2 Isle of Souls -->
+	<route name="Dwarf_2_Isle_Of_Souls" repeat="true" repeatStyle="back">
+		<target id="8501" spawnX="-111049" spawnY="48270" spawnZ="-990" />
+		<point X="-111049" Y="48270" Z="-990" delay="0" run="true" />
+		<point X="-110889" Y="47959" Z="-981" delay="0" run="true" />
+		<point X="-110692" Y="47713" Z="-987" delay="0" run="true" />
+		<point X="-110495" Y="47623" Z="-1029" delay="0" run="true" />
+	</route>
+	<!-- Dwarf Mimir's Florest -->
+	<route name="Dwarf_Mimir_Florest" repeat="true" repeatStyle="back">
+		<target id="8501" spawnX="-91972" spawnY="58331" spawnZ="-3020" />
+		<point X="-91972" Y="58331" Z="-3020" delay="0" run="true" />
+		<point X="-92032" Y="58501" Z="-3005" delay="0" run="true" />
+		<point X="-92021" Y="58697" Z="-2994" delay="0" run="true" />
+		<point X="-91661" Y="58944" Z="-2992" delay="0" run="true" />
 	</route>
 </routes>

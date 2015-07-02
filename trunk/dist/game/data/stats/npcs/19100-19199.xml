@@ -2392,8 +2392,8 @@
 		</collision>
 	</npc>
 	<npc id="19196" level="85" type="L2Npc" name="Soldier">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DWARF</race>
+		<equipment rhand="17291" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
 			<vitals hp="20903" hpRegen="7.5" mp="20903" mpRegen="2.7" />
 			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2407,7 +2407,7 @@
 			</speed>
 			<hit_time>334</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" showName="true" />
 		<skill_list>
 			<skill id="4416" level="18" />
 		</skill_list>
@@ -2418,8 +2418,8 @@
 		</collision>
 	</npc>
 	<npc id="19197" level="85" type="L2Npc" name="Soldier">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DWARF</race>
+		<equipment rhand="22791" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
 			<vitals hp="20903" hpRegen="7.5" mp="20903" mpRegen="2.7" />
 			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2433,7 +2433,7 @@
 			</speed>
 			<hit_time>334</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" showName="true" />
 		<skill_list>
 			<skill id="4416" level="18" />
 		</skill_list>

@@ -229,15 +229,14 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19308" level="94" type="L2Npc" name="Yin Fragment" title="Spicula Clone Generator">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19308" level="94" type="L2Monster" name="Yin Fragment" title="Spicula Clone Generator">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="127" hpRegen="7.5" mp="127" mpRegen="2.7" />
+			<vitals hp="45708" hpRegen="7.5" mp="2103" mpRegen="2.7" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1" magical="1" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="0" />
@@ -245,22 +244,21 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+	<status attackable="true" targetable="true" showName="true" />
 		<skill_list>
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
 		</skill_list>
 		<collision>
 			<radius normal="25" />
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19309" level="94" type="L2Npc" name="Golem of Repairs" title="Black Anvil Guild">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19309" level="94" type="L2Monster" name="Golem of Repairs" title="Black Anvil Guild">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
@@ -275,14 +273,13 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19310" level="94" type="L2Npc" name="Drill Golem" title="Black Anvil Guild">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19310" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
@@ -297,7 +294,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<skill_list>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
@@ -311,8 +308,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19311" level="94" type="L2Npc" name="Drill Golem" title="Black Anvil Guild">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19311" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
@@ -327,14 +323,13 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19312" level="94" type="L2Npc" name="Excavator Golem" title="Black Anvil Guild">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19312" level="94" type="L2Monster" name="Excavator Golem" title="Black Anvil Guild">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
@@ -349,7 +344,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<skill_list>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
@@ -363,8 +358,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19313" level="94" type="L2Npc" name="Excavator Golem" title="Black Anvil Guild">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19313" level="94" type="L2Monster" name="Excavator Golem" title="Black Anvil Guild">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
@@ -379,7 +373,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -541,15 +535,14 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19320" level="94" type="L2Npc" name="Yin" title="Spicula Clone Generator">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19320" level="94" type="L2Monster" name="Yin" title="Spicula Clone Generator">
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="25167" hpRegen="7.5" mp="25167" mpRegen="2.7" />
+			<vitals hp="65167" hpRegen="7.5" mp="3167" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="72" />
@@ -557,7 +550,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="90" />

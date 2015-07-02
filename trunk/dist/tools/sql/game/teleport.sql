@@ -1071,3 +1071,7 @@ INSERT INTO `teleport` (`Description`, `id`, `loc_x`, `loc_y`, `loc_z`, `price`,
 ('Ragraman', 3319006, -53027, 172265, -3680, 0, 0, 57),
 ('Iris', 3319007, -31348, 169552, -3840, 0, 0, 57),
 ('Thorn', 3319008, -28460, 183596, -3760, 0, 0, 57);
+
+INSERT INTO `teleport` VALUES
+('Isle of Souls Harbor -> Gludin', 1140, -80684, 149770, -3040, 7300, 0, 57),
+('Isle of Souls Harbor -> Rune Township', 1141, 43835, -47749, -792, 10000, 0, 57);
