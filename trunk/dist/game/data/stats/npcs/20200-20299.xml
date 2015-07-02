@@ -3264,42 +3264,21 @@
 				<clan>CAVE_SERVANT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="653" max="1332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.25679999589920044">
-					<item id="282" min="1" max="1" chance="0.6457" /> <!-- Elemental Bow -->
-					<item id="2085" min="1" max="1" chance="49.3543" /> <!-- Crossbow Shaft -->
-					<item id="285" min="1" max="1" chance="0.6457" /> <!-- Noble Elven Bow -->
-					<item id="2086" min="1" max="1" chance="49.3543" /> <!-- Noble Elven Bow Shaft -->
-				</group>
-				<group chance="31.886699676513672">
-					<item id="1869" min="1" max="1" chance="19.1496" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="38.2992" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="1.915" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.2553" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="0.6383" /> <!-- Asofe -->
-					<item id="952" min="1" max="1" chance="0.2553" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="2230" min="1" max="1" chance="0.3711" /> <!-- Recipe: Theca Leather Gaiters -->
-					<item id="8724" min="1" max="1" chance="0.6383" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.1596" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.016" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0032" /> <!-- Top-Grade Life Stone - Level 49 -->
-					<item id="1342" min="10" max="30" chance="38.2991" /> <!-- Steel Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2329" min="1" max="1" chance="0.3846" /> <!-- Recipe: Tsurugi -->
-				<item id="3010" min="1" max="1" chance="4.4939" /> <!-- Recipe: Composite Helmet -->
-				<item id="951" min="1" max="1" chance="0.3007" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17" max="40" chance="70" /> <!-- Adena -->
+				<item id="951" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="952" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="9.600" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20238" level="48" type="L2Monster" name="Cave Servant Warrior">
 		<parameters>
@@ -3352,42 +3331,25 @@
 				<clan>CAVE_SERVANT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="630" max="1281" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.118299961090088">
-					<item id="355" min="1" max="1" chance="0.637" /> <!-- Dwarven Chain Mail Shirt -->
-					<item id="1968" min="1" max="1" chance="38.028" /> <!-- Dwarven Chain Mail Shirt Material -->
-					<item id="382" min="1" max="1" chance="1.0192" /> <!-- Dwarven Chain Gaiters -->
-					<item id="1969" min="1" max="1" chance="60.3158" /> <!-- Dwarven Chain Gaiters Material -->
-				</group>
-				<group chance="12.588800430297852">
-					<item id="1871" min="1" max="1" chance="46.7328" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="31.1552" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="1.8693" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.4064" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="0.9347" /> <!-- Mold Lubricant -->
-					<item id="2335" min="1" max="1" chance="0.1087" /> <!-- Recipe: War Axe -->
-					<item id="2348" min="1" max="1" chance="0.1087" /> <!-- Recipe: Heathen's Book -->
-					<item id="6668" min="1" max="1" chance="16.6903" /> <!-- Deluxe Chest Key - Grade 4 -->
-					<item id="8724" min="1" max="1" chance="1.5578" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.3894" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0389" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0078" /> <!-- Top-Grade Life Stone - Level 49 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2357" min="1" max="1" chance="0.2599" /> <!-- Recipe: Crystal Dagger -->
-				<item id="1877" min="1" max="1" chance="6.3734" /> <!-- Adamantite Nugget -->
-				<item id="4041" min="1" max="1" chance="1.3855" /> <!-- Mold Hardener -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="17" max="39" chance="70" /> <!-- Adena -->
+					<item id="8724" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 49 -->
+					<item id="8734" min="1" max="1" chance="0.075" /> <!-- Mid-Grade Life Stone - Level 49 -->
+					<item id="8744" min="1" max="1" chance="0.0055" /> <!-- High-Grade Life Stone - Level 49 -->
+					<item id="8754" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 49 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="9.500" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20239" level="49" type="L2Monster" name="Cave Servant Captain">
 		<parameters>

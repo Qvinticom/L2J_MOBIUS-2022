@@ -2886,47 +2886,24 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="587" max="1194" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.6841000318527222">
-					<item id="103" min="1" max="1" chance="0.4598" /> <!-- Tower Shield -->
-					<item id="1978" min="1" max="1" chance="29.2233" /> <!-- Tower Shield Fragment -->
-					<item id="107" min="1" max="1" chance="0.4598" /> <!-- Composite Shield -->
-					<item id="4055" min="1" max="1" chance="29.2233" /> <!-- Composite Shield Fragment -->
-					<item id="517" min="1" max="1" chance="0.322" /> <!-- Composite Helmet -->
-					<item id="2957" min="1" max="1" chance="19.9949" /> <!-- Composite Helmet Design -->
-					<item id="1149" min="1" max="1" chance="0.322" /> <!-- Shining Circlet -->
-					<item id="1983" min="1" max="1" chance="19.9949" /> <!-- Shining Circlet Pattern -->
-				</group>
-				<group chance="8.626299858093262">
-					<item id="1871" min="1" max="1" chance="54.7702" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="36.5135" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="2.1908" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.4763" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="1.0954" /> <!-- Mold Lubricant -->
-					<item id="2170" min="1" max="1" chance="1.2918" /> <!-- Recipe: Nassen's Earring -->
-					<item id="4609" min="1" max="1" chance="0.1217" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-					<item id="3014" min="1" max="1" chance="1.5299" /> <!-- Recipe: Full Plate Boots -->
-					<item id="4188" min="1" max="1" chance="0.0631" /> <!-- Recipe: Hell Knife (100%) -->
-					<item id="8725" min="1" max="1" chance="1.5214" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.3803" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.038" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0076" /> <!-- Top-Grade Life Stone - Level 52 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1915" min="1" max="1" chance="13.0858" /> <!-- Ring of Ages Gemstone -->
-				<item id="1869" min="1" max="3" chance="74.2616" /> <!-- Iron Ore -->
-				<item id="1914" min="1" max="1" chance="8.344" /> <!-- Earring of Seal Gemstone -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+					<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+					<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="8725" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 52 -->
+					<item id="8735" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 52 -->
+					<item id="8745" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 52 -->
+					<item id="8755" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 52 -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="8.500" /> <!-- Thread -->
+				<item id="36880" min="1" max="3" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20147" level="21" type="L2Monster" name="Hobgoblin">
 		<parameters>

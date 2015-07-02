@@ -402,12 +402,12 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="23423" level="77" type="L2Npc" name="Mesmer Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23423" level="77" type="L2Monster" name="Mesmer Dragon">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="27167" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="17142" hpRegen="7.5" mp="1574" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -418,13 +418,27 @@
 			<radius normal="40" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23424" level="78" type="L2Npc" name="Gargoyle Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23424" level="78" type="L2Monster" name="Gargoyle Dragon">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="28286" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -435,13 +449,27 @@
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="23" max="54" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23425" level="78" type="L2Npc" name="Black Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23425" level="78" type="L2Monster" name="Black Dragon">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="28286" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -452,13 +480,27 @@
 			<radius normal="20" />
 			<height normal="33" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23426" level="79" type="L2Npc" name="Emerald Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23426" level="79" type="L2Monster" name="Emerald Dragon">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="29745" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="18768" hpRegen="7.5" mp="1641" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -469,13 +511,27 @@
 			<radius normal="100" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.300" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23427" level="80" type="L2Npc" name="Sand Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23427" level="80" type="L2Monster" name="Sand Dragon">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="31288" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -486,13 +542,27 @@
 			<radius normal="38" />
 			<height normal="63" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="31" max="72" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.250" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23428" level="80" type="L2Npc" name="Captain" title="Dragonblood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23428" level="80" type="L2Monster" name="Captain" title="Dragonblood">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="31288" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -503,13 +573,27 @@
 			<radius normal="22" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="39" max="91" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.0055" /> <!-- Wind Stone -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="10485" min="1" max="1" chance="0.003009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.675" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23429" level="79" type="L2Npc" name="Minion" title="Dragonblood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23429" level="79" type="L2Monster" name="Minion" title="Dragonblood">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14872" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="9384" hpRegen="7.5" mp="1641" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -520,13 +604,27 @@
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23430" level="81" type="L2Npc" name="Prey Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23430" level="81" type="L2Monster" name="Prey Drake">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32921" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -537,13 +635,27 @@
 			<radius normal="58" />
 			<height normal="61" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.003" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.0009" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23431" level="82" type="L2Npc" name="Beast Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23431" level="82" type="L2Monster" name="Beast Drake">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="34648" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -554,13 +666,27 @@
 			<radius normal="24" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.0055" /> <!-- Water Stone -->
+				<item id="9553" min="1" max="1" chance="0.003" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.725" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23432" level="82" type="L2Npc" name="Dust Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23432" level="82" type="L2Monster" name="Dust Drake">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="34648" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -571,13 +697,27 @@
 			<radius normal="48" />
 			<height normal="53.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="34" max="78" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.0055" /> <!-- Water Stone -->
+				<item id="9553" min="1" max="1" chance="0.0009" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.400" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23433" level="83" type="L2Npc" name="Vampiric Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23433" level="83" type="L2Monster" name="Vampiric Drake">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="36476" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="23014" hpRegen="7.5" mp="1777" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -588,13 +728,27 @@
 			<radius normal="33" />
 			<height normal="70" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="43" max="100" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.0055" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.003" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.735" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23434" level="81" type="L2Npc" name="Dragon Hatchling">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23434" level="81" type="L2Monster" name="Dragon Hatchling">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32921" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -605,13 +759,27 @@
 			<radius normal="8" />
 			<height normal="11.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.0055" /> <!-- Water Stone -->
+				<item id="9553" min="1" max="1" chance="0.0009" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23435" level="83" type="L2Npc" name="Leopard Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23435" level="83" type="L2Monster" name="Leopard Dragon">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="18238" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="11507" hpRegen="7.5" mp="1777" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -622,13 +790,27 @@
 			<radius normal="24" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.003" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.0009" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23436" level="77" type="L2Npc" name="Cave Servant Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23436" level="77" type="L2Monster" name="Cave Servant Archer">
+		<!-- http://2wiki.com-->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="27167" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="17142" hpRegen="7.5" mp="1574" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -639,13 +821,27 @@
 			<radius normal="7" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
+				<item id="9555" min="1" max="1" chance="0.0009" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23437" level="78" type="L2Npc" name="Cave Servant Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23437" level="78" type="L2Monster" name="Cave Servant Warrior">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="28286" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -656,13 +852,27 @@
 			<radius normal="15" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="28" max="66" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
+				<item id="9555" min="1" max="1" chance="0.0009" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.225" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23438" level="78" type="L2Npc" name="Metallic Cave Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23438" level="78" type="L2Monster" name="Metallic Cave Servant">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="28286" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -673,13 +883,27 @@
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="42" max="99" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.0055" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.003" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.775" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23439" level="79" type="L2Npc" name="Iron Cave Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23439" level="79" type="L2Monster" name="Iron Cave Servant">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="29745" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="18768" hpRegen="7.5" mp="1641" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -690,13 +914,27 @@
 			<radius normal="14" />
 			<height normal="32.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4430" max="102" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.003" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.875" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23440" level="80" type="L2Npc" name="Headless Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23440" level="80" type="L2Monster" name="Headless Knight">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="31288" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -707,13 +945,27 @@
 			<radius normal="21" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.0009" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23441" level="81" type="L2Npc" name="Bloody Grave Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23441" level="81" type="L2Monster" name="Bloody Grave Warrior">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32921" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -724,13 +976,27 @@
 			<radius normal="20" />
 			<height normal="34" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.03" /> <!-- Earth Stone -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.920" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23442" level="82" type="L2Npc" name="Dark Grave Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23442" level="82" type="L2Monster" name="Dark Grave Warrior">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="34648" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -741,13 +1007,27 @@
 			<radius normal="22.88" />
 			<height normal="41.6" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="47" max="110" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23443" level="82" type="L2Npc" name="Dark Grave Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23443" level="82" type="L2Monster" name="Dark Grave Wizard">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="34648" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -758,13 +1038,27 @@
 			<radius normal="21.12" />
 			<height normal="40.48" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="42" max="98" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.0055" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="1.700" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23444" level="83" type="L2Npc" name="Dark Grave Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23444" level="83" type="L2Monster" name="Dark Grave Knight">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="36476" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="23014" hpRegen="7.5" mp="1777" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -775,13 +1069,27 @@
 			<radius normal="35" />
 			<height normal="32.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23445" level="77" type="L2Npc" name="Chaos Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23445" level="77" type="L2Monster" name="Chaos Dragon">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="10491" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="6620" hpRegen="7.5" mp="1540" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -792,13 +1100,27 @@
 			<radius normal="24" />
 			<height normal="20" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.003" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.0009" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23446" level="81" type="L2Npc" name="Crag Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23446" level="81" type="L2Monster" name="Crag Dragon">
+		<!-- http://2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="13168" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8310" hpRegen="7.5" mp="1708" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -809,13 +1131,27 @@
 			<radius normal="32" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.003" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.0009" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="23447" level="81" type="L2Npc" name="Gust Spiral">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23447" level="81" type="L2Monster" name="Gust Spiral">
+		<!-- http://l2wiki.com/ -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="16460" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="10386" hpRegen="7.5" mp="1708" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -826,6 +1162,20 @@
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="17" max="40" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.003" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.0009" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23448" level="2" type="L2Monster" name="Floato">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
