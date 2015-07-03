@@ -44,410 +44,814 @@
 		</for>
 	</skill>
 	<skill id="8805" levels="1" name="Dark Eternal Helmet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 3% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.3" />
+					<mul stat="pvpMagicalDef" val="1.3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8806" levels="1" name="Dark Eternal Breastplate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 8% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.8" />
+					<mul stat="pvpMagicalDef" val="1.8" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8807" levels="1" name="Dark Eternal Gaiters">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 5% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.5" />
+					<mul stat="pvpMagicalDef" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8808" levels="1" name="Dark Eternal Gauntlets">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.2" />
+					<mul stat="pvpMagicalDef" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8809" levels="1" name="Dark Eternal Boots">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.2" />
+					<mul stat="pvpMagicalDef" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8810" levels="1" name="Dark Eternal Leather Helmet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 3% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.3" />
+					<mul stat="pvpMagicalDef" val="1.3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8811" levels="1" name="Dark Eternal Leather Armor">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 8% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.8" />
+					<mul stat="pvpMagicalDef" val="1.8" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8812" levels="1" name="Dark Eternal Leather Leggings">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 5% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.5" />
+					<mul stat="pvpMagicalDef" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8813" levels="1" name="Dark Eternal Leather Gloves">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.2" />
+					<mul stat="pvpMagicalDef" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8814" levels="1" name="Dark Eternal Leather Boots">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.2" />
+					<mul stat="pvpMagicalDef" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8815" levels="1" name="Dark Eternal Circlet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 3% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.3" />
+					<mul stat="pvpMagicalDef" val="1.3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8816" levels="1" name="Dark Eternal Tunic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 8% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.8" />
+					<mul stat="pvpMagicalDef" val="1.8" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8817" levels="1" name="Dark Eternal Stockings">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 5% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.5" />
+					<mul stat="pvpMagicalDef" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8818" levels="1" name="Dark Eternal Gloves">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.2" />
+					<mul stat="pvpMagicalDef" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8819" levels="1" name="Dark Eternal Shoes">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDef" val="1.2" />
+					<mul stat="pvpMagicalDef" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8820" levels="1" name="Dark Amaranthine Shaper">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8821" levels="1" name="Dark Amaranthine Cutter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8822" levels="1" name="Dark Amaranthine Slasher">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8823" levels="1" name="Dark Amaranthine Avenger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8824" levels="1" name="Dark Amaranthine Fighter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8825" levels="1" name="Dark Amaranthine Stormer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8826" levels="1" name="Dark Amaranthine Thrower">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8827" levels="1" name="Dark Amaranthine Shooter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8828" levels="1" name="Dark Amaranthine Buster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8829" levels="1" name="Dark Amaranthine Caster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8830" levels="1" name="Dark Amaranthine Retributer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8831" levels="1" name="Dark Amaranthine Dualsword">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8832" levels="1" name="Dark Amaranthine Dual Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8833" levels="1" name="Dark Amaranthine Dual Blunt Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvpPhysDmg" val="1.15" />
+					<mul stat="pvpMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8834" levels="1" name="Bloody Eternal Helmet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.3" />
+					<mul stat="pveMagicalDef" val="1.3" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8835" levels="1" name="Bloody Eternal Breastplate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.8" />
+					<mul stat="pveMagicalDef" val="1.8" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8836" levels="1" name="Bloody Eternal Gaiters">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.5" />
+					<mul stat="pveMagicalDef" val="1.5 /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8837" levels="1" name="Bloody Eternal Gauntlets">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.2" />
+					<mul stat="pveMagicalDef" val="1.2" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8838" levels="1" name="Bloody Eternal Boots">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.2" />
+					<mul stat="pveMagicalDef" val="1.2" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8839" levels="1" name="Bloody Eternal Leather Helmet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.3" />
+					<mul stat="pveMagicalDef" val="1.3" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8840" levels="1" name="Bloody Eternal Leather Armor">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.8" />
+					<mul stat="pveMagicalDef" val="1.8" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8841" levels="1" name="Bloody Eternal Leather Leggings">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.5" />
+					<mul stat="pveMagicalDef" val="1.5" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8842" levels="1" name="Bloody Eternal Leather Gloves">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.2" />
+					<mul stat="pveMagicalDef" val="1.2" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8843" levels="1" name="Bloody Eternal Leather Boots">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.2" />
+					<mul stat="pveMagicalDef" val="1.2" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8844" levels="1" name="Bloody Eternal Circlet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.3" />
+					<mul stat="pveMagicalDef" val="1.3" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8845" levels="1" name="Bloody Eternal Tunic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.8" />
+					<mul stat="pveMagicalDef" val="1.8" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8846" levels="1" name="Bloody Eternal Stockings">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.5" />
+					<mul stat="pveMagicalDef" val="1.5" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8847" levels="1" name="Bloody Eternal Gloves">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.2" />
+					<mul stat="pveMagicalDef" val="1.2" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8848" levels="1" name="Bloody Eternal Shoes">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+			<!--  	<mul stat="pvePhysDef" val="1.2" />
+					<mul stat="pveMagicalDef" val="1.2" /> -->
+					<mul stat="pAtk" val="1.1" />
+					<mul stat="mAtk" val="1.2" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8849" levels="1" name="Bloody Amaranthine Shaper">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8850" levels="1" name="Bloody Amaranthine Cutter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8851" levels="1" name="Bloody Amaranthine Slasher">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8852" levels="1" name="Bloody Amaranthine Avenger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8853" levels="1" name="Bloody Amaranthine Fighter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8854" levels="1" name="Bloody Amaranthine Stormer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8855" levels="1" name="Bloody Amaranthine Thrower">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8856" levels="1" name="Bloody Amaranthine Shooter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8857" levels="1" name="Bloody Amaranthine Buster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8858" levels="1" name="Bloody Amaranthine Caster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8859" levels="1" name="Bloody Amaranthine Retributer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8860" levels="1" name="Bloody Amaranthine Dualsword">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8861" levels="1" name="Bloody Amaranthine Dual Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8862" levels="1" name="Bloody Amaranthine Dual Blunt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pvePhysDmg" val="1.15" />
+					<mul stat="pveMagicalDmg" val="1.15" />
+					<mul stat="maxCp" val="1.10" />
+					<mul stat="maxHp" val="1.10" />
+					<mul stat="maxMp" val="1.10" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="8863" levels="1" name="Tauti's Bracelet">
 		<set name="icon" val="icon.accessory_bracelet_of_tauti_i01" />
