@@ -237,12 +237,24 @@
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12883-1" />
 	</item>
 	<item id="32743" name="Rabbit Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12884-1" />
 	</item>
 	<item id="32744" name="Raccoon Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
@@ -250,6 +262,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12885-1" />
 	</item>
 	<item id="32745" name="Raccoon Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
@@ -257,6 +274,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12886-1" />
 	</item>
 	<item id="32746" name="Cat Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
@@ -264,24 +286,47 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12887-1" />
 	</item>
 	<item id="32747" name="Cat Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12888-1" />
 	</item>
 	<item id="32748" name="Romantic Chapeau" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12889-1" />
 	</item>
 	<item id="32749" name="Romantic Chapeau" additionalName="Critical Damage" type="Armor">
 		<!-- P. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12890-1" />
 	</item>
 	<item id="32750" name="Angel Circlet" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
@@ -289,18 +334,35 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12891-1" />
 	</item>
 	<item id="32751" name="Angel Circlet" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12892-1" />
 	</item>
 	<item id="32752" name="Angel Circlet" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12893-1" />
 	</item>
 	<item id="32753" name="Demon Circlet" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
@@ -308,18 +370,35 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12894-1" />
 	</item>
 	<item id="32754" name="Demon Circlet" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12895-1" />
 	</item>
 	<item id="32755" name="Demon Circlet" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="12896-1" />
 	</item>
 	<item id="32756" name="Rabbit Ears - STR Pendant" additionalName="" type="EtcItem">
 		<!-- Combines rabbit ears to make Rabbit Ears - STR. -->

@@ -550,102 +550,162 @@
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="12883" levels="1" name="Rabbit Ears - STR">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="STR" val="3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12884" levels="1" name="Rabbit Ears - DEX">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="DEX" val="3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12885" levels="1" name="Raccoon Ears: CON">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="CON" val="3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12886" levels="1" name="Raccoon Ears: MEN">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="MEN" val="3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12887" levels="1" name="Cat Ears: INT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="INT" val="3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12888" levels="1" name="Cat Ears: WIT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="WIT" val="3" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12889" levels="1" name="Romantic Chapeau - Critical Rate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Critical rate + 50. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="mCritRate" val="50" />
+					<add stat="rCrit" val="50" />
+				</effect>
+			</for>	
 	</skill>
 	<skill id="12890" levels="1" name="Romantic Chapeau - Critical Damage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Critical damage + 90 and M. Critical damage + 68. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="mCritPowerAdd" val="68" />
+					<add stat="cAtkAdd" val="90" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12891" levels="1" name="Angel Circlet - P. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 5%. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pDef" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12892" levels="1" name="Angel Circlet - M. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 5%. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="mDef" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12893" levels="1" name="Angel Circlet - Evasion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Evasion + 5. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="rEvas" val="5" />
+					<add stat="mEvas" val="5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12894" levels="1" name="Demon Circlet - P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 5%. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="pAtk" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12895" levels="1" name="Demon Circlet - M. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 10%. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<mul stat="mAtk" val="1.5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12896" levels="1" name="Demon Circlet - Accuracy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Accuracy + 5. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+			<for>
+				<effect name="Buff" >
+					<add stat="accCombat" val="5" />
+					<add stat="accMagic" val="5" />
+				</effect>
+			</for>
 	</skill>
 	<skill id="12897" levels="1" name="Player Commendation - Blessing">
 		<!-- AUTO GENERATED SKILL -->
