@@ -18,20 +18,23 @@
  */
 package com.l2jserver.util;
 
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.nio.channels.SocketChannel;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
+import java.util.logging.Logger;
 
 import commons.mmocore.IAcceptFilter;
 
 /**
  * IPv4 filter.
- * @author Forsaiken
+ * @author Forsaiken, Zoey76
  */
 public class IPv4Filter implements IAcceptFilter, Runnable
 {
+	private static final Logger LOG = Logger.getLogger(IPv4Filter.class.getName());
 	private final HashMap<Integer, Flood> _ipFloodMap;
 	private static final long SLEEP_TIME = 5000;
 	
@@ -67,9 +70,14 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 	@Override
 	public boolean accept(SocketChannel sc)
 	{
-		InetAddress addr = sc.socket().getInetAddress();
-		int h = hash(addr.getAddress());
+		final InetAddress addr = sc.socket().getInetAddress();
+		if (!(addr instanceof Inet4Address))
+		{
+			LOG.info(IPv4Filter.class.getSimpleName() + ": Someone tried to connect from something other than IPv4: " + addr.getHostAddress());
+			return false;
+		}
 		
+		final int h = hash(addr.getAddress());
 		long current = System.currentTimeMillis();
 		Flood f;
 		synchronized (_ipFloodMap)

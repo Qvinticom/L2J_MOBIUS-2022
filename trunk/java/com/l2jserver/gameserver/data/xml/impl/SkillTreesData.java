@@ -25,6 +25,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -79,29 +80,30 @@ import com.l2jserver.util.data.xml.IXmlReader;
 public final class SkillTreesData implements IXmlReader
 {
 	// ClassId, HashMap of Skill Hash Code, L2SkillLearn
-	private static final Map<ClassId, Map<Integer, L2SkillLearn>> _classSkillTrees = new HashMap<>();
-	private static final Map<ClassId, Map<Integer, L2SkillLearn>> _transferSkillTrees = new HashMap<>();
-	private static final Map<Race, Map<Integer, L2SkillLearn>> _raceSkillTree = new HashMap<>();
-	private static final Map<SubclassType, Map<Integer, L2SkillLearn>> _revelationSkillTree = new HashMap<>();
+	// ClassId, Map of Skill Hash Code, L2SkillLearn
+	private final Map<ClassId, Map<Integer, L2SkillLearn>> _classSkillTrees = new LinkedHashMap<>();
+	private final Map<ClassId, Map<Integer, L2SkillLearn>> _transferSkillTrees = new LinkedHashMap<>();
+	private static final Map<Race, Map<Integer, L2SkillLearn>> _raceSkillTree = new LinkedHashMap<>();
+	private static final Map<SubclassType, Map<Integer, L2SkillLearn>> _revelationSkillTree = new LinkedHashMap<>();
 	// Skill Hash Code, L2SkillLearn
-	private static final Map<Integer, L2SkillLearn> _collectSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _fishingSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _pledgeSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _subClassSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _subPledgeSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _transformSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _commonSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _subClassChangeSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _abilitySkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _alchemySkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _dualClassSkillTree = new HashMap<>();
+	private static final Map<Integer, L2SkillLearn> _collectSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _fishingSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _pledgeSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _subClassSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _subPledgeSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _transformSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _commonSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _subClassChangeSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _abilitySkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _alchemySkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _dualClassSkillTree = new LinkedHashMap<>();
 	// Other skill trees
-	private static final Map<Integer, L2SkillLearn> _nobleSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _heroSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _gameMasterSkillTree = new HashMap<>();
-	private static final Map<Integer, L2SkillLearn> _gameMasterAuraSkillTree = new HashMap<>();
+	private static final Map<Integer, L2SkillLearn> _nobleSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _heroSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _gameMasterSkillTree = new LinkedHashMap<>();
+	private static final Map<Integer, L2SkillLearn> _gameMasterAuraSkillTree = new LinkedHashMap<>();
 	// Remove skill tree
-	private static final Map<ClassId, Set<Integer>> _removeSkillCache = new HashMap<>();
+	private static final Map<ClassId, Set<Integer>> _removeSkillCache = new LinkedHashMap<>();
 	
 	// Checker, sorted arrays of hash codes
 	private Map<Integer, int[]> _skillsByClassIdHashCodes; // Occupation skills
@@ -110,8 +112,8 @@ public final class SkillTreesData implements IXmlReader
 	
 	private boolean _loading = true;
 	
-	/** Parent class Ids are read from XML and stored in this map, to allow easy customization. */
-	private static final Map<ClassId, ClassId> _parentClassMap = new HashMap<>();
+	/** Parent class IDs are read from XML and stored in this map, to allow easy customization. */
+	private final Map<ClassId, ClassId> _parentClassMap = new LinkedHashMap<>();
 	
 	/**
 	 * Instantiates a new skill trees data.
@@ -418,13 +420,24 @@ public final class SkillTreesData implements IXmlReader
 	 */
 	public Map<Integer, L2SkillLearn> getCompleteClassSkillTree(ClassId classId)
 	{
-		final Map<Integer, L2SkillLearn> skillTree = new HashMap<>();
+		final Map<Integer, L2SkillLearn> skillTree = new LinkedHashMap<>();
 		// Add all skills that belong to all classes.
 		skillTree.putAll(_commonSkillTree);
-		while ((classId != null) && (_classSkillTrees.get(classId) != null))
+		
+		final LinkedList<ClassId> classSequence = new LinkedList<>();
+		while (classId != null)
 		{
-			skillTree.putAll(_classSkillTrees.get(classId));
+			classSequence.addFirst(classId);
 			classId = _parentClassMap.get(classId);
+		}
+		
+		for (ClassId cid : classSequence)
+		{
+			final Map<Integer, L2SkillLearn> classSkillTree = _classSkillTrees.get(cid);
+			if (classSkillTree != null)
+			{
+				skillTree.putAll(classSkillTree);
+			}
 		}
 		return skillTree;
 	}

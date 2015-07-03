@@ -135,7 +135,7 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Returns name and instance of all participated players in FastMap<br>
+	 * Returns name and instance of all participated players in Map<br>
 	 * <br>
 	 * @return Map<String, L2PcInstance>: map of players in this team<br>
 	 */

@@ -365,12 +365,7 @@ public final class L2Weapon extends L2Item
 			return;
 		}
 		
-		L2Character[] targets =
-		{
-			target
-		};
-		
-		onCritSkill.activateSkill(caster, targets);
+		onCritSkill.activateSkill(caster, target);
 	}
 	
 	/**
@@ -429,18 +424,18 @@ public final class L2Weapon extends L2Item
 			return;
 		}
 		
-		L2Character[] targets =
-		{
-			target
-		};
-		
 		// Launch the magic skill and calculate its effects
 		// Get the skill handler corresponding to the skill type
-		onMagicSkill.activateSkill(caster, targets);
+		onMagicSkill.activateSkill(caster, target);
 		
 		// notify quests of a skill use
 		if (caster instanceof L2PcInstance)
 		{
+			L2Character[] targets =
+			{
+				target
+			};
+			
 			//@formatter:off
 			caster.getKnownList().getKnownObjects().values().stream()
 				.filter(Objects::nonNull)

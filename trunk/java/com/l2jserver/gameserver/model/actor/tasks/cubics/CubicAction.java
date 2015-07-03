@@ -121,100 +121,102 @@ public final class CubicAction implements Runnable
 			}
 			else if (Rnd.get(1, 100) < _chance)
 			{
-				Skill skill = _cubic.getSkills().get(Rnd.get(_cubic.getSkills().size()));
-				if (skill != null)
+				final Skill skill = _cubic.getSkills().get(Rnd.get(_cubic.getSkills().size()));
+				if (skill == null)
 				{
-					if (skill.getId() == L2CubicInstance.SKILL_CUBIC_HEAL)
+					return;
+				}
+				
+				if (skill.getId() == L2CubicInstance.SKILL_CUBIC_HEAL)
+				{
+					// friendly skill, so we look a target in owner's party
+					_cubic.cubicTargetForHeal();
+				}
+				else
+				{
+					// offensive skill, we look for an enemy target
+					_cubic.getCubicTarget();
+					if (!L2CubicInstance.isInCubicRange(_cubic.getOwner(), _cubic.getTarget()))
 					{
-						// friendly skill, so we look a target in owner's party
-						_cubic.cubicTargetForHeal();
+						_cubic.setTarget(null);
 					}
-					else
+				}
+				L2Character target = _cubic.getTarget();
+				if ((target != null) && !target.isDead())
+				{
+					if (Config.DEBUG)
 					{
-						// offensive skill, we look for an enemy target
-						_cubic.getCubicTarget();
-						if (!L2CubicInstance.isInCubicRange(_cubic.getOwner(), _cubic.getTarget()))
-						{
-							_cubic.setTarget(null);
-						}
+						_log.info("L2CubicInstance: Action.run();");
+						_log.info("Cubic ID: " + _cubic.getId() + " Target: " + target.getName() + " distance: " + target.calculateDistance(_cubic.getOwner(), true, false));
 					}
-					L2Character target = _cubic.getTarget();
-					if ((target != null) && !target.isDead())
+					
+					_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
+					
+					L2Character[] targets =
+					{
+						target
+					};
+					
+					if (skill.isContinuous())
 					{
 						if (Config.DEBUG)
 						{
-							_log.info("L2CubicInstance: Action.run();");
-							_log.info("Cubic ID: " + _cubic.getId() + " Target: " + target.getName() + " distance: " + target.calculateDistance(_cubic.getOwner(), true, false));
+							_log.info("L2CubicInstance: Action.run() skill " + skill);
 						}
-						
-						_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
-						
-						L2Character[] targets =
-						{
-							target
-						};
-						
-						if (skill.isContinuous())
-						{
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run() skill " + skill);
-							}
-							_cubic.useCubicContinuous(skill, targets);
-						}
-						else
-						{
-							skill.activateSkill(_cubic.getOwner(), targets);
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run(); other handler");
-							}
-						}
-						
-						if (skill.hasEffectType(L2EffectType.MAGICAL_ATTACK))
-						{
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run() skill " + skill);
-							}
-							_cubic.useCubicMdam(_cubic, skill, targets);
-						}
-						else if (skill.hasEffectType(L2EffectType.HP_DRAIN))
-						{
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run() skill " + skill);
-							}
-							_cubic.useCubicDrain(_cubic, skill, targets);
-						}
-						else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT, L2EffectType.PARALYZE))
-						{
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run() skill " + skill);
-							}
-							_cubic.useCubicDisabler(skill, targets);
-						}
-						else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
-						{
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run() skill " + skill);
-							}
-							_cubic.useCubicContinuous(skill, targets);
-						}
-						else if (skill.hasEffectType(L2EffectType.AGGRESSION))
-						{
-							if (Config.DEBUG)
-							{
-								_log.info("L2CubicInstance: Action.run() skill " + skill);
-							}
-							_cubic.useCubicDisabler(skill, targets);
-						}
-						
-						// The cubic has done an action, increase the current count
-						_currentCount.incrementAndGet();
+						_cubic.useCubicContinuous(skill, targets);
 					}
+					else
+					{
+						skill.activateSkill(_cubic, targets);
+						if (Config.DEBUG)
+						{
+							_log.info("L2CubicInstance: Action.run(); other handler");
+						}
+					}
+					
+					if (skill.hasEffectType(L2EffectType.MAGICAL_ATTACK))
+					{
+						if (Config.DEBUG)
+						{
+							_log.info("L2CubicInstance: Action.run() skill " + skill);
+						}
+						_cubic.useCubicMdam(skill, targets);
+					}
+					else if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+					{
+						if (Config.DEBUG)
+						{
+							_log.info("L2CubicInstance: Action.run() skill " + skill);
+						}
+						_cubic.useCubicDrain(skill, targets);
+					}
+					else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT, L2EffectType.PARALYZE))
+					{
+						if (Config.DEBUG)
+						{
+							_log.info("L2CubicInstance: Action.run() skill " + skill);
+						}
+						_cubic.useCubicDisabler(skill, targets);
+					}
+					else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
+					{
+						if (Config.DEBUG)
+						{
+							_log.info("L2CubicInstance: Action.run() skill " + skill);
+						}
+						_cubic.useCubicContinuous(skill, targets);
+					}
+					else if (skill.hasEffectType(L2EffectType.AGGRESSION))
+					{
+						if (Config.DEBUG)
+						{
+							_log.info("L2CubicInstance: Action.run() skill " + skill);
+						}
+						_cubic.useCubicDisabler(skill, targets);
+					}
+					
+					// The cubic has done an action, increase the current count
+					_currentCount.incrementAndGet();
 				}
 			}
 		}

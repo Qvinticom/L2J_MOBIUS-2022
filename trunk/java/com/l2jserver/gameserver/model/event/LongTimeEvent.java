@@ -97,7 +97,7 @@ public class LongTimeEvent extends Quest
 			{
 				long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
 				ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStart(), delay);
-				_log.info("Event " + _eventName + " will be started at " + _eventPeriod.getEndDate());
+				_log.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
 			}
 			else
 			{
@@ -266,17 +266,21 @@ public class LongTimeEvent extends Quest
 	 */
 	protected void startEvent()
 	{
+		long currentTime = System.currentTimeMillis();
 		// Add drop
 		if (_dropList != null)
 		{
-			for (GeneralDropItem drop : _dropList)
+			if (currentTime < _dropPeriod.getEndDate().getTime())
 			{
-				EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
+				for (GeneralDropItem drop : _dropList)
+				{
+					EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
+				}
 			}
 		}
 		
 		// Add spawns
-		Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - System.currentTimeMillis();
+		Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - currentTime;
 		if (_spawnList != null)
 		{
 			for (NpcSpawn spawn : _spawnList)

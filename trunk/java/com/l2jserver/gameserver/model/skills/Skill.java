@@ -886,7 +886,7 @@ public final class Skill implements IIdentifiable
 	
 	public boolean useSoulShot()
 	{
-		return (hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK));
+		return hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK);
 	}
 	
 	public boolean useSpiritShot()
@@ -1324,18 +1324,18 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(L2Character, L2CubicInstance, L2Character, boolean, boolean, boolean, int)}.<br>
+	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int)}.<br>
 	 * Simplify the calls.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
 	 */
 	public void applyEffects(L2Character effector, L2Character effected)
 	{
-		applyEffects(effector, null, effected, false, false, true, 0);
+		applyEffects(effector, effected, false, false, true, 0);
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(L2Character, L2CubicInstance, L2Character, boolean, boolean, boolean, int)}.<br>
+	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int)}.<br>
 	 * Simplify the calls, allowing abnormal time time customization.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
@@ -1344,20 +1344,19 @@ public final class Skill implements IIdentifiable
 	 */
 	public void applyEffects(L2Character effector, L2Character effected, boolean instant, int abnormalTime)
 	{
-		applyEffects(effector, null, effected, false, false, instant, abnormalTime);
+		applyEffects(effector, effected, false, false, instant, abnormalTime);
 	}
 	
 	/**
 	 * Applies the effects from this skill to the target.
 	 * @param effector the caster of the skill
-	 * @param cubic the cubic that cast the skill, can be {@code null}
 	 * @param effected the target of the effect
 	 * @param self if {@code true} self-effects will be casted on the caster
 	 * @param passive if {@code true} passive effects will be applied to the effector
 	 * @param instant if {@code true} instant effects will be applied to the effected
 	 * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
 	 */
-	public void applyEffects(L2Character effector, L2CubicInstance cubic, L2Character effected, boolean self, boolean passive, boolean instant, int abnormalTime)
+	public void applyEffects(L2Character effector, L2Character effected, boolean self, boolean passive, boolean instant, int abnormalTime)
 	{
 		// null targets cannot receive any effects.
 		if (effected == null)
@@ -1449,11 +1448,32 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Activates the skill to the targets.
+	 * Activates a skill for the given creature and targets.
 	 * @param caster the caster
 	 * @param targets the targets
 	 */
-	public void activateSkill(L2Character caster, L2Object[] targets)
+	public void activateSkill(L2Character caster, L2Object... targets)
+	{
+		activateSkill(caster, null, targets);
+	}
+	
+	/**
+	 * Activates a skill for the given cubic and targets.
+	 * @param cubic the cubic
+	 * @param targets the targets
+	 */
+	public void activateSkill(L2CubicInstance cubic, L2Object... targets)
+	{
+		activateSkill(cubic.getOwner(), cubic, targets);
+	}
+	
+	/**
+	 * Activates the skill to the targets.
+	 * @param caster the caster
+	 * @param cubic the cubic, can be {@code null}
+	 * @param targets the targets
+	 */
+	private void activateSkill(L2Character caster, L2CubicInstance cubic, L2Object... targets)
 	{
 		switch (getId())
 		{
@@ -1525,16 +1545,19 @@ public final class Skill implements IIdentifiable
 			{
 				caster.stopSkillEffects(true, getId());
 			}
-			applyEffects(caster, null, caster, true, false, true, 0);
+			applyEffects(caster, caster, true, false, true, 0);
 		}
 		
-		if (useSpiritShot())
+		if (cubic == null)
 		{
-			caster.setChargedShot(caster.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
-		}
-		else if (useSoulShot())
-		{
-			caster.setChargedShot(ShotType.SOULSHOTS, false);
+			if (useSpiritShot())
+			{
+				caster.setChargedShot(caster.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+			}
+			else if (useSoulShot())
+			{
+				caster.setChargedShot(ShotType.SOULSHOTS, false);
+			}
 		}
 	}
 	

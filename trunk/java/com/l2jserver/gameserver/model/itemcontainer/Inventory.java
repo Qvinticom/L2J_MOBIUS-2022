@@ -385,12 +385,7 @@ public abstract class Inventory extends ItemContainer
 			final Skill unequipSkill = it.getUnequipSkill();
 			if (unequipSkill != null)
 			{
-				L2PcInstance[] targets =
-				{
-					player
-				};
-				
-				unequipSkill.activateSkill(player, targets);
+				unequipSkill.activateSkill(player, player);
 			}
 			
 			// Remove itemEquip skill
@@ -492,12 +487,7 @@ public abstract class Inventory extends ItemContainer
 			final Skill itemEquipSkill = it.getEquipSkill();
 			if (itemEquipSkill != null)
 			{
-				L2PcInstance[] targets =
-				{
-					player
-				};
-				
-				itemEquipSkill.activateSkill(player, targets);
+				itemEquipSkill.activateSkill(player, player);
 			}
 			
 			if (update)

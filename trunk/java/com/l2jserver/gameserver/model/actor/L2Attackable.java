@@ -685,7 +685,7 @@ public class L2Attackable extends L2Npc
 	}
 	
 	/**
-	 * Add damage and hate to the attacker AggroInfo of the L2Attackable _aggroList.
+	 * Adds damage and hate to the attacker aggression list for this character.
 	 * @param attacker The L2Character that gave damages to this L2Attackable
 	 * @param damage The number of damages given by the attacker L2Character
 	 * @param aggro The hate (=damage) given by the attacker L2Character
@@ -697,13 +697,14 @@ public class L2Attackable extends L2Npc
 			return;
 		}
 		
-		final L2PcInstance targetPlayer = attacker.getActingPlayer();
 		// Get the AggroInfo of the attacker L2Character from the _aggroList of the L2Attackable
 		final AggroInfo ai = getAggroList().computeIfAbsent(attacker, AggroInfo::new);
 		ai.addDamage(damage);
-		// traps does not cause aggro
+		
+		// Traps does not cause aggro
 		// making this hack because not possible to determine if damage made by trap
 		// so just check for triggered trap here
+		final L2PcInstance targetPlayer = attacker.getActingPlayer();
 		if ((targetPlayer == null) || (targetPlayer.getTrap() == null) || !targetPlayer.getTrap().isTriggered())
 		{
 			ai.addHate(aggro);

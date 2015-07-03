@@ -56,35 +56,24 @@ public class CubicHeal implements Runnable
 			_cubic.cancelDisappear();
 			return;
 		}
+		
 		try
 		{
-			Skill skill = null;
-			for (Skill sk : _cubic.getSkills())
+			final Skill skill = _cubic.getSkills().stream().filter(s -> s.getId() == L2CubicInstance.SKILL_CUBIC_HEAL).findFirst().orElse(null);
+			if (skill == null)
 			{
-				if (sk.getId() == L2CubicInstance.SKILL_CUBIC_HEAL)
-				{
-					skill = sk;
-					break;
-				}
+				return;
 			}
 			
-			if (skill != null)
+			_cubic.cubicTargetForHeal();
+			final L2Character target = _cubic.getTarget();
+			if ((target != null) && !target.isDead())
 			{
-				_cubic.cubicTargetForHeal();
-				final L2Character target = _cubic.getTarget();
-				if ((target != null) && !target.isDead())
+				if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
 				{
-					if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
-					{
-						L2Character[] targets =
-						{
-							target
-						};
-						
-						skill.activateSkill(_cubic.getOwner(), targets);
-						
-						_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
-					}
+					skill.activateSkill(_cubic, target);
+					
+					_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
 				}
 			}
 		}

@@ -130,7 +130,7 @@ public class SummonEffectsTable
 	
 	public void addPetEffect(int controlObjectId, Skill skill, int effectCurTime)
 	{
-		_petEffects.putIfAbsent(controlObjectId, new ArrayList<>()).add(new SummonEffect(skill, effectCurTime));
+		_petEffects.computeIfAbsent(controlObjectId, k -> new ArrayList<>()).add(new SummonEffect(skill, effectCurTime));
 	}
 	
 	public boolean containsPetId(int controlObjectId)
