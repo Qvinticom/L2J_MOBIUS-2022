@@ -1712,22 +1712,15 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="25" />
+			<height normal="31" grown="37.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="128" max="189" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2393999993801117">
-					<item id="9" min="1" max="1" chance="9.9075" /> <!-- Cedar Staff -->
-					<item id="2008" min="1" max="1" chance="80.185" /> <!-- Cedar Staff Head -->
-					<item id="154" min="1" max="1" chance="9.9075" /> <!-- Dwarven Mace -->
-				</group>
-				<group chance="7.056600093841553">
-					<item id="1866" min="1" max="1" chance="34.9614" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="52.4422" /> <!-- Charcoal -->
-					<item id="1793" min="1" max="1" chance="3.856" /> <!-- Recipe: Sword of Reflection -->
-					<item id="734" min="1" max="1" chance="8.7404" /> <!-- Haste Potion -->
-				</group>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="734" min="1" max="1" chance="0.75" /> <!-- Wind Walk Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1761,15 +1754,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2143" min="1" max="1" chance="5.0113" /> <!-- Recipe: Synthetic Cokes -->
-				<item id="1897" min="1" max="1" chance="5.9658" /> <!-- Necklace of Wisdom Chain -->
-				<item id="1896" min="1" max="1" chance="10.6171" /> <!-- Necklace of Anguish Chain -->
+				<item id="36531" min="1" max="1" chance="4.700" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="25" />
-			<height normal="31" grown="37.5" />
-		</collision>
 	</npc>
 	<npc id="20522" level="10" type="L2Monster" name="White Fang">
 		<parameters>
@@ -1990,18 +1977,15 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="25" />
+			<height normal="31" grown="37.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="131" max="199" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.2720999717712402">
-					<item id="114" min="1" max="1" chance="10.0297" /> <!-- Earring of Strength -->
-					<item id="115" min="1" max="1" chance="10.0297" /> <!-- Earring of Wisdom -->
-					<item id="907" min="1" max="1" chance="7.5223" /> <!-- Necklace of Anguish -->
-					<item id="1896" min="1" max="1" chance="57.3736" /> <!-- Necklace of Anguish Chain -->
-					<item id="876" min="1" max="1" chance="15.0447" /> <!-- Ring of Anguish -->
-				</group>
+				<item id="57" min="5" max="10" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="9" /> <!-- Bandage -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 				<group chance="12.854599952697754">
 					<item id="1866" min="1" max="1" chance="26.5922" /> <!-- Suede -->
 					<item id="1871" min="1" max="1" chance="39.8883" /> <!-- Charcoal -->
@@ -2040,15 +2024,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1833" min="1" max="1" chance="69.4345" /> <!-- Bandage -->
-				<item id="1921" min="1" max="1" chance="16.7987" /> <!-- Leather Shoes Texture -->
-				<item id="5220" min="1" max="1" chance="1.0415" /> <!-- Metal Hardener -->
+				<item id="36531" min="1" max="1" chance="4.700" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="25" />
-			<height normal="31" grown="37.5" />
-		</collision>
 	</npc>
 	<npc id="20527" level="4" type="L2Monster" name="Snow Wolf">
 		<parameters>

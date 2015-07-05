@@ -1734,21 +1734,15 @@
 				<clan>GOBLIN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="21.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="116" max="172" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2703999876976013">
-					<item id="216" min="1" max="1" chance="11.939" /> <!-- Dirk -->
-					<item id="2009" min="1" max="1" chance="88.061" /> <!-- Dirk Blade -->
-				</group>
-				<group chance="12.558199882507324">
-					<item id="1871" min="1" max="1" chance="26.7366" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="17.8244" /> <!-- Suede -->
-					<item id="1792" min="1" max="1" chance="1.9659" /> <!-- Recipe: Short Spear -->
-					<item id="6037" min="1" max="1" chance="53.4731" /> <!-- Waking Scroll -->
-				</group>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="6037" min="1" max="1" chance="5.700" /> <!-- Scroll: Cancel Sleep -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1782,15 +1776,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1869" min="1" max="1" chance="22.7339" /> <!-- Iron Ore -->
-				<item id="1865" min="1" max="1" chance="22.7339" /> <!-- Varnish -->
-				<item id="1792" min="1" max="1" chance="1.6716" /> <!-- Recipe: Short Spear -->
+				<item id="36531" min="1" max="1" chance="4.200" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="21.4" />
-		</collision>
 	</npc>
 	<npc id="20324" level="10" type="L2Monster" name="Goblin Brigand Lieutenant">
 		<parameters>

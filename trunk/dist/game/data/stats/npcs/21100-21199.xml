@@ -2253,21 +2253,15 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="33.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="121" max="200" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.02850000001490116">
-					<item id="309" min="1" max="1" chance="50" /> <!-- Tears of Eva -->
-					<item id="310" min="1" max="1" chance="50" /> <!-- Relic of the Saints -->
-				</group>
-				<group chance="9.280400276184082">
-					<item id="1865" min="1" max="1" chance="40.3042" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="40.3042" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="6.7174" /> <!-- Cokes -->
-					<item id="1800" min="1" max="1" chance="12.6742" /> <!-- Recipe: Piece Bone Breastplate -->
-				</group>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2301,15 +2295,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1865" min="1" max="1" chance="25.3256" /> <!-- Varnish -->
-				<item id="735" min="1" max="1" chance="2.1105" /> <!-- Alacrity Potion -->
-				<item id="1897" min="1" max="1" chance="6.0299" /> <!-- Necklace of Wisdom Chain -->
+				<item id="36531" min="1" max="1" chance="4.750" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="33.5" />
-		</collision>
 	</npc>
 	<npc id="21125" level="19" type="L2Monster" name="Northern Trimden">
 		<parameters>
@@ -2447,25 +2435,14 @@
 				<clan>WEREWOLF</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="29.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="125" max="217" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.26570001244544983">
-					<item id="24" min="1" max="1" chance="19.255" /> <!-- Bone Breastplate -->
-					<item id="390" min="1" max="1" chance="19.255" /> <!-- Cotton Shirt -->
-					<item id="31" min="1" max="1" chance="30.745" /> <!-- Bone Gaiters -->
-					<item id="412" min="1" max="1" chance="30.745" /> <!-- Cotton Pants -->
-				</group>
-				<group chance="16.67300033569336">
-					<item id="1864" min="1" max="1" chance="31.9149" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="15.9574" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.6383" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.383" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="31.9149" /> <!-- Thread -->
-					<item id="2143" min="1" max="1" chance="3.1915" /> <!-- Recipe: Synthetic Cokes -->
-				</group>
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2499,15 +2476,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1925" min="1" max="1" chance="17.719" /> <!-- Leather Gloves Lining -->
-				<item id="1864" min="1" max="1" chance="54.0431" /> <!-- Stem -->
-				<item id="1865" min="1" max="1" chance="27.0215" /> <!-- Varnish -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="29.7" />
-		</collision>
 	</npc>
 	<npc id="21127" level="21" type="L2Monster" name="Northern Goblin">
 		<parameters>
@@ -2556,25 +2527,16 @@
 				<clan>GOBLIN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="4" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="156" max="278" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9477999806404114">
-					<item id="25" min="1" max="1" chance="2.9004" /> <!-- Piece Bone Breastplate -->
-					<item id="1926" min="1" max="1" chance="35.8597" /> <!-- Piece Bone Breastplate Fragment -->
-					<item id="26" min="1" max="1" chance="1.8774" /> <!-- Bronze Breastplate -->
-					<item id="32" min="1" max="1" chance="4.6407" /> <!-- Piece Bone Gaiters -->
-					<item id="1928" min="1" max="1" chance="51.7132" /> <!-- Piece Bone Gaiters Fragment -->
-					<item id="34" min="1" max="1" chance="3.0086" /> <!-- Bronze Gaiters -->
-				</group>
-				<group chance="13.93910026550293">
-					<item id="1868" min="1" max="1" chance="72.4143" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="14.4829" /> <!-- Silver Nugget -->
-					<item id="2151" min="1" max="1" chance="10.0856" /> <!-- Recipe: Necklace of Devotion -->
-					<item id="6035" min="1" max="1" chance="3.0172" /> <!-- Magic Haste Potion -->
-				</group>
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion-->
+				<item id="1804" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (D-grade) -->
+				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2608,15 +2570,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1898" min="1" max="1" chance="3.5102" /> <!-- Blue Diamond Necklace Gem -->
-				<item id="1804" min="1" max="1" chance="1.3669" /> <!-- Recipe: Soulshot (D-Grade) -->
-				<item id="1926" min="1" max="1" chance="3.4517" /> <!-- Piece Bone Breastplate Fragment -->
+				<item id="36531" min="1" max="1" chance="5.800" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="4" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="21128" level="22" type="L2Monster" name="Spine Golem">
 		<parameters>
@@ -2669,23 +2625,14 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40.3" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="164" max="295" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.19619999825954437">
-					<item id="1102" min="1" max="1" chance="38.3948" /> <!-- Tunic of Magic -->
-					<item id="1105" min="1" max="1" chance="61.6052" /> <!-- Stockings of Magic -->
-				</group>
-				<group chance="20.29199981689453">
-					<item id="1869" min="1" max="1" chance="17.5712" /> <!-- Iron Ore -->
-					<item id="1870" min="1" max="1" chance="17.5712" /> <!-- Coal -->
-					<item id="1871" min="1" max="1" chance="17.5712" /> <!-- Charcoal -->
-					<item id="1872" min="1" max="1" chance="23.4283" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="23.4283" /> <!-- Animal Skin -->
-					<item id="2256" min="1" max="1" chance="0.4298" /> <!-- Recipe: Assassin Knife -->
-				</group>
+				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2719,15 +2666,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2151" min="1" max="1" chance="10.0871" /> <!-- Recipe: Necklace of Devotion -->
-				<item id="1927" min="1" max="1" chance="2.8889" /> <!-- Hard Leather Shirt Pattern -->
-				<item id="1869" min="1" max="1" chance="36.2125" /> <!-- Iron Ore -->
+				<item id="36531" min="1" max="1" chance="6.700" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="40.3" />
-		</collision>
 	</npc>
 	<npc id="21129" level="23" type="L2Monster" name="Kerope Werewolf Chief">
 		<parameters>
@@ -2775,23 +2716,16 @@
 				<clan>WEREWOLF</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="29.7" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="177" max="312" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.8862000107765198">
-					<item id="846" min="1" max="1" chance="10.4521" /> <!-- Coral Earring -->
-					<item id="909" min="1" max="1" chance="7.8391" /> <!-- Blue Diamond Necklace -->
-					<item id="1898" min="1" max="1" chance="66.0305" /> <!-- Blue Diamond Necklace Gem -->
-					<item id="878" min="1" max="1" chance="15.6783" /> <!-- Blue Coral Ring -->
-				</group>
-				<group chance="12.095800399780273">
-					<item id="1870" min="1" max="1" chance="47.0958" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="47.0958" /> <!-- Varnish -->
-					<item id="3032" min="1" max="1" chance="1.8838" /> <!-- Recipe: Spiritshot D -->
-					<item id="6035" min="1" max="1" chance="3.9246" /> <!-- Magic Haste Potion -->
-				</group>
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion-->
+				<item id="3032" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (D-grade) -->
+				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2825,15 +2759,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="38.5707" /> <!-- Coal -->
-				<item id="1928" min="1" max="1" chance="5.6185" /> <!-- Piece Bone Gaiters Fragment -->
-				<item id="2176" min="1" max="1" chance="18.4549" /> <!-- Recipe: Leather Boots -->
+				<item id="36531" min="1" max="1" chance="7.200" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="29.7" />
-		</collision>
 	</npc>
 	<npc id="21130" level="24" type="L2Monster" name="Northern Goblin Captain">
 		<parameters>
@@ -2882,16 +2810,16 @@
 				<clan>GOBLIN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="4" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="181" max="334" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.3947999477386475">
-					<item id="39" min="1" max="1" chance="7.0524" /> <!-- Boots -->
-					<item id="1930" min="1" max="1" chance="85.8951" /> <!-- Boot Lining -->
-					<item id="51" min="1" max="1" chance="7.0525" /> <!-- Bracer -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="734" min="1" max="1" chance="0.75" /> <!-- Wind Walk Potion -->
+				<item id="5273" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
+				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
 				<group chance="11.271200180053711">
 					<item id="1871" min="1" max="1" chance="53.3808" /> <!-- Charcoal -->
 					<item id="1866" min="1" max="1" chance="35.5872" /> <!-- Suede -->
@@ -2931,15 +2859,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1929" min="1" max="1" chance="5.2565" /> <!-- Hard Leather Gaiters Material -->
-				<item id="2177" min="1" max="1" chance="13.0152" /> <!-- Recipe: Bone Helmet -->
-				<item id="1930" min="1" max="1" chance="10.4455" /> <!-- Boot Lining -->
+				<item id="36531" min="1" max="1" chance="7.500" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="4" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="21131" level="25" type="L2Monster" name="Reinforced Spine Golem">
 		<parameters>
@@ -2992,23 +2914,14 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40.3" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="185" max="346" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4042999744415283">
-					<item id="626" min="1" max="1" chance="6.6164" /> <!-- Bronze Shield -->
-					<item id="45" min="1" max="1" chance="4.6397" /> <!-- Bone Helmet -->
-					<item id="1932" min="1" max="1" chance="88.7439" /> <!-- Bone Helmet Design -->
-				</group>
-				<group chance="13.858599662780762">
-					<item id="1872" min="1" max="1" chance="45.3229" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="45.3229" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.5323" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2661" /> <!-- Stone of Purity -->
-					<item id="2180" min="1" max="1" chance="2.5558" /> <!-- Recipe: Scale Mail -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3042,15 +2955,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1872" min="1" max="1" chance="55.9583" /> <!-- Animal Bone -->
-				<item id="1867" min="1" max="1" chance="55.9583" /> <!-- Animal Skin -->
-				<item id="1899" min="1" max="1" chance="6.5576" /> <!-- Necklace of Devotion Chain -->
+				<item id="36531" min="1" max="1" chance="7.400" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="40.3" />
-		</collision>
 	</npc>
 	<npc id="21132" level="24" type="L2Monster" name="Underground Kobold">
 		<parameters>
