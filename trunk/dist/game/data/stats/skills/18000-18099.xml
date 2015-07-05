@@ -185,12 +185,32 @@
 		<set name="reuseDelay" val="-1000" />
 	</skill>
 	<skill id="18024" levels="24" name="Venir's Talisman">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- MEN + 1. -->
-		<table name="#icons"> icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 </table>
+		<!--<table name="#icons"> icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 </table> -->
 		<set name="icon" val="#icons" />
+		<table name="#icons">icon.etc_allstat_talisman_i00 icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i00  icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i01 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02 icon.etc_allstat_talisman_i02</table>
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="3" />
+		<table name="#statAdd1"> 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 </table>
+		<table name="#statAdd2"> 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 </table>
+		<table name="#statAdd3"> 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 </table>
+		<table name="#statAdd4"> 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 </table>
+		<table name="#statAdd5"> 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 </table>
+		<table name="#statAdd6"> 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 </table>
+		<table name="#statAdd7"> 0 0 0 0 0 2 2 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 </table>
+		<table name="#statAdd8"> 0 0 0 0 0 2 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 </table>
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="#statAdd1" />
+				<add stat="DEX" val="#statAdd2" />
+				<add stat="CON" val="#statAdd3" />
+				<add stat="INT" val="#statAdd4" />
+				<add stat="WIT" val="#statAdd5" />
+				<add stat="MEN" val="#statAdd6" />
+				<add stat="CHA" val="#statAdd7" />
+				<add stat="LUC" val="#statAdd8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18048" levels="1" name="Hair Accessory (LUC)">
 		<!-- AUTO GENERATED SKILL -->
