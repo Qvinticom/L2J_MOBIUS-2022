@@ -69,61 +69,127 @@
 	<item id="38012" name="Specter Shaper Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35296,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35420,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 	</item>
 	<item id="38013" name="Specter Cutter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35297,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35421,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 	</item>
 	<item id="38014" name="Specter Slasher Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35298,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35422,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 	</item>
 	<item id="38015" name="Specter Avenger Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35299,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35423,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 	</item>
 	<item id="38016" name="Specter Fighter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35300,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35424,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 	</item>
 	<item id="38017" name="Specter Stormer Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35301,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35425,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 	</item>
 	<item id="38018" name="Specter Thrower Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35302,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35426,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 		<set name="commissionItemType" val="BOW" />
 	</item>
 	<item id="38019" name="Specter Shooter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35303,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35427,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 	</item>
 	<item id="38020" name="Specter Buster Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35304,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35428,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 	</item>
 	<item id="38021" name="Specter Caster Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35305,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35429,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 	</item>
 	<item id="38022" name="Specter Retributer Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35306,10,10,100;17371,3768,3768,100;19440,69,69,100;36564,16,16,100;36524,25,25,100;36544,25,25,100;35430,1,1,100;36549,22,22,100" /> <!-- Item Craft Specter Pack -->
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 	</item>
 	<item id="38023" name="Seraph Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
@@ -242,57 +308,123 @@
 	<item id="38043" name="Amaranthine Shaper Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35327,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35451,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38044" name="Amaranthine Cutter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35328,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35452,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38045" name="Amaranthine Slasher Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35329,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35453,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38046" name="Amaranthine Avenger Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35330,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35454,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38047" name="Amaranthine Fighter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35331,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35455,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
-	<item id="38048" name="Amaranthine Stormer Crafting Pack" additionalName="" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Stormer. -->
+	<item id="38048" name="Amaranthine Stormer Crafting Pack"  additionalName="" type="EtcItem">
+		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Stormer.. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35332,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35456,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38049" name="Amaranthine Thrower Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35333,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35457,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38050" name="Amaranthine Shooter Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35334,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35458,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38051" name="Amaranthine Buster Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35335,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35459,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38052" name="Amaranthine Caster Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35336,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35460,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38053" name="Amaranthine Retributer Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35337,10,10,100;17371,8302,8302,100;19440,152,152,100;36564,35,35,100;36524,117,117,100;36544,55,55,100;35461,1,1,100;36549,47,47,100" /> <!-- Item Craft Amaranthine Pack -->
 	</item>
 	<item id="38054" name="Eternal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Helmet. -->
