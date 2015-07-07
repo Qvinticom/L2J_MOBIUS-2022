@@ -115,13 +115,31 @@
 		<!-- When equipped, M. Def. + 552, MP Recovery by 3, Dark Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.lilith_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="item_skill" val="13569-1" />
 	</item>
 	<item id="37715" name="Talisman - Anakim" additionalName="" type="Armor">
 		<!-- When equipped, P. Def. + 971, HP Recovery by 6, Dark Resistance and Holy Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.anakim_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="item_skill" val="13569-2" />
 	</item>
 	<item id="37716" name="Seven Signs' Energy" additionalName="" type="EtcItem">
 		<!-- Bring Talisman - Lilith and Talisman - Anakim to the Seed Talisman Manager to receive a Talisman - Seven Signs. -->
@@ -132,7 +150,16 @@
 		<!-- When equipped, M. Def. + 736, P. Def. by 1126, MP Recovery by 4, HP Recovery by 8, Attribute Resistance by 10, and Damage Reflect Resistance by 14. When equipped with Talisman - Longing, Attribute Attack increases by 50 and all weapon resistance increases by 3%. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.sevensign_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
+        <set name="item_skill" val="13569-3" />
 	</item>
 	<item id="37718" name="Shiny Elemental Shirt" additionalName="" type="Armor">
 		<!-- Sparkly magic shirt containing Einhasad's energy.\nIt can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed . -->

@@ -671,13 +671,39 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="13569" levels="3" name="Talisman - Lilith">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increase M. Def. + 552, MP recovery + 3, dark resistance + 10, and damage reflect resistance + 6. -->
+		<!-- Level 1 : Talisman - Lilith  -->
+		<!-- Level 2 : Talisman - Anakim -->
+		<!-- Level 3 : Talisman - Seven Signs -->
 		<table name="#icons"> icon.lilith_talisman_i00 icon.anakim_talisman_i00 icon.sevensign_talisman_i00 </table>
+		<table name="#mp"> 3 0 4 </table>
+		<table name="#hp"> 0 6 8 </table>
+		<table name="#reflectDamageRes"> 6 6 14 </table>
+		<table name="#pDef"> 0 971 1126 </table>
+		<table name="#mDef"> 552 0 736</table>
+		<table name="#fireRes"> 0 0 10</table>
+		<table name="#windRes"> 0 0 10</table>
+		<table name="#waterRes"> 0 0 10</table>
+		<table name="#earthRes"> 0 0 10</table>
+		<table name="#holyRes"> 0 10 10</table>
 		<set name="icon" val="#icons" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+			    <add stat="regMp" val="#mp" />
+			    <add stat="regHp" val="#hp" />
+				<add stat="reflectDamageRes" val="#reflectDamageRes" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="mDef" val="#mDef" />
+				<add stat="fireRes" val="#fireRes" />
+				<add stat="windRes" val="#windRes" />
+				<add stat="waterRes" val="#waterRes" />
+				<add stat="earthRes" val="#earthRes" />
+				<add stat="holyRes" val="#holyRes" />
+				<add stat="darkRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13570" levels="1" name="Hero's Weapon: Dagger">
 		<!-- AUTO GENERATED SKILL -->
