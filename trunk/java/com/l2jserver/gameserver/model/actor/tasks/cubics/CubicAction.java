@@ -98,7 +98,7 @@ public final class CubicAction implements Runnable
 			
 			// Smart Cubic debuff cancel is 100%
 			boolean useCubicCure = false;
-			if ((_cubic.getId() >= L2CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= L2CubicInstance.SMART_CUBIC_SPECTRALMASTER))
+			if (((_cubic.getId() >= L2CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= L2CubicInstance.SMART_CUBIC_SPECTRALMASTER)) || (_cubic.getId() == L2CubicInstance.AVENGING_CUBIC))
 			{
 				for (BuffInfo info : _cubic.getOwner().getEffectList().getDebuffs())
 				{
@@ -113,11 +113,20 @@ public final class CubicAction implements Runnable
 			if (useCubicCure)
 			{
 				// Smart Cubic debuff cancel is needed, no other skill is used in this activation period
-				MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
-				_cubic.getOwner().broadcastPacket(msu);
-				
-				// The cubic has done an action, increase the current count
-				_currentCount.incrementAndGet();
+				if ((_cubic.getId() >= L2CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= L2CubicInstance.SMART_CUBIC_SPECTRALMASTER))
+				{
+					MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
+					_cubic.getOwner().broadcastPacket(msu);
+					// The cubic has done an action, increase the current count
+					_currentCount.incrementAndGet();
+				}
+				else
+				{
+					MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_AVENGING_CUBIC_CLEANCE, 1, 0, 0);
+					_cubic.getOwner().broadcastPacket(msu);
+					// The cubic has done an action, increase the current count
+					_currentCount.incrementAndGet();
+				}
 			}
 			else if (Rnd.get(1, 100) < _chance)
 			{

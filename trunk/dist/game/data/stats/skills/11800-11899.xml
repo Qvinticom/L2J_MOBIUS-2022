@@ -65,13 +65,29 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11807" levels="5" name="Miracle of Fairy">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill11807" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
+	<skill id="11807" levels="5" name="Miracle of Fairy" enchantGroup1="10">
+		<table name="#amount"> 500 520 540 560 580 </table> <!-- Need verify -->
+		<table name="#effectPoints"> 700 800 900 1000 1200 </table>
+		<table name="#magicLvl"> 85 88 91 94 97 </table>
+		<table name="#enchAmount"> 600 610 620 630 640 650 660 670 680 690 </table>
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="5000" />
+		<enchant1 name="magicLvl" val="99" />
+		<for>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Heal">
+				<param power="#enchAmount" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="11808" levels="2" name="Elegance of Light">
 		<!-- AUTO GENERATED SKILL -->

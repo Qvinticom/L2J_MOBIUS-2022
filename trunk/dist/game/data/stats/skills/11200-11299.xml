@@ -847,17 +847,10 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 2 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 3 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 4 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 5 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 6 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 7 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
-	<!-- Level 8 : Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
 	<skill id="11268" levels="8" name="Summon Avenging Cubic">
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
 		<table name="#mpConsume"> 70 72 75 78 81 84 87 91 </table>
+		<table name="#cubicPower"> 2106 2306 2506 2706 2906 3106 3306 3506 </table>
 		<set name="icon" val="icon.skill11268" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -867,6 +860,11 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="15" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#cubicPower" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Consumes your MP to restore servitors' HP by 1308. -->
 	<!-- Level 2 : Consumes your MP to restore servitors' HP by 1336. -->
@@ -1462,32 +1460,56 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="11292" levels="8" name="Cubic Cleanse">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Cancels debuffs on you. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<set name="effectPoint" val="408" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11293" levels="8" name="Cubic Cancellation">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Cancels the enemy's buff. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<set name="effectPoint" val="-700" />
 		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11294" levels="8" name="Cubic Root">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Temporarily stops the enemy from moving. -->
-		<set name="icon" val="icon.skill1201" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="isMagic" val="1" />
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="5" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="effectPoint" val="-700" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="HOLD" />
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : INT + 2. Max HP + 4151 and P. Def. + 1155 when equipped with Light Armor. -->
 	<!-- Level 101 : INT + 2. Max HP + 4151 and P. Def. + 1188 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 1 Power | Increases the effect.) -->

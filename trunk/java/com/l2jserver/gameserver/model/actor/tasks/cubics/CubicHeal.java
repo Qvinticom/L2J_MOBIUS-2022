@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.actor.tasks.cubics;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.util.Rnd;
 
 /**
  * Cubic heal task.
@@ -34,6 +36,7 @@ public class CubicHeal implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(CubicHeal.class.getName());
 	private final L2CubicInstance _cubic;
+	private final AtomicInteger _currentCount = new AtomicInteger();
 	
 	public CubicHeal(L2CubicInstance cubic)
 	{
@@ -57,23 +60,104 @@ public class CubicHeal implements Runnable
 			return;
 		}
 		
+		// The cubic has already reached its limit and it will stay idle until its duration ends.
+		if ((_cubic.getCubicMaxCount() > -1) && (_currentCount.get() >= _cubic.getCubicMaxCount()))
+		{
+			_cubic.stopAction();
+			return;
+		}
+		
 		try
 		{
-			final Skill skill = _cubic.getSkills().stream().filter(s -> s.getId() == L2CubicInstance.SKILL_CUBIC_HEAL).findFirst().orElse(null);
-			if (skill == null)
+			Skill skill = null;
+			// Base chance 10% to use great skill
+			double chance = Rnd.get();
+			for (Skill sk : _cubic.getSkills())
 			{
-				return;
+				switch (sk.getId())
+				{
+					case L2CubicInstance.SKILL_CUBIC_HEAL:
+					case L2CubicInstance.SKILL_CUBIC_HEALER:
+						skill = sk;
+						break;
+					case L2CubicInstance.SKILL_BUFF_CUBIC_HEAL:
+						if (chance > 0.6)
+						{
+							skill = sk;
+						}
+						break;
+					case L2CubicInstance.SKILL_MIND_CUBIC_RECHARGE:
+						if ((chance > 0.2) && (chance <= 0.6))
+						{
+							skill = sk;
+						}
+						break;
+					case L2CubicInstance.SKILL_BUFF_CUBIC_GREAT_HEAL:
+						if ((chance > 0.1) && (chance <= 0.2))
+						{
+							skill = sk;
+						}
+						break;
+					case L2CubicInstance.SKILL_MIND_CUBIC_GREAT_RECHARGE:
+						if (chance <= 0.1)
+						{
+							skill = sk;
+						}
+						break;
+				}
+				if (skill != null)
+				{
+					break;
+				}
 			}
 			
-			_cubic.cubicTargetForHeal();
-			final L2Character target = _cubic.getTarget();
-			if ((target != null) && !target.isDead())
+			if (skill != null)
 			{
-				if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
+				switch (skill.getId())
 				{
-					skill.activateSkill(_cubic, target);
-					
-					_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
+					case L2CubicInstance.SKILL_CUBIC_HEAL:
+						_cubic.cubicTargetForHeal();
+						final L2Character target = _cubic.getTarget();
+						if ((target != null) && !target.isDead())
+						{
+							if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
+							{
+								skill.activateSkill(_cubic.getOwner(), target);
+								_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
+								// The cubic has done an action, increase the current count
+								_currentCount.incrementAndGet();
+							}
+						}
+						break;
+					case L2CubicInstance.SKILL_MIND_CUBIC_RECHARGE:
+					case L2CubicInstance.SKILL_MIND_CUBIC_GREAT_RECHARGE:
+						final L2Character owner = _cubic.getOwner();
+						if ((owner != null) && !owner.isDead())
+						{
+							if ((owner.getMaxMp() - owner.getCurrentMp()) > skill.getPower())
+							{
+								skill.activateSkill(owner, owner);
+								owner.broadcastPacket(new MagicSkillUse(owner, owner, skill.getId(), skill.getLevel(), 0, 0));
+								// The cubic has done an action, increase the current count
+								_currentCount.incrementAndGet();
+							}
+						}
+						break;
+					case L2CubicInstance.SKILL_CUBIC_HEALER:
+					case L2CubicInstance.SKILL_BUFF_CUBIC_HEAL:
+					case L2CubicInstance.SKILL_BUFF_CUBIC_GREAT_HEAL:
+						final L2Character _owner = _cubic.getOwner();
+						if ((_owner != null) && !_owner.isDead())
+						{
+							if ((_owner.getMaxHp() - _owner.getCurrentHp()) > skill.getPower())
+							{
+								skill.activateSkill(_owner, _owner);
+								_owner.broadcastPacket(new MagicSkillUse(_owner, _owner, skill.getId(), skill.getLevel(), 0, 0));
+								// The cubic has done an action, increase the current count
+								_currentCount.incrementAndGet();
+							}
+						}
+						break;
 				}
 			}
 		}

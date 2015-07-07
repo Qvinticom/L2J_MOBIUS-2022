@@ -144,44 +144,32 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
-	<!-- Level 2 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
-	<!-- Level 3 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
-	<!-- Level 4 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
-	<!-- Level 5 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
-	<!-- Level 101 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
-	<!-- Level 201 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 6 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 1 Time | Increases the effect's duration.) -->
-	<!-- Level 202 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 12 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 2 Time | Increases the effect's duration.) -->
-	<!-- Level 203 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 18 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 3 Time | Increases the effect's duration.) -->
-	<!-- Level 204 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 24 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 4 Time | Increases the effect's duration.) -->
-	<!-- Level 205 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 30 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 5 Time | Increases the effect's duration.) -->
-	<!-- Level 206 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 36 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 6 Time | Increases the effect's duration.) -->
-	<!-- Level 207 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 42 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 7 Time | Increases the effect's duration.) -->
-	<!-- Level 208 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 48 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 8 Time | Increases the effect's duration.) -->
-	<!-- Level 209 : Summons a fairy that follows and periodically heals the selected party member for 1 minute and 54 seconds. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 9 Time | Increases the effect's duration.) -->
-	<!-- Level 210 : Summons a fairy that follows and periodically heals the selected party member for 2 minutes. Has a chance of recovering HP when attacked. Enchant Time: Increases Duration. (+ 10 Time | Increases the effect's duration.) -->
-	<skill id="11754" levels="5" name="Fairy of Life">
+	<skill id="11754" levels="5" name="Fairy of Life" enchantGroup1="10" enchantGroup2="10">
 		<table name="#magicLvl"> 85 88 91 94 97 </table>
 		<table name="#mpConsume"> 43 46 48 52 55 </table>
+		<table name="#ench2Time"> 66 72 78 84 90 96 102 108 114 120 </table>
 		<set name="icon" val="icon.skill11754" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY_MEMBER" />
+		<enchant1 name="magicLvl" val="99" />
+		<enchant2 name="magicLvl" val="99" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="17" cubicDelay="10" cubicDuration="60" cubicMaxCount="30" />
+			</effect>
+		</for>
+		<enchant2for>
+			<effect name="SummonCubic">
+				<param cubicId="17" cubicDelay="10" cubicDuration="#ench2Time" cubicMaxCount="30" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="11755" levels="8" name="Radiant Heal" enchantGroup1="10">
 		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->

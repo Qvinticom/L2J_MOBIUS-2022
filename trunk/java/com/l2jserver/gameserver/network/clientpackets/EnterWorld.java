@@ -505,6 +505,9 @@ public class EnterWorld extends L2GameClientPacket
 			}
 		}
 		
+		// Temp Fix
+		activeChar.broadcastUserInfo();
+		
 		activeChar.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		
 		AnnouncementsTable.getInstance().showAnnouncements(activeChar);

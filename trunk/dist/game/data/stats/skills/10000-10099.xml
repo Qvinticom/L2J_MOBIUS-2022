@@ -1568,7 +1568,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="10041" levels="4" name="Summon Cubic of Despair">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- NOT USED -->
 		<set name="icon" val="icon.skill0010" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
@@ -1578,7 +1578,7 @@
 		<set name="reuseDelay" val="30000" />
 	</skill>
 	<skill id="10042" levels="3" name="Summon Cubic of Life">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- NOT USED -->
 		<set name="icon" val="icon.skill0010" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
@@ -1595,16 +1595,13 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="SUMMON" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
-		<set name="activationchance" val="40" />
-		<set name="activationtime" val="13" />
-		<set name="maxcount" val="30" />
-		<set name="cubicPower" val="2106" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="16" />
-		<set name="summonTotalLifeTime" val="900000" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="16" cubicDelay="13" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10044" levels="1" name="Superior Elemental Mastery">
 		<!-- STR + 2 and Attribute Resistance + 20. -->
@@ -1833,8 +1830,7 @@
 		</for>
 	</skill>
 	<skill id="10055" levels="1" name="Cubic Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Momentarily decreases P. Atk. Effect 3. -->
+		<!-- NOT USED -->
 		<set name="icon" val="icon.skill1164" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
@@ -1848,17 +1844,18 @@
 		<table name="#abnormalLvl">1 2 3 4 5 6 7 8</table>
 		<table name="#magicLvl">85 86 88 90 92 94 96 98</table>
 		<table name="#HpHealPercent">0 0 0 0 0 3 6 10</table>
-		<set name="castRange" val="600" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalLvl" val="#abnormalLvl" />
-		<set name="effectRange" val="1100" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="isMagic" val="1" />
 		<for>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
 			<effect name="HealPercent" noicon="1" val="#HpHealPercent" />
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<set stat="debuffImmunity" val="1" />
 				<add stat="pDef" val="#pDef" />
 				<add stat="mDef" val="#mDef" />
@@ -1866,8 +1863,7 @@
 		</for>
 	</skill>
 	<skill id="10057" levels="1" name="Cubic Curse">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicted with poison and HP is momentarily decreased. Effect 5. -->
+		<!-- NOT USED -->
 		<set name="icon" val="icon.skill1168" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
@@ -2158,25 +2154,23 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
-	<!-- Level 2 : Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
-	<!-- Level 3 : Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
-	<!-- Level 4 : Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
 	<skill id="10073" levels="4" name="Summon Buff Cubic">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skill10073" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="96" />
+		<table name="#magicLvl">85 90 95 99</table>
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
+		<set name="mpConsume" val="96" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="18" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10074" levels="4" name="Summon Mind Cubic">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons the Mind Cubic. The Sigel Mind Cubic uses magic to restore the owner's MP. -->
+		<!-- NOT USED -->
 		<set name="icon" val="icon.skill10074" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
@@ -2244,37 +2238,37 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="4" />
 	</skill>
-	<!-- Level 1 : Summons a Phantom Cubic. It uses magic to decrease the enemy's physical and magic Spd. -->
-	<!-- Level 2 : Summons a Phantom Cubic. It uses magic to decrease the enemy's physical and magic Spd. -->
-	<!-- Level 3 : Summons a Phantom Cubic. It uses magic to decrease the enemy's physical and magic Spd. -->
-	<!-- Level 4 : Summons a Phantom Cubic. It uses magic to decrease the enemy's physical and magic Spd. -->
 	<skill id="10079" levels="4" name="Summon Phantom Cubic">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skill10079" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="96" />
+		<table name="#magicLvl">85 90 95 99</table>
+		<table name="#cubicPower"> 2106 2506 2906 3506 </table> <!-- Need verify -->
 		<set name="hitTime" val="3500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="96" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="20" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#cubicPower" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Level 1 : Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. -->
-	<!-- Level 2 : Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. -->
-	<!-- Level 3 : Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. -->
-	<!-- Level 4 : Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. -->
 	<skill id="10080" levels="4" name="Summon Hex Cubic">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skill10080" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="96" />
+		<table name="#magicLvl">85 90 95 99</table>
+		<table name="#cubicPower"> 2106 2506 2906 3506 </table> <!-- Need verify -->
 		<set name="hitTime" val="3500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="96" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="21" cubicDelay="3" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#cubicPower" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10081" levels="4" name="Lightning Root">
 		<!-- AUTO GENERATED SKILL -->
@@ -2291,45 +2285,99 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="10082" levels="4" name="Strong Cubic Heal">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#amount"> 600 650 700 750 </table> <!-- Need verify -->
+		<table name="#effectPoints"> 900 1000 1100 1200 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
+		<for>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10083" levels="4" name="Basic Cubic Heal">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#amount"> 400 450 500 600 </table> <!-- Need verify -->
+		<table name="#effectPoints"> 700 800 900 1000 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
+		<for>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10084" levels="4" name="Basic Cubic Mind">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0191" />
+		<table name="#amount"> 140 150 160 170 </table> <!-- Need verify -->
+		<table name="#effectPoints"> 900 1000 1100 1200 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
+		<for>
+			<effect name="ManaHeal">
+				<param power="#amount" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10085" levels="4" name="Cubic Falter">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 sec., Atk. Spd./ Casting Spd. - 5%. -->
-		<set name="icon" val="icon.skill1206" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<table name="#rate"> 0.95 0.93 0.9 0.85 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="5" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="effectPoint" val="-700" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd" val="#rate" />
+				<mul stat="mAtkSpd" val="#rate" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10086" levels="4" name="Cubic Hex">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 5 sec., P. Def./ M. Def. - 5%. -->
-		<set name="icon" val="icon.skill0122" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<table name="#rate"> 0.95 0.93 0.9 0.85 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="5" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="effectPoint" val="-700" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#rate" />
+				<mul stat="mDef" val="#rate" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10087" levels="4" name="Blood Panther Roar">
 		<!-- AUTO GENERATED SKILL -->
@@ -2359,11 +2407,21 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="10089" levels="4" name="Strong Cubic Mind">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0191" />
+		<table name="#amount"> 200 250 300 350 </table> <!-- Need verify -->
+		<table name="#effectPoints"> 900 1000 1100 1200 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
+		<for>
+			<effect name="ManaHeal">
+				<param power="#amount" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10090" levels="4" name="Provoking Shackle">
 		<!-- AUTO GENERATED SKILL -->
@@ -2388,29 +2446,39 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Summons a Guardian Cubic. The Guardian Cubic uses magic to increase its owner's Shield Defense and Spd. -->
-	<!-- Level 2 : Summons a Guardian Cubic. The Guardian Cubic uses magic to increase its owner's Shield Defense and Spd. -->
-	<!-- Level 3 : Summons a Guardian Cubic. The Guardian Cubic uses magic to increase its owner's Shield Defense and Spd. -->
-	<!-- Level 4 : Summons a Guardian Cubic. The Guardian Cubic uses magic to increase its owner's Shield Defense and Spd. -->
 	<skill id="10092" levels="4" name="Summon Guardian Cubic">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skll10093" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="96" />
+		<table name="#magicLvl">85 90 95 99</table>
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
+		<set name="mpConsume" val="96" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonCubic">
+				<param cubicId="22" cubicDelay="13" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10093" levels="4" name="Guardian Cubic">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Shield P. Def. and Shield Defense. Spd. + 13. -->
+		<table name="#rate"> 1.1 1.2 1.3 1.4 </table>
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skll10093" />
+		<set name="abnormalTime" val="5" />
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect name="Buff">
+				<mul stat="rShld" val="#rate" />
+				<mul stat="sDef" val="#rate" />
+				<add stat="runSpd" val="13" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with 11997 Power. Paralyzes for 5 seconds. Consumes 1 Soulstone. -->
 	<!-- Level 2 : Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with 14177 Power. Paralyzes for 5 seconds. Consumes 2 Soulstones. -->

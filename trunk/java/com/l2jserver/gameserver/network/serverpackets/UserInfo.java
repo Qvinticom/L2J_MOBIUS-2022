@@ -86,6 +86,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		{
 			addComponentType(UserInfoType.values());
 		}
+		// Visual Fix
+		_activeChar.sendPacket(new ExUserInfoEquipSlot(_activeChar));
+		_activeChar.sendPacket(new ExUserInfoCubic(_activeChar));
+		_activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(_activeChar));
 	}
 	
 	@Override
