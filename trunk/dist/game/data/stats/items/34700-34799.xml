@@ -106,7 +106,16 @@
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<set name="price" val="200000" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="enchant_enabled" val="2" />
+		<for>
+			<mul stat="mAtk" val="1.1" />
+		</for>
 	</item>
 	<item id="34718" name="Refined Devil Horn" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
@@ -731,50 +740,114 @@
 	<item id="34782" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2022-1" />
 	</item>
 	<item id="34783" name="Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9186-1" />
 	</item>
 	<item id="34784" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2021-1" />
 	</item>
 	<item id="34785" name="Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9185-1" />
 	</item>
 	<item id="34786" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Starting at + 4, HP increases according to the enchanting and the enchant value. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2208-1" />
 	</item>
 	<item id="34787" name="Blessed Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. Greatly increased starting at + 4. Can be enhanced safely to + 3. When enhanced + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9196-1" />
 	</item>
 	<item id="34788" name="Blessed Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. and M. Atk. bonus double. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2026-1" />
 	</item>
 	<item id="34789" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, and two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk. and M. Atk. greatly increases starting at + 4. For blessed weapons, all stats increases more than normal weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9187-1" />
 	</item>
 	<item id="34790" name="Fire Stone" additionalName="Event" type="EtcItem">
 		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->

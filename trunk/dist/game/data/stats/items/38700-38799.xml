@@ -802,26 +802,46 @@
 	<item id="38757" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Success rate + 20% for enchanting R-grade weapons with Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_wp_stone_i02" />
+		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="38758" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Success rate + 30% for enchanting R-grade armor with Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. One-piece armor must be enchanted between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_amr_stone_i02" />
+		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="38759" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)" additionalName="" type="EtcItem">
 		<!-- Success rate + 20% for enchanting S-grade weapons with Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_wp_stone_i01" />
+		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="38760" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)" additionalName="" type="EtcItem">
 		<!-- Success rate + 30% for enchanting S-grade armor with Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. One-piece armor must be enchanted between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_amr_stone_i01" />
+		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="38761" name="Energy of Destruction 3-unit Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x 3. -->

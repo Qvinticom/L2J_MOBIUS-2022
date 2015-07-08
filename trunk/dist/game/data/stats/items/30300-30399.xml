@@ -937,14 +937,28 @@
 	<item id="30381" name="Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (R-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="30382" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="30383" name="Mentor Ring" additionalName="" type="Armor">
 		<!-- Ring received by an academy member after training with his sponsor. Produces the effect of MP + 22. -->

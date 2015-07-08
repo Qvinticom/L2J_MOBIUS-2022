@@ -330,8 +330,16 @@
 	<item id="34940" name="Scroll: Enchant Hair Accessory" additionalName="Event" type="EtcItem">
 		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_HR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9234-1" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="34941" name="Life Stone: Hair Accessory" additionalName="Event" type="EtcItem">

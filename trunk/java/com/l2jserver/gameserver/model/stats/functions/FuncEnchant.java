@@ -75,7 +75,21 @@ public class FuncEnchant extends AbstractFunction
 		
 		if ((getStat() == Stats.MAGIC_DEFENCE) || (getStat() == Stats.POWER_DEFENCE))
 		{
-			return value + enchant + (3 * overenchant);
+			switch (item.getItem().getCrystalTypePlus())
+			{
+				case R:
+					value += (2 * enchant) + (4 * overenchant);
+					break;
+				case S:
+				case A:
+				case B:
+				case C:
+				case D:
+				case NONE:
+					value += enchant + (3 * overenchant);
+					break;
+			}
+			return value;
 		}
 		
 		if (getStat() == Stats.MAGIC_ATTACK)

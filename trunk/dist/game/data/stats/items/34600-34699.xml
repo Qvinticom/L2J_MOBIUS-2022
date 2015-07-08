@@ -186,8 +186,15 @@
 	<item id="34627" name="Scroll: Enchant Elemental Shirt" additionalName="" type="EtcItem">
 		<!-- Enchant scroll that is exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. P. Def. + 3 starting from +4. Can be safely enchanted to +3 and up to a maximum of +10. From +4, basic abilities (CON, MEN, STR, INT, DEX, WT) are raised n stages. Depending on the shirt type, various additional options can be applied from +4 to +10. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="9396-1" />
 	</item>
 	<item id="34628" name="Einhasad's Energy" additionalName="" type="EtcItem">
 		<!-- Vitality is replenished for 1 hr. -->

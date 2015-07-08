@@ -31,7 +31,14 @@ public final class EnchantSupportItem extends AbstractEnchantItem
 	public EnchantSupportItem(StatsSet set)
 	{
 		super(set);
-		_isWeapon = getItem().getItemType() == EtcItemType.SCRL_INC_ENCHANT_PROP_WP;
+		if ((getItem().getItemType() == EtcItemType.SCRL_INC_ENCHANT_PROP_WP) || (getItem().getItemType() == EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_WP) || (getItem().getItemType() == EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_WP) || (getItem().getItemType() == EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP) || (getItem().getItemType() == EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_WP) || (getItem().getItemType() == EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP) || (getItem().getItemType() == EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP))
+		{
+			_isWeapon = true;
+		}
+		else
+		{
+			_isWeapon = false;
+		}
 	}
 	
 	@Override

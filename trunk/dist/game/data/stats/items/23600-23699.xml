@@ -3,8 +3,15 @@
 	<item id="23600" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="ARMOR_ENCHANT_STONE" />
 	</item>
 	<item id="23601" name="Player Commendation - Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift given after accumulating 1-hr worth of PC Points. Double-click to use. -->
@@ -285,14 +292,26 @@
 	<item id="23646" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="23647" name="High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="23648" name="Knighthood's Fortune Box" additionalName="" type="EtcItem">
 		<!-- Wrapped Pack containing supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->

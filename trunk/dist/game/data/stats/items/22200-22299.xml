@@ -217,6 +217,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22359-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="22222" type="EtcItem" name="Scroll: Enchant Armor of Destruction (S-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Def. by 1 for S-Grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
@@ -234,6 +235,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22360-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="22223" type="EtcItem" name="Scroll: Enchant Weapon of Destruction (A-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Atk. by 4 for A-Grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dualswords, and hand-to-hand combat weapons. Increases P. Atk. by 8 for bows. Increases P. Atk. by 3 for all weapons. From +4, P. Atk. and M. Atk. increase by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are +15 or above. -->
@@ -251,6 +253,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22361-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="22224" type="EtcItem" name="Scroll: Enchant Armor of Destruction (A-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Def. by 1 for A-Grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
@@ -268,6 +271,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22362-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="22225" type="EtcItem" name="Scroll: Enchant Weapon of Destruction (B-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Atk. by 3 for B-Grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, dualswords, and hand-to-hand combat weapons. Increases P. Atk. by 6 for bows. Increases P. Atk. by 3 for all weapons. From +4, P. Atk. and M. Atk. increase by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are +15 or above. -->
@@ -285,6 +289,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22363-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="22226" type="EtcItem" name="Scroll: Enchant Armor of Destruction (B-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Def. by 1 for B-Grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
@@ -302,6 +307,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22364-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="22227" type="EtcItem" name="Scroll: Enchant Weapon of Destruction (C-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Atk. by 3 for C-Grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, dualswords, and hand-to-hand combat weapons. Increases P. Atk. by 6 for bows. Increases P. Atk. by 3 for all weapons. From +4, P. Atk. and M. Atk. increase by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are +15 or above. -->
@@ -319,6 +325,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22365-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="22228" type="EtcItem" name="Scroll: Enchant Armor of Destruction (C-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Def. by 1 for C-Grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
@@ -336,6 +343,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22366-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="22229" type="EtcItem" name="Scroll: Enchant Weapon of Destruction (D-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Atk. by 2 for D-Grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 2 for two-handed swords, two-handed blunts, dualswords, and hand-to-hand combat weapons. Increases P. Atk. by 4 for bows. Increases P. Atk. by 2 for all weapons. From +4, P. Atk. and M. Atk. increase by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are +15 or above. -->
@@ -353,6 +361,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22367-1" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 	</item>
 	<item id="22230" type="EtcItem" name="Scroll: Enchant Armor of Destruction (D-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Def. by 1 for D-Grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
@@ -370,7 +379,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22368-1" />
-
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 	</item>
 	<item id="22231" type="EtcItem" name="Mysterious Blessed Spiritshot (S-grade)">
 		<!-- Description: High-level spirit light is infused into a weapon, instantly and greatly increasing its magic power. Can be used on S-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->

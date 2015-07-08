@@ -46,14 +46,30 @@
 	<item id="36008" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="36009" name="High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="36010" name="Heavenly P. Atk. Cookie" additionalName="Event" type="EtcItem">
 		<!-- For 1 hour, increases Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
@@ -107,14 +123,28 @@
 	<item id="36019" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="36020" name="High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="36021" name="Returning Hero's Potion Pack" additionalName="" type="EtcItem">
 		<!-- Gift box that contains 30 Returning Hero's Health Potions, 1 Returning Hero's Vitality Replenishing Juice 3-unit Pack, and 6 Heavenly Cocktails. -->

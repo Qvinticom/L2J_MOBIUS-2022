@@ -46,11 +46,29 @@ public abstract class AbstractEnchantItem
 		EtcItemType.SCRL_ENCHANT_WP,
 		EtcItemType.SCRL_INC_ENCHANT_PROP_AM,
 		EtcItemType.SCRL_INC_ENCHANT_PROP_WP,
+		EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_AM,
+		EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_WP,
+		EtcItemType.GIANT_SCRL_ENCHANT_AM,
+		EtcItemType.GIANT_SCRL_ENCHANT_WP,
+		EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_AM,
+		EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_WP,
+		EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_AM,
+		EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP,
+		EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_AM,
+		EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_WP,
+		EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_AM,
+		EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP,
+		EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_AM,
+		EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP,
+		EtcItemType.SCRL_ENCHANT_HR
 	};
 	
 	private final int _id;
 	private final CrystalType _grade;
+	private final int _minEnchantLevel;
 	private final int _maxEnchantLevel;
+	private final int _maxEnchantLevelFighter;
+	private final int _maxEnchantLevelMagic;
 	private final double _bonusRate;
 	
 	public AbstractEnchantItem(StatsSet set)
@@ -65,7 +83,10 @@ public abstract class AbstractEnchantItem
 			throw new IllegalAccessError();
 		}
 		_grade = set.getEnum("targetGrade", CrystalType.class, CrystalType.NONE);
+		_minEnchantLevel = set.getInt("minEnchant", 0);
 		_maxEnchantLevel = set.getInt("maxEnchant", 65535);
+		_maxEnchantLevelFighter = set.getInt("maxEnchantFighter", 65535);
+		_maxEnchantLevelMagic = set.getInt("maxEnchantMagic", 65535);
 		_bonusRate = set.getDouble("bonusRate", 0);
 	}
 	
@@ -107,11 +128,35 @@ public abstract class AbstractEnchantItem
 	public abstract boolean isWeapon();
 	
 	/**
+	 * @return the minimum enchant level that this scroll/item can be used with
+	 */
+	public int getMinEnchantLevel()
+	{
+		return _minEnchantLevel;
+	}
+	
+	/**
 	 * @return the maximum enchant level that this scroll/item can be used with
 	 */
 	public int getMaxEnchantLevel()
 	{
 		return _maxEnchantLevel;
+	}
+	
+	/**
+	 * @return the maximum enchant level that fighter weapon can be enchanted with this scroll
+	 */
+	public int getMaxEnchantLevelFighter()
+	{
+		return _maxEnchantLevelFighter;
+	}
+	
+	/**
+	 * @return the maximum enchant level that magic weapon can be enchanted with this scroll
+	 */
+	public int getMaxEnchantLevelMagic()
+	{
+		return _maxEnchantLevelMagic;
 	}
 	
 	/**
@@ -133,7 +178,19 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
+		else if ((_minEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() < _minEnchantLevel))
+		{
+			return false;
+		}
 		else if ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel))
+		{
+			return false;
+		}
+		else if ((_maxEnchantLevelFighter != 0) && !itemToEnchant.getItem().isMagicWeapon() && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevelFighter))
+		{
+			return false;
+		}
+		else if ((_maxEnchantLevelMagic != 0) && itemToEnchant.getItem().isMagicWeapon() && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevelMagic))
 		{
 			return false;
 		}

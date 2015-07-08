@@ -218,8 +218,15 @@
 	<item id="45439" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="45440" name="Agathion - Bae Kisung" additionalName="1-day" type="Armor">
 		<!-- Kisung Agathion summon bracelet. -->

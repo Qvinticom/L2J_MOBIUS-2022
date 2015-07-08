@@ -202,12 +202,28 @@
 	<item id="40232" name="Freya's Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
 		<set name="icon" val="icon.freya_stone_i01" />
+		<set name="etcitem_type" val="BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="40233" name="Freya's Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
 		<set name="icon" val="icon.freya_stone_i02" />
+		<set name="etcitem_type" val="BLESS_DROP_SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="40234" name="Giant's Energy 3-unit Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 3 Giant's Energy. -->

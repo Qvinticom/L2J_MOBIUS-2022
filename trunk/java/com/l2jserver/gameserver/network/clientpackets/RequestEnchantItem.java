@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.model.items.enchant.EnchantResultType;
 import com.l2jserver.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jserver.gameserver.model.items.enchant.EnchantSupportItem;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -44,6 +45,7 @@ import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.Rnd;
 
 public final class RequestEnchantItem extends L2GameClientPacket
 {
@@ -190,7 +192,18 @@ public final class RequestEnchantItem extends L2GameClientPacket
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(activeChar, item) > 0)
 					{
-						item.setEnchantLevel(item.getEnchantLevel() + 1);
+						if (scrollTemplate.isGiant() && ((supportTemplate == null) || (supportTemplate.getItem().getItemType() != EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_AM) || (supportTemplate.getItem().getItemType() != EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP)))
+						{
+							item.setEnchantLevel(item.getEnchantLevel() + Rnd.get(1, 3));
+						}
+						else if (scrollTemplate.isGiant() && (supportTemplate != null) && ((supportTemplate.getItem().getItemType() == EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_AM) || (supportTemplate.getItem().getItemType() == EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP)))
+						{
+							item.setEnchantLevel(item.getEnchantLevel() + Rnd.get(2, 4));
+						}
+						else
+						{
+							item.setEnchantLevel(item.getEnchantLevel() + 1);
+						}
 						item.updateDatabase();
 					}
 					activeChar.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));
@@ -227,7 +240,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 						}
 					}
 					
-					if ((item.isArmor()) && (item.getEnchantLevel() == 4) && item.isEquipped())
+					if ((item.isArmor()) && (item.getEnchantLevel() >= 4) && item.isEquipped())
 					{
 						enchant4Skill = it.getEnchant4Skill();
 						if (enchant4Skill != null)
@@ -290,7 +303,30 @@ public final class RequestEnchantItem extends L2GameClientPacket
 							activeChar.broadcastUserInfo();
 						}
 						
-						if (scrollTemplate.isBlessed())
+						if (scrollTemplate.isBlessed() && (supportTemplate != null) && ((supportTemplate.getItem().getItemType() == EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_AM) || (supportTemplate.getItem().getItemType() == EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP)))
+						{
+							// blessed enchant + using special stone - drop enchant value by 1
+							activeChar.sendPacket(SystemMessageId.FAILURE_WILL_DEDUCT_YOUR_ENCHANT_VALUE_BY_1);
+							
+							item.setEnchantLevel(item.getEnchantLevel() - 1);
+							item.updateDatabase();
+							activeChar.sendPacket(new EnchantResult(EnchantResult.BLESSED_FAIL, 0, 0));
+							
+							if (Config.LOG_ITEM_ENCHANTS)
+							{
+								LogRecord record = new LogRecord(Level.INFO, "Blessed Fail");
+								record.setParameters(new Object[]
+								{
+									activeChar,
+									item,
+									scroll,
+									support,
+								});
+								record.setLoggerName("item");
+								_logEnchant.log(record);
+							}
+						}
+						else if (scrollTemplate.isBlessed() || ((supportTemplate != null) && ((supportTemplate.getItem().getItemType() == EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_AM) || (supportTemplate.getItem().getItemType() == EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP) || (supportTemplate.getItem().getItemType() == EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_AM) || (supportTemplate.getItem().getItemType() == EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_WP))))
 						{
 							// blessed enchant - clear enchant value
 							activeChar.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);

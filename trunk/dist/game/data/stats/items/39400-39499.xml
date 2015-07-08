@@ -390,27 +390,46 @@
 	<item id="39462" name="Giant's Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor (R-grade) when using the Giant's Enchant Scrolls. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.giant_ench_armor_stone_r_i01" />
+		<set name="etcitem_type" val="GIANT_SCRL_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="ARMOR_ENCHANT_STONE" />
 	</item>
 	<item id="39463" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (R-grade) when using the Giant's Enchant Scrolls.Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.giant_ench_wp_stone_r_i01" />
+		<set name="etcitem_type" val="GIANT_SCRL_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
 	</item>
 	<item id="39464" name="Windy Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade) when using the Giant's Enchant Scrolls. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.giant_ench_armor_stone_r_i02" />
+		<set name="etcitem_type" val="GIANT_SCRL_BLESS_INC_ENCHANT_PROP_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="ARMOR_ENCHANT_STONE" />
 	</item>
 	<item id="39465" name="Windy Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade) when using the Giant's Enchant Scrolls.Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.giant_ench_wp_stone_r_i02" />
+		<set name="etcitem_type" val="GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
 	</item>
 	<item id="39466" name="Windy Healing Potion" additionalName="" type="EtcItem">
 		<!-- Quickly restores HP for 15 sec. Cannot be used in the Olympiad / Ceremony of Chaos. -->
