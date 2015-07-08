@@ -852,61 +852,141 @@
 	<item id="34790" name="Fire Stone" additionalName="Event" type="EtcItem">
 		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34791" name="Water Stone" additionalName="Event" type="EtcItem">
 		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34792" name="Earth Stone" additionalName="Event" type="EtcItem">
 		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34793" name="Wind Stone" additionalName="Event" type="EtcItem">
 		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34794" name="Dark Stone" additionalName="Event" type="EtcItem">
 		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34795" name="Holy Stone" additionalName="Event" type="EtcItem">
 		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34796" name="Fire Crystal" additionalName="Event" type="EtcItem">
 		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34797" name="Water Crystal" additionalName="Event" type="EtcItem">
 		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34798" name="Earth Crystal" additionalName="Event" type="EtcItem">
 		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="34799" name="Wind Crystal" additionalName="Event" type="EtcItem">
 		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 </list>

@@ -1003,74 +1003,170 @@
 	<item id="33481" name="Fire Stone - Super" additionalName="" type="EtcItem">
 		<!-- Fire attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-1" />
 	</item>
 	<item id="33482" name="Water Stone - Super" additionalName="" type="EtcItem">
 		<!-- Water attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-1" />
 	</item>
 	<item id="33483" name="Earth Stone - Super" additionalName="" type="EtcItem">
 		<!-- Earth attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-1" />
 	</item>
 	<item id="33484" name="Wind Stone - Super" additionalName="" type="EtcItem">
 		<!-- Wind attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-1" />
 	</item>
 	<item id="33485" name="Dark Stone - Super" additionalName="" type="EtcItem">
 		<!-- Dark attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-1" />
 	</item>
 	<item id="33486" name="Holy Stone - Super" additionalName="" type="EtcItem">
 		<!-- Holy attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-1" />
 	</item>
 	<item id="33487" name="Fire Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Fire attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-2" />
 	</item>
 	<item id="33488" name="Water Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Water attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-2" />
 	</item>
 	<item id="33489" name="Earth Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Earth attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-2" />
 	</item>
 	<item id="33490" name="Wind Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Wind attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-2" />
 	</item>
 	<item id="33491" name="Dark Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Dark attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-2" />
 	</item>
 	<item id="33492" name="Holy Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Holy attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-2" />
 	</item>
 	<item id="33493" name="Attribute Enchant Support Box" additionalName="" type="EtcItem">
 		<!-- Box containing attribute items for playing on the test server. -->

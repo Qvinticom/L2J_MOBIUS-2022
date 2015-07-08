@@ -384,115 +384,254 @@
 	<item id="36960" name="Fire Stone (+ 60)" additionalName="" type="EtcItem">
 		<!-- Can bestow fire attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36961" name="Water Stone (+ 60)" additionalName="" type="EtcItem">
 		<!-- Can bestow water attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36962" name="Earth Stone (+ 60)" additionalName="" type="EtcItem">
 		<!-- Can bestow earth attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36963" name="Wind Stone (+ 60)" additionalName="" type="EtcItem">
 		<!-- Can bestow wind attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36964" name="Dark Stone (+ 60)" additionalName="" type="EtcItem">
 		<!-- Can bestow dark attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36965" name="Holy Stone (+ 60)" additionalName="" type="EtcItem">
 		<!-- Can bestow holy attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36966" name="Fire Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow fire attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-1" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36967" name="Water Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow water attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-1" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36968" name="Earth Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow earth attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-1" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36969" name="Wind Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow wind attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-1" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36970" name="Dark Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow dark attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-1" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36971" name="Holy Stone (+ 150)" additionalName="" type="EtcItem">
 		<!-- Can bestow holy attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-1" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36972" name="Fire Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Fire attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36973" name="Water Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Water attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36974" name="Earth Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Earth attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36975" name="Wind Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Wind attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36976" name="Dark Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Dark attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36977" name="Holy Crystal - Super" additionalName="" type="EtcItem">
 		<!-- Holy attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-2" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 	</item>
 	<item id="36978" name="Scroll: Enchant Hair Accessory" additionalName="" type="EtcItem">
 		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->

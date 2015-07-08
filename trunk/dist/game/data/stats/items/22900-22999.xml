@@ -129,62 +129,170 @@
 	<item id="22919" name="Fire Stone" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-1" />
 	</item>
 	<item id="22920" name="Water Stone" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-1" />
 	</item>
 	<item id="22921" name="Earth Stone" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-1" />
 	</item>
 	<item id="22922" name="Wind Stone" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-1" />
 	</item>
 	<item id="22923" name="Dark Stone" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-3 only. Additional Elemental attributes cannot be bestowed. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-1" />
 	</item>
 	<item id="22924" name="Holy Stone" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-1" />
 	</item>
 	<item id="22925" name="Fire Crystal" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-2" />
 	</item>
 	<item id="22926" name="Water Crystal" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-2" />
 	</item>
 	<item id="22927" name="Earth Crystal" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-2" />
 	</item>
 	<item id="22928" name="Wind Crystal" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Wind + 5. When used with your armor, Wind + 6 with increased resistance against Earth. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-2" />
 	</item>
 	<item id="22929" name="Dark Crystal" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-2" />
 	</item>
 	<item id="22930" name="Holy Crystal" additionalName="" type="EtcItem">
 		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-2" />
 	</item>
 	<item id="22931" name="Warrior's Helmet" additionalName="" type="Armor">
 		<!-- Helmet of a brave ancient warrior. Uses 2 hair accessory slots. -->

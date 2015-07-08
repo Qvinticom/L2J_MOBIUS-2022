@@ -264,74 +264,170 @@
 	<item id="22635" name="Fire Stone" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nFire attack increases by 5 when bestowed on a weapon. Fire attack and water defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-1" />
 	</item>
 	<item id="22636" name="Water Stone" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nWater attack increases by 5 when bestowed on a weapon. Water attack and fire defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-1" />
 	</item>
 	<item id="22637" name="Earth Stone" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nEarth attack increases by 5 when bestowed on a weapon. Earth attack and wind defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-1" />
 	</item>
 	<item id="22638" name="Wind Stone" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nWind attack increases by 5 when bestowed on a weapon. Wind attack and earth defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-1" />
 	</item>
 	<item id="22639" name="Dark Stone" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nDark attack increases by 5 when bestowed on a weapon. Dark attack and holy defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-1" />
 	</item>
 	<item id="22640" name="Holy Stone" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nHoly attack increases by 5 when bestowed on a weapon. Holy attack and dark defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-1" />
 	</item>
 	<item id="22641" name="Fire Crystal" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nFire attack increases by 5 when bestowed on a weapon. Fire attack and water defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2329-2" />
 	</item>
 	<item id="22642" name="Water Crystal" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nWater attack increases by 5 when bestowed on a weapon. Water attack and fire defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2330-2" />
 	</item>
 	<item id="22643" name="Earth Crystal" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nEarth attack increases by 5 when bestowed on a weapon. Earth attack and wind defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2332-2" />
 	</item>
 	<item id="22644" name="Wind Crystal" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nWind attack increases by 5 when bestowed on a weapon. Wind attack and earth defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2331-2" />
 	</item>
 	<item id="22645" name="Dark Crystal" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nDark attack increases by 5 when bestowed on a weapon. Dark attack and holy defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2334-2" />
 	</item>
 	<item id="22646" name="Holy Crystal" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nHoly attack increases by 5 when bestowed on a weapon. Holy attack and dark defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="item_skill" val="2333-2" />
 	</item>
 	<item id="22647" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
 		<!-- Premium user exclusive item\nWhen enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->

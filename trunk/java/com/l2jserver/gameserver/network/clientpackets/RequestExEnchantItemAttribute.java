@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.clientpackets;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.model.Elementals;
+import com.l2jserver.gameserver.model.Elementals.ElementalItemType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -323,9 +324,12 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 				{
 					case Stone:
 					case Roughore:
+					case Stone60:
+					case Stone150:
 						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_STONE;
 						break;
 					case Crystal:
+					case Crystal300:
 						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL;
 						break;
 					case Jewel:
@@ -365,7 +369,16 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 	{
 		if (Elementals.getItemElement(stoneId) != Elementals.NONE)
 		{
-			if (item.isWeapon())
+			final Elementals.ElementalItems elementItem = Elementals.getItemElemental(stoneId);
+			if (elementItem._type == ElementalItemType.Stone60)
+			{
+				return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
+			}
+			else if ((elementItem._type == ElementalItemType.Stone150) || (elementItem._type == ElementalItemType.Crystal300))
+			{
+				return Elementals.WEAPON_VALUES[elementItem._type._maxLevel];
+			}
+			else if (item.isWeapon())
 			{
 				if (oldValue == 0)
 				{
