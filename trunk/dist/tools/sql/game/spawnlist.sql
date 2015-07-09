@@ -52399,3 +52399,6 @@ INSERT INTO `spawnlist` VALUES
 ('Stronghold II', 1, 23267, -87326, 54243, -2387, 0, 0, 20915, 60, 0, 0, 0),
 ('Stronghold II', 1, 23267, -87081, 53715, -2375, 0, 0, 2294, 60, 0, 0, 0),
 ('Stronghold II', 1, 23267, -81637, 49750, -3259, 0, 0, 9489, 60, 0, 0, 0);
+
+-- Hunters Village Bracelet Npc
+INSERT INTO `spawnlist` VALUES ('Aria_Hunter_Vilage', 1, 33918, 116390, 75387, -2712, 0, 0, 12298, 60, 0, 0, 0);
