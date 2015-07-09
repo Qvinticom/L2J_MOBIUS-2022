@@ -305,22 +305,29 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		}
 		
 		boolean success = false;
-		switch (stone.getItem().getCrystalType())
+		ElementalItemType stoneType = Elementals.getItemElemental(stone.getId())._type;
+		switch (item.getItem().getCrystalType())
 		{
 			case R:
 			{
-				success = Rnd.get(100) < 80;
-				break;
+				if ((stoneType == ElementalItemType.Stone) || (stoneType == ElementalItemType.Stone60) || (stoneType == ElementalItemType.Stone150) || (stoneType == ElementalItemType.Roughore))
+				{
+					success = Rnd.get(100) < 80;
+					break;
+				}
 			}
 			case R95:
 			case R99:
 			{
-				success = true;
-				break;
+				if ((stoneType == ElementalItemType.Stone) || (stoneType == ElementalItemType.Stone60) || (stoneType == ElementalItemType.Stone150) || (stoneType == ElementalItemType.Roughore))
+				{
+					success = true;
+					break;
+				}
 			}
 			default:
 			{
-				switch (Elementals.getItemElemental(stone.getId())._type)
+				switch (stoneType)
 				{
 					case Stone:
 					case Roughore:
