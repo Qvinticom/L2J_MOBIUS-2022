@@ -29021,7 +29021,7 @@ public final class NpcStringId
 	@ClientString(id = 1802738, message = "How did I lose to these worthless creatures?")
 	public static NpcStringId HOW_DID_I_LOSE_TO_THESE_WORTHLESS_CREATURES;
 	
-	@ClientString(id = 1802739, message = "This pains me. I couldn’t even get my revenge!")
+	@ClientString(id = 1802739, message = "This pains me. I couldn't even get my revenge!")
 	public static NpcStringId THIS_PAINS_ME_I_COULDN_T_EVEN_GET_MY_REVENGE;
 	
 	@ClientString(id = 1802740, message = "I will show you what true strength is.")

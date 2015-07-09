@@ -12214,7 +12214,7 @@ public final class SystemMessageId
 	@ClientString(id = 4301, message = "You have pre-registered your character. The Classic Server will be accessible after the maintenance on 5/28.")
 	public static SystemMessageId YOU_HAVE_PRE_REGISTERED_YOUR_CHARACTER_THE_CLASSIC_SERVER_WILL_BE_ACCESSIBLE_AFTER_THE_MAINTENANCE_ON_5_28;
 	
-	@ClientString(id = 4302, message = "You can only create 1 character, and you’ll be able to create additional characters after the maintenance on 5/28. The wait time to delete a character is 3 minutes.")
+	@ClientString(id = 4302, message = "You can only create 1 character, and you'll be able to create additional characters after the maintenance on 5/28. The wait time to delete a character is 3 minutes.")
 	public static SystemMessageId YOU_CAN_ONLY_CREATE_1_CHARACTER_AND_YOU_LL_BE_ABLE_TO_CREATE_ADDITIONAL_CHARACTERS_AFTER_THE_MAINTENANCE_ON_5_28_THE_WAIT_TIME_TO_DELETE_A_CHARACTER_IS_3_MINUTES;
 	
 	@ClientString(id = 4303, message = "You can only fish during the paid period.")
@@ -13231,7 +13231,7 @@ public final class SystemMessageId
 	@ClientString(id = 5069, message = "Please enter card number (font color='#FFDF4C')$s1(/font).")
 	public static SystemMessageId PLEASE_ENTER_CARD_NUMBER_FONT_COLOR_FFDF4C_S1_FONT;
 	
-	@ClientString(id = 5070, message = "(font size='15' color='#FFDF5F')The Lineage II server has been restructured as of 06/11/14.(/font)(br)(font size='13' color='#ABABAB')Bartz, Fehyshar(/font) → Bartz(New)(br)(font size='13' color='#ABABAB')Erica, Gustin, Teon(/font) → Sieghardt(New)(br)(font size='13' color='#ABABAB')Franz, Irene, Aria(/font) → Kain(New)")
+	@ClientString(id = 5070, message = "(font size='15' color='#FFDF5F')The Lineage II server has been restructured as of 06/11/14.(/font)(br)(font size='13' color='#ABABAB')Bartz, Fehyshar(/font) -> Bartz(New)(br)(font size='13' color='#ABABAB')Erica, Gustin, Teon(/font) -> Sieghardt(New)(br)(font size='13' color='#ABABAB')Franz, Irene, Aria(/font) -> Kain(New)")
 	public static SystemMessageId FONT_SIZE_15_COLOR_FFDF5F_THE_LINEAGE_II_SERVER_HAS_BEEN_RESTRUCTURED_AS_OF_06_11_14_FONT_BR_FONT_SIZE_13_COLOR_ABABAB_BARTZ_FEHYSHAR_FONT_BARTZ_NEW_BR_FONT_SIZE_13_COLOR_ABABAB_ERICA_GUSTIN_TEON_FONT_SIEGHARDT_NEW_BR_FONT_SIZE_13_COLOR_ABABAB_FRANZ_IRENE_ARIA_FONT_KAIN_NEW;
 	
 	@ClientString(id = 5071, message = "(font color='#FFDF4C')We give various benefits to warriors who return after a long time.(/font)")
