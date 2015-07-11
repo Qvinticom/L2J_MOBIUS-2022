@@ -44,6 +44,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	private final int _chance;
 	private final SkillHolder _skill;
 	private final L2TargetType _targetType;
+	private final int AQUAMARINE = 17822;
 	
 	/**
 	 * @param attachCond
@@ -64,12 +65,12 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	
 	public void onSkillUseEvent(OnCreatureSkillUse event)
 	{
-		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || (_castSkillId == 0)))
+		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || ((_castSkillId == 0) && (_skill.getSkillId() != AQUAMARINE))))
 		{
 			return;
 		}
 		
-		if (_castSkillId != event.getSkill().getId())
+		if ((_castSkillId != event.getSkill().getId()) && (_skill.getSkillId() != AQUAMARINE))
 		{
 			return;
 		}

@@ -99,73 +99,75 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17814" levels="2" name="Ruby">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Soulshot damage + 1%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17815" levels="1" name="Ruby">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Soulshot damage + 7.5%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17816" levels="1" name="Ruby">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Soulshot damage + 12.5%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17817" levels="1" name="Ruby">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Soulshot damage + 20%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17818" levels="4" name="Sapphire">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Spiritshot damage + 1%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17819" levels="2" name="Sapphire">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Spiritshot damage + 7.5%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17820" levels="2" name="Sapphire">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Spiritshot damage + 12.5%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17821" levels="2" name="Sapphire">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Spiritshot damage + 20%. -->
+		<!-- DONE IN CORE -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17822" levels="1" name="Aquamarine">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ManaHeal">
+				<param power="136" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17823" levels="5" name="Aquamarine">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 1% chance of recovering 136 MP. -->
+		<table name="#rate"> 1 2 4 9 15 </table>
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TriggerSkillBySkill">
+				<param chance="#rate" />
+				<param skillId="17822" skillLevel="1" />
+				<param targetType="SELF" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17824" levels="1" name="La Vie En Rose's Jewelry Box">
 		<!-- AUTO GENERATED SKILL -->
@@ -174,11 +176,22 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17825" levels="5" name="Emerald">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- CON + 1, MEN + 1 -->
+		<table name="#rate1"> 1 1 1 2 3 </table>
+		<table name="#rate2"> 0 1 1 2 3 </table>
+		<table name="#rate3"> 0 0 1 2 3 </table>
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="#rate2" />
+				<add stat="DEX" val="#rate3" />
+				<add stat="CON" val="#rate1" />
+				<add stat="INT" val="#rate2" />
+				<add stat="WIT" val="#rate3" />
+				<add stat="MEN" val="#rate1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17826" levels="1" name="10th Anniversary Time Capsule Box">
 		<!-- AUTO GENERATED SKILL -->

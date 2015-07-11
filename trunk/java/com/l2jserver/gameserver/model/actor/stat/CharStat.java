@@ -730,20 +730,21 @@ public class CharStat
 	
 	public int getAttackElementValue(byte attackAttribute)
 	{
+		double additionalPower = _activeChar.getStat().calcStat(Stats.WEAPON_ELEMENT_POWER, 0, null, null);
 		switch (attackAttribute)
 		{
 			case Elementals.FIRE:
-				return (int) calcStat(Stats.FIRE_POWER, _activeChar.getTemplate().getBaseFire());
+				return (int) (calcStat(Stats.FIRE_POWER, _activeChar.getTemplate().getBaseFire()) + additionalPower);
 			case Elementals.WATER:
-				return (int) calcStat(Stats.WATER_POWER, _activeChar.getTemplate().getBaseWater());
+				return (int) (calcStat(Stats.WATER_POWER, _activeChar.getTemplate().getBaseWater()) + additionalPower);
 			case Elementals.WIND:
-				return (int) calcStat(Stats.WIND_POWER, _activeChar.getTemplate().getBaseWind());
+				return (int) (calcStat(Stats.WIND_POWER, _activeChar.getTemplate().getBaseWind()) + additionalPower);
 			case Elementals.EARTH:
-				return (int) calcStat(Stats.EARTH_POWER, _activeChar.getTemplate().getBaseEarth());
+				return (int) (calcStat(Stats.EARTH_POWER, _activeChar.getTemplate().getBaseEarth()) + additionalPower);
 			case Elementals.HOLY:
-				return (int) calcStat(Stats.HOLY_POWER, _activeChar.getTemplate().getBaseHoly());
+				return (int) (calcStat(Stats.HOLY_POWER, _activeChar.getTemplate().getBaseHoly()) + additionalPower);
 			case Elementals.DARK:
-				return (int) calcStat(Stats.DARK_POWER, _activeChar.getTemplate().getBaseDark());
+				return (int) (calcStat(Stats.DARK_POWER, _activeChar.getTemplate().getBaseDark()) + additionalPower);
 			default:
 				return 0;
 		}

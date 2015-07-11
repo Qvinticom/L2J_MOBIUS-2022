@@ -1270,7 +1270,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="3" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Debuff">

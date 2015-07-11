@@ -713,7 +713,33 @@ public final class Formulas
 		}
 		
 		// Add soulshot boost.
-		int ssBoost = ss ? 2 : 1;
+		double ssBoost;
+		if (attacker.isPlayer())
+		{
+			double rubyBonus = 0;
+			if ((attacker.getInventory().getItemByItemId(38859) != null) && (attacker.getInventory().getItemByItemId(38859).isEquipped()))
+			{
+				rubyBonus = 0.2;
+			}
+			else if ((attacker.getInventory().getItemByItemId(38858) != null) && (attacker.getInventory().getItemByItemId(38858).isEquipped()))
+			{
+				rubyBonus = 0.125;
+			}
+			else if ((attacker.getInventory().getItemByItemId(38857) != null) && (attacker.getInventory().getItemByItemId(38857).isEquipped()))
+			{
+				rubyBonus = 0.075;
+			}
+			double ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
+			if (ssEnchBonus > 0.21)
+			{
+				ssEnchBonus = 0.21;
+			}
+			ssBoost = ss ? (2 + rubyBonus + ssEnchBonus) : 1;
+		}
+		else
+		{
+			ssBoost = ss ? 2 : 1;
+		}
 		damage = (skill != null) ? ((damage * ssBoost) + skill.getPower(attacker, target, isPvP, isPvE)) : (damage * ssBoost);
 		
 		if (crit)
@@ -853,7 +879,7 @@ public final class Formulas
 			}
 		}
 		
-		int mAtk = attacker.getMAtk(target, skill);
+		double mAtk = attacker.getMAtk(target, skill);
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
 		
@@ -870,8 +896,33 @@ public final class Formulas
 			}
 		}
 		
-		// Bonus Spirit shot
-		mAtk *= bss ? 4 : sps ? 2 : 1;
+		// Add spiritshot\blessed spiritshot boost.
+		if (attacker.isPlayer())
+		{
+			double sapphireBonus = 0;
+			if ((attacker.getInventory().getItemByItemId(38931) != null) && (attacker.getInventory().getItemByItemId(38931).isEquipped()))
+			{
+				sapphireBonus = 0.2;
+			}
+			else if ((attacker.getInventory().getItemByItemId(38930) != null) && (attacker.getInventory().getItemByItemId(38930).isEquipped()))
+			{
+				sapphireBonus = 0.125;
+			}
+			else if ((attacker.getInventory().getItemByItemId(38929) != null) && (attacker.getInventory().getItemByItemId(38929).isEquipped()))
+			{
+				sapphireBonus = 0.075;
+			}
+			double ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
+			if (ssEnchBonus > 0.21)
+			{
+				ssEnchBonus = 0.21;
+			}
+			mAtk *= bss ? (4 + sapphireBonus + ssEnchBonus) : sps ? (2 + sapphireBonus + ssEnchBonus) : 1;
+		}
+		else
+		{
+			mAtk *= bss ? 4 : sps ? 2 : 1;
+		}
 		// MDAM Formula.
 		double damage = ((91 * Math.sqrt(mAtk)) / mDef) * skill.getPower(attacker, target, isPvP, isPvE);
 		
@@ -1499,9 +1550,33 @@ public final class Formulas
 				return 1;
 		}
 		
-		// Bonus Spiritshot
-		mAtk *= bss ? 4 : sps ? 2 : 1;
-		
+		// Add spiritshot\blessed spiritshot boost.
+		if (attacker.isPlayer())
+		{
+			double sapphireBonus = 0;
+			if ((attacker.getInventory().getItemByItemId(38931) != null) && (attacker.getInventory().getItemByItemId(38931).isEquipped()))
+			{
+				sapphireBonus = 0.2;
+			}
+			else if ((attacker.getInventory().getItemByItemId(38930) != null) && (attacker.getInventory().getItemByItemId(38930).isEquipped()))
+			{
+				sapphireBonus = 0.125;
+			}
+			else if ((attacker.getInventory().getItemByItemId(38929) != null) && (attacker.getInventory().getItemByItemId(38929).isEquipped()))
+			{
+				sapphireBonus = 0.075;
+			}
+			double ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
+			if (ssEnchBonus > 0.21)
+			{
+				ssEnchBonus = 0.21;
+			}
+			mAtk *= bss ? (4 + sapphireBonus + ssEnchBonus) : sps ? (2 + sapphireBonus + ssEnchBonus) : 1;
+		}
+		else
+		{
+			mAtk *= bss ? 4 : sps ? 2 : 1;
+		}
 		double damage = (Math.sqrt(mAtk) * skill.getPower(attacker, target, isPvP, isPvE) * (mp / 97)) / mDef;
 		damage *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 		

@@ -142,6 +142,7 @@ public enum Stats
 	EARTH_POWER("earthPower"),
 	HOLY_POWER("holyPower"),
 	DARK_POWER("darkPower"),
+	WEAPON_ELEMENT_POWER("weaponElementPower"),
 	
 	// PROFICIENCY
 	CANCEL_PROF("cancelProf"),

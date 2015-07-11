@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17701" levels="5" name="Topaz: Spiritshot">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1062. -->
+		<table name="#power"> 1062 3717 6903 10089 13275 </table>
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<set name="dmgDirectlyToHp" val="true" />
 		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="106" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
+		<for>
+			<effect name="SkillTurning">
+				<param chance="100" />
+			</effect>
+			<effect name="StaticDamage">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17702" levels="5" name="Jewel: Quick Recovery">
 		<!-- AUTO GENERATED SKILL -->
@@ -27,18 +38,28 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17704" levels="5" name="Obsidian">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Received Damage in PvP - 1%. -->
+		<table name="#rate"> 1.01 1.03 1.07 1.11 1.15 </table>
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpMagicalDef" val="#rate" />
+				<mul stat="pvpPhysSkillsDef" val="#rate" />
+				<mul stat="pvpPhysDef" val="#rate" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17705" levels="5" name="Opal">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attack Attribute + 10. -->
+		<table name="#rate"> 10 20 40 70 120 </table>
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="weaponElementPower" val="#rate" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17706" levels="5" name="Jewel: Atk. Spd. Increase">
 		<!-- AUTO GENERATED SKILL -->
@@ -55,18 +76,30 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17708" levels="5" name="Diamond">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Def. + 283, and Received P. Critical Damage - 1%. -->
+		<table name="#pDef"> 283 567 945 1418 1986 </table>
+		<table name="#defCritDmg"> 0.99 0.98 0.07 0.96 0.95 </table>
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pDef" val="#pDef" />
+				<mul stat="defCritDamage" val="#defCritDmg" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17709" levels="5" name="Pearl">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Def. + 163, and Received P. Critical Damage - 1%. -->
+		<table name="#mDef"> 163 328 548 821 1150 </table>
+		<table name="#defCritDmg"> 0.99 0.98 0.97 0.96 0.95 </table>
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="mDef" val="#mDef" />
+				<mul stat="defCritDamage" val="#defCritDmg" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17710" levels="1" name="10th Anniversary Blessing Effect (Free)">
 		<!-- AUTO GENERATED SKILL -->

@@ -389,6 +389,8 @@
 			<xs:enumeration value="magicSuccRes" />
 			<xs:enumeration value="reflectDamageRes" />
 			<xs:enumeration value="receivedDamageModifier" />
+			<xs:enumeration value="maxSkillDamage" />
+			<xs:enumeration value="weaponElementPower" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">

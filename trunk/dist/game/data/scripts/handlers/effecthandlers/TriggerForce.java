@@ -92,15 +92,18 @@ public final class TriggerForce extends AbstractEffect
 			for (L2PcInstance member : effector.getParty().getMembers())
 			{
 				_affectedMembers.add(member);
-				if (member.calculateDistance(effector, true, false) < 900)
+				if ((member.calculateDistance(effector, true, false) < 900) && (_skill.getSkillId() != RAGE_AURA))
 				{
-					member.makeTriggerCast(_skill.getSkill(), effector);
+					_skill.getSkill().applyEffects(effector, member);
 				}
 			}
 		}
 		else
 		{
-			effector.makeTriggerCast(_skill.getSkill(), effector);
+			if (_skill.getSkillId() != RAGE_AURA)
+			{
+				_skill.getSkill().applyEffects(effector, effector);
+			}
 			_affectedMembers.add(effector);
 		}
 	}
@@ -149,6 +152,7 @@ public final class TriggerForce extends AbstractEffect
 					if (_affectedObjects.contains(_affectedObjToRemove.get(i)))
 					{
 						_affectedObjects.remove(i);
+						i--;
 					}
 				}
 			}
@@ -163,15 +167,15 @@ public final class TriggerForce extends AbstractEffect
 				{
 					_affectedMembers.add(member);
 				}
-				if (!member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) < 900))
+				if (!member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) < 900) && (_skill.getSkillId() != RAGE_AURA))
 				{
 					if ((member != effector))
 					{
-						member.makeTriggerCast(_skill.getSkill(), effector);
+						_skill.getSkill().applyEffects(effector, member);
 					}
 					else if ((_skill.getSkillId() != CHALLENGE_AURA) && (_skill.getSkillId() != IRON_AURA) && (_skill.getSkillId() != RESISTANCE_AURA) && (_skill.getSkillId() != RECOVERY_AURA) && (_skill.getSkillId() != SPIRIT_AURA))
 					{
-						member.makeTriggerCast(_skill.getSkill(), effector);
+						_skill.getSkill().applyEffects(effector, effector);
 					}
 				}
 				else if (member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) > 900))
@@ -253,6 +257,7 @@ public final class TriggerForce extends AbstractEffect
 					if (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (skill.getSkill().getLevel() != Math.min((activeForces - 3), 3)))
 					{
 						member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);
+						
 					}
 				}
 			}

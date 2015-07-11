@@ -99,7 +99,23 @@ public class SpiritShot implements IItemHandler
 		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+		// Visual effect change if player has equipped Sapphire lvl 3 or higher
+		if ((activeChar.getInventory().getItemByItemId(38931) != null) && (activeChar.getInventory().getItemByItemId(38931).isEquipped()))
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17821, 1, 0, 0), 600);
+		}
+		else if ((activeChar.getInventory().getItemByItemId(38930) != null) && (activeChar.getInventory().getItemByItemId(38930).isEquipped()))
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17820, 1, 0, 0), 600);
+		}
+		else if ((activeChar.getInventory().getItemByItemId(38929) != null) && (activeChar.getInventory().getItemByItemId(38929).isEquipped()))
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17819, 1, 0, 0), 600);
+		}
+		else
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+		}
 		return true;
 	}
 }

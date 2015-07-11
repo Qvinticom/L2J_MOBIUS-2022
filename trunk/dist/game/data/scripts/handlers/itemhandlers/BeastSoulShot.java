@@ -123,7 +123,23 @@ public class BeastSoulShot implements IItemHandler
 			if (!pet.isChargedShot(ShotType.SOULSHOTS))
 			{
 				pet.setChargedShot(ShotType.SOULSHOTS, true);
-				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+				// Visual effect change if player has equipped Ruby lvl 3 or higher
+				if ((activeOwner.getInventory().getItemByItemId(38859) != null) && (activeOwner.getInventory().getItemByItemId(38859).isEquipped()))
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17817, 1, 0, 0), 600);
+				}
+				else if ((activeOwner.getInventory().getItemByItemId(38858) != null) && (activeOwner.getInventory().getItemByItemId(38858).isEquipped()))
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17816, 1, 0, 0), 600);
+				}
+				else if ((activeOwner.getInventory().getItemByItemId(38857) != null) && (activeOwner.getInventory().getItemByItemId(38857).isEquipped()))
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17815, 1, 0, 0), 600);
+				}
+				else
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+				}
 			}
 		}
 		
@@ -132,7 +148,23 @@ public class BeastSoulShot implements IItemHandler
 			if (!s.isChargedShot(ShotType.SOULSHOTS))
 			{
 				s.setChargedShot(ShotType.SOULSHOTS, true);
-				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+				// Visual effect change if player has equipped Ruby lvl 3 or higher
+				if ((activeOwner.getInventory().getItemByItemId(38859) != null) && (activeOwner.getInventory().getItemByItemId(38859).isEquipped()))
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, 17817, 1, 0, 0), 600);
+				}
+				else if ((activeOwner.getInventory().getItemByItemId(38858) != null) && (activeOwner.getInventory().getItemByItemId(38858).isEquipped()))
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, 17816, 1, 0, 0), 600);
+				}
+				else if ((activeOwner.getInventory().getItemByItemId(38857) != null) && (activeOwner.getInventory().getItemByItemId(38857).isEquipped()))
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, 17815, 1, 0, 0), 600);
+				}
+				else
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+				}
 			}
 		});
 		return true;
