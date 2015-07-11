@@ -714,6 +714,7 @@ public final class Formulas
 		
 		// Add soulshot boost.
 		double ssBoost;
+		double ssEnchBonus = 0;
 		if (attacker.isPlayer())
 		{
 			double rubyBonus = 0;
@@ -729,10 +730,13 @@ public final class Formulas
 			{
 				rubyBonus = 0.075;
 			}
-			double ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
-			if (ssEnchBonus > 0.21)
+			if (attacker.getActiveWeaponInstance() != null)
 			{
-				ssEnchBonus = 0.21;
+				ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
+				if (ssEnchBonus > 0.21)
+				{
+					ssEnchBonus = 0.21;
+				}
 			}
 			ssBoost = ss ? (2 + rubyBonus + ssEnchBonus) : 1;
 		}
@@ -900,6 +904,7 @@ public final class Formulas
 		if (attacker.isPlayer())
 		{
 			double sapphireBonus = 0;
+			double ssEnchBonus = 0;
 			if ((attacker.getInventory().getItemByItemId(38931) != null) && (attacker.getInventory().getItemByItemId(38931).isEquipped()))
 			{
 				sapphireBonus = 0.2;
@@ -912,10 +917,13 @@ public final class Formulas
 			{
 				sapphireBonus = 0.075;
 			}
-			double ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
-			if (ssEnchBonus > 0.21)
+			if (attacker.getActiveWeaponInstance() != null)
 			{
-				ssEnchBonus = 0.21;
+				ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
+				if (ssEnchBonus > 0.21)
+				{
+					ssEnchBonus = 0.21;
+				}
 			}
 			mAtk *= bss ? (4 + sapphireBonus + ssEnchBonus) : sps ? (2 + sapphireBonus + ssEnchBonus) : 1;
 		}
@@ -1554,6 +1562,7 @@ public final class Formulas
 		if (attacker.isPlayer())
 		{
 			double sapphireBonus = 0;
+			double ssEnchBonus = 0;
 			if ((attacker.getInventory().getItemByItemId(38931) != null) && (attacker.getInventory().getItemByItemId(38931).isEquipped()))
 			{
 				sapphireBonus = 0.2;
@@ -1566,10 +1575,13 @@ public final class Formulas
 			{
 				sapphireBonus = 0.075;
 			}
-			double ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
-			if (ssEnchBonus > 0.21)
+			if (attacker.getActiveWeaponInstance() != null)
 			{
-				ssEnchBonus = 0.21;
+				ssEnchBonus = attacker.getActiveWeaponInstance().getEnchantLevel() * 0.007;
+				if (ssEnchBonus > 0.21)
+				{
+					ssEnchBonus = 0.21;
+				}
 			}
 			mAtk *= bss ? (4 + sapphireBonus + ssEnchBonus) : sps ? (2 + sapphireBonus + ssEnchBonus) : 1;
 		}
@@ -2138,7 +2150,8 @@ public final class Formulas
 	}
 	
 	/**
-	 * Calculates karma gain upon playable kill.</br> Updated to High Five on 10.09.2014 by Zealar tested in retail.
+	 * Calculates karma gain upon playable kill.</br>
+	 * Updated to High Five on 10.09.2014 by Zealar tested in retail.
 	 * @param pkCount
 	 * @param isSummon
 	 * @return karma points that will be added to the player.
