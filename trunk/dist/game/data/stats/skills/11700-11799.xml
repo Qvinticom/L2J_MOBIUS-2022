@@ -7,7 +7,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="abnormalTime" val="3" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="DamOverTime">
 				<mul stat="pveMagicalDmg" val="1.5" />
 				<mul stat="MagicalMpConsumeRate" val="1.3" />
 			</effect>
@@ -67,7 +67,7 @@
 		<set name="trait" val="KNOCKDOWN" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect effectType="KNOCK_DOWN" name="KnockDown" val="0" />
+			<effect name="KnockDown" />
 		</for>
 	</skill>
 	<skill id="11751" levels="1" name="Superior Magic Weapon Mastery">
@@ -123,7 +123,7 @@
 		<set name="activationChance" val="100" />
 		<set name="activationSkills" val="11752" />
 		<for>
-			<effect name="HealOverTime" val="#hotValue">
+			<effect name="HealOverTime">
 				<mul stat="healEffect" val="#power" />
 			</effect>
 		</for>
@@ -139,7 +139,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="triggeredLevelUpMax" val="3" />
 		<for>
-			<effect name="HealOverTime" val="0">
+			<effect name="HealOverTime">
 				<mul stat="healEffect" val="#power" />
 			</effect>
 		</for>
@@ -167,7 +167,7 @@
 		</for>
 		<enchant2for>
 			<effect name="SummonCubic">
-				<param cubicId="17" cubicDelay="10" cubicDuration="#ench2Time" cubicMaxCount="30" />
+				<param cubicId="17" cubicDelay="10" cubicDuration="60" cubicMaxCount="30" /> <!-- TODO: Fix duration -->
 			</effect>
 		</enchant2for>
 	</skill>
@@ -671,29 +671,29 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect abnormalLvl="#abnormalLvl" abnormalTime="30" abnormalType="mp_cost_up" name="Debuff" val="0">
+			<effect abnormalTime="30" name="Debuff">
 				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul stat="mAtkSpd" val="0.8" />
 				<mul stat="pAtkSpd" val="0.8" />
 			</effect>
 		</for>
-		<echant3for>
-			<effect abnormalLvl="6" abnormalTime="30" abnormalType="mp_cost_up" name="Debuff" val="0">
+		<enchant3for>
+			<effect abnormalTime="30" name="Debuff">
 				<mul stat="MagicalMpConsumeRate" val="4" />
 				<mul stat="PhysicalMpConsumeRate" val="4" />
 				<mul stat="mAtkSpd" val="0.8" />
 				<mul stat="pAtkSpd" val="#ench34CastAtkSpdReduce" />
 			</effect>
-		</echant3for>
-		<echant4for>
-			<effect abnormalLvl="6" abnormalTime="30" abnormalType="mp_cost_up" name="Debuff" val="0">
+		</enchant3for>
+		<enchant4for>
+			<effect abnormalTime="30" name="Debuff">
 				<mul stat="MagicalMpConsumeRate" val="4" />
 				<mul stat="PhysicalMpConsumeRate" val="4" />
 				<mul stat="mAtkSpd" val="#ench34CastAtkSpdReduce" />
 				<mul stat="pAtkSpd" val="0.8" />
 			</effect>
-		</echant4for>
+		</enchant4for>
 	</skill>
 	<skill id="11770" levels="1" name="Dissolve">
 		<set name="hitTime" val="500" />
@@ -709,7 +709,7 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="castMagic" val="MAGIC" />
 		<for>
-			<effect name="Buff" self="1" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="100" />
 			</effect>
 		</for>
@@ -899,25 +899,25 @@
 		<set name="effectRange" val="900" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" val="#dmg">
+			<effect name="DamOverTime">
 				<mul stat="pDef" val="#pDef" />
 				<mul stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="DamOverTime" val="134">
+			<effect name="DamOverTime">
 				<mul stat="pDef" val="0.75" />
 				<mul stat="mDef" val="0.75" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="DamOverTime" val="134">
+			<effect name="DamOverTime">
 				<mul stat="pDef" val="#ench2pDef" />
 				<mul stat="mDef" val="0.75" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="DamOverTime" val="134">
+			<effect name="DamOverTime">
 				<mul stat="pDef" val="0.75" />
 				<mul stat="mDef" val="#ench3mDef" />
 			</effect>
@@ -984,7 +984,7 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="#spd" />
 				<mul stat="mAtkSpd" val="#spd" />
 				<mul stat="pAtkSpd" val="#spd" />
@@ -1020,12 +1020,12 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="healEffect" val="#gainHp" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="healEffect" val="#ench3debuffPower" />
 			</effect>
 		</enchant3for>
@@ -1046,7 +1046,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="TOGGLE" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="DamOverTime">
 				<mul stat="mAtkSpd" val="#mAtkSpd">
 					<using kind="MAGIC,LIGHT" />
 				</mul>
@@ -1159,8 +1159,7 @@
 					<using kind="LIGHT" />
 				</add>
 				<add stat="mDef" val="300">
-					<using kind="MAGIC" />
-					<using kind="LIGHT" />
+					<using kind="MAGIC,LIGHT" />
 				</add>
 				<add stat="regHp" val="2.8" />
 				<add stat="regMp" val="3.6" />

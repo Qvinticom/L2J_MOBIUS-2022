@@ -334,6 +334,8 @@
 			<xs:enumeration value="MEN" />
 			<xs:enumeration value="WIT" />
 			<xs:enumeration value="DEX" />
+			<xs:enumeration value="LUC" />
+			<xs:enumeration value="CHA" />
 			<xs:enumeration value="waterPower" />
 			<xs:enumeration value="windPower" />
 			<xs:enumeration value="firePower" />
@@ -462,6 +464,7 @@
 			<xs:element name="enchant6" type="enchantType" />
 			<xs:element name="enchant7" type="enchantType" />
 			<xs:element name="enchant8" type="enchantType" />
+			<xs:element name="enchant9" type="enchantType" />
 			<xs:element name="cond" type="condType" />
 			<xs:element name="for" type="forType" />
 			<xs:element name="enchant1for" type="forType" />
@@ -499,6 +502,7 @@
 		<xs:attribute type="xs:byte" name="enchantGroup6" use="optional" />
 		<xs:attribute type="xs:byte" name="enchantGroup7" use="optional" />
 		<xs:attribute type="xs:byte" name="enchantGroup8" use="optional" />
+		<xs:attribute type="xs:byte" name="enchantGroup9" use="optional" />
 	</xs:complexType>
 	<xs:element name="list">
 		<xs:complexType>

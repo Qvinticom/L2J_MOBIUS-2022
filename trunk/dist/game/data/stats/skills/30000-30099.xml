@@ -50,7 +50,7 @@
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Debuff" time="10" val="0">
+			<effect name="Debuff">
 				<mul stat="mDef" val="0.3" />
 				<mul stat="runSpd" val="70" />
 			</effect>
@@ -238,8 +238,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect abnormalTime="10" chance="100" name="TriggerSkillBySkill" triggeredId="30002"
-					triggeredLevel="1" val="0" />
+			<effect abnormalTime="10" name="TriggerSkillBySkill" triggeredId="30002" triggeredLevel="1" />
 		</for>
 	</skill>
 	<skill id="30012" levels="22" name="Air Rush">
@@ -341,7 +340,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="storm">
+			<effect name="Buff">
 				<add stat="mCritRate" val="100" />
 				<add stat="pDef" val="1.30" />
 				<add stat="mDef" val="1.30" />
@@ -427,7 +426,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect name="Buff" val="0" stackOrder="1" stackType="fury">
+			<effect name="Buff">
 				<add stat="runSpd" val="1.5" />
 				<mul stat="mCritRate" val="0.50" />
 				<mul stat="rCrit" val="0.50" />
@@ -455,7 +454,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
 		<for>
-			<effect name="Buff" time="30" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="50" />
 			</effect>
 		</for>

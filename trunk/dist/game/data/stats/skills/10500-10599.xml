@@ -326,7 +326,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Buff" time="10" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="40" />
 				<add stat="rEvas" val="5" />
 			</effect>
@@ -534,7 +534,7 @@
 		<enchant8 name="power" val="#enchPower" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Debuff" time="10" val="0">
+			<effect name="Debuff">
 				<param BLEED="1.1" />
 			</effect>
 		</for>
@@ -583,7 +583,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="5" val="0" />
+			<effect name="Paralyze" abnormalTime="5" />
 		</for>
 	</skill>
 	<skill id="10516" levels="6" name="Shadow Chase">
@@ -609,15 +609,15 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant3 name="castRange" val="#ench3CastRange" />
 		<for>
-			<effect effectPower="100" name="TargetCancel" noicon="1" val="0" />
-			<effect name="TeleportToTarget" val="0" />
-			<effect name="Stun" val="0">
+			<effect name="TargetCancel" />
+			<effect name="TeleportToTarget" />
+			<effect name="Stun">
 				<param power="40" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect effectPower="100" name="TargetCancel" noicon="1" val="0" />
-			<effect name="Stun" val="0">
+			<effect name="TargetCancel" />
+			<effect name="Stun">
 				<param power="40" />
 			</effect>
 		</enchant2for>
@@ -699,7 +699,7 @@
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<enchant3 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="TriggerSkillBySkill" noicon="1" triggeredId="10544" triggeredLevel="4" val="0" />
+			<effect name="TriggerSkillBySkill" triggeredId="10544" triggeredLevel="4" />
 			<effect name="Buff">
 				<add stat="rEvas" val="#rEvas" />
 				<add stat="mEvas" val="#mEvas" />
@@ -709,7 +709,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="TriggerSkillBySkill" noicon="1" triggeredId="10544" triggeredLevel="4" val="0" />
+			<effect name="TriggerSkillBySkill" triggeredId="10544" triggeredLevel="4" />
 			<effect name="Buff">
 				<add stat="rEvas" val="75" />
 				<add stat="mEvas" val="90" />
@@ -719,7 +719,7 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="TriggerSkillBySkill" noicon="1" triggeredId="10544" triggeredLevel="4" val="0" />
+			<effect name="TriggerSkillBySkill" triggeredId="10544" triggeredLevel="4" />
 			<effect name="Buff">
 				<add stat="rEvas" val="75" />
 				<add stat="mEvas" val="90" />
@@ -729,7 +729,7 @@
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="TriggerSkillBySkill" noicon="1" triggeredId="10544" triggeredLevel="4" val="0" />
+			<effect name="TriggerSkillBySkill" triggeredId="10544" triggeredLevel="4" />
 			<effect name="Buff">
 				<add stat="rEvas" val="75" />
 				<add stat="mEvas" val="90" />
@@ -782,7 +782,7 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DamOverTime" val="#dot">
+			<effect name="DamOverTime">
 				<mul stat="runSpd" val="#runSpd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="sDef" val="#sDef" />
@@ -816,13 +816,13 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="vengeancePdam" val="#vengeancePdam" />
 				<add stat="pSkillEvas" val="90" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="vengeancePdam" val="100" />
 				<add stat="pSkillEvas" val="90" />
 			</effect>
@@ -848,21 +848,21 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="66" />
 				<mul stat="regHp" val="#regHp" />
 				<add stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="66" />
 				<mul stat="regHp" val="1.4" />
 				<add stat="rEvas" val="10" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="66" />
 				<mul stat="regHp" val="1.4" />
 				<add stat="rEvas" val="10" />
@@ -895,41 +895,38 @@
 		<enchant2 name="power" val="#ench2effectPower" />
 		<for>
 			<effect name="RandomizeHate" />
-			<effect name="TargetCancel" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="TargetCancel" />
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="RandomizeHate" />
-			<effect name="TargetCancel" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="TargetCancel" />
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
-				<add stat="paralyzeVuln" val="#enchVuln" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="RandomizeHate" />
-			<effect name="TargetCancel" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="TargetCancel" />
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
 				<param BLEED="#enchVuln" />
 			</effect>
 		</enchant4for>
 		<enchant5for>
 			<effect name="RandomizeHate" />
-			<effect name="TargetCancel" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="TargetCancel" />
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
-				<add stat="poisonVuln" val="#enchVuln" />
 			</effect>
 		</enchant5for>
 		<enchant6for>
 			<effect name="RandomizeHate" />
-			<effect name="TargetCancel" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="TargetCancel" />
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
-				<add stat="stunVuln" val="#enchVuln" />
 			</effect>
 		</enchant6for>
 	</skill>
@@ -996,7 +993,7 @@
 		<set name="skillType" val="FAKE_DEATH" />
 		<set name="operateType" val="TOGGLE" />
 		<for>
-			<effect name="FakeDeath" val="60" />
+			<effect name="FakeDeath" />
 		</for>
 	</skill>
 	<skill id="10529" levels="1" name="Shadow Flash">
@@ -1055,7 +1052,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="rCrit" val="1.1" />
 				<mul stat="cAtk" val="1.1">
@@ -1089,7 +1086,7 @@
 			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="#runSpd" />
 				<add stat="rEvas" val="40" />
 				<add stat="pSkillEvas" val="#pSkillEvas" />
@@ -1105,7 +1102,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="34" />
 				<add stat="rEvas" val="40" />
 				<add stat="pSkillEvas" val="45" />
@@ -1121,13 +1118,12 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="34" />
 				<add stat="rEvas" val="40" />
 				<add stat="pSkillEvas" val="45" />
 				<mul stat="rCrit" val="1.4" />
 				<sub stat="debuffVuln" val="80" />
-				<add stat="stunProf" val="#enchBonusProf" />
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -1202,7 +1198,7 @@
 		<set name="lvlDepend" val="2" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" val="0" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="10538" levels="4" name="Weakness Critical">
@@ -1288,7 +1284,7 @@
 			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.2" />
 			</effect>
 		</for>
@@ -1322,25 +1318,25 @@
 			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<param power="#power" />
 				<sub stat="accCombat" val="#accPhysical" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<param power="#power" />
 				<sub stat="accCombat" val="16" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="accCombat" val="16" />
 				<sub stat="earthRes" val="#enchtargetTypeElemVuln" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="accCombat" val="16" />
 				<param BLEED="#enchtargetTypeElemVuln" />
 			</effect>
@@ -1396,7 +1392,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" val="45">
+			<effect name="SilentMove">
 				<mul stat="runSpd" val="1.2" />
 				<mul stat="pDef" val="0.8" />
 			</effect>
@@ -1414,7 +1410,7 @@
 		<set name="power" val="100" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetCancel" noicon="1" val="0" />
+			<effect name="TargetCancel" />
 		</for>
 	</skill>
 	<skill id="10545" levels="4" name="Crippling Poison">
@@ -1430,7 +1426,7 @@
 		<set name="power" val="100" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Paralyze" val="0" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="10546" levels="4" name="Uppercut">
@@ -1461,11 +1457,11 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect abnormalVisualEffect="sknockdown" comboType="COMBO_KNOCK_DOWN" effectType="KNOCK_DOWN" name="KnockDown" val="0" />
+			<effect name="KnockDown" />
 		</for>
 		<enchant2for>
 			<effect name="PhysicalAttack" />
-			<effect effectType="KNOCK_DOWN" name="KnockDown" val="0" />
+			<effect name="KnockDown" />
 		</enchant2for>
 	</skill>
 	<skill id="10547" levels="1" name="Shadow Attack">
@@ -1496,9 +1492,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="power" val="#ench1power" />
-		<cond addName="1" msgId="109">
+		<!--<cond addName="1" msgId="109">
 			<targetType npcType="L2MonsterInstance" />
-		</cond>
+		</cond>-->
 		<!--<for>
 			<effect name="Plunder" noicon="1" val="0" />
 		</for>-->
@@ -1530,7 +1526,7 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="power" val="#ench2effectPower" />
 		<for>
-			<effect effectPower="-1" effectType="KNOCK_BACK" name="KnockBack" val="0" />
+			<effect name="KnockBack" />
 		</for>
 	</skill>
 	<skill id="10550" levels="4" name="Illusion Strike">
@@ -1547,7 +1543,7 @@
 		<set name="staticReuse" val="false" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.77" />
 			</effect>
 		</for>
@@ -1569,7 +1565,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="TargetCancel" noicon="1" val="0" />
+			<effect name="TargetCancel" />
 		</for>
 	</skill>
 	<skill id="10552" levels="1" name="Superior Resistance">
@@ -1632,9 +1628,9 @@
 		<set name="isDebuff" val="true" />
 		<enchant1 name="power" val="#ench1chance" />
 		<for>
-			<effect name="Bluff" noicon="1" val="0" />
-			<effect  name="Stun" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0" />
+			<effect name="Bluff" />
+			<effect  name="Stun" />
+			<effect name="TargetCancel" />
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="70" />
@@ -1659,7 +1655,7 @@
 		<set name="trait" val="HOLD" />
 		<set name="ignoreResists" val="true" />
 		<for>
-			<effect name="Root" val="0" />
+			<effect name="Root" />
 		</for>
 	</skill>
 	<skill id="10556" levels="1" name="Illusion Hide">
@@ -1706,11 +1702,11 @@
 					<using kind="DAGGER,DUALDAGGER" />
 				</mul>
 				<mul stat="rCrit" val="#rCritSide">
-					<targetType position="SIDE" />
+					<!--<targetType position="SIDE" />-->
 					<using kind="DAGGER,DUALDAGGER" />
 				</mul>
 				<mul stat="rCrit" val="#rCritBack">
-					<targetType position="BACK" />
+					<!--<targetType position="BACK" />-->
 					<using kind="DAGGER,DUALDAGGER" />
 				</mul>
 			</effect>
@@ -1736,7 +1732,7 @@
 		<set name="power" val="100" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="TargetCancel" noicon="1" val="0" />
+			<effect name="TargetCancel" />
 		</for>
 	</skill>
 	<skill id="10560" levels="1" name="Maximum Blow">
@@ -1750,7 +1746,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="weaponsAllowed" val="Dagger, Dual Dagger" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="blowRate" val="1.1" />
 			</effect>
 		</for>

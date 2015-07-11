@@ -69,7 +69,7 @@
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="10251" levels="1" name="Superior Weapon Mastery" enchantGroup1="10">
@@ -662,13 +662,13 @@
 		<enchant8 name="power" val="#enchPower" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="RandomizeHate" noicon="1" val="0">
+			<effect name="RandomizeHate">
 				<param power="#powerDebuff" />
 			</effect>
-			<effect  name="TargetCancel" noicon="1" val="0">
+			<effect  name="TargetCancel">
 				<param power="#powerDebuff" />
 			</effect>
-			<effect name="Stun" val="0">
+			<effect name="Stun">
 				<param power="#powerDebuff" />
 			</effect>
 		</for>
@@ -752,17 +752,17 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Stun" val="0">
+			<effect name="Stun">
 				<param power="70" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Stun" val="0">
+			<effect name="Stun">
 				<param power="#ench2effectPower" />
 			</effect>
 		</enchant2for>
 		<enchant4for>
-			<effect name="Stun" val="0">
+			<effect name="Stun">
 				<param power="#ench2effectPower" />
 			</effect>
 			<effect name="Debuff">
@@ -784,7 +784,7 @@
 		<set name="skillToCastLevel" val="#triggeredLevel" />
 		<set name="operateType" val="TOGGLE" />
 		<for>
-			<effect abnormalLvl="#triggeredLevel" name="ManaDamOverTime" val="#mdot" />
+			<effect name="ManaDamOverTime" />
 		</for>
 	</skill>
 	<skill id="10269" levels="7" name="Jump Attack">
@@ -840,19 +840,19 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<param power="80" />
 				<mul stat="runSpd" val="0.3" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<param power="80" />
 				<mul stat="runSpd" val="0.3" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<param power="#ench2effectPower" />
 				<mul stat="runSpd" val="0.3" />
 			</effect>
@@ -913,7 +913,7 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant3 name="skillRadius" val="#ench3radius" />
 		<for>
-			<effect name="TargetMe" val="0">
+			<effect name="TargetMe">
 				<param power="75" />
 				<mul stat="pAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -921,7 +921,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="TargetMe" val="0">
+			<effect name="TargetMe">
 				<param power="#ench2effectPower" />
 				<mul stat="pAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -929,7 +929,7 @@
 			</effect>
 		</enchant2for>
 		<enchant4for>
-			<effect name="TargetMe" val="0">
+			<effect name="TargetMe">
 				<param power="#ench2effectPower" />
 				<mul stat="pAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -937,7 +937,7 @@
 			</effect>
 		</enchant4for>
 		<enchant5for>
-			<effect name="TargetMe" val="0">
+			<effect name="TargetMe">
 				<param power="#ench2effectPower" />
 				<mul stat="pAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -970,25 +970,25 @@
 		<enchant2 name="abnormalTime" val="#ench2Time" />
 		<enchant3 name="skillRadius" val="#ench3radius" />
 		<for>
-			<effect abnormalLvl="1" abnormalType="disarm" name="Disarm" val="0">
+			<effect name="Disarm">
 				<mul stat="pDef" val="#def" />
 				<mul stat="mDef" val="#def" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect abnormalLvl="1" abnormalType="disarm" abnormalVisualEffect="bleed" name="Disarm" val="0">
+			<effect name="Disarm">
 				<mul stat="pDef" val="0.75" />
 				<mul stat="mDef" val="0.75" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect abnormalLvl="1" abnormalType="disarm" abnormalVisualEffect="bleed" name="Disarm" val="0">
+			<effect name="Disarm">
 				<mul stat="pDef" val="0.75" />
 				<mul stat="mDef" val="0.75" />
 			</effect>
 		</enchant2for>
 		<enchant4for>
-			<effect abnormalLvl="1" abnormalType="disarm" abnormalVisualEffect="bleed" name="Disarm" val="0">
+			<effect name="Disarm">
 				<mul stat="pDef" val="0.75" />
 				<mul stat="mDef" val="0.75" />
 				<!--<add stat="knockDownVuln" val="#enchVuln" />
@@ -996,7 +996,7 @@
 			</effect>
 		</enchant4for>
 		<enchant5for>
-			<effect abnormalLvl="1" abnormalTime="5" abnormalType="disarm" abnormalVisualEffect="bleed" name="Disarm" val="0">
+			<effect name="Disarm">
 				<mul stat="pDef" val="0.75" />
 				<mul stat="mDef" val="0.75" />
 				<!--<add stat="stunVuln" val="#enchVuln" />-->
@@ -1039,7 +1039,7 @@
 			</and>
 		</enchant3cond>
 		<for>
-			<effect abnormalLvl="#abnormalLvl" abnormalType="pinch" name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="#runSpd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<add stat="accCombat" val="#accPhysical" />
@@ -1069,7 +1069,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect abnormalLvl="7" abnormalType="pinch" name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="25" />
 				<mul stat="pAtk" val="1.11" />
 				<add stat="accCombat" val="25" />
@@ -1099,7 +1099,7 @@
 			</effect>
 		</enchant2for>
 		<enchant4for>
-			<effect abnormalLvl="7" abnormalType="pinch" name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="25" />
 				<mul stat="pAtk" val="1.11" />
 				<add stat="accCombat" val="25" />
@@ -1173,15 +1173,15 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="1" name="FocusEnergy" noicon="1" val="15" />
+			<effect name="FocusEnergy" />
 		</for>
 		<enchant1for>
-			<effect count="1" name="FocusEnergy" noicon="1" val="15" />
-			<effect name="HealPercent" noicon="1" val="#enchPercentHeal" />
+			<effect name="FocusEnergy" />
+			<effect name="HealPercent" />
 		</enchant1for>
 		<enchant2for>
-			<effect count="1" name="FocusEnergy" noicon="1" val="15" />
-			<effect name="CpHealPercent" noicon="1" val="#enchPercentHeal" />
+			<effect name="FocusEnergy" />
+			<effect name="CpHealPercent" />
 		</enchant2for>
 	</skill>
 	<skill id="10277" levels="4" name="Final Cry">
@@ -1203,7 +1203,7 @@
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<enchant3 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
 				<mul stat="pvpPhysDmg" val="1.05" />
@@ -1211,7 +1211,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.33" />
 				<mul stat="physicalSkillPower" val="1.33" />
 				<mul stat="pvpPhysDmg" val="1.05" />
@@ -1219,7 +1219,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.33" />
 				<mul stat="physicalSkillPower" val="1.16" />
 				<mul stat="pvpPhysDmg" val="1.05" />
@@ -1296,7 +1296,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="FocusEnergy" val="100" />
+			<effect name="FocusEnergy" />
 		</for>
 	</skill>
 	<skill id="10281" levels="2" name="Sonic Star">
@@ -1430,7 +1430,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<for>
-			<effect name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime" />
 		</for>
 	</skill>
 	<skill id="10288" levels="8" name="Hurricane Storm">
@@ -1787,7 +1787,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="mpConsume" val="38" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="HealPercent" />
 		</for>
 	</skill>
 	<skill id="10299" levels="1" name="Stun Spear">

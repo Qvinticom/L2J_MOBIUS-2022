@@ -704,9 +704,7 @@
 			<effect name="KnockBack" />
 		</for>
 		<enchant2for>
-			<for>
-				<effect name="KnockBack" />
-			</for>
+			<effect name="KnockBack" />
 		</enchant2for>
 	</skill>
 	<skill id="10771" levels="8" name="Multiple Arrow">
@@ -837,7 +835,7 @@
 		<set name="hitTime" val="700" />
 		<enchant1 name="flyRadius" val="#ench1flyRadius" />
 		<for>
-			<effect name="Blink" noicon="1" self="1" val="0" />
+			<effect name="Blink" />
 		</for>
 	</skill>
 	<skill id="10775" levels="3" name="Confusion Decoy">
@@ -1471,9 +1469,6 @@
 		<set name="trait" val="BLEED" />
 		<enchant1 name="power" val="#ench1power" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<for>
-			<effect abnormalType="bleeding" abnormalVisualEffect="bleed" count="10" effectPower="50" effectType="BLEED" name="DamOverTime" val="#dot" />
-		</for>
 	</skill>
 	<skill id="10799" levels="1" name="Superior M. Def.">
 		<table name="#ench1mDef">206 213 220 227 234 241 248 255 262 270</table>

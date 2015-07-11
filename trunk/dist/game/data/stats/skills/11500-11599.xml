@@ -1712,7 +1712,7 @@
 		</cond>
 		<for>
 			<effect name="Transformation">
-				<param id="#transformationId" />
+				<param id="111" />
 				<mul stat="pAtk" val="0.8" />
 				<mul stat="mAtk" val="0.8" />
 				<add stat="pDef" val="#Def" />
@@ -2118,9 +2118,8 @@
 		<set name="effectRange" val="1200" />
 		<set name="castRange" val="900" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<effect name="Invincible" time="30" val="0" />
 		<for>
-			<effect name="Invincible" time="30" val="0" />
+			<effect name="Invincible" />
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2130,7 +2129,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Invincible" time="30" val="0" />
+			<effect name="Invincible" />
 			<effect name="Buff">
 				<add stat="runSpd" val="#ench2runSpd" />
 			</effect>
@@ -2143,8 +2142,8 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="HealPercent" noicon="1" val="#enchHealPower" />
-			<effect name="Invincible" time="30" val="0" />
+			<effect name="HealPercent" />
+			<effect name="Invincible" />
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2154,8 +2153,8 @@
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="MpHealPercent" noicon="1" val="#enchHealPower" />
-			<effect name="Invincible" time="30" val="0" />
+			<effect name="MpHealPercent" />
+			<effect name="Invincible" />
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2165,8 +2164,8 @@
 			</effect>
 		</enchant4for>
 		<enchant5for>
-			<effect name="CpHealPercent" noicon="1" val="#enchHealPower" />
-			<effect name="Invincible" time="30" val="0" />
+			<effect name="CpHealPercent" />
+			<effect name="Invincible" />
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2241,13 +2240,13 @@
 		<set name="canBeDispeled" val="false" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
-			<effect abnormalLvl="3" abnormalTime="120" abnormalType="DANCE_OF_SHADOW" abnormalVisualEffect="STEALTH" name="SilentMove" removed="ON_ATTACK_BUFF" val="0" />
+			<effect abnormalTime="120" name="SilentMove" />
 		</for>
 		<enchant2for>
-			<effect abnormalLvl="3" abnormalTime="#ench2abnormalTime" abnormalType="DANCE_OF_SHADOW" abnormalVisualEffect="STEALTH" name="SilentMove" removed="ON_ATTACK_BUFF" val="0" />
+			<effect abnormalTime="#ench2abnormalTime" name="SilentMove" />
 		</enchant2for>
 		<enchant3for>
-			<effect abnormalLvl="3" abnormalTime="120" abnormalType="DANCE_OF_SHADOW" abnormalVisualEffect="STEALTH" name="SilentMove" removed="ON_ATTACK_BUFF" val="0">
+			<effect abnormalTime="120" name="SilentMove">
 				<add stat="runSpd" val="#ench3runSpd" />
 			</effect>
 		</enchant3for>

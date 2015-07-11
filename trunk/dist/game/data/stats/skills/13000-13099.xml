@@ -1057,9 +1057,9 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtkRange" val="50">
-					<mul stat="pvpPhysDmg" val="1.05" />
+					<!--<mul stat="pvpPhysDmg" val="1.05" />
 					<mul stat="pvpPhysSkillsDmg" val="1.05" />
-					<mul stat="pvpMagicalDmg" val="1.05" />
+					<mul stat="pvpMagicalDmg" val="1.05" />-->
 					<using kind="BOW" />
 				</add>
 			</effect>
@@ -1516,7 +1516,7 @@
 		<table name="#pAtkMul"> 1 1 1 1.07 </table>
 		<table name="#cAtkAdd"> 0 0 0 242 </table>
 		<table name="#resist"> 0 0 0 10 </table>
-		<mul stat="pAtkSpd" val="#pAtkSpd" />
+		<!--<mul stat="pAtkSpd" val="#pAtkSpd" />-->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />

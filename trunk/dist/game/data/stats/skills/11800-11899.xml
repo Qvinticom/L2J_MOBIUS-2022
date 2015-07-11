@@ -331,7 +331,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="canBeDispeled" val="false" />
 		<effect name="Debuff">
-			<div stat="healEffect" val="1.4" />
+			<set stat="healEffect" val="1.4" />
 		</effect>
 	</skill>
 	<!-- Level 1 : Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. -->

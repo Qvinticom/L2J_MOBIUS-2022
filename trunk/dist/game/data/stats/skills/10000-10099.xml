@@ -460,7 +460,7 @@
 		<enchant8 name="power" val="#enchPower" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Mute" val="0">
+			<effect name="Mute">
 				<param power="80" />
 				<mul stat="pDef" val="0.8" />
 				<mul stat="mDef" val="0.8" />
@@ -518,13 +518,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" val="0" />
-			<param power="40" />
+			<effect name="Stun" />
 		</for>
 		<enchant2for>
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" val="0" />
-			<param power="#ench2effectPower" />
+			<effect name="Stun" />
 		</enchant2for>
 	</skill>
 	<skill id="10012" levels="7" name="Shield Wave">
@@ -578,13 +576,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" val="0" />
-			<param power="65" />
+			<effect name="Stun" />
 		</for>
 		<enchant2for>
 			<effect name="PhysicalAttack" />
-			<effect name="Stun" val="0" />
-			<param power="#ench2effectPower" />
+			<effect name="Stun" />
 		</enchant2for>
 	</skill>
 	<skill id="10013" levels="8" name="Gust Blade">
@@ -685,7 +681,7 @@
 		<enchant8 name="power" val="#enchPower" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="regHp" val="0.1" />
 			</effect>
 		</for>
@@ -826,20 +822,20 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="#transDamToPlayer" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
 			</effect>
-			<effect name="HealPercent" noicon="1" val="#ench3HpHealPercent" />
+			<effect name="HealPercent" />
 		</enchant3for>
 	</skill>
 	<skill id="10019" levels="2" name="Protection of Faith">
@@ -861,7 +857,7 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
 				<param DERANGEMENT="#derangementVuln" />
 				<add stat="pDef" val="#power" />
@@ -869,7 +865,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
 				<param DERANGEMENT="70" />
 				<add stat="pDef" val="10000" />
@@ -877,7 +873,7 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="TransferDamage" val="0">
+			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
 				<param DERANGEMENT="70" />
 				<add stat="pDef" val="10000" />
@@ -900,7 +896,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DamOverTime" val="#mpConsume">
+			<effect name="DamOverTime">
 				<add stat="pDef" val="#pDef" />
 				<add stat="sDef" val="#sDef" />
 				<mul stat="rShld" val="#rShld" />
@@ -929,14 +925,14 @@
 			<using kind="SHIELD" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="reflectDam" val="#reflectPercent" />
 				<add stat="vengeanceMdam" val="50" />
 				<add stat="reflectSkillMagic" val="50" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="reflectDam" val="25" />
 				<add stat="vengeanceMdam" val="50" />
 				<add stat="reflectSkillMagic" val="50" />
@@ -961,11 +957,11 @@
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<!-- <enchant9 name="reuseDelay" val="#ench9Reuse" /> -->
 		<for>
-			<effect name="IgnoreDeath"/>
+			<effect name="IgnoreDeath" />
 		</for>
 		<enchant3for>
-			<effect name="IgnoreDeath"/>
-			<effect name="HealPercent" noicon="1" val="#ench3HpHealPercent" />
+			<effect name="IgnoreDeath" />
+			<effect name="HealPercent" />
 		</enchant3for>
 	</skill>
 	<skill id="10023" levels="2" name="King of Beasts">
@@ -1010,7 +1006,7 @@
 			<using kind="SHIELD" />
 		</cond>
 		<for>
-			<effect abnormalLvl="1" abnormalTime="1" abnormalVisualEffect="sknockdown" effectPower="85"	effectType="KNOCK_DOWN" name="KnockDown" val="0" />
+			<effect abnormalTime="1" name="KnockDown" />
 		</for>
 	</skill>
 	<skill id="10024" levels="1" name="Party Rescue" enchantGroup1="10" enchantGroup2="10">
@@ -1036,15 +1032,15 @@
 				<add stat="transDamToPlayer" val="90" />
 				<add stat="maxSkillDamage" val="10" />
 			</effect>
-			<effect name="JumpToFriend" noicon="1" />
+			<effect name="JumpToFriend" />
 		</for>
 		<enchant2for>
 			<effect name="TransferDamage">
 				<add stat="transDamToPlayer" val="90" />
 				<add stat="maxSkillDamage" val="10" />
 			</effect>
-			<effect name="JumpToFriend" noicon="1" />
-			<effect name="HealPercent" noicon="1" val="#ench2HpHealPercent" />
+			<effect name="JumpToFriend" />
+			<effect name="HealPercent" />
 		</enchant2for>
 	</skill>
 	<skill id="10025" levels="4" name="Knight Frenzy">
@@ -1845,7 +1841,7 @@
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="10" />
 			</effect>
-			<effect name="HealPercent" noicon="1" val="#HpHealPercent" />
+			<effect name="HealPercent" />
 			<effect name="Buff">
 				<set stat="debuffImmunity" val="1" />
 				<add stat="pDef" val="#pDef" />
@@ -1871,7 +1867,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="mDef" val="1000" />
 				<add stat="fireRes" val="20" />
 				<add stat="waterRes" val="20" />
@@ -1956,7 +1952,7 @@
 		<set name="skillRadius" val="450" />
 		<set name="skillType" val="BUFF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="mDef" val="#defense" />
 				<mul stat="pDef" val="#defense" />
 			</effect>

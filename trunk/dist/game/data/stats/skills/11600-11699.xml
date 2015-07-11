@@ -150,9 +150,9 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="castRange" val="900" />
 		<set name="skillRadius" val="250" />
-		<cond>
+		<!--<cond>
 			<target playable="true" />
-		</cond>
+		</cond>-->
 		<for>
 			<effect name="Debuff">
 				<mul stat="regHp" val="0.7" />
@@ -197,7 +197,7 @@
 		<set name="castRange" val="900" />
 		<set name="skillRadius" val="250" />
 		<for>
-			<effect abnormalLvl="1" abnormalTime="1800" abnormalType="song_of_shield" name="Buff" val="0">
+			<effect abnormalTime="1800" name="Buff">
 				<mul stat="pDef" val="1.1" />
 				<add stat="fireRes" val="20" />
 				<add stat="waterRes" val="20" />
@@ -223,7 +223,7 @@
 		<set name="castRange" val="900" />
 		<set name="skillRadius" val="250" />
 		<for>
-			<effect abnormalLvl="1" abnormalTime="1800" abnormalType="dance_of_power" name="Buff" val="0">
+			<effect abnormalTime="1800" name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="rCrit" val="1.1" />

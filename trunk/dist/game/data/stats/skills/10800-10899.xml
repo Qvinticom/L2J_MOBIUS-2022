@@ -65,7 +65,6 @@
 				<param BOW="1.6" />
 				<param CROSSBOW="1.6" />
 				<mul stat="mDef" val="0.75" />
-				<add stat="stunVuln" val="#enchVuln" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
@@ -74,7 +73,6 @@
 				<param CROSSBOW="1.6" />
 				<mul stat="mDef" val="0.75" />
 				<param KNOCKDOWN="#enchVuln" />
-				<param KNOCKBACK="#enchVuln" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -117,7 +115,6 @@
 				<param BOW="1.6" />
 				<param CROSSBOW="1.6" />
 				<mul stat="mDef" val="0.75" />
-				<add stat="stunVuln" val="#enchVuln" />
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -133,7 +130,6 @@
 				<param CROSSBOW="1.6" />
 				<mul stat="mDef" val="0.75" />
 				<param KNOCKDOWN="#enchVuln" />
-				<param KNOCKBACK="#enchVuln" />
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />

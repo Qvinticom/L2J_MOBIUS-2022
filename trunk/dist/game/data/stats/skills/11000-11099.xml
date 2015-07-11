@@ -25,7 +25,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Stun" val="0">
+			<effect name="Stun">
 				<param power="50" />
 			</effect>
 		</for>
@@ -197,7 +197,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="forceStore" val="true" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="DamOverTime">
 				<add stat="firePower" val="50" />
 			</effect>
 		</for>
@@ -215,7 +215,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="forceStore" val="true" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="DamOverTime">
 				<add stat="waterPower" val="50" />
 			</effect>
 		</for>
@@ -233,7 +233,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="forceStore" val="true" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="DamOverTime">
 				<add stat="windPower" val="50" />
 			</effect>
 		</for>
@@ -251,7 +251,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="forceStore" val="true" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="DamOverTime">
 				<add stat="earthPower" val="50" />
 			</effect>
 		</for>
@@ -966,15 +966,20 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime">
+				<param power="#dot" />
+			</effect>
 		</for>
 		<enchant2for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" val="#ench2dot" />
+			<effect name="DamOverTime">
+				<param power="#ench2dot" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" val="537">
+			<effect name="DamOverTime">
+				<param power="537" />
 				<param DERANGEMENT="#ench3reduceFear" />
 			</effect>
 		</enchant3for>
@@ -1054,12 +1059,12 @@
 		<enchant4 name="power" val="#enchPower" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect effectPower="40" effectType="KNOCK_BACK" name="KnockBack" noicon="1" val="0">
+			<effect name="KnockBack">
 				<param power="40" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect effectType="KNOCK_BACK" name="KnockBack" noicon="1" val="0">
+			<effect name="KnockBack">
 				<param power="#ench3debuffPower" />
 			</effect>
 		</enchant3for>
@@ -1524,7 +1529,7 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="mAtk" val="#mAtk" />
 				<mul stat="mCritRate" val="#mCritRate" />
 				<mul stat="mDef" val="1.2" />
@@ -1534,7 +1539,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="mAtk" val="1.3" />
 				<mul stat="mCritRate" val="1.6" />
 				<mul stat="mDef" val="1.2" />
@@ -1544,7 +1549,7 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="mAtk" val="1.3" />
 				<mul stat="mCritRate" val="1.6" />
 				<mul stat="mDef" val="1.2" />
@@ -1554,14 +1559,13 @@
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="mAtk" val="1.3" />
 				<mul stat="mCritRate" val="1.6" />
 				<mul stat="mDef" val="1.2" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="MagicalMpConsumeRate" val="0.4" />
 				<add stat="rEvas" val="2" />
-				<add stat="derangementProf" val="#ench4derangementProf" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -1605,7 +1609,7 @@
 		<enchant5 name="power" val="#enchPower" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="mDef" val="0.7" />
 				<mul stat="mAtk" val="0.7" />
 				<mul stat="mAtkSpd" val="0.9" />
@@ -1618,7 +1622,7 @@
 		</for>
 		<enchant2for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.9" />
 				<sub stat="rEvas" val="6" />
 				<mul stat="pDef" val="0.9" />
@@ -1629,7 +1633,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.9" />
 				<sub stat="rEvas" val="6" />
 				<mul stat="pDef" val="#ench3pDefDown" />
@@ -1640,7 +1644,7 @@
 		</enchant3for>
 		<enchant4for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.9" />
 				<sub stat="rEvas" val="6" />
 				<mul stat="pDef" val="0.9" />
@@ -1650,7 +1654,7 @@
 			</effect>
 		</enchant4for>
 		<enchant5for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="runSpd" val="#ench5slow" />
 				<sub stat="rEvas" val="6" />
 				<mul stat="pDef" val="0.9" />
@@ -1701,7 +1705,7 @@
 		<enchant5 name="power" val="#enchMdamPower" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="rEvas" val="12" />
 				<sub stat="mEvas" val="12" />
 				<mul stat="pDef" val="0.92" />
@@ -1713,7 +1717,7 @@
 		</for>
 		<enchant2for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="rEvas" val="12" />
 				<sub stat="mEvas" val="12" />
 				<mul stat="pDef" val="0.92" />
@@ -1725,7 +1729,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="rEvas" val="12" />
 				<sub stat="mEvas" val="12" />
 				<mul stat="pDef" val="#ench3PhysicalHexpower" />
@@ -1737,7 +1741,7 @@
 		</enchant3for>
 		<enchant4for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="rEvas" val="12" />
 				<sub stat="mEvas" val="12" />
 				<mul stat="pDef" val="0.92" />
@@ -1749,7 +1753,7 @@
 		</enchant4for>
 		<enchant5for>
 			<effect name="MagicalAttack" />
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub stat="rEvas" val="12" />
 				<sub stat="mEvas" val="12" />
 				<mul stat="pDef" val="0.92" />
@@ -1820,15 +1824,15 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
 		<for>
-			<effect name="ThrowUp" val="0" />
+			<effect name="ThrowUp" />
 		</for>
 		<enchant3for>
-			<effect name="ThrowUp" val="0">
+			<effect name="ThrowUp">
 				<mul stat="pDef" val="#enchHex" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="ThrowUp" val="0">
+			<effect name="ThrowUp">
 				<mul stat="mDef" val="#enchHex" />
 			</effect>
 		</enchant4for>
@@ -1917,7 +1921,7 @@
 		<enchant2 name="power" val="#ench1MpInitialConsume" />
 		<enchant3 name="castRange" val="#ench3CastRange" />
 		<for>
-			<effect abnormalLvl="1" abnormalTime="9" abnormalVisualEffect="sflyup" comboType="COMBO_FLY_UP" effectPower="-1" name="ThrowUp" val="0" />
+			<effect abnormalTime="9" name="ThrowUp" />
 		</for>
 	</skill>
 	<skill id="11054" levels="1" name="Yoke Status">
@@ -1962,18 +1966,18 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
 		<for>
-			<effect abnormalType="turn_flee" activationChance="40" count="5" name="Fear" val="0">
+			<effect activationChance="40" name="Fear">
 				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect abnormalType="turn_flee" activationChance="40" count="5" name="Fear" val="0">
+			<effect activationChance="40" name="Fear">
 				<mul stat="runSpd" val="0.7" />
 				<mul stat="pDef" val="#enchHex" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect abnormalType="turn_flee" activationChance="40" count="5" name="Fear" val="0">
+			<effect activationChance="40" name="Fear">
 				<mul stat="runSpd" val="0.7" />
 				<mul stat="mDef" val="#enchHex" />
 			</effect>
@@ -2011,18 +2015,18 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
 		<for>
-			<effect abnormalType="turn_flee" activationChance="40" count="5" name="Fear" val="0">
+			<effect activationChance="40" name="Fear">
 				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect abnormalType="turn_flee" activationChance="40" count="5" name="Fear" val="0">
+			<effect activationChance="40" name="Fear">
 				<mul stat="runSpd" val="0.4" />
 				<mul stat="pDef" val="#enchHex" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect abnormalType="turn_flee" activationChance="40" count="5" name="Fear" val="0">
+			<effect activationChance="40" name="Fear">
 				<mul stat="runSpd" val="0.4" />
 				<mul stat="mDef" val="#enchHex" />
 			</effect>
@@ -2062,9 +2066,9 @@
 		<enchant3 name="skillRadius" val="#ench3skillRadius" />
 		<enchant3 name="power" val="#enchPower" />
 		<for>
-			<effect name="Stun" val="0" />
-			<effect name="Blink" noicon="1" self="1" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0" />
+			<effect name="Stun" />
+			<effect name="Blink" />
+			<effect name="TargetCancel" />
 		</for>
 	</skill>
 	<skill id="11058" levels="3" name="Shadow Snare">
@@ -2092,9 +2096,9 @@
 		<set name="effectLevel" val="1" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
+		<!--<cond msgId="1509">
+			<player use_in_olympiad="false" />
+		</cond>-->
 		<!--<for>
 			<effect abnormalTime="2" count="3" name="BlackHole" val="0" />
 		</for>-->
@@ -2127,23 +2131,23 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="90" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="90" />
 				<mul stat="pDef" val="#enchDefence" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="runSpd" val="90" />
 				<mul stat="mDef" val="#enchDefence" />
 			</effect>
@@ -2203,26 +2207,26 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="manaShield" val="20" />
 				<add stat="reflectDam" val="10" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="manaShield" val="20" />
 				<add stat="reflectDam" val="10" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="manaShield" val="20" />
 				<add stat="reflectDam" val="10" />
 				<mul stat="pDef" val="#enchDefence" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add stat="manaShield" val="80" />
 				<add stat="reflectDam" val="10" />
 				<mul stat="mDef" val="#enchDefence" />
@@ -2258,10 +2262,10 @@
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="power" val="#enchPower" />
 		<for>
-			<effect abnormalType="turn_flee" activationChance="70" count="5" effectPower="50" name="Fear" val="0" />
+			<effect activationChance="70" name="Fear" />
 		</for>
 		<enchant2for>
-			<effect abnormalType="turn_flee" activationChance="70" count="5" effectPower="50" name="Fear" val="0">
+			<effect activationChance="70" name="Fear">
 				<mul stat="runSpd" val="#ench2slow" />
 			</effect>
 		</enchant2for>
@@ -2296,10 +2300,10 @@
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="power" val="#enchPower" />
 		<for>
-			<effect abnormalType="turn_flee" activationChance="70" count="5" effectPower="50" name="Fear" val="0" />
+			<effect activationChance="70" name="Fear" />
 		</for>
 		<enchant2for>
-			<effect abnormalType="turn_flee" activationChance="70" count="5" effectPower="50" name="Fear" val="0">
+			<effect activationChance="70" name="Fear">
 				<mul stat="runSpd" val="#ench2slow" />
 			</effect>
 		</enchant2for>
@@ -2666,9 +2670,9 @@
 		<enchant3 name="skillRadius" val="#ench3skillRadius" />
 		<enchant3 name="power" val="#enchPower" />
 		<for>
-			<effect name="Stun" val="0" />
-			<effect name="Blink" noicon="1" self="1" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0" />
+			<effect name="Stun" />
+			<effect name="Blink" />
+			<effect name="TargetCancel" />
 		</for>
 	</skill>
 	<skill id="11096" levels="1" name="Elemental Destruction: Fire">
