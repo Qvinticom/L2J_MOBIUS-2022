@@ -21,23 +21,33 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
-	<!-- Level 1 : Casts Eviscerator Force on entire party, which increases P. Skill Critical Rate + 1%. -->
 	<skill id="30602" levels="1" name="Eviscerator Aura">
 		<set name="icon" val="icon.icon_lender" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<for>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="30603" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30603" levels="1" name="Eviscerator Force">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Skill Critical Rate + 1%. -->
 		<set name="icon" val="icon.icon_lender_01" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
+		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="1.01" /> <!-- IMPLEMENT P.Skill Critical Rate and change stat -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="30604" levels="1" name="Block Eviscerator Force">
 		<!-- AUTO GENERATED SKILL -->
@@ -46,28 +56,32 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Casts Sayha's Seer Force on entire party, which increases M. Critical Rate + 1%. -->
 	<skill id="30605" levels="1" name="Sayha's Seer Aura">
 		<set name="icon" val="icon.icon_Er_wizard" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="3" />
 		<set name="targetType" val="SELF" />
+		<set name="castRange" val="1000" />
+		<for>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="30606" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30606" levels="1" name="Sayha's Seer Force">
+		<set name="icon" val="icon.icon_Er_wizard_01" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
 				<mul stat="mCritRate" val="1.01" />
 			</effect>
 		</for>
-	</skill>
-	<skill id="30606" levels="1" name="Sayha's Seer Force">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Critical Rate + 1%. -->
-		<set name="icon" val="icon.icon_Er_wizard_01" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="30607" levels="1" name="Block Sayha's Seer Force">
 		<!-- AUTO GENERATED SKILL -->

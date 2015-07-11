@@ -1242,77 +1242,78 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="skillType" val="CONT" />
-		<set name="abnormalTime" val="15" />
-		<set name="skillToCast" val="10029" />
-		<set name="skillToCastLevel" val="1" />
-		<set name="skillRadius" val="200" />
-		<set name="targetType" val="PARTY" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_DEBUFF_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DamOverTime" val="0">
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pAtkSpd" val="1.1" />
-				<add stat="runSpd" val="10" />
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.1">
+					<using kind="SWORD, BLUNT" />
+				</mul>
+				<mul stat="pAtkSpd" val="1.1">
+					<using kind="SWORD, BLUNT" />
+				</mul>
+				<add stat="runSpd" val="10">
+					<using kind="SWORD, BLUNT" />
+				</add>
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10029" skillLevel="1" />
+				<param targetType="AURA" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10029" levels="1" name="Rage Aura">
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
-		<set name="power" val="100" />
-		<set name="abnormalTime" val="15" />
-		<set name="lvlDepend" val="1" />
+		<set name="abnormalVisualEffect" val="AURA_DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<set name="isDebuff" val="true" />
-		<set name="skillRadius" val="200" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="isMagic" val="3" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul stat="pAtkSpd" val="0.8" />
 				<mul stat="pAtk" val="0.8" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10030" levels="1" name="Challenge Aura">
-		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="skillType" val="CONT" />
-		<set name="abnormalTime" val="15" />
-		<set name="skillRadius" val="200" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
-		<set name="skillToCast" val="10031" />
-		<set name="skillToCastLevel" val="1" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="Buff">
+				<!-- TODO: add increase aggression power -->
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="MagicalMpConsumeRate" val="0.8" />
 				<mul stat="PhysicalMpConsumeRate" val="0.8" />
 				<mul stat="DanceMpConsumeRate" val="0.8" />
 			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10031" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="10031" levels="1" name="Challenge Aura">
 		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="power" val="100" />
-		<set name="lvlDepend" val="1" />
-		<set name="abnormalTime" val="15" />
-		<set name="targetType" val="PARTY" />
-		<set name="skillRadius" val="200" />
-		<set name="power" val="35000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<cond>
-			<not>
-				<target active_effect_id="10030" />
-			</not>
-		</cond>
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="MagicalMpConsumeRate" val="0.8" />
@@ -1322,79 +1323,75 @@
 		</for>
 	</skill>
 	<skill id="10032" levels="1" name="Iron Aura">
-		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
-		<set name="abnormalTime" val="15" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="skillType" val="CONT" />
-		<set name="skillRadius" val="200" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
-		<set name="skillToCast" val="10033" />
-		<set name="skillToCastLevel" val="1" />
 		<for>
-			<effect name="DamOverTime" val="0">
-				<mul stat="pAtk" val="1.05" />
-				<mul stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05">
+					<using kind="SHIELD" />
+				</mul>
+				<mul stat="pAtkSpd" val="1.05">
+					<using kind="SHIELD" />
+				</mul>
 				<add stat="pDef" val="215">
-					<using kind="HEAVY" />
+					<using kind="SHIELD" />
 				</add>
-				<mul stat="sDef" val="1.5">
-					<using kind="HEAVY" />
-				</mul>
 				<mul stat="rShld" val="2">
-					<using kind="HEAVY" />
+					<using kind="SHIELD" />
 				</mul>
-				<!--<mul stat="bowWpnVuln" val="0.8">
-					<using kind="HEAVY" />
+				<mul stat="sDef" val="1.5">
+					<using kind="SHIELD" />
 				</mul>
-				<mul stat="crossbowWpnVuln" val="0.8">
-					<using kind="HEAVY" />
-				</mul>-->
-				<mul stat="cAtk" val="0.85">
-					<using kind="HEAVY" />
-				</mul>
+				<mul stat="defCritDamage" val="0.85" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param BOW="20" />
+				<param CROSSBOW="20" />
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10033" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10033" levels="1" name="Iron Aura">
 		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="power" val="100" />
-		<set name="lvlDepend" val="1" />
-		<set name="targetType" val="PARTY" />
-		<set name="abnormalTime" val="15" />
-		<set name="effectRange" val="120" />
-		<set name="skillRadius" val="200" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<cond>
-			<not>
-				<target active_effect_id="10032" />
-			</not>
-		</cond>
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="pDef" val="1.10" />
-				<!-- <mul stat="bowWpnVuln" val="0.8" />
-				<mul stat="crossbowWpnVuln" val="0.8" />-->
+				<mul stat="healEffect" val="1.1" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param BOW="20" />
+				<param CROSSBOW="20" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10034" levels="1" name="Aura Resistance">
-		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="skillType" val="CONT" />
-		<set name="abnormalTime" val="15" />
-		<set name="skillRadius" val="200" />
-		<set name="skillToCast" val="10035" />
-		<set name="skillToCastLevel" val="1" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="mDef" val="1.1" />
@@ -1403,26 +1400,24 @@
 				<add stat="windRes" val="20" />
 				<add stat="earthRes" val="20" />
 			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10035" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="10035" levels="1" name="Aura Resistance">
 		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="power" val="100" />
-		<set name="lvlDepend" val="1" />
-		<set name="abnormalTime" val="15" />
-		<set name="targetType" val="PARTY" />
-		<set name="skillRadius" val="200" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<cond>
-			<not>
-				<target active_effect_id="10034" />
-			</not>
-		</cond>
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="mDef" val="1.1" />
@@ -1434,96 +1429,92 @@
 		</for>
 	</skill>
 	<skill id="10036" levels="1" name="Recovery Aura">
-		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="skillType" val="CONT" />
-		<set name="abnormalTime" val="15" />
-		<set name="skillRadius" val="200" />
-		<set name="skillToCast" val="10037" />
-		<set name="skillToCastLevel" val="1" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<param HOLD="15" />
-				<sub stat="debuffVuln" val="15" />
+				<sub stat="debuffVuln" val="20" />
 				<mul stat="regHp" val="1.1" />
-				<!--<mul stat="gainHp" val="1.1" />-->
+				<mul stat="healEffect" val="1.1" />
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10037" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10037" levels="1" name="Recovery Aura">
 		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="power" val="100" />
-		<set name="abnormalTime" val="15" />
-		<set name="targetType" val="PARTY" />
-		<set name="skillRadius" val="200" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<cond>
-			<not>
-				<target active_effect_id="10036" />
-			</not>
-		</cond>
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<param HOLD="15" />
-				<sub stat="debuffVuln" val="15" />
+				<sub stat="debuffVuln" val="20" />
 				<mul stat="regHp" val="1.1" />
-				<!--<mul stat="gainHp" val="1.1" />-->
+				<mul stat="healEffect" val="1.1" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="20" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10038" levels="1" name="Spirit Aura">
-		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="skillType" val="CONT" />
-		<set name="abnormalTime" val="15" />
-		<set name="skillRadius" val="200" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
-		<set name="skillToCast" val="10039" />
-		<set name="skillToCastLevel" val="1" />
 		<for>
-			<effect name="DamOverTime" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<param HOLD="15" />
-				<sub stat="debuffVuln" val="15" />
+				<sub stat="debuffVuln" val="20" />
 				<mul stat="regMp" val="1.1" />
-				<!--<add stat="gainMp" val="10" />-->
+				<mul stat="manaCharge" val="1.1" />
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10039" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10039" levels="1" name="Spirit Aura">
 		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="power" val="100" />
-		<set name="abnormalTime" val="15" />
-		<set name="skillRadius" val="200" />
-		<set name="targetType" val="PARTY" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<cond>
-			<not>
-				<target active_effect_id="10038" />
-			</not>
-		</cond>
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<param HOLD="15" />
-				<sub stat="debuffVuln" val="15" />
+				<sub stat="debuffVuln" val="20" />
 				<mul stat="regMp" val="1.1" />
-				<!--<add stat="gainMp" val="10" />-->
+				<mul stat="manaCharge" val="1.1" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="20" />
 			</effect>
 		</for>
 	</skill>

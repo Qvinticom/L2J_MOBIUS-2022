@@ -304,21 +304,22 @@
 		<set name="icon" val="icon.icon_sigel" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1928" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1928" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1928" levels="1" name="Sigel Force">
 		<set name="icon" val="icon.icon_sigel_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
@@ -327,23 +328,25 @@
 		</for>
 	</skill>
 	<skill id="1929" levels="1" name="Tyrr Aura">
+		<set name="icon" val="icon.icon_tir" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1930" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1930" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1930" levels="1" name="Tyrr Force">
 		<set name="icon" val="icon.icon_tir_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
@@ -355,21 +358,22 @@
 		<set name="icon" val="icon.icon_othel" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1932" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1932" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1932" levels="1" name="Othell Force">
 		<set name="icon" val="icon.icon_othel_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
@@ -381,21 +385,22 @@
 		<set name="icon" val="icon.icon_yr" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1934" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1934" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1934" levels="1" name="Yul Force">
 		<set name="icon" val="icon.icon_yr_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
@@ -407,21 +412,22 @@
 		<set name="icon" val="icon.icon_feoh" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1936" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1936" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1936" levels="1" name="Feoh Force">
 		<set name="icon" val="icon.icon_feoh_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
@@ -433,21 +439,22 @@
 		<set name="icon" val="icon.icon_wynn" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1938" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1938" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1938" levels="1" name="Wynn Force">
 		<set name="icon" val="icon.icon_wynn_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
@@ -460,21 +467,22 @@
 		<set name="icon" val="icon.icon_eolh" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
+		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<for>
-			<effect name="TriggerForce">
-				<param skillId="1940" />
+			<effect name="TriggerForce" ticks="1">
+				<param skillId="1940" skillLevel="1" />
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1940" levels="1" name="Aeore Force">
 		<set name="icon" val="icon.icon_eolh_01" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="PARTY" />
-		<set name="isMagic" val="2" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">

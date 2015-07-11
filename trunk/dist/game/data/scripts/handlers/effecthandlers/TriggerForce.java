@@ -18,20 +18,46 @@
  */
 package handlers.effecthandlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
  * Force Skill effect implementation.
- * @author Mobius
+ * @author Mobius, NviX
  */
 public final class TriggerForce extends AbstractEffect
 {
 	private final SkillHolder _skill;
+	private final List<L2PcInstance> _affectedMembers = new ArrayList<>();
+	private final List<L2Character> _affectedObjects = new ArrayList<>();
+	private final List<L2Character> _affectedObjToRemove = new ArrayList<>();
+	private static final int SIGEL_FORCE = 1928;
+	private static final int TYRR_FORCE = 1930;
+	private static final int OTHELL_FORCE = 1932;
+	private static final int YUL_FORCE = 1934;
+	private static final int FEOH_FORCE = 1936;
+	private static final int WYNN_FORCE = 1938;
+	private static final int AEORE_FORCE = 1940;
+	private static final int EVISCERATOR_FORCE = 30603;
+	private static final int SAYHAS_SEER_FORCE = 30606;
+	private static final int PARTY_SOLIDARITY = 1955;
+	private static final int RAGE_AURA = 10029;
+	private static final int CHALLENGE_AURA = 10031;
+	private static final int IRON_AURA = 10033;
+	private static final int RESISTANCE_AURA = 10035;
+	private static final int RECOVERY_AURA = 10037;
+	private static final int SPIRIT_AURA = 10039;
 	
 	/**
 	 * @param attachCond
@@ -61,37 +87,216 @@ public final class TriggerForce extends AbstractEffect
 		{
 			return;
 		}
-		
 		if (effector.getParty() != null)
 		{
 			for (L2PcInstance member : effector.getParty().getMembers())
 			{
-				member.makeTriggerCast(_skill.getSkill(), effector);
+				_affectedMembers.add(member);
+				if (member.calculateDistance(effector, true, false) < 900)
+				{
+					member.makeTriggerCast(_skill.getSkill(), effector);
+				}
 			}
 		}
 		else
 		{
 			effector.makeTriggerCast(_skill.getSkill(), effector);
+			_affectedMembers.add(effector);
 		}
+	}
+	
+	@Override
+	public boolean onActionTime(BuffInfo info)
+	{
+		final L2PcInstance effector = info.getEffector().getActingPlayer();
+		// if die
+		if (effector.isDead())
+		{
+			return false;
+		}
+		// apply Rage Aura to enemies
+		if (_skill.getSkillId() == RAGE_AURA)
+		{
+			final boolean srcInArena = (effector.isInsideZone(ZoneId.PVP) && (!effector.isInsideZone(ZoneId.SIEGE)));
+			for (L2Character obj : effector.getKnownList().getKnownCharactersInRadius(200))
+			{
+				if (((obj.isAttackable() || obj.isPlayable()) && !obj.isDoor()) && Skill.checkForAreaOffensiveSkills(effector, obj, _skill.getSkill(), srcInArena) && !_affectedObjects.contains(obj))
+				{
+					_affectedObjects.add(obj);
+					_skill.getSkill().applyEffects(effector, obj);
+				}
+			}
+		}
+		// remove Rage Aura from enemies who not in affect radius
+		if (!_affectedObjects.isEmpty())
+		{
+			for (L2Character obj : _affectedObjects)
+			{
+				if (!effector.getKnownList().getKnownCharactersInRadius(200).contains(obj))
+				{
+					if (obj.getEffectList().isAffectedBySkill(RAGE_AURA))
+					{
+						obj.getEffectList().remove(true, obj.getEffectList().getBuffInfoBySkillId(RAGE_AURA));
+					}
+					_affectedObjToRemove.add(obj);
+				}
+			}
+			if (!_affectedObjToRemove.isEmpty())
+			{
+				final int limit = _affectedObjToRemove.size();
+				for (int i = 0; i < limit; i++)
+				{
+					if (_affectedObjects.contains(_affectedObjToRemove.get(i)))
+					{
+						_affectedObjects.remove(i);
+					}
+				}
+			}
+			_affectedObjToRemove.clear();
+		}
+		// apply effect to new party members or remove if member > 900 distance from effector.
+		if (effector.getParty() != null)
+		{
+			for (L2PcInstance member : effector.getParty().getMembers())
+			{
+				if (!_affectedMembers.contains(member))
+				{
+					_affectedMembers.add(member);
+				}
+				if (!member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) < 900))
+				{
+					if ((member != effector))
+					{
+						member.makeTriggerCast(_skill.getSkill(), effector);
+					}
+					else if ((_skill.getSkillId() != CHALLENGE_AURA) && (_skill.getSkillId() != IRON_AURA) && (_skill.getSkillId() != RESISTANCE_AURA) && (_skill.getSkillId() != RECOVERY_AURA) && (_skill.getSkillId() != SPIRIT_AURA))
+					{
+						member.makeTriggerCast(_skill.getSkill(), effector);
+					}
+				}
+				else if (member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) > 900))
+				{
+					member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(_skill.getSkillId()));
+				}
+			}
+		}
+		// if any member leave from party
+		if (!_affectedMembers.isEmpty())
+		{
+			for (L2PcInstance player : _affectedMembers)
+			{
+				if ((player != effector) && !player.isInPartyWith(effector) && (player.getEffectList().getBuffInfoBySkillId(_skill.getSkillId()) != null))
+				{
+					player.getEffectList().remove(true, player.getEffectList().getBuffInfoBySkillId(_skill.getSkillId()));
+					if (player.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY) != null)
+					{
+						player.getEffectList().remove(true, player.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY));
+					}
+				}
+			}
+		}
+		_affectedMembers.clear();
+		// Party Solidarity apply/remove
+		if (effector.getParty() != null)
+		{
+			for (L2PcInstance member : effector.getParty().getMembers())
+			{
+				_affectedMembers.add(member);
+				int activeForces = 0;
+				if (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(TYRR_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(OTHELL_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(YUL_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(FEOH_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(WYNN_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(EVISCERATOR_FORCE) != null)
+				{
+					activeForces++;
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(SAYHAS_SEER_FORCE) != null)
+				{
+					activeForces++;
+				}
+				
+				if ((activeForces < 4) || ((member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) == null) || (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) == null)))
+				{
+					if (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY) != null)
+					{
+						member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY));
+					}
+				}
+				if ((activeForces >= 4) && (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null) && (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null))
+				{
+					BuffInfo skill = member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY);
+					if (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (skill.getSkill().getLevel() != Math.min((activeForces - 3), 3)))
+					{
+						member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);
+					}
+				}
+			}
+		}
+		else
+		{
+			_affectedMembers.add(effector);
+		}
+		return true;
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final L2PcInstance effected = info.getEffected().getActingPlayer();
+		final L2PcInstance effector = info.getEffector().getActingPlayer();
 		final int skillId = info.getSkill().getId();
 		
-		if ((effected.getEffectList().getBuffInfoBySkillId(skillId) == null) && (effected.getEffectList().getBuffInfoBySkillId(skillId + 1) != null))
+		if ((effector.getEffectList().getBuffInfoBySkillId(skillId) == null) && (effector.getEffectList().getBuffInfoBySkillId(skillId + 1) != null))
 		{
-			effected.getEffectList().remove(true, effected.getEffectList().getBuffInfoBySkillId(skillId + 1));
+			effector.getEffectList().remove(true, effector.getEffectList().getBuffInfoBySkillId(skillId + 1));
 		}
 		
-		if (effected.getParty() != null)
+		if (effector.getParty() != null)
 		{
-			for (L2PcInstance member : effected.getParty().getMembers())
+			for (L2PcInstance member : _affectedMembers)
 			{
-				member.makeTriggerCast(_skill.getSkill(), effected);
+				if (member.getEffectList().getBuffInfoBySkillId(skillId + 1) != null)
+				{
+					member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(skillId + 1));
+				}
 			}
+		}
+		// remove Rage Aura from all affected enemies
+		if (!_affectedObjects.isEmpty())
+		{
+			for (L2Character obj : _affectedObjects)
+			{
+				if (obj.getEffectList().isAffectedBySkill(RAGE_AURA))
+				{
+					obj.getEffectList().remove(true, obj.getEffectList().getBuffInfoBySkillId(RAGE_AURA));
+				}
+			}
+			_affectedObjects.clear();
+			_affectedObjToRemove.clear();
 		}
 	}
 }
