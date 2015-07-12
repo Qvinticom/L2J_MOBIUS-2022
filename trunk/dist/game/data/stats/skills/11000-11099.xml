@@ -2094,11 +2094,9 @@
 		<set name="offensive" val="true" />
 		<set name="effectId" val="11175" />
 		<set name="effectLevel" val="1" />
+		<set name="blockedInOlympiad" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
-		<!--<cond msgId="1509">
-			<player use_in_olympiad="false" />
-		</cond>-->
 		<!--<for>
 			<effect abnormalTime="2" count="3" name="BlackHole" val="0" />
 		</for>-->

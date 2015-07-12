@@ -130,9 +130,7 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="1000" />
-		<!--<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>-->
+		<set name="blockedInOlympiad" val="true" />
 		<cond addName="1" msgId="113">
 			<player canTransform="true" />
 		</cond>
