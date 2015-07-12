@@ -312,6 +312,18 @@ public class PcStatus extends PlayableStatus
 				return;
 			}
 			
+			if ((attacker != null) && (attacker.isPlayer()))
+			{
+				final int hpRestore = (int) attacker.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
+				if (hpRestore > 0)
+				{
+					final double amount = Math.max(Math.min((attacker.getMaxHp() * hpRestore) / 100, attacker.getMaxRecoverableHp() - attacker.getCurrentHp()), 0);
+					if (amount != 0)
+					{
+						attacker.setCurrentHp(amount + attacker.getCurrentHp());
+					}
+				}
+			}
 			getActiveChar().doDie(attacker);
 		}
 	}

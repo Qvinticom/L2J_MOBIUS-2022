@@ -18,13 +18,13 @@
  */
 package handlers;
 
-import handlers.effecthandlers.*;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
+
+import handlers.effecthandlers.*;
 
 /**
  * Effect Master handler.
@@ -175,6 +175,7 @@ public final class EffectMasterHandler
 		Summon.class,
 		SummonAgathion.class,
 		SummonCubic.class,
+		SummonDebuff.class,
 		SummonNpc.class,
 		SummonPet.class,
 		SummonTrap.class,

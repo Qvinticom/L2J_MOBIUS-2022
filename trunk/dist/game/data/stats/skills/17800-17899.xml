@@ -170,10 +170,23 @@
 		</for>
 	</skill>
 	<skill id="17824" levels="1" name="La Vie En Rose's Jewelry Box">
-		<!-- AUTO GENERATED SKILL -->
+		<table name="#extractableItems"> 38855,1,7;38927,1,7;38850,1,10;38875,1,14.5;38870,1,10;38890,1,12;38880,1,13;38885,1,14.5;38895,1,12 </table>
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17825" levels="5" name="Emerald">
 		<table name="#rate1"> 1 1 1 2 3 </table>

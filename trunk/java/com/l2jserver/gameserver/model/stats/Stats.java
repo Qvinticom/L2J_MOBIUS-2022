@@ -210,7 +210,10 @@ public enum Stats
 	MAX_SUMMON_POINTS("summonPoints"),
 	
 	// Max Skill Damage Receive
-	MAX_SKILL_DAMAGE("maxSkillDamage");
+	MAX_SKILL_DAMAGE("maxSkillDamage"),
+	
+	// Hp restore on kill enemy
+	HP_RESTORE_ON_KILL("hpRestoreOnKill");
 	
 	public static final int NUM_STATS = values().length;
 	

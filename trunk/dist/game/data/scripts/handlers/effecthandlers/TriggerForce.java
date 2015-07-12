@@ -58,6 +58,7 @@ public final class TriggerForce extends AbstractEffect
 	private static final int RESISTANCE_AURA = 10035;
 	private static final int RECOVERY_AURA = 10037;
 	private static final int SPIRIT_AURA = 10039;
+	private static final int ROLLING_THUNDER = 10287;
 	
 	/**
 	 * @param attachCond
@@ -100,7 +101,7 @@ public final class TriggerForce extends AbstractEffect
 		}
 		else
 		{
-			if (_skill.getSkillId() != RAGE_AURA)
+			if ((_skill.getSkillId() != RAGE_AURA) && (_skill.getSkillId() != ROLLING_THUNDER))
 			{
 				_skill.getSkill().applyEffects(effector, effector);
 			}
@@ -117,8 +118,8 @@ public final class TriggerForce extends AbstractEffect
 		{
 			return false;
 		}
-		// apply Rage Aura to enemies
-		if (_skill.getSkillId() == RAGE_AURA)
+		// apply offensive aura to enemies
+		if ((_skill.getSkillId() == RAGE_AURA) || (_skill.getSkillId() == ROLLING_THUNDER))
 		{
 			final boolean srcInArena = (effector.isInsideZone(ZoneId.PVP) && (!effector.isInsideZone(ZoneId.SIEGE)));
 			for (L2Character obj : effector.getKnownList().getKnownCharactersInRadius(200))
@@ -130,7 +131,7 @@ public final class TriggerForce extends AbstractEffect
 				}
 			}
 		}
-		// remove Rage Aura from enemies who not in affect radius
+		// remove offensive aura from enemies who not in affect radius
 		if (!_affectedObjects.isEmpty())
 		{
 			for (L2Character obj : _affectedObjects)
@@ -140,6 +141,10 @@ public final class TriggerForce extends AbstractEffect
 					if (obj.getEffectList().isAffectedBySkill(RAGE_AURA))
 					{
 						obj.getEffectList().remove(true, obj.getEffectList().getBuffInfoBySkillId(RAGE_AURA));
+					}
+					if (obj.getEffectList().isAffectedBySkill(ROLLING_THUNDER))
+					{
+						obj.getEffectList().remove(true, obj.getEffectList().getBuffInfoBySkillId(ROLLING_THUNDER));
 					}
 					_affectedObjToRemove.add(obj);
 				}
@@ -167,7 +172,7 @@ public final class TriggerForce extends AbstractEffect
 				{
 					_affectedMembers.add(member);
 				}
-				if (!member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) < 900) && (_skill.getSkillId() != RAGE_AURA))
+				if (!member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) < 900) && (_skill.getSkillId() != RAGE_AURA) && (_skill.getSkillId() != ROLLING_THUNDER))
 				{
 					if ((member != effector))
 					{
@@ -298,6 +303,10 @@ public final class TriggerForce extends AbstractEffect
 				if (obj.getEffectList().isAffectedBySkill(RAGE_AURA))
 				{
 					obj.getEffectList().remove(true, obj.getEffectList().getBuffInfoBySkillId(RAGE_AURA));
+				}
+				if (obj.getEffectList().isAffectedBySkill(ROLLING_THUNDER))
+				{
+					obj.getEffectList().remove(true, obj.getEffectList().getBuffInfoBySkillId(ROLLING_THUNDER));
 				}
 			}
 			_affectedObjects.clear();

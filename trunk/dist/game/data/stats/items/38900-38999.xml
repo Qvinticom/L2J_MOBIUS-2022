@@ -195,59 +195,103 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="38932" name="La Vie En Rose's Ruby Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Ruby. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38855,1,1,100" />
 	</item>
 	<item id="38933" name="La Vie En Rose's Sapphire Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Sapphire. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38927,1,1,100" />
 	</item>
 	<item id="38934" name="La Vie En Rose's Topaz Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Topaz. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38850,1,1,100" />
 	</item>
 	<item id="38935" name="La Vie En Rose's Opal Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Opal. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38875,1,1,100" />
 	</item>
 	<item id="38936" name="La Vie En Rose's Obsidian Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Obsidian. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38870,1,1,100" />
 	</item>
 	<item id="38937" name="La Vie En Rose's Diamond Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Diamond. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38890,1,1,100" />
 	</item>
 	<item id="38938" name="La Vie En Rose's Emerald Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Emerald. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38880,1,1,100" />
 	</item>
 	<item id="38939" name="La Vie En Rose's Aquamarine Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Aquamarine. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38885,1,1,100" />
 	</item>
 	<item id="38940" name="La Vie En Rose's Pearl Chest" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Pearl. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="38895,1,1,100" />
 	</item>
 	<item id="38941" name="La Vie En Rose's Jewelry Box" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire 1 of La Vie En Rose's jewels. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="17824-1" />
 	</item>
 	<item id="38942" name="La Vie En Rose's Jewelry Pack" additionalName="" type="EtcItem">
-		<!-- Double-click to acquire 10 La Vie En Rose's Jewelry Boxes. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="26211-1" />
 	</item>
 	<item id="38943" name="La Vie En Rose's Noble Brooch Chest" additionalName="" type="EtcItem">
 		<!-- Double-click to acquire 1 La Vie En Rose's Noble Brooch. -->

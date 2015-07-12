@@ -350,6 +350,17 @@ public class L2Attackable extends L2Npc
 		{
 			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsyncDelayed(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this, _onKillDelay);
+			// if killer have stat hpRestoreOnKill
+			int hpRestore = (int) killer.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
+			if (hpRestore > 0)
+			{
+				double amount = (killer.getMaxHp() * hpRestore) / 100;
+				amount = Math.max(Math.min(amount, killer.getMaxRecoverableHp() - killer.getCurrentHp()), 0);
+				if (amount != 0)
+				{
+					killer.setCurrentHp(amount + killer.getCurrentHp());
+				}
+			}
 		}
 		
 		// Notify to minions if there are.

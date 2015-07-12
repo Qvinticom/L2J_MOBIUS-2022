@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<!-- Level 1 : For 1 min., P./M. Def. +50%, Attribute Resistance + 10, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
-	<!-- Level 2 : For 1 min., P./M. Def. +70%, Attribute Resistance + 20, Speed + 20. When equipped with a sword or blunt weapon, Accuracy + 6, Atk. Spd. + 20%, Critical Rate + 40, Critical Damage + 40%. -->
-	<!-- Level 3 : For 1 min., P./M. Def. +100%, Attribute Resistance + 25, Speed + 25. When equipped with a sword or blunt weapon, Accuracy + 8, Atk. Spd. + 25%, Critical Rate + 50, Critical Damage + 50%. -->
-	<!-- Level 4 : For 1 min., P./M. Def. +120%, Attribute Resistance + 30, Speed + 30. When equipped with a sword or blunt weapon, Accuracy + 10, Atk. Spd. + 30%, Critical Rate + 60, Critical Damage + 60%. -->
 	<skill id="10100" levels="4" name="Guardian's Frenzy">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 20 21 23 24 </table>
@@ -49,10 +45,6 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : For 1 min., P. Skill Power + 5%, P./M. Def. + 50%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
-	<!-- Level 2 : For 1 min., P. Skill Power + 7%, P./M. Def. + 65%, Speed + 20. When equipped with a sword or blunt weapon, Accuracy + 6, Atk. Spd. + 15%, Critical Rate + 40, Critical Damage + 40%. -->
-	<!-- Level 3 : For 1 min., P. Skill Power + 10%, P./M. Def. + 80%, Speed + 25. When equipped with a sword or blunt weapon, Accuracy + 8, Atk. Spd. + 20%, Critical Rate + 50, Critical Damage + 50%. -->
-	<!-- Level 4 : For 1 min., P. Skill Power + 15%, P./M. Def. + 100%, Speed + 30. When equipped with a sword or blunt weapon, Accuracy + 10, Atk. Spd. + 25%, Critical Rate + 60, Critical Damage + 60%. -->
 	<skill id="10101" levels="4" name="Templar's Frenzy">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 20 21 23 24 </table>
@@ -94,42 +86,80 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Summons a Dark Panther to attack enemies in front of you with 33505 Power added to P. Atk. and knocks them down. Requires a shield. Consumes 6 Soulstones. Over-hit. -->
-	<!-- Level 2 : Summons a Dark Panther to attack enemies in front of you with 34353 Power added to P. Atk. and knocks them down. Requires a shield. Consumes 6 Soulstones. Over-hit. -->
-	<!-- Level 3 : Summons a Dark Panther to attack enemies in front of you with 35201 Power added to P. Atk. and knocks them down. Requires a shield. Consumes 6 Soulstones. Over-hit. -->
 	<skill id="10102" levels="3" name="Shadow Slash">
 		<table name="#magicLvl"> 97 98 99 </table>
 		<table name="#power"> 33505 34353 35201 </table>
 		<table name="#mpConsume"> 185 191 197 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="icon" val="icon.skill10102" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="40" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="effectPoint" val="-100" /> <!-- Need verify -->
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
+		<set name="itemConsumeCount" val="6" />
+		<set name="itemConsumeId" val="1785" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="overHit" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="trait" val="KNOCKDOWN" />
+		<cond msgId="113" addName="1">
+			<using kind="SHIELD" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="KnockDown">
+				<param speed="700" distance="50" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Level 1 : Freezes the air, inflicting 18151 damage to target and nearby enemies, and for 10 sec., decreases enemy Speed by 100. Consumes 6 Soulstones.  -->
-	<!-- Level 2 : Freezes the air, inflicting 18641 damage to target and nearby enemies, and for 10 sec., decreases enemy Speed by 100. Consumes 6 Soulstones.  -->
-	<!-- Level 3 : Freezes the air, inflicting 19131 damage to target and nearby enemies, and for 10 sec., decreases enemy Speed by 100. Consumes 6 Soulstones.  -->
-	<!-- Level 4 : Freezes the air, inflicting 19131 damage to target and nearby enemies, and for 10 sec., decreases enemy Speed by 100. -->
 	<skill id="10103" levels="4" name="Mass Freezing Strike">
 		<table name="#magicLvl"> 97 98 99 99 </table>
 		<table name="#mpConsume"> 185 191 197 197 </table>
+		<table name="#power"> 18151 18641 19131 19131 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="150" />
 		<set name="icon" val="icon.skill10103" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="200" />
+		<set name="itemConsumeCount" val="6" />
+		<set name="itemConsumeId" val="1785" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Debuff">
+				<sub stat="runSpd" val="100" />
+			</effect>
+		</for>
 	</skill>
 </list>
