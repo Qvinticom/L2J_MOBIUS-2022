@@ -746,7 +746,7 @@ public final class DarkCloudMansion extends AbstractInstance
 			{
 				npcobj.isDead = true;
 			}
-			if (npcobj.isDead == false)
+			if (!npcobj.isDead)
 			{
 				cont = false;
 			}

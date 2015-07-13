@@ -14504,7 +14504,7 @@ public final class L2PcInstance extends L2Playable
 			_log.warning("Premium System: Could not restore premium system data for " + account + "." + e);
 			e.printStackTrace();
 		}
-		if (success == false)
+		if (!success)
 		{
 			PremiumManager.getInstance().removePremiumStatus(player.getAccountName());
 			player.setPremiumStatus(false);

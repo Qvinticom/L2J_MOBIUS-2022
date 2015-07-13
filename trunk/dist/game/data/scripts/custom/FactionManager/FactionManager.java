@@ -149,7 +149,7 @@ public class FactionManager extends AbstractNpcAI
 	
 	private void broadcastMessageToFaction(String factionName, String message)
 	{
-		if (factionName == Config.FACTION_GOOD_TEAM_NAME)
+		if (factionName.equals(Config.FACTION_GOOD_TEAM_NAME))
 		{
 			for (L2PcInstance player : L2World.getInstance().getAllGoodPlayers())
 			{

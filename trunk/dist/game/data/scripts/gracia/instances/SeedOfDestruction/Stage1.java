@@ -815,7 +815,7 @@ public final class Stage1 extends Quest
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((isSummon == false) && (player != null))
+		if (!isSummon && (player != null))
 		{
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 			if (tmpworld instanceof SOD1World)
