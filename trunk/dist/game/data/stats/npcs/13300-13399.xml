@@ -224,10 +224,15 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="13310" level="85" type="L2Npc" name="Solo Dance">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="13310" level="85" type="L2EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="1" /> <!-- Poisoned -->
+		</parameters>
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -235,15 +240,29 @@
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
 			<speed>
-				<walk ground="0" />
-				<run ground="0" />
+				<walk ground="50" />
+				<run ground="20" />
 			</speed>
-			<hit_time>398</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" hasSummoner="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="10523" level="1" /> <!-- Poisoned -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13311" level="85" type="L2Npc" name="Awakened Knight's Mount">
@@ -1774,119 +1793,209 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13377" level="87" type="L2Npc" name="Solo Dance">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="13377" level="87" type="L2EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="2" /> <!-- Poisoned -->
+		</parameters>
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="8056" hpRegen="7.5" mp="8056" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="186" />
+				<run ground="20" />
 			</speed>
-			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
-		<ai aggroRange="300" clanHelpRange="300" />
+		<status attackable="false" hasSummoner="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="10523" level="2" /> <!-- Poisoned -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13378" level="90" type="L2Npc" name="Solo Dance">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="13378" level="90" type="L2EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="3" /> <!-- Poisoned -->
+		</parameters>
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="9311" hpRegen="7.5" mp="9311" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="186" />
+				<run ground="20" />
 			</speed>
-			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
-		<ai aggroRange="300" clanHelpRange="300" />
+		<status attackable="false" hasSummoner="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="10523" level="3" /> <!-- Poisoned -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13379" level="93" type="L2Npc" name="Solo Dance">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="13379" level="93" type="L2EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="4" /> <!-- Poisoned -->
+		</parameters>
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="10790" hpRegen="7.5" mp="10790" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="186" />
+				<run ground="20" />
 			</speed>
-			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
-		<ai aggroRange="300" clanHelpRange="300" />
+		<status attackable="false" hasSummoner="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="10523" level="4" /> <!-- Poisoned -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13380" level="96" type="L2Npc" name="Solo Dance">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="13380" level="96" type="L2EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="5" /> <!-- Poisoned -->
+		</parameters>
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="12538" hpRegen="7.5" mp="12538" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="186" />
+				<run ground="20" />
 			</speed>
-			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
-		<ai aggroRange="300" clanHelpRange="300" />
+		<status attackable="false" hasSummoner="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="10523" level="5" /> <!-- Poisoned -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13381" level="99" type="L2Npc" name="Solo Dance">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="13381" level="99" type="L2EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="6" /> <!-- Poisoned -->
+		</parameters>
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="186" />
+				<run ground="20" />
 			</speed>
-			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
-		<ai aggroRange="300" clanHelpRange="300" />
+		<status attackable="false" hasSummoner="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="10523" level="6" /> <!-- Poisoned -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="0.01" />
-			<height normal="0.01" />
+			<radius normal="5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="13382" level="55" type="L2Npc" name="Orfen">

@@ -59,6 +59,7 @@ public enum Stats
 	CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
 	MAGIC_CRIT_DMG("mCritPower"),
 	MAGIC_CRIT_DMG_ADD("mCritPowerAdd"),
+	MOMENTUM_SKILL_POWER("momentumSkillPower"),
 	
 	// PVP BONUS
 	PVP_PHYSICAL_DMG("pvpPhysDmg"),

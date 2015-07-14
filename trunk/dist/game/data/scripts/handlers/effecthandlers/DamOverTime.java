@@ -32,6 +32,7 @@ public final class DamOverTime extends AbstractEffect
 {
 	private final boolean _canKill;
 	private final double _power;
+	private final int _charge;
 	
 	public DamOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -39,6 +40,7 @@ public final class DamOverTime extends AbstractEffect
 		
 		_canKill = params.getBoolean("canKill", false);
 		_power = params.getDouble("power", 0);
+		_charge = params.getInt("charge", 0);
 	}
 	
 	@Override
@@ -74,6 +76,16 @@ public final class DamOverTime extends AbstractEffect
 				}
 				damage = info.getEffected().getCurrentHp() - 1;
 			}
+		}
+		
+		if ((_charge != 0) && (info.getEffected().getActingPlayer().getCharges() >= _charge))
+		{
+			info.getEffected().sendPacket(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY);
+			return false;
+		}
+		else if (_charge != 0)
+		{
+			info.getEffected().getActingPlayer().increaseCharges(1, _charge);
 		}
 		
 		info.getEffected().reduceCurrentHpByDOT(damage, info.getEffector(), info.getSkill());

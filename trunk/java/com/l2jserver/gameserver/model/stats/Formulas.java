@@ -746,17 +746,23 @@ public final class Formulas
 		}
 		damage = (skill != null) ? ((damage * ssBoost) + skill.getPower(attacker, target, isPvP, isPvE)) : (damage * ssBoost);
 		
+		double reduceDef = 1;
+		if (skill != null)
+		{
+			reduceDef -= (skill.getIgnorePhysDefPercent() / 100.0);
+		}
+		
 		if (crit)
 		{
 			// Finally retail like formula
-			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((70 * damage) / defence);
+			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((70 * damage) / (defence * reduceDef));
 			// Crit dmg add is almost useless in normal hits...
-			damage += ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 70) / defence);
+			damage += ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 70) / (defence * reduceDef));
 			damage += target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		}
 		else
 		{
-			damage = (70 * damage) / defence;
+			damage = (70 * damage) / (defence * reduceDef);
 		}
 		
 		damage *= calcAttackTraitBonus(attacker, target);

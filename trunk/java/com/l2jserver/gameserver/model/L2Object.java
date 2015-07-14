@@ -184,7 +184,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public final boolean spawnMe()
 	{
-		assert (getWorldRegion() == null) && (getLocation().getX() != 0) && (getLocation().getY() != 0) && (getLocation().getZ() != 0);
+		assert(getWorldRegion() == null) && (getLocation().getX() != 0) && (getLocation().getY() != 0) && (getLocation().getZ() != 0);
 		
 		synchronized (this)
 		{
@@ -569,7 +569,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public void removeStatusListener(L2Character object)
 	{
-		
+	
 	}
 	
 	protected void badCoords()
@@ -1005,6 +1005,15 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	public boolean isInvul()
 	{
 		return false;
+	}
+	
+	/**
+	 * @param player
+	 * @return {@code true} if player can ignore an invulnerable object if it's invulnerable, {@code false} otherwise.
+	 */
+	public boolean isVulnerableFor(L2Character player)
+	{
+		return !isInvul() || player.canOverrideCond(PcCondOverride.VULNERABLE_ALL_PLAYERS);
 	}
 	
 	@Override

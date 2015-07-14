@@ -112,6 +112,7 @@
 				<xs:attribute type="xs:string" name="race" use="optional" />
 				<xs:attribute type="xs:string" name="npcId" use="optional" />
 				<xs:attribute type="xs:string" name="npcType" use="optional" />
+				<xs:attribute type="xs:string" name="hp" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -247,7 +248,7 @@
 				<xs:attribute type="xs:string" name="grade" use="optional" />
 				<xs:attribute type="xs:byte" name="VALAKAS" use="optional" />
 				<xs:attribute type="xs:string" name="isItem" use="optional" />
-				<xs:attribute type="xs:byte" name="skillLvl" use="optional" />
+				<xs:attribute type="xs:string" name="skillLvl" use="optional" />
 				<xs:attribute type="xs:byte" name="GUST" use="optional" />
 				<xs:attribute type="xs:byte" name="BOSS" use="optional" />
 				<xs:attribute type="xs:byte" name="PHYSICAL_BLOCKADE" use="optional" />
@@ -263,6 +264,13 @@
 				<xs:attribute type="xs:integer" name="speed" use="optional" />
 				<xs:attribute type="xs:integer" name="distance" use="optional" />
 				<xs:attribute type="xs:integer" name="debuffId" use="optional" />
+				<xs:attribute type="xs:string" name="weaponTypeDec" use="optional" />
+				<xs:attribute type="xs:double" name="valueDec" use="optional" />
+				<xs:attribute type="xs:string" name="weaponTypeInc" use="optional" />
+				<xs:attribute type="xs:double" name="valueInc" use="optional" />
+				<xs:attribute type="xs:boolean" name="isLastAttack" use="optional" />
+				<xs:attribute type="xs:string" name="targetAbnormalType" use="optional" />
+				<xs:attribute type="xs:double" name="skillAddPower" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -395,6 +403,7 @@
 			<xs:enumeration value="maxSkillDamage" />
 			<xs:enumeration value="weaponElementPower" />
 			<xs:enumeration value="hpRestoreOnKill" />
+			<xs:enumeration value="momentumSkillPower" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">
@@ -480,6 +489,8 @@
 			<xs:element name="enchant4for" type="forType" />
 			<xs:element name="enchant5for" type="forType" />
 			<xs:element name="enchant6for" type="forType" />
+			<xs:element name="enchant8for" type="forType" />
+			<xs:element name="enchant9for" type="forType" />
 			<xs:element name="endEffects" type="effectsType" />
 			<xs:element name="selfEffects" type="effectsType" />
 			<xs:element name="enchant2selfEffects" type="effectsType" />

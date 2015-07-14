@@ -18,12 +18,15 @@
  */
 package handlers.effecthandlers;
 
+import java.util.StringTokenizer;
+
 import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.BaseStats;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -37,9 +40,21 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class PhysicalAttack extends AbstractEffect
 {
+	private final String _type1;
+	private final double _valueReduce;
+	private final String _type2;
+	private final double _valueIncrease;
+	private final boolean _isLastAttack;
+	
 	public PhysicalAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		_type1 = params.getString("weaponTypeDec", "NONE");
+		_valueReduce = params.getDouble("valueDec", 1);
+		_type2 = params.getString("weaponTypeInc", "NONE");
+		_valueIncrease = params.getDouble("valueInc", 1);
+		_isLastAttack = params.getBoolean("isLastAttack", false);
 	}
 	
 	@Override
@@ -101,6 +116,30 @@ public final class PhysicalAttack extends AbstractEffect
 			damage *= 2;
 		}
 		
+		if ((activeChar.getActiveWeaponItem() != null) && (_type1 != "NONE") && (_type2 != "NONE"))
+		{
+			StringTokenizer st = new StringTokenizer(_type1, ",");
+			while (st.hasMoreTokens())
+			{
+				String item = st.nextToken().trim();
+				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(item))
+				{
+					damage *= _valueReduce;
+					break;
+				}
+			}
+			st = new StringTokenizer(_type2, ",");
+			while (st.hasMoreTokens())
+			{
+				String item = st.nextToken().trim();
+				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(item))
+				{
+					damage *= _valueIncrease;
+					break;
+				}
+			}
+		}
+		
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
@@ -111,8 +150,22 @@ public final class PhysicalAttack extends AbstractEffect
 			}
 			
 			activeChar.sendDamageMessage(target, damage, false, crit, false);
-			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit, false);
+			if (_isLastAttack && !target.isPlayer() && !target.isRaid())
+			{
+				if (damage < target.getCurrentHp())
+				{
+					target.setCurrentHp(1);
+				}
+				else
+				{
+					target.reduceCurrentHp(damage, activeChar, info.getSkill());
+				}
+			}
+			else
+			{
+				target.reduceCurrentHp(damage, activeChar, info.getSkill());
+				target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit, false);
+			}
 			
 			// Check if damage should be reflected
 			Formulas.calcDamageReflected(activeChar, target, info.getSkill(), crit);

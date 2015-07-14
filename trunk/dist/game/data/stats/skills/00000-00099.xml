@@ -138,7 +138,6 @@
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="castRange" val="40" />
-		<set name="chargeConsume" val="3" />
 		<set name="coolTime" val="167" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
@@ -169,10 +168,7 @@
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<and>
-				<using kind="DUAL" /> <!-- Requires a dualsword weapon -->
-				<player Charges="3" /> <!-- whose 3rd energy stage has been recharged -->
-			</and>
+			<using kind="DUAL" /> <!-- Requires a dualsword weapon -->
 		</cond>
 		<for>
 			<effect name="EnergyAttack">
@@ -221,11 +217,16 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="baseCritRate" val="10" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="power" val="#ench2pvePower" />
+		<enchant2 name="pvpPower" val="1827" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
@@ -239,6 +240,8 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
+		<enchant7 name="power" val="1827" />
+		<enchant7 name="pvpPower" val="ench7pvpPower" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUAL,SWORD,BLUNT" /> <!-- Requires a dualsword, sword or blunt weapon weapon -->
@@ -246,48 +249,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="EnergyAttack">
-				<param power="#power" />
-				<param criticalChance="15" />
-			</effect>
+			<effect name="PhysicalAttack" />
 		</for>
-		<enchant1for>
-			<effect name="EnergyAttack">
-				<param power="#ench1Power" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-		</enchant2for>
-		<enchant2pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="1827" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant2pvpEffects>
-		<enchant2pveEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench2pvePower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant2pveEffects>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="1827" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
 	<skill id="7" levels="41" name="Sonic Storm" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<table name="#effectPoints"> -114 -117 -119 -121 -124 -126 -129 -131 -133 -136 -138 -140 -142 -144 -146 -148 -150 -152 -154 -156 -157 -159 -160 -162 -163 -164 -166 -167 -168 -169 -170 -171 -172 -173 -174 -175 -176 -177 -178 -179 -180 </table>
 		<table name="#magicLvl"> 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 77 79 81 83 85 86 88 90 92 94 96 98 </table> <!-- Confirmed -->
 		<table name="#mpConsume"> 55 56 58 59 59 61 62 64 65 67 69 70 71 73 73 75 76 77 79 80 81 83 84 85 86 88 89 90 161 163 169 175 180 161 163 169 175 180 186 192 198  </table> <!-- Confirmed -->
@@ -305,16 +270,17 @@
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="1790" />
 		<set name="icon" val="icon.skill0007" />
-		<set name="itemConsumeCount" val="3" />
-		<set name="itemConsumeId" val="5589" /> <!-- Energy Stone -->
+		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
+		<set name="baseCritRate" val="10" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
@@ -330,41 +296,16 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
+		<enchant7 name="power" val="457" />
+		<enchant7 name="pvpPower" val="#ench7pvpPower" />
 		<cond msgId="113" addName="1">
-			<and>
-				<using kind="DUAL,SWORD,BLUNT" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
-				<player Charges="2" /> <!-- whose 2nd energy stage has been recharged -->
-			</and>
+			<using kind="DUAL, SWORD, BLUNT, POLE, DUALFIST, DUALBLUNT" />
 		</cond>
 		<for>
-			<effect name="EnergyAttack">
-				<param power="#power" />
-				<param criticalChance="15" />
-			</effect>
+			<effect name="PhysicalAttack" />
 		</for>
-		<enchant1for>
-			<effect name="EnergyAttack">
-				<param power="#ench1Power" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="457" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
 	<skill id="8" levels="8" name="Sonic Focus">
-		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
 		<set name="effectPoint" val="200" />

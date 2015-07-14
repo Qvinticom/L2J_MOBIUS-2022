@@ -200,6 +200,7 @@ public final class Skill implements IIdentifiable
 	private final String _attribute;
 	
 	private final boolean _ignoreShield;
+	private final int _ignorePhysDefPercent;
 	
 	private final boolean _isSuicideAttack;
 	private final boolean _canBeDispeled;
@@ -335,6 +336,7 @@ public final class Skill implements IIdentifiable
 		_minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
 		_maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
 		_ignoreShield = set.getBoolean("ignoreShld", false);
+		_ignorePhysDefPercent = set.getInt("ignorePhysDefPercent", 0);
 		
 		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
 		
@@ -1365,7 +1367,7 @@ public final class Skill implements IIdentifiable
 		}
 		
 		// Check bad skills against target.
-		if ((effector != effected) && isBad() && (effected.isInvul() || (effector.isGM() && !effector.getAccessLevel().canGiveDamage())))
+		if ((effector != effected) && isBad() && ((effected.isInvul() && (!effected.isVulnerableFor(effector))) || (effector.isGM() && !effector.getAccessLevel().canGiveDamage())))
 		{
 			return;
 		}
@@ -1477,7 +1479,7 @@ public final class Skill implements IIdentifiable
 	{
 		switch (getId())
 		{
-		// TODO: replace with AI
+			// TODO: replace with AI
 			case 5852:
 			case 5853:
 			{
@@ -1650,6 +1652,14 @@ public final class Skill implements IIdentifiable
 	public boolean ignoreShield()
 	{
 		return _ignoreShield;
+	}
+	
+	/**
+	 * @return the percent of ignore defense of this skill
+	 */
+	public int getIgnorePhysDefPercent()
+	{
+		return _ignorePhysDefPercent;
 	}
 	
 	public boolean canBeDispeled()

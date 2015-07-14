@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.stats.Stats;
 
 /**
  * Static Damage effect implementation.
@@ -29,7 +30,7 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class StaticDamage extends AbstractEffect
 {
-	private final int _power;
+	private int _power;
 	
 	public StaticDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -50,6 +51,13 @@ public final class StaticDamage extends AbstractEffect
 		if (info.getEffector().isAlikeDead())
 		{
 			return;
+		}
+		
+		// reduce damage if target has maxdamage buff
+		double maxDamage = (info.getEffected().getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+		if (maxDamage > 0)
+		{
+			_power = (int) maxDamage;
 		}
 		
 		info.getEffected().reduceCurrentHp(_power, info.getEffector(), info.getSkill());

@@ -115,6 +115,7 @@ import com.l2jserver.gameserver.model.conditions.ConditionTargetActiveEffectId;
 import com.l2jserver.gameserver.model.conditions.ConditionTargetActiveSkillId;
 import com.l2jserver.gameserver.model.conditions.ConditionTargetAggro;
 import com.l2jserver.gameserver.model.conditions.ConditionTargetClassIdRestriction;
+import com.l2jserver.gameserver.model.conditions.ConditionTargetHp;
 import com.l2jserver.gameserver.model.conditions.ConditionTargetInvSize;
 import com.l2jserver.gameserver.model.conditions.ConditionTargetLevel;
 import com.l2jserver.gameserver.model.conditions.ConditionTargetLevelRange;
@@ -1047,6 +1048,12 @@ public abstract class DocumentBase
 				{
 					AbnormalType abnormalType = AbnormalType.getAbnormalType(getValue(a.getNodeValue(), template));
 					cond = joinAnd(cond, new ConditionTargetAbnormalType(abnormalType));
+					break;
+				}
+				case "hp":
+				{
+					int hp = Integer.decode(getValue(a.getNodeValue(), template));
+					cond = joinAnd(cond, new ConditionTargetHp(hp));
 					break;
 				}
 				case "mindistance":

@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -56,6 +57,12 @@ public class NpcBufferAI implements Runnable
 		
 		final Skill skill = _skillData.getSkill();
 		final L2PcInstance player = _npc.getSummoner().getActingPlayer();
+		
+		if (skill.getId() == 10523)
+		{
+			// fix for visual effect not show
+			_npc.broadcastPacket(new MagicSkillUse(_npc, skill.getId(), skill.getLevel(), 1, 0));
+		}
 		
 		switch (_skillData.getAffectScope())
 		{

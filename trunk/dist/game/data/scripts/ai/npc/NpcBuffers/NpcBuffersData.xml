@@ -98,4 +98,22 @@
 	<npc id="13267"> <!-- Virtual Image -->
 		<skill id="5272" level="17" delay="5" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Decoy Provocation -->
 	</npc>
+	<npc id="13310">
+		<skill id="10523" level="1" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Poisoned -->
+	</npc>
+	<npc id="13377">
+		<skill id="10523" level="2" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Poisoned -->
+	</npc>
+	<npc id="13378">
+		<skill id="10523" level="3" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Poisoned -->
+	</npc>
+	<npc id="13379">
+		<skill id="10523" level="4" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Poisoned -->
+	</npc>
+	<npc id="13380">
+		<skill id="10523" level="5" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Poisoned -->
+	</npc>
+	<npc id="13381">
+		<skill id="10523" level="6" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Poisoned -->
+	</npc>
 </list>
