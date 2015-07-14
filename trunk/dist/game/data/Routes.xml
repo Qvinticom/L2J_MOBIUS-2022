@@ -1393,4 +1393,34 @@
 		<point X="-92021" Y="58697" Z="-2994" delay="0" run="true" />
 		<point X="-91661" Y="58944" Z="-2992" delay="0" run="true" />
 	</route>
+	<!-- Seed of Hellfire - Kunda Whact-->
+	<route name="soh" repeat="true" repeatStyle="back">
+		<target id="23220" spawnX="-149557" spawnY="239964" spawnZ="-11697" /> <!-- Kunda -->
+		<point X="-149533" Y="239968" Z="-11697" delay="5" run="true" />
+		<point X="-148262" Y="239972" Z="-11697" delay="2" run="true" />
+		<point X="-147089" Y="239973" Z="-11697" delay="2" run="true" />
+		<point X="-145485" Y="239971" Z="-11697" delay="5" run="true" />
+	</route>
+	<!-- Seed of Hellfire - Kunda Whact-->
+	<route name="soh_2" repeat="true" repeatStyle="back">
+		<target id="23220" spawnX="-145343" spawnY="242084" spawnZ="-11697" /> <!-- Kunda 2 -->
+		<point X="-145343" Y="242084" Z="-11697" delay="5" run="true" />
+		<point X="-146859" Y="242085" Z="-11697" delay="2" run="true" />
+		<point X="-148141" Y="242089" Z="-11697" delay="2" run="true" />
+		<point X="-149553" Y="242064" Z="-11697" delay="5" run="true" />
+	</route>
+	<!-- Seed of Hellfire - Kunda Whact-->
+	<route name="soh_3" repeat="true" repeatStyle="back">
+		<target id="23220" spawnX="-151486" spawnY="243066" spawnZ="-11950" /> <!-- Kunda 3 -->
+		<point X="-151486" Y="243066" Z="-11697" delay="5" run="true" />
+		<point X="-151481" Y="245045" Z="-11697" delay="3" run="true" />
+		<point X="-151488" Y="247055" Z="-11697" delay="5" run="true" />
+	</route>
+	<!-- Seed of Hellfire - Kunda Whact-->
+	<route name="soh_4" repeat="true" repeatStyle="back">
+		<target id="23220" spawnX="-149369" spawnY="247180" spawnZ="-11950" /> <!-- Kunda 4 -->
+		<point X="-149369" Y="247180" Z="-11950" delay="5" run="true" />
+		<point X="-149377" Y="245195" Z="-11950" delay="2" run="true" />
+		<point X="-149367" Y="243068" Z="-11950" delay="5" run="true" />
+	</route>
 </routes>
