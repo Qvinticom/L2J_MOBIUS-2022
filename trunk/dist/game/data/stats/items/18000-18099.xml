@@ -448,6 +448,7 @@
 		</for>
 	</item>
 	<item id="18015" name="Blessed Twilight Helmet" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -464,6 +465,7 @@
 		</for>
 	</item>
 	<item id="18016" name="Blessed Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -481,6 +483,7 @@
 		</for>
 	</item>
 	<item id="18017" name="Blessed Twilight Gaiters" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -497,6 +500,7 @@
 		</for>
 	</item>
 	<item id="18018" name="Blessed Twilight Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -513,6 +517,7 @@
 		</for>
 	</item>
 	<item id="18019" name="Blessed Twilight Boots" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -546,6 +551,7 @@
 		</for>
 	</item>
 	<item id="18021" name="Blessed Twilight Leather Helmet" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -562,6 +568,7 @@
 		</for>
 	</item>
 	<item id="18022" name="Blessed Twilight Leather Armor" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -581,6 +588,7 @@
 		</for>
 	</item>
 	<item id="18023" name="Blessed Twilight Leather Leggings" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -599,6 +607,7 @@
 		</for>
 	</item>
 	<item id="18024" name="Blessed Twilight Leather Gloves" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -615,6 +624,7 @@
 		</for>
 	</item>
 	<item id="18025" name="Blessed Twilight Leather Boots" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -631,6 +641,7 @@
 		</for>
 	</item>
 	<item id="18026" name="Blessed Twilight Circlet" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -647,6 +658,7 @@
 		</for>
 	</item>
 	<item id="18027" name="Blessed Twilight Tunic" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -665,6 +677,7 @@
 		</for>
 	</item>
 	<item id="18028" name="Blessed Twilight Stockings" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -684,6 +697,7 @@
 		</for>
 	</item>
 	<item id="18029" name="Blessed Twilight Gloves" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -701,6 +715,7 @@
 		</for>
 	</item>
 	<item id="18030" name="Blessed Twilight Shoes" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -717,6 +732,7 @@
 		</for>
 	</item>
 	<item id="18031" name="Blessed Twilight Sigil" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<set name="icon" val="icon.weapon_dynaksus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1210,6 +1226,7 @@
 		</for>
 	</item>
 	<item id="18049" name="Blessed Seraph Helmet" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1226,6 +1243,7 @@
 		</for>
 	</item>
 	<item id="18050" name="Blessed Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,6 +1261,7 @@
 		</for>
 	</item>
 	<item id="18051" name="Blessed Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1259,6 +1278,7 @@
 		</for>
 	</item>
 	<item id="18052" name="Blessed Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1275,6 +1295,7 @@
 		</for>
 	</item>
 	<item id="18053" name="Blessed Seraph Boots" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1307,6 +1328,7 @@
 		</for>
 	</item>
 	<item id="18055" name="Blessed Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1323,6 +1345,7 @@
 		</for>
 	</item>
 	<item id="18056" name="Blessed Seraph Leather Armor" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1341,6 +1364,7 @@
 		</for>
 	</item>
 	<item id="18057" name="Blessed Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1359,6 +1383,7 @@
 		</for>
 	</item>
 	<item id="18058" name="Blessed Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1375,6 +1400,7 @@
 		</for>
 	</item>
 	<item id="18059" name="Blessed Seraph Leather Boots" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1391,6 +1417,7 @@
 		</for>
 	</item>
 	<item id="18060" name="Blessed Seraph Circlet" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1407,6 +1434,7 @@
 		</for>
 	</item>
 	<item id="18061" name="Blessed Seraph Tunic" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1426,6 +1454,7 @@
 		</for>
 	</item>
 	<item id="18062" name="Blessed Seraph Stockings" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1445,6 +1474,7 @@
 		</for>
 	</item>
 	<item id="18063" name="Blessed Seraph Gloves" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1462,6 +1492,7 @@
 		</for>
 	</item>
 	<item id="18064" name="Blessed Seraph Shoes" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,6 +1510,7 @@
 		</for>
 	</item>
 	<item id="18065" name="Blessed Seraph Sigil" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1972,6 +2004,7 @@
 		</for>
 	</item>
 	<item id="18083" name="Blessed Eternal Helmet" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1988,6 +2021,7 @@
 		</for>
 	</item>
 	<item id="18084" name="Blessed Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2005,6 +2039,7 @@
 		</for>
 	</item>
 	<item id="18085" name="Blessed Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2021,6 +2056,7 @@
 		</for>
 	</item>
 	<item id="18086" name="Blessed Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2037,6 +2073,7 @@
 		</for>
 	</item>
 	<item id="18087" name="Blessed Eternal Boots" additionalName="Heavy Armor" type="Armor">
+		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2069,6 +2106,7 @@
 		</for>
 	</item>
 	<item id="18089" name="Blessed Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2085,6 +2123,7 @@
 		</for>
 	</item>
 	<item id="18090" name="Blessed Eternal Leather Armor" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2103,6 +2142,7 @@
 		</for>
 	</item>
 	<item id="18091" name="Blessed Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2121,6 +2161,7 @@
 		</for>
 	</item>
 	<item id="18092" name="Blessed Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2137,6 +2178,7 @@
 		</for>
 	</item>
 	<item id="18093" name="Blessed Eternal Leather Boots" additionalName="Light Armor" type="Armor">
+		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2154,6 +2196,7 @@
 		</for>
 	</item>
 	<item id="18094" name="Blessed Eternal Circlet" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2170,6 +2213,7 @@
 		</for>
 	</item>
 	<item id="18095" name="Blessed Eternal Tunic" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2188,6 +2232,7 @@
 		</for>
 	</item>
 	<item id="18096" name="Blessed Eternal Stockings" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2206,6 +2251,7 @@
 		</for>
 	</item>
 	<item id="18097" name="Blessed Eternal Gloves" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2222,6 +2268,7 @@
 		</for>
 	</item>
 	<item id="18098" name="Blessed Eternal Shoes" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2238,6 +2285,7 @@
 		</for>
 	</item>
 	<item id="18099" name="Blessed Eternal Sigil" additionalName="Robe" type="Armor">
+		<set name="armor_type" val="MAGIC" />
 		<set name="icon" val="icon.elos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

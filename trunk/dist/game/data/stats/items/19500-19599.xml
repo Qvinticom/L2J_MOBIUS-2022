@@ -164,6 +164,7 @@
 	<item id="19523" name="Immortal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -180,6 +181,7 @@
 	</item>
 	<item id="19524" name="Immortal Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -195,6 +197,7 @@
 	</item>
 	<item id="19525" name="Immortal Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -211,6 +214,7 @@
 	</item>
 	<item id="19526" name="Immortal Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -242,6 +246,7 @@
 	</item>
 	<item id="19528" name="Immortal Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -259,6 +264,7 @@
 	<item id="19529" name="Immortal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -277,6 +283,7 @@
 	</item>
 	<item id="19530" name="Immortal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -295,6 +302,7 @@
 	</item>
 	<item id="19531" name="Immortal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -311,6 +319,7 @@
 	</item>
 	<item id="19532" name="Immortal Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -326,6 +335,7 @@
 	</item>
 	<item id="19533" name="Immortal Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -342,6 +352,7 @@
 	<item id="19534" name="Immortal Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -359,6 +370,7 @@
 	</item>
 	<item id="19535" name="Immortal Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -376,6 +388,7 @@
 	</item>
 	<item id="19536" name="Immortal Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -392,6 +405,7 @@
 	</item>
 	<item id="19537" name="Immortal Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -407,6 +421,7 @@
 	</item>
 	<item id="19538" name="Twilight Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -424,6 +439,7 @@
 	<item id="19539" name="Twilight Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -440,6 +456,7 @@
 	</item>
 	<item id="19540" name="Twilight Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -456,6 +473,7 @@
 	</item>
 	<item id="19541" name="Twilight Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -472,6 +490,7 @@
 	</item>
 	<item id="19542" name="Twilight Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -505,6 +524,7 @@
 	</item>
 	<item id="19544" name="Twilight Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -522,6 +542,7 @@
 	<item id="19545" name="Twilight Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -540,6 +561,7 @@
 	</item>
 	<item id="19546" name="Twilight Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -558,6 +580,7 @@
 	</item>
 	<item id="19547" name="Twilight Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -574,6 +597,7 @@
 	</item>
 	<item id="19548" name="Twilight Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -590,6 +614,7 @@
 	</item>
 	<item id="19549" name="Twilight Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -607,6 +632,7 @@
 	<item id="19550" name="Twilight Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -625,6 +651,7 @@
 	</item>
 	<item id="19551" name="Twilight Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -643,6 +670,7 @@
 	</item>
 	<item id="19552" name="Twilight Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -659,6 +687,7 @@
 	</item>
 	<item id="19553" name="Twilight Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -675,6 +704,7 @@
 	</item>
 	<item id="19554" name="Seraph Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -692,6 +722,7 @@
 	<item id="19555" name="Seraph Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -708,6 +739,7 @@
 	</item>
 	<item id="19556" name="Seraph Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -724,6 +756,7 @@
 	</item>
 	<item id="19557" name="Seraph Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -740,6 +773,7 @@
 	</item>
 	<item id="19558" name="Seraph Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -772,6 +806,7 @@
 	</item>
 	<item id="19560" name="Seraph Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -789,6 +824,7 @@
 	<item id="19561" name="Seraph Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -807,6 +843,7 @@
 	</item>
 	<item id="19562" name="Seraph Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -825,6 +862,7 @@
 	</item>
 	<item id="19563" name="Seraph Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -841,6 +879,7 @@
 	</item>
 	<item id="19564" name="Seraph Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -857,6 +896,7 @@
 	</item>
 	<item id="19565" name="Seraph Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -874,6 +914,7 @@
 	<item id="19566" name="Seraph Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -892,6 +933,7 @@
 	</item>
 	<item id="19567" name="Seraph Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t403_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -910,6 +952,7 @@
 	</item>
 	<item id="19568" name="Seraph Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t403_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -926,6 +969,7 @@
 	</item>
 	<item id="19569" name="Seraph Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t403_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -942,6 +986,7 @@
 	</item>
 	<item id="19570" name="Eternal Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R99" />
@@ -959,6 +1004,7 @@
 	<item id="19571" name="Eternal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -975,6 +1021,7 @@
 	</item>
 	<item id="19572" name="Eternal Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t701_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -991,6 +1038,7 @@
 	</item>
 	<item id="19573" name="Eternal Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t701_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R99" />
@@ -1007,6 +1055,7 @@
 	</item>
 	<item id="19574" name="Eternal Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t701_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R99" />
@@ -1039,6 +1088,7 @@
 	</item>
 	<item id="19576" name="Eternal Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R99" />
@@ -1056,6 +1106,7 @@
 	<item id="19577" name="Eternal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -1073,6 +1124,7 @@
 	</item>
 	<item id="19578" name="Eternal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t702_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -1090,6 +1142,7 @@
 	</item>
 	<item id="19579" name="Eternal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t702_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R99" />
@@ -1106,6 +1159,7 @@
 	</item>
 	<item id="19580" name="Eternal Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t702_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R99" />
@@ -1121,6 +1175,7 @@
 	</item>
 	<item id="19581" name="Eternal Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R99" />
@@ -1138,6 +1193,7 @@
 	<item id="19582" name="Eternal Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -1155,6 +1211,7 @@
 	</item>
 	<item id="19583" name="Eternal Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t703_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -1173,6 +1230,7 @@
 	</item>
 	<item id="19584" name="Eternal Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t703_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R99" />
@@ -1189,6 +1247,7 @@
 	</item>
 	<item id="19585" name="Eternal Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t703_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R99" />
@@ -1206,6 +1265,7 @@
 	<item id="19586" name="Bound Immortal Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1222,6 +1282,7 @@
 	<item id="19587" name="Bound Immortal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1238,6 +1299,7 @@
 	<item id="19588" name="Bound Immortal Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1254,6 +1316,7 @@
 	<item id="19589" name="Bound Immortal Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1270,6 +1333,7 @@
 	<item id="19590" name="Bound Immortal Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1302,6 +1366,7 @@
 	<item id="19592" name="Bound Immortal Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1318,6 +1383,7 @@
 	<item id="19593" name="Bound Immortal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1336,6 +1402,7 @@
 	<item id="19594" name="Bound Immortal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1354,6 +1421,7 @@
 	<item id="19595" name="Bound Immortal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1370,6 +1438,7 @@
 	<item id="19596" name="Bound Immortal Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1386,6 +1455,7 @@
 	<item id="19597" name="Bound Immortal Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1402,6 +1472,7 @@
 	<item id="19598" name="Bound Immortal Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1420,6 +1491,7 @@
 	<item id="19599" name="Bound Immortal Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />

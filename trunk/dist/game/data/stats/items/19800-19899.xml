@@ -3,6 +3,7 @@
 	<item id="19800" name="Bound Immortal Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -19,6 +20,7 @@
 	<item id="19801" name="Bound Immortal Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -37,6 +39,7 @@
 	<item id="19802" name="Bound Immortal Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -55,6 +58,7 @@
 	<item id="19803" name="Bound Immortal Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -71,6 +75,7 @@
 	<item id="19804" name="Bound Immortal Leather Boots" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -87,6 +92,7 @@
 	<item id="19805" name="Bound Immortal Circlet" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -103,6 +109,7 @@
 	<item id="19806" name="Bound Immortal Tunic" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -121,6 +128,7 @@
 	<item id="19807" name="Bound Immortal Stockings" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -139,6 +147,7 @@
 	<item id="19808" name="Bound Immortal Gloves" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -155,6 +164,7 @@
 	<item id="19809" name="Bound Immortal Shoes" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -171,6 +181,7 @@
 	<item id="19810" name="Bound Twilight Helmet" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -187,6 +198,7 @@
 	<item id="19811" name="Bound Twilight Breastplate" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -203,6 +215,7 @@
 	<item id="19812" name="Bound Twilight Gaiters" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -219,6 +232,7 @@
 	<item id="19813" name="Bound Twilight Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -235,6 +249,7 @@
 	<item id="19814" name="Bound Twilight Boots" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -267,6 +282,7 @@
 	<item id="19816" name="Bound Twilight Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -283,6 +299,7 @@
 	<item id="19817" name="Bound Twilight Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -301,6 +318,7 @@
 	<item id="19818" name="Bound Twilight Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -319,6 +337,7 @@
 	<item id="19819" name="Bound Twilight Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -335,6 +354,7 @@
 	<item id="19820" name="Bound Twilight Leather Boots" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -351,6 +371,7 @@
 	<item id="19821" name="Bound Twilight Circlet" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -367,6 +388,7 @@
 	<item id="19822" name="Bound Twilight Tunic" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -385,6 +407,7 @@
 	<item id="19823" name="Bound Twilight Stockings" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -403,6 +426,7 @@
 	<item id="19824" name="Bound Twilight Gloves" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -419,6 +443,7 @@
 	<item id="19825" name="Bound Twilight Shoes" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -435,6 +460,7 @@
 	<item id="19826" name="Bound Seraph Helmet" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -451,6 +477,7 @@
 	<item id="19827" name="Bound Seraph Breastplate" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -467,6 +494,7 @@
 	<item id="19828" name="Bound Seraph Gaiters" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -483,6 +511,7 @@
 	<item id="19829" name="Bound Seraph Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -499,6 +528,7 @@
 	<item id="19830" name="Bound Seraph Boots" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -531,6 +561,7 @@
 	<item id="19832" name="Bound Seraph Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -547,6 +578,7 @@
 	<item id="19833" name="Bound Seraph Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -565,6 +597,7 @@
 	<item id="19834" name="Bound Seraph Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -583,6 +616,7 @@
 	<item id="19835" name="Bound Seraph Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -599,6 +633,7 @@
 	<item id="19836" name="Bound Seraph Leather Boots" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -615,6 +650,7 @@
 	<item id="19837" name="Bound Seraph Circlet" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -631,6 +667,7 @@
 	<item id="19838" name="Bound Seraph Tunic" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -649,6 +686,7 @@
 	<item id="19839" name="Bound Seraph Stockings" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -667,6 +705,7 @@
 	<item id="19840" name="Bound Seraph Gloves" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -683,6 +722,7 @@
 	<item id="19841" name="Bound Seraph Shoes" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -699,6 +739,7 @@
 	<item id="19842" name="Bound Eternal Helmet" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R99" />
@@ -715,6 +756,7 @@
 	<item id="19843" name="Bound Eternal Breastplate" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -731,6 +773,7 @@
 	<item id="19844" name="Bound Eternal Gaiters" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -747,6 +790,7 @@
 	<item id="19845" name="Bound Eternal Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R99" />
@@ -763,6 +807,7 @@
 	<item id="19846" name="Bound Eternal Boots" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R99" />
@@ -795,6 +840,7 @@
 	<item id="19848" name="Bound Eternal Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R99" />
@@ -811,6 +857,7 @@
 	<item id="19849" name="Bound Eternal Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -829,6 +876,7 @@
 	<item id="19850" name="Bound Eternal Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -847,6 +895,7 @@
 	<item id="19851" name="Bound Eternal Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R99" />
@@ -863,6 +912,7 @@
 	<item id="19852" name="Bound Eternal Leather Boots" additionalName="Enchant Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R99" />
@@ -879,6 +929,7 @@
 	<item id="19853" name="Bound Eternal Circlet" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R99" />
@@ -895,6 +946,7 @@
 	<item id="19854" name="Bound Eternal Tunic" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases M. Evasion and Mental Attack Resistance when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -913,6 +965,7 @@
 	<item id="19855" name="Bound Eternal Stockings" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -931,6 +984,7 @@
 	<item id="19856" name="Bound Eternal Gloves" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R99" />
@@ -947,6 +1001,7 @@
 	<item id="19857" name="Bound Eternal Shoes" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R99" />
@@ -962,6 +1017,7 @@
 	</item>
 	<item id="19858" name="Blessed Immortal Helmet" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -978,6 +1034,7 @@
 	<item id="19859" name="Blessed Immortal Breastplate" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -993,6 +1050,7 @@
 	</item>
 	<item id="19860" name="Blessed Immortal Gaiters" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1008,6 +1066,7 @@
 	</item>
 	<item id="19861" name="Blessed Immortal Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1023,6 +1082,7 @@
 	</item>
 	<item id="19862" name="Blessed Immortal Boots" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1054,6 +1114,7 @@
 	</item>
 	<item id="19864" name="Blessed Immortal Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1070,6 +1131,7 @@
 	<item id="19865" name="Blessed Immortal Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1087,6 +1149,7 @@
 	</item>
 	<item id="19866" name="Blessed Immortal Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1104,6 +1167,7 @@
 	</item>
 	<item id="19867" name="Blessed Immortal Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1119,6 +1183,7 @@
 	</item>
 	<item id="19868" name="Blessed Immortal Leather Boots" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1134,6 +1199,7 @@
 	</item>
 	<item id="19869" name="Blessed Immortal Circlet" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1150,6 +1216,7 @@
 	<item id="19870" name="Blessed Immortal Tunic" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1167,6 +1234,7 @@
 	</item>
 	<item id="19871" name="Blessed Immortal Stockings" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1184,6 +1252,7 @@
 	</item>
 	<item id="19872" name="Blessed Immortal Gloves" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1199,6 +1268,7 @@
 	</item>
 	<item id="19873" name="Blessed Immortal Shoes" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1214,6 +1284,7 @@
 	</item>
 	<item id="19874" name="Blessed Twilight Helmet" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1230,6 +1301,7 @@
 	<item id="19875" name="Blessed Twilight Breastplate" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1246,6 +1318,7 @@
 	</item>
 	<item id="19876" name="Blessed Twilight Gaiters" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1261,6 +1334,7 @@
 	</item>
 	<item id="19877" name="Blessed Twilight Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1276,6 +1350,7 @@
 	</item>
 	<item id="19878" name="Blessed Twilight Boots" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1307,6 +1382,7 @@
 	</item>
 	<item id="19880" name="Blessed Twilight Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1323,6 +1399,7 @@
 	<item id="19881" name="Blessed Twilight Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1340,6 +1417,7 @@
 	</item>
 	<item id="19882" name="Blessed Twilight Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1357,6 +1435,7 @@
 	</item>
 	<item id="19883" name="Blessed Twilight Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1372,6 +1451,7 @@
 	</item>
 	<item id="19884" name="Blessed Twilight Leather Boots" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1387,6 +1467,7 @@
 	</item>
 	<item id="19885" name="Blessed Twilight Circlet" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
@@ -1403,6 +1484,7 @@
 	<item id="19886" name="Blessed Twilight Tunic" additionalName="Recovery Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1420,6 +1502,7 @@
 	</item>
 	<item id="19887" name="Blessed Twilight Stockings" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1437,6 +1520,7 @@
 	</item>
 	<item id="19888" name="Blessed Twilight Gloves" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
@@ -1453,6 +1537,7 @@
 	</item>
 	<item id="19889" name="Blessed Twilight Shoes" additionalName="Recovery Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
@@ -1469,6 +1554,7 @@
 	</item>
 	<item id="19890" name="Blessed Seraph Helmet" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -1485,6 +1571,7 @@
 	<item id="19891" name="Blessed Seraph Breastplate" additionalName="Defense Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -1501,6 +1588,7 @@
 	</item>
 	<item id="19892" name="Blessed Seraph Gaiters" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -1516,6 +1604,7 @@
 	</item>
 	<item id="19893" name="Blessed Seraph Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
@@ -1532,6 +1621,7 @@
 	</item>
 	<item id="19894" name="Blessed Seraph Boots" additionalName="Defense Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R95" />
@@ -1563,6 +1653,7 @@
 	</item>
 	<item id="19896" name="Blessed Seraph Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R95" />
@@ -1580,6 +1671,7 @@
 	<item id="19897" name="Blessed Seraph Leather Armor" additionalName="Enchant Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -1598,6 +1690,7 @@
 	</item>
 	<item id="19898" name="Blessed Seraph Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -1615,6 +1708,7 @@
 	</item>
 	<item id="19899" name="Blessed Seraph Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_g_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R95" />
