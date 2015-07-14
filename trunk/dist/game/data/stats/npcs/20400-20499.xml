@@ -4016,23 +4016,14 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="25.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="122" max="197" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2468000054359436">
-					<item id="24" min="1" max="1" chance="19.255" /> <!-- Bone Breastplate -->
-					<item id="390" min="1" max="1" chance="19.255" /> <!-- Cotton Shirt -->
-					<item id="31" min="1" max="1" chance="30.745" /> <!-- Bone Gaiters -->
-					<item id="412" min="1" max="1" chance="30.745" /> <!-- Cotton Pants -->
-				</group>
-				<group chance="11.901399612426758">
-					<item id="1867" min="1" max="1" chance="41.5311" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="41.5311" /> <!-- Animal Bone -->
-					<item id="1801" min="1" max="1" chance="15.6919" /> <!-- Recipe: Piece Bone Gaiters -->
-					<item id="5158" min="1" max="1" chance="1.2459" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="734" min="1" max="1" chance="1.050" /> <!-- Wind Walk Potion -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4066,15 +4057,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="50.1999" /> <!-- Thread -->
-				<item id="1897" min="1" max="1" chance="5.9762" /> <!-- Necklace of Wisdom Chain -->
-				<item id="734" min="1" max="1" chance="4.1833" /> <!-- Haste Potion -->
+				<item id="36531" min="1" max="1" chance="4.700" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="25.5" />
-		</collision>
 	</npc>
 	<npc id="20468" level="6" type="L2Monster" name="Kaboo Orc">
 		<parameters>
@@ -4510,21 +4495,14 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="114" max="157" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2037999927997589">
-					<item id="66" min="1" max="1" chance="9.9075" /> <!-- Gladius -->
-					<item id="1333" min="1" max="1" chance="9.9075" /> <!-- Brandish -->
-					<item id="2010" min="1" max="1" chance="80.185" /> <!-- Brandish Blade -->
-				</group>
-				<group chance="14.699700355529785">
-					<item id="1869" min="1" max="1" chance="28.5714" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="57.1429" /> <!-- Stem -->
-					<item id="736" min="1" max="1" chance="14.2857" /> <!-- Scroll of Escape -->
-				</group>
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="4.300" /> <!-- Iron Ore -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4558,15 +4536,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1867" min="1" max="1" chance="28.437" /> <!-- Animal Skin -->
-				<item id="1864" min="1" max="1" chance="42.6554" /> <!-- Stem -->
-				<item id="1922" min="1" max="1" chance="5.4407" /> <!-- Leather Tunic Pattern -->
+				<item id="36531" min="1" max="1" chance="3.900" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="22" grown="26.4" />
-		</collision>
 	</npc>
 	<npc id="20473" level="11" type="L2Monster" name="Kaboo Orc Warrior Lieutenant">
 		<parameters>
@@ -4609,21 +4581,14 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="109" max="147" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.19259999692440033">
-					<item id="9" min="1" max="1" chance="9.9075" /> <!-- Cedar Staff -->
-					<item id="2008" min="1" max="1" chance="80.185" /> <!-- Cedar Staff Head -->
-					<item id="154" min="1" max="1" chance="9.9075" /> <!-- Dwarven Mace -->
-				</group>
-				<group chance="12.200499534606934">
-					<item id="1869" min="1" max="1" chance="32.5359" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="65.0718" /> <!-- Stem -->
-					<item id="1792" min="1" max="1" chance="2.3923" /> <!-- Recipe: Short Spear -->
-				</group>
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="15" /> <!-- Antidote -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4657,15 +4622,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="23" min="1" max="1" chance="0.6588" /> <!-- Wooden Breastplate -->
-				<item id="1831" min="1" max="1" chance="53.7542" /> <!-- Antidote -->
-				<item id="1896" min="1" max="1" chance="8.5415" /> <!-- Necklace of Anguish Chain -->
+				<item id="36531" min="1" max="1" chance="3.800" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="22" grown="26.4" />
-		</collision>
 	</npc>
 	<npc id="20474" level="15" type="L2Monster" name="Kasha Spider">
 		<parameters>

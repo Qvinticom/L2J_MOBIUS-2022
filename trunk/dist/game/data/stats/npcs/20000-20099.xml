@@ -1650,22 +1650,14 @@
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="114" max="168" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.4686999320983887">
-					<item id="429" min="1" max="1" chance="4.3575" /> <!-- Leather Tunic -->
-					<item id="1922" min="1" max="1" chance="34.0148" /> <!-- Leather Tunic Pattern -->
-					<item id="464" min="1" max="1" chance="6.981" /> <!-- Leather Stockings -->
-					<item id="1923" min="1" max="1" chance="54.6467" /> <!-- Leather Stockings Pattern -->
-				</group>
-				<group chance="7.637800216674805">
-					<item id="1871" min="1" max="1" chance="57.4648" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="38.3099" /> <!-- Suede -->
-					<item id="1793" min="1" max="1" chance="4.2253" /> <!-- Recipe: Sword of Reflection -->
-				</group>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="36536" min="1" max="1" chance="3" /> <!-- Worn Leather Braid -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1699,15 +1691,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="1" chance="44.5764" /> <!-- Stem -->
-				<item id="1923" min="1" max="1" chance="9.1345" /> <!-- Leather Stockings Pattern -->
-				<item id="1792" min="1" max="1" chance="1.6388" /> <!-- Recipe: Short Spear -->
+				<item id="36531" min="1" max="1" chance="4.100" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="20" />
-		</collision>
 	</npc>
 	<npc id="20020" level="14" type="L2Monster" name="Marsh Zombie Scout">
 		<parameters>
@@ -3262,23 +3248,15 @@
 				<clan>ELEMENTAL2</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="124" max="204" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.270900011062622">
-					<item id="845" min="1" max="1" chance="8.7774" /> <!-- Cat's Eye Earring -->
-					<item id="908" min="1" max="1" chance="6.5831" /> <!-- Necklace of Wisdom -->
-					<item id="1897" min="1" max="1" chance="71.4734" /> <!-- Necklace of Wisdom Chain -->
-					<item id="877" min="1" max="1" chance="13.1661" /> <!-- Ring of Wisdom -->
-				</group>
-				<group chance="14.005599975585938">
-					<item id="1864" min="1" max="1" chance="54.481" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="27.2405" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="10.8962" /> <!-- Braided Hemp -->
-					<item id="2173" min="1" max="1" chance="7.3823" /> <!-- Recipe: Hard Leather Shirt -->
-				</group>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="36541" min="1" max="1" chance="1.210" /> <!-- Steel Wire -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!--  Haste Potion -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3312,15 +3290,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1873" min="1" max="1" chance="10.3328" /> <!-- Silver Nugget -->
-				<item id="2175" min="1" max="1" chance="21.0017" /> <!-- Recipe: Boots -->
-				<item id="735" min="1" max="1" chance="2.1527" /> <!-- Alacrity Potion -->
+				<item id="36531" min="1" max="1" chance="4.850" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="20037" level="18" type="L2Monster" name="Mana Seeker">
 		<parameters>
@@ -3979,21 +3951,17 @@
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="125" max="213" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.029999999329447746">
-					<item id="309" min="1" max="1" chance="50" /> <!-- Tears of Eva -->
-					<item id="310" min="1" max="1" chance="50" /> <!-- Relic of the Saints -->
-				</group>
-				<group chance="11.803600311279297">
-					<item id="1872" min="1" max="1" chance="44.4444" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="44.4444" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.4444" /> <!-- Coarse Bone Powder -->
-					<item id="2144" min="1" max="1" chance="6.6668" /> <!-- Recipe: Compound Braid -->
-				</group>
+				<item id="57" min="4" max="11" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="3.650" /> <!-- Fiber -->
+				<item id="36516" min="1" max="1" chance="3.500" /> <!-- Worn Leather-->
+				<item id="36521" min="1" max="1" chance="1.400" /> <!-- Iron Ore -->
+				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4027,15 +3995,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1865" min="1" max="1" chance="26.6401" /> <!-- Varnish -->
-				<item id="2142" min="1" max="1" chance="5.328" /> <!-- Recipe: Varnish of Purity -->
-				<item id="1872" min="1" max="1" chance="35.5202" /> <!-- Animal Bone -->
+				<item id="36531" min="1" max="1" chance="4.900" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="20045" level="27" type="L2Monster" name="Skeleton Scout">
 		<parameters>

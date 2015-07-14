@@ -454,22 +454,14 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="25.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="118" max="183" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.4268999099731445">
-					<item id="38" min="1" max="1" chance="5.2405" /> <!-- Low Boots -->
-					<item id="50" min="1" max="1" chance="5.2405" /> <!-- Leather Gloves -->
-					<item id="1925" min="1" max="1" chance="89.519" /> <!-- Leather Gloves Lining -->
-				</group>
-				<group chance="9.262900352478027">
-					<item id="1868" min="1" max="1" chance="75.7576" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="15.1515" /> <!-- Silver Nugget -->
-					<item id="2143" min="1" max="1" chance="7.5758" /> <!-- Recipe: Synthetic Cokes -->
-					<item id="5158" min="1" max="1" chance="1.5151" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="36551" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Low-grade)-->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -503,15 +495,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="47.5131" /> <!-- Thread -->
-				<item id="1924" min="1" max="1" chance="7.6634" /> <!-- Leather Helmet Design -->
-				<item id="1897" min="1" max="1" chance="5.6563" /> <!-- Necklace of Wisdom Chain -->
+				<item id="36531" min="1" max="1" chance="4.475" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="25.5" />
-		</collision>
 	</npc>
 	<npc id="20309" level="2" type="L2Monster" name="Brown Fox">
 		<parameters>
@@ -2658,25 +2644,16 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="6" />
+			<height normal="15" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="67" max="91" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0230000019073486">
-					<item id="428" min="1" max="1" chance="19.2434" /> <!-- Feriotic Tunic -->
-					<item id="1100" min="1" max="1" chance="19.2434" /> <!-- Cotton Tunic -->
-					<item id="463" min="1" max="1" chance="30.7566" /> <!-- Feriotic Stockings -->
-					<item id="1103" min="1" max="1" chance="30.7566" /> <!-- Cotton Stockings -->
-				</group>
-				<group chance="7.670899868011475">
-					<item id="1864" min="1" max="1" chance="31.9923" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="15.9961" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.6641" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.3985" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="31.9923" /> <!-- Thread -->
-					<item id="1789" min="1" max="1" chance="2.9567" /> <!-- Recipe: Cedar Staff -->
-				</group>
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="2.300" /> <!-- Healing Potion -->
+				<item id="36536" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+				<item id="36556" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Low-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2710,15 +2687,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1802" min="1" max="1" chance="26.8004" /> <!-- Recipe: Necklace of Anguish -->
-				<item id="29" min="1" max="1" chance="2.1303" /> <!-- Leather Pants -->
-				<item id="1060" min="1" max="1" chance="27.6937" /> <!-- Lesser Healing Potion -->
+				<item id="36531" min="1" max="1" chance="2.375" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="6" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="20337" level="2" type="L2Monster" name="Longtail Fox">
 		<parameters>

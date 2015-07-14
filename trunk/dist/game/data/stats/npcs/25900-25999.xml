@@ -3112,8 +3112,8 @@
 			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="25990" level="93" type="L2Npc" name="Isadora's Avatar" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25990" level="93" type="L2RaidBoss" name="Isadora's Avatar" title="Raid Boss">
+		<!-- http://l2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3124,13 +3124,70 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="16262" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17343" min="1" max="1" chance="6" /> <!-- Twilight Shield -->
+				<item id="17354" min="1" max="1" chance="6" /> <!-- Twilight Sigil -->
+				<item id="17344" min="1" max="1" chance="6" /> <!-- Twilight Leather Helmet -->
+				<item id="17348" min="1" max="1" chance="6" /> <!-- Twilight Leather Boots -->
+				<item id="17347" min="1" max="1" chance="6" /> <!-- Twilight Leather Gloves -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="1" max="1" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="33.25" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="33.25" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33.25" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="17680" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye -->
+				<item id="38573" min="1" max="1" chance="4" /> <!-- Apparition Stone (Lv. 93) -->
+				<item id="38007" min="1" max="1" chance="3.575" /> <!-- Twilight Shoes Crafting Pack -->
+				<item id="38000" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Leggings Crafting Pack -->
+				<item id="37992" min="1" max="1" chance="3.575" /> <!-- Twilight Helmet Crafting Pack -->
+				<item id="37999" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Armor Crafting Pack -->
+				<item id="37996" min="1" max="1" chance="3.575" /> <!-- Twilight Boots Crafting Pack -->
+				<item id="38003" min="1" max="1" chance="3.575" /> <!-- Twilight Circlet Crafting Pack -->
+				<item id="37993" min="1" max="1" chance="3.575" /> <!-- Twilight Breastplate Crafting Pack -->
+				<item id="38005" min="1" max="1" chance="3.575" /> <!-- Twilight Stockings Crafting Pack -->
+				<item id="37997" min="1" max="1" chance="3.575" /> <!-- Twilight Shield Crafting Pack -->
+				<item id="38002" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Boots Crafting Pack -->
+				<item id="38004" min="1" max="1" chance="3.575" /> <!-- Twilight Tunic Crafting Pack -->
+				<item id="38006" min="1" max="1" chance="3.575" /> <!-- Twilight Gloves Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Gloves Crafting Pack -->
+				<item id="37998" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Helmet Crafting Pack -->
+				<item id="37995" min="1" max="1" chance="3.575" /> <!-- Twilight Gauntlets Crafting Pack -->
+				<item id="37994" min="1" max="1" chance="3.575" /> <!-- Twilight Gaiters Crafting Pack -->
+				<item id="38008" min="1" max="1" chance="3.575" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="2.775" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="2.775" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="2.775" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37986" min="1" max="1" chance="2.775" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="2.775" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="2.775" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37982" min="1" max="1" chance="2.775" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="2.775" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37987" min="1" max="1" chance="2.775" /> <!-- Apocalypse Thrower Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="25991" level="93" type="L2Npc" name="Maliss' Avatar" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25991" level="93" type="L2RaidBoss" name="Maliss' Avatar" title="Raid Boss">
+		<!-- http://l2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3141,13 +3198,70 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="16263" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17343" min="1" max="1" chance="6" /> <!-- Twilight Shield -->
+				<item id="17354" min="1" max="1" chance="6" /> <!-- Twilight Sigil -->
+				<item id="17353" min="1" max="1" chance="6" /> <!-- Twilight Shoes -->
+				<item id="17349" min="1" max="1" chance="6" /> <!-- Twilight Circlet -->
+				<item id="17352" min="1" max="1" chance="6" /> <!-- Twilight Gloves -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="1" max="1" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="33.25" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="33.25" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33.25" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="17680" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye -->
+				<item id="38573" min="1" max="1" chance="4" /> <!-- Apparition Stone (Lv. 93) -->
+				<item id="38007" min="1" max="1" chance="3.575" /> <!-- Twilight Shoes Crafting Pack -->
+				<item id="38000" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Leggings Crafting Pack -->
+				<item id="37992" min="1" max="1" chance="3.575" /> <!-- Twilight Helmet Crafting Pack -->
+				<item id="37999" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Armor Crafting Pack -->
+				<item id="37996" min="1" max="1" chance="3.575" /> <!-- Twilight Boots Crafting Pack -->
+				<item id="38003" min="1" max="1" chance="3.575" /> <!-- Twilight Circlet Crafting Pack -->
+				<item id="37993" min="1" max="1" chance="3.575" /> <!-- Twilight Breastplate Crafting Pack -->
+				<item id="38005" min="1" max="1" chance="3.575" /> <!-- Twilight Stockings Crafting Pack -->
+				<item id="37997" min="1" max="1" chance="3.575" /> <!-- Twilight Shield Crafting Pack -->
+				<item id="38002" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Boots Crafting Pack -->
+				<item id="38004" min="1" max="1" chance="3.575" /> <!-- Twilight Tunic Crafting Pack -->
+				<item id="38006" min="1" max="1" chance="3.575" /> <!-- Twilight Gloves Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Gloves Crafting Pack -->
+				<item id="37998" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Helmet Crafting Pack -->
+				<item id="37995" min="1" max="1" chance="3.575" /> <!-- Twilight Gauntlets Crafting Pack -->
+				<item id="37994" min="1" max="1" chance="3.575" /> <!-- Twilight Gaiters Crafting Pack -->
+				<item id="38008" min="1" max="1" chance="3.575" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="2.775" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="2.775" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="2.775" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37986" min="1" max="1" chance="2.775" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="2.775" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="2.775" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37982" min="1" max="1" chance="2.775" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="2.775" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37987" min="1" max="1" chance="2.775" /> <!-- Apocalypse Thrower Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="25992" level="93" type="L2Npc" name="Embryo Garron" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25992" level="93" type="L2RaidBoss" name="Embryo Garron" title="Raid Boss">
+		<!-- http://l2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3158,13 +3272,70 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="16" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="16264" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="10" />
 			<height normal="26.99" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17343" min="1" max="1" chance="6" /> <!-- Twilight Shield -->
+				<item id="17354" min="1" max="1" chance="6" /> <!-- Twilight Sigil -->
+				<item id="17342" min="1" max="1" chance="6" /> <!-- Twilight Boots -->
+				<item id="17341" min="1" max="1" chance="6" /> <!-- Twilight Gauntlets -->
+				<item id="17338" min="1" max="1" chance="6" /> <!-- Twilight Helmet -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="1" max="1" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="33.25" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="33.25" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33.25" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="17680" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye -->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17683" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="38573" min="1" max="1" chance="4" /> <!-- Apparition Stone (Lv. 93) -->
+				<item id="38007" min="1" max="1" chance="3.575" /> <!-- Twilight Shoes Crafting Pack -->
+				<item id="38000" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Leggings Crafting Pack -->
+				<item id="37992" min="1" max="1" chance="3.575" /> <!-- Twilight Helmet Crafting Pack -->
+				<item id="37999" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Armor Crafting Pack -->
+				<item id="37996" min="1" max="1" chance="3.575" /> <!-- Twilight Boots Crafting Pack -->
+				<item id="38003" min="1" max="1" chance="3.575" /> <!-- Twilight Circlet Crafting Pack -->
+				<item id="37993" min="1" max="1" chance="3.575" /> <!-- Twilight Breastplate Crafting Pack -->
+				<item id="38005" min="1" max="1" chance="3.575" /> <!-- Twilight Stockings Crafting Pack -->
+				<item id="37997" min="1" max="1" chance="3.575" /> <!-- Twilight Shield Crafting Pack -->
+				<item id="38002" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Boots Crafting Pack -->
+				<item id="38004" min="1" max="1" chance="3.575" /> <!-- Twilight Tunic Crafting Pack -->
+				<item id="38006" min="1" max="1" chance="3.575" /> <!-- Twilight Gloves Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Gloves Crafting Pack -->
+				<item id="37998" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Helmet Crafting Pack -->
+				<item id="37995" min="1" max="1" chance="3.575" /> <!-- Twilight Gauntlets Crafting Pack -->
+				<item id="37994" min="1" max="1" chance="3.575" /> <!-- Twilight Gaiters Crafting Pack -->
+				<item id="38008" min="1" max="1" chance="3.575" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="2.775" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="2.775" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="2.775" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37986" min="1" max="1" chance="2.775" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="2.775" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="2.775" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37982" min="1" max="1" chance="2.775" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="2.775" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37987" min="1" max="1" chance="2.775" /> <!-- Apocalypse Thrower Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="25993" level="93" type="L2Npc" name="Embryo Nigel" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25994" level="93" type="L2RaidBoss" name="Embryo Dabos" title="Raid Boss">
+		<!-- http://l2wiki.com -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3175,27 +3346,142 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<collision>
-			<radius normal="18" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="25994" level="93" type="L2Npc" name="Embryo Dabos" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="16265" level="1" />
+		</skill_list>
 		<collision>
 			<radius normal="24" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17343" min="1" max="1" chance="6" /> <!-- Twilight Shield -->
+				<item id="17354" min="1" max="1" chance="6" /> <!-- Twilight Sigil -->
+				<item id="17344" min="1" max="1" chance="6" /> <!-- Item .jpg Twilight Leather Helmet -->
+				<item id="17348" min="1" max="1" chance="6" /> <!-- Item .jpg Twilight Leather Boots -->
+				<item id="17347" min="1" max="1" chance="6" /> <!-- Item .jpg Twilight Leather Gloves -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="1" max="1" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="33.25" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="33.25" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33.25" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="17680" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye -->
+				<item id="38573" min="1" max="1" chance="4" /> <!-- Apparition Stone (Lv. 93) -->
+				<item id="38007" min="1" max="1" chance="3.575" /> <!-- Twilight Shoes Crafting Pack -->
+				<item id="38000" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Leggings Crafting Pack -->
+				<item id="37992" min="1" max="1" chance="3.575" /> <!-- Twilight Helmet Crafting Pack -->
+				<item id="37999" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Armor Crafting Pack -->
+				<item id="37996" min="1" max="1" chance="3.575" /> <!-- Twilight Boots Crafting Pack -->
+				<item id="38003" min="1" max="1" chance="3.575" /> <!-- Twilight Circlet Crafting Pack -->
+				<item id="37993" min="1" max="1" chance="3.575" /> <!-- Twilight Breastplate Crafting Pack -->
+				<item id="38005" min="1" max="1" chance="3.575" /> <!-- Twilight Stockings Crafting Pack -->
+				<item id="37997" min="1" max="1" chance="3.575" /> <!-- Twilight Shield Crafting Pack -->
+				<item id="38002" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Boots Crafting Pack -->
+				<item id="38004" min="1" max="1" chance="3.575" /> <!-- Twilight Tunic Crafting Pack -->
+				<item id="38006" min="1" max="1" chance="3.575" /> <!-- Twilight Gloves Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Gloves Crafting Pack -->
+				<item id="37998" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Helmet Crafting Pack -->
+				<item id="37995" min="1" max="1" chance="3.575" /> <!-- Twilight Gauntlets Crafting Pack -->
+				<item id="37994" min="1" max="1" chance="3.575" /> <!-- Twilight Gaiters Crafting Pack -->
+				<item id="38008" min="1" max="1" chance="3.575" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="2.775" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="2.775" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="2.775" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37986" min="1" max="1" chance="2.775" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="2.775" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="2.775" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37982" min="1" max="1" chance="2.775" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="2.775" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37987" min="1" max="1" chance="2.775" /> <!-- Apocalypse Thrower Crafting Pack -->
+			</death>
+		</drop_lists>
+	</npc>
+	<npc id="25994" level="93" type="L2RaidBoss" name="Embryo Dabos" title="Raid Boss">
+		<!-- http://l2wiki.com -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="30490209" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4410" level="15" />
+			<skill id="4414" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="16266" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="45" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17343" min="1" max="1" chance="6" /> <!-- Twilight Shield -->
+				<item id="17354" min="1" max="1" chance="6" /> <!-- Twilight Sigil -->
+				<item id="17353" min="1" max="1" chance="6" /> <!-- Twilight Shoes -->
+				<item id="17352" min="1" max="1" chance="6" /> <!-- Twilight Gloves -->
+				<item id="17349" min="1" max="1" chance="6" /> <!-- Twilight Circlet -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="1" max="1" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19508" min="1" max="1" chance="33.25" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+				<item id="19509" min="1" max="1" chance="33.25" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+				<item id="19510" min="1" max="1" chance="33.25" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+				<item id="17680" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant DEX Dye -->
+				<item id="17683" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant WIT Dye -->
+				<item id="17681" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant CON Dye -->
+				<item id="17679" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant STR Dye -->
+				<item id="17682" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant INT Dye -->
+				<item id="17684" min="3" max="3" chance="17" /> <!-- Lv. 4 Giant MEN Dye -->
+				<item id="38573" min="1" max="1" chance="4" /> <!-- Apparition Stone (Lv. 93) -->
+				<item id="38007" min="1" max="1" chance="3.575" /> <!-- Twilight Shoes Crafting Pack -->
+				<item id="38000" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Leggings Crafting Pack -->
+				<item id="37992" min="1" max="1" chance="3.575" /> <!-- Twilight Helmet Crafting Pack -->
+				<item id="37999" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Armor Crafting Pack -->
+				<item id="37996" min="1" max="1" chance="3.575" /> <!-- Twilight Boots Crafting Pack -->
+				<item id="38003" min="1" max="1" chance="3.575" /> <!-- Twilight Circlet Crafting Pack -->
+				<item id="37993" min="1" max="1" chance="3.575" /> <!-- Twilight Breastplate Crafting Pack -->
+				<item id="38005" min="1" max="1" chance="3.575" /> <!-- Twilight Stockings Crafting Pack -->
+				<item id="37997" min="1" max="1" chance="3.575" /> <!-- Twilight Shield Crafting Pack -->
+				<item id="38002" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Boots Crafting Pack -->
+				<item id="38004" min="1" max="1" chance="3.575" /> <!-- Twilight Tunic Crafting Pack -->
+				<item id="38006" min="1" max="1" chance="3.575" /> <!-- Twilight Gloves Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Gloves Crafting Pack -->
+				<item id="37998" min="1" max="1" chance="3.575" /> <!-- Twilight Leather Helmet Crafting Pack -->
+				<item id="37995" min="1" max="1" chance="3.575" /> <!-- Twilight Gauntlets Crafting Pack -->
+				<item id="37994" min="1" max="1" chance="3.575" /> <!-- Twilight Gaiters Crafting Pack -->
+				<item id="38008" min="1" max="1" chance="3.575" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="2.775" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="2.775" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="2.775" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37986" min="1" max="1" chance="2.775" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="2.775" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="2.775" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="2.775" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37982" min="1" max="1" chance="2.775" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="2.775" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37987" min="1" max="1" chance="2.775" /> <!-- Apocalypse Thrower Crafting Pack -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25995" level="93" type="L2Npc" name="Embryo Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

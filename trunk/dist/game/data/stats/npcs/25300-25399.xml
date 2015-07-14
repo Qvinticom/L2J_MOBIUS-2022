@@ -4039,7 +4039,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1452604" sp="348" raidPoints="232" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="36847.1860753942" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
+			<vitals hp="57906" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
 			<attack physical="48.8251644288713" magical="2.38238750889189" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="260.61147" magical="127.14" evasion="-18" />
 			<attribute>
@@ -4072,28 +4072,22 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="44.975101470947266">
-					<item id="347" min="2" max="4" chance="62.4817" /> <!-- Ring Mail Breastplate -->
-					<item id="376" min="4" max="12" chance="37.5183" /> <!-- Iron Plate Gaiters -->
-				</group>
-				<group chance="51.5536994934082">
-					<item id="156" min="1" max="1" chance="33.3333" /> <!-- Hand Axe -->
-					<item id="167" min="1" max="1" chance="33.3333" /> <!-- Scalpel -->
-					<item id="178" min="1" max="1" chance="33.3334" /> <!-- Bone Staff -->
-				</group>
-				<group chance="74.06800079345703">
-					<item id="6575" min="1" max="1" chance="5.2632" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-					<item id="6576" min="1" max="1" chance="47.3684" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-					<item id="955" min="1" max="3" chance="47.3684" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="27.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="347" min="1" max="1" chance="6.420" /> <!-- Ring Breastplate -->
+				<item id="376" min="1" max="1" chance="2.150" /> <!-- Iron Plate Gaiters -->
+				<item id="156" min="1" max="1" chance="3.300" /> <!-- Hand Axe -->
+				<item id="167" min="1" max="1" chance="2.800" /> <!-- Scalpel -->
+				<item id="178" min="1" max="1" chance="2.500" /> <!-- Bone Staff -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+				<item id="6576" min="1" max="1" chance="6.850" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="14.25" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25376" level="19" type="L2Monster" name="Ferkel's Warrior" title="Raid Fighter">
 		<parameters>
