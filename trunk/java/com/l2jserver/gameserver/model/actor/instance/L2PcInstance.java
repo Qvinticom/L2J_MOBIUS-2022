@@ -19,10 +19,10 @@
 package com.l2jserver.gameserver.model.actor.instance;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -666,7 +666,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// charges
 	private final AtomicInteger _charges = new AtomicInteger();
-	private ScheduledFuture<?> _chargeTask = null;
+	private volatile ScheduledFuture<?> _chargeTask = null;
 	
 	// Absorbed Souls
 	private int _souls = 0;
@@ -4524,7 +4524,7 @@ public final class L2PcInstance extends L2Playable
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		// Check if the L2Object to pick up is a L2ItemInstance
-		if (!(object instanceof L2ItemInstance))
+		if (!(object.isItem()))
 		{
 			// dont try to pickup anything that is not an item :)
 			_log.warning(this + " trying to pickup wrong target." + getTarget());
@@ -4533,12 +4533,7 @@ public final class L2PcInstance extends L2Playable
 		
 		L2ItemInstance target = (L2ItemInstance) object;
 		
-		// Send a Server->Client packet ActionFailed to this L2PcInstance
-		sendPacket(ActionFailed.STATIC_PACKET);
-		
-		// Send a Server->Client packet StopMove to this L2PcInstance
-		StopMove sm = new StopMove(this);
-		sendPacket(sm);
+		sendPacket(new StopMove(this));
 		
 		SystemMessage smsg = null;
 		synchronized (target)
@@ -4567,12 +4562,8 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			
-			if (isInvul() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
+			if (isInvisible() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-				smsg.addItemName(target);
-				sendPacket(smsg);
 				return;
 			}
 			
@@ -6986,7 +6977,7 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(34, getBaseClass());
 			statement.setInt(35, isNoble() ? 1 : 0);
 			statement.setLong(36, 0);
-			statement.setDate(37, new Date(getCreateDate().getTimeInMillis()));
+			statement.setTimestamp(37, new Timestamp(getCreateDate().getTimeInMillis()));
 			statement.executeUpdate();
 		}
 		catch (Exception e)
@@ -7182,7 +7173,7 @@ public final class L2PcInstance extends L2Playable
 					player.setPcBangPoints(rset.getInt("pccafe_points"));
 					
 					// character creation Time
-					player.getCreateDate().setTime(rset.getDate("createDate"));
+					player.getCreateDate().setTimeInMillis(rset.getTimestamp("createDate").getTime());
 					
 					// Language
 					player.setLang(rset.getString("language"));
@@ -7841,11 +7832,23 @@ public final class L2PcInstance extends L2Playable
 	
 	public int isOnlineInt()
 	{
-		if (_isOnline && (getClient() != null))
+		if (_isOnline && (_client != null))
 		{
-			return getClient().isDetached() ? 2 : 1;
+			return _client.isDetached() ? 2 : 1;
 		}
 		return 0;
+	}
+	
+	/**
+	 * Verifies if the player is in offline mode.<br>
+	 * The offline mode may happen for different reasons:<br>
+	 * Abnormally: Player gets abrouptaly disconnected from server.<br>
+	 * Normally: The player gets into offline shop mode, only avaiable by enabling the offline shop mod.
+	 * @return {@code true} if the player is in offline mode, {@code false} otherwise
+	 */
+	public boolean isInOfflineMode()
+	{
+		return (_client == null) || _client.isDetached();
 	}
 	
 	@Override
@@ -10703,6 +10706,16 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(new SkillCoolTime(this));
 			sendPacket(new ExStorageMaxCount(this));
 			
+			// TODO: Fix with Support for Ertheia race.
+			// if (Config.ALTERNATE_CLASS_MASTER)
+			// {
+			// if (Config.CLASS_MASTER_SETTINGS.isAllowed(getClassId().level() + 1) && Config.ALTERNATE_CLASS_MASTER && (((this.getClassId().level() == 1) && (this.getLevel() >= 40)) || ((this.getClassId().level() == 2) && (this.getLevel() >= 76)) || ((this.getClassId().level() == 3) &&
+			// (this.getLevel() >= 85))))
+			// {
+			// L2ClassMasterInstance.showQuestionMark(this);
+			// }
+			// }
+			
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
 			return true;
 		}
@@ -12932,7 +12945,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (_transformSkills == null)
 				{
-					_transformSkills = new HashMap<>();
+					_transformSkills = new ConcurrentHashMap<>();
 				}
 			}
 		}
@@ -12941,15 +12954,23 @@ public final class L2PcInstance extends L2Playable
 	
 	public Skill getTransformSkill(int id)
 	{
+		if (_transformSkills == null)
+		{
+			return null;
+		}
 		return _transformSkills.get(id);
 	}
 	
 	public boolean hasTransformSkill(int id)
 	{
+		if (_transformSkills == null)
+		{
+			return false;
+		}
 		return _transformSkills.containsKey(id);
 	}
 	
-	public synchronized void removeAllTransformSkills()
+	public void removeAllTransformSkills()
 	{
 		_transformSkills = null;
 	}
@@ -13194,8 +13215,13 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_chargeTask != null)
 		{
-			_chargeTask.cancel(false);
-			_chargeTask = null;
+			synchronized (this)
+			{
+				if (_chargeTask != null)
+				{
+					_chargeTask.cancel(false);
+				}
+			}
 		}
 		_chargeTask = ThreadPoolManager.getInstance().scheduleGeneral(new ResetChargesTask(this), 600000);
 	}
@@ -14161,9 +14187,9 @@ public final class L2PcInstance extends L2Playable
 	{
 		try
 		{
-			for (L2BossZone _zone : GrandBossManager.getInstance().getZones())
+			for (L2BossZone zone : GrandBossManager.getInstance().getZones().values())
 			{
-				_zone.removePlayer(this);
+				zone.removePlayer(this);
 			}
 		}
 		catch (Exception e)
@@ -14177,10 +14203,9 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void checkPlayerSkills()
 	{
-		L2SkillLearn learn;
 		for (Entry<Integer, Skill> e : getSkills().entrySet())
 		{
-			learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
+			final L2SkillLearn learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
 			if (learn != null)
 			{
 				int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;

@@ -87,7 +87,7 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 				activeChar.setPledgeType(requestPacket.getPledgeType());
 				if (requestPacket.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
 				{
-					activeChar.setPowerGrade(9); // adademy
+					activeChar.setPowerGrade(9); // Academy
 					activeChar.setLvlJoinedAcademy(activeChar.getLevel());
 				}
 				else

@@ -63,6 +63,7 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.AllyCrest;
 import com.l2jserver.gameserver.network.serverpackets.Die;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -659,11 +660,11 @@ public class EnterWorld extends L2GameClientPacket
 		
 		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
 		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+		
+		// Unstuck players that had client open when server crashed.
+		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	/**
-	 * @param cha
-	 */
 	private void engage(L2PcInstance cha)
 	{
 		int chaId = cha.getObjectId();

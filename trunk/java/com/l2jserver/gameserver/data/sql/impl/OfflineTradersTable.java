@@ -67,7 +67,7 @@ public class OfflineTradersTable
 			{
 				try
 				{
-					if ((pc.getPrivateStoreType() != PrivateStoreType.NONE) && ((pc.getClient() == null) || pc.getClient().isDetached()))
+					if ((pc.getPrivateStoreType() != PrivateStoreType.NONE) && pc.isInOfflineMode())
 					{
 						stm3.setInt(1, pc.getObjectId()); // Char Id
 						stm3.setLong(2, pc.getOfflineStartTime());

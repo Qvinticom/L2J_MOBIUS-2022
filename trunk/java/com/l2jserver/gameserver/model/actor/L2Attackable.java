@@ -1022,7 +1022,7 @@ public class L2Attackable extends L2Npc
 				}
 				
 				// Broadcast message if RaidBoss was defeated
-				if (isRaid() && !isRaidMinion())
+				if (isRaid() && !isRaidMinion() && (drop.getCount() > 0))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
 					sm.addCharName(this);

@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `bookmarkslot` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `vitality_points` int(10) NOT NULL DEFAULT '140000',
   `pccafe_points` int(6) DEFAULT NULL,
-  `createDate` date NOT NULL DEFAULT '0000-00-00',
+  `createDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `language` VARCHAR(2) DEFAULT NULL,
   `faction` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`),

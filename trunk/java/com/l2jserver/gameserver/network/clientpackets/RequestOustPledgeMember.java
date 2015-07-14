@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
+import java.util.concurrent.TimeUnit;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2Clan;
@@ -83,8 +85,8 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 		}
 		
 		// this also updates the database
-		clan.removeClanMember(member.getObjectId(), System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
-		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
+		clan.removeClanMember(member.getObjectId(), System.currentTimeMillis() + TimeUnit.DAYS.toMillis(Config.ALT_CLAN_JOIN_DAYS));
+		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + TimeUnit.DAYS.toMillis(Config.ALT_CLAN_JOIN_DAYS));
 		clan.updateClanInDB();
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);

@@ -149,8 +149,8 @@ public class L2ClanMember
 	}
 	
 	/**
-	 * Checks if is online.
-	 * @return true, if is online
+	 * Verifies if the clan member is online.
+	 * @return {@code true} if is online
 	 */
 	public boolean isOnline()
 	{
@@ -158,11 +158,7 @@ public class L2ClanMember
 		{
 			return false;
 		}
-		if (_player.getClient() == null)
-		{
-			return false;
-		}
-		if (_player.getClient().isDetached())
+		if (_player.isInOfflineMode())
 		{
 			return false;
 		}
