@@ -523,25 +523,88 @@
 		<set name="reuseDelay" val="120000" />
 	</skill>
 	<skill id="13339" levels="3" name="Enchant Heavy Armor Set + 6 (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Set item is enchanted. P. Def. + 93, and MP Recovery Bonus + 32 when standing/ sitting. -->
+		<table name="#addRegMp"> 1 1.32 1.32 </table>
+		<table name="#physSkillMpCost"> 1 0.93 0.93 </table>
+		<table name="#addPDef"> 1 1 1.11 </table>
 		<set name="icon" val="icon.skill0231" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pDef" val="93" />
+				<mul stat="regMp" val="1.32">
+					<player resting="true" />
+				</mul>
+				<mul stat="regMp" val="#addRegMp">
+					<and>
+						<player standing="true" />
+						<or>
+							<player running="true" />
+						</or>
+					</and>
+				</mul>
+				<mul stat="PhysicalMpConsumeRate" val="#physSkillMpCost" />
+				<mul stat="pDef" val="#addPDef" />
+				<!-- reflect debuff 5% chance, NOT DONE -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="13340" levels="3" name="Enchant Light Armor Set + 6 (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Set item is enchanted. M. Def. + 55, P. Evasion + 2, and Debuff Resistance + 10%. MP Recovery Bonus + 8 when standing/ sitting. -->
+		<table name="#skillCritRate"> 1 1.14 1.14 </table>
+		<table name="#absorbDam"> 0 4 4 </table>
+		<table name="#reuse"> 1 1 0.9 </table>
+		<table name="#runSpd"> 0 0 7 </table>
 		<set name="icon" val="icon.skill0233" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="mDef" val="55" />
+				<add stat="rEvas" val="2" />
+				<mul stat="regMp" val="1.08">
+					<and>
+						<player resting="true" />
+						<or>
+							<player standing="true" />
+						</or>
+					</and>
+				</mul>
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="skillCriticalProbability" val="#skillCritRate" />
+				<add stat="absorbDam" val="#absorbDam" />
+				<mul stat="pReuse" val="#reuse" />
+				<mul stat="mReuse" val="#reuse" />
+				<mul stat="dReuse" val="#reuse" />
+				<add stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13341" levels="3" name="Enchant Robe Set + 6 (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Set item is enchanted. P. Def. + 60, Weight Limit + 30%, and Skill Cooldown - 3%. MP Recovery Bonus + 8 when standing/ sitting. -->
+		<table name="#maxHp"> 0 4890 4890 </table>
+		<table name="#debuffVuln"> 0 0 11 </table>
+		<table name="#cancel"> 1 1 0.463 </table>
 		<set name="icon" val="icon.skill0234" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="weightLimit" val="1.3" />
+				<mul stat="regMp" val="1.08">
+					<and>
+						<player resting="true" />
+						<or>
+							<player standing="true" />
+						</or>
+					</and>
+				</mul>
+				<mul stat="pReuse" val="0.97" />
+				<mul stat="mReuse" val="0.97" />
+				<mul stat="dReuse" val="0.97" />
+				<add stat="maxHp" val="#maxHp" />
+				<sub stat="debuffVuln" val="#debuffVuln" />
+				<mul stat="cancel" val="#cancel" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13342" levels="1" name="T-shirt of Destiny">
 		<!-- AUTO GENERATED SKILL -->
