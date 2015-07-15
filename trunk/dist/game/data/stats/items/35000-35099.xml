@@ -66,7 +66,7 @@
 		<set name="item_skill" val="8805-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -84,7 +84,7 @@
 		<set name="item_skill" val="8806-1;13310-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="433.0" />
+			<add order="0" stat="pDef" val="433.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -102,7 +102,7 @@
 		<set name="item_skill" val="8807-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="270.0" />
+			<add order="0" stat="pDef" val="270.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -120,7 +120,7 @@
 		<set name="item_skill" val="8808-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -138,7 +138,7 @@
 		<set name="item_skill" val="8809-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -156,7 +156,7 @@
 		<set name="item_skill" val="8810-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -174,7 +174,7 @@
 		<set name="item_skill" val="8811-1;13311-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="346.0" />
+			<add order="0" stat="pDef" val="346.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -194,7 +194,7 @@
 		<set name="item_skill" val="8812-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="216.0" />
+			<add order="0" stat="pDef" val="216.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -214,7 +214,7 @@
 		<set name="item_skill" val="8813-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -232,7 +232,7 @@
 		<set name="item_skill" val="8814-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -250,7 +250,7 @@
 		<set name="item_skill" val="8815-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -268,8 +268,8 @@
 		<set name="item_skill" val="8816-1;13312-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="56.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="56.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -288,8 +288,8 @@
 		<set name="item_skill" val="8817-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="37.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -308,7 +308,7 @@
 		<set name="item_skill" val="8818-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -326,7 +326,7 @@
 		<set name="item_skill" val="8819-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -344,7 +344,7 @@
 		<set name="item_skill" val="8805-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -362,7 +362,7 @@
 		<set name="item_skill" val="8806-1;13310-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="433.0" />
+			<add order="0" stat="pDef" val="433.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -380,7 +380,7 @@
 		<set name="item_skill" val="8807-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="270.0" />
+			<add order="0" stat="pDef" val="270.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -398,7 +398,7 @@
 		<set name="item_skill" val="8808-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -416,7 +416,7 @@
 		<set name="item_skill" val="8809-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -434,7 +434,7 @@
 		<set name="item_skill" val="8810-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -452,7 +452,7 @@
 		<set name="item_skill" val="8811-1;13311-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="346.0" />
+			<add order="0" stat="pDef" val="346.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -472,7 +472,7 @@
 		<set name="item_skill" val="8812-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="216.0" />
+			<add order="0" stat="pDef" val="216.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -492,7 +492,7 @@
 		<set name="item_skill" val="8813-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -510,7 +510,7 @@
 		<set name="item_skill" val="8814-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -528,7 +528,7 @@
 		<set name="item_skill" val="8815-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -546,8 +546,8 @@
 		<set name="item_skill" val="8816-1;13312-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="56.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="56.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -566,8 +566,8 @@
 		<set name="item_skill" val="8817-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="37.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -586,7 +586,7 @@
 		<set name="item_skill" val="8818-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -604,7 +604,7 @@
 		<set name="item_skill" val="8819-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -622,7 +622,7 @@
 		<set name="item_skill" val="8834-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -640,7 +640,7 @@
 		<set name="item_skill" val="8835-1;13310-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="433.0" />
+			<add order="0" stat="pDef" val="433.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -658,7 +658,7 @@
 		<set name="item_skill" val="8836-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="270.0" />
+			<add order="0" stat="pDef" val="270.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -676,7 +676,7 @@
 		<set name="item_skill" val="8837-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -694,7 +694,7 @@
 		<set name="item_skill" val="8838-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -712,7 +712,7 @@
 		<set name="item_skill" val="8839-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -730,7 +730,7 @@
 		<set name="item_skill" val="8840-1;13311-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="346.0" />
+			<add order="0" stat="pDef" val="346.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -750,7 +750,7 @@
 		<set name="item_skill" val="8841-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="216.0" />
+			<add order="0" stat="pDef" val="216.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -770,7 +770,7 @@
 		<set name="item_skill" val="8842-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -788,7 +788,7 @@
 		<set name="item_skill" val="8843-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -806,7 +806,7 @@
 		<set name="item_skill" val="8844-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -824,8 +824,8 @@
 		<set name="item_skill" val="8845-1;13312-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="56.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="56.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -844,8 +844,8 @@
 		<set name="item_skill" val="8846-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="37.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -864,7 +864,7 @@
 		<set name="item_skill" val="8847-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -882,7 +882,7 @@
 		<set name="item_skill" val="8848-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -900,7 +900,7 @@
 		<set name="item_skill" val="8834-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -918,7 +918,7 @@
 		<set name="item_skill" val="8835-1;13309-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="433.0" />
+			<add order="0" stat="pDef" val="433.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -936,7 +936,7 @@
 		<set name="item_skill" val="8836-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="270.0" />
+			<add order="0" stat="pDef" val="270.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -954,7 +954,7 @@
 		<set name="item_skill" val="8837-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -972,7 +972,7 @@
 		<set name="item_skill" val="8838-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -990,7 +990,7 @@
 		<set name="item_skill" val="8839-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1008,7 +1008,7 @@
 		<set name="item_skill" val="8840-1;13310-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="346.0" />
+			<add order="0" stat="pDef" val="346.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -1028,7 +1028,7 @@
 		<set name="item_skill" val="8841-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="216.0" />
+			<add order="0" stat="pDef" val="216.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -1048,7 +1048,7 @@
 		<set name="item_skill" val="8842-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1066,7 +1066,7 @@
 		<set name="item_skill" val="8843-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1084,7 +1084,7 @@
 		<set name="item_skill" val="8844-1" />
 		<set name="price" val="158359000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1102,8 +1102,8 @@
 		<set name="item_skill" val="8845-1;13312-3" />
 		<set name="price" val="422292000" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="56.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="56.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1122,8 +1122,8 @@
 		<set name="item_skill" val="8846-1" />
 		<set name="price" val="263933000" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="37.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1142,7 +1142,7 @@
 		<set name="item_skill" val="8847-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1160,7 +1160,7 @@
 		<set name="item_skill" val="8848-1" />
 		<set name="price" val="105573000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1178,7 +1178,7 @@
 		<set name="price" val="158359000" />
 		<set name="item_skill" val="8805-1" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1196,7 +1196,7 @@
 		<set name="price" val="422292000" />
 		<set name="item_skill" val="8806-1" />
 		<for>
-			<add stat="pDef" val="433.0" />
+			<add order="0" stat="pDef" val="433.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1214,7 +1214,7 @@
 		<set name="price" val="263933000" />
 		<set name="item_skill" val="8807-1" />
 		<for>
-			<add stat="pDef" val="270.0" />
+			<add order="0" stat="pDef" val="270.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1232,7 +1232,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8808-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1249,7 +1249,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8809-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1267,7 +1267,7 @@
 		<set name="price" val="158359000" />
 		<set name="item_skill" val="8810-1" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1285,7 +1285,7 @@
 		<set name="price" val="422292000" />
 		<set name="item_skill" val="8811-1" />
 		<for>
-			<add stat="pDef" val="346.0" />
+			<add order="0" stat="pDef" val="346.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -1305,7 +1305,7 @@
 		<set name="price" val="263933000" />
 		<set name="item_skill" val="8812-1" />
 		<for>
-			<add stat="pDef" val="216.0" />
+			<add order="0" stat="pDef" val="216.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -1325,7 +1325,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8813-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1343,7 +1343,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8814-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1361,7 +1361,7 @@
 		<set name="price" val="158359000" />
 		<set name="item_skill" val="8815-1" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1379,8 +1379,8 @@
 		<set name="price" val="422292000" />
 		<set name="item_skill" val="8816-1" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="56.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="56.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1399,8 +1399,8 @@
 		<set name="price" val="263933000" />
 		<set name="item_skill" val="8817-1" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="37.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1419,7 +1419,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8818-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1437,7 +1437,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8819-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1455,7 +1455,7 @@
 		<set name="price" val="158359000" />
 		<set name="item_skill" val="8834-1" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1473,7 +1473,7 @@
 		<set name="price" val="422292000" />
 		<set name="item_skill" val="8835-1" />
 		<for>
-			<add stat="pDef" val="433.0" />
+			<add order="0" stat="pDef" val="433.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1491,7 +1491,7 @@
 		<set name="price" val="263933000" />
 		<set name="item_skill" val="8836-1" />
 		<for>
-			<add stat="pDef" val="270.0" />
+			<add order="0" stat="pDef" val="270.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1509,7 +1509,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8837-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1526,7 +1526,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8838-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1544,7 +1544,7 @@
 		<set name="price" val="158359000" />
 		<set name="item_skill" val="8839-1" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1562,7 +1562,7 @@
 		<set name="price" val="422292000" />
 		<set name="item_skill" val="8840-1" />
 		<for>
-			<add stat="pDef" val="346.0" />
+			<add order="0" stat="pDef" val="346.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -1582,7 +1582,7 @@
 		<set name="price" val="263933000" />
 		<set name="item_skill" val="8841-1" />
 		<for>
-			<add stat="pDef" val="216.0" />
+			<add order="0" stat="pDef" val="216.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -1602,7 +1602,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8842-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1620,7 +1620,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8843-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1638,7 +1638,7 @@
 		<set name="price" val="158359000" />
 		<set name="item_skill" val="8844-1" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1656,8 +1656,8 @@
 		<set name="price" val="422292000" />
 		<set name="item_skill" val="8845-1" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="56.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="56.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1676,8 +1676,8 @@
 		<set name="price" val="263933000" />
 		<set name="item_skill" val="8846-1" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="37.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1696,7 +1696,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8847-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1714,7 +1714,7 @@
 		<set name="price" val="105573000" />
 		<set name="item_skill" val="8848-1" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

@@ -161,7 +161,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="pDef" val="10.0" />
+			<add order="0" stat="pDef" val="10.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -177,7 +177,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="pDef" val="10.0" />
+			<add order="0" stat="pDef" val="10.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

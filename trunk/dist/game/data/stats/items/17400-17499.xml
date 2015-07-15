@@ -12,7 +12,7 @@
 		<set name="price" val="38327000" />
 		<set name="commissionItemType" val="FEET" />
 		<for>
-			<add stat="pDef" val="94.0" />
+			<add order="0" stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -29,8 +29,10 @@
 		<set name="price" val="40243000" />
 		<set name="commissionItemType" val="SHIELD" />
 		<for>
-			<add stat="sDef" val="515.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="515.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="17402" name="Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -46,13 +48,14 @@
 		<set name="price" val="57490000" />
 		<set name="commissionItemType" val="HELMET" />
 		<for>
-			<add stat="pDef" val="141.0" />
+			<add order="0" stat="pDef" val="141.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17403" name="Seraph Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -63,7 +66,7 @@
 		<set name="price" val="153308000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
-			<add stat="pDef" val="301.0" />
+			<add order="0" stat="pDef" val="301.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -72,6 +75,7 @@
 	<item id="17404" name="Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -82,7 +86,7 @@
 		<set name="price" val="95818000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
-			<add stat="pDef" val="188.0" />
+			<add order="0" stat="pDef" val="188.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -101,7 +105,7 @@
 		<set name="price" val="38327000" />
 		<set name="commissionItemType" val="GLOVES" />
 		<for>
-			<add stat="pDef" val="94.0" />
+			<add order="0" stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -118,7 +122,7 @@
 		<set name="price" val="38327000" />
 		<set name="commissionItemType" val="FEET" />
 		<for>
-			<add stat="pDef" val="94.0" />
+			<add order="0" stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -135,13 +139,14 @@
 		<set name="price" val="57490000" />
 		<set name="commissionItemType" val="HELMET" />
 		<for>
-			<add stat="pDef" val="141.0" />
+			<add order="0" stat="pDef" val="141.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17408" name="Seraph Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R95" />
@@ -152,8 +157,8 @@
 		<set name="price" val="153308000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
-			<add stat="pDef" val="207.0" />
-			<add stat="mDef" val="47.0" />
+			<add order="0" stat="pDef" val="207.0" />
+			<add order="0" stat="mDef" val="47.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -161,6 +166,7 @@
 	<item id="17409" name="Seraph Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R95" />
@@ -171,8 +177,8 @@
 		<set name="price" val="95818000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
-			<add stat="pDef" val="129.0" />
-			<add stat="mDef" val="31.0" />
+			<add order="0" stat="pDef" val="129.0" />
+			<add order="0" stat="mDef" val="31.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -190,7 +196,7 @@
 		<set name="price" val="38327000" />
 		<set name="commissionItemType" val="GLOVES" />
 		<for>
-			<add stat="pDef" val="94.0" />
+			<add order="0" stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -207,7 +213,7 @@
 		<set name="price" val="38327000" />
 		<set name="commissionItemType" val="FEET" />
 		<for>
-			<add stat="pDef" val="94.0" />
+			<add order="0" stat="pDef" val="94.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -223,7 +229,8 @@
 		<set name="price" val="40243000" />
 		<set name="commissionItemType" val="SIGIL" />
 		<for>
-			<add stat="pDef" val="47.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="47.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -240,7 +247,7 @@
 		<set name="price" val="39924000" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="161.0" />
+			<add order="0" stat="mDef" val="161.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -257,7 +264,7 @@
 		<set name="price" val="29943000" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="121.0" />
+			<add order="0" stat="mDef" val="121.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -274,7 +281,7 @@
 		<set name="price" val="19962000" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="80.0" />
+			<add order="0" stat="mDef" val="80.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -723,13 +730,14 @@
 		<set name="price" val="126687000" />
 		<set name="commissionItemType" val="HELMET" />
 		<for>
-			<add stat="pDef" val="150.0" />
+			<add order="0" stat="pDef" val="150.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17431" name="Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -740,13 +748,14 @@
 		<set name="price" val="337834000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
-			<add stat="pDef" val="400.0" />
+			<add order="0" stat="pDef" val="400.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17432" name="Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -757,7 +766,7 @@
 		<set name="price" val="211146000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
-			<add stat="pDef" val="250.0" />
+			<add order="0" stat="pDef" val="250.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -774,7 +783,7 @@
 		<set name="price" val="84458000" />
 		<set name="commissionItemType" val="GLOVES" />
 		<for>
-			<add stat="pDef" val="100.0" />
+			<add order="0" stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -790,7 +799,7 @@
 		<set name="price" val="84458000" />
 		<set name="commissionItemType" val="FEET" />
 		<for>
-			<add stat="pDef" val="100.0" />
+			<add order="0" stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -807,8 +816,10 @@
 		<set name="price" val="88681000" />
 		<set name="commissionItemType" val="SHIELD" />
 		<for>
-			<add stat="sDef" val="546.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="546.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="17436" name="Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -824,13 +835,14 @@
 		<set name="price" val="126687000" />
 		<set name="commissionItemType" val="HELMET" />
 		<for>
-			<add stat="pDef" val="150.0" />
+			<add order="0" stat="pDef" val="150.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17437" name="Eternal Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -841,7 +853,7 @@
 		<set name="price" val="337834000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
-			<add stat="pDef" val="320.0" />
+			<add order="0" stat="pDef" val="320.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -850,6 +862,7 @@
 	<item id="17438" name="Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -860,7 +873,7 @@
 		<set name="price" val="211146000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
-			<add stat="pDef" val="200.0" />
+			<add order="0" stat="pDef" val="200.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -879,7 +892,7 @@
 		<set name="price" val="84458000" />
 		<set name="commissionItemType" val="GLOVES" />
 		<for>
-			<add stat="pDef" val="100.0" />
+			<add order="0" stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -896,7 +909,7 @@
 		<set name="price" val="84458000" />
 		<set name="commissionItemType" val="FEET" />
 		<for>
-			<add stat="pDef" val="100.0" />
+			<add order="0" stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -913,13 +926,14 @@
 		<set name="price" val="126687000" />
 		<set name="commissionItemType" val="HELMET" />
 		<for>
-			<add stat="pDef" val="150.0" />
+			<add order="0" stat="pDef" val="150.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17442" name="Eternal Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
@@ -930,8 +944,8 @@
 		<set name="price" val="337834000" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<for>
-			<add stat="pDef" val="220.0" />
-			<add stat="mDef" val="49.0" />
+			<add order="0" stat="pDef" val="220.0" />
+			<add order="0" stat="mDef" val="49.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -939,6 +953,7 @@
 	<item id="17443" name="Eternal Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
@@ -949,8 +964,8 @@
 		<set name="price" val="211146000" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<for>
-			<add stat="pDef" val="137.0" />
-			<add stat="mDef" val="33.0" />
+			<add order="0" stat="pDef" val="137.0" />
+			<add order="0" stat="mDef" val="33.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -968,7 +983,7 @@
 		<set name="price" val="84458000" />
 		<set name="commissionItemType" val="GLOVES" />
 		<for>
-			<add stat="pDef" val="100.0" />
+			<add order="0" stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -985,7 +1000,7 @@
 		<set name="price" val="84458000" />
 		<set name="commissionItemType" val="FEET" />
 		<for>
-			<add stat="pDef" val="100.0" />
+			<add order="0" stat="pDef" val="100.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1001,7 +1016,8 @@
 		<set name="price" val="88681000" />
 		<set name="commissionItemType" val="SIGIL" />
 		<for>
-			<add stat="pDef" val="50.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="50.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1017,7 +1033,7 @@
 		<set name="price" val="87977000" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="174.0" />
+			<add order="0" stat="mDef" val="174.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1033,7 +1049,7 @@
 		<set name="price" val="65983000" />
 		<set name="commissionItemType" val="EARRING" />
 		<for>
-			<add stat="mDef" val="130.0" />
+			<add order="0" stat="mDef" val="130.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1049,7 +1065,7 @@
 		<set name="price" val="43988000" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="87.0" />
+			<add order="0" stat="mDef" val="87.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1292,7 +1308,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="274252000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<add stat="rEvas" val="1.2" />
 			<add stat="mEvas" val="1.2" />
 			<enchant stat="pDef" val="0" />
@@ -1301,13 +1317,14 @@
 	<item id="17465" name="Blessed Durandia Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="7520" />
 		<set name="price" val="731340000" />
 		<for>
-			<add stat="pDef" val="238.0" />
+			<add order="0" stat="pDef" val="238.0" />
 			<add stat="pAtk" val="41.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1315,13 +1332,14 @@
 	<item id="17466" name="Blessed Durandia Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="3170" />
 		<set name="price" val="457087000" />
 		<for>
-			<add stat="pDef" val="148.0" />
+			<add order="0" stat="pDef" val="148.0" />
 			<add stat="rCrit" val="2.9" />
 			<add stat="mCritRate" val="2.9" />
 			<enchant stat="pDef" val="0" />
@@ -1336,7 +1354,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="182835000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<add stat="accCombat" val="1.15" />
 			<add stat="accMagic" val="1.15" />
 			<enchant stat="pDef" val="0" />
@@ -1350,7 +1368,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="182835000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<add stat="runSpd" val="30.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1364,8 +1382,10 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="191976000" />
 		<for>
-			<add stat="sDef" val="592.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="592.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="17470" name="Blessed Durandia Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -1377,7 +1397,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="274252000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<add stat="rEvas" val="1.2" />
 			<add stat="mEvas" val="1.2" />
 			<enchant stat="pDef" val="0" />
@@ -1386,13 +1406,14 @@
 	<item id="17471" name="Blessed Durandia Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="4140" />
 		<set name="price" val="731340000" />
 		<for>
-			<add stat="pDef" val="238.0" />
+			<add order="0" stat="pDef" val="238.0" />
 			<add stat="pAtk" val="41.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
@@ -1402,13 +1423,14 @@
 	<item id="17472" name="Blessed Durandia Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t98_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1320" />
 		<set name="price" val="457087000" />
 		<for>
-			<add stat="pDef" val="148.0" />
+			<add order="0" stat="pDef" val="148.0" />
 			<add stat="rCrit" val="2.9" />
 			<add stat="mCritRate" val="2.9" />
 			<add stat="rEvas" val="3.0" />
@@ -1425,7 +1447,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="182835000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<add stat="accCombat" val="1.15" />
 			<add stat="accMagic" val="1.15" />
 			<enchant stat="pDef" val="0" />
@@ -1440,7 +1462,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="182835000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<add stat="runSpd" val="30.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1454,7 +1476,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="274252000" />
 		<for>
-			<add stat="pDef" val="162.0" />
+			<add order="0" stat="pDef" val="162.0" />
 			<add stat="rEvas" val="1.2" />
 			<add stat="mEvas" val="1.2" />
 			<enchant stat="pDef" val="0" />
@@ -1463,14 +1485,15 @@
 	<item id="17476" name="Blessed Durandia Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1750" />
 		<set name="price" val="731340000" />
 		<for>
-			<add stat="pDef" val="238.0" />
-			<add stat="mDef" val="63.0" />
+			<add order="0" stat="pDef" val="238.0" />
+			<add order="0" stat="mDef" val="63.0" />
 			<add stat="pAtk" val="41.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
@@ -1479,14 +1502,15 @@
 	<item id="17477" name="Blessed Durandia Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t99_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="850" />
 		<set name="price" val="457087000" />
 		<for>
-			<add stat="pDef" val="148.0" />
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="pDef" val="148.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<add stat="rCrit" val="2.9" />
 			<add stat="mCritRate" val="2.9" />
 			<enchant stat="pDef" val="0" />
@@ -1502,7 +1526,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="182835000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<add stat="accCombat" val="1.15" />
 			<add stat="accMagic" val="1.15" />
 			<enchant stat="pDef" val="0" />
@@ -1517,7 +1541,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="182835000" />
 		<for>
-			<add stat="pDef" val="108.0" />
+			<add order="0" stat="pDef" val="108.0" />
 			<add stat="runSpd" val="30.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1530,7 +1554,8 @@
 		<set name="weight" val="920" />
 		<set name="price" val="191976000" />
 		<for>
-			<add stat="pDef" val="54.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="54.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1542,7 +1567,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="190453000" />
 		<for>
-			<add stat="mDef" val="192.0" />
+			<add order="0" stat="mDef" val="192.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1554,7 +1579,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="142839000" />
 		<for>
-			<add stat="mDef" val="144.0" />
+			<add order="0" stat="mDef" val="144.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1566,7 +1591,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="95226000" />
 		<for>
-			<add stat="mDef" val="96.0" />
+			<add order="0" stat="mDef" val="96.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

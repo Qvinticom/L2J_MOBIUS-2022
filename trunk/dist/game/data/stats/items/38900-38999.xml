@@ -339,8 +339,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="38952" name="Festival's Cloack - Pearl White" additionalName="" type="Armor">
@@ -349,8 +349,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="38953" name="Festival's Cloack - Blood Red" additionalName="" type="Armor">
@@ -359,8 +359,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="38954" name="10th Anniversary Cake" additionalName="" type="EtcItem">

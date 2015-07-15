@@ -122,8 +122,8 @@
 		<set name="weight" val="220" />
 		<set name="price" val="10000000" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="36121" name="Rabbit Ears: STR (3-day)" additionalName="Campaign" type="Armor">
@@ -392,7 +392,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -405,7 +405,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -418,7 +418,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -530,7 +530,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="38.0" />
+			<add order="0" stat="pDef" val="38.0" />
 		</for>
 	</item>
 	<item id="36188" name="Blaze Shirt" additionalName="" type="Armor">
@@ -539,7 +539,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="38.0" />
+			<add order="0" stat="pDef" val="38.0" />
 		</for>
 	</item>
 	<item id="36189" name="Rising Belt" additionalName="" type="Armor">
@@ -548,7 +548,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25.0" />
 		</for>
 	</item>
 	<item id="36190" name="Blaze Belt" additionalName="" type="Armor">
@@ -557,7 +557,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25.0" />
+			<add order="0" stat="pDef" val="25.0" />
 		</for>
 	</item>
 	<item id="36191" name="Kaliel's Wish" additionalName="" type="EtcItem">

@@ -592,7 +592,7 @@
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="100" />
 		<for>
-			<add stat="pDef" val="385.0" />
+			<add order="0" stat="pDef" val="385.0" />
 			<add stat="accMagic" val="10.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -605,7 +605,7 @@
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="100" />
 		<for>
-			<add stat="pDef" val="385.0" />
+			<add order="0" stat="pDef" val="385.0" />
 			<add stat="mEvas" val="11.0" />
 			<enchant stat="pDef" val="0" />
 		</for>

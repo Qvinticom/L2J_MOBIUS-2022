@@ -466,8 +466,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="36052" name="Clan Cloak - Clan Hall (Auction)" additionalName="" type="Armor">
@@ -477,8 +477,8 @@
 		<set name="weight" val="220" />
 		<set name="price" val="5000000" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="36053" name="Clan Cloak - Castle" additionalName="" type="Armor">
@@ -488,8 +488,8 @@
 		<set name="weight" val="220" />
 		<set name="price" val="15000000" />
 		<for>
-			<add stat="pDef" val="50.0" />
-			<add stat="mDef" val="40.0" />
+			<add order="0" stat="pDef" val="50.0" />
+			<add order="0" stat="mDef" val="40.0" />
 		</for>
 	</item>
 	<item id="36054" name="Red Gate Key" additionalName="" type="EtcItem">

@@ -878,7 +878,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add stat="mDef" val="17.0" />
+			<add order="0" stat="mDef" val="17.0" />
 			<set stat="broochJewels" val="2" />
 		</for>
 	</item>
@@ -892,7 +892,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add stat="mDef" val="43.0" />
+			<add order="0" stat="mDef" val="43.0" />
 			<set stat="broochJewels" val="3" />
 		</for>
 	</item>
@@ -906,7 +906,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<for>
-			<add stat="mDef" val="87.0" />
+			<add order="0" stat="mDef" val="87.0" />
 			<set stat="broochJewels" val="4" />
 			<add stat="inventoryLimit" val="12" />
 		</for>

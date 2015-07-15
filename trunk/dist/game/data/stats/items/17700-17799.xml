@@ -127,7 +127,7 @@
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
 		<for>
-			<add stat="pDef" val="20.0" />
+			<add order="0" stat="pDef" val="20.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

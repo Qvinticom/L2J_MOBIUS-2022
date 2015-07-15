@@ -475,14 +475,14 @@
 		<set name="weight" val="530" />
 		<set name="price" val="687000" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17846" name="Bound Immortal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -492,14 +492,14 @@
 		<set name="weight" val="7520" />
 		<set name="price" val="1834000" />
 		<for>
-			<add stat="pDef" val="304.0" />
+			<add order="0" stat="pDef" val="304.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17847" name="Bound Immortal Gaiters" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -509,7 +509,7 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="1146000" />
 		<for>
-			<add stat="pDef" val="190.0" />
+			<add order="0" stat="pDef" val="190.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -526,7 +526,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="458000" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -542,7 +542,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="458000" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -558,8 +558,10 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="481000" />
 		<for>
-			<add stat="sDef" val="415.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="415.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="17851" name="Bound Immortal Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -575,14 +577,14 @@
 		<set name="weight" val="530" />
 		<set name="price" val="687000" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17852" name="Bound Immortal Leather Armor" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -592,16 +594,16 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="1834000" />
 		<for>
-			<add stat="pDef" val="243.0" />
+			<add order="0" stat="pDef" val="243.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17853" name="Bound Immortal Leather Leggings" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -611,7 +613,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="1146000" />
 		<for>
-			<add stat="pDef" val="152.0" />
+			<add order="0" stat="pDef" val="152.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -630,7 +632,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="458000" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -647,7 +649,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="458000" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -664,14 +666,14 @@
 		<set name="weight" val="530" />
 		<set name="price" val="687000" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17857" name="Bound Immortal Tunic" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -681,16 +683,16 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="1834000" />
 		<for>
-			<add stat="pDef" val="167.0" />
-			<add stat="mDef" val="36.0" />
+			<add order="0" stat="pDef" val="167.0" />
+			<add order="0" stat="mDef" val="36.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="17858" name="Bound Immortal Stockings" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -700,8 +702,8 @@
 		<set name="weight" val="850" />
 		<set name="price" val="1146000" />
 		<for>
-			<add stat="pDef" val="104.0" />
-			<add stat="mDef" val="24.0" />
+			<add order="0" stat="pDef" val="104.0" />
+			<add order="0" stat="mDef" val="24.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -719,7 +721,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="458000" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -736,7 +738,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="458000" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -753,7 +755,8 @@
 		<set name="weight" val="920" />
 		<set name="price" val="481000" />
 		<for>
-			<add stat="pDef" val="37.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="37.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -769,7 +772,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="477000" />
 		<for>
-			<add stat="mDef" val="123.0" />
+			<add order="0" stat="mDef" val="123.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -785,7 +788,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="358000" />
 		<for>
-			<add stat="mDef" val="92.0" />
+			<add order="0" stat="mDef" val="92.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -801,7 +804,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="238000" />
 		<for>
-			<add stat="mDef" val="62.0" />
+			<add order="0" stat="mDef" val="62.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1278,14 +1281,14 @@
 		<set name="weight" val="530" />
 		<set name="price" val="1665000" />
 		<for>
-			<add stat="pDef" val="126.0" />
+			<add order="0" stat="pDef" val="126.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17880" name="Bound Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1295,14 +1298,14 @@
 		<set name="weight" val="7520" />
 		<set name="price" val="4442000" />
 		<for>
-			<add stat="pDef" val="335.0" />
+			<add order="0" stat="pDef" val="335.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17881" name="Bound Twilight Gaiters" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1312,7 +1315,7 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="2776000" />
 		<for>
-			<add stat="pDef" val="209.0" />
+			<add order="0" stat="pDef" val="209.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1329,7 +1332,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="1110000" />
 		<for>
-			<add stat="pDef" val="84.0" />
+			<add order="0" stat="pDef" val="84.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1345,7 +1348,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="1110000" />
 		<for>
-			<add stat="pDef" val="84.0" />
+			<add order="0" stat="pDef" val="84.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1361,8 +1364,10 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="1166000" />
 		<for>
-			<add stat="sDef" val="458.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="458.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="17885" name="Bound Twilight Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -1378,14 +1383,14 @@
 		<set name="weight" val="530" />
 		<set name="price" val="1665000" />
 		<for>
-			<add stat="pDef" val="126.0" />
+			<add order="0" stat="pDef" val="126.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17886" name="Bound Twilight Leather Armor" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1395,16 +1400,16 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="4442000" />
 		<for>
-			<add stat="pDef" val="268.0" />
+			<add order="0" stat="pDef" val="268.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17887" name="Bound Twilight Leather Leggings" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1414,7 +1419,7 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="2776000" />
 		<for>
-			<add stat="pDef" val="168.0" />
+			<add order="0" stat="pDef" val="168.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -1433,7 +1438,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="1110000" />
 		<for>
-			<add stat="pDef" val="84.0" />
+			<add order="0" stat="pDef" val="84.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1450,7 +1455,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="1110000" />
 		<for>
-			<add stat="pDef" val="84.0" />
+			<add order="0" stat="pDef" val="84.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1467,14 +1472,14 @@
 		<set name="weight" val="530" />
 		<set name="price" val="1665000" />
 		<for>
-			<add stat="pDef" val="126.0" />
+			<add order="0" stat="pDef" val="126.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17891" name="Bound Twilight Tunic" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
@@ -1484,16 +1489,16 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="4442000" />
 		<for>
-			<add stat="pDef" val="184.0" />
-			<add stat="mDef" val="41.0" />
+			<add order="0" stat="pDef" val="184.0" />
+			<add order="0" stat="mDef" val="41.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="17892" name="Bound Twilight Stockings" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
@@ -1503,8 +1508,8 @@
 		<set name="weight" val="850" />
 		<set name="price" val="2776000" />
 		<for>
-			<add stat="pDef" val="115.0" />
-			<add stat="mDef" val="27.0" />
+			<add order="0" stat="pDef" val="115.0" />
+			<add order="0" stat="mDef" val="27.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1522,7 +1527,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="1110000" />
 		<for>
-			<add stat="pDef" val="84.0" />
+			<add order="0" stat="pDef" val="84.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1539,7 +1544,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="1110000" />
 		<for>
-			<add stat="pDef" val="84.0" />
+			<add order="0" stat="pDef" val="84.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1556,7 +1561,8 @@
 		<set name="weight" val="920" />
 		<set name="price" val="1166000" />
 		<for>
-			<add stat="pDef" val="41.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="41.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1572,7 +1578,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1156000" />
 		<for>
-			<add stat="mDef" val="139.0" />
+			<add order="0" stat="mDef" val="139.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1588,7 +1594,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="867000" />
 		<for>
-			<add stat="mDef" val="105.0" />
+			<add order="0" stat="mDef" val="105.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1604,7 +1610,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="578000" />
 		<for>
-			<add stat="mDef" val="70.0" />
+			<add order="0" stat="mDef" val="70.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

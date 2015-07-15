@@ -667,7 +667,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="19955" />
 		<for>
-			<add stat="pDef" val="41.0" />
+			<add order="0" stat="pDef" val="41.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -681,7 +681,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="19955" />
 		<for>
-			<add stat="pDef" val="41.0" />
+			<add order="0" stat="pDef" val="41.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

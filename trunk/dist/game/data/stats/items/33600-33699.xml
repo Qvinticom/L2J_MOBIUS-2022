@@ -9,7 +9,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="304950" />
 		<for>
-			<add stat="pDef" val="61.0" />
+			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -22,7 +22,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="304950" />
 		<for>
-			<add stat="pDef" val="61.0" />
+			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -35,7 +35,7 @@
 		<set name="weight" val="1780" />
 		<set name="price" val="914900" />
 		<for>
-			<add stat="pDef" val="113.0" />
+			<add order="0" stat="pDef" val="113.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -48,7 +48,7 @@
 		<set name="weight" val="860" />
 		<set name="price" val="571800" />
 		<for>
-			<add stat="pDef" val="71.0" />
+			<add order="0" stat="pDef" val="71.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -61,7 +61,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="457450" />
 		<for>
-			<add stat="pDef" val="92.0" />
+			<add order="0" stat="pDef" val="92.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -74,7 +74,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="304950" />
 		<for>
-			<add stat="pDef" val="61.0" />
+			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -87,7 +87,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="304950" />
 		<for>
-			<add stat="pDef" val="61.0" />
+			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -100,7 +100,8 @@
 		<set name="weight" val="930" />
 		<set name="price" val="320200" />
 		<for>
-			<add stat="pDef" val="15.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="15.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -243,7 +244,7 @@
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="weight" val="10" />
 		<for>
-			<add stat="pDef" val="37.0" />
+			<add order="0" stat="pDef" val="37.0" />
 		</for>
 	</item>
 	<item id="33642" name="Kukurin Bracelet" additionalName="" type="Armor">

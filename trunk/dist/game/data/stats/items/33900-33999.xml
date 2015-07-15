@@ -8,20 +8,21 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33901" name="Immortal Tunic" additionalName="Robe (Event)" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1750" />
 		<for>
-			<add stat="pDef" val="167.0" />
-			<add stat="mDef" val="36.0" />
+			<add order="0" stat="pDef" val="167.0" />
+			<add order="0" stat="mDef" val="36.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -29,13 +30,14 @@
 	<item id="33902" name="Immortal Stockings" additionalName="Robe (Event)" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="850" />
 		<for>
-			<add stat="pDef" val="104.0" />
-			<add stat="mDef" val="24.0" />
+			<add order="0" stat="pDef" val="104.0" />
+			<add order="0" stat="mDef" val="24.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -48,7 +50,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -60,7 +62,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -71,7 +73,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="920" />
 		<for>
-			<add stat="pDef" val="19.0" />
+			<sub stat="rEvas" val="8" />
+			<add order="0" stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -83,7 +86,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="123.0" />
+			<add order="0" stat="mDef" val="123.0" />
+			<add stat="maxMp" val="53" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -95,7 +99,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="92.0" />
+			<add order="0" stat="mDef" val="92.0" />
+			<add stat="maxMp" val="40" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -107,7 +112,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="62.0" />
+			<add order="0" stat="mDef" val="62.0" />
+			<add stat="maxMp" val="26" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -766,30 +772,32 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33952" name="Immortal Breastplate" additionalName="Attack Type / Heavy (Event)" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="7520" />
 		<for>
-			<add stat="pDef" val="304.0" />
+			<add order="0" stat="pDef" val="304.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33953" name="Immortal Gaiters" additionalName="Attack Type / Heavy (Event)" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="3170" />
 		<for>
-			<add stat="pDef" val="190.0" />
+			<add order="0" stat="pDef" val="190.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -800,7 +808,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -811,7 +819,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -823,8 +831,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1130" />
 		<for>
-			<add stat="sDef" val="415.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="415.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="33957" name="Immortal Leather Helmet" additionalName="Assassin Type / Light (Event)" type="Armor">
@@ -834,19 +844,20 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33958" name="Immortal Leather Armor" additionalName="Assassin Type / Light (Event)" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="4140" />
 		<for>
-			<add stat="pDef" val="243.0" />
+			<add order="0" stat="pDef" val="243.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -854,12 +865,13 @@
 	</item>
 	<item id="33959" name="Immortal Leather Leggings" additionalName="Assassin Type / Light (Event)" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1320" />
 		<for>
-			<add stat="pDef" val="152.0" />
+			<add order="0" stat="pDef" val="152.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -872,7 +884,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -883,7 +895,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -894,33 +906,35 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33963" name="Immortal Tunic" additionalName="Magic Type / Robe (Event)" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1750" />
 		<for>
-			<add stat="pDef" val="167.0" />
-			<add stat="mDef" val="36.0" />
+			<add order="0" stat="pDef" val="167.0" />
+			<add order="0" stat="mDef" val="36.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="33964" name="Immortal Stockings" additionalName="Magic Type / Robe (Event)" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="850" />
 		<for>
-			<add stat="pDef" val="104.0" />
-			<add stat="mDef" val="24.0" />
+			<add order="0" stat="pDef" val="104.0" />
+			<add order="0" stat="mDef" val="24.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -932,7 +946,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -943,7 +957,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -954,30 +968,32 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33968" name="Immortal Breastplate" additionalName="Defense Type / Heavy (Event)" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="7520" />
 		<for>
-			<add stat="pDef" val="304.0" />
+			<add order="0" stat="pDef" val="304.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33969" name="Immortal Gaiters" additionalName="Defense Type / Heavy (Event)" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="3170" />
 		<for>
-			<add stat="pDef" val="190.0" />
+			<add order="0" stat="pDef" val="190.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -988,7 +1004,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -999,7 +1015,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1011,8 +1027,10 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1130" />
 		<for>
-			<add stat="sDef" val="415.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="415.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="33973" name="Immortal Leather Helmet" additionalName="Enchant Type / Light (Event)" type="Armor">
@@ -1022,19 +1040,20 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33974" name="Immortal Leather Armor" additionalName="Enchant Type / Light (Event)" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="4140" />
 		<for>
-			<add stat="pDef" val="243.0" />
+			<add order="0" stat="pDef" val="243.0" />
 			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
@@ -1042,12 +1061,13 @@
 	</item>
 	<item id="33975" name="Immortal Leather Leggings" additionalName="Enchant Type / Light (Event)" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1320" />
 		<for>
-			<add stat="pDef" val="152.0" />
+			<add order="0" stat="pDef" val="152.0" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
@@ -1060,7 +1080,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1071,7 +1091,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1082,33 +1102,35 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="114.0" />
+			<add order="0" stat="pDef" val="114.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33979" name="Immortal Tunic" additionalName="Recovery Type / Robe (Event)" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Resistance to Mental Attacks. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1750" />
 		<for>
-			<add stat="pDef" val="167.0" />
-			<add stat="mDef" val="36.0" />
+			<add order="0" stat="pDef" val="167.0" />
+			<add order="0" stat="mDef" val="36.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="33980" name="Immortal Stockings" additionalName="Recovery Type / Robe (Event)" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="850" />
 		<for>
-			<add stat="pDef" val="104.0" />
-			<add stat="mDef" val="24.0" />
+			<add order="0" stat="pDef" val="104.0" />
+			<add order="0" stat="mDef" val="24.0" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -1120,7 +1142,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1131,7 +1153,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="76.0" />
+			<add order="0" stat="pDef" val="76.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

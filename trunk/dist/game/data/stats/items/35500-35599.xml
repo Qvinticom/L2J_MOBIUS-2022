@@ -432,7 +432,7 @@
 		<set name="weight" val="440" />
 		<set name="time" val="259200" />
 		<for>
-			<add stat="pDef" val="50.0" />
+			<add order="0" stat="pDef" val="50.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -471,7 +471,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="15192000" />
 		<for>
-			<add stat="mDef" val="108.0" />
+			<add order="0" stat="mDef" val="108.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -483,7 +483,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="85.0" />
+			<add order="0" stat="mDef" val="85.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -495,7 +495,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="85.0" />
+			<add order="0" stat="mDef" val="85.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -507,7 +507,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="85.0" />
+			<add order="0" stat="mDef" val="85.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -519,7 +519,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="85.0" />
+			<add order="0" stat="mDef" val="85.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -531,7 +531,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="85.0" />
+			<add order="0" stat="mDef" val="85.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -543,7 +543,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="85.0" />
+			<add order="0" stat="mDef" val="85.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -555,7 +555,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -567,7 +567,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -579,7 +579,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -592,7 +592,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -604,7 +604,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -616,7 +616,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="158.0" />
+			<add order="0" stat="mDef" val="158.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -628,7 +628,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -640,7 +640,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -652,7 +652,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -664,7 +664,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -676,7 +676,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -688,7 +688,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="42.0" />
+			<add order="0" stat="mDef" val="42.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -701,7 +701,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -714,7 +714,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -727,7 +727,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -740,7 +740,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -753,7 +753,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -766,7 +766,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<for>
-			<add stat="mDef" val="79.0" />
+			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -778,7 +778,7 @@
 		<set name="crystal_type" val="S80" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="106.0" />
+			<add order="0" stat="mDef" val="106.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -790,7 +790,7 @@
 		<set name="crystal_type" val="S80" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="106.0" />
+			<add order="0" stat="mDef" val="106.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -802,7 +802,7 @@
 		<set name="crystal_type" val="S80" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="106.0" />
+			<add order="0" stat="mDef" val="106.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -814,7 +814,7 @@
 		<set name="crystal_type" val="S80" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="106.0" />
+			<add order="0" stat="mDef" val="106.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -826,7 +826,7 @@
 		<set name="crystal_type" val="S80" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="106.0" />
+			<add order="0" stat="mDef" val="106.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

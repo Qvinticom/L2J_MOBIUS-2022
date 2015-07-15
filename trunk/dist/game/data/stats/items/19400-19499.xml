@@ -707,7 +707,7 @@
 		<set name="price" val="1999000" />
 		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="19.0" />
+			<add order="0" stat="pDef" val="19.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -756,7 +756,7 @@
 		<set name="price" val="5970000" />
 		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="21.0" />
+			<add order="0" stat="pDef" val="21.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -805,7 +805,7 @@
 		<set name="price" val="13648000" />
 		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="23.0" />
+			<add order="0" stat="pDef" val="23.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -854,7 +854,7 @@
 		<set name="price" val="35570000" />
 		<set name="commissionItemType" val="BELT" />
 		<for>
-			<add stat="pDef" val="24.0" />
+			<add order="0" stat="pDef" val="24.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

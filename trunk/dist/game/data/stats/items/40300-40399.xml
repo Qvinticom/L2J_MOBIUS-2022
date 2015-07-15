@@ -72,7 +72,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20.0" />
+			<add order="0" stat="pDef" val="20.0" />
 		</for>
 	</item>
 	<item id="40313" name="Santa's Mark" additionalName="" type="EtcItem">

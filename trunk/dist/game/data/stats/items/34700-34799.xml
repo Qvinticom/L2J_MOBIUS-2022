@@ -411,7 +411,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="28.0" />
+			<add order="0" stat="pDef" val="28.0" />
 		</for>
 	</item>
 	<item id="34733" name="Pa'agrio's Box" additionalName="" type="EtcItem">
@@ -636,7 +636,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="28.0" />
+			<add order="0" stat="pDef" val="28.0" />
 		</for>
 	</item>
 	<item id="34771" name="Sayha's Shirt" additionalName="Event" type="Armor">
@@ -645,7 +645,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="28.0" />
+			<add order="0" stat="pDef" val="28.0" />
 		</for>
 	</item>
 	<item id="34772" name="Eva's Shirt" additionalName="Event" type="Armor">
@@ -654,7 +654,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="28.0" />
+			<add order="0" stat="pDef" val="28.0" />
 		</for>
 	</item>
 	<item id="34773" name="Maphr's Shirt" additionalName="Event" type="Armor">
@@ -663,7 +663,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="28.0" />
+			<add order="0" stat="pDef" val="28.0" />
 		</for>
 	</item>
 	<item id="34774" name="Scroll of Blessing (R1-grade)" additionalName="Event" type="EtcItem">
@@ -702,7 +702,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="62.0" />
+			<add order="0" stat="mDef" val="62.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -714,7 +714,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="92.0" />
+			<add order="0" stat="mDef" val="92.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -726,7 +726,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="123.0" />
+			<add order="0" stat="mDef" val="123.0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

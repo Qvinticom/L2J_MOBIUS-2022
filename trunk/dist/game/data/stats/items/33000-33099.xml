@@ -1132,7 +1132,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="60" />
 		<for>
-			<add stat="pDef" val="58.0" />
+			<add order="0" stat="pDef" val="58.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1143,7 +1143,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1048" />
 		<for>
-			<add stat="pDef" val="239.0" />
+			<add order="0" stat="pDef" val="239.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1155,8 +1155,10 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="122" />
 		<for>
-			<add stat="sDef" val="203.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="203.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="33076" name="Full Plate Boots of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
@@ -1167,7 +1169,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="120" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1179,7 +1181,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="60" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1191,7 +1193,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="580" />
 		<for>
-			<add stat="pDef" val="179.0" />
+			<add order="0" stat="pDef" val="179.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1203,7 +1205,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="121" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1215,7 +1217,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="60" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1227,7 +1229,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="198" />
 		<for>
-			<add stat="pDef" val="74.0" />
+			<add order="0" stat="pDef" val="74.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1239,7 +1241,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="96" />
 		<for>
-			<add stat="pDef" val="46.0" />
+			<add order="0" stat="pDef" val="46.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1251,7 +1253,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="61" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1263,7 +1265,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="60" />
 		<for>
-			<add stat="pDef" val="58.0" />
+			<add order="0" stat="pDef" val="58.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1274,7 +1276,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1048" />
 		<for>
-			<add stat="pDef" val="239.0" />
+			<add order="0" stat="pDef" val="239.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1286,8 +1288,10 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="122" />
 		<for>
-			<add stat="sDef" val="203.0" />
-			<add stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="8" />
+			<set stat="sDef" val="203.0" />
+			<set stat="rShld" val="20.0" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="33087" name="Full Plate Boots of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
@@ -1298,7 +1302,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="120" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1310,7 +1314,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="60" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1322,7 +1326,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="580" />
 		<for>
-			<add stat="pDef" val="179.0" />
+			<add order="0" stat="pDef" val="179.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1334,7 +1338,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="121" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1346,7 +1350,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="60" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1358,7 +1362,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="198" />
 		<for>
-			<add stat="pDef" val="74.0" />
+			<add order="0" stat="pDef" val="74.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1370,7 +1374,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="96" />
 		<for>
-			<add stat="pDef" val="46.0" />
+			<add order="0" stat="pDef" val="46.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1382,7 +1386,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="61" />
 		<for>
-			<add stat="pDef" val="39.0" />
+			<add order="0" stat="pDef" val="39.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
