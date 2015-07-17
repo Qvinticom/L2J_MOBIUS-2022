@@ -374,7 +374,8 @@ public enum AbnormalType
 	ELEMENTAL_RESISTANCE_ISS,
 	HOLY_ATTACK_RESISTANCE_ISS,
 	MENTAL_ATTACK_RESISTANCE_ISS,
-	SIGEL_AURA;
+	SIGEL_AURA,
+	YUL_STANCE;
 	
 	/**
 	 * Get the enumerate for the given String.

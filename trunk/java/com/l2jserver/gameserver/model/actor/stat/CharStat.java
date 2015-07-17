@@ -61,8 +61,7 @@ public class CharStat
 	
 	/**
 	 * Calculate the new value of the state with modifiers that will be applied on the targeted L2Character.<BR>
-	 * <B><U> Concept</U> :</B><BR
-	 * A L2Character owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...) : <BR>
+	 * <B><U> Concept</U> :</B><BR A L2Character owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...) : <BR>
 	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<BR>
 	 * When the calc method of a calculator is launched, each mathematical function is called according to its priority <B>_order</B>.<br>
 	 * Indeed, Func with lowest priority order is executed firsta and Funcs with the same order are executed in unspecified order.<br>
@@ -191,9 +190,18 @@ public class CharStat
 	{
 		int val = (int) calcStat(Stats.CRITICAL_RATE, _activeChar.getTemplate().getBaseCritRate(), target, skill);
 		
+		int maxCrit = (int) _activeChar.getStat().calcStat(Stats.MAX_PHYS_CRIT_RATE, 0, null, null);
+		
 		if (!_activeChar.canOverrideCond(PcCondOverride.MAX_STATS_VALUE))
 		{
-			val = Math.min(val, Config.MAX_PCRIT_RATE);
+			if (maxCrit > 0)
+			{
+				val = Math.min(val, (Config.MAX_PCRIT_RATE + maxCrit));
+			}
+			else
+			{
+				val = Math.min(val, Config.MAX_PCRIT_RATE);
+			}
 		}
 		
 		return val;

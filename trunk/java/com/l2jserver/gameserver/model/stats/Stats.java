@@ -86,6 +86,7 @@ public enum Stats
 	DEFENCE_CRITICAL_DAMAGE_ADD("defCritDamageAdd"), // Resistance to critical damage in value (Example: +100 will be 100 more critical damage, NOT 100% more).
 	SHIELD_RATE("rShld"),
 	CRITICAL_RATE("rCrit"),
+	MAX_PHYS_CRIT_RATE("maxPhysCritRate"),
 	BLOW_RATE("blowRate"),
 	MCRITICAL_RATE("mCritRate"),
 	EXPSP_RATE("rExp"),

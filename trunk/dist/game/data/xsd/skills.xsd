@@ -404,6 +404,7 @@
 			<xs:enumeration value="weaponElementPower" />
 			<xs:enumeration value="hpRestoreOnKill" />
 			<xs:enumeration value="momentumSkillPower" />
+			<xs:enumeration value="maxPhysCritRate" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">
