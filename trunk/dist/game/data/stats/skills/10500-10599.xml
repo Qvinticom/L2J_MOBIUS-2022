@@ -1408,7 +1408,7 @@
 	<skill id="10535" levels="4" name="Scorpion Poison" enchantGroup1="10" enchantGroup2="10">
 		<!-- Need verify and correct enchant parameters -->
 		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#triggerLvl1"> 1 1 2 2 </table>
+		<table name="#triggerLvl1"> 0 0 1 2 </table>
 		<table name="#triggerLvl2"> 1 2 3 4 </table>
 		<table name="#enchChance"> 16 17 18 19 20 21 22 23 24 25 </table>
 		<set name="targetType" val="SELF" />

@@ -216,13 +216,19 @@
 		</for>-->
 	</skill>
 	<skill id="10808" levels="1" name="Decoy Provocation">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decoy's provocation. Cannot change target. -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
+		<set name="abnormalTime" val="3" />
+		<set name="hitTime" val="1200" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="TargetMe" />
+		</for>
 	</skill>
 	<skill id="10809" levels="1" name="Survival Movement">
 		<set name="reuseDelay" val="30000" />
