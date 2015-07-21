@@ -3934,7 +3934,7 @@
 		<sex>MALE</sex>
 		<acquire exp="529271" sp="127" raidPoints="248" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="37886.4853669374" hpRegen="16.8269664693931" mp="205.2" mpRegen="1.5" />
+			<vitals hp="59539" hpRegen="16.8269664693931" mp="205.2" mpRegen="1.5" />
 			<attack physical="53.1275788089434" magical="3.16860505219161" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="269.19177" magical="131.32" evasion="-18" />
 			<attribute>
@@ -3965,26 +3965,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="70.0259017944336">
-					<item id="46" min="2" max="4" chance="65.1332" /> <!-- Bronze Helmet -->
-					<item id="627" min="4" max="12" chance="34.8668" /> <!-- Aspis -->
-				</group>
-				<group chance="31.812000274658203">
-					<item id="315" min="1" max="1" chance="100" /> <!-- Divine Tome -->
-				</group>
-				<group chance="66.21890258789062">
-					<item id="6575" min="1" max="1" chance="5.7143" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-					<item id="6576" min="1" max="1" chance="51.4286" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-					<item id="6387" min="12" max="36" chance="42.8571" /> <!-- Blessed Scroll of Resurrection for Pets -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="21" />
 			<height normal="54" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="315" min="1" max="1" chance="13.25" /> <!-- Divine Tome -->
+				<item id="46" min="1" max="1" chance="9.85" /> <!-- Bronze Helmet -->
+				<item id="627" min="1" max="1" chance="4" /> <!-- Aspis -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+				<item id="6576" min="1" max="1" chance="6.350" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
+				<item id="6387" min="3" max="9" chance="21" /> <!-- Blessed Scroll of Resurrection for Pets -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25374" level="20" type="L2Monster" name="Abyss Flyer" title="Raid Fighter">
 		<parameters>

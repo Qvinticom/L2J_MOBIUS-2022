@@ -3839,30 +3839,19 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="97" max="137" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.052400000393390656">
-					<item id="271" min="1" max="1" chance="100" /> <!-- Hunting Bow -->
-				</group>
-				<group chance="14.473999977111816">
-					<item id="1864" min="1" max="1" chance="50.2463" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="25.1232" /> <!-- Iron Ore -->
-					<item id="1798" min="1" max="1" chance="24.6305" /> <!-- Recipe: Leather Helmet -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2010" min="1" max="1" chance="0.7185" /> <!-- Brandish Blade -->
-				<item id="1921" min="1" max="1" chance="11.9134" /> <!-- Leather Shoes Texture -->
-				<item id="1799" min="1" max="1" chance="27.3567" /> <!-- Recipe: Leather Gloves -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.475" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20464" level="12" type="L2Monster" name="Dungeon Skeleton Soldier">
 		<parameters>
@@ -3907,32 +3896,19 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="95" max="131" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.16979999840259552">
-					<item id="9" min="1" max="1" chance="9.9075" /> <!-- Cedar Staff -->
-					<item id="2008" min="1" max="1" chance="80.185" /> <!-- Cedar Staff Head -->
-					<item id="154" min="1" max="1" chance="9.9075" /> <!-- Dwarven Mace -->
-				</group>
-				<group chance="9.940999984741211">
-					<item id="1870" min="1" max="1" chance="35.2071" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="35.2071" /> <!-- Varnish -->
-					<item id="1803" min="1" max="1" chance="29.5858" /> <!-- Recipe: Necklace of Wisdom -->
-				</group>
-			</death>
-			<corpse>
-				<item id="464" min="1" max="1" chance="0.9305" /> <!-- Leather Stockings -->
-				<item id="1874" min="1" max="1" chance="1.1849" /> <!-- Oriharukon Ore -->
-				<item id="1870" min="1" max="1" chance="17.7731" /> <!-- Coal -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36556" min="1" max="1" chance="1.400" /> <!-- Accessory Gem (Low-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.300" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20465" level="2" type="L2Monster" name="Prairie Fox">
 		<parameters>
@@ -5544,35 +5520,20 @@
 				<clan>KIRUNAK</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="130" max="231" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.955299973487854">
-					<item id="27" min="1" max="1" chance="3.1003" /> <!-- Hard Leather Shirt -->
-					<item id="1927" min="1" max="1" chance="35.1206" /> <!-- Hard Leather Shirt Pattern -->
-					<item id="33" min="1" max="1" chance="4.9744" /> <!-- Hard Leather Gaiters -->
-					<item id="1929" min="1" max="1" chance="56.8047" /> <!-- Hard Leather Gaiters Material -->
-				</group>
-				<group chance="7.506899833679199">
-					<item id="1865" min="1" max="1" chance="44.8206" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="44.8206" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.4701" /> <!-- Cokes -->
-					<item id="5278" min="1" max="1" chance="1.7928" /> <!-- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%) -->
-					<item id="5437" min="1" max="1" chance="1.0959" /> <!-- Recipe: Heavy Sword(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1879" min="1" max="1" chance="4.7461" /> <!-- Cokes -->
-				<item id="25" min="1" max="1" chance="0.2327" /> <!-- Piece Bone Breastplate -->
-				<item id="1865" min="1" max="1" chance="28.4768" /> <!-- Varnish -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="7.538" /> <!-- Worn Leather -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="5.400" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20494" level="31" type="L2Monster" name="Turek War Hound">
 		<parameters>

@@ -3043,35 +3043,20 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="110" max="171" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2184000015258789">
-					<item id="24" min="1" max="1" chance="19.255" /> <!-- Bone Breastplate -->
-					<item id="390" min="1" max="1" chance="19.255" /> <!-- Cotton Shirt -->
-					<item id="31" min="1" max="1" chance="30.745" /> <!-- Bone Gaiters -->
-					<item id="412" min="1" max="1" chance="30.745" /> <!-- Cotton Pants -->
-				</group>
-				<group chance="12.303000450134277">
-					<item id="1866" min="1" max="1" chance="14.2213" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="21.332" /> <!-- Charcoal -->
-					<item id="1800" min="1" max="1" chance="6.7082" /> <!-- Recipe: Piece Bone Breastplate -->
-					<item id="5268" min="1" max="1" chance="0.8533" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
-					<item id="1831" min="1" max="1" chance="56.8852" /> <!-- Antidote -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2174" min="1" max="1" chance="9.6576" /> <!-- Recipe: Hard Leather Gaiters -->
-				<item id="1925" min="1" max="1" chance="14.5655" /> <!-- Leather Gloves Lining -->
-				<item id="5220" min="1" max="1" chance="0.8885" /> <!-- Metal Hardener -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="7.800" /> <!-- Antidote -->
+				<item id="5268" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="4.100" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20346" level="13" type="L2Monster" name="Darkstone Golem">
 		<parameters>
@@ -3438,32 +3423,20 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="106" max="184" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.15929999947547913">
-					<item id="272" min="1" max="1" chance="8.11" /> <!-- Forest Bow -->
-					<item id="2013" min="1" max="1" chance="91.89" /> <!-- Forest Bow Shaft -->
-				</group>
-				<group chance="11.672699928283691">
-					<item id="1864" min="1" max="1" chance="58.1229" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="29.0615" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="11.6246" /> <!-- Braided Hemp -->
-					<item id="2253" min="1" max="1" chance="1.191" /> <!-- Recipe: Sword Breaker -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2173" min="1" max="1" chance="6.2245" /> <!-- Recipe: Hard Leather Shirt -->
-				<item id="735" min="1" max="1" chance="1.914" /> <!-- Alacrity Potion -->
-				<item id="1897" min="1" max="1" chance="5.4686" /> <!-- Necklace of Wisdom Chain -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="4.200" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20352" level="22" type="L2Monster" name="Dre Vanul Slayer">
 		<parameters>
@@ -3595,32 +3568,22 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="132" max="236" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.018300000578165054">
-					<item id="16" min="1" max="1" chance="100" /> <!-- Great Spear -->
-				</group>
-				<group chance="11.943099975585938">
-					<item id="1864" min="1" max="1" chance="57.4713" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="28.7356" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="11.4943" /> <!-- Braided Hemp -->
-					<item id="3953" min="1" max="1" chance="1.1494" /> <!-- Recipe: Blessed Spiritshot D -->
-					<item id="5273" min="1" max="1" chance="1.1494" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1878" min="1" max="1" chance="11.6185" /> <!-- Braided Hemp -->
-				<item id="2256" min="1" max="1" chance="0.7102" /> <!-- Recipe: Assassin Knife -->
-				<item id="1864" min="1" max="1" chance="58.0926" /> <!-- Stem -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="36541" min="1" max="1" chance="0.75" /> <!-- Steel Wire -->
+				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="3953" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (D-grade) -->
+				<item id="5273" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="5.350" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20354" level="20" type="L2Monster" name="Dwarf Ghost">
 		<parameters>
@@ -4920,33 +4883,19 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="99" max="150" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.1805999279022217">
-					<item id="429" min="1" max="1" chance="4.3575" /> <!-- Leather Tunic -->
-					<item id="1922" min="1" max="1" chance="34.0148" /> <!-- Leather Tunic Pattern -->
-					<item id="464" min="1" max="1" chance="6.981" /> <!-- Leather Stockings -->
-					<item id="1923" min="1" max="1" chance="54.6467" /> <!-- Leather Stockings Pattern -->
-				</group>
-				<group chance="9.719300270080566">
-					<item id="1866" min="1" max="1" chance="26.5922" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="39.8883" /> <!-- Charcoal -->
-					<item id="1803" min="1" max="1" chance="33.5195" /> <!-- Recipe: Necklace of Wisdom -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1869" min="1" max="1" chance="19.6871" /> <!-- Iron Ore -->
-				<item id="114" min="1" max="1" chance="1.4583" /> <!-- Earring of Strength -->
-				<item id="1896" min="1" max="1" chance="8.342" /> <!-- Necklace of Anguish Chain -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.700" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20372" level="10" type="L2Monster" name="Baraq Orc Warrior">
 		<parameters>
@@ -4989,31 +4938,21 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="81" max="110" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4131999909877777">
-					<item id="3" min="1" max="1" chance="22.5806" /> <!-- Broadsword -->
-					<item id="2005" min="1" max="1" chance="77.4194" /> <!-- Broadsword Blade -->
-				</group>
-				<group chance="10.529399871826172">
-					<item id="1869" min="1" max="1" chance="28.3582" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="56.7164" /> <!-- Stem -->
-					<item id="1814" min="1" max="1" chance="14.9254" /> <!-- Recipe: Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1870" min="1" max="1" chance="15.1631" /> <!-- Coal -->
-				<item id="1870" min="1" max="1" chance="15.1631" /> <!-- Coal -->
-				<item id="1864" min="1" max="1" chance="30.3261" /> <!-- Stem -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="6" chance="70" /> <!-- Adena -->
+				<item id="36541" min="1" max="1" chance="0.3" /> <!-- Steel Wire -->
+				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="0.075" /> <!-- Cokes -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="2.750" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20373" level="11" type="L2Monster" name="Baraq Orc Warrior Captain">
 		<parameters>
@@ -5056,31 +4995,19 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="91" max="122" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0746999979019165">
-					<item id="2371" min="1" max="1" chance="68.0851" /> <!-- Fist of Butcher -->
-					<item id="255" min="1" max="1" chance="31.9149" /> <!-- Fox Claw Gloves -->
-				</group>
-				<group chance="14.824600219726562">
-					<item id="1869" min="1" max="1" chance="22.314" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="44.6281" /> <!-- Stem -->
-					<item id="1799" min="1" max="1" chance="33.0579" /> <!-- Recipe: Leather Gloves -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1793" min="1" max="1" chance="1.2352" /> <!-- Recipe: Sword of Reflection -->
-				<item id="1871" min="1" max="1" chance="16.7982" /> <!-- Charcoal -->
-				<item id="1869" min="1" max="1" chance="16.7982" /> <!-- Iron Ore -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="6" chance="70" /> <!-- Adena -->
+				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.150" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20376" level="10" type="L2Monster" name="Varika Brigand Leader">
 		<parameters>

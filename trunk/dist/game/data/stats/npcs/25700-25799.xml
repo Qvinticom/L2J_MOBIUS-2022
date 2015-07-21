@@ -1286,7 +1286,7 @@
 		<sex>MALE</sex>
 		<acquire exp="22870083" sp="5488" raidPoints="356" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3750258.43683614" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<vitals hp="8929367" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
 			<attack physical="17953.9556768251" magical="29074.4276846416" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" evasion="-18" />
 			<attribute>
@@ -1322,34 +1322,28 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
-				<group chance="2.506200075149536">
-					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
-					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
-					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
-					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
-					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
-				</group>
-				<group chance="4.813600063323975">
-					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
-				</group>
-				<group chance="4.246699810028076">
-					<item id="959" min="1" max="1" chance="85.7143" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="14.2857" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="60" />
 			<height normal="80" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="13143" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Helmet -->
+				<item id="13144" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13145" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Circlet -->
+				<item id="14111" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shield -->
+				<item id="13887" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Sigil -->
+				<item id="14109" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shoes -->
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<item id="959" min="1" max="1" chance="1.250" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25723" level="84" type="L2RaidBoss" name="Spike Slasher" title="Raid Boss">
 		<parameters>
@@ -1362,7 +1356,7 @@
 		<sex>MALE</sex>
 		<acquire exp="24629320" sp="5911" raidPoints="356" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2625180.9057853" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<vitals hp="6250556" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
 			<attack physical="17953.9556768251" magical="25843.9357196815" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" evasion="-18" />
 			<attribute>
@@ -1396,34 +1390,28 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
-				<group chance="3.455899953842163">
-					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
-				</group>
-				<group chance="4.048500061035156">
-					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
-					<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
-					<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
-					<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
-					<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
-				</group>
-				<group chance="4.573299884796143">
-					<item id="959" min="1" max="1" chance="85.7143" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="14.2857" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="55" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="14109" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shoes -->
+				<item id="13143" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Helmet -->
+				<item id="13144" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13145" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Circlet -->
+				<item id="14111" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shield -->
+				<item id="13887" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Sigil -->
+				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
+				<item id="959" min="1" max="1" chance="1.275" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25724" level="84" type="L2RaidBoss" name="Muscle Bomber" title="Raid Boss">
 		<parameters>
@@ -4074,12 +4062,12 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25796" level="98" type="L2Monster" name="Veridan" title="Hell's Warden">
+	<npc id="25796" level="98" type="L2RaidBoss" name="Veridan" title="Hell's Warden">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="936890" />
 		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="1775522" hpRegen="7.5" mp="1775522" mpRegen="2.7" />
+			<vitals hp="1775522" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="516000" magical="387000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6880" magical="6960" />
 			<attribute>
@@ -4093,16 +4081,17 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4437" level="3" />
-			<skill id="4441" level="3" />
-			<skill id="4435" level="3" />
-			<skill id="4436" level="3" />
-			<skill id="4440" level="3" />
-			<skill id="4439" level="3" />
-			<skill id="4438" level="3" />
 			<skill id="4416" level="9" />
 			<skill id="5463" level="1" />
 			<skill id="4494" level="1" />
+			<skill id="14714" level="1" />
+			<skill id="4440" level="3" />
+			<skill id="4441" level="3" />
+			<skill id="4438" level="3" />
+			<skill id="4437" level="3" />
+			<skill id="4436" level="3" />
+			<skill id="4435" level="3" />
+			<skill id="4439" level="3" />
 			<skill id="14714" level="1" />
 		</skill_list>
 		<collision>
@@ -4111,38 +4100,61 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36513" min="2" max="3" chance="7.5" />
-				<item id="17441" min="1" max="1" chance="0.06667" />
-				<item id="17442" min="1" max="1" chance="0.06667" />
-				<item id="17443" min="1" max="1" chance="0.06667" />
-				<item id="17444" min="1" max="1" chance="0.06667" />
-				<item id="17445" min="1" max="1" chance="0.06667" />
-				<item id="17446" min="1" max="1" chance="0.06667" />
-				<item id="17447" min="1" max="1" chance="0.06667" />
-				<item id="17448" min="1" max="1" chance="0.06667" />
-				<item id="17449" min="1" max="1" chance="0.06667" />
-				<item id="17440" min="1" max="1" chance="0.06667" />
-				<item id="17439" min="1" max="1" chance="0.06667" />
-				<item id="17430" min="1" max="1" chance="0.06667" />
-				<item id="17431" min="1" max="1" chance="0.06667" />
-				<item id="17432" min="1" max="1" chance="0.06667" />
-				<item id="17433" min="1" max="1" chance="0.06667" />
-				<item id="17434" min="1" max="1" chance="0.06667" />
-				<item id="17435" min="1" max="1" chance="0.06667" />
-				<item id="17436" min="1" max="1" chance="0.06667" />
-				<item id="17437" min="1" max="1" chance="0.06667" />
-				<item id="17438" min="1" max="1" chance="0.06667" />
-				<item id="17391" min="1" max="1" chance="0.025" />
-				<item id="17390" min="1" max="1" chance="0.025" />
-				<item id="17389" min="1" max="1" chance="0.025" />
-				<item id="17388" min="1" max="1" chance="0.025" />
-				<item id="17387" min="1" max="1" chance="0.025" />
-				<item id="17386" min="1" max="1" chance="0.025" />
-				<item id="17385" min="1" max="1" chance="0.025" />
-				<item id="17384" min="1" max="1" chance="0.025" />
-				<item id="17383" min="1" max="1" chance="0.025" />
-				<item id="17382" min="1" max="1" chance="0.025" />
-				<item id="17392" min="1" max="1" chance="0.025" />
+				<item id="36586" min="1" max="1" chance="79.58" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="36" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="22.44" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="8.570" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35308" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="1" chance="0.3" /> <!-- Seraph Boot Ingredient -->
+				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
+				<item id="35313" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
+				<item id="35320" min="1" max="1" chance="0.3" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35318" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35317" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack -->
 			</death>
 		</drop_lists>
 	</npc>

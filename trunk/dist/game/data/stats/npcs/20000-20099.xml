@@ -2986,34 +2986,20 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="100" max="161" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0089000463485718">
-					<item id="845" min="1" max="1" chance="8.7774" /> <!-- Cat's Eye Earring -->
-					<item id="908" min="1" max="1" chance="6.5831" /> <!-- Necklace of Wisdom -->
-					<item id="1897" min="1" max="1" chance="71.4734" /> <!-- Necklace of Wisdom Chain -->
-					<item id="877" min="1" max="1" chance="13.1661" /> <!-- Ring of Wisdom -->
-				</group>
-				<group chance="6.784200191497803">
-					<item id="1870" min="1" max="1" chance="44.6429" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="44.6429" /> <!-- Varnish -->
-					<item id="2142" min="1" max="1" chance="8.9286" /> <!-- Recipe: Varnish of Purity -->
-					<item id="5158" min="1" max="1" chance="1.7856" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2139" min="1" max="1" chance="4.1013" /> <!-- Recipe: Steel Mold -->
-				<item id="1924" min="1" max="1" chance="6.615" /> <!-- Leather Helmet Design -->
-				<item id="1925" min="1" max="1" chance="13.4469" /> <!-- Leather Gloves Lining -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="36541" min="1" max="1" chance="2.150" /> <!-- Item 36521.jpg Iron Ore -->
+				<item id="36546" min="1" max="1" chance="0.075" /> <!-- Item 5158.jpg Recipe: Spiritshot Compressed Package (D-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.750" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20034" level="17" type="L2Monster" name="Prowler">
 		<parameters>
@@ -3595,34 +3581,19 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="101" max="167" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4352999925613403">
-					<item id="945" min="1" max="1" chance="16.452" /> <!-- Skeleton Buckler -->
-					<item id="102" min="1" max="1" chance="7.9403" /> <!-- Round Shield -->
-					<item id="44" min="1" max="1" chance="5.5541" /> <!-- Leather Helmet -->
-					<item id="1924" min="1" max="1" chance="70.0536" /> <!-- Leather Helmet Design -->
-				</group>
-				<group chance="7.7332000732421875">
-					<item id="1868" min="1" max="1" chance="80.6132" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="16.1226" /> <!-- Silver Nugget -->
-					<item id="2252" min="1" max="1" chance="1.6519" /> <!-- Recipe: Iron Hammer -->
-					<item id="5158" min="1" max="1" chance="1.6123" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2175" min="1" max="1" chance="17.1583" /> <!-- Recipe: Boots -->
-				<item id="2140" min="1" max="1" chance="4.2209" /> <!-- Recipe: High-Grade Suede -->
-				<item id="2012" min="1" max="1" chance="0.4397" /> <!-- Sword of Reflection Blade -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
+				<item id="5158" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="3.900" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20041" level="18" type="L2Monster" name="Contortion of Lunacy">
 		<parameters>
@@ -4218,36 +4189,22 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="104" max="177" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.218299999833107">
-					<item id="24" min="1" max="1" chance="19.255" /> <!-- Bone Breastplate -->
-					<item id="390" min="1" max="1" chance="19.255" /> <!-- Cotton Shirt -->
-					<item id="31" min="1" max="1" chance="30.745" /> <!-- Bone Gaiters -->
-					<item id="412" min="1" max="1" chance="30.745" /> <!-- Cotton Pants -->
-				</group>
-				<group chance="8.833999633789062">
-					<item id="1864" min="1" max="1" chance="49.4872" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="24.7436" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="9.8974" /> <!-- Braided Hemp -->
-					<item id="2174" min="1" max="1" chance="10.7581" /> <!-- Recipe: Hard Leather Gaiters -->
-					<item id="5273" min="1" max="1" chance="0.9897" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
-					<item id="734" min="1" max="1" chance="4.124" /> <!-- Haste Potion -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1869" min="1" max="1" chance="22.2001" /> <!-- Iron Ore -->
-				<item id="38" min="1" max="1" chance="0.8522" /> <!-- Low Boots -->
-				<item id="2139" min="1" max="1" chance="4.44" /> <!-- Recipe: Steel Mold -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="3.200" /> <!--Fiber -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion) -->
+				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="5273" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="4.075" /> <!-- Thread -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20048" level="20" type="L2Monster" name="Lesser Succubus">
 		<parameters>
