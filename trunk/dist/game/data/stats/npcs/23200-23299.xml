@@ -3815,15 +3815,22 @@
 		</drop_lists>
 	</npc>
 	<npc id="23277" level="98" type="L2Monster" name="Ritual Offering">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="SelfRangePhysicalSpecial" id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill name="DeBuff" id="4615" level="9" /> <!-- Bleed -->
+		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="3496652" sp="15319" />
+		<acquire exp="4910598" sp="3142" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="272678" hpRegen="7.5" mp="272678" mpRegen="2.7" />
+			<vitals hp="196331" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2081" magical="905" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -3831,364 +3838,572 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4414" level="3" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="4" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4615" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
+					<item id="35327" min="1" max="1" chance="0.01" /> <!-- Amaranthine Shaper Fragment -->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="2.869" /> <!-- Synthetic Braid -->
+				<item id="19440" min="1" max="1" chance="0.1" /> <!-- Gemstone (R-grade) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="2042" max="4763" chance="70" />
-				<item id="36247" min="1" max="1" chance="34.8" />
-				<item id="35327" min="1" max="1" chance="0.05501" />
-				<item id="17526" min="1" max="1" chance="0.006" />
-				<item id="35451" min="1" max="1" chance="0.001" />
-			</death>
-			<corpse>
-				<item id="36533" min="1" max="1" chance="7.462" />
-				<item id="19440" min="1" max="1" chance="0.3003" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23278" level="98" type="L2Monster" name="Triol's Layperson">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="99" />
+			<param name="party_members" value="5" />
+			<param name="TelPosX1" value="-16128" />
+			<param name="TelPosY1" value="-35888" />
+			<param name="TelPosZ1" value="-10726" />
+			<param name="TelPosX2" value="-17029" />
+			<param name="TelPosY2" value="-39617" />
+			<param name="TelPosZ2" value="-10724" />
+			<param name="TelPosX3" value="-15729" />
+			<param name="TelPosY3" value="-42001" />
+			<param name="TelPosZ3" value="-10724" />
+			<skill name="PhysicalSpecial2" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
 		<race>HUMANOID</race>
-		<acquire exp="3496652" sp="15319" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="272678" hpRegen="7.5" mp="272678" mpRegen="2.7" />
-			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2081" magical="905" />
+		<sex>MALE</sex>
+		<equipment rhand="8207" lhand="8207" /> <!-- rhand: Monster Only (Heretic Private Axe) lhand: Monster Only (Heretic Private Axe) -->
+		<acquire exp="4453839" sp="2850" />
+		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+			<vitals hp="196331" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="80" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="58" />
+				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5467" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4413" level="4" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
+					<item id="36523" min="1" max="1" chance="0.1" /> <!-- Adamantite -->
+					<item id="35341" min="1" max="1" chance="0.01" /> <!-- Eternal Gauntlet Ingredient -->
+					<item id="36524" min="1" max="1" chance="0.01" /> <!-- Orichalcum -->
+					<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="2.095" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.1" /> <!-- Orichalcum -->
+				<item id="19447" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="2042" max="4763" chance="70" />
-				<item id="36523" min="1" max="1" chance="1.2" />
-				<item id="36524" min="1" max="1" chance="0.13004" />
-				<item id="35341" min="1" max="1" chance="0.05599" />
-				<item id="35465" min="1" max="1" chance="0.003" />
-				<item id="17433" min="1" max="1" chance="0.002" />
-			</death>
-			<corpse>
-				<item id="36523" min="1" max="1" chance="5.772" />
-				<item id="36524" min="1" max="1" chance="0.75188" />
-				<item id="19447" min="1" max="1" chance="0.003" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23279" level="99" type="L2Monster" name="Triol's Priest">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="99" />
+			<param name="party_members" value="5" />
+			<param name="TelPosX1" value="-16128" />
+			<param name="TelPosY1" value="-35888" />
+			<param name="TelPosZ1" value="-10726" />
+			<param name="TelPosX2" value="-16368" />
+			<param name="TelPosY2" value="-43339" />
+			<param name="TelPosZ2" value="-10724" />
+			<param name="TelPosX3" value="-16363" />
+			<param name="TelPosY3" value="-47026" />
+			<param name="TelPosZ3" value="-10825" />
+			<skill name="PhysicalSpecial2" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
 		<race>HUMANOID</race>
-		<acquire exp="10088008" sp="44477" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="3766" magical="1469" />
+		<sex>MALE</sex>
+		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
+		<acquire exp="8776110" sp="14041" />
+		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+			<vitals hp="197328" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
+			<attack physical="1009.3950039" magical="719.599557852" random="30" critical="4" accuracy="6" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="373.969485" magical="273.65463924" evasion="2" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="80" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="0.1424" /> <!-- Adena -->
+					<item id="35333" min="1" max="1" chance="0.01" /> <!-- Amaranthine Thrower Fragment-->
+					<item id="36563" min="1" max="1" chance="0.01" /> <!-- Synthetic Cokes -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="36564" min="1" max="1" chance="0.001" /> <!-- Greater Synthetic Cokes -->
+					<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36563" min="1" max="1" chance="0.1" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.01" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="7519" max="17555" chance="70" />
-				<item id="35339" min="1" max="1" chance="0.3003" />
-				<item id="19448" min="1" max="1" chance="0.03" />
-				<item id="35463" min="1" max="1" chance="0.003" />
-				<item id="19447" min="1" max="1" chance="0.003" />
-			</death>
-			<corpse>
-				<item id="36533" min="1" max="1" chance="26.76" />
-				<item id="36534" min="1" max="1" chance="2.596" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23280" level="99" type="L2Monster" name="Temple Guard">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="SelfRangePhysicalSpecial" id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill name="DeBuff" id="4615" level="9" /> <!-- Bleed -->
+		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="7403982" sp="32643" />
+		<acquire exp="8812387" sp="14096" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
+			<vitals hp="196331" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
 			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3766" magical="1469" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="38" />
+				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4414" level="3" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4615" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="1024" max="2383" chance="70" /> <!-- Adena -->
+					<item id="35340" min="1" max="1" chance="0.01" /> <!-- Eternal Gaiter Ingredient-->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!--Scroll: Enchant Weapon (R-grade) -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="40207" min="1" max="1" chance="7.486" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="7519" max="17555" chance="70" />
-				<item id="35340" min="1" max="1" chance="0.3003" />
-				<item id="17526" min="1" max="1" chance="0.03" />
-				<item id="19448" min="1" max="1" chance="0.03" />
-				<item id="35464" min="1" max="1" chance="0.003" />
-			</death>
-			<corpse>
-				<item id="36533" min="1" max="1" chance="28.86" />
-				<item id="36534" min="1" max="1" chance="2.588" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23281" level="99" type="L2Monster" name="Temple Guard Captain">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="DeBuff" id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill name="W_ShortRangeDDMagic" id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
+			<skill name="W_LongRangeDDMagic" id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="6487486" sp="28603" />
+		<acquire exp="8776110" sp="14041" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3766" magical="1469" />
+			<vitals hp="196331" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
+			<attack physical="1009.3950039" magical="719.599557852" random="30" critical="4" accuracy="10.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="373.969485" magical="273.65463924" evasion="2" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="38" />
+				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4414" level="3" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
+			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="1024" max="2383" chance="0.1131" /> <!-- Adena-->
+					<item id="35329" min="1" max="1" chance="0.01" /> <!-- Amaranthine Slasher Fragment -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Slasher (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="40207" min="1" max="1" chance="7.480" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="7519" max="17555" chance="70" />
-				<item id="35329" min="1" max="1" chance="0.3003" />
-				<item id="17526" min="1" max="1" chance="0.03" />
-				<item id="19448" min="1" max="1" chance="0.03" />
-				<item id="35453" min="1" max="1" chance="0.003" />
-				<item id="19447" min="1" max="1" chance="0.003" />
-			</death>
-			<corpse>
-				<item id="36533" min="1" max="1" chance="28.3" />
-				<item id="36534" min="1" max="1" chance="2.612" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23282" level="99" type="L2Monster" name="Ritual Offering">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="SelfRangePhysicalSpecial" id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill name="DeBuff" id="4615" level="9" /> <!-- Bleed -->
+		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="7403982" sp="32643" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3766" magical="1469" />
+		<sex>MALE</sex>
+		<acquire exp="4910598" sp="3142" />
+		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+			<vitals hp="196331" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="268.81344996" evasion="5" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="38" />
+				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4414" level="3" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4615" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="1024" max="2383" chance="70" /> <!-- Adena-->
+					<item id="35327" min="1" max="1" chance="0.01" /> <!-- Amaranthine Shaper Fragment -->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="40207" min="1" max="1" chance="7.391" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="8494" max="12922" chance="70" />
-				<item id="35327" min="1" max="1" chance="0.3003" />
-				<item id="17526" min="1" max="1" chance="0.03" />
-				<item id="35451" min="1" max="1" chance="0.003" />
-				<item id="19447" min="1" max="1" chance="0.003" />
-			</death>
-			<corpse>
-				<item id="36533" min="1" max="1" chance="28.81" />
-				<item id="19440" min="1" max="1" chance="1.696" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23283" level="99" type="L2Monster" name="Triol's Believer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="99" />
+			<param name="party_members" value="5" />
+			<param name="TelPosX1" value="-16128" />
+			<param name="TelPosY1" value="-35888" />
+			<param name="TelPosZ1" value="-10726" />
+			<param name="TelPosX2" value="-15729" />
+			<param name="TelPosY2" value="-42001" />
+			<param name="TelPosZ2" value="-10724" />
+			<param name="TelPosX3" value="-16397" />
+			<param name="TelPosY3" value="-44970" />
+			<param name="TelPosZ3" value="-10724" />
+			<skill name="DeBuff" id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill name="W_ShortRangeDDMagic" id="4629" level="9" /> <!-- NPC MR - HP Drain -->
+			<skill name="W_LongRangeDDMagic" id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
+		</parameters>
 		<race>HUMANOID</race>
-		<acquire exp="7076662" sp="31200" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="3766" magical="1469" />
+		<sex>MALE</sex>
+		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
+		<acquire exp="4593482" sp="2939" />
+		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+			<vitals hp="196331" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="4" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="361.0859925" magical="264.22705872" evasion="4" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="80" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill id="4629" level="9" /> <!-- NPC MR - HP Drain -->
+			<skill id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
+					<item id="35338" min="1" max="1" chance="0.01" /> <!--  Eternal Helmet Ingredient -->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="19448" min="1" max="1" chance="0.01" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="14138" max="14138" chance="70" />
-				<item id="35338" min="1" max="1" chance="0.3003" />
-				<item id="17526" min="1" max="1" chance="0.03" />
-				<item id="19448" min="1" max="1" chance="0.03" />
-				<item id="35462" min="1" max="1" chance="0.003" />
-				<item id="19447" min="1" max="1" chance="0.003" />
-			</death>
-			<corpse>
-				<item id="19448" min="1" max="1" chance="0.3003" />
-				<item id="19447" min="1" max="1" chance="0.03" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23284" level="99" type="L2Monster" name="Ritual Sacrifice">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="111" />
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="PhysicalSpecial2" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="6487486" sp="28603" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3766" magical="1469" />
+		<sex>MALE</sex>
+		<acquire exp="8451407" sp="13522" />
+		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+			<vitals hp="196331" hpRegen="8.976" mp="1919.436" mpRegen="3.16812" />
+			<attack physical="1055.0276874" magical="760.9193205984" random="30" critical="4" accuracy="12.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="386.504775" magical="282.8274207" evasion="8" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="dark" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="30" />
+				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>430</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="36" /> <!-- Undead -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill id="4789" level="10" /> <!-- NPC High Level -->
 		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="500">
+			<clan_list>
+				<clan>TRIOLL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="0.1424" /> <!-- Adena -->
+					<item id="35333" min="1" max="1" chance="0.01" /> <!-- Amaranthine Thrower Fragment-->
+					<item id="36563" min="1" max="1" chance="0.01" /> <!-- Synthetic Cokes -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="36564" min="1" max="1" chance="0.001" /> <!-- Greater Synthetic Cokes -->
+					<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36563" min="1" max="1" chance="0.1" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.01" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</drop_lists>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<drop_lists>
-			<death>
-				<item id="57" min="7519" max="17555" chance="70" />
-				<item id="36563" min="1" max="1" chance="1.7" />
-				<item id="36564" min="1" max="1" chance="0.3003" />
-				<item id="17526" min="1" max="1" chance="0.07502" />
-				<item id="19447" min="1" max="1" chance="0.006" />
-			</death>
-			<corpse>
-				<item id="36563" min="1" max="1" chance="2.109" />
-				<item id="36564" min="1" max="1" chance="0.3003" />
-				<item id="17526" min="1" max="1" chance="0.07502" />
-			</corpse>
-		</drop_lists>
 	</npc>
 	<npc id="23285" level="97" type="L2Monster" name="Triol's Trooper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<acquire exp="10276969" sp="45956" />
+		<acquire exp="21323560" sp="13647" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="271359" hpRegen="7.5" mp="271359" mpRegen="2.7" />
+			<vitals hp="195385" hpRegen="7.5" mp="2280" mpRegen="2.7" />
 			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2033" magical="889" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -4206,21 +4421,26 @@
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="13" /> -->
 		</skill_list>
+		<ai clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="24.6" />
 		</collision>
 	</npc>
 	<npc id="23286" level="97" type="L2Monster" name="Triol's Trooper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<acquire exp="10276969" sp="45956" />
+		<acquire exp="21323560" sp="13647" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="271359" hpRegen="7.5" mp="271359" mpRegen="2.7" />
+			<vitals hp="196385" hpRegen="7.5" mp="2280" mpRegen="2.7" />
 			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2033" magical="889" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -4238,21 +4458,26 @@
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="13" /> -->
 		</skill_list>
+		<ai clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
 	</npc>
 	<npc id="23287" level="97" type="L2Monster" name="Triol's Trooper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<acquire exp="10276969" sp="45956" />
+		<acquire exp="21323560" sp="13547" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="271359" hpRegen="7.5" mp="271359" mpRegen="2.7" />
+			<vitals hp="195385" hpRegen="7.5" mp="13647" mpRegen="2.7" />
 			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2033" magical="889" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -4270,21 +4495,26 @@
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="13" /> -->
 		</skill_list>
+		<ai clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="24.6" />
 		</collision>
 	</npc>
 	<npc id="23288" level="99" type="L2Monster" name="Triol's Trooper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<acquire exp="22723724" sp="100186" />
+		<acquire exp="26328332" sp="42125" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="822185" hpRegen="7.5" mp="822185" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<attack physical="58520" magical="58410" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="2112" magical="1770" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -4300,21 +4530,26 @@
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="30.5" />
 		</collision>
 	</npc>
 	<npc id="23289" level="99" type="L2Monster" name="Triol's Trooper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<acquire exp="6487486" sp="28603" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
+			<vitals hp="369786" hpRegen="7.5" mp="10380" mpRegen="2.7" />
 			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3766" magical="1469" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -4332,6 +4567,11 @@
 			<!-- <skill id="4412" level="19" /> -->
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai clanHelpRange="300">
+			<clan_list>
+				<clan>TRIOL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />

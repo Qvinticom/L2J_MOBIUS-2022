@@ -3458,7 +3458,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29062" level="80" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
+	<npc id="29062" level="99" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="doSummonNPC" value="1" />
@@ -3471,10 +3471,11 @@
 		<equipment rhand="8208" /> <!-- rhand: Monster Only (Heretic Private Staff) -->
 		<acquire exp="6751585467" sp="10802536" raidPoints="5032" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="115708.195" hpRegen="364.87" mp="2051.19" mpRegen="3.21" />
+			<vitals hp="36816715" hpRegen="364.87" mp="2051.19" mpRegen="3.21" />
 			<attack physical="3134.565" magical="1241.64405" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3161.7216" magical="578.3992" evasion="-11" />
 			<attribute>
+				<attack type="DARK" value="300" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
@@ -3509,19 +3510,38 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="32.33980178833008">
-					<item id="6684" min="1" max="1" chance="5.274" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="12" max="36" chance="94.726" /> <!-- Sealed Major Arcana Robe Part -->
+				<group chance="100.0">
+					<item id="36280" min="1" max="1" chance="1.557" /> <!-- Pagan Devil Circlet (2) -->
+					<item id="36279" min="1" max="1" chance="1.515" /> <!-- Pagan Devil Circlet (1) -->
+					<item id="36281" min="1" max="1" chance="1.462" /> <!-- Pagan Devil Circlet (3) -->
 				</group>
-				<group chance="24.400800704956055">
-					<item id="7575" min="1" max="1" chance="4.3049" /> <!-- Draconic Bow -->
-					<item id="7579" min="12" max="36" chance="95.6951" /> <!-- Draconic Bow Shaft -->
+				<group chance="100.0">
+					<item id="36389" min="1" max="1" chance="77.76" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+					<item id="36386" min="1" max="1" chance="17.14" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 				</group>
-				<group chance="67.75350189208984">
-					<item id="8921" min="1" max="1" chance="47.2441" /> <!-- Demon Circlet -->
-					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<group chance="100.0">
+					<item id="17693" min="1" max="1" chance="15.62" /> <!-- Lv. 4 Legendary CON Dye -->
+					<item id="19467" min="1" max="1" chance="15.38" /> <!-- Yellow Soul Crystal Fragment (R99-grade) -->
+					<item id="17691" min="1" max="1" chance="15.05" /> <!-- Lv. 4 Legendary STR Dye -->
+					<item id="19468" min="1" max="1" chance="15.00" /> <!-- Teal Soul Crystal Fragment (R99-grade) -->
+					<item id="17695" min="1" max="1" chance="14.94" /> <!-- Lv. 4 Legendary WIT Dye -->
+					<item id="17692" min="1" max="1" chance="14.68" /> <!-- Lv. 4 Legendary DEX Dye -->
+				</group>
+				<group chance="100.0">
+					<item id="19469" min="1" max="1" chance="14.60" /> <!-- Purple Soul Crystal Fragment (R99-grade) -->
+					<item id="17694" min="1" max="1" chance="14.37" /> <!-- Lv. 4 Legendary INT Dye -->
+					<item id="17696" min="1" max="1" chance="14.20" /> <!-- Lv. 4 Legendary MEN Dye -->
+					<item id="38052" min="1" max="1" chance="0.05" /> <!-- Amaranthine Caster Crafting Pack -->
+					<item id="38051" min="1" max="1" chance="0.05" /> <!-- Amaranthine Buster Crafting Pack -->
+					<item id="38050" min="1" max="1" chance="0.05" /> <!-- Amaranthine Shooter Crafting Pack -->
+					<item id="38049" min="1" max="1" chance="0.05" /> <!-- Amaranthine Thrower Crafting Pack -->
+					<item id="38048" min="1" max="1" chance="0.05" /> <!-- Amaranthine Stormer Crafting Pack -->
+					<item id="38047" min="1" max="1" chance="0.05" /> <!-- Amaranthine Fighter Crafting Pack -->
+					<item id="38046" min="1" max="1" chance="0.05" /> <!-- Amaranthine Avenger Crafting Pack -->
+					<item id="38045" min="1" max="1" chance="0.05" /> <!-- Amaranthine Slasher Crafting Pack -->
+					<item id="38044" min="1" max="1" chance="0.05" /> <!-- Amaranthine Cutter Crafting Pack -->
+					<item id="38043" min="1" max="1" chance="0.05" /> <!-- Amaranthine Shaper Crafting Pack -->
+					<item id="38053" min="1" max="1" chance="0.05" /> <!-- Amaranthine Retributer Crafting Pack -->
 				</group>
 			</death>
 		</drop_lists>
@@ -3539,10 +3559,11 @@
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="324814" hpRegen="145.856" mp="1994.708" mpRegen="3.18" />
+			<vitals hp="194889" hpRegen="145.856" mp="1994.708" mpRegen="3.18" />
 			<attack physical="8120.810308" magical="8457.09203048" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="1550.2288" magical="567.1848" evasion="6" />
 			<attribute>
+				<attack type="DARK" value="300" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
@@ -3572,13 +3593,6 @@
 				<clan>ANDREAS</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="38.49330139160156">
-					<item id="1344" min="60" max="180" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
@@ -3593,10 +3607,11 @@
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- rhand: Monster Only (Heretic Private Axe) lhand: Monster Only (Heretic Private Axe) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="324814" hpRegen="145.32" mp="1939.14" mpRegen="3.15" />
+			<vitals hp="194889" hpRegen="145.32" mp="1939.14" mpRegen="3.15" />
 			<attack physical="5913.6" magical="4557.735" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1519.518" magical="555.954" evasion="5" />
 			<attribute>
+				<attack type="DARK" value="300" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
@@ -3626,13 +3641,6 @@
 				<clan>ANDREAS</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="37.599998474121094">
-					<item id="1344" min="60" max="180" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />

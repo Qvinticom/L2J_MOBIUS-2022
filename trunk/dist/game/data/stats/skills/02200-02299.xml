@@ -777,8 +777,7 @@
 		</for>
 	</skill>
 	<skill id="2235" levels="1" name="Anteroom Door Key">
-		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="40" />
+		<set name="castRange" val="100" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
@@ -787,13 +786,17 @@
 		<set name="itemConsumeId" val="8273" /> <!-- Anteroom Key -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009" />
 		</cond>
+			<for>
+			<effect name="OpenDoor">
+				<param chance="1000" isItem="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2236" levels="1" name="Chapel Key">
 		<!-- Confirmed CT2.5 -->
