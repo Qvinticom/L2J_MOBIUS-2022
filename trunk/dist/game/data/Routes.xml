@@ -1393,6 +1393,24 @@
 		<point X="-92021" Y="58697" Z="-2994" delay="0" run="true" />
 		<point X="-91661" Y="58944" Z="-2992" delay="0" run="true" />
 	</route>
+	<!-- Dwarf 2 Mimir's Florest -->
+	<route name="Dwarf_2_Mimir_Florest" repeat="true" repeatStyle="back">
+		<target id="8501" spawnX="-92261" spawnY="45441" spawnZ="-2499" /> <!-- Ruben -->
+		<point X="-92145" Y="45470" Z="-2528" delay="0" run="true" />
+		<point X="-92010" Y="45419" Z="-2480" delay="0" run="true" />
+		<point X="-91764" Y="45244" Z="-2456" delay="0" run="true" />
+		<point X="-91727" Y="45011" Z="-2488" delay="0" run="true" />
+		<point X="-91853" Y="44718" Z="-2504" delay="0" run="true" />
+	</route>
+	<!-- Dwarf 1 Stronghold 3 -->
+	<route name="Dwarf_1_Stronghold_3" repeat="true" repeatStyle="back">
+		<target id="8501" spawnX="-74723" spawnY="43068" spawnZ="-2747" /> <!-- Ruben -->
+		<point X="-74760" Y="43236" Z="-2712" delay="0" run="true" />
+		<point X="-74819" Y="43317" Z="-2736" delay="0" run="true" />
+		<point X="-75053" Y="43495" Z="-2752" delay="0" run="true" />
+		<point X="-75467" Y="43426" Z="-2736" delay="0" run="true" />
+		<point X="-75636" Y="43220" Z="-2696" delay="0" run="true" />
+	</route>
 	<!-- Seed of Hellfire - Kunda Whact-->
 	<route name="soh" repeat="true" repeatStyle="back">
 		<target id="23220" spawnX="-149557" spawnY="239964" spawnZ="-11697" /> <!-- Kunda -->
