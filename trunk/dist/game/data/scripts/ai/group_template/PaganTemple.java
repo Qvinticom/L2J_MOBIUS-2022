@@ -21,6 +21,7 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Pagan Temple AI.
@@ -29,18 +30,55 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 public class PaganTemple extends AbstractNpcAI
 {
 	// Npc
+	private static final int TRIOL_HIGH_PRIEST = 19410;
 	private static final int CHAPEL_GATEKEEPER = 22138;
 	
 	public PaganTemple()
 	{
 		super(PaganTemple.class.getSimpleName(), "ai/group_template");
-		addSpawnId(CHAPEL_GATEKEEPER);
+		addSpawnId(TRIOL_HIGH_PRIEST, CHAPEL_GATEKEEPER);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("SPAWN_TRIOL") && (npc != null))
+		{
+			npc.setInvisible(false);
+			startQuestTimer("DESPAWN_TRIOL", 10000, npc, null, false); // 10 seconds delay
+		}
+		else if (event.equals("DESPAWN_TRIOL") && (npc != null))
+		{
+			if (npc.isInCombat())
+			{
+				startQuestTimer("DESPAWN_TRIOL", 10000, npc, null, false); // 10 seconds delay
+			}
+			else
+			{
+				npc.setInvisible(true);
+				startQuestTimer("SPAWN_TRIOL", 600000, npc, null, false); // 10 minutes delay
+			}
+		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		npc.setIsNoRndWalk(true);
+		switch (npc.getId())
+		{
+			case CHAPEL_GATEKEEPER:
+			{
+				npc.setIsNoRndWalk(true);
+				break;
+			}
+			case TRIOL_HIGH_PRIEST:
+			{
+				npc.setInvisible(true);
+				startQuestTimer("SPAWN_TRIOL", 600000, npc, null, false); // 10 minutes delay
+				break;
+			}
+		}
 		return super.onSpawn(npc);
 	}
 	
