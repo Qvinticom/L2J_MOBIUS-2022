@@ -1204,6 +1204,24 @@ public final class L2PcInstance extends L2Playable
 		return getStat().getLevel();
 	}
 	
+	/**
+	 * @return dual class level
+	 **/
+	public final int getDualClassLevel()
+	{
+		if (hasDualClass())
+		{
+			for (SubClass subClass : getSubClasses().values())
+			{
+				if (subClass.isDualClass())
+				{
+					return subClass.getLevel();
+				}
+			}
+		}
+		return 0;
+	}
+	
 	@Override
 	public double getLevelMod()
 	{

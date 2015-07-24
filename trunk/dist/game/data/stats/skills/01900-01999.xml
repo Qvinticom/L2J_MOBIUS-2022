@@ -1058,11 +1058,15 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="1986" levels="4" name="Dual Maximum HP">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max HP + 463. Can be used when the main/ dual class is Level 85 or above. -->
+		<table name="#maxHp"> 463 972 1458 1926 </table>
 		<set name="icon" val="icon.skill0917" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ManaDamOverTime">
+				<add stat="maxHp" val="#maxHp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1987" levels="1" name="Sigel Armor Limit">
 		<!-- AUTO GENERATED SKILL -->

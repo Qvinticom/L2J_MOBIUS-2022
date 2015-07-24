@@ -623,7 +623,7 @@ public final class SkillTreesData implements IXmlReader
 		final Map<Integer, L2SkillLearn> skills = getCompleteClassSkillTree(classId);
 		for (L2SkillLearn skill : skills.values())
 		{
-			if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || skill.isLearnedByFS() || (skill.getGetLevel() > player.getLevel()))
+			if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || skill.isLearnedByFS() || (skill.getGetLevel() > player.getLevel()) || (skill.getDualClassLevel() > player.getDualClassLevel()))
 			{
 				continue;
 			}
@@ -690,7 +690,7 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			if (player.getLevel() >= skill.getGetLevel())
+			if ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel()))
 			{
 				final Skill oldSkill = holder.getKnownSkill(skill.getSkillId());
 				if (oldSkill != null)
@@ -769,7 +769,7 @@ public final class SkillTreesData implements IXmlReader
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
 			final int hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
 			
-			if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel()))
+			if (skill.isAutoGet() && ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())))
 			{
 				final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
 				if (oldSkill != null)
@@ -805,7 +805,7 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel()))
+			if (skill.isLearnedByNpc() && ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
 				if (oldSkill != null)
@@ -858,7 +858,7 @@ public final class SkillTreesData implements IXmlReader
 		
 		for (L2SkillLearn skill : _alchemySkillTree.values())
 		{
-			if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel()))
+			if (skill.isLearnedByNpc() && ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
 				
@@ -941,7 +941,7 @@ public final class SkillTreesData implements IXmlReader
 		final Race race = player.getRace();
 		for (L2SkillLearn skill : _transformSkillTree.values())
 		{
-			if ((player.getLevel() >= skill.getGetLevel()) && (skill.getRaces().isEmpty() || skill.getRaces().contains(race)))
+			if (((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())) && (skill.getRaces().isEmpty() || skill.getRaces().contains(race)))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
 				if (oldSkill != null)
@@ -1342,9 +1342,9 @@ public final class SkillTreesData implements IXmlReader
 		{
 			for (L2SkillLearn s : skillTree.values())
 			{
-				if (player.getLevel() < s.getGetLevel())
+				if ((player.getLevel() < s.getGetLevel()) || (player.getDualClassLevel() < s.getDualClassLevel()))
 				{
-					if ((minLevel == 0) || (minLevel > s.getGetLevel()))
+					if ((minLevel == 0) || ((minLevel > s.getGetLevel()) && (minLevel > s.getDualClassLevel())))
 					{
 						minLevel = s.getGetLevel();
 					}
@@ -1372,7 +1372,7 @@ public final class SkillTreesData implements IXmlReader
 				{
 					continue;
 				}
-				if (minLevelForNewSkill <= skill.getGetLevel())
+				if ((minLevelForNewSkill <= skill.getGetLevel()) && (minLevelForNewSkill <= skill.getDualClassLevel()))
 				{
 					final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
 					if (oldSkill != null)

@@ -54,7 +54,7 @@ public class AcquireSkillList extends L2GameServerPacket
 			writeH(skill.getSkillLevel());
 			writeQ(skill.getLevelUpSp());
 			writeC(skill.getGetLevel());
-			writeC(0x00); // Dual Class Level Required
+			writeC(skill.getDualClassLevel());
 			writeC(skill.getRequiredItems().size());
 			for (ItemHolder item : skill.getRequiredItems())
 			{
