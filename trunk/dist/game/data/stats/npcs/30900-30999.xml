@@ -1193,7 +1193,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30930" level="70" type="L2Npc" name="Rogent" title="Antique Appraiser">
+	<npc id="30930" level="70" type="L2Npc" name="Rogent">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="132" />
@@ -1212,7 +1212,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->

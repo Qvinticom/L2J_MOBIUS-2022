@@ -1075,3 +1075,16 @@ INSERT INTO `teleport` (`Description`, `id`, `loc_x`, `loc_y`, `loc_z`, `price`,
 INSERT INTO `teleport` VALUES
 ('Isle of Souls Harbor -> Gludin', 1140, -80684, 149770, -3040, 7300, 0, 57),
 ('Isle of Souls Harbor -> Rune Township', 1141, 43835, -47749, -792, 10000, 0, 57);
+
+INSERT INTO `teleport` VALUES
+('Dragon Valley - Town of Giran', 3317001, 83497, 148015, -3400, 0, 0, 57),
+('Namo - Dragon Valley Junction', 3317002, 80012, 115911, -3672, 1900, 0, 57),
+('Whirling Vortex Junction', 3317003, 102278, 113038, -3720, 1900, 0, 57),
+('Namo - Entrance to Antharas Lair', 3317004, 131116, 114333, -3704, 1900, 0, 57),
+('Northern Dragon Valley', 3317005, 87712, 106060, -3176, 0, 0, 57),
+('Southern Dragon Valley', 3317006, 88016, 118852, -3056, 0, 0, 57),
+('Northern Whirling Vortex', 3317007, 108064, 112432, -3008, 0, 0, 57),
+('Southern Dragon Valley', 3317008, 109918, 121266, -3720, 0, 0, 57),
+('Deep in Whirling Vortex', 3317009, 119506, 112331, -3688, 0, 0, 57),
+('Antharas Lair - Barrier Bridge', 3317010, 146129, 111232, -3568, 0, 0, 57),
+('Deep in Anthars'' Lair', 3317011, 148447, 110582, -3944, 0, 0, 57);

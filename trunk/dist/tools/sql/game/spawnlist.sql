@@ -34946,10 +34946,6 @@ INSERT INTO `spawnlist` VALUES
 -- Theodric
 ("dragon_valley", 1, 30755, 131176, 114676, -3720, 0, 0, 21124, 60, 0, 0, 0),
 -- Separated Soul
-("lair_of_antharas", 1, 32868, 148558, 110541, -3944, 0, 0, 28938, 60, 0, 0, 0),
--- Separated Soul
-("lair_of_antharas", 1, 32869, 146014, 111226, -3560, 0, 0, 2366, 60, 0, 0, 0),
--- Separated Soul
 ("lair_of_antharas", 1, 32891, 131156, 114177, -3704, 0, 0, 27664, 60, 0, 0, 0),
 
 -- [24_22]
@@ -53911,3 +53907,14 @@ INSERT INTO `spawnlist` VALUES
 ('Stronghold 3', 1, 19196, -91820, 44538, -2532, 0, 0, 57691, 60, 0, 0, 0),
 ('Stronghold 3', 1, 19196, -79503, 53782, -3385, 0, 0, 31900, 60, 0, 0, 0),
 ('Stronghold 3', 1, 19196, -75763, 43097, -2714, 0, 0, 27931, 60, 0, 0, 0); 
+
+INSERT INTO `spawnlist` VALUES
+('Dragon Valley', 1, 33970, 80042, 116033, -3680, 0, 0, 44928, 60, 0, 0, 0),
+('Dragon Valley', 1, 33970, 102396, 113152, -3727, 0, 0, 43643, 60, 0, 0, 0),
+('Dragon Valley', 1, 31045, 102504, 113128, -3727, 0, 0, 39138, 60, 0, 0, 0),
+('Dragon Valley', 1, 32890, 102352, 113306, -3727, 0, 0, 38314, 60, 0, 0, 0),
+('Dragon Valley', 1, 33972, 102238, 113296, -3727, 0, 0, 50632, 60, 0, 0, 0),
+('Dragon Valley', 1, 33973, 72224, 116720, -3693, 0, 0, 25811, 60, 0, 0, 0);
+
+DELETE FROM `spawnlist` WHERE `npc_templateid` = 32869 AND `locx` = 146014 AND `locy` = 111226 AND `locz` = -3560;
+DELETE FROM `spawnlist` WHERE `npc_templateid` = 32868 AND `locx` = 148558 AND `locy` = 110541 AND `locz` = -3944;
