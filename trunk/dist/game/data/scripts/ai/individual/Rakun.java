@@ -21,14 +21,14 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.enums.ChatType;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * Mercenary Captain AI.
- * @author Gladicek
- * @Changed by Stayway
+ * Rakun AI.
+ * @author Mobius
  */
 public final class Rakun extends AbstractNpcAI
 {
@@ -38,13 +38,13 @@ public final class Rakun extends AbstractNpcAI
 	private Rakun()
 	{
 		super(Rakun.class.getSimpleName(), "ai/individual");
-		addSpawnId(RAKUN);
+		addSeeCreatureId(RAKUN);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("SPAM_TEXT") && (npc != null))
+		if (event.equals("BROADCAST_TEXT") && (npc != null))
 		{
 			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THIS_PLACE_SWARMS_WITH_DRAGONS_BY_DAY_AND_UNDEAD_BY_NIGHT, 1000);
 		}
@@ -52,10 +52,13 @@ public final class Rakun extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
-		return super.onSpawn(npc);
+		if (creature.isPlayer())
+		{
+			startQuestTimer("BROADCAST_TEXT", 3000, npc, null, true);
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)
