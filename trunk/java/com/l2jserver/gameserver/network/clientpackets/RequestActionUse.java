@@ -51,6 +51,7 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ChairSit;
 import com.l2jserver.gameserver.network.serverpackets.ExAskCoupleAction;
 import com.l2jserver.gameserver.network.serverpackets.ExBasicActionList;
+import com.l2jserver.gameserver.network.serverpackets.ExInzoneWaiting;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.RecipeShopManageList;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -441,6 +442,9 @@ public final class RequestActionUse extends L2GameClientPacket
 				{
 					sendPacket(ActionFailed.STATIC_PACKET);
 				}
+				break;
+			case 90: // /instancedzone action since Lindvior
+				activeChar.sendPacket(new ExInzoneWaiting(activeChar));
 				break;
 			case 1000: // Siege Golem - Siege Hammer
 				if ((target != null) && target.isDoor())
