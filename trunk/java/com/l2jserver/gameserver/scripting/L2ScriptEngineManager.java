@@ -41,9 +41,8 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import javax.script.SimpleScriptContext;
 
-import commons.javaengine.JavaScriptEngineFactory;
-
 import com.l2jserver.Config;
+import com.l2jserver.commons.javaengine.JavaScriptEngineFactory;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
