@@ -2226,7 +2226,7 @@
 				<mul stat="cAtk" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_HUNTER;DANCE_OF_FIRE" />
+				<param dispel="SONG_OF_HUNTER,9;DANCE_OF_FIRE,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_HUNTER;DANCE_OF_FIRE" />
@@ -2251,7 +2251,7 @@
 				<mul stat="cAtk" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_HUNTER;DANCE_OF_FIRE" />
+				<param dispel="SONG_OF_HUNTER,9;DANCE_OF_FIRE,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_HUNTER;DANCE_OF_FIRE" />
@@ -2279,7 +2279,7 @@
 				<mul stat="mDef" val="1.30" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_WARDING;DANCE_OF_MYSTIC" />
+				<param dispel="SONG_OF_WARDING,9;DANCE_OF_MYSTIC,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_WARDING;DANCE_OF_MYSTIC" />
@@ -2304,7 +2304,7 @@
 				<mul stat="mDef" val="1.30" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_WARDING;DANCE_OF_MYSTIC" />
+				<param dispel="SONG_OF_WARDING,9;DANCE_OF_MYSTIC,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_WARDING;DANCE_OF_MYSTIC" />
@@ -2332,7 +2332,7 @@
 				<mul stat="pDef" val="1.25" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_EARTH;DANCE_OF_WARRIOR" />
+				<param dispel="SONG_OF_EARTH,9;DANCE_OF_WARRIOR,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_EARTH;DANCE_OF_WARRIOR" />
@@ -2357,7 +2357,7 @@
 				<mul stat="pDef" val="1.25" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_EARTH;DANCE_OF_WARRIOR" />
+				<param dispel="SONG_OF_EARTH,9;DANCE_OF_WARRIOR,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_EARTH;DANCE_OF_WARRIOR" />
@@ -2385,7 +2385,7 @@
 				<mul stat="maxHp" val="1.30" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_VITALITY;DANCE_OF_FURY" />
+				<param dispel="SONG_OF_VITALITY,9;DANCE_OF_FURY,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_VITALITY;DANCE_OF_FURY" />
@@ -2411,7 +2411,7 @@
 				<mul stat="maxHp" val="1.30" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_VITALITY;DANCE_OF_FURY" />
+				<param dispel="SONG_OF_VITALITY,9;DANCE_OF_FURY,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_VITALITY;DANCE_OF_FURY" />
@@ -2439,7 +2439,7 @@
 				<mul stat="reflectDam" val="20" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_VENGEANCE;DANCE_OF_VAMPIRE" />
+				<param dispel="SONG_OF_VENGEANCE,9;DANCE_OF_VAMPIRE,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_VENGEANCE;DANCE_OF_VAMPIRE" />
@@ -2464,7 +2464,7 @@
 				<mul stat="reflectDam" val="20" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_VENGEANCE;DANCE_OF_VAMPIRE" />
+				<param dispel="SONG_OF_VENGEANCE,9;DANCE_OF_VAMPIRE,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_VENGEANCE;DANCE_OF_VAMPIRE" />
@@ -2494,7 +2494,7 @@
 				<mul stat="MagicalMpConsumeRate" val="0.8" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_RENEWAL;SONG_OF_CHAMPION;DANCE_OF_SIREN" />
+				<param dispel="SONG_OF_RENEWAL,9;SONG_OF_CHAMPION,9;DANCE_OF_SIREN,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_RENEWAL;SONG_OF_CHAMPION;DANCE_OF_SIREN" />
@@ -2521,7 +2521,7 @@
 				<mul stat="MagicalMpConsumeRate" val="0.8" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_RENEWAL;SONG_OF_CHAMPION;DANCE_OF_SIREN" />
+				<param dispel="SONG_OF_RENEWAL,9;SONG_OF_CHAMPION,9;DANCE_OF_SIREN,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_RENEWAL;SONG_OF_CHAMPION;DANCE_OF_SIREN" />
@@ -2562,7 +2562,7 @@
 				<mul stat="regMp" val="1.20" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_MEDITATION;DANCE_OF_CONCENTRATION" />
+				<param dispel="SONG_OF_MEDITATION,9;DANCE_OF_CONCENTRATION,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_MEDITATION;DANCE_OF_CONCENTRATION" />
@@ -2589,7 +2589,7 @@
 				<mul stat="regMp" val="1.20" />
 			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="SONG_OF_MEDITATION;DANCE_OF_CONCENTRATION" />
+				<param dispel="SONG_OF_MEDITATION,9;DANCE_OF_CONCENTRATION,9" />
 			</effect>
 			<effect name="BlockBuffSlot">
 				<param slot="SONG_OF_MEDITATION;DANCE_OF_CONCENTRATION" />
