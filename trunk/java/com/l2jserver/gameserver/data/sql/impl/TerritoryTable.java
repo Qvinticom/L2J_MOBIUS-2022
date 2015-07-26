@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.Location;
 
@@ -74,7 +74,7 @@ public class TerritoryTable
 	public void load()
 	{
 		_territory.clear();
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement stmt = con.createStatement();
 			ResultSet rset = stmt.executeQuery("SELECT * FROM locations WHERE loc_id>0"))
 		{

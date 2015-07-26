@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
@@ -106,7 +106,7 @@ public final class SiegeGuardManager
 	 */
 	public void removeMerc(int npcId, int x, int y, int z)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1"))
 		{
 			ps.setInt(1, npcId);
@@ -126,7 +126,7 @@ public final class SiegeGuardManager
 	 */
 	public void removeMercs()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -192,7 +192,7 @@ public final class SiegeGuardManager
 	 */
 	private void loadSiegeGuard()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -238,18 +238,18 @@ public final class SiegeGuardManager
 	 */
 	private void saveSiegeGuard(int x, int y, int z, int heading, int npcId, int isHire)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
 		{
-			statement.setInt(1, getCastle().getResidenceId());
-			statement.setInt(2, npcId);
-			statement.setInt(3, x);
-			statement.setInt(4, y);
-			statement.setInt(5, z);
-			statement.setInt(6, heading);
-			statement.setInt(7, (isHire == 1 ? 0 : 600));
-			statement.setInt(8, isHire);
-			statement.execute();
+			ps.setInt(1, getCastle().getResidenceId());
+			ps.setInt(2, npcId);
+			ps.setInt(3, x);
+			ps.setInt(4, y);
+			ps.setInt(5, z);
+			ps.setInt(6, heading);
+			ps.setInt(7, (isHire == 1 ? 0 : 600));
+			ps.setInt(8, isHire);
+			ps.execute();
 		}
 		catch (Exception e)
 		{

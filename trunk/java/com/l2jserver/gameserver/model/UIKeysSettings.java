@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.xml.impl.UIData;
 
 /**
@@ -95,6 +95,7 @@ public class UIKeysSettings
 			return;
 		}
 		
+		// TODO(Zoey76): Refactor this to use batch.
 		query = "REPLACE INTO character_ui_categories (`charId`, `catId`, `order`, `cmdId`) VALUES ";
 		for (int category : _storedCategories.keySet())
 		{
@@ -105,7 +106,7 @@ public class UIKeysSettings
 			}
 		}
 		query = query.substring(0, query.length() - 1) + "; ";
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(query))
 		{
 			statement.execute();
@@ -126,7 +127,7 @@ public class UIKeysSettings
 		}
 		query = query.substring(0, query.length() - 1) + ";";
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(query))
 		{
 			statement.execute();
@@ -147,11 +148,11 @@ public class UIKeysSettings
 		
 		_storedCategories = new HashMap<>();
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement stmt = con.prepareStatement("SELECT * FROM character_ui_categories WHERE `charId` = ? ORDER BY `catId`, `order`"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_ui_categories WHERE `charId` = ? ORDER BY `catId`, `order`"))
 		{
-			stmt.setInt(1, _playerObjId);
-			try (ResultSet rs = stmt.executeQuery())
+			ps.setInt(1, _playerObjId);
+			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
 				{
@@ -179,11 +180,11 @@ public class UIKeysSettings
 		
 		_storedKeys = new HashMap<>();
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement stmt = con.prepareStatement("SELECT * FROM character_ui_actions WHERE `charId` = ? ORDER BY `cat`, `order`"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_ui_actions WHERE `charId` = ? ORDER BY `cat`, `order`"))
 		{
-			stmt.setInt(1, _playerObjId);
-			try (ResultSet rs = stmt.executeQuery())
+			ps.setInt(1, _playerObjId);
+			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
 				{

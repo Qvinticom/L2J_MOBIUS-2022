@@ -35,7 +35,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
@@ -110,7 +110,7 @@ public class Hero
 		HERO_DIARY.clear();
 		HERO_MESSAGE.clear();
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement s1 = con.createStatement();
 			ResultSet rset = s1.executeQuery(GET_HEROES);
 			PreparedStatement ps = con.prepareStatement(GET_CLAN_ALLY);
@@ -208,11 +208,11 @@ public class Hero
 	 */
 	public void loadMessage(int charId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT message FROM heroes WHERE charId=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT message FROM heroes WHERE charId=?"))
 		{
-			statement.setInt(1, charId);
-			try (ResultSet rset = statement.executeQuery())
+			ps.setInt(1, charId);
+			try (ResultSet rset = ps.executeQuery())
 			{
 				if (rset.next())
 				{
@@ -230,11 +230,11 @@ public class Hero
 	{
 		final List<StatsSet> diary = new ArrayList<>();
 		int diaryentries = 0;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
 		{
-			statement.setInt(1, charId);
-			try (ResultSet rset = statement.executeQuery())
+			ps.setInt(1, charId);
+			try (ResultSet rset = ps.executeQuery())
 			{
 				while (rset.next())
 				{
@@ -297,13 +297,13 @@ public class Hero
 		int _losses = 0;
 		int _draws = 0;
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
 		{
-			statement.setInt(1, charId);
-			statement.setInt(2, charId);
-			statement.setLong(3, from);
-			try (ResultSet rset = statement.executeQuery())
+			ps.setInt(1, charId);
+			ps.setInt(2, charId);
+			ps.setLong(3, from);
+			try (ResultSet rset = ps.executeQuery())
 			{
 				int charOneId;
 				int charOneClass;
@@ -694,13 +694,13 @@ public class Hero
 	
 	public void updateHeroes(boolean setDefault)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			if (setDefault)
 			{
-				try (PreparedStatement update_all = con.prepareStatement(UPDATE_ALL))
+				try (Statement s = con.createStatement())
 				{
-					update_all.execute();
+					s.executeUpdate(UPDATE_ALL);
 				}
 			}
 			else
@@ -825,14 +825,14 @@ public class Hero
 	
 	public void setDiaryData(int charId, int action, int param)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
 		{
-			statement.setInt(1, charId);
-			statement.setLong(2, System.currentTimeMillis());
-			statement.setInt(3, action);
-			statement.setInt(4, param);
-			statement.execute();
+			ps.setInt(1, charId);
+			ps.setLong(2, System.currentTimeMillis());
+			ps.setInt(3, action);
+			ps.setInt(4, param);
+			ps.execute();
 		}
 		catch (SQLException e)
 		{
@@ -861,12 +861,12 @@ public class Hero
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("UPDATE heroes SET message=? WHERE charId=?;"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE heroes SET message=? WHERE charId=?;"))
 		{
-			statement.setString(1, HERO_MESSAGE.get(charId));
-			statement.setInt(2, charId);
-			statement.execute();
+			ps.setString(1, HERO_MESSAGE.get(charId));
+			ps.setInt(2, charId);
+			ps.execute();
 		}
 		catch (SQLException e)
 		{
@@ -876,10 +876,10 @@ public class Hero
 	
 	private void deleteItemsInDb()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(DELETE_ITEMS))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			Statement s = con.createStatement())
 		{
-			statement.execute();
+			s.executeUpdate(DELETE_ITEMS);
 		}
 		catch (SQLException e)
 		{

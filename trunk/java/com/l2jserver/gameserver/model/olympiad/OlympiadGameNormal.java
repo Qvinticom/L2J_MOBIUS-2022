@@ -27,7 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -793,18 +793,18 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	
 	protected static final void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
 		{
-			statement.setInt(1, one.getObjectId());
-			statement.setInt(2, two.getObjectId());
-			statement.setInt(3, one.getBaseClass());
-			statement.setInt(4, two.getBaseClass());
-			statement.setInt(5, winner);
-			statement.setLong(6, startTime);
-			statement.setLong(7, fightTime);
-			statement.setInt(8, (type == CompetitionType.CLASSED ? 1 : 0));
-			statement.execute();
+			ps.setInt(1, one.getObjectId());
+			ps.setInt(2, two.getObjectId());
+			ps.setInt(3, one.getBaseClass());
+			ps.setInt(4, two.getBaseClass());
+			ps.setInt(5, winner);
+			ps.setLong(6, startTime);
+			ps.setLong(7, fightTime);
+			ps.setInt(8, (type == CompetitionType.CLASSED ? 1 : 0));
+			ps.execute();
 		}
 		catch (SQLException e)
 		{

@@ -23,7 +23,7 @@ import java.sql.PreparedStatement;
 import java.util.Calendar;
 import java.util.logging.Level;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.enums.SiegeClanType;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2SiegeClan;
@@ -132,13 +132,13 @@ public final class SiegableHall extends ClanHall
 	@Override
 	public final void updateDb()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(SQL_SAVE))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_SAVE))
 		{
-			statement.setInt(1, getOwnerId());
-			statement.setLong(2, getNextSiegeTime());
-			statement.setInt(3, getId());
-			statement.execute();
+			ps.setInt(1, getOwnerId());
+			ps.setLong(2, getNextSiegeTime());
+			ps.setInt(3, getId());
+			ps.execute();
 		}
 		catch (Exception e)
 		{

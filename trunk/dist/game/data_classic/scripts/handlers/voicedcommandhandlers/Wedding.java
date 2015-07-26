@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -209,30 +209,29 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		// check if target has player on friendlist
-		boolean FoundOnFriendList = false;
-		int objectId;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		// Check if target has player on friend list
+		boolean foundOnFriendList = false;
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=?"))
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=?");
 			statement.setInt(1, ptarget.getObjectId());
-			final ResultSet rset = statement.executeQuery();
-			while (rset.next())
+			try (ResultSet rset = statement.executeQuery())
 			{
-				objectId = rset.getInt("friendId");
-				if (objectId == activeChar.getObjectId())
+				while (rset.next())
 				{
-					FoundOnFriendList = true;
+					if (rset.getInt("friendId") == activeChar.getObjectId())
+					{
+						foundOnFriendList = true;
+					}
 				}
 			}
-			statement.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not read friend data:" + e);
 		}
 		
-		if (!FoundOnFriendList)
+		if (!foundOnFriendList)
 		{
 			activeChar.sendMessage("The player you want to ask is not on your friends list, you must first be on each others friends list before you choose to engage.");
 			return false;

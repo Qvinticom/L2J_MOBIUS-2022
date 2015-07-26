@@ -26,7 +26,7 @@ import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.enums.ShortcutType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IRestorable;
@@ -91,17 +91,17 @@ public class ShortCuts implements IRestorable
 			deleteShortCutFromDb(oldShortCut);
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
 		{
-			statement.setInt(1, _owner.getObjectId());
-			statement.setInt(2, shortcut.getSlot());
-			statement.setInt(3, shortcut.getPage());
-			statement.setInt(4, shortcut.getType().ordinal());
-			statement.setInt(5, shortcut.getId());
-			statement.setInt(6, shortcut.getLevel());
-			statement.setInt(7, _owner.getClassIndex());
-			statement.execute();
+			ps.setInt(1, _owner.getObjectId());
+			ps.setInt(2, shortcut.getSlot());
+			ps.setInt(3, shortcut.getPage());
+			ps.setInt(4, shortcut.getType().ordinal());
+			ps.setInt(5, shortcut.getId());
+			ps.setInt(6, shortcut.getLevel());
+			ps.setInt(7, _owner.getClassIndex());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -159,14 +159,14 @@ public class ShortCuts implements IRestorable
 	 */
 	private void deleteShortCutFromDb(Shortcut shortcut)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
 		{
-			statement.setInt(1, _owner.getObjectId());
-			statement.setInt(2, shortcut.getSlot());
-			statement.setInt(3, shortcut.getPage());
-			statement.setInt(4, _owner.getClassIndex());
-			statement.execute();
+			ps.setInt(1, _owner.getObjectId());
+			ps.setInt(2, shortcut.getSlot());
+			ps.setInt(3, shortcut.getPage());
+			ps.setInt(4, _owner.getClassIndex());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -178,7 +178,7 @@ public class ShortCuts implements IRestorable
 	public boolean restoreMe()
 	{
 		_shortCuts.clear();
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT charId, slot, page, type, shortcut_id, level FROM character_shortcuts WHERE charId=? AND class_index=?"))
 		{
 			statement.setInt(1, _owner.getObjectId());

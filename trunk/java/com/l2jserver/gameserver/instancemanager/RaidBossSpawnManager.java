@@ -22,6 +22,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Calendar;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,7 +31,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -76,21 +77,21 @@ public class RaidBossSpawnManager
 		_storedInfo.clear();
 		_schedules.clear();
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM raidboss_spawnlist ORDER BY boss_id");
-			ResultSet rset = statement.executeQuery())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			Statement s = con.createStatement();
+			ResultSet rs = s.executeQuery("SELECT * FROM raidboss_spawnlist ORDER BY boss_id"))
 		{
-			while (rset.next())
+			while (rs.next())
 			{
-				final L2Spawn spawnDat = new L2Spawn(rset.getInt("boss_id"));
-				spawnDat.setX(rset.getInt("loc_x"));
-				spawnDat.setY(rset.getInt("loc_y"));
-				spawnDat.setZ(rset.getInt("loc_z"));
-				spawnDat.setAmount(rset.getInt("amount"));
-				spawnDat.setHeading(rset.getInt("heading"));
-				spawnDat.setRespawnDelay(rset.getInt("respawn_delay"), rset.getInt("respawn_random"));
+				final L2Spawn spawnDat = new L2Spawn(rs.getInt("boss_id"));
+				spawnDat.setX(rs.getInt("loc_x"));
+				spawnDat.setY(rs.getInt("loc_y"));
+				spawnDat.setZ(rs.getInt("loc_z"));
+				spawnDat.setAmount(rs.getInt("amount"));
+				spawnDat.setHeading(rs.getInt("heading"));
+				spawnDat.setRespawnDelay(rs.getInt("respawn_delay"), rs.getInt("respawn_random"));
 				
-				addNewSpawn(spawnDat, rset.getLong("respawn_time"), rset.getDouble("currentHP"), rset.getDouble("currentMP"), false);
+				addNewSpawn(spawnDat, rs.getLong("respawn_time"), rs.getDouble("currentHP"), rs.getDouble("currentMP"), false);
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + _bosses.size() + " Instances");
@@ -98,7 +99,7 @@ public class RaidBossSpawnManager
 		}
 		catch (SQLException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": Couldnt load raidboss spawnlist table.");
+			_log.warning(getClass().getSimpleName() + ": Couldnt load raidboss_spawnlist table");
 		}
 		catch (Exception e)
 		{
@@ -265,19 +266,19 @@ public class RaidBossSpawnManager
 		
 		if (storeInDb)
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("INSERT INTO raidboss_spawnlist (boss_id,amount,loc_x,loc_y,loc_z,heading,respawn_time,currentHp,currentMp) VALUES(?,?,?,?,?,?,?,?,?)"))
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement("INSERT INTO raidboss_spawnlist (boss_id,amount,loc_x,loc_y,loc_z,heading,respawn_time,currentHp,currentMp) VALUES(?,?,?,?,?,?,?,?,?)"))
 			{
-				statement.setInt(1, spawnDat.getId());
-				statement.setInt(2, spawnDat.getAmount());
-				statement.setInt(3, spawnDat.getX());
-				statement.setInt(4, spawnDat.getY());
-				statement.setInt(5, spawnDat.getZ());
-				statement.setInt(6, spawnDat.getHeading());
-				statement.setLong(7, respawnTime);
-				statement.setDouble(8, currentHP);
-				statement.setDouble(9, currentMP);
-				statement.execute();
+				ps.setInt(1, spawnDat.getId());
+				ps.setInt(2, spawnDat.getAmount());
+				ps.setInt(3, spawnDat.getX());
+				ps.setInt(4, spawnDat.getY());
+				ps.setInt(5, spawnDat.getZ());
+				ps.setInt(6, spawnDat.getHeading());
+				ps.setLong(7, respawnTime);
+				ps.setDouble(8, currentHP);
+				ps.setDouble(9, currentMP);
+				ps.execute();
 			}
 			catch (Exception e)
 			{
@@ -326,11 +327,11 @@ public class RaidBossSpawnManager
 		
 		if (updateDb)
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("DELETE FROM raidboss_spawnlist WHERE boss_id=?"))
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM raidboss_spawnlist WHERE boss_id=?"))
 			{
-				statement.setInt(1, bossId);
-				statement.execute();
+				ps.setInt(1, bossId);
+				ps.execute();
 			}
 			catch (Exception e)
 			{
@@ -345,8 +346,8 @@ public class RaidBossSpawnManager
 	 */
 	private void updateDb()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
 		{
 			for (Integer bossId : _storedInfo.keySet())
 			{
@@ -376,16 +377,17 @@ public class RaidBossSpawnManager
 				
 				try
 				{
-					statement.setLong(1, info.getLong("respawnTime"));
-					statement.setDouble(2, info.getDouble("currentHP"));
-					statement.setDouble(3, info.getDouble("currentMP"));
-					statement.setInt(4, bossId);
-					statement.executeUpdate();
-					statement.clearParameters();
+					// TODO(Zoey76): Change this to use batch.
+					ps.setLong(1, info.getLong("respawnTime"));
+					ps.setDouble(2, info.getDouble("currentHP"));
+					ps.setDouble(3, info.getDouble("currentMP"));
+					ps.setInt(4, bossId);
+					ps.executeUpdate();
+					ps.clearParameters();
 				}
 				catch (SQLException e)
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt update raidboss spawnlist table " + e.getMessage(), e);
+					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt update raidboss_spawnlist table " + e.getMessage(), e);
 				}
 			}
 		}

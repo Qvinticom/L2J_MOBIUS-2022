@@ -21,6 +21,7 @@ package conquerablehalls.RainbowSpringsChateau;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -31,7 +32,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
@@ -395,7 +396,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 								long count = warDecrees.getCount();
 								_warDecreesCount.put(clan.getId(), count);
 								player.destroyItem("Rainbow Springs Registration", warDecrees, npc, true);
-								updateAttacker(clan.getId(), count, false);
+								addAttacker(clan.getId(), count);
 								html = "messenger_yetti009.htm";
 							}
 						}
@@ -415,7 +416,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 						}
 						else
 						{
-							updateAttacker(clan.getId(), 0, true);
+							removeAttacker(clan.getId());
 							html = "messenger_yetti018.htm";
 						}
 						break;
@@ -830,34 +831,31 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static boolean isYetiTarget(int npcId)
 	{
-		for (int yeti : YETIS)
-		{
-			if (yeti == npcId)
-			{
-				return true;
-			}
-		}
-		return false;
+		return Util.contains(YETIS, npcId);
 	}
 	
-	private static void updateAttacker(int clanId, long count, boolean remove)
+	private static void removeAttacker(int clanId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM rainbowsprings_attacker_list WHERE clanId = ?"))
 		{
-			PreparedStatement statement;
-			if (remove)
-			{
-				statement = con.prepareStatement("DELETE FROM rainbowsprings_attacker_list WHERE clanId = ?");
-				statement.setInt(1, clanId);
-			}
-			else
-			{
-				statement = con.prepareStatement("INSERT INTO rainbowsprings_attacker_list VALUES (?,?)");
-				statement.setInt(1, clanId);
-				statement.setLong(2, count);
-			}
-			statement.execute();
-			statement.close();
+			ps.setInt(1, clanId);
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	private static void addAttacker(int clanId, long count)
+	{
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO rainbowsprings_attacker_list VALUES (?,?)"))
+		{
+			ps.setInt(1, clanId);
+			ps.setLong(2, count);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -868,18 +866,16 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	@Override
 	public void loadAttackers()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			Statement s = con.createStatement())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM rainbowsprings_attacker_list");
-			ResultSet rset = statement.executeQuery();
-			while (rset.next())
+			try (ResultSet rset = s.executeQuery("SELECT * FROM rainbowsprings_attacker_list"))
 			{
-				int clanId = rset.getInt("clan_id");
-				long count = rset.getLong("decrees_count");
-				_warDecreesCount.put(clanId, count);
+				while (rset.next())
+				{
+					_warDecreesCount.put(rset.getInt("clan_id"), rset.getLong("decrees_count"));
+				}
 			}
-			rset.close();
-			statement.close();
 		}
 		catch (Exception e)
 		{

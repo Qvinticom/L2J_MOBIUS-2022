@@ -29,7 +29,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
@@ -101,7 +101,7 @@ public class FishingChampionshipManager
 	{
 		_enddate = GlobalVariablesManager.getInstance().getLong("fishChampionshipEnd", 0);
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SELECT);
 			ResultSet rs = statement.executeQuery();
@@ -375,7 +375,7 @@ public class FishingChampionshipManager
 	{
 		GlobalVariablesManager.getInstance().set("fishChampionshipEnd", _enddate);
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE);
 			statement.execute();

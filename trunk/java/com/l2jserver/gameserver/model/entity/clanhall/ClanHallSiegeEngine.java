@@ -30,7 +30,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.enums.ChatType;
@@ -93,11 +93,11 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public void loadAttackers()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(SQL_LOAD_ATTACKERS))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_LOAD_ATTACKERS))
 		{
-			statement.setInt(1, _hall.getId());
-			try (ResultSet rset = statement.executeQuery())
+			ps.setInt(1, _hall.getId());
+			try (ResultSet rset = ps.executeQuery())
 			{
 				while (rset.next())
 				{
@@ -115,11 +115,11 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public final void saveAttackers()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement delStatement = con.prepareStatement("DELETE FROM clanhall_siege_attackers WHERE clanhall_id = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM clanhall_siege_attackers WHERE clanhall_id = ?"))
 		{
-			delStatement.setInt(1, _hall.getId());
-			delStatement.execute();
+			ps.setInt(1, _hall.getId());
+			ps.execute();
 			
 			if (_attackers.size() > 0)
 			{
@@ -147,11 +147,11 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		if (_guards == null)
 		{
 			_guards = new ArrayList<>();
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(SQL_LOAD_GUARDS))
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
 			{
-				statement.setInt(1, _hall.getId());
-				try (ResultSet rset = statement.executeQuery())
+				ps.setInt(1, _hall.getId());
+				try (ResultSet rset = ps.executeQuery())
 				{
 					while (rset.next())
 					{

@@ -969,6 +969,7 @@ public final class Config
 	public static String DATABASE_URL;
 	public static String DATABASE_LOGIN;
 	public static String DATABASE_PASSWORD;
+	public static String DATABASE_CONNECTION_POOL;
 	public static int DATABASE_MAX_CONNECTIONS;
 	public static int DATABASE_MAX_IDLE_TIME;
 	public static int MAXIMUM_ONLINE_USERS;
@@ -1181,6 +1182,7 @@ public final class Config
 			DATABASE_URL = serverSettings.getString("URL", "jdbc:mysql://localhost/l2jgs");
 			DATABASE_LOGIN = serverSettings.getString("Login", "root");
 			DATABASE_PASSWORD = serverSettings.getString("Password", "");
+			DATABASE_CONNECTION_POOL = serverSettings.getString("ConnectionPool", "C3P0");
 			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
 			
@@ -2919,6 +2921,7 @@ public final class Config
 			DATABASE_URL = ServerSettings.getString("URL", "jdbc:mysql://localhost/l2jls");
 			DATABASE_LOGIN = ServerSettings.getString("Login", "root");
 			DATABASE_PASSWORD = ServerSettings.getString("Password", "");
+			DATABASE_CONNECTION_POOL = ServerSettings.getString("ConnectionPool", "C3P0");
 			DATABASE_MAX_CONNECTIONS = ServerSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = ServerSettings.getInt("MaximumDbIdleTime", 0);
 			CONNECTION_CLOSE_TIME = ServerSettings.getLong("ConnectionCloseTime", 60000);

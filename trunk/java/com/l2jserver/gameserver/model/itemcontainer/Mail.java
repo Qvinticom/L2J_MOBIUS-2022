@@ -23,7 +23,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2World;
@@ -118,13 +118,13 @@ public class Mail extends ItemContainer
 	@Override
 	public void restore()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
-			statement.setInt(1, getOwnerId());
-			statement.setString(2, getBaseLocation().name());
-			statement.setInt(3, getMessageId());
-			try (ResultSet inv = statement.executeQuery())
+			ps.setInt(1, getOwnerId());
+			ps.setString(2, getBaseLocation().name());
+			ps.setInt(3, getMessageId());
+			try (ResultSet inv = ps.executeQuery())
 			{
 				L2ItemInstance item;
 				while (inv.next())

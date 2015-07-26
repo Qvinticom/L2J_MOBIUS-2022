@@ -27,7 +27,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.handler.IPunishmentHandler;
 import com.l2jserver.gameserver.handler.PunishmentHandler;
@@ -184,17 +184,17 @@ public class PunishmentTask implements Runnable
 	{
 		if (!_isStored)
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 			{
-				st.setString(1, _key);
-				st.setString(2, _affect.name());
-				st.setString(3, _type.name());
-				st.setLong(4, _expirationTime);
-				st.setString(5, _reason);
-				st.setString(6, _punishedBy);
-				st.execute();
-				try (ResultSet rset = st.getGeneratedKeys())
+				ps.setString(1, _key);
+				ps.setString(2, _affect.name());
+				ps.setString(3, _type.name());
+				ps.setLong(4, _expirationTime);
+				ps.setString(5, _reason);
+				ps.setString(6, _punishedBy);
+				ps.execute();
+				try (ResultSet rset = ps.getGeneratedKeys())
 				{
 					if (rset.next())
 					{
@@ -223,12 +223,12 @@ public class PunishmentTask implements Runnable
 	{
 		if (_isStored)
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
 			{
-				st.setLong(1, System.currentTimeMillis());
-				st.setLong(2, _id);
-				st.execute();
+				ps.setLong(1, System.currentTimeMillis());
+				ps.setLong(2, _id);
+				ps.execute();
 			}
 			catch (SQLException e)
 			{

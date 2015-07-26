@@ -25,7 +25,7 @@ import java.sql.SQLException;
 import java.util.Stack;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 
 /**
  * This class ...
@@ -44,7 +44,7 @@ public class StackIDFactory extends IdFactory
 		_curOID = FIRST_OID;
 		_tempOID = FIRST_OID;
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			// con.createStatement().execute("drop table if exists tmp_obj_id");
 			

@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.AirShipTeleportList;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
@@ -171,7 +171,7 @@ public class AirShipManager
 			
 			_airShipsInfo.put(ownerId, info);
 			
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(ADD_DB))
 			{
 				ps.setInt(1, ownerId);
@@ -267,7 +267,7 @@ public class AirShipManager
 	
 	private void load()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(LOAD_DB))
 		{
@@ -298,7 +298,7 @@ public class AirShipManager
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_DB))
 		{
 			ps.setInt(1, info.getInt("fuel"));

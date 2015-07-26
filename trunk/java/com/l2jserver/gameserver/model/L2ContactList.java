@@ -26,7 +26,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -59,17 +59,17 @@ public class L2ContactList
 	{
 		_contacts.clear();
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(QUERY_LOAD))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(QUERY_LOAD))
 		{
-			statement.setInt(1, activeChar.getObjectId());
-			try (ResultSet rset = statement.executeQuery())
+			ps.setInt(1, activeChar.getObjectId());
+			try (ResultSet rs = ps.executeQuery())
 			{
 				int contactId;
 				String contactName;
-				while (rset.next())
+				while (rs.next())
 				{
-					contactId = rset.getInt(1);
+					contactId = rs.getInt(1);
 					contactName = CharNameTable.getInstance().getNameById(contactId);
 					if ((contactName == null) || contactName.equals(activeChar.getName()) || (contactId == activeChar.getObjectId()))
 					{
@@ -125,12 +125,12 @@ public class L2ContactList
 			}
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(QUERY_ADD))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(QUERY_ADD))
 		{
-			statement.setInt(1, activeChar.getObjectId());
-			statement.setInt(2, contactId);
-			statement.execute();
+			ps.setInt(1, activeChar.getObjectId());
+			ps.setInt(2, contactId);
+			ps.execute();
 			
 			_contacts.add(name);
 			
@@ -162,12 +162,12 @@ public class L2ContactList
 		
 		_contacts.remove(name);
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(QUERY_REMOVE))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(QUERY_REMOVE))
 		{
-			statement.setInt(1, activeChar.getObjectId());
-			statement.setInt(2, contactId);
-			statement.execute();
+			ps.setInt(1, activeChar.getObjectId());
+			ps.setInt(2, contactId);
+			ps.execute();
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
 			sm.addString(name);

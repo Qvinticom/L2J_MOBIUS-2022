@@ -22,12 +22,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jserver.gameserver.model.ItemInfo;
@@ -52,7 +53,7 @@ public final class ItemAuction
 	private final long _startingTime;
 	private volatile long _endingTime;
 	private final AuctionItem _auctionItem;
-	private final ArrayList<ItemAuctionBid> _auctionBids;
+	private final List<ItemAuctionBid> _auctionBids;
 	private final Object _auctionStateLock;
 	
 	private volatile ItemAuctionState _auctionState;
@@ -70,10 +71,10 @@ public final class ItemAuction
 	
 	public ItemAuction(final int auctionId, final int instanceId, final long startingTime, final long endingTime, final AuctionItem auctionItem)
 	{
-		this(auctionId, instanceId, startingTime, endingTime, auctionItem, new ArrayList<ItemAuctionBid>(), ItemAuctionState.CREATED);
+		this(auctionId, instanceId, startingTime, endingTime, auctionItem, new ArrayList<>(), ItemAuctionState.CREATED);
 	}
 	
-	public ItemAuction(final int auctionId, final int instanceId, final long startingTime, final long endingTime, final AuctionItem auctionItem, final ArrayList<ItemAuctionBid> auctionBids, final ItemAuctionState auctionState)
+	public ItemAuction(final int auctionId, final int instanceId, final long startingTime, final long endingTime, final AuctionItem auctionItem, final List<ItemAuctionBid> auctionBids, final ItemAuctionState auctionState)
 	{
 		_auctionId = auctionId;
 		_instanceId = instanceId;
@@ -193,17 +194,17 @@ public final class ItemAuction
 	
 	public final void storeMe()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO item_auction (auctionId,instanceId,auctionItemId,startingTime,endingTime,auctionStateId) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE auctionStateId=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO item_auction (auctionId,instanceId,auctionItemId,startingTime,endingTime,auctionStateId) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE auctionStateId=?"))
 		{
-			statement.setInt(1, _auctionId);
-			statement.setInt(2, _instanceId);
-			statement.setInt(3, _auctionItem.getAuctionItemId());
-			statement.setLong(4, _startingTime);
-			statement.setLong(5, _endingTime);
-			statement.setByte(6, _auctionState.getStateId());
-			statement.setByte(7, _auctionState.getStateId());
-			statement.execute();
+			ps.setInt(1, _auctionId);
+			ps.setInt(2, _instanceId);
+			ps.setInt(3, _auctionItem.getAuctionItemId());
+			ps.setLong(4, _startingTime);
+			ps.setLong(5, _endingTime);
+			ps.setByte(6, _auctionState.getStateId());
+			ps.setByte(7, _auctionState.getStateId());
+			ps.execute();
 		}
 		catch (final SQLException e)
 		{
@@ -227,7 +228,7 @@ public final class ItemAuction
 	final void updatePlayerBidInternal(final ItemAuctionBid bid, final boolean delete)
 	{
 		final String query = delete ? DELETE_ITEM_AUCTION_BID : INSERT_ITEM_AUCTION_BID;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, _auctionId);

@@ -33,7 +33,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.SiegeScheduleData;
@@ -773,11 +773,11 @@ public class Siege implements Siegable
 	/** Clear all registered siege clans from database for castle */
 	public void clearSiegeClan()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?"))
 		{
-			statement.setInt(1, getCastle().getResidenceId());
-			statement.execute();
+			ps.setInt(1, getCastle().getResidenceId());
+			ps.execute();
 			
 			if (getCastle().getOwnerId() > 0)
 			{
@@ -801,11 +801,11 @@ public class Siege implements Siegable
 	/** Clear all siege clans waiting for approval from database for castle */
 	public void clearSiegeWaitingClan()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2"))
 		{
-			statement.setInt(1, getCastle().getResidenceId());
-			statement.execute();
+			ps.setInt(1, getCastle().getResidenceId());
+			ps.execute();
 			
 			getDefenderWaitingClans().clear();
 		}
@@ -1028,12 +1028,12 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?"))
 		{
-			statement.setInt(1, getCastle().getResidenceId());
-			statement.setInt(2, clanId);
-			statement.execute();
+			ps.setInt(1, getCastle().getResidenceId());
+			ps.setInt(2, clanId);
+			ps.execute();
 			
 			loadSiegeClan();
 		}
@@ -1294,8 +1294,8 @@ public class Siege implements Siegable
 	private void loadSiegeClan()
 	{
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?"))
 		{
 			getAttackerClans().clear();
 			getDefenderClans().clear();
@@ -1307,8 +1307,8 @@ public class Siege implements Siegable
 				addDefender(getCastle().getOwnerId(), SiegeClanType.OWNER);
 			}
 			
-			statement.setInt(1, getCastle().getResidenceId());
-			try (ResultSet rs = statement.executeQuery())
+			ps.setInt(1, getCastle().getResidenceId());
+			try (ResultSet rs = ps.executeQuery())
 			{
 				int typeId;
 				while (rs.next())
@@ -1405,14 +1405,14 @@ public class Siege implements Siegable
 			_scheduledStartSiegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("UPDATE castle SET siegeDate = ?, regTimeEnd = ?, regTimeOver = ?  WHERE id = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE castle SET siegeDate = ?, regTimeEnd = ?, regTimeOver = ?  WHERE id = ?"))
 		{
-			statement.setLong(1, getSiegeDate().getTimeInMillis());
-			statement.setLong(2, getTimeRegistrationOverDate().getTimeInMillis());
-			statement.setString(3, String.valueOf(getIsTimeRegistrationOver()));
-			statement.setInt(4, getCastle().getResidenceId());
-			statement.execute();
+			ps.setLong(1, getSiegeDate().getTimeInMillis());
+			ps.setLong(2, getTimeRegistrationOverDate().getTimeInMillis());
+			ps.setString(3, String.valueOf(getIsTimeRegistrationOver()));
+			ps.setInt(4, getCastle().getResidenceId());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -1434,7 +1434,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			if ((typeId == DEFENDER) || (typeId == DEFENDER_NOT_APPROVED) || (typeId == OWNER))
 			{
@@ -1453,22 +1453,22 @@ public class Siege implements Siegable
 			
 			if (!isUpdateRegistration)
 			{
-				try (PreparedStatement statement = con.prepareStatement("INSERT INTO siege_clans (clan_id,castle_id,type,castle_owner) values (?,?,?,0)"))
+				try (PreparedStatement ps = con.prepareStatement("INSERT INTO siege_clans (clan_id,castle_id,type,castle_owner) values (?,?,?,0)"))
 				{
-					statement.setInt(1, clan.getId());
-					statement.setInt(2, getCastle().getResidenceId());
-					statement.setInt(3, typeId);
-					statement.execute();
+					ps.setInt(1, clan.getId());
+					ps.setInt(2, getCastle().getResidenceId());
+					ps.setInt(3, typeId);
+					ps.execute();
 				}
 			}
 			else
 			{
-				try (PreparedStatement statement = con.prepareStatement("UPDATE siege_clans SET type = ? WHERE castle_id = ? AND clan_id = ?"))
+				try (PreparedStatement ps = con.prepareStatement("UPDATE siege_clans SET type = ? WHERE castle_id = ? AND clan_id = ?"))
 				{
-					statement.setInt(1, typeId);
-					statement.setInt(2, getCastle().getResidenceId());
-					statement.setInt(3, clan.getId());
-					statement.execute();
+					ps.setInt(1, typeId);
+					ps.setInt(2, getCastle().getResidenceId());
+					ps.setInt(3, clan.getId());
+					ps.execute();
 				}
 			}
 			

@@ -29,7 +29,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ItemsAutoDestroy;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -82,7 +82,7 @@ public final class ItemsOnGroundManager implements Runnable
 				str = "UPDATE itemsonground SET drop_time = ? WHERE drop_time = -1";
 			}
 			
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(str))
 			{
 				ps.setLong(1, System.currentTimeMillis());
@@ -95,7 +95,7 @@ public final class ItemsOnGroundManager implements Runnable
 		}
 		
 		// Add items to world
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable FROM itemsonground"))
 		{
 			int count = 0;
@@ -181,7 +181,7 @@ public final class ItemsOnGroundManager implements Runnable
 	
 	public void emptyTable()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("DELETE FROM itemsonground");
@@ -207,8 +207,8 @@ public final class ItemsOnGroundManager implements Runnable
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
 		{
 			for (L2ItemInstance item : _items)
 			{
@@ -224,17 +224,17 @@ public final class ItemsOnGroundManager implements Runnable
 				
 				try
 				{
-					statement.setInt(1, item.getObjectId());
-					statement.setInt(2, item.getId());
-					statement.setLong(3, item.getCount());
-					statement.setInt(4, item.getEnchantLevel());
-					statement.setInt(5, item.getX());
-					statement.setInt(6, item.getY());
-					statement.setInt(7, item.getZ());
-					statement.setLong(8, (item.isProtected() ? -1 : item.getDropTime())); // item is protected or AutoDestroyed
-					statement.setLong(9, (item.isEquipable() ? 1 : 0)); // set equip-able
-					statement.execute();
-					statement.clearParameters();
+					ps.setInt(1, item.getObjectId());
+					ps.setInt(2, item.getId());
+					ps.setLong(3, item.getCount());
+					ps.setInt(4, item.getEnchantLevel());
+					ps.setInt(5, item.getX());
+					ps.setInt(6, item.getY());
+					ps.setInt(7, item.getZ());
+					ps.setLong(8, (item.isProtected() ? -1 : item.getDropTime())); // item is protected or AutoDestroyed
+					ps.setLong(9, (item.isEquipable() ? 1 : 0)); // set equip-able
+					ps.execute();
+					ps.clearParameters();
 				}
 				catch (Exception e)
 				{

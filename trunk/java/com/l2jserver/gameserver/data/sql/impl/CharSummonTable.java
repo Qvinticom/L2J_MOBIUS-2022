@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -72,7 +72,7 @@ public class CharSummonTable
 	{
 		if (Config.RESTORE_SERVITOR_ON_RECONNECT)
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(INIT_SUMMONS))
 			{
@@ -89,7 +89,7 @@ public class CharSummonTable
 		
 		if (Config.RESTORE_PET_ON_RECONNECT)
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(INIT_PET))
 			{
@@ -113,7 +113,7 @@ public class CharSummonTable
 			return !v.isEmpty() ? v : null;
 		});
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(REMOVE_SUMMON))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -183,7 +183,7 @@ public class CharSummonTable
 	
 	public void restoreServitor(L2PcInstance activeChar)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(LOAD_SUMMON))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -229,7 +229,7 @@ public class CharSummonTable
 		
 		_servitors.computeIfAbsent(summon.getOwner().getObjectId(), k -> ConcurrentHashMap.newKeySet()).add(summon.getObjectId());
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SAVE_SUMMON))
 		{
 			ps.setInt(1, summon.getOwner().getObjectId());

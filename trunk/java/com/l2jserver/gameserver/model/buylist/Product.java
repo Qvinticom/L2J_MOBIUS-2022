@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.items.L2Item;
 
@@ -161,25 +161,25 @@ public final class Product
 	
 	private void save()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
 		{
-			statement.setInt(1, getBuyListId());
-			statement.setInt(2, getItemId());
-			statement.setLong(3, getCount());
-			statement.setLong(5, getCount());
+			ps.setInt(1, getBuyListId());
+			ps.setInt(2, getItemId());
+			ps.setLong(3, getCount());
+			ps.setLong(5, getCount());
 			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
 			{
 				long nextRestockTime = System.currentTimeMillis() + _restockTask.getDelay(TimeUnit.MILLISECONDS);
-				statement.setLong(4, nextRestockTime);
-				statement.setLong(6, nextRestockTime);
+				ps.setLong(4, nextRestockTime);
+				ps.setLong(6, nextRestockTime);
 			}
 			else
 			{
-				statement.setLong(4, 0);
-				statement.setLong(6, 0);
+				ps.setLong(4, 0);
+				ps.setLong(6, 0);
 			}
-			statement.executeUpdate();
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{

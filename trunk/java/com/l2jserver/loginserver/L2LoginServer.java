@@ -27,7 +27,6 @@ import java.io.LineNumberReader;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.GeneralSecurityException;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -36,8 +35,8 @@ import commons.mmocore.SelectorConfig;
 import commons.mmocore.SelectorThread;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.Server;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.loginserver.network.L2LoginClient;
 import com.l2jserver.loginserver.network.L2LoginPacketHandler;
 import com.l2jserver.status.Status;
@@ -94,15 +93,7 @@ public final class L2LoginServer
 		Config.load();
 		
 		// Prepare Database
-		try
-		{
-			L2DatabaseFactory.getInstance();
-		}
-		catch (SQLException e)
-		{
-			_log.log(Level.SEVERE, "FATAL: Failed initializing database. Reason: " + e.getMessage(), e);
-			System.exit(1);
-		}
+		ConnectionFactory.getInstance();
 		
 		try
 		{

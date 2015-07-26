@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.enums.AuctionItemType;
@@ -164,11 +164,11 @@ public class Auction
 	/** Load auctions */
 	private void load()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("Select * from auction where id = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("Select * from auction where id = ?"))
 		{
-			statement.setInt(1, getId());
-			try (ResultSet rs = statement.executeQuery())
+			ps.setInt(1, getId());
+			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
 				{
@@ -199,11 +199,11 @@ public class Auction
 		_highestBidderName = "";
 		_highestBidderMaxBid = 0;
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT bidderId, bidderName, maxBid, clan_name, time_bid FROM auction_bid WHERE auctionId = ? ORDER BY maxBid DESC"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT bidderId, bidderName, maxBid, clan_name, time_bid FROM auction_bid WHERE auctionId = ? ORDER BY maxBid DESC"))
 		{
-			statement.setInt(1, getId());
-			try (ResultSet rs = statement.executeQuery())
+			ps.setInt(1, getId());
+			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
 				{
@@ -248,12 +248,12 @@ public class Auction
 	/** Save Auction Data End */
 	private void saveAuctionDate()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("Update auction set endDate = ? where id = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("Update auction set endDate = ? where id = ?"))
 		{
-			statement.setLong(1, _endDate);
-			statement.setInt(2, _id);
-			statement.execute();
+			ps.setLong(1, _endDate);
+			ps.setInt(2, _id);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -346,33 +346,33 @@ public class Auction
 	 */
 	private void updateInDB(L2PcInstance bidder, long bid)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			if (_bidders.get(bidder.getClanId()) != null)
 			{
-				try (PreparedStatement statement = con.prepareStatement("UPDATE auction_bid SET bidderId=?, bidderName=?, maxBid=?, time_bid=? WHERE auctionId=? AND bidderId=?"))
+				try (PreparedStatement ps = con.prepareStatement("UPDATE auction_bid SET bidderId=?, bidderName=?, maxBid=?, time_bid=? WHERE auctionId=? AND bidderId=?"))
 				{
-					statement.setInt(1, bidder.getClanId());
-					statement.setString(2, bidder.getClan().getLeaderName());
-					statement.setLong(3, bid);
-					statement.setLong(4, System.currentTimeMillis());
-					statement.setInt(5, getId());
-					statement.setInt(6, bidder.getClanId());
-					statement.execute();
+					ps.setInt(1, bidder.getClanId());
+					ps.setString(2, bidder.getClan().getLeaderName());
+					ps.setLong(3, bid);
+					ps.setLong(4, System.currentTimeMillis());
+					ps.setInt(5, getId());
+					ps.setInt(6, bidder.getClanId());
+					ps.execute();
 				}
 			}
 			else
 			{
-				try (PreparedStatement statement = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)"))
+				try (PreparedStatement ps = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)"))
 				{
-					statement.setInt(1, IdFactory.getInstance().getNextId());
-					statement.setInt(2, getId());
-					statement.setInt(3, bidder.getClanId());
-					statement.setString(4, bidder.getName());
-					statement.setLong(5, bid);
-					statement.setString(6, bidder.getClan().getName());
-					statement.setLong(7, System.currentTimeMillis());
-					statement.execute();
+					ps.setInt(1, IdFactory.getInstance().getNextId());
+					ps.setInt(2, getId());
+					ps.setInt(3, bidder.getClanId());
+					ps.setString(4, bidder.getName());
+					ps.setLong(5, bid);
+					ps.setString(6, bidder.getClan().getName());
+					ps.setLong(7, System.currentTimeMillis());
+					ps.execute();
 				}
 				if (L2World.getInstance().getPlayer(_highestBidderName) != null)
 				{
@@ -403,11 +403,11 @@ public class Auction
 	/** Remove bids */
 	private void removeBids()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=?"))
 		{
-			statement.setInt(1, getId());
-			statement.execute();
+			ps.setInt(1, getId());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -436,11 +436,11 @@ public class Auction
 	public void deleteAuctionFromDB()
 	{
 		ClanHallAuctionManager.getInstance().getAuctions().remove(this);
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM auction WHERE itemId=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM auction WHERE itemId=?"))
 		{
-			statement.setInt(1, _itemId);
-			statement.execute();
+			ps.setInt(1, _itemId);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -492,12 +492,12 @@ public class Auction
 	 */
 	public synchronized void cancelBid(int bidder)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=? AND bidderId=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=? AND bidderId=?"))
 		{
-			statement.setInt(1, getId());
-			statement.setInt(2, bidder);
-			statement.execute();
+			ps.setInt(1, getId());
+			ps.setInt(2, bidder);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -521,23 +521,23 @@ public class Auction
 	public void confirmAuction()
 	{
 		ClanHallAuctionManager.getInstance().getAuctions().add(this);
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"))
 		{
-			statement.setInt(1, getId());
-			statement.setInt(2, _sellerId);
-			statement.setString(3, _sellerName);
-			statement.setString(4, _sellerClanName);
-			statement.setString(5, _itemType);
-			statement.setInt(6, _itemId);
-			statement.setInt(7, _itemObjectId);
-			statement.setString(8, _itemName);
-			statement.setLong(9, _itemQuantity);
-			statement.setLong(10, _startingBid);
-			statement.setLong(11, _currentBid);
-			statement.setLong(12, _endDate);
-			statement.execute();
-			statement.close();
+			ps.setInt(1, getId());
+			ps.setInt(2, _sellerId);
+			ps.setString(3, _sellerName);
+			ps.setString(4, _sellerClanName);
+			ps.setString(5, _itemType);
+			ps.setInt(6, _itemId);
+			ps.setInt(7, _itemObjectId);
+			ps.setString(8, _itemName);
+			ps.setLong(9, _itemQuantity);
+			ps.setLong(10, _startingBid);
+			ps.setLong(11, _currentBid);
+			ps.setLong(12, _endDate);
+			ps.execute();
+			ps.close();
 		}
 		catch (Exception e)
 		{

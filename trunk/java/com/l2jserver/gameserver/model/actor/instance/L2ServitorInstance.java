@@ -28,7 +28,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.data.sql.impl.CharSummonTable;
@@ -260,14 +260,14 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		// Clear list for overwrite
 		SummonEffectsTable.getInstance().clearServitorEffects(getOwner(), getReferenceSkill());
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(DELETE_SKILL_SAVE))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(DELETE_SKILL_SAVE))
 		{
 			// Delete all current stored effects for summon to avoid dupe
-			statement.setInt(1, getOwner().getObjectId());
-			statement.setInt(2, getOwner().getClassIndex());
-			statement.setInt(3, getReferenceSkill());
-			statement.execute();
+			ps.setInt(1, getOwner().getObjectId());
+			ps.setInt(2, getOwner().getClassIndex());
+			ps.setInt(3, getReferenceSkill());
+			ps.execute();
 			
 			int buff_index = 0;
 			
@@ -338,22 +338,22 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			if (!SummonEffectsTable.getInstance().containsSkill(getOwner(), getReferenceSkill()))
 			{
-				try (PreparedStatement statement = con.prepareStatement(RESTORE_SKILL_SAVE))
+				try (PreparedStatement ps = con.prepareStatement(RESTORE_SKILL_SAVE))
 				{
-					statement.setInt(1, getOwner().getObjectId());
-					statement.setInt(2, getOwner().getClassIndex());
-					statement.setInt(3, getReferenceSkill());
-					try (ResultSet rset = statement.executeQuery())
+					ps.setInt(1, getOwner().getObjectId());
+					ps.setInt(2, getOwner().getClassIndex());
+					ps.setInt(3, getReferenceSkill());
+					try (ResultSet rs = ps.executeQuery())
 					{
-						while (rset.next())
+						while (rs.next())
 						{
-							int effectCurTime = rset.getInt("remaining_time");
+							int effectCurTime = rs.getInt("remaining_time");
 							
-							final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
+							final Skill skill = SkillData.getInstance().getSkill(rs.getInt("skill_id"), rs.getInt("skill_level"));
 							if (skill == null)
 							{
 								continue;

@@ -20,11 +20,11 @@ package handlers.admincommandhandlers;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -63,47 +63,36 @@ public class AdminRepairChar implements IAdminCommandHandler
 			return;
 		}
 		
+		final String playerName = parts[1];
 		String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(cmd);
-			statement.setString(1, parts[1]);
-			statement.execute();
-			statement.close();
-			
-			statement = con.prepareStatement("SELECT charId FROM characters where char_name=?");
-			statement.setString(1, parts[1]);
-			ResultSet rset = statement.executeQuery();
-			int objId = 0;
-			if (rset.next())
+			try (PreparedStatement ps = con.prepareStatement(cmd))
 			{
-				objId = rset.getInt(1);
+				ps.setString(1, playerName);
+				ps.execute();
 			}
 			
-			rset.close();
-			statement.close();
-			
-			if (objId == 0)
+			final int objId = CharNameTable.getInstance().getIdByName(playerName);
+			if (objId != 0)
 			{
-				con.close();
-				return;
+				// Delete player's shortcuts.
+				try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?"))
+				{
+					ps.setInt(1, objId);
+					ps.execute();
+				}
+				// Move all items to the inventory.
+				try (PreparedStatement ps = con.prepareStatement("UPDATE items SET loc=\"INVENTORY\" WHERE owner_id=?"))
+				{
+					ps.setInt(1, objId);
+					ps.execute();
+				}
 			}
-			
-			// connection = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?");
-			statement.setInt(1, objId);
-			statement.execute();
-			statement.close();
-			
-			// connection = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("UPDATE items SET loc=\"INVENTORY\" WHERE owner_id=?");
-			statement.setInt(1, objId);
-			statement.execute();
-			statement.close();
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not repair char:", e);
+			_log.log(Level.WARNING, "Could not repair char:", e);
 		}
 	}
 }

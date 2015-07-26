@@ -37,7 +37,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.itemauction.ItemAuctionInstance;
 
 /**
@@ -60,13 +60,13 @@ public final class ItemAuctionManager
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			Statement statement = con.createStatement();
-			ResultSet rset = statement.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			Statement s = con.createStatement();
+			ResultSet rs = s.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
 		{
-			if (rset.next())
+			if (rs.next())
 			{
-				_auctionIds.set(rset.getInt(1) + 1);
+				_auctionIds.set(rs.getInt(1) + 1);
 			}
 		}
 		catch (final SQLException e)
@@ -138,18 +138,18 @@ public final class ItemAuctionManager
 	
 	public static final void deleteAuction(final int auctionId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
 			{
-				statement.setInt(1, auctionId);
-				statement.execute();
+				ps.setInt(1, auctionId);
+				ps.execute();
 			}
 			
-			try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction_bid WHERE auctionId=?"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_auction_bid WHERE auctionId=?"))
 			{
-				statement.setInt(1, auctionId);
-				statement.execute();
+				ps.setInt(1, auctionId);
+				ps.execute();
 			}
 		}
 		catch (SQLException e)

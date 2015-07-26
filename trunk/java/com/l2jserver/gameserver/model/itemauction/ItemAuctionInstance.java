@@ -29,6 +29,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -40,7 +41,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.enums.ItemLocation;
@@ -163,7 +164,7 @@ public final class ItemAuctionInstance
 			throw new IllegalArgumentException("No items defined");
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_AUCTION_ID_BY_INSTANCE_ID))
 		{
 			ps.setInt(1, _instanceId);
@@ -544,7 +545,7 @@ public final class ItemAuctionInstance
 	
 	private final ItemAuction loadAuction(final int auctionId) throws SQLException
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			int auctionItemId = 0;
 			long startingTime = 0;
@@ -604,7 +605,7 @@ public final class ItemAuctionInstance
 				return null;
 			}
 			
-			final ArrayList<ItemAuctionBid> auctionBids = new ArrayList<>();
+			final List<ItemAuctionBid> auctionBids = new ArrayList<>();
 			try (PreparedStatement ps = con.prepareStatement(SELECT_PLAYERS_ID_BY_AUCTION_ID))
 			{
 				ps.setInt(1, auctionId);

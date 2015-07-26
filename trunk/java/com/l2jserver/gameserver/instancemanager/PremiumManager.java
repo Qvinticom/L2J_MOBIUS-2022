@@ -25,7 +25,7 @@ import java.sql.SQLException;
 import java.util.Calendar;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -38,7 +38,7 @@ public class PremiumManager
 	
 	public long getPremiumEndDate(String accountName)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT premium_service,enddate FROM account_premium WHERE account_name=?");
 			statement.setString(1, accountName);
@@ -72,7 +72,7 @@ public class PremiumManager
 			remainingTime -= System.currentTimeMillis();
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			Calendar endDate = Calendar.getInstance();
 			endDate.setTimeInMillis(System.currentTimeMillis() + remainingTime);
@@ -102,7 +102,7 @@ public class PremiumManager
 	public void removePremiumStatus(String accountName)
 	{
 		// TODO: Add check if account exists. XD
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO account_premium (account_name,premium_service,enddate) values(?,?,?) ON DUPLICATE KEY UPDATE premium_service = ?, enddate = ?");
 			statement.setString(1, accountName);

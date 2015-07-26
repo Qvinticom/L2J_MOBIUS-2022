@@ -23,7 +23,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
@@ -218,14 +218,14 @@ public final class AuctionableHall extends ClanHall
 	@Override
 	public final void updateDb()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("UPDATE clanhall SET ownerId=?, paidUntil=?, paid=? WHERE id=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE clanhall SET ownerId=?, paidUntil=?, paid=? WHERE id=?"))
 		{
-			statement.setInt(1, getOwnerId());
-			statement.setLong(2, getPaidUntil());
-			statement.setInt(3, (getPaid()) ? 1 : 0);
-			statement.setInt(4, getId());
-			statement.execute();
+			ps.setInt(1, getOwnerId());
+			ps.setLong(2, getPaidUntil());
+			ps.setInt(3, (getPaid()) ? 1 : 0);
+			ps.setInt(4, getId());
+			ps.execute();
 		}
 		catch (Exception e)
 		{

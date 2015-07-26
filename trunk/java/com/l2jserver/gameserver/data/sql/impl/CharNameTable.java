@@ -30,7 +30,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -101,7 +101,7 @@ public class CharNameTable
 		int id = -1;
 		int accessLevel = 0;
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT charId,accesslevel FROM characters WHERE char_name=?"))
 		{
 			ps.setString(1, name);
@@ -147,7 +147,7 @@ public class CharNameTable
 			return null;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT char_name,accesslevel FROM characters WHERE charId=?"))
 		{
 			ps.setInt(1, id);
@@ -183,7 +183,7 @@ public class CharNameTable
 	public synchronized boolean doesCharNameExist(String name)
 	{
 		boolean result = true;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT account_name FROM characters WHERE char_name=?"))
 		{
 			ps.setString(1, name);
@@ -201,7 +201,7 @@ public class CharNameTable
 	
 	public int getAccountCharacterCount(String account)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT COUNT(char_name) FROM characters WHERE account_name=?"))
 		{
 			ps.setString(1, account);
@@ -222,7 +222,7 @@ public class CharNameTable
 	
 	public int getLevelById(int objectId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT level FROM characters WHERE charId = ?"))
 		{
 			ps.setInt(1, objectId);
@@ -243,7 +243,7 @@ public class CharNameTable
 	
 	public int getClassIdById(int objectId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT classid FROM characters WHERE charId = ?"))
 		{
 			ps.setInt(1, objectId);
@@ -264,7 +264,7 @@ public class CharNameTable
 	
 	private void loadAll()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT charId, char_name, accesslevel FROM characters"))
 		{

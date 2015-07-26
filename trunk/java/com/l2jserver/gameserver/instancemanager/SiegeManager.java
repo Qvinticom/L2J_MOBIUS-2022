@@ -30,7 +30,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
@@ -89,12 +89,12 @@ public final class SiegeManager
 		}
 		
 		boolean register = false;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?"))
 		{
-			statement.setInt(1, clan.getId());
-			statement.setInt(2, castleid);
-			try (ResultSet rs = statement.executeQuery())
+			ps.setInt(1, clan.getId());
+			ps.setInt(2, castleid);
+			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
 				{
@@ -278,7 +278,7 @@ public final class SiegeManager
 	
 	private final void loadTrapUpgrade(int castleId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_trapupgrade WHERE castleId=?"))
 		{
 			ps.setInt(1, castleId);

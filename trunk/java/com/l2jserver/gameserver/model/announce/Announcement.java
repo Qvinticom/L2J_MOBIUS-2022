@@ -26,7 +26,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 
 /**
  * @author UnAfraid
@@ -110,14 +110,14 @@ public class Announcement implements IAnnouncement
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 		{
-			st.setInt(1, _type.ordinal());
-			st.setString(2, _content);
-			st.setString(3, _author);
-			st.execute();
-			try (ResultSet rset = st.getGeneratedKeys())
+			ps.setInt(1, _type.ordinal());
+			ps.setString(2, _content);
+			ps.setString(3, _author);
+			ps.execute();
+			try (ResultSet rset = ps.getGeneratedKeys())
 			{
 				if (rset.next())
 				{
@@ -136,14 +136,14 @@ public class Announcement implements IAnnouncement
 	@Override
 	public boolean updateMe()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
 		{
-			st.setInt(1, _type.ordinal());
-			st.setString(2, _content);
-			st.setString(3, _author);
-			st.setInt(4, _id);
-			st.execute();
+			ps.setInt(1, _type.ordinal());
+			ps.setString(2, _content);
+			ps.setString(3, _author);
+			ps.setInt(4, _id);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
@@ -156,11 +156,11 @@ public class Announcement implements IAnnouncement
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement st = con.prepareStatement(DELETE_QUERY))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(DELETE_QUERY))
 		{
-			st.setInt(1, _id);
-			st.execute();
+			ps.setInt(1, _id);
+			ps.execute();
 		}
 		catch (Exception e)
 		{

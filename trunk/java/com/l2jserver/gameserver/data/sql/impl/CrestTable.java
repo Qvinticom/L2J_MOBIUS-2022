@@ -31,7 +31,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Crest;
 import com.l2jserver.gameserver.model.L2Crest.CrestType;
@@ -74,7 +74,7 @@ public final class CrestTable
 			}
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement statement = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
 			ResultSet rs = statement.executeQuery("SELECT `crest_id`, `data`, `type` FROM `crests` ORDER BY `crest_id` DESC"))
 		{
@@ -166,18 +166,16 @@ public final class CrestTable
 	 */
 	public L2Crest createCrest(byte[] data, CrestType crestType)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement("INSERT INTO `crests`(`crest_id`, `data`, `type`) VALUES(?, ?, ?)"))
 		{
-			try (PreparedStatement statement = con.prepareStatement("INSERT INTO `crests`(`crest_id`, `data`, `type`) VALUES(?, ?, ?)"))
-			{
-				final L2Crest crest = new L2Crest(getNextId(), data, crestType);
-				statement.setInt(1, crest.getId());
-				statement.setBytes(2, crest.getData());
-				statement.setInt(3, crest.getType().getId());
-				statement.executeUpdate();
-				_crests.put(crest.getId(), crest);
-				return crest;
-			}
+			final L2Crest crest = new L2Crest(getNextId(), data, crestType);
+			statement.setInt(1, crest.getId());
+			statement.setBytes(2, crest.getData());
+			statement.setInt(3, crest.getType().getId());
+			statement.executeUpdate();
+			_crests.put(crest.getId(), crest);
+			return crest;
 		}
 		catch (SQLException e)
 		{
@@ -201,7 +199,7 @@ public final class CrestTable
 			return;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM `crests` WHERE `crest_id` = ?"))
 		{
 			statement.setInt(1, crestId);

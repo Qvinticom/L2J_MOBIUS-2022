@@ -38,7 +38,7 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.Race;
@@ -1492,7 +1492,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static final void playerEnter(L2PcInstance player)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ?");
 			PreparedStatement invalidQuestDataVar = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ? AND var = ?");
 			PreparedStatement ps1 = con.prepareStatement("SELECT name, value FROM character_quests WHERE charId = ? AND var = ?"))
@@ -1581,13 +1581,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void saveGlobalQuestVar(String var, String value)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("REPLACE INTO quest_global_data (quest_name,var,value) VALUES (?,?,?)"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("REPLACE INTO quest_global_data (quest_name,var,value) VALUES (?,?,?)"))
 		{
-			statement.setString(1, getName());
-			statement.setString(2, var);
-			statement.setString(3, value);
-			statement.executeUpdate();
+			ps.setString(1, getName());
+			ps.setString(2, var);
+			ps.setString(3, value);
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1607,12 +1607,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public final String loadGlobalQuestVar(String var)
 	{
 		String result = "";
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT value FROM quest_global_data WHERE quest_name = ? AND var = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT value FROM quest_global_data WHERE quest_name = ? AND var = ?"))
 		{
-			statement.setString(1, getName());
-			statement.setString(2, var);
-			try (ResultSet rs = statement.executeQuery())
+			ps.setString(1, getName());
+			ps.setString(2, var);
+			try (ResultSet rs = ps.executeQuery())
 			{
 				if (rs.first())
 				{
@@ -1633,12 +1633,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void deleteGlobalQuestVar(String var)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ? AND var = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ? AND var = ?"))
 		{
-			statement.setString(1, getName());
-			statement.setString(2, var);
-			statement.executeUpdate();
+			ps.setString(1, getName());
+			ps.setString(2, var);
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1651,11 +1651,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void deleteAllGlobalQuestVars()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ?"))
 		{
-			statement.setString(1, getName());
-			statement.executeUpdate();
+			ps.setString(1, getName());
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1671,15 +1671,15 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void createQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?"))
 		{
-			statement.setInt(1, qs.getPlayer().getObjectId());
-			statement.setString(2, qs.getQuestName());
-			statement.setString(3, var);
-			statement.setString(4, value);
-			statement.setString(5, value);
-			statement.executeUpdate();
+			ps.setInt(1, qs.getPlayer().getObjectId());
+			ps.setString(2, qs.getQuestName());
+			ps.setString(3, var);
+			ps.setString(4, value);
+			ps.setString(5, value);
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1695,14 +1695,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?"))
 		{
-			statement.setString(1, value);
-			statement.setInt(2, qs.getPlayer().getObjectId());
-			statement.setString(3, qs.getQuestName());
-			statement.setString(4, var);
-			statement.executeUpdate();
+			ps.setString(1, value);
+			ps.setInt(2, qs.getPlayer().getObjectId());
+			ps.setString(3, qs.getQuestName());
+			ps.setString(4, var);
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1717,13 +1717,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?"))
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?"))
 		{
-			statement.setInt(1, qs.getPlayer().getObjectId());
-			statement.setString(2, qs.getQuestName());
-			statement.setString(3, var);
-			statement.executeUpdate();
+			ps.setInt(1, qs.getPlayer().getObjectId());
+			ps.setString(2, qs.getQuestName());
+			ps.setString(3, var);
+			ps.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1738,7 +1738,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void deleteQuestInDb(QuestState qs, boolean repeatable)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(repeatable ? QUEST_DELETE_FROM_CHAR_QUERY : QUEST_DELETE_FROM_CHAR_QUERY_NON_REPEATABLE_QUERY))
 		{
 			ps.setInt(1, qs.getPlayer().getObjectId());

@@ -28,7 +28,7 @@ import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jserver.gameserver.network.L2GameClient;
@@ -73,7 +73,7 @@ public class SecondaryPasswordAuth
 	private void loadPassword()
 	{
 		String var, value = null;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_PASSWORD))
 		{
 			statement.setString(1, _activeClient.getAccountName());
@@ -118,7 +118,7 @@ public class SecondaryPasswordAuth
 		
 		password = cryptPassword(password);
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_PASSWORD))
 		{
 			statement.setString(1, _activeClient.getAccountName());
@@ -137,7 +137,7 @@ public class SecondaryPasswordAuth
 	
 	public boolean insertWrongAttempt(int attempts)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_ATTEMPT))
 		{
 			statement.setString(1, _activeClient.getAccountName());
@@ -176,7 +176,7 @@ public class SecondaryPasswordAuth
 		
 		newPassword = cryptPassword(newPassword);
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(UPDATE_PASSWORD))
 		{
 			statement.setString(1, newPassword);

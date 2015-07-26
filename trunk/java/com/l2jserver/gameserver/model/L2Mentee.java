@@ -24,7 +24,7 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
@@ -51,17 +51,17 @@ public class L2Mentee
 		L2PcInstance player = getPlayerInstance();
 		if (player == null) // Only if player is offline
 		{
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("SELECT char_name, level, base_class FROM characters WHERE charId = ?"))
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement("SELECT char_name, level, base_class FROM characters WHERE charId = ?"))
 			{
-				statement.setInt(1, getObjectId());
-				try (ResultSet rset = statement.executeQuery())
+				ps.setInt(1, getObjectId());
+				try (ResultSet rs = ps.executeQuery())
 				{
-					if (rset.next())
+					if (rs.next())
 					{
-						_name = rset.getString("char_name");
-						_classId = rset.getInt("base_class");
-						_currentLevel = rset.getInt("level");
+						_name = rs.getString("char_name");
+						_classId = rs.getInt("base_class");
+						_currentLevel = rs.getInt("level");
 					}
 				}
 			}

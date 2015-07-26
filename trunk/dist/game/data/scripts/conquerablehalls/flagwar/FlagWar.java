@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2SpecialSiegeGuardAI;
@@ -764,135 +764,123 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	@Override
 	public final void loadAttackers()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_LOAD_ATTACKERS))
 		{
-			PreparedStatement statement = con.prepareStatement(SQL_LOAD_ATTACKERS);
-			statement.setInt(1, _hall.getId());
-			ResultSet rset = statement.executeQuery();
-			while (rset.next())
+			ps.setInt(1, _hall.getId());
+			try (ResultSet rset = ps.executeQuery())
 			{
-				final int clanId = rset.getInt("clan_id");
-				
-				if (ClanTable.getInstance().getClan(clanId) == null)
+				while (rset.next())
 				{
-					_log.warning(getName() + ": Loaded an unexistent clan as attacker! Clan ID: " + clanId);
-					continue;
+					final int clanId = rset.getInt("clan_id");
+					
+					if (ClanTable.getInstance().getClan(clanId) == null)
+					{
+						_log.warning(getName() + ": Loaded an unexistent clan as attacker! Clan ID: " + clanId);
+						continue;
+					}
+					
+					ClanData data = new ClanData();
+					data.flag = rset.getInt("flag");
+					data.npc = rset.getInt("npc");
+					
+					_data.put(clanId, data);
+					loadAttackerMembers(clanId);
 				}
-				
-				ClanData data = new ClanData();
-				data.flag = rset.getInt("flag");
-				data.npc = rset.getInt("npc");
-				
-				_data.put(clanId, data);
-				loadAttackerMembers(clanId);
 			}
-			rset.close();
-			statement.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning(getName() + ".loadAttackers()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
 	private final void loadAttackerMembers(int clanId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		final List<Integer> listInstance = _data.get(clanId).players;
+		if (listInstance == null)
 		{
-			ArrayList<Integer> listInstance = _data.get(clanId).players;
-			
-			if (listInstance == null)
+			_log.warning(getName() + ": Tried to load unregistered clan with ID " + clanId);
+			return;
+		}
+		
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_LOAD_MEMEBERS))
+		{
+			ps.setInt(1, clanId);
+			try (ResultSet rset = ps.executeQuery())
 			{
-				_log.warning(getName() + ": Tried to load unregistered clan with ID " + clanId);
-				return;
+				while (rset.next())
+				{
+					listInstance.add(rset.getInt("object_id"));
+				}
 			}
-			
-			PreparedStatement statement = con.prepareStatement(SQL_LOAD_MEMEBERS);
-			statement.setInt(1, clanId);
-			ResultSet rset = statement.executeQuery();
-			while (rset.next())
-			{
-				listInstance.add(rset.getInt("object_id"));
-				
-			}
-			rset.close();
-			statement.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning(getName() + ".loadAttackerMembers()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
 	private final void saveClan(int clanId, int flag)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_SAVE_CLAN))
 		{
-			PreparedStatement statement = con.prepareStatement(SQL_SAVE_CLAN);
-			statement.setInt(1, _hall.getId());
-			statement.setInt(2, flag);
-			statement.setInt(3, 0);
-			statement.setInt(4, clanId);
-			statement.execute();
-			statement.close();
+			ps.setInt(1, _hall.getId());
+			ps.setInt(2, flag);
+			ps.setInt(3, 0);
+			ps.setInt(4, clanId);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
 			_log.warning(getName() + ".saveClan()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
 	private final void saveNpc(int npc, int clanId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_SAVE_NPC))
 		{
-			PreparedStatement statement = con.prepareStatement(SQL_SAVE_NPC);
-			statement.setInt(1, npc);
-			statement.setInt(2, clanId);
-			statement.execute();
-			statement.close();
+			ps.setInt(1, npc);
+			ps.setInt(2, clanId);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
 			_log.warning(getName() + ".saveNpc()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
 	private final void saveMember(int clanId, int objectId)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_SAVE_ATTACKER))
 		{
-			PreparedStatement statement = con.prepareStatement(SQL_SAVE_ATTACKER);
-			statement.setInt(1, _hall.getId());
-			statement.setInt(2, clanId);
-			statement.setInt(3, objectId);
-			statement.execute();
-			statement.close();
+			ps.setInt(1, _hall.getId());
+			ps.setInt(2, clanId);
+			ps.setInt(3, objectId);
+			ps.execute();
 		}
 		catch (Exception e)
 		{
 			_log.warning(getName() + ".saveMember()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
 	private void clearTables()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			PreparedStatement ps1 = con.prepareStatement(SQL_CLEAR_CLAN);
+			PreparedStatement ps2 = con.prepareStatement(SQL_CLEAR_CLAN_ATTACKERS))
 		{
-			PreparedStatement stat1 = con.prepareStatement(SQL_CLEAR_CLAN);
-			stat1.setInt(1, _hall.getId());
-			stat1.execute();
-			stat1.close();
+			ps1.setInt(1, _hall.getId());
+			ps1.execute();
 			
-			PreparedStatement stat2 = con.prepareStatement(SQL_CLEAR_CLAN_ATTACKERS);
-			stat2.setInt(1, _hall.getId());
-			stat2.execute();
-			stat2.close();
+			ps2.setInt(1, _hall.getId());
+			ps2.execute();
 		}
 		catch (Exception e)
 		{
@@ -904,8 +892,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		int flag = 0;
 		int npc = 0;
-		ArrayList<Integer> players = new ArrayList<>(18);
-		ArrayList<L2PcInstance> playersInstance = new ArrayList<>(18);
+		List<Integer> players = new ArrayList<>(18);
+		List<L2PcInstance> playersInstance = new ArrayList<>(18);
 		L2Spawn warrior = null;
 		L2Spawn flagInstance = null;
 	}

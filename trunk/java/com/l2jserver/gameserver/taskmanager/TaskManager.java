@@ -37,7 +37,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.taskmanager.tasks.TaskBirthday;
 import com.l2jserver.gameserver.taskmanager.tasks.TaskClanLeaderApply;
@@ -105,7 +105,7 @@ public final class TaskManager
 		{
 			task.onTimeElapsed(this);
 			lastActivation = System.currentTimeMillis();
-			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]))
 			{
 				statement.setLong(1, lastActivation);
@@ -210,7 +210,7 @@ public final class TaskManager
 	
 	private void startAllTasks()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
 			ResultSet rset = statement.executeQuery())
 		{
@@ -329,7 +329,7 @@ public final class TaskManager
 	
 	public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps1 = con.prepareStatement(SQL_STATEMENTS[2]))
 		{
 			ps1.setString(1, task);
@@ -365,7 +365,7 @@ public final class TaskManager
 	
 	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]))
 		{
 			statement.setString(1, task);

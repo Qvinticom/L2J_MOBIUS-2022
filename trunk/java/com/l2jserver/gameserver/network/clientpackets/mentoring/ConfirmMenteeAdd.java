@@ -22,7 +22,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.instancemanager.MentorManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -75,7 +75,7 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		{
 			if (validate(mentor, mentee))
 			{
-				try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+				try (Connection con = ConnectionFactory.getInstance().getConnection();
 					PreparedStatement statement = con.prepareStatement("INSERT INTO character_mentees (charId, mentorId) VALUES (?, ?)"))
 				{
 					statement.setInt(1, mentee.getObjectId());

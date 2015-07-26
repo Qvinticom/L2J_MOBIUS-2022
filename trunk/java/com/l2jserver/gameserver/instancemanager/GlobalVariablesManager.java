@@ -27,7 +27,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.variables.AbstractVariables;
 
 /**
@@ -52,7 +52,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery(SELECT_QUERY))
 		{
@@ -83,7 +83,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement del = con.createStatement();
 			PreparedStatement st = con.prepareStatement(INSERT_QUERY))
 		{
@@ -115,7 +115,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement del = con.createStatement())
 		{
 			del.execute(DELETE_QUERY);

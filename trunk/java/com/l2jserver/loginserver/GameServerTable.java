@@ -35,7 +35,7 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jserver.util.IPSubnet;
 import com.l2jserver.util.Rnd;
@@ -113,7 +113,7 @@ public final class GameServerTable implements IXmlReader
 	 */
 	private void loadRegisteredGameServers()
 	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT * FROM gameservers"))
 		{
@@ -220,7 +220,7 @@ public final class GameServerTable implements IXmlReader
 	public void registerServerOnDB(byte[] hexId, int id, String externalHost)
 	{
 		register(id, new GameServerInfo(id, hexId));
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO gameservers (hexid,server_id,host) values (?,?,?)"))
 		{
 			ps.setString(1, hexToString(hexId));

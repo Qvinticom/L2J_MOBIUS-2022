@@ -30,7 +30,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -557,11 +557,13 @@ public class AdminEditChar implements IAdminCommandHandler
 				
 				if (player == null)
 				{
-					Connection con = L2DatabaseFactory.getInstance().getConnection();
-					PreparedStatement ps = con.prepareStatement("UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1");
-					
-					ps.setString(1, playerName);
-					ps.execute();
+					final String updateQuery = "UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1";
+					try (Connection con = ConnectionFactory.getInstance().getConnection();
+						PreparedStatement ps = con.prepareStatement(updateQuery))
+					{
+						ps.setString(1, playerName);
+						ps.execute();
+					}
 				}
 				else
 				{
