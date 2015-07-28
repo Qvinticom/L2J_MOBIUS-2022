@@ -162,7 +162,7 @@ public final class RequestJoinParty extends L2GameClientPacket
 		{
 			requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
 		}
-		else if (party.getMemberCount() >= 9)
+		else if (party.getMemberCount() >= 7) // 7 members for GOD version
 		{
 			requestor.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
 		}
