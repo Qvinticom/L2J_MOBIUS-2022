@@ -20,42 +20,28 @@ package com.l2jserver.commons.database.pool.impl;
 
 import javax.sql.DataSource;
 
-import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.AbstractConnectionFactory;
 import com.l2jserver.commons.database.pool.IConnectionFactory;
-import com.zaxxer.hikari.HikariDataSource;
 
 /**
  * HikariCP Connection Factory implementation.<br>
  * <b>Note that this class is not public to prevent external initialization.</b><br>
- * <b>Access it through {@link ConnectionFactory} and proper configuration.</b><br>
- * <b><font color="RED" size="3">Totally BETA and untested feature!</font></b>
+ * <b>Access it through {@link ConnectionFactory} and proper configuration.</b>
  * @author Zoey76
  */
 final class HikariCPConnectionFactory extends AbstractConnectionFactory
 {
-	private final HikariDataSource _dataSource;
+	private final DataSource _dataSource = null;
 	
 	public HikariCPConnectionFactory()
 	{
-		_dataSource = new HikariDataSource();
-		_dataSource.setJdbcUrl(Config.DATABASE_URL);
-		_dataSource.setUsername(Config.DATABASE_LOGIN);
-		_dataSource.setPassword(Config.DATABASE_PASSWORD);
-		_dataSource.setMaximumPoolSize(Config.DATABASE_MAX_CONNECTIONS);
+		LOG.severe("HikariCP is not supported yet, nothing is going to work!");
 	}
 	
 	@Override
 	public void close()
 	{
-		try
-		{
-			_dataSource.close();
-		}
-		catch (Exception e)
-		{
-			LOG.info(e.getMessage());
-		}
+		throw new UnsupportedOperationException("HikariCP is not supported yet!");
 	}
 	
 	@Override
