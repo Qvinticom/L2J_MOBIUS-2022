@@ -374,7 +374,7 @@ public class L2Party extends AbstractPlayerGroup
 					_positionPacket.reuse(this);
 				}
 				broadcastPacket(_positionPacket);
-			} , PARTY_POSITION_BROADCAST_INTERVAL.toMillis() / 2, PARTY_POSITION_BROADCAST_INTERVAL.toMillis());
+			}, PARTY_POSITION_BROADCAST_INTERVAL.toMillis() / 2, PARTY_POSITION_BROADCAST_INTERVAL.toMillis());
 		}
 		applyTacticalSigns(player, false);
 	}
@@ -799,10 +799,7 @@ public class L2Party extends AbstractPlayerGroup
 	/**
 	 * Distribute Experience and SP rewards to L2PcInstance Party members in the known area of the last attacker.<BR>
 	 * <BR>
-	 * <B><U> Actions</U> :</B>
-	 * <li>Get the L2PcInstance owner of the L2ServitorInstance (if necessary)</li>
-	 * <li>Calculate the Experience and SP reward distribution rate</li>
-	 * <li>Add Experience and SP to the L2PcInstance</li><BR>
+	 * <B><U> Actions</U> :</B> <li>Get the L2PcInstance owner of the L2ServitorInstance (if necessary)</li> <li>Calculate the Experience and SP reward distribution rate</li> <li>Add Experience and SP to the L2PcInstance</li><BR>
 	 * @param xpReward The Experience reward to distribute
 	 * @param spReward The SP reward to distribute
 	 * @param rewardedMembers The list of L2PcInstance to reward

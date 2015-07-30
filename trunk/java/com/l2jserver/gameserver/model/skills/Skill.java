@@ -1479,7 +1479,7 @@ public final class Skill implements IIdentifiable
 	{
 		switch (getId())
 		{
-			// TODO: replace with AI
+		// TODO: replace with AI
 			case 5852:
 			case 5853:
 			{
