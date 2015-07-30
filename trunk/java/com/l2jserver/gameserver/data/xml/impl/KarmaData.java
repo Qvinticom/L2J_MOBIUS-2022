@@ -29,6 +29,7 @@ import org.w3c.dom.Node;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
+ * Karma data.
  * @author UnAfraid
  */
 public class KarmaData implements IXmlReader

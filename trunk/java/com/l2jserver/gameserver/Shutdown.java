@@ -222,7 +222,7 @@ public class Shutdown extends Thread
 				// ignore
 			}
 			
-			// stop all threadpolls
+			// stop all thread pools
 			try
 			{
 				ThreadPoolManager.getInstance().shutdown();
@@ -490,9 +490,6 @@ public class Shutdown extends Thread
 		
 		}
 		
-		/*
-		 * if (Config.ACTIVATE_POSITION_RECORDER) Universe.getInstance().implode(true);
-		 */
 		TimeCounter tc = new TimeCounter();
 		
 		// Save all raidboss and GrandBoss status ^_^

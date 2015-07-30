@@ -140,15 +140,6 @@ public class LoginServerThread extends Thread
 		_maxPlayer = Config.MAXIMUM_ONLINE_USERS;
 	}
 	
-	/**
-	 * Gets the single instance of LoginServerThread.
-	 * @return single instance of LoginServerThread
-	 */
-	public static LoginServerThread getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
 	@Override
 	public void run()
 	{
@@ -810,6 +801,15 @@ public class LoginServerThread extends Thread
 			gameClient = client;
 			session = key;
 		}
+	}
+	
+	/**
+	 * Gets the single instance of LoginServerThread.
+	 * @return single instance of LoginServerThread
+	 */
+	public static LoginServerThread getInstance()
+	{
+		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder

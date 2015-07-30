@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.util.LinePointIterator;
 import com.l2jserver.gameserver.util.LinePointIterator3D;
 
 /**
+ * Geodata.
  * @author -Nemesiss-, HorridoJoho
  */
 public class GeoData

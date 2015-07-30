@@ -111,7 +111,6 @@ public final class MultisellData implements IXmlReader
 						}
 						catch (NumberFormatException e)
 						{
-							
 							try
 							{
 								list.setUseRate(Config.class.getField(att.getNodeValue()).getDouble(Config.class));
@@ -238,13 +237,13 @@ public final class MultisellData implements IXmlReader
 		ListContainer template = _entries.get(listId);
 		if (template == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId:" + (npc != null ? npc.getId() : 0));
+			LOGGER.warning(getClass().getSimpleName() + ": Cannot find list ID: " + listId + " requested by player: " + player.getName() + ", NPC ID:" + (npc != null ? npc.getId() : 0));
 			return;
 		}
 		
 		if (!template.isNpcAllowed(-1) && (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly())))
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
+			LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
 			return;
 		}
 		
@@ -386,14 +385,14 @@ public final class MultisellData implements IXmlReader
 				{
 					if (!verifyIngredient(ing))
 					{
-						LOGGER.warning(getClass().getSimpleName() + ": can't find ingredient with itemId: " + ing.getItemId() + " in list: " + list.getListId());
+						LOGGER.warning(getClass().getSimpleName() + ": Cannot find ingredient with item ID: " + ing.getItemId() + " in list: " + list.getListId());
 					}
 				}
 				for (Ingredient ing : ent.getProducts())
 				{
 					if (!verifyIngredient(ing))
 					{
-						LOGGER.warning(getClass().getSimpleName() + ": can't find product with itemId: " + ing.getItemId() + " in list: " + list.getListId());
+						LOGGER.warning(getClass().getSimpleName() + ": Cannot find product with item ID: " + ing.getItemId() + " in list: " + list.getListId());
 					}
 				}
 			}

@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
+ * Siege Schedule data.
  * @author UnAfraid
  */
 public class SiegeScheduleData implements IXmlReader

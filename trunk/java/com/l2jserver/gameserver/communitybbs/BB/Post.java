@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.communitybbs.Manager.PostBBSManager;
  */
 public class Post
 {
-	private static Logger _log = Logger.getLogger(Post.class.getName());
+	private static final Logger _log = Logger.getLogger(Post.class.getName());
 	
 	public static class CPost
 	{
@@ -155,10 +155,10 @@ public class Post
 	 */
 	public void updatetxt(int i)
 	{
+		CPost cp = getCPost(i);
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?"))
 		{
-			CPost cp = getCPost(i);
 			ps.setString(1, cp.postTxt);
 			ps.setInt(2, cp.postId);
 			ps.setInt(3, cp.postTopicId);

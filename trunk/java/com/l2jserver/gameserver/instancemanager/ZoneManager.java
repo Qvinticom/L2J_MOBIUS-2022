@@ -225,11 +225,8 @@ public final class ZoneManager implements IXmlReader
 								continue;
 							}
 							
-							// Create this zone. Parsing for cuboids is a
-							// bit different than for other polygons
-							// cuboids need exactly 2 points to be defined.
-							// Other polygons need at least 3 (one per
-							// vertex)
+							// Create this zone. Parsing for cuboids is a bit different than for other polygons cuboids need exactly 2 points to be defined.
+							// Other polygons need at least 3 (one per vertex)
 							if (zoneShape.equalsIgnoreCase("Cuboid"))
 							{
 								if (coords.length == 2)
@@ -354,8 +351,7 @@ public final class ZoneManager implements IXmlReader
 						
 						addZone(zoneId, temp);
 						
-						// Register the zone into any world region it
-						// intersects with...
+						// Register the zone into any world region it intersects with...
 						// currently 11136 test for each zone :>
 						int ax, ay, bx, by;
 						for (int x = 0; x < worldRegions.length; x++)

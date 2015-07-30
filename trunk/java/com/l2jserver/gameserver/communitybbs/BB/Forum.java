@@ -32,7 +32,7 @@ import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jserver.gameserver.communitybbs.Manager.TopicBBSManager;
 
-public class Forum
+public final class Forum
 {
 	private static final Logger _log = Logger.getLogger(Forum.class.getName());
 	

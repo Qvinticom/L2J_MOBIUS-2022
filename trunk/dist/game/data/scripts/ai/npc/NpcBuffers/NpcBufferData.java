@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * NPC Buffers data.
  * @author UnAfraid
  */
 public class NpcBufferData

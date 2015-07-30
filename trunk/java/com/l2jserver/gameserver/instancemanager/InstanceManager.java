@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
+ * Instance Manager.
  * @author evill33t, GodKratos
  */
 public final class InstanceManager implements IXmlReader

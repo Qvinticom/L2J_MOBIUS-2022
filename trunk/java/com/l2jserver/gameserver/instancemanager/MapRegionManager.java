@@ -44,6 +44,7 @@ import com.l2jserver.gameserver.model.zone.type.L2RespawnZone;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
+ * Map Region Manager.
  * @author Nyaran
  */
 public final class MapRegionManager implements IXmlReader

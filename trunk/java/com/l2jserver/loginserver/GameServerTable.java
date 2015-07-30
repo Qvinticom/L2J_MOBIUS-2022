@@ -63,7 +63,7 @@ public final class GameServerTable implements IXmlReader
 		load();
 		
 		loadRegisteredGameServers();
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + GAME_SERVER_TABLE.size() + " registered Game Servers");
+		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + GAME_SERVER_TABLE.size() + " registered Game Servers.");
 		
 		initRSAKeys();
 		LOGGER.info(GameServerTable.class.getSimpleName() + ": Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
@@ -74,7 +74,7 @@ public final class GameServerTable implements IXmlReader
 	{
 		SERVER_NAMES.clear();
 		parseDatapackFile("servername.xml");
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + SERVER_NAMES.size() + " server names");
+		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + SERVER_NAMES.size() + " server names.");
 	}
 	
 	@Override

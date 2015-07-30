@@ -38,6 +38,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExBasicActionList;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
+ * Transformation data.
  * @author UnAfraid
  */
 public final class TransformData implements IXmlReader

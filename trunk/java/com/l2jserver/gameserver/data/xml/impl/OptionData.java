@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.model.stats.functions.FuncTemplate;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
+ * Item Option data.
  * @author UnAfraid
  */
 public class OptionData implements IXmlReader

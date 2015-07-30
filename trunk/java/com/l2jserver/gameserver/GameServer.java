@@ -189,7 +189,7 @@ public final class GameServer
 		if (!IdFactory.getInstance().isInitialized())
 		{
 			_log.severe(getClass().getSimpleName() + ": Could not read object IDs from DB. Please check your data.");
-			throw new Exception("Could not initialize the ID factory");
+			throw new Exception("Could not initialize the ID factory!");
 		}
 		
 		ThreadPoolManager.getInstance();
@@ -474,7 +474,7 @@ public final class GameServer
 			}
 			catch (UnknownHostException e1)
 			{
-				_log.log(Level.SEVERE, getClass().getSimpleName() + ": WARNING: The GameServer bind address is invalid, using all avaliable IPs. Reason: " + e1.getMessage(), e1);
+				_log.log(Level.SEVERE, getClass().getSimpleName() + ": WARNING: The GameServer bind address is invalid, using all avaliable IPs! Reason: " + e1.getMessage(), e1);
 			}
 		}
 		

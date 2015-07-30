@@ -88,7 +88,6 @@ final class C3P0ConnectionFactory extends AbstractConnectionFactory
 		}
 		catch (PropertyVetoException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		_dataSource.setJdbcUrl(Config.DATABASE_URL);
@@ -102,7 +101,6 @@ final class C3P0ConnectionFactory extends AbstractConnectionFactory
 		}
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

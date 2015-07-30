@@ -76,9 +76,8 @@ public class MonsterRace
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				_log.log(Level.WARNING, "Unable to create monster!", e);
 			}
-			// _log.info("Monster "+i+" is id: "+(id+random));
 		}
 		newSpeeds();
 	}

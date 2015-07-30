@@ -38,7 +38,7 @@ public class HtmCache
 {
 	private static final Logger _log = Logger.getLogger(HtmCache.class.getName());
 	
-	private static final HTMLFilter htmlFilter = new HTMLFilter();
+	private static final HTMLFilter HTML_FILTER = new HTMLFilter();
 	
 	private static final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
 	
@@ -109,7 +109,7 @@ public class HtmCache
 	
 	public String loadFile(File file)
 	{
-		if (!htmlFilter.accept(file))
+		if (!HTML_FILTER.accept(file))
 		{
 			return null;
 		}
@@ -205,7 +205,7 @@ public class HtmCache
 	 */
 	public boolean isLoadable(String path)
 	{
-		return htmlFilter.accept(new File(Config.DATAPACK_ROOT, path));
+		return HTML_FILTER.accept(new File(Config.DATAPACK_ROOT, path));
 	}
 	
 	public static HtmCache getInstance()

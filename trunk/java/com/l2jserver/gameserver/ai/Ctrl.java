@@ -44,7 +44,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public interface Ctrl
 {
-	
 	/**
 	 * Gets the actor.
 	 * @return the actor

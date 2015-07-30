@@ -86,7 +86,7 @@ public final class SpawnTable implements IXmlReader
 	/**
 	 * Verifies if the template exists and it's spawnable.
 	 * @param npcId the NPC ID
-	 * @return {@code true} if the NPC ID belongs to an spawnable tempalte, {@code false} otherwise
+	 * @return {@code true} if the NPC ID belongs to an spawnable template, {@code false} otherwise
 	 */
 	private boolean checkTemplate(int npcId)
 	{
@@ -342,10 +342,8 @@ public final class SpawnTable implements IXmlReader
 		}
 		catch (Exception e)
 		{
-			// problem with initializing spawn, go to next one
 			LOGGER.log(Level.WARNING, "Spawn could not be initialized: " + e.getMessage(), e);
 		}
-		
 		return ret;
 	}
 	
