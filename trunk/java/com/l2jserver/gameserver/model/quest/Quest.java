@@ -66,6 +66,7 @@ import com.l2jserver.gameserver.model.olympiad.CompetitionType;
 import com.l2jserver.gameserver.model.olympiad.Participant;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -2831,6 +2832,32 @@ public class Quest extends AbstractScript implements IIdentifiable
 			getNpcLogList(activeChar).forEach(packet::add);
 			activeChar.sendPacket(packet);
 		}
+	}
+	
+	/**
+	 * Sends an ExQuestNpcLogList packet to the player containing an Npc ID and count.
+	 * @param player L2PcInstance
+	 * @param npcId int
+	 * @param count int
+	 */
+	public void sendNpcLogList(L2PcInstance player, int npcId, int count)
+	{
+		final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+		log.addNpc(npcId, count);
+		player.sendPacket(log);
+	}
+	
+	/**
+	 * Sends an ExQuestNpcLogList packet to the player containing an NpcStringId and count.
+	 * @param player L2PcInstance
+	 * @param npcStringId NpcStringId
+	 * @param count int
+	 */
+	public void sendNpcLogList(L2PcInstance player, NpcStringId npcStringId, int count)
+	{
+		final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+		log.addNpcString(npcStringId, count);
+		player.sendPacket(log);
 	}
 	
 	/**
