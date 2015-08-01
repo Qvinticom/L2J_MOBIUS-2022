@@ -31,6 +31,7 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 {
 	private final int _questId;
 	private final List<NpcLogListHolder> _npcLogList = new ArrayList<>();
+	private boolean isNpcString = false;
 	
 	public ExQuestNpcLogList(int questId)
 	{
@@ -45,6 +46,7 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	public void addNpcString(NpcStringId npcStringId, int count)
 	{
 		_npcLogList.add(new NpcLogListHolder(npcStringId.getId(), true, count));
+		isNpcString = true;
 	}
 	
 	public void add(NpcLogListHolder holder)
@@ -61,7 +63,14 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		writeC(_npcLogList.size());
 		for (NpcLogListHolder holder : _npcLogList)
 		{
-			writeD(holder.getId() + 1000000); // npc id in client quest data is normal npc id + 1000000
+			if (isNpcString)
+			{
+				writeD(holder.getId());
+			}
+			else
+			{
+				writeD(holder.getId() + 1000000); // npc id in client quest data is normal npc id + 1000000
+			}
 			writeC(holder.isNpcString() ? 0x01 : 0x00);
 			writeD(holder.getCount());
 		}
