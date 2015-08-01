@@ -196,6 +196,7 @@ import quests.Q10329_BackupSeekers.Q10329_BackupSeekers;
 import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
 import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 import quests.Q10332_ToughRoad.Q10332_ToughRoad;
+import quests.Q10333_DisappearedSakum.Q10333_DisappearedSakum;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
@@ -411,6 +412,7 @@ public class QuestMasterHandler
 		Q10330_ToTheRuinsOfYeSagira.class,
 		Q10331_StartOfFate.class,
 		Q10332_ToughRoad.class,
+		Q10333_DisappearedSakum.class,
 		Q10338_SeizeYourDestiny.class,
 		Q10390_KekropusLetter.class,
 		Q10393_KekropusLetter_AClueCompleted.class,
