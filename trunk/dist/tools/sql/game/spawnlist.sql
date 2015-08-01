@@ -53918,3 +53918,8 @@ INSERT INTO `spawnlist` VALUES
 
 DELETE FROM `spawnlist` WHERE `npc_templateid` = 32869 AND `locx` = 146014 AND `locy` = 111226 AND `locz` = -3560;
 DELETE FROM `spawnlist` WHERE `npc_templateid` = 32868 AND `locx` = 148558 AND `locy` = 110541 AND `locz` = -3944;
+
+-- Guard Vent & Guard Schunain
+INSERT INTO `spawnlist` VALUES
+('', 1, 33176, -74511, 168718, -3506, 0, 0, 45183, 60, 0, 0, 0),
+('', 1, 33508, -69545, 170901, -3461, 0, 0, 18939, 60, 0, 0, 0);
