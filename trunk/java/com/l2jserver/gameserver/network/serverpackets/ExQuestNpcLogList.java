@@ -61,7 +61,7 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		writeC(_npcLogList.size());
 		for (NpcLogListHolder holder : _npcLogList)
 		{
-			writeD(holder.getId());
+			writeD(holder.getId() + 1000000); // npc id in client quest data is normal npc id + 1000000
 			writeC(holder.isNpcString() ? 0x01 : 0x00);
 			writeD(holder.getCount());
 		}
