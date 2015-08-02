@@ -32,8 +32,13 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10332_ToughRoad extends Quest
 {
+	// Npcs
 	private static final int BATHIS = 30332;
 	private static final int KAKAI = 30565;
+	// Rewards
+	private static final int ADENA_REWARD = 700;
+	private static final int EXP_REWARD = 90000;
+	private static final int SP_REWARD = 21;
 	
 	public Q10332_ToughRoad()
 	{
@@ -74,8 +79,8 @@ public class Q10332_ToughRoad extends Quest
 			}
 			case "30332-03.html":
 			{
-				giveAdena(player, 70000, true);
-				addExpAndSp(player, 90000, 21);
+				giveAdena(player, ADENA_REWARD, true);
+				addExpAndSp(player, EXP_REWARD, SP_REWARD);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
