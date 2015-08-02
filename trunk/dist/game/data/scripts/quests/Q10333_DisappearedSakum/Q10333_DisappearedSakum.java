@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * Disappeared Sakum (10333)
@@ -213,7 +214,7 @@ public class Q10333_DisappearedSakum extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isCond(2))
+		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
 			switch (npc.getId())
 			{
