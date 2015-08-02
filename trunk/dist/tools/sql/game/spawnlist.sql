@@ -53923,3 +53923,8 @@ DELETE FROM `spawnlist` WHERE `npc_templateid` = 32868 AND `locx` = 148558 AND `
 INSERT INTO `spawnlist` VALUES
 ('', 1, 33176, -74511, 168718, -3506, 0, 0, 45183, 60, 0, 0, 0),
 ('', 1, 33508, -69545, 170901, -3461, 0, 0, 18939, 60, 0, 0, 0);
+
+-- Guard Kallesin & Guard Zenath
+INSERT INTO `spawnlist` VALUES
+('', 1, 33177, -41021, 122823, -2916, 0, 0, 32767, 60, 0, 0, 0),
+('', 1, 33509, -46101, 109354, -3813, 0, 0, 20352, 60, 0, 0, 0);
