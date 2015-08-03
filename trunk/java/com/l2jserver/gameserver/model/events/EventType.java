@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArr
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSocialActionSee;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSpawn;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcTeleport;
 import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAggroRangeEnter;
@@ -167,6 +168,7 @@ public enum EventType
 	ON_NPC_QUEST_START(null, void.class),
 	ON_NPC_SKILL_FINISHED(OnNpcSkillFinished.class, void.class),
 	ON_NPC_SKILL_SEE(OnNpcSkillSee.class, void.class),
+	ON_NPC_SOCIAL_ACTION_SEE(OnNpcSocialActionSee.class, void.class),
 	ON_NPC_SPAWN(OnNpcSpawn.class, void.class),
 	ON_NPC_TALK(null, void.class),
 	ON_NPC_TELEPORT(OnNpcTeleport.class, void.class),

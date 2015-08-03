@@ -91,6 +91,7 @@ import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArr
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSocialActionSee;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSpawn;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcTeleport;
 import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAggroRangeEnter;
@@ -526,6 +527,19 @@ public abstract class AbstractScript implements INamable
 	protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, Collection<Integer> npcIds)
 	{
 		return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation when L2Npc sees skill from a player.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setNpcSocialActionSeeId(Consumer<OnNpcSocialActionSee> callback, int... npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_NPC_SOCIAL_ACTION_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------

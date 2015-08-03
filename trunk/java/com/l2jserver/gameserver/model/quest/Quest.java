@@ -762,6 +762,26 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	/**
 	 * @param npc
+	 * @param caster
+	 * @param actionId
+	 */
+	public final void notifySocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
+	{
+		String res = null;
+		try
+		{
+			res = onSocialActionSee(npc, caster, actionId);
+		}
+		catch (Exception e)
+		{
+			showError(caster, e);
+			return;
+		}
+		showResult(caster, res);
+	}
+	
+	/**
+	 * @param npc
 	 * @param caller
 	 * @param attacker
 	 * @param isSummon
@@ -1202,6 +1222,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @return
 	 */
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	{
+		return null;
+	}
+	
+	/**
+	 * @param npc the NPC that saw the social action
+	 * @param caster the player who used the social action
+	 * @param actionId the actual action id that was used
+	 * @return
+	 */
+	public String onSocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
 	{
 		return null;
 	}
@@ -2020,6 +2051,15 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void addSkillSeeId(Collection<Integer> npcIds)
 	{
 		setNpcSkillSeeId(event -> notifySkillSee(event.getTarget(), event.getCaster(), event.getSkill(), event.getTargets(), event.isSummon()), npcIds);
+	}
+	
+	/**
+	 * Add this quest to the list of quests that the passed npc will respond to for social action see events.
+	 * @param npcIds the IDs of the NPCs to register
+	 */
+	public void addSocialActionSeeId(int... npcIds)
+	{
+		setNpcSocialActionSeeId(event -> notifySocialActionSee(event.getTarget(), event.getCaster(), event.getActionId()), npcIds);
 	}
 	
 	/**

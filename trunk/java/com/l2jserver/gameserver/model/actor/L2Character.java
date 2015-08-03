@@ -102,6 +102,7 @@ import com.l2jserver.gameserver.model.events.impl.character.OnCreatureKill;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureSkillUse;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureTeleported;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSocialActionSee;
 import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 import com.l2jserver.gameserver.model.holders.InvulSkillHolder;
@@ -6653,6 +6654,22 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void broadcastSocialAction(int id)
 	{
 		broadcastPacket(new SocialAction(getObjectId(), id));
+		if (!isPlayer())
+		{
+			return;
+		}
+		Collection<L2Object> objs = getKnownList().getKnownObjects().values();
+		for (L2Object npc : objs)
+		{
+			if ((npc != null) && npc.isNpc())
+			{
+				final L2Npc npcMob = (L2Npc) npc;
+				if ((npcMob.isInsideRadius(this, 150, true, true))) // 150 radius?
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee(npcMob, getActingPlayer(), id), npcMob);
+				}
+			}
+		}
 	}
 	
 	public Team getTeam()
