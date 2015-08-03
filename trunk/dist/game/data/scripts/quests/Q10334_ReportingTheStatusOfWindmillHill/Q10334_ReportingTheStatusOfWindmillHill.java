@@ -64,6 +64,13 @@ public class Q10334_ReportingTheStatusOfWindmillHill extends Quest
 		String htmltext = null;
 		switch (event)
 		{
+			case "33508-02.htm":
+			case "33508-04.html":
+			case "30332-02.html":
+			{
+				htmltext = event;
+				break;
+			}
 			case "33508-03.htm":
 			{
 				qs.startQuest();
@@ -72,19 +79,15 @@ public class Q10334_ReportingTheStatusOfWindmillHill extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33508-02.htm":
-			case "33508-04.html":
-			case "30332-02.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30332-03.html":
 			{
-				giveAdena(player, ADENA_REWARD, true);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(1))
+				{
+					giveAdena(player, ADENA_REWARD, true);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
