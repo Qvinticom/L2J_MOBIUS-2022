@@ -110,11 +110,14 @@ public class Q10333_DisappearedSakum extends Quest
 			}
 			case "33508-03.html":
 			{
-				giveAdena(player, ADENA_REWARD, true);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				qs.exitQuest(false);
-				htmltext = event;
-				break;
+				if (qs.isCond(3))
+				{
+					giveAdena(player, ADENA_REWARD, true);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
+					qs.exitQuest(false);
+					htmltext = event;
+					break;
+				}
 			}
 		}
 		return htmltext;
