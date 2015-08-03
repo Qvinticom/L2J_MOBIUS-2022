@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.model.events.impl.character.npc;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.IBaseEvent;
@@ -28,20 +27,13 @@ import com.l2jserver.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnNpcSocialActionSee implements IBaseEvent
 {
-	private final L2Npc _npc;
 	private final L2PcInstance _caster;
 	private final int _actionId;
 	
-	public OnNpcSocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
+	public OnNpcSocialActionSee(L2PcInstance caster, int actionId)
 	{
-		_npc = npc;
 		_caster = caster;
 		_actionId = actionId;
-	}
-	
-	public L2Npc getTarget()
-	{
-		return _npc;
 	}
 	
 	public L2PcInstance getCaster()

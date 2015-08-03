@@ -761,16 +761,15 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	/**
-	 * @param npc
 	 * @param caster
 	 * @param actionId
 	 */
-	public final void notifySocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
+	public final void notifySocialActionSee(L2PcInstance caster, int actionId)
 	{
 		String res = null;
 		try
 		{
-			res = onSocialActionSee(npc, caster, actionId);
+			res = onSocialActionSee(caster, actionId);
 		}
 		catch (Exception e)
 		{
@@ -1227,12 +1226,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	/**
-	 * @param npc the NPC that saw the social action
 	 * @param caster the player who used the social action
 	 * @param actionId the actual action id that was used
 	 * @return
 	 */
-	public String onSocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
+	public String onSocialActionSee(L2PcInstance caster, int actionId)
 	{
 		return null;
 	}
@@ -2059,7 +2057,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void addSocialActionSeeId(int... npcIds)
 	{
-		setNpcSocialActionSeeId(event -> notifySocialActionSee(event.getTarget(), event.getCaster(), event.getActionId()), npcIds);
+		setNpcSocialActionSeeId(event -> notifySocialActionSee(event.getCaster(), event.getActionId()), npcIds);
 	}
 	
 	/**

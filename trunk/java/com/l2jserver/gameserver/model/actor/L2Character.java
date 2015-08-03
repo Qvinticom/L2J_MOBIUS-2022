@@ -6666,7 +6666,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				final L2Npc npcMob = (L2Npc) npc;
 				if ((npcMob.isInsideRadius(this, 150, true, true))) // 150 radius?
 				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee(npcMob, getActingPlayer(), id), npcMob);
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee(getActingPlayer(), id), npcMob);
 				}
 			}
 		}
