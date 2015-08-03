@@ -201,6 +201,7 @@ import quests.Q10334_ReportingTheStatusOfWindmillHill.Q10334_ReportingTheStatusO
 import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
 import quests.Q10336_DividedSakumKanilov.Q10336_DividedSakumKanilov;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
+import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
 import quests.Q10397_KekropusLetter_ASuspiciousBadge.Q10397_KekropusLetter_ASuspiciousBadge;
@@ -420,6 +421,7 @@ public class QuestMasterHandler
 		Q10335_RequestToFindSakum.class,
 		Q10336_DividedSakumKanilov.class,
 		Q10338_SeizeYourDestiny.class,
+		Q10365_SeekerEscort.class,
 		Q10390_KekropusLetter.class,
 		Q10393_KekropusLetter_AClueCompleted.class,
 		Q10397_KekropusLetter_ASuspiciousBadge.class,
