@@ -90,7 +90,6 @@ public final class Q10365_SeekerEscort extends Quest
 	public Q10365_SeekerEscort()
 	{
 		super(10365, Q10365_SeekerEscort.class.getSimpleName(), "Seeker Escort");
-		addStartNpc(DEP);
 		addTalkId(DEP, SEBION);
 		addSpawnId(BLOODHOUND);
 		addMoveFinishedId(BLOODHOUND);
@@ -120,6 +119,7 @@ public final class Q10365_SeekerEscort extends Quest
 				qs.startQuest();
 				qs.setMemoState(2);
 				final L2Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_LOC1_SPAWN, false, 300000);
+				bloodhound.setTitle(player.getName());
 				startQuestTimer("MOVE_DELAY", 500, bloodhound, player);
 				htmltext = event;
 				break;
@@ -139,6 +139,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				qs.setMemoState(2);
 				final L2Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_LOC1_SPAWN, false, 300000);
+				bloodhound.setTitle(player.getName());
 				startQuestTimer("MOVE_DELAY", 500, bloodhound, player);
 				break;
 			}
@@ -235,6 +236,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				qs.setMemoState(3);
 				final L2Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_LOC2_SPAWN, false, 300000);
+				bloodhound.setTitle(player.getName());
 				player.teleToLocation(BLOODHOUND_LOC2_SPAWN);
 				startQuestTimer("MOVE_DELAY", 1000, bloodhound, player);
 				break;
