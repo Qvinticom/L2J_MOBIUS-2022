@@ -1441,4 +1441,45 @@
 		<point X="-149377" Y="245195" Z="-11950" delay="2" run="true" />
 		<point X="-149367" Y="243068" Z="-11950" delay="5" run="true" />
 	</route>
+	<!-- Windmill Hill - Guard 1-->
+	<route name="Wind_G_1" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-69793" spawnY="171160" spawnZ="-3464" />
+		<point X="-70019" Y="170736" Z="-3456" delay="0" run="false" />
+		<point X="-70036" Y="170450" Z="-3456" delay="0" run="false" />
+		<point X="-70218" Y="170095" Z="-3528" delay="0" run="false" />
+		<point X="-70330" Y="169961" Z="-3544" delay="0" run="false" />
+		<point X="-70530" Y="169889" Z="-3568" delay="0" run="false" />
+		<point X="-70666" Y="169881" Z="-3568" delay="0" run="false" />
+		<point X="-70765" Y="169952" Z="-3568" delay="0" run="false" />
+		<point X="-70766" Y="170134" Z="-3560" delay="0" run="false" />
+		<point X="-70690" Y="170402" Z="-3560" delay="0" run="false" />
+		<point X="-70676" Y="171158" Z="-3560" delay="0" run="false" />
+		<point X="-70663" Y="171522" Z="-3624" delay="0" run="false" />
+		<point X="-70603" Y="172002" Z="-3664" delay="0" run="false" />
+		<point X="-70642" Y="172168" Z="-3672" delay="0" run="false" />
+		<point X="-70722" Y="172267" Z="-3672" delay="0" run="false" />
+	</route>
+	<!-- Windmill Hill - Guard 2-->
+	<route name="Wind_G_2" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-76411" spawnY="166637" spawnZ="-3458" /> 
+		<point X="-76185" Y="167035" Z="-3408" delay="0" run="false" />
+		<point X="-75941" Y="167283" Z="-3424" delay="0" run="false" />
+		<point X="-75657" Y="168824" Z="-3576" delay="0" run="false" />
+		<point X="-75666" Y="168287" Z="-3632" delay="0" run="false" />
+		<point X="-75551" Y="168578" Z="-3600" delay="0" run="false" />
+		<point X="-75218" Y="169197" Z="-3624" delay="0" run="false" />
+		<point X="-75288" Y="169378" Z="-3640" delay="0" run="false" />
+		<point X="-75265" Y="169465" Z="-3664" delay="0" run="false" />
+	</route>
+	<!-- Windmill Hill - Guard 3-->
+	<route name="Wind_G_3" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-77646" spawnY="165968" spawnZ="-3706" /> 
+		<point X="-77239" Y="166896" Z="-3640" delay="0" run="false" />
+		<point X="-77019" Y="167485" Z="-3640" delay="0" run="false" />
+		<point X="-76415" Y="168616" Z="-3720" delay="0" run="false" />
+		<point X="-76137" Y="169060" Z="-3712" delay="0" run="false" />
+		<point X="-75891" Y="169349" Z="-3728" delay="0" run="false" />
+		<point X="-75246" Y="168848" Z="-3680" delay="0" run="false" />
+		<point X="-75108" Y="169969" Z="-3680" delay="0" run="false" />
+	</route>
 </routes>

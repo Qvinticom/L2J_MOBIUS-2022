@@ -1088,3 +1088,6 @@ INSERT INTO `teleport` VALUES
 ('Deep in Whirling Vortex', 3317009, 119506, 112331, -3688, 0, 0, 57),
 ('Antharas Lair - Barrier Bridge', 3317010, 146129, 111232, -3568, 0, 0, 57),
 ('Deep in Anthars'' Lair', 3317011, 148447, 110582, -3944, 0, 0, 57);
+
+INSERT INTO `teleport` VALUES
+('Windmill Hill -> Gludio', '3319009', '-14557', '123809', '-3104', '0', '0', '57');

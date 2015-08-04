@@ -53919,10 +53919,48 @@ INSERT INTO `spawnlist` VALUES
 DELETE FROM `spawnlist` WHERE `npc_templateid` = 32869 AND `locx` = 146014 AND `locy` = 111226 AND `locz` = -3560;
 DELETE FROM `spawnlist` WHERE `npc_templateid` = 32868 AND `locx` = 148558 AND `locy` = 110541 AND `locz` = -3944;
 
--- Guard Vent & Guard Schunain
+-- Teleport Device
 INSERT INTO `spawnlist` VALUES
-('', 1, 33176, -74511, 168718, -3506, 0, 0, 45183, 60, 0, 0, 0),
-('', 1, 33508, -69545, 170901, -3461, 0, 0, 18939, 60, 0, 0, 0);
+('Windmill Hill', 1, 33088, -74724, 168556, -3498, 0, 0, 11547, 60, 0, 0, 0); 
+-- Guard Vent
+INSERT INTO `spawnlist` VALUES
+('Windmill Hill', 1, 33176, -74549, 168580, -3498, 0, 0, 61192, 60, 0, 0, 0);
+-- Guard Schunain
+INSERT INTO `spawnlist` VALUES
+('Windmill Hill', 1, 33508, -69496, 170894, -3461, 0, 0, 62758, 60, 0, 0, 0);
+-- Guards
+INSERT INTO `spawnlist` VALUES
+('Windmill Hill', 1, 33426, -77646, 165969, -3706, 0, 0, 45409, 60, 0, 0, 0),
+('Windmill Hill', 1, 33426, -76411, 166637, -3458, 0, 0, 11547, 60, 0, 0, 0),
+('Windmill Hill', 1, 33426, -74758, 168267, -3503, 0, 0, 10795, 60, 0, 0, 0),
+('Windmill Hill', 1, 33426, -74652, 168701, -3508, 0, 0, 6657, 60, 0, 0, 0),
+('Windmill Hill', 1, 33426, -74600, 168733, -3506, 0, 0, 48500, 60, 0, 0, 0),
+('Windmill Hill', 1, 33426, -69793, 171160, -3464, 0, 0, 45921, 60, 0, 0, 0);
+-- Giant Venomous Spider
+INSERT INTO `spawnlist` VALUES
+('Windmill Hill', 1, 20038, -69716, 169342, -3485, 0, 0, 10212, 60, 0, 0, 0),
+('Windmill Hill', 1, 20038, -69541, 168766, -3471, 0, 0, 40241, 60, 0, 0, 0),
+('Windmill Hill', 1, 20038, -69073, 174630, -3620, 0, 0, 18866, 60, 0, 0, 0),
+('Windmill Hill', 1, 20038, -68924, 169440, -3478, 0, 0, 18868, 60, 0, 0, 0),
+('Windmill Hill', 1, 20038, -68876, 173818, -3617, 0, 0, 23244, 60, 0, 0, 0),
+('Windmill Hill', 1, 20038, -68792, 175294, -3622, 0, 0, 6481, 60, 0, 0, 0);
+-- Arachnid Tracker
+INSERT INTO `spawnlist` VALUES
+('Windmill Hill', 1, 20043, -69195, 169136, -3482, 0, 0, 38811, 60, 0, 0, 0),
+('Windmill Hill', 1, 20043, -67328, 171696, -3629, 0, 0, 36783, 60, 0, 0, 0),
+('Windmill Hill', 1, 20043, -67035, 171772, -3629, 0, 0, 46572, 60, 0, 0, 0);
+-- Poisonous Spider
+INSERT INTO `spawnlist` VALUES
+('Windmill Hill', 1, 23094, -70317, 167698, -3465, 0, 0, 48906, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -70161, 167296, -3482, 0, 0, 58192, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -69733, 168204, -3457, 0, 0, 32146, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -68931, 168932, -3491, 0, 0, 8651, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -68586, 173326, -3636, 0, 0, 47964, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -68405, 174090, -3618, 0, 0, 51065, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -68242, 169566, -3495, 0, 0, 37355, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -68200, 170350, -3482, 0, 0, 17308, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -67690, 171483, -3480, 0, 0, 23829, 60, 0, 0, 0),
+('Windmill Hill', 1, 23094, -67524, 171043, -3492, 0, 0, 11130, 60, 0, 0, 0);
 
 -- Guard Kallesin & Guard Zenath
 INSERT INTO `spawnlist` VALUES
