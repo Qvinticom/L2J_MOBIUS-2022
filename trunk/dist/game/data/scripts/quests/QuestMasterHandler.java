@@ -200,6 +200,7 @@ import quests.Q10333_DisappearedSakum.Q10333_DisappearedSakum;
 import quests.Q10334_ReportingTheStatusOfWindmillHill.Q10334_ReportingTheStatusOfWindmillHill;
 import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
 import quests.Q10336_DividedSakumKanilov.Q10336_DividedSakumKanilov;
+import quests.Q10337_SakumsInfluence.Q10337_SakumsInfluence;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
@@ -420,6 +421,7 @@ public class QuestMasterHandler
 		Q10334_ReportingTheStatusOfWindmillHill.class,
 		Q10335_RequestToFindSakum.class,
 		Q10336_DividedSakumKanilov.class,
+		Q10337_SakumsInfluence.class,
 		Q10338_SeizeYourDestiny.class,
 		Q10365_SeekerEscort.class,
 		Q10390_KekropusLetter.class,
