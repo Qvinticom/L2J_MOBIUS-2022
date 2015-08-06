@@ -22,22 +22,16 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
 
 /**
  * YeSagira AI.
- * @author Stayway
+ * @author Stayway, Mobius
  */
 public class YeSagira extends AbstractNpcAI
 {
 	// Npcs
-	private static final int STALKER = 22992;
-	private static final int CRITTER = 22993;
-	private static final int CRAWLER = 22991;
-	private static final int KRAPHER = 22996;
-	private static final int AVIAN = 22994;
-	private static final int EYESAROCH = 23112;
 	private static final int GUARD_1 = 19152;
 	private static final int GUARD_2 = 19153;
 	
@@ -45,7 +39,6 @@ public class YeSagira extends AbstractNpcAI
 	{
 		super(YeSagira.class.getSimpleName(), "ai/group_template");
 		addSpawnId(GUARD_1, GUARD_2);
-		addSpawnId(STALKER, CRAWLER);
 	}
 	
 	@Override
@@ -59,9 +52,9 @@ public class YeSagira extends AbstractNpcAI
 				{
 					break;
 				}
-				if (nearby.isMonster() && ((nearby.getId() == STALKER) || (nearby.getId() == EYESAROCH) || (nearby.getId() == CRITTER) || (nearby.getId() == AVIAN) || (nearby.getId() == KRAPHER) || (nearby.getId() == CRAWLER)))
+				if (nearby.isMonster())
 				{
-					((L2MonsterInstance) npc).addDamage(nearby, 1, null);
+					((L2QuestGuardInstance) npc).addDamage(nearby, 1, null);
 					break;
 				}
 			}
@@ -73,14 +66,7 @@ public class YeSagira extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc.getId() == GUARD_1) || (npc.getId() == GUARD_2))
-		{
-			startQuestTimer("GUARD_AGGRO", 5000, npc, null);
-		}
-		else
-		{
-			npc.setState(1);
-		}
+		startQuestTimer("GUARD_AGGRO", 5000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
