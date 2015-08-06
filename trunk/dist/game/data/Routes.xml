@@ -1482,4 +1482,44 @@
 		<point X="-75246" Y="168848" Z="-3680" delay="0" run="false" />
 		<point X="-75108" Y="169969" Z="-3680" delay="0" run="false" />
 	</route>
+	<!-- YeSagira - Guard 1 -->
+	<route name="YeS_1" repeat="true" repeatStyle="conveyor">
+		<target id="33018" spawnX="-115105" spawnY="237378" spawnZ="-3089" /> 
+		<point X="-115428" Y="236690" Z="-3089" delay="1" run="true" />
+		<point X="-115545" Y="236003" Z="-3089" delay="0" run="true" />
+		<point X="-114689" Y="235415" Z="-3089" delay="2" run="true" />
+		<point X="-114203" Y="235531" Z="-3089" delay="0" run="true" />
+		<point X="-113715" Y="236304" Z="-3044" delay="1" run="true" />
+		<point X="-113667" Y="236689" Z="-3044" delay="2" run="true" />
+	</route>
+	<!-- YeSagira - Guard 2 -->
+	<route name="YeS_2" repeat="true" repeatStyle="conveyor">
+		<target id="33018" spawnX="-115169" spawnY="237486" spawnZ="-3089" /> 
+		<point X="-115430" Y="236690" Z="-3089" delay="0" run="true" />
+		<point X="-115545" Y="236003" Z="-3089" delay="0" run="true" />
+		<point X="-114692" Y="235415" Z="-3089" delay="1" run="true" />
+		<point X="-114203" Y="235531" Z="-3089" delay="0" run="true" />
+		<point X="-113715" Y="236304" Z="-3044" delay="0" run="true" />
+		<point X="-113667" Y="236689" Z="-3044" delay="2" run="true" />
+	</route>
+	<!-- YeSagira - Guard 3 -->
+	<route name="YeS_3" repeat="true" repeatStyle="conveyor">
+		<target id="33018" spawnX="-115175" spawnY="237373" spawnZ="-3089" /> 
+		<point X="-115440" Y="236694" Z="-3089" delay="2" run="true" />
+		<point X="-115547" Y="236004" Z="-3089" delay="1" run="true" />
+		<point X="-114692" Y="235415" Z="-3089" delay="0" run="true" />
+		<point X="-114205" Y="235530" Z="-3089" delay="0" run="true" />
+		<point X="-113714" Y="236304" Z="-3044" delay="1" run="true" />
+		<point X="-113669" Y="236689" Z="-3044" delay="3" run="true" />
+	</route>
+	<!-- YeSagira - Guard 4 -->
+	<route name="YeS_4" repeat="true" repeatStyle="conveyor">
+		<target id="33018" spawnX="-115202" spawnY="237414" spawnZ="-3089" /> 
+		<point X="-115440" Y="236694" Z="-3089" delay="1" run="true" />
+		<point X="-115548" Y="236004" Z="-3089" delay="1" run="true" />
+		<point X="-114691" Y="235415" Z="-3089" delay="1" run="true" />
+		<point X="-114205" Y="235530" Z="-3089" delay="0" run="true" />
+		<point X="-113715" Y="236304" Z="-3044" delay="1" run="true" />
+		<point X="-113670" Y="236689" Z="-3044" delay="0" run="true" />
+	</route>
 </routes>

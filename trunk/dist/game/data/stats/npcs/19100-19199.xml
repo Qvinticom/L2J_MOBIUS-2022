@@ -1264,12 +1264,11 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19152" level="10" type="L2Npc" name="Combat Soldier">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19152" level="10" type="L2Monster" name="Combat Soldier">
 		<race>HUMAN</race>
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
 			<vitals hp="258" hpRegen="7.5" mp="258" mpRegen="2.7" />
-			<attack physical="120" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="40" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
@@ -1280,21 +1279,25 @@
 			</speed>
 			<hit_time>334</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<skill_list>
 			<skill id="4416" level="14" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="500" isAggressive="false">
+			<clan_list>
+				<clan>SAGIRA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19153" level="10" type="L2Npc" name="Combat Soldier">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19153" level="10" type="L2Monster" name="Combat Soldier">
 		<race>HUMAN</race>
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
 			<vitals hp="258" hpRegen="7.5" mp="258" mpRegen="2.7" />
-			<attack physical="120" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="40" magical="663" random="30" critical="2" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
@@ -1305,10 +1308,15 @@
 			</speed>
 			<hit_time>334</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<skill_list>
 			<skill id="4416" level="14" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="500" isAggressive="false">
+			<clan_list>
+				<clan>SAGIRA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
