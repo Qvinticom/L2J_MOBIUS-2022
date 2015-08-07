@@ -55,8 +55,7 @@ public class PaganTemple extends AbstractNpcAI
 			}
 			else
 			{
-				npc.setInvisible(true);
-				startQuestTimer("SPAWN_TRIOL", 600000, npc, null, false); // 10 minutes delay
+				npc.deleteMe();
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -75,7 +74,7 @@ public class PaganTemple extends AbstractNpcAI
 			case TRIOL_HIGH_PRIEST:
 			{
 				npc.setInvisible(true);
-				startQuestTimer("SPAWN_TRIOL", 600000, npc, null, false); // 10 minutes delay
+				startQuestTimer("SPAWN_TRIOL", 10000, npc, null, false); // 10 seconds delay
 				break;
 			}
 		}
