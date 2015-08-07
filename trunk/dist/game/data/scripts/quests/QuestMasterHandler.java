@@ -202,6 +202,7 @@ import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
 import quests.Q10336_DividedSakumKanilov.Q10336_DividedSakumKanilov;
 import quests.Q10337_SakumsInfluence.Q10337_SakumsInfluence;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
+import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
@@ -423,6 +424,7 @@ public class QuestMasterHandler
 		Q10336_DividedSakumKanilov.class,
 		Q10337_SakumsInfluence.class,
 		Q10338_SeizeYourDestiny.class,
+		Q10358_DividedSakumPoslof.class,
 		Q10365_SeekerEscort.class,
 		Q10390_KekropusLetter.class,
 		Q10393_KekropusLetter_AClueCompleted.class,
