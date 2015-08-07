@@ -42,12 +42,7 @@ public class PaganTemple extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("SPAWN_TRIOL") && (npc != null))
-		{
-			npc.setInvisible(false);
-			startQuestTimer("DESPAWN_TRIOL", 10000, npc, null, false); // 10 seconds delay
-		}
-		else if (event.equals("DESPAWN_TRIOL") && (npc != null))
+		if (event.equals("DESPAWN_TRIOL") && (npc != null))
 		{
 			if (npc.isInCombat())
 			{
@@ -73,8 +68,7 @@ public class PaganTemple extends AbstractNpcAI
 			}
 			case TRIOL_HIGH_PRIEST:
 			{
-				npc.setInvisible(true);
-				startQuestTimer("SPAWN_TRIOL", 10000, npc, null, false); // 10 seconds delay
+				startQuestTimer("DESPAWN_TRIOL", 10000, npc, null, false); // 10 seconds delay
 				break;
 			}
 		}
