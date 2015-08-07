@@ -1266,6 +1266,7 @@
 	</npc>
 	<npc id="19152" level="10" type="L2QuestGuard" name="Combat Soldier">
 		<race>HUMAN</race>
+		<equipment lhand="102" rhand="129" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
 			<vitals hp="258" hpRegen="7.5" mp="258" mpRegen="2.7" />
 			<attack physical="40" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
