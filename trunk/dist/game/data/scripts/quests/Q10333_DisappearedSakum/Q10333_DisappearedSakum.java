@@ -46,7 +46,7 @@ public class Q10333_DisappearedSakum extends Quest
 	private static final int POISON_PREDATOR = 20050; // arachnid predator on l2wiki.com
 	private static final int SUSPICIOUS_BADGE = 17583; // suspicious mark on l2wiki.com
 	// Rewards
-	private static final long ADENA_REWARD = 800;
+	private static final long ADENA_REWARD = 80000;
 	private static final int EXP_REWARD = 180000;
 	private static final int SP_REWARD = 43;
 	// Other
@@ -258,7 +258,7 @@ public class Q10333_DisappearedSakum extends Quest
 			log.addNpc(VUKU_ORC_FIGHTER, qs.getInt(Integer.toString(VUKU_ORC_FIGHTER)));
 			killer.sendPacket(log);
 			
-			if ((qs.getInt(Integer.toString(LANGK_LIZARDMAN)) >= LANGK_LIZARDMAN_REQUIRED) && (qs.getInt(Integer.toString(VUKU_ORC_FIGHTER)) >= VUKU_ORC_FIGHTER_REQUIRED))
+			if ((qs.getInt(Integer.toString(LANGK_LIZARDMAN)) >= LANGK_LIZARDMAN_REQUIRED) && (qs.getInt(Integer.toString(VUKU_ORC_FIGHTER)) >= VUKU_ORC_FIGHTER_REQUIRED) && (qs.getQuestItemsCount(SUSPICIOUS_BADGE) >= SUSPICIOUS_BADGE_REQUIRED))
 			{
 				qs.setCond(3);
 			}
