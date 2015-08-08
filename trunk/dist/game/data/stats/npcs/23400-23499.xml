@@ -403,17 +403,32 @@
 		</collision>
 	</npc>
 	<npc id="23423" level="77" type="L2Monster" name="Mesmer Dragon">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="274158" sp="65" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="17142" hpRegen="7.5" mp="1574" mpRegen="2.7" />
+			<attack physical="11520" magical="10410" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1312" magical="1070" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="80" water="80" wind="80" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4416" level="10" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="44" />
@@ -434,17 +449,35 @@
 		</drop_lists>
 	</npc>
 	<npc id="23424" level="78" type="L2Monster" name="Gargoyle Dragon">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="297058" sp="71" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
+			<attack physical="12310" magical="11740" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1312" magical="1070" />
+			<attribute>
+				<attack type="MAGIC" value="300" />
+				<defence fire="80" water="180" wind="80" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5463" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
+			<skill id="4413" level="12" />
+		</skill_list>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
@@ -465,17 +498,33 @@
 		</drop_lists>
 	</npc>
 	<npc id="23425" level="78" type="L2Monster" name="Black Dragon">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="292767" sp="70" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
+			<attack physical="12310" magical="11740" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1312" magical="1070" />
+			<attribute>
+				<defence fire="180" water="80" wind="80" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" /> <!-- Not Done -->
+			<skill id="4412" level="12" />
+			<skill id="4413" level="12" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="33" />
@@ -496,17 +545,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23426" level="79" type="L2Monster" name="Emerald Dragon">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="321008" sp="77" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18768" hpRegen="7.5" mp="1641" mpRegen="2.7" />
+			<attack physical="13370" magical="16790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1612" magical="1270" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" /> <!-- Not Done -->
+			<skill id="4411" level="13" />
+			<skill id="4412" level="13" />
+			<skill id="4413" level="13" />
+		</skill_list>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="100" />
 			<height normal="40" />
@@ -527,17 +593,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23427" level="80" type="L2Monster" name="Sand Dragon">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="337462" sp="80" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+			<attack physical="14350" magical="12790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1612" magical="1270" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="180" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5465" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="14" />
+			<skill id="4412" level="13" />
+			<skill id="4413" level="13" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="38" />
 			<height normal="63" />
@@ -558,17 +641,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23428" level="80" type="L2Monster" name="Captain" title="Dragonblood">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="356719" sp="85" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+			<attack physical="12370" magical="10790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1712" magical="1670" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="180" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5465" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="14" />
+			<skill id="4412" level="14" />
+			<skill id="4413" level="14" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>BLOOD</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="22" />
 			<height normal="42" />
@@ -589,17 +689,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23429" level="79" type="L2Monster" name="Minion" title="Dragonblood">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<acquire exp="356719" sp="85" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="9384" hpRegen="7.5" mp="1641" mpRegen="2.7" />
+			<attack physical="9370" magical="7790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1012" magical="1010" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="180" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" />
+			<skill id="5465" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>BLOOD</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -620,17 +734,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23430" level="81" type="L2Monster" name="Prey Drake">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="414685" sp="99" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
+			<attack physical="14970" magical="13790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1712" magical="1670" />
+			<attribute>
+				<defence fire="180" water="80" wind="80" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="58" />
 			<height normal="61" />
@@ -651,17 +779,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23431" level="82" type="L2Monster" name="Beast Drake">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="525002" sp="126" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
+			<attack physical="15970" magical="13990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1812" magical="1705" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="14" />
+			<skill id="4412" level="14" />
+			<skill id="4413" level="14" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="40" />
@@ -682,17 +827,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23432" level="82" type="L2Monster" name="Dust Drake">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="484481" sp="116" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
+			<attack physical="14970" magical="13590" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1612" magical="1505" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="180" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5465" level="1" /> <!-- Not Done -->
+			<skill id="4411" level="13" />
+			<skill id="4412" level="13" />
+			<skill id="4413" level="13" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="48" />
 			<height normal="53.5" />
@@ -713,17 +875,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23433" level="83" type="L2Monster" name="Vampiric Drake">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="551084" sp="132" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="23014" hpRegen="7.5" mp="1777" mpRegen="2.7" />
+			<attack physical="15310" magical="10590" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1612" magical="1505" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="14" />
+			<skill id="4412" level="14" />
+			<skill id="4413" level="14" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="33" />
 			<height normal="70" />
@@ -744,17 +923,30 @@
 		</drop_lists>
 	</npc>
 	<npc id="23434" level="81" type="L2Monster" name="Dragon Hatchling">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="210188" sp="50" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
+			<attack physical="9310" magical="8590" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1112" magical="1005" />
+			<attribute>
+				<defence fire="180" water="80" wind="80" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="11.5" />
@@ -1147,17 +1339,26 @@
 		</drop_lists>
 	</npc>
 	<npc id="23447" level="81" type="L2Monster" name="Gust Spiral">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="210188" sp="50" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10386" hpRegen="7.5" mp="1708" mpRegen="2.7" />
+			<attack physical="10970" magical="9790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1112" magical="1070" />
+			<attribute>
+				<defence fire="180" water="80" wind="80" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" /> <!-- Not Done -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="30" />
