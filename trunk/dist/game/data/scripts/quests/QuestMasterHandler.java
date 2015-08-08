@@ -203,7 +203,9 @@ import quests.Q10336_DividedSakumKanilov.Q10336_DividedSakumKanilov;
 import quests.Q10337_SakumsInfluence.Q10337_SakumsInfluence;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
+import quests.Q10359_SakumsTrace.Q10359_SakumsTrace;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
+import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
 import quests.Q10397_KekropusLetter_ASuspiciousBadge.Q10397_KekropusLetter_ASuspiciousBadge;
@@ -425,7 +427,9 @@ public class QuestMasterHandler
 		Q10337_SakumsInfluence.class,
 		Q10338_SeizeYourDestiny.class,
 		Q10358_DividedSakumPoslof.class,
+		Q10359_SakumsTrace.class,
 		Q10365_SeekerEscort.class,
+		Q10368_RebellionOfMonsters.class,
 		Q10390_KekropusLetter.class,
 		Q10393_KekropusLetter_AClueCompleted.class,
 		Q10397_KekropusLetter_ASuspiciousBadge.class,
