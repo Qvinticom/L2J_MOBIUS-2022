@@ -98,6 +98,7 @@ public final class OlympiadGameTask implements Runnable
 		BATTLE_COUNTDOWN_SECOND,
 		BATTLE_STARTED,
 		BATTLE_IN_PROGRESS,
+		GAME_CANCELLED,
 		GAME_STOPPED,
 		TELEPORT_TO_TOWN,
 		CLEANUP,
@@ -201,7 +202,7 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (!startGame())
 					{
-						_state = GameState.GAME_STOPPED;
+						_state = GameState.GAME_CANCELLED;
 						break;
 					}
 					
@@ -271,6 +272,13 @@ public final class OlympiadGameTask implements Runnable
 						_state = GameState.GAME_STOPPED;
 					}
 					
+					break;
+				}
+				// Battle cancelled before teleport participants to the stadium
+				case GAME_CANCELLED:
+				{
+					stopGame();
+					_state = GameState.CLEANUP;
 					break;
 				}
 				// End of the battle
