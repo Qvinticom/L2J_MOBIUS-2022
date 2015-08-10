@@ -205,6 +205,7 @@ import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
 import quests.Q10359_SakumsTrace.Q10359_SakumsTrace;
 import quests.Q10361_RolesOfTheSeeker.Q10361_RolesOfTheSeeker;
+import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
@@ -430,6 +431,7 @@ public class QuestMasterHandler
 		Q10358_DividedSakumPoslof.class,
 		Q10359_SakumsTrace.class,
 		Q10361_RolesOfTheSeeker.class,
+		Q10362_CertificationOfTheSeeker.class,
 		Q10365_SeekerEscort.class,
 		Q10368_RebellionOfMonsters.class,
 		Q10390_KekropusLetter.class,
