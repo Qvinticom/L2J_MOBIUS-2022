@@ -45,7 +45,7 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 	private static final int DIRTY_PIECE_OF_PAPER = 17578;
 	private static final int DPP_REQUIRED = 5;
 	// Rewards
-	private static final int ADENA_REWARD = 55000;
+	private static final int ADENA_REWARD = 550;
 	private static final int EXP_REWARD = 95000;
 	private static final int SP_REWARD = 22;
 	private static final ItemHolder LEATHER_SHOES = new ItemHolder(37, 1);
