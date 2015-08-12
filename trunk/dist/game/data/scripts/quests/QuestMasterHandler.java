@@ -207,6 +207,7 @@ import quests.Q10359_SakumsTrace.Q10359_SakumsTrace;
 import quests.Q10361_RolesOfTheSeeker.Q10361_RolesOfTheSeeker;
 import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
 import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
+import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
@@ -434,6 +435,7 @@ public class QuestMasterHandler
 		Q10361_RolesOfTheSeeker.class,
 		Q10362_CertificationOfTheSeeker.class,
 		Q10363_RequestOfTheSeeker.class,
+		Q10364_ObligationsOfTheSeeker.class,
 		Q10365_SeekerEscort.class,
 		Q10368_RebellionOfMonsters.class,
 		Q10390_KekropusLetter.class,

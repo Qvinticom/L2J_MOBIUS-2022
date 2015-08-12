@@ -18,6 +18,8 @@
  */
 package quests.Q10365_SeekerEscort;
 
+import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
+
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -95,7 +97,7 @@ public final class Q10365_SeekerEscort extends Quest
 		addSpawnId(BLOODHOUND);
 		addMoveFinishedId(BLOODHOUND);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		// addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "no_level.html");
+		addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "no_level.html");
 	}
 	
 	@Override
