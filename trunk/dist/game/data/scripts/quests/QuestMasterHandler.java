@@ -209,6 +209,7 @@ import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
 import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
+import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
@@ -437,6 +438,7 @@ public class QuestMasterHandler
 		Q10363_RequestOfTheSeeker.class,
 		Q10364_ObligationsOfTheSeeker.class,
 		Q10365_SeekerEscort.class,
+		Q10366_RuinsStatusUpdate.class,
 		Q10368_RebellionOfMonsters.class,
 		Q10390_KekropusLetter.class,
 		Q10393_KekropusLetter_AClueCompleted.class,

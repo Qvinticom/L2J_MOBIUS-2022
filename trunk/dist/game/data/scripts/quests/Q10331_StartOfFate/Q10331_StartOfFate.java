@@ -18,6 +18,8 @@
  */
 package quests.Q10331_StartOfFate;
 
+import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
+
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -35,7 +37,7 @@ import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
  */
 public class Q10331_StartOfFate extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int FRANCO = 32153;
 	private static final int VALFAR = 32146;
 	private static final int RIVIAN = 32147;
@@ -59,7 +61,7 @@ public class Q10331_StartOfFate extends Quest
 		addTalkId(FRANCO, VALFAR, RIVIAN, TOOK, MOKA, DEVON, PANTHEON, LAKCIS, SEBION);
 		registerQuestItems(SARIL_NECKLACE, BELIS_MARK);
 		addCondMinLevel(18, "no_level.html");
-		// addCondCompletedQuest(Q10330_RuinsStatusUpdate.class.getSimpleName(), "no_prequest.html");
+		addCondCompletedQuest(Q10366_RuinsStatusUpdate.class.getSimpleName(), "no_prequest.html");
 	}
 	
 	@Override
