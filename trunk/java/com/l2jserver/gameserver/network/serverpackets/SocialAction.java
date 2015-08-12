@@ -43,4 +43,9 @@ public class SocialAction extends L2GameServerPacket
 		writeD(_actionId);
 		writeD(0x00); // TODO: Find me!
 	}
+	
+	public int getId()
+	{
+		return _actionId;
+	}
 }
