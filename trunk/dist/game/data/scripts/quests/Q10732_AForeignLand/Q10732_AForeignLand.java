@@ -42,8 +42,8 @@ public class Q10732_AForeignLand extends Quest
 		super(10732, Q10732_AForeignLand.class.getSimpleName(), "A Foreign Land");
 		addStartNpc(NAVARI);
 		addTalkId(NAVARI, GERETH);
-		addCondMaxLevel(MAX_LEVEL, "findme.html"); // TODO: Find proper HTML
-		addCondRace(Race.ERTHEIA, "findme.html"); // TODO: Find proper HTML
+		addCondMaxLevel(MAX_LEVEL, "no_quest.html"); // TODO: Find proper HTML
+		addCondRace(Race.ERTHEIA, "no_quest.html"); // TODO: Find proper HTML
 	}
 	
 	@Override
