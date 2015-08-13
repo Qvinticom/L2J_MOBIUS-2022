@@ -62,10 +62,10 @@ public class Q10735_ASpecialPower extends Quest
 		addStartNpc(AYANTHE);
 		addTalkId(AYANTHE, AYANTHE_2);
 		addKillId(FLOATO, RATEL);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
-		addCondRace(Race.ERTHEIA, "fixme.html");
-		addCondClassId(ClassId.ERTHEIA_WIZARD, "fixme.html");
-		addCondCompletedQuest(Q10734_DoOrDie.class.getSimpleName(), "fixme.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
+		addCondRace(Race.ERTHEIA, "no_quest.html");
+		addCondClassId(ClassId.ERTHEIA_WIZARD, "no_quest.html");
+		addCondCompletedQuest(Q10734_DoOrDie.class.getSimpleName(), "no_quest.html");
 	}
 	
 	@Override

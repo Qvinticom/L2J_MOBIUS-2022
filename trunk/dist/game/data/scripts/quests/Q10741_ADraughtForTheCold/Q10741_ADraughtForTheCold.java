@@ -103,20 +103,20 @@ public class Q10741_ADraughtForTheCold extends Quest
 		
 		if (qs.isCompleted())
 		{
-			htmltext = getAlreadyCompletedMsg(player);
+			return getAlreadyCompletedMsg(player);
 		}
 		
 		switch (npc.getId())
 		{
 			case SIVANTHE:
 			{
-				if (qs.isCreated())
-				{
-					htmltext = "33951-01.htm";
-				}
-				else if (qs.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = "33951-04.html";
+				}
+				else
+				{
+					htmltext = "33951-01.htm";
 				}
 				break;
 			}

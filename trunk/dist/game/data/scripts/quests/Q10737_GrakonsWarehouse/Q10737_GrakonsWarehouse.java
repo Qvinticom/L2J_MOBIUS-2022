@@ -48,8 +48,8 @@ public class Q10737_GrakonsWarehouse extends Quest
 		super(10737, Q10737_GrakonsWarehouse.class.getSimpleName(), "Grakon's Warehouse");
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, GRAKON);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
-		addCondRace(Race.ERTHEIA, "fixme.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
+		addCondRace(Race.ERTHEIA, "no_quest.html");
 		registerQuestItems(APPRENTICE_SUPPORT_BOX.getId());
 	}
 	

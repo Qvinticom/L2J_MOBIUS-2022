@@ -59,8 +59,8 @@ public class Q10742_AFurryFriend extends Quest
 		addStartNpc(LEIRA);
 		addTalkId(LEIRA, KIKU_S_CAVE);
 		addMoveFinishedId(RICKY);
-		addCondRace(Race.ERTHEIA, "fixme.html");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
+		addCondRace(Race.ERTHEIA, "no_quest.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
 	}
 	
 	@Override

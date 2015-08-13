@@ -48,8 +48,8 @@ public class Q10744_StrongerThanSteel extends Quest
 		addTalkId(MILONE, DOLKIN);
 		addKillId(TREANT, LEAFIE);
 		registerQuestItems(TREANT_LEAF, LEAFIE_LEAF);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
-		addCondRace(Race.ERTHEIA, "fixme.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
+		addCondRace(Race.ERTHEIA, "no_quest.html");
 	}
 	
 	@Override

@@ -59,8 +59,8 @@ public class Q10745_TheSecretIngredients extends Quest
 		addTalkId(DOLKIN, DOLKIN_INSTANCE, KARLA);
 		addKillId(KARAPHON, KEEN_HONEYBEE, KEEN_GROWLER);
 		registerQuestItems(SECRET_INGREDIENTS.getId(), DOLKIN_REPORT.getId());
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
-		addCondRace(Race.ERTHEIA, "fixme.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
+		addCondRace(Race.ERTHEIA, "no_quest.html");
 	}
 	
 	@Override

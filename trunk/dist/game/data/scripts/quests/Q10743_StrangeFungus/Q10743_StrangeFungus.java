@@ -52,7 +52,7 @@ public class Q10743_StrangeFungus extends Quest
 		addTalkId(LEIRA, MILONE);
 		addKillId(GROWLER, ROBUST_GROWLER, EVOLVED_GROWLER);
 		registerQuestItems(PECULIAR_MUSHROOM_SPORE);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "fixme.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
 	}
 	
 	@Override
