@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
  */
 public class Q10740_NeverForget extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int SIVANTHE = 33951;
 	private static final int REMEMBERANCE_TOWER = 33989;
 	// Items
@@ -89,7 +89,7 @@ public class Q10740_NeverForget extends Quest
 				}
 				break;
 			}
-			case "33951-02.htm":
+			case "33951-02.html":
 			{
 				htmltext = event;
 				break;
