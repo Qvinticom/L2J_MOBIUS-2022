@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
  */
 public class Q10742_AFurryFriend extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int LEIRA = 33952;
 	private static final int KIKU_S_CAVE = 33995;
 	private static final int RICKY = 19552;
@@ -58,6 +58,7 @@ public class Q10742_AFurryFriend extends Quest
 		super(10742, Q10742_AFurryFriend.class.getSimpleName(), "A Furry Friend");
 		addStartNpc(LEIRA);
 		addTalkId(LEIRA, KIKU_S_CAVE);
+		addFirstTalkId(KIKU_S_CAVE);
 		addMoveFinishedId(RICKY);
 		addCondRace(Race.ERTHEIA, "no_quest.html");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
@@ -98,25 +99,6 @@ public class Q10742_AFurryFriend extends Quest
 				npc.setScriptValue(0);
 				break;
 			}
-			case "33995-03.html":
-			{
-				if (qs.isStarted())
-				{
-					if (!player.getKnownList().getKnownCharactersInRadius(500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
-					{
-						showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 4500);
-						final L2Npc ricky = addSpawn(RICKY, player.getLocation());
-						ricky.setSummoner(player);
-						ricky.setTitle(player.getAppearance().getVisibleName());
-						ricky.setIsRunning(true);
-						ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-						startQuestTimer("check_ricky_distance", 1000, ricky, player, true);
-						startQuestTimer("unspawn_ricky_failed", 120000, ricky, player);
-						player.sendPacket(new ExSendUIEvent(player, false, false, 0, 120, NpcStringId.REMAINING_TIME));
-					}
-				}
-				break;
-			}
 			case "check_ricky_distance":
 			{
 				if (player == null)
@@ -128,8 +110,17 @@ public class Q10742_AFurryFriend extends Quest
 					// Follow was breaking sometimes, making sure it doesn't happen.
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					
-					final double distanceToRicky = player.calculateDistance(npc, false, true);
+					if ((L2Npc) npc.getKnownList().getKnownCharactersInRadius(300).stream().filter(n -> (n.getId() == LEIRA)).findFirst().orElse(null) != null)
+					{
+						qs.setCond(2, true);
+						showOnScreenMsg(player, NpcStringId.RICKY_HAS_FOUND_LEIRA, ExShowScreenMessage.TOP_CENTER, 4500);
+						player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
+						startQuestTimer("unspawn_ricky", 2000, npc, player);
+						cancelQuestTimer("check_ricky_distance", npc, player);
+						break;
+					}
 					
+					final double distanceToRicky = player.calculateDistance(npc, false, true);
 					if ((distanceToRicky > 200) && (distanceToRicky < 500))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_ARE_FAR_FROM_RICKY, ExShowScreenMessage.TOP_CENTER, 4500);
@@ -137,19 +128,6 @@ public class Q10742_AFurryFriend extends Quest
 					else if (distanceToRicky > 500)
 					{
 						startQuestTimer("unspawn_ricky_failed", 120000, npc, player);
-					}
-					else
-					{
-						final L2Npc leira = (L2Npc) npc.getKnownList().getKnownCharactersInRadius(300).stream().filter(n -> (n.getId() == LEIRA)).findFirst().orElse(null);
-						if (leira != null)
-						{
-							qs.setCond(2, true);
-							showOnScreenMsg(player, NpcStringId.RICKY_HAS_FOUND_LEIRA, ExShowScreenMessage.TOP_CENTER, 4500);
-							player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
-							startQuestTimer("unspawn_ricky", 2000, npc, player);
-							cancelQuestTimer("check_ricky_distance", npc, player);
-						}
-						break;
 					}
 				}
 				break;
@@ -178,42 +156,57 @@ public class Q10742_AFurryFriend extends Quest
 		
 		if (qs.isCompleted())
 		{
-			htmltext = getAlreadyCompletedMsg(player);
+			return getAlreadyCompletedMsg(player);
 		}
 		
-		switch (npc.getId())
+		if (npc.getId() == LEIRA)
 		{
-			case LEIRA:
+			if (qs.isCreated())
 			{
-				if (qs.isCreated())
-				{
-					htmltext = "33952-01.htm";
-				}
-				else if (qs.isCond(2))
-				{
-					giveAdena(player, 2500, true);
-					addExpAndSp(player, 52516, 5);
-					qs.exitQuest(false, true);
-					htmltext = "33952-04.html";
-				}
-				break;
+				htmltext = "33952-01.htm";
 			}
-			case KIKU_S_CAVE:
+			else if (qs.isCond(2))
 			{
-				if (qs.isStarted())
-				{
-					if (getRandomBoolean())
-					{
-						htmltext = "33995-01.html";
-					}
-					else
-					{
-						addAttackPlayerDesire(addSpawn(KIKU, player.getLocation(), true, 120000), player);
-						showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
-						htmltext = "33995-02.html";
-					}
-				}
-				break;
+				cancelQuestTimer("start_move_ricky", npc, player);
+				cancelQuestTimer("check_ricky_distance", npc, player);
+				cancelQuestTimer("unspawn_ricky_failed", npc, player);
+				giveAdena(player, 2500, true);
+				addExpAndSp(player, 52516, 5);
+				qs.exitQuest(false, true);
+				htmltext = "33952-04.html";
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
+		
+		if (qs.isStarted())
+		{
+			if (getRandomBoolean())
+			{
+				addAttackPlayerDesire(addSpawn(KIKU, player.getLocation(), true, 120000), player);
+				showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
+				htmltext = "33995-02.html";
+			}
+			else if (!player.getKnownList().getKnownCharactersInRadius(500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
+			{
+				showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 4500);
+				final L2Npc ricky = addSpawn(RICKY, player.getLocation());
+				ricky.setSummoner(player);
+				ricky.setTitle(player.getAppearance().getVisibleName());
+				ricky.setIsRunning(true);
+				ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+				ricky.setScriptValue(-1);
+				startQuestTimer("check_ricky_distance", 1000, ricky, player, true);
+				startQuestTimer("unspawn_ricky_failed", 120000, ricky, player);
+				player.sendPacket(new ExSendUIEvent(player, false, false, 0, 120, NpcStringId.REMAINING_TIME));
+				htmltext = "33995-03.html";
 			}
 		}
 		
@@ -237,8 +230,11 @@ public class Q10742_AFurryFriend extends Quest
 			}
 			case 3:
 			{
-				showOnScreenMsg(npc.getSummoner().getActingPlayer(), NpcStringId.RICKY_IS_ENTERING_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
-				npc.deleteMe();
+				if (npc.getScriptValue() != -1)
+				{
+					showOnScreenMsg(npc.getSummoner().getActingPlayer(), NpcStringId.RICKY_IS_ENTERING_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
+					npc.deleteMe();
+				}
 				break;
 			}
 		}
