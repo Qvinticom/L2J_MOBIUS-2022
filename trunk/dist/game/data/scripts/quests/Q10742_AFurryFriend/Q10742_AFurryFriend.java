@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class Q10742_AFurryFriend extends Quest
 {
@@ -202,7 +202,7 @@ public class Q10742_AFurryFriend extends Quest
 				ricky.setTitle(player.getAppearance().getVisibleName());
 				ricky.setIsRunning(true);
 				ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-				ricky.setScriptValue(-1);
+				ricky.setScriptValue(4);
 				startQuestTimer("check_ricky_distance", 1000, ricky, player, true);
 				startQuestTimer("unspawn_ricky_failed", 120000, ricky, player);
 				player.sendPacket(new ExSendUIEvent(player, false, false, 0, 120, NpcStringId.REMAINING_TIME));
@@ -230,11 +230,8 @@ public class Q10742_AFurryFriend extends Quest
 			}
 			case 3:
 			{
-				if (npc.getScriptValue() != -1)
-				{
-					showOnScreenMsg(npc.getSummoner().getActingPlayer(), NpcStringId.RICKY_IS_ENTERING_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
-					npc.deleteMe();
-				}
+				showOnScreenMsg(npc.getSummoner().getActingPlayer(), NpcStringId.RICKY_IS_ENTERING_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
+				npc.deleteMe();
 				break;
 			}
 		}
