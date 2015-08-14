@@ -253,6 +253,11 @@
 			<skill id="4416" level="1" />
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>SPORES</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -300,6 +305,11 @@
 			<skill id="4416" level="1" />
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>SPORES</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -343,6 +353,11 @@
 			<skill id="4416" level="12" />
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>SPORES</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
@@ -392,6 +407,11 @@
 			<skill id="4416" level="12" />
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>SPORES</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -437,6 +457,11 @@
 			<skill id="4416" level="6" />
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>SPORES</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -491,6 +516,11 @@
 			<skill id="4416" level="12" />
 			<skill id="4414" level="1" />
 		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>SPORES</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
