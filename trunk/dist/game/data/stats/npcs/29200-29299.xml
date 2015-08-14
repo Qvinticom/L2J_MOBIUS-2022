@@ -331,16 +331,17 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="29212" level="99" type="L2Monster" name="Octavis">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="29212" level="99" type="L2GrandBoss" name="Octavis">
+		<!-- Source http://l2on.net/en/?c=npc&id=29212 -->
 		<race>HUMANOID</race>
-		<acquire exp="29747926593" sp="118991706" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="46010814" hpRegen="7.5" mp="46010814" mpRegen="2.7" />
+		<acquire exp="29747926593" sp="47596682" raidPoints="1"/>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="46010814" hpRegen="7.5" mp="4601081" mpRegen="2.7" />
 			<attack physical="1000000" magical="800000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="10000" magical="8000" />
+			<defence physical="10000" magical="8000" evasion="3" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="300" water="300" wind="370" earth="240" holy="300" dark="300" />
+				<attack type="WIND" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -348,7 +349,8 @@
 			</speed>
 			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -365,74 +367,84 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="19462" min="1" max="1" chance="62" />
-				<item id="36287" min="1" max="1" chance="60" />
-				<item id="36290" min="1" max="1" chance="32" />
-				<item id="19448" min="1" max="1" chance="30" />
-				<item id="36164" min="1" max="1" chance="25" />
-				<item id="19447" min="1" max="1" chance="20" />
-				<item id="36163" min="1" max="1" chance="20" />
-				<item id="18560" min="1" max="1" chance="10" />
-				<item id="18561" min="1" max="1" chance="10" />
-				<item id="18562" min="1" max="1" chance="10" />
-				<item id="17747" min="1" max="1" chance="10" />
-				<item id="17700" min="1" max="1" chance="9" />
-				<item id="17699" min="1" max="1" chance="9" />
-				<item id="17698" min="1" max="1" chance="9" />
-				<item id="17702" min="1" max="1" chance="9" />
-				<item id="17701" min="1" max="1" chance="9" />
-				<item id="17697" min="1" max="1" chance="8.99999" />
-				<item id="19446" min="1" max="1" chance="8" />
-				<item id="17703" min="1" max="1" chance="4.5" />
-				<item id="17704" min="1" max="1" chance="4.5" />
-				<item id="17705" min="1" max="1" chance="4.5" />
-				<item id="17706" min="1" max="1" chance="4.5" />
-				<item id="17708" min="1" max="1" chance="4.5" />
-				<item id="17707" min="1" max="1" chance="4.5" />
-				<item id="17714" min="1" max="1" chance="3" />
-				<item id="17713" min="1" max="1" chance="3" />
-				<item id="17712" min="1" max="1" chance="3" />
-				<item id="17711" min="1" max="1" chance="3" />
-				<item id="17710" min="1" max="1" chance="3" />
-				<item id="17709" min="1" max="1" chance="3" />
-				<item id="19457" min="1" max="1" chance="1.5" />
-				<item id="17418" min="1" max="1" chance="1" />
-				<item id="19458" min="1" max="1" chance="1" />
-				<item id="17416" min="1" max="1" chance="1" />
-				<item id="17417" min="1" max="1" chance="1" />
-				<item id="17419" min="1" max="1" chance="1" />
-				<item id="17420" min="1" max="1" chance="1" />
-				<item id="17421" min="1" max="1" chance="1" />
-				<item id="17422" min="1" max="1" chance="1" />
-				<item id="17423" min="1" max="1" chance="1" />
-				<item id="17392" min="1" max="1" chance="1" />
-				<item id="17390" min="1" max="1" chance="1" />
-				<item id="17389" min="1" max="1" chance="1" />
-				<item id="17387" min="1" max="1" chance="1" />
-				<item id="17386" min="1" max="1" chance="1" />
-				<item id="17385" min="1" max="1" chance="1" />
-				<item id="17384" min="1" max="1" chance="1" />
-				<item id="17383" min="1" max="1" chance="1" />
-				<item id="17388" min="1" max="1" chance="1" />
-				<item id="17382" min="1" max="1" chance="1" />
-				<item id="17426" min="1" max="1" chance="1" />
-				<item id="17425" min="1" max="1" chance="1" />
-				<item id="17424" min="1" max="1" chance="1" />
-				<item id="17391" min="1" max="1" chance="1" />
-				<item id="19459" min="1" max="1" chance="0.6993" />
+				<item id="17408" min="1" max="1" chance="1.4705" /> <!-- Seraph Tunic Robe -->
+				<item id="19457" min="1" max="1" chance="3.4313" /> <!-- Octavis' Ring -->
+				<item id="17409" min="1" max="1" chance="2.4509" /> <!-- Seraph Stockings Robe -->
+				<item id="19458" min="1" max="1" chance="1.4705" /> <!-- Octavis' Earring -->
+				<item id="19459" min="1" max="1" chance="3.4313" /> <!-- Octavis' Necklace -->
+				<item id="19462" min="1" max="1" chance="20.40816" /> <!-- Octavis' Shirt -->
+				<item id="38043" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.075" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.075" /> <!-- Amaranthine Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.075" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.075" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.075" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.075" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.75" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.75" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="0.75" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="0.75" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.75" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.75" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="39483" min="1" max="1" chance="0.4901" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="3.9215" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39485" min="1" max="1" chance="1.9607" /> <!-- Alchemic Tome: Dye -->
+				<item id="37067" min="1" max="1" chance="2.04081" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37068" min="1" max="1" chance="4.4117" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37069" min="1" max="1" chance="4.08163" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37070" min="1" max="1" chance="8.16326" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37071" min="1" max="1" chance="8.16326" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37072" min="1" max="1" chance="4.08163" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37073" min="1" max="1" chance="12.24489" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37074" min="1" max="1" chance="10.20408" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="17747" min="1" max="1" chance="16.32653" /> <!-- Trace of Decaying Darkness -->
+				<item id="37075" min="1" max="1" chance="6.12244" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37076" min="1" max="1" chance="2.04081" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37077" min="1" max="1" chance="1.9607" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37078" min="1" max="1" chance="2.4509" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37079" min="1" max="1" chance="4.08163" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="3.4313" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37081" min="1" max="1" chance="3.9215" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37082" min="1" max="1" chance="2.9411" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37083" min="1" max="1" chance="10.20408" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37084" min="1" max="1" chance="2.04081" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37085" min="1" max="1" chance="3.9215" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37086" min="1" max="1" chance="4.08163" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="17397" min="1" max="1" chance="3.4313" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="1" max="1" chance="0.9803" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="1" max="1" chance="51.0204" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="48.97959" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="1.4705" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="0.9803" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="29213" level="98" type="L2Monster" name="Baylor" title="Warden">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) and http://l2wiki.com -->
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) and Source: http://l2on.net/en/?c=npc&id=29213 (Ertheia)-->
 		<race>DEMONIC</race>
-		<acquire exp="738701264" sp="2954805" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<acquire exp="738701264" sp="177288" />
+		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
 			<vitals hp="4101847" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="223536" magical="197808" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4541" magical="5550" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="34" />
@@ -440,7 +452,7 @@
 			</speed>
 			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="5228" level="2" />
 			<skill id="5223" level="1" />
@@ -464,62 +476,63 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36586" min="1" max="1" chance="70" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="45431" min="1" max="1" chance="19.80" /> <!-- Entrance Pass: Baylor -->
-				<item id="36574" min="1" max="1" chance="10.028" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="7.407" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="1.950" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Item Recipe: Eternal Sigil (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Item Recipe: Eternal Shoes (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Item Recipe: Eternal Gloves (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Pack -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack -->
-				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack -->
-				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack -->
-				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack -->
-				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack -->
-				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35349" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
-				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
-				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35350" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35351" min="1" max="1" chance="0.3" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35352" min="1" max="1" chance="0.3" /> <!-- Eternal Glove Ingredient -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35462" min="1" max="1" chance="0.17793" /> <!-- Recipe:Β Eternal Helmet (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3343" /> <!-- Recipe:Β Eternal Breastplate (60%) -->
+				<item id="35464" min="1" max="1" chance="0.71174" /> <!-- Recipe:Β Eternal Gaiters (60%) -->
+				<item id="35465" min="1" max="1" chance="0.35587" /> <!-- Recipe:Β Eternal Gauntlets (60%) -->
+				<item id="35466" min="1" max="1" chance="0.4361" /> <!-- Recipe:Β Eternal Boots (60%) -->
+				<item id="35338" min="1" max="1" chance="0.2035" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35467" min="1" max="1" chance="0.35587" /> <!-- Recipe:Β Eternal Shield (60%) -->
+				<item id="35339" min="1" max="1" chance="0.29069" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35340" min="1" max="1" chance="0.71174" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35468" min="1" max="1" chance="0.2762" /> <!-- Recipe:Β Eternal Leather Helmet (60%) -->
+				<item id="35469" min="1" max="1" chance="0.2762" /> <!-- Recipe:Β Eternal Leather Armor (60%) -->
+				<item id="35341" min="1" max="1" chance="0.2035" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="35342" min="1" max="1" chance="0.3053" /> <!-- Eternal Boot Ingredient -->
+				<item id="35470" min="1" max="1" chance="0.2326" /> <!-- Recipe:Β Eternal Leather Leggings (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3343" /> <!-- Recipe:Β Eternal Leather Gloves (60%) -->
+				<item id="35343" min="1" max="1" chance="0.2617" /> <!-- Eternal Shield Ingredient -->
+				<item id="35472" min="1" max="1" chance="0.29069" /> <!-- Recipe:Β Eternal Leather Boots (60%) -->
+				<item id="35344" min="1" max="1" chance="0.218" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35345" min="1" max="1" chance="0.3489" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35473" min="1" max="1" chance="0.3343" /> <!-- Recipe:Β Eternal Circlet (60%) -->
+				<item id="35346" min="1" max="1" chance="0.35587" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35474" min="1" max="1" chance="0.2471" /> <!-- Recipe:Β Eternal Tunic (60%) -->
+				<item id="35347" min="1" max="1" chance="0.88967" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35475" min="1" max="1" chance="0.17793" /> <!-- Recipe:Β Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.35587" /> <!-- Recipe:Β Eternal Gloves (60%) -->
+				<item id="35348" min="1" max="1" chance="0.2617" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35477" min="1" max="1" chance="0.71174" /> <!-- Recipe:Β Eternal Shoes (60%) -->
+				<item id="35349" min="1" max="1" chance="0.2617" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35478" min="1" max="1" chance="0.29069" /> <!-- Recipe:Β Eternal Sigil (60%) -->
+				<item id="35350" min="1" max="1" chance="0.17793" /> <!-- Eternal Tunic Ingredient -->
+				<item id="35351" min="1" max="1" chance="0.3053" /> <!-- Eternal Stocking Ingredient -->
+				<item id="35352" min="1" max="1" chance="0.5338" /> <!-- Eternal Glove Ingredient -->
+				<item id="35353" min="1" max="1" chance="0.407" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35354" min="1" max="1" chance="0.2617" /> <!-- Eternal Sigil Ingredient -->
+				<item id="36513" min="2" max="2" chance="82.02846" /> <!-- Elcyum Powder -->
+				<item id="38054" min="1" max="1" chance="0.1453" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.0872" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.0872" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.1308" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.1163" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.0581" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.1453" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.15989" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.0581" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.10169" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.0581" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.0726" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="0.0581" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="0.1453" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.1308" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.10169" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.10169" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="36574" min="1" max="1" chance="9.973" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="69.84" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="1.77935" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="45431" min="1" max="1" chance="17.97153" /> <!-- Entrance Pass: Baylor -->
+				<item id="17527" min="1" max="1" chance="6.9395" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -633,12 +646,13 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) and http://l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="4269384207" sp="17077544" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
 			<vitals hp="19813665" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="447072" magical="395616" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4541" magical="5550" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="267" dark="464" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="120" />
@@ -660,66 +674,67 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="17397" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate -->
-				<item id="17398" min="1" max="1" chance="0.3" /> <!--  Seraph Gaiters  -->
-				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor -->
-				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings -->
-				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic -->
-				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings -->
-				<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
-				<item id="30299" min="1" max="1" chance="80" /> <!-- Superior Giant's Codex - Discipline -->
-				<item id="19447" min="1" max="1" chance="50.71" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="50.62" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="30300" min="1" max="1" chance="18.30" /> <!-- Superior Giant's Codex - Oblivion -->
-				<item id="37069" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
-				<item id="37075" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
-				<item id="37080" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
-				<item id="37077" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
-				<item id="37084" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
-				<item id="37072" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
-				<item id="37082" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
-				<item id="37071" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
-				<item id="37083" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
-				<item id="37074" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
-				<item id="37073" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
-				<item id="37086" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
-				<item id="37078" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
-				<item id="37079" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
-				<item id="37067" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
-				<item id="37076" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
-				<item id="37070" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
-				<item id="37085" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
-				<item id="37081" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
-				<item id="37068" min="1" max="1" chance="5.532" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
-				<item id="38058" min="1" max="1" chance="0.75" /> <!-- Eternal Boots Crafting Pack -->
-				<item id="38059" min="1" max="1" chance="0.75" /> <!-- Eternal Shield Crafting Pack -->
-				<item id="38060" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Crafting Pack -->
-				<item id="38061" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor Crafting Pack -->
-				<item id="38062" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings Crafting Pack -->
-				<item id="38063" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Gloves Crafting Pack -->
-				<item id="38064" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boots Crafting Pack -->
-				<item id="38066" min="1" max="1" chance="0.75" /> <!-- Eternal Tunic Crafting Pack -->
-				<item id="38067" min="1" max="1" chance="0.75" /> <!-- Eternal Stockings Crafting Pack -->
-				<item id="38068" min="1" max="1" chance="0.75" /> <!-- Eternal Gloves Crafting Pack -->
-				<item id="38069" min="1" max="1" chance="0.75" /> <!-- Eternal Shoes Crafting Pack -->
-				<item id="38070" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil Crafting Pack -->
-				<item id="38057" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlets Crafting Pack -->
-				<item id="38056" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters Crafting Pack -->
-				<item id="38055" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Crafting Pack -->
-				<item id="38065" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Crafting Pack -->
-				<item id="30298" min="1" max="1" chance="0.75" /> <!-- Superior Giant's Codex - Mastery -->
-				<item id="38054" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Crafting Pack -->
-				<item id="38052" min="1" max="1" chance="0.075" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Robe -->
 				<item id="38043" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shaper Crafting Pack -->
 				<item id="38044" min="1" max="1" chance="0.075" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.075" /> <!-- Amaranthine Slasher Crafting Pack -->
 				<item id="38046" min="1" max="1" chance="0.075" /> <!-- Amaranthine Avenger Crafting Pack -->
 				<item id="38047" min="1" max="1" chance="0.075" /> <!-- Amaranthine Fighter Crafting Pack -->
-				<item id="38045" min="1" max="1" chance="0.075" /> <!-- Amaranthine Slasher Crafting Pack -->
-				<item id="38053" min="1" max="1" chance="0.075" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Crafting Pack -->
 				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Amaranthine Thrower Crafting Pack -->
 				<item id="38050" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shooter Crafting Pack -->
 				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Crafting Pack -->
-				<item id="38048" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.075" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.075" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="0.7633" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="1.145" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.3816" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.25439" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.6361" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.7633" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.6361" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.6361" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="1.145" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.6361" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="1.145" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.6361" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="0.5089" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="0.7633" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.7633" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.3816" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.8905" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
+				<item id="37067" min="1" max="1" chance="6.5934" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37068" min="1" max="1" chance="9.8901" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37069" min="1" max="1" chance="5.4945" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37070" min="1" max="1" chance="6.5934" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37071" min="1" max="1" chance="3.2967" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37072" min="1" max="1" chance="7.6923" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37073" min="1" max="1" chance="6.5934" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37074" min="1" max="1" chance="4.3956" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37075" min="1" max="1" chance="2.1978" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37076" min="1" max="1" chance="4.3956" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37077" min="1" max="1" chance="9.8901" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37078" min="1" max="1" chance="4.3956" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37079" min="1" max="1" chance="4.3956" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="5.4945" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="30297" min="1" max="1" chance="50.54945" /> <!-- Superior Giant's Codex -->
+				<item id="37081" min="1" max="1" chance="6.5934" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37082" min="1" max="1" chance="2.1978" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="30298" min="1" max="1" chance="1.6539" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="30299" min="1" max="1" chance="49.45054" /> <!-- Superior Giant's Codex - Discipline -->
+				<item id="37083" min="1" max="1" chance="2.1978" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="30300" min="1" max="1" chance="19.3384" /> <!-- Superior Giant's Codex - Oblivion -->
+				<item id="37084" min="1" max="1" chance="1.0989" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37085" min="1" max="1" chance="3.2967" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37086" min="1" max="1" chance="3.2967" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="17397" min="1" max="1" chance="0.5089" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="1" max="1" chance="54.94505" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="45.05494" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="0.25439" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="0.3816" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -1218,16 +1233,17 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="29236" level="99" type="L2Monster" name="Tauti">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="29236" level="99" type="L2GrandBoss" name="Tauti">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) and http://l2on.net/en/?c=npc&id=29236 -->
 		<race>DEMONIC</race>
-		<acquire exp="12833899848" sp="51335599" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<acquire exp="12833899848" sp="51335599" raidPoints="1"/>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="98413151" hpRegen="7.5" mp="98413151" mpRegen="2.7" />
 			<attack physical="600000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="6000" magical="4000" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="267" dark="464" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="240" dark="370" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1235,7 +1251,7 @@
 			</speed>
 			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
@@ -1246,81 +1262,88 @@
 			<skill id="5467" level="1" />
 			<skill id="16101" level="1" />
 		</skill_list>
-		<ai aggroRange="100" clanHelpRange="100" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36287" min="1" max="1" chance="50" />
-				<item id="36290" min="1" max="1" chance="35" />
-				<item id="36389" min="1" max="1" chance="25" />
-				<item id="19448" min="1" max="1" chance="20" />
-				<item id="36386" min="1" max="1" chance="15" />
-				<item id="19447" min="1" max="1" chance="10" />
-				<item id="19446" min="1" max="1" chance="8" />
-				<item id="17698" min="1" max="1" chance="7.5" />
-				<item id="17699" min="1" max="1" chance="7.5" />
-				<item id="17700" min="1" max="1" chance="7.5" />
-				<item id="17701" min="1" max="1" chance="7.5" />
-				<item id="17702" min="1" max="1" chance="7.5" />
-				<item id="17697" min="1" max="1" chance="7.5" />
-				<item id="17704" min="1" max="1" chance="5" />
-				<item id="17708" min="1" max="1" chance="5" />
-				<item id="17707" min="1" max="1" chance="5" />
-				<item id="17706" min="1" max="1" chance="5" />
-				<item id="17705" min="1" max="1" chance="5" />
-				<item id="17703" min="1" max="1" chance="5" />
-				<item id="17713" min="1" max="1" chance="3" />
-				<item id="17714" min="1" max="1" chance="3" />
-				<item id="17712" min="1" max="1" chance="3" />
-				<item id="17709" min="1" max="1" chance="3" />
-				<item id="17710" min="1" max="1" chance="3" />
-				<item id="17711" min="1" max="1" chance="3" />
-				<item id="35667" min="1" max="3" chance="2.5" />
-				<item id="17392" min="1" max="1" chance="1.6" />
-				<item id="17391" min="1" max="1" chance="1.6" />
-				<item id="17390" min="1" max="1" chance="1.6" />
-				<item id="17389" min="1" max="1" chance="1.6" />
-				<item id="17388" min="1" max="1" chance="1.6" />
-				<item id="17387" min="1" max="1" chance="1.6" />
-				<item id="17386" min="1" max="1" chance="1.6" />
-				<item id="17385" min="1" max="1" chance="1.6" />
-				<item id="17384" min="1" max="1" chance="1.6" />
-				<item id="17383" min="1" max="1" chance="1.6" />
-				<item id="17382" min="1" max="1" chance="1.6" />
-				<item id="35570" min="1" max="1" chance="1" />
-				<item id="17439" min="1" max="1" chance="0.3003" />
-				<item id="17440" min="1" max="1" chance="0.3003" />
-				<item id="17441" min="1" max="1" chance="0.3003" />
-				<item id="17442" min="1" max="1" chance="0.3003" />
-				<item id="17443" min="1" max="1" chance="0.3003" />
-				<item id="17444" min="1" max="1" chance="0.3003" />
-				<item id="17445" min="1" max="1" chance="0.3003" />
-				<item id="17438" min="1" max="1" chance="0.3003" />
-				<item id="17437" min="1" max="1" chance="0.3003" />
-				<item id="17436" min="1" max="1" chance="0.3003" />
-				<item id="17435" min="1" max="1" chance="0.3003" />
-				<item id="17434" min="1" max="1" chance="0.3003" />
-				<item id="17433" min="1" max="1" chance="0.3003" />
-				<item id="17432" min="1" max="1" chance="0.3003" />
-				<item id="17431" min="1" max="1" chance="0.3003" />
-				<item id="17430" min="1" max="1" chance="0.3003" />
-				<item id="17446" min="1" max="1" chance="0.3003" />
+				<item id="17408" min="1" max="1" chance="1.4736" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="0.8421" /> <!-- Seraph Stockings Robe -->
+				<item id="38043" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.075" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.075" /> <!-- Amaranthine Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.075" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.075" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.075" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.075" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="1.26309" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.421" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.421" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="1.26309" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.6315" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.421" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="1.0526" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.2105" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.8421" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.421" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.2105" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="0.6315" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="1.4736" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.8421" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.6315" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.421" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="39483" min="1" max="1" chance="1.26309" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="1.6842" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39485" min="1" max="1" chance="1.26309" /> <!-- Alchemic Tome: Dye -->
+				<item id="37067" min="1" max="1" chance="6.97674" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37068" min="1" max="1" chance="6.97674" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37069" min="1" max="1" chance="9.30232" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37070" min="1" max="1" chance="4.6315" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37071" min="1" max="1" chance="3.3684" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37072" min="1" max="1" chance="3.5789" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37073" min="1" max="1" chance="5.0526" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37074" min="1" max="1" chance="6.97674" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37075" min="1" max="1" chance="6.97674" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="35667" min="1" max="1" chance="6.97674" /> <!-- Tauti's Fragment -->
+				<item id="37076" min="1" max="1" chance="4.6315" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37077" min="1" max="1" chance="3.3684" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37078" min="1" max="1" chance="3.78939" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37079" min="1" max="1" chance="4.65116" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="2.32558" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37081" min="1" max="1" chance="9.30232" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37082" min="1" max="1" chance="4.421" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37083" min="1" max="1" chance="9.30232" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37084" min="1" max="1" chance="9.30232" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37085" min="1" max="1" chance="6.97674" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37086" min="1" max="1" chance="4.421" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="35570" min="1" max="1" chance="0.8421" /> <!-- Tauti's Ring -->
+				<item id="17397" min="1" max="1" chance="1.6842" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="1" max="1" chance="1.26309" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="1" max="1" chance="58.13953" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="41.86046" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="1.4736" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="1.26309" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="29237" level="99" type="L2Monster" name="Tauti">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="29237" level="99" type="L2GrandBoss" name="Tauti">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) / Source: http://l2on.net/en/?c=npc&id=29237 -->
 		<race>DEMONIC</race>
-		<acquire exp="16977958668" sp="67911864" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<acquire exp="16977958668" sp="67911864" raidPoints="1"/>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="238200786" hpRegen="7.5" mp="238200786" mpRegen="2.7" />
 			<attack physical="750000" magical="500000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="9000" magical="6000" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="267" dark="464" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="240" dark="370" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1328,7 +1351,7 @@
 			</speed>
 			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
@@ -1339,85 +1362,88 @@
 			<skill id="5467" level="1" />
 			<skill id="16101" level="1" />
 		</skill_list>
-		<ai aggroRange="100" clanHelpRange="100" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="18560" min="1" max="1" chance="33.3333" />
-				<item id="18561" min="1" max="1" chance="33.3333" />
-				<item id="18562" min="1" max="1" chance="33.3333" />
-				<item id="36287" min="1" max="1" chance="30" />
-				<item id="19448" min="1" max="1" chance="30" />
-				<item id="36290" min="1" max="1" chance="15" />
-				<item id="36389" min="1" max="1" chance="10" />
-				<item id="17700" min="1" max="1" chance="7.5" />
-				<item id="17699" min="1" max="1" chance="7.5" />
-				<item id="17697" min="1" max="1" chance="7.5" />
-				<item id="17701" min="1" max="1" chance="7.5" />
-				<item id="19447" min="1" max="1" chance="7.5" />
-				<item id="17702" min="1" max="1" chance="7.5" />
-				<item id="17698" min="1" max="1" chance="7.49999" />
-				<item id="35667" min="1" max="3" chance="5" />
-				<item id="17707" min="1" max="1" chance="5" />
-				<item id="17703" min="1" max="1" chance="5" />
-				<item id="17704" min="1" max="1" chance="5" />
-				<item id="17705" min="1" max="1" chance="5" />
-				<item id="17706" min="1" max="1" chance="5" />
-				<item id="19446" min="1" max="1" chance="5" />
-				<item id="17708" min="1" max="1" chance="5" />
-				<item id="36386" min="1" max="1" chance="2.5" />
-				<item id="17709" min="1" max="1" chance="2.5" />
-				<item id="17710" min="1" max="1" chance="2.5" />
-				<item id="17712" min="1" max="1" chance="2.5" />
-				<item id="17713" min="1" max="1" chance="2.5" />
-				<item id="17714" min="1" max="1" chance="2.5" />
-				<item id="17711" min="1" max="1" chance="2.5" />
-				<item id="35570" min="1" max="1" chance="2" />
-				<item id="17433" min="1" max="1" chance="0.75188" />
-				<item id="35568" min="1" max="1" chance="0.75188" />
-				<item id="17443" min="1" max="1" chance="0.75188" />
-				<item id="17442" min="1" max="1" chance="0.75188" />
-				<item id="17441" min="1" max="1" chance="0.75188" />
-				<item id="17440" min="1" max="1" chance="0.75188" />
-				<item id="17439" min="1" max="1" chance="0.75188" />
-				<item id="17438" min="1" max="1" chance="0.75188" />
-				<item id="17437" min="1" max="1" chance="0.75188" />
-				<item id="17436" min="1" max="1" chance="0.75188" />
-				<item id="17434" min="1" max="1" chance="0.75188" />
-				<item id="17432" min="1" max="1" chance="0.75188" />
-				<item id="17431" min="1" max="1" chance="0.75188" />
-				<item id="17444" min="1" max="1" chance="0.75188" />
-				<item id="17445" min="1" max="1" chance="0.75188" />
-				<item id="17446" min="1" max="1" chance="0.75188" />
-				<item id="17435" min="1" max="1" chance="0.75188" />
-				<item id="17430" min="1" max="1" chance="0.75188" />
-				<item id="17418" min="1" max="1" chance="0.3003" />
-				<item id="17416" min="1" max="1" chance="0.3003" />
-				<item id="17425" min="1" max="1" chance="0.3003" />
-				<item id="17424" min="1" max="1" chance="0.3003" />
-				<item id="17423" min="1" max="1" chance="0.3003" />
-				<item id="17419" min="1" max="1" chance="0.3003" />
-				<item id="17417" min="1" max="1" chance="0.3003" />
-				<item id="17426" min="1" max="1" chance="0.3003" />
-				<item id="17421" min="1" max="1" chance="0.3003" />
-				<item id="17420" min="1" max="1" chance="0.3003" />
-				<item id="17422" min="1" max="1" chance="0.3003" />
+				<item id="17408" min="1" max="1" chance="3.324" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="3.306" /> <!-- Seraph Stockings Robe -->
+				<item id="38043" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.3" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.3" /> <!-- Amaranthine Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.3" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.3" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.3" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.3" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.3" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.3" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.75" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.75" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="0.75" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="0.75" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.75" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.75" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="39483" min="1" max="1" chance="1.7239" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="1.687" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39485" min="1" max="1" chance="1.725" /> <!-- Alchemic Tome: Dye -->
+				<item id="37067" min="1" max="1" chance="5.02" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37068" min="1" max="1" chance="4.961" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37069" min="1" max="1" chance="5.063" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37070" min="1" max="1" chance="5.002" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37071" min="1" max="1" chance="4.9349" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37072" min="1" max="1" chance="4.933" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37073" min="1" max="1" chance="5.034" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37074" min="1" max="1" chance="5.036" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="35667" min="1" max="1" chance="9.96599" /> <!-- Tauti's Fragment -->
+				<item id="37075" min="1" max="1" chance="4.96699" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37076" min="1" max="1" chance="5.013" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37077" min="1" max="1" chance="5.04589" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37078" min="1" max="1" chance="4.933" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37079" min="1" max="1" chance="4.943" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="5.004" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37081" min="1" max="1" chance="5.013" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37082" min="1" max="1" chance="4.989" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37083" min="1" max="1" chance="4.956" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37084" min="1" max="1" chance="5.0439" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37085" min="1" max="1" chance="4.9959" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37086" min="1" max="1" chance="5.042" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="35570" min="1" max="1" chance="1.938" /> <!-- Tauti's Ring -->
+				<item id="17397" min="1" max="1" chance="3.367" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="1" max="1" chance="3.37799" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="1" max="1" chance="49.49" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="49.02" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="3.267" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="3.366" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="29238" level="99" type="L2Monster" name="Tauti">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="29238" level="99" type="L2RaidBoss" name="Tauti">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) / http://l2on.net/en/?c=npc&id=29238 -->
 		<race>DEMONIC</race>
-		<acquire exp="16977958668" sp="67911864" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<acquire exp="16977958668" sp="67911864" raidPoints="1"/>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="238200786" hpRegen="7.5" mp="238200786" mpRegen="2.7" />
 			<attack physical="750000" magical="500000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="9000" magical="6000" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="267" dark="464" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="240" dark="370" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1425,7 +1451,7 @@
 			</speed>
 			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
@@ -1436,72 +1462,74 @@
 			<skill id="5467" level="1" />
 			<skill id="16101" level="1" />
 		</skill_list>
-		<ai aggroRange="100" clanHelpRange="100" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36287" min="1" max="1" chance="60" />
-				<item id="19448" min="1" max="1" chance="60" />
-				<item id="18560" min="1" max="1" chance="33.3333" />
-				<item id="18561" min="1" max="1" chance="33.3333" />
-				<item id="18562" min="1" max="1" chance="33.3333" />
-				<item id="36290" min="1" max="1" chance="30" />
-				<item id="36389" min="1" max="1" chance="20" />
-				<item id="17699" min="1" max="1" chance="15" />
-				<item id="17698" min="1" max="1" chance="15" />
-				<item id="17697" min="1" max="1" chance="15" />
-				<item id="17700" min="1" max="1" chance="15" />
-				<item id="17701" min="1" max="1" chance="15" />
-				<item id="19447" min="1" max="1" chance="15" />
-				<item id="17702" min="1" max="1" chance="15" />
-				<item id="35667" min="1" max="3" chance="10" />
-				<item id="17707" min="1" max="1" chance="10" />
-				<item id="17703" min="1" max="1" chance="10" />
-				<item id="17704" min="1" max="1" chance="10" />
-				<item id="17705" min="1" max="1" chance="10" />
-				<item id="17706" min="1" max="1" chance="10" />
-				<item id="19446" min="1" max="1" chance="10" />
-				<item id="17708" min="1" max="1" chance="9.99999" />
-				<item id="36386" min="1" max="1" chance="5" />
-				<item id="17709" min="1" max="1" chance="5" />
-				<item id="17710" min="1" max="1" chance="5" />
-				<item id="17712" min="1" max="1" chance="5" />
-				<item id="17713" min="1" max="1" chance="5" />
-				<item id="17714" min="1" max="1" chance="5" />
-				<item id="17711" min="1" max="1" chance="5" />
-				<item id="35570" min="1" max="1" chance="4" />
-				<item id="17433" min="1" max="1" chance="0.75188" />
-				<item id="35568" min="1" max="1" chance="0.75188" />
-				<item id="17443" min="1" max="1" chance="0.75188" />
-				<item id="17442" min="1" max="1" chance="0.75188" />
-				<item id="17441" min="1" max="1" chance="0.75188" />
-				<item id="17440" min="1" max="1" chance="0.75188" />
-				<item id="17439" min="1" max="1" chance="0.75188" />
-				<item id="17438" min="1" max="1" chance="0.75188" />
-				<item id="17437" min="1" max="1" chance="0.75188" />
-				<item id="17436" min="1" max="1" chance="0.75188" />
-				<item id="17434" min="1" max="1" chance="0.75188" />
-				<item id="17432" min="1" max="1" chance="0.75188" />
-				<item id="17431" min="1" max="1" chance="0.75188" />
-				<item id="17444" min="1" max="1" chance="0.75188" />
-				<item id="17445" min="1" max="1" chance="0.75188" />
-				<item id="17446" min="1" max="1" chance="0.75188" />
-				<item id="17435" min="1" max="1" chance="0.75188" />
-				<item id="17430" min="1" max="1" chance="0.75188" />
-				<item id="17418" min="1" max="1" chance="0.3003" />
-				<item id="17416" min="1" max="1" chance="0.3003" />
-				<item id="17425" min="1" max="1" chance="0.3003" />
-				<item id="17424" min="1" max="1" chance="0.3003" />
-				<item id="17423" min="1" max="1" chance="0.3003" />
-				<item id="17419" min="1" max="1" chance="0.3003" />
-				<item id="17417" min="1" max="1" chance="0.3003" />
-				<item id="17426" min="1" max="1" chance="0.3003" />
-				<item id="17421" min="1" max="1" chance="0.3003" />
-				<item id="17420" min="1" max="1" chance="0.3003" />
-				<item id="17422" min="1" max="1" chance="0.3003" />
+				<item id="17408" min="1" max="1" chance="5" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="1" /> <!-- Seraph Stockings Robe -->
+				<item id="38043" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.3" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.3" /> <!-- Amaranthine Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.3" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.3" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.3" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.3" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.3" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.3" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.75" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.75" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="0.75" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="0.75" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.75" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.75" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="39483" min="1" max="1" chance="1.642" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="1.664" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39485" min="1" max="1" chance="1.688" /> <!-- Alchemic Tome: Dye -->
+				<item id="37067" min="1" max="1" chance="3" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37068" min="1" max="1" chance="13.7931" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37069" min="1" max="1" chance="4" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37070" min="1" max="1" chance="4" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37071" min="1" max="1" chance="3" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37072" min="1" max="1" chance="3.44827" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37073" min="1" max="1" chance="4" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37074" min="1" max="1" chance="3" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="35667" min="1" max="1" chance="17.24137" /> <!-- Tauti's Fragment -->
+				<item id="37075" min="1" max="1" chance="6" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37076" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37077" min="1" max="1" chance="12" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37078" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37079" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37081" min="1" max="1" chance="3" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37082" min="1" max="1" chance="2" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37083" min="1" max="1" chance="4" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37084" min="1" max="1" chance="3.44827" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37085" min="1" max="1" chance="2" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37086" min="1" max="1" chance="10.34482" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="35570" min="1" max="1" chance="1.942" /> <!-- Tauti's Ring -->
+				<item id="17397" min="1" max="1" chance="4" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="1" max="1" chance="2" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="1" max="1" chance="65.51724" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="34.48275" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="2" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="4" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -1538,16 +1566,17 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="29240" level="99" type="L2Monster" name="Lindvior" title="Wind Dragon">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="29240" level="99" type="L2RaidBoss" name="Lindvior" title="Wind Dragon">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) / http://l2on.net/en/?c=npc&id=29240 -->
 		<race>DRAGON</race>
-		<acquire exp="183572573184" sp="371265743" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<acquire exp="183572573184" sp="293716117" raidPoints="1"/>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="1641657225" hpRegen="7.5" mp="1641657225" mpRegen="2.7" />
 			<attack physical="300000" magical="250000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="15000" magical="12500" />
 			<attribute>
-				<defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" />
+				<defence fire="300" water="300" wind="370" earth="240" holy="300" dark="300" />
+				<attack type="WIND" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="120" />
@@ -1555,93 +1584,87 @@
 			</speed>
 			<hit_time>3819</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="4416" level="10" />
 			<skill id="15638" level="1" />
 		</skill_list>
-		<ai aggroRange="2000" clanHelpRange="2000" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="2000" isAggressive="false" />
 		<collision>
 			<radius normal="350" />
 			<height normal="210" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36287" min="1" max="3" chance="100" />
-				<item id="36414" min="1" max="2" chance="100" />
-				<item id="35568" min="1" max="1" chance="100" />
-				<item id="19447" min="1" max="3" chance="100" />
-				<item id="19448" min="1" max="3" chance="100" />
-				<item id="35569" min="1" max="3" chance="100" />
-				<item id="19446" min="1" max="2" chance="100" />
-				<item id="36290" min="1" max="1" chance="100" />
-				<item id="36946" min="1" max="1" chance="66" />
-				<item id="18561" min="1" max="1" chance="33.3333" />
-				<item id="18560" min="1" max="1" chance="33.3333" />
-				<item id="18562" min="1" max="1" chance="33.3333" />
-				<item id="17430" min="1" max="1" chance="20" />
-				<item id="17446" min="1" max="1" chance="20" />
-				<item id="17445" min="1" max="1" chance="20" />
-				<item id="17444" min="1" max="1" chance="20" />
-				<item id="17441" min="1" max="1" chance="20" />
-				<item id="17435" min="1" max="1" chance="20" />
-				<item id="17434" min="1" max="1" chance="20" />
-				<item id="17433" min="1" max="1" chance="20" />
-				<item id="17440" min="1" max="1" chance="20" />
-				<item id="17439" min="1" max="1" chance="20" />
-				<item id="17436" min="1" max="1" chance="20" />
-				<item id="17431" min="1" max="1" chance="16.6667" />
-				<item id="17437" min="1" max="1" chance="16.6667" />
-				<item id="17432" min="1" max="1" chance="16.6667" />
-				<item id="17442" min="1" max="1" chance="16.6667" />
-				<item id="17443" min="1" max="1" chance="16.6667" />
-				<item id="17438" min="1" max="1" chance="16.6667" />
-				<item id="17421" min="1" max="1" chance="9.09091" />
-				<item id="17418" min="1" max="1" chance="9.09091" />
-				<item id="17416" min="1" max="1" chance="9.09091" />
-				<item id="17422" min="1" max="1" chance="9.09091" />
-				<item id="17423" min="1" max="1" chance="9.09091" />
-				<item id="17424" min="1" max="1" chance="9.09091" />
-				<item id="17425" min="1" max="1" chance="9.09091" />
-				<item id="17419" min="1" max="1" chance="9.09091" />
-				<item id="17420" min="1" max="1" chance="9.09091" />
-				<item id="17426" min="1" max="1" chance="9.09091" />
-				<item id="17417" min="1" max="1" chance="9.0909" />
-				<item id="18083" min="1" max="1" chance="5.88236" />
-				<item id="18094" min="1" max="1" chance="5.88236" />
-				<item id="18099" min="1" max="1" chance="5.88236" />
-				<item id="18088" min="1" max="1" chance="5.88236" />
-				<item id="18089" min="1" max="1" chance="5.88236" />
-				<item id="18086" min="1" max="1" chance="5.88235" />
-				<item id="18087" min="1" max="1" chance="5.88235" />
-				<item id="18084" min="1" max="1" chance="5.88235" />
-				<item id="18098" min="1" max="1" chance="5.88235" />
-				<item id="18097" min="1" max="1" chance="5.88235" />
-				<item id="18090" min="1" max="1" chance="5.88235" />
-				<item id="18091" min="1" max="1" chance="5.88235" />
-				<item id="18096" min="1" max="1" chance="5.88235" />
-				<item id="18095" min="1" max="1" chance="5.88235" />
-				<item id="18085" min="1" max="1" chance="5.88235" />
-				<item id="18093" min="1" max="1" chance="5.88235" />
-				<item id="18092" min="1" max="1" chance="5.88235" />
-				<item id="18071" min="1" max="1" chance="5" />
-				<item id="18079" min="1" max="1" chance="5" />
-				<item id="18078" min="1" max="1" chance="5" />
-				<item id="18077" min="1" max="1" chance="5" />
-				<item id="18076" min="1" max="1" chance="5" />
-				<item id="18075" min="1" max="1" chance="5" />
-				<item id="18069" min="1" max="1" chance="5" />
-				<item id="18070" min="1" max="1" chance="5" />
-				<item id="18072" min="1" max="1" chance="5" />
-				<item id="18073" min="1" max="1" chance="5" />
-				<item id="18074" min="1" max="1" chance="5" />
-				<item id="36440" min="1" max="1" chance="0.4" />
-				<item id="36438" min="1" max="1" chance="0.4" />
-				<item id="36437" min="1" max="1" chance="0.4" />
-				<item id="36436" min="1" max="1" chance="0.4" />
-				<item id="36435" min="1" max="1" chance="0.4" />
-				<item id="36434" min="1" max="1" chance="0.4" />
-				<item id="36439" min="1" max="1" chance="0.4" />
+				<item id="18560" min="1" max="1" chance="29.4117" /> <!-- Yellow Soul Crystal (R99-grade) -->
+				<item id="18561" min="1" max="1" chance="38.2352" /> <!-- Teal Soul Crystal (R99-grade) -->
+				<item id="18562" min="1" max="1" chance="32.3529" /> <!-- Purple Soul Crystal (R99-grade) -->
+				<item id="17416" min="2" max="2" chance="8.82349" /> <!-- Amaranthine Shaper -->
+				<item id="17417" min="2" max="2" chance="17.64699" /> <!-- Amaranthine Cutter -->
+				<item id="17418" min="1" max="1" chance="5.8823" /> <!-- Amaranthine Slasher -->
+				<item id="17419" min="1" max="1" chance="9.105" /> <!-- Amaranthine Avenger -->
+				<item id="37772" min="1" max="1" chance="61.7647" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="17420" min="1" max="1" chance="17.64699" /> <!-- Amaranthine Fighter -->
+				<item id="17421" min="1" max="1" chance="5.8823" /> <!-- Amaranthine Stormer -->
+				<item id="17422" min="1" max="1" chance="5.8823" /> <!-- Amaranthine Thrower -->
+				<item id="17423" min="1" max="1" chance="5.8823" /> <!-- Amaranthine Shooter -->
+				<item id="17424" min="1" max="1" chance="11.7647" /> <!-- Amaranthine Buster -->
+				<item id="17425" min="2" max="2" chance="11.7647" /> <!-- Amaranthine Caster -->
+				<item id="17426" min="2" max="2" chance="8.82349" /> <!-- Amaranthine Retributer -->
+				<item id="37781" min="1" max="1" chance="38.2352" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
+				<item id="17430" min="1" max="1" chance="29.4117" /> <!-- Eternal Helmet Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="5.8823" /> <!-- Eternal Breastplate Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="23.5294" /> <!-- Eternal Gaiters Heavy Armor -->
+				<item id="17433" min="1" max="1" chance="17.64699" /> <!-- Eternal Gauntlets Heavy Armor -->
+				<item id="17434" min="1" max="1" chance="11.7647" /> <!-- Eternal Boots Heavy Armor -->
+				<item id="17435" min="1" max="1" chance="11.7647" /> <!-- Eternal Shield Heavy Armor -->
+				<item id="17436" min="2" max="2" chance="11.7647" /> <!-- Eternal Leather Helmet Light Armor -->
+				<item id="17437" min="1" max="1" chance="23.5294" /> <!-- Eternal Leather Armor Light Armor -->
+				<item id="17438" min="1" max="1" chance="35.2941" /> <!-- Eternal Leather Leggings Light Armor -->
+				<item id="17439" min="1" max="1" chance="26.4705" /> <!-- Eternal Leather Gloves Light Armor -->
+				<item id="17440" min="1" max="1" chance="2.9411" /> <!-- Eternal Leather Boots Light Armor -->
+				<item id="17697" min="1" max="1" chance="29.4117" /> <!-- Lv. 5 Giant STR Dye STR +5 -->
+				<item id="17441" min="1" max="1" chance="14.7058" /> <!-- Eternal Circlet Robe -->
+				<item id="17698" min="1" max="1" chance="20.5882" /> <!-- Lv. 5 Giant DEX Dye DEX +5 -->
+				<item id="36386" min="10" max="10" chance="17.64699" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="17442" min="1" max="1" chance="17.64699" /> <!-- Eternal Tunic Robe -->
+				<item id="17443" min="1" max="1" chance="14.7058" /> <!-- Eternal Stockings Robe -->
+				<item id="17699" min="1" max="1" chance="11.7647" /> <!-- Lv. 5 Giant CON Dye CON +5 -->
+				<item id="17700" min="1" max="1" chance="20.5882" /> <!-- Lv. 5 Giant INT Dye INT +5 -->
+				<item id="17444" min="2" max="2" chance="14.7058" /> <!-- Eternal Gloves Robe -->
+				<item id="36389" min="10" max="10" chance="11.7647" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="17701" min="1" max="1" chance="8.82349" /> <!-- Lv. 5 Giant WIT Dye Wit +5 -->
+				<item id="17445" min="2" max="2" chance="8.82349" /> <!-- Eternal Shoes Robe -->
+				<item id="17446" min="1" max="1" chance="29.4117" /> <!-- Eternal Sigil Robe -->
+				<item id="17702" min="1" max="1" chance="8.82349" /> <!-- Lv. 5 Giant MEN Dye Men +5 -->
+				<item id="17703" min="1" max="1" chance="11.7647" /> <!-- Lv. 5 Ancient STR Dye STR +5 / Fire Resistance +25 -->
+				<item id="17704" min="1" max="1" chance="20.5882" /> <!-- Lv. 5 Ancient DEX Dye DEX +5 / Earth Resistance +25 -->
+				<item id="17705" min="1" max="1" chance="14.7058" /> <!-- Lv. 5 Ancient CON Dye CON +5 / Dark Resistance +25 -->
+				<item id="17706" min="1" max="1" chance="17.64699" /> <!-- Lv. 5 Ancient INT Dye INT +5 / Water Resistance +25 -->
+				<item id="17707" min="1" max="1" chance="20.5882" /> <!-- Lv. 5 Ancient WIT Dye WIT +5 / Wind Resistance +25 -->
+				<item id="17708" min="1" max="1" chance="14.7058" /> <!-- Lv. 5 Ancient MEN Dye MEN +5 / Holy Resistance +25 -->
+				<item id="17709" min="1" max="1" chance="8.82349" /> <!-- Lv. 5 Legendary STR Dye STR +5 / DEX +1 / Fire Resistance +25 -->
+				<item id="17710" min="1" max="1" chance="23.5294" /> <!-- Lv. 5 Legendary DEX Dye DEX +5 / CON +1 / Earth Resistance +25 -->
+				<item id="17711" min="1" max="1" chance="11.7647" /> <!-- Lv. 5 Legendary CON Dye CON +5 / STR +1 / Dark Resistance +25 -->
+				<item id="17712" min="1" max="1" chance="8.82349" /> <!-- Lv. 5 Legendary INT Dye INT +5 / WIT +1 / Water Resistance +25 -->
+				<item id="17713" min="1" max="1" chance="23.5294" /> <!-- Lv. 5 Legendary WIT Dye WIT +5 / MEN +1 / Wind Resistance +25 -->
+				<item id="17714" min="1" max="1" chance="23.5294" /> <!-- Lv. 5 Legendary MEN Dye MEN +5 / INT +1 / Holy Resistance +25 -->
+				<item id="39483" min="1" max="1" chance="29.4117" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="41.1764" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39485" min="1" max="1" chance="23.5294" /> <!-- Alchemic Tome: Dye -->
+				<item id="36414" min="1" max="1" chance="100" /> <!-- Dragon Claw -->
+				<item id="36162" min="1" max="1" chance="58.8235" /> <!-- Scroll of Blessing (R99-grade) -->
+				<item id="36946" min="1" max="1" chance="32.3529" /> <!-- Lindvior's Earring -->
+				<item id="36434" min="1" max="1" chance="0.075" /> <!-- Lindvior Shaper Fragment -->
+				<item id="36435" min="1" max="1" chance="0.075" /> <!-- Lindvior Thrower Fragment -->
+				<item id="36436" min="1" max="1" chance="0.075" /> <!-- Lindvior Slasher Fragment -->
+				<item id="36437" min="1" max="1" chance="0.075" /> <!-- Lindvior Caster Fragment -->
+				<item id="36438" min="1" max="1" chance="0.075" /> <!-- Lindvior Cutter Fragment -->
+				<item id="36439" min="1" max="1" chance="0.075" /> <!-- Lindvior Shooter Fragment -->
+				<item id="36440" min="1" max="1" chance="0.075" /> <!-- Lindvior Dual Dagger Fragment -->
+				<item id="35568" min="1" max="1" chance="85.2941" /> <!-- Bloody Amaranthine Enhancement Stone -->
+				<item id="19447" min="10" max="10" chance="17.64699" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="10" max="10" chance="52.9411" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -1865,22 +1888,97 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="29251" level="99" type="L2Npc" name="Ekimus" title="Immortal Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="29251" level="99" type="L2RaidBoss" name="Ekimus" title="Immortal Lord">
+		<!-- Source: http://l2on.net/en/?c=npc&id=29251 -->
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="127545938" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="127545938" hpRegen="7.5"  mp="12754594" mpRegen="2.7" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="70" />
 		</collision>
+		<skill_list>
+			<skill id="4336" level="1" />
+			<skill id="4290" level="1" />
+			<skill id="4286" level="1" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<drop_lists>
+			<death>
+				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="1.1173" /> <!-- Seraph Stockings Robe -->
+				<item id="38043" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.075" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.075" /> <!-- Amaranthine Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.075" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.075" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.075" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.075" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.075" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="1.1173" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38056" min="1" max="1" chance="0.5586" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.5586" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.8379" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38059" min="1" max="1" chance="0.75" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.5586" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.5586" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.8379" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.2793" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38066" min="1" max="1" chance="1.6759" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38067" min="1" max="1" chance="0.2793" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.5586" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="1.1173" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.8379" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
+				<item id="38592" min="1" max="1" chance="1.1173" /> <!-- Ekimus' Belt -->
+				<item id="37067" min="1" max="1" chance="5.3072" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37068" min="1" max="1" chance="2.77777" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37069" min="1" max="1" chance="5.3072" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37070" min="1" max="1" chance="5.3072" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37071" min="1" max="1" chance="13.88888" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37072" min="1" max="1" chance="2.79319" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37073" min="1" max="1" chance="5.55555" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37074" min="1" max="1" chance="4.4692" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37075" min="1" max="1" chance="5.55555" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37076" min="1" max="1" chance="6.4245" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37077" min="1" max="1" chance="6.1452" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37078" min="1" max="1" chance="2.77777" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37079" min="1" max="1" chance="4.7486" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="11.11111" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37081" min="1" max="1" chance="3.6312" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37082" min="1" max="1" chance="22.22222" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37083" min="1" max="1" chance="3.9106" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37084" min="1" max="1" chance="4.7486" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37085" min="1" max="1" chance="4.4692" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37086" min="1" max="1" chance="5.0279" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="17397" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Light Armor -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29252" level="99" type="L2Npc" name="Curain" title="Screaming Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

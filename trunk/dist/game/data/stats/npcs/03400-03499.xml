@@ -1998,18 +1998,19 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<acquire exp="207470592" sp="83404800" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56203347" hpRegen="7.5" mp="56203347" mpRegen="2.7" />
-			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="120" magical="100" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="210" earth="340" holy="250" dark="250" />
+				<attack type="EARTH" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>333</hit_time>
 		</stats>
 		<status attackable="true" />
 		<skill_list>
@@ -2023,6 +2024,59 @@
 			<radius normal="50" />
 			<height normal="68" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="1.056" /> <!-- Seraph Stockings Robe -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shaper (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Cutter (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Caster (60%) -->
+				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Retributer (60%) -->
+				<item id="35431" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Helmet (60%) -->
+				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
+				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Breastplate (60%) -->
+				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Gaiters (60%) -->
+				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Gauntlets (60%) -->
+				<item id="17386" min="1" max="1" chance="0.3" /> <!-- Specter Fighter -->
+				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Boots (60%) -->
+				<item id="17387" min="1" max="1" chance="0.3" /> <!-- Specter Stormer -->
+				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Shield (60%) -->
+				<item id="17388" min="1" max="1" chance="0.3" /> <!-- Specter Thrower -->
+				<item id="35437" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Leather Helmet (60%) -->
+				<item id="17389" min="1" max="1" chance="0.3" /> <!-- Specter Shooter -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
+				<item id="17390" min="1" max="1" chance="0.3" /> <!-- Specter Buster -->
+				<item id="17391" min="1" max="1" chance="0.3" /> <!-- Specter Caster -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Leather Gloves (60%) -->
+				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
+				<item id="35441" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Circlet (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Stockings (60%) -->
+				<item id="35445" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Gloves (60%) -->
+				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17526" min="1" max="1" chance="1.565" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17398" min="1" max="1" chance="1.01089" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="35446" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Sigil (60%) -->
+				<item id="35448" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Necklace (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Earring (60%) -->
+				<item id="35450" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Ring (60%) -->
+				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="1.037" /> <!-- Seraph Leather Leggings Light Armor -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3474" level="95" type="L2Npc" name="Super Kat the Cat">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2099,11 +2153,11 @@
 			<height normal="1" />
 		</collision>
 	</npc>
-	<npc id="3477" level="88" type="L2RaidBoss" name="Reinforced Super Kat the Cat" title="Raid Boss">
+	<npc id="3477" level="88" type="L2Monster" name="Reinforced Super Kat the Cat" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<acquire exp="174332928" sp="70083200" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
 			<vitals hp="30496657" hpRegen="7.5" mp="30496657" mpRegen="2.7" />
 			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="100" magical="100" />
@@ -2111,19 +2165,36 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="170" />
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
-			<skill id="4416" level="2" />
+			<skill id="4291" level="1" />
 		</skill_list>
+		<ai aggroRange="100" clanHelpRange="100" />
 		<collision>
-			<radius normal="1" />
-			<height normal="1" />
+			<radius normal="40" />
+			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17296" min="1" max="1" chance="1.486" /> <!-- Requiem Thrower -->
+				<item id="17313" min="1" max="1" chance="11.86" /> <!-- Immortal Leather Gloves Light Armor -->
+				<item id="17300" min="1" max="1" chance="1.544" /> <!-- Requiem Retributer -->
+				<item id="17318" min="1" max="1" chance="24.64" /> <!-- Immortal Gloves Robe -->
+				<item id="17526" min="1" max="1" chance="3.58" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="45.72" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17319" min="2" max="2" chance="7.941" /> <!-- Immortal Shoes Robe -->
+				<item id="17304" min="1" max="1" chance="15.53" /> <!-- Immortal Helmet Heavy Armor -->
+				<item id="17290" min="1" max="1" chance="1.544" /> <!-- Requiem Shaper -->
+				<item id="17291" min="1" max="1" chance="1.488" /> <!-- Requiem Cutter -->
+				<item id="17308" min="1" max="1" chance="25.03" /> <!-- Immortal Boots Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="15.22" /> <!-- Immortal Leather Helmet Light Armor -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3478" level="87" type="L2Npc" name="Reinforced Kat the Cat">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2147,31 +2218,40 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="3479" level="92" type="L2RaidBoss" name="Darkened Super Feline Queen" title="Raid Boss">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ELEMENTAL</race>
-		<acquire exp="190541568" sp="76599200" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="33852162" hpRegen="7.5" mp="33852162" mpRegen="2.7" />
-			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="100" magical="100" />
+	<npc id="3479" level="92" type="L2Monster" name="Darkened Super Feline Queen" title="Raid Boss">
+		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
+			<vitals hp="33852165" hpRegen="7.5" mp="3385217" mpRegen="10" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="120" />
+				<run ground="300" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4416" level="7" />
 		</skill_list>
+		<ai aggroRange="100" clanHelpRange="100" />
 		<collision>
-			<radius normal="1" />
-			<height normal="1" />
+			<radius normal="40" />
+			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
+				<item id="17350" min="1" max="1" chance="15.9899" /> <!-- Twilight Tunic Robe -->
+				<item id="17526" min="1" max="1" chance="3.578" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="46.47" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17339" min="1" max="1" chance="16.47" /> <!-- Twilight Breastplate Heavy Armor -->
+				<item id="17325" min="1" max="1" chance="0.75" /> <!-- Apocalypse Cutter -->
+				<item id="17343" min="1" max="1" chance="66.32" /> <!-- Twilight Shield Heavy Armor -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3480" level="91" type="L2Npc" name="Mind-controlling Feline Queen">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2195,31 +2275,41 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="3481" level="94" type="L2RaidBoss" name="Control-crazed Mew the Cat" title="Raid Boss">
+	<npc id="3481" level="94" type="L2Monster" name="Control-crazed Mew the Cat" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
 		<acquire exp="198916032" sp="79965800" />
 		<stats> <!-- str="164" int="188" dex="55" wit="78" con="82" men="149" -->
 			<vitals hp="24955737" hpRegen="7.5" mp="24955737" mpRegen="2.7" />
-			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="100" magical="100" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="140" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="true" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
+		<ai aggroRange="100" clanHelpRange="100" />
 		<skill_list>
 			<skill id="4416" level="4" />
 		</skill_list>
 		<collision>
-			<radius normal="1" />
-			<height normal="1" />
+			<radius normal="40" />
+			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17330" min="1" max="1" chance="7.538" /> <!-- Apocalypse Thrower -->
+				<item id="17347" min="1" max="1" chance="18.3" /> <!-- Twilight Leather Gloves Light Armor -->
+				<item id="17526" min="1" max="1" chance="36.62" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17334" min="1" max="1" chance="1.539" /> <!-- Apocalypse Retributer -->
+				<item id="17352" min="1" max="1" chance="92.39" /> <!-- Twilight Gloves Robe -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3482" level="93" type="L2Npc" name="Traitorous Mew the Cat">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->

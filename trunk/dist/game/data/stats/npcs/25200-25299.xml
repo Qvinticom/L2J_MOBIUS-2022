@@ -4542,20 +4542,50 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="57.4994010925293">
-					<item id="6364" min="1" max="1" chance="1.093" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="1.093" /> <!-- Heaven's Divider -->
-					<item id="6688" min="8" max="22" chance="33.6734" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="4" max="12" chance="64.1406" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="38.60850143432617">
-					<item id="7575" min="1" max="1" chance="4.8834" /> <!-- Draconic Bow -->
-					<item id="7579" min="12" max="36" chance="95.1166" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="76.9281997680664">
-					<item id="6578" min="1" max="1" chance="15.0943" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="3" chance="84.9057" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
+				<item id="17344" min="2" max="2" chance="16.12899" /> <!-- Twilight Leather Helmet Light Armor -->
+				<item id="17345" min="2" max="2" chance="25.8064" /> <!-- Twilight Leather Armor Light Armor -->
+				<item id="17346" min="2" max="2" chance="16.12899" /> <!-- Twilight Leather Leggings Light Armor -->
+				<item id="17347" min="2" max="2" chance="16.12899" /> <!-- Twilight Leather Gloves Light Armor -->
+				<item id="17348" min="2" max="2" chance="19.3548" /> <!-- Twilight Leather Boots Light Armor -->
+				<item id="17349" min="2" max="2" chance="16.12899" /> <!-- Twilight Circlet Robe -->
+				<item id="17350" min="2" max="2" chance="12.9032" /> <!-- Twilight Tunic Robe -->
+				<item id="17351" min="2" max="2" chance="9.6774" /> <!-- Twilight Stockings Robe -->
+				<item id="17352" min="2" max="2" chance="9.6774" /> <!-- Twilight Gloves Robe -->
+				<item id="17353" min="2" max="2" chance="16.12899" /> <!-- Twilight Shoes Robe -->
+				<item id="37770" min="1" max="1" chance="38.7096" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
+				<item id="17354" min="2" max="2" chance="29.0322" /> <!-- Twilight Sigil Robe -->
+				<item id="37714" min="1" max="1" chance="64.51609" /> <!-- Talisman - Lilith -->
+				<item id="37779" min="1" max="1" chance="58.06449" /> <!-- Scroll of Blessing: Armor (R-grade) -->
+				<item id="37716" min="1" max="1" chance="25.8064" /> <!-- Seven Signs' Energy -->
+				<item id="36257" min="1" max="1" chance="19.3548" /> <!-- Lilith's Soul Necklace -->
+				<item id="17697" min="1" max="1" chance="9.6774" /> <!-- Lv. 5 Giant STR Dye STR +5 -->
+				<item id="17698" min="1" max="1" chance="3.2258" /> <!-- Lv. 5 Giant DEX Dye DEX +5 -->
+				<item id="17699" min="1" max="1" chance="25.8064" /> <!-- Lv. 5 Giant CON Dye CON +5 -->
+				<item id="17700" min="1" max="1" chance="19.3548" /> <!-- Lv. 5 Giant INT Dye INT +5 -->
+				<item id="17701" min="1" max="1" chance="29.0322" /> <!-- Lv. 5 Giant WIT Dye Wit +5 -->
+				<item id="17702" min="1" max="1" chance="12.9032" /> <!-- Lv. 5 Giant MEN Dye Men +5 -->
+				<item id="17324" min="1" max="1" chance="3.2258" /> <!-- Apocalypse Shaper -->
+				<item id="17325" min="1" max="1" chance="12.9032" /> <!-- Apocalypse Cutter -->
+				<item id="19502" min="1" max="1" chance="16.12899" /> <!-- Yellow Soul Crystal (R-grade) -->
+				<item id="17326" min="1" max="1" chance="6.4516" /> <!-- Apocalypse Slasher -->
+				<item id="19503" min="1" max="1" chance="19.3548" /> <!-- Teal Soul Crystal (R-grade) -->
+				<item id="17327" min="1" max="1" chance="6.4516" /> <!-- Apocalypse Avenger -->
+				<item id="19504" min="1" max="1" chance="6.4516" /> <!-- Purple Soul Crystal (R-grade) -->
+				<item id="17328" min="1" max="1" chance="6.4516" /> <!-- Apocalypse Fighter -->
+				<item id="17329" min="1" max="1" chance="6.4516" /> <!-- Apocalypse Stormer -->
+				<item id="17330" min="1" max="1" chance="22.5806" /> <!-- Apocalypse Thrower -->
+				<item id="17331" min="1" max="1" chance="6.4516" /> <!-- Apocalypse Shooter -->
+				<item id="17332" min="1" max="1" chance="3.2258" /> <!-- Apocalypse Buster -->
+				<item id="17333" min="1" max="1" chance="3.2258" /> <!-- Apocalypse Caster -->
+				<item id="17334" min="1" max="1" chance="16.12899" /> <!-- Apocalypse Retributer -->
+				<item id="19447" min="10" max="10" chance="35.4838" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="5" max="5" chance="64.51609" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17338" min="2" max="2" chance="22.5806" /> <!-- Twilight Helmet Heavy Armor -->
+				<item id="17339" min="2" max="2" chance="19.3548" /> <!-- Twilight Breastplate Heavy Armor -->
+				<item id="17340" min="2" max="2" chance="16.76" /> <!-- Twilight Gaiters Heavy Armor -->
+				<item id="17341" min="2" max="2" chance="16.12899" /> <!-- Twilight Gauntlets Heavy Armor -->
+				<item id="17342" min="2" max="2" chance="25.8064" /> <!-- Twilight Boots Heavy Armor -->
+				<item id="17343" min="2" max="2" chance="9.6774" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
 		</drop_lists>
 		<collision>
@@ -4696,28 +4726,50 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="53.45029830932617">
-					<item id="6365" min="1" max="1" chance="0.5879" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="0.5879" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="0.5879" /> <!-- Dragon Hunter Axe -->
-					<item id="6579" min="1" max="1" chance="0.5879" /> <!-- Arcana Mace -->
-					<item id="6689" min="16" max="48" chance="8.3295" /> <!-- Basalt Battlehammer Head -->
-					<item id="6690" min="11" max="31" chance="12.961" /> <!-- Imperial Staff Head -->
-					<item id="6693" min="6" max="18" chance="23.0489" /> <!-- Dragon Hunter Axe Blade -->
-					<item id="6697" min="3" max="7" chance="53.309" /> <!-- Arcana Mace Head -->
-				</group>
-				<group chance="38.188499450683594">
-					<item id="6367" min="1" max="1" chance="4.9371" /> <!-- Angel Slayer -->
-					<item id="6691" min="12" max="36" chance="95.0629" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="77.79900360107422">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-				<group chance="1.0">
-					<item id="10296" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Anakim -->
-				</group>
+				<item id="17408" min="2" max="2" chance="5.5555" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="2" max="2" chance="27.7777" /> <!-- Seraph Stockings Robe -->
+				<item id="17410" min="2" max="2" chance="22.2222" /> <!-- Seraph Gloves Robe -->
+				<item id="17411" min="2" max="2" chance="11.1111" /> <!-- Seraph Shoes Robe -->
+				<item id="17412" min="2" max="2" chance="11.1111" /> <!-- Seraph Sigil Robe -->
+				<item id="37771" min="1" max="1" chance="44.4444" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
+				<item id="37715" min="1" max="1" chance="72.2222" /> <!-- Talisman - Anakim -->
+				<item id="37780" min="1" max="1" chance="55.5555" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
+				<item id="37716" min="1" max="1" chance="27.7777" /> <!-- Seven Signs' Energy -->
+				<item id="17697" min="1" max="1" chance="11.1111" /> <!-- Lv. 5 Giant STR Dye STR +5 -->
+				<item id="17698" min="1" max="1" chance="16.6666" /> <!-- Lv. 5 Giant DEX Dye DEX +5 -->
+				<item id="17699" min="1" max="1" chance="11.1111" /> <!-- Lv. 5 Giant CON Dye CON +5 -->
+				<item id="17700" min="1" max="1" chance="11.1111" /> <!-- Lv. 5 Giant INT Dye INT +5 -->
+				<item id="17701" min="1" max="1" chance="22.2222" /> <!-- Lv. 5 Giant WIT Dye Wit +5 -->
+				<item id="17702" min="1" max="1" chance="27.7777" /> <!-- Lv. 5 Giant MEN Dye Men +5 -->
+				<item id="17382" min="1" max="1" chance="9.04599" /> <!-- Specter Shaper -->
+				<item id="17383" min="1" max="1" chance="9.066" /> <!-- Specter Cutter -->
+				<item id="17384" min="1" max="1" chance="9.056" /> <!-- Specter Slasher -->
+				<item id="17385" min="1" max="1" chance="9.077" /> <!-- Specter Avenger -->
+				<item id="17386" min="1" max="1" chance="9.16" /> <!-- Specter Fighter -->
+				<item id="17387" min="1" max="1" chance="9.146" /> <!-- Specter Stormer -->
+				<item id="17388" min="1" max="1" chance="9.109" /> <!-- Specter Thrower -->
+				<item id="17389" min="1" max="1" chance="9.151" /> <!-- Specter Shooter -->
+				<item id="19502" min="1" max="1" chance="10.066" /> <!-- Yellow Soul Crystal (R-grade) -->
+				<item id="17390" min="1" max="1" chance="9.088" /> <!-- Specter Buster -->
+				<item id="19503" min="1" max="1" chance="9.93399" /> <!-- Teal Soul Crystal (R-grade) -->
+				<item id="17391" min="1" max="1" chance="9.12" /> <!-- Specter Caster -->
+				<item id="19504" min="1" max="1" chance="9.6" /> <!-- Purple Soul Crystal (R-grade) -->
+				<item id="17392" min="1" max="1" chance="9.089" /> <!-- Specter Retributer -->
+				<item id="17396" min="2" max="2" chance="11.1111" /> <!-- Seraph Helmet Heavy Armor -->
+				<item id="17397" min="2" max="2" chance="27.7777" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17398" min="2" max="2" chance="16.6666" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="19447" min="10" max="10" chance="44.4444" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17399" min="2" max="2" chance="5.5555" /> <!-- Seraph Gauntlets Heavy Armor -->
+				<item id="19448" min="5" max="5" chance="55.5555" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="10296" min="1" max="1" chance="38.8888" /> <!-- Transformation Sealbook: Anakim -->
+				<item id="17400" min="2" max="2" chance="5.5555" /> <!-- Seraph Boots Heavy Armor -->
+				<item id="17401" min="2" max="2" chance="27.7777" /> <!-- Seraph Shield Heavy Armor -->
+				<item id="17402" min="2" max="2" chance="11.1111" /> <!-- Seraph Leather Helmet Light Armor -->
+				<item id="17403" min="2" max="2" chance="11.1111" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="2" max="2" chance="22.2222" /> <!-- Seraph Leather Leggings Light Armor -->
+				<item id="17405" min="2" max="2" chance="27.7777" /> <!-- Seraph Leather Gloves Light Armor -->
+				<item id="17406" min="2" max="2" chance="22.2222" /> <!-- Seraph Leather Boots Light Armor -->
+				<item id="17407" min="2" max="2" chance="16.6666" /> <!-- Seraph Circlet Robe -->
 			</death>
 		</drop_lists>
 		<collision>

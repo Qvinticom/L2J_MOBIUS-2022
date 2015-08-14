@@ -28,7 +28,7 @@
 			<attack physical="5869.75911848713" magical="4125.48586492145" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="1520.63794152047" magical="834.552631578947" />
 			<attribute>
-				<attack type="UNHOLY" value="170" />
+				<attack type="DARK" value="170" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="110" dark="170" default="120" />
 			</attribute>
 			<speed>
@@ -37,7 +37,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -122,7 +122,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4379" level="1" /> <!-- Resist Spear Weapons -->
@@ -211,7 +211,7 @@
 			</speed>
 			<hit_time>590</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -289,7 +289,7 @@
 			<attack physical="3152.92775365761" magical="1289.6819828842" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1127.29373410405" magical="549.93387283237" />
 			<attribute>
-				<attack type="UNHOLY" value="200" />
+				<attack type="DARK" value="200" />
 				<defence fire="180" water="140" wind="160" earth="160" holy="120" dark="200" default="120" />
 			</attribute>
 			<speed>
@@ -298,7 +298,7 @@
 			</speed>
 			<hit_time>440</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4246" level="1" /> <!-- Strong in "nan" activity magic DOT -->
@@ -330,6 +330,7 @@
 				<group chance="58.951698303222656">
 					<item id="6367" min="1" max="1" chance="1.2817" /> <!-- Angel Slayer -->
 					<item id="6691" min="3" max="9" chance="98.7183" /> <!-- Angel Slayer Blade -->
+					<item id="21919" min="1" max="1" chance="0.3" /> <!-- Hellblade -->
 				</group>
 				<group chance="53.13669967651367">
 					<item id="6680" min="1" max="1" chance="5.855" /> <!-- Sealed Draconic Leather Armor -->
@@ -357,7 +358,7 @@
 				<run ground="80" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -405,7 +406,7 @@
 			</speed>
 			<hit_time>200</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4032" level="10" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -459,7 +460,7 @@
 			</speed>
 			<hit_time>350</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4032" level="10" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -513,7 +514,7 @@
 			</speed>
 			<hit_time>560</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4032" level="10" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -567,7 +568,7 @@
 			</speed>
 			<hit_time>410</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4032" level="10" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -635,7 +636,7 @@
 			</speed>
 			<hit_time>530</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
@@ -733,7 +734,7 @@
 			</speed>
 			<hit_time>530</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
@@ -834,7 +835,7 @@
 			</speed>
 			<hit_time>530</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
@@ -926,7 +927,7 @@
 			</speed>
 			<hit_time>530</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
@@ -996,7 +997,7 @@
 				<run ground="80" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4077" level="10" /> <!-- NPC Aura Burn -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
@@ -1042,7 +1043,7 @@
 				<run ground="50" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4288" level="1" /> <!-- Greater Resist Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1082,7 +1083,7 @@
 				<run ground="50" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4288" level="1" /> <!-- Greater Resist Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1128,7 +1129,7 @@
 			</speed>
 			<hit_time>260</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="2" /> <!-- BOSS Might -->
@@ -1176,7 +1177,7 @@
 			</speed>
 			<hit_time>460</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="3" /> <!-- BOSS Might -->
@@ -1223,7 +1224,7 @@
 			</speed>
 			<hit_time>370</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="4" /> <!-- BOSS Might -->
@@ -1271,7 +1272,7 @@
 			</speed>
 			<hit_time>710</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="5" /> <!-- BOSS Might -->
@@ -1318,7 +1319,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="6" /> <!-- BOSS Might -->
@@ -1367,7 +1368,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="7" /> <!-- BOSS Might -->
@@ -1408,7 +1409,7 @@
 			<attack physical="3111.31464337673" magical="2124.62457584495" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1036.83381" magical="505.8" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="100" />
+				<attack type="DARK" value="100" />
 				<defence fire="90" water="90" wind="90" earth="90" holy="65" dark="130" default="80" />
 			</attribute>
 			<speed>
@@ -1417,7 +1418,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="8" /> <!-- BOSS Might -->
@@ -1629,7 +1630,7 @@
 			<attack physical="643.033547458868" magical="132.116420113434" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1005.7282140355" magical="490.630579881657" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="150" />
+				<attack type="DARK" value="150" />
 				<defence fire="130" water="130" wind="130" earth="130" holy="90" dark="150" default="100" />
 			</attribute>
 			<speed>
@@ -1843,7 +1844,7 @@
 			<attack physical="459.199396852777" magical="111.023360116077" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="449.1458235" magical="438.228" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -1892,7 +1893,7 @@
 			<attack physical="449.963472088467" magical="108.971985914937" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="443.1654855" magical="432.378" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2094,7 +2095,7 @@
 			<attack physical="1816.9154129765" magical="1073.23050730418" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1092.54760217647" magical="532.982470588235" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2102,7 +2103,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2180,7 +2181,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2260,7 +2261,7 @@
 			</speed>
 			<hit_time>440</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2319,7 +2320,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2327,7 +2328,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2399,7 +2400,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2468,7 +2469,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2476,7 +2477,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2550,7 +2551,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2622,7 +2623,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2692,7 +2693,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2700,7 +2701,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2763,7 +2764,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2771,7 +2772,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2833,7 +2834,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2841,7 +2842,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2919,7 +2920,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -2927,7 +2928,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2998,7 +2999,7 @@
 			</speed>
 			<hit_time>440</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3071,7 +3072,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3141,7 +3142,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -3149,7 +3150,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3213,7 +3214,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -3221,7 +3222,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3297,7 +3298,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3365,7 +3366,7 @@
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -3373,7 +3374,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3449,7 +3450,7 @@
 				<run ground="200" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3537,7 +3538,7 @@
 			</speed>
 			<hit_time>580</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
@@ -3612,7 +3613,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
@@ -3684,7 +3685,7 @@
 			</speed>
 			<hit_time>470</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
@@ -3748,7 +3749,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -3801,7 +3802,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4066" level="8" /> <!-- NPC Twister -->
@@ -3852,7 +3853,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -3910,7 +3911,7 @@
 			</speed>
 			<hit_time>580</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
@@ -3983,7 +3984,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
@@ -4057,7 +4058,7 @@
 			</speed>
 			<hit_time>470</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
@@ -4122,7 +4123,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -4174,7 +4175,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4066" level="7" /> <!-- NPC Twister -->
@@ -4225,7 +4226,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -4343,7 +4344,7 @@
 			<attack physical="2153.20693445914" magical="1624.01432535894" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="703.664537294118" magical="514.911176470588" />
 			<attribute>
-				<attack type="UNHOLY" value="130" />
+				<attack type="DARK" value="130" />
 				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
 			</attribute>
 			<speed>
@@ -4443,7 +4444,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4161" level="1" /> <!-- Summon PC -->
@@ -4504,7 +4505,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4161" level="1" /> <!-- Summon PC -->
@@ -4565,7 +4566,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4161" level="1" /> <!-- Summon PC -->
@@ -4626,7 +4627,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4161" level="1" /> <!-- Summon PC -->
@@ -4683,7 +4684,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="9" /> <!-- Hold -->
@@ -4750,7 +4751,7 @@
 			</speed>
 			<hit_time>710</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4195" level="9" /> <!-- BOSS Twister -->
@@ -4793,7 +4794,7 @@
 			</speed>
 			<hit_time>710</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4842,7 +4843,7 @@
 			</speed>
 			<hit_time>460</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4902,7 +4903,7 @@
 			</speed>
 			<hit_time>720</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4941,7 +4942,7 @@
 			</speed>
 			<hit_time>480</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4988,7 +4989,7 @@
 			</speed>
 			<hit_time>720</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="9" /> <!-- Hold -->
@@ -5056,7 +5057,7 @@
 			</speed>
 			<hit_time>720</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4196" level="9" /> <!-- Decrease Speed -->
@@ -5099,7 +5100,7 @@
 			</speed>
 			<hit_time>720</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5147,7 +5148,7 @@
 			</speed>
 			<hit_time>580</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="8" /> <!-- BOSS Might -->
@@ -5229,7 +5230,7 @@
 			</speed>
 			<hit_time>370</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4185" level="8" /> <!-- Sleep -->
@@ -5292,7 +5293,7 @@
 			</speed>
 			<hit_time>370</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4276" level="3" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -5334,7 +5335,7 @@
 			</speed>
 			<hit_time>370</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4276" level="3" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -5383,7 +5384,7 @@
 			</speed>
 			<hit_time>560</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="8" /> <!-- Hold -->
@@ -5453,7 +5454,7 @@
 			</speed>
 			<hit_time>580</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4195" level="8" /> <!-- BOSS Twister -->
@@ -5499,7 +5500,7 @@
 			</speed>
 			<hit_time>720</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -5552,7 +5553,7 @@
 			</speed>
 			<hit_time>430</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4184" level="8" /> <!-- Decrease Atk. Spd. -->
@@ -5616,7 +5617,7 @@
 			</speed>
 			<hit_time>460</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5656,7 +5657,7 @@
 			</speed>
 			<hit_time>580</hit_time>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5702,7 +5703,7 @@
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="220" />
 			</attribute>
 			<speed>
@@ -5710,7 +5711,7 @@
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
@@ -5781,7 +5782,7 @@
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="220" />
 			</attribute>
 			<speed>
@@ -5789,7 +5790,7 @@
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
@@ -5860,7 +5861,7 @@
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="220" />
 			</attribute>
 			<speed>
@@ -5868,7 +5869,7 @@
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
@@ -5939,7 +5940,7 @@
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="220" />
 			</attribute>
 			<speed>
@@ -5947,7 +5948,7 @@
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
@@ -6018,7 +6019,7 @@
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="220" />
 			</attribute>
 			<speed>
@@ -6026,7 +6027,7 @@
 				<run ground="160" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
@@ -6091,7 +6092,7 @@
 			<attack physical="1839.50786343276" magical="1082.55400336307" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1108.0785" magical="540.56" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="220" />
 			</attribute>
 			<speed>
@@ -6099,7 +6100,7 @@
 				<run ground="140" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
@@ -6140,6 +6141,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="25696" level="90" type="L2RaidBoss" name="Taklacan" title="Bistakon">
+		<!-- Autogenerated Npc - Source: http://l2on.net/en/?c=npc&id=25696 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6379" level="1" /> <!-- Blood Spurt -->
 			<skill name="Skill02_ID" id="6378" level="1" /> <!-- Earth Shift -->
@@ -6163,7 +6165,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -6186,23 +6188,19 @@
 			<skill id="6652" level="1" /> <!-- Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="0.8133000135421753">
-					<item id="14105" min="1" max="1" chance="38.4619" /> <!-- Sealed Vesper Breastplate -->
-					<item id="14108" min="1" max="1" chance="61.5381" /> <!-- Sealed Vesper Gaiters -->
-				</group>
-				<group chance="0.30550000071525574">
-					<item id="13457" min="1" max="1" chance="33.3333" /> <!-- Vesper Cutter -->
-					<item id="13458" min="1" max="1" chance="33.3333" /> <!-- Vesper Slasher -->
-					<item id="13459" min="1" max="1" chance="33.3334" /> <!-- Vesper Buster -->
-				</group>
-				<group chance="21.131099700927734">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="17312" min="1" max="1" chance="4.537" /> <!-- Immortal Leather Leggings Light Armor -->
+				<item id="17314" min="1" max="1" chance="3.809" /> <!-- Immortal Leather Boots Light Armor -->
+				<item id="17298" min="1" max="1" chance="0.75" /> <!-- Requiem Buster -->
+				<item id="17315" min="1" max="1" chance="1.934" /> <!-- Immortal Circlet Robe -->
+				<item id="17299" min="1" max="1" chance="0.75" /> <!-- Requiem Caster -->
+				<item id="17316" min="1" max="1" chance="2.834" /> <!-- Immortal Tunic Robe -->
+				<item id="17526" min="1" max="1" chance="11.1299" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17305" min="1" max="1" chance="2.831" /> <!-- Immortal Breastplate Heavy Armor -->
+				<item id="17307" min="1" max="1" chance="1.157" /> <!-- Immortal Gauntlets Heavy Armor -->
+				<item id="17295" min="1" max="1" chance="0.75" /> <!-- Requiem Stormer -->
 			</death>
 		</drop_lists>
 		<collision>
@@ -6210,7 +6208,8 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25697" level="90" type="L2RaidBoss" name="Torumba" title="Reptilikon">
+	<npc id="25697" level="89" type="L2RaidBoss" name="Torumba" title="Reptilikon">
+		<!--- Autogenerated Npc - Source: http://l2on.net/en/?c=npc&id=25697 -->
 		<parameters>
 			<skill name="SpecialSkill01_ID" id="6403" level="1" /> <!-- Torumba Numbing Poison -->
 			<skill name="SpecialSkill02_ID" id="6404" level="1" /> <!-- Torumba Poison Swing -->
@@ -6232,7 +6231,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status />
+		<status undying="false" noSleepMode="true"  attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -6255,17 +6254,16 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="2.0404000282287598">
-					<item id="14106" min="1" max="1" chance="38.4626" /> <!-- Sealed Vesper Leather Breastplate -->
-					<item id="14112" min="1" max="1" chance="61.5374" /> <!-- Sealed Vesper Leather Leggings -->
-				</group>
-				<group chance="0.5748000144958496">
-					<item id="13467" min="1" max="1" chance="100" /> <!-- Vesper Thrower -->
-				</group>
-				<group chance="6.82450008392334">
-					<item id="6577" min="1" max="1" chance="13.0435" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6578" min="1" max="1" chance="86.9565" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				</group>
+				<item id="17297" min="1" max="1" chance="0.75" /> <!-- Requiem Shooter -->
+				<item id="17317" min="1" max="1" chance="4.582" /> <!-- Immortal Stockings Robe -->
+				<item id="17526" min="1" max="1" chance="10.86" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17320" min="1" max="1" chance="1.41" /> <!-- Immortal Sigil Robe -->
+				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters Heavy Armor -->
+				<item id="17292" min="1" max="1" chance="0.75" /> <!-- Requiem Slasher -->
+				<item id="17309" min="1" max="1" chance="3.747" /> <!-- Immortal Shield Heavy Armor -->
+				<item id="17293" min="1" max="1" chance="0.75" /> <!-- Requiem Avenger -->
+				<item id="17294" min="1" max="1" chance="0.75" /> <!-- Requiem Fighter -->
+				<item id="17311" min="1" max="1" chance="2.809" /> <!-- Immortal Leather Armor Light Armor -->
 			</death>
 		</drop_lists>
 		<collision>
@@ -6274,6 +6272,7 @@
 		</collision>
 	</npc>
 	<npc id="25698" level="89" type="L2RaidBoss" name="Dopagen" title="Kokracon">
+		<!--- Autogenerated Npc Source: http://l2on.net/en/?c=npc&id=25698 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6390" level="1" /> <!-- Cokrakon Sonic Explosion -->
 			<skill name="Skill02_ID" id="6391" level="1" /> <!-- Cokrakon Sonic Slash -->
@@ -6296,7 +6295,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -6318,24 +6317,20 @@
 			<skill id="6654" level="1" /> <!-- Level 85 Raid Boss -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
-				<group chance="1.0255000591278076">
-					<item id="14107" min="1" max="1" chance="38.4626" /> <!-- Sealed Vesper Tunic -->
-					<item id="14115" min="1" max="1" chance="61.5374" /> <!-- Sealed Vesper Stockings -->
-				</group>
-				<group chance="0.2888999879360199">
-					<item id="13463" min="1" max="1" chance="25" /> <!-- Vesper Avenger -->
-					<item id="13464" min="1" max="1" chance="25" /> <!-- Vesper Retributer -->
-					<item id="13465" min="1" max="1" chance="25" /> <!-- Vesper Caster -->
-					<item id="13466" min="1" max="1" chance="25" /> <!-- Vesper Singer -->
-				</group>
-				<group chance="19.98390007019043">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
+				<item id="17313" min="1" max="1" chance="5.067" /> <!-- Immortal Leather Gloves Light Armor -->
+				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
+				<item id="17526" min="1" max="1" chance="11.23" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17318" min="1" max="1" chance="1.977" /> <!-- Immortal Gloves Robe -->
+				<item id="17319" min="1" max="1" chance="3.395" /> <!-- Immortal Shoes Robe -->
+				<item id="17304" min="1" max="1" chance="1.105" /> <!-- Immortal Helmet Heavy Armor -->
+				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
+				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
+				<item id="17308" min="1" max="1" chance="2.579" /> <!-- Immortal Boots Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet Light Armor -->
 			</death>
 		</drop_lists>
 		<collision>
