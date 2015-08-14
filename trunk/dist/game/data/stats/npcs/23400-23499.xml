@@ -967,17 +967,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23435" level="83" type="L2Monster" name="Leopard Dragon">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<acquire exp="410402" sp="98" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="11507" hpRegen="7.5" mp="1777" mpRegen="2.7" />
+			<attack physical="13310" magical="11590" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1612" magical="1505" />
+			<attribute>
+				<defence fire="180" water="80" wind="180" earth="80" holy="180" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>DRAGONS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="35" />
@@ -998,17 +1012,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23436" level="77" type="L2Monster" name="Cave Servant Archer">
-		<!-- http://2wiki.com-->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="274158" sp="65" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="17142" hpRegen="7.5" mp="1574" mpRegen="2.7" />
+			<vitals hp="17142" hpRegen="7.5" mp="1774" mpRegen="2.7" />
+			<attack physical="10310" magical="8255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1212" magical="1005" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
@@ -1029,17 +1057,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23437" level="78" type="L2Monster" name="Cave Servant Warrior">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="306497" sp="73" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
+			<attack physical="11770" magical="10255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1412" magical="1185" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -1060,17 +1102,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23438" level="78" type="L2Monster" name="Metallic Cave Servant">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="362848" sp="87" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
+			<attack physical="11770" magical="9255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1492" magical="1235" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="15" />
+			<skill id="4412" level="15" />
+			<skill id="4413" level="15" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -1091,17 +1150,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23439" level="79" type="L2Monster" name="Iron Cave Servant">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="372211" sp="89" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18768" hpRegen="7.5" mp="1641" mpRegen="2.7" />
+			<attack physical="11970" magical="8255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1492" magical="1235" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="15" />
+			<skill id="4412" level="15" />
+			<skill id="4413" level="15" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="32.5" />
@@ -1122,17 +1198,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23440" level="80" type="L2Monster" name="Headless Knight">
-		<!-- http://l2wiki.com/ -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="295937" sp="71" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+			<attack physical="11470" magical="8255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1398" magical="1205" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
@@ -1153,17 +1243,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23441" level="81" type="L2Monster" name="Bloody Grave Warrior">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="534853" sp="128" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
+			<attack physical="13470" magical="9450" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1498" magical="1295" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="15" />
+			<skill id="4412" level="15" />
+			<skill id="4413" level="15" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="34" />
@@ -1184,17 +1291,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23442" level="82" type="L2Monster" name="Dark Grave Warrior">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="561759" sp="134" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
+			<attack physical="13770" magical="10350" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1528" magical="1335" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="15" />
+			<skill id="4412" level="15" />
+			<skill id="4413" level="15" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="22.88" />
 			<height normal="41.6" />
@@ -1215,17 +1339,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23443" level="82" type="L2Monster" name="Dark Grave Wizard">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="519466" sp="134" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
+			<attack physical="9740" magical="14350" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1328" magical="1135" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4411" level="14" />
+			<skill id="4412" level="14" />
+			<skill id="4413" level="14" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="21.12" />
 			<height normal="40.48" />
@@ -1246,17 +1387,34 @@
 		</drop_lists>
 	</npc>
 	<npc id="23444" level="83" type="L2Monster" name="Dark Grave Knight">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<acquire exp="589667" sp="141" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="23014" hpRegen="7.5" mp="1777" mpRegen="2.7" />
+			<attack physical="14740" magical="9350" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1468" magical="1295" />
+			<attribute>
+				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" />
+			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4410" level="15" />
+			<skill id="4412" level="15" />
+			<skill id="4413" level="15" />
+		</skill_list>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>UNDEADS</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />
