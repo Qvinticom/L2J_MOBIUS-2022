@@ -1467,7 +1467,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="27452" level="34" type="L2Npc" name="Poslof" title="Quest Monster">
+	<npc id="27452" level="34" type="L2Monster" name="Poslof" title="Quest Monster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
@@ -1483,7 +1483,7 @@
 			</speed>
 			<hit_time>398</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" attackable="true" />
 		<skill_list>
 			<skill id="4416" level="4" />
 			<!-- <skill id="4413" level="15" /> -->
