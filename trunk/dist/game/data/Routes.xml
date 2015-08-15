@@ -1557,4 +1557,30 @@
 		<point X="-113715" Y="236304" Z="-3044" delay="1" run="true" />
 		<point X="-113670" Y="236689" Z="-3044" delay="0" run="true" />
 	</route>
+	<!-- Ruins of Agony - Guard 1-->
+	<route name="Ruins_Ag_1" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-40201" spawnY="123705" spawnZ="-2893" /> 
+		<point X="-40228" Y="123544" Z="-2895" delay="0" run="false" />
+		<point X="-40859" Y="123467" Z="-2894" delay="0" run="false" />
+		<point X="-41010" Y="123405" Z="-2896" delay="0" run="false" />
+		<point X="-41049" Y="123282" Z="-2913" delay="0" run="false" />
+		<point X="-41048" Y="123050" Z="-2916" delay="0" run="false" />
+		<point X="-40994" Y="122903" Z="-2916" delay="0" run="false" />
+		<point X="-41068" Y="122793" Z="-2916" delay="0" run="false" />
+		<point X="-40996" Y="122673" Z="-2917" delay="0" run="false" />
+		<point X="-41028" Y="122550" Z="-2916" delay="0" run="false" />
+	</route>
+	<!-- Ruins of Agony - Guard 2 -->
+	<route name="Ruins_Ag_2" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-42542" spawnY="120294" spawnZ="-3480" /> 
+		<point X="-42426" Y="120370" Z="-3465" delay="0" run="false" />
+		<point X="-42343" Y="120603" Z="-3421" delay="0" run="false" />
+		<point X="-42300" Y="121020" Z="-3332" delay="0" run="false" />
+		<point X="-42209" Y="121322" Z="-3267" delay="0" run="false" />
+		<point X="-42063" Y="121953" Z="-3135" delay="0" run="false" />
+		<point X="-41861" Y="122797" Z="-2994" delay="4" run="false" />
+		<point X="-41765" Y="123235" Z="-2937" delay="0" run="false" />
+		<point X="-41808" Y="123410" Z="-2915" delay="0" run="false" />
+		<point X="-42228" Y="123707" Z="-2886" delay="0" run="false" />
+	</route>
 </routes>
