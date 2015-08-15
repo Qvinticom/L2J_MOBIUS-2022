@@ -3127,9 +3127,9 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clan_list>
-				<clan>SKELETON</clan>
+				<clan>ALL</clan>
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -4011,7 +4011,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
-				<clan>SKELETON</clan>
+				<clan>ALL</clan>
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -4516,7 +4516,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
-				<clan>SKELETON</clan>
+				<clan>ALL</clan>
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -4808,7 +4808,7 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
-				<clan>SKELETON</clan>
+				<clan>ALL</clan>
 			</clan_list>
 		</ai>
 		<drop_lists>
@@ -5394,9 +5394,9 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clan_list>
-				<clan>SKELETON</clan>
+				<clan>ALL</clan>
 			</clan_list>
 		</ai>
 		<drop_lists>
