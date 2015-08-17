@@ -5982,7 +5982,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="500" clanHelpRange="300">
+			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clan_list>
 				<clan>CROC</clan>
 			</clan_list>
@@ -6212,7 +6212,11 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CROC</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<death>
 				<group chance="70">
