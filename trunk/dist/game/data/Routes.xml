@@ -1560,6 +1560,7 @@
 	<!-- Ruins of Agony - Guard 1-->
 	<route name="Ruins_Ag_1" repeat="true" repeatStyle="back">
 		<target id="33426" spawnX="-40201" spawnY="123705" spawnZ="-2893" /> 
+		<point X="-40201" Y="123705" Z="-2893" delay="0" run="false" />
 		<point X="-40228" Y="123544" Z="-2895" delay="0" run="false" />
 		<point X="-40859" Y="123467" Z="-2894" delay="0" run="false" />
 		<point X="-41010" Y="123405" Z="-2896" delay="0" run="false" />
@@ -1573,6 +1574,7 @@
 	<!-- Ruins of Agony - Guard 2 -->
 	<route name="Ruins_Ag_2" repeat="true" repeatStyle="back">
 		<target id="33426" spawnX="-42542" spawnY="120294" spawnZ="-3480" /> 
+		<point X="-42542" Y="120294" Z="-3480" delay="0" run="false" />
 		<point X="-42426" Y="120370" Z="-3465" delay="0" run="false" />
 		<point X="-42343" Y="120603" Z="-3421" delay="0" run="false" />
 		<point X="-42300" Y="121020" Z="-3332" delay="0" run="false" />
@@ -1582,5 +1584,28 @@
 		<point X="-41765" Y="123235" Z="-2937" delay="0" run="false" />
 		<point X="-41808" Y="123410" Z="-2915" delay="0" run="false" />
 		<point X="-42228" Y="123707" Z="-2886" delay="0" run="false" />
+	</route>
+	<!-- Ruins of Despair - Guard 1 -->
+	<route name="Ruins_Des_1" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-18959" spawnY="137150" spawnZ="-3762" /> 
+		<point X="-18959" Y="137150" Z="-3762" delay="0" run="false" />
+		<point X="-19061" Y="137123" Z="-3762" delay="0" run="false" />
+		<point X="-19171" Y="137123" Z="-3762" delay="0" run="false" />
+		<point X="-20034" Y="137511" Z="-3893" delay="0" run="false" />
+		<point X="-20191" Y="137621" Z="-3887" delay="0" run="false" />
+		<point X="-20493" Y="137755" Z="-3897" delay="0" run="false" />
+	</route>
+	<!-- Ruins of Despair - Guard 2 -->
+	<route name="Ruins_Des_2" repeat="true" repeatStyle="back">
+		<target id="33426" spawnX="-20886" spawnY="136647" spawnZ="-3897" /> 
+		<point X="-20886" Y="136647" Z="-3897" delay="0" run="false" />
+		<point X="-20604" Y="136563" Z="-3897" delay="0" run="false" />
+		<point X="-20452" Y="136428" Z="-3897" delay="0" run="false" />
+		<point X="-20428" Y="136274" Z="-3897" delay="0" run="false" />
+		<point X="-20624" Y="136025" Z="-3897" delay="0" run="false" />
+		<point X="-20688" Y="135505" Z="-3897" delay="0" run="false" />
+		<point X="-20294" Y="134709" Z="-3898" delay="0" run="false" />
+		<point X="-19748" Y="133899" Z="-3881" delay="0" run="false" />
+		<point X="-19331" Y="133534" Z="-3798" delay="0" run="false" />	
 	</route>
 </routes>
