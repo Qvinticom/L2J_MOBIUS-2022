@@ -3,7 +3,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence maxOccurs="1" minOccurs="1">
-				<xs:element name="fishingMonster" maxOccurs="100" minOccurs="1">
+				<xs:element name="fishingMonster" maxOccurs="9" minOccurs="1">
 					<xs:complexType>
 						<xs:attribute name="fishingMonsterId" use="required">
 							<xs:simpleType>
@@ -25,7 +25,7 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:positiveInteger">
 									<xs:minInclusive value="1" />
-									<xs:maxInclusive value="100" />
+									<xs:maxInclusive value="99" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
@@ -33,7 +33,7 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:positiveInteger">
 									<xs:minInclusive value="1" />
-									<xs:maxInclusive value="100" />
+									<xs:maxInclusive value="99" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
