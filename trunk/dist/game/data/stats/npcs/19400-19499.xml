@@ -1705,7 +1705,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="19470" level="65" type="L2Npc" name="Kartia's Flower">
+	<npc id="19470" level="65" type="L2Monster" name="Kartia's Flower">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>PLANT</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -1721,7 +1721,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" />
 		</skill_list>

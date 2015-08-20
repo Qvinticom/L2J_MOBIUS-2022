@@ -829,7 +829,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27540" level="60" type="L2Npc" name="Embryo Purifier" title="Quest Monster">
+	<npc id="27540" level="60" type="L2Monster" name="Embryo Purifier" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -840,13 +840,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="6" />
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27541" level="60" type="L2Npc" name="Embryo Purifier" title="Quest Monster">
+	<npc id="27541" level="60" type="L2Monster" name="Embryo Purifier" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -857,7 +857,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="6" />
 			<height normal="22.5" />
