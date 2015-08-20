@@ -619,7 +619,7 @@ INSERT INTO `teleport` VALUES
 ('Fantasy Isle -> Krateis Cube',12108,-70293,-71029,-1416,0,0,57),
 ('Krateis Cube -> Fantasy Isle',12109,-59224,-56837,-2032,0,0,57),
 ('Gludio -> Airship dock',12118,-149406,255247,-80,0,0,57),
-('Airship dock -> Talking Island',12119,-84752,243122,-3728,0,0,57),
+('Airship dock -> Talking Island',12119,-112156,257222,-1408,0,0,57),
 ('Talking Island -> Airship dock',12120,-149406,255247,-80,0,0,57),
 ('Fantasy Isle -> Handys Block',12121,-57328,-60566,-2360,0,0,57),
 ('Keucereus -> Heart of Infinity',12122,-204288,242026,1744,0,0,57),
