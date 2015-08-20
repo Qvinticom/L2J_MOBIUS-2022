@@ -361,10 +361,11 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
 		<set name="price" val="80" />
+		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ManaPotion" />
-		<set name="item_skill" val="10000-1" />
+		<set name="item_skill" val="24000-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -395,7 +396,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ManaPotion" />
-		<set name="item_skill" val="10001-1" />
+		<set name="item_skill" val="24001-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
