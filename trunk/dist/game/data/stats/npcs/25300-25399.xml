@@ -3085,7 +3085,7 @@
 		<equipment rhand="216" /> <!-- rhand: Dirk -->
 		<acquire exp="1452604" sp="348" raidPoints="248" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="37886.4853669374" hpRegen="16.8269664693931" mp="205.2" mpRegen="1.5" />
+			<vitals hp="59539" hpRegen="16.8269664693931" mp="205.2" mpRegen="1.5" />
 			<attack physical="53.1275788089434" magical="3.16860505219161" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="269.19177" magical="131.32" evasion="-18" />
 			<attribute>
@@ -3115,26 +3115,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="39.33869934082031">
-					<item id="605" min="4" max="12" chance="65.2174" /> <!-- Leather Gauntlets -->
-					<item id="1123" min="8" max="22" chance="34.7826" /> <!-- Blue Buckskin Boots -->
-				</group>
-				<group chance="31.812000274658203">
-					<item id="222" min="1" max="1" chance="100" /> <!-- Poniard Dagger -->
-				</group>
-				<group chance="61.759498596191406">
-					<item id="6387" min="24" max="72" chance="22.9759" /> <!-- Blessed Scroll of Resurrection for Pets -->
-					<item id="955" min="4" max="10" chance="15.7549" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="956" min="8" max="22" chance="61.2692" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="605" min="1" max="1" chance="8" /> <!-- Leather Gauntlets -->
+				<item id="1123" min="1" max="1" chance="3.725" /> <!-- Blue Buckskin Boots -->
+				<item id="222" min="1" max="1" chance="2.575" /> <!-- Poniard Dagger -->
+				<item id="6387" min="4" max="12" chance="17" /> <!-- Blessed Scroll of Resurrection for Pets -->
+				<item id="955" min="1" max="1" chance="12.75" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="956" min="7" max="21" chance="7.550" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25358" level="20" type="L2Monster" name="Sukar Ratman Escort" title="Raid Fighter">
 		<parameters>
