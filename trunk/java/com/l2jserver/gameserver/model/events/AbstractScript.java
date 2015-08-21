@@ -2301,16 +2301,17 @@ public abstract class AbstractScript implements INamable
 		dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
 		if ((npc != null) && Config.L2JMOD_CHAMPION_ENABLE && npc.isChampion())
 		{
-			dropChance *= Config.L2JMOD_CHAMPION_REWARDS;
 			if ((itemId == Inventory.ADENA_ID) || (itemId == Inventory.ANCIENT_ADENA_ID))
 			{
-				minAmount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
-				maxAmount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
+				dropChance *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE;
+				minAmount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT;
+				maxAmount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT;
 			}
 			else
 			{
-				minAmount *= Config.L2JMOD_CHAMPION_REWARDS;
-				maxAmount *= Config.L2JMOD_CHAMPION_REWARDS;
+				dropChance *= Config.L2JMOD_CHAMPION_REWARDS_CHANCE;
+				minAmount *= Config.L2JMOD_CHAMPION_REWARDS_AMOUNT;
+				maxAmount *= Config.L2JMOD_CHAMPION_REWARDS_AMOUNT;
 			}
 		}
 		

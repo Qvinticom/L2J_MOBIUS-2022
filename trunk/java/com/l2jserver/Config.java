@@ -689,8 +689,11 @@ public final class Config
 	public static int L2JMOD_CHAMP_MIN_LVL;
 	public static int L2JMOD_CHAMP_MAX_LVL;
 	public static int L2JMOD_CHAMPION_HP;
-	public static int L2JMOD_CHAMPION_REWARDS;
-	public static float L2JMOD_CHAMPION_ADENAS_REWARDS;
+	public static float L2JMOD_CHAMPION_REWARDS_EXP_SP;
+	public static float L2JMOD_CHAMPION_REWARDS_CHANCE;
+	public static float L2JMOD_CHAMPION_REWARDS_AMOUNT;
+	public static float L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE;
+	public static float L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT;
 	public static float L2JMOD_CHAMPION_HP_REGEN;
 	public static float L2JMOD_CHAMPION_ATK;
 	public static float L2JMOD_CHAMPION_SPD_ATK;
@@ -2204,8 +2207,11 @@ public final class Config
 			L2JMOD_CHAMP_MAX_LVL = CustomSettings.getInt("ChampionMaxLevel", 60);
 			L2JMOD_CHAMPION_HP = CustomSettings.getInt("ChampionHp", 7);
 			L2JMOD_CHAMPION_HP_REGEN = CustomSettings.getFloat("ChampionHpRegen", 1);
-			L2JMOD_CHAMPION_REWARDS = CustomSettings.getInt("ChampionRewards", 8);
-			L2JMOD_CHAMPION_ADENAS_REWARDS = CustomSettings.getFloat("ChampionAdenasRewards", 1);
+			L2JMOD_CHAMPION_REWARDS_EXP_SP = CustomSettings.getFloat("ChampionRewardsExpSp", 8);
+			L2JMOD_CHAMPION_REWARDS_CHANCE = CustomSettings.getFloat("ChampionRewardsChance", 8);
+			L2JMOD_CHAMPION_REWARDS_AMOUNT = CustomSettings.getFloat("ChampionRewardsAmount", 1);
+			L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE = CustomSettings.getFloat("ChampionAdenasRewardsChance", 1);
+			L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT = CustomSettings.getFloat("ChampionAdenasRewardsAmount", 1);
 			L2JMOD_CHAMPION_ATK = CustomSettings.getFloat("ChampionAtk", 1);
 			L2JMOD_CHAMPION_SPD_ATK = CustomSettings.getFloat("ChampionSpdAtk", 1);
 			L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE = CustomSettings.getInt("ChampionRewardLowerLvlItemChance", 0);
@@ -3578,11 +3584,20 @@ public final class Config
 			case "championhpregen":
 				L2JMOD_CHAMPION_HP_REGEN = Float.parseFloat(pValue);
 				break;
-			case "championrewards":
-				L2JMOD_CHAMPION_REWARDS = Integer.parseInt(pValue);
+			case "championrewardsexpsp":
+				L2JMOD_CHAMPION_REWARDS_EXP_SP = Float.parseFloat(pValue);
 				break;
-			case "championadenasrewards":
-				L2JMOD_CHAMPION_ADENAS_REWARDS = Float.parseFloat(pValue);
+			case "championrewardschance":
+				L2JMOD_CHAMPION_REWARDS_CHANCE = Float.parseFloat(pValue);
+				break;
+			case "championrewardsamount":
+				L2JMOD_CHAMPION_REWARDS_AMOUNT = Float.parseFloat(pValue);
+				break;
+			case "championadenasrewardschance":
+				L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE = Float.parseFloat(pValue);
+				break;
+			case "championadenasrewardsamount":
+				L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT = Float.parseFloat(pValue);
 				break;
 			case "championatk":
 				L2JMOD_CHAMPION_ATK = Float.parseFloat(pValue);

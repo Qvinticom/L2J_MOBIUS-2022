@@ -547,7 +547,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				endSiege();
 				_log.warning(getName() + ": Problems in siege initialization!");
-				e.printStackTrace();
 			}
 		}
 	}
@@ -653,8 +652,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		catch (Exception e)
 		{
-			_log.warning(getName() + ": Couldnt make clan spawns: " + e.getMessage());
-			e.printStackTrace();
+			_log.warning(getName() + ": Could not make clan spawns: " + e.getMessage());
 		}
 	}
 	

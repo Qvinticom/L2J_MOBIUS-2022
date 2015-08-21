@@ -87,7 +87,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		_hall.setSiege(this);
 		
 		_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
-		_log.config(_hall.getName() + " siege scheduled for: " + getSiegeDate().getTime());
+		_log.config(_hall.getName() + " siege scheduled for " + getSiegeDate().getTime() + ".");
 		loadAttackers();
 	}
 	
@@ -109,7 +109,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.warning(getName() + ": Could not load siege attackers!:");
+			_log.warning(getName() + ": Could not load siege attackers!");
 		}
 	}
 	
@@ -134,11 +134,11 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 					}
 				}
 			}
-			_log.config(getName() + ": Sucessfully saved attackers down to database!");
+			_log.config(getName() + ": Successfully saved attackers to database.");
 		}
 		catch (Exception e)
 		{
-			_log.warning(getName() + ": Couldnt save attacker list!");
+			_log.warning(getName() + ": Couldn't save attacker list!");
 		}
 	}
 	
@@ -168,7 +168,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			}
 			catch (Exception e)
 			{
-				_log.warning(getName() + ": Couldnt load siege guards!:");
+				_log.warning(getName() + ": Couldnt load siege guards!");
 			}
 		}
 	}
@@ -404,7 +404,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		onSiegeEnds();
 		
 		_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
-		_log.config("Siege of " + _hall.getName() + " scheduled for: " + _hall.getSiegeDate().getTime());
+		_log.config("Siege of " + _hall.getName() + " scheduled for " + _hall.getSiegeDate().getTime() + ".");
 		
 		_hall.updateSiegeStatus(SiegeStatus.REGISTERING);
 		unSpawnSiegeGuards();
@@ -415,7 +415,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	{
 		cancelSiegeTask();
 		_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new PrepareOwner(), _hall.getNextSiegeTime() - 3600000);
-		_log.config(_hall.getName() + " siege scheduled for: " + _hall.getSiegeDate().getTime().toString());
+		_log.config(_hall.getName() + " siege scheduled for " + _hall.getSiegeDate().getTime().toString() + ".");
 	}
 	
 	public void cancelSiegeTask()

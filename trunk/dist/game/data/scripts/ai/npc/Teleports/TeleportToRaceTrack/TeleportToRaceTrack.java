@@ -104,7 +104,7 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 		else
 		{
 			player.teleToLocation(TELEPORT);
-			player.getVariables().set(MONSTER_RETURN, String.valueOf(TELEPORTERS.get(npc.getId())));
+			player.getVariables().set(MONSTER_RETURN, TELEPORTERS.get(npc.getId()));
 		}
 		return super.onTalk(npc, player);
 	}

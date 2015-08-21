@@ -504,8 +504,8 @@ public class L2Attackable extends L2Npc
 							
 							if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 							{
-								exp *= Config.L2JMOD_CHAMPION_REWARDS;
-								sp *= Config.L2JMOD_CHAMPION_REWARDS;
+								exp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
+								sp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
 							}
 							
 							exp *= penalty;
@@ -614,8 +614,8 @@ public class L2Attackable extends L2Npc
 						
 						if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 						{
-							exp *= Config.L2JMOD_CHAMPION_REWARDS;
-							sp *= Config.L2JMOD_CHAMPION_REWARDS;
+							exp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
+							sp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
 						}
 						
 						exp *= partyMul;

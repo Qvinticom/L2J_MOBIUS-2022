@@ -22,6 +22,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
@@ -59,6 +60,8 @@ public class PlayerHandler implements ITelnetHandler
 	@Override
 	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime)
 	{
+		final Logger LOGGER = Logger.getLogger(PlayerHandler.class.getName());
+		
 		if (command.startsWith("kick"))
 		{
 			try
@@ -246,7 +249,7 @@ public class PlayerHandler implements ITelnetHandler
 			{
 				if (Config.DEBUG)
 				{
-					e.printStackTrace();
+					LOGGER.info("Could not jail player via telnet!");
 				}
 			}
 		}
@@ -276,7 +279,7 @@ public class PlayerHandler implements ITelnetHandler
 			{
 				if (Config.DEBUG)
 				{
-					e.printStackTrace();
+					LOGGER.info("Could not unjail player via telnet!");
 				}
 			}
 		}

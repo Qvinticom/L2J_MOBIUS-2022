@@ -38,11 +38,11 @@ public interface IChanceMultiplierStrategy
 		double championmult;
 		if ((item.getItemId() == Inventory.ADENA_ID) || (item.getItemId() == Inventory.ANCIENT_ADENA_ID))
 		{
-			championmult = Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
+			championmult = Config.L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE;
 		}
 		else
 		{
-			championmult = Config.L2JMOD_CHAMPION_REWARDS;
+			championmult = Config.L2JMOD_CHAMPION_REWARDS_CHANCE;
 		}
 		
 		return (Config.L2JMOD_CHAMPION_ENABLE && (victim != null) && victim.isChampion()) ? (Config.RATE_QUEST_DROP * championmult) : Config.RATE_QUEST_DROP;
@@ -55,7 +55,7 @@ public interface IChanceMultiplierStrategy
 			float multiplier = 1;
 			if (victim.isChampion())
 			{
-				multiplier *= item.getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS : Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
+				multiplier *= item.getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS_CHANCE : Config.L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE;
 			}
 			Float dropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(item.getItemId());
 			if (dropChanceMultiplier != null)

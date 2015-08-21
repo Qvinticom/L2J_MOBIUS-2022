@@ -686,7 +686,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	{
 		if ((arena < 0) || (arena > 3))
 		{
-			_log.warning("RainbowSptringChateau siege: Wrong arena id passed: " + arena);
+			_log.warning("RainbowSptringChateau siege: Wrong arena ID passed: " + arena);
 			return;
 		}
 		for (L2PcInstance pc : leader.getParty().getMembers())
@@ -725,7 +725,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					// _log.warning("Unable to spawn guard for clan index " + i + "!");
 				}
 			}
 			SpawnTable.getInstance().addNewSpawn(_gourds[i], false);
@@ -844,7 +844,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// _log.warning(RainbowSpringsChateau.class.getSigners() + ": Unable to remove attacker clan ID " + clanId + " from database!");
 		}
 	}
 	
@@ -859,7 +859,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// _log.warning(RainbowSpringsChateau.class.getSigners() + ": Unable add attakers for clan ID " + clanId + " and count " + count + "!");
 		}
 	}
 	
@@ -867,19 +867,17 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	public void loadAttackers()
 	{
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			Statement s = con.createStatement())
+			Statement s = con.createStatement();
+			ResultSet rset = s.executeQuery("SELECT * FROM rainbowsprings_attacker_list"))
 		{
-			try (ResultSet rset = s.executeQuery("SELECT * FROM rainbowsprings_attacker_list"))
+			while (rset.next())
 			{
-				while (rset.next())
-				{
-					_warDecreesCount.put(rset.getInt("clan_id"), rset.getLong("decrees_count"));
-				}
+				_warDecreesCount.put(rset.getInt("clan_id"), rset.getLong("decrees_count"));
 			}
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			_log.warning(RainbowSpringsChateau.class.getSigners() + ": Unable load attakers!");
 		}
 	}
 	

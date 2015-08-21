@@ -46,8 +46,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	{
 		new Location(45109, 112124, -1900), // 30%
 		new Location(47653, 110816, -2110), // 40%
-		new Location(47247, 109396, -2000)
-	// 30%
+		new Location(47247, 109396, -2000), // 30%
 	};
 	
 	private L2Spawn _nurka;
@@ -86,8 +85,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		}
 		catch (Exception e)
 		{
-			_log.warning(getName() + ": Couldnt set the Bloody Lord Nurka spawn");
-			e.printStackTrace();
+			_log.warning(getName() + ": Couldn't set the Bloody Lord Nurka spawn!");
 		}
 	}
 	

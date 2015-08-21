@@ -156,31 +156,15 @@ public final class GameServer
 {
 	private static final Logger _log = Logger.getLogger(GameServer.class.getName());
 	
+	// Local Constants
+	private static final String LOG_FOLDER = "log"; // Name of folder for log file
+	private static final String LOG_NAME = "./log.cfg"; // Name of log file
+	
 	private final SelectorThread<L2GameClient> _selectorThread;
 	private final L2GamePacketHandler _gamePacketHandler;
 	private final DeadLockDetector _deadDetectThread;
 	public static GameServer gameServer;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
-	
-	public long getUsedMemoryMB()
-	{
-		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
-	}
-	
-	public SelectorThread<L2GameClient> getSelectorThread()
-	{
-		return _selectorThread;
-	}
-	
-	public L2GamePacketHandler getL2GamePacketHandler()
-	{
-		return _gamePacketHandler;
-	}
-	
-	public DeadLockDetector getDeadLockDetectorThread()
-	{
-		return _deadDetectThread;
-	}
 	
 	public GameServer() throws Exception
 	{
@@ -188,7 +172,7 @@ public final class GameServer
 		
 		if (!IdFactory.getInstance().isInitialized())
 		{
-			_log.severe(getClass().getSimpleName() + ": Could not read object IDs from DB. Please check your data.");
+			_log.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
 		}
 		
@@ -497,9 +481,6 @@ public final class GameServer
 	public static void main(String[] args) throws Exception
 	{
 		Server.serverMode = Server.MODE_GAMESERVER;
-		// Local Constants
-		final String LOG_FOLDER = "log"; // Name of folder for log file
-		final String LOG_NAME = "./log.cfg"; // Name of log file
 		
 		/*** Main ***/
 		// Create log folder
@@ -522,6 +503,26 @@ public final class GameServer
 		{
 			new Status(Server.serverMode).start();
 		}
+	}
+	
+	public long getUsedMemoryMB()
+	{
+		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
+	}
+	
+	public SelectorThread<L2GameClient> getSelectorThread()
+	{
+		return _selectorThread;
+	}
+	
+	public L2GamePacketHandler getL2GamePacketHandler()
+	{
+		return _gamePacketHandler;
+	}
+	
+	public DeadLockDetector getDeadLockDetectorThread()
+	{
+		return _deadDetectThread;
 	}
 	
 	public static void printSection(String s)
