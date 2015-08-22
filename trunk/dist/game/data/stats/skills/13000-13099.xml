@@ -839,214 +839,334 @@
 		</for>
 	</skill>
 	<skill id="13031" levels="1" name="Fire Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire Resistance by 5. -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13032" levels="1" name="Earth Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 5. -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="earthRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13033" levels="1" name="Dark Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 5. -->
 		<set name="icon" val="icon.skill4333" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="darkRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13034" levels="1" name="Water Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water Resistance by 5. -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13035" levels="1" name="Wind Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind Resistance by 5. -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13036" levels="1" name="Divinity Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Divinity Resistance by 5. -->
 		<set name="icon" val="icon.skill4337" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13037" levels="1" name="Fire Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire Resistance by 10. -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13038" levels="1" name="Earth Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 10. -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="earthRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13039" levels="1" name="Dark Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 10. -->
 		<set name="icon" val="icon.skill4333" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="darkRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13040" levels="1" name="Water Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water Resistance by 10. -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13041" levels="1" name="Wind Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind Resistance by 10. -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13042" levels="1" name="Divinity Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Divinity Resistance by 10. -->
 		<set name="icon" val="icon.skill4337" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13043" levels="1" name="Fire Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire Resistance by 15. -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13044" levels="1" name="Earth Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 15. -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="earthRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13045" levels="1" name="Dark Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 15. -->
 		<set name="icon" val="icon.skill4333" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="darkRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13046" levels="1" name="Water Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water Resistance by 15. -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13047" levels="1" name="Wind Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind Resistance by 15. -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13048" levels="1" name="Divinity Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Divinity Resistance by 15. -->
 		<set name="icon" val="icon.skill4337" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13049" levels="1" name="Fire Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire Resistance by 20. -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13050" levels="1" name="Earth Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 20. -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="earthRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13051" levels="1" name="Dark Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 20. -->
 		<set name="icon" val="icon.skill4333" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13052" levels="1" name="Water Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water Resistance by 20. -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13053" levels="1" name="Wind Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind Resistance by 20. -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13054" levels="1" name="Divinity Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Divinity Resistance by 20. -->
 		<set name="icon" val="icon.skill4337" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13055" levels="1" name="Fire Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire Resistance by 25. -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13056" levels="1" name="Earth Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 25. -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="earthRes" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13057" levels="1" name="Dark Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 25. -->
 		<set name="icon" val="icon.skill4333" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="darkRes" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13058" levels="1" name="Water Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water Resistance by 25. -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="waterRes" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13059" levels="1" name="Wind Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind Resistance by 25. -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13060" levels="1" name="Divinity Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Divinity Resistance by 25. -->
 		<set name="icon" val="icon.skill4337" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13061" levels="1" name="Special Ability: Long Blow">
 		<!-- Increases bow/crossbow range. Inflicts additional damage during PvP. -->
