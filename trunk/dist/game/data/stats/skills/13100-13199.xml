@@ -259,7 +259,7 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="buff">
+			<effect name="Buff">
 				<mul stat="maxHp" val="1.1" />
 				<mul stat="maxCp" val="1.15" />
 				<add stat="mDef" val="80" />
@@ -284,7 +284,7 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="buff">
+			<effect name="Buff">
 				<mul stat="maxHp" val="1.1" />
 				<mul stat="maxCp" val="1.15" />
 				<add stat="mDef" val="50" />
