@@ -23,6 +23,7 @@ import java.util.List;
 
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 /**
  * Class for the Henna object.
@@ -46,6 +47,7 @@ public class L2Henna
 	private final int _cancel_fee;
 	private final int _cancel_count;
 	private final List<ClassId> _wear_class;
+	private final List<SkillHolder> _skills;
 	
 	public L2Henna(StatsSet set)
 	{
@@ -65,6 +67,7 @@ public class L2Henna
 		_cancel_fee = set.getInt("cancel_fee");
 		_cancel_count = set.getInt("cancel_count");
 		_wear_class = new ArrayList<>();
+		_skills = new ArrayList<>();
 	}
 	
 	/**
@@ -210,5 +213,15 @@ public class L2Henna
 	public void setWearClassIds(List<ClassId> wearClassIds)
 	{
 		_wear_class.addAll(wearClassIds);
+	}
+	
+	public List<SkillHolder> getSkills()
+	{
+		return _skills;
+	}
+	
+	public void setSkills(List<SkillHolder> skills)
+	{
+		_skills.addAll(skills);
 	}
 }

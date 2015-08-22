@@ -29,6 +29,7 @@ import org.w3c.dom.Node;
 
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.L2Henna;
 import com.l2jserver.util.data.xml.IXmlReader;
 
@@ -85,6 +86,7 @@ public final class HennaData implements IXmlReader
 	{
 		final StatsSet set = new StatsSet();
 		final List<ClassId> wearClassIds = new ArrayList<>();
+		final List<SkillHolder> skills = new ArrayList<>();
 		NamedNodeMap attrs = d.getAttributes();
 		Node attr;
 		for (int i = 0; i < attrs.getLength(); i++)
@@ -124,6 +126,19 @@ public final class HennaData implements IXmlReader
 					set.set("cancel_fee", attr.getNodeValue());
 					break;
 				}
+				case "skills":
+				{
+					for (Node i = c.getFirstChild(); i != null; i = i.getNextSibling())
+					{
+						if ("skill".equals(i.getNodeName()))
+						{
+							final int skillId = Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue());
+							final int skillLevel = Integer.parseInt(i.getAttributes().getNamedItem("level").getNodeValue());
+							skills.add(new SkillHolder(skillId, skillLevel));
+						}
+					}
+					break;
+				}
 				case "classId":
 				{
 					wearClassIds.add(ClassId.getClassId(Integer.parseInt(c.getTextContent())));
@@ -133,6 +148,7 @@ public final class HennaData implements IXmlReader
 		}
 		final L2Henna henna = new L2Henna(set);
 		henna.setWearClassIds(wearClassIds);
+		henna.setSkills(skills);
 		_hennaList.put(henna.getDyeId(), henna);
 	}
 	
