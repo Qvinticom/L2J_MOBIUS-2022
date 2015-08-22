@@ -658,8 +658,11 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
 		}
 		
-		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
-		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+		if (!Config.SERVER_CLASSIC_SUPPORT)
+		{
+			activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+		}
 		
 		// Unstuck players that had client open when server crashed.
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
