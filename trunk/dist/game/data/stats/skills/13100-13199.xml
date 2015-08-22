@@ -254,18 +254,54 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="13136" levels="1" name="Hero's Cloak">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 10% and Max CP by 15%, and increases STR/INT/CON/MEN/DEX/WIT + 2, and Fire/Water/Wind/Earth/Holy/Dark Resistance + 10 when equipped. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="buff">
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxCp" val="1.15" />
+				<add stat="mDef" val="80" />
+				<add stat="STR" val="2" />
+				<add stat="INT" val="2" />
+				<add stat="CON" val="2" />
+				<add stat="MEN" val="2" />
+				<add stat="DEX" val="2" />
+				<add stat="WIT" val="2" />
+				<add stat="fireRes" val="10" />
+				<add stat="waterRes" val="10" />
+				<add stat="windRes" val="10" />
+				<add stat="earthRes" val="10" />
+				<add stat="holyRes" val="10" />
+				<add stat="darkRes" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13137" levels="1" name="Glorious Cloak">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 10% and Max CP by 15%, and increases STR/INT/CON/MEN/DEX/WIT + 1, and Fire/Water/Wind/Earth/Holy/Dark Resistance + 5 when equipped. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="buff">
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxCp" val="1.15" />
+				<add stat="mDef" val="50" />
+				<add stat="STR" val="1" />
+				<add stat="INT" val="1" />
+				<add stat="CON" val="1" />
+				<add stat="MEN" val="1" />
+				<add stat="DEX" val="1" />
+				<add stat="WIT" val="1" />
+				<add stat="fireRes" val="5" />
+				<add stat="waterRes" val="5" />
+				<add stat="windRes" val="5" />
+				<add stat="earthRes" val="5" />
+				<add stat="holyRes" val="5" />
+				<add stat="darkRes" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13138" levels="1" name="Haste Talisman">
 		<!-- AUTO GENERATED SKILL -->
