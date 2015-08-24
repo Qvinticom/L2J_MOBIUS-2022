@@ -112,6 +112,7 @@
 				<xs:attribute type="xs:string" name="race" use="optional" />
 				<xs:attribute type="xs:string" name="npcId" use="optional" />
 				<xs:attribute type="xs:string" name="npcType" use="optional" />
+				<xs:attribute type="xs:string" name="hp" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -247,7 +248,7 @@
 				<xs:attribute type="xs:string" name="grade" use="optional" />
 				<xs:attribute type="xs:byte" name="VALAKAS" use="optional" />
 				<xs:attribute type="xs:string" name="isItem" use="optional" />
-				<xs:attribute type="xs:byte" name="skillLvl" use="optional" />
+				<xs:attribute type="xs:string" name="skillLvl" use="optional" />
 				<xs:attribute type="xs:byte" name="GUST" use="optional" />
 				<xs:attribute type="xs:byte" name="BOSS" use="optional" />
 				<xs:attribute type="xs:byte" name="PHYSICAL_BLOCKADE" use="optional" />
@@ -262,6 +263,14 @@
 				<xs:attribute type="xs:string" name="KNOCKDOWN" use="optional" />
 				<xs:attribute type="xs:integer" name="speed" use="optional" />
 				<xs:attribute type="xs:integer" name="distance" use="optional" />
+				<xs:attribute type="xs:integer" name="debuffId" use="optional" />
+				<xs:attribute type="xs:string" name="weaponTypeDec" use="optional" />
+				<xs:attribute type="xs:double" name="valueDec" use="optional" />
+				<xs:attribute type="xs:string" name="weaponTypeInc" use="optional" />
+				<xs:attribute type="xs:double" name="valueInc" use="optional" />
+				<xs:attribute type="xs:boolean" name="isLastAttack" use="optional" />
+				<xs:attribute type="xs:string" name="targetAbnormalType" use="optional" />
+				<xs:attribute type="xs:double" name="skillAddPower" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -334,6 +343,8 @@
 			<xs:enumeration value="MEN" />
 			<xs:enumeration value="WIT" />
 			<xs:enumeration value="DEX" />
+			<xs:enumeration value="LUC" />
+			<xs:enumeration value="CHA" />
 			<xs:enumeration value="waterPower" />
 			<xs:enumeration value="windPower" />
 			<xs:enumeration value="firePower" />
@@ -389,6 +400,11 @@
 			<xs:enumeration value="magicSuccRes" />
 			<xs:enumeration value="reflectDamageRes" />
 			<xs:enumeration value="receivedDamageModifier" />
+			<xs:enumeration value="maxSkillDamage" />
+			<xs:enumeration value="weaponElementPower" />
+			<xs:enumeration value="hpRestoreOnKill" />
+			<xs:enumeration value="momentumSkillPower" />
+			<xs:enumeration value="maxPhysCritRate" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">
@@ -460,6 +476,7 @@
 			<xs:element name="enchant6" type="enchantType" />
 			<xs:element name="enchant7" type="enchantType" />
 			<xs:element name="enchant8" type="enchantType" />
+			<xs:element name="enchant9" type="enchantType" />
 			<xs:element name="cond" type="condType" />
 			<xs:element name="for" type="forType" />
 			<xs:element name="enchant1for" type="forType" />
@@ -473,6 +490,8 @@
 			<xs:element name="enchant4for" type="forType" />
 			<xs:element name="enchant5for" type="forType" />
 			<xs:element name="enchant6for" type="forType" />
+			<xs:element name="enchant8for" type="forType" />
+			<xs:element name="enchant9for" type="forType" />
 			<xs:element name="endEffects" type="effectsType" />
 			<xs:element name="selfEffects" type="effectsType" />
 			<xs:element name="enchant2selfEffects" type="effectsType" />
@@ -497,6 +516,7 @@
 		<xs:attribute type="xs:byte" name="enchantGroup6" use="optional" />
 		<xs:attribute type="xs:byte" name="enchantGroup7" use="optional" />
 		<xs:attribute type="xs:byte" name="enchantGroup8" use="optional" />
+		<xs:attribute type="xs:byte" name="enchantGroup9" use="optional" />
 	</xs:complexType>
 	<xs:element name="list">
 		<xs:complexType>
