@@ -59,7 +59,7 @@ public class Q10360_CertificationOfFate extends Quest
 	// Requirements
 	private static final int MIN_LEVEL = 38;
 	// Rewards
-	private static final int ADENA_REWARD = 110000;
+	private static final int ADENA_REWARD = 1100;
 	private static final int EXP_REWARD = 2700000;
 	private static final int SP_REWARD = 648;
 	private static final ItemHolder PROOF_OF_JUSTICE = new ItemHolder(17822, 40);
@@ -108,6 +108,14 @@ public class Q10360_CertificationOfFate extends Quest
 				htmltext = event;
 				break;
 			}
+			case "30155-03.html":
+			case "30158-03.html":
+			case "30288-03.html":
+			case "30289-03.html":
+			case "30297-03.html":
+			case "30504-03.html":
+			case "30505-03.html":
+			case "32196-03.html":
 			case "33524-02.html":
 			case "33518-02.html":
 			case "33517-02.html":
@@ -180,18 +188,22 @@ public class Q10360_CertificationOfFate extends Quest
 						case DARK_ELF:
 						{
 							qs.setCond(12);
+							break;
 						}
 						case ORC:
 						{
 							qs.setCond(13);
+							break;
 						}
 						case DWARF:
 						{
 							qs.setCond(14);
+							break;
 						}
 						case KAMAEL:
 						{
 							qs.setCond(15);
+							break;
 						}
 					}
 					htmltext = event;
@@ -428,6 +440,10 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30289-01.htm";
 						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
+						}
 						break;
 					}
 					case RAINS:
@@ -435,6 +451,10 @@ public class Q10360_CertificationOfFate extends Quest
 						if (player.getClassId().getParent() == ClassId.FIGHTER)
 						{
 							htmltext = "30288-01.htm";
+						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -444,6 +464,10 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30155-01.htm";
 						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
+						}
 						break;
 					}
 					case ESRANDELL:
@@ -451,6 +475,10 @@ public class Q10360_CertificationOfFate extends Quest
 						if (player.getClassId().getParent() == ClassId.ELVEN_MAGE)
 						{
 							htmltext = "30158-01.htm";
+						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -460,6 +488,10 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30297-01.htm";
 						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
+						}
 						break;
 					}
 					case DRIKUS:
@@ -467,6 +499,10 @@ public class Q10360_CertificationOfFate extends Quest
 						if ((player.getRace() == Race.ORC) && (player.getClassId().level() == 1))
 						{
 							htmltext = "30505-01.htm";
+						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -476,6 +512,10 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30504-01.htm";
 						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
+						}
 						break;
 					}
 					case GERSHWIN:
@@ -483,6 +523,10 @@ public class Q10360_CertificationOfFate extends Quest
 						if ((player.getRace() == Race.KAMAEL) && (player.getClassId().level() == 1))
 						{
 							htmltext = "32196-01.htm";
+						}
+						else
+						{
+							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -644,10 +688,12 @@ public class Q10360_CertificationOfFate extends Quest
 								case SHILLIEN_ORACLE:
 								{
 									htmltext = "30297-04d.html";
+									break;
 								}
 								case DARK_WIZARD:
 								{
 									htmltext = "30297-04c.html";
+									break;
 								}
 								case ASSASSIN:
 								{
