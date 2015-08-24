@@ -84,9 +84,9 @@ public abstract class AbstractEnchantItem
 		}
 		_grade = set.getEnum("targetGrade", CrystalType.class, CrystalType.NONE);
 		_minEnchantLevel = set.getInt("minEnchant", 0);
-		_maxEnchantLevel = set.getInt("maxEnchant", 65535);
-		_maxEnchantLevelFighter = set.getInt("maxEnchantFighter", 65535);
-		_maxEnchantLevelMagic = set.getInt("maxEnchantMagic", 65535);
+		_maxEnchantLevel = set.getInt("maxEnchant", 127);
+		_maxEnchantLevelFighter = set.getInt("maxEnchantFighter", 127);
+		_maxEnchantLevelMagic = set.getInt("maxEnchantMagic", 127);
 		_bonusRate = set.getDouble("bonusRate", 0);
 	}
 	
