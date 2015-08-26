@@ -314,7 +314,6 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					}
 					
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
-					sm.addSkillName(_skillId);
 					player.sendPacket(sm);
 					player.sendPacket(ExEnchantSkillResult.valueOf(false));
 				}
@@ -514,7 +513,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					_logEnchant.log(record);
 				}
 				
-				player.addSkill(skill, true);
+				player.addSkill(SkillData.getInstance().getSkill(_skillId, _skillLvl), true);
 				player.sendPacket(ExEnchantSkillResult.valueOf(true));
 				
 				if (Config.DEBUG)
