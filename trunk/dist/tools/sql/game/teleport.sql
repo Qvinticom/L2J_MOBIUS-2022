@@ -1091,3 +1091,10 @@ INSERT INTO `teleport` VALUES
 
 INSERT INTO `teleport` VALUES
 ('Windmill Hill -> Gludio', '3319009', '-14557', '123809', '-3104', '0', '0', '57');
+
+-- Gracia
+INSERT INTO `teleport` VALUES ('HellfireTeleport1', 990001, -147856, 250651, -14024, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('HellfireTeleport2', 990002, -147728, 152787, -14048, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('HellfireTeleport3', 990003, -150131, 143145, -11960, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('HellfireTeleport4', 990004, -150169, 241022, -11928, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('DevicetoHellfire', 999001, -147642, 152827, -14059, 0, 0, 57);
