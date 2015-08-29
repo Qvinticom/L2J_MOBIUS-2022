@@ -53,7 +53,7 @@ public final class Q00401_PathOfTheWarrior extends Quest
 	private static final int TRACKER_SKELETON_LIDER = 20042;
 	private static final int ARACHNID_TRACKER = 20043;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00401_PathOfTheWarrior()
 	{
@@ -276,21 +276,9 @@ public final class Q00401_PathOfTheWarrior extends Quest
 						}
 						else
 						{
-							giveAdena(player, 163800, true);
+							// giveAdena(player, 1000, true); No Longer Gives Adena
 							giveItems(player, MEDALLION_OF_WARRIOR, 1);
-							final int level = player.getLevel();
-							if (level >= 20)
-							{
-								addExpAndSp(player, 320534, 21012);
-							}
-							else if (level == 19)
-							{
-								addExpAndSp(player, 456128, 27710);
-							}
-							else
-							{
-								addExpAndSp(player, 160267, 34408);
-							}
+							addExpAndSp(player, 6080, 0); // Player now only gets EXP Fixed rate.
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
 							qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
