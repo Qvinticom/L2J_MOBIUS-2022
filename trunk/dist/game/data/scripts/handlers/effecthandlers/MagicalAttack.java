@@ -104,10 +104,5 @@ public final class MagicalAttack extends AbstractEffect
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
 		}
-		
-		if (info.getSkill().isSuicideAttack())
-		{
-			activeChar.doDie(activeChar);
-		}
 	}
 }

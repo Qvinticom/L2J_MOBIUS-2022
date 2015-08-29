@@ -20,6 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.EffectCalculationType;
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.stat.CharStat;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -27,6 +28,8 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.stats.functions.FuncAdd;
 import com.l2jserver.gameserver.model.stats.functions.FuncMul;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Zealar
@@ -65,11 +68,13 @@ public final class MaxCp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final L2Character effected = info.getEffected();
+		final CharStat charStat = effected.getStat();
+		final double currentCp = effected.getCurrentCp();
+		double amount = _power;
 		
 		synchronized (charStat)
 		{
-			final double currentCp = info.getEffected().getCurrentCp();
 			switch (_type)
 			{
 				case DIFF:
@@ -77,20 +82,28 @@ public final class MaxCp extends AbstractEffect
 					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_CP, 1, this, _power, null));
 					if (_heal)
 					{
-						info.getEffected().setCurrentCp((currentCp + _power));
+						effected.setCurrentCp((currentCp + _power));
 					}
 					break;
 				}
 				case PER:
 				{
+					final double maxCp = effected.getMaxCp();
 					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_CP, 1, this, _power, null));
 					if (_heal)
 					{
-						info.getEffected().setCurrentCp((currentCp * _power));
+						amount = (_power - 1) * maxCp;
+						effected.setCurrentCp(currentCp + amount);
 					}
 					break;
 				}
 			}
+		}
+		if (_heal)
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+			sm.addInt((int) amount);
+			effected.sendPacket(sm);
 		}
 	}
 	

@@ -20,6 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.EffectCalculationType;
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.stat.CharStat;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -27,6 +28,8 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.stats.functions.FuncAdd;
 import com.l2jserver.gameserver.model.stats.functions.FuncMul;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Zealar
@@ -65,33 +68,43 @@ public final class MaxHp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final L2Character effected = info.getEffected();
+		final CharStat charStat = effected.getStat();
+		final double currentHp = effected.getCurrentHp();
+		double amount = _power;
 		
 		synchronized (charStat)
 		{
-			final double currentHp = info.getEffected().getCurrentHp();
 			switch (_type)
 			{
 				case DIFF:
 				{
+					
 					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
-						info.getEffected().setCurrentHp((currentHp + _power));
+						effected.setCurrentHp((currentHp + _power));
 					}
 					break;
 				}
 				case PER:
 				{
+					final double maxHp = effected.getMaxHp();
 					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
-						info.getEffected().setCurrentHp((currentHp * _power));
+						amount = (_power - 1) * maxHp;
+						effected.setCurrentHp(currentHp + amount);
 					}
 					break;
 				}
 			}
-			
+		}
+		if (_heal)
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+			sm.addInt((int) amount);
+			effected.sendPacket(sm);
 		}
 	}
 	

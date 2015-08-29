@@ -35,7 +35,6 @@ public final class DarkElvenChange2 extends Quest
 	// NPCs
 	private static int[] NPCS =
 	{
-		31328, // Innocentin
 		30195, // Brecson
 		30699, // Medown
 		30474, // Angus

@@ -77,6 +77,13 @@ public final class MagicalAttack extends AbstractEffect
 		
 		if (damage > 0)
 		{
+			// reduce damage if target has maxdamage buff
+			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			if (maxDamage > 0)
+			{
+				damage = (int) maxDamage;
+			}
+			
 			// Manage attack or cast break of the target (calculating rate, sending message...)
 			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 			{
@@ -96,11 +103,6 @@ public final class MagicalAttack extends AbstractEffect
 				target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
-		}
-		
-		if (info.getSkill().isSuicideAttack())
-		{
-			activeChar.doDie(activeChar);
 		}
 	}
 }
