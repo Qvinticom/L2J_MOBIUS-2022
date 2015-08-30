@@ -134,6 +134,8 @@ public abstract class L2Summon extends L2Playable
 		// if someone comes into range now, the animation shouldn't show any more
 		_restoreSummon = false;
 		
+		rechargeShots(true, true);
+		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonSpawn(this), this);
 	}
