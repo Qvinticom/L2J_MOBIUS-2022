@@ -1051,7 +1051,7 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		final int rank = NOBLES_RANK.get(objId);
-		int points = (player.isHero() ? Config.ALT_OLY_HERO_POINTS : 0);
+		int points = (player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()) ? Config.ALT_OLY_HERO_POINTS : 0);
 		switch (rank)
 		{
 			case 1:
