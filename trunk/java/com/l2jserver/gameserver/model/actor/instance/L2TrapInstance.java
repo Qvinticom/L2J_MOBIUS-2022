@@ -181,7 +181,7 @@ public final class L2TrapInstance extends L2Npc
 			return false;
 		}
 		
-		if (!target.isInsideRadius(this, _skill.getSkill().getEffectRange(), false, false))
+		if (!target.isInsideRadius(this, _skill.getSkill().getAffectRange(), false, false))
 		{
 			return false;
 		}
