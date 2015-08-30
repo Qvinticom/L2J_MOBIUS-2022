@@ -39,6 +39,12 @@ public class FuncMul extends AbstractFunction
 	{
 		if ((getApplayCond() == null) || getApplayCond().test(effector, effected, skill))
 		{
+			// Focus Death/Power fix by Sahar.
+			if ((getStat() == Stats.CRITICAL_DAMAGE) && (skill != null) && ((skill.getId() == 355) || (skill.getId() == 357)))
+			{
+				return initVal * (1 + ((getValue() - 1) / 2));
+			}
+			
 			return initVal * getValue();
 		}
 		return initVal;
