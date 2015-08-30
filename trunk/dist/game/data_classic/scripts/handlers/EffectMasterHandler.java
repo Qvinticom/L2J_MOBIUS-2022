@@ -84,7 +84,6 @@ public final class EffectMasterHandler
 		EnableCloak.class,
 		EnemyCharge.class,
 		EnergyAttack.class,
-		EnlargeAbnormalSlot.class,
 		Escape.class,
 		FakeDeath.class,
 		FatalBlow.class,
