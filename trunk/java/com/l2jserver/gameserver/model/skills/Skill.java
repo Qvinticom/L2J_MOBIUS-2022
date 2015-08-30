@@ -1400,7 +1400,7 @@ public final class Skill implements IIdentifiable
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (effected.isPlayer() && effected.hasServitors())
+			if (effected.isPlayer() && effected.hasServitors() && (_abnormalType != AbnormalType.TRANSFORM))
 			{
 				if ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb())
 				{
