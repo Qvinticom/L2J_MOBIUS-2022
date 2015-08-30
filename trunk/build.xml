@@ -110,38 +110,38 @@
 				<attribute name="Main-Class" value="com.l2jserver.gameserver.GameServer" />
 			</manifest>
 		</jar>
-			<jar destfile="${build.dist.dbinstaller}/Database_Installer_GS.jar" level="9">
-				<fileset dir="${build.bin}">
-					<include name="**/dbinstaller/**" />
-					<include name="**/images/**" />
-					<include name="**/util/**" />
-					<include name="**/SQLFilter**" />
-					<exclude name="**/LauncherLS*" />
-				</fileset>
-				<manifest>
-					<attribute name="Built-By" value="${user.name}" />
-					<attribute name="Built-Date" value="${time.stamp}" />
-					<attribute name="Class-Path" value="${manifest.libs}" />
-					<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
-					<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherGS" />
-				</manifest>
-			</jar>
-			<jar destfile="${build.dist.dbinstaller}/Database_Installer_LS.jar" level="9">
-				<fileset dir="${build.bin}">
-					<include name="**/dbinstaller/**" />
-					<include name="**/images/**" />
-					<include name="**/util/**" />
-					<include name="**/SQLFilter**" />
-					<exclude name="**/LauncherGS*" />
-				</fileset>
-				<manifest>
-					<attribute name="Built-By" value="${user.name}" />
-					<attribute name="Built-Date" value="${time.stamp}" />
-					<attribute name="Class-Path" value="${manifest.libs}" />
-					<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
-					<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherLS" />
-				</manifest>
-			</jar>
+		<jar destfile="${build.dist.dbinstaller}/Database_Installer_GS.jar" level="9">
+			<fileset dir="${build.bin}">
+				<include name="**/dbinstaller/**" />
+				<include name="**/images/**" />
+				<include name="**/util/**" />
+				<include name="**/SQLFilter**" />
+				<exclude name="**/LauncherLS*" />
+			</fileset>
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Built-Date" value="${time.stamp}" />
+				<attribute name="Class-Path" value="${manifest.libs}" />
+				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
+				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherGS" />
+			</manifest>
+		</jar>
+		<jar destfile="${build.dist.dbinstaller}/Database_Installer_LS.jar" level="9">
+			<fileset dir="${build.bin}">
+				<include name="**/dbinstaller/**" />
+				<include name="**/images/**" />
+				<include name="**/util/**" />
+				<include name="**/SQLFilter**" />
+				<exclude name="**/LauncherGS*" />
+			</fileset>
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Built-Date" value="${time.stamp}" />
+				<attribute name="Class-Path" value="${manifest.libs}" />
+				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
+				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherLS" />
+			</manifest>
+		</jar>
 	</target>
 
 	<target name="build" depends="jar" description="Create the Zip file.">
