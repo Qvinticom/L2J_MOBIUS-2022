@@ -174,7 +174,7 @@
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY_NOTME" />
+		<set name="targetType" val="AURA_FRIENDLY" />
 		<for>
 			<effect name="Invincible" />
 			<effect name="CpHeal">

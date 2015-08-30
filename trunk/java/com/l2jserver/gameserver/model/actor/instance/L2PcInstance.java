@@ -8787,6 +8787,7 @@ public final class L2PcInstance extends L2Playable
 			case GROUND:
 			case SELF:
 			case AURA_CORPSE_MOB:
+			case AURA_FRIENDLY:
 			case COMMAND_CHANNEL:
 				target = this;
 				break;
@@ -8890,6 +8891,7 @@ public final class L2PcInstance extends L2Playable
 			case SELF:
 			case AREA_SUMMON:
 			case AURA_CORPSE_MOB:
+			case AURA_FRIENDLY:
 			case COMMAND_CHANNEL:
 				target = this;
 				break;
@@ -9070,6 +9072,7 @@ public final class L2PcInstance extends L2Playable
 					case SELF:
 					case GROUND:
 					case AREA_SUMMON:
+					case AURA_FRIENDLY:
 					case UNLOCKABLE:
 						break;
 					default: // Send a Server->Client packet ActionFailed to the L2PcInstance

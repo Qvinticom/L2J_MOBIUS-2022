@@ -200,6 +200,7 @@ import handlers.targethandlers.AreaFriendly;
 import handlers.targethandlers.AreaSummon;
 import handlers.targethandlers.Aura;
 import handlers.targethandlers.AuraCorpseMob;
+import handlers.targethandlers.AuraFriendly;
 import handlers.targethandlers.BehindArea;
 import handlers.targethandlers.BehindAura;
 import handlers.targethandlers.Clan;
@@ -550,6 +551,7 @@ public class MasterHandler
 			AreaSummon.class,
 			Aura.class,
 			AuraCorpseMob.class,
+			AuraFriendly.class,
 			BehindArea.class,
 			BehindAura.class,
 			Clan.class,
