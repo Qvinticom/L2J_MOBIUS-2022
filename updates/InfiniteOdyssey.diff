@@ -1,0 +1,4546 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius
+Index: dist/db_installer/sql/game/character_skills.sql
+===================================================================
+--- dist/db_installer/sql/game/character_skills.sql	(revision 775)
++++ dist/db_installer/sql/game/character_skills.sql	(working copy)
+@@ -5,4 +5,6 @@
+   `skill_level` INT(3) NOT NULL DEFAULT 1,
+   `class_index` INT(1) NOT NULL DEFAULT 0,
+   PRIMARY KEY (`charId`,`skill_id`,`class_index`)
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+\ No newline at end of file
++) ENGINE=InnoDB DEFAULT CHARSET=utf8;
++ALTER TABLE `character_skills` MODIFY COLUMN `skill_level` INT(4);
++UPDATE `character_skills` SET skill_level=((skill_level % 100) + (round(skill_level / 100) * 1000)) WHERE skill_level <= 1000 AND skill_level >= 100;
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java	(working copy)
+@@ -38,7 +38,7 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xFE);
+-		writeH(0xD3);
++		writeH(0xD4);
+ 		writeD(_contacts.size());
+ 		for (String name : _contacts)
+ 		{
+Index: java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java	(working copy)
+@@ -59,17 +59,17 @@
+ 	
+ 	public static int getEnchantRoute(int level)
+ 	{
+-		return (int) Math.floor(level / 100);
++		return (int) Math.floor(level / 1000);
+ 	}
+ 	
+ 	public static int getEnchantIndex(int level)
+ 	{
+-		return (level % 100) - 1;
++		return (level % 1000) - 1;
+ 	}
+ 	
+ 	public static int getEnchantType(int level)
+ 	{
+-		return ((level - 1) / 100) - 1;
++		return ((level - 1) / 1000) - 1;
+ 	}
+ 	
+ 	public L2EnchantSkillGroup getFirstRouteGroup()
+@@ -84,7 +84,7 @@
+ 	
+ 	public int getMinSkillLevel(int level)
+ 	{
+-		if ((level % 100) == 1)
++		if ((level % 1000) == 1)
+ 		{
+ 			return _baseLvl;
+ 		}
+Index: java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java	(working copy)
+@@ -47,8 +47,8 @@
+ 	public static final int M_ATK = 0x16;
+ 	public static final int CAST_SPD = 0x17;
+ 	public static final int M_DEF = 0x18;
+-	public static final int PVP_FLAG = 0x19;
+-	public static final int KARMA = 0x1A;
++	public static final int PVP_FLAG = 0x1A;
++	public static final int KARMA = 0x1B;
+ 	
+ 	public static final int CUR_CP = 0x21;
+ 	public static final int MAX_CP = 0x22;
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java	(working copy)
+@@ -52,6 +52,7 @@
+ 	
+ 	private int _skillId;
+ 	private int _skillLvl;
++	private int _fullLvl;
+ 	
+ 	@Override
+ 	protected void readImpl()
+@@ -58,7 +59,15 @@
+ 	{
+ 		_type = readD();
+ 		_skillId = readD();
+-		_skillLvl = readD();
++		_fullLvl = readD();
++		if (_fullLvl < 100)
++		{
++			_skillLvl = _fullLvl;
++		}
++		else
++		{
++			_skillLvl = _fullLvl >> 16;
++		}
+ 	}
+ 	
+ 	@Override
+@@ -104,6 +113,7 @@
+ 		{
+ 			return;
+ 		}
++		final int _elvl = ((_skillLvl % 100) - 1) / 10;
+ 		if (_type == 0) // enchant
+ 		{
+ 			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+@@ -117,8 +127,7 @@
+ 			final int requiredSp = esd.getSpCost() * costMultiplier;
+ 			if (player.getSp() >= requiredSp)
+ 			{
+-				// only first lvl requires book
+-				final boolean usesBook = (_skillLvl % 100) == 1; // 101, 201, 301 ...
++				final boolean usesBook = true;
+ 				final int reqItemId;
+ 				if (player.getClassId().level() == 3)
+ 				{
+@@ -126,7 +135,18 @@
+ 				}
+ 				else
+ 				{
+-					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
++					if (_elvl == 0)
++					{
++						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
++					}
++					else if (_elvl == 1)
++					{
++						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
++					}
++					else
++					{
++						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
++					}
+ 				}
+ 				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+ 				
+@@ -188,7 +208,15 @@
+ 				}
+ 				else
+ 				{
+-					player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
++					if (player.getClassId().level() == 3)
++					{
++						player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
++					}
++					else
++					{
++						final int _clvl = ((((_skillLvl % 100) - 1) / 10) * 10) + ((_skillLvl / 1000) * 1000);
++						player.addSkill(SkillData.getInstance().getSkill(_skillId, _clvl), true);
++					}
+ 					player.sendPacket(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
+ 					player.sendPacket(ExEnchantSkillResult.valueOf(false));
+ 					
+@@ -229,7 +257,18 @@
+ 			}
+ 			else
+ 			{
+-				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
++				if (_elvl == 0)
++				{
++					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
++				}
++				else if (_elvl == 1)
++				{
++					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
++				}
++				else
++				{
++					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
++				}
+ 			}
+ 			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+ 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+@@ -333,104 +372,7 @@
+ 		}
+ 		else if (_type == 2) // untrain
+ 		{
+-			if ((_skillLvl % 100) == 0)
+-			{
+-				_skillLvl = s.getBaseLevel();
+-			}
+-			
+-			final int reqItemId;
+-			if (player.getClassId().level() == 3)
+-			{
+-				reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK_OLD;
+-			}
+-			else
+-			{
+-				reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
+-			}
+-			
+-			final int beforeUntrainSkillLevel = player.getSkillLevel(_skillId);
+-			if (((beforeUntrainSkillLevel - 1) != _skillLvl) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLvl != s.getBaseLevel())))
+-			{
+-				return;
+-			}
+-			
+-			EnchantSkillHolder esd = s.getEnchantSkillHolder(beforeUntrainSkillLevel);
+-			
+-			int requiredSp = esd.getSpCost();
+-			int requireditems = esd.getAdenaCost();
+-			
+-			L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+-			if (Config.ES_SP_BOOK_NEEDED)
+-			{
+-				if (spb == null)
+-				{
+-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+-					return;
+-				}
+-			}
+-			
+-			if (player.getInventory().getAdena() < requireditems)
+-			{
+-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+-				return;
+-			}
+-			
+-			boolean check = true;
+-			if (Config.ES_SP_BOOK_NEEDED)
+-			{
+-				check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
+-			}
+-			
+-			check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
+-			
+-			if (!check)
+-			{
+-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+-				return;
+-			}
+-			
+-			player.getStat().addSp((int) (requiredSp * 0.8));
+-			
+-			if (Config.LOG_SKILL_ENCHANTS)
+-			{
+-				LogRecord record = new LogRecord(Level.INFO, "Untrain");
+-				record.setParameters(new Object[]
+-				{
+-					player,
+-					skill,
+-					spb
+-				});
+-				record.setLoggerName("skill");
+-				_logEnchant.log(record);
+-			}
+-			
+-			player.addSkill(skill, true);
+-			player.sendPacket(ExEnchantSkillResult.valueOf(true));
+-			
+-			if (Config.DEBUG)
+-			{
+-				_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requireditems + " Adena.");
+-			}
+-			
+-			player.sendPacket(new UserInfo(player));
+-			
+-			if (_skillLvl > 100)
+-			{
+-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
+-				sm.addSkillName(_skillId);
+-				player.sendPacket(sm);
+-			}
+-			else
+-			{
+-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
+-				sm.addSkillName(_skillId);
+-				player.sendPacket(sm);
+-			}
+-			player.sendSkillList();
+-			final int afterUntrainSkillLevel = player.getSkillLevel(_skillId);
+-			player.sendPacket(new ExEnchantSkillInfo(_skillId, afterUntrainSkillLevel));
+-			player.sendPacket(new ExEnchantSkillInfoDetail(2, _skillId, afterUntrainSkillLevel - 1, player));
+-			player.updateShortCuts(_skillId, afterUntrainSkillLevel);
++			return;
+ 		}
+ 		else if (_type == 3) // change route
+ 		{
+@@ -441,17 +383,28 @@
+ 			}
+ 			else
+ 			{
+-				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
++				if (_elvl == 0)
++				{
++					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
++				}
++				else if (_elvl == 1)
++				{
++					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
++				}
++				else
++				{
++					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
++				}
+ 			}
+ 			
+ 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+-			if (beforeEnchantSkillLevel <= 100)
++			if (beforeEnchantSkillLevel <= 1000)
+ 			{
+ 				return;
+ 			}
+ 			
+-			int currentEnchantLevel = beforeEnchantSkillLevel % 100;
+-			if (currentEnchantLevel != (_skillLvl % 100))
++			int currentEnchantLevel = beforeEnchantSkillLevel % 1000;
++			if (currentEnchantLevel != (_skillLvl % 1000))
+ 			{
+ 				return;
+ 			}
+@@ -495,7 +448,7 @@
+ 				
+ 				int levelPenalty = Rnd.get(Math.min(4, currentEnchantLevel));
+ 				_skillLvl -= levelPenalty;
+-				if ((_skillLvl % 100) == 0)
++				if ((_skillLvl % 1000) == 0)
+ 				{
+ 					_skillLvl = s.getBaseLevel();
+ 				}
+@@ -534,9 +487,9 @@
+ 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
+ 					sm.addSkillName(_skillId);
+ 					
+-					if (_skillLvl > 100)
++					if (_skillLvl > 1000)
+ 					{
+-						sm.addInt(_skillLvl % 100);
++						sm.addInt(_skillLvl % 1000);
+ 					}
+ 					else
+ 					{
+@@ -558,7 +511,26 @@
+ 		}
+ 		else if (_type == 4) // 100% enchant
+ 		{
+-			int reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
++			final int reqItemId;
++			if (player.getClassId().level() == 3)
++			{
++				reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
++			}
++			else
++			{
++				if (_elvl == 0)
++				{
++					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
++				}
++				else if (_elvl == 1)
++				{
++					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
++				}
++				else
++				{
++					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
++				}
++			}
+ 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
+ 			if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
+ 			{
+Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java	(working copy)
+@@ -20,6 +20,7 @@
+ 
+ import java.util.Collection;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.model.L2Clan;
+ import com.l2jserver.gameserver.model.L2Clan.SubPledge;
+ import com.l2jserver.gameserver.model.L2ClanMember;
+@@ -58,7 +59,7 @@
+ 		
+ 		writeD(pledge == null ? 0 : 1);
+ 		writeD(_clan.getId());
+-		writeD(0x00); // pledge db id
++		writeD(Config.SERVER_ID);
+ 		writeD(pledgeId);
+ 		writeS(_clan.getName());
+ 		writeS(_clan.getLeaderName());
+Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(working copy)
+@@ -22,6 +22,7 @@
+ import java.util.Collections;
+ import java.util.List;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.Location;
+ import com.l2jserver.gameserver.model.actor.L2Character;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+@@ -35,11 +36,12 @@
+ {
+ 	private final int _skillId;
+ 	private final int _skillLevel;
++	private final int _maxLevel;
+ 	private final int _hitTime;
+ 	private final int _reuseDelay;
+ 	private final L2Character _activeChar;
+ 	private final L2Character _target;
+-	private final List<Integer> _unknown = Collections.emptyList();
++	private List<Integer> _unknown = Collections.emptyList();
+ 	private final List<Location> _groundLocations;
+ 	
+ 	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
+@@ -48,6 +50,7 @@
+ 		_target = target;
+ 		_skillId = skillId;
+ 		_skillLevel = skillLevel;
++		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
+ 		_hitTime = hitTime;
+ 		_reuseDelay = reuseDelay;
+ 		Location skillWorldPos = null;
+@@ -67,6 +70,25 @@
+ 		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay);
+ 	}
+ 	
++	/**
++	 * @param l2Character
++	 * @param target
++	 * @param displayId
++	 * @param displayLevel
++	 * @param skillTime
++	 * @param reuseDelay
++	 * @param blowSuccess
++	 */
++	public MagicSkillUse(L2Character l2Character, L2Character target, int displayId, int displayLevel, int skillTime, int reuseDelay, boolean blowSuccess)
++	{
++		this(l2Character, target, displayId, displayLevel, skillTime, reuseDelay);
++		if (blowSuccess)
++		{
++			_unknown = Arrays.asList(0);
++		}
++		
++	}
++	
+ 	@Override
+ 	protected final void writeImpl()
+ 	{
+@@ -75,7 +97,15 @@
+ 		writeD(_activeChar.getObjectId());
+ 		writeD(_target.getObjectId());
+ 		writeD(_skillId);
+-		writeD(_skillLevel);
++		if (_skillLevel < 100)
++		{
++			writeD(_skillLevel);
++		}
++		else
++		{
++			writeH(_maxLevel);
++			writeH(_skillLevel);
++		}
+ 		writeD(_hitTime);
+ 		writeD(-1); // TODO: Find me!
+ 		writeD(_reuseDelay);
+Index: java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java	(working copy)
+@@ -48,24 +48,24 @@
+ 			// TODO: Unhardcode these
+ 			writeD(chr.getRace().ordinal());
+ 			writeD(chr.getClassId().getId());
+-			writeD(0x46);
++			writeD(0x63);
+ 			writeD(chr.getBaseSTR());
+-			writeD(0x0A);
+-			writeD(0x46);
++			writeD(0x01);
++			writeD(0x63);
+ 			writeD(chr.getBaseDEX());
+-			writeD(0x0A);
+-			writeD(0x46);
++			writeD(0x01);
++			writeD(0x63);
+ 			writeD(chr.getBaseCON());
+-			writeD(0x0A);
+-			writeD(0x46);
++			writeD(0x01);
++			writeD(0x63);
+ 			writeD(chr.getBaseINT());
+-			writeD(0x0A);
+-			writeD(0x46);
++			writeD(0x01);
++			writeD(0x63);
+ 			writeD(chr.getBaseWIT());
+-			writeD(0x0A);
+-			writeD(0x46);
++			writeD(0x01);
++			writeD(0x63);
+ 			writeD(chr.getBaseMEN());
+-			writeD(0x0A);
++			writeD(0x01);
+ 		}
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java	(working copy)
+@@ -75,6 +75,5 @@
+ 		}
+ 		writeQ(_msg.getReqAdena());
+ 		writeD(_msg.hasAttachments() ? 0x01 : 0x00);
+-		writeD(_msg.isReturned() ? 0x01 : 00);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java	(working copy)
+@@ -18,12 +18,16 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+ import com.l2jserver.gameserver.enums.UserInfoType;
++import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
+ import com.l2jserver.gameserver.model.Elementals;
+ import com.l2jserver.gameserver.model.L2Clan;
+ import com.l2jserver.gameserver.model.L2Party;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
++import com.l2jserver.gameserver.model.items.L2Weapon;
++import com.l2jserver.gameserver.model.items.type.WeaponType;
+ import com.l2jserver.gameserver.model.zone.ZoneId;
+ 
+ /**
+@@ -213,7 +217,30 @@
+ 		if (containsMask(UserInfoType.STATS))
+ 		{
+ 			writeH(56);
+-			writeH(_activeChar.getActiveWeaponItem() != null ? 40 : 20);
++			if (_activeChar.getActiveWeaponItem() != null)
++			{
++				L2Weapon weaponItem = _activeChar.getActiveWeaponItem();
++				if (weaponItem.getItemType() == WeaponType.POLE)
++				{
++					writeH(80);
++				}
++				else if (weaponItem.getItemType() == WeaponType.BOW)
++				{
++					writeH(500);
++				}
++				else if (weaponItem.getItemType() == WeaponType.CROSSBOW)
++				{
++					writeH(400);
++				}
++				else
++				{
++					writeH(40);
++				}
++			}
++			else
++			{
++				writeH(0);
++			}
+ 			writeD(_activeChar.getPAtk(null));
+ 			writeD(_activeChar.getPAtkSpd());
+ 			writeD(_activeChar.getPDef(null));
+@@ -292,8 +319,8 @@
+ 			writeD(_activeChar.getClanId());
+ 			writeD(_activeChar.getClanCrestLargeId());
+ 			writeD(_activeChar.getClanCrestId());
+-			writeC(_activeChar.isClanLeader() ? -1 : 0x00);
+ 			writeD(_activeChar.getClanPrivileges().getBitmask());
++			writeC(_activeChar.isClanLeader() ? 1 : 0);
+ 			writeD(_activeChar.getAllyId());
+ 			writeD(_activeChar.getAllyCrestId());
+ 			writeC(_activeChar.isInPartyMatchRoom() ? 0x01 : 0x00);
+@@ -305,11 +332,12 @@
+ 			writeC(_activeChar.getPvpFlag());
+ 			writeD(_activeChar.getReputation());
+ 			writeC(_activeChar.isNoble() ? 0x01 : 0x00);
+-			writeC(_activeChar.isHero() ? 0x01 : 0x00);
++			writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
+ 			writeC(_activeChar.getPledgeClass());
+ 			writeD(_activeChar.getPkKills());
+ 			writeD(_activeChar.getPvpKills());
+-			writeD(_activeChar.getRecomLeft());
++			writeH(_activeChar.getRecomLeft());
++			writeH(_activeChar.getRecomHave());
+ 		}
+ 		
+ 		if (containsMask(UserInfoType.VITA_FAME))
+@@ -353,13 +381,13 @@
+ 			writeH(0x00);
+ 			writeH(0x00);
+ 			writeH(_activeChar.getInventoryLimit());
+-			writeC(0x00); // if greater than 1 show the attack cursor when interacting
++			writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+ 		}
+ 		
+ 		if (containsMask(UserInfoType.UNK_3))
+ 		{
+ 			writeH(9);
+-			writeC(0x00);
++			writeC(0x01);
+ 			writeH(0x00);
+ 			writeD(0x00);
+ 		}
+Index: java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java	(working copy)
+@@ -71,6 +71,11 @@
+ 	@Override
+ 	protected void onEnter(L2Character character)
+ 	{
++		if (!isInsideZone(character))
++		{
++			return;
++		}
++		
+ 		if (character.isPlayer())
+ 		{
+ 			character.setInsideZone(ZoneId.JUMP, true);
+Index: java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java	(working copy)
+@@ -18,12 +18,16 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
++import com.l2jserver.gameserver.enums.ShortcutType;
++import com.l2jserver.gameserver.model.L2Augmentation;
+ import com.l2jserver.gameserver.model.Shortcut;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
++import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+ 
+ public final class ShortCutInit extends L2GameServerPacket
+ {
+-	private Shortcut[] _shortCuts;
++	private ShortcutInfo[] _shortCuts;
+ 	
+ 	public ShortCutInit(L2PcInstance activeChar)
+ 	{
+@@ -32,40 +36,114 @@
+ 			return;
+ 		}
+ 		
+-		_shortCuts = activeChar.getAllShortCuts();
++		Shortcut[] tmp = activeChar.getAllShortCuts();
++		_shortCuts = new ShortcutInfo[tmp.length];
++		
++		int index = -1;
++		for (Shortcut shortCut : tmp)
++		{
++			index++;
++			_shortCuts[index] = convert(activeChar, shortCut);
++		}
+ 	}
+ 	
++	/**
++	 * @param player
++	 * @param shortCut
++	 * @return
++	 */
++	private ShortcutInfo convert(L2PcInstance player, Shortcut shortCut)
++	{
++		ShortcutInfo shortcutInfo = null;
++		int page = shortCut.getSlot() + (shortCut.getPage() * 12);
++		ShortcutType type = shortCut.getType();
++		int id = shortCut.getId();
++		int characterType = 0;
++		
++		switch (type)
++		{
++			case ITEM:
++				int reuseGroup = -1,
++				currentReuse = 0,
++				reuse = 0,
++				augmentationId = 0;
++				
++				characterType = shortCut.getCharacterType();
++				L2ItemInstance item = player.getInventory().getItemByObjectId(shortCut.getId());
++				
++				if (item != null)
++				{
++					L2Augmentation augmentation = item.getAugmentation();
++					if (augmentation != null)
++					{
++						augmentationId = augmentation.getAugmentationId();
++					}
++					
++					reuseGroup = shortCut.getSharedReuseGroup();
++				}
++				
++				shortcutInfo = new ItemShortcutInfo(type, page, id, reuseGroup, currentReuse, reuse, augmentationId, characterType);
++				break;
++			
++			case SKILL:
++				int level = shortCut.getLevel();
++				int skillReuseGroup = shortCut.getSharedReuseGroup();
++				boolean isDisabled = false; // FIXME: To implement !!!
++				shortcutInfo = new SkillShortcutInfo(type, page, id, skillReuseGroup, level, isDisabled, characterType);
++				break;
++			
++			default:
++				shortcutInfo = new ShortcutInfo(type, page, id, characterType);
++				break;
++		}
++		
++		return shortcutInfo;
++	}
++	
+ 	@Override
+ 	protected final void writeImpl()
+ 	{
+ 		writeC(0x45);
+ 		writeD(_shortCuts.length);
+-		for (Shortcut sc : _shortCuts)
++		for (ShortcutInfo sc : _shortCuts)
+ 		{
+ 			writeD(sc.getType().ordinal());
+-			writeD(sc.getSlot() + (sc.getPage() * 12));
++			writeD(sc.getPage());
+ 			
+ 			switch (sc.getType())
+ 			{
+ 				case ITEM:
+ 				{
+-					writeD(sc.getId());
+-					writeD(0x01);
+-					writeD(sc.getSharedReuseGroup());
+-					writeD(0x00);
+-					writeD(0x00);
+-					writeH(0x00);
+-					writeH(0x00);
++					ItemShortcutInfo item = (ItemShortcutInfo) sc;
++					
++					writeD(item.getId());
++					writeD(item.getCharacterType());
++					writeD(item.getReuseGroup());
++					writeD(item.getCurrentReuse());
++					writeD(item.getBasicReuse());
++					writeD(item.get1stAugmentationId());
++					writeD(item.get2ndAugmentationId());
+ 					writeD(0x00); // TODO: Find me!
+ 					break;
+ 				}
+ 				case SKILL:
+ 				{
+-					writeD(sc.getId());
+-					writeD(sc.getLevel());
+-					writeD(0x00); // TODO: Find me!
+-					writeC(0x00); // C5
+-					writeD(0x01); // C6
++					SkillShortcutInfo skill = (SkillShortcutInfo) sc;
++					
++					writeD(skill.getId());
++					if ((skill.getLevel() < 100) || (skill.getLevel() > 10000))
++					{
++						writeD(skill.getLevel());
++					}
++					else
++					{
++						int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
++						writeH(maxLevel);
++						writeH(skill.getLevel());
++					}
++					writeD(skill.getReuseGroup());
++					writeC(skill.isDisabled());
++					writeD(skill.getCharacterType());
+ 					break;
+ 				}
+ 				case ACTION:
+@@ -74,9 +152,120 @@
+ 				case BOOKMARK:
+ 				{
+ 					writeD(sc.getId());
+-					writeD(0x01); // C6
++					writeD(sc.getCharacterType());
+ 				}
+ 			}
+ 		}
+ 	}
++	
++	protected class ShortcutInfo
++	{
++		private final ShortcutType _type;
++		private final int _page;
++		protected final int _id;
++		protected final int _characterType;
++		
++		ShortcutInfo(ShortcutType type, int page, int id, int characterType)
++		{
++			_type = type;
++			_page = page;
++			_id = id;
++			_characterType = characterType;
++		}
++		
++		public ShortcutType getType()
++		{
++			return _type;
++		}
++		
++		public int getPage()
++		{
++			return _page;
++		}
++		
++		public int getId()
++		{
++			return _id;
++		}
++		
++		public int getCharacterType()
++		{
++			return _characterType;
++		}
++	}
++	
++	private class SkillShortcutInfo extends ShortcutInfo
++	{
++		private final int _reuseGroup;
++		private final int _level;
++		private final boolean _isDisabled;
++		
++		SkillShortcutInfo(ShortcutType type, int page, int id, int reuseGroup, int level, boolean isDisabled, int characterType)
++		{
++			super(type, page, id, characterType);
++			_level = level;
++			_reuseGroup = reuseGroup;
++			_isDisabled = isDisabled;
++		}
++		
++		/**
++		 * @return
++		 */
++		public boolean isDisabled()
++		{
++			return _isDisabled;
++		}
++		
++		public int getReuseGroup()
++		{
++			return _reuseGroup;
++		}
++		
++		public int getLevel()
++		{
++			return _level;
++		}
++	}
++	
++	private class ItemShortcutInfo extends ShortcutInfo
++	{
++		private final int _reuseGroup;
++		private final int _currentReuse;
++		private final int _basicReuse;
++		private final int _augmentationId;
++		
++		ItemShortcutInfo(ShortcutType type, int page, int id, int reuseGroup, int currentReuse, int basicReuse, int augmentationId, int characterType)
++		{
++			super(type, page, id, characterType);
++			_reuseGroup = reuseGroup;
++			_currentReuse = currentReuse;
++			_basicReuse = basicReuse;
++			_augmentationId = augmentationId;
++		}
++		
++		public int getReuseGroup()
++		{
++			return _reuseGroup;
++		}
++		
++		public int getCurrentReuse()
++		{
++			return _currentReuse;
++		}
++		
++		public int getBasicReuse()
++		{
++			return _basicReuse;
++		}
++		
++		public int get1stAugmentationId()
++		{
++			return 0x0000FFFF & _augmentationId;
++		}
++		
++		public int get2ndAugmentationId()
++		{
++			return _augmentationId >> 16;
++		}
++	}
+ }
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java	(working copy)
+@@ -76,7 +76,8 @@
+ 		
+ 		final String pledgeName = activeChar.getClan().getName();
+ 		final String subPledgeName = (activeChar.getClan().getSubPledge(_pledgeType) != null ? activeChar.getClan().getSubPledge(_pledgeType).getName() : null);
+-		target.sendPacket(new AskJoinPledge(activeChar.getObjectId(), subPledgeName, _pledgeType, pledgeName));
++		final String askjoinName = activeChar.getName();
++		target.sendPacket(new AskJoinPledge(activeChar.getObjectId(), subPledgeName, _pledgeType, pledgeName, askjoinName));
+ 	}
+ 	
+ 	public int getPledgeType()
+Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java	(working copy)
+@@ -54,6 +54,8 @@
+ 			writeD((int) _activeChar.getCurrentMp());
+ 			writeD(_activeChar.getMaxMp());
+ 			writeD(_success ? 1 : 0); // item creation success/failed
++			writeC(0);
++			writeQ(0);
+ 		}
+ 		else
+ 		{
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java	(working copy)
+@@ -20,6 +20,7 @@
+ 
+ import com.l2jserver.Config;
+ import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
+ import com.l2jserver.gameserver.model.L2EnchantSkillLearn;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+@@ -42,6 +43,7 @@
+ 	private final int _type;
+ 	private final int _skillid;
+ 	private final int _skilllvl;
++	private final int _maxlvl;
+ 	private final int _chance;
+ 	private int _sp;
+ 	private final int _adenacount;
+@@ -48,6 +50,10 @@
+ 	
+ 	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, L2PcInstance ply)
+ 	{
++		_type = type;
++		_skillid = skillid;
++		_skilllvl = skilllvl;
++		_maxlvl = SkillData.getInstance().getMaxLevel(_skillid);
+ 		
+ 		L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
+ 		EnchantSkillHolder esd = null;
+@@ -54,9 +60,9 @@
+ 		// do we have this skill?
+ 		if (enchantLearn != null)
+ 		{
+-			if (skilllvl > 100)
++			if (_skilllvl > 1000)
+ 			{
+-				esd = enchantLearn.getEnchantSkillHolder(skilllvl);
++				esd = enchantLearn.getEnchantSkillHolder(_skilllvl);
+ 			}
+ 			else
+ 			{
+@@ -66,7 +72,7 @@
+ 		
+ 		if (esd == null)
+ 		{
+-			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + skilllvl);
++			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + _skilllvl);
+ 		}
+ 		
+ 		if (type == 0)
+@@ -93,60 +99,98 @@
+ 			_sp = 0;
+ 			_adenacount = 0;
+ 		}
+-		_type = type;
+-		_skillid = skillid;
+-		_skilllvl = skilllvl;
+ 		
++		final int _elvl = ((_skilllvl % 100) - 1) / 10;
+ 		switch (type)
+ 		{
+ 			case TYPE_NORMAL_ENCHANT:
+-				if (ply.getClassId().level() == 3)
++				if (ply.getClassId().level() < 4)
+ 				{
+ 					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
+ 				}
+ 				else
+ 				{
+-					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
++					if (_elvl == 0)
++					{
++						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
++					}
++					else if (_elvl == 1)
++					{
++						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
++					}
++					else
++					{
++						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
++					}
+ 				}
+-				reqCount = (((_skilllvl % 100) > 1) ? 0 : 1);
++				reqCount = 1;
+ 				break;
+ 			case TYPE_SAFE_ENCHANT:
+-				if (ply.getClassId().level() == 3)
++				if (ply.getClassId().level() < 4)
+ 				{
+ 					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
+ 				}
+ 				else
+ 				{
+-					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
++					if (_elvl == 0)
++					{
++						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
++					}
++					else if (_elvl == 1)
++					{
++						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
++					}
++					else
++					{
++						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
++					}
+ 				}
+ 				reqCount = 1;
+ 				break;
+-			case TYPE_UNTRAIN_ENCHANT:
+-				if (ply.getClassId().level() == 3)
++			case TYPE_CHANGE_ENCHANT:
++				if (ply.getClassId().level() < 4)
+ 				{
+-					bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK_OLD;
++					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
+ 				}
+ 				else
+ 				{
+-					bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
++					if (_elvl == 0)
++					{
++						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
++					}
++					else if (_elvl == 1)
++					{
++						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
++					}
++					else
++					{
++						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
++					}
+ 				}
+ 				reqCount = 1;
+ 				break;
+-			case TYPE_CHANGE_ENCHANT:
+-				if (ply.getClassId().level() == 3)
++			case TYPE_IMMORTAL_ENCHANT:
++				if (ply.getClassId().level() < 4)
+ 				{
+-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
++					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+ 				}
+ 				else
+ 				{
+-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
++					if (_elvl == 0)
++					{
++						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
++					}
++					else if (_elvl == 1)
++					{
++						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
++					}
++					else
++					{
++						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
++					}
+ 				}
+ 				reqCount = 1;
+ 				break;
+-			case TYPE_IMMORTAL_ENCHANT:
+-				bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+-				reqCount = 1;
+-				break;
+ 			default:
+ 				return;
+ 		}
+@@ -165,7 +209,8 @@
+ 		
+ 		writeD(_type);
+ 		writeD(_skillid);
+-		writeD(_skilllvl);
++		writeH(_maxlvl);
++		writeH(_skilllvl);
+ 		writeQ(_sp * multi); // sp
+ 		writeD(_chance); // exp
+ 		writeD(0x02); // items count?
+Index: dist/game/data/stats/items/46100-46199.xml
+===================================================================
+--- dist/game/data/stats/items/46100-46199.xml	(revision 0)
++++ dist/game/data/stats/items/46100-46199.xml	(working copy)
+@@ -0,0 +1,57 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
++	<item id="46150" name="Superior Giant's Codex Chapter 1" additionalName="" type="EtcItem">
++		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
++		<set name="icon" val="icon.codex_of_incuse" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++		<set name="commissionItemType" val="OTHER_ITEM" />
++	</item>
++	<item id="46151" name="Superior Giant's Codex - Mastery Chapter 1" additionalName="" type="EtcItem">
++		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 11~+ 20 after Awakening. -->
++		<set name="icon" val="icon.codex_of_incuse_dexterity" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++		<set name="commissionItemType" val="OTHER_ITEM" />
++	</item>
++	<item id="46152" name="Superior Giant's Codex - Discipline Chapter 1" additionalName="" type="EtcItem">
++		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 11~+ 20 after Awakening. -->
++		<set name="icon" val="icon.codex_of_incuse_training" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++		<set name="commissionItemType" val="OTHER_ITEM" />
++	</item>
++	<item id="46153" name="Immortal Scroll Chapter 1" additionalName="" type="EtcItem">
++		<!-- Enchants a skill between + 11~+ 20 to the next grade with a success rate of 100% without consuming extra materials. -->
++		<set name="icon" val="icon.esagira_telepo_01" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++	</item>
++	<item id="46154" name="Superior Giant's Codex Chapter 2" additionalName="" type="EtcItem">
++		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 21~+ 30 after Awakening. -->
++		<set name="icon" val="icon.codex_of_incuse" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++		<set name="commissionItemType" val="OTHER_ITEM" />
++	</item>
++	<item id="46155" name="Superior Giant's Codex - Mastery Chapter 2" additionalName="" type="EtcItem">
++		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 21~+ 30 after Awakening. -->
++		<set name="icon" val="icon.codex_of_incuse_dexterity" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++		<set name="commissionItemType" val="OTHER_ITEM" />
++	</item>
++	<item id="46156" name="Superior Giant's Codex - Discipline Chapter 2" additionalName="" type="EtcItem">
++		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 21~+ 30 after Awakening. -->
++		<set name="icon" val="icon.codex_of_incuse_training" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++		<set name="commissionItemType" val="OTHER_ITEM" />
++	</item>
++	<item id="46157" name="Immortal Scroll Chapter 2" additionalName="" type="EtcItem">
++		<!-- Enchants a skill between + 21~+ 30 to the next grade with a success rate of 100% without consuming extra materials. -->
++		<set name="icon" val="icon.esagira_telepo_01" />
++		<set name="weight" val="10" />
++		<set name="is_stackable" val="true" />
++	</item>
++</list>
+\ No newline at end of file
+Index: java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java	(working copy)
+@@ -35,9 +35,9 @@
+ 	public void writeImpl()
+ 	{
+ 		writeC(0x74);
+-		writeD(0x27533DD9);
+-		writeD(0x2E72A51D);
+-		writeD(0x2017038B);
+-		writeD(0xC35B1EA3);
++		writeD(0xE1B752B6);
++		writeD(0x51AFEF3A);
++		writeD(0xB1180C49);
++		writeD(0x08F4F7D7);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java	(working copy)
+@@ -103,7 +103,7 @@
+ 			return;
+ 		}
+ 		
+-		if ((_level < 1) || (_level > 1000) || (_id < 1) || (_id > 32000))
++		if ((_level < 1) || (_level > 10000) || (_id < 1) || (_id > 32000))
+ 		{
+ 			Util.handleIllegalPlayerAction(activeChar, "Wrong Packet Data in Aquired Skill", Config.DEFAULT_PUNISH);
+ 			_log.warning("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + activeChar);
+Index: java/com/l2jserver/gameserver/model/skills/Skill.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/skills/Skill.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/skills/Skill.java	(working copy)
+@@ -1308,7 +1308,7 @@
+ 				{
+ 					if (effect.isInstant())
+ 					{
+-						if (applyInstantEffects && effect.calcSuccess(info))
++						if (applyInstantEffects && (getBlowChance() > 0 ? BlowSuccess.getInstance().get(info.getEffector(), info.getSkill()) : effect.calcSuccess(info)))
+ 						{
+ 							effect.onStart(info);
+ 						}
+Index: java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java	(working copy)
+@@ -48,22 +48,6 @@
+ 	
+ 	private int _vehicleId = 0;
+ 	
+-	private static final int[] PAPERDOLL_ORDER = new int[]
+-	{
+-		Inventory.PAPERDOLL_UNDER,
+-		Inventory.PAPERDOLL_HEAD,
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_LHAND,
+-		Inventory.PAPERDOLL_GLOVES,
+-		Inventory.PAPERDOLL_CHEST,
+-		Inventory.PAPERDOLL_LEGS,
+-		Inventory.PAPERDOLL_FEET,
+-		Inventory.PAPERDOLL_CLOAK,
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_HAIR,
+-		Inventory.PAPERDOLL_HAIR2
+-	};
+-	
+ 	public CharInfo(L2PcInstance cha)
+ 	{
+ 		_activeChar = cha;
+@@ -133,19 +117,20 @@
+ 		writeC(_activeChar.getAppearance().getSex() ? 0x01 : 0x00); // Confirmed
+ 		writeD(_activeChar.getBaseClass()); // Confirmed
+ 		
+-		for (int slot : getPaperdollOrder())
++		for (int slot : Inventory.PAPERDOLL_ORDER)
+ 		{
+ 			writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
+ 		}
+ 		
+-		for (int slot : getPaperdollOrderAugument())
++		for (int slot : Inventory.PAPERDOLL_ORDER_AUGMENT)
+ 		{
+-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot)); // Confirmed
++			writeD(_activeChar.getInventory().getPaperdoll1stAugmentationId(slot));
++			writeD(_activeChar.getInventory().getPaperdoll2ndAugmentationId(slot));
+ 		}
+ 		
+ 		writeC(_armorEnchant);
+ 		
+-		for (int slot : getPaperdollOrderVisualId())
++		for (int slot : Inventory.PAPERDOLL_ORDER_VISUAL_ID)
+ 		{
+ 			writeD(_activeChar.getInventory().getPaperdollItemVisualId(slot));
+ 		}
+@@ -241,7 +226,7 @@
+ 		writeD(_activeChar.getTransformationDisplayId()); // Confirmed
+ 		writeD(_activeChar.getAgathionId()); // Confirmed
+ 		
+-		writeC(0x00); // TODO: Find me!
++		writeC(0x01); // TODO: Find me!
+ 		
+ 		writeD((int) Math.round(_activeChar.getCurrentCp())); // Confirmed
+ 		writeD(_activeChar.getMaxHp()); // Confirmed
+@@ -260,10 +245,4 @@
+ 		writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
+ 		writeC(_activeChar.getAbilityPointsUsed()); // Used Ability Points
+ 	}
+-	
+-	@Override
+-	protected int[] getPaperdollOrder()
+-	{
+-		return PAPERDOLL_ORDER;
+-	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java	(working copy)
+@@ -49,14 +49,14 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xE5);
+-		writeC(_activeChar.getHennaStatINT()); // equip INT
+-		writeC(_activeChar.getHennaStatSTR()); // equip STR
+-		writeC(_activeChar.getHennaStatCON()); // equip CON
+-		writeC(_activeChar.getHennaStatMEN()); // equip MEN
+-		writeC(_activeChar.getHennaStatDEX()); // equip DEX
+-		writeC(_activeChar.getHennaStatWIT()); // equip WIT
+-		writeC(_activeChar.getHennaStatLUC()); // equip LUC
+-		writeC(_activeChar.getHennaStatCHA()); // equip CHA
++		writeD(_activeChar.getHennaStatINT()); // equip INT
++		writeD(_activeChar.getHennaStatSTR()); // equip STR
++		writeD(_activeChar.getHennaStatCON()); // equip CON
++		writeD(_activeChar.getHennaStatMEN()); // equip MEN
++		writeD(_activeChar.getHennaStatDEX()); // equip DEX
++		writeD(_activeChar.getHennaStatWIT()); // equip WIT
++		writeD(_activeChar.getHennaStatLUC()); // equip LUC
++		writeD(_activeChar.getHennaStatCHA()); // equip CHA
+ 		writeD(3 - _activeChar.getHennaEmptySlots()); // Slots
+ 		writeD(_hennas.size()); // Size
+ 		for (L2Henna henna : _hennas)
+Index: java/com/l2jserver/gameserver/network/clientpackets/UseItem.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/UseItem.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/UseItem.java	(working copy)
+@@ -31,7 +31,6 @@
+ import com.l2jserver.gameserver.handler.IItemHandler;
+ import com.l2jserver.gameserver.handler.ItemHandler;
+ import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
+-import com.l2jserver.gameserver.model.PcCondOverride;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.effects.L2EffectType;
+ import com.l2jserver.gameserver.model.holders.SkillHolder;
+@@ -244,61 +243,6 @@
+ 					{
+ 						return;
+ 					}
+-					
+-					// Don't allow other Race to Wear Kamael exclusive Weapons.
+-					if (!item.isEquipped() && item.isWeapon() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
+-					{
+-						L2Weapon wpn = (L2Weapon) item.getItem();
+-						
+-						switch (activeChar.getRace())
+-						{
+-							case ERTHEIA:
+-							{
+-								switch (wpn.getItemType())
+-								{
+-									case SWORD:
+-									case DAGGER:
+-									case BOW:
+-									case POLE:
+-									case NONE:
+-									case DUAL:
+-									case RAPIER:
+-									case ANCIENTSWORD:
+-									case CROSSBOW:
+-									case DUALDAGGER:
+-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+-										return;
+-								}
+-								break;
+-							}
+-							case KAMAEL:
+-							{
+-								switch (wpn.getItemType())
+-								{
+-									case NONE:
+-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+-										return;
+-								}
+-								break;
+-							}
+-							case HUMAN:
+-							case DWARF:
+-							case ELF:
+-							case DARK_ELF:
+-							case ORC:
+-							{
+-								switch (wpn.getItemType())
+-								{
+-									case RAPIER:
+-									case CROSSBOW:
+-									case ANCIENTSWORD:
+-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+-										return;
+-								}
+-								break;
+-							}
+-						}
+-					}
+ 					break;
+ 				}
+ 				case L2Item.SLOT_CHEST:
+@@ -309,7 +253,7 @@
+ 				case L2Item.SLOT_FULL_ARMOR:
+ 				case L2Item.SLOT_LEGS:
+ 				{
+-					if ((activeChar.getRace() == Race.ERTHEIA) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
++					if ((activeChar.getRace() == Race.ERTHEIA) && (activeChar.isMageClass()) && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
+ 					{
+ 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+ 						return;
+Index: java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java	(working copy)
+@@ -51,7 +51,7 @@
+ 	protected final void writeImpl()
+ 	{
+ 		writeC(0xF5);
+-		writeD(5056);
++		writeD(0x00);
+ 		writeQ(_money); // current money
+ 		writeD(_listId);
+ 		
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java	(working copy)
+@@ -18,6 +18,9 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import java.util.ArrayList;
++import java.util.List;
++
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+ 
+@@ -29,6 +32,7 @@
+ 	private L2ItemInstance[] _sellList = null;
+ 	private L2ItemInstance[] _refundList = null;
+ 	private final boolean _done;
++	private final List<L2ItemInstance> _items = new ArrayList<>();
+ 	
+ 	public ExBuySellList(L2PcInstance player, boolean done)
+ 	{
+@@ -38,6 +42,14 @@
+ 			_refundList = player.getRefund().getItems();
+ 		}
+ 		_done = done;
++		
++		for (L2ItemInstance item : player.getInventory().getItems())
++		{
++			if (!item.isQuestItem())
++			{
++				_items.add(item);
++			}
++		}
+ 	}
+ 	
+ 	@Override
+@@ -46,7 +58,7 @@
+ 		writeC(0xFE);
+ 		writeH(0xB8);
+ 		writeD(0x01);
+-		writeD(0x00); // TODO: Find me
++		writeD(_items.size());
+ 		
+ 		if ((_sellList != null))
+ 		{
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java	(working copy)
+@@ -34,6 +34,7 @@
+ 	private int _type;
+ 	private int _skillId;
+ 	private int _skillLvl;
++	private int _fullLvl;
+ 	
+ 	@Override
+ 	protected void readImpl()
+@@ -40,7 +41,15 @@
+ 	{
+ 		_type = readD();
+ 		_skillId = readD();
+-		_skillLvl = readD();
++		_fullLvl = readD();
++		if (_fullLvl < 100)
++		{
++			_skillLvl = _fullLvl;
++		}
++		else
++		{
++			_skillLvl = _fullLvl >> 16;
++		}
+ 	}
+ 	
+ 	@Override
+@@ -66,7 +75,7 @@
+ 		}
+ 		else if (_type == 2)
+ 		{
+-			reqSkillLvl = _skillLvl + 1; // untrain
++			return;
+ 		}
+ 		else if (_type == 3)
+ 		{
+@@ -82,7 +91,7 @@
+ 		}
+ 		
+ 		// if reqlvl is 100,200,.. check base skill lvl enchant
+-		if ((reqSkillLvl % 100) == 0)
++		if ((reqSkillLvl % 1000) == 0)
+ 		{
+ 			L2EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
+ 			if (esl != null)
+@@ -102,7 +111,7 @@
+ 		else if (playerSkillLvl != reqSkillLvl)
+ 		{
+ 			// change route is different skill lvl but same enchant
+-			if ((_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100)))
++			if ((_type == 3) && ((playerSkillLvl % 1000) != (_skillLvl % 1000)))
+ 			{
+ 				return;
+ 			}
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java	(working copy)
+@@ -43,10 +43,10 @@
+ 		writeD(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
+ 		
+ 		// Seed of Infinity
+-		writeD(-213770); // x coord
+-		writeD(210760); // y coord
+-		writeD(4400); // z coord
++		writeD(-178472); // x coord
++		writeD(152538); // y coord
++		writeD(2544); // z coord
+ 		// Manager not implemented yet
+-		writeD(2766); // sys msg id
++		writeD(3302); // sys msg id
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java	(working copy)
+@@ -381,6 +381,7 @@
+ 		
+ 		final InventoryUpdate iu = new InventoryUpdate();
+ 		iu.addModifiedItem(targetItem);
++		
+ 		if (inventory.getItemByObjectId(stone.getObjectId()) == null)
+ 		{
+ 			iu.addRemovedItem(stone);
+@@ -389,6 +390,19 @@
+ 		{
+ 			iu.addModifiedItem(stone);
+ 		}
++		
++		if (appearanceStone.getType() == AppearanceType.NORMAL)
++		{
++			if (inventory.getItemByObjectId(extracItem.getObjectId()) == null)
++			{
++				iu.addRemovedItem(extracItem);
++			}
++			else
++			{
++				iu.addModifiedItem(extracItem);
++			}
++		}
++		
+ 		player.sendPacket(iu);
+ 		
+ 		player.removeRequest(ShapeShiftingItemRequest.class);
+Index: java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java	(working copy)
+@@ -63,7 +63,7 @@
+ 		writeD(_enchantLevel);
+ 		for (int option : _enchantOptions)
+ 		{
+-			writeH(option);
++			writeD(option);
+ 		}
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java	(working copy)
+@@ -18,6 +18,8 @@
+  */
+ package com.l2jserver.gameserver.model;
+ 
++import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
++import com.l2jserver.gameserver.model.entity.Hero;
+ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+ import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
+ import com.l2jserver.gameserver.model.variables.PlayerVariables;
+@@ -323,11 +325,16 @@
+ 		_sp = sp;
+ 	}
+ 	
+-	public int getEnchantEffect()
++	public int getWeaponEnchantEffect()
+ 	{
+-		return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
++		return getEnchantEffect(Inventory.PAPERDOLL_RHAND);
+ 	}
+ 	
++	public int getEnchantEffect(int slot)
++	{
++		return _paperdoll[slot][2];
++	}
++	
+ 	public void setKarma(int karma)
+ 	{
+ 		_karma = karma;
+@@ -432,4 +439,71 @@
+ 	{
+ 		return _vars.getBoolean("hairAccessoryEnabled", true);
+ 	}
++	
++	public float getExpPercent()
++	{
++		return (float) (getExp() - ExperienceData.getInstance().getExpForLevel(getLevel())) / (ExperienceData.getInstance().getExpForLevel(getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(getLevel()));
++	}
++	
++	public int getTransformationId()
++	{
++		int weaponId = getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
++		switch (weaponId)
++		{
++			case 8190:
++				return 301;
++			case 8689:
++				return 302;
++		}
++		
++		return 0;
++	}
++	
++	public int getVitalityPercent()
++	{
++		// FIXME: To implement.
++		return 200;
++	}
++	
++	public int getVitalityItemCount()
++	{
++		// FIXME: To implement.
++		return 5;
++	}
++	
++	public boolean isAvailable()
++	{
++		return getAccessLevel() > -100;
++	}
++	
++	public int getDeleteTime()
++	{
++		return getAccessLevel() > -100 ? (int) getDeleteTimer() : -1;
++	}
++	
++	public boolean isHero()
++	{
++		// FIXME: To implement.
++		return Hero.getInstance().isHero(getObjectId());
++	}
++	
++	public int getReputationInfo()
++	{
++		return getKarma() > 0 ? getKarma() * -1 : getReputation();
++	}
++	
++	public int get1stAugmentationId()
++	{
++		return 0x0000FFFF & getAugmentationId();
++	}
++	
++	public int get2ndAugmentationId()
++	{
++		return getAugmentationId() >> 16;
++	}
++	
++	public boolean showHairAccessory()
++	{
++		return true;
++	}
+ }
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java	(working copy)
+@@ -35,6 +35,7 @@
+ 	private int _objectId;
+ 	private int _skillId;
+ 	private int _skillLevel;
++	private int _fullLevel;
+ 	
+ 	@Override
+ 	protected void readImpl()
+@@ -41,7 +42,15 @@
+ 	{
+ 		_objectId = readD();
+ 		_skillId = readD();
+-		_skillLevel = readD();
++		_fullLevel = readD();
++		if (_fullLevel < 100)
++		{
++			_skillLevel = _fullLevel;
++		}
++		else
++		{
++			_skillLevel = _fullLevel >> 16;
++		}
+ 	}
+ 	
+ 	@Override
+Index: java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java	(working copy)
+@@ -123,9 +123,11 @@
+ 		writeD(_textType.getClientId());
+ 		writeD(_npcId);
+ 		writeD(_npcString);
++		int size = 5;
+ 		if (_npcString == -1)
+ 		{
+ 			writeS(_text);
++			size--;
+ 		}
+ 		else if (_parameters != null)
+ 		{
+@@ -132,7 +134,17 @@
+ 			for (String s : _parameters)
+ 			{
+ 				writeS(s);
++				size--;
+ 			}
+ 		}
++		for (int i = 1; i < size; i++)
++		{
++			writeS("");
++		}
++		writeD(0x00);
++		writeD(0x00);
++		writeD(0x00);
++		writeD(0x00);
++		writeD(0x00);
+ 	}
+ }
+\ No newline at end of file
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java	(working copy)
+@@ -126,6 +126,9 @@
+ 		1132, 1133, 1134, 1135,
+ 		1136, 1137, 1138, 1139,
+ 		1140, 1141, 1142, 1143,
++		1144, 1145, 1146, 1147,
++		1148, 1149, 1150, 1151,
++		1152, 1153, 1154, 1155,
+ 		5000, 5001, 5002, 5003, 
+ 		5004, 5005, 5006, 5007,
+ 		5008, 5009, 5010, 5011,
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java	(working copy)
+@@ -18,6 +18,8 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
++
+ /**
+  * @author Gnat
+  **/
+@@ -24,8 +26,11 @@
+ 
+ public class ExBirthdayPopup extends L2GameServerPacket
+ {
+-	public ExBirthdayPopup()
++	private final L2PcInstance _activeChar;
++	
++	public ExBirthdayPopup(L2PcInstance character)
+ 	{
++		_activeChar = character;
+ 	}
+ 	
+ 	@Override
+@@ -33,5 +38,6 @@
+ 	{
+ 		writeC(0xFE);
+ 		writeH(0x90);
++		writeD(_activeChar.getObjectId());
+ 	}
+ }
+\ No newline at end of file
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java	(working copy)
+@@ -24,7 +24,7 @@
+ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+ 
+ /**
+- * @author Erlandys
++ * @author Erlandys TODO: Fix this class to Infinity Odyssey !!!
+  */
+ public class ExChangeAttributeItemList extends AbstractItemPacket
+ {
+Index: java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java	(working copy)
+@@ -21,6 +21,7 @@
+ import java.util.ArrayList;
+ import java.util.List;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.actor.L2Character;
+ import com.l2jserver.gameserver.model.skills.BuffInfo;
+ 
+@@ -51,7 +52,16 @@
+ 			if ((info != null) && info.isInUse())
+ 			{
+ 				writeD(info.getSkill().getDisplayId());
+-				writeH(info.getSkill().getDisplayLevel());
++				if (info.getSkill().getDisplayLevel() < 100)
++				{
++					writeD(info.getSkill().getDisplayLevel());
++				}
++				else
++				{
++					int maxLevel = SkillData.getInstance().getMaxLevel(info.getSkill().getDisplayId());
++					writeH(maxLevel);
++					writeH(info.getSkill().getDisplayLevel());
++				}
+ 				writeD(0x00);
+ 				writeH(info.getTime());
+ 			}
+Index: java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java	(working copy)
+@@ -62,23 +62,19 @@
+ 		_npc = npc;
+ 		_abnormalVisualEffects = npc.getCurrentAbnormalVisualEffects();
+ 		
+-		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+-		
+-		if (npc.getHeading() > 0)
++		if (npc.getTemplate().isUsingServerSideName())
+ 		{
+-			addComponentType(NpcInfoType.HEADING);
++			addComponentType(NpcInfoType.NAME);
+ 		}
+ 		
+-		if ((npc.getStat().getPAtkSpd() > 0) || (npc.getStat().getMAtkSpd() > 0))
+-		{
+-			addComponentType(NpcInfoType.ATK_CAST_SPEED);
+-		}
++		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+ 		
+-		if (npc.getRunSpeed() > 0)
+-		{
+-			addComponentType(NpcInfoType.SPEED_MULTIPLIER);
+-		}
++		addComponentType(NpcInfoType.HEADING);
+ 		
++		addComponentType(NpcInfoType.ATK_CAST_SPEED);
++		
++		addComponentType(NpcInfoType.SPEED_MULTIPLIER);
++		
+ 		if ((npc.getLeftHandItem() > 0) || (npc.getRightHandItem() > 0))
+ 		{
+ 			addComponentType(NpcInfoType.EQUIPPED);
+@@ -89,56 +85,18 @@
+ 			addComponentType(NpcInfoType.TEAM);
+ 		}
+ 		
+-		if (npc.getState() > 0)
+-		{
+-			addComponentType(NpcInfoType.DISPLAY_EFFECT);
+-		}
++		addComponentType(NpcInfoType.DISPLAY_EFFECT);
+ 		
+-		if (npc.isInsideZone(ZoneId.WATER) || npc.isFlying())
+-		{
+-			addComponentType(NpcInfoType.SWIM_OR_FLY);
+-		}
++		addComponentType(NpcInfoType.SWIM_OR_FLY);
+ 		
+-		if (npc.isFlying())
+-		{
+-			addComponentType(NpcInfoType.FLYING);
+-		}
++		addComponentType(NpcInfoType.FLYING);
+ 		
+-		if (npc.getMaxHp() > 0)
+-		{
+-			addComponentType(NpcInfoType.MAX_HP);
+-		}
++		addComponentType(NpcInfoType.MAX_HP);
+ 		
+-		if (npc.getMaxMp() > 0)
+-		{
+-			addComponentType(NpcInfoType.MAX_MP);
+-		}
++		addComponentType(NpcInfoType.CURRENT_HP);
+ 		
+-		if (npc.getCurrentHp() <= npc.getMaxHp())
+-		{
+-			addComponentType(NpcInfoType.CURRENT_HP);
+-		}
++		addComponentType(NpcInfoType.ABNORMALS);
+ 		
+-		if (npc.getCurrentMp() <= npc.getMaxMp())
+-		{
+-			addComponentType(NpcInfoType.CURRENT_MP);
+-		}
+-		
+-		if (npc.getTemplate().isUsingServerSideName())
+-		{
+-			addComponentType(NpcInfoType.NAME);
+-		}
+-		
+-		if (npc.getTemplate().isUsingServerSideTitle() || (Config.SHOW_NPC_LVL && npc.isMonster()) || npc.isChampion())
+-		{
+-			addComponentType(NpcInfoType.TITLE);
+-		}
+-		
+-		if (!_abnormalVisualEffects.isEmpty())
+-		{
+-			addComponentType(NpcInfoType.ABNORMALS);
+-		}
+-		
+ 		if (npc.getEnchantEffect() > 0)
+ 		{
+ 			addComponentType(NpcInfoType.ENCHANT);
+@@ -165,8 +123,6 @@
+ 			}
+ 		}
+ 		
+-		addComponentType(NpcInfoType.UNKNOWN8);
+-		
+ 		// TODO: Confirm me
+ 		if (npc.isInCombat())
+ 		{
+@@ -215,7 +171,14 @@
+ 			}
+ 			case TITLE:
+ 			{
+-				_initSize += type.getBlockLength() + (npc.getTitle().length() * 2);
++				if (npc.getTemplate().isUsingServerSideTitle())
++				{
++					_initSize += type.getBlockLength() + (npc.getTemplate().getTitle().length() * 2);
++				}
++				else
++				{
++					_initSize += type.getBlockLength();
++				}
+ 				break;
+ 			}
+ 			case NAME:
+@@ -253,7 +216,14 @@
+ 		}
+ 		if (containsMask(NpcInfoType.TITLE))
+ 		{
+-			writeS(_npc.getTitle());
++			if (_npc.getTemplate().isUsingServerSideTitle())
++			{
++				writeS(_npc.getTemplate().getTitle());
++			}
++			else
++			{
++				writeS("");
++			}
+ 		}
+ 		
+ 		// Block 2
+@@ -278,8 +248,8 @@
+ 		}
+ 		if (containsMask(NpcInfoType.ATK_CAST_SPEED))
+ 		{
++			writeD(_npc.getMAtkSpd());
+ 			writeD(_npc.getPAtkSpd());
+-			writeD(_npc.getMAtkSpd());
+ 		}
+ 		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))
+ 		{
+Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java	(working copy)
+@@ -76,9 +76,10 @@
+ 		writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+ 		writeC(item.getCustomType1()); // Filler (always 0)
+ 		writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+-		writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
++		writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
+ 		writeH(0x00); // Equipped : 00-No, 01-yes
+-		writeH(item.getCustomType2());
++		writeC(item.getCustomType2());
++		writeD(0);
+ 		writeItemElementalAndEnchant(new ItemInfo(item));
+ 	}
+ 	
+@@ -95,13 +96,15 @@
+ 		writeC(item.getCustomType1()); // Filler (always 0)
+ 		writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
+ 		writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+-		writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
++		writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
++		writeC(0);
+ 		writeD(item.getMana());
+ 		writeD(item.getTime());
+ 		writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
+ 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
+ 		{
+-			writeD(item.getAugmentationBonus());
++			writeD(item.get1stAugmentationId());
++			writeD(item.get2ndAugmentationId());
+ 		}
+ 		if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE))
+ 		{
+@@ -181,7 +184,7 @@
+ 		// Enchant Effects
+ 		for (int op : item.getEnchantOptions())
+ 		{
+-			writeH(op);
++			writeD(op);
+ 		}
+ 	}
+ 	
+Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/actor/L2Character.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/actor/L2Character.java	(working copy)
+@@ -87,6 +87,7 @@
+ import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
+ import com.l2jserver.gameserver.model.actor.transform.Transform;
+ import com.l2jserver.gameserver.model.actor.transform.TransformTemplate;
++import com.l2jserver.gameserver.model.effects.AbstractEffect;
+ import com.l2jserver.gameserver.model.effects.EffectFlag;
+ import com.l2jserver.gameserver.model.effects.L2EffectType;
+ import com.l2jserver.gameserver.model.entity.Instance;
+@@ -120,6 +121,7 @@
+ import com.l2jserver.gameserver.model.options.OptionsSkillType;
+ import com.l2jserver.gameserver.model.skills.AbnormalType;
+ import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
++import com.l2jserver.gameserver.model.skills.BlowSuccess;
+ import com.l2jserver.gameserver.model.skills.BuffInfo;
+ import com.l2jserver.gameserver.model.skills.CommonSkill;
+ import com.l2jserver.gameserver.model.skills.EffectScope;
+@@ -1966,7 +1968,18 @@
+ 		
+ 		// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
+ 		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
+-		broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
++		if (skill.getBlowChance() > 0)
++		{
++			for (AbstractEffect effect : skill.getEffects(EffectScope.GENERAL))
++			{
++				BlowSuccess.getInstance().set(this, skill, effect.calcSuccess(new BuffInfo(this, target, skill)));
++			}
++			broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay, BlowSuccess.getInstance().get(this, skill)));
++		}
++		else
++		{
++			broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
++		}
+ 		
+ 		// Send a system message to the player.
+ 		if (isPlayer() && !skill.isAbnormalInstant())
+Index: java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java	(working copy)
+@@ -22,15 +22,18 @@
+ {
+ 	private final String _requestorName;
+ 	private final int _requestorObjId;
++	private final String _requestorAllyName;
+ 	
+ 	/**
+ 	 * @param requestorObjId
++	 * @param requestorAllyName
+ 	 * @param requestorName
+ 	 */
+-	public AskJoinAlly(int requestorObjId, String requestorName)
++	public AskJoinAlly(int requestorObjId, String requestorAllyName, String requestorName)
+ 	{
+ 		_requestorName = requestorName;
+ 		_requestorObjId = requestorObjId;
++		_requestorAllyName = requestorAllyName;
+ 	}
+ 	
+ 	@Override
+@@ -38,7 +41,7 @@
+ 	{
+ 		writeC(0xbb);
+ 		writeD(_requestorObjId);
+-		writeS(null); // Ally Name ?
++		writeS(_requestorAllyName);
+ 		writeS(null); // TODO: Find me!
+ 		writeS(_requestorName);
+ 	}
+Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java	(working copy)
+@@ -414,12 +414,8 @@
+ 				}
+ 				
+ 				case TYPE_ITEM_NAME:
+-				case TYPE_CASTLE_NAME:
+ 				case TYPE_INT_NUMBER:
+ 				case TYPE_NPC_NAME:
+-				case TYPE_ELEMENT_NAME:
+-				case TYPE_SYSTEM_STRING:
+-				case TYPE_INSTANCE_NAME:
+ 				case TYPE_DOOR_NAME:
+ 				{
+ 					writeD(param.getIntValue());
+@@ -429,8 +425,25 @@
+ 				case TYPE_SKILL_NAME:
+ 				{
+ 					final int[] array = param.getIntArrayValue();
+-					writeD(array[0]); // SkillId
+-					writeH(array[1]); // SkillLevel
++					final int _skillId = array[0];
++					final int _skillLevel = array[1];
++					writeD(_skillId); // SkillId
++					if (_skillLevel < 100)
++					{
++						writeH(_skillLevel); // SkillLevel
++						writeH(0);
++					}
++					else if (_skillLevel > 10000)
++					{
++						writeH((short) _skillLevel);
++						writeH(_skillLevel >> 16);
++					}
++					else
++					{
++						int _maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
++						writeH(_maxLevel);
++						writeH(_skillLevel);
++					}
+ 					break;
+ 				}
+ 				
+@@ -444,10 +457,18 @@
+ 					break;
+ 				}
+ 				case TYPE_CLASS_ID:
++				case TYPE_CASTLE_NAME:
++				case TYPE_INSTANCE_NAME:
++				case TYPE_SYSTEM_STRING:
+ 				{
+ 					writeH(param.getIntValue());
+ 					break;
+ 				}
++				case TYPE_ELEMENT_NAME:
++				{
++					writeC(param.getIntValue());
++					break;
++				}
+ 			}
+ 		}
+ 	}
+@@ -504,6 +525,7 @@
+ 					final int[] array = param.getIntArrayValue();
+ 					out.println(array[0]); // SkillId
+ 					out.println(array[1]); // SkillLevel
++					out.println(array[2]);
+ 					break;
+ 				}
+ 				
+@@ -615,8 +637,16 @@
+ 				case TYPE_SKILL_NAME:
+ 				{
+ 					final int[] array = param.getIntArrayValue();
+-					final Skill skill = SkillData.getInstance().getSkill(array[0], array[1]);
+-					params[i] = skill == null ? "Unknown" : skill.getName();
++					if (array[1] < 10000)
++					{
++						final Skill skill = SkillData.getInstance().getSkill(array[0], array[1]);
++						params[i] = skill == null ? "Unknown" : skill.getName();
++					}
++					else
++					{
++						final Skill skill = SkillData.getInstance().getSkill(array[0], array[1] >> 16);
++						params[i] = skill == null ? "Unknown" : skill.getName();
++					}
+ 					break;
+ 				}
+ 				
+Index: java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java	(working copy)
+@@ -87,7 +87,7 @@
+ 			_log.log(Level.SEVERE, "Error:", e);
+ 		}
+ 		
+-		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
++		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1);
+ 		sendPacket(cl);
+ 		getClient().setCharSelection(cl.getCharInfo());
+ 	}
+Index: java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java	(working copy)
+@@ -46,21 +46,21 @@
+ 		writeD(_henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00); // able to remove or not
+ 		writeQ(_activeChar.getAdena());
+ 		writeD(_activeChar.getINT()); // current INT
+-		writeC(_activeChar.getINT() - _henna.getStatINT()); // equip INT
++		writeD(_activeChar.getINT() - _henna.getStatINT()); // equip INT
+ 		writeD(_activeChar.getSTR()); // current STR
+-		writeC(_activeChar.getSTR() - _henna.getStatSTR()); // equip STR
++		writeD(_activeChar.getSTR() - _henna.getStatSTR()); // equip STR
+ 		writeD(_activeChar.getCON()); // current CON
+-		writeC(_activeChar.getCON() - _henna.getStatCON()); // equip CON
++		writeD(_activeChar.getCON() - _henna.getStatCON()); // equip CON
+ 		writeD(_activeChar.getMEN()); // current MEN
+-		writeC(_activeChar.getMEN() - _henna.getStatMEN()); // equip MEN
++		writeD(_activeChar.getMEN() - _henna.getStatMEN()); // equip MEN
+ 		writeD(_activeChar.getDEX()); // current DEX
+-		writeC(_activeChar.getDEX() - _henna.getStatDEX()); // equip DEX
++		writeD(_activeChar.getDEX() - _henna.getStatDEX()); // equip DEX
+ 		writeD(_activeChar.getWIT()); // current WIT
+-		writeC(_activeChar.getWIT() - _henna.getStatWIT()); // equip WIT
++		writeD(_activeChar.getWIT() - _henna.getStatWIT()); // equip WIT
+ 		writeD(_activeChar.getLUC()); // current LUC
+-		writeC(_activeChar.getLUC() - _henna.getStatLUC()); // equip LUC
++		writeD(_activeChar.getLUC() - _henna.getStatLUC()); // equip LUC
+ 		writeD(_activeChar.getCHA()); // current CHA
+-		writeC(_activeChar.getCHA() - _henna.getStatCHA()); // equip CHA
++		writeD(_activeChar.getCHA() - _henna.getStatCHA()); // equip CHA
+ 		writeD(0x00);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.items.L2Henna;
+ 
+@@ -49,8 +50,11 @@
+ 				writeD(henna.getDyeItemId());
+ 				writeQ(henna.getCancelCount());
+ 				writeQ(henna.getCancelFee());
+-				writeD(0x00);
+-				writeD(0x00);
++				writeD(0x01);
++				if (!Config.SERVER_CLASSIC_SUPPORT)
++				{
++					writeD(0x00);
++				}
+ 			}
+ 		}
+ 	}
+Index: java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java	(working copy)
+@@ -34,7 +34,7 @@
+ 	protected final void writeImpl()
+ 	{
+ 		writeC(0x83);
++		writeC(1);
+ 		writeS(_requestorName);
+-		writeD(0x00);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java	(working copy)
+@@ -36,6 +36,6 @@
+ 		writeD(_charObjId);
+ 		writeD(_degree);
+ 		writeD(_speed);
+-		writeD(0); // ?
++		writeD(-2); // ?
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/model/skills/BlowSuccess.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/skills/BlowSuccess.java	(revision 0)
++++ java/com/l2jserver/gameserver/model/skills/BlowSuccess.java	(working copy)
+@@ -0,0 +1,59 @@
++/*
++ * Copyright (C) 2004-2015 L2J Server
++ * 
++ * This file is part of L2J Server.
++ * 
++ * L2J Server is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 3 of the License, or
++ * (at your option) any later version.
++ * 
++ * L2J Server is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++ * General Public License for more details.
++ * 
++ * You should have received a copy of the GNU General Public License
++ * along with this program. If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.l2jserver.gameserver.model.skills;
++
++import java.util.HashMap;
++import java.util.Map;
++
++import com.l2jserver.gameserver.model.actor.L2Character;
++
++public class BlowSuccess
++{
++	private static Map<String, Boolean> _success = new HashMap<>();
++	
++	public static BlowSuccess getInstance()
++	{
++		return SingletonHolder._instance;
++	}
++	
++	private static class SingletonHolder
++	{
++		protected static final BlowSuccess _instance = new BlowSuccess();
++	}
++	
++	public void remove(L2Character l2Character, Skill skill)
++	{
++		_success.remove(makeKey(l2Character, skill));
++	}
++	
++	public boolean get(L2Character l2Character, Skill skill)
++	{
++		return _success.get(makeKey(l2Character, skill));
++	}
++	
++	public void set(L2Character l2Character, Skill skill, boolean success)
++	{
++		_success.put(makeKey(l2Character, skill), success);
++	}
++	
++	private String makeKey(L2Character l2Character, Skill skill)
++	{
++		return "" + l2Character.getObjectId() + ":" + skill.getId();
++	}
++}
+Index: java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java
+===================================================================
+--- java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java	(revision 775)
++++ java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java	(working copy)
+@@ -280,7 +280,7 @@
+ 		{
+ 			_currentSkill.enchsets1[i] = new StatsSet();
+ 			_currentSkill.enchsets1[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets1[i].set("level", i + 101);
++			_currentSkill.enchsets1[i].set("level", i + 1001);
+ 			_currentSkill.enchsets1[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -309,7 +309,7 @@
+ 		{
+ 			_currentSkill.enchsets2[i] = new StatsSet();
+ 			_currentSkill.enchsets2[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets2[i].set("level", i + 201);
++			_currentSkill.enchsets2[i].set("level", i + 2001);
+ 			_currentSkill.enchsets2[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -338,7 +338,7 @@
+ 		{
+ 			_currentSkill.enchsets3[i] = new StatsSet();
+ 			_currentSkill.enchsets3[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets3[i].set("level", i + 301);
++			_currentSkill.enchsets3[i].set("level", i + 3001);
+ 			_currentSkill.enchsets3[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -367,7 +367,7 @@
+ 		{
+ 			_currentSkill.enchsets4[i] = new StatsSet();
+ 			_currentSkill.enchsets4[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets4[i].set("level", i + 401);
++			_currentSkill.enchsets4[i].set("level", i + 4001);
+ 			_currentSkill.enchsets4[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -396,7 +396,7 @@
+ 		{
+ 			_currentSkill.enchsets5[i] = new StatsSet();
+ 			_currentSkill.enchsets5[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets5[i].set("level", i + 501);
++			_currentSkill.enchsets5[i].set("level", i + 5001);
+ 			_currentSkill.enchsets5[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -425,7 +425,7 @@
+ 		{
+ 			_currentSkill.enchsets6[i] = new StatsSet();
+ 			_currentSkill.enchsets6[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets6[i].set("level", i + 601);
++			_currentSkill.enchsets6[i].set("level", i + 6001);
+ 			_currentSkill.enchsets6[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -454,7 +454,7 @@
+ 		{
+ 			_currentSkill.enchsets7[i] = new StatsSet();
+ 			_currentSkill.enchsets7[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets7[i].set("level", i + 701);
++			_currentSkill.enchsets7[i].set("level", i + 7001);
+ 			_currentSkill.enchsets7[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -483,7 +483,7 @@
+ 		{
+ 			_currentSkill.enchsets8[i] = new StatsSet();
+ 			_currentSkill.enchsets8[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets8[i].set("level", i + 801);
++			_currentSkill.enchsets8[i].set("level", i + 8001);
+ 			_currentSkill.enchsets8[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+@@ -512,7 +512,7 @@
+ 		{
+ 			_currentSkill.enchsets9[i] = new StatsSet();
+ 			_currentSkill.enchsets9[i].set("skill_id", _currentSkill.id);
+-			_currentSkill.enchsets9[i].set("level", i + 901);
++			_currentSkill.enchsets9[i].set("level", i + 9001);
+ 			_currentSkill.enchsets9[i].set("name", _currentSkill.name);
+ 			
+ 			for (n = first; n != null; n = n.getNextSibling())
+Index: java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java	(working copy)
+@@ -48,7 +48,16 @@
+ 		for (Skill skill : _skills)
+ 		{
+ 			writeD(skill.isPassive() ? 1 : 0);
+-			writeD(skill.getDisplayLevel());
++			if (skill.getDisplayLevel() < 100)
++			{
++				writeD(skill.getDisplayLevel());
++			}
++			else
++			{
++				int maxLevel = SkillData.getInstance().getMaxLevel(skill.getDisplayLevel());
++				writeH(maxLevel);
++				writeH(skill.getDisplayLevel());
++			}
+ 			writeD(skill.getDisplayId());
+ 			writeD(0x00);
+ 			writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
+Index: java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java	(working copy)
+@@ -22,7 +22,9 @@
+ import java.util.Objects;
+ import java.util.stream.Collectors;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.L2SkillLearn;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.holders.ItemHolder;
+@@ -51,7 +53,14 @@
+ 		for (L2SkillLearn skill : _learnable)
+ 		{
+ 			writeD(skill.getSkillId());
+-			writeH(skill.getSkillLevel());
++			if (Config.SERVER_CLASSIC_SUPPORT)
++			{
++				writeH(skill.getSkillLevel());
++			}
++			else
++			{
++				writeD(skill.getSkillLevel());
++			}
+ 			writeQ(skill.getLevelUpSp());
+ 			writeC(skill.getGetLevel());
+ 			writeC(skill.getDualClassLevel());
+@@ -68,7 +77,16 @@
+ 			for (Skill skillRemove : skillRem)
+ 			{
+ 				writeD(skillRemove.getId());
+-				writeH(skillRemove.getLevel());
++				if (skillRemove.getLevel() < 100)
++				{
++					writeD(skillRemove.getLevel());
++				}
++				else
++				{
++					int maxLevel = SkillData.getInstance().getMaxLevel(skillRemove.getId());
++					writeH(maxLevel);
++					writeH(skillRemove.getLevel());
++				}
+ 			}
+ 		}
+ 	}
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package com.l2jserver.gameserver.network.clientpackets;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.model.L2Party;
+ import com.l2jserver.gameserver.model.PartyMatchRoom;
+ import com.l2jserver.gameserver.model.PartyMatchRoomList;
+@@ -82,7 +83,7 @@
+ 			{
+ 				if (requestor.isInParty())
+ 				{
+-					if (requestor.getParty().getMemberCount() >= 9)
++					if (requestor.getParty().getMemberCount() >= (Config.SERVER_CLASSIC_SUPPORT ? 9 : 7))
+ 					{
+ 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
+ 						player.sendPacket(sm);
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java	(working copy)
+@@ -43,6 +43,10 @@
+ 		_page = slot / 12;
+ 		_id = readD();
+ 		_lvl = readD();
++		if ((typeId == 2) && (_lvl > 10000))
++		{
++			_lvl = _lvl >> 16;
++		}
+ 		_characterType = readD();
+ 	}
+ 	
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java	(working copy)
+@@ -36,7 +36,7 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xFE);
+-		writeH(0xD2);
++		writeH(0xD3);
+ 		writeS(_charName);
+ 		writeD(_added ? 0x01 : 0x00);
+ 	}
+Index: java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java	(working copy)
+@@ -49,15 +49,15 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xF0);
+-		writeC(_activeChar.getHennaStatINT()); // equip INT
+-		writeC(_activeChar.getHennaStatSTR()); // equip STR
+-		writeC(_activeChar.getHennaStatCON()); // equip CON
+-		writeC(_activeChar.getHennaStatMEN()); // equip MEN
+-		writeC(_activeChar.getHennaStatDEX()); // equip DEX
+-		writeC(_activeChar.getHennaStatWIT()); // equip WIT
+-		writeC(0x00); // equip LUC
+-		writeC(0x00); // equip CHA
+-		writeD(3); // Slots
++		writeD(_activeChar.getHennaStatINT()); // equip INT
++		writeD(_activeChar.getHennaStatSTR()); // equip STR
++		writeD(_activeChar.getHennaStatCON()); // equip CON
++		writeD(_activeChar.getHennaStatMEN()); // equip MEN
++		writeD(_activeChar.getHennaStatDEX()); // equip DEX
++		writeD(_activeChar.getHennaStatWIT()); // equip WIT
++		writeD(_activeChar.getHennaStatLUC()); // equip LUC
++		writeD(_activeChar.getHennaStatCHA()); // equip CHA
++		writeD(_hennas.size() > 0 ? 3 : 0);
+ 		writeD(_hennas.size()); // Size
+ 		for (L2Henna henna : _hennas)
+ 		{
+Index: java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java	(working copy)
+@@ -25,7 +25,6 @@
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.interfaces.IPositionable;
+ import com.l2jserver.gameserver.model.interfaces.IUpdateTypeComponent;
+-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+ import com.l2jserver.gameserver.network.L2GameClient;
+ 
+ /**
+@@ -37,64 +36,6 @@
+ 	
+ 	private boolean _invisible = false;
+ 	
+-	private static final int[] PAPERDOLL_ORDER = new int[]
+-	{
+-		Inventory.PAPERDOLL_UNDER,
+-		Inventory.PAPERDOLL_REAR,
+-		Inventory.PAPERDOLL_LEAR,
+-		Inventory.PAPERDOLL_NECK,
+-		Inventory.PAPERDOLL_RFINGER,
+-		Inventory.PAPERDOLL_LFINGER,
+-		Inventory.PAPERDOLL_HEAD,
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_LHAND,
+-		Inventory.PAPERDOLL_GLOVES,
+-		Inventory.PAPERDOLL_CHEST,
+-		Inventory.PAPERDOLL_LEGS,
+-		Inventory.PAPERDOLL_FEET,
+-		Inventory.PAPERDOLL_CLOAK,
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_HAIR,
+-		Inventory.PAPERDOLL_HAIR2,
+-		Inventory.PAPERDOLL_RBRACELET,
+-		Inventory.PAPERDOLL_LBRACELET,
+-		Inventory.PAPERDOLL_DECO1,
+-		Inventory.PAPERDOLL_DECO2,
+-		Inventory.PAPERDOLL_DECO3,
+-		Inventory.PAPERDOLL_DECO4,
+-		Inventory.PAPERDOLL_DECO5,
+-		Inventory.PAPERDOLL_DECO6,
+-		Inventory.PAPERDOLL_BELT,
+-		Inventory.PAPERDOLL_BROOCH,
+-		Inventory.PAPERDOLL_BROOCH_JEWEL1,
+-		Inventory.PAPERDOLL_BROOCH_JEWEL2,
+-		Inventory.PAPERDOLL_BROOCH_JEWEL3,
+-		Inventory.PAPERDOLL_BROOCH_JEWEL4,
+-		Inventory.PAPERDOLL_BROOCH_JEWEL5,
+-		Inventory.PAPERDOLL_BROOCH_JEWEL6
+-	
+-	};
+-	
+-	private static final int[] PAPERDOLL_ORDER_AUGMENT = new int[]
+-	{
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_LHAND,
+-		Inventory.PAPERDOLL_RHAND
+-	};
+-	
+-	private static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
+-	{
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_LHAND,
+-		Inventory.PAPERDOLL_RHAND,
+-		Inventory.PAPERDOLL_GLOVES,
+-		Inventory.PAPERDOLL_CHEST,
+-		Inventory.PAPERDOLL_LEGS,
+-		Inventory.PAPERDOLL_FEET,
+-		Inventory.PAPERDOLL_HAIR,
+-		Inventory.PAPERDOLL_HAIR2
+-	};
+-	
+ 	/**
+ 	 * @return True if packet originated from invisible character.
+ 	 */
+@@ -143,21 +84,6 @@
+ 		}
+ 	}
+ 	
+-	protected int[] getPaperdollOrder()
+-	{
+-		return PAPERDOLL_ORDER;
+-	}
+-	
+-	protected int[] getPaperdollOrderAugument()
+-	{
+-		return PAPERDOLL_ORDER_AUGMENT;
+-	}
+-	
+-	protected int[] getPaperdollOrderVisualId()
+-	{
+-		return PAPERDOLL_ORDER_VISUAL_ID;
+-	}
+-	
+ 	@Override
+ 	protected void write()
+ 	{
+Index: java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java	(working copy)
+@@ -21,6 +21,7 @@
+ import java.util.ArrayList;
+ import java.util.List;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.skills.BuffInfo;
+ 
+ public class AbnormalStatusUpdate extends L2GameServerPacket
+@@ -45,7 +46,16 @@
+ 			if ((info != null) && info.isInUse())
+ 			{
+ 				writeD(info.getSkill().getDisplayId());
+-				writeH(info.getSkill().getDisplayLevel());
++				if (info.getSkill().getDisplayLevel() < 100)
++				{
++					writeD(info.getSkill().getDisplayLevel());
++				}
++				else
++				{
++					int maxLevel = SkillData.getInstance().getMaxLevel(info.getSkill().getDisplayId());
++					writeH(maxLevel);
++					writeH(info.getSkill().getDisplayLevel());
++				}
+ 				writeD(0x00);
+ 				writeH(info.getTime());
+ 			}
+Index: java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java	(working copy)
+@@ -125,5 +125,6 @@
+ 			writeQ(temp.count);
+ 			writeD(temp.unk);
+ 		}
++		writeD(0);
+ 	}
+ }
+\ No newline at end of file
+Index: java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java	(working copy)
+@@ -48,6 +48,6 @@
+ 		writeD(_room.getLootType());
+ 		writeD(_room.getLocation());
+ 		writeS(_room.getTitle());
+-		writeH(59064);
++		writeH(0x105);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java	(working copy)
+@@ -54,7 +54,7 @@
+ 			if ((info != null) && info.isInUse())
+ 			{
+ 				writeD(info.getSkill().getDisplayId());
+-				writeH(info.getSkill().getDisplayLevel());
++				writeD(info.getSkill().getDisplayLevel());
+ 				writeD(0x00);
+ 				writeH(info.getTime());
+ 			}
+Index: java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java	(working copy)
+@@ -70,7 +70,8 @@
+ 				writeC(0x00); // Filler (always 0)
+ 				writeH(0x00); // Equipped : 00-No, 01-yes
+ 				writeQ(0x00); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+-				writeH(0x00); // Enchant level (pet level shown in control item)
++				writeC(0x00); // Enchant level (pet level shown in control item)
++				writeC(0x00);
+ 				writeD(-1);
+ 				writeD(-9999);
+ 				writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
+Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java	(working copy)
+@@ -21,6 +21,7 @@
+ import java.util.Arrays;
+ import java.util.List;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.L2Object;
+ import com.l2jserver.gameserver.model.actor.L2Character;
+ 
+@@ -33,6 +34,7 @@
+ 	private final int _charObjId;
+ 	private final int _skillId;
+ 	private final int _skillLevel;
++	private final int _maxLevel;
+ 	private final List<L2Object> _targets;
+ 	
+ 	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, L2Object... targets)
+@@ -40,6 +42,7 @@
+ 		_charObjId = cha.getObjectId();
+ 		_skillId = skillId;
+ 		_skillLevel = skillLevel;
++		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
+ 		
+ 		//@formatter:off
+ 		if (targets == null)
+@@ -62,7 +65,15 @@
+ 		writeD(0x00); // TODO: Find me!
+ 		writeD(_charObjId);
+ 		writeD(_skillId);
+-		writeD(_skillLevel);
++		if (_skillLevel < 100)
++		{
++			writeD(_skillLevel);
++		}
++		else
++		{
++			writeH(_maxLevel);
++			writeH(_skillLevel);
++		}
+ 		writeD(_targets.size());
+ 		for (L2Object target : _targets)
+ 		{
+Index: dist/db_installer/sql/game/character_shortcuts.sql
+===================================================================
+--- dist/db_installer/sql/game/character_shortcuts.sql	(revision 775)
++++ dist/db_installer/sql/game/character_shortcuts.sql	(working copy)
+@@ -9,4 +9,5 @@
+   `class_index` int(1) NOT NULL DEFAULT '0',
+   PRIMARY KEY (`charId`,`slot`,`page`,`class_index`),
+   KEY `shortcut_id` (`shortcut_id`)
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+\ No newline at end of file
++) ENGINE=InnoDB DEFAULT CHARSET=utf8;
++ALTER TABLE `character_shortcuts` MODIFY COLUMN `level` varchar(9);
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java	(working copy)
+@@ -34,5 +34,6 @@
+ 	{
+ 		writeC(0xFE);
+ 		writeH(0x5D);
++		writeD(0x00);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/L2GamePacketHandler.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/L2GamePacketHandler.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/L2GamePacketHandler.java	(working copy)
+@@ -467,6 +467,9 @@
+ 					case 0x67:
+ 						msg = new RequestPledgeCrest();
+ 						break;
++					case 0x6a:
++						// New Request Friend List
++						break;
+ 					case 0x6b: // RequestSendL2FriendSay
+ 						msg = new RequestSendFriendMsg();
+ 						break;
+@@ -937,7 +940,7 @@
+ 								msg = new RequestExEnchantItemAttribute();
+ 								break;
+ 							case 0x33:
+-								msg = new RequestGotoLobby();
++								// already in AUTHED
+ 								break;
+ 							case 0x35:
+ 								msg = new MoveToLocationAirShip();
+@@ -986,7 +989,7 @@
+ 								msg = new RequestExEnchantSkillInfoDetail();
+ 								break;
+ 							case 0x44:
+-								msg = new RequestExMagicSkillUseGround();
++								// already in 0x41
+ 								break;
+ 							case 0x45:
+ 								msg = new RequestFortressMapInfo();
+Index: java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java
+===================================================================
+--- java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java	(revision 775)
++++ java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java	(working copy)
+@@ -53,6 +53,14 @@
+ 	public static final int CHANGE_ENCHANT_BOOK = 30299;
+ 	public static final int UNTRAIN_ENCHANT_BOOK = 30300;
+ 	public static final int IMMORTAL_SCROLL = 37044;
++	public static final int NORMAL_ENCHANT_BOOK_V2 = 46150;
++	public static final int SAFE_ENCHANT_BOOK_V2 = 46151;
++	public static final int CHANGE_ENCHANT_BOOK_V2 = 46152;
++	public static final int IMMORTAL_SCROLL_V2 = 46153;
++	public static final int NORMAL_ENCHANT_BOOK_V3 = 46154;
++	public static final int SAFE_ENCHANT_BOOK_V3 = 46155;
++	public static final int CHANGE_ENCHANT_BOOK_V3 = 46156;
++	public static final int IMMORTAL_SCROLL_V3 = 46157;
+ 	
+ 	private final Map<Integer, L2EnchantSkillGroup> _enchantSkillGroups = new HashMap<>();
+ 	private final Map<Integer, L2EnchantSkillLearn> _enchantSkillTrees = new HashMap<>();
+Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java	(working copy)
+@@ -41,5 +41,7 @@
+ 		writeD(_player.getMaxMp());
+ 		writeD(0xffffffff);
+ 		writeQ(0x00);
++		writeC(0);
++		writeQ(0);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java	(working copy)
+@@ -20,6 +20,7 @@
+ 
+ import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
++import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+ 
+ public class GMViewCharacterInfo extends L2GameServerPacket
+ {
+@@ -75,23 +76,21 @@
+ 		writeD(_activeChar.getMaxLoad());
+ 		writeD(_activeChar.getPkKills());
+ 		
+-		for (int slot : getPaperdollOrder())
++		for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
+ 		{
+ 			writeD(_activeChar.getInventory().getPaperdollObjectId(slot));
+ 		}
+ 		
+-		for (int slot : getPaperdollOrder())
++		for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
+ 		{
+ 			writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
+ 		}
+ 		
+-		for (int slot : getPaperdollOrder())
++		for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
+ 		{
+-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
++			writeD(_activeChar.getInventory().getPaperdoll1stAugmentationId(slot));
++			writeD(_activeChar.getInventory().getPaperdoll2ndAugmentationId(slot));
+ 		}
+-		writeD(0x00);
+-		writeD(0x00);
+-		writeD(0x00);
+ 		
+ 		writeC(_activeChar.getInventory().getTalismanSlots()); // CT2.3
+ 		writeC(_activeChar.getInventory().canEquipCloak() ? 1 : 0); // CT2.3
+Index: java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java	(working copy)
+@@ -49,7 +49,7 @@
+ 		}
+ 		
+ 		getClient().markRestoredChar(_charSlot);
+-		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
++		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1);
+ 		sendPacket(cl);
+ 		getClient().setCharSelection(cl.getCharInfo());
+ 		final CharSelectInfoPackage charInfo = getClient().getCharSelection(_charSlot);
+Index: java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java	(working copy)
+@@ -71,39 +71,114 @@
+ 	public static final long MAX_ADENA = Config.MAX_ADENA;
+ 	
+ 	public static final int PAPERDOLL_UNDER = 0;
+-	public static final int PAPERDOLL_HEAD = 1;
+-	public static final int PAPERDOLL_HAIR = 2;
+-	public static final int PAPERDOLL_HAIR2 = 3;
+-	public static final int PAPERDOLL_NECK = 4;
+-	public static final int PAPERDOLL_RHAND = 5;
+-	public static final int PAPERDOLL_CHEST = 6;
+-	public static final int PAPERDOLL_LHAND = 7;
+-	public static final int PAPERDOLL_REAR = 8;
+-	public static final int PAPERDOLL_LEAR = 9;
+-	public static final int PAPERDOLL_GLOVES = 10;
++	public static final int PAPERDOLL_REAR = 1;
++	public static final int PAPERDOLL_LEAR = 2;
++	public static final int PAPERDOLL_NECK = 3;
++	public static final int PAPERDOLL_RFINGER = 4;
++	public static final int PAPERDOLL_LFINGER = 5;
++	public static final int PAPERDOLL_HEAD = 6;
++	public static final int PAPERDOLL_RHAND = 7;
++	public static final int PAPERDOLL_LHAND = 8;
++	public static final int PAPERDOLL_GLOVES = 9;
++	public static final int PAPERDOLL_CHEST = 10;
+ 	public static final int PAPERDOLL_LEGS = 11;
+ 	public static final int PAPERDOLL_FEET = 12;
+-	public static final int PAPERDOLL_RFINGER = 13;
+-	public static final int PAPERDOLL_LFINGER = 14;
+-	public static final int PAPERDOLL_LBRACELET = 15;
+-	public static final int PAPERDOLL_RBRACELET = 16;
+-	public static final int PAPERDOLL_DECO1 = 17;
+-	public static final int PAPERDOLL_DECO2 = 18;
+-	public static final int PAPERDOLL_DECO3 = 19;
+-	public static final int PAPERDOLL_DECO4 = 20;
+-	public static final int PAPERDOLL_DECO5 = 21;
+-	public static final int PAPERDOLL_DECO6 = 22;
+-	public static final int PAPERDOLL_CLOAK = 23;
+-	public static final int PAPERDOLL_BELT = 24;
+-	public static final int PAPERDOLL_BROOCH = 25;
+-	public static final int PAPERDOLL_BROOCH_JEWEL1 = 26;
+-	public static final int PAPERDOLL_BROOCH_JEWEL2 = 27;
+-	public static final int PAPERDOLL_BROOCH_JEWEL3 = 28;
+-	public static final int PAPERDOLL_BROOCH_JEWEL4 = 29;
+-	public static final int PAPERDOLL_BROOCH_JEWEL5 = 30;
+-	public static final int PAPERDOLL_BROOCH_JEWEL6 = 31;
+-	public static final int PAPERDOLL_TOTALSLOTS = 32;
++	public static final int PAPERDOLL_CLOAK = 13;
++	public static final int PAPERDOLL_LRHAND = 14;
++	public static final int PAPERDOLL_HAIR = 15;
++	public static final int PAPERDOLL_DHAIR = 16;
++	public static final int PAPERDOLL_RBRACELET = 17;
++	public static final int PAPERDOLL_LBRACELET = 18;
++	public static final int PAPERDOLL_TALISMAN1 = 19;
++	public static final int PAPERDOLL_TALISMAN2 = 20;
++	public static final int PAPERDOLL_TALISMAN3 = 21;
++	public static final int PAPERDOLL_TALISMAN4 = 22;
++	public static final int PAPERDOLL_TALISMAN5 = 23;
++	public static final int PAPERDOLL_TALISMAN6 = 24;
++	public static final int PAPERDOLL_BELT = 25;
++	public static final int PAPERDOLL_BROOCH = 26;
++	public static final int PAPERDOLL_BROOCH_STONE1 = 27;
++	public static final int PAPERDOLL_BROOCH_STONE2 = 28;
++	public static final int PAPERDOLL_BROOCH_STONE3 = 29;
++	public static final int PAPERDOLL_BROOCH_STONE4 = 30;
++	public static final int PAPERDOLL_BROOCH_STONE5 = 31;
++	public static final int PAPERDOLL_BROOCH_STONE6 = 32;
+ 	
++	public static final int PAPERDOLL_TOTALSLOTS = 33;
++	
++	public static final int[] PAPERDOLL_ORDER = new int[]
++	{
++		Inventory.PAPERDOLL_UNDER,
++		Inventory.PAPERDOLL_HEAD,
++		Inventory.PAPERDOLL_RHAND,
++		Inventory.PAPERDOLL_LHAND,
++		Inventory.PAPERDOLL_GLOVES,
++		Inventory.PAPERDOLL_CHEST,
++		Inventory.PAPERDOLL_LEGS,
++		Inventory.PAPERDOLL_FEET,
++		Inventory.PAPERDOLL_CLOAK,
++		Inventory.PAPERDOLL_LRHAND,
++		Inventory.PAPERDOLL_HAIR,
++		Inventory.PAPERDOLL_DHAIR
++	};
++	
++	public static final int[] PAPERDOLL_ORDER_ALL =
++	{
++		Inventory.PAPERDOLL_UNDER,
++		Inventory.PAPERDOLL_REAR,
++		Inventory.PAPERDOLL_LEAR,
++		Inventory.PAPERDOLL_NECK,
++		Inventory.PAPERDOLL_RFINGER,
++		Inventory.PAPERDOLL_LFINGER,
++		Inventory.PAPERDOLL_HEAD,
++		Inventory.PAPERDOLL_RHAND,
++		Inventory.PAPERDOLL_LHAND,
++		Inventory.PAPERDOLL_GLOVES,
++		Inventory.PAPERDOLL_CHEST,
++		Inventory.PAPERDOLL_LEGS,
++		Inventory.PAPERDOLL_FEET,
++		Inventory.PAPERDOLL_CLOAK,
++		Inventory.PAPERDOLL_LRHAND,
++		Inventory.PAPERDOLL_HAIR,
++		Inventory.PAPERDOLL_DHAIR,
++		Inventory.PAPERDOLL_RBRACELET,
++		Inventory.PAPERDOLL_LBRACELET,
++		Inventory.PAPERDOLL_TALISMAN1,
++		Inventory.PAPERDOLL_TALISMAN2,
++		Inventory.PAPERDOLL_TALISMAN3,
++		Inventory.PAPERDOLL_TALISMAN4,
++		Inventory.PAPERDOLL_TALISMAN5,
++		Inventory.PAPERDOLL_TALISMAN6,
++		Inventory.PAPERDOLL_BELT,
++		Inventory.PAPERDOLL_BROOCH,
++		Inventory.PAPERDOLL_BROOCH_STONE1,
++		Inventory.PAPERDOLL_BROOCH_STONE2,
++		Inventory.PAPERDOLL_BROOCH_STONE3,
++		Inventory.PAPERDOLL_BROOCH_STONE4,
++		Inventory.PAPERDOLL_BROOCH_STONE5,
++		Inventory.PAPERDOLL_BROOCH_STONE6
++	};
++	
++	public static final int[] PAPERDOLL_ORDER_AUGMENT = new int[]
++	{
++		Inventory.PAPERDOLL_RHAND,
++		Inventory.PAPERDOLL_LHAND,
++		Inventory.PAPERDOLL_LRHAND
++	};
++	
++	public static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
++	{
++		Inventory.PAPERDOLL_RHAND,
++		Inventory.PAPERDOLL_LHAND,
++		Inventory.PAPERDOLL_GLOVES,
++		Inventory.PAPERDOLL_CHEST,
++		Inventory.PAPERDOLL_LEGS,
++		Inventory.PAPERDOLL_FEET,
++		Inventory.PAPERDOLL_LRHAND,
++		Inventory.PAPERDOLL_HAIR,
++		Inventory.PAPERDOLL_DHAIR
++	};
++	
+ 	// Speed percentage mods
+ 	public static final double MAX_ARMOR_WEIGHT = 12000;
+ 	
+@@ -848,12 +923,12 @@
+ 		{
+ 			if (item.getItem().getBodyPart() == L2Item.SLOT_R_BRACELET)
+ 			{
+-				inventory.unEquipItemInSlot(PAPERDOLL_DECO1);
+-				inventory.unEquipItemInSlot(PAPERDOLL_DECO2);
+-				inventory.unEquipItemInSlot(PAPERDOLL_DECO3);
+-				inventory.unEquipItemInSlot(PAPERDOLL_DECO4);
+-				inventory.unEquipItemInSlot(PAPERDOLL_DECO5);
+-				inventory.unEquipItemInSlot(PAPERDOLL_DECO6);
++				inventory.unEquipItemInSlot(PAPERDOLL_TALISMAN1);
++				inventory.unEquipItemInSlot(PAPERDOLL_TALISMAN2);
++				inventory.unEquipItemInSlot(PAPERDOLL_TALISMAN3);
++				inventory.unEquipItemInSlot(PAPERDOLL_TALISMAN4);
++				inventory.unEquipItemInSlot(PAPERDOLL_TALISMAN5);
++				inventory.unEquipItemInSlot(PAPERDOLL_TALISMAN6);
+ 			}
+ 		}
+ 		
+@@ -878,12 +953,12 @@
+ 		{
+ 			if (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH)
+ 			{
+-				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL1);
+-				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL2);
+-				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL3);
+-				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL4);
+-				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL5);
+-				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL6);
++				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_STONE1);
++				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_STONE2);
++				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_STONE3);
++				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_STONE4);
++				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_STONE5);
++				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_STONE6);
+ 			}
+ 		}
+ 		
+@@ -1092,19 +1167,19 @@
+ 			case L2Item.SLOT_HAIRALL:
+ 				return PAPERDOLL_HAIR;
+ 			case L2Item.SLOT_HAIR2:
+-				return PAPERDOLL_HAIR2;
++				return PAPERDOLL_DHAIR;
+ 			case L2Item.SLOT_R_BRACELET:
+ 				return PAPERDOLL_RBRACELET;
+ 			case L2Item.SLOT_L_BRACELET:
+ 				return PAPERDOLL_LBRACELET;
+ 			case L2Item.SLOT_DECO:
+-				return PAPERDOLL_DECO1; // return first we deal with it later
++				return PAPERDOLL_TALISMAN1; // return first we deal with it later
+ 			case L2Item.SLOT_BELT:
+ 				return PAPERDOLL_BELT;
+ 			case L2Item.SLOT_BROOCH:
+ 				return PAPERDOLL_BROOCH;
+ 			case L2Item.SLOT_BROOCH_JEWEL:
+-				return PAPERDOLL_BROOCH_JEWEL1;
++				return PAPERDOLL_BROOCH_STONE1;
+ 		}
+ 		return -1;
+ 	}
+@@ -1167,6 +1242,16 @@
+ 		return ((item != null) && (item.getAugmentation() != null)) ? item.getAugmentation().getAugmentationId() : 0;
+ 	}
+ 	
++	public int getPaperdoll1stAugmentationId(int slot)
++	{
++		return 0x0000FFFF & getPaperdollAugmentationId(slot);
++	}
++	
++	public int getPaperdoll2ndAugmentationId(int slot)
++	{
++		return getPaperdollAugmentationId(slot) >> 16;
++	}
++	
+ 	/**
+ 	 * Returns the objectID associated to the item in the paperdoll slot
+ 	 * @param slot : int pointing out the slot
+@@ -1303,7 +1388,7 @@
+ 			case PAPERDOLL_HAIR:
+ 				slot = L2Item.SLOT_HAIR;
+ 				break;
+-			case PAPERDOLL_HAIR2:
++			case PAPERDOLL_DHAIR:
+ 				slot = L2Item.SLOT_HAIR2;
+ 				break;
+ 			case PAPERDOLL_HEAD:
+@@ -1336,12 +1421,12 @@
+ 			case PAPERDOLL_RBRACELET:
+ 				slot = L2Item.SLOT_R_BRACELET;
+ 				break;
+-			case PAPERDOLL_DECO1:
+-			case PAPERDOLL_DECO2:
+-			case PAPERDOLL_DECO3:
+-			case PAPERDOLL_DECO4:
+-			case PAPERDOLL_DECO5:
+-			case PAPERDOLL_DECO6:
++			case PAPERDOLL_TALISMAN1:
++			case PAPERDOLL_TALISMAN2:
++			case PAPERDOLL_TALISMAN3:
++			case PAPERDOLL_TALISMAN4:
++			case PAPERDOLL_TALISMAN5:
++			case PAPERDOLL_TALISMAN6:
+ 				slot = L2Item.SLOT_DECO;
+ 				break;
+ 			case PAPERDOLL_BELT:
+@@ -1350,12 +1435,12 @@
+ 			case PAPERDOLL_BROOCH:
+ 				slot = L2Item.SLOT_BROOCH;
+ 				break;
+-			case PAPERDOLL_BROOCH_JEWEL1:
+-			case PAPERDOLL_BROOCH_JEWEL2:
+-			case PAPERDOLL_BROOCH_JEWEL3:
+-			case PAPERDOLL_BROOCH_JEWEL4:
+-			case PAPERDOLL_BROOCH_JEWEL5:
+-			case PAPERDOLL_BROOCH_JEWEL6:
++			case PAPERDOLL_BROOCH_STONE1:
++			case PAPERDOLL_BROOCH_STONE2:
++			case PAPERDOLL_BROOCH_STONE3:
++			case PAPERDOLL_BROOCH_STONE4:
++			case PAPERDOLL_BROOCH_STONE5:
++			case PAPERDOLL_BROOCH_STONE6:
+ 				slot = L2Item.SLOT_BROOCH_JEWEL;
+ 				break;
+ 		}
+@@ -1453,7 +1538,7 @@
+ 				pdollSlot = PAPERDOLL_HAIR;
+ 				break;
+ 			case L2Item.SLOT_HAIR2:
+-				pdollSlot = PAPERDOLL_HAIR2;
++				pdollSlot = PAPERDOLL_DHAIR;
+ 				break;
+ 			case L2Item.SLOT_HAIRALL:
+ 				setPaperdollItem(PAPERDOLL_HAIR, null);
+@@ -1496,7 +1581,7 @@
+ 				pdollSlot = PAPERDOLL_RBRACELET;
+ 				break;
+ 			case L2Item.SLOT_DECO:
+-				pdollSlot = PAPERDOLL_DECO1;
++				pdollSlot = PAPERDOLL_TALISMAN1;
+ 				break;
+ 			case L2Item.SLOT_BELT:
+ 				pdollSlot = PAPERDOLL_BELT;
+@@ -1505,7 +1590,7 @@
+ 				pdollSlot = PAPERDOLL_BROOCH;
+ 				break;
+ 			case L2Item.SLOT_BROOCH_JEWEL:
+-				pdollSlot = PAPERDOLL_BROOCH_JEWEL1;
++				pdollSlot = PAPERDOLL_BROOCH_STONE1;
+ 				break;
+ 			default:
+ 				_log.info("Unhandled slot type: " + slot);
+@@ -1684,7 +1769,7 @@
+ 				L2ItemInstance hair = getPaperdollItem(PAPERDOLL_HAIR);
+ 				if ((hair != null) && (hair.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
+ 				{
+-					setPaperdollItem(PAPERDOLL_HAIR2, null);
++					setPaperdollItem(PAPERDOLL_DHAIR, null);
+ 				}
+ 				else
+ 				{
+@@ -1701,13 +1786,13 @@
+ 				}
+ 				else
+ 				{
+-					setPaperdollItem(PAPERDOLL_HAIR2, null);
++					setPaperdollItem(PAPERDOLL_DHAIR, null);
+ 				}
+ 				
+-				setPaperdollItem(PAPERDOLL_HAIR2, item);
++				setPaperdollItem(PAPERDOLL_DHAIR, item);
+ 				break;
+ 			case L2Item.SLOT_HAIRALL:
+-				setPaperdollItem(PAPERDOLL_HAIR2, null);
++				setPaperdollItem(PAPERDOLL_DHAIR, null);
+ 				setPaperdollItem(PAPERDOLL_HAIR, item);
+ 				break;
+ 			case L2Item.SLOT_UNDERWEAR:
+@@ -1893,7 +1978,7 @@
+ 		}
+ 		
+ 		// find same (or incompatible) talisman type
+-		for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++)
++		for (int i = PAPERDOLL_TALISMAN1; i < (PAPERDOLL_TALISMAN1 + getTalismanSlots()); i++)
+ 		{
+ 			if (_paperdoll[i] != null)
+ 			{
+@@ -1907,7 +1992,7 @@
+ 		}
+ 		
+ 		// no free slot found - put on first free
+-		for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++)
++		for (int i = PAPERDOLL_TALISMAN1; i < (PAPERDOLL_TALISMAN1 + getTalismanSlots()); i++)
+ 		{
+ 			if (_paperdoll[i] == null)
+ 			{
+@@ -1917,7 +2002,7 @@
+ 		}
+ 		
+ 		// no free slots - put on first
+-		setPaperdollItem(PAPERDOLL_DECO1, item);
++		setPaperdollItem(PAPERDOLL_TALISMAN1, item);
+ 	}
+ 	
+ 	public int getBroochJewelSlots()
+@@ -1933,7 +2018,7 @@
+ 		}
+ 		
+ 		// find same (or incompatible) brooch jewel type
+-		for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++)
++		for (int i = PAPERDOLL_BROOCH_STONE1; i < (PAPERDOLL_BROOCH_STONE1 + getBroochJewelSlots()); i++)
+ 		{
+ 			if (_paperdoll[i] != null)
+ 			{
+@@ -1947,7 +2032,7 @@
+ 		}
+ 		
+ 		// no free slot found - put on first free
+-		for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++)
++		for (int i = PAPERDOLL_BROOCH_STONE1; i < (PAPERDOLL_BROOCH_STONE1 + getBroochJewelSlots()); i++)
+ 		{
+ 			if (_paperdoll[i] == null)
+ 			{
+@@ -1957,7 +2042,7 @@
+ 		}
+ 		
+ 		// no free slots - put on first
+-		setPaperdollItem(PAPERDOLL_BROOCH_JEWEL1, item);
++		setPaperdollItem(PAPERDOLL_BROOCH_STONE1, item);
+ 	}
+ 	
+ 	public boolean canEquipCloak()
+Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.model.L2Clan;
+ 
+ public final class PledgeStatusChanged extends L2GameServerPacket
+@@ -33,7 +34,7 @@
+ 	protected final void writeImpl()
+ 	{
+ 		writeC(0xCD);
+-		writeD(0x00);
++		writeD(Config.SERVER_ID);
+ 		writeD(_clan.getLeaderId());
+ 		writeD(_clan.getId());
+ 		writeD(_clan.getCrestId());
+Index: java/com/l2jserver/gameserver/model/ItemInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/ItemInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/ItemInfo.java	(working copy)
+@@ -325,6 +325,16 @@
+ 		return _augmentation;
+ 	}
+ 	
++	public int get1stAugmentationId()
++	{
++		return 0x0000FFFF & getAugmentationBonus();
++	}
++	
++	public int get2ndAugmentationId()
++	{
++		return getAugmentationBonus() >> 16;
++	}
++	
+ 	public long getCount()
+ 	{
+ 		return _count;
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package com.l2jserver.gameserver.network.clientpackets;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.enums.PartyDistributionType;
+ import com.l2jserver.gameserver.model.BlockList;
+ import com.l2jserver.gameserver.model.L2Party;
+@@ -162,7 +163,7 @@
+ 		{
+ 			requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
+ 		}
+-		else if (party.getMemberCount() >= 7) // 7 members for GOD version
++		else if (party.getMemberCount() >= (Config.SERVER_CLASSIC_SUPPORT ? 9 : 7)) // 7 members for GOD version
+ 		{
+ 			requestor.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
+ 		}
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java	(working copy)
+@@ -79,7 +79,7 @@
+ 		sm.addString(activeChar.getClan().getAllyName());
+ 		sm.addString(activeChar.getName());
+ 		target.sendPacket(sm);
+-		target.sendPacket(new AskJoinAlly(activeChar.getObjectId(), activeChar.getClan().getAllyName()));
++		target.sendPacket(new AskJoinAlly(activeChar.getObjectId(), activeChar.getClan().getAllyName(), activeChar.getName()));
+ 	}
+ 	
+ 	@Override
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java	(working copy)
+@@ -33,14 +33,14 @@
+ 	private static final String _C__D0_52_REQUESTWITHDRAWPREMIUMITEM = "[C] D0:52 RequestWithDrawPremiumItem";
+ 	
+ 	private int _itemNum;
+-	private int _charId;
++	// private int _charId;
+ 	private long _itemCount;
+ 	
+ 	@Override
+ 	protected void readImpl()
+ 	{
+-		_itemNum = readD();
+-		_charId = readD();
++		_itemNum = (int) readQ();
++		// _charId = readD();
+ 		_itemCount = readQ();
+ 	}
+ 	
+@@ -57,11 +57,9 @@
+ 		{
+ 			return;
+ 		}
+-		else if (activeChar.getObjectId() != _charId)
+-		{
+-			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH);
+-			return;
+-		}
++		/*
++		 * else if (activeChar.getObjectId() != _charId) { Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH); return; }
++		 */
+ 		else if (activeChar.getPremiumItemList().isEmpty())
+ 		{
+ 			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
+Index: java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java	(working copy)
+@@ -20,9 +20,9 @@
+ 
+ public final class SetupGauge extends L2GameServerPacket
+ {
+-	public static final int BLUE = 0;
++	public static final int BLUE = 2;
+ 	public static final int RED = 1;
+-	public static final int CYAN = 2;
++	public static final int GREEN = 3;
+ 	
+ 	private final int _dat1;
+ 	private final int _time;
+Index: java/com/l2jserver/gameserver/network/serverpackets/Die.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/Die.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/Die.java	(working copy)
+@@ -45,9 +45,7 @@
+ 	private final boolean _isSweepable;
+ 	private boolean _useFeather;
+ 	private boolean _toFortress;
+-	private boolean _hideAnimation;
+ 	private List<Integer> _items = null;
+-	private boolean _itemsEnabled;
+ 	
+ 	public Die(L2Character activeChar)
+ 	{
+@@ -84,11 +82,6 @@
+ 		_isSweepable = activeChar.isAttackable() && activeChar.isSweepActive();
+ 	}
+ 	
+-	public void setHideAnimation(boolean val)
+-	{
+-		_hideAnimation = val;
+-	}
+-	
+ 	public void addItem(int itemId)
+ 	{
+ 		if (_items == null)
+@@ -111,11 +104,6 @@
+ 		return _items != null ? _items : Collections.emptyList();
+ 	}
+ 	
+-	public void setItemsEnabled(boolean val)
+-	{
+-		_itemsEnabled = val;
+-	}
+-	
+ 	@Override
+ 	protected final void writeImpl()
+ 	{
+@@ -128,14 +116,10 @@
+ 		writeD(_isSweepable ? 0x01 : 0x00);
+ 		writeD(_useFeather ? 0x01 : 0x00);
+ 		writeD(_toFortress ? 0x01 : 0x00);
+-		writeC(_hideAnimation ? 0x01 : 0x00);
+-		
+-		writeD(getItems().size());
+-		for (int itemId : getItems())
+-		{
+-			writeD(itemId);
+-		}
+-		
+-		writeD(_itemsEnabled ? 0x01 : 0x00);
++		writeD(0x00);
++		writeD(0x00);
++		writeC(0x00);
++		writeD(0x00);
++		writeD(0x00);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java	(working copy)
+@@ -54,11 +54,28 @@
+ 		writeD(getFromList(Inventory.PAPERDOLL_LEGS));
+ 		writeD(getFromList(Inventory.PAPERDOLL_FEET));
+ 		writeD(getFromList(Inventory.PAPERDOLL_CLOAK));
+-		writeD(getFromList(Inventory.PAPERDOLL_RHAND));
++		writeD(getFromList(Inventory.PAPERDOLL_LRHAND));
+ 		writeD(getFromList(Inventory.PAPERDOLL_HAIR));
+-		writeD(getFromList(Inventory.PAPERDOLL_HAIR2));
++		writeD(getFromList(Inventory.PAPERDOLL_DHAIR));
+ 		writeD(getFromList(Inventory.PAPERDOLL_RBRACELET));
+ 		writeD(getFromList(Inventory.PAPERDOLL_LBRACELET));
++		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN1));
++		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN2));
++		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN3));
++		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN4));
++		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN5));
++		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN6));
++		writeD(getFromList(Inventory.PAPERDOLL_BELT));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE1));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE2));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE3));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE4));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE5));
++		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE6));
++		writeD(0);
++		writeD(0);
++		writeD(0);
+ 	}
+ 	
+ 	private int getFromList(int key)
+Index: java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java	(working copy)
+@@ -46,21 +46,21 @@
+ 		writeD(_henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00); // able to draw or not 0 is false and 1 is true
+ 		writeQ(_activeChar.getAdena());
+ 		writeD(_activeChar.getINT()); // current INT
+-		writeC(_activeChar.getINT() + _henna.getStatINT()); // equip INT
++		writeD(_activeChar.getINT() + _henna.getStatINT()); // equip INT
+ 		writeD(_activeChar.getSTR()); // current STR
+-		writeC(_activeChar.getSTR() + _henna.getStatSTR()); // equip STR
++		writeD(_activeChar.getSTR() + _henna.getStatSTR()); // equip STR
+ 		writeD(_activeChar.getCON()); // current CON
+-		writeC(_activeChar.getCON() + _henna.getStatCON()); // equip CON
++		writeD(_activeChar.getCON() + _henna.getStatCON()); // equip CON
+ 		writeD(_activeChar.getMEN()); // current MEN
+-		writeC(_activeChar.getMEN() + _henna.getStatMEN()); // equip MEN
++		writeD(_activeChar.getMEN() + _henna.getStatMEN()); // equip MEN
+ 		writeD(_activeChar.getDEX()); // current DEX
+-		writeC(_activeChar.getDEX() + _henna.getStatDEX()); // equip DEX
++		writeD(_activeChar.getDEX() + _henna.getStatDEX()); // equip DEX
+ 		writeD(_activeChar.getWIT()); // current WIT
+-		writeC(_activeChar.getWIT() + _henna.getStatWIT()); // equip WIT
++		writeD(_activeChar.getWIT() + _henna.getStatWIT()); // equip WIT
+ 		writeD(_activeChar.getLUC()); // current LUC
+-		writeC(_activeChar.getLUC() + _henna.getStatLUC()); // equip LUC
++		writeD(_activeChar.getLUC() + _henna.getStatLUC()); // equip LUC
+ 		writeD(_activeChar.getCHA()); // current CHA
+-		writeC(_activeChar.getCHA() + _henna.getStatCHA()); // equip CHA
++		writeD(_activeChar.getCHA() + _henna.getStatCHA()); // equip CHA
+ 		writeD(0x00); // TODO: Find me!
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java	(working copy)
+@@ -79,10 +79,11 @@
+ 		{
+ 			if (containsMask(slot))
+ 			{
+-				writeH(18); // 2 + 4 * 4
++				writeH(22); // 2 + 4 * 5
+ 				writeD(inventory.getPaperdollObjectId(slot.getSlot()));
+ 				writeD(inventory.getPaperdollItemId(slot.getSlot()));
+-				writeD(inventory.getPaperdollAugmentationId(slot.getSlot()));
++				writeD(inventory.getPaperdoll1stAugmentationId(slot.getSlot()));
++				writeD(inventory.getPaperdoll2ndAugmentationId(slot.getSlot()));
+ 				writeD(inventory.getPaperdollItemVisualId(slot.getSlot()));
+ 			}
+ 		}
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java	(working copy)
+@@ -120,6 +120,15 @@
+ 			case S84:
+ 				price = 920000;
+ 				break;
++			case R:
++				price = 1840000;
++				break;
++			case R95:
++				price = 3680000;
++				break;
++			case R99:
++				price = 7360000;
++				break;
+ 			// TODO: S84 TOP price 3.2M
+ 			// any other item type is not augmentable
+ 			default:
+Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.model.L2Clan;
+ 
+ public class PledgeShowInfoUpdate extends L2GameServerPacket
+@@ -35,6 +36,7 @@
+ 		writeC(0x8E);
+ 		// sending empty data so client will ask all the info in response ;)
+ 		writeD(_clan.getId());
++		writeD(Config.SERVER_ID);
+ 		writeD(_clan.getCrestId());
+ 		writeD(_clan.getLevel()); // clan level
+ 		writeD(_clan.getCastleId());
+Index: java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java	(working copy)
+@@ -24,13 +24,15 @@
+ 	private final String _subPledgeName;
+ 	private final int _pledgeType;
+ 	private final String _pledgeName;
++	private final String _askjoinName;
+ 	
+-	public AskJoinPledge(int requestorObjId, String subPledgeName, int pledgeType, String pledgeName)
++	public AskJoinPledge(int requestorObjId, String subPledgeName, int pledgeType, String pledgeName, String askjoinName)
+ 	{
+ 		_requestorObjId = requestorObjId;
+ 		_subPledgeName = subPledgeName;
+ 		_pledgeType = pledgeType;
+ 		_pledgeName = pledgeName;
++		_askjoinName = askjoinName;
+ 	}
+ 	
+ 	@Override
+@@ -38,14 +40,15 @@
+ 	{
+ 		writeC(0x2c);
+ 		writeD(_requestorObjId);
+-		if (_subPledgeName != null)
+-		{
+-			writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
+-		}
++		writeS(_askjoinName);
+ 		writeS(_pledgeName);
+ 		if (_pledgeType != 0)
+ 		{
+ 			writeD(_pledgeType);
+ 		}
++		if (_subPledgeName != null)
++		{
++			writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
++		}
+ 	}
+ }
+Index: dist/db_installer/sql/game/character_skills_save.sql
+===================================================================
+--- dist/db_installer/sql/game/character_skills_save.sql	(revision 775)
++++ dist/db_installer/sql/game/character_skills_save.sql	(working copy)
+@@ -10,4 +10,6 @@
+   `class_index` INT(1) NOT NULL DEFAULT 0,
+   `buff_index` INT(2) NOT NULL DEFAULT 0,
+   PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`)
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+\ No newline at end of file
++) ENGINE=InnoDB DEFAULT CHARSET=utf8;
++ALTER TABLE `character_skills_save` MODIFY COLUMN `skill_level` INT(4);
++UPDATE `character_skills_save` SET skill_level=((skill_level % 100) + (round(skill_level / 100) * 1000)) WHERE skill_level <= 1000 AND skill_level >= 100;
+Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java	(working copy)
+@@ -34,12 +34,21 @@
+ 	
+ 	private int _skillId;
+ 	private int _skillLvl;
++	private int _fullLvl;
+ 	
+ 	@Override
+ 	protected void readImpl()
+ 	{
+ 		_skillId = readD();
+-		_skillLvl = readD();
++		_fullLvl = readD();
++		if (_fullLvl < 100)
++		{
++			_skillLvl = _fullLvl;
++		}
++		else
++		{
++			_skillLvl = _fullLvl >> 16;
++		}
+ 	}
+ 	
+ 	@Override
+Index: java/com/l2jserver/gameserver/network/serverpackets/SkillList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/SkillList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/SkillList.java	(working copy)
+@@ -21,6 +21,8 @@
+ import java.util.ArrayList;
+ import java.util.List;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
++
+ public final class SkillList extends L2GameServerPacket
+ {
+ 	private final List<Skill> _skills = new ArrayList<>();
+@@ -63,7 +65,16 @@
+ 		for (Skill temp : _skills)
+ 		{
+ 			writeD(temp.passive ? 1 : 0);
+-			writeD(temp.level);
++			if (temp.level < 100)
++			{
++				writeD(temp.level);
++			}
++			else
++			{
++				int maxlevel = SkillData.getInstance().getMaxLevel(temp.id);
++				writeH(maxlevel);
++				writeH(temp.level);
++			}
+ 			writeD(temp.id);
+ 			writeD(-1); // GOD ReuseDelayShareGroupID
+ 			writeC(temp.disabled ? 1 : 0); // iSkillDisabled
+Index: dist/game/config/Server.properties
+===================================================================
+--- dist/game/config/Server.properties	(revision 775)
++++ dist/game/config/Server.properties	(working copy)
+@@ -93,9 +93,9 @@
+ # Numbers of protocol revisions that server allows to connect.
+ # Delimiter is ;
+ # WARNING: <u><b><font color="red">Changing the protocol revision may result in incompatible communication and many errors in game!</font></b></u>
+-# Ertheia: 603;606;607;610
+-# Classic: 19
+-AllowedProtocolRevisions = 603;606;607;610
++# Infinite Odyssey: 24
++# Classic: 24
++AllowedProtocolRevisions = 24
+ 
+ # Displays server type next to the server name on character selection.
+ # Notes:
+Index: java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package com.l2jserver.gameserver.network.serverpackets;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.Shortcut;
+ 
+ public final class ShortCutRegister extends L2GameServerPacket
+@@ -50,12 +51,22 @@
+ 				writeD(0x00); // unknown
+ 				writeD(0x00); // item augment id
+ 				writeD(0x00); // TODO: Find me, item visual id ?
++				writeD(0x00);
+ 				break;
+ 			}
+ 			case SKILL:
+ 			{
+ 				writeD(_shortcut.getId());
+-				writeD(_shortcut.getLevel());
++				if ((_shortcut.getLevel() < 100) || (_shortcut.getLevel() > 10000))
++				{
++					writeD(_shortcut.getLevel());
++				}
++				else
++				{
++					int _maxLevel = SkillData.getInstance().getMaxLevel(_shortcut.getId());
++					writeH(_maxLevel);
++					writeH(_shortcut.getLevel());
++				}
+ 				writeD(_shortcut.getSharedReuseGroup());
+ 				writeC(0x00); // C5
+ 				writeD(_shortcut.getCharacterType());
+Index: java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java	(working copy)
+@@ -20,6 +20,7 @@
+ 
+ import java.util.List;
+ 
++import com.l2jserver.Config;
+ import com.l2jserver.gameserver.data.xml.impl.HennaData;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.items.L2Henna;
+@@ -63,7 +64,10 @@
+ 				writeQ(henna.getWearCount()); // amount of dyes required
+ 				writeQ(henna.getWearFee()); // amount of Adena required
+ 				writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
+-				writeD(0x00); // TODO: Find me!
++				if (!Config.SERVER_CLASSIC_SUPPORT)
++				{
++					writeD(0x00);
++				}
+ 			}
+ 		}
+ 	}
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java	(working copy)
+@@ -29,7 +29,6 @@
+ {
+ 	private final int _inventory;
+ 	private final int _warehouse;
+-	private final int _freight;
+ 	private final int _clan;
+ 	private final int _privateSell;
+ 	private final int _privateBuy;
+@@ -42,7 +41,6 @@
+ 	{
+ 		_inventory = activeChar.getInventoryLimit();
+ 		_warehouse = activeChar.getWareHouseLimit();
+-		_freight = Config.ALT_FREIGHT_SLOTS;
+ 		_privateSell = activeChar.getPrivateSellStoreLimit();
+ 		_privateBuy = activeChar.getPrivateBuyStoreLimit();
+ 		_clan = Config.WAREHOUSE_SLOTS_CLAN;
+@@ -60,7 +58,6 @@
+ 		
+ 		writeD(_inventory);
+ 		writeD(_warehouse);
+-		writeD(_freight);
+ 		writeD(_clan);
+ 		writeD(_privateSell);
+ 		writeD(_privateBuy);
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java	(working copy)
+@@ -36,7 +36,7 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xFE);
+-		writeH(0xE1);
++		writeH(0xE5);
+ 		// state 0 - pause 1 - started
+ 		writeC(_paused ? 0x00 : 0x01);
+ 		// left time in ms max is 16000 its 4m and state is automatically changed to quit
+Index: java/com/l2jserver/commons/mmocore/SendablePacket.java
+===================================================================
+--- java/com/l2jserver/commons/mmocore/SendablePacket.java	(revision 775)
++++ java/com/l2jserver/commons/mmocore/SendablePacket.java	(working copy)
+@@ -43,6 +43,17 @@
+ 	 * 8bit integer (00)
+ 	 * @param data
+ 	 */
++	protected final void writeC(final boolean data)
++	{
++		int value = data ? 0x01 : 0x00;
++		_buf.put((byte) value);
++	}
++	
++	/**
++	 * Write <B>byte</B> to the buffer. <BR>
++	 * 8bit integer (00)
++	 * @param data
++	 */
+ 	protected final void writeC(final int data)
+ 	{
+ 		_buf.put((byte) data);
+@@ -79,6 +90,17 @@
+ 	}
+ 	
+ 	/**
++	 * Write <B>int</B> to the buffer. <BR>
++	 * 32bit integer (00 00 00 00)
++	 * @param value
++	 */
++	protected final void writeD(final boolean value)
++	{
++		int val = value ? 0x01 : 0x00;
++		_buf.putInt(val);
++	}
++	
++	/**
+ 	 * Write <B>long</B> to the buffer. <BR>
+ 	 * 64bit integer (00 00 00 00 00 00 00 00)
+ 	 * @param value
+Index: java/com/l2jserver/gameserver/enums/InventorySlot.java
+===================================================================
+--- java/com/l2jserver/gameserver/enums/InventorySlot.java	(revision 775)
++++ java/com/l2jserver/gameserver/enums/InventorySlot.java	(working copy)
+@@ -40,25 +40,25 @@
+ 	LEGS(Inventory.PAPERDOLL_LEGS),
+ 	FEET(Inventory.PAPERDOLL_FEET),
+ 	CLOAK(Inventory.PAPERDOLL_CLOAK),
+-	LRHAND(Inventory.PAPERDOLL_RHAND),
++	LRHAND(Inventory.PAPERDOLL_LRHAND),
+ 	HAIR(Inventory.PAPERDOLL_HAIR),
+-	HAIR2(Inventory.PAPERDOLL_HAIR2),
++	HAIR2(Inventory.PAPERDOLL_DHAIR),
+ 	RBRACELET(Inventory.PAPERDOLL_RBRACELET),
+ 	LBRACELET(Inventory.PAPERDOLL_LBRACELET),
+-	DECO1(Inventory.PAPERDOLL_DECO1),
+-	DECO2(Inventory.PAPERDOLL_DECO2),
+-	DECO3(Inventory.PAPERDOLL_DECO3),
+-	DECO4(Inventory.PAPERDOLL_DECO4),
+-	DECO5(Inventory.PAPERDOLL_DECO5),
+-	DECO6(Inventory.PAPERDOLL_DECO6),
++	DECO1(Inventory.PAPERDOLL_TALISMAN1),
++	DECO2(Inventory.PAPERDOLL_TALISMAN2),
++	DECO3(Inventory.PAPERDOLL_TALISMAN3),
++	DECO4(Inventory.PAPERDOLL_TALISMAN4),
++	DECO5(Inventory.PAPERDOLL_TALISMAN5),
++	DECO6(Inventory.PAPERDOLL_TALISMAN6),
+ 	BELT(Inventory.PAPERDOLL_BELT),
+ 	BROOCH(Inventory.PAPERDOLL_BROOCH),
+-	BROOCH_JEWEL(Inventory.PAPERDOLL_BROOCH_JEWEL1),
+-	BROOCH_JEWEL2(Inventory.PAPERDOLL_BROOCH_JEWEL2),
+-	BROOCH_JEWEL3(Inventory.PAPERDOLL_BROOCH_JEWEL3),
+-	BROOCH_JEWEL4(Inventory.PAPERDOLL_BROOCH_JEWEL4),
+-	BROOCH_JEWEL5(Inventory.PAPERDOLL_BROOCH_JEWEL5),
+-	BROOCH_JEWEL6(Inventory.PAPERDOLL_BROOCH_JEWEL6);
++	BROOCH_JEWEL(Inventory.PAPERDOLL_BROOCH_STONE1),
++	BROOCH_JEWEL2(Inventory.PAPERDOLL_BROOCH_STONE2),
++	BROOCH_JEWEL3(Inventory.PAPERDOLL_BROOCH_STONE3),
++	BROOCH_JEWEL4(Inventory.PAPERDOLL_BROOCH_STONE4),
++	BROOCH_JEWEL5(Inventory.PAPERDOLL_BROOCH_STONE5),
++	BROOCH_JEWEL6(Inventory.PAPERDOLL_BROOCH_STONE6);
+ 	
+ 	private final int _paperdollSlot;
+ 	
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java	(working copy)
+@@ -34,7 +34,7 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xFE);
+-		writeH(0xDF);
++		writeH(0xE3);
+ 		writeD(_points); // 72 = 1%, max 7200 = 100%
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java
+===================================================================
+--- java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java	(revision 775)
++++ java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java	(working copy)
+@@ -879,7 +879,7 @@
+ 	
+ 	public static int[][] restoreVisibleInventory(int objectId)
+ 	{
+-		int[][] paperdoll = new int[33][4];
++		int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
+ 		try (Connection con = ConnectionFactory.getInstance().getConnection();
+ 			PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
+ 		{
+Index: java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java	(working copy)
+@@ -29,10 +29,8 @@
+ import com.l2jserver.Config;
+ import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+ import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+-import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+ import com.l2jserver.gameserver.model.CharSelectInfoPackage;
+ import com.l2jserver.gameserver.model.L2Clan;
+-import com.l2jserver.gameserver.model.entity.Hero;
+ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+ import com.l2jserver.gameserver.network.L2GameClient;
+ 
+@@ -41,7 +39,6 @@
+ 	private static Logger _log = Logger.getLogger(CharSelectionInfo.class.getName());
+ 	private final String _loginName;
+ 	private final int _sessionId;
+-	private int _activeId;
+ 	private final List<CharSelectInfoPackage> _characterPackages;
+ 	
+ 	/**
+@@ -54,17 +51,8 @@
+ 		_sessionId = sessionId;
+ 		_loginName = loginName;
+ 		_characterPackages = loadCharacterSelectInfo(_loginName);
+-		_activeId = -1;
+ 	}
+ 	
+-	public CharSelectionInfo(String loginName, int sessionId, int activeId)
+-	{
+-		_sessionId = sessionId;
+-		_loginName = loginName;
+-		_characterPackages = loadCharacterSelectInfo(_loginName);
+-		_activeId = activeId;
+-	}
+-	
+ 	public List<CharSelectInfoPackage> getCharInfo()
+ 	{
+ 		return _characterPackages;
+@@ -80,125 +68,115 @@
+ 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
+ 		writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
+ 		writeC(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT ? 0x01 : 0x00); // if 1 can't create new char
+-		writeC(0x01); // play mode, if 1 can create only 2 char in regular lobby
+-		writeD(0x02); // if 1, korean client
++		writeC(0x02); // play mode, if 1 can create only 2 char in regular lobby
++		writeD(0x00); // if 1, korean client
+ 		writeC(0x00); // if 1 suggest premium account
+ 		
+-		long lastAccess = 0L;
+-		if (_activeId == -1)
++		int charId = 0;
++		if (!_characterPackages.isEmpty())
+ 		{
+-			for (int i = 0; i < size; i++)
++			long lastAccess = -1L;
++			charId = _characterPackages.get(0).getObjectId();
++			
++			for (CharSelectInfoPackage info : _characterPackages)
+ 			{
+-				final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
+-				if (lastAccess < charInfoPackage.getLastAccess())
++				if (info.isAvailable() && (lastAccess < info.getLastAccess()))
+ 				{
+-					lastAccess = charInfoPackage.getLastAccess();
+-					_activeId = i;
++					lastAccess = info.getLastAccess();
++					charId = info.getObjectId();
+ 				}
+ 			}
+ 		}
+ 		
+-		for (int i = 0; i < size; i++)
++		for (CharSelectInfoPackage charInfoPackage : _characterPackages)
+ 		{
+-			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
+-			
+-			writeS(charInfoPackage.getName()); // char name
+-			writeD(charInfoPackage.getObjectId()); // char id
+-			writeS(_loginName); // login
+-			writeD(_sessionId); // session id
+-			writeD(0x00); // ??
+-			writeD(0x00); // ??
+-			
+-			writeD(charInfoPackage.getSex()); // sex
+-			writeD(charInfoPackage.getRace()); // race
+-			
+-			if (charInfoPackage.getClassId() == charInfoPackage.getBaseClassId())
+-			{
+-				writeD(charInfoPackage.getClassId());
+-			}
+-			else
+-			{
+-				writeD(charInfoPackage.getBaseClassId());
+-			}
+-			
+-			writeD(0x01); // server id ??
+-			
++			writeS(charInfoPackage.getName());
++			writeD(charInfoPackage.getObjectId());
++			writeS(_loginName);
++			writeD(_sessionId);
++			writeD(charInfoPackage.getClanId());
++			writeD(0x00);
++			writeD(charInfoPackage.getSex());
++			writeD(charInfoPackage.getRace());
++			writeD(charInfoPackage.getBaseClassId());
++			writeD(Config.SERVER_ID);
+ 			writeD(charInfoPackage.getX());
+ 			writeD(charInfoPackage.getY());
+ 			writeD(charInfoPackage.getZ());
+ 			writeF(charInfoPackage.getCurrentHp());
+ 			writeF(charInfoPackage.getCurrentMp());
+-			
+ 			writeQ(charInfoPackage.getSp());
+ 			writeQ(charInfoPackage.getExp());
+-			writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High Five
++			writeF(charInfoPackage.getExpPercent());
+ 			writeD(charInfoPackage.getLevel());
+-			
+-			writeD(charInfoPackage.getKarma() > 0 ? charInfoPackage.getKarma() * -1 : charInfoPackage.getReputation());
++			writeD(charInfoPackage.getReputationInfo());
+ 			writeD(charInfoPackage.getPkKills());
+ 			writeD(charInfoPackage.getPvPKills());
+ 			
+-			writeD(0x00);
+-			writeD(0x00);
+-			writeD(0x00);
+-			writeD(0x00);
+-			writeD(0x00);
+-			writeD(0x00);
+-			writeD(0x00);
++			for (int j = 0; j < 7; j++)
++			{
++				writeD(0x00);
++			}
+ 			
+ 			writeD(0x00); // Ertheia
+ 			writeD(0x00); // Ertheia
+ 			
+-			for (int slot : getPaperdollOrder())
++			for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
+ 			{
+ 				writeD(charInfoPackage.getPaperdollItemId(slot));
+ 			}
+ 			
+-			for (int slot : getPaperdollOrderVisualId())
++			for (int slot : Inventory.PAPERDOLL_ORDER_VISUAL_ID)
+ 			{
+ 				writeD(charInfoPackage.getPaperdollItemVisualId(slot));
+ 			}
+ 			
+-			writeD(0x00); // ??
+-			writeD(0x00); // ??
+-			writeH(0x00); // ??
++			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_CHEST));
++			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_LEGS));
++			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_HEAD));
++			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_GLOVES));
++			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_FEET));
+ 			
+ 			writeD(charInfoPackage.getHairStyle());
+ 			writeD(charInfoPackage.getHairColor());
+ 			writeD(charInfoPackage.getFace());
+-			
+-			writeF(charInfoPackage.getMaxHp()); // hp max
+-			writeF(charInfoPackage.getMaxMp()); // mp max
+-			
+-			writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
++			writeF(charInfoPackage.getMaxHp());
++			writeF(charInfoPackage.getMaxMp());
++			writeD(charInfoPackage.getDeleteTime());
+ 			writeD(charInfoPackage.getClassId());
+-			writeD(i == _activeId ? 1 : 0);
++			writeD(isSelected(charId, charInfoPackage));
++			writeC(charInfoPackage.getWeaponEnchantEffect());
++			writeD(charInfoPackage.get1stAugmentationId());
++			writeD(charInfoPackage.get2ndAugmentationId());
++			writeD(charInfoPackage.getTransformationId());
+ 			
+-			writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
+-			writeD(charInfoPackage.getAugmentationId());
++			writeD(0x00);
++			writeD(0x00);
++			writeD(0x00);
++			writeD(0x00);
+ 			
+-			// writeD(charInfoPackage.getTransformId()); // Used to display Transformations
+-			writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
+-			
+-			// Freya by Vistall:
+-			writeD(0x00); // npdid - 16024 Tame Tiny Baby Kookaburra A9E89C
+-			writeD(0x00); // level
+-			writeD(0x00); // ?
+-			writeD(0x00); // food? - 1200
+-			writeF(0x00); // max Hp
+-			writeF(0x00); // cur Hp
+-			
+-			// High Five by Vistall:
+-			writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
+-			writeD(0x00); // Vitality Exp Bonus
+-			writeD(0x00); // Vitality items used, such as potion
+-			writeD(charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01); // Char is active or not
+-			writeC(0x00); // is noble
+-			writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00); // hero glow
+-			writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // show hair accessory if enabled
++			writeF(0x00);
++			writeF(0x00);
++			writeD(charInfoPackage.getVitalityPoints());
++			writeD(charInfoPackage.getVitalityPercent());
++			writeD(charInfoPackage.getVitalityItemCount());
++			writeD(charInfoPackage.isAvailable());
++			writeC(0x00);
++			writeC(charInfoPackage.isHero());
++			writeC(charInfoPackage.showHairAccessory());
+ 		}
+ 	}
+ 	
++	/**
++	 * @param charId
++	 * @param charInfoPackage
++	 * @return
++	 */
++	private int isSelected(int charId, CharSelectInfoPackage charInfoPackage)
++	{
++		return charId == charInfoPackage.getObjectId() ? 0x01 : 0x00;
++	}
++	
+ 	private static List<CharSelectInfoPackage> loadCharacterSelectInfo(String loginName)
+ 	{
+ 		final List<CharSelectInfoPackage> characterList = new ArrayList<>();
+@@ -255,7 +233,7 @@
+ 		String name = chardata.getString("char_name");
+ 		
+ 		// See if the char must be deleted
+-		long deletetime = chardata.getLong("deletetime");
++		int deletetime = chardata.getInt("deletetime");
+ 		if (deletetime > 0)
+ 		{
+ 			if (System.currentTimeMillis() > deletetime)
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java	(working copy)
+@@ -21,6 +21,7 @@
+ import java.util.ArrayList;
+ import java.util.List;
+ 
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.actor.L2Character;
+ import com.l2jserver.gameserver.model.skills.BuffInfo;
+ import com.l2jserver.gameserver.model.skills.Skill;
+@@ -34,6 +35,7 @@
+ 	{
+ 		protected int _skillId;
+ 		protected int _level;
++		protected int _maxlevel;
+ 		protected int _duration;
+ 		protected int _caster;
+ 		
+@@ -49,6 +51,7 @@
+ 			
+ 			_skillId = skill.getDisplayId();
+ 			_level = skill.getDisplayLevel();
++			_maxlevel = SkillData.getInstance().getMaxLevel(_skillId);
+ 			_duration = info.getTime();
+ 			_caster = casterId;
+ 		}
+@@ -86,7 +89,15 @@
+ 		for (Effect info : _effects)
+ 		{
+ 			writeD(info._skillId);
+-			writeH(info._level);
++			if (info._level < 100)
++			{
++				writeD(info._level);
++			}
++			else
++			{
++				writeH(info._maxlevel);
++				writeH(info._level);
++			}
+ 			writeH(0x00); // Combo abnormal ?
+ 			writeH(info._duration);
+ 			writeD(info._caster);
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java	(working copy)
+@@ -70,7 +70,7 @@
+ 			writeD(hair.getAdena());
+ 			writeD(hair.getResetAdena());
+ 			writeD(hair.getBeautyShopTicket());
+-			writeD(1); // Limit
++			writeD(99999999); // Limit
+ 		}
+ 		
+ 		writeD(FACE_TYPE);
+@@ -82,7 +82,7 @@
+ 			writeD(face.getAdena());
+ 			writeD(face.getResetAdena());
+ 			writeD(face.getBeautyShopTicket());
+-			writeD(1); // Limit
++			writeD(99999999); // Limit
+ 		}
+ 		
+ 		writeD(COLOR_TYPE);
+@@ -96,7 +96,7 @@
+ 				writeD(color.getAdena());
+ 				writeD(color.getResetAdena());
+ 				writeD(color.getBeautyShopTicket());
+-				writeD(1);
++				writeD(99999999);
+ 			}
+ 		}
+ 	}
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java	(working copy)
+@@ -34,7 +34,7 @@
+ 	protected void writeImpl()
+ 	{
+ 		writeC(0xFE);
+-		writeH(0xE0);
++		writeH(0xE4);
+ 		writeD(_timeLeft);
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java	(working copy)
+@@ -63,9 +63,9 @@
+ 	protected final void writeImpl()
+ 	{
+ 		writeC(0xDE);
+-		writeD(_seller.getObjectId());
+-		writeD((int) _seller.getAdena());
+ 		writeD(_isDwarven ? 0x00 : 0x01);
++		writeD((int) _seller.getCurrentMp());
++		writeD(_seller.getMaxMp());
+ 		
+ 		if (_recipes == null)
+ 		{
+Index: java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java
+===================================================================
+--- java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java	(revision 775)
++++ java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java	(working copy)
+@@ -33,7 +33,7 @@
+ 	MAX_MP(0x20),
+ 	LEVEL(0x40),
+ 	CLASS_ID(0x80),
+-	VITALITY_POINTS(0x100);
++	VITALITY_POINTS(0x200);
+ 	
+ 	private final int _mask;
+ 	
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java	(working copy)
+@@ -34,7 +34,6 @@
+ 	private final int _sysMessageId;
+ 	private final int _unk1;
+ 	private final int _unk2;
+-	private final int _unk3;
+ 	private final boolean _fade;
+ 	private final int _size;
+ 	private final int _position;
+@@ -64,7 +63,6 @@
+ 		_sysMessageId = -1;
+ 		_unk1 = 0;
+ 		_unk2 = 0;
+-		_unk3 = 0;
+ 		_fade = false;
+ 		_position = TOP_CENTER;
+ 		_text = text;
+@@ -88,7 +86,6 @@
+ 		_sysMessageId = -1;
+ 		_unk1 = 0;
+ 		_unk2 = 0;
+-		_unk3 = 0;
+ 		_fade = false;
+ 		_position = TOP_CENTER;
+ 		_text = text;
+@@ -107,11 +104,10 @@
+ 	 */
+ 	public ExShowScreenMessage(NpcStringId npcString, int position, int time, String... params)
+ 	{
+-		_type = 2;
++		_type = 1;
+ 		_sysMessageId = -1;
+ 		_unk1 = 0x00;
+ 		_unk2 = 0x00;
+-		_unk3 = 0x00;
+ 		_fade = false;
+ 		_position = position;
+ 		_text = null;
+@@ -134,11 +130,10 @@
+ 	 */
+ 	public ExShowScreenMessage(SystemMessageId systemMsg, int position, int time, String... params)
+ 	{
+-		_type = 2;
++		_type = 0;
+ 		_sysMessageId = systemMsg.getId();
+ 		_unk1 = 0x00;
+ 		_unk2 = 0x00;
+-		_unk3 = 0x00;
+ 		_fade = false;
+ 		_position = position;
+ 		_text = null;
+@@ -174,7 +169,6 @@
+ 		_sysMessageId = messageId;
+ 		_unk1 = unk1;
+ 		_unk2 = unk2;
+-		_unk3 = unk3;
+ 		_fade = fade;
+ 		_position = position;
+ 		_text = text;
+@@ -211,14 +205,16 @@
+ 		writeD(_unk1);
+ 		writeD(_size);
+ 		writeD(_unk2);
+-		writeD(_unk3);
++		writeD(1);
+ 		writeD(_effect ? 0x01 : 0x00);
+ 		writeD(_time);
+ 		writeD(_fade ? 0x01 : 0x00);
+ 		writeD(_npcString);
++		int exsize = 5;
+ 		if (_npcString == -1)
+ 		{
+ 			writeS(_text);
++			exsize--;
+ 		}
+ 		else
+ 		{
+@@ -227,8 +223,13 @@
+ 				for (String s : _parameters)
+ 				{
+ 					writeS(s);
++					exsize--;
+ 				}
+ 			}
+ 		}
++		for (int i = 1; i < exsize; i++)
++		{
++			writeS("");
++		}
+ 	}
+ }
+Index: java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java
+===================================================================
+--- java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java	(revision 775)
++++ java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java	(working copy)
+@@ -22,6 +22,7 @@
+ import java.util.List;
+ 
+ import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
++import com.l2jserver.gameserver.datatables.SkillData;
+ import com.l2jserver.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
+ import com.l2jserver.gameserver.model.L2EnchantSkillLearn;
+ 
+@@ -31,6 +32,7 @@
+ 	
+ 	private final int _id;
+ 	private final int _lvl;
++	private final int _maxlvl;
+ 	private boolean _maxEnchanted = false;
+ 	
+ 	public ExEnchantSkillInfo(int id, int lvl)
+@@ -37,6 +39,7 @@
+ 	{
+ 		_id = id;
+ 		_lvl = lvl;
++		_maxlvl = SkillData.getInstance().getMaxLevel(_id);
+ 		
+ 		L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
+ 		// do we have this skill?
+@@ -43,7 +46,7 @@
+ 		if (enchantLearn != null)
+ 		{
+ 			// skill already enchanted?
+-			if (_lvl > 100)
++			if (_lvl > 1000)
+ 			{
+ 				_maxEnchanted = enchantLearn.isMaxEnchant(_lvl);
+ 				
+@@ -51,22 +54,22 @@
+ 				EnchantSkillHolder esd = enchantLearn.getEnchantSkillHolder(_lvl);
+ 				
+ 				// if it exists add it
+-				if (esd != null)
++				if ((esd != null) && !_maxEnchanted)
+ 				{
+-					_routes.add(_lvl); // current enchant add firts
++					_routes.add(_lvl + 1); // current enchant add firts
+ 				}
+ 				
+-				int skillLvL = (_lvl % 100);
++				int skillLvL = (_lvl % 1000);
+ 				
+ 				for (int route : enchantLearn.getAllRoutes())
+ 				{
+-					if (((route * 100) + skillLvL) == _lvl)
++					if (((route * 1000) + skillLvL) == _lvl)
+ 					{
+ 						continue;
+ 					}
+ 					// add other levels of all routes - same lvl as enchanted
+ 					// lvl
+-					_routes.add((route * 100) + skillLvL);
++					_routes.add((route * 1000) + skillLvL);
+ 				}
+ 				
+ 			}
+@@ -76,7 +79,7 @@
+ 				for (int route : enchantLearn.getAllRoutes())
+ 				{
+ 					// add first level (+1) of all routes
+-					_routes.add((route * 100) + 1);
++					_routes.add((route * 1000) + 1);
+ 				}
+ 			}
+ 		}
+@@ -88,14 +91,23 @@
+ 		writeC(0xFE);
+ 		writeH(0x2A);
+ 		writeD(_id);
+-		writeD(_lvl);
++		if (_lvl < 100)
++		{
++			writeD(_lvl);
++		}
++		else
++		{
++			writeH(_maxlvl);
++			writeH(_lvl);
++		}
+ 		writeD(_maxEnchanted ? 0 : 1);
+-		writeD(_lvl > 100 ? 1 : 0); // enchanted?
++		writeD(_lvl > 1000 ? 1 : 0); // enchanted?
+ 		writeD(_routes.size());
+ 		
+ 		for (int level : _routes)
+ 		{
+-			writeD(level);
++			writeH(_maxlvl);
++			writeH(level);
+ 		}
+ 	}
+ }
