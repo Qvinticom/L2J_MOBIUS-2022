@@ -531,6 +531,7 @@ public final class Formulas
 		double baseMod = ((77 * (power + (attacker.getPAtk(target) * ssboost))) / defence);
 		// Critical
 		double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
+		double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POSITION, 1, target, skill) - 1) / 2);
 		double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
 		double criticalAddMod = ((attacker.getStat().calcStat(Stats.CRITICAL_DAMAGE_ADD, 0) * 6.1 * 77) / defence);
 		double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
@@ -554,7 +555,7 @@ public final class Formulas
 			}
 		}
 		
-		damage = (baseMod * criticalMod * criticalVulnMod * proximityBonus * pvpBonus) + criticalAddMod + criticalAddVuln;
+		damage = (baseMod * criticalMod * criticalModPos * criticalVulnMod * proximityBonus * pvpBonus) + criticalAddMod + criticalAddVuln;
 		damage *= weaponTraitMod;
 		damage *= generalTraitMod;
 		damage *= attributeMod;
@@ -570,6 +571,7 @@ public final class Formulas
 			set.set("pvpBonus", pvpBonus);
 			set.set("baseMod", baseMod);
 			set.set("criticalMod", criticalMod);
+			set.set("criticalModPos", criticalModPos);
 			set.set("criticalVulnMod", criticalVulnMod);
 			set.set("criticalAddMod", criticalAddMod);
 			set.set("criticalAddVuln", criticalAddVuln);
@@ -621,6 +623,7 @@ public final class Formulas
 		double baseMod = ((77 * (skill.getPower(isPvP, isPvE) + attacker.getPAtk(target))) / defence) * ssboost;
 		// Critical
 		double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
+		double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POSITION, 1, target, skill) - 1) / 2);
 		double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
 		double criticalAddMod = ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 6.1 * 77) / defence);
 		double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
@@ -644,7 +647,7 @@ public final class Formulas
 			
 		}
 		
-		damage = (baseMod * criticalMod * criticalVulnMod * proximityBonus * pvpBonus) + criticalAddMod + criticalAddVuln;
+		damage = (baseMod * criticalMod * criticalModPos * criticalVulnMod * proximityBonus * pvpBonus) + criticalAddMod + criticalAddVuln;
 		damage *= generalTraitMod;
 		damage *= attributeMod;
 		damage *= weaponMod;
@@ -659,6 +662,7 @@ public final class Formulas
 			set.set("pvpBonus", pvpBonus);
 			set.set("baseMod", baseMod);
 			set.set("criticalMod", criticalMod);
+			set.set("criticalModPos", criticalModPos);
 			set.set("criticalVulnMod", criticalVulnMod);
 			set.set("criticalAddMod", criticalAddMod);
 			set.set("criticalAddVuln", criticalAddVuln);
@@ -755,7 +759,7 @@ public final class Formulas
 		if (crit)
 		{
 			// Finally retail like formula
-			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((70 * damage) / (defence * reduceDef));
+			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * attacker.calcStat(Stats.CRITICAL_DAMAGE_POSITION, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((70 * damage) / (defence * reduceDef));
 			// Crit dmg add is almost useless in normal hits...
 			damage += ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 70) / (defence * reduceDef));
 			damage += target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);

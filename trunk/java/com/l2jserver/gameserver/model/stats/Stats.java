@@ -56,6 +56,7 @@ public enum Stats
 	DANCE_REUSE("dReuse"), // Dance Skill Reuse Rate
 	SHIELD_DEFENCE("sDef"),
 	CRITICAL_DAMAGE("cAtk"),
+	CRITICAL_DAMAGE_POSITION("cAtkPos"),
 	CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
 	MAGIC_CRIT_DMG("mCritPower"),
 	MAGIC_CRIT_DMG_ADD("mCritPowerAdd"),
