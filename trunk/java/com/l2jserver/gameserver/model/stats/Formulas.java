@@ -1904,7 +1904,7 @@ public final class Formulas
 		
 		double result = (attribute_mod_diff / 100.0) + 1;
 		
-		if (attacker.isPlayer() && target.isPlayer() && (result < 1.0))
+		if (attacker.isPlayable() && target.isPlayable() && (result < 1.0))
 		{
 			result = 1.0;
 		}
