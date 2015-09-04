@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<project name="L2J_Mobius" default="build" basedir=".">
+<project name="L2J_Mobius" default="cleanup" basedir=".">
 	<description>
 		This script will build the L2J Server.
 
@@ -29,7 +29,8 @@
 	<property name="build.dist.game" location="${build.dist}/game" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 	<property name="build.dist.dbinstaller" location="${build.dist}/db_installer" />
-	<property name="libs" location="dist/libs" />
+	<property name="datapack" location="dist" />
+	<property name="libs" location="${datapack}/libs" />
 	<property name="src" location="java" />
 
 	<path id="classpath">
@@ -65,13 +66,7 @@
 		<mkdir dir="${build.bin}" />
 	</target>
 
-	<target name="dist" depends="init" description="Export the files to the output directory.">
-		<sync todir="${build.dist}" includeemptydirs="true">
-			<fileset dir="dist" />
-		</sync>
-	</target>
-
-	<target name="compile" depends="dist" description="Compile the source.">
+	<target name="compile" depends="init" description="Compile the source.">
 		<javac srcdir="${src}" classpathref="classpath" destdir="${build.bin}" compiler="modern" debug="true" debuglevel="lines,vars,source" includeantruntime="false" source="1.8" target="1.8" />
 	</target>
 
@@ -144,7 +139,15 @@
 		</jar>
 	</target>
 
-	<target name="build" depends="jar" description="Create the Zip file.">
+	<target name="adding-core" depends="jar" description="Adding the compiled jars to the Zip file.">
 		<zip destfile="${build}/L2J_Mobius.zip" basedir="${build.dist}" level="9" />
+	</target>
+	
+	<target name="adding-datapack" depends="adding-core" description="Updating the Zip file with datapack content.">
+		<zip destfile="${build}/L2J_Mobius.zip" basedir="${datapack}" update="true" level="9" />
+	</target>
+	
+	<target name="cleanup" depends="adding-datapack" description="Cleaning the build folder.">
+		<delete dir="${build.dist}" />
 	</target>
 </project>
