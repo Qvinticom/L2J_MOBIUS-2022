@@ -1184,8 +1184,18 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9167" levels="1" name="Nevit's Hourglass - 1 hour(s)">
-		<!-- Increases Nevit's blessing by 1 hour(s). -->
-		<set name="operateType" val="PASSIVE" />
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="VOTE" />
+		<set name="abnormalVisualEffect" val="VP_UP" />
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17206" /> <!-- Nevit's Hourglass - 1 hour -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9168" levels="1" name="Nevit's Hourglass - 1.5 hour(s)">
