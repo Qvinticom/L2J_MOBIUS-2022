@@ -135,7 +135,21 @@ public class DBConfigGUI extends JFrame
 				DBInstallerGUI dbi = new DBInstallerGUI(connector.getConnection());
 				setVisible(false);
 				
-				if (!_dir.equals("sql/login/"))
+				if (_dir.equals("sql/login/"))
+				{
+					Object[] options =
+					{
+						"Install Login",
+						"Exit"
+					};
+					int n = JOptionPane.showOptionDialog(null, "Install login server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+					
+					if ((n == 1) || (n == -1))
+					{
+						System.exit(0);
+					}
+				}
+				else
 				{
 					Object[] options =
 					{
@@ -143,7 +157,7 @@ public class DBConfigGUI extends JFrame
 						"Ertheia Install",
 						"Exit"
 					};
-					int n = JOptionPane.showOptionDialog(null, "Select Installation Type", "Installation Type", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+					int n = JOptionPane.showOptionDialog(null, "Select installation type.", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
 					
 					if ((n == 2) || (n == -1))
 					{

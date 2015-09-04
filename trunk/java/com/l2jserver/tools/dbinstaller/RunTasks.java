@@ -77,7 +77,5 @@ public class RunTasks extends Thread
 		_frame.setFrameVisible(false);
 		_frame.showMessage("Done!", "Database Installation Complete!", JOptionPane.INFORMATION_MESSAGE);
 		System.exit(0);
-		
 	}
-	
 }
