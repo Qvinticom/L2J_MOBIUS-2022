@@ -69,6 +69,11 @@ public final class TriggerSkillByDamage extends AbstractEffect
 			return;
 		}
 		
+		if ((_targetType == L2TargetType.ONE) && (event.getAttacker().getTarget() != event.getTarget()))
+		{
+			return;
+		}
+		
 		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
 		if (targetHandler == null)
 		{
