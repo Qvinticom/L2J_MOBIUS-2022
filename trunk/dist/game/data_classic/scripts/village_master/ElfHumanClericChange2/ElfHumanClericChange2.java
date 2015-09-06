@@ -50,7 +50,6 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 	private static final int MARK_OF_HEALER = 2820; // proof11z, proof21z
 	private static final int MARK_OF_REFORMER = 2821; // proof12z
 	private static final int MARK_OF_LIFE = 3140; // proof21y
-	
 	// Classes
 	private static final int BISHOP = 16;
 	private static final int PROPHET = 17;

@@ -54,7 +54,6 @@ public final class OrcChange2 extends AbstractNpcAI
 	private static final int MARK_OF_GLORY = 3203; // proof11y, proof21y, proof31y, proof32y
 	private static final int MARK_OF_CHAMPION = 3276; // proof11z
 	private static final int MARK_OF_LORD = 3390; // proof31z
-	
 	// Classes
 	private static final int DESTROYER = 46;
 	private static final int TYRANT = 48;
