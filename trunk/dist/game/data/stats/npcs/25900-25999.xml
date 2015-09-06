@@ -45,7 +45,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
@@ -122,7 +122,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
@@ -905,7 +905,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
@@ -970,7 +970,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="5462" level="1" />
 			<skill id="4416" level="17" />
@@ -1035,7 +1035,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="5462" level="1" />
 			<skill id="4416" level="17" />
@@ -1100,7 +1100,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="5462" level="1" />
 			<skill id="4416" level="17" />
@@ -1165,7 +1165,7 @@
 			<hit_time>500</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="15564" level="1" />
 			<skill id="15565" level="1" />
@@ -1648,7 +1648,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="45.5" />
@@ -1756,7 +1756,7 @@
 			<skill id="4281" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="17679" min="5" max="5" chance="6.4516" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
@@ -1855,7 +1855,7 @@
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="45.5" />
@@ -1959,7 +1959,7 @@
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="100" />
 			<height normal="82.1" />
@@ -2037,7 +2037,7 @@
 			<skill id="4299" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
@@ -2115,7 +2115,7 @@
 			<skill id="4299" level="1" />
 			<skill id="4411" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="112" />
 			<height normal="150" />
@@ -2193,7 +2193,7 @@
 			<skill id="4299" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="48" />
 			<height normal="73" />
@@ -2271,7 +2271,7 @@
 			<skill id="4299" level="1" />
 			<skill id="4411" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="30" />
 			<height normal="50" />
@@ -2349,7 +2349,7 @@
 			<skill id="4299" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="55" />
 			<height normal="80.5" />
@@ -2512,7 +2512,7 @@
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
@@ -2590,7 +2590,7 @@
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -2668,7 +2668,7 @@
 			<skill id="4282" level="1" />
 			<skill id="4411" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
@@ -2746,7 +2746,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="28" />
 			<height normal="46.15" />
@@ -2824,7 +2824,7 @@
 			<skill id="4282" level="1" />
 			<skill id="4411" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
@@ -2902,7 +2902,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="28" />
 			<height normal="46.15" />
@@ -3065,7 +3065,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="28" />
 			<height normal="33.5" />
@@ -3146,7 +3146,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="54.5" />
@@ -3227,7 +3227,7 @@
 			<skill id="4411" level="1" />
 			<skill id="4300" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="40.5" />
@@ -3308,7 +3308,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="50" />
@@ -3389,7 +3389,7 @@
 			<skill id="4411" level="1" />
 			<skill id="4300" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="40.5" />
@@ -3470,7 +3470,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="50" />
@@ -3638,7 +3638,7 @@
 			<skill id="4494" level="1" /> <!-- -->
 			<skill id="16274" level="1" /> <!-- -->
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="45" />
 			<height normal="42" />
@@ -3719,7 +3719,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="30" />
 			<height normal="44.5" />
@@ -3800,7 +3800,7 @@
 			<skill id="4312" level="1" />
 			<skill id="4411" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="39" />
@@ -3881,7 +3881,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="28" />
 			<height normal="41.5" />
@@ -3962,7 +3962,7 @@
 			<skill id="4312" level="1" />
 			<skill id="4411" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="39" />
@@ -4043,7 +4043,7 @@
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="47.5" />
@@ -4209,7 +4209,7 @@
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="44" />
 			<height normal="78" />
@@ -4365,7 +4365,7 @@
 			<hit_time>333</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -4447,7 +4447,7 @@
 			<hit_time>333</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="4416" level="16" />
 			<skill id="5467" level="1" />
@@ -4533,7 +4533,7 @@
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 		</skill_list>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
@@ -4614,7 +4614,7 @@
 			<hit_time>333</hit_time>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<skill_list>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />

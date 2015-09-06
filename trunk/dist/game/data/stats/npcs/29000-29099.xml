@@ -34,7 +34,7 @@
 		</skill_list>
 		<corpse_time>300</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="2000" clanHelpRange="2000" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>QUEEN_ANT</clan>
 			</clan_list>
@@ -104,7 +104,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="4500" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>QUEEN_ANT</clan>
 			</clan_list>
@@ -320,7 +320,7 @@
 		</skill_list>
 		<corpse_time>10</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="2000" clanHelpRange="4500" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -394,7 +394,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="2100" clanHelpRange="2300">
+		<ai aggroRange="600" clanHelpRange="1200" >
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -444,7 +444,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1900" clanHelpRange="700">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="700">
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -492,7 +492,7 @@
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1300" clanHelpRange="800">
+		<ai aggroRange="600" clanHelpRange="800">
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -538,7 +538,7 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1500" clanHelpRange="1200">
+		<ai aggroRange="600" clanHelpRange="1200">
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -586,7 +586,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1700" clanHelpRange="1500">
+		<ai aggroRange="600" clanHelpRange="1200" >
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -637,7 +637,7 @@
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1500" clanHelpRange="800">
+		<ai aggroRange="600" clanHelpRange="800">
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -683,7 +683,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1300" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="600" clanHelpRange="1200" isAggressive="false">
 			<clan_list>
 				<clan>CURMA_CORE</clan>
 			</clan_list>
@@ -837,7 +837,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1500" clanHelpRange="2500" isAggressive="false">
+		<ai aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>ORFEN</clan>
 			</clan_list>
@@ -883,7 +883,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1300" clanHelpRange="2700" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>ORFEN</clan>
 			</clan_list>
@@ -929,7 +929,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="1100" clanHelpRange="2700" isAggressive="false">
+		<ai aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>ORFEN</clan>
 			</clan_list>
@@ -970,7 +970,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1500" clanHelpRange="2900" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<clan_list>
 				<clan>ORFEN</clan>
 			</clan_list>
@@ -1023,7 +1023,7 @@
 		</skill_list>
 		<corpse_time>14</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<drop_lists>
 			<death>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
@@ -1673,7 +1673,7 @@
 		</skill_list>
 		<corpse_time>21</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>VALAKAS</clan>
 			</clan_list>
@@ -2642,7 +2642,7 @@
 		</skill_list>
 		<corpse_time>18</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="3000" clanHelpRange="2000">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200" >
 			<skill primaryId="5014" />
 			<clan_list>
 				<clan>FRINTESSA</clan>
@@ -2689,7 +2689,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="3000" clanHelpRange="2000" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200"  isAggressive="false">
 			<skill primaryId="5014" shortRangeId="5019" shortRangeChance="10" />
 			<clan_list>
 				<clan>FRINTESSA</clan>
@@ -2884,7 +2884,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1500" clanHelpRange="2000">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200" >
 			<clan_list>
 				<clan>FRINTESSA</clan>
 			</clan_list>
@@ -2926,7 +2926,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="1500" clanHelpRange="2000">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="1200" >
 			<clan_list>
 				<clan>FRINTESSA</clan>
 			</clan_list>
@@ -3740,7 +3740,7 @@
 		</skill_list>
 		<corpse_time>14</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false">
 			<skill maxChance="25" />
 		</ai>
 		<drop_lists>
@@ -3956,7 +3956,7 @@
 		</skill_list>
 		<corpse_time>14</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false">
 			<skill maxChance="25" />
 		</ai>
 		<drop_lists>
@@ -4178,7 +4178,7 @@
 		</skill_list>
 		<corpse_time>14</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false">
 			<skill maxChance="25" primaryId="4112" />
 		</ai>
 		<!-- Source: http://l2on.net/en/?c=npc&id=29068 -->
