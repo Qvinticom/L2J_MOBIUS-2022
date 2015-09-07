@@ -1043,6 +1043,7 @@ public final class Config
 	public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
 	public static int CHANGE_CHANCE_ELEMENT;
 	public static int[] ENCHANT_BLACKLIST;
+	public static boolean DISABLE_OVER_ENCHANTING;
 	public static int AUGMENTATION_NG_SKILL_CHANCE;
 	public static int AUGMENTATION_NG_GLOW_CHANCE;
 	public static int AUGMENTATION_MID_SKILL_CHANCE;
@@ -1555,6 +1556,7 @@ public final class Config
 				ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
 			}
 			Arrays.sort(ENCHANT_BLACKLIST);
+			DISABLE_OVER_ENCHANTING = character.getBoolean("DisableOverEnchanting", true);
 			
 			AUGMENTATION_NG_SKILL_CHANCE = character.getInt("AugmentationNGSkillChance", 15);
 			AUGMENTATION_NG_GLOW_CHANCE = character.getInt("AugmentationNGGlowChance", 0);

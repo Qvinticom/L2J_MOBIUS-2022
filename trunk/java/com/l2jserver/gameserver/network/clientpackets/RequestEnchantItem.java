@@ -122,8 +122,8 @@ public final class RequestEnchantItem extends L2GameClientPacket
 			supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
 		}
 		
-		// first validation check
-		if (!scrollTemplate.isValid(item, supportTemplate))
+		// first validation check - also over enchant check
+		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel())))
 		{
 			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			activeChar.removeRequest(request.getClass());
