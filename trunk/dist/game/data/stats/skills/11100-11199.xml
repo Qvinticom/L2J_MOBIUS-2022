@@ -646,13 +646,14 @@
 	<!-- Level 109 : INT + 2 and increases Max MP by 497. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
 	<!-- Level 110 : INT + 2 and increases Max MP by 517. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
 	<skill id="11185" levels="1" name="Superior MP Boost">
+		<table name="#maxMp"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="maxMp" val="0" />
+				<add stat="maxMp" val="313" />
 			</effect>
 		</for>
 	</skill>
@@ -696,7 +697,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="regMp" val="0" />
+				<add stat="regMp" val="5.1" />
 			</effect>
 		</for>
 	</skill>

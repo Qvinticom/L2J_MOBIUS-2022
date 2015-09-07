@@ -175,9 +175,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pAtk" val="0" />
+				<add stat="pAtk" val="82.9" />
 				<mul stat="pAtk" val="2.05" />
-				<add stat="mAtk" val="0" />
+				<add stat="mAtk" val="103.7" />
 				<mul stat="mCritRate" val="1.06" />
 				<mul stat="mAtkSpd" val="1.23" />
 			</effect>
@@ -201,8 +201,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pDef" val="0" />
-				<add stat="maxHp" val="0" />
+				<add stat="pDef" val="845" />
+				<add stat="maxHp" val="4151" />
 				<mul stat="mAtkSpd" val="1.05" />
 			</effect>
 		</for>
@@ -225,8 +225,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="mDef" val="0" />
-				<add stat="maxMp" val="0" />
+				<add stat="mDef" val="139" />
+				<add stat="maxMp" val="313" />
 			</effect>
 		</for>
 	</skill>
@@ -1402,7 +1402,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="mDef" val="0" />
+				<add stat="mDef" val="199" />
 			</effect>
 		</for>
 	</skill>
@@ -1639,7 +1639,7 @@
 				<mul stat="pDef" val="1.2" />
 				<mul stat="maxMp" val="1.2" />
 				<mul stat="regHp" val="1.2" />
-				<add stat="mCritRate" val="0" />
+				<add stat="mCritRate" val="20" />
 				<mul stat="cAtk" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="mAtkSpd" val="1.2" />

@@ -410,7 +410,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="mCritRate" val="0" />
+				<mul stat="mCritRate" val="1.32" />
 			</effect>
 		</for>
 	</skill>
@@ -607,7 +607,7 @@
 				<mul stat="pDef" val="0.8" />
 				<mul stat="maxMp" val="0.8" />
 				<mul stat="regHp" val="0.8" />
-				<add stat="mCritRate" val="0" />
+				<add stat="mCritRate" val="20" />
 				<mul stat="cAtk" val="0.8" />
 				<mul stat="pAtkSpd" val="0.8" />
 				<mul stat="mAtkSpd" val="0.8" />
