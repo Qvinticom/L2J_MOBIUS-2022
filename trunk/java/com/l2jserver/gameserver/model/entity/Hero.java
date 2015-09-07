@@ -638,7 +638,7 @@ public class Hero
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
+			for (L2ItemInstance item : player.getInventory().getItems())
 			{
 				if ((item != null) && item.isHeroItem())
 				{
