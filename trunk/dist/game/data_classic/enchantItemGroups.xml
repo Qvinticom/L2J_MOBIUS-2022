@@ -3,29 +3,37 @@
 	<!-- General armor enchant group. -->
 	<enchantRateGroup name="ARMOR_GROUP">
 		<current enchant="0-2" chance="100" />
-		<current enchant="3-19" chance="66.67" />
-		<current enchant="20-65535" chance="20" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General full armor enchant group. -->
 	<enchantRateGroup name="FULL_ARMOR_GROUP">
 		<current enchant="0-3" chance="100" />
-		<current enchant="4-19" chance="66.67" />
-		<current enchant="20-65535" chance="20" />
+		<current enchant="4-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General fighter weapon enchant group. -->
 	<enchantRateGroup name="FIGHTER_WEAPON_GROUP">
 		<current enchant="0-2" chance="100" />
-		<current enchant="3-14" chance="66.67" />
-		<current enchant="15-65535" chance="20" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General mage weapon enchant group. -->
 	<enchantRateGroup name="MAGE_WEAPON_GROUP">
 		<current enchant="0-2" chance="100" />
-		<current enchant="3-14" chance="66.67" />
-		<current enchant="15-65535" chance="20" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- Default scrolls enchanting route line. -->
