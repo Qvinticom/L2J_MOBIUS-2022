@@ -25,8 +25,9 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.stats.BaseStats;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -64,6 +65,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
+		Skill skill = info.getSkill();
 		
 		if (activeChar.isAlikeDead())
 		{
@@ -73,31 +75,38 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		if (activeChar.isMovementDisabled())
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(info.getSkill());
+			sm.addSkillName(skill);
 			activeChar.sendPacket(sm);
 			return;
 		}
 		
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		// Physical damage critical rate is only affected by STR.
 		boolean crit = false;
-		if (info.getSkill().getBaseCritRate() > 0)
+		if (skill.getBaseCritRate() > 0)
 		{
-			crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
+			crit = Formulas.calcCrit(activeChar, target, skill);
 		}
 		
 		int damage = 0;
-		boolean ss = info.getSkill().isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		damage = (int) Formulas.calcPhysDam(activeChar, target, info.getSkill(), shld, false, ss);
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
 		
 		if (damage > 0)
 		{
+			// reduce damage if target has maxdamage buff
+			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			if (maxDamage > 0)
+			{
+				damage = (int) maxDamage;
+			}
+			
 			activeChar.sendDamageMessage(target, damage, false, crit, false);
-			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit, false);
+			target.reduceCurrentHp(damage, activeChar, skill);
+			target.notifyDamageReceived(damage, activeChar, skill, crit, false);
 			
 			// Check if damage should be reflected.
-			Formulas.calcDamageReflected(activeChar, target, info.getSkill(), crit);
+			Formulas.calcDamageReflected(activeChar, target, skill, crit);
 		}
 		else
 		{

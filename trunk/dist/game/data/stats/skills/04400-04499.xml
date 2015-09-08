@@ -101,7 +101,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -122,7 +122,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critDmg" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>

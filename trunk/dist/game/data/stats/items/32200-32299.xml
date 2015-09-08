@@ -47,7 +47,7 @@
 		<set name="price" val="92993000" />
 		<for>
 			<add order="0" stat="pDef" val="168.0" />
-			<add stat="rCrit" val="2.6" />
+			<add stat="critRate" val="2.6" />
 			<add stat="mCritRate" val="2.6" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
@@ -135,7 +135,7 @@
 		<for>
 			<add order="0" stat="pDef" val="115.0" />
 			<add order="0" stat="mDef" val="27.0" />
-			<add stat="rCrit" val="2.6" />
+			<add stat="critRate" val="2.6" />
 			<add stat="mCritRate" val="2.6" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
@@ -219,7 +219,7 @@
 		<set name="price" val="46496000" />
 		<for>
 			<add order="0" stat="pDef" val="209.0" />
-			<add stat="rCrit" val="2.6" />
+			<add stat="critRate" val="2.6" />
 			<add stat="mCritRate" val="2.6" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -322,7 +322,7 @@
 		<set name="price" val="46496000" />
 		<for>
 			<add order="0" stat="pDef" val="168.0" />
-			<add stat="rCrit" val="2.6" />
+			<add stat="critRate" val="2.6" />
 			<add stat="mCritRate" val="2.6" />
 			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
@@ -410,7 +410,7 @@
 		<for>
 			<add order="0" stat="pDef" val="115.0" />
 			<add order="0" stat="mDef" val="27.0" />
-			<add stat="rCrit" val="2.6" />
+			<add stat="critRate" val="2.6" />
 			<add stat="mCritRate" val="2.6" />
 			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />

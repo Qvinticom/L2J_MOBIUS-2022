@@ -267,7 +267,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -672,7 +672,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -716,7 +716,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -760,7 +760,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -804,7 +804,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -964,8 +964,8 @@
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="24" />
 				<add stat="cancelVuln" val="30" />
-				<mul stat="MagicalMpConsumeRate" val="1.3" />
-				<mul stat="PhysicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.3" />
+				<mul stat="physicalMpConsumeRate" val="1.1" />
 				<add stat="debuffVuln" val="30" />
 			</effect>
 		</for>
@@ -1417,10 +1417,10 @@
 				<add stat="rEvas" val="4" />
 				<mul stat="pAtkSpd" val="1.2" />
 				<add stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
-				<mul stat="cAtk" val="1.2">
+				<mul stat="critDmgPos" val="1.2">
 					<player behind="true" />
 				</mul>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRatePos" val="1.2">
 					<player behind="true" />
 				</mul>
 				<sub stat="debuffVuln" val="10" />
@@ -1457,9 +1457,9 @@
 				<param power="20" />
 				<param type="PER" />
 				<param heal="true" />
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="runSpd" val="0.8" />
 				<add stat="accCombat" val="4" />
@@ -1648,9 +1648,9 @@
 				<mul stat="mAtkSpd" val="1.2" />
 				<sub stat="debuffVuln" val="10" />
 				<mul stat="runSpd" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 		<enchant3for>
@@ -1665,9 +1665,9 @@
 				<mul stat="mAtkSpd" val="1.2" />
 				<sub stat="debuffVuln" val="10" />
 				<mul stat="runSpd" val="#ench3Spd" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</enchant3for>
 	</skill>
@@ -1702,7 +1702,7 @@
 				<mul stat="maxMp" val="1.2" />
 				<mul stat="regHp" val="1.2" />
 				<add stat="mCritRate" val="2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -1719,7 +1719,7 @@
 				<mul stat="maxMp" val="1.2" />
 				<mul stat="regHp" val="1.2" />
 				<add stat="mCritRate" val="2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -1761,7 +1761,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -1777,7 +1777,7 @@
 		<enchant3for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -2035,7 +2035,7 @@
 				<param type="PER" />
 				<param heal="true" />
 				<add stat="mCritRate" val="2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -2053,7 +2053,7 @@
 				<param type="PER" />
 				<param heal="true" />
 				<add stat="mCritRate" val="2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -2185,8 +2185,8 @@
 				<mul stat="runSpd" val="0.8" />
 				<mul stat="mDef" val="0.7" />
 				<mul stat="pAtkSpd" val="0.7" />
-				<mul stat="rCrit" val="0.7" />
-				<mul stat="cAtk" val="0.7" />
+				<mul stat="critRate" val="0.7" />
+				<mul stat="critDmg" val="0.7" />
 				<sub stat="accCombat" val="6" />
 			</effect>
 		</for>
@@ -2240,7 +2240,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="DwarfRecipeLimit" val="#power" />
+				<add stat="dwarfRecipeLimit" val="#power" />
 			</effect>
 		</for>
 	</skill>
@@ -2253,7 +2253,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="CommonRecipeLimit" val="#power" />
+				<add stat="commonRecipeLimit" val="#power" />
 			</effect>
 		</for>
 	</skill>
@@ -2266,8 +2266,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="PrivateSellLimit" val="#power" />
-				<add stat="PrivateBuyLimit" val="#power" />
+				<add stat="privateSellLimit" val="#power" />
+				<add stat="privateBuyLimit" val="#power" />
 			</effect>
 		</for>
 	</skill>
@@ -2281,7 +2281,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="whLimit" val="#power" />
-				<add stat="FreightLimit" val="#power" />
+				<add stat="freightLimit" val="#power" />
 			</effect>
 		</for>
 	</skill>
@@ -3169,16 +3169,16 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
-				<mul stat="MagicalMpConsumeRate" val="3" />
-				<mul stat="PhysicalMpConsumeRate" val="3" />
-				<mul stat="DanceMpConsumeRate" val="3" />
+				<mul stat="magicalMpConsumeRate" val="3" />
+				<mul stat="physicalMpConsumeRate" val="3" />
+				<mul stat="danceMpConsumeRate" val="3" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="Debuff">
-				<mul stat="MagicalMpConsumeRate" val="3" />
-				<mul stat="PhysicalMpConsumeRate" val="3" />
-				<mul stat="DanceMpConsumeRate" val="3" />
+				<mul stat="magicalMpConsumeRate" val="3" />
+				<mul stat="physicalMpConsumeRate" val="3" />
+				<mul stat="danceMpConsumeRate" val="3" />
 				<mul stat="regMp" val="#ench3mpReg" />
 			</effect>
 		</enchant3for>
@@ -3219,30 +3219,30 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="#ench1Power" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="#ench1Power" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#ench2Power" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="#ench2Power" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="#ench1Power" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="#ench1Power" />
 			</effect>
 		</enchant3for>
 	</skill>

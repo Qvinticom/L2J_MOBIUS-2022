@@ -153,13 +153,13 @@ public class PetInfo extends L2GameServerPacket
 		
 		writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0);// weight
 		writeD(_summon.getMaxLoad());// max weight it can carry
-		writeD(_summon.getPAtk(null));// patk
-		writeD(_summon.getPDef(null));// pdef
+		writeD((int) _summon.getPAtk(null));// patk
+		writeD((int) _summon.getPDef(null));// pdef
 		writeD(_summon.getAccuracy());// accuracy
 		writeD(_summon.getEvasionRate(null));// evasion
 		writeD(_summon.getCriticalHit(null, null));// critical
-		writeD(_summon.getMAtk(null, null));// matk
-		writeD(_summon.getMDef(null, null));// mdef
+		writeD((int) _summon.getMAtk(null, null));// matk
+		writeD((int) _summon.getMDef(null, null));// mdef
 		writeD(_summon.getMagicAccuracy()); // magic accuracy
 		writeD(_summon.getMagicEvasionRate(null)); // magic evasion
 		writeD(_summon.getMCriticalHit(null, null)); // mcritical

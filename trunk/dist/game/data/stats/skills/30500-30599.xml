@@ -372,7 +372,7 @@
 			<effect name="Buff">
 				<add stat="runSpd" val="#spd" />
 				<add stat="pAtk" val="#pAtks" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="critDmg" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -482,7 +482,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#rCrit">
+				<add stat="critRate" val="#rCrit">
 					<using kind="FIST,DUALFIST" />
 				</add>
 				<mul stat="pAtk" val="#pAtkMul">
@@ -494,7 +494,7 @@
 				<add stat="accCombat" val="#accCombat">
 					<using kind="FIST,DUALFIST" />
 				</add>
-				<mul stat="cAtkAdd" val="#cAtkAdd">
+				<mul stat="critDmgAdd" val="#cAtkAdd">
 					<using kind="FIST,DUALFIST" />
 				</mul>
 				<mul stat="pAtkSpd" val="1.10">

@@ -191,7 +191,7 @@ public class CharStat
 	 */
 	public int getCriticalHit(L2Character target, Skill skill)
 	{
-		int val = (int) calcStat(Stats.CRITICAL_RATE, _activeChar.getTemplate().getBaseCritRate(), target, skill);
+		double val = (int) calcStat(Stats.CRITICAL_RATE, _activeChar.getTemplate().getBaseCritRate(), target, skill);
 		
 		int maxCrit = (int) _activeChar.getStat().calcStat(Stats.MAX_PHYS_CRIT_RATE, 0, null, null);
 		
@@ -207,7 +207,16 @@ public class CharStat
 			}
 		}
 		
-		return val;
+		return (int) (val + .5);
+	}
+	
+	/**
+	 * @param base
+	 * @return the Critical Hit Pos rate of the L2Character
+	 */
+	public int getCriticalHitPos(int base)
+	{
+		return (int) calcStat(Stats.CRITICAL_RATE_POS, base);
 	}
 	
 	/**
@@ -329,7 +338,7 @@ public class CharStat
 	 * @param skill The L2Skill used against the target
 	 * @return
 	 */
-	public int getMAtk(L2Character target, Skill skill)
+	public double getMAtk(L2Character target, Skill skill)
 	{
 		float bonusAtk = 1;
 		if (Config.L2JMOD_CHAMPION_ENABLE && _activeChar.isChampion())
@@ -342,7 +351,7 @@ public class CharStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return (int) calcStat(Stats.MAGIC_ATTACK, _activeChar.getTemplate().getBaseMAtk() * bonusAtk, target, skill);
+		return calcStat(Stats.MAGIC_ATTACK, _activeChar.getTemplate().getBaseMAtk() * bonusAtk, target, skill);
 	}
 	
 	/**
@@ -389,7 +398,7 @@ public class CharStat
 	 * @param skill The L2Skill used against the target
 	 * @return the MDef (base+modifier) of the L2Character against a skill in function of abnormal effects in progress.
 	 */
-	public int getMDef(L2Character target, Skill skill)
+	public double getMDef(L2Character target, Skill skill)
 	{
 		// Get the base MDef of the L2Character
 		double defence = _activeChar.getTemplate().getBaseMDef();
@@ -401,7 +410,7 @@ public class CharStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return (int) calcStat(Stats.MAGIC_DEFENCE, defence, target, skill);
+		return calcStat(Stats.MAGIC_DEFENCE, defence, target, skill);
 	}
 	
 	/**
@@ -526,7 +535,7 @@ public class CharStat
 	 * @param target
 	 * @return the PAtk (base+modifier) of the L2Character.
 	 */
-	public int getPAtk(L2Character target)
+	public double getPAtk(L2Character target)
 	{
 		float bonusAtk = 1;
 		if (Config.L2JMOD_CHAMPION_ENABLE && _activeChar.isChampion())
@@ -537,7 +546,7 @@ public class CharStat
 		{
 			bonusAtk *= Config.RAID_PATTACK_MULTIPLIER;
 		}
-		return (int) calcStat(Stats.POWER_ATTACK, _activeChar.getTemplate().getBasePAtk() * bonusAtk, target, null);
+		return calcStat(Stats.POWER_ATTACK, _activeChar.getTemplate().getBasePAtk() * bonusAtk, target, null);
 	}
 	
 	/**
@@ -558,9 +567,9 @@ public class CharStat
 	 * @param target
 	 * @return the PDef (base+modifier) of the L2Character.
 	 */
-	public int getPDef(L2Character target)
+	public double getPDef(L2Character target)
 	{
-		return (int) calcStat(Stats.POWER_DEFENCE, (_activeChar.isRaid()) ? _activeChar.getTemplate().getBasePDef() * Config.RAID_PDEFENCE_MULTIPLIER : _activeChar.getTemplate().getBasePDef(), target, null);
+		return calcStat(Stats.POWER_DEFENCE, (_activeChar.isRaid()) ? _activeChar.getTemplate().getBasePDef() * Config.RAID_PDEFENCE_MULTIPLIER : _activeChar.getTemplate().getBasePDef(), target, null);
 	}
 	
 	/**

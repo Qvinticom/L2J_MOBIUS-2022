@@ -647,7 +647,7 @@
 		<set name="price" val="590" />
 		<for>
 			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="22362" name="Emerald Dualsword" additionalName="" type="Weapon">
@@ -658,7 +658,7 @@
 		<set name="price" val="1180" />
 		<for>
 			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="22363" name="Mount - Black Bear" additionalName="7-day" type="Armor">
@@ -683,7 +683,7 @@
 		<for>
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="4.75" />
-			<add stat="rCrit" val="6.0" />
+			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="22366" name="Black Bear Claw" additionalName="" type="Weapon">
@@ -694,7 +694,7 @@
 		<for>
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="4.75" />
-			<add stat="rCrit" val="6.0" />
+			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="22367" name="Black Bear Hat" additionalName="7-day" type="Armor">
@@ -829,7 +829,7 @@
 		<set name="time" val="604800" />
 		<for>
 			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="22388" name="Halloween Scythe" additionalName="Event" type="Weapon">
@@ -839,7 +839,7 @@
 		<set name="weight" val="2040" />
 		<for>
 			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="22389" name="Halloween Cloak" additionalName="7-day (Event)" type="Armor">

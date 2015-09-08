@@ -290,7 +290,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<add stat="rCrit" val="100" />
+				<add stat="critRate" val="100" />
 				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
@@ -303,8 +303,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<add stat="rCrit" val="100" />
-				<mul stat="cAtk" val="1.25" />
+				<add stat="critRate" val="100" />
+				<mul stat="critDmg" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -317,7 +317,7 @@
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
 				<mul stat="blowRate" val="1.25" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -329,7 +329,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<add stat="rCrit" val="100" />
+				<add stat="critRate" val="100" />
 				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
@@ -342,8 +342,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<add stat="rCrit" val="100" />
-				<mul stat="cAtk" val="1.25" />
+				<add stat="critRate" val="100" />
+				<mul stat="critDmg" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -356,7 +356,7 @@
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
 				<mul stat="mAtkSpd" val="1.25" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -369,7 +369,7 @@
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
 				<mul stat="mAtk" val="1.5" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -381,7 +381,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
@@ -395,7 +395,7 @@
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
 				<mul stat="pAtkRange" val="1.25" />
-				<mul stat="rCrit" val="1.25" />
+				<mul stat="critRate" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -421,8 +421,8 @@
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
 				<mul stat="pAtkSpd" val="1.25" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -434,7 +434,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<add stat="rCrit" val="100" />
+				<add stat="critRate" val="100" />
 				<add stat="absorbDam" val="10" />
 			</effect>
 		</for>
@@ -447,8 +447,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.3" />
-				<add stat="rCrit" val="100" />
-				<mul stat="cAtk" val="1.25" />
+				<add stat="critRate" val="100" />
+				<mul stat="critDmg" val="1.25" />
 			</effect>
 		</for>
 	</skill>
@@ -974,7 +974,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1186,7 +1186,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1356,7 +1356,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1700,8 +1700,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="1.3" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>

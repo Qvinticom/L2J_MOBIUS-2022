@@ -558,7 +558,7 @@
 			<add stat="mDef" val="15" />
 			<add stat="runSpd" val="7" />
 			<add stat="physicalSkillPower" val="93" />
-			<mul stat="MpConsume" val="0.97" />
+			<mul stat="mpConsume" val="0.97" />
 		</for>
 	</option>
 	<option id="24973" name="high_five">
@@ -567,8 +567,8 @@
 			<add stat="mDef" val="16" />
 			<add stat="runSpd" val="7" />
 			<add stat="physicalSkillPower" val="93" />
-			<mul stat="MpConsume" val="0.97" />
-			<add stat="cAtkAdd" val="41" />
+			<mul stat="mpConsume" val="0.97" />
+			<add stat="critDmgAdd" val="41" />
 			<add stat="mCritRate" val="2" />
 		</for>
 	</option>
@@ -578,8 +578,8 @@
 			<add stat="mDef" val="17" />
 			<add stat="runSpd" val="7" />
 			<add stat="physicalSkillPower" val="93" />
-			<mul stat="MpConsume" val="0.97" />
-			<add stat="cAtkAdd" val="41" />
+			<mul stat="mpConsume" val="0.97" />
+			<add stat="critDmgAdd" val="41" />
 			<add stat="mCritRate" val="2" />
 		</for>
 	</option>
@@ -654,8 +654,8 @@
 			<add stat="mDef" val="18" />
 			<add stat="runSpd" val="7" />
 			<add stat="physicalSkillPower" val="93" />
-			<mul stat="MpConsume" val="0.97" />
-			<add stat="cAtkAdd" val="41" />
+			<mul stat="mpConsume" val="0.97" />
+			<add stat="critDmgAdd" val="41" />
 			<add stat="mCritRate" val="2" />
 		</for>
 	</option>

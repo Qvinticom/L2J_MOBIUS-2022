@@ -155,7 +155,7 @@
 		<for>
 			<set stat="pAtk" val="16" />
 			<set stat="mAtk" val="6" />
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
@@ -179,7 +179,7 @@
 		<for>
 			<set stat="pAtk" val="11" />
 			<set stat="mAtk" val="12" />
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -202,7 +202,7 @@
 		<for>
 			<set stat="pAtk" val="24" />
 			<set stat="mAtk" val="17" />
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -224,7 +224,7 @@
 		<for>
 			<set stat="pAtk" val="24" />
 			<set stat="mAtk" val="17" />
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -249,7 +249,7 @@
 		<for>
 			<set stat="pAtk" val="141" />
 			<set stat="mAtk" val="104" />
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="325" />
 			<enchant val="0" stat="pAtk" />
@@ -276,7 +276,7 @@
 		<for>
 			<set stat="pAtk" val="16" />
 			<set stat="mAtk" val="6" />
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
@@ -317,7 +317,7 @@
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
@@ -342,7 +342,7 @@
 		<for>
 			<set stat="pAtk" val="112" />
 			<set stat="mAtk" val="54" />
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />

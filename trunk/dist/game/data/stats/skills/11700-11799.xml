@@ -9,7 +9,7 @@
 		<for>
 			<effect name="DamOverTime">
 				<mul stat="pveMagicalDmg" val="1.5" />
-				<mul stat="MagicalMpConsumeRate" val="1.3" />
+				<mul stat="magicalMpConsumeRate" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -672,24 +672,24 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect abnormalTime="30" name="Debuff">
-				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul stat="mAtkSpd" val="0.8" />
 				<mul stat="pAtkSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect abnormalTime="30" name="Debuff">
-				<mul stat="MagicalMpConsumeRate" val="4" />
-				<mul stat="PhysicalMpConsumeRate" val="4" />
+				<mul stat="magicalMpConsumeRate" val="4" />
+				<mul stat="physicalMpConsumeRate" val="4" />
 				<mul stat="mAtkSpd" val="0.8" />
 				<mul stat="pAtkSpd" val="#ench34CastAtkSpdReduce" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect abnormalTime="30" name="Debuff">
-				<mul stat="MagicalMpConsumeRate" val="4" />
-				<mul stat="PhysicalMpConsumeRate" val="4" />
+				<mul stat="magicalMpConsumeRate" val="4" />
+				<mul stat="physicalMpConsumeRate" val="4" />
 				<mul stat="mAtkSpd" val="#ench34CastAtkSpdReduce" />
 				<mul stat="pAtkSpd" val="0.8" />
 			</effect>
@@ -1050,8 +1050,8 @@
 				<mul stat="mAtkSpd" val="#mAtkSpd">
 					<using kind="MAGIC,LIGHT" />
 				</mul>
-				<mul stat="MagicalMpConsumeRate" val="1.3" />
-				<mul stat="PhysicalMpConsumeRate" val="1.3" />
+				<mul stat="magicalMpConsumeRate" val="1.3" />
+				<mul stat="physicalMpConsumeRate" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1199,7 +1199,7 @@
 				<add stat="INT" val="2" />
 				<add stat="maxMp" val="313" />
 				<mul stat="mAtkSpd" val="1.23" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
 				<mul stat="mReuse" val="0.75" />
 			</effect>
 		</for>
@@ -1208,7 +1208,7 @@
 				<add stat="INT" val="2" />
 				<add stat="maxMp" val="#ench1maxMp" />
 				<mul stat="mAtkSpd" val="1.23" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
 				<mul stat="mReuse" val="0.75" />
 			</effect>
 		</enchant1for>

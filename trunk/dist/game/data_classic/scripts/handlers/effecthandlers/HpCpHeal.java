@@ -130,7 +130,7 @@ public final class HpCpHeal extends AbstractEffect
 			{
 				target.sendPacket(SystemMessageId.REJUVENATING_HP);
 			}
-			else
+			else if (healAmount != 0)
 			{
 				if (activeChar.isPlayer() && (activeChar != target))
 				{
@@ -152,20 +152,20 @@ public final class HpCpHeal extends AbstractEffect
 			if (amount != 0)
 			{
 				target.setCurrentCp(amount + target.getCurrentCp());
-			}
-			
-			if (activeChar.isPlayer() && (activeChar != target))
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
-				sm.addString(activeChar.getName());
-				sm.addInt((int) amount);
-				target.sendPacket(sm);
-			}
-			else
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
-				sm.addInt((int) healAmount);
-				target.sendPacket(sm);
+				
+				if (activeChar.isPlayer() && (activeChar != target))
+				{
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
+					sm.addString(activeChar.getName());
+					sm.addInt((int) amount);
+					target.sendPacket(sm);
+				}
+				else
+				{
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+					sm.addInt((int) amount);
+					target.sendPacket(sm);
+				}
 			}
 		}
 	}

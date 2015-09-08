@@ -85,7 +85,7 @@ public final class EnergyAttack extends AbstractEffect
 		final Skill skill = info.getSkill();
 		
 		double attack = attacker.getPAtk(target);
-		int defence = target.getPDef(attacker);
+		double defence = target.getPDef(attacker);
 		
 		if (!_ignoreShieldDefence)
 		{
@@ -130,11 +130,27 @@ public final class EnergyAttack extends AbstractEffect
 				weaponTypeBoost = 77;
 			}
 			
-			// charge count should be the count before casting the skill but since its reduced before calling effects
-			// we add skill consume charges to current charges
-			double energyChargesBoost = (((attacker.getCharges() + skill.getChargeConsume()) - 1) * 0.2) + 1;
+			double energyChargesBoost = 1;
+			if (attacker.getCharges() == 1)
+			{
+				energyChargesBoost = 1.1;
+				attacker.decreaseCharges(1);
+			}
+			else if (attacker.getCharges() == 2)
+			{
+				energyChargesBoost = 1.2;
+				attacker.decreaseCharges(2);
+			}
+			else if (attacker.getCharges() >= 3)
+			{
+				energyChargesBoost = 1.3;
+				attacker.decreaseCharges(3);
+			}
+			
+			double addPower = (attacker.getStat().calcStat(Stats.MOMENTUM_SKILL_POWER, 1, null, null));
 			
 			attack += _power;
+			attack *= addPower;
 			attack *= ssBoost;
 			attack *= energyChargesBoost;
 			attack *= weaponTypeBoost;
@@ -157,6 +173,13 @@ public final class EnergyAttack extends AbstractEffect
 		
 		if (damage > 0)
 		{
+			// reduce damage if target has maxdamage buff
+			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			if (maxDamage > 0)
+			{
+				damage = (int) maxDamage;
+			}
+			
 			attacker.sendDamageMessage(target, (int) damage, false, critical, false);
 			target.reduceCurrentHp(damage, attacker, skill);
 			target.notifyDamageReceived(damage, attacker, skill, critical, false);

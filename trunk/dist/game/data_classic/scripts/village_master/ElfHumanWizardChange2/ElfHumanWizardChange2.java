@@ -88,7 +88,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 			case "30115-15.htm": // master_lv3_hew007eat
 			case "30115-16.htm": // master_lv3_hew006eb
 			case "30115-17.htm": // master_lv3_hew007eb
-			case "30115-18.htm": // master_lv3_hew007eb
+			case "30115-18.htm": // master_lv3_hew007ebt
 			{
 				htmltext = event;
 				break;

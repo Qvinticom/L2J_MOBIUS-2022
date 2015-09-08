@@ -19,7 +19,7 @@
 				<mul stat="mAtk" val="1.2" />
 				<mul stat="mDef" val="1.2" />
 				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -264,7 +264,7 @@
 				<mul stat="mAtkSpd" val="1.2" />
 				<mul stat="mAtk" val="1.2" />
 				<mul stat="mDef" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -333,7 +333,7 @@
 				<mul stat="mAtkSpd" val="1.2" />
 				<mul stat="mAtk" val="1.2" />
 				<mul stat="mDef" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -380,8 +380,8 @@
 				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="cAtk" val="1.2" />
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -594,8 +594,8 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.4" />
 				<mul stat="maxMp" val="1.4" />
-				<mul stat="rCrit" val="1.1" />
-				<mul stat="cAtk" val="1.1" />
+				<mul stat="critRate" val="1.1" />
+				<mul stat="critDmg" val="1.1" />
 				<add stat="darkRes" val="20" />
 			</effect>
 		</for>
@@ -643,9 +643,9 @@
 				<mul stat="maxHp" val="1.4" />
 				<mul stat="maxMp" val="1.4" />
 				<mul stat="runSpd" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 				<add stat="darkRes" val="20" />
 			</effect>
 		</for>
@@ -809,8 +809,8 @@
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.4" />
 				<mul stat="maxMp" val="1.4" />
-				<mul stat="rCrit" val="1.1" />
-				<mul stat="cAtk" val="1.1" />
+				<mul stat="critRate" val="1.1" />
+				<mul stat="critDmg" val="1.1" />
 				<add stat="darkRes" val="20" />
 			</effect>
 		</for>
@@ -858,9 +858,9 @@
 				<mul stat="maxHp" val="1.4" />
 				<mul stat="maxMp" val="1.4" />
 				<mul stat="runSpd" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 				<add stat="darkRes" val="20" />
 			</effect>
 		</for>
@@ -1103,8 +1103,8 @@
 				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.3" />
-				<mul stat="cAtk" val="1.2" />
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 			</effect>
 		</for>
 	</skill>

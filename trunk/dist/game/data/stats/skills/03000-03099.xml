@@ -99,7 +99,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -113,7 +113,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -201,7 +201,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit">
+				<mul stat="critRatePos" val="#rCrit">
 					<player behind="true" />
 				</mul>
 			</effect>
@@ -217,7 +217,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit">
+				<mul stat="critRate" val="#rCrit">
 					<player behind="true" />
 				</mul>
 			</effect>
@@ -307,7 +307,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -363,7 +363,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -378,7 +378,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#rCrit">
+				<add stat="critRate" val="#rCrit">
 					<player hp="60" />
 				</add>
 				<mul stat="pvpPhysDmg" val="#pvpBonus" />
@@ -651,7 +651,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<mul stat="pvpPhysDmg" val="#pvpBonus" />
 				<mul stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 				<mul stat="pvpMagicalDmg" val="#pvpBonus" />
@@ -668,7 +668,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -683,7 +683,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 				<mul stat="pvpPhysDmg" val="#pvpBonus" />
 				<mul stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 				<mul stat="pvpMagicalDmg" val="#pvpBonus" />
@@ -786,7 +786,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="61.6" />
+				<add stat="critRate" val="61.6" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />
@@ -802,7 +802,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="67.3" />
+				<add stat="critRate" val="67.3" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />
@@ -1055,7 +1055,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.37">
+				<mul stat="critRatePos" val="1.37">
 					<player behind="true" />
 				</mul>
 				<mul stat="pvpPhysDmg" val="1.05" />
@@ -1104,7 +1104,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />
@@ -1121,7 +1121,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />
@@ -1192,7 +1192,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="130">
+				<add stat="critRate" val="130">
 					<player hp="60" />
 				</add>
 				<mul stat="pvpPhysDmg" val="#pvpBonus" />
@@ -1229,7 +1229,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="mAtk" val="#mAtk" />
-				<mul stat="MagicalMpConsumeRate" val="1.15" />
+				<mul stat="magicalMpConsumeRate" val="1.15" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />
@@ -1319,7 +1319,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="mAtk" val="#mAtk" />
-				<mul stat="MagicalMpConsumeRate" val="1.15" />
+				<mul stat="magicalMpConsumeRate" val="1.15" />
 			</effect>
 		</for>
 	</skill>

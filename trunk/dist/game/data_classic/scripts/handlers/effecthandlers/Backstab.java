@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.stats.BaseStats;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
@@ -43,7 +43,7 @@ public final class Backstab extends AbstractEffect
 	@Override
 	public boolean calcSuccess(BuffInfo info)
 	{
-		return info.getEffector().isBehindTarget() && !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
+		return !info.getEffector().isInFrontOf(info.getEffected()) && !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -68,18 +68,19 @@ public final class Backstab extends AbstractEffect
 		
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
-		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		double damage = Formulas.calcBackstabDamage(activeChar, target, info.getSkill(), shld, ss);
+		Skill skill = info.getSkill();
+		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		byte shld = Formulas.calcShldUse(activeChar, target, skill);
+		double damage = Formulas.calcBackstabDamage(activeChar, target, skill, shld, ss);
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
-		if (Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
+		if (Formulas.calcCrit(activeChar, target, skill))
 		{
 			damage *= 2;
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, info.getSkill());
-		target.notifyDamageReceived(damage, activeChar, info.getSkill(), true, false);
+		target.reduceCurrentHp(damage, activeChar, skill);
+		target.notifyDamageReceived(damage, activeChar, skill, true, false);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
@@ -95,6 +96,6 @@ public final class Backstab extends AbstractEffect
 		}
 		
 		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
+		Formulas.calcDamageReflected(activeChar, target, skill, true);
 	}
 }

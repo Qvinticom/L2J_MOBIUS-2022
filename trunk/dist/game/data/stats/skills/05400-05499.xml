@@ -331,7 +331,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mAtkSpd" val="0.85" />
 			</effect>
 		</for>

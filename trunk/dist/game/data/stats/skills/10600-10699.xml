@@ -68,27 +68,27 @@
 		</cond>
 		<for>
 		<effect name="Buff">
-				<add stat="cAtk" val="304" />
+				<add stat="critDmg" val="304" />
 				<mul stat="blowRate" val="1.15" />
-				<mul stat="cAtk" val="0.7">
+				<mul stat="critDmg" val="0.7">
 					<player front="true" />
 				</mul>
-				<mul stat="rCrit" val="1.3">
+				<mul stat="critRate" val="1.3">
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="cAtk" val="1.3">
+				<mul stat="critDmg" val="1.3">
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="rCrit" val="1.5">
+				<mul stat="critRate" val="1.5">
 					<player behind="true" />
 				</mul>
-				<mul stat="cAtk" val="1.5">
+				<mul stat="critDmg" val="1.5">
 					<player behind="true" />
 				</mul>
 			</effect>
@@ -152,7 +152,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critDmg" val="#cAtk" />
 				<add stat="runSpd" val="#spd" />
 			</effect>
 		</for>
@@ -171,27 +171,27 @@
 		</cond>
 		<for>
 		<effect name="Buff">
-				<add stat="cAtk" val="304" />
+				<add stat="critDmg" val="304" />
 				<mul stat="blowRate" val="1.05" />
-				<mul stat="cAtk" val="0.7">
+				<mul stat="critDmg" val="0.7">
 					<player front="true" />
 				</mul>
-				<mul stat="rCrit" val="1.3">
+				<mul stat="critRate" val="1.3">
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="cAtk" val="1.3">
+				<mul stat="critDmg" val="1.3">
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="rCrit" val="1.5">
+				<mul stat="critRate" val="1.5">
 					<player behind="true" />
 				</mul>
-				<mul stat="cAtk" val="1.5">
+				<mul stat="critDmg" val="1.5">
 					<player behind="true" />
 				</mul>
 			</effect>

@@ -769,7 +769,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
+				<mul stat="critRate" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -786,7 +786,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1099,9 +1099,9 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -1129,9 +1129,9 @@
 				<mul stat="mAtkSpd" val="1.2" />
 				<sub stat="debuffVuln" val="10" />
 				<mul stat="runSpd" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -1151,7 +1151,7 @@
 				<mul stat="maxMp" val="1.2" />
 				<mul stat="regHp" val="1.2" />
 				<add stat="mCritRate" val="2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -1178,7 +1178,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 				<mul stat="mCritPower" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
@@ -1209,7 +1209,7 @@
 				<param type="PER" />
 				<param heal="true" />
 				<add stat="mCritRate" val="2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -1327,8 +1327,8 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="1.3" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -1413,7 +1413,7 @@
 				<mul stat="pAtk" val="1.05">
 					<using kind="SWORD,DUAL,ANCIENTSWORD,RAPIER,DAGGER,DUALDAGGER,POLE,DUALFIST" />
 				</mul>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRate" val="1.2">
 					<using kind="SWORD,DUAL,ANCIENTSWORD,RAPIER,DAGGER,DUALDAGGER,POLE,DUALFIST" />
 				</mul>
 			</effect>

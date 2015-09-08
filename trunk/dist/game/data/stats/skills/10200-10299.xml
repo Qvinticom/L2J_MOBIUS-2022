@@ -12,7 +12,7 @@
 			<effect name="Buff">
 				<mul stat="pvePhysDmg" val="#power" />
 				<mul stat="pvpPhysSkillsDmg" val="#power" />
-				<mul stat="MagicalMpConsumeRate" val="1.3" />
+				<mul stat="magicalMpConsumeRate" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1401,13 +1401,13 @@
 				<add stat="accCombat" val="#accPhysical" />
 				<mul stat="pDef" val="#pDef" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<mul stat="pAtk" val="1.10">
 					<and>
 						<player hp="60" />
 					</and>
 				</mul>
-				<add stat="rCrit" val="100">
+				<add stat="critRate" val="100">
 					<and>
 						<player hp="60" />
 					</and>
@@ -1417,7 +1417,7 @@
 						<player hp="30" />
 					</and>
 				</mul>
-				<add stat="rCrit" val="300">
+				<add stat="critRate" val="300">
 					<and>
 						<player hp="30" />
 					</and>
@@ -1432,13 +1432,13 @@
 				<add stat="accCombat" val="25" />
 				<mul stat="pDef" val="1.11" />
 				<mul stat="pAtkSpd" val="1.11" />
-				<add stat="cAtkAdd" val="350" />
+				<add stat="critDmgAdd" val="350" />
 				<mul stat="pAtk" val="1.10">
 					<and>
 						<player hp="60" />
 					</and>
 				</mul>
-				<add stat="rCrit" val="100">
+				<add stat="critRate" val="100">
 					<and>
 						<player hp="60" />
 					</and>
@@ -1448,7 +1448,7 @@
 						<player hp="30" />
 					</and>
 				</mul>
-				<add stat="rCrit" val="300">
+				<add stat="critRate" val="300">
 					<and>
 						<player hp="30" />
 					</and>
@@ -1975,13 +1975,13 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.3" />
-				<mul stat="cAtk" val="1.3" />
+				<mul stat="critDmg" val="1.3" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.3" />
-				<mul stat="cAtk" val="1.3" />
+				<mul stat="critDmg" val="1.3" />
 			</effect>
 			<effect name="AttackTrait">
 				<param KNOCKDOWN="#enchTraits" />
@@ -2012,7 +2012,7 @@
 				<mul stat="pAtk" val="1.35" />
 				<mul stat="pDef" val="1.35" />
 				<mul stat="mDef" val="1.35" />
-				<mul stat="cAtk" val="1.10" />
+				<mul stat="critDmg" val="1.10" />
 			</effect>
 		</for>
 		<enchant2for>
@@ -2021,7 +2021,7 @@
 				<mul stat="pAtk" val="1.35" />
 				<mul stat="pDef" val="1.35" />
 				<mul stat="mDef" val="1.35" />
-				<mul stat="cAtk" val="1.10" />
+				<mul stat="critDmg" val="1.10" />
 			</effect>
 			<effect name="AttackTrait">
 				<param KNOCKDOWN="#enchTraits" />
@@ -2121,15 +2121,15 @@
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="8" />
-				<add stat="rCrit" val="120" />
-				<mul stat="cAtk" val="1.30" />
+				<add stat="critRate" val="120" />
+				<mul stat="critDmg" val="1.30" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Buff">
 				<add stat="accCombat" val="8" />
-				<add stat="rCrit" val="120" />
-				<mul stat="cAtk" val="1.30" />
+				<add stat="critRate" val="120" />
+				<mul stat="critDmg" val="1.30" />
 			</effect>
 			<effect name="AttackTrait">
 				<param KNOCKDOWN="#enchTraits" />

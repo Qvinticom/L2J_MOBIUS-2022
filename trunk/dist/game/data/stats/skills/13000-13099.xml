@@ -118,8 +118,8 @@
 				<add stat="STR" val="#base" />
 				<sub stat="CON" val="#base1" />
 				<add stat="DEX" val="#base" />
-				<add stat="rCrit" val="#rCrit" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critRate" val="#rCrit" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="regMp" val="1.0557" />
@@ -184,7 +184,7 @@
 				<sub stat="MEN" val="#base1" />
 				<add stat="WIT" val="#base" />
 				<add stat="runSpd" val="#runSpd" />
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 				<mul stat="mAtk" val="#mAtk" />
 				<mul stat="mAtkSpd" val="#mAtkSpd" />
 				<mul stat="regMp" val="1.0557" />
@@ -484,7 +484,7 @@
 				<mul stat="pDef" val="1.0557" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="runSpd" val="#runSpd" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -556,7 +556,7 @@
 				<add stat="STR" val="#base" />
 				<sub stat="CON" val="#base1" />
 				<mul stat="pAtk" val="#pAtk" />
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 				<add stat="maxHp" val="550" />
 				<mul stat="magicSuccRes" val="#magicSuccRes" />
 				<add stat="absorbDam" val="#absorbDam" />
@@ -595,7 +595,7 @@
 				<sub stat="CON" val="#base1" />
 				<add stat="DEX" val="#base1" />
 				<mul stat="runSpd" val="1.03" />
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<add stat="fireRes" val="#resist" />
@@ -637,7 +637,7 @@
 				<mul stat="mAtk" val="#mAtk" />
 				<mul stat="mAtkSpd" val="#mAtkSpd" />
 				<mul stat="regMp" val="#regMp" />
-				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MpConsumeRate" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -1264,7 +1264,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="1" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<add stat="pAtk" val="#pAtk" />
 				<mul stat="pDef" val="#pDef" />
@@ -1333,10 +1333,10 @@
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<sub stat="CON" val="1" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 				<add stat="pAtk" val="#pAtk" />
 				<mul stat="pDef" val="#pDef" />
 				<add stat="fireRes" val="#resist" />
@@ -1407,7 +1407,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="3" />
 				<sub stat="CON" val="2" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
 				<add stat="pAtk" val="#pAtk" />
@@ -1479,7 +1479,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="3" />
 				<sub stat="CON" val="1" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="absorbDam" val="#absorbDam" />
 				<add stat="pAtk" val="#pAtk" />
@@ -1535,11 +1535,11 @@
 			<effect name="Buff">
 				<add stat="DEX" val="1" />
 				<add stat="rEvas" val="#rEvas" />
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<!-- TODO: add stat received heal amount -->
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -1570,7 +1570,7 @@
 			<effect name="Buff">
 				<add stat="STR" val="1" />
 				<add stat="pAtk" val="155" />
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtk" />
@@ -1611,7 +1611,7 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtkMul" />
 				<!-- TODO: add stat received heal amount -->
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -1646,14 +1646,14 @@
 				<add stat="STR" val="2" />
 				<sub stat="CON" val="1" />
 				<add stat="pAtk" val="#pAtkAdd" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtkMul" />
 				<!-- TODO: add stat received heal amount -->
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -1687,12 +1687,12 @@
 				<add stat="DEX" val="3" />
 				<sub stat="STR" val="2" />
 				<add stat="rEvas" val="#rEvas" />
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<!-- TODO: add stat received heal amount -->
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -1725,9 +1725,9 @@
 				<add stat="STR" val="3" />
 				<sub stat="CON" val="2" />
 				<add stat="pAtk" val="214" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtk" />
@@ -1768,12 +1768,12 @@
 				<add stat="DEX" val="3" />
 				<sub stat="STR" val="1" />
 				<add stat="rEvas" val="#rEvas" />
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 				<mul stat="absorbDam" val="#absorbDam" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
 				<mul stat="pAtk" val="#pAtk" />
 				<!-- TODO: add stat received heal amount -->
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 				<add stat="fireRes" val="#resist" />
 				<add stat="waterRes" val="#resist" />
 				<add stat="windRes" val="#resist" />
@@ -1806,9 +1806,9 @@
 				<add stat="STR" val="3" />
 				<sub stat="CON" val="1" />
 				<add stat="pAtk" val="246" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />

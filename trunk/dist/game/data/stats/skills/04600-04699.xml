@@ -53,7 +53,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 				<mul stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
@@ -325,7 +325,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -349,7 +349,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critDmg" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -1170,7 +1170,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -1190,7 +1190,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critDmg" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -2289,7 +2289,7 @@
 				<sub stat="rEvas" val="4" />
 				<mul stat="pDef" val="0.55" />
 				<mul stat="pAtkSpd" val="0.75" />
-				<mul stat="rCrit" val="0.77" />
+				<mul stat="critRate" val="0.77" />
 				<mul stat="mDef" val="0.2" />
 			</effect>
 		</for>
@@ -2388,8 +2388,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critRate" val="#rCrit" />
+				<mul stat="critDmg" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>

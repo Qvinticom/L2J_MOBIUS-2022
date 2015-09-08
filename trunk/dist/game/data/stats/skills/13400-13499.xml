@@ -298,9 +298,9 @@
 			<effect name="Buff">
 				<add stat="accCombat" val="4" />
 				<add stat="accMagic" val="4" />
-				<add stat="rCrit" val="20" />
+				<add stat="critRate" val="20" />
 				<add stat="mCritRate" val="20" />
-				<mul stat="cAtk" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
 				<mul stat="mCritPower" val="1.15" />
 			</effect>
 			<effect name="AttackTrait">
@@ -325,8 +325,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="healEffect" val="1.1" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<add stat="absorbDam" val="4" />
 			</effect>
 			<effect name="AttackTrait">

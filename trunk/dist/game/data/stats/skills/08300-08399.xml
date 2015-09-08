@@ -105,7 +105,7 @@
 				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
 				<add stat="maxMp" val="354" /> <!-- Max MP by 354 -->
 				<add stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
-				<add stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
+				<add stat="critDmgAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
@@ -167,7 +167,7 @@
 				<mul stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
 				<sub stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<mul stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<mul stat="magicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
 				<mul stat="pvpMagicalDef" val="1.05" />
 				<mul stat="pvpPhysSkillsDef" val="1.05" />
 				<mul stat="pvpPhysDef" val="1.05" />
@@ -274,8 +274,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
 		</for>
 	</skill>

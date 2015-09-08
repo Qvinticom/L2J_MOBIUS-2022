@@ -259,8 +259,8 @@
 		<for>
 			<effect name="Buff">
 				<sub stat="accCombat" val="16" />
-				<mul stat="rCrit" val="#rCrit" />
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critRate" val="#rCrit" />
+				<mul stat="critDmg" val="#cAtk" />
 				<mul stat="pAtkSpd" val="0.9" />
 				<mul stat="pAtk" val="0.9" />
 			</effect>

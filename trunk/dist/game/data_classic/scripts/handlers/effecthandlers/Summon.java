@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
@@ -42,6 +43,7 @@ public final class Summon extends AbstractEffect
 	private final int _lifeTime;
 	private final int _consumeItemInterval;
 	private final int _summonPoints;
+	private final SkillHolder _debuff;
 	
 	public Summon(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
@@ -58,6 +60,7 @@ public final class Summon extends AbstractEffect
 		_consumeItemInterval = params.getInt("consumeItemInterval", 0);
 		_lifeTime = params.getInt("lifeTime", 3600) * 1000;
 		_summonPoints = params.getInt("summonPoints", 0);
+		_debuff = new SkillHolder(params.getInt("debuffId", 0), 1);
 	}
 	
 	@Override
@@ -115,5 +118,9 @@ public final class Summon extends AbstractEffect
 		summon.setShowSummonAnimation(true);
 		summon.setRunning();
 		summon.spawnMe();
+		if (_debuff.getSkillId() != 0)
+		{
+			_debuff.getSkill().applyEffects(player, player);
+		}
 	}
 }

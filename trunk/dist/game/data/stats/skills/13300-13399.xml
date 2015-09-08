@@ -153,8 +153,8 @@
 				<add stat="earthRes" val="30" />
 				<add stat="holyRes" val="15" />
 				<mul stat="healEffect" val="1.4" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
 				<add stat="absorbDam" val="4" />
 				<add stat="CON" val="3" />
 				<add stat="MEN" val="3" />
@@ -255,7 +255,7 @@
 				<!-- <add stat="PullingRes" val="20" /> -->
 				<mul stat="pDef" val="1.15" />
 				<mul stat="regMp" val="1.05" />
-				<mul stat="rCrit" val="1.15" />
+				<mul stat="critRate" val="1.15" />
 				<add stat="accCombat" val="4" />
 				<mul stat="pAtkSpd" val="1.05" />
 				<mul stat="mAtkSpd" val="1.05" />
@@ -313,7 +313,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="3" />
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 				<add stat="waterRes" val="20" />
 			</effect>
 		</for>
@@ -393,7 +393,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
 				<add stat="fireRes" val="20" />
 			</effect>
 		</for>
@@ -543,7 +543,7 @@
 						</or>
 					</and>
 				</mul>
-				<mul stat="PhysicalMpConsumeRate" val="#physSkillMpCost" />
+				<mul stat="physicalMpConsumeRate" val="#physSkillMpCost" />
 				<mul stat="pDef" val="#addPDef" />
 				<!-- reflect debuff 5% chance, NOT DONE -->
 			</effect>

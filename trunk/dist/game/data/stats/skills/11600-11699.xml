@@ -32,7 +32,7 @@
 				<mul stat="mAtkSpd" val="1.30" />
 				<mul stat="maxHp" val="1.30" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<mul stat="magicalMpConsumeRate" val="0.90" />
 				<sub stat="cancel" val="50" /> <!-- Guess -->
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -120,8 +120,8 @@
 				<add stat="accCombat" val="4" />
 				<add stat="rEvas" val="3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="PhysicalMpConsumeRate" val="0.80" />
-				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="physicalMpConsumeRate" val="0.80" />
+				<mul stat="magicalMpConsumeRate" val="0.80" />
 				<mul stat="mReuse" val="0.90" />
 				<mul stat="pReuse" val="0.90" />
 			</effect>
@@ -226,7 +226,7 @@
 			<effect abnormalTime="1800" name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<mul stat="rCrit" val="1.1" />
+				<mul stat="critRate" val="1.1" />
 				<add stat="runSpd" val="10" />
 			</effect>
 		</for>
@@ -263,7 +263,7 @@
 				<mul stat="mAtkSpd" val="1.30" />
 				<mul stat="maxHp" val="1.30" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<mul stat="magicalMpConsumeRate" val="0.90" />
 				<sub stat="cancel" val="50" /> <!-- Guess -->
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -352,8 +352,8 @@
 				<add stat="accCombat" val="4" />
 				<add stat="rEvas" val="3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="PhysicalMpConsumeRate" val="0.80" />
-				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="physicalMpConsumeRate" val="0.80" />
+				<mul stat="magicalMpConsumeRate" val="0.80" />
 				<mul stat="mReuse" val="0.90" />
 				<mul stat="pReuse" val="0.90" />
 			</effect>
@@ -397,7 +397,7 @@
 				<mul stat="mAtkSpd" val="1.30" />
 				<mul stat="maxHp" val="1.30" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<mul stat="magicalMpConsumeRate" val="0.90" />
 				<sub stat="cancel" val="50" /> <!-- Guess -->
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -486,8 +486,8 @@
 				<add stat="accCombat" val="4" />
 				<add stat="rEvas" val="3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="PhysicalMpConsumeRate" val="0.80" />
-				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="physicalMpConsumeRate" val="0.80" />
+				<mul stat="magicalMpConsumeRate" val="0.80" />
 				<mul stat="mReuse" val="0.90" />
 				<mul stat="pReuse" val="0.90" />
 			</effect>

@@ -82,8 +82,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="1.3" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -672,8 +672,8 @@
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="1.3" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -1105,7 +1105,7 @@
 				<mul stat="mAtk" val="1.4" />
 				<mul stat="mAtkSpd" val="1.5" />
 				<mul stat="mCritRate" val="1.5" />
-				<mul stat="MagicalMpConsumeRate" val="0.1" />
+				<mul stat="magicalMpConsumeRate" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1130,7 +1130,7 @@
 				<mul stat="healEffect" val="1.4" />
 				<mul stat="mAtkSpd" val="1.5" />
 				<mul stat="mCritRate" val="1.5" />
-				<mul stat="MagicalMpConsumeRate" val="0.1" />
+				<mul stat="magicalMpConsumeRate" val="0.1" />
 			</effect>
 		</for>
 	</skill>
@@ -1239,8 +1239,8 @@
 		<set name="targetType" val="PARTY_CLAN" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="1.3" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
@@ -1530,7 +1530,7 @@
 				<mul stat="mAtk" val="#amount" />
 				<mul stat="mAtkSpd" val="#mAtkSpd" />
 				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -1807,7 +1807,7 @@
 				<share stat="mDef" val="0.25" />
 				<share stat="maxHp" val="0.1" />
 				<share stat="maxMp" val="0.1" />
-				<share stat="rCrit" val="0.2" />
+				<share stat="critRate" val="0.2" />
 				<share stat="pAtkSpd" val="0.1" />
 				<share stat="mAtkSpd" val="0.03" />
 			</effect>
@@ -1858,10 +1858,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit">
+				<mul stat="critRate" val="#rCrit">
 					<using kind="DAGGER,DUALDAGGER,LIGHT" />
 				</mul>
-				<add stat="cAtkAdd" val="#cAtkAdd">
+				<add stat="critDmgAdd" val="#cAtkAdd">
 					<using kind="DAGGER,DUALDAGGER,LIGHT" />
 				</add>
 			</effect>
@@ -2222,8 +2222,8 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="2" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="2" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SONG_OF_HUNTER,9;DANCE_OF_FIRE,9" />
@@ -2247,8 +2247,8 @@
 		<set name="isMagic" val="3" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="2" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="2" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SONG_OF_HUNTER,9;DANCE_OF_FIRE,9" />
@@ -2489,9 +2489,9 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="mCritRate" val="2" /> 
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SONG_OF_RENEWAL,9;SONG_OF_CHAMPION,9;DANCE_OF_SIREN,9" />
@@ -2516,9 +2516,9 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="mCritRate" val="2" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 			</effect>
 			<effect name="DispelBySlot">
 				<param dispel="SONG_OF_RENEWAL,9;SONG_OF_CHAMPION,9;DANCE_OF_SIREN,9" />
@@ -2557,7 +2557,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="cancel" val="40" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
 				<mul stat="mAtkSpd" val="1.3" />
 				<mul stat="regMp" val="1.20" />
 			</effect>
@@ -2584,7 +2584,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="cancel" val="40" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
 				<mul stat="mAtkSpd" val="1.3" />
 				<mul stat="regMp" val="1.20" />
 			</effect>

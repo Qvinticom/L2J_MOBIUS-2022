@@ -585,7 +585,7 @@
 				<add stat="accCombat" val="#accCombat">
 					<using kind="CROSSBOW" />
 				</add>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRate" val="1.2">
 					<using kind="CROSSBOW" />
 				</mul>
 				<add stat="pAtkRange" val="#range">
@@ -601,7 +601,7 @@
 				<add stat="accCombat" val="#ench1Acc">
 					<using kind="CROSSBOW" />
 				</add>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRate" val="1.2">
 					<using kind="CROSSBOW" />
 				</mul>
 				<add stat="pAtkRange" val="200">

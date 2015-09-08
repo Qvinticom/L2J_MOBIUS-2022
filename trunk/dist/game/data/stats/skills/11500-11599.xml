@@ -30,7 +30,7 @@
 				<mul stat="pAtkSpd" val="1.20">
 					<using kind="DUAL, DUALBLUNT" />
 				</mul>
-				<mul stat="cAtk" val="1.15">
+				<mul stat="critDmg" val="1.15">
 					<using kind="DUAL, DUALBLUNT" />
 				</mul>
 				<add stat="accCombat" val="4">
@@ -53,7 +53,7 @@
 				<mul stat="pAtkSpd" val="1.20">
 					<using kind="DUAL, DUALBLUNT" />
 				</mul>
-				<mul stat="cAtk" val="1.15">
+				<mul stat="critDmg" val="1.15">
 					<using kind="DUAL, DUALBLUNT" />
 				</mul>
 				<add stat="accCombat" val="4">
@@ -728,7 +728,7 @@
 				<mul stat="maxMp" val="#maxMp" />
 				<mul stat="regHp" val="#regHp" />
 				<add stat="mCritRate" val="#mCritRate" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="critDmg" val="#cAtk" />
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="pDef" val="#pDef" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
@@ -835,12 +835,12 @@
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critRate" val="#rCrit" />
+				<mul stat="critDmg" val="#cAtk" />
 				<add stat="mCritRate" val="#mCritRate" />
-				<mul stat="MagicalMpConsumeRate" val="#magicMpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#physMpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="0.8">
+				<mul stat="magicalMpConsumeRate" val="#magicMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#physMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="0.8">
 					<player class_id_restriction="171,172,173,174,175" />
 				</mul>
 			</effect>
@@ -974,8 +974,8 @@
 				<mul stat="pDef" val="1.45" />
 				<mul stat="rShld" val="1.30" />
 				<mul stat="sDef" val="1.50" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
@@ -990,8 +990,8 @@
 				<mul stat="pDef" val="1.45" />
 				<mul stat="rShld" val="1.30" />
 				<mul stat="sDef" val="1.50" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
@@ -1031,8 +1031,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -1048,8 +1048,8 @@
 		<enchant3for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -1068,8 +1068,8 @@
 		<enchant4for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -1088,8 +1088,8 @@
 		<enchant5for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -1137,8 +1137,8 @@
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
 				<add stat="runSpd" val="8" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
 				<mul stat="pReuse" val="0.80" />
 				<mul stat="dReuse" val="0.80" />
@@ -1160,8 +1160,8 @@
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
 				<add stat="runSpd" val="8" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
 				<mul stat="pReuse" val="0.80" />
 				<mul stat="dReuse" val="0.80" />
@@ -1186,8 +1186,8 @@
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
 				<add stat="runSpd" val="8" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
 				<mul stat="pReuse" val="0.80" />
 				<mul stat="dReuse" val="0.80" />
@@ -1257,7 +1257,7 @@
 				<mul stat="mAtkSpd" val="1.30" />
 				<mul stat="maxHp" val="1.30" />
 				<mul stat="regMp" val="1.20" />
-				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<mul stat="magicalMpConsumeRate" val="0.90" />
 				<sub stat="cancel" val="50" /> <!-- Guess -->
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1346,8 +1346,8 @@
 				<add stat="accCombat" val="4" />
 				<add stat="rEvas" val="3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="PhysicalMpConsumeRate" val="0.80" />
-				<mul stat="MagicalMpConsumeRate" val="0.80" />
+				<mul stat="physicalMpConsumeRate" val="0.80" />
+				<mul stat="magicalMpConsumeRate" val="0.80" />
 				<mul stat="mReuse" val="0.90" />
 				<mul stat="pReuse" val="0.90" />
 			</effect>
@@ -1807,7 +1807,7 @@
 		<set name="skillRadius" val="900" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.5" />
+				<mul stat="critRate" val="0.5" />
 				<mul stat="mCritRate" val="0.5" />
 			</effect>
 		</for>
@@ -1939,9 +1939,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumes" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumes" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumes" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumes" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumes" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumes" />
 			</effect>
 		</for>
 	</skill>
@@ -2433,7 +2433,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="2"> <!-- GUESS: From testing it's looking more like 120% increase to critical damage. More testing on live server is needed to confirm this -->
+				<mul stat="critDmg" val="2"> <!-- GUESS: From testing it's looking more like 120% increase to critical damage. More testing on live server is needed to confirm this -->
 					<using kind="SWORD,BLUNT,DAGGER,DUALDAGGER,DUAL,DUALFIST,POLE,ANCIENTSWORD,RAPIER,BOW,CROSSBOW,DUALBLUNT" />
 				</mul>
 			</effect>
@@ -2730,7 +2730,7 @@
 				<mul stat="maxMp" val="#maxMp" />
 				<mul stat="regHp" val="#regHp" />
 				<add stat="mCritRate" val="#mCritRate" />
-				<add stat="cAtk" val="#cAtk" />
+				<add stat="critDmg" val="#cAtk" />
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="pDef" val="#pDef" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
@@ -2837,11 +2837,11 @@
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTime" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
-				<mul stat="cAtk" val="#cAtk" />
+				<mul stat="critRate" val="#rCrit" />
+				<mul stat="critDmg" val="#cAtk" />
 				<add stat="mCritRate" val="#mCritRate" />
-				<mul stat="MagicalMpConsumeRate" val="#magicMpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#physMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#magicMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#physMpConsumeRate" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" rate="100" />
@@ -2973,8 +2973,8 @@
 				<mul stat="pDef" val="1.45" />
 				<mul stat="rShld" val="1.30" />
 				<mul stat="sDef" val="1.50" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
@@ -2989,8 +2989,8 @@
 				<mul stat="pDef" val="1.45" />
 				<mul stat="rShld" val="1.30" />
 				<mul stat="sDef" val="1.50" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
@@ -3030,8 +3030,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -3047,8 +3047,8 @@
 		<enchant3for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -3067,8 +3067,8 @@
 		<enchant4for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -3087,8 +3087,8 @@
 		<enchant5for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.00" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.00" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -3136,8 +3136,8 @@
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
 				<mul stat="runSpd" val="1.08" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
 				<mul stat="pReuse" val="0.80" />
 				<mul stat="dReuse" val="0.80" />
@@ -3159,8 +3159,8 @@
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
 				<mul stat="runSpd" val="1.08" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
 				<mul stat="pReuse" val="0.80" />
 				<mul stat="dReuse" val="0.80" />
@@ -3185,8 +3185,8 @@
 				<mul stat="mCritRate" val="2.00" />
 				<mul stat="regMp" val="1.20" />
 				<mul stat="runSpd" val="1.08" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.80" />
 				<mul stat="pReuse" val="0.80" />
 				<mul stat="dReuse" val="0.80" />

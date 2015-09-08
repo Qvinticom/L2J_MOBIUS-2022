@@ -483,7 +483,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -670,9 +670,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>

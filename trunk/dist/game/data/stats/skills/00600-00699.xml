@@ -148,8 +148,8 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="17.3" />
-				<add stat="rCrit" val="#rCrit" />
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critRate" val="#rCrit" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -210,9 +210,9 @@
 			<effect name="Buff">
 				<add stat="healEffect" val="20" />
 				<mul stat="maxMp" val="#maxMp" />
-				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -461,20 +461,20 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
-				<add stat="cAtkAdd" val="#cAtk" />
+				<mul stat="critRate" val="#rCrit" />
+				<add stat="critDmgAdd" val="#cAtk" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#ench1rCrit" />
-				<add stat="cAtkAdd" val="317" />
+				<mul stat="critRate" val="#ench1rCrit" />
+				<add stat="critDmgAdd" val="317" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.25" />
-				<add stat="cAtkAdd" val="#ench2cAtk" />
+				<mul stat="critRate" val="1.25" />
+				<add stat="critDmgAdd" val="#ench2cAtk" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -776,7 +776,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="30" />
+				<add stat="critRate" val="30" />
 			</effect>
 		</for>
 	</skill>

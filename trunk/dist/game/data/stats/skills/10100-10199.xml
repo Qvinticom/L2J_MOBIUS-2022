@@ -36,10 +36,10 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
-				<add stat="rCrit" val="#rCrit">
+				<add stat="critRate" val="#rCrit">
 					<using kind="SWORD,BLUNT" />
 				</add>
-				<mul stat="cAtkAdd" val="#cAtkAdd">
+				<mul stat="critDmgAdd" val="#cAtkAdd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
 			</effect>
@@ -77,10 +77,10 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
-				<add stat="rCrit" val="#rCrit">
+				<add stat="critRate" val="#rCrit">
 					<using kind="SWORD,BLUNT" />
 				</add>
-				<mul stat="cAtkAdd" val="#cAtkAdd">
+				<mul stat="critDmgAdd" val="#cAtkAdd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
 			</effect>

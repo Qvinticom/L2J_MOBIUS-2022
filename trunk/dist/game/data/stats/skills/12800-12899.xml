@@ -623,7 +623,7 @@
 			<for>
 				<effect name="Buff" >
 					<add stat="mCritRate" val="50" />
-					<add stat="rCrit" val="50" />
+					<add stat="critRate" val="50" />
 				</effect>
 			</for>	
 	</skill>
@@ -635,7 +635,7 @@
 			<for>
 				<effect name="Buff" >
 					<add stat="mCritPowerAdd" val="68" />
-					<add stat="cAtkAdd" val="90" />
+					<add stat="critDmgAdd" val="90" />
 				</effect>
 			</for>
 	</skill>

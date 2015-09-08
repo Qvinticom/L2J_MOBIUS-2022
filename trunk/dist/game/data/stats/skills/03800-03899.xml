@@ -93,7 +93,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="darkRes" val="3.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 				<add stat="maxHp" val="1023" />
 				<mul stat="pDef" val="1.0724" />
 			</effect>
@@ -351,7 +351,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="220" />
+				<add stat="critDmgAdd" val="220" />
 			</effect>
 		</for>
 	</skill>
@@ -363,7 +363,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 			</effect>
 		</for>
 	</skill>
@@ -419,7 +419,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="169" />
+				<add stat="critDmgAdd" val="169" />
 			</effect>
 		</for>
 	</skill>
@@ -431,7 +431,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 			</effect>
 		</for>
 	</skill>
@@ -487,7 +487,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="268" />
+				<add stat="critDmgAdd" val="268" />
 			</effect>
 		</for>
 	</skill>
@@ -499,7 +499,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 			</effect>
 		</for>
 	</skill>
@@ -576,7 +576,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="340" />
+				<add stat="critDmgAdd" val="340" />
 			</effect>
 		</for>
 	</skill>
@@ -589,7 +589,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 			</effect>
 		</for>
 	</skill>
@@ -650,7 +650,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="303" />
+				<add stat="critDmgAdd" val="303" />
 			</effect>
 		</for>
 	</skill>
@@ -663,7 +663,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 			</effect>
 		</for>
 	</skill>
@@ -731,9 +731,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -938,7 +938,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -950,7 +950,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="54.4" />
+				<add stat="critRate" val="54.4" />
 			</effect>
 		</for>
 	</skill>
@@ -1071,7 +1071,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="528" />
+				<add stat="critDmgAdd" val="528" />
 			</effect>
 		</for>
 	</skill>
@@ -1191,7 +1191,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -1215,7 +1215,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="415" />
+				<add stat="critDmgAdd" val="415" />
 			</effect>
 		</for>
 	</skill>
@@ -1228,7 +1228,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="52.2" />
+				<add stat="critRate" val="52.2" />
 			</effect>
 		</for>
 	</skill>

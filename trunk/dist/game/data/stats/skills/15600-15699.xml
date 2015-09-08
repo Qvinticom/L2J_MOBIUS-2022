@@ -446,7 +446,7 @@
 				<mul stat="maxMp" val="1.2" />
 				<mul stat="regHp" val="1.2" />
 				<add stat="mCritRate" val="20" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtkSpd" val="1.2" />
@@ -517,10 +517,10 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.32" />
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critRate" val="1.32" />
+				<mul stat="critDmg" val="1.35" />
 				<add stat="mCritRate" val="20" />
-				<mul stat="MagicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.1" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" rate="100" />
@@ -605,8 +605,8 @@
 				<mul stat="pDef" val="1.45" />
 				<mul stat="rShld" val="1.3" />
 				<mul stat="sDef" val="1.5" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.0" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.0" />
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<param dispel="PA_UP;PD_UP;SHIELD_DEFENCE_UP;SHIELD_PROB_UP;CRITICAL_DMG_UP;CRITICAL_PROB_UP;IMPROVE_PA_PD_UP;IMPROVE_CRT_RATE_DMG_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP" rate="100" />
@@ -632,8 +632,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.35" />
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="2.0" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="2.0" />
 				<mul stat="pAtkSpd" val="1.08" />
 				<mul stat="mAtk" val="1.16" />
 				<mul stat="mAtkSpd" val="1.08" />
@@ -670,8 +670,8 @@
 				<mul stat="mCritRate" val="2.0" />
 				<mul stat="regMp" val="1.20" />
 				<mul stat="runSpd" val="1.08" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<mul stat="mReuse" val="0.8" />
 				<mul stat="pReuse" val="0.8" />
 				<mul stat="dReuse" val="0.8" />
@@ -703,7 +703,7 @@
 				<mul stat="mAtkSpd" val="1.20" />
 				<mul stat="maxHp" val="1.20" />
 				<mul stat="regMp" val="1.10" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 				<sub stat="cancel" val="50" />
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -766,8 +766,8 @@
 				<add stat="accCombat" val="2" />
 				<add stat="rEvas" val="2" />
 				<add stat="runSpd" val="10" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
 				<mul stat="mReuse" val="0.95" />
 				<mul stat="pReuse" val="0.95" />
 			</effect>

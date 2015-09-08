@@ -21,7 +21,7 @@
 	<option id="21803" name="o_w_82_1g_13">
 		<!-- Critical increases by 14.96. -->
 		<for>
-			<add stat="rCrit" val="14.96" />
+			<add stat="critRate" val="14.96" />
 		</for>
 	</option>
 	<option id="21804" name="o_w_82_1g_14">
@@ -105,7 +105,7 @@
 		<!-- P. Def. increases by 12.36. Critical increases by 7.04. -->
 		<for>
 			<add stat="pDef" val="12.357" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21816" name="o_w_82_1g_26">
@@ -182,7 +182,7 @@
 		<!-- M. Def. increases by 10.1. Critical increases by 7.04. -->
 		<for>
 			<add stat="mDef" val="10.097" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21827" name="o_w_82_1g_37">
@@ -252,7 +252,7 @@
 		<!-- Max HP increases by 28.57 Critical increases by 7.04. -->
 		<for>
 			<add stat="maxHp" val="28.566" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21837" name="o_w_82_1g_47">
@@ -315,7 +315,7 @@
 		<!-- Max HP increases by 34.04. Critical increases by 7.04. -->
 		<for>
 			<add stat="maxMp" val="34.036" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21846" name="o_w_82_1g_56">
@@ -371,7 +371,7 @@
 		<!-- Max CP increases by 42.85. Critical increases by 7.04. -->
 		<for>
 			<add stat="maxCp" val="42.849" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21854" name="o_w_82_1g_64">
@@ -420,7 +420,7 @@
 		<!-- P. Atk. increases by 8.11. Critical increases by 7.04. -->
 		<for>
 			<add stat="pAtk" val="8.108" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21861" name="o_w_82_1g_71">
@@ -462,7 +462,7 @@
 		<!-- M. Atk. increases by 10.1. Critical increases by 7.04. -->
 		<for>
 			<add stat="mAtk" val="10.098" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21867" name="o_w_82_1g_77">
@@ -497,7 +497,7 @@
 		<!-- HP Regen increases by 0.15. Critical increases by 7.04. -->
 		<for>
 			<add stat="regHp" val="0.153" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21872" name="o_w_82_1g_82">
@@ -525,7 +525,7 @@
 		<!-- MP Regen increases by 0.1. Critical increases by 7.04. -->
 		<for>
 			<add stat="regMp" val="0.099" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21876" name="o_w_82_1g_86">
@@ -546,7 +546,7 @@
 		<!-- CP Regen increases by 0.15. Critical increases by 7.04. -->
 		<for>
 			<add stat="regCp" val="0.153" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21879" name="o_w_82_1g_89">
@@ -560,14 +560,14 @@
 		<!-- Evasion increases by 1.03. Critical increases by 7.04. -->
 		<for>
 			<add stat="rEvas" val="1.034" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21881" name="o_w_82_1g_91">
 		<!-- Accuracy increases by 1.03. Critical increases by 7.04. -->
 		<for>
 			<add stat="accCombat" val="1.034" />
-			<add stat="rCrit" val="7.039999999999999" />
+			<add stat="critRate" val="7.039999999999999" />
 		</for>
 	</option>
 	<option id="21882" name="o_w_82_1s_1">
@@ -645,7 +645,7 @@
 	<option id="21894" name="o_w_82_1s_13">
 		<!-- Critical increases by 21.12. -->
 		<for>
-			<add stat="rCrit" val="21.12" />
+			<add stat="critRate" val="21.12" />
 		</for>
 	</option>
 	<option id="21895" name="o_w_82_1s_14">

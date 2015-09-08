@@ -342,9 +342,9 @@
 				<mul stat="mDef" val="1.2" />
 				<mul stat="mAtk" val="1.15" />
 				<add stat="runSpd" val="20" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -370,9 +370,9 @@
 				<mul stat="mDef" val="1.2" />
 				<mul stat="mAtk" val="1.3" />
 				<add stat="runSpd" val="20" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1009,7 +1009,7 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
+				<mul stat="critDmg" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1409,9 +1409,9 @@
 				<mul stat="mDef" val="1.3" />
 				<add stat="runSpd" val="30" />
 				<mul stat="pAtk" val="1.2" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1447,9 +1447,9 @@
 				<mul stat="mDef" val="1.3" />
 				<add stat="runSpd" val="20" />
 				<mul stat="mAtk" val="1.45" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="0.85" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.85" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1488,8 +1488,8 @@
 				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
-				<mul stat="rCrit" val="1.2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critRate" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -1648,8 +1648,8 @@
 				<mul stat="pAtkSpd" val="1.2" />
 				<mul stat="pDef" val="1.2" />
 				<mul stat="pAtk" val="1.1" />
-				<mul stat="rCrit" val="1.2" />
-				<mul stat="cAtk" val="1.2" />
+				<mul stat="critRate" val="1.2" />
+				<mul stat="critDmg" val="1.2" />
 			</effect>
 		</for>
 	</skill>

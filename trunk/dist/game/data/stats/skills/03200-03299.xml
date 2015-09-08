@@ -869,7 +869,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -948,7 +948,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -962,7 +962,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -976,7 +976,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#DanceMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -991,9 +991,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1452,9 +1452,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0.96" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.96" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -1476,9 +1476,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="0" />
-				<mul stat="PhysicalMpConsumeRate" val="0" />
-				<mul stat="DanceMpConsumeRate" val="0" />
+				<mul stat="magicalMpConsumeRate" val="0" />
+				<mul stat="physicalMpConsumeRate" val="0" />
+				<mul stat="danceMpConsumeRate" val="0" />
 			</effect>
 		</for>
 	</skill>
@@ -1769,7 +1769,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="30" />
+				<add stat="critDmgAdd" val="30" />
 			</effect>
 		</for>
 	</skill>

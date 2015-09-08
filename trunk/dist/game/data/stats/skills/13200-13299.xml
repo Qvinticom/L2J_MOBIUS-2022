@@ -462,7 +462,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="27" />
+				<add stat="critRate" val="27" />
 				<add stat="accCombat" val="2" />
 			</effect>
 		</for>
@@ -475,7 +475,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="338" />
+				<add stat="critDmgAdd" val="338" />
 				<add stat="accCombat" val="3" />
 			</effect>
 		</for>
@@ -488,7 +488,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="338" />
+				<add stat="critDmgAdd" val="338" />
 				<add stat="accCombat" val="3" />
 			</effect>
 		</for>
@@ -501,7 +501,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="338" />
+				<add stat="critDmgAdd" val="338" />
 				<add stat="accCombat" val="3" />
 			</effect>
 		</for>
@@ -514,7 +514,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="338" />
+				<add stat="critDmgAdd" val="338" />
 				<add stat="accCombat" val="3" />
 			</effect>
 		</for>
@@ -527,7 +527,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="338" />
+				<add stat="critDmgAdd" val="338" />
 				<add stat="accCombat" val="3" />
 			</effect>
 		</for>
@@ -743,7 +743,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="rCrit" val="27" />
+				<add stat="critRate" val="27" />
 			</effect>
 		</for>
 	</skill>
@@ -756,7 +756,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="rCrit" val="27" />
+				<add stat="critRate" val="27" />
 			</effect>
 		</for>
 	</skill>
@@ -769,7 +769,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="rCrit" val="27" />
+				<add stat="critRate" val="27" />
 			</effect>
 		</for>
 	</skill>
@@ -782,7 +782,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="rCrit" val="27" />
+				<add stat="critRate" val="27" />
 			</effect>
 		</for>
 	</skill>
@@ -795,7 +795,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="rCrit" val="27" />
+				<add stat="critRate" val="27" />
 			</effect>
 		</for>
 	</skill>
@@ -807,7 +807,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="884" />
+				<add stat="critDmgAdd" val="884" />
 			</effect>
 		</for>
 	</skill>
@@ -819,7 +819,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="884" />
+				<add stat="critDmgAdd" val="884" />
 			</effect>
 		</for>
 	</skill>
@@ -831,7 +831,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="884" />
+				<add stat="critDmgAdd" val="884" />
 			</effect>
 		</for>
 	</skill>
@@ -843,7 +843,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="884" />
+				<add stat="critDmgAdd" val="884" />
 			</effect>
 		</for>
 	</skill>
@@ -855,7 +855,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="884" />
+				<add stat="critDmgAdd" val="884" />
 			</effect>
 		</for>
 	</skill>
@@ -868,7 +868,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="cAtkAdd" val="506" />
+				<add stat="critDmgAdd" val="506" />
 			</effect>
 		</for>
 	</skill>
@@ -881,7 +881,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="cAtkAdd" val="506" />
+				<add stat="critDmgAdd" val="506" />
 			</effect>
 		</for>
 	</skill>
@@ -894,7 +894,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="cAtkAdd" val="506" />
+				<add stat="critDmgAdd" val="506" />
 			</effect>
 		</for>
 	</skill>
@@ -907,7 +907,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="cAtkAdd" val="506" />
+				<add stat="critDmgAdd" val="506" />
 			</effect>
 		</for>
 	</skill>
@@ -920,7 +920,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="18" />
-				<add stat="cAtkAdd" val="506" />
+				<add stat="critDmgAdd" val="506" />
 			</effect>
 		</for>
 	</skill>

@@ -20,7 +20,7 @@
 		<for>
 			<set stat="pAtk" val="629.0" />
 			<set stat="mAtk" val="322.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="8.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="darkPower" val="450" />
@@ -46,7 +46,7 @@
 		<for>
 			<set stat="pAtk" val="766.0" />
 			<set stat="mAtk" val="322.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="8.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="darkPower" val="450" />
@@ -1736,7 +1736,7 @@
 			<add stat="pAtk" val="629.0" />
 			<add stat="mAtk" val="313.0" />
 			<add stat="pAtkSpd" val="433.0" />
-			<add stat="rCrit" val="12.0" />
+			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="35096" name="Dark Amaranthine Cutter" additionalName="" type="Weapon">
@@ -1757,7 +1757,7 @@
 			<add stat="pAtk" val="719.0" />
 			<add stat="mAtk" val="313.0" />
 			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="35097" name="Dark Amaranthine Slasher" additionalName="" type="Weapon">
@@ -1778,7 +1778,7 @@
 			<add stat="pAtk" val="875.0" />
 			<add stat="mAtk" val="313.0" />
 			<add stat="pAtkSpd" val="325.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="35098" name="Dark Amaranthine Avenger" additionalName="" type="Weapon">
@@ -1800,7 +1800,7 @@
 			<add stat="mAtk" val="313.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="35099" name="Dark Amaranthine Fighter" additionalName="" type="Weapon">
@@ -1822,7 +1822,7 @@
 			<add stat="mAtk" val="313.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
 </list>

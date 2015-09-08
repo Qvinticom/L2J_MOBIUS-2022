@@ -85,7 +85,7 @@ public final class EnergyAttack extends AbstractEffect
 		final Skill skill = info.getSkill();
 		
 		double attack = attacker.getPAtk(target);
-		int defence = target.getPDef(attacker);
+		double defence = target.getPDef(attacker);
 		
 		if (!_ignoreShieldDefence)
 		{

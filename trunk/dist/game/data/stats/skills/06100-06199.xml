@@ -206,8 +206,8 @@
 				<add stat="runSpd" val="15" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="mAtk" val="1.15" />
-				<add stat="rCrit" val="50" />
-				<mul stat="cAtk" val="1.15" />
+				<add stat="critRate" val="50" />
+				<mul stat="critDmg" val="1.15" />
 				<add stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -797,7 +797,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="Debuff">
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>

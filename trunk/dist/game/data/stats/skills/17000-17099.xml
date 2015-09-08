@@ -597,7 +597,7 @@
 				<mul stat="mAtkSpd" val="1.2" />
 				<mul stat="maxHp" val="1.2" />
 				<mul stat="regMp" val="1.1" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
 				<sub stat="cancel" val="50" />
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -656,8 +656,8 @@
 				<add stat="accCombat" val="2" />
 				<add stat="rEvas" val="2" />
 				<add stat="runSpd" val="10" />
-				<mul stat="PhysicalMpConsumeRate" val="0.90" />
-				<mul stat="MagicalMpConsumeRate" val="0.90" />
+				<mul stat="physicalMpConsumeRate" val="0.90" />
+				<mul stat="magicalMpConsumeRate" val="0.90" />
 				<mul stat="mReuse" val="0.95" />
 				<mul stat="pReuse" val="0.95" />
 			</effect>

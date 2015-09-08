@@ -16,7 +16,7 @@
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
 															<xs:enumeration value="accCombat" />
-															<xs:enumeration value="cAtkAdd" />
+															<xs:enumeration value="critDmgAdd" />
 															<xs:enumeration value="CON" />
 															<xs:enumeration value="darkRes" />
 															<xs:enumeration value="DEX" />
@@ -34,7 +34,7 @@
 															<xs:enumeration value="pAtk" />
 															<xs:enumeration value="pDef" />
 															<xs:enumeration value="physicalSkillPower" />
-															<xs:enumeration value="rCrit" />
+															<xs:enumeration value="critRate" />
 															<xs:enumeration value="regCp" />
 															<xs:enumeration value="regHp" />
 															<xs:enumeration value="regMp" />
@@ -56,7 +56,7 @@
 												<xs:attribute name="stat" use="required">
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
-															<xs:enumeration value="MpConsume" />
+															<xs:enumeration value="mpConsume" />
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>

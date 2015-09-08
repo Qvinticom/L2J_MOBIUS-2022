@@ -30,9 +30,9 @@
 				<mul stat="mDef" val="1.3" />
 				<add stat="runSpd" val="20" />
 				<mul stat="mAtk" val="1.45" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</selfEffects>
 	</skill>
@@ -448,8 +448,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.35" />
-				<mul stat="rCrit" val="1.3" />
+				<mul stat="critDmg" val="1.35" />
+				<mul stat="critRate" val="1.3" />
 				<add stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -520,11 +520,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="DanceMpConsumeRate" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
 				<mul stat="mAtkSpd" val="1.3" />
 				<mul stat="maxHp" val="1.35" />
-				<mul stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -896,7 +896,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.35" />
+				<mul stat="critRate" val="1.35" />
 			</effect>
 		</for>
 	</skill>
@@ -1064,9 +1064,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="DanceMpConsumeRate" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -1102,7 +1102,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.3" />
+				<mul stat="critRate" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -1228,7 +1228,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="15" />
+				<add stat="critRate" val="15" />
 				<add stat="mCritRate" val="2" />
 				<add stat="runSpd" val="10" />
 				<add stat="absorbDam" val="5" />
@@ -1302,7 +1302,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.15" />
-				<mul stat="rCrit" val="1.1" />
+				<mul stat="critRate" val="1.1" />
 			</effect>
 		</for>
 	</skill>

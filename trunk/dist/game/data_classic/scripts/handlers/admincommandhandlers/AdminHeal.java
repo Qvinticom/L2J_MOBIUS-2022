@@ -44,7 +44,6 @@ public class AdminHeal implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		
 		if (command.equals("admin_heal"))
 		{
 			handleHeal(activeChar);

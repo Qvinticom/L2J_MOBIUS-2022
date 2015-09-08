@@ -256,7 +256,7 @@
 		<for>
 			<set stat="pAtk" val="8" />
 			<set stat="mAtk" val="6" />
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -281,7 +281,7 @@
 		<for>
 			<set stat="pAtk" val="5" />
 			<set stat="mAtk" val="5" />
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="433" />
 			<enchant val="0" stat="pAtk" />

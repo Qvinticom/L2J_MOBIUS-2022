@@ -820,7 +820,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.2" />
+				<mul stat="critRate" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -899,7 +899,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -913,7 +913,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -927,7 +927,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#DanceMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
@@ -942,9 +942,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
-				<mul stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>

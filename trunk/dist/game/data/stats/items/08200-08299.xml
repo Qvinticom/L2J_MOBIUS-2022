@@ -50,7 +50,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -69,7 +69,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -88,7 +88,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -108,7 +108,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -127,7 +127,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -146,7 +146,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -166,7 +166,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -199,7 +199,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -218,7 +218,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -238,7 +238,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -258,7 +258,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -278,7 +278,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -297,7 +297,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -317,7 +317,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -336,7 +336,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -356,7 +356,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -377,7 +377,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
@@ -397,7 +397,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -417,7 +417,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="for_npc" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>

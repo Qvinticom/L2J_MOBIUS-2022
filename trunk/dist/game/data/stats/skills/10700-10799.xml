@@ -194,7 +194,7 @@
 					<using kind="CROSSBOW,BOW" />
 				</add>
 				<mul stat="maxMp" val="1.25" />
-				<mul stat="PhysicalMpConsumeRate" val="0.7">
+				<mul stat="physicalMpConsumeRate" val="0.7">
 					<using kind="CROSSBOW,BOW" />
 				</mul>
 			</effect>
@@ -281,16 +281,16 @@
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<mul stat="rCrit" val="1.25" />
-				<add stat="cAtkAdd" val="774" />
+				<mul stat="critRate" val="1.25" />
+				<add stat="critDmgAdd" val="774" />
 				<mul stat="skillCriticalProbability" val="11" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<mul stat="rCrit" val="1.25" />
-				<add stat="cAtkAdd" val="#ench1cAtk" />
+				<mul stat="critRate" val="1.25" />
+				<add stat="critDmgAdd" val="#ench1cAtk" />
 				<mul stat="skillCriticalProbability" val="11" />
 			</effect>
 		</enchant1for>
@@ -1235,30 +1235,30 @@
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#pCritRate">
+				<add stat="critRate" val="#pCritRate">
 					<using kind="CROSSBOW,BOW" />
 				</add>
-				<mul stat="cAtk" val="#cAtk">
+				<mul stat="critDmg" val="#cAtk">
 					<using kind="CROSSBOW,BOW" />
 				</mul>
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Buff">
-				<add stat="rCrit" val="250">
+				<add stat="critRate" val="250">
 					<using kind="CROSSBOW,BOW" />
 				</add>
-				<mul stat="cAtk" val="2.3">
+				<mul stat="critDmg" val="2.3">
 					<using kind="CROSSBOW,BOW" />
 				</mul>
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff">
-				<add stat="rCrit" val="250">
+				<add stat="critRate" val="250">
 					<using kind="CROSSBOW,BOW" />
 				</add>
-				<mul stat="cAtk" val="2.3">
+				<mul stat="critDmg" val="2.3">
 					<using kind="CROSSBOW,BOW" />
 				</mul>
 				<!--<add stat="stunProf" val="#ench3stunProf" />-->

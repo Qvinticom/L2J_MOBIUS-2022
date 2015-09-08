@@ -15,7 +15,7 @@
 			<set stat="pAtk" val="805.0"/>
 			<set stat="mAtk" val="696.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30401" name="Infinity Caster" type="Weapon">
@@ -34,7 +34,7 @@
 			<set stat="mAtk" val="696.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30402" name="Infinity Retributer" type="Weapon">
@@ -54,7 +54,7 @@
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
 			<add stat="accMagic" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30403" name="Infinity Dualsword" type="Weapon">
@@ -72,7 +72,7 @@
 			<set stat="pAtk" val="1225.0"/>
 			<set stat="mAtk" val="521.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30404" name="Infinity Dual Dagger" type="Weapon">
@@ -90,7 +90,7 @@
 			<set stat="pAtk" val="1007.0"/>
 			<set stat="mAtk" val="521.0"/>
 			<set stat="pAtkSpd" val="433.0"/>
-			<set stat="rCrit" val="12.0"/>
+			<set stat="critRate" val="12.0"/>
 		</for>
 	</item>
 	<item id="30405" name="Infinity Dual Blunt Weapon" type="Weapon">
@@ -109,7 +109,7 @@
 			<set stat="mAtk" val="521.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30406" name="Internal test type stone Pack" type="EtcItem">
@@ -438,7 +438,7 @@
 			<set stat="mAtk" val="79.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30441" name="Bound Ghost Staff" type="Weapon">
@@ -456,7 +456,7 @@
 			<set stat="mAtk" val="79.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30442" name="Bound Hoplon" type="Weapon">
@@ -527,7 +527,7 @@
 			<set stat="pAtk" val="111.0"/>
 			<set stat="mAtk" val="101.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30446" name="Bound Homunkulus' Sword" additionalName="Acumen" type="Weapon">
@@ -548,7 +548,7 @@
 			<set stat="pAtk" val="111.0"/>
 			<set stat="mAtk" val="101.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30447" name="Bound Homunkulus' Sword" additionalName="Conversion" type="Weapon">
@@ -569,7 +569,7 @@
 			<set stat="pAtk" val="111.0"/>
 			<set stat="mAtk" val="101.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30448" name="Bound Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
@@ -590,7 +590,7 @@
 			<set stat="pAtk" val="111.0"/>
 			<set stat="mAtk" val="101.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30449" name="Bound Sage's Blood" type="Weapon">
@@ -610,7 +610,7 @@
 			<set stat="pAtk" val="51.0"/>
 			<set stat="mAtk" val="52.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30450" name="Bound Sage's Staff" type="Weapon">
@@ -632,7 +632,7 @@
 			<set stat="mAtk" val="111.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30451" name="Bound Sage's Staff" additionalName="Magic Hold" type="Weapon">
@@ -654,7 +654,7 @@
 			<set stat="mAtk" val="111.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30452" name="Bound Sage's Staff" additionalName="Magic Poison" type="Weapon">
@@ -676,7 +676,7 @@
 			<set stat="mAtk" val="111.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30453" name="Bound Sage's Staff" additionalName="Magic Weakness" type="Weapon">
@@ -698,7 +698,7 @@
 			<set stat="mAtk" val="111.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30454" name="Bound Sage's Ring" type="Armor">
@@ -799,7 +799,7 @@
 			<set stat="pAtk" val="148.0"/>
 			<set stat="mAtk" val="68.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30460" name="Bound Sword of Revolution*Elven Long Sword" type="Weapon">
@@ -820,7 +820,7 @@
 			<set stat="pAtk" val="155.0"/>
 			<set stat="mAtk" val="70.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30461" name="Bound Sword of Revolution" type="Weapon">
@@ -841,7 +841,7 @@
 			<set stat="pAtk" val="79.0"/>
 			<set stat="mAtk" val="47.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30462" name="Bound Helmet" type="Armor">
@@ -878,7 +878,7 @@
 			<set stat="pAtk" val="122.0"/>
 			<set stat="mAtk" val="122.0"/>
 			<set stat="pAtkSpd" val="433.0"/>
-			<set stat="rCrit" val="12.0"/>
+			<set stat="critRate" val="12.0"/>
 		</for>
 	</item>
 	<item id="30464" name="Bound Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
@@ -899,7 +899,7 @@
 			<set stat="pAtk" val="122.0"/>
 			<set stat="mAtk" val="122.0"/>
 			<set stat="pAtkSpd" val="433.0"/>
-			<set stat="rCrit" val="12.0"/>
+			<set stat="critRate" val="12.0"/>
 		</for>
 	</item>
 	<item id="30465" name="Bound Twilight Knife" additionalName="Magic Mental Shield" type="Weapon">
@@ -920,7 +920,7 @@
 			<set stat="pAtk" val="122.0"/>
 			<set stat="mAtk" val="122.0"/>
 			<set stat="pAtkSpd" val="433.0"/>
-			<set stat="rCrit" val="12.0"/>
+			<set stat="critRate" val="12.0"/>
 		</for>
 	</item>
 	<item id="30466" name="Bound Twilight Knife" additionalName="Magic Weakness" type="Weapon">
@@ -941,7 +941,7 @@
 			<set stat="pAtk" val="122.0"/>
 			<set stat="mAtk" val="122.0"/>
 			<set stat="pAtkSpd" val="433.0"/>
-			<set stat="rCrit" val="12.0"/>
+			<set stat="critRate" val="12.0"/>
 		</for>
 	</item>
 	<item id="30467" name="Bound Hell Hound" type="Weapon">
@@ -962,7 +962,7 @@
 			<set stat="pAtk" val="245.0"/>
 			<set stat="mAtk" val="99.0"/>
 			<set stat="pAtkSpd" val="303.0"/>
-			<set stat="rCrit" val="10.0"/>
+			<set stat="critRate" val="10.0"/>
 		</for>
 	</item>
 	<item id="30468" name="Bound Hell Hound" additionalName="Guidance" type="Weapon">
@@ -983,7 +983,7 @@
 			<set stat="pAtk" val="245.0"/>
 			<set stat="mAtk" val="99.0"/>
 			<set stat="pAtkSpd" val="303.0"/>
-			<set stat="rCrit" val="10.0"/>
+			<set stat="critRate" val="10.0"/>
 		</for>
 	</item>
 	<item id="30469" name="Bound Hell Hound" additionalName="Quick Recovery" type="Weapon">
@@ -1004,7 +1004,7 @@
 			<set stat="pAtk" val="245.0"/>
 			<set stat="mAtk" val="99.0"/>
 			<set stat="pAtkSpd" val="303.0"/>
-			<set stat="rCrit" val="10.0"/>
+			<set stat="critRate" val="10.0"/>
 		</for>
 	</item>
 	<item id="30470" name="Bound Hell Hound" additionalName="Cheap Shot" type="Weapon">
@@ -1025,7 +1025,7 @@
 			<set stat="pAtk" val="245.0"/>
 			<set stat="mAtk" val="99.0"/>
 			<set stat="pAtkSpd" val="303.0"/>
-			<set stat="rCrit" val="10.0"/>
+			<set stat="critRate" val="10.0"/>
 		</for>
 	</item>
 	<item id="30471" name="Bound Heavy Mace" type="Weapon">
@@ -1047,7 +1047,7 @@
 			<set stat="mAtk" val="26.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30472" name="Bound Heavy War Axe" type="Weapon">
@@ -1069,7 +1069,7 @@
 			<set stat="mAtk" val="91.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30473" name="Bound Heavy War Axe" additionalName="Anger" type="Weapon">
@@ -1091,7 +1091,7 @@
 			<set stat="mAtk" val="91.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30474" name="Bound Heavy War Axe" additionalName="Health" type="Weapon">
@@ -1113,7 +1113,7 @@
 			<set stat="mAtk" val="91.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30475" name="Bound Heavy War Axe" additionalName="Rsk. Focus" type="Weapon">
@@ -1135,7 +1135,7 @@
 			<set stat="mAtk" val="91.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30476" name="Bound Heavy Sword" type="Weapon">
@@ -1156,7 +1156,7 @@
 			<set stat="pAtk" val="49.0"/>
 			<set stat="mAtk" val="26.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30477" name="Bound Heavy Bone Club" type="Weapon">
@@ -1178,7 +1178,7 @@
 			<set stat="mAtk" val="47.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30478" name="Bound Heavy Doom Hammer" type="Weapon">
@@ -1200,7 +1200,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30479" name="Bound Heavy Doom Hammer" additionalName="Magic Regeneration" type="Weapon">
@@ -1222,7 +1222,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30480" name="Bound Heavy Doom Hammer" additionalName="Magic Mental Shield" type="Weapon">
@@ -1244,7 +1244,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30481" name="Bound Heavy Doom Hammer" additionalName="Magic Hold" type="Weapon">
@@ -1266,7 +1266,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30482" name="Bound Heavy Doom Axe" type="Weapon">
@@ -1288,7 +1288,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30483" name="Bound Heavy Doom Axe" additionalName="Magic Poison" type="Weapon">
@@ -1310,7 +1310,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30484" name="Bound Heavy Doom Axe" additionalName="Magic Weakness" type="Weapon">
@@ -1332,7 +1332,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30485" name="Bound Heavy Doom Axe" additionalName="Magic Chaos" type="Weapon">
@@ -1354,7 +1354,7 @@
 			<set stat="mAtk" val="89.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30486" name="Bound Heaven's Divider" type="Weapon">
@@ -1375,7 +1375,7 @@
 			<set stat="pAtk" val="342.0"/>
 			<set stat="mAtk" val="132.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30487" name="Bound Heaven's Divider" additionalName="Haste" type="Weapon">
@@ -1396,7 +1396,7 @@
 			<set stat="pAtk" val="342.0"/>
 			<set stat="mAtk" val="132.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30488" name="Bound Heaven's Divider" additionalName="Health" type="Weapon">
@@ -1417,7 +1417,7 @@
 			<set stat="pAtk" val="342.0"/>
 			<set stat="mAtk" val="132.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30489" name="Bound Heaven's Divider" additionalName="Focus" type="Weapon">
@@ -1438,7 +1438,7 @@
 			<set stat="pAtk" val="342.0"/>
 			<set stat="mAtk" val="132.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30490" name="Bound Field Gun" type="Weapon">
@@ -1459,7 +1459,7 @@
 			<set stat="pAtk" val="51.0"/>
 			<set stat="mAtk" val="26.0"/>
 			<set stat="pAtkSpd" val="303.0"/>
-			<set stat="rCrit" val="10.0"/>
+			<set stat="critRate" val="10.0"/>
 		</for>
 	</item>
 	<item id="30491" name="Bound Field Sword" type="Weapon">
@@ -1481,7 +1481,7 @@
 			<set stat="mAtk" val="39.0"/>
 			<set stat="pAtkSpd" val="350.0"/>
 			<add stat="accCombat" val="2.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30492" name="Bound Ring of Devotion" type="Armor">
@@ -1534,7 +1534,7 @@
 			<set stat="pAtk" val="213.0"/>
 			<set stat="mAtk" val="107.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30495" name="Bound Halberd" additionalName="Haste" type="Weapon">
@@ -1555,7 +1555,7 @@
 			<set stat="pAtk" val="213.0"/>
 			<set stat="mAtk" val="107.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30496" name="Bound Halberd" additionalName="Critical Stun" type="Weapon">
@@ -1576,7 +1576,7 @@
 			<set stat="pAtk" val="213.0"/>
 			<set stat="mAtk" val="107.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30497" name="Bound Halberd" additionalName="Wide Blow" type="Weapon">
@@ -1597,7 +1597,7 @@
 			<set stat="pAtk" val="213.0"/>
 			<set stat="mAtk" val="107.0"/>
 			<set stat="pAtkSpd" val="325.0"/>
-			<set stat="rCrit" val="8.0"/>
+			<set stat="critRate" val="8.0"/>
 		</for>
 	</item>
 	<item id="30498" name="Bound Hand Axe" type="Weapon">
@@ -1619,7 +1619,7 @@
 			<set stat="mAtk" val="26.0"/>
 			<set stat="pAtkSpd" val="379.0"/>
 			<add stat="accCombat" val="8.0"/>
-			<set stat="rCrit" val="6.0"/>
+			<set stat="critRate" val="6.0"/>
 		</for>
 	</item>
 	<item id="30499" name="Bound Hand Crossbow" type="Weapon">
@@ -1640,7 +1640,7 @@
 			<set stat="pAtk" val="64.0"/>
 			<set stat="mAtk" val="32.0"/>
 			<set stat="pAtkSpd" val="303.0"/>
-			<set stat="rCrit" val="10.0"/>
+			<set stat="critRate" val="10.0"/>
 		</for>
 	</item>
 </list>

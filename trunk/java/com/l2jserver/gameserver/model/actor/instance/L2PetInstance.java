@@ -842,7 +842,9 @@ public class L2PetInstance extends L2Summon
 		dropItemHere(dropit, false);
 	}
 	
-	/** @return Returns the mount able. */
+	/**
+	 * @return Returns the mount able.
+	 */
 	@Override
 	public boolean isMountable()
 	{
@@ -1218,18 +1220,6 @@ public class L2PetInstance extends L2Summon
 	public int getCriticalHit(L2Character target, Skill skill)
 	{
 		return getStat().getCriticalHit(target, skill);
-	}
-	
-	@Override
-	public int getMAtk(L2Character target, Skill skill)
-	{
-		return getStat().getMAtk(target, skill);
-	}
-	
-	@Override
-	public int getMDef(L2Character target, Skill skill)
-	{
-		return getStat().getMDef(target, skill);
 	}
 	
 	@Override

@@ -916,7 +916,7 @@
 		<for>
 			<set stat="pAtk" val="1" />
 			<set stat="mAtk" val="1" />
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -985,7 +985,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 		</for>
 	</item>
 	<item id="14781" type="Weapon" name="Baguette's Dagger">
@@ -1001,7 +1001,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
@@ -1018,7 +1018,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 		</for>
 	</item>
 	<item id="14783" type="Weapon" name="Baguette's Mace">
@@ -1035,7 +1035,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
@@ -1053,7 +1053,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
@@ -1070,7 +1070,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
@@ -1089,7 +1089,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>
@@ -1107,7 +1107,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
@@ -1126,7 +1126,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 		</for>
 	</item>
 	<item id="14789" type="Weapon" name="Baguette's Staff">
@@ -1144,7 +1144,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
@@ -1166,7 +1166,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="600" />
 		<for>
-			<set stat="rCrit" val="4" />
+			<set stat="critRate" val="4" />
 			<add stat="accCombat" val="4.75" />
 		</for>
 	</item>
@@ -1206,7 +1206,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="rCrit" val="10" />
+			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
 		</for>
 	</item>
@@ -1228,7 +1228,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
 		</for>
 	</item>
@@ -1250,7 +1250,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="rCrit" val="10" />
+			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
 		</for>
 	</item>
@@ -1269,7 +1269,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
-			<set stat="rCrit" val="8" />
+			<set stat="critRate" val="8" />
 		</for>
 	</item>
 	<item id="14796" type="Armor" name="Baguette's Sigil">
@@ -1308,7 +1308,7 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="rCrit" val="12" />
+			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
 		</for>
 	</item>

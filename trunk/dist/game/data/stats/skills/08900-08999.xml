@@ -15,7 +15,7 @@
 				<mul stat="pvpPhysSkillsDmg" val="1.15" />
 				<mul stat="pvpPhysDmg" val="1.15" />
 				<add stat="pAtkSpd" val="300" />
-				<add stat="rCrit" val="100" /> 
+				<add stat="critRate" val="100" /> 
 			</effect>
 			<effect name="AttackTrait">
 				<param DRAGON_WEAKNESS="100" />
@@ -37,7 +37,7 @@
 				<mul stat="pvpPhysSkillsDmg" val="1.30" />
 				<mul stat="pvpPhysDmg" val="1.30" />
 				<add stat="pAtkSpd" val="1500" />
-				<add stat="rCrit" val="500" />
+				<add stat="critRate" val="500" />
 			</effect>
 			<effect name="AttackTrait">
 				<param DRAGON_WEAKNESS="300" />

@@ -78,10 +78,10 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%mp%", String.valueOf((int) ((L2Character) target).getCurrentMp()));
 			html.replace("%mpmax%", String.valueOf(((L2Character) target).getMaxMp()));
 			
-			html.replace("%patk%", String.valueOf(((L2Character) target).getPAtk(null)));
-			html.replace("%matk%", String.valueOf(((L2Character) target).getMAtk(null, null)));
-			html.replace("%pdef%", String.valueOf(((L2Character) target).getPDef(null)));
-			html.replace("%mdef%", String.valueOf(((L2Character) target).getMDef(null, null)));
+			html.replace("%patk%", String.valueOf((int) ((L2Character) target).getPAtk(null)));
+			html.replace("%matk%", String.valueOf((int) ((L2Character) target).getMAtk(null, null)));
+			html.replace("%pdef%", String.valueOf((int) ((L2Character) target).getPDef(null)));
+			html.replace("%mdef%", String.valueOf((int) ((L2Character) target).getMDef(null, null)));
 			html.replace("%accu%", String.valueOf(((L2Character) target).getAccuracy()));
 			html.replace("%evas%", String.valueOf(((L2Character) target).getEvasionRate(null)));
 			html.replace("%crit%", String.valueOf(((L2Character) target).getCriticalHit(null, null)));
@@ -126,8 +126,8 @@ public class L2NpcActionShift implements IActionShiftHandler
 					html.replace("%spawntype%", "Fixed");
 					html.replace("%spawn%", ((L2Npc) target).getSpawn().getX() + " " + ((L2Npc) target).getSpawn().getY() + " " + ((L2Npc) target).getSpawn().getZ());
 				}
-				html.replace("%loc2d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(target), false, false)));
-				html.replace("%loc3d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(target), true, false)));
+				html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance(((L2Npc) target).getSpawn().getLocation(target), false, false)));
+				html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance(((L2Npc) target).getSpawn().getLocation(target), true, false)));
 				if (((L2Npc) target).getSpawn().getRespawnMinDelay() == 0)
 				{
 					html.replace("%resp%", "None");

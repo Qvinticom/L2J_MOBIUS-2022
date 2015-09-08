@@ -18,7 +18,7 @@
 			<set stat="pAtk" val="771.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18601" name="Requiem Shooter" additionalName="Haste" type="Weapon">
@@ -39,7 +39,7 @@
 			<set stat="pAtk" val="771.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18602" name="Requiem Buster" additionalName="Acumen" type="Weapon">
@@ -60,7 +60,7 @@
 			<set stat="pAtk" val="348.0" />
 			<set stat="mAtk" val="252.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18603" name="Requiem Buster" additionalName="Magic Hold" type="Weapon">
@@ -81,7 +81,7 @@
 			<set stat="pAtk" val="348.0" />
 			<set stat="mAtk" val="252.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18604" name="Requiem Buster" additionalName="Mana Up" type="Weapon">
@@ -102,7 +102,7 @@
 			<set stat="pAtk" val="348.0" />
 			<set stat="mAtk" val="252.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18605" name="Requiem Caster" additionalName="Empower" type="Weapon">
@@ -125,7 +125,7 @@
 			<set stat="mAtk" val="252.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18606" name="Requiem Caster" additionalName="Acumen" type="Weapon">
@@ -148,7 +148,7 @@
 			<set stat="mAtk" val="252.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18607" name="Requiem Caster" additionalName="Magic Hold" type="Weapon">
@@ -170,7 +170,7 @@
 			<set stat="mAtk" val="252.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18608" name="Requiem Retributer" additionalName="MP Regeneration" type="Weapon">
@@ -193,7 +193,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18609" name="Requiem Retributer" additionalName="Acumen" type="Weapon">
@@ -216,7 +216,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18610" name="Requiem Retributer" additionalName="Empower" type="Weapon">
@@ -239,7 +239,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18611" name="Requiem Dualsword" additionalName="Haste" type="Weapon">
@@ -260,7 +260,7 @@
 			<set stat="pAtk" val="529.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18612" name="Requiem Dualsword" additionalName="Damage Up" type="Weapon">
@@ -281,7 +281,7 @@
 			<set stat="pAtk" val="529.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18613" name="Requiem Dualsword" additionalName="Health" type="Weapon">
@@ -302,7 +302,7 @@
 			<set stat="pAtk" val="529.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18614" name="Requiem Dual Dagger" additionalName="Damage Up" type="Weapon">
@@ -324,7 +324,7 @@
 			<set stat="pAtk" val="435.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18615" name="Requiem Dual Dagger" additionalName="Focus" type="Weapon">
@@ -346,7 +346,7 @@
 			<set stat="pAtk" val="435.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18616" name="Requiem Dual Dagger" additionalName="Guidance" type="Weapon">
@@ -367,7 +367,7 @@
 			<set stat="pAtk" val="435.0" />
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18617" name="Requiem Dual Blunt Weapon" additionalName="Focus" type="Weapon">
@@ -389,7 +389,7 @@
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18618" name="Requiem Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
@@ -411,7 +411,7 @@
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18619" name="Requiem Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
@@ -433,7 +433,7 @@
 			<set stat="mAtk" val="189.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18620" name="Bound Requiem Shaper" additionalName="Guidance" type="Weapon">
@@ -454,7 +454,7 @@
 			<set stat="pAtk" val="369.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18621" name="Bound Requiem Shaper" additionalName="Haste" type="Weapon">
@@ -475,7 +475,7 @@
 			<set stat="pAtk" val="369.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18622" name="Bound Requiem Shaper" additionalName="Focus" type="Weapon">
@@ -496,7 +496,7 @@
 			<set stat="pAtk" val="369.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18623" name="Bound Requiem Cutter" additionalName="Haste" type="Weapon">
@@ -517,7 +517,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18624" name="Bound Requiem Cutter" additionalName="Focus" type="Weapon">
@@ -538,7 +538,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18625" name="Bound Requiem Cutter" additionalName="Health" type="Weapon">
@@ -559,7 +559,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18626" name="Bound Requiem Slasher" additionalName="Focus" type="Weapon">
@@ -580,7 +580,7 @@
 			<set stat="pAtk" val="514.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18627" name="Bound Requiem Slasher" additionalName="Damage Up" type="Weapon">
@@ -601,7 +601,7 @@
 			<set stat="pAtk" val="514.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18628" name="Bound Requiem Slasher" additionalName="Haste" type="Weapon">
@@ -622,7 +622,7 @@
 			<set stat="pAtk" val="514.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18629" name="Bound Requiem Avenger" additionalName="Haste" type="Weapon">
@@ -644,7 +644,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18630" name="Bound Requiem Avenger" additionalName="Critical Damage" type="Weapon">
@@ -666,7 +666,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18631" name="Bound Requiem Avenger" additionalName="Focus" type="Weapon">
@@ -688,7 +688,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18632" name="Bound Requiem Fighter" additionalName="Focus" type="Weapon">
@@ -710,7 +710,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18633" name="Bound Requiem Fighter" additionalName="Damage Up" type="Weapon">
@@ -732,7 +732,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18634" name="Bound Requiem Fighter" additionalName="Haste" type="Weapon">
@@ -754,7 +754,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18635" name="Bound Requiem Stormer" additionalName="HP Drain" type="Weapon">
@@ -775,7 +775,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18636" name="Bound Requiem Stormer" additionalName="Guidance" type="Weapon">
@@ -796,7 +796,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18637" name="Bound Requiem Stormer" additionalName="Damage Up" type="Weapon">
@@ -817,7 +817,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18638" name="Bound Requiem Thrower" additionalName="Damage Up" type="Weapon">
@@ -838,7 +838,7 @@
 			<set stat="pAtk" val="831.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="293.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18639" name="Bound Requiem Thrower" additionalName="Focus" type="Weapon">
@@ -859,7 +859,7 @@
 			<set stat="pAtk" val="831.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="293.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18640" name="Bound Requiem Thrower" additionalName="Long Blow" type="Weapon">
@@ -880,7 +880,7 @@
 			<set stat="pAtk" val="831.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="293.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18641" name="Bound Requiem Shooter" additionalName="Focus" type="Weapon">
@@ -901,7 +901,7 @@
 			<set stat="pAtk" val="748.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18642" name="Bound Requiem Shooter" additionalName="Critical Slow" type="Weapon">
@@ -922,7 +922,7 @@
 			<set stat="pAtk" val="748.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18643" name="Bound Requiem Shooter" additionalName="Haste" type="Weapon">
@@ -943,7 +943,7 @@
 			<set stat="pAtk" val="748.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18644" name="Bound Requiem Buster" additionalName="Acumen" type="Weapon">
@@ -964,7 +964,7 @@
 			<set stat="pAtk" val="338.0" />
 			<set stat="mAtk" val="245.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18645" name="Bound Requiem Buster" additionalName="Magic Hold" type="Weapon">
@@ -985,7 +985,7 @@
 			<set stat="pAtk" val="338.0" />
 			<set stat="mAtk" val="245.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18646" name="Bound Requiem Buster" additionalName="Mana Up" type="Weapon">
@@ -1006,7 +1006,7 @@
 			<set stat="pAtk" val="338.0" />
 			<set stat="mAtk" val="245.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18647" name="Bound Requiem Caster" additionalName="Empower" type="Weapon">
@@ -1028,7 +1028,7 @@
 			<set stat="mAtk" val="245.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18648" name="Bound Requiem Caster" additionalName="Acumen" type="Weapon">
@@ -1050,7 +1050,7 @@
 			<set stat="mAtk" val="245.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18649" name="Bound Requiem Caster" additionalName="Magic Hold" type="Weapon">
@@ -1072,7 +1072,7 @@
 			<set stat="mAtk" val="245.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18650" name="Bound Requiem Retributer" additionalName="MP Regeneration" type="Weapon">
@@ -1095,7 +1095,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18651" name="Bound Requiem Retributer" additionalName="Acumen" type="Weapon">
@@ -1118,7 +1118,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18652" name="Bound Requiem Retributer" additionalName="Empower" type="Weapon">
@@ -1141,7 +1141,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18653" name="Bound Requiem Dualsword" additionalName="Haste" type="Weapon">
@@ -1162,7 +1162,7 @@
 			<set stat="pAtk" val="514.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18654" name="Bound Requiem Dualsword" additionalName="Damage Up" type="Weapon">
@@ -1183,7 +1183,7 @@
 			<set stat="pAtk" val="514.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18655" name="Bound Requiem Dualsword" additionalName="Health" type="Weapon">
@@ -1204,7 +1204,7 @@
 			<set stat="pAtk" val="514.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18656" name="Bound Requiem Dual Dagger" additionalName="Damage Up" type="Weapon">
@@ -1225,7 +1225,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18657" name="Bound Requiem Dual Dagger" additionalName="Focus" type="Weapon">
@@ -1246,7 +1246,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18658" name="Bound Requiem Dual Dagger" additionalName="Guidance" type="Weapon">
@@ -1267,7 +1267,7 @@
 			<set stat="pAtk" val="422.0" />
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18659" name="Bound Requiem Dual Blunt Weapon" additionalName="Focus" type="Weapon">
@@ -1289,7 +1289,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18660" name="Bound Requiem Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
@@ -1311,7 +1311,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18661" name="Bound Requiem Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
@@ -1333,7 +1333,7 @@
 			<set stat="mAtk" val="186.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18662" name="Blessed Requiem Shaper" additionalName="Guidance" type="Weapon">
@@ -1354,7 +1354,7 @@
 			<set stat="pAtk" val="392.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18663" name="Blessed Requiem Shaper" additionalName="Haste" type="Weapon">
@@ -1375,7 +1375,7 @@
 			<set stat="pAtk" val="392.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18664" name="Blessed Requiem Shaper" additionalName="Focus" type="Weapon">
@@ -1396,7 +1396,7 @@
 			<set stat="pAtk" val="392.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18665" name="Blessed Requiem Cutter" additionalName="Haste" type="Weapon">
@@ -1417,7 +1417,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18666" name="Blessed Requiem Cutter" additionalName="Focus" type="Weapon">
@@ -1438,7 +1438,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18667" name="Blessed Requiem Cutter" additionalName="Health" type="Weapon">
@@ -1459,7 +1459,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18668" name="Blessed Requiem Slasher" additionalName="Focus" type="Weapon">
@@ -1480,7 +1480,7 @@
 			<set stat="pAtk" val="545.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18669" name="Blessed Requiem Slasher" additionalName="Damage Up" type="Weapon">
@@ -1501,7 +1501,7 @@
 			<set stat="pAtk" val="545.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18670" name="Blessed Requiem Slasher" additionalName="Haste" type="Weapon">
@@ -1522,7 +1522,7 @@
 			<set stat="pAtk" val="545.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18671" name="Blessed Requiem Avenger" additionalName="Haste" type="Weapon">
@@ -1544,7 +1544,7 @@
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18672" name="Blessed Requiem Avenger" additionalName="Critical Damage" type="Weapon">
@@ -1566,7 +1566,7 @@
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18673" name="Blessed Requiem Avenger" additionalName="Focus" type="Weapon">
@@ -1588,7 +1588,7 @@
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18674" name="Blessed Requiem Fighter" additionalName="Focus" type="Weapon">
@@ -1610,7 +1610,7 @@
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18675" name="Blessed Requiem Fighter" additionalName="Damage Up" type="Weapon">
@@ -1632,7 +1632,7 @@
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18676" name="Blessed Requiem Fighter" additionalName="Haste" type="Weapon">
@@ -1654,7 +1654,7 @@
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18677" name="Blessed Requiem Stormer" additionalName="HP Drain" type="Weapon">
@@ -1675,7 +1675,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18678" name="Blessed Requiem Stormer" additionalName="Guidance" type="Weapon">
@@ -1696,7 +1696,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18679" name="Blessed Requiem Stormer" additionalName="Damage Up" type="Weapon">
@@ -1717,7 +1717,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18680" name="Blessed Requiem Thrower" additionalName="Damage Up" type="Weapon">
@@ -1738,7 +1738,7 @@
 			<set stat="pAtk" val="882.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="293.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18681" name="Blessed Requiem Thrower" additionalName="Focus" type="Weapon">
@@ -1759,7 +1759,7 @@
 			<set stat="pAtk" val="882.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="293.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18682" name="Blessed Requiem Thrower" additionalName="Long Blow" type="Weapon">
@@ -1780,7 +1780,7 @@
 			<set stat="pAtk" val="882.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="293.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18683" name="Blessed Requiem Shooter" additionalName="Focus" type="Weapon">
@@ -1801,7 +1801,7 @@
 			<set stat="pAtk" val="794.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18684" name="Blessed Requiem Shooter" additionalName="Critical Slow" type="Weapon">
@@ -1822,7 +1822,7 @@
 			<set stat="pAtk" val="794.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18685" name="Blessed Requiem Shooter" additionalName="Haste" type="Weapon">
@@ -1843,7 +1843,7 @@
 			<set stat="pAtk" val="794.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18686" name="Blessed Requiem Buster" additionalName="Acumen" type="Weapon">
@@ -1864,7 +1864,7 @@
 			<set stat="pAtk" val="358.0" />
 			<set stat="mAtk" val="260.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18687" name="Blessed Requiem Buster" additionalName="Magic Hold" type="Weapon">
@@ -1885,7 +1885,7 @@
 			<set stat="pAtk" val="358.0" />
 			<set stat="mAtk" val="260.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18688" name="Blessed Requiem Buster" additionalName="Mana Up" type="Weapon">
@@ -1907,7 +1907,7 @@
 			<set stat="pAtk" val="358.0" />
 			<set stat="mAtk" val="260.0" />
 			<set stat="pAtkSpd" val="379.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18689" name="Blessed Requiem Caster" additionalName="Empower" type="Weapon">
@@ -1929,7 +1929,7 @@
 			<set stat="mAtk" val="260.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18690" name="Blessed Requiem Caster" additionalName="Acumen" type="Weapon">
@@ -1952,7 +1952,7 @@
 			<set stat="mAtk" val="260.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18691" name="Blessed Requiem Caster" additionalName="Magic Hold" type="Weapon">
@@ -1974,7 +1974,7 @@
 			<set stat="mAtk" val="260.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18692" name="Blessed Requiem Retributer" additionalName="MP Regeneration" type="Weapon">
@@ -1997,7 +1997,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18693" name="Blessed Requiem Retributer" additionalName="Acumen" type="Weapon">
@@ -2021,7 +2021,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18694" name="Blessed Requiem Retributer" additionalName="Empower" type="Weapon">
@@ -2044,7 +2044,7 @@
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="rCrit" val="6.0" />
+			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="18695" name="Blessed Requiem Dualsword" additionalName="Haste" type="Weapon">
@@ -2065,7 +2065,7 @@
 			<set stat="pAtk" val="545.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18696" name="Blessed Requiem Dualsword" additionalName="Damage Up" type="Weapon">
@@ -2086,7 +2086,7 @@
 			<set stat="pAtk" val="545.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18697" name="Blessed Requiem Dualsword" additionalName="Health" type="Weapon">
@@ -2107,7 +2107,7 @@
 			<set stat="pAtk" val="545.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="325.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="18698" name="Blessed Requiem Dual Dagger" additionalName="Damage Up" type="Weapon">
@@ -2128,7 +2128,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="18699" name="Blessed Requiem Dual Dagger" additionalName="Focus" type="Weapon">
@@ -2149,7 +2149,7 @@
 			<set stat="pAtk" val="448.0" />
 			<set stat="mAtk" val="195.0" />
 			<set stat="pAtkSpd" val="433.0" />
-			<set stat="rCrit" val="12.0" />
+			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
 </list>

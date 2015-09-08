@@ -907,7 +907,7 @@
 				<add stat="absorbDam" val="#absorbDam" />
 				<add stat="pAtkSpd" val="#atkSpeed" />
 				<add stat="mAtkSpd" val="#atkSpeed" />
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 				<add stat="mCritRate" val="#mCritRate" />
 				<add stat="pAtk" val="#pAtk" />
 				<add stat="mAtk" val="#mAtk" />
@@ -915,9 +915,9 @@
 				<add stat="reflectDamageRes" val="#reflectDamageRes" />
 				<add stat="pDef" val="#pDef" />
 				<add stat="mDef" val="#mDef" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 				<add stat="STR" val="#statAdd" />
 				<add stat="INT" val="#statAdd" />
 				<add stat="CON" val="#statAdd" />
@@ -1002,7 +1002,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.15" />
-				<add stat="rCrit" val="150" />
+				<add stat="critRate" val="150" />
 				<mul stat="maxHp" val="1.25" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pvpPhysDmg" val="1.15" />
@@ -1020,7 +1020,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.15" />
-				<add stat="rCrit" val="150" />
+				<add stat="critRate" val="150" />
 				<mul stat="maxHp" val="1.25" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pvpPhysDmg" val="1.15" />
@@ -1038,7 +1038,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.15" />
-				<add stat="rCrit" val="150" />
+				<add stat="critRate" val="150" />
 				<mul stat="maxHp" val="1.25" />
 				<mul stat="pAtk" val="1.1" />
 				<mul stat="pvpPhysDmg" val="1.15" />

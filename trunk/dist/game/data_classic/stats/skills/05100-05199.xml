@@ -908,9 +908,9 @@
 				<mul stat="pAtk" val="0.5" />
 				<mul stat="pDef" val="0.5" />
 				<mul stat="runSpd" val="0.5" />
-				<mul stat="MagicalMpConsumeRate" val="3" />
-				<mul stat="PhysicalMpConsumeRate" val="3" />
-				<mul stat="DanceMpConsumeRate" val="3" />
+				<mul stat="magicalMpConsumeRate" val="3" />
+				<mul stat="physicalMpConsumeRate" val="3" />
+				<mul stat="danceMpConsumeRate" val="3" />
 				<sub stat="fireRes" val="50" />
 				<sub stat="windRes" val="50" />
 				<sub stat="waterRes" val="50" />
@@ -1251,7 +1251,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>

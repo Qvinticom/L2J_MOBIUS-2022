@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -80,8 +81,8 @@ public class ClassChange extends AbstractEffect
 				msg.addClassId(activeClass);
 				msg.addClassId(player.getClassId().getId());
 				player.sendPacket(msg);
-				
 				player.broadcastUserInfo();
+				player.sendPacket(new AcquireSkillList(player));
 				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 			}, 1000);
 		}

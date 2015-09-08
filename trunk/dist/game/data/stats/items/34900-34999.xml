@@ -129,7 +129,7 @@
 			<add stat="pAtk" val="1.0" />
 			<add stat="mAtk" val="1.0" />
 			<add stat="pAtkSpd" val="379.0" />
-			<add stat="rCrit" val="8.0" />
+			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
 	<item id="34922" name="Revolutionary's Bow" additionalName="" type="Weapon">
@@ -146,7 +146,7 @@
 			<add stat="pAtk" val="1.0" />
 			<add stat="mAtk" val="1.0" />
 			<add stat="pAtkSpd" val="293.0" />
-			<add stat="rCrit" val="12.0" />
+			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
 	<item id="34923" name="Revolutionary's Staff" additionalName="" type="Weapon">
@@ -164,7 +164,7 @@
 			<add stat="mAtk" val="1.0" />
 			<add stat="pAtkSpd" val="325.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="34924" name="Revolutionary's Wand" additionalName="" type="Weapon">
@@ -182,7 +182,7 @@
 			<add stat="mAtk" val="1.0" />
 			<add stat="pAtkSpd" val="379.0" />
 			<add stat="accCombat" val="8.0" />
-			<add stat="rCrit" val="6.0" />
+			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
 	<item id="34925" name="Cloak of Light" additionalName="" type="Armor">
@@ -791,7 +791,7 @@
 		<for>
 			<set stat="pAtk" val="629.0" />
 			<set stat="mAtk" val="322.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="8.0" />
 			<set stat="pAtkSpd" val="379.0" />
 			<add stat="darkPower" val="450" />
@@ -817,7 +817,7 @@
 		<for>
 			<set stat="pAtk" val="766.0" />
 			<set stat="mAtk" val="322.0" />
-			<set stat="rCrit" val="8.0" />
+			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="8" />
 			<set stat="pAtkSpd" val="325.0" />
 			<add stat="darkPower" val="450" />

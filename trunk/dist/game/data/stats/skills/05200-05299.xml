@@ -1537,9 +1537,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Debuff">
-				<mul stat="MagicalMpConsumeRate" val="#val" />
-				<mul stat="PhysicalMpConsumeRate" val="#val" />
-				<mul stat="DanceMpConsumeRate" val="#val" />
+				<mul stat="magicalMpConsumeRate" val="#val" />
+				<mul stat="physicalMpConsumeRate" val="#val" />
+				<mul stat="danceMpConsumeRate" val="#val" />
 			</effect>
 		</for>
 	</skill>

@@ -187,11 +187,11 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%atktype%", Util.capitalizeFirst(npc.getAttackType().name().toLowerCase()));
 		html.replace("%atkrange%", npc.getStat().getPhysicalAttackRange());
 		
-		html.replace("%patk%", npc.getPAtk(activeChar));
-		html.replace("%pdef%", npc.getPDef(activeChar));
+		html.replace("%patk%", (int) npc.getPAtk(activeChar));
+		html.replace("%pdef%", (int) npc.getPDef(activeChar));
 		
-		html.replace("%matk%", npc.getMAtk(activeChar, null));
-		html.replace("%mdef%", npc.getMDef(activeChar, null));
+		html.replace("%matk%", (int) npc.getMAtk(activeChar, null));
+		html.replace("%mdef%", (int) npc.getMDef(activeChar, null));
 		
 		html.replace("%atkspd%", npc.getPAtkSpd());
 		html.replace("%castspd%", npc.getMAtkSpd());

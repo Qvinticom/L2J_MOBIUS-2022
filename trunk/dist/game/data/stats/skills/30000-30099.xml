@@ -429,7 +429,7 @@
 			<effect name="Buff">
 				<add stat="runSpd" val="1.5" />
 				<mul stat="mCritRate" val="0.50" />
-				<mul stat="rCrit" val="0.50" />
+				<mul stat="critRate" val="0.50" />
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<param castSkillId="1401" />
@@ -636,7 +636,7 @@
 				<add stat="maxHp" val="#maxHp" />
 				<mul stat="mReuse" val="#mReuse" />
 				<add stat="regMp" val="#regMp" />
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 			</effect>
 		</for>
 	</skill>

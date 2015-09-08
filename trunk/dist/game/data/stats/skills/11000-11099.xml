@@ -163,8 +163,8 @@
 				<add stat="INT" val="2" />
 				<mul stat="mAtk" val="1.06" />
 				<mul stat="mAtkSpd" val="1.06" />
-				<mul stat="MagicalMpConsumeRate" val="0.94" />
-				<mul stat="PhysicalMpConsumeRate" val="0.94" />
+				<mul stat="magicalMpConsumeRate" val="0.94" />
+				<mul stat="physicalMpConsumeRate" val="0.94" />
 				<mul stat="mCritRate" val="1.06" />
 			</effect>
 		</for>
@@ -1534,7 +1534,7 @@
 				<mul stat="mCritRate" val="#mCritRate" />
 				<mul stat="mDef" val="1.2" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 				<add stat="rEvas" val="2" />
 			</effect>
 		</for>
@@ -1544,7 +1544,7 @@
 				<mul stat="mCritRate" val="1.6" />
 				<mul stat="mDef" val="1.2" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.4" />
+				<mul stat="magicalMpConsumeRate" val="0.4" />
 				<add stat="rEvas" val="2" />
 			</effect>
 		</enchant2for>
@@ -1554,7 +1554,7 @@
 				<mul stat="mCritRate" val="1.6" />
 				<mul stat="mDef" val="1.2" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.4" />
+				<mul stat="magicalMpConsumeRate" val="0.4" />
 				<add stat="rEvas" val="2" />
 			</effect>
 		</enchant3for>
@@ -1564,7 +1564,7 @@
 				<mul stat="mCritRate" val="1.6" />
 				<mul stat="mDef" val="1.2" />
 				<mul stat="pDef" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.4" />
+				<mul stat="magicalMpConsumeRate" val="0.4" />
 				<add stat="rEvas" val="2" />
 			</effect>
 		</enchant4for>
@@ -1614,7 +1614,7 @@
 				<mul stat="mAtk" val="0.7" />
 				<mul stat="mAtkSpd" val="0.9" />
 				<mul stat="mCritRate" val="0.9" />
-				<mul stat="rCrit" val="0.9" />
+				<mul stat="critRate" val="0.9" />
 				<mul stat="pAtk" val="0.9" />
 				<mul stat="runSpd" val="0.9" />
 				<sub stat="rEvas" val="6" />

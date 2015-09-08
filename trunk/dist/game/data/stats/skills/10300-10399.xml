@@ -182,8 +182,8 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.45" />
-				<mul stat="cAtk" val="1.45" />
-				<add stat="rCrit" val="45" />
+				<mul stat="critDmg" val="1.45" />
+				<add stat="critRate" val="45" />
 				<mul stat="pAtkSpd" val="0.85" />
 			</effect>
 		</for>
@@ -620,10 +620,10 @@
 				<mul stat="pAtk" val="#rate">
 					<using kind="SWORD, BLUNT" />
 				</mul>
-				<mul stat="cAtk" val="#rate">
+				<mul stat="critDmg" val="#rate">
 					<using kind="SWORD, BLUNT" />
 				</mul>
-				<mul stat="PhysicalMpConsumeRate" val="1.1">
+				<mul stat="physicalMpConsumeRate" val="1.1">
 					<using kind="SWORD, BLUNT" />
 				</mul>
 			</effect>
@@ -642,7 +642,7 @@
 						<using slot="rhand" />
 					</and>
 				</mul>
-				<add stat="rCrit" val="60">
+				<add stat="critRate" val="60">
 					<and>
 						<using kind="BLUNT" />
 						<using slot="rhand" />

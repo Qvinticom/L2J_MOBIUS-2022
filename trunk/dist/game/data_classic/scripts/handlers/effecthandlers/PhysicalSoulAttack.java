@@ -25,8 +25,9 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.stats.BaseStats;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -64,16 +65,17 @@ public final class PhysicalSoulAttack extends AbstractEffect
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
+		Skill skill = info.getSkill();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
-		if (((info.getSkill().getFlyRadius() > 0) || (info.getSkill().getFlyType() != null)) && activeChar.isMovementDisabled())
+		if (((skill.getFlyRadius() > 0) || (skill.getFlyType() != null)) && activeChar.isMovementDisabled())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(info.getSkill());
+			sm.addSkillName(skill);
 			activeChar.sendPacket(sm);
 			return;
 		}
@@ -84,21 +86,21 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		}
 		
 		int damage = 0;
-		boolean ss = info.getSkill().isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		// Physical damage critical rate is only affected by STR.
 		boolean crit = false;
-		if (info.getSkill().getBaseCritRate() > 0)
+		if (skill.getBaseCritRate() > 0)
 		{
-			crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
+			crit = Formulas.calcCrit(activeChar, target, skill);
 		}
 		
-		damage = (int) Formulas.calcPhysDam(activeChar, target, info.getSkill(), shld, false, ss);
+		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
 		
-		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		if ((skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
+			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		if (crit)
@@ -108,19 +110,26 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		
 		if (damage > 0)
 		{
+			// reduce damage if target has maxdamage buff
+			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			if (maxDamage > 0)
+			{
+				damage = (int) maxDamage;
+			}
+			
 			activeChar.sendDamageMessage(target, damage, false, crit, false);
-			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit, false);
+			target.reduceCurrentHp(damage, activeChar, skill);
+			target.notifyDamageReceived(damage, activeChar, skill, crit, false);
 			
 			// Check if damage should be reflected
-			Formulas.calcDamageReflected(activeChar, target, info.getSkill(), crit);
+			Formulas.calcDamageReflected(activeChar, target, skill, crit);
 		}
 		else
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 		}
 		
-		if (info.getSkill().isSuicideAttack())
+		if (skill.isSuicideAttack())
 		{
 			activeChar.doDie(activeChar);
 		}

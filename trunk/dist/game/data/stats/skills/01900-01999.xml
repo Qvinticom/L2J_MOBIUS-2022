@@ -94,7 +94,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="10" />
+				<add stat="critRate" val="10" />
 				<add stat="mCritRate" val="10" />
 			</effect>
 		</for>
@@ -107,7 +107,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.01" />
+				<mul stat="critDmg" val="1.01" />
 				<mul stat="mCritPower" val="1.01" />
 			</effect>
 		</for>
@@ -350,7 +350,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="1.01" />
+				<mul stat="critRate" val="1.01" />
 			</effect>
 		</for>
 	</skill>
@@ -458,8 +458,8 @@
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Buff">
-				<mul stat="PhysicalMpConsumeRate" val="0.97" />
-				<mul stat="MagicalMpConsumeRate" val="0.97" />
+				<mul stat="physicalMpConsumeRate" val="0.97" />
+				<mul stat="magicalMpConsumeRate" val="0.97" />
 			</effect>
 		</for>
 	</skill>
@@ -629,7 +629,7 @@
 			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
 				<mul stat="mAtk" val="#pAtk" />
-				<mul stat="rCrit" val="#rCrit" />
+				<mul stat="critRate" val="#rCrit" />
 				<mul stat="pAtkSpd" val="#AtkSpd" />
 				<mul stat="mAtkSpd" val="#AtkSpd" />
 				<mul stat="pReuse" val="#Reuse" />
@@ -689,7 +689,7 @@
 		<set name="magicLvl" val="85" />
 		<for>
 			<effect name="Buff">
-				<add stat="rCrit" val="#critRate" />
+				<add stat="critRate" val="#critRate" />
 				<add stat="mCritRate" val="#critRate" />
 			</effect>
 		</for>

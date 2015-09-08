@@ -229,7 +229,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="2">
+				<mul stat="critRatePos" val="2">
 					<player behind="true" />
 				</mul>
 				<!-- TODO: Missing bonus for Rapier -->
@@ -718,7 +718,7 @@
 		<for>
 			<effect name="Debuff">
 				<mul stat="pDef" val="#pDef" />
-				<add stat="rCrit" val="#rCrit" />
+				<add stat="critRate" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>
@@ -799,7 +799,7 @@
 		<for>
 			<effect name="Debuff">
 				<mul stat="mAtkSpd" val="#mAtkSpd" />
-				<mul stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
 		</for>
 	</skill>

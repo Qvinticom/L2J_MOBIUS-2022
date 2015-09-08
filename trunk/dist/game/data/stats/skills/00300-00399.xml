@@ -420,19 +420,19 @@
 		<for>
 			<effect name="MpConsumePerLevel" ticks="5">
 				<param power="0.8" />
-				<add stat="cAtkAdd" val="#crit" />
+				<add stat="critDmgAdd" val="#crit" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="MpConsumePerLevel" ticks="5">
 				<param power="0.8" />
-				<add stat="cAtkAdd" val="#ench1crit" />
+				<add stat="critDmgAdd" val="#ench1crit" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="MpConsumePerLevel" ticks="5">
 				<param power="#ench2val" />
-				<add stat="cAtkAdd" val="609" />
+				<add stat="critDmgAdd" val="609" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -475,7 +475,7 @@
 				<add stat="accCombat" val="#accCombat">
 					<using kind="BOW" />
 				</add>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRate" val="1.2">
 					<using kind="BOW" />
 				</mul>
 				<add stat="pAtkRange" val="#pAtkRange">
@@ -491,7 +491,7 @@
 				<add stat="accCombat" val="6">
 					<using kind="BOW" />
 				</add>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRate" val="1.2">
 					<using kind="BOW" />
 				</mul>
 				<add stat="pAtkRange" val="200">
@@ -507,7 +507,7 @@
 				<add stat="accCombat" val="6">
 					<using kind="BOW" />
 				</add>
-				<mul stat="rCrit" val="1.2">
+				<mul stat="critRate" val="1.2">
 					<using kind="BOW" />
 				</mul>
 				<add stat="pAtkRange" val="200">
@@ -645,7 +645,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtk" val="#cAtk">
+				<mul stat="critDmg" val="#cAtk">
 					<using kind="POLE" />
 				</mul>
 				<add stat="accCombat" val="#accCombat">
@@ -1078,8 +1078,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="PrivateBuyLimit" val="1" />
-				<add stat="PrivateSellLimit" val="1" />
+				<add stat="privateBuyLimit" val="1" />
+				<add stat="privateSellLimit" val="1" />
 			</effect>
 		</for>
 	</skill>
@@ -1142,14 +1142,14 @@
 			<effect name="DamOverTime" ticks="5">
 				<param power="50" />
 				<mul stat="mAtkSpd" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="0.7" />
+				<mul stat="magicalMpConsumeRate" val="0.7" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="50" />
 				<mul stat="mAtkSpd" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="#ench1mpConsume" />
+				<mul stat="magicalMpConsumeRate" val="#ench1mpConsume" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -1166,14 +1166,14 @@
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="50" />
-				<mul stat="MagicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.1" />
 				<mul stat="mAtk" val="1.3" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="50" />
-				<mul stat="MagicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.1" />
 				<mul stat="mAtk" val="#ench1mAtk" />
 			</effect>
 		</enchant1for>
@@ -1195,7 +1195,7 @@
 				<param power="50" />
 				<mul stat="mAtkSpd" val="1.2" />
 				<mul stat="mReuse" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.1" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -1203,7 +1203,7 @@
 				<param power="50" />
 				<mul stat="mAtkSpd" val="#ench1mAtkSpd" />
 				<mul stat="mReuse" val="0.9" />
-				<mul stat="MagicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.1" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
@@ -1211,7 +1211,7 @@
 				<param power="50" />
 				<mul stat="mAtkSpd" val="1.2" />
 				<mul stat="mReuse" val="#ench2mReuse" />
-				<mul stat="MagicalMpConsumeRate" val="1.1" />
+				<mul stat="magicalMpConsumeRate" val="1.1" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -1621,9 +1621,9 @@
 			<effect name="Buff">
 				<mul stat="mReuse" val="0.8" />
 				<mul stat="pReuse" val="0.8" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul stat="DanceMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 	</skill>
@@ -1877,36 +1877,36 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.7" /> <!-- Decreases critical attack rate by 30% -->
+				<mul stat="critRate" val="0.7" /> <!-- Decreases critical attack rate by 30% -->
 				<mul stat="blowRate" val="1.6" /> <!-- Increases blow land rate by 60% -->
-				<mul stat="cAtkPos" val="0.7"> <!-- Decreases frontal critical damage by 30% -->
+				<mul stat="critDmgPos" val="0.7"> <!-- Decreases frontal critical damage by 30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="cAtkPos" val="1.9"> <!-- Increases rear critical damage by 90% -->
+				<mul stat="critDmgPos" val="1.9"> <!-- Increases rear critical damage by 90% -->
 					<player behind="true" />
 				</mul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.7" />
+				<mul stat="critRate" val="0.7" />
 				<mul stat="blowRate" val="#ench1blowRate" />
-				<mul stat="cAtkPos" val="0.7">
+				<mul stat="critDmgPos" val="0.7">
 					<player front="true" />
 				</mul>
-				<mul stat="cAtkPos" val="1.9">
+				<mul stat="critDmgPos" val="1.9">
 					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.7" />
+				<mul stat="critRate" val="0.7" />
 				<mul stat="blowRate" val="1.6" />
-				<mul stat="cAtkPos" val="0.7">
+				<mul stat="critDmgPos" val="0.7">
 					<player front="true" />
 				</mul>
-				<mul stat="cAtkPos" val="#ench2cAtk">
+				<mul stat="critDmgPos" val="#ench2cAtk">
 					<player behind="true" />
 				</mul>
 			</effect>
@@ -1935,48 +1935,48 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.7"> <!-- Decreases frontal critical attack rate by 30% -->
+				<mul stat="critRatePos" val="0.7"> <!-- Decreases frontal critical attack rate by 30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="rCrit" val="1.3"> <!-- Increase side critical attack rate by 30% -->
+				<mul stat="critRatePos" val="1.3"> <!-- Increase side critical attack rate by 30% -->
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="rCrit" val="1.6"> <!-- Increase rear critical attack rate by 60% -->
+				<mul stat="critRatePos" val="1.6"> <!-- Increase rear critical attack rate by 60% -->
 					<player behind="true" />
 				</mul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.7"> <!-- Critical Chance from front -30% -->
+				<mul stat="critRatePos" val="0.7"> <!-- Critical Chance from front -30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="rCrit" val="1.3"> <!-- Critical Chance from side +30% -->
+				<mul stat="critRatePos" val="1.3"> <!-- Critical Chance from side +30% -->
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="rCrit" val="#ench1rCrit"> <!-- Critical Chance from back +60% -->
+				<mul stat="critRatePos" val="#ench1rCrit"> <!-- Critical Chance from back +60% -->
 					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="0.7"> <!-- Critical Chance from front -30% -->
+				<mul stat="critRatePos" val="0.7"> <!-- Critical Chance from front -30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="rCrit" val="#ench2rCrit"> <!-- Critical Chance from side +30% -->
+				<mul stat="critRatePos" val="#ench2rCrit"> <!-- Critical Chance from side +30% -->
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="rCrit" val="1.6"> <!-- Critical Chance from back +60% -->
+				<mul stat="critRatePos" val="1.6"> <!-- Critical Chance from back +60% -->
 					<player behind="true" />
 				</mul>
 			</effect>
@@ -2005,48 +2005,48 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="cAtkPos" val="0.7"> <!-- Decreases frontal critical attack damage by 30% -->
+				<mul stat="critDmgPos" val="0.7"> <!-- Decreases frontal critical attack damage by 30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="cAtkPos" val="1.3"> <!-- Increases side critical attack damage by 30% -->
+				<mul stat="critDmgPos" val="1.3"> <!-- Increases side critical attack damage by 30% -->
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="cAtkPos" val="1.6"> <!-- Increases rear critical attack damage by 60% -->
+				<mul stat="critDmgPos" val="1.6"> <!-- Increases rear critical attack damage by 60% -->
 					<player behind="true" />
 				</mul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul stat="cAtkPos" val="0.7"> <!-- Critical Damage from front -30% -->
+				<mul stat="critDmgPos" val="0.7"> <!-- Critical Damage from front -30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="cAtkPos" val="1.3"> <!-- Critical Damage from side +30% -->
+				<mul stat="critDmgPos" val="1.3"> <!-- Critical Damage from side +30% -->
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="cAtkPos" val="#ench1cAtk"> <!-- Critical Damage from back + enchant % -->
+				<mul stat="critDmgPos" val="#ench1cAtk"> <!-- Critical Damage from back + enchant % -->
 					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
-				<mul stat="cAtkPos" val="0.7"> <!-- Critical Damage from front -30% -->
+				<mul stat="critDmgPos" val="0.7"> <!-- Critical Damage from front -30% -->
 					<player front="true" />
 				</mul>
-				<mul stat="cAtkPos" val="#ench2cAtk"> <!-- Critical Damage from side + enchant % -->
+				<mul stat="critDmgPos" val="#ench2cAtk"> <!-- Critical Damage from side + enchant % -->
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="cAtkPos" val="1.6"> <!-- Critical Damage from back +60% -->
+				<mul stat="critDmgPos" val="1.6"> <!-- Critical Damage from back +60% -->
 					<player behind="true" />
 				</mul>
 			</effect>
@@ -2331,7 +2331,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="regMp" val="1.2" />
-				<mul stat="MagicalMpConsumeRate" val="0.9" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -2360,9 +2360,9 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pReuse" val="0.9" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
 				<mul stat="dReuse" val="0.9" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>

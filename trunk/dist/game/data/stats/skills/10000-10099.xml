@@ -357,7 +357,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Buff">
-				<mul stat="cAtk" val="1.1" />
+				<mul stat="critDmg" val="1.1" />
 				<sub stat="rEvas" val="2" />
 				<mul stat="pDef" val="0.9" />
 			</effect>
@@ -1198,10 +1198,10 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="SWORD, BLUNT" />
 				</mul>
-				<add stat="rCrit" val="#pCritRate">
+				<add stat="critRate" val="#pCritRate">
 					<using kind="SWORD" />
 				</add>
-				<mul stat="cAtk" val="#cAtk">
+				<mul stat="critDmg" val="#cAtk">
 					<using kind="BLUNT" />
 				</mul>
 			</effect>
@@ -1217,10 +1217,10 @@
 				<mul stat="pAtkSpd" val="1.25">
 					<using kind="SWORD, BLUNT" />
 				</mul>
-				<add stat="rCrit" val="60">
+				<add stat="critRate" val="60">
 					<using kind="SWORD" />
 				</add>
-				<mul stat="cAtk" val="1.6">
+				<mul stat="critDmg" val="1.6">
 					<using kind="BLUNT" />
 				</mul>
 				<mul stat="sDef" val="#ench3shieldDef" />
@@ -1237,10 +1237,10 @@
 				<mul stat="pAtkSpd" val="1.25">
 					<using kind="SWORD, BLUNT" />
 				</mul>
-				<add stat="rCrit" val="60">
+				<add stat="critRate" val="60">
 					<using kind="SWORD" />
 				</add>
-				<mul stat="cAtk" val="1.6">
+				<mul stat="critDmg" val="1.6">
 					<using kind="BLUNT" />
 				</mul>
 				<mul stat="pAtk" val="#ench4pAtk" />
@@ -1402,9 +1402,9 @@
 				<!-- TODO: add increase aggression power -->
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 			<effect name="TriggerForce" ticks="2">
 				<param skillId="10031" skillLevel="1" />
@@ -1426,9 +1426,9 @@
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.05" />
 				<mul stat="pAtkSpd" val="1.05" />
-				<mul stat="MagicalMpConsumeRate" val="0.8" />
-				<mul stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul stat="DanceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
 	</skill>
@@ -2856,10 +2856,10 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
-				<add stat="rCrit" val="#rCrit">
+				<add stat="critRate" val="#rCrit">
 					<using kind="SWORD,BLUNT" />
 				</add>
-				<mul stat="cAtkAdd" val="#cAtkAdd">
+				<mul stat="critDmgAdd" val="#cAtkAdd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
 			</effect>
@@ -2897,10 +2897,10 @@
 				<mul stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
-				<add stat="rCrit" val="#rCrit">
+				<add stat="critRate" val="#rCrit">
 					<using kind="SWORD,BLUNT" />
 				</add>
-				<mul stat="cAtkAdd" val="#cAtkAdd">
+				<mul stat="critDmgAdd" val="#cAtkAdd">
 					<using kind="SWORD,BLUNT" />
 				</mul>
 			</effect>

@@ -156,7 +156,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.05" />
-				<mul stat="cAtk" val="1.05" />
+				<mul stat="critDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -188,9 +188,9 @@
 				<add stat="maxCp" val="#maxCP" />
 				<mul stat="regCp" val="1.4" />
 				<mul stat="reduceExpLostByPvp" val="#expLost" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -216,9 +216,9 @@
 				<add stat="maxCp" val="#maxCP" />
 				<mul stat="regCp" val="1.4" />
 				<mul stat="reduceExpLostByPvp" val="#expLost" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -244,9 +244,9 @@
 				<add stat="maxCp" val="#maxCP" />
 				<mul stat="regCp" val="1.4" />
 				<mul stat="reduceExpLostByPvp" val="#expLost" />
-				<mul stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />

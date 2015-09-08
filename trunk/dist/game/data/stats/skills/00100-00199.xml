@@ -377,7 +377,7 @@
 				</mul>
 				<mul stat="pDef" val="1.3" />
 				<mul stat="mDef" val="1.3" />
-				<mul stat="cAtk" val="1.1">
+				<mul stat="critDmg" val="1.1">
 					<using kind="DUALFIST" />
 				</mul>
 			</effect>
@@ -966,12 +966,12 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#rate" />
+				<mul stat="critRate" val="#rate" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<mul stat="rCrit" val="#ench1rate" />
+				<mul stat="critRate" val="#ench1rate" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -1382,13 +1382,13 @@
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<mul stat="rCrit" val="#pCritRate">
+				<mul stat="critRate" val="#pCritRate">
 					<and>
 						<using kind="SWORD,BLUNT,POLE" />
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<mul stat="cAtk" val="#pCritDmg">
+				<mul stat="critDmg" val="#pCritDmg">
 					<and>
 						<using kind="SWORD,BLUNT,POLE" />
 						<using slot="lrhand" />
@@ -1420,7 +1420,7 @@
 						<using slot="lrhand" />
 					</and>
 				</mul>
-				<add stat="rCrit" val="#pCritRate"> <!-- Additional 300 critical rate if wears sword, blunt, spear and below 30% hp -->
+				<add stat="critRate" val="#pCritRate"> <!-- Additional 300 critical rate if wears sword, blunt, spear and below 30% hp -->
 					<and>
 						<player hp="30" />
 						<using kind="SWORD,BLUNT,POLE" />
@@ -1530,12 +1530,12 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#crit" />
+				<add stat="critDmgAdd" val="#crit" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#ench1crit" />
+				<add stat="critDmgAdd" val="#ench1crit" />
 			</effect>
 		</enchant1for>
 	</skill>

@@ -546,7 +546,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="cAtkAdd" val="#cAtkAdd" />
+				<add stat="critDmgAdd" val="#cAtkAdd" />
 			</effect>
 		</for>
 	</skill>
@@ -755,8 +755,8 @@
 			<effect name="Buff">
 				<add stat="earthRes" val="15" />
 				<mul stat="healEffect" val="1.1" />
-				<mul stat="MagicalMpConsumeRate" val="0.95" />
-				<mul stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
 				<add stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
 			</effect>
 			<effect name="AttackTrait">
@@ -829,7 +829,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="2" />
-				<mul stat="cAtk" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
 				<mul stat="pAtkSpd" val="1.04" />
 				<mul stat="mAtkSpd" val="1.04" />
 			</effect>
@@ -853,7 +853,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="2" />
-				<mul stat="cAtk" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
 			</effect>
 			<effect name="AttackTrait">
 				<param POISON="30" />
