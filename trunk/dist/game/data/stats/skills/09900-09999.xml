@@ -523,12 +523,23 @@
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="9967" levels="1" name="Scroll of Escape: Alligator Island">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Alligator Island. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="20000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37025" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="115205" y="191624" z="-3416" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9968" levels="1" name="Scroll of Escape: Outlaw Forest">
 		<!-- AUTO GENERATED SKILL -->

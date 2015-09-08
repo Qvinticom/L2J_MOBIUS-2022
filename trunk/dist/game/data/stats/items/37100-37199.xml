@@ -77,7 +77,17 @@
 	<item id="37112" name="Scroll of Escape: Heine" additionalName="" type="EtcItem">
 		<!-- Teleports you close to Captain Gosta in Heine. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18003-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37113" name="Scroll of Escape: Town of Oren" additionalName="" type="EtcItem">
 		<!-- Teleports you close to Head Blacksmith Flutter in the town of Oren. -->
