@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2CharacterAI;
 import com.l2jserver.gameserver.ai.L2SummonAI;
 import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
-import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.ShotType;
@@ -44,7 +43,6 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import com.l2jserver.gameserver.model.itemcontainer.PetInventory;
-import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.ActionType;
@@ -133,8 +131,6 @@ public abstract class L2Summon extends L2Playable
 		setShowSummonAnimation(false); // addVisibleObject created the info packets with summon animation
 		// if someone comes into range now, the animation shouldn't show any more
 		_restoreSummon = false;
-		
-		rechargeShots(true, true);
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonSpawn(this), this);
@@ -468,14 +464,6 @@ public abstract class L2Summon extends L2Playable
 			setTarget(null);
 			if (owner != null)
 			{
-				for (int itemId : owner.getAutoSoulShot())
-				{
-					String handler = ((L2EtcItem) ItemTable.getInstance().getTemplate(itemId)).getHandlerName();
-					if ((handler != null) && handler.contains("Beast"))
-					{
-						owner.disableAutoShot(itemId);
-					}
-				}
 				owner.setUsedSummonPoints(owner.getUsedSummonPoints() - _summonPoints);
 			}
 		}

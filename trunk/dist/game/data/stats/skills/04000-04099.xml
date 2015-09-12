@@ -326,7 +326,7 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="OWNER_PET" />
 		<for>
 			<effect name="ManaHealByLevel">
 				<param power="#amount" />

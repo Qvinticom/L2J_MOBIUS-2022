@@ -86,7 +86,7 @@ public final class Config
 	public static final String EOL = System.lineSeparator();
 	
 	// --------------------------------------------------
-	// L2J Property File Definitions
+	// L2J Initialization File Definitions
 	// --------------------------------------------------
 	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";

@@ -516,7 +516,7 @@ public final class Formulas
 		double power = skill.getPower(isPvP, isPvE);
 		double damage = 0;
 		double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed);
-		double ssboost = ss ? 2 : 1;
+		double ssboost = ss ? 1.458 : 1;
 		double pvpBonus = 1;
 		
 		if (isPvP)
@@ -608,7 +608,7 @@ public final class Formulas
 		boolean isPvE = attacker.isPlayable() && target.isAttackable();
 		double damage = 0;
 		double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed)
-		double ssboost = ss ? 2 : 1;
+		double ssboost = ss ? 1.458 : 1;
 		double pvpBonus = 1;
 		
 		if (isPvP)
@@ -691,6 +691,7 @@ public final class Formulas
 	{
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
+		double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10%
 		double damage = attacker.getPAtk(target);
 		double defence = target.getPDef(attacker);
 		
@@ -759,14 +760,14 @@ public final class Formulas
 		if (crit)
 		{
 			// Retail like formula.
-			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((76 * damage) / (defence * reduceDef));
+			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((76 * damage * proximityBonus) / (defence * reduceDef));
 			// Crit dmg add is almost useless in normal hits.
 			damage += ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 77) / (defence * reduceDef));
 			damage += target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		}
 		else
 		{
-			damage = (76 * damage) / (defence * reduceDef);
+			damage = (76 * damage * proximityBonus) / (defence * reduceDef);
 		}
 		
 		damage *= calcAttackTraitBonus(attacker, target);
@@ -1764,6 +1765,10 @@ public final class Formulas
 		else
 		{
 			attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement());
+			if (attack_attribute == 0)
+			{
+				return 1;
+			}
 		}
 		
 		int defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
