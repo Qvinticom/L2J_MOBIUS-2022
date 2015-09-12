@@ -450,7 +450,7 @@ public final class L2PcInstance extends L2Playable
 	private long _expBeforeDeath;
 	
 	/** The Karma of the L2PcInstance (if higher than 0, the name of the L2PcInstance appears in red) */
-	private int _karma;
+	private int _karma = 0;
 	
 	/** The Reputation of the L2PcInstance (if higher than 0, the name of the L2PcInstance appears in green) */
 	private int _reputation;
@@ -5656,24 +5656,25 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		// PK Points are increased only if you kill a player.
-		if (target.isPlayer())
+		// Calculate new karma. (calculate karma before incrase pk count!)
+		final int addedKarma = Formulas.calculateKarmaGain(getPkKills(), target);
+		if (addedKarma > 0)
 		{
-			if (target.getActingPlayer().getKarma() <= 0)
+			if (!Config.FACTION_SYSTEM_ENABLED)
 			{
-				if (!Config.FACTION_SYSTEM_ENABLED)
-				{
-					// Calculate new karma. (calculate karma before incrase pk count!)
-					setKarma(getKarma() + Formulas.calculateKarmaGain(getPkKills(), target.isSummon()));
-				}
-				if (_PvPRegTask != null)
-				{
-					_PvPRegTask.cancel(true);
-					updatePvPFlag(0);
-				}
-				setPkKills(getPkKills() + 1);
-				_reputation = 0;
+				setKarma(getKarma() + addedKarma);
 			}
+			// PK Points are increased only if you kill a player.
+			if (target.isPlayer())
+			{
+				setPkKills(getPkKills() + 1);
+			}
+			if (_PvPRegTask != null)
+			{
+				_PvPRegTask.cancel(true);
+				updatePvPFlag(0);
+			}
+			_reputation = 0;
 		}
 		
 		// Update player's UI.
