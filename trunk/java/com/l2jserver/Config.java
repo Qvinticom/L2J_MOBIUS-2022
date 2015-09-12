@@ -88,29 +88,29 @@ public final class Config
 	// --------------------------------------------------
 	// L2J Property File Definitions
 	// --------------------------------------------------
-	public static final String CHARACTER_CONFIG_FILE = "./config/Character.properties";
-	public static final String FEATURE_CONFIG_FILE = "./config/Feature.properties";
-	public static final String FORTSIEGE_CONFIGURATION_FILE = "./config/FortSiege.properties";
-	public static final String GENERAL_CONFIG_FILE = "./config/General.properties";
+	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
+	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
+	public static final String FORTSIEGE_CONFIGURATION_FILE = "./config/FortSiege.ini";
+	public static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	public static final String HEXID_FILE = "./config/hexid.txt";
-	public static final String ID_CONFIG_FILE = "./config/IdFactory.properties";
-	public static final String CUSTOM_CONFIG_FILE = "./config/Custom.properties";
-	public static final String LOGIN_CONFIGURATION_FILE = "./config/LoginServer.properties";
-	public static final String NPC_CONFIG_FILE = "./config/NPC.properties";
-	public static final String PVP_CONFIG_FILE = "./config/PVP.properties";
-	public static final String RATES_CONFIG_FILE = "./config/Rates.properties";
-	public static final String CONFIGURATION_FILE = "./config/Server.properties";
+	public static final String ID_CONFIG_FILE = "./config/IdFactory.ini";
+	public static final String CUSTOM_CONFIG_FILE = "./config/Custom.ini";
+	public static final String LOGIN_CONFIGURATION_FILE = "./config/LoginServer.ini";
+	public static final String NPC_CONFIG_FILE = "./config/NPC.ini";
+	public static final String PVP_CONFIG_FILE = "./config/PVP.ini";
+	public static final String RATES_CONFIG_FILE = "./config/Rates.ini";
+	public static final String CONFIGURATION_FILE = "./config/Server.ini";
 	public static final String IP_CONFIG_FILE = "./config/ipconfig.xml";
-	public static final String SIEGE_CONFIGURATION_FILE = "./config/Siege.properties";
-	public static final String TELNET_FILE = "./config/Telnet.properties";
-	public static final String FLOOD_PROTECTOR_FILE = "./config/FloodProtector.properties";
-	public static final String MMO_CONFIG_FILE = "./config/MMO.properties";
-	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.properties";
-	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.properties";
-	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.properties";
+	public static final String SIEGE_CONFIGURATION_FILE = "./config/Siege.ini";
+	public static final String TELNET_FILE = "./config/Telnet.ini";
+	public static final String FLOOD_PROTECTOR_FILE = "./config/FloodProtector.ini";
+	public static final String MMO_CONFIG_FILE = "./config/MMO.ini";
+	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
+	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
-	public static final String GEODATA_FILE = "./config/GeoData.properties";
+	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.ini";
+	public static final String GEODATA_FILE = "./config/GeoData.ini";
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
