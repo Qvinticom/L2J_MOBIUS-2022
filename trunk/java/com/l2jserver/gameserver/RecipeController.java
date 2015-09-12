@@ -675,6 +675,12 @@ public class RecipeController
 				{
 					itemId = rareProdId;
 					itemCount = _recipeList.getRareCount();
+					
+					final int craftMastery = (int) _player.calcStat(Stats.CRAFT_MASTERY, 0, null, null);
+					if ((craftMastery > 0) && (Rnd.get(10) < craftMastery))
+					{
+						itemCount <<= 1;
+					}
 				}
 			}
 			

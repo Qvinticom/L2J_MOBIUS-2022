@@ -189,6 +189,7 @@ public enum Stats
 	// Skill mastery
 	SKILL_CRITICAL("skillCritical"),
 	SKILL_CRITICAL_PROBABILITY("skillCriticalProbability"),
+	CRAFT_MASTERY("craftMastery"),
 	
 	// Vitality
 	VITALITY_CONSUME_RATE("vitalityConsumeRate"),
