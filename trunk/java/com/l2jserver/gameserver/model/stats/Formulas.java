@@ -116,44 +116,47 @@ public final class Formulas
 	{
 		Calculator[] std = new Calculator[Stats.NUM_STATS];
 		
-		std[Stats.MAX_HP.ordinal()] = new Calculator();
-		std[Stats.MAX_HP.ordinal()].addFunc(FuncMaxHpMul.getInstance());
-		
-		std[Stats.MAX_MP.ordinal()] = new Calculator();
-		std[Stats.MAX_MP.ordinal()].addFunc(FuncMaxMpMul.getInstance());
-		
-		std[Stats.POWER_ATTACK.ordinal()] = new Calculator();
-		std[Stats.POWER_ATTACK.ordinal()].addFunc(FuncPAtkMod.getInstance());
-		
-		std[Stats.MAGIC_ATTACK.ordinal()] = new Calculator();
-		std[Stats.MAGIC_ATTACK.ordinal()].addFunc(FuncMAtkMod.getInstance());
-		
-		std[Stats.POWER_DEFENCE.ordinal()] = new Calculator();
-		std[Stats.POWER_DEFENCE.ordinal()].addFunc(FuncPDefMod.getInstance());
-		
-		std[Stats.MAGIC_DEFENCE.ordinal()] = new Calculator();
-		std[Stats.MAGIC_DEFENCE.ordinal()].addFunc(FuncMDefMod.getInstance());
-		
-		std[Stats.CRITICAL_RATE.ordinal()] = new Calculator();
-		std[Stats.CRITICAL_RATE.ordinal()].addFunc(FuncAtkCritical.getInstance());
-		
-		std[Stats.MCRITICAL_RATE.ordinal()] = new Calculator();
-		std[Stats.MCRITICAL_RATE.ordinal()].addFunc(FuncMAtkCritical.getInstance());
+		if (!Config.IGNORE_NPC_STAT_FORMULAS)
+		{
+			std[Stats.MAX_HP.ordinal()] = new Calculator();
+			std[Stats.MAX_HP.ordinal()].addFunc(FuncMaxHpMul.getInstance());
+			
+			std[Stats.MAX_MP.ordinal()] = new Calculator();
+			std[Stats.MAX_MP.ordinal()].addFunc(FuncMaxMpMul.getInstance());
+			
+			std[Stats.POWER_ATTACK.ordinal()] = new Calculator();
+			std[Stats.POWER_ATTACK.ordinal()].addFunc(FuncPAtkMod.getInstance());
+			
+			std[Stats.MAGIC_ATTACK.ordinal()] = new Calculator();
+			std[Stats.MAGIC_ATTACK.ordinal()].addFunc(FuncMAtkMod.getInstance());
+			
+			std[Stats.POWER_DEFENCE.ordinal()] = new Calculator();
+			std[Stats.POWER_DEFENCE.ordinal()].addFunc(FuncPDefMod.getInstance());
+			
+			std[Stats.MAGIC_DEFENCE.ordinal()] = new Calculator();
+			std[Stats.MAGIC_DEFENCE.ordinal()].addFunc(FuncMDefMod.getInstance());
+			
+			std[Stats.CRITICAL_RATE.ordinal()] = new Calculator();
+			std[Stats.CRITICAL_RATE.ordinal()].addFunc(FuncAtkCritical.getInstance());
+			
+			std[Stats.MCRITICAL_RATE.ordinal()] = new Calculator();
+			std[Stats.MCRITICAL_RATE.ordinal()].addFunc(FuncMAtkCritical.getInstance());
+			
+			std[Stats.POWER_ATTACK_SPEED.ordinal()] = new Calculator();
+			std[Stats.POWER_ATTACK_SPEED.ordinal()].addFunc(FuncPAtkSpeed.getInstance());
+			
+			std[Stats.MAGIC_ATTACK_SPEED.ordinal()] = new Calculator();
+			std[Stats.MAGIC_ATTACK_SPEED.ordinal()].addFunc(FuncMAtkSpeed.getInstance());
+			
+			std[Stats.MOVE_SPEED.ordinal()] = new Calculator();
+			std[Stats.MOVE_SPEED.ordinal()].addFunc(FuncMoveSpeed.getInstance());
+		}
 		
 		std[Stats.ACCURACY_COMBAT.ordinal()] = new Calculator();
 		std[Stats.ACCURACY_COMBAT.ordinal()].addFunc(FuncAtkAccuracy.getInstance());
 		
 		std[Stats.EVASION_RATE.ordinal()] = new Calculator();
 		std[Stats.EVASION_RATE.ordinal()].addFunc(FuncAtkEvasion.getInstance());
-		
-		std[Stats.POWER_ATTACK_SPEED.ordinal()] = new Calculator();
-		std[Stats.POWER_ATTACK_SPEED.ordinal()].addFunc(FuncPAtkSpeed.getInstance());
-		
-		std[Stats.MAGIC_ATTACK_SPEED.ordinal()] = new Calculator();
-		std[Stats.MAGIC_ATTACK_SPEED.ordinal()].addFunc(FuncMAtkSpeed.getInstance());
-		
-		std[Stats.MOVE_SPEED.ordinal()] = new Calculator();
-		std[Stats.MOVE_SPEED.ordinal()].addFunc(FuncMoveSpeed.getInstance());
 		
 		std[Stats.ACCURACY_MAGIC.ordinal()] = new Calculator();
 		std[Stats.ACCURACY_MAGIC.ordinal()].addFunc(FuncMatkAccuracy.getInstance());
