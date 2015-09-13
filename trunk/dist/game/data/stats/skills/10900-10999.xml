@@ -27,11 +27,19 @@
 	<!-- Level 3 : Skill power + 7%. -->
 	<!-- Level 4 : Skill power + 10%. -->
 	<skill id="10904" levels="4" name="Superior Skill Mastery">
+	<table name="#skillDamage">1.05 1.06 1.07 1.1</table>
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11874" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<mul stat="physicalSkillPower" val="#skillDamage">
+				<and>
+					<using kind="CROSSBOW,BOW" />
+				</and>
+			</mul>
+		</for>
 	</skill>
 	<skill id="10905" levels="3" name="Fatal Arrow">
 		<!-- AUTO GENERATED SKILL -->

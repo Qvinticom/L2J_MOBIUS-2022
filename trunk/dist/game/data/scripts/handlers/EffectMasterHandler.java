@@ -18,13 +18,13 @@
  */
 package handlers;
 
-import handlers.effecthandlers.*;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
+
+import handlers.effecthandlers.*;
 
 /**
  * Effect Master handler.
@@ -153,6 +153,7 @@ public final class EffectMasterHandler
 		Reeling.class,
 		RefuelAirship.class,
 		Relax.class,
+		RemoteControl.class,
 		ResistSkill.class,
 		Restoration.class,
 		RestorationRandom.class,
@@ -162,6 +163,7 @@ public final class EffectMasterHandler
 		RunAway.class,
 		ServitorShare.class,
 		SetSkill.class,
+		ShiftTarget.class,
 		ShilensBreath.class,
 		SilentMove.class,
 		SkillTurning.class,
