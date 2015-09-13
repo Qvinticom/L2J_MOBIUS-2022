@@ -1615,7 +1615,9 @@
 				<add stat="pDef" val="4500" />
 				<mul stat="runSpd" val="1.60" />
 			</effect>
-			<!--<effect name="HealPercent" noicon="1" val="#enchHealPercent" />-->
+			<effect name="ManaHealPercent">
+				<param power="#enchHealPercent" />
+			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Transformation">
@@ -1624,7 +1626,9 @@
 				<add stat="pDef" val="4500" />
 				<mul stat="runSpd" val="1.60" />
 			</effect>
-			<!--<effect name="MpHealPercent" noicon="1" val="#enchHealPercent" />-->
+			<effect name="ManaHealPercent">
+				<param power="#enchHealPercent" />
+			</effect>
 		</enchant4for>
 		<enchant5for>
 			<effect name="Transformation">
@@ -1633,7 +1637,9 @@
 				<add stat="pDef" val="4500" />
 				<mul stat="runSpd" val="1.60" />
 			</effect>
-			<!--<effect name="CpHealPercent" noicon="1" val="#enchHealPercent" />-->
+			<effect name="CpHealPercent">
+				<param power="#enchHealPercent" />
+			</effect>
 		</enchant5for>
 	</skill>
 	<skill id="11541" levels="1" name="Polymorph" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
@@ -1903,13 +1909,26 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" chance="30" />
+				<param skillId="11550" skillLevel="1" />
+				<param targetType="SELF" />
+				<param allowWeapons="ALL" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11550" levels="1" name="Superior Mana Steal">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill11505" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3000" />
+		<for>
+			<effect name="ManaHealPercent">
+				<param power="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11551" levels="1" name="Superior Mental Attack Resistance">
 		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->

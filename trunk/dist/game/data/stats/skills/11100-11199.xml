@@ -509,10 +509,18 @@
 	<!-- Level 4 : M. Atk., Max MP, and MP Recovery Rate + 10%. -->
 	<skill id="11151" levels="4" name="Superior Wizardry">
 		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#increase">1.05 1.06 1.07 1.1</table>
 		<set name="icon" val="icon.skill0945" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="#increase"/>
+				<mul stat="maxMp" val="#increase"/>
+				<mul stat="regMp" val="#increase"/>
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Sacrifice your servitor to become immune to debuffs for 3 sec. -->
 	<skill id="11152" levels="1" name="Sacrificial Soul">
@@ -549,10 +557,16 @@
 	<!-- Level 4 : M. Skill cooldown - 10%. -->
 	<skill id="11176" levels="4" name="Superior Wizardry">
 		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#reuse"> 0.95 0.94 0.93 0.9 </table>
 		<set name="icon" val="icon.skill0945" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mReuse" val="#reuse"/>
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
 	<!-- Level 2 : Inflicts damage with 195 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
@@ -621,6 +635,13 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2"/>
+				<mul stat="mReuse" val="0.75"/>
+				<mul stat="pReuse" val="0.75"/>
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : INT + 2 and increases Fire/Water/Wind/Earth Resistance by 20 and M. Def. by 5%. -->
 	<skill id="11184" levels="1" name="Superior Arcane Lore">
@@ -630,7 +651,13 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
+				<add stat="INT" val="2"/>
 				<mul stat="mDef" val="1.05" />
+				<mul stat="mDef" val="1.05"/>
+				<add stat="fireRes" val="20"/>
+				<add stat="waterRes" val="20"/>
+				<add stat="windRes" val="20"/>
+				<add stat="earthRes" val="20"/>
 			</effect>
 		</for>
 	</skill>

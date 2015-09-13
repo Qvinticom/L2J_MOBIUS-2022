@@ -247,6 +247,13 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2"/>
+				<add stat="debuffVuln" val="30"/>
+				<add stat="movementVuln" val="30"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11256" levels="8" name="Summon Cute Bear" enchantGroup1="10">
 		<!-- Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. -->
