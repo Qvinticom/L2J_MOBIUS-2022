@@ -34,11 +34,13 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul stat="physicalSkillPower" val="#skillDamage">
-				<and>
-					<using kind="CROSSBOW,BOW" />
-				</and>
-			</mul>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="#skillDamage">
+					<and>
+						<using kind="CROSSBOW,BOW" />
+					</and>
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="10905" levels="3" name="Fatal Arrow">
