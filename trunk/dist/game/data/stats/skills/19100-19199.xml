@@ -80,16 +80,41 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill19109" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="70" />
 		<set name="hitTime" val="10000" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="isMagic" val="1" />
+		<set name="itemConsumeCount" val="10" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="targetType" val="SELF" />
+		<cond addName="1" msgId="113">
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="650">
+			<player canSummonSiegeGolem="true" />
+		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="mDef" val="1.5" />
+			</effect>
+			<effect name="Transformation">
+				<param id="148" />
+				<add stat="STR" val="15" />
+				<add stat="INT" val="46" />
+				<add stat="CON" val="2" />
+				<add stat="DEX" val="8" />
+				<add stat="WIT" val="47" />
+				<add stat="MEN" val="44" />
+				<mul stat="maxHp" val="3.4" />
+				<mul stat="maxCp" val="4" />
+				<mul stat="maxMp" val="1.5" />
+				<mul stat="pDef" val="6" />
+				<mul stat="mDef" val="5" />
+				<mul stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
 	</skill>

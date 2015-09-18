@@ -59,6 +59,7 @@
 	<skill id="11106" levels="4" name="Elemental Mass Burst">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 137 154 166 179 </table>
+		<table name="#power"> 569 618 649 683 </table>
 		<set name="icon" val="icon.skill11865" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -69,6 +70,8 @@
 		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="skillType" val="MDAM" />
+		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="Buff">
@@ -158,6 +161,7 @@
 	<skill id="11112" levels="4" name="Elemental Speed Burst">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 137 154 166 179 </table>
+		<table name="#power"> 517 562 591 622 </table>
 		<set name="icon" val="icon.skill11865" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -168,6 +172,8 @@
 		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="MDAM" />
+		<set name="power" val="#power" />
 	</skill>
 	<skill id="11113" levels="4" name="Elemental Speed Burst: Fire">
 		<!-- AUTO GENERATED SKILL -->
@@ -246,6 +252,7 @@
 	<skill id="11118" levels="4" name="Elemental Power Burst">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 137 154 166 179 </table>
+		<table name="#power"> 569 618 649 683 </table>
 		<set name="icon" val="icon.skill11865" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -256,6 +263,8 @@
 		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="MDAM" />
+		<set name="power" val="#power" />
 	</skill>
 	<skill id="11119" levels="4" name="Elemental Power Burst: Fire">
 		<!-- AUTO GENERATED SKILL -->
@@ -516,9 +525,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtk" val="#increase"/>
-				<mul stat="maxMp" val="#increase"/>
-				<mul stat="regMp" val="#increase"/>
+				<mul stat="mAtk" val="#increase" />
+				<mul stat="maxMp" val="#increase" />
+				<mul stat="regMp" val="#increase" />
 			</effect>
 		</for>
 	</skill>
@@ -564,7 +573,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="mReuse" val="#reuse"/>
+				<mul stat="mReuse" val="#reuse" />
 			</effect>
 		</for>
 	</skill>
@@ -637,9 +646,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="2"/>
-				<mul stat="mReuse" val="0.75"/>
-				<mul stat="pReuse" val="0.75"/>
+				<add stat="INT" val="2" />
+				<mul stat="mReuse" val="0.75" />
+				<mul stat="pReuse" val="0.75" />
 			</effect>
 		</for>
 	</skill>
@@ -651,13 +660,13 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="2"/>
+				<add stat="INT" val="2" />
 				<mul stat="mDef" val="1.05" />
-				<mul stat="mDef" val="1.05"/>
-				<add stat="fireRes" val="20"/>
-				<add stat="waterRes" val="20"/>
-				<add stat="windRes" val="20"/>
-				<add stat="earthRes" val="20"/>
+				<mul stat="mDef" val="1.05" />
+				<add stat="fireRes" val="20" />
+				<add stat="waterRes" val="20" />
+				<add stat="windRes" val="20" />
+				<add stat="earthRes" val="20" />
 			</effect>
 		</for>
 	</skill>

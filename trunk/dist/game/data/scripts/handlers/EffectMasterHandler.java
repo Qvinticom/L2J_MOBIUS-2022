@@ -154,6 +154,7 @@ public final class EffectMasterHandler
 		RefuelAirship.class,
 		Relax.class,
 		RemoteControl.class,
+		RemoveTarget.class,
 		ResistSkill.class,
 		Restoration.class,
 		RestorationRandom.class,

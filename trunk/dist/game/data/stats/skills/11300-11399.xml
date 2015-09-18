@@ -308,6 +308,8 @@
 	</skill>
 	<!-- Level 1 : Summons 1900 Beast Soulshots. Consumes 1 Crystal (R-grade). -->
 	<skill id="11316" levels="1" name="Summon Soulshots">
+		<table name="#extractableItems"> 35670,1900,100 </table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="icon" val="icon.skill11316" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -316,6 +318,15 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="11317" levels="8" name="Servitor Group Heal">
 		<!-- AUTO GENERATED SKILL -->
@@ -956,6 +967,7 @@
 	<skill id="11348" levels="4" name="Servitor Death Whisper">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 61 67 73 79 </table>
+		<table name="#cAtk"> 1.10 1.12 1.15 1.20 </table>
 		<set name="icon" val="icon.skill11348" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -965,7 +977,12 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
+		<for>
+			<effect name="Buff">
+				<mul stat="critDmg" val="#cAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : For 30 min., all servitors' P. Atk. + 10%. -->
 	<!-- Level 2 : For 30 min., all servitors' P. Atk. + 12%. -->

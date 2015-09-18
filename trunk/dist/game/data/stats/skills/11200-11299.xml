@@ -249,9 +249,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="2"/>
-				<add stat="debuffVuln" val="30"/>
-				<add stat="movementVuln" val="30"/>
+				<add stat="INT" val="2" />
+				<add stat="debuffVuln" val="30" />
+				<add stat="movementVuln" val="30" />
 			</effect>
 		</for>
 	</skill>
@@ -799,7 +799,21 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<cond>
+			<and>
+				<target myPartyExceptMe="true" />
+				<player callPc="true" />
+			</and>
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
+		<for>
+			<effect name="CallPc" />
+		</for>
 	</skill>
 	<!-- Level 1 : Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
 	<skill id="11266" levels="1" name="Summon Death Gate">
@@ -837,9 +851,13 @@
 	<!-- Level 208 : Transform into Naviarope. For 12 minutes 40 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 8 Time | Increases the effect's duration.) -->
 	<!-- Level 209 : Transform into Naviarope. For 13 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 9 Time | Increases the effect's duration.) -->
 	<!-- Level 210 : Transform into Naviarope. For 13 minutes 20 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 10 Time | Increases the effect's duration.) -->
-	<skill id="11267" levels="3" name="Spirit of Naviarope">
+	<skill id="11267" levels="3" name="Spirit of Naviarope" enchantGroup1="10" enchantGroup2="10">
 		<table name="#magicLvl"> 95 97 99 </table>
+		<table name="#ench1MpConsume"> 67 64 61 58 56 53 50 47 44 42 </table>
+		<table name="#ench2abnormalTime"> 620 640 660 680 720 740 760 780 800 820 </table>
 		<set name="icon" val="icon.skill11267" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="70" />
@@ -848,11 +866,41 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<cond addName="1" msgId="113">
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="pDef" val="1" />
+				<set stat="STR" val="102" />
+				<set stat="DEX" val="55" />
+				<set stat="CON" val="82" />
+				<set stat="INT" val="107" />
+				<set stat="WIT" val="78" />
+				<set stat="MEN" val="78" />
+				<mul stat="pDef" val="1.50" />
+				<mul stat="mDef" val="1.50" />
+				<mul stat="rEvas" val="0.5" />
+			</effect>
+			<effect name="Transformation">
+				<param id="509" />
 			</effect>
 		</for>
+		<enchant2for>
+			<effect name="Buff">
+				<set stat="STR" val="102" />
+				<set stat="DEX" val="55" />
+				<set stat="CON" val="82" />
+				<set stat="INT" val="107" />
+				<set stat="WIT" val="78" />
+				<set stat="MEN" val="78" />
+				<mul stat="pDef" val="1.50" />
+				<mul stat="mDef" val="1.50" />
+				<mul stat="rEvas" val="0.5" />
+			</effect>
+			<effect name="Transformation">
+				<param id="509" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="11268" levels="8" name="Summon Avenging Cubic">
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
@@ -897,19 +945,34 @@
 	<!-- Level 208 : Consumes your MP to restore servitors' HP by 1445. Enchant Power: Increases Effect. (+ 8 Power | Increases the effect.) -->
 	<!-- Level 209 : Consumes your MP to restore servitors' HP by 1453. Enchant Power: Increases Effect. (+ 9 Power | Increases the effect.) -->
 	<!-- Level 210 : Consumes your MP to restore servitors' HP by 1461. Enchant Power: Increases Effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11269" levels="4" name="Mass Servitor Heal">
+	<skill id="11269" levels="4" name="Mass Servitor Heal" enchantGroup1="10" enchantGroup2="10">
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mpConsume"> 101 112 124 138 </table>
+		<table name="#ench1MpConsume"> 134 130 126 122 118 114 110 106 102 98 </table>
+		<table name="#ench1amount"> 1389 1397 1405 1413 1421 1429 1437 1445 1453 1461 </table>
+		<table name="#amount"> 1308 1336 1358 1381 </table>
+		<table name="#aggro"> 655 665 685 696 </table>
 		<set name="icon" val="icon.skill11269" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
+		<set name="mpConsume" val="#mpConsume" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<for>
+			<effect name="Heal">
+				<param power="#amount" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Heal">
+				<param power="#ench1amount" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<!-- Level 1 : Transfers 70% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
 	<!-- Level 2 : Transfers 72% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
@@ -917,12 +980,19 @@
 	<!-- Level 4 : Transfers 75% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
 	<skill id="11270" levels="4" name="Ultimate Transfer Pain">
 		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#power"> 70 72 74 75 </table>
 		<set name="icon" val="icon.skill11270" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="mpConsume" val="70" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="MpConsumePerLevel" ticks="5">
+				<param power="0.2" />
+				<add stat="transDam" val="#power" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
 	<!-- Level 2 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
@@ -1427,7 +1497,24 @@
 		<set name="coolTime" val="#coolTime" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
+		<for>
+			<!-- Note: 0.6 means 60% of owner's patk! -->
+			<effect name="ServitorShare">
+				<share stat="pAtk" val="0.6" />
+				<share stat="pDef" val="0.6" />
+				<share stat="mAtk" val="0.3" />
+				<share stat="mDef" val="0.3" />
+				<share stat="maxHp" val="0.15" />
+				<share stat="maxMp" val="0.15" />
+				<share stat="critRate" val="0.3" />
+				<share stat="pAtkSpd" val="0.1" />
+				<share stat="mAtkSpd" val="0.03" />
+			</effect>
+		</for>
+		<selfEffects>
+			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
+		</selfEffects>
 	</skill>
 	<skill id="11289" levels="1" name="Gate Root">
 		<!-- AUTO GENERATED SKILL -->
@@ -1742,10 +1829,13 @@
 	<!-- Level 808 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 8 Dark Attack | Increases dark damage.) -->
 	<!-- Level 809 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 9 Dark Attack | Increases dark damage.) -->
 	<!-- Level 810 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 10 Dark Attack | Increases dark damage.) -->
-	<skill id="11298" levels="8" name="Mark of Fire">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#power"> 168 170 175 180 185 189 194 199 </table>
-		<table name="#mpConsume"> 63 65 68 70 73 76 79 82 </table>
+	<skill id="11298" levels="10" name="Mark of Fire" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 98 98 </table>
+		<table name="#mpConsume"> 63 65 68 70 73 76 79 82 82 82 </table>
+		<table name="#ench1MpConsume"> 78 75 72 68 65 62 59 55 52 49 </table>
+		<table name="#power"> 168 170 175 180 185 189 194 199 199 199 </table>
+		<table name="#enchPower"> 204 207 209 212 214 216 219 221 224 226 </table>
+		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="icon" val="icon.skill11298" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1756,7 +1846,35 @@
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="power" val="#enchPower" />
+		<enchant2 name="pvpPower" val="#enchPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="element" val="0" />
+		<enchant3 name="power" val="#enchPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="element" val="1" />
+		<enchant4 name="power" val="#enchPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="element" val="2" />
+		<enchant5 name="power" val="#enchPower" />
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="element" val="3" />
+		<enchant6 name="power" val="#enchPower" />
+		<enchant7 name="elementPower" val="#enchElementPower" />
+		<enchant7 name="element" val="4" />
+		<enchant7 name="power" val="#enchPower" />
+		<enchant8 name="elementPower" val="#enchElementPower" />
+		<enchant8 name="element" val="5" />
+		<enchant8 name="power" val="#enchPower" />
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="DamOverTime" ticks="5">
+				<param power="#enchPower" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Balances you and your servitor's HP. -->
 	<!-- Level 101 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
@@ -1771,6 +1889,7 @@
 	<!-- Level 110 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
 	<skill id="11299" levels="1" name="Servitor Balance Life">
 		<set name="icon" val="icon.skill11299" />
+		<table name="#ench1MpConsume"> 60 57 55 52 50 47 45 42 40 37 </table>
 		<set name="magicLvl" val="91" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="63" />
@@ -1780,5 +1899,9 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
+		<for>
+			<effect name="RebalanceHP" /> <!--  make effect for pet? -->
+		</for>
 	</skill>
 </list>

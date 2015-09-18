@@ -1483,7 +1483,7 @@
 			<effect name="Fear" />
 			<effect name="Transformation">
 				<param id="108" />
-					<mul stat="runSpd" val="#runSpd" />
+				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -2479,6 +2479,12 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
+		<set name="skillType" val="HEAL" />
+		<for>
+			<effect name="HealPercent"> <!-- Make it work for nearby targets. -->
+				<param power="35" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Restores target's CP by 1000. -->
 	<!-- Level 101 : Restores target's CP by 1000. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
@@ -2501,7 +2507,9 @@
 	<!-- Level 208 : Restores target's CP by 1080. Enchant Power: Increases Effect. (+ 8 Power | Increases the effect.) -->
 	<!-- Level 209 : Restores target's CP by 1090. Enchant Power: Increases Effect. (+ 9 Power | Increases the effect.) -->
 	<!-- Level 210 : Restores target's CP by 1100. Enchant Power: Increases Effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11571" levels="1" name="Recovery Melody">
+	<skill id="11571" levels="1" name="Recovery Melody" enchantGroup1="10" enchantGroup2="10">
+		<table name="#ench1MpConsume"> 92 88 84 80 76 72 69 65 61 57 </table>
+		<table name="#ench2cpHeal"> 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 </table>
 		<set name="icon" val="icon.skill11571" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -2510,7 +2518,22 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="CpHeal">
+				<param power="1000" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="CpHeal">
+				<param power="1000" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="CpHeal">
+				<param power="#ench2cpHeal" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<!-- Level 1 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
 	<!-- Level 2 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->

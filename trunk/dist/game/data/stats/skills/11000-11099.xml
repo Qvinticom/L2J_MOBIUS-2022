@@ -2563,7 +2563,13 @@
 	<!-- Level 308 : Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for 10 seconds and rapidly recovers HP and MP. Enchant Fast MP: MP Recovery + 6.6. (+ 8 Fast MP | Increases MP Recovery by 6.6.) -->
 	<!-- Level 309 : Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for 10 seconds and rapidly recovers HP and MP. Enchant Fast MP: MP Recovery + 7.4. (+ 9 Fast MP | Increases MP Recovery by 7.4.) -->
 	<!-- Level 310 : Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for 10 seconds and rapidly recovers HP and MP. Enchant Fast MP: MP Recovery + 8.2. (+ 10 Fast MP | Increases MP Recovery by 8.2.) -->
-	<skill id="11093" levels="1" name="Crystal Form">
+	<skill id="11093" levels="1" name="Crystal Form" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+		<table name="#ench1MpConsume"> 56 54 51 49 47 44 42 40 37 35 </table>
+		<table name="#ench1MpInitialConsume"> 14 14 14 14 14 14 14 14 14 14 </table>
+		<table name="#ench1MpConsume"> 70 68 65 63 61 58 56 54 51 49 </table>
+		<table name="#enchHpHeal"> 178 179 180 181 182 183 184 185 186 187 </table>
+		<table name="#enchMpHeal"> 50 51.8 52.6 53.4 54.2 55 55.8 56.6 57.4 58.8 </table>
+		<table name="#dispelAbnormals"> POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 </table>
 		<set name="icon" val="icon.skill11093" />
 		<set name="magicLvl" val="97" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -2572,6 +2578,47 @@
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="97" />
+		<set name="target" val="SELF" />
+		<set name="ignoreSkillStun" val="true" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="#dispelAbnormals" />
+			</effect>
+			<effect name="HealOverTime" ticks="3">
+				<param power="177" />
+			</effect>
+			<effect name="ManaHealOverTime" ticks="3">
+				<param power="49" />
+			</effect>
+			<effect name="Invincible" />
+		</for>
+		<enchant2for>
+			<effect name="DispelBySlot">
+				<param dispel="#dispelAbnormals" />
+			</effect>
+			<effect name="HealOverTime" ticks="3">
+				<param power="#enchHpHeal" />
+			</effect>
+			<effect name="ManaHealOverTime" ticks="3">
+				<param power="#enchMpHeal" />
+			</effect>
+			<effect name="Invincible" />
+		</enchant2for>
+		<enchant3for>
+			<effect name="DispelBySlot">
+				<param dispel="#dispelAbnormals" />
+			</effect>
+			<effect name="HealOverTime" ticks="3">
+				<param power="#enchHpHeal" />
+			</effect>
+			<effect name="ManaHealOverTime" ticks="3">
+				<param power="#enchMpHeal" />
+			</effect>
+			<effect name="Invincible" />
+		</enchant3for>
 	</skill>
 	<!-- Level 1 : Attacks nearby enemies with 133 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the front. -->
 	<!-- Level 2 : Attacks nearby enemies with 136 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the front. -->
