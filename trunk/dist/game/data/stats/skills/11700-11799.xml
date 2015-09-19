@@ -4,7 +4,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="abnormalTime" val="3" />
 		<for>
 			<effect name="DamOverTime">
@@ -30,7 +29,6 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="11749" levels="1" name="Heavy Hit">
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="flyRadius" val="60" />
 		<set name="effectRange" val="900" />
@@ -38,7 +36,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="power" val="5000" />
 		<set name="mpConsume" val="92" />
@@ -50,7 +47,6 @@
 		</for>-->
 	</skill>
 	<skill id="11750" levels="1" name="Heavy Hit">
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="flyRadius" val="60" />
 		<set name="effectRange" val="1100" />
@@ -58,7 +54,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="abnormalTime" val="5" />
 		<set name="power" val="5000" />
@@ -75,7 +70,6 @@
 		<table name="#ench1mAtk">109 116 123 130 137 144 151 158 165 172</table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -107,21 +101,12 @@
 		<table name="#power">1.10 1.13 1.16 1.19 1.22 1.25 1.28 1.30</table>
 		<table name="#magicLvl">85 87 89 91 93 95 97 99</table>
 		<table name="#hotValue">172 173 173 174 174 175 175 176</table>
-		<table name="#aggroPoints">419 423 437 446 452 458 463 468</table>
 		<set name="abnormalTime" val="15" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
-		<set name="buffDuration" val="15000" />
-		<set name="chanceType" val="ON_CAST" />
-		<set name="triggeredId" val="11753" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="100" />
-		<set name="activationSkills" val="11752" />
 		<for>
 			<effect name="HealOverTime">
 				<mul stat="healEffect" val="#power" />
@@ -134,10 +119,8 @@
 		<table name="#abnormalLevel">1 2 3</table>
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="10" />
-		<set name="triggeredLevelUpMax" val="3" />
 		<for>
 			<effect name="HealOverTime">
 				<mul stat="healEffect" val="#power" />
@@ -506,11 +489,8 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillRadius" val="630" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="effectRange" val="900" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -659,13 +639,11 @@
 		<table name="#MpConsumeRate">1.5 2.5 3 3.5 3.5 4</table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="2" />
 		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="effectRange" val="900" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -704,10 +682,7 @@
 		<set name="power" val="90" />
 		<set name="abnormalTime" val="15" />
 		<set name="targetType" val="AURA" />
-		<set name="skillType" val="AGGREMOVE" />
-		<set name="skillRadius" val="200" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="castMagic" val="MAGIC" />
 		<for>
 			<effect name="Buff">
 				<add stat="runSpd" val="100" />
@@ -788,7 +763,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SUMMON" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="2000" />
 		<set name="reuseDelay" val="10000" />
@@ -838,9 +812,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SUMMON" />
-		<set name="summonGroupReplace" val="aeore_healer" />
-		<set name="skillToCast" val="11818" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
@@ -888,12 +859,8 @@
 		<set name="power" val="89" />
 		<set name="element" val="5" />
 		<set name="elementPower" val="20" />
-		<set name="skillType" val="POISON" />
 		<set name="isDebuff" val="true" />
-		<set name="isRestartableDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="targetType" val="ONE" />
-		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="900" />
@@ -1010,9 +977,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="ONE" />
-		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="900" />
@@ -1043,7 +1008,6 @@
 		<set name="abnormalTime" val="3" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="TOGGLE" />
 		<for>
 			<effect name="DamOverTime">
@@ -1105,14 +1069,10 @@
 		<table name="#power">80 90 100</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="aggroPoints" val="578" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="staticReuse" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillRadius" val="900" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<cond>
@@ -1143,7 +1103,6 @@
 		<table name="#ench1mDef">320 340 360 380 400 420 440 460 480 500</table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
@@ -1192,7 +1151,6 @@
 		<table name="#ench1maxMp">333 353 374 394 415 435 455 476 496 517</table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="Buff">
@@ -1216,14 +1174,8 @@
 	<skill id="11789" levels="1" name="Superior Anti Magic">
 		<table name="#ench1mDef">146 154 162 170 178 186 194 202 210 218</table>
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="triggeredId" val="10058" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="20" />
-		<set name="activationElements" val="0,1,2,3,4,5" />
-		<set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL" />
 		<for>
 			<effect name="Buff">
 				<add stat="mDef" val="139" />
@@ -1241,7 +1193,6 @@
 		<table name="#ench1Vuln">21 22 23 24 25 26 27 28 29 30</table>
 		<set name="magicLvl" val="87" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1265,7 +1216,6 @@
 	<skill id="11791" levels="1" name="Superior Sigil Mastery">
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1281,7 +1231,6 @@
 		<table name="#enchPower">21 22 23 24 25 26 27 28 29 30</table>
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="Buff">

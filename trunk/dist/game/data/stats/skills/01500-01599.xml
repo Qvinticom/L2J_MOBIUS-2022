@@ -171,7 +171,6 @@
 		<set name="mpConsume" val="174" />
 		<set name="mpInitialConsume" val="44" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA_FRIENDLY" />
@@ -1784,9 +1783,11 @@
 	</skill>
 	<skill id="1557" levels="1" name="Servitor Share">
 		<!-- High Five Skill -->
-		<!-- Totally Unconfirmed -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="SUMMON_CONDITION" />
 		<set name="castRange" val="400" />
+		<set name="canBeDispeled" val="false" />
 		<set name="effectPoint" val="669" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -1797,24 +1798,25 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SERVITOR" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player hasServitor="true" />
+			</and>
+		</cond>
 		<for>
-			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="0.5" />
-				<share stat="pDef" val="0.5" />
-				<share stat="mAtk" val="0.25" />
-				<share stat="mDef" val="0.25" />
-				<share stat="maxHp" val="0.1" />
-				<share stat="maxMp" val="0.1" />
-				<share stat="critRate" val="0.2" />
-				<share stat="pAtkSpd" val="0.1" />
-				<share stat="mAtkSpd" val="0.03" />
+				<param pDef="1.5" />
+				<param pAtk="1.5" />
+				<param mDef="1.25" />
+				<param mAtk="1.25" />
+				<param maxMp="1.1" />
+				<param maxHp="1.1" />
+				<param critRate="1.20" />
+				<param pAtkSpd="1.1" />
+				<param mAtkSpd="1.03" />
 			</effect>
 		</for>
-		<selfEffects>
-			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
-		</selfEffects>
 	</skill>
 	<skill id="1558" levels="24" name="Dimension Spiral">
 		<!-- High Five Skill -->

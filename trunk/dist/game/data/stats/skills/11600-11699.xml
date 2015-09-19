@@ -143,13 +143,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AREA" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="abnormalTime" val="30" />
 		<set name="hitTime" val="2110" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="120000" />
 		<set name="castRange" val="900" />
-		<set name="skillRadius" val="250" />
 		<!--<cond>
 			<target playable="true" />
 		</cond>-->
@@ -193,9 +191,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="83" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="castRange" val="900" />
-		<set name="skillRadius" val="250" />
 		<for>
 			<effect abnormalTime="1800" name="Buff">
 				<mul stat="pDef" val="1.1" />
@@ -219,9 +215,7 @@
 		<set name="mpConsume" val="83" />
 		<set name="abnormalTime" val="1800" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="castRange" val="900" />
-		<set name="skillRadius" val="250" />
 		<for>
 			<effect abnormalTime="1800" name="Buff">
 				<mul stat="pAtk" val="1.05" />
@@ -511,7 +505,6 @@
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="600000" />
 		<for>
 			<effect name="Buff">

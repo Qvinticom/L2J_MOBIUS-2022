@@ -3,8 +3,8 @@
 	<skill id="8900" levels="1" name="Dragon's Sealed Power(Warrior)">
 		<!-- PvP Damage + 15%, HP/MP/CP + 30%, Atk. Spd. + 300, P. Critical Rate + 100, and added damage to dragons + 100%. -->
 		<set name="icon" val="icon.skill8900" />
-		<set name="magicLevel" val="85" />
-		<set name="target" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
 		<for> 
 			<effect name="Buff">
@@ -25,8 +25,8 @@
 	<skill id="8901" levels="1" name="Dragon's Power (Warrior)">
 		<!-- PvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, and added damage to dragons + 300%. -->
 		<set name="icon" val="icon.skill8901" />
-		<set name="magicLevel" val="85" />
-		<set name="target" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
 		<for> 
 			<effect name="Buff">
@@ -47,8 +47,8 @@
 	<skill id="8902" levels="1" name="Dragon's Sealed Power(Wizard)">
 		<!-- PvP Damage + 15%, HP/MP/CP + 30%, Casting Spd. + 300, M. Critical Rate + 100, and added damage to dragons + 100%. -->
 		<set name="icon" val="icon.skill8902" />
-		<set name="magicLevel" val="85" />
-		<set name="target" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
 		<for> 
 			<effect name="Buff">
@@ -69,8 +69,8 @@
 	<skill id="8903" levels="1" name="Dragon's Power (Wizard)">
 		<!-- PvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, and added damage to dragons + 300%. -->
 		<set name="icon" val="icon.skill8903" />
-		<set name="magicLevel" val="85" />
-		<set name="target" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="Buff">

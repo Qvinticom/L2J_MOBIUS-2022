@@ -339,7 +339,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond>
-		    <and>
+			<and>
 				<player canSummonServitor="true" />
 				<player hasFreeSummonPoints="4" />
 			</and>
@@ -591,8 +591,6 @@
 		<set name="icon" val="icon.skill0922" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="removedOnAnyActionExceptMove" val="true" />
-		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="180000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -1855,7 +1853,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />

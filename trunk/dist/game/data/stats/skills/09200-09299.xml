@@ -123,9 +123,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="9209" levels="1" name="Kukuru">
-		<set name="target" val="SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="castMagic" val="STATIC" />
+		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="60" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="2500" />

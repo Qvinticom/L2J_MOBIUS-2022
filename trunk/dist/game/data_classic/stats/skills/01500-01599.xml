@@ -171,7 +171,6 @@
 		<set name="mpConsume" val="174" />
 		<set name="mpInitialConsume" val="44" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA_FRIENDLY" />
@@ -1685,9 +1684,11 @@
 	</skill>
 	<skill id="1557" levels="1" name="Servitor Share">
 		<!-- High Five Skill -->
-		<!-- Totally Unconfirmed -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="SUMMON_CONDITION" />
 		<set name="castRange" val="400" />
+		<set name="canBeDispeled" val="false" />
 		<set name="effectPoint" val="669" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -1698,24 +1699,25 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SERVITOR" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player hasServitor="true" />
+			</and>
+		</cond>
 		<for>
-			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="0.5" />
-				<share stat="pDef" val="0.5" />
-				<share stat="mAtk" val="0.25" />
-				<share stat="mDef" val="0.25" />
-				<share stat="maxHp" val="0.1" />
-				<share stat="maxMp" val="0.1" />
-				<share stat="critRate" val="0.2" />
-				<share stat="pAtkSpd" val="0.1" />
-				<share stat="mAtkSpd" val="0.03" />
+				<param pDef="1.5" />
+				<param pAtk="1.5" />
+				<param mDef="1.25" />
+				<param mAtk="1.25" />
+				<param maxMp="1.1" />
+				<param maxHp="1.1" />
+				<param critRate="1.20" />
+				<param pAtkSpd="1.1" />
+				<param mAtkSpd="1.03" />
 			</effect>
 		</for>
-		<selfEffects>
-			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
-		</selfEffects>
 	</skill>
 	<skill id="1558" levels="24" name="Dimension Spiral">
 		<!-- High Five Skill -->
@@ -2020,8 +2022,10 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1585" levels="1" name="Rhythm of Critical Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_CRITICAL" />
+		<set name="abnormalTime" val="120" />
 		<set name="icon" val="icon.skill1583" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
@@ -2029,155 +2033,383 @@
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="critRate" val="2" />
+				<mul stat="critDmg" val="1.35" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_HUNTER,9;DANCE_OF_FIRE,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_HUNTER;DANCE_OF_FIRE" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1586" levels="1" name="Rhythm of Critical">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill1583" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_CRITICAL" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="critRate" val="2" />
+				<mul stat="critDmg" val="1.35" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_HUNTER,9;DANCE_OF_FIRE,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_HUNTER;DANCE_OF_FIRE" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1587" levels="1" name="Rhythm of Magic Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<set name="icon" val="icon.skill1588" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_MAGIC" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.20" />
+				<mul stat="mDef" val="1.30" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_WARDING,9;DANCE_OF_MYSTIC,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_WARDING;DANCE_OF_MYSTIC" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1588" levels="1" name="Rhythm of Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill1588" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_MAGIC" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.20" />
+				<mul stat="mDef" val="1.30" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_WARDING,9;DANCE_OF_MYSTIC,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_WARDING;DANCE_OF_MYSTIC" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1589" levels="1" name="Rhythm of Combat Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<set name="icon" val="icon.skill1584" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_COMBAT" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+				<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.12" />
+				<mul stat="pDef" val="1.25" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_EARTH,9;DANCE_OF_WARRIOR,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_EARTH;DANCE_OF_WARRIOR" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1590" levels="1" name="Rhythm of Combat">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill1584" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_COMBAT" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.12" />
+				<mul stat="pDef" val="1.25" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_EARTH,9;DANCE_OF_WARRIOR,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_EARTH;DANCE_OF_WARRIOR" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1591" levels="1" name="Rhythm of Fighter Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<set name="icon" val="icon.skill1587" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_FIGHTER" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+				<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+				<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="maxHp" val="1.30" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_VITALITY,9;DANCE_OF_FURY,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_VITALITY;DANCE_OF_FURY" />
+			</effect>
+		</for>
+		
 	</skill>
 	<skill id="1592" levels="1" name="Rhythm of Fighter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill1587" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_FIGHTER" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="maxHp" val="1.30" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_VITALITY,9;DANCE_OF_FURY,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_VITALITY;DANCE_OF_FURY" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1593" levels="1" name="Rhythm of Revenge Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. Additionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<set name="icon" val="icon.skill1585" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_REVENGE" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="absorbDam" val="8" />
+				<mul stat="reflectDam" val="20" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_VENGEANCE,9;DANCE_OF_VAMPIRE,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_VENGEANCE;DANCE_OF_VAMPIRE" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1594" levels="1" name="Rhythm of Revenge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill1585" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_REVENGE" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="absorbDam" val="8" />
+				<mul stat="reflectDam" val="20" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_VENGEANCE,9;DANCE_OF_VAMPIRE,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_VENGEANCE;DANCE_OF_VAMPIRE" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1595" levels="1" name="Rhythm of Start Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<set name="icon" val="icon.skill1586" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_START" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritRate" val="2" /> 
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_RENEWAL,9;SONG_OF_CHAMPION,9;DANCE_OF_SIREN,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_RENEWAL;SONG_OF_CHAMPION;DANCE_OF_SIREN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1596" levels="1" name="Rhythm of Start">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill1586" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_START" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritRate" val="2" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.8" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_RENEWAL,9;SONG_OF_CHAMPION,9;DANCE_OF_SIREN,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_RENEWAL;SONG_OF_CHAMPION;DANCE_OF_SIREN" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1597" levels="1" name="Weight Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases weight capacity by 15000. -->
 		<set name="icon" val="icon.skill0150" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="weightLimit" val="15000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1598" levels="1" name="Rhythm of Magician Dark">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<set name="icon" val="icon.skill11005" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_MAGICIAN" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<cond msgId="113" addName="1">
+			<using kind="DUAL" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="cancel" val="40" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="mAtkSpd" val="1.3" />
+				<mul stat="regMp" val="1.20" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_MEDITATION,9;DANCE_OF_CONCENTRATION,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_MEDITATION;DANCE_OF_CONCENTRATION" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1599" levels="1" name="Rhythm of Magician">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<set name="icon" val="icon.skill11005" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="RHYTHM_OF_MAGICIAN" />
+		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="60" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="3" />
+		<for>
+			<effect name="Buff">
+				<mul stat="cancel" val="40" />
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="mAtkSpd" val="1.3" />
+				<mul stat="regMp" val="1.20" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SONG_OF_MEDITATION,9;DANCE_OF_CONCENTRATION,9" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_MEDITATION;DANCE_OF_CONCENTRATION" />
+			</effect>
+		</for>
 	</skill>
 </list>

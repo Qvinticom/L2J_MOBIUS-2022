@@ -45,7 +45,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 		_z = cha.getZ();
 		_heading = cha.getHeading();
 		_mAtkSpd = cha.getMAtkSpd();
-		_pAtkSpd = cha.getPAtkSpd();
+		_pAtkSpd = (int) cha.getPAtkSpd();
 		_moveMultiplier = cha.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);

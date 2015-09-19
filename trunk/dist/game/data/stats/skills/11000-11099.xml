@@ -13,10 +13,7 @@
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="19158" />
-		<set name="skillRadius" val="100" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="150" />
 		<set name="trait" val="SHOCK" />
 		<set name="isDebuff" val="true" />
 		<cond msgId="113" addName="1">
@@ -102,7 +99,6 @@
 		<!-- INT + 2, M. Def. + 139, Magic Attack Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance for 10 seconds. -->
 		<table name="#ench1mDef"> 146 154 162 170 178 186 194 202 210 218 </table>
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.skill10004" />
 		<set name="operateType" val="PASSIVE" />
@@ -188,14 +184,11 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="element" val="0" />
 		<set name="abnormalTime" val="3" />
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
-		<set name="forceStore" val="true" />
 		<for>
 			<effect name="DamOverTime">
 				<add stat="firePower" val="50" />
@@ -206,14 +199,11 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="element" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
-		<set name="forceStore" val="true" />
 		<for>
 			<effect name="DamOverTime">
 				<add stat="waterPower" val="50" />
@@ -224,14 +214,11 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="element" val="2" />
 		<set name="abnormalTime" val="3" />
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
-		<set name="forceStore" val="true" />
 		<for>
 			<effect name="DamOverTime">
 				<add stat="windPower" val="50" />
@@ -242,14 +229,11 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="element" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
-		<set name="forceStore" val="true" />
 		<for>
 			<effect name="DamOverTime">
 				<add stat="earthPower" val="50" />
@@ -273,12 +257,9 @@
 		<set name="reuseDelay" val="0" />
 		<set name="effectRange" val="1100" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -308,11 +289,9 @@
 		<set name="element" val="0" />
 		<set name="elementPower" val="50" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -348,12 +327,10 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" />
 		<set name="elementPower" val="50" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -390,11 +367,9 @@
 		<set name="element" val="2" />
 		<set name="elementPower" val="50" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -431,12 +406,9 @@
 		<set name="element" val="3" />
 		<set name="elementPower" val="50" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -470,12 +442,10 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="2000" />
 		<set name="effectRange" val="1100" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -508,13 +478,10 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="effectRange" val="1100" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="flyRadius" val="200" />
 		<set name="trait" val="KNOCKBACK" />
@@ -547,11 +514,9 @@
 		<set name="element" val="0" />
 		<set name="elementPower" val="80" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -588,12 +553,10 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -631,11 +594,9 @@
 		<set name="overHit" val="true" />
 		<set name="element" val="2" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -673,11 +634,9 @@
 		<set name="overHit" val="true" />
 		<set name="element" val="3" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -713,11 +672,9 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="effectRange" val="1100" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -754,8 +711,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -787,8 +742,6 @@
 		<set name="targetType" val="ONE" />
 		<set name="element" val="0" />
 		<set name="elementPower" val="100" />
-		<set name="skillType" val="MDAM" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -796,8 +749,6 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="pvpPower" val="#enchPower" />
-		<set name="triggeredId" val="11101" />
-		<set name="triggeredLevel" val="1" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -822,8 +773,6 @@
 		<set name="targetType" val="ONE" />
 		<set name="element" val="1" />
 		<set name="elementPower" val="100" />
-		<set name="skillType" val="MDAM" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -831,8 +780,6 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="pvpPower" val="#enchPower" />
-		<set name="triggeredId" val="11102" />
-		<set name="triggeredLevel" val="1" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -857,8 +804,6 @@
 		<set name="targetType" val="ONE" />
 		<set name="element" val="2" />
 		<set name="elementPower" val="100" />
-		<set name="skillType" val="MDAM" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -866,8 +811,6 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="pvpPower" val="#enchPower" />
-		<set name="triggeredId" val="11103" />
-		<set name="triggeredLevel" val="1" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -891,8 +834,6 @@
 		<set name="targetType" val="ONE" />
 		<set name="element" val="3" />
 		<set name="elementPower" val="100" />
-		<set name="skillType" val="MDAM" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -900,8 +841,6 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="pvpPower" val="#enchPower" />
-		<set name="triggeredId" val="11104" />
-		<set name="triggeredLevel" val="1" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -923,8 +862,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -953,14 +890,10 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="DOT" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
-		<set name="isNoFlag" val="true" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -994,7 +927,6 @@
 		<table name="#dot">25 50 75 100</table>
 		<table name="#power">65 70 75 80</table>
 		<set name="abnormalType" val="POISON" />
-		<set name="abnormalLevel" val="4" />
 		<set name="effectPoint" val="-1" />
 		<set name="abnormalTime" val="10" />
 		<set name="hitTime" val="10000" />
@@ -1004,10 +936,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="1" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="CASTTIME" />
-		<set name="castMagic" val="STATIC" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -1040,14 +969,10 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AURA" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="skillRadius" val="300" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="saveAs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="flyRadius" val="200" />
 		<set name="trait" val="KNOCKBACK" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1093,15 +1018,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="effectPoint" val="-1" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="MDAM" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
@@ -1125,18 +1046,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="effectPoint" val="-1" />
 		<set name="element" val="0" />
 		<set name="elementPower" val="80" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1162,18 +1079,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" />
 		<set name="elementPower" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
@@ -1198,18 +1111,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="2" />
 		<set name="elementPower" val="80" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="trait" val="KNOCKBACK" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1235,18 +1144,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="3" />
 		<set name="elementPower" val="80" />
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="trait" val="HOLD" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1272,16 +1177,12 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
@@ -1308,14 +1209,10 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<set name="effectRange" val="1100" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
@@ -1342,15 +1239,11 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="overHit" val="true" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1379,16 +1272,12 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
@@ -1415,16 +1304,12 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="2" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="trait" val="KNOCKBACK" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1452,16 +1337,12 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="3" />
 		<set name="elementPower" val="80" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="trait" val="HOLD" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1487,14 +1368,10 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="effectRange" val="1100" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="100" />
 		<set name="overHit" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1522,8 +1399,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1592,11 +1467,8 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="2" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
@@ -1687,14 +1559,9 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="2" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="150" />
-		<set name="skillType" val="MDAM" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="absorbPart" val="0.25" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1771,7 +1638,6 @@
 		<table name="#ench1MpInitialConsume">17 16 15 15 14 13 12 12 11 10</table>
 		<table name="#ench2Power">61 62 63 64 65 66 67 68 69 70</table>
 		<table name="#power">55 60</table>
-		<table name="#maxNegated">1 2</table>
 		<table name="#magicLvl">93 98</table>
 		<set name="hitTime" val="3000" />
 		<set name="castRange" val="1100" />
@@ -1781,11 +1647,8 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="CANCEL" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
-		<set name="maxNegated" val="#maxNegated" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
@@ -1813,13 +1676,10 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="staticReuse" val="true" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
-		<set name="isNoFlag" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
@@ -1852,7 +1712,6 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="150" />
 	</skill>
 	<skill id="11052" levels="4" name="Mass Hell Binding">
 		<table name="#mpConsume">183 195 206 219</table>
@@ -1873,19 +1732,12 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="castMagic" val="STATIC" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1000" />
-		<set name="skillRadius" val="300" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="CASTTIME" />
 		<set name="targetType" val="AREA" />
-		<set name="triggeredById" val="11052" />
-		<set name="triggeredId" val="#skill" />
-		<set name="triggeredLevel" val="1" />
-		<set name="skillRadius" val="200" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
@@ -1915,7 +1767,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="70" />
 		<set name="targetType" val="AREA" />
-		<set name="skillRadius" val="150" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench1MpInitialConsume" />
@@ -1950,18 +1801,14 @@
 		<set name="abnormalTime" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="lvlDepend" val="1" />
 		<set name="effectPoint" val="-1" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="FEAR" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="maxChance" val="30" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
@@ -2001,15 +1848,11 @@
 		<set name="effectPoint" val="-1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="lvlDepend" val="1" />
 		<set name="targetType" val="AURA" />
-		<set name="skillRadius" val="300" />
-		<set name="skillType" val="FEAR" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2050,13 +1893,10 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="flyCourse" val="0" />
 		<set name="flyRadius" val="500" />
-		<set name="lvlDepend" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="200" />
 		<set name="targetType" val="SELF" />
 		<set name="power" val="#power" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2085,15 +1925,8 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<set name="targetType" val="GROUND" />
-		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="300" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="castMagic" val="MAGIC" />
-		<set name="effectNpcId" val="#npcId" />
-		<set name="offensive" val="true" />
-		<set name="effectId" val="11175" />
-		<set name="effectLevel" val="1" />
 		<set name="blockedInOlympiad" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2122,10 +1955,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="aggroPoints" val="#aggroPoints" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
@@ -2173,7 +2003,6 @@
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="aggroPoints" val="#aggroPoints" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant1 name="power" val="#ench1mpAmount" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
@@ -2194,12 +2023,9 @@
 		<set name="reuseDelay" val="200000" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="aggroPoints" val="504" />
 		<set name="abnormalTime" val="20" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2249,9 +2075,7 @@
 		<set name="abnormalTime" val="1" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
@@ -2285,12 +2109,9 @@
 		<set name="abnormalTime" val="1" />
 		<set name="targetType" val="AREA" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="overHit" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="300" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2579,8 +2400,6 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="97" />
-		<set name="target" val="SELF" />
-		<set name="ignoreSkillStun" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<for>
@@ -2700,12 +2519,9 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="flyCourse" val="180" />
 		<set name="flyRadius" val="400" />
-		<set name="lvlDepend" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="200" />
 		<set name="targetType" val="SELF" />
 		<set name="power" val="#power" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />

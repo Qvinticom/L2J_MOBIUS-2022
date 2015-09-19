@@ -98,7 +98,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(0x00);
 		writeH(0x00);
 		writeD((int) _activeChar.getPAtk(null));
-		writeD(_activeChar.getPAtkSpd());
+		writeD((int) _activeChar.getPAtkSpd());
 		writeD((int) _activeChar.getPDef(null));
 		writeD(_activeChar.getEvasionRate(null));
 		writeD(_activeChar.getAccuracy());
@@ -106,7 +106,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD((int) _activeChar.getMAtk(null, null));
 		
 		writeD(_activeChar.getMAtkSpd());
-		writeD(_activeChar.getPAtkSpd());
+		writeD((int) _activeChar.getPAtkSpd());
 		
 		writeD((int) _activeChar.getMDef(null, null));
 		writeD(_activeChar.getMagicEvasionRate(null));

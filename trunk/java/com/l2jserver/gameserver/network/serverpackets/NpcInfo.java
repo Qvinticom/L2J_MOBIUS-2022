@@ -278,7 +278,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.ATK_CAST_SPEED))
 		{
-			writeD(_npc.getPAtkSpd());
+			writeD((int) _npc.getPAtkSpd());
 			writeD(_npc.getMAtkSpd());
 		}
 		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))

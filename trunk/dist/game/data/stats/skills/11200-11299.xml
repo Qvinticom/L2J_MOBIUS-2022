@@ -1497,24 +1497,24 @@
 		<set name="coolTime" val="#coolTime" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SERVITOR" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player hasServitor="true" />
+			</and>
+		</cond>
 		<for>
-			<!-- Note: 0.6 means 60% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="0.6" />
-				<share stat="pDef" val="0.6" />
-				<share stat="mAtk" val="0.3" />
-				<share stat="mDef" val="0.3" />
-				<share stat="maxHp" val="0.15" />
-				<share stat="maxMp" val="0.15" />
-				<share stat="critRate" val="0.3" />
-				<share stat="pAtkSpd" val="0.1" />
-				<share stat="mAtkSpd" val="0.03" />
+				<param pDef="1.6" />
+				<param pAtk="1.6" />
+				<param mDef="1.3" />
+				<param mAtk="1.3" />
+				<param maxMp="1.15" />
+				<param maxHp="1.15" />
+				<param critRate="1.3" />
+				<param pAtkSpd="1.1" />
+				<param mAtkSpd="1.03" />
 			</effect>
 		</for>
-		<selfEffects>
-			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
-		</selfEffects>
 	</skill>
 	<skill id="11289" levels="1" name="Gate Root">
 		<!-- AUTO GENERATED SKILL -->

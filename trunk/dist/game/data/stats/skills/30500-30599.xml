@@ -34,7 +34,7 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="ONE" />
 		<set name="power" val="#power" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -67,7 +67,7 @@
 		<set name="icon" val="icon.skill30503" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="ONE" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="power" val="#power" />
 		<set name="castRange" val="60" />
@@ -88,7 +88,7 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="ONE" />
 		<set name="power" val="#power" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2500" />
@@ -108,7 +108,7 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />
 		<set name="power" val="#power" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -128,7 +128,7 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />
 		<set name="power" val="#power" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="80" />
 		<set name="hitTime" val="2000" />
@@ -334,10 +334,8 @@
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2500" />
-		<set name="skillRadius" val="250" />	
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
-		<set name="nextAction" val="attack" />
 		<set name="isMagic" val="6" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="AREA" />
@@ -453,7 +451,6 @@
 		<set name="targetType" val="ONE" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
-		<set name="nextAction" val="attack" />
 		<set name="power" val="#Power" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />

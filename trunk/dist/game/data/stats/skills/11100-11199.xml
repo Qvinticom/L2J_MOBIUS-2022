@@ -70,7 +70,6 @@
 		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="MDAM" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
@@ -172,7 +171,6 @@
 		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="MDAM" />
 		<set name="power" val="#power" />
 	</skill>
 	<skill id="11113" levels="4" name="Elemental Speed Burst: Fire">
@@ -263,7 +261,6 @@
 		<set name="reuseDelay" val="6699" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="MDAM" />
 		<set name="power" val="#power" />
 	</skill>
 	<skill id="11119" levels="4" name="Elemental Power Burst: Fire">

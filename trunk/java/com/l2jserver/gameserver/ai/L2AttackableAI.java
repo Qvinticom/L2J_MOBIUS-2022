@@ -75,13 +75,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	 */
 	public static class FearTask implements Runnable
 	{
-		private final L2Character _effected;
+		private final L2AttackableAI _ai;
 		private final L2Character _effector;
 		private boolean _start;
 		
-		public FearTask(L2Character effected, L2Character effector, boolean start)
+		public FearTask(L2AttackableAI ai, L2Character effector, boolean start)
 		{
-			_effected = effected;
+			_ai = ai;
 			_effector = effector;
 			_start = start;
 		}
@@ -89,9 +89,9 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		@Override
 		public void run()
 		{
-			final int fearTimeLeft = ((L2AttackableAI) _effected.getAI()).getFearTime() - FEAR_TICKS;
-			((L2AttackableAI) _effected.getAI()).setFearTime(fearTimeLeft);
-			_effected.getAI().onEvtAfraid(_effector, _start);
+			final int fearTimeLeft = _ai.getFearTime() - FEAR_TICKS;
+			_ai.setFearTime(fearTimeLeft);
+			_ai.onEvtAfraid(_effector, _start);
 			_start = false;
 		}
 	}
@@ -422,14 +422,14 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	{
 		if ((_fearTime > 0) && (_fearTask == null))
 		{
-			_fearTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FearTask(_actor, effector, start), 0, FEAR_TICKS, TimeUnit.SECONDS);
+			_fearTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FearTask(this, effector, start), 0, FEAR_TICKS, TimeUnit.SECONDS);
 			_actor.startAbnormalVisualEffect(AbnormalVisualEffect.TURN_FLEE);
 		}
 		else
 		{
 			super.onEvtAfraid(effector, start);
 			
-			if ((_fearTime <= 0) && (_fearTask != null))
+			if ((_actor.isDead() || (_fearTime <= 0)) && (_fearTask != null))
 			{
 				_fearTask.cancel(true);
 				_fearTask = null;

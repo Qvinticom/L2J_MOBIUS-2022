@@ -45,7 +45,7 @@ public final class OrcChange1 extends AbstractNpcAI
 	private static final int SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE = 8869;
 	private static final int MARK_OF_RAIDER = 1592;
 	private static final int KHAVATARI_TOTEM = 1615;
-	private static final int MASK_OF_MEDIUM = 1615;
+	private static final int MASK_OF_MEDIUM = 1631;
 	
 	private OrcChange1()
 	{

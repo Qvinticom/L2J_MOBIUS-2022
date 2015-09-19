@@ -264,7 +264,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.ATK_CAST_SPEED))
 		{
-			writeD(_summon.getPAtkSpd());
+			writeD((int) _summon.getPAtkSpd());
 			writeD(_summon.getMAtkSpd());
 		}
 		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))

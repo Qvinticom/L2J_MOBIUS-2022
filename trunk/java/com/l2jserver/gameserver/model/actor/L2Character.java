@@ -83,7 +83,6 @@ import com.l2jserver.gameserver.model.actor.tasks.character.HitTask;
 import com.l2jserver.gameserver.model.actor.tasks.character.MagicUseTask;
 import com.l2jserver.gameserver.model.actor.tasks.character.NotifyAITask;
 import com.l2jserver.gameserver.model.actor.tasks.character.QueuedMagicUseTask;
-import com.l2jserver.gameserver.model.actor.tasks.character.UsePotionTask;
 import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jserver.gameserver.model.actor.transform.Transform;
 import com.l2jserver.gameserver.model.actor.transform.TransformTemplate;
@@ -1849,28 +1848,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// queue herbs and potions
 		if (isCastingSimultaneouslyNow() && simultaneously)
 		{
-			ThreadPoolManager.getInstance().scheduleAi(new UsePotionTask(this, skill), 100);
+			ThreadPoolManager.getInstance().scheduleAi(() -> doCast(skill), 100);
 			return;
 		}
 		
-		// Set the _castInterruptTime and casting status (L2PcInstance already has this true)
 		if (simultaneously)
 		{
 			setIsCastingSimultaneouslyNow(true);
+			setLastSimultaneousSkillCast(skill);
 		}
 		else
 		{
 			setIsCastingNow(true);
-		}
-		
-		if (!simultaneously)
-		{
 			_castInterruptTime = -2 + GameTimeController.getInstance().getGameTicks() + (skillTime / GameTimeController.MILLIS_IN_TICK);
 			setLastSkillCast(skill);
-		}
-		else
-		{
-			setLastSimultaneousSkillCast(skill);
 		}
 		
 		// Calculate the Reuse Time of the Skill
@@ -4941,6 +4932,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		if ((isNpc() && target.isAlikeDead()) || target.isDead() || (!getKnownList().knowsObject(target) && !isDoor()))
 		{
 			// getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
+			// Some times attack is processed but target die before the hit
+			// So we need to recharge shot for next attack
+			rechargeShots(true, false);
+			
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -5319,9 +5314,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			switch (weapon.getItemType())
 			{
 				case BOW:
-					return (1500 * 345) / getPAtkSpd();
+					return (int) ((1500 * 345) / getPAtkSpd());
 				case CROSSBOW:
-					return (1200 * 345) / getPAtkSpd();
+					return (int) ((1200 * 345) / getPAtkSpd());
 				case DAGGER:
 					// atkSpd /= 1.15;
 					break;
@@ -5795,6 +5790,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		// Stop casting
 		setIsCastingNow(false);
+		setIsCastingSimultaneouslyNow(false);
 		
 		final Skill skill = mut.getSkill();
 		final L2Object target = mut.getTargets().length > 0 ? mut.getTargets()[0] : null;
@@ -6330,7 +6326,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return getStat().getMaxRecoverableCp();
 	}
 	
-	public final double getMAtk(L2Character target, Skill skill)
+	public double getMAtk(L2Character target, Skill skill)
 	{
 		return getStat().getMAtk(target, skill);
 	}
@@ -6365,7 +6361,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return getStat().getMCriticalHit(target, skill);
 	}
 	
-	public final double getMDef(L2Character target, Skill skill)
+	public double getMDef(L2Character target, Skill skill)
 	{
 		return getStat().getMDef(target, skill);
 	}
@@ -6375,17 +6371,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return getStat().getMReuseRate(skill);
 	}
 	
-	public final double getPAtk(L2Character target)
+	public double getPAtk(L2Character target)
 	{
 		return getStat().getPAtk(target);
 	}
 	
-	public int getPAtkSpd()
+	public double getPAtkSpd()
 	{
-		return getStat().getPAtkSpd();
+		return (int) getStat().getPAtkSpd();
 	}
 	
-	public final double getPDef(L2Character target)
+	public double getPDef(L2Character target)
 	{
 		return getStat().getPDef(target);
 	}
@@ -6603,6 +6599,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void sendDamageMessage(L2Character target, int damage, boolean mcrit, boolean pcrit, boolean miss)
 	{
+		if (miss && target.isPlayer())
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
+			sm.addPcName(target.getActingPlayer());
+			sm.addCharName(this);
+			target.sendPacket(sm);
+		}
 		
 	}
 	
@@ -6921,18 +6924,18 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final WeaponType getAttackType()
 	{
-		final L2Weapon weapon = getActiveWeaponItem();
-		if (weapon != null)
-		{
-			return weapon.getItemType();
-		}
-		else if (isTransformed())
+		if (isTransformed())
 		{
 			final TransformTemplate template = getTransformation().getTemplate(getActingPlayer());
 			if (template != null)
 			{
 				return template.getBaseAttackType();
 			}
+		}
+		final L2Weapon weapon = getActiveWeaponItem();
+		if (weapon != null)
+		{
+			return weapon.getItemType();
 		}
 		return getTemplate().getBaseAttackType();
 	}

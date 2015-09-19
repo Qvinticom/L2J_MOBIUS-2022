@@ -265,7 +265,6 @@
 		<set name="icon" val="icon.skill11508" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DIRECTIONAL_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
@@ -311,7 +310,6 @@
 		<set name="hitTime" val="910" />
 		<set name="icon" val="icon.skill11509" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="nextActionAttack" val="true" />
 		<set name="overHit" val="true" />
@@ -384,7 +382,6 @@
 		<set name="hitTime" val="1010" />
 		<set name="icon" val="icon.skill11510" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="nextActionAttack" val="true" />
 		<set name="overHit" val="true" />
@@ -505,7 +502,6 @@
 		<set name="hitTime" val="1210" />
 		<set name="icon" val="icon.skill11513" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="nextActionAttack" val="true" />
 		<set name="overHit" val="true" />
@@ -576,7 +572,6 @@
 		<set name="hitTime" val="1410" />
 		<set name="icon" val="icon.skill11514" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="nextActionAttack" val="true" />
 		<set name="overHit" val="true" />
@@ -1435,16 +1430,13 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="power" val="50" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="maxNegated" val="2" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
@@ -1580,13 +1572,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="abnormalTime" val="15" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
-		<set name="castMagic" val="MAGIC" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<cond addName="1" msgId="113">
@@ -1766,9 +1756,6 @@
 		<table name="#ench2runSpd">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="magicLvl" val="89" />
 		<set name="targetType" val="PARTY" />
-		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF" />
-		<set name="castMagic" val="MAGIC" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -1776,7 +1763,6 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="mpConsume" val="734" />
 		<set name="mpInitialConsume" val="182" />
-		<set name="aggroPoints" val="514" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<for>
@@ -1799,7 +1785,6 @@
 	</skill>
 	<skill id="11545" levels="1" name="Crazy Nocturne">
 		<set name="targetType" val="PARTY" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="staticReuse" val="true" />
@@ -1809,8 +1794,6 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="mpConsume" val="826" />
 		<set name="mpInitialConsume" val="206" />
-		<set name="aggroPoints" val="467" />
-		<set name="skillRadius" val="900" />
 		<for>
 			<effect name="Buff">
 				<mul stat="critRate" val="0.5" />
@@ -1836,7 +1819,6 @@
 		<set name="power" val="38826" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AREA" />
@@ -2122,17 +2104,13 @@
 		<table name="#mpConsume">339 446</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="aggroPoints" val="668" />
 		<set name="staticReuse" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="1000" />
 		<set name="abnormalTime" val="30" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="targetType" val="#target" />
 		<set name="effectRange" val="1200" />
 		<set name="castRange" val="900" />
@@ -2248,14 +2226,11 @@
 		<set name="abnormalType" val="DANCE_OF_SHADOW" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="targetType" val="PARTY" />
-		<set name="skillRadius" val="1000" />
 		<set name="abnormalTime" val="120" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="mpConsume" val="60" />
-		<set name="aggroPoints" val="669" />
 		<set name="canBeDispeled" val="false" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
@@ -2291,7 +2266,6 @@
 		<table name="#power">40 50 60</table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
-		<set name="aggroPoints" val="421" />
 		<set name="effectRange" val="900" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="6000" />
@@ -2479,7 +2453,6 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="HEAL" />
 		<for>
 			<effect name="HealPercent"> <!-- Make it work for nearby targets. -->
 				<param power="35" />

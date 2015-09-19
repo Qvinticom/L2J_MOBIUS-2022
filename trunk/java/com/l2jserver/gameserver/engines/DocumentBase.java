@@ -81,6 +81,7 @@ import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasClanHall;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasFort;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasFreeSummonPoints;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasPet;
+import com.l2jserver.gameserver.model.conditions.ConditionPlayerHasServitor;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerHp;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerImmobile;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerInsideZoneId;
@@ -98,7 +99,6 @@ import com.l2jserver.gameserver.model.conditions.ConditionPlayerPkCount;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerPledgeClass;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerRace;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerRangeFromNpc;
-import com.l2jserver.gameserver.model.conditions.ConditionPlayerServitorNpcId;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerSex;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerSiegeSide;
 import com.l2jserver.gameserver.model.conditions.ConditionPlayerSouls;
@@ -794,16 +794,9 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerHasPet(array));
 					break;
 				}
-				case "servitornpcid":
+				case "hasservitor":
 				{
-					StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					ArrayList<Integer> array = new ArrayList<>(st.countTokens());
-					while (st.hasMoreTokens())
-					{
-						String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, null)));
-					}
-					cond = joinAnd(cond, new ConditionPlayerServitorNpcId(array));
+					cond = joinAnd(cond, new ConditionPlayerHasServitor());
 					break;
 				}
 				case "npcidradius":
@@ -875,7 +868,7 @@ public abstract class DocumentBase
 				}
 				case "cantakecastle":
 				{
-					cond = joinAnd(cond, new ConditionPlayerCanTakeCastle(Boolean.parseBoolean(a.getNodeValue())));
+					cond = joinAnd(cond, new ConditionPlayerCanTakeCastle());
 					break;
 				}
 				case "cantakefort":

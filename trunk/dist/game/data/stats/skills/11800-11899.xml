@@ -230,7 +230,6 @@
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
 		<set name="trait" val="KNOCKBACK" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -350,9 +349,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="power" val="#power" />
 		<set name="isDebuff" val="true" />
-		<set name="skillRadius" val="230" />
-		<set name="skillType" val="MDAM" />
-		<set name="target" val="AREA" />
+		<set name="targetType" val="AREA" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant1 name="power" val="#enchPower" />
@@ -382,7 +379,6 @@
 		<set name="targetType" val="OWNER_PET" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="isDebuff" val="true" />
 		<set name="canBeDispeled" val="false" />
 		<effect name="Debuff">
@@ -818,7 +814,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="120000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />

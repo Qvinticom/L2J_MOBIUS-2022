@@ -10,7 +10,91 @@
 	<xs:complexType name="setType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute type="xs:string" name="name" use="optional" />
+				<xs:attribute name="name" use="optional">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="abnormalInstant" />
+							<xs:enumeration value="abnormalLvl" />
+							<xs:enumeration value="abnormalTime" />
+							<xs:enumeration value="abnormalType" />
+							<xs:enumeration value="abnormalVisualEffect" />
+							<xs:enumeration value="activateRate" />
+							<xs:enumeration value="affectLimit" />
+							<xs:enumeration value="affectRange" />
+							<xs:enumeration value="afterEffectId" />
+							<xs:enumeration value="alchemyTransmuteIngredients" />
+							<xs:enumeration value="alchemyTransmuteProduction" />
+							<xs:enumeration value="attribute" />
+							<xs:enumeration value="attributePower" />
+							<xs:enumeration value="baseCritRate" />
+							<xs:enumeration value="basicProperty" />
+							<xs:enumeration value="blockedInOlympiad" />
+							<xs:enumeration value="blowChance" />
+							<xs:enumeration value="canBeDispeled" />
+							<xs:enumeration value="capsuled_items_skill" />
+							<xs:enumeration value="castRange" />
+							<xs:enumeration value="channelingSkillId" />
+							<xs:enumeration value="channelingTickInterval" />
+							<xs:enumeration value="chargeConsume" />
+							<xs:enumeration value="coolTime" />
+							<xs:enumeration value="despawnDelay" />
+							<xs:enumeration value="displayId" />
+							<xs:enumeration value="dmgDirectlyToHp" />
+							<xs:enumeration value="effectPoint" />
+							<xs:enumeration value="effectRange" />
+							<xs:enumeration value="element" />
+							<xs:enumeration value="elementPower" />
+							<xs:enumeration value="excludedFromCheck" />
+							<xs:enumeration value="fanRange" />
+							<xs:enumeration value="feed" />
+							<xs:enumeration value="flyCourse" />
+							<xs:enumeration value="flyRadius" />
+							<xs:enumeration value="flyType" />
+							<xs:enumeration value="halfKillRate" />
+							<xs:enumeration value="hitTime" />
+							<xs:enumeration value="hpConsume" />
+							<xs:enumeration value="icon" />
+							<xs:enumeration value="ignoreShld" />
+							<xs:enumeration value="ignorePhysDefPercent" />
+							<xs:enumeration value="inheritElementals" />
+							<xs:enumeration value="inheritPercent" />
+							<xs:enumeration value="isDebuff" />
+							<xs:enumeration value="isMagic" />
+							<xs:enumeration value="isMentoring" />
+							<xs:enumeration value="isOutpost" />
+							<xs:enumeration value="isRecoveryHerb" />
+							<xs:enumeration value="isSuicideAttack" />
+							<xs:enumeration value="isTriggeredSkill" />
+							<xs:enumeration value="itemConsumeCount" />
+							<xs:enumeration value="itemConsumeId" />
+							<xs:enumeration value="itemConsumeSteps" />
+							<xs:enumeration value="learnSkillId" />
+							<xs:enumeration value="lethalStrikeRate" />
+							<xs:enumeration value="lvlBonusRate" />
+							<xs:enumeration value="magicLvl" />
+							<xs:enumeration value="minPledgeClass" />
+							<xs:enumeration value="mpConsume" />
+							<xs:enumeration value="mpInitialConsume" />
+							<xs:enumeration value="mpPerChanneling" />
+							<xs:enumeration value="nextActionAttack" />
+							<xs:enumeration value="npcId" />
+							<xs:enumeration value="operateType" />
+							<xs:enumeration value="overHit" />
+							<xs:enumeration value="power" />
+							<xs:enumeration value="pvpPower" />
+							<xs:enumeration value="resetQuest" />
+							<xs:enumeration value="reuseDelay" />
+							<xs:enumeration value="rideState" />
+							<xs:enumeration value="simultaneousCast" />
+							<xs:enumeration value="soulMaxConsumeCount" />
+							<xs:enumeration value="staticReuse" />
+							<xs:enumeration value="stayAfterDeath" />
+							<xs:enumeration value="stayOnSubclassChange" />
+							<xs:enumeration value="targetType" />
+							<xs:enumeration value="trait" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
 				<xs:attribute type="xs:string" name="val" use="optional" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -57,6 +141,7 @@
 				<xs:attribute type="xs:string" name="hp" use="optional" />
 				<xs:attribute type="xs:string" name="cp" use="optional" />
 				<xs:attribute type="xs:string" name="mp" use="optional" />
+				<xs:attribute type="xs:boolean" name="hasServitor" use="optional" />
 				<xs:attribute type="xs:byte" name="souls" use="optional" />
 				<xs:attribute type="xs:string" name="canTransform" use="optional" />
 				<xs:attribute type="xs:string" name="canUntransform" use="optional" />
@@ -161,6 +246,15 @@
 	<xs:complexType name="paramType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute type="xs:string" name="pAtk" use="optional" />
+				<xs:attribute type="xs:string" name="mAtk" use="optional" />
+				<xs:attribute type="xs:string" name="pDef" use="optional" />
+				<xs:attribute type="xs:string" name="mDef" use="optional" />
+				<xs:attribute type="xs:string" name="maxHp" use="optional" />
+				<xs:attribute type="xs:string" name="maxMp" use="optional" />
+				<xs:attribute type="xs:string" name="critRate" use="optional" />
+				<xs:attribute type="xs:string" name="pAtkSpd" use="optional" />
+				<xs:attribute type="xs:string" name="mAtkSpd" use="optional" />
 				<xs:attribute type="xs:string" name="side" use="optional" />
 				<xs:attribute type="xs:string" name="chance" use="optional" />
 				<xs:attribute type="xs:string" name="power" use="optional" />

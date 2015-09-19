@@ -1350,6 +1350,11 @@ public final class CharEffectList
 					continue;
 				}
 				
+				if (bi.getSkill().getAbnormalType() == AbnormalType.SUMMON_CONDITION)
+				{
+					continue;
+				}
+				
 				stopAndRemove(bi, effects);
 				
 				buffsToRemove--;

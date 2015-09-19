@@ -93,7 +93,7 @@ public class PetInfo extends L2GameServerPacket
 		writeD(_summon.getHeading());
 		
 		writeD(_summon.getStat().getMAtkSpd());
-		writeD(_summon.getStat().getPAtkSpd());
+		writeD((int) _summon.getStat().getPAtkSpd());
 		
 		writeH(_runSpd);
 		writeH(_walkSpd);
@@ -164,7 +164,7 @@ public class PetInfo extends L2GameServerPacket
 		writeD(_summon.getMagicEvasionRate(null)); // magic evasion
 		writeD(_summon.getMCriticalHit(null, null)); // mcritical
 		writeD((int) _summon.getStat().getMoveSpeed());// speed
-		writeD(_summon.getPAtkSpd());// atkspeed
+		writeD((int) _summon.getPAtkSpd());// atkspeed
 		writeD(_summon.getMAtkSpd());// casting speed
 		
 		writeC(0); // TODO: Check me, might be ride status

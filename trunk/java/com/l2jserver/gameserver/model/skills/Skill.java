@@ -340,8 +340,8 @@ public final class Skill implements IIdentifiable
 		
 		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
 		
-		_removedOnAnyActionExceptMove = set.getBoolean("removedOnAnyActionExceptMove", false);
-		_removedOnDamage = set.getBoolean("removedOnDamage", false);
+		_removedOnAnyActionExceptMove = (_abnormalType == AbnormalType.INVINCIBILITY) || (_abnormalType == AbnormalType.HIDE);
+		_removedOnDamage = (_abnormalType == AbnormalType.SLEEP) || (_abnormalType == AbnormalType.FORCE_MEDITATION) || (_abnormalType == AbnormalType.HIDE);
 		
 		_blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
 		
@@ -1400,7 +1400,7 @@ public final class Skill implements IIdentifiable
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (effected.isPlayer() && effected.hasServitors() && !isTransformation())
+			if (effected.isPlayer() && effected.hasServitors() && !isTransformation() && (getAbnormalType() != AbnormalType.SUMMON_CONDITION))
 			{
 				if ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb())
 				{

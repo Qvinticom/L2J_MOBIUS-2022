@@ -63,11 +63,9 @@
 		<set name="coolTime" val="500" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="abnormalTime" val="7" />
 		<set name="effectRange" val="700" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="power" val="5000" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -861,9 +859,7 @@
 		<set name="overHit" val="true" />
 		<set name="trait" val="SHOCK" />
 		<set name="baseCritRate" val="7" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="200" />
 		<set name="effectRange" val="600" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="isDebuff" val="true" />
@@ -941,7 +937,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillRadius" val="300" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="activateRate" val="#ench2Chance" />
@@ -990,7 +985,6 @@
 		<set name="effectRange" val="670" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="flyRadius" val="55" />
-		<set name="skillRadius" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="100" />
 		<set name="castRange" val="600" />
@@ -1002,7 +996,6 @@
 		<set name="flyType" val="CHARGE" />
 		<set name="isDebuff" val="true" />
 		<set name="nextActionAttack" val="true" />
-		<set name="lvlDepend" val="2" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="activateRate" val="#activateRate" />
 		<enchant3 name="skillType" val="PDAM" />
@@ -1068,7 +1061,6 @@
 		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillRadius" val="200" />
 		<set name="effectRange" val="600" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="flyType" val="CHARGE" />
@@ -1078,7 +1070,6 @@
 		<set name="affectRange" val="200" />
 		<set name="overHit" val="true" />
 		<set name="baseCritRate" val="10" />
-		<set name="chargesMaxConsume" val="3" />
 		<set name="nextActionAttack" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="activateRate" val="#ench2activateRate" />
@@ -1227,7 +1218,6 @@
 		<table name="#ench2effectPower">80 81 82 83 84 85 86 87 88 89</table>
 		<table name="#magicLvl">97 99</table>
 		<table name="#ench3radius">320 340 360 380 400 420 440 460 480 500</table>
-		<table name="#skillRadius">250 300</table>
 		<table name="#mpConsume">76 83</table>
 		<table name="#rate"> -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 </table>
 		<table name="#ench9Reuse"> 3900 3800 3700 3600 3500 3400 3300 3200 3100 3000 </table> <!-- Need verify -->
@@ -1237,7 +1227,6 @@
 		<set name="affectRange" val="250" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="isDebuff" val="true" />
-		<set name="isRestartableDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="hitTime" val="1200" />
 		<set name="abnormalTime" val="10" />
@@ -1246,7 +1235,6 @@
 		<set name="targetType" val="AURA" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectPoint" val="-1000" />
-		<set name="skillRadius" val="#skillRadius" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant3 name="skillRadius" val="#ench3radius" />
@@ -1324,7 +1312,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AURA" />
-		<set name="skillRadius" val="200" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="activateRate" val="#ench2ActivateRate" />
 		<enchant3 name="skillRadius" val="#ench3radius" />
@@ -1371,13 +1358,11 @@
 		<table name="#ench9Reuse"> 299000 298000 297000 296000 295000 294000 293000 292000 291000 290000 </table> <!-- Need verify -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
-		<set name="aggroPoints" val="624" />
 		<set name="abnormalTime" val="60" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
@@ -1475,7 +1460,6 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="1178" />
 		<set name="baseCritRate" val="7" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1499,7 +1483,6 @@
 		<set name="mpConsume" val="38" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="skillType" val="CHARGE" />
 		<cond msgId="324">
 			<not>
 				<player Charges="15" />
@@ -1536,13 +1519,11 @@
 		<table name="#ench9Reuse"> 179000 178000 177000 176000 175000 174000 173000 172000 171000 170000 </table> <!-- Need verify -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="180000" />
 		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="aggroPoints" val="408" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<enchant9 name="reuseDelay" val="#ench9Reuse" />
@@ -1566,13 +1547,11 @@
 		<set name="targetType" val="AURA" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="700" />
-		<set name="skillType" val="AURA" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE" />
-		<set name="skillRadius" val="700" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant9 name="reuseDelay" val="#ench9Reuse" />
@@ -1598,7 +1577,6 @@
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="magicLvl" val="91" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
@@ -1670,8 +1648,6 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
-		<set name="skillRadius" val="400" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="KNOCKDOWN" />
 		<enchant1 name="magicLevel" val="99" />
@@ -1722,7 +1698,6 @@
 		<set name="abnormalTime" val="#time" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="castRange" val="400" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
@@ -1745,10 +1720,9 @@
 	<skill id="10285" levels="1" name="HP Drain">
 		<set name="reuseDelay" val="10000" />
 		<set name="effectPoint" val="313" />
-		<set name="magicLevel" val="85" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="HEAL" />
 		<for>
 			<effect name="HealPercent">
 				<param power="20" />
@@ -1885,10 +1859,8 @@
 		<table name="#enchRate"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
 		<set name="abnormalTime" val="60" />
 		<set name="targetType" val="SELF" />
-		<set name="aggroPoints" val="597" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="300000" />
@@ -2140,7 +2112,6 @@
 		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="1800" />
 		<set name="hitTime" val="2000" />
@@ -2167,7 +2138,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalTime" val="1800" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />

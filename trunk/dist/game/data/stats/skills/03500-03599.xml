@@ -1450,7 +1450,7 @@
 				<!-- NOTE: The skill reflection rate has been increased in H5, values unconfirmed -->
 				<add stat="reflectSkillPhysic" val="20" /> <!-- Reflect Skills 20% of the time -->
 				<add stat="reflectSkillMagic" val="20" /> <!-- Reflect Skills 20% of the time -->
-				<add stat="atkCountMax" val="5" />
+				<add stat="atkCountMax" val="4" />
 			</effect>
 		</for>
 	</skill>
@@ -1594,7 +1594,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="atkCountMax" val="3" />
+				<add stat="atkCountMax" val="4" />
 			</effect>
 		</for>
 	</skill>

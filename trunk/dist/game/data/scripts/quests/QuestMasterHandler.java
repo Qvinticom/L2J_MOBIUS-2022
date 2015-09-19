@@ -133,6 +133,8 @@ import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00552_OlympiadVeteran.Q00552_OlympiadVeteran;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
+import quests.Q00603_DaimonTheWhiteEyedPart1.Q00603_DaimonTheWhiteEyedPart1;
+import quests.Q00604_DaimonTheWhiteEyedPart2.Q00604_DaimonTheWhiteEyedPart2;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00621_EggDelivery.Q00621_EggDelivery;
@@ -364,6 +366,8 @@ public class QuestMasterHandler
 		Q00551_OlympiadStarter.class,
 		Q00552_OlympiadVeteran.class,
 		Q00553_OlympiadUndefeated.class,
+		Q00603_DaimonTheWhiteEyedPart1.class,
+		Q00604_DaimonTheWhiteEyedPart2.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
 		Q00621_EggDelivery.class,

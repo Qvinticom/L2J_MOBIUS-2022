@@ -191,9 +191,9 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public int getPAtkSpd()
+	public double getPAtkSpd()
 	{
-		int val = super.getPAtkSpd();
+		double val = super.getPAtkSpd();
 		if (getActiveChar().isHungry())
 		{
 			val = val / 2;

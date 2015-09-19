@@ -176,18 +176,19 @@ public final class L2TrapInstance extends L2Npc
 	
 	public boolean checkTarget(L2Character target)
 	{
+		// Range seems to be reduced from Freya(300) to H5(150)
+		if (!target.isInsideRadius(this, 150, false, false))
+		{
+			return false;
+		}
+		
 		if (!Skill.checkForAreaOffensiveSkills(this, target, _skill.getSkill(), _isInArena))
 		{
 			return false;
 		}
 		
-		if (!target.isInsideRadius(this, _skill.getSkill().getAffectRange(), false, false))
-		{
-			return false;
-		}
-		
 		// observers
-		if ((target instanceof L2PcInstance) && ((L2PcInstance) target).inObserverMode())
+		if (target.isPlayer() && target.getActingPlayer().inObserverMode())
 		{
 			return false;
 		}
@@ -411,7 +412,7 @@ public final class L2TrapInstance extends L2Npc
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(new TrapTriggerTask(this), 300);
+		ThreadPoolManager.getInstance().scheduleGeneral(new TrapTriggerTask(this), 500);
 	}
 	
 	public void unSummon()

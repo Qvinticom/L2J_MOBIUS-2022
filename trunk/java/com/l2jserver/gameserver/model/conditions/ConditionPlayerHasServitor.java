@@ -16,32 +16,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.model.actor.tasks.character;
+package com.l2jserver.gameserver.model.conditions;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Task dedicated to use potion of character
- * @author xban1x
+ * The Class ConditionPlayerHasServitor.
+ * @author Zealar
  */
-public final class UsePotionTask implements Runnable
+public class ConditionPlayerHasServitor extends Condition
 {
-	private final L2Character _character;
-	private final Skill _skill;
-	
-	public UsePotionTask(L2Character character, Skill skill)
-	{
-		_character = character;
-		_skill = skill;
-	}
 	
 	@Override
-	public void run()
+	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if (_character != null)
+		if ((effector.getActingPlayer() == null))
 		{
-			_character.doSimultaneousCast(_skill);
+			return false;
 		}
+		
+		if (!effector.getActingPlayer().hasSummon())
+		{
+			effector.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_SKILL_BECAUSE_THE_SERVITOR_HAS_NOT_BEEN_SUMMONED);
+			return false;
+		}
+		
+		return true;
 	}
 }
