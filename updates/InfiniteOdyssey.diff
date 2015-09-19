@@ -2,7 +2,7 @@
 #P L2J_Mobius
 Index: dist/db_installer/sql/game/character_skills.sql
 ===================================================================
---- dist/db_installer/sql/game/character_skills.sql	(revision 791)
+--- dist/db_installer/sql/game/character_skills.sql	(revision 801)
 +++ dist/db_installer/sql/game/character_skills.sql	(working copy)
 @@ -5,4 +5,6 @@
    `skill_level` INT(3) NOT NULL DEFAULT 1,
@@ -15,7 +15,7 @@ Index: dist/db_installer/sql/game/character_skills.sql
 +UPDATE `character_skills` SET skill_level=((skill_level % 100) + (round(skill_level / 100) * 1000)) WHERE skill_level <= 1000 AND skill_level >= 100;
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.java	(working copy)
 @@ -38,7 +38,7 @@
  	protected void writeImpl()
@@ -28,7 +28,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowContactList.jav
  		{
 Index: java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java	(revision 801)
 +++ java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java	(working copy)
 @@ -59,17 +59,17 @@
  	
@@ -62,7 +62,7 @@ Index: java/com/l2jserver/gameserver/model/L2EnchantSkillLearn.java
  		}
 Index: java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java	(working copy)
 @@ -47,8 +47,8 @@
  	public static final int M_ATK = 0x16;
@@ -77,7 +77,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/StatusUpdate.java
  	public static final int MAX_CP = 0x22;
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill.java	(working copy)
 @@ -52,6 +52,7 @@
  	
@@ -369,7 +369,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill
  			{
 Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListAll.java	(working copy)
 @@ -20,6 +20,7 @@
  
@@ -390,7 +390,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListA
  		writeS(_clan.getLeaderName());
 Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(working copy)
 @@ -22,6 +22,7 @@
  import java.util.Collections;
@@ -467,7 +467,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
  		writeD(_reuseDelay);
 Index: java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.java	(working copy)
 @@ -48,24 +48,24 @@
  			// TODO: Unhardcode these
@@ -508,7 +508,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/NewCharacterSuccess.j
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java	(working copy)
 @@ -75,6 +75,5 @@
  		}
@@ -519,7 +519,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExReplySentPost.java
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java	(revision 798)
+--- java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java	(revision 815)
 +++ java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java	(working copy)
 @@ -18,12 +18,16 @@
   */
@@ -568,7 +568,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java
 +				writeH(0);
 +			}
  			writeD((int) _activeChar.getPAtk(null));
- 			writeD(_activeChar.getPAtkSpd());
+ 			writeD((int) _activeChar.getPAtkSpd());
  			writeD((int) _activeChar.getPDef(null));
 @@ -292,8 +319,8 @@
  			writeD(_activeChar.getClanId());
@@ -613,7 +613,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/UserInfo.java
  		}
 Index: java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java	(revision 801)
 +++ java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java	(working copy)
 @@ -71,6 +71,11 @@
  	@Override
@@ -629,7 +629,7 @@ Index: java/com/l2jserver/gameserver/model/zone/type/L2JumpZone.java
  			character.setInsideZone(ZoneId.JUMP, true);
 Index: java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java	(working copy)
 @@ -18,12 +18,16 @@
   */
@@ -903,7 +903,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ShortCutInit.java
  }
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.java	(working copy)
 @@ -76,7 +76,8 @@
  		
@@ -917,7 +917,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinPledge.jav
  	public int getPledgeType()
 Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.java	(working copy)
 @@ -54,6 +54,8 @@
  			writeD((int) _activeChar.getCurrentMp());
@@ -930,7 +930,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeItemMakeInfo.ja
  		{
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfoDetail.java	(working copy)
 @@ -20,6 +20,7 @@
  
@@ -1174,7 +1174,7 @@ Index: dist/game/data/stats/items/46100-46199.xml
 \ No newline at end of file
 Index: java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java	(working copy)
 @@ -35,9 +35,9 @@
  	public void writeImpl()
@@ -1192,7 +1192,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/GameGuardQuery.java
  }
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.java	(working copy)
 @@ -103,7 +103,7 @@
  			return;
@@ -1205,7 +1205,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestAcquireSkill.j
  			_log.warning("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + activeChar);
 Index: java/com/l2jserver/gameserver/model/skills/Skill.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/skills/Skill.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/skills/Skill.java	(revision 815)
 +++ java/com/l2jserver/gameserver/model/skills/Skill.java	(working copy)
 @@ -1308,7 +1308,7 @@
  				{
@@ -1218,7 +1218,7 @@ Index: java/com/l2jserver/gameserver/model/skills/Skill.java
  						}
 Index: java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java	(revision 815)
 +++ java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java	(working copy)
 @@ -48,22 +48,6 @@
  	
@@ -1290,7 +1290,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/CharInfo.java
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java	(working copy)
 @@ -49,14 +49,14 @@
  	protected void writeImpl()
@@ -1317,7 +1317,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/HennaInfo.java
  		for (L2Henna henna : _hennas)
 Index: java/com/l2jserver/gameserver/network/clientpackets/UseItem.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/UseItem.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/UseItem.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/UseItem.java	(working copy)
 @@ -31,7 +31,6 @@
  import com.l2jserver.gameserver.handler.IItemHandler;
@@ -1400,7 +1400,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/UseItem.java
  						return;
 Index: java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java	(working copy)
 @@ -51,7 +51,7 @@
  	protected final void writeImpl()
@@ -1413,7 +1413,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewList.java
  		
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java	(working copy)
 @@ -18,6 +18,9 @@
   */
@@ -1459,7 +1459,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExBuySellList.java
  		{
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfoDetail.java	(working copy)
 @@ -34,6 +34,7 @@
  	private int _type;
@@ -1515,7 +1515,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill
  			}
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.java	(working copy)
 @@ -43,10 +43,10 @@
  		writeD(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
@@ -1534,7 +1534,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowSeedMapInfo.jav
  }
 Index: java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestShapeShiftingItem.java	(working copy)
 @@ -381,6 +381,7 @@
  		
@@ -1566,7 +1566,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/appearance/RequestSha
  		player.removeRequest(ShapeShiftingItemRequest.class);
 Index: java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java	(working copy)
 @@ -63,7 +63,7 @@
  		writeD(_enchantLevel);
@@ -1579,7 +1579,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/EnchantResult.java
  }
 Index: java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java	(revision 801)
 +++ java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java	(working copy)
 @@ -18,6 +18,8 @@
   */
@@ -1683,7 +1683,7 @@ Index: java/com/l2jserver/gameserver/model/CharSelectInfoPackage.java
  }
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java	(working copy)
 @@ -35,6 +35,7 @@
  	private int _objectId;
@@ -1712,7 +1712,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestDispel.java
  	@Override
 Index: java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java	(working copy)
 @@ -123,9 +123,11 @@
  		writeD(_textType.getClientId());
@@ -1747,7 +1747,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/NpcSay.java
 \ No newline at end of file
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.java	(working copy)
 @@ -126,6 +126,9 @@
  		1132, 1133, 1134, 1135,
@@ -1761,7 +1761,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExBasicActionList.jav
  		5008, 5009, 5010, 5011,
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java	(working copy)
 @@ -18,6 +18,8 @@
   */
@@ -1795,7 +1795,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExBirthdayPopup.java
 \ No newline at end of file
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItemList.java	(working copy)
 @@ -24,7 +24,7 @@
  import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -1808,7 +1808,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExChangeAttributeItem
  {
 Index: java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java	(working copy)
 @@ -21,6 +21,7 @@
  import java.util.ArrayList;
@@ -1838,7 +1838,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/PartySpelled.java
  			}
 Index: java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java	(revision 815)
 +++ java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java	(working copy)
 @@ -62,23 +62,19 @@
  		_npc = npc;
@@ -1981,14 +1981,14 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/NpcInfo.java
  		if (containsMask(NpcInfoType.ATK_CAST_SPEED))
  		{
 +			writeD(_npc.getMAtkSpd());
- 			writeD(_npc.getPAtkSpd());
+ 			writeD((int) _npc.getPAtkSpd());
 -			writeD(_npc.getMAtkSpd());
  		}
  		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))
  		{
 Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.java	(working copy)
 @@ -76,9 +76,10 @@
  		writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
@@ -2032,9 +2032,9 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.ja
  	
 Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/actor/L2Character.java	(revision 798)
+--- java/com/l2jserver/gameserver/model/actor/L2Character.java	(revision 815)
 +++ java/com/l2jserver/gameserver/model/actor/L2Character.java	(working copy)
-@@ -87,6 +87,7 @@
+@@ -86,6 +86,7 @@
  import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
  import com.l2jserver.gameserver.model.actor.transform.Transform;
  import com.l2jserver.gameserver.model.actor.transform.TransformTemplate;
@@ -2042,7 +2042,7 @@ Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
  import com.l2jserver.gameserver.model.effects.EffectFlag;
  import com.l2jserver.gameserver.model.effects.L2EffectType;
  import com.l2jserver.gameserver.model.entity.Instance;
-@@ -120,6 +121,7 @@
+@@ -119,6 +120,7 @@
  import com.l2jserver.gameserver.model.options.OptionsSkillType;
  import com.l2jserver.gameserver.model.skills.AbnormalType;
  import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
@@ -2050,7 +2050,7 @@ Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
  import com.l2jserver.gameserver.model.skills.BuffInfo;
  import com.l2jserver.gameserver.model.skills.CommonSkill;
  import com.l2jserver.gameserver.model.skills.EffectScope;
-@@ -1966,7 +1968,18 @@
+@@ -1957,7 +1959,18 @@
  		
  		// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
  		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
@@ -2072,7 +2072,7 @@ Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
  		if (isPlayer() && !skill.isAbnormalInstant())
 Index: java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java	(working copy)
 @@ -22,15 +22,18 @@
  {
@@ -2105,7 +2105,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AskJoinAlly.java
  	}
 Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket.java	(working copy)
 @@ -414,12 +414,8 @@
  				}
@@ -2196,7 +2196,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractMessagePacket
  				
 Index: java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java	(working copy)
 @@ -87,7 +87,7 @@
  			_log.log(Level.SEVERE, "Error:", e);
@@ -2209,7 +2209,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/CharacterDelete.java
  	}
 Index: java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.java	(working copy)
 @@ -46,21 +46,21 @@
  		writeD(_henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00); // able to remove or not
@@ -2243,7 +2243,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/HennaItemRemoveInfo.j
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java	(working copy)
 @@ -18,6 +18,7 @@
   */
@@ -2269,7 +2269,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/HennaRemoveList.java
  	}
 Index: java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java	(working copy)
 @@ -34,7 +34,7 @@
  	protected final void writeImpl()
@@ -2282,7 +2282,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/FriendAddRequest.java
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/StopRotation.java	(working copy)
 @@ -36,6 +36,6 @@
  		writeD(_charObjId);
@@ -2358,7 +2358,7 @@ Index: java/com/l2jserver/gameserver/model/skills/BlowSuccess.java
 +}
 Index: java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java
 ===================================================================
---- java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java	(revision 791)
+--- java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java	(revision 801)
 +++ java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java	(working copy)
 @@ -280,7 +280,7 @@
  		{
@@ -2443,7 +2443,7 @@ Index: java/com/l2jserver/gameserver/engines/skills/DocumentSkill.java
  			for (n = first; n != null; n = n.getNextSibling())
 Index: java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java	(working copy)
 @@ -48,7 +48,16 @@
  		for (Skill skill : _skills)
@@ -2465,7 +2465,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/GMViewSkillInfo.java
  			writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
 Index: java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java	(working copy)
 @@ -22,7 +22,9 @@
  import java.util.Objects;
@@ -2513,7 +2513,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillList.java
  	}
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinParty.java	(working copy)
 @@ -18,6 +18,7 @@
   */
@@ -2534,7 +2534,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestAnswerJoinPart
  						player.sendPacket(sm);
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.java	(working copy)
 @@ -43,6 +43,10 @@
  		_page = slot / 12;
@@ -2549,7 +2549,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestShortCutReg.ja
  	
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContact.java	(working copy)
 @@ -36,7 +36,7 @@
  	protected void writeImpl()
@@ -2562,7 +2562,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExConfirmAddingContac
  	}
 Index: java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java	(working copy)
 @@ -49,15 +49,15 @@
  	protected void writeImpl()
@@ -2591,7 +2591,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/GMHennaInfo.java
  		{
 Index: java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.java	(working copy)
 @@ -25,7 +25,6 @@
  import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -2690,7 +2690,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/L2GameServerPacket.ja
  	{
 Index: java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.java	(working copy)
 @@ -21,6 +21,7 @@
  import java.util.ArrayList;
@@ -2720,7 +2720,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AbnormalStatusUpdate.
  			}
 Index: java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java	(working copy)
 @@ -125,5 +125,6 @@
  			writeQ(temp.count);
@@ -2732,7 +2732,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AcquireSkillInfo.java
 \ No newline at end of file
 Index: java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java	(working copy)
 @@ -48,6 +48,6 @@
  		writeD(_room.getLootType());
@@ -2744,7 +2744,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/PartyMatchDetail.java
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo.java	(working copy)
 @@ -54,7 +54,7 @@
  			if ((info != null) && info.isInUse())
@@ -2757,7 +2757,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExOlympiadSpelledInfo
  			}
 Index: java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java	(working copy)
 @@ -70,7 +70,8 @@
  				writeC(0x00); // Filler (always 0)
@@ -2771,7 +2771,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/BuyListSeed.java
  				writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
 Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.java	(working copy)
 @@ -21,6 +21,7 @@
  import java.util.Arrays;
@@ -2816,7 +2816,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillLaunched.ja
  		{
 Index: dist/db_installer/sql/game/character_shortcuts.sql
 ===================================================================
---- dist/db_installer/sql/game/character_shortcuts.sql	(revision 791)
+--- dist/db_installer/sql/game/character_shortcuts.sql	(revision 801)
 +++ dist/db_installer/sql/game/character_shortcuts.sql	(working copy)
 @@ -9,4 +9,5 @@
    `class_index` int(1) NOT NULL DEFAULT '0',
@@ -2828,7 +2828,7 @@ Index: dist/db_installer/sql/game/character_shortcuts.sql
 +ALTER TABLE `character_shortcuts` MODIFY COLUMN `level` varchar(9);
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java	(working copy)
 @@ -34,5 +34,6 @@
  	{
@@ -2839,7 +2839,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExPlayScene.java
  }
 Index: java/com/l2jserver/gameserver/network/L2GamePacketHandler.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/L2GamePacketHandler.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/L2GamePacketHandler.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/L2GamePacketHandler.java	(working copy)
 @@ -467,6 +467,9 @@
  					case 0x67:
@@ -2871,7 +2871,7 @@ Index: java/com/l2jserver/gameserver/network/L2GamePacketHandler.java
  								msg = new RequestFortressMapInfo();
 Index: java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java
 ===================================================================
---- java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java	(revision 791)
+--- java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java	(revision 801)
 +++ java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java	(working copy)
 @@ -53,6 +53,14 @@
  	public static final int CHANGE_ENCHANT_BOOK = 30299;
@@ -2890,7 +2890,7 @@ Index: java/com/l2jserver/gameserver/data/xml/impl/EnchantSkillGroupsData.java
  	private final Map<Integer, L2EnchantSkillLearn> _enchantSkillTrees = new HashMap<>();
 Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.java	(working copy)
 @@ -41,5 +41,7 @@
  		writeD(_player.getMaxMp());
@@ -2902,7 +2902,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeShopItemInfo.ja
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java	(revision 798)
+--- java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java	(revision 815)
 +++ java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.java	(working copy)
 @@ -20,6 +20,7 @@
  
@@ -2943,7 +2943,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/GMViewCharacterInfo.j
  		writeC(_activeChar.getInventory().canEquipCloak() ? 1 : 0); // CT2.3
 Index: java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java	(working copy)
 @@ -49,7 +49,7 @@
  		}
@@ -2956,7 +2956,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/CharacterRestore.java
  		final CharSelectInfoPackage charInfo = getClient().getCharSelection(_charSlot);
 Index: java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java	(revision 801)
 +++ java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java	(working copy)
 @@ -71,39 +71,114 @@
  	public static final long MAX_ADENA = Config.MAX_ADENA;
@@ -3337,7 +3337,7 @@ Index: java/com/l2jserver/gameserver/model/itemcontainer/Inventory.java
  	public boolean canEquipCloak()
 Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.java	(working copy)
 @@ -18,6 +18,7 @@
   */
@@ -3358,7 +3358,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeStatusChanged.j
  		writeD(_clan.getCrestId());
 Index: java/com/l2jserver/gameserver/model/ItemInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/ItemInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/ItemInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/model/ItemInfo.java	(working copy)
 @@ -325,6 +325,16 @@
  		return _augmentation;
@@ -3379,7 +3379,7 @@ Index: java/com/l2jserver/gameserver/model/ItemInfo.java
  		return _count;
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java	(working copy)
 @@ -18,6 +18,7 @@
   */
@@ -3400,7 +3400,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinParty.java
  		}
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java	(working copy)
 @@ -79,7 +79,7 @@
  		sm.addString(activeChar.getClan().getAllyName());
@@ -3413,7 +3413,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestJoinAlly.java
  	@Override
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiumItem.java	(working copy)
 @@ -33,14 +33,14 @@
  	private static final String _C__D0_52_REQUESTWITHDRAWPREMIUMITEM = "[C] D0:52 RequestWithDrawPremiumItem";
@@ -3450,7 +3450,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestWithDrawPremiu
  			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
 Index: java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java	(working copy)
 @@ -20,9 +20,9 @@
  
@@ -3466,7 +3466,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/SetupGauge.java
  	private final int _time;
 Index: java/com/l2jserver/gameserver/network/serverpackets/Die.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/Die.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/Die.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/Die.java	(working copy)
 @@ -45,9 +45,7 @@
  	private final boolean _isSweepable;
@@ -3524,7 +3524,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/Die.java
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java	(working copy)
 @@ -54,11 +54,28 @@
  		writeD(getFromList(Inventory.PAPERDOLL_LEGS));
@@ -3559,7 +3559,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ShopPreviewInfo.java
  	private int getFromList(int key)
 Index: java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.java	(working copy)
 @@ -46,21 +46,21 @@
  		writeD(_henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00); // able to draw or not 0 is false and 1 is true
@@ -3593,7 +3593,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/HennaItemDrawInfo.jav
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.java	(working copy)
 @@ -79,10 +79,11 @@
  		{
@@ -3611,7 +3611,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExUserInfoEquipSlot.j
  		}
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelItem.java	(working copy)
 @@ -120,6 +120,15 @@
  			case S84:
@@ -3629,9 +3629,26 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestConfirmCancelI
  			// TODO: S84 TOP price 3.2M
  			// any other item type is not augmentable
  			default:
+Index: dist/game/config/Server.ini
+===================================================================
+--- dist/game/config/Server.ini	(revision 803)
++++ dist/game/config/Server.ini	(working copy)
+@@ -93,9 +93,9 @@
+ # Numbers of protocol revisions that server allows to connect.
+ # Delimiter is ;
+ # WARNING: <u><b><font color="red">Changing the protocol revision may result in incompatible communication and many errors in game!</font></b></u>
+-# Ertheia: 603;606;607;610
+-# Classic: 19
+-AllowedProtocolRevisions = 603;606;607;610
++# Infinite Odyssey: 24
++# Classic: 24
++AllowedProtocolRevisions = 24
+ 
+ # Displays server type next to the server name on character selection.
+ # Notes:
 Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.java	(working copy)
 @@ -18,6 +18,7 @@
   */
@@ -3651,7 +3668,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowInfoUpdate.
  		writeD(_clan.getCastleId());
 Index: java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java	(working copy)
 @@ -24,13 +24,15 @@
  	private final String _subPledgeName;
@@ -3692,7 +3709,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AskJoinPledge.java
  }
 Index: dist/db_installer/sql/game/character_skills_save.sql
 ===================================================================
---- dist/db_installer/sql/game/character_skills_save.sql	(revision 791)
+--- dist/db_installer/sql/game/character_skills_save.sql	(revision 801)
 +++ dist/db_installer/sql/game/character_skills_save.sql	(working copy)
 @@ -10,4 +10,6 @@
    `class_index` INT(1) NOT NULL DEFAULT 0,
@@ -3705,7 +3722,7 @@ Index: dist/db_installer/sql/game/character_skills_save.sql
 +UPDATE `character_skills_save` SET skill_level=((skill_level % 100) + (round(skill_level / 100) * 1000)) WHERE skill_level <= 1000 AND skill_level >= 100;
 Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkillInfo.java	(working copy)
 @@ -34,12 +34,21 @@
  	
@@ -3732,7 +3749,7 @@ Index: java/com/l2jserver/gameserver/network/clientpackets/RequestExEnchantSkill
  	@Override
 Index: java/com/l2jserver/gameserver/network/serverpackets/SkillList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/SkillList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/SkillList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/SkillList.java	(working copy)
 @@ -21,6 +21,8 @@
  import java.util.ArrayList;
@@ -3761,26 +3778,9 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/SkillList.java
  			writeD(temp.id);
  			writeD(-1); // GOD ReuseDelayShareGroupID
  			writeC(temp.disabled ? 1 : 0); // iSkillDisabled
-Index: dist/game/config/Server.properties
-===================================================================
---- dist/game/config/Server.properties	(revision 791)
-+++ dist/game/config/Server.properties	(working copy)
-@@ -93,9 +93,9 @@
- # Numbers of protocol revisions that server allows to connect.
- # Delimiter is ;
- # WARNING: <u><b><font color="red">Changing the protocol revision may result in incompatible communication and many errors in game!</font></b></u>
--# Ertheia: 603;606;607;610
--# Classic: 19
--AllowedProtocolRevisions = 603;606;607;610
-+# Infinite Odyssey: 24
-+# Classic: 24
-+AllowedProtocolRevisions = 24
- 
- # Displays server type next to the server name on character selection.
- # Notes:
 Index: java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java	(working copy)
 @@ -18,6 +18,7 @@
   */
@@ -3816,7 +3816,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ShortCutRegister.java
  				writeD(_shortcut.getCharacterType());
 Index: java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java	(working copy)
 @@ -20,6 +20,7 @@
  
@@ -3840,7 +3840,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/HennaEquipList.java
  	}
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.java	(working copy)
 @@ -29,7 +29,6 @@
  {
@@ -3868,7 +3868,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExStorageMaxCount.jav
  		writeD(_privateBuy);
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChange.java	(working copy)
 @@ -36,7 +36,7 @@
  	protected void writeImpl()
@@ -3881,7 +3881,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventTimeChan
  		// left time in ms max is 16000 its 4m and state is automatically changed to quit
 Index: java/com/l2jserver/commons/mmocore/SendablePacket.java
 ===================================================================
---- java/com/l2jserver/commons/mmocore/SendablePacket.java	(revision 791)
+--- java/com/l2jserver/commons/mmocore/SendablePacket.java	(revision 801)
 +++ java/com/l2jserver/commons/mmocore/SendablePacket.java	(working copy)
 @@ -43,6 +43,17 @@
  	 * 8bit integer (00)
@@ -3921,7 +3921,7 @@ Index: java/com/l2jserver/commons/mmocore/SendablePacket.java
  	 * @param value
 Index: java/com/l2jserver/gameserver/enums/InventorySlot.java
 ===================================================================
---- java/com/l2jserver/gameserver/enums/InventorySlot.java	(revision 791)
+--- java/com/l2jserver/gameserver/enums/InventorySlot.java	(revision 801)
 +++ java/com/l2jserver/gameserver/enums/InventorySlot.java	(working copy)
 @@ -40,25 +40,25 @@
  	LEGS(Inventory.PAPERDOLL_LEGS),
@@ -3965,7 +3965,7 @@ Index: java/com/l2jserver/gameserver/enums/InventorySlot.java
  	
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInfoPacket.java	(working copy)
 @@ -34,7 +34,7 @@
  	protected void writeImpl()
@@ -3978,7 +3978,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventPointInf
  }
 Index: java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java	(revision 791)
+--- java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java	(revision 801)
 +++ java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java	(working copy)
 @@ -879,7 +879,7 @@
  	
@@ -3991,7 +3991,7 @@ Index: java/com/l2jserver/gameserver/model/itemcontainer/PcInventory.java
  		{
 Index: java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.java	(working copy)
 @@ -29,10 +29,8 @@
  import com.l2jserver.Config;
@@ -4233,7 +4233,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/CharSelectionInfo.jav
  			if (System.currentTimeMillis() > deletetime)
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdateFromTarget.java	(working copy)
 @@ -21,6 +21,7 @@
  import java.util.ArrayList;
@@ -4278,7 +4278,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExAbnormalStatusUpdat
  			writeD(info._caster);
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java	(working copy)
 @@ -70,7 +70,7 @@
  			writeD(hair.getAdena());
@@ -4309,7 +4309,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExBeautyItemList.java
  	}
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.java	(working copy)
 @@ -34,7 +34,7 @@
  	protected void writeImpl()
@@ -4322,7 +4322,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExNevitAdventEffect.j
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.java	(working copy)
 @@ -63,9 +63,9 @@
  	protected final void writeImpl()
@@ -4338,7 +4338,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/RecipeShopManageList.
  		{
 Index: java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java
 ===================================================================
---- java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java	(revision 791)
+--- java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java	(revision 801)
 +++ java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java	(working copy)
 @@ -33,7 +33,7 @@
  	MAX_MP(0x20),
@@ -4351,7 +4351,7 @@ Index: java/com/l2jserver/gameserver/enums/PartySmallWindowUpdateType.java
  	
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.java	(working copy)
 @@ -34,7 +34,6 @@
  	private final int _sysMessageId;
@@ -4445,7 +4445,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/ExShowScreenMessage.j
  }
 Index: java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java	(revision 791)
+--- java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java	(revision 801)
 +++ java/com/l2jserver/gameserver/network/serverpackets/ExEnchantSkillInfo.java	(working copy)
 @@ -22,6 +22,7 @@
  import java.util.List;
