@@ -1848,7 +1848,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// queue herbs and potions
 		if (isCastingSimultaneouslyNow() && simultaneously)
 		{
-			ThreadPoolManager.getInstance().scheduleAi(() -> doCast(skill), 100);
+			ThreadPoolManager.getInstance().scheduleAi(() -> beginCast(skill, simultaneously, target, targets), 100);
 			return;
 		}
 		
