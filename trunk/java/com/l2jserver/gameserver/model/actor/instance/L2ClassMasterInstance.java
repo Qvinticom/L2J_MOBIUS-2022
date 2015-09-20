@@ -145,10 +145,11 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			return;
 		}
 		
-		if (!player.getFloodProtectors().getServerBypass().tryPerformAction("changeclass"))
-		{
-			return;
-		}
+		// Removed - did not work with normal characres (only GMs)
+		// if (!player.getFloodProtectors().getServerBypass().tryPerformAction("changeclass"))
+		// {
+		// return;
+		// }
 		
 		try
 		{
