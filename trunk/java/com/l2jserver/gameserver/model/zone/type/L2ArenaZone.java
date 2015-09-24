@@ -40,10 +40,7 @@ public class L2ArenaZone extends L2ZoneType
 	{
 		if (character instanceof L2PcInstance)
 		{
-			if (character.isInsideZone(ZoneId.PVP))
-			{
-				character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-			}
+			character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 		}
 		
 		character.setInsideZone(ZoneId.PVP, true);
