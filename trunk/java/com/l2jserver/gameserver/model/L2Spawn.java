@@ -41,6 +41,7 @@ import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.model.interfaces.INamable;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jserver.util.Rnd;
 
@@ -620,7 +621,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 					isQuestMonster = true;
 				}
 				
-				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && GeoData.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
+				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && GeoData.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
 				{
 					newlocx = randX;
 					newlocy = randY;
