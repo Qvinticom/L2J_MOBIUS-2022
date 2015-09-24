@@ -66,7 +66,7 @@ public interface IGroupedItemDropCalculationStrategy
 				for (GeneralDropItem item2 : normalized.getItems())
 				{
 					// Grouped item chance rates should not be modified (the whole magic was already done by normalizing thus the items' chance sum is always 100%).
-					totalChance += item2.getChance();
+					totalChance += Math.sqrt(item2.getChance());
 					if (totalChance > random)
 					{
 						int amountMultiply = 1;
