@@ -80,9 +80,9 @@ public final class Q00183_RelicExploration extends Quest
 					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 					{
 						qs.addExpAndSp(60000, 3000);
-						qs.exitQuest(false, true);
-						htmltext = event;
 					}
+					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}
@@ -190,10 +190,7 @@ public final class Q00183_RelicExploration extends Quest
 		}
 		if (qs.isCompleted())
 		{
-			if (npc.getId() == HEAD_BLACKSMITH_KUSTO)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}
