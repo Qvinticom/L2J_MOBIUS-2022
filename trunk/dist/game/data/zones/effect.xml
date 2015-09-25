@@ -2185,4 +2185,20 @@
 		<node X="25804" Y="-15088" />
 		<node X="26324" Y="-15704" />
 	</zone>
+	<zone name="Queen Ant Curse Zone" type="EffectZone" shape="NPoly" minZ="-5947" maxZ="-5547"> <!-- Custom -->
+		<stat name="affectedLvlMin" val="50" />
+		<stat name="chance" val="100" />
+		<stat name="initialDelay" val="2000" />
+		<stat name="reuse" val="6000" />
+		<stat name="skillIdLvl" val="4515-1;" />
+		<stat name="showDangerIcon" val="false" />
+		<node X="-21490" Y="178613" />
+		<node X="-22258" Y="178961" />
+		<node X="-22890" Y="182205" />
+		<node X="-22770" Y="183129" />
+		<node X="-21594" Y="183945" />
+		<node X="-20570" Y="183381" />
+		<node X="-20310" Y="182673" />
+		<node X="-20762" Y="179129" />
+	</zone>
 </list>
