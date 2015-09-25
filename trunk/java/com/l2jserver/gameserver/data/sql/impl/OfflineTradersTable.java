@@ -49,7 +49,7 @@ public class OfflineTradersTable
 	private static final String CLEAR_OFFLINE_TABLE_ITEMS = "DELETE FROM character_offline_trade_items";
 	private static final String CLEAR_OFFLINE_TABLE_ITEMS_PLAYER = "DELETE FROM character_offline_trade_items WHERE `charId`=?";
 	private static final String LOAD_OFFLINE_STATUS = "SELECT * FROM character_offline_trade";
-	private static final String LOAD_OFFLINE_ITEMS = "SELECT * FROM character_offline_trade_items WHERE charId = ?";
+	private static final String LOAD_OFFLINE_ITEMS = "SELECT * FROM character_offline_trade_items WHERE `charId`=?";
 	
 	public void storeOffliners()
 	{
@@ -213,7 +213,8 @@ public class OfflineTradersTable
 											0
 										}, 0) == null)
 										{
-											throw new NullPointerException();
+											continue;
+											// throw new NullPointerException();
 										}
 									}
 									player.getBuyList().setTitle(rs.getString("title"));
@@ -224,7 +225,8 @@ public class OfflineTradersTable
 									{
 										if (player.getSellList().addItem(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
 										{
-											throw new NullPointerException();
+											continue;
+											// throw new NullPointerException();
 										}
 									}
 									player.getSellList().setTitle(rs.getString("title"));
