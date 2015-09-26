@@ -22,6 +22,7 @@ import instances.AbstractInstance;
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
+import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
 
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
@@ -66,10 +67,12 @@ public final class ElcadiasTent extends AbstractInstance
 			final QuestState GirlOfDoubt = talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
 			final QuestState ForbiddenBook = talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
 			final QuestState Monastery = talker.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+			final QuestState PowerOfSeal = talker.getQuestState(Q10296_SevenSignsPowerOfTheSeal.class.getSimpleName());
 			if (((GirlOfDoubt != null) && GirlOfDoubt.isStarted()) //
 				|| ((GirlOfDoubt != null) && GirlOfDoubt.isCompleted() && (ForbiddenBook == null)) //
 				|| ((ForbiddenBook != null) && ForbiddenBook.isStarted()) //
-				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)))
+				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)) //
+				|| ((PowerOfSeal != null) && PowerOfSeal.isCompleted()))
 			{
 				enterInstance(talker, new ETWorld(), "ElcadiasTent.xml", TEMPLATE_ID);
 			}

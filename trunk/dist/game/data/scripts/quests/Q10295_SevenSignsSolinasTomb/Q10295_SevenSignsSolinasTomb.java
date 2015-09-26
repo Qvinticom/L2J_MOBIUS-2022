@@ -333,7 +333,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			return htmltext;
 		}
 		
-		int cond = st.getInt("cond");
+		int cond = st.getCond();
 		int npcId = npc.getId();
 		switch (st.getState())
 		{

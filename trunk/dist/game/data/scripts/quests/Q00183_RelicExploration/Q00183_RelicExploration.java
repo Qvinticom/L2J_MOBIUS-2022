@@ -188,7 +188,7 @@ public final class Q00183_RelicExploration extends Quest
 				}
 			}
 		}
-		if (qs.isCompleted())
+		else if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);
 		}

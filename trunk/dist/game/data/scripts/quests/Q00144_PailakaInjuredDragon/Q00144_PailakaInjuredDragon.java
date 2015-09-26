@@ -503,7 +503,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_FOOTMAN:
 			case VARKA_SILENOS_RECRUIT:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 5))
+				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
 				{
 					qs.giveItems(STAGE1, 1);
 					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -517,7 +517,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKA_SILENOS_WARRIOR:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 10))
+				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
 				{
 					qs.giveItems(STAGE1, 1);
 					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -531,7 +531,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKA_ELITE_GUARD:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 15))
+				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
 				{
 					qs.giveItems(STAGE1, 1);
 					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -561,7 +561,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_GREAT_MAGUS:
 			case VARKA_SILENOS_GENERAL:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 5))
+				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
 				{
 					qs.giveItems(STAGE2, 1);
 					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -575,7 +575,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKAS_PROPHET:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 10))
+				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
 				{
 					qs.giveItems(STAGE2, 1);
 					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -589,7 +589,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKA_SILENOS_HEAD_GUARD:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 20))
+				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
 				{
 					qs.giveItems(STAGE2, 1);
 					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
