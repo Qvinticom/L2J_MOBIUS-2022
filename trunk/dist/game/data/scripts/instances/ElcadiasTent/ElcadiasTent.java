@@ -39,7 +39,6 @@ public final class ElcadiasTent extends AbstractInstance
 {
 	protected class ETWorld extends InstanceWorld
 	{
-		
 	}
 	
 	// NPCs
@@ -72,7 +71,7 @@ public final class ElcadiasTent extends AbstractInstance
 				|| ((GirlOfDoubt != null) && GirlOfDoubt.isCompleted() && (ForbiddenBook == null)) //
 				|| ((ForbiddenBook != null) && ForbiddenBook.isStarted()) //
 				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)) //
-				|| ((PowerOfSeal != null) && PowerOfSeal.isCompleted()))
+				|| ((PowerOfSeal != null) && PowerOfSeal.isStarted()))
 			{
 				enterInstance(talker, new ETWorld(), "ElcadiasTent.xml", TEMPLATE_ID);
 			}
