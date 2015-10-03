@@ -5325,6 +5325,12 @@ public final class L2PcInstance extends L2Playable
 			// Clear resurrect xp calculation
 			setExpBeforeDeath(0);
 			
+			// Kill the L2PcInstance
+			if (!super.doDie(killer))
+			{
+				return false;
+			}
+			
 			// Issues drop of Cursed Weapon.
 			if (isCursedWeaponEquipped())
 			{
@@ -5384,12 +5390,6 @@ public final class L2PcInstance extends L2Playable
 		
 		// calculate Shilen's Breath debuff level
 		calculateShilensBreathDebuffLevel(killer);
-		
-		// Kill the L2PcInstance
-		if (!super.doDie(killer))
-		{
-			return false;
-		}
 		
 		if (isMounted())
 		{
