@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -87,6 +88,9 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 44;
 	private static final int ZONE = 20109;
+	private static final int ZONE_EXIT = 200000;
+	private static final int TIGRESS_LVL1 = 14916;
+	private static final int TIGRESS_LVL2 = 14917;
 	
 	public PailakaDevilsLegacy()
 	{
@@ -96,6 +100,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 		addKillId(LEMATAN);
 		addSpawnId(FOLLOWERS);
 		addEnterZoneId(ZONE);
+		addExitZoneId(ZONE_EXIT);
 		addMoveFinishedId(LEMATAN);
 	}
 	
@@ -292,6 +297,35 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 			}
 		}
 		return super.onEnterZone(character, zone);
+	}
+	
+	@Override
+	public String onExitZone(L2Character character, L2ZoneType zone)
+	{
+		if (character.isPlayer() && character.hasSummon())
+		{
+			for (L2Summon summon : character.getServitors().values())
+			{
+				if (((summon.getTemplate().getId() == TIGRESS_LVL1) || (summon.getTemplate().getId() == TIGRESS_LVL2)))
+				{
+					if (!summon.isDead())
+					{
+						summon.getAI().stopFollow();
+						summon.abortAttack();
+						summon.abortCast();
+						if (summon.hasAI())
+						{
+							summon.getAI().stopAITask();
+						}
+						summon.getKnownList().removeAllKnownObjects();
+						summon.setTarget(null);
+					}
+					summon.decayMe();
+					break;
+				}
+			}
+		}
+		return super.onExitZone(character, zone);
 	}
 	
 	@Override
