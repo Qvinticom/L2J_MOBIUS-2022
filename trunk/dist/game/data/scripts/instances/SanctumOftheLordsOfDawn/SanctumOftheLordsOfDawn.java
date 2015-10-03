@@ -247,6 +247,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
+		npc.disableCoreAI(true); // disable core AI
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));
 		startQuestTimer("teleportPlayer", 2000, npc, player);
 		return super.onAggroRangeEnter(npc, player, isSummon);
