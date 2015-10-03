@@ -973,16 +973,15 @@ public class L2CharacterAI extends AbstractAI
 			_actor.setRunning();
 		}
 		
-		// If pathfinding enabled the creature will go to the defined destination (retail like).
-		// Otherwise it will go to the nearest obstacle.
+		// If pathfinding enabled the creature will go to the nearest obstacle.
 		final Location destination;
 		if (Config.PATHFINDING > 0)
 		{
-			destination = new Location(posX, posY, posZ, _actor.getInstanceId());
+			destination = GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId());
 		}
 		else
 		{
-			destination = GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId());
+			destination = new Location(posX, posY, posZ);
 		}
 		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
