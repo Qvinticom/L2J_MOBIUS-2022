@@ -321,6 +321,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 						summon.setTarget(null);
 					}
 					summon.decayMe();
+					((L2PcInstance) character).removeServitor(summon.getObjectId());
 					break;
 				}
 			}
