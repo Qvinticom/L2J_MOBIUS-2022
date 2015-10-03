@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.TerritoryTable;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.AISkillScope;
 import com.l2jserver.gameserver.enums.AIType;
 import com.l2jserver.gameserver.model.L2Object;
@@ -575,8 +576,17 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// Check if the actor is a L2GuardInstance
 		if ((npc instanceof L2GuardInstance) && !npc.isWalker())
 		{
-			// Order to the L2GuardInstance to return to its home location because there's no target to attack
-			npc.returnHome();
+			if (Config.ENABLE_GUARD_RETURN && (npc.getSpawn() != null) && (Util.calculateDistance(npc, npc.getSpawn(), false, false) > 50) && /* !npc.isInsideZone(ZoneId.SIEGE) && */!npc.isCastingNow())
+			{
+				// Custom guard teleport to spawn.
+				npc.clearAggroList();
+				npc.doCast(SkillData.getInstance().getSkill(1050, 1));
+			}
+			else
+			{
+				// Order to the L2GuardInstance to return to its home location because there's no target to attack
+				npc.returnHome();
+			}
 		}
 		
 		// Minions following leader

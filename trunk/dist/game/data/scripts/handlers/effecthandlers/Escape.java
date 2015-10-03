@@ -21,6 +21,8 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.TeleportWhereType;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -61,7 +63,15 @@ public final class Escape extends AbstractEffect
 			return;
 		}
 		
-		info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
-		info.getEffected().setInstanceId(0);
+		if (info.getEffected() instanceof L2GuardInstance)
+		{
+			info.getEffected().teleToLocation(((L2Npc) info.getEffected()).getSpawn());
+			info.getEffected().setHeading(((L2Npc) info.getEffected()).getSpawn().getHeading());
+		}
+		else
+		{
+			info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
+			info.getEffected().setInstanceId(0);
+		}
 	}
 }
