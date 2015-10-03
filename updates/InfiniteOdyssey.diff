@@ -391,7 +391,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/PledgeShowMemberListA
  		writeS(_clan.getLeaderName());
 Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
 ===================================================================
---- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(revision 834)
+--- java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(revision 838)
 +++ java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java	(working copy)
 @@ -22,6 +22,7 @@
  import java.util.Collections;
@@ -400,8 +400,8 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
 +import com.l2jserver.gameserver.datatables.SkillData;
  import com.l2jserver.gameserver.model.Location;
  import com.l2jserver.gameserver.model.actor.L2Character;
- import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-@@ -35,11 +36,12 @@
+ import com.l2jserver.gameserver.model.interfaces.IPositionable;
+@@ -34,11 +35,12 @@
  {
  	private final int _skillId;
  	private final int _skillLevel;
@@ -415,15 +415,15 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
  	private final List<Location> _groundLocations;
  	
  	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
-@@ -48,6 +50,7 @@
+@@ -47,6 +49,7 @@
  		_target = target;
  		_skillId = skillId;
  		_skillLevel = skillLevel;
 +		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
  		_hitTime = hitTime;
  		_reuseDelay = reuseDelay;
- 		Location skillWorldPos = null;
-@@ -67,6 +70,25 @@
+ 		_groundLocations = cha.isPlayer() && (cha.getActingPlayer().getCurrentSkillWorldPosition() != null) ? Arrays.asList(cha.getActingPlayer().getCurrentSkillWorldPosition()) : Collections.<Location> emptyList();
+@@ -57,6 +60,25 @@
  		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay);
  	}
  	
@@ -449,7 +449,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/MagicSkillUse.java
  	@Override
  	protected final void writeImpl()
  	{
-@@ -75,7 +97,15 @@
+@@ -65,7 +87,15 @@
  		writeD(_activeChar.getObjectId());
  		writeD(_target.getObjectId());
  		writeD(_skillId);
@@ -2037,7 +2037,7 @@ Index: java/com/l2jserver/gameserver/network/serverpackets/AbstractItemPacket.ja
  	
 Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
 ===================================================================
---- java/com/l2jserver/gameserver/model/actor/L2Character.java	(revision 834)
+--- java/com/l2jserver/gameserver/model/actor/L2Character.java	(revision 839)
 +++ java/com/l2jserver/gameserver/model/actor/L2Character.java	(working copy)
 @@ -86,6 +86,7 @@
  import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
@@ -2055,7 +2055,7 @@ Index: java/com/l2jserver/gameserver/model/actor/L2Character.java
  import com.l2jserver.gameserver.model.skills.BuffInfo;
  import com.l2jserver.gameserver.model.skills.CommonSkill;
  import com.l2jserver.gameserver.model.skills.EffectScope;
-@@ -1957,7 +1959,18 @@
+@@ -1950,7 +1952,18 @@
  		
  		// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
  		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
