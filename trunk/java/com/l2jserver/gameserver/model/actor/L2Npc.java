@@ -20,7 +20,6 @@ package com.l2jserver.gameserver.model.actor;
 
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -83,7 +82,6 @@ import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.variables.NpcVariables;
 import com.l2jserver.gameserver.model.zone.type.L2TownZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -193,14 +191,6 @@ public class L2Npc extends L2Character
 		return getTemplate().getSpiritShotChance();
 	}
 	
-	/**
-	 * @return the primary attack skill Id
-	 */
-	public int getPrimarySkillId()
-	{
-		return getTemplate().getPrimarySkillId();
-	}
-	
 	public int getMinSkillChance()
 	{
 		return getTemplate().getMinSkillChance();
@@ -209,6 +199,15 @@ public class L2Npc extends L2Character
 	public int getMaxSkillChance()
 	{
 		return getTemplate().getMaxSkillChance();
+	}
+	
+	/**
+	 * Verifies if the NPC can cast a skill given the minimum and maximum skill chances.
+	 * @return {@code true} if the NPC has chances of casting a skill
+	 */
+	public boolean hasSkillChance()
+	{
+		return Rnd.get(100) < Rnd.get(getMinSkillChance(), getMaxSkillChance());
 	}
 	
 	public boolean canMove()
@@ -226,169 +225,57 @@ public class L2Npc extends L2Character
 		return getTemplate().getDodge();
 	}
 	
-	public int getSSkillChance()
+	public List<Skill> getLongRangeSkills()
 	{
-		return getTemplate().getShortRangeSkillChance();
+		return getTemplate().getAISkills(AISkillScope.LONG_RANGE);
 	}
 	
-	public int getLSkillChance()
+	public List<Skill> getShortRangeSkills()
 	{
-		return getTemplate().getLongRangeSkillChance();
-	}
-	
-	public boolean hasLSkill()
-	{
-		return getTemplate().getLongRangeSkillId() > 0;
-	}
-	
-	public boolean hasSSkill()
-	{
-		return getTemplate().getShortRangeSkillId() > 0;
-	}
-	
-	public List<Skill> getLongRangeSkill()
-	{
-		final List<Skill> skilldata = new ArrayList<>();
-		if (getTemplate().getLongRangeSkillId() == 0)
-		{
-			return skilldata;
-		}
-		
-		switch (getTemplate().getLongRangeSkillId())
-		{
-			case -1:
-			{
-				final Collection<Skill> skills = getAllSkills();
-				if (skills != null)
-				{
-					for (Skill sk : skills)
-					{
-						if ((sk == null) || sk.isPassive() || (sk.getTargetType() == L2TargetType.SELF))
-						{
-							continue;
-						}
-						
-						if (sk.getCastRange() >= 200)
-						{
-							skilldata.add(sk);
-						}
-					}
-				}
-				break;
-			}
-			case 1:
-			{
-				for (Skill sk : getTemplate().getAISkills(AISkillScope.UNIVERSAL))
-				{
-					if (sk.getCastRange() >= 200)
-					{
-						skilldata.add(sk);
-					}
-				}
-				break;
-			}
-			default:
-			{
-				for (Skill sk : getAllSkills())
-				{
-					if (sk.getId() == getTemplate().getLongRangeSkillId())
-					{
-						skilldata.add(sk);
-					}
-				}
-			}
-		}
-		return skilldata;
-	}
-	
-	public List<Skill> getShortRangeSkill()
-	{
-		final List<Skill> skilldata = new ArrayList<>();
-		if (getTemplate().getShortRangeSkillId() == 0)
-		{
-			return skilldata;
-		}
-		
-		switch (getTemplate().getShortRangeSkillId())
-		{
-			case -1:
-			{
-				Collection<Skill> skills = getAllSkills();
-				if (skills != null)
-				{
-					for (Skill sk : skills)
-					{
-						if ((sk == null) || sk.isPassive() || (sk.getTargetType() == L2TargetType.SELF))
-						{
-							continue;
-						}
-						if (sk.getCastRange() <= 200)
-						{
-							skilldata.add(sk);
-						}
-					}
-				}
-				break;
-			}
-			case 1:
-			{
-				for (Skill sk : getTemplate().getAISkills(AISkillScope.UNIVERSAL))
-				{
-					if (sk.getCastRange() <= 200)
-					{
-						skilldata.add(sk);
-					}
-				}
-				break;
-			}
-			default:
-			{
-				for (Skill sk : getAllSkills())
-				{
-					if (sk.getId() == getTemplate().getShortRangeSkillId())
-					{
-						skilldata.add(sk);
-					}
-				}
-			}
-		}
-		return skilldata;
+		return getTemplate().getAISkills(AISkillScope.SHORT_RANGE);
 	}
 	
 	/** Task launching the function onRandomAnimation() */
-	protected class RandomAnimationTask implements Runnable
+	protected static class RandomAnimationTask implements Runnable
 	{
+		private final L2Npc _npc;
+		
+		protected RandomAnimationTask(L2Npc npc)
+		{
+			_npc = npc;
+		}
+		
 		@Override
 		public void run()
 		{
 			try
 			{
-				if (isMob())
+				if (_npc.isMob())
 				{
 					// Cancel further animation timers until intention is changed to ACTIVE again.
-					if (getAI().getIntention() != AI_INTENTION_ACTIVE)
+					if (_npc.getAI().getIntention() != AI_INTENTION_ACTIVE)
 					{
 						return;
 					}
 				}
 				else
 				{
-					if (!isInActiveRegion())
+					if (!_npc.isInActiveRegion())
 					{
 						return;
 					}
 				}
 				
-				if (!(isDead() || isStunned() || isSleeping() || isParalyzed()))
+				if (!(_npc.isDead() || _npc.isStunned() || _npc.isSleeping() || _npc.isParalyzed()))
 				{
-					onRandomAnimation(Rnd.get(2, 3));
+					_npc.onRandomAnimation(Rnd.get(2, 3));
 				}
 				
-				startRandomAnimationTimer();
+				_npc.startRandomAnimationTimer();
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				_log.log(Level.SEVERE, "There has been an error trying to perform a random animation for NPC " + _npc.getId() + "!", e);
 			}
 		}
 	}
@@ -425,7 +312,7 @@ public class L2Npc extends L2Character
 		int interval = Rnd.get(minWait, maxWait) * 1000;
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
-		_rAniTask = new RandomAnimationTask();
+		_rAniTask = new RandomAnimationTask(this);
 		ThreadPoolManager.getInstance().scheduleGeneral(_rAniTask, interval);
 	}
 	

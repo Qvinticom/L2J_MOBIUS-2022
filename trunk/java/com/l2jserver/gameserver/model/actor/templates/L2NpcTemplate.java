@@ -89,11 +89,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private int _spiritShotChance;
 	private int _minSkillChance;
 	private int _maxSkillChance;
-	private int _primarySkillId;
-	private int _shortRangeSkillId;
-	private int _shortRangeSkillChance;
-	private int _longRangeSkillId;
-	private int _longRangeSkillChance;
 	private Map<Integer, Skill> _skills;
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
@@ -166,11 +161,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		
 		_minSkillChance = set.getInt("minSkillChance", 7);
 		_maxSkillChance = set.getInt("maxSkillChance", 15);
-		_primarySkillId = set.getInt("primarySkillId", 0);
-		_shortRangeSkillId = set.getInt("shortRangeSkillId", 0);
-		_shortRangeSkillChance = set.getInt("shortRangeSkillChance", 0);
-		_longRangeSkillId = set.getInt("longRangeSkillId", 0);
-		_longRangeSkillChance = set.getInt("longRangeSkillChance", 0);
 		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
@@ -397,31 +387,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		return _maxSkillChance;
 	}
 	
-	public int getPrimarySkillId()
-	{
-		return _primarySkillId;
-	}
-	
-	public int getShortRangeSkillId()
-	{
-		return _shortRangeSkillId;
-	}
-	
-	public int getShortRangeSkillChance()
-	{
-		return _shortRangeSkillChance;
-	}
-	
-	public int getLongRangeSkillId()
-	{
-		return _longRangeSkillId;
-	}
-	
-	public int getLongRangeSkillChance()
-	{
-		return _longRangeSkillChance;
-	}
-	
 	@Override
 	public Map<Integer, Skill> getSkills()
 	{
@@ -430,18 +395,17 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public void setSkills(Map<Integer, Skill> skills)
 	{
-		_skills = skills != null ? Collections.unmodifiableMap(skills) : Collections.<Integer, Skill> emptyMap();
+		_skills = skills != null ? Collections.unmodifiableMap(skills) : Collections.emptyMap();
 	}
 	
 	public List<Skill> getAISkills(AISkillScope aiSkillScope)
 	{
-		final List<Skill> aiSkills = _aiSkillLists.get(aiSkillScope);
-		return aiSkills != null ? aiSkills : Collections.<Skill> emptyList();
+		return _aiSkillLists.getOrDefault(aiSkillScope, Collections.emptyList());
 	}
 	
 	public void setAISkillLists(Map<AISkillScope, List<Skill>> aiSkillLists)
 	{
-		_aiSkillLists = aiSkillLists != null ? Collections.unmodifiableMap(aiSkillLists) : Collections.<AISkillScope, List<Skill>> emptyMap();
+		_aiSkillLists = aiSkillLists != null ? Collections.unmodifiableMap(aiSkillLists) : Collections.emptyMap();
 	}
 	
 	public Set<Integer> getClans()

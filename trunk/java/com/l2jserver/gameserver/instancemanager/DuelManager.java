@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -26,9 +28,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Duel;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jserver.util.Rnd;
 
 public final class DuelManager
 {
+	private static final List<String> ARENAS = Arrays.asList("OlympiadGrassyArena.xml", "OlympiadHerossVestigesArena.xml", "OlympiadOrbisArena.xml", "OlympiadThreeBridgesArena.xml");
 	private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
 	private final AtomicInteger _currentDuelId = new AtomicInteger();
 	
@@ -207,6 +211,15 @@ public final class DuelManager
 				duel.broadcastToTeam1(packet);
 			}
 		}
+	}
+	
+	/**
+	 * Gets new a random Olympiad Stadium instance name.
+	 * @return an instance name
+	 */
+	public String getDuelArena()
+	{
+		return ARENAS.get(Rnd.get(ARENAS.size()));
 	}
 	
 	public static final DuelManager getInstance()

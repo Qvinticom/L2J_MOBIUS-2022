@@ -362,7 +362,7 @@ public class StatsSet implements IParserAdvUtils
 		Object val = _set.get(key);
 		if (val == null)
 		{
-			throw new IllegalArgumentException("Integer value required, but not specified");
+			throw new IllegalArgumentException("Long value required, but not specified");
 		}
 		if (val instanceof Number)
 		{
@@ -374,7 +374,7 @@ public class StatsSet implements IParserAdvUtils
 		}
 		catch (Exception e)
 		{
-			throw new IllegalArgumentException("Integer value required, but found: " + val);
+			throw new IllegalArgumentException("Long value required, but found: " + val);
 		}
 	}
 	
@@ -396,7 +396,7 @@ public class StatsSet implements IParserAdvUtils
 		}
 		catch (Exception e)
 		{
-			throw new IllegalArgumentException("Integer value required, but found: " + val);
+			throw new IllegalArgumentException("Long value required, but found: " + val);
 		}
 	}
 	
@@ -414,7 +414,7 @@ public class StatsSet implements IParserAdvUtils
 		}
 		try
 		{
-			return (float) Double.parseDouble((String) val);
+			return Float.parseFloat((String) val);
 		}
 		catch (Exception e)
 		{
@@ -436,7 +436,7 @@ public class StatsSet implements IParserAdvUtils
 		}
 		try
 		{
-			return (float) Double.parseDouble((String) val);
+			return Float.parseFloat((String) val);
 		}
 		catch (Exception e)
 		{
@@ -450,7 +450,7 @@ public class StatsSet implements IParserAdvUtils
 		Object val = _set.get(key);
 		if (val == null)
 		{
-			throw new IllegalArgumentException("Float value required, but not specified");
+			throw new IllegalArgumentException("Double value required, but not specified");
 		}
 		if (val instanceof Number)
 		{
@@ -462,7 +462,7 @@ public class StatsSet implements IParserAdvUtils
 		}
 		catch (Exception e)
 		{
-			throw new IllegalArgumentException("Float value required, but found: " + val);
+			throw new IllegalArgumentException("Double value required, but found: " + val);
 		}
 	}
 	
@@ -484,7 +484,7 @@ public class StatsSet implements IParserAdvUtils
 		}
 		catch (Exception e)
 		{
-			throw new IllegalArgumentException("Float value required, but found: " + val);
+			throw new IllegalArgumentException("Double value required, but found: " + val);
 		}
 	}
 	
@@ -607,7 +607,7 @@ public class StatsSet implements IParserAdvUtils
 		Object obj = _set.get(key);
 		if ((obj == null) || !(obj instanceof List<?>))
 		{
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
 		
 		return (List<MinionHolder>) obj;

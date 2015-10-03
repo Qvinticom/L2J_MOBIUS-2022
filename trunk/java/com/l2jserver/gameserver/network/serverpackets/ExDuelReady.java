@@ -19,15 +19,19 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
- * @author KenM
+ * Duel Ready packet implementation.
+ * @author KenM, Zoey76
  */
 public class ExDuelReady extends L2GameServerPacket
 {
-	private final int _unk1;
+	public static final ExDuelReady PLAYER_DUEL = new ExDuelReady(false);
+	public static final ExDuelReady PARTY_DUEL = new ExDuelReady(true);
 	
-	public ExDuelReady(int unk1)
+	private final boolean _partyDuel;
+	
+	public ExDuelReady(boolean partyDuel)
 	{
-		_unk1 = unk1;
+		_partyDuel = partyDuel;
 	}
 	
 	@Override
@@ -36,6 +40,6 @@ public class ExDuelReady extends L2GameServerPacket
 		writeC(0xFE);
 		writeH(0x4E);
 		
-		writeD(_unk1);
+		writeD(_partyDuel ? 1 : 0);
 	}
 }

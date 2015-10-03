@@ -48,7 +48,7 @@ import com.l2jserver.util.Rnd;
  */
 public class AugmentationData
 {
-	// Zoey76: TODO: Implement using IXmlReader.
+	// TODO(Zoey76): Implement using IXmlReader.
 	private static final Logger LOGGER = Logger.getLogger(AugmentationData.class.getName());
 	
 	// stats
@@ -350,7 +350,6 @@ public class AugmentationData
 					{
 						NamedNodeMap aNodeAttributes = null;
 						
-						// System.out.println("We're going through the list now.");
 						for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling())
 						{
 							if (n.getNodeName().equals("weapon"))
@@ -359,7 +358,6 @@ public class AugmentationData
 								
 								aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
 								
-								// System.out.println("Now showing Augmentations for " + aWeaponType + " Weapons.");
 								for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
 								{
 									if (c.getNodeName().equals("stone"))
@@ -384,7 +382,6 @@ public class AugmentationData
 														
 														aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
 														
-														// System.out.println("Stone Id: " + aStoneId + ", Variation Id: " + aVariationId + ", Category Chances: " + aCategoryChance);
 														for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
 														{
 															if (e.getNodeName().equals("augment"))

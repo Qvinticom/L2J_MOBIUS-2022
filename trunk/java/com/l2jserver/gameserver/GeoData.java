@@ -224,10 +224,8 @@ public class GeoData
 	{
 		if (target.isDoor())
 		{
-			// can always see doors :o
 			return true;
 		}
-		
 		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), target.getX(), target.getY(), target.getZ(), target.getInstanceId());
 	}
 	
