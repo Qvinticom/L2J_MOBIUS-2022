@@ -406,7 +406,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						_actor.setTarget(_actor);
 						_actor.doCast(buff);
 						_actor.setTarget(target);
-						_log.info(this.getActor().getName() + "used buff skill " + buff.getName() + " on " + _actor.getName());
+						if (Config.DEBUG)
+						{
+							_log.info(this.getActor().getName() + " used buff skill " + buff.getName() + " on " + _actor.getName());
+						}
 						break;
 					}
 				}
@@ -850,7 +853,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				if (cast(skill))
 				{
-					_log.info(this.getActor().getName() + " used suicide skill " + skill.getName());
+					if (Config.DEBUG)
+					{
+						_log.info(this.getActor().getName() + " used suicide skill " + skill.getName());
+					}
 					return;
 				}
 			}
@@ -1036,7 +1042,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 								npc.setTarget(leader);
 								npc.doCast(healSkill);
 								npc.setTarget(target);
-								_log.info(this.getActor().getName() + " used heal skill " + healSkill.getName() + " on leader " + leader.getName());
+								if (Config.DEBUG)
+								{
+									_log.info(this.getActor().getName() + " used heal skill " + healSkill.getName() + " on leader " + leader.getName());
+								}
 								return;
 							}
 						}
@@ -1057,7 +1066,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						npc.setTarget(npc);
 						npc.doCast(sk);
 						npc.setTarget(target);
-						_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on itself");
+						if (Config.DEBUG)
+						{
+							_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on itself");
+						}
 						return;
 					}
 				}
@@ -1094,7 +1106,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 									npc.setTarget(obj);
 									npc.doCast(sk);
 									npc.setTarget(target);
-									_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on " + obj.getName());
+									if (Config.DEBUG)
+									{
+										_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on " + obj.getName());
+									}
 									return;
 								}
 							}
@@ -1145,7 +1160,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 								npc.setTarget(leader);
 								npc.doCast(sk);
 								npc.setTarget(target);
-								_log.info(this.getActor().getName() + " used resurrection skill " + sk.getName() + " on leader " + leader.getName());
+								if (Config.DEBUG)
+								{
+									_log.info(this.getActor().getName() + " used resurrection skill " + sk.getName() + " on leader " + leader.getName());
+								}
 								return;
 							}
 						}
@@ -1181,7 +1199,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 									npc.setTarget(obj);
 									npc.doCast(sk);
 									npc.setTarget(target);
-									_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on clan member " + obj.getName());
+									if (Config.DEBUG)
+									{
+										_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on clan member " + obj.getName());
+									}
 									return;
 								}
 							}
@@ -1195,7 +1216,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						npc.setTarget(npc);
 						npc.doCast(sk);
 						npc.setTarget(target);
-						_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on party");
+						if (Config.DEBUG)
+						{
+							_log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on party");
+						}
 						return;
 					}
 				}
@@ -1233,7 +1257,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				clientStopMoving(null);
 				npc.doCast(shortRangeSkill);
-				_log.info(this.getActor().getName() + " used short range skill " + shortRangeSkill.getName() + " on " + npc.getTarget().getName());
+				if (Config.DEBUG)
+				{
+					_log.info(this.getActor().getName() + " used short range skill " + shortRangeSkill.getName() + " on " + npc.getTarget().getName());
+				}
 				return;
 			}
 		}
@@ -1245,7 +1272,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				clientStopMoving(null);
 				npc.doCast(longRangeSkill);
-				_log.info(this.getActor().getName() + " used long range skill " + longRangeSkill.getName() + " on " + npc.getTarget().getName());
+				if (Config.DEBUG)
+				{
+					_log.info(this.getActor().getName() + " used long range skill " + longRangeSkill.getName() + " on " + npc.getTarget().getName());
+				}
 				return;
 			}
 		}
@@ -1983,7 +2013,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		catch (NullPointerException e)
 		{
 			setIntention(AI_INTENTION_ACTIVE);
-			_log.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - failed executing movementDisable()!");
+			if (Config.DEBUG)
+			{
+				_log.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - failed executing movementDisable()!");
+			}
 			return;
 		}
 	}
