@@ -1670,7 +1670,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="critDmg" val="609">
+				<add stat="critDmgAdd" val="609">
 					<using kind="DAGGER, DUALDAGGER" />
 				</add>
 				<mul stat="blowRate" val="1.1">
