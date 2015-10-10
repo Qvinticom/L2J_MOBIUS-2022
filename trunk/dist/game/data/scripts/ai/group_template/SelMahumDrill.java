@@ -27,7 +27,9 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.util.Util;
@@ -130,6 +132,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 	{
 		super(SelMahumDrill.class.getSimpleName(), "ai/group_template");
 		
+		addAttackId(MAHUM_CHIEFS);
 		addAttackId(MAHUM_SOLDIERS);
 		addKillId(MAHUM_CHIEFS);
 		addEventReceivedId(MAHUM_CHIEFS);
@@ -203,7 +206,15 @@ public final class SelMahumDrill extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if (getRandom(10) < 1)
+		// group hate
+		for (L2Character ch : npc.getKnownList().getKnownCharacters())
+		{
+			if (!ch.isInCombat() && ch.isMonster() && (((L2Npc) ch).getSpawn().getName() == npc.getSpawn().getName()))
+			{
+				((L2MonsterInstance) ch).addDamageHate(attacker, 0, 1000);
+			}
+		}
+		if ((getRandom(10) < 1) && (Util.contains(MAHUM_SOLDIERS, npc.getId())))
 		{
 			npc.broadcastEvent("ATTACKED", 1000, null);
 		}
