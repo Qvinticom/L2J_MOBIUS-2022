@@ -578,11 +578,16 @@ public class Shutdown extends Thread
 					client.setActiveChar(null);
 					player.setClient(null);
 				}
+				else
+				// player is probably a bot - force logout
+				{
+					player.logout();
+				}
 				player.deleteMe();
 			}
 			catch (Throwable t)
 			{
-				_log.log(Level.WARNING, "Failed logour char " + player, t);
+				_log.log(Level.WARNING, "Failed logout char " + player, t);
 			}
 		}
 	}
