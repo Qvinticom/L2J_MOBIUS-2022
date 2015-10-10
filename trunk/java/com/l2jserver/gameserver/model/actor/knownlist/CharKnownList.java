@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.knownlist;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -34,9 +32,9 @@ import com.l2jserver.gameserver.util.Util;
 
 public class CharKnownList extends ObjectKnownList
 {
-	private Map<Integer, L2PcInstance> _knownPlayers;
-	private Map<Integer, L2Summon> _knownSummons;
-	private Map<Integer, Integer> _knownRelations;
+	private volatile Map<Integer, L2PcInstance> _knownPlayers;
+	private volatile Map<Integer, L2Summon> _knownSummons;
+	private volatile Map<Integer, Integer> _knownRelations;
 	
 	public CharKnownList(L2Character activeChar)
 	{
@@ -50,7 +48,8 @@ public class CharKnownList extends ObjectKnownList
 		{
 			return false;
 		}
-		else if (object.isPlayer())
+		
+		if (object.isPlayer())
 		{
 			getKnownPlayers().put(object.getObjectId(), object.getActingPlayer());
 			getKnownRelations().put(object.getObjectId(), -1);
@@ -59,7 +58,6 @@ public class CharKnownList extends ObjectKnownList
 		{
 			getKnownSummons().put(object.getObjectId(), (L2Summon) object);
 		}
-		
 		return true;
 	}
 	
@@ -127,12 +125,10 @@ public class CharKnownList extends ObjectKnownList
 	{
 		if (!fullCheck)
 		{
-			final Collection<L2PcInstance> plrs = getKnownPlayers().values();
-			final Iterator<L2PcInstance> pIter = plrs.iterator();
-			L2PcInstance player;
+			final Iterator<L2PcInstance> pIter = getKnownPlayers().values().iterator();
 			while (pIter.hasNext())
 			{
-				player = pIter.next();
+				L2PcInstance player = pIter.next();
 				if (player == null)
 				{
 					pIter.remove();
@@ -146,13 +142,10 @@ public class CharKnownList extends ObjectKnownList
 				}
 			}
 			
-			final Collection<L2Summon> sums = getKnownSummons().values();
-			final Iterator<L2Summon> sIter = sums.iterator();
-			L2Summon summon;
-			
+			final Iterator<L2Summon> sIter = getKnownSummons().values().iterator();
 			while (sIter.hasNext())
 			{
-				summon = sIter.next();
+				L2Summon summon = sIter.next();
 				if (summon == null)
 				{
 					sIter.remove();
@@ -172,12 +165,10 @@ public class CharKnownList extends ObjectKnownList
 			return;
 		}
 		// Go through knownObjects
-		final Collection<L2Object> objs = getKnownObjects().values();
-		final Iterator<L2Object> oIter = objs.iterator();
-		L2Object object;
+		final Iterator<L2Object> oIter = getKnownObjects().values().iterator();
 		while (oIter.hasNext())
 		{
-			object = oIter.next();
+			L2Object object = oIter.next();
 			if (object == null)
 			{
 				oIter.remove();
@@ -208,8 +199,7 @@ public class CharKnownList extends ObjectKnownList
 	public List<L2Character> getKnownCharacters()
 	{
 		List<L2Character> result = new LinkedList<>();
-		final Collection<L2Object> objs = getKnownObjects().values();
-		for (L2Object obj : objs)
+		for (L2Object obj : getKnownObjects().values())
 		{
 			if (obj instanceof L2Character)
 			{
@@ -219,12 +209,10 @@ public class CharKnownList extends ObjectKnownList
 		return result;
 	}
 	
-	public Collection<L2Character> getKnownCharactersInRadius(long radius)
+	public List<L2Character> getKnownCharactersInRadius(long radius)
 	{
-		List<L2Character> result = new ArrayList<>();
-		
-		final Collection<L2Object> objs = getKnownObjects().values();
-		for (L2Object obj : objs)
+		List<L2Character> result = new LinkedList<>();
+		for (L2Object obj : getKnownObjects().values())
 		{
 			if (obj instanceof L2Character)
 			{
@@ -234,7 +222,19 @@ public class CharKnownList extends ObjectKnownList
 				}
 			}
 		}
-		
+		return result;
+	}
+	
+	public final List<L2PcInstance> getKnownPlayersInRadius(long radius)
+	{
+		List<L2PcInstance> result = new LinkedList<>();
+		for (L2PcInstance player : getKnownPlayers().values())
+		{
+			if (Util.checkIfInRange((int) radius, getActiveChar(), player, true))
+			{
+				result.add(player);
+			}
+		}
 		return result;
 	}
 	
@@ -242,7 +242,13 @@ public class CharKnownList extends ObjectKnownList
 	{
 		if (_knownPlayers == null)
 		{
-			_knownPlayers = new ConcurrentHashMap<>();
+			synchronized (this)
+			{
+				if (_knownPlayers == null)
+				{
+					_knownPlayers = new ConcurrentHashMap<>();
+				}
+			}
 		}
 		return _knownPlayers;
 	}
@@ -251,7 +257,13 @@ public class CharKnownList extends ObjectKnownList
 	{
 		if (_knownRelations == null)
 		{
-			_knownRelations = new ConcurrentHashMap<>();
+			synchronized (this)
+			{
+				if (_knownRelations == null)
+				{
+					_knownRelations = new ConcurrentHashMap<>();
+				}
+			}
 		}
 		return _knownRelations;
 	}
@@ -260,23 +272,20 @@ public class CharKnownList extends ObjectKnownList
 	{
 		if (_knownSummons == null)
 		{
-			_knownSummons = new ConcurrentHashMap<>();
+			synchronized (this)
+			{
+				if (_knownSummons == null)
+				{
+					_knownSummons = new ConcurrentHashMap<>();
+				}
+			}
 		}
 		return _knownSummons;
 	}
 	
-	public final Collection<L2PcInstance> getKnownPlayersInRadius(long radius)
+	@Override
+	public final String toString()
 	{
-		List<L2PcInstance> result = new ArrayList<>();
-		
-		final Collection<L2PcInstance> plrs = getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
-		{
-			if (Util.checkIfInRange((int) radius, getActiveChar(), player, true))
-			{
-				result.add(player);
-			}
-		}
-		return result;
+		return getActiveChar() + " Known Objects " + getKnownObjects();
 	}
 }

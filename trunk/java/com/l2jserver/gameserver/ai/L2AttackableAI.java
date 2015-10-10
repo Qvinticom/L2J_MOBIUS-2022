@@ -737,7 +737,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	 * <li>Chose a target and order to attack it with magic skill or physical attack</li>
 	 * </ul>
 	 */
-	protected synchronized void thinkAttack()
+	protected void thinkAttack()
 	{
 		final L2Attackable npc = getActiveChar();
 		if (npc.isCastingNow())
@@ -750,10 +750,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead())
 		{
 			// Stop hating this target after the attack timeout or if target is dead
-			if (originalAttackTarget != null)
-			{
-				npc.stopHating(originalAttackTarget);
-			}
+			npc.stopHating(originalAttackTarget);
 			
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE);

@@ -5271,6 +5271,12 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean doDie(L2Character killer)
 	{
+		// Kill the L2PcInstance
+		if (!super.doDie(killer))
+		{
+			return false;
+		}
+		
 		if (killer != null)
 		{
 			final L2PcInstance pk = killer.getActingPlayer();
@@ -5325,12 +5331,6 @@ public final class L2PcInstance extends L2Playable
 			// Clear resurrect xp calculation
 			setExpBeforeDeath(0);
 			
-			// Kill the L2PcInstance
-			if (!super.doDie(killer))
-			{
-				return false;
-			}
-			
 			// Issues drop of Cursed Weapon.
 			if (isCursedWeaponEquipped())
 			{
@@ -5352,12 +5352,13 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				final boolean insidePvpZone = isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE);
+				final boolean insidePvpZone = isInsideZone(ZoneId.PVP);
+				final boolean insideSiegeZone = isInsideZone(ZoneId.SIEGE);
 				if ((pk == null) || !pk.isCursedWeaponEquipped())
 				{
 					onDieDropItem(killer); // Check if any item should be dropped
 					
-					if (!insidePvpZone)
+					if (!insidePvpZone && !insideSiegeZone)
 					{
 						if ((pk != null) && (pk.getClan() != null) && (getClan() != null) && !isAcademyMember() && !(pk.isAcademyMember()))
 						{
@@ -5380,7 +5381,7 @@ public final class L2PcInstance extends L2Playable
 						}
 					}
 					// If player is Lucky shouldn't get penalized.
-					if (!isLucky() && !insidePvpZone)
+					if (!isLucky() && (insideSiegeZone || !insidePvpZone))
 					{
 						calculateDeathExpPenalty(killer, isAtWarWith(pk));
 					}

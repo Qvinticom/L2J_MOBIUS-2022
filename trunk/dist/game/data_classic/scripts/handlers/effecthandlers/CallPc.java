@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SummonRequestHolder;
+import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -124,7 +125,7 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isInOlympiadMode())
+		if (target.isInOlympiadMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
 		{
 			activeChar.sendPacket(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING);
 			return false;

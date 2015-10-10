@@ -1437,22 +1437,13 @@ public final class SkillTreesData implements IXmlReader
 	 */
 	public boolean isGMSkill(int skillId, int skillLevel)
 	{
-		final Map<Integer, L2SkillLearn> gmSkills = new HashMap<>();
-		gmSkills.putAll(_gameMasterSkillTree);
-		gmSkills.putAll(_gameMasterAuraSkillTree);
-		if (gmSkills.containsKey(SkillData.getSkillHashCode(skillId, skillLevel)))
+		if (skillLevel <= 0)
 		{
-			return true;
+			return _gameMasterSkillTree.values().stream().filter(s -> s.getSkillId() == skillId).findAny().isPresent() //
+				|| _gameMasterAuraSkillTree.values().stream().filter(s -> s.getSkillId() == skillId).findAny().isPresent();
 		}
-		
-		for (L2SkillLearn skill : gmSkills.values())
-		{
-			if ((skill.getSkillId() == skillId) && (skillLevel == -1))
-			{
-				return true;
-			}
-		}
-		return false;
+		final int hashCode = SkillData.getSkillHashCode(skillId, skillLevel);
+		return _gameMasterSkillTree.containsKey(hashCode) || _gameMasterAuraSkillTree.containsKey(hashCode);
 	}
 	
 	/**

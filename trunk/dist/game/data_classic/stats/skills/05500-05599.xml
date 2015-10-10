@@ -1087,7 +1087,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5561" levels="3" name="Seed of Revenge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
 		<table name="#cAtk"> 1 1 1.25 </table>
@@ -1100,7 +1100,7 @@
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<for>
@@ -1117,7 +1117,7 @@
 		</for>
 	</skill>
 	<skill id="5562" levels="3" name="Spirit of the Phoenix">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
 		<table name="#elementRes"> 0 30 30 </table>
@@ -1130,7 +1130,7 @@
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<for>
@@ -1148,7 +1148,7 @@
 		</for>
 	</skill>
 	<skill id="5563" levels="3" name="Eva's Will">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
 		<table name="#icons"> icon.skill0786 icon.skill0786_2 icon.skill0786_3 </table>
@@ -1161,7 +1161,7 @@
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<for>
@@ -1178,7 +1178,7 @@
 		</for>
 	</skill>
 	<skill id="5564" levels="3" name="Pain of Shilen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#absorbDam"> 0 0 8 </table>
 		<table name="#activationChance"> 10 10 0 </table>
@@ -1191,7 +1191,7 @@
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<for>
@@ -1246,13 +1246,13 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5567" levels="1" name="Flame Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1492" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="power" val="47" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1262,7 +1262,7 @@
 		</for>
 	</skill>
 	<skill id="5568" levels="1" name="Frost Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1275,7 +1275,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -1286,7 +1286,7 @@
 		</for>
 	</skill>
 	<skill id="5569" levels="1" name="Hurricane Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -1299,7 +1299,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />

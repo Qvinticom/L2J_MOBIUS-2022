@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.AggroInfo;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
@@ -66,6 +65,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	private static final int MIN_LEVEL = 80;
 	private static final Map<Integer, Integer> MONSTER_NPCS = new HashMap<>();
 	private static final Map<Integer, Integer> MONSTER_ESSENCES = new HashMap<>();
+	
 	static
 	{
 		MONSTER_NPCS.put(25725, DRAKE_LORD_CORPSE);
@@ -75,6 +75,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 		MONSTER_ESSENCES.put(BEHEMOTH_LEADER_CORPSE, BEHEMOTH_LEADER_ESSENCE);
 		MONSTER_ESSENCES.put(DRAGON_BEAST_CORPSE, DRAGON_BEAST_ESSENCE);
 	}
+	
 	// Rewards
 	private static final int[] WEAPONS =
 	{
@@ -280,10 +281,9 @@ public final class Q00456_DontKnowDontCare extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		Map<L2Character, AggroInfo> playerList = ((L2Attackable) npc).getAggroList();
 		Set<Integer> allowedPlayers = new HashSet<>();
 		
-		for (AggroInfo aggro : playerList.values())
+		for (AggroInfo aggro : ((L2Attackable) npc).getAggroList().values())
 		{
 			if ((aggro.getAttacker() == null) || !aggro.getAttacker().isPlayer())
 			{

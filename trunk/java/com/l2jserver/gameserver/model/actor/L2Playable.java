@@ -207,7 +207,7 @@ public abstract class L2Playable extends L2Character
 		
 		// Notify L2Character AI
 		getAI().notifyEvent(CtrlEvent.EVT_DEAD);
-		super.updateEffectIcons();
+		updateEffectIcons();
 		return true;
 	}
 	

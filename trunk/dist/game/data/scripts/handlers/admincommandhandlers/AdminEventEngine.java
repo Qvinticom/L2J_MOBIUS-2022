@@ -18,9 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -123,16 +121,18 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 					
-					DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(Config.DATAPACK_ROOT + "events/" + eventName)));
-					BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
-					adminReply.setFile("en", "html/mods/EventEngine/Participation.htm");
-					adminReply.replace("%eventName%", eventName);
-					adminReply.replace("%eventCreator%", inbr.readLine());
-					adminReply.replace("%eventInfo%", inbr.readLine());
-					adminReply.replace("npc_%objectId%_event_participate", "admin_event"); // Weird, but nice hack, isnt it? :)
-					adminReply.replace("button value=\"Participate\"", "button value=\"Back\"");
-					activeChar.sendPacket(adminReply);
-					inbr.close();
+					try (FileInputStream fis = new FileInputStream(Config.DATAPACK_ROOT + "events/" + eventName);
+						InputStreamReader isr = new InputStreamReader(fis);
+						BufferedReader br = new BufferedReader(isr))
+					{
+						adminReply.setFile("en", "html/mods/EventEngine/Participation.htm");
+						adminReply.replace("%eventName%", eventName);
+						adminReply.replace("%eventCreator%", br.readLine());
+						adminReply.replace("%eventInfo%", br.readLine());
+						adminReply.replace("npc_%objectId%_event_participate", "admin_event"); // Weird, but nice hack, isnt it? :)
+						adminReply.replace("button value=\"Participate\"", "button value=\"Back\"");
+						activeChar.sendPacket(adminReply);
+					}
 				}
 				catch (Exception e)
 				{
@@ -165,12 +165,12 @@ public class AdminEventEngine implements IAdminCommandHandler
 			{
 				try
 				{
-					FileOutputStream file = new FileOutputStream(new File(Config.DATAPACK_ROOT, "events/" + tempName));
-					PrintStream p = new PrintStream(file);
-					p.println(activeChar.getName());
-					p.println(tempBuffer);
-					file.close();
-					p.close();
+					try (FileOutputStream file = new FileOutputStream(new File(Config.DATAPACK_ROOT, "events/" + tempName));
+						PrintStream p = new PrintStream(file))
+					{
+						p.println(activeChar.getName());
+						p.println(tempBuffer);
+					}
 				}
 				catch (Exception e)
 				{
@@ -476,7 +476,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		
-		final String replyMSG = StringUtil.concat("<html><title>[ L2J EVENT ENGINE ]</title><body>" + "<br><center><button value=\"Create NEW event \" action=\"bypass -h admin_event_new\" width=150 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "<center><br><font color=LEVEL>Stored Events:</font><br></center>", showStoredEvents(), "</body></html>");
+		final String replyMSG = StringUtil.concat("<html><title>[ EVENT ENGINE ]</title><body>" + "<br><center><button value=\"Create NEW event \" action=\"bypass -h admin_event_new\" width=150 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "<center><br><font color=LEVEL>Stored Events:</font><br></center>", showStoredEvents(), "</body></html>");
 		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
 	}

@@ -4538,7 +4538,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
 			
 			// Movement checks:
-			// when PATHFINDING > 0, for all characters except mobs returning home (could be changed later to teleport if pathfinding fails)
+			// When pathfinding enabled, for all characters except monsters returning home (could be changed later to teleport if pathfinding fails)
 			if (((Config.PATHFINDING > 0) && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()))) //
 				|| (isPlayer() && !(isInVehicle && (distance > 1500))))
 			{
@@ -5940,7 +5940,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				for (L2Object target : targets)
 				{
 					// EVT_ATTACKED and PvPStatus
-					if (target instanceof L2Character)
+					if (target.isCharacter())
 					{
 						if (skill.getEffectPoint() <= 0)
 						{
@@ -6069,7 +6069,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				for (L2Object target : targets)
 				{
-					if (target instanceof L2Character)
+					if (target.isCharacter())
 					{
 						final L2Character creature = (L2Character) target;
 						if (creature.hasAI())

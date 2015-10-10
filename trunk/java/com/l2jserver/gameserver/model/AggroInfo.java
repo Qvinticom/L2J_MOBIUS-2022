@@ -95,4 +95,10 @@ public final class AggroInfo
 	{
 		return _attacker.getObjectId();
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "AggroInfo [attacker=" + _attacker + ", hate=" + _hate + ", damage=" + _damage + "]";
+	}
 }

@@ -692,13 +692,13 @@
 		</for>
 	</skill>
 	<skill id="6059" levels="1" name="Counter Critical">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="COUNTER_CRITICAL_TRIGGER" />
 		<set name="icon" val="icon.skill1542" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE" />
@@ -718,7 +718,7 @@
 		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill1543" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE" />
@@ -975,7 +975,6 @@
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Lightning Shock end effect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -985,7 +984,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="soulMaxConsumeCount" val="5" />

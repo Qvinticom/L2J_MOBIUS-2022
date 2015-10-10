@@ -18,7 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.knownlist;
 
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,13 +25,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2WorldRegion;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.util.Util;
 
 public class ObjectKnownList
 {
 	private final L2Object _activeObject;
-	private Map<Integer, L2Object> _knownObjects;
+	private volatile Map<Integer, L2Object> _knownObjects;
 	
 	public ObjectKnownList(L2Object activeObject)
 	{
@@ -116,18 +114,17 @@ public class ObjectKnownList
 	 */
 	public final void findObjects()
 	{
-		final L2WorldRegion region = getActiveObject().getWorldRegion();
-		if (region == null)
+		final L2WorldRegion worldRegion = getActiveObject().getWorldRegion();
+		if (worldRegion == null)
 		{
 			return;
 		}
 		
 		if (getActiveObject().isPlayable())
 		{
-			for (L2WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
+			for (L2WorldRegion surroundingRegion : worldRegion.getSurroundingRegions()) // offer members of this and surrounding regions
 			{
-				Collection<L2Object> vObj = regi.getVisibleObjects().values();
-				for (L2Object object : vObj)
+				for (L2Object object : surroundingRegion.getVisibleObjects().values())
 				{
 					if (object != getActiveObject())
 					{
@@ -142,12 +139,11 @@ public class ObjectKnownList
 		}
 		else if (getActiveObject() instanceof L2Character)
 		{
-			for (L2WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
+			for (L2WorldRegion surroundingRegion : worldRegion.getSurroundingRegions()) // offer members of this and surrounding regions
 			{
-				if (regi.isActive())
+				if (surroundingRegion.isActive())
 				{
-					Collection<L2Playable> vPls = regi.getVisiblePlayable().values();
-					for (L2Object object : vPls)
+					for (L2Object object : surroundingRegion.getVisiblePlayable().values())
 					{
 						if (object != getActiveObject())
 						{
@@ -165,19 +161,10 @@ public class ObjectKnownList
 	 */
 	public void forgetObjects(boolean fullCheck)
 	{
-		// Go through knownObjects
-		final Collection<L2Object> objs = getKnownObjects().values();
-		final Iterator<L2Object> oIter = objs.iterator();
-		L2Object object;
+		final Iterator<L2Object> oIter = getKnownObjects().values().iterator();
 		while (oIter.hasNext())
 		{
-			object = oIter.next();
-			if (object == null)
-			{
-				oIter.remove();
-				continue;
-			}
-			
+			final L2Object object = oIter.next();
 			if (!fullCheck && !object.isPlayable())
 			{
 				continue;
@@ -214,7 +201,13 @@ public class ObjectKnownList
 	{
 		if (_knownObjects == null)
 		{
-			_knownObjects = new ConcurrentHashMap<>();
+			synchronized (this)
+			{
+				if (_knownObjects == null)
+				{
+					_knownObjects = new ConcurrentHashMap<>();
+				}
+			}
 		}
 		return _knownObjects;
 	}

@@ -18,45 +18,47 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.stats.Stats;
 
 /**
- * Servitor Share effect implementation.<br>
- * Synchronizing effects on player and servitor if one of them gets removed for some reason the same will happen to another. Partner's effect exit is executed in own thread, since there is no more queue to schedule the effects,<br>
- * partner's effect is called while this effect is still exiting issuing an exit call for the effect, causing a stack over flow.
- * @author UnAfraid, Zoey76
+ * Servitor Share effect implementation. Have effect only on servitor's but not on pets Important: Only one effect can be used on char per time.
+ * @author Zealar
  */
 public final class ServitorShare extends AbstractEffect
 {
-	private static final class ScheduledEffectExitTask implements Runnable
-	{
-		private final L2Character _effected;
-		private final int _skillId;
-		
-		public ScheduledEffectExitTask(L2Character effected, int skillId)
-		{
-			_effected = effected;
-			_skillId = skillId;
-		}
-		
-		@Override
-		public void run()
-		{
-			_effected.stopSkillEffects(false, _skillId);
-		}
-	}
+	private final Map<Stats, Double> stats = new HashMap<>(9);
 	
 	public ServitorShare(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		for (String key : params.getSet().keySet())
+		{
+			stats.put(Stats.valueOfXml(key), params.getDouble(key, 1.));
+		}
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		super.onStart(info);
+		info.getEffected().getActingPlayer().setServitorShare(stats);
+		if (info.getEffected().getActingPlayer().getServitors() != null)
+		{
+			for (L2Summon summon : info.getEffected().getActingPlayer().getServitors().values())
+			{
+				summon.broadcastInfo();
+			}
+		}
 	}
 	
 	@Override
@@ -74,11 +76,13 @@ public final class ServitorShare extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected().isSummon() ? ((L2Summon) info.getEffected()).getOwner() : info.getEffected();
-		
-		if (effected != null)
+		info.getEffected().getActingPlayer().setServitorShare(null);
+		if (info.getEffected().getServitors() != null)
 		{
-			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
+			for (L2Summon summon : info.getEffected().getActingPlayer().getServitors().values())
+			{
+				summon.broadcastInfo();
+			}
 		}
 	}
 }

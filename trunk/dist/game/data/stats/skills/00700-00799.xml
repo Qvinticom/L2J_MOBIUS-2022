@@ -1595,7 +1595,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0761" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1630,7 +1630,7 @@
 		<set name="ignoreShld" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
@@ -1675,7 +1675,7 @@
 		<set name="icon" val="icon.skill0763" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="87" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="75000" />
@@ -1793,7 +1793,7 @@
 		<set name="effectPoint" val="679" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0768" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="900000" />
@@ -1817,7 +1817,7 @@
 		<set name="effectPoint" val="679" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0769" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="900000" />
@@ -1841,7 +1841,7 @@
 		<set name="effectPoint" val="679" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0770" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="900000" />
@@ -1869,7 +1869,7 @@
 		<set name="fanRange" val="0,0,900,40" />
 		<set name="hitTime" val="3500" />
 		<set name="icon" val="icon.skill0771" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
@@ -1898,7 +1898,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0772" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
@@ -1928,7 +1928,7 @@
 		<set name="fanRange" val="0,0,900,100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0773" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
@@ -2011,7 +2011,7 @@
 		</for>
 	</skill>
 	<skill id="776" levels="1" name="Force of Destruction">
-		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="FORCE_OF_DESTRUCTION" />
@@ -2027,7 +2027,7 @@
 		<set name="icon" val="icon.skill0776" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="37" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="overHit" val="true" />
@@ -2051,7 +2051,7 @@
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="affectRange" val="500" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="150" />
@@ -2060,7 +2060,7 @@
 		<set name="fanRange" val="0,0,500,60" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0777" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
@@ -2209,7 +2209,7 @@
 		</for>
 	</skill>
 	<skill id="784" levels="1" name="Spirit of the Phoenix">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
@@ -2217,7 +2217,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0784" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -2245,7 +2245,7 @@
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1253" />
 		<set name="icon" val="icon.skill0785" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="150000" />
 		<set name="rideState" val="NONE" />
@@ -2273,7 +2273,7 @@
 		</for>
 	</skill>
 	<skill id="786" levels="1" name="Eva's Will">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
@@ -2281,7 +2281,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0786" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -2300,20 +2300,20 @@
 		</for>
 	</skill>
 	<skill id="787" levels="1" name="Touch of Eva">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="TOUCH_OF_LIFE" />
 		<set name="affectRange" val="1000" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="835" />
+		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1253" />
 		<set name="icon" val="icon.skill0787" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="150000" />
 		<set name="rideState" val="NONE" />
@@ -2336,7 +2336,7 @@
 		</for>
 	</skill>
 	<skill id="788" levels="1" name="Pain of Shilen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
@@ -2344,7 +2344,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -2372,7 +2372,7 @@
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1253" />
 		<set name="icon" val="icon.skill0789" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="150000" />
 		<set name="rideState" val="NONE" />
@@ -2409,7 +2409,7 @@
 		<set name="fanRange" val="0,0,900,40" />
 		<set name="hitTime" val="3500" />
 		<set name="icon" val="icon.skill0790" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="120" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />

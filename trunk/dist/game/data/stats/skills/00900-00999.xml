@@ -327,12 +327,13 @@
 		</for>
 	</skill>
 	<skill id="912" levels="1" name="Summon Imperial Phoenix">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0912" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="2" />
 		<set name="itemConsumeId" val="1461" /> <!-- Crystal (A-Grade) -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="145" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="45000" />
@@ -373,7 +374,7 @@
 		</for>
 	</skill>
 	<skill id="914" levels="1" name="Song of Purification">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_PURIFICATION" />
@@ -382,7 +383,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0914" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="240000" />
@@ -399,7 +400,7 @@
 		</for>
 	</skill>
 	<skill id="915" levels="1" name="Dance of Berserker">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_BERSERKER" />
@@ -408,7 +409,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0915" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="240000" />
@@ -478,12 +479,12 @@
 		</for>
 	</skill>
 	<skill id="918" levels="1" name="Maximum Force Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="80" />
 		<set name="icon" val="icon.skill0918" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="20" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="75000" />
@@ -502,12 +503,12 @@
 		</for>
 	</skill>
 	<skill id="919" levels="1" name="Maximum Sonic Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="80" />
 		<set name="icon" val="icon.skill0919" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="20" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="75000" />
@@ -1090,7 +1091,7 @@
 		</for>
 	</skill>
 	<skill id="947" levels="1" name="Lucky Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="affectLimit" val="3-6" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="5" />
@@ -1100,7 +1101,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1700" />
 		<set name="icon" val="icon.skill0947" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="70" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1123,7 +1124,7 @@
 		<set name="effectPoint" val="340" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill0948" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="29" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="75000" />
@@ -1154,7 +1155,7 @@
 		<set name="icon" val="icon.skill0949" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="35" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />

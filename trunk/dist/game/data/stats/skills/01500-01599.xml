@@ -156,7 +156,7 @@
 		</for>
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -167,7 +167,7 @@
 		<set name="hpConsume" val="4000" />
 		<set name="icon" val="icon.skill1505" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="174" />
 		<set name="mpInitialConsume" val="44" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -188,14 +188,14 @@
 		</for>
 	</skill>
 	<skill id="1506" levels="1" name="Blessing of Eva">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="668" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1506" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="58" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -232,7 +232,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1507" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1373,8 +1373,7 @@
 		</for>
 	</skill>
 	<skill id="1542" levels="1" name="Counter Critical">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: Description in H5 Client is wrong -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="COUNTER_CRITICAL" />
@@ -1384,7 +1383,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1542" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="58" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1403,9 +1402,9 @@
 		</for>
 	</skill>
 	<skill id="1543" levels="1" name="Great Fury">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="icon" val="icon.skill1543" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillBySkill">

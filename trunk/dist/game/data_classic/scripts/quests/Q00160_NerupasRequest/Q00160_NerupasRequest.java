@@ -41,6 +41,7 @@ public final class Q00160_NerupasRequest extends Quest
 	private static final int UNOS_RECEIPT = 1027;
 	private static final int CELS_TICKET = 1028;
 	private static final int NIGHTSHADE_LEAF = 1029;
+	// Reward
 	private static final int LESSER_HEALING_POTION = 1060;
 	// Misc
 	private static final int MIN_LEVEL = 3;
@@ -60,7 +61,10 @@ public final class Q00160_NerupasRequest extends Quest
 		if ((qs != null) && event.equals("30370-04.htm"))
 		{
 			qs.startQuest();
-			giveItems(player, SILVERY_SPIDERSILK, 1);
+			if (!hasQuestItems(player, SILVERY_SPIDERSILK))
+			{
+				giveItems(player, SILVERY_SPIDERSILK, 1);
+			}
 			return event;
 		}
 		return null;
@@ -103,17 +107,16 @@ public final class Q00160_NerupasRequest extends Quest
 				{
 					case NERUPA:
 					{
-						if (hasQuestItems(player, NIGHTSHADE_LEAF))
+						if (hasAtLeastOneQuestItem(player, SILVERY_SPIDERSILK, UNOS_RECEIPT, CELS_TICKET))
 						{
-							takeItems(player, NIGHTSHADE_LEAF, -1);
+							htmltext = "30370-05.html";
+						}
+						else if (hasQuestItems(player, NIGHTSHADE_LEAF))
+						{
 							rewardItems(player, LESSER_HEALING_POTION, 5);
 							addExpAndSp(player, 1000, 0);
 							qs.exitQuest(false, true);
 							htmltext = "30370-06.html";
-						}
-						else
-						{
-							htmltext = "30370-05.html";
 						}
 						break;
 					}
@@ -122,7 +125,10 @@ public final class Q00160_NerupasRequest extends Quest
 						if (hasQuestItems(player, SILVERY_SPIDERSILK))
 						{
 							takeItems(player, SILVERY_SPIDERSILK, -1);
-							giveItems(player, UNOS_RECEIPT, 1);
+							if (!hasQuestItems(player, UNOS_RECEIPT))
+							{
+								giveItems(player, UNOS_RECEIPT, 1);
+							}
 							qs.setCond(2, true);
 							htmltext = "30147-01.html";
 						}
@@ -141,7 +147,10 @@ public final class Q00160_NerupasRequest extends Quest
 						if (hasQuestItems(player, UNOS_RECEIPT))
 						{
 							takeItems(player, UNOS_RECEIPT, -1);
-							giveItems(player, CELS_TICKET, 1);
+							if (!hasQuestItems(player, CELS_TICKET))
+							{
+								giveItems(player, CELS_TICKET, 1);
+							}
 							qs.setCond(3, true);
 							htmltext = "30149-01.html";
 						}
@@ -160,7 +169,10 @@ public final class Q00160_NerupasRequest extends Quest
 						if (hasQuestItems(player, CELS_TICKET))
 						{
 							takeItems(player, CELS_TICKET, -1);
-							giveItems(player, NIGHTSHADE_LEAF, 1);
+							if (!hasQuestItems(player, NIGHTSHADE_LEAF))
+							{
+								giveItems(player, NIGHTSHADE_LEAF, 1);
+							}
 							qs.setCond(4, true);
 							htmltext = "30152-01.html";
 							

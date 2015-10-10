@@ -424,4 +424,10 @@ public final class BuffInfo
 		}
 		return 0;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "BuffInfo [effector=" + _effector + ", effected=" + _effected + ", skill=" + _skill + ", effects=" + _effects + ", tasks=" + _tasks + ", scheduledFutureTimeTask=" + _scheduledFutureTimeTask + ", abnormalTime=" + _abnormalTime + ", periodStartTicks=" + _periodStartTicks + ", isRemoved=" + _isRemoved + ", isInUse=" + _isInUse + "]";
+	}
 }

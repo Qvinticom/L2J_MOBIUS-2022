@@ -973,7 +973,7 @@ public class L2CharacterAI extends AbstractAI
 			_actor.setRunning();
 		}
 		
-		// If pathfinding enabled the creature will go to the nearest obstacle.
+		// If pathfinding enabled the creature will go to the destination or it will go to the nearest obstacle.
 		final Location destination;
 		if (Config.PATHFINDING > 0)
 		{
