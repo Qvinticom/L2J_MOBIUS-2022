@@ -578,7 +578,7 @@ public class Shutdown extends Thread
 					client.setActiveChar(null);
 					player.setClient(null);
 				}
-				else
+				else if (!player.isInOfflineMode())
 				// player is probably a bot - force logout
 				{
 					player.logout();
