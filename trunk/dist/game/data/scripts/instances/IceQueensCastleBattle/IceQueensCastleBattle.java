@@ -504,7 +504,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						{
 							final L2Attackable knight = (L2Attackable) addSpawn((world.isHardCore ? KNIGHT_HARD : KNIGHT_EASY), loc, false, 0, false, world.getInstanceId());
 							knight.disableCoreAI(true);
-							knight.setState(1);
+							knight.setDisplayEffect(1);
 							knight.getSpawn().setLocation(loc);
 							world.spawnedMobs.add(knight);
 							startQuestTimer("ICE_RUPTURE", getRandom(2, 5) * 1000, knight, null);
@@ -525,7 +525,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 							knight.getVariables().set("SPAWNED_NPC", npc);
 							knight.disableCoreAI(true);
 							knight.setIsImmobilized(true);
-							knight.setState(1);
+							knight.setDisplayEffect(1);
 							knight.getSpawn().setLocation(loc);
 							world.spawnedMobs.add(knight);
 							
@@ -540,7 +540,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						{
 							final Location loc = new Location(MIDDLE_POINT.getX() + getRandom(-1000, 1000), MIDDLE_POINT.getY() + getRandom(-1000, 1000), MIDDLE_POINT.getZ());
 							final L2Attackable glacier = (L2Attackable) addSpawn(GLACIER, loc, false, 0, false, world.getInstanceId());
-							glacier.setState(1);
+							glacier.setDisplayEffect(1);
 							glacier.disableCoreAI(true);
 							glacier.setIsImmobilized(true);
 							world.spawnedMobs.add(glacier);
@@ -554,7 +554,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						{
 							npc.disableCoreAI(false);
 							npc.setIsImmobilized(false);
-							npc.setState(2);
+							npc.setDisplayEffect(2);
 							manageRandomAttack(world, (L2Attackable) npc);
 						}
 						break;
@@ -566,7 +566,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "CHANGE_STATE":
 					{
-						npc.setState(2);
+						npc.setDisplayEffect(2);
 						startQuestTimer("CAST_SKILL", 20000, npc, null);
 						break;
 					}
@@ -582,7 +582,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "SUICIDE":
 					{
-						npc.setState(3);
+						npc.setDisplayEffect(3);
 						npc.setIsMortal(true);
 						npc.doDie(null);
 						break;
@@ -989,7 +989,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						manageRandomAttack(world, (L2Attackable) npc);
 						npc.disableCoreAI(false);
 						npc.setIsImmobilized(false);
-						npc.setState(2);
+						npc.setDisplayEffect(2);
 						cancelQuestTimer("ICE_RUPTURE", npc, null);
 					}
 					break;

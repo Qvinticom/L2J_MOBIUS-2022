@@ -105,7 +105,7 @@ public class HillsOfGold extends AbstractNpcAI
 		}
 		else
 		{
-			npc.setState(1);
+			npc.setDisplayEffect(1);
 		}
 		return super.onSpawn(npc);
 	}

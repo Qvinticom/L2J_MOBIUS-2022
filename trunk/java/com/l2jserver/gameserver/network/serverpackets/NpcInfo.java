@@ -89,7 +89,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.TEAM);
 		}
 		
-		if (npc.getState() > 0)
+		if (npc.getDisplayEffect() > 0)
 		{
 			addComponentType(NpcInfoType.DISPLAY_EFFECT);
 		}
@@ -327,7 +327,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.DISPLAY_EFFECT))
 		{
-			writeD(_npc.getState());
+			writeD(_npc.getDisplayEffect());
 		}
 		if (containsMask(NpcInfoType.TRANSFORMATION))
 		{

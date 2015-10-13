@@ -254,7 +254,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			case "room_3":
 			{
 				world.setStatus(7);
-				world.generator.setState(1);
+				world.generator.setDisplayEffect(1);
 				final L2ZoneType dmgZone = ZoneManager.getInstance().getZoneById(DAMAGE_ZONE_ID);
 				if (dmgZone != null)
 				{
