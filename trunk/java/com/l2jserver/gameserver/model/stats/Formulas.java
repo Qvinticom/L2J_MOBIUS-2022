@@ -2174,7 +2174,7 @@ public final class Formulas
 	 */
 	public static int calculateKarmaGain(int pkCount, L2Character target)
 	{
-		if ((target.isPlayer() && (target.getActingPlayer().getKarma() > 0)) || (target.isSummon() && (target.getSummoner().getActingPlayer().getKarma() > 0)))
+		if ((target.isPlayer() && (target.getActingPlayer().getReputation() < 0)) || (target.isSummon() && (target.getSummoner().getActingPlayer().getReputation() < 0)))
 		{
 			return 0;
 		}

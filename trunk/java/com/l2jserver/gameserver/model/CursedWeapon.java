@@ -80,7 +80,7 @@ public class CursedWeapon implements INamable
 	private int _playerId = 0;
 	protected L2PcInstance _player = null;
 	private L2ItemInstance _item = null;
-	private int _playerKarma = 0;
+	private int _playerReputation = 0;
 	private int _playerPkKills = 0;
 	protected int transformationId = 0;
 	
@@ -103,7 +103,7 @@ public class CursedWeapon implements INamable
 				
 				_player.abortAttack();
 				
-				_player.setKarma(_playerKarma);
+				_player.setReputation(_playerReputation);
 				_player.setPkKills(_playerPkKills);
 				_player.setCursedWeaponEquippedId(0);
 				removeSkill();
@@ -153,7 +153,7 @@ public class CursedWeapon implements INamable
 					}
 					
 					// Restore the karma
-					ps.setInt(1, _playerKarma);
+					ps.setInt(1, _playerReputation);
 					ps.setInt(2, _playerPkKills);
 					ps.setInt(3, _playerId);
 					if (ps.executeUpdate() != 1)
@@ -219,7 +219,7 @@ public class CursedWeapon implements INamable
 		_endTime = 0;
 		_player = null;
 		_playerId = 0;
-		_playerKarma = 0;
+		_playerReputation = 0;
 		_playerPkKills = 0;
 		_item = null;
 		_nbKills = 0;
@@ -274,7 +274,7 @@ public class CursedWeapon implements INamable
 		{
 			_item = _player.getInventory().getItemByItemId(_itemId);
 			_player.dropItem("DieDrop", _item, killer, true);
-			_player.setKarma(_playerKarma);
+			_player.setReputation(_playerReputation);
 			_player.setPkKills(_playerPkKills);
 			_player.setCursedWeaponEquippedId(0);
 			removeSkill();
@@ -422,13 +422,13 @@ public class CursedWeapon implements INamable
 		// Player holding it data
 		_player = player;
 		_playerId = _player.getObjectId();
-		_playerKarma = _player.getKarma();
+		_playerReputation = _player.getReputation();
 		_playerPkKills = _player.getPkKills();
 		saveData();
 		
 		// Change player stats
 		_player.setCursedWeaponEquippedId(_itemId);
-		_player.setKarma(9999999);
+		_player.setReputation(-9999999);
 		_player.setPkKills(0);
 		if (_player.isInParty())
 		{
@@ -498,7 +498,7 @@ public class CursedWeapon implements INamable
 			{
 				ps.setInt(1, _itemId);
 				ps.setInt(2, _playerId);
-				ps.setInt(3, _playerKarma);
+				ps.setInt(3, _playerReputation);
 				ps.setInt(4, _playerPkKills);
 				ps.setInt(5, _nbKills);
 				ps.setLong(6, _endTime);
@@ -523,7 +523,7 @@ public class CursedWeapon implements INamable
 			// Unequip & Drop
 			dropIt(null, null, killer, false);
 			// Reset player stats
-			_player.setKarma(_playerKarma);
+			_player.setReputation(_playerReputation);
 			_player.setPkKills(_playerPkKills);
 			_player.setCursedWeaponEquippedId(0);
 			removeSkill();
@@ -590,7 +590,7 @@ public class CursedWeapon implements INamable
 	
 	public void setPlayerKarma(int playerKarma)
 	{
-		_playerKarma = playerKarma;
+		_playerReputation = playerKarma;
 	}
 	
 	public void setPlayerPkKills(int playerPkKills)
@@ -666,7 +666,7 @@ public class CursedWeapon implements INamable
 	
 	public int getPlayerKarma()
 	{
-		return _playerKarma;
+		return _playerReputation;
 	}
 	
 	public int getPlayerPkKills()

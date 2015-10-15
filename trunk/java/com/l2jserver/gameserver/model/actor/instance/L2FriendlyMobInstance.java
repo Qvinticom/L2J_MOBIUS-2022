@@ -57,7 +57,7 @@ public class L2FriendlyMobInstance extends L2Attackable
 	{
 		if (attacker instanceof L2PcInstance)
 		{
-			return ((L2PcInstance) attacker).getKarma() > 0;
+			return ((L2PcInstance) attacker).getReputation() < 0;
 		}
 		return false;
 	}

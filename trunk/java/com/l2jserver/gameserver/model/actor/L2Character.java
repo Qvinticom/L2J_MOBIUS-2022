@@ -2539,6 +2539,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getSkillChannelized().abortChannelization();
 		}
+		
+		// FIXME: Karma reduction tempfix.
+		if (isMonster() && (killer != null) && killer.isPlayer() && (killer.getActingPlayer().getReputation() < 0))
+		{
+			if (killer.getLevel() >= (getLevel() - 5))
+			{
+				killer.getActingPlayer().setKarma(killer.getActingPlayer().getReputation() - (killer.getActingPlayer().getReputation() / 8));
+			}
+		}
+		
 		return true;
 	}
 	
@@ -5257,11 +5267,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		if (Config.ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE)
 		{
 			// allows red to be attacked and red to attack flagged players
-			if ((target.getActingPlayer() != null) && (target.getActingPlayer().getKarma() > 0))
+			if ((target.getActingPlayer() != null) && (target.getActingPlayer().getReputation() < 0))
 			{
 				return false;
 			}
-			if ((attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getKarma() > 0) && (target.getActingPlayer() != null) && (target.getActingPlayer().getPvpFlag() > 0))
+			if ((attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getReputation() < 0) && (target.getActingPlayer() != null) && (target.getActingPlayer().getPvpFlag() > 0))
 			{
 				return false;
 			}
@@ -5994,7 +6004,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 							if (target.isPlayer())
 							{
 								// Casting non offensive skill on player with pvp flag set or with karma
-								if (!(target.equals(this) || target.equals(player)) && ((target.getActingPlayer().getPvpFlag() > 0) || (target.getActingPlayer().getKarma() > 0)))
+								if (!(target.equals(this) || target.equals(player)) && ((target.getActingPlayer().getPvpFlag() > 0) || (target.getActingPlayer().getReputation() < 0)))
 								{
 									player.updatePvPStatus();
 								}

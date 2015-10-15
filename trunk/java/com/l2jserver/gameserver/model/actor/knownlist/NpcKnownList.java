@@ -130,7 +130,7 @@ public class NpcKnownList extends CharKnownList
 			
 			for (L2PcInstance pl : getKnownPlayers().values())
 			{
-				if (!pl.isDead() && !pl.isInvul() && pl.isInsideRadius(monster, monster.getAggroRange(), true, false) && (monster.isMonster() || (monster.isInstanceTypes(InstanceType.L2GuardInstance) && (pl.getKarma() > 0))))
+				if (!pl.isDead() && !pl.isInvul() && pl.isInsideRadius(monster, monster.getAggroRange(), true, false) && (monster.isMonster() || (monster.isInstanceTypes(InstanceType.L2GuardInstance) && (pl.getReputation() < 0))))
 				{
 					// Send aggroRangeEnter
 					if (monster.getHating(pl) == 0)

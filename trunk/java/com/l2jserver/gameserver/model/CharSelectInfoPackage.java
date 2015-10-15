@@ -49,7 +49,6 @@ public class CharSelectInfoPackage
 	private int _maxMp = 0;
 	private double _currentMp = 0;
 	private final int[][] _paperdoll;
-	private int _karma = 0;
 	private int _reputation = 0;
 	private int _pkKills = 0;
 	private int _pvpKills = 0;
@@ -326,16 +325,6 @@ public class CharSelectInfoPackage
 	public int getEnchantEffect()
 	{
 		return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
-	}
-	
-	public void setKarma(int karma)
-	{
-		_karma = karma;
-	}
-	
-	public int getKarma()
-	{
-		return _karma;
 	}
 	
 	public void setReputation(int reputation)

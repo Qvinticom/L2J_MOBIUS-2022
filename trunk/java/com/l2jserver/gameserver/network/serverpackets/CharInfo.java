@@ -151,7 +151,7 @@ public class CharInfo extends L2GameServerPacket
 		}
 		
 		writeC(_activeChar.getPvpFlag());
-		writeD(_activeChar.getKarma());
+		writeD(_activeChar.getReputation());
 		
 		writeD(_mAtkSpd);
 		writeD(_pAtkSpd);

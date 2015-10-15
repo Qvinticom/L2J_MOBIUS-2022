@@ -368,8 +368,8 @@ public final class L2PcInstance extends L2Playable
 	private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
 	
 	// Character Character SQL String Definitions:
-	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,reputation,fame,raidpoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,clan_privs,wantspeace,base_class,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,reputation=?,fame=?,raidpoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,pccafe_points=?,language=?,faction=? WHERE charId=?";
+	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidpoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,clan_privs,wantspeace,base_class,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidpoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,pccafe_points=?,language=?,faction=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Premium System String Definitions:
@@ -449,10 +449,7 @@ public final class L2PcInstance extends L2Playable
 	/** The Experience of the L2PcInstance before the last Death Penalty */
 	private long _expBeforeDeath;
 	
-	/** The Karma of the L2PcInstance (if higher than 0, the name of the L2PcInstance appears in red) */
-	private int _karma = 0;
-	
-	/** The Reputation of the L2PcInstance (if higher than 0, the name of the L2PcInstance appears in green) */
+	/** The Reputation of the L2PcInstance (defines PKK color) */
 	private int _reputation;
 	
 	/** The number of player killed during a PvP (the player killed was PvP Flagged) */
@@ -1987,28 +1984,15 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Return the Karma of the L2PcInstance.
-	 */
-	@Override
-	public int getKarma()
-	{
-		return _karma;
-	}
-	
-	/**
 	 * Set the Karma of the L2PcInstance and send a Server->Client packet StatusUpdate (broadcast).
 	 * @param karma
 	 */
 	public void setKarma(int karma)
 	{
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerKarmaChanged(this, getKarma(), karma), this);
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerKarmaChanged(this, getReputation(), karma), this);
 		
-		if (karma < 0)
-		{
-			karma = 0;
-		}
-		if ((_karma == 0) && (karma > 0))
+		if ((getReputation() < 0) && (karma < 0))
 		{
 			Collection<L2Object> objs = getKnownList().getKnownObjects().values();
 			
@@ -2025,13 +2009,13 @@ public final class L2PcInstance extends L2Playable
 				}
 			}
 		}
-		else if ((_karma > 0) && (karma == 0))
+		else if ((getReputation() < 0) && (karma >= 0))
 		{
 			// Send a Server->Client StatusUpdate packet with Karma and PvP Flag to the L2PcInstance and all L2PcInstance to inform (broadcast)
 			setKarmaFlag(0);
 		}
 		
-		_karma = karma;
+		_reputation = karma;
 		broadcastKarma();
 	}
 	
@@ -5430,6 +5414,12 @@ public final class L2PcInstance extends L2Playable
 		
 		AntiFeedManager.getInstance().setLastDeathTime(getObjectId());
 		
+		// FIXME: Karma reduction tempfix.
+		if (getReputation() < 0)
+		{
+			setKarma(getReputation() - (getReputation() / 4));
+		}
+		
 		return true;
 	}
 	
@@ -5441,7 +5431,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		L2PcInstance pk = killer.getActingPlayer();
-		if ((getKarma() <= 0) && (pk != null) && (pk.getClan() != null) && (getClan() != null) && (pk.getClan().isAtWarWith(getClanId())
+		if ((getReputation() >= 0) && (pk != null) && (pk.getClan() != null) && (getClan() != null) && (pk.getClan().isAtWarWith(getClanId())
 		// || getClan().isAtWarWith(((L2PcInstance)killer).getClanId())
 		))
 		{
@@ -5460,7 +5450,7 @@ public final class L2PcInstance extends L2Playable
 			int dropLimit = 0;
 			int dropPercent = 0;
 			
-			if ((getKarma() > 0) && (getPkKills() >= pkLimit))
+			if ((getReputation() < 0) && (getPkKills() >= pkLimit))
 			{
 				isKarmaDrop = true;
 				dropPercent = Config.KARMA_RATE_DROP;
@@ -5605,15 +5595,15 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// 'No war' or 'One way war' -> 'Normal PK'
-			if (targetPlayer.getKarma() > 0) // Target player has karma
+			if (targetPlayer.getReputation() < 0) // Target player has karma
 			{
 				if (Config.KARMA_AWARD_PK_KILL)
 				{
 					increasePvpKills(target);
 				}
-				if ((_karma <= 0) && AntiFeedManager.getInstance().check(this, targetPlayer))
+				if ((_reputation >= 0) && AntiFeedManager.getInstance().check(this, targetPlayer))
 				{
-					_reputation += 100;
+					_reputation += 100; // FIXME: Find more proper calculation.
 					broadcastUserInfo();
 				}
 			}
@@ -5664,7 +5654,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (!Config.FACTION_SYSTEM_ENABLED)
 			{
-				setKarma(getKarma() + addedKarma);
+				setKarma(getReputation() - addedKarma); // karma is negative reputation
 			}
 			// PK Points are increased only if you kill a player.
 			if (target.isPlayer())
@@ -5676,7 +5666,6 @@ public final class L2PcInstance extends L2Playable
 				_PvPRegTask.cancel(true);
 				updatePvPFlag(0);
 			}
-			_reputation = 0;
 		}
 		
 		// Update player's UI.
@@ -5717,7 +5706,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			return;
 		}
-		if ((!isInsideZone(ZoneId.PVP) || !player_target.isInsideZone(ZoneId.PVP)) && (player_target.getKarma() == 0))
+		if ((!isInsideZone(ZoneId.PVP) || !player_target.isInsideZone(ZoneId.PVP)) && (player_target.getReputation() >= 0))
 		{
 			if (checkIfPvP(player_target))
 			{
@@ -5783,7 +5772,7 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		if (getKarma() > 0)
+		if (getReputation() < 0)
 		{
 			percentLost *= Config.RATE_KARMA_EXP_LOST;
 		}
@@ -6851,7 +6840,7 @@ public final class L2PcInstance extends L2Playable
 	public void setKarmaFlag(int flag)
 	{
 		StatusUpdate su = new StatusUpdate(this);
-		su.addAttribute(StatusUpdate.PVP_FLAG, getKarma());
+		su.addAttribute(StatusUpdate.PVP_FLAG, getReputation());
 		sendPacket(su);
 		
 		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
@@ -6892,7 +6881,7 @@ public final class L2PcInstance extends L2Playable
 	public void broadcastKarma()
 	{
 		StatusUpdate su = new StatusUpdate(this);
-		su.addAttribute(StatusUpdate.KARMA, getKarma());
+		su.addAttribute(StatusUpdate.KARMA, getReputation());
 		sendPacket(su);
 		
 		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
@@ -6991,27 +6980,26 @@ public final class L2PcInstance extends L2Playable
 			ps.setInt(14, getAppearance().getSex() ? 1 : 0);
 			ps.setLong(15, getExp());
 			ps.setLong(16, getSp());
-			ps.setInt(17, getKarma());
-			ps.setInt(18, getReputation());
-			ps.setInt(19, getFame());
-			ps.setInt(20, getRaidPoints());
-			ps.setInt(21, getPvpKills());
-			ps.setInt(22, getPkKills());
-			ps.setInt(23, getClanId());
-			ps.setInt(24, getRace().ordinal());
-			ps.setInt(25, getClassId().getId());
-			ps.setLong(26, getDeleteTimer());
-			ps.setInt(27, hasDwarvenCraft() ? 1 : 0);
-			ps.setString(28, getTitle());
-			ps.setInt(29, getAppearance().getTitleColor());
-			ps.setInt(30, getAccessLevel().getLevel());
-			ps.setInt(31, isOnlineInt());
-			ps.setInt(32, getClanPrivileges().getBitmask());
-			ps.setInt(33, getWantsPeace());
-			ps.setInt(34, getBaseClass());
-			ps.setInt(35, isNoble() ? 1 : 0);
-			ps.setLong(36, 0);
-			ps.setTimestamp(37, new Timestamp(getCreateDate().getTimeInMillis()));
+			ps.setInt(17, getReputation());
+			ps.setInt(18, getFame());
+			ps.setInt(19, getRaidPoints());
+			ps.setInt(20, getPvpKills());
+			ps.setInt(21, getPkKills());
+			ps.setInt(22, getClanId());
+			ps.setInt(23, getRace().ordinal());
+			ps.setInt(24, getClassId().getId());
+			ps.setLong(25, getDeleteTimer());
+			ps.setInt(26, hasDwarvenCraft() ? 1 : 0);
+			ps.setString(27, getTitle());
+			ps.setInt(28, getAppearance().getTitleColor());
+			ps.setInt(29, getAccessLevel().getLevel());
+			ps.setInt(30, isOnlineInt());
+			ps.setInt(31, getClanPrivileges().getBitmask());
+			ps.setInt(32, getWantsPeace());
+			ps.setInt(33, getBaseClass());
+			ps.setInt(34, isNoble() ? 1 : 0);
+			ps.setLong(35, 0);
+			ps.setTimestamp(36, new Timestamp(getCreateDate().getTimeInMillis()));
 			ps.executeUpdate();
 		}
 		catch (Exception e)
@@ -7062,7 +7050,6 @@ public final class L2PcInstance extends L2Playable
 					
 					player.setHeading(rs.getInt("heading"));
 					
-					player.setKarma(rs.getInt("karma"));
 					player.setReputation(rs.getInt("reputation"));
 					player.setFame(rs.getInt("fame"));
 					player.setRaidPoints(rs.getInt("raidpoints"));
@@ -7625,23 +7612,22 @@ public final class L2PcInstance extends L2Playable
 			ps.setLong(16, exp);
 			ps.setLong(17, getExpBeforeDeath());
 			ps.setLong(18, sp);
-			ps.setInt(19, getKarma());
-			ps.setInt(20, getReputation());
-			ps.setInt(21, getFame());
-			ps.setInt(22, getRaidPoints());
-			ps.setInt(23, getPvpKills());
-			ps.setInt(24, getPkKills());
-			ps.setInt(25, getClanId());
-			ps.setInt(26, getRace().ordinal());
-			ps.setInt(27, getClassId().getId());
-			ps.setLong(28, getDeleteTimer());
-			ps.setString(29, getTitle());
-			ps.setInt(30, getAppearance().getTitleColor());
-			ps.setInt(31, getAccessLevel().getLevel());
-			ps.setInt(32, isOnlineInt());
-			ps.setInt(33, getClanPrivileges().getBitmask());
-			ps.setInt(34, getWantsPeace());
-			ps.setInt(35, getBaseClass());
+			ps.setInt(19, getReputation());
+			ps.setInt(20, getFame());
+			ps.setInt(21, getRaidPoints());
+			ps.setInt(22, getPvpKills());
+			ps.setInt(23, getPkKills());
+			ps.setInt(24, getClanId());
+			ps.setInt(25, getRace().ordinal());
+			ps.setInt(26, getClassId().getId());
+			ps.setLong(27, getDeleteTimer());
+			ps.setString(28, getTitle());
+			ps.setInt(29, getAppearance().getTitleColor());
+			ps.setInt(30, getAccessLevel().getLevel());
+			ps.setInt(31, isOnlineInt());
+			ps.setInt(32, getClanPrivileges().getBitmask());
+			ps.setInt(33, getWantsPeace());
+			ps.setInt(34, getBaseClass());
 			
 			long totalOnlineTime = _onlineTime;
 			if (_onlineBeginTime > 0)
@@ -7649,21 +7635,21 @@ public final class L2PcInstance extends L2Playable
 				totalOnlineTime += (System.currentTimeMillis() - _onlineBeginTime) / 1000;
 			}
 			
-			ps.setLong(36, totalOnlineTime);
-			ps.setInt(37, isNoble() ? 1 : 0);
-			ps.setInt(38, getPowerGrade());
-			ps.setInt(39, getPledgeType());
-			ps.setInt(40, getLvlJoinedAcademy());
-			ps.setLong(41, getApprentice());
-			ps.setLong(42, getSponsor());
-			ps.setLong(43, getClanJoinExpiryTime());
-			ps.setLong(44, getClanCreateExpiryTime());
-			ps.setString(45, getName());
-			ps.setLong(46, 0); // unset
-			ps.setInt(47, getBookMarkSlot());
-			ps.setInt(48, _vitalityPoints); // unset
-			ps.setInt(49, getPcBangPoints());
-			ps.setString(50, getLang());
+			ps.setLong(35, totalOnlineTime);
+			ps.setInt(36, isNoble() ? 1 : 0);
+			ps.setInt(37, getPowerGrade());
+			ps.setInt(38, getPledgeType());
+			ps.setInt(39, getLvlJoinedAcademy());
+			ps.setLong(40, getApprentice());
+			ps.setLong(41, getSponsor());
+			ps.setLong(42, getClanJoinExpiryTime());
+			ps.setLong(43, getClanCreateExpiryTime());
+			ps.setString(44, getName());
+			ps.setLong(45, 0); // unset
+			ps.setInt(46, getBookMarkSlot());
+			ps.setInt(47, _vitalityPoints); // unset
+			ps.setInt(48, getPcBangPoints());
+			ps.setString(49, getLang());
 			
 			int factionId = 0;
 			if (isGood())
@@ -7674,9 +7660,9 @@ public final class L2PcInstance extends L2Playable
 			{
 				factionId = 2;
 			}
-			ps.setInt(51, factionId);
+			ps.setInt(50, factionId);
 			
-			ps.setInt(52, getObjectId());
+			ps.setInt(51, getObjectId());
 			ps.execute();
 		}
 		catch (Exception e)
@@ -8701,7 +8687,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// Check if the L2PcInstance has Karma
-		if ((getKarma() > 0) || (getPvpFlag() > 0))
+		if ((getReputation() < 0) || (getPvpFlag() > 0))
 		{
 			return true;
 		}
@@ -9336,7 +9322,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// On retail, it is impossible to debuff a "peaceful" player.
-			if ((targetPlayer.getPvpFlag() == 0) && (targetPlayer.getKarma() == 0))
+			if ((targetPlayer.getPvpFlag() == 0) && (targetPlayer.getReputation() >= 0))
 			{
 				// Check if skill can do dmg
 				if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target))
@@ -9349,7 +9335,7 @@ public final class L2PcInstance extends L2Playable
 				return false;
 			}
 			
-			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getKarma() > 0))
+			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getReputation() < 0))
 			{
 				return true;
 			}
@@ -12810,7 +12796,7 @@ public final class L2PcInstance extends L2Playable
 		
 		if (killer.isInCategory(CategoryType.SHILENS_FOLLOWERS) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent)))
 		{
-			if (!killer.isPlayable() || (getKarma() > 0))
+			if (!killer.isPlayable() || (getReputation() < 0))
 			{
 				increaseShilensBreathDebuff();
 			}
@@ -14374,7 +14360,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else if ((getClan() == null) || (target.getClan() == null))
 			{
-				if ((target.getPvpFlag() == 0) && (target.getKarma() == 0))
+				if ((target.getPvpFlag() == 0) && (target.getReputation() >= 0))
 				{
 					return false;
 				}

@@ -46,7 +46,7 @@ public class GuardKnownList extends AttackableKnownList
 		if (object.isPlayer())
 		{
 			// Check if the object added is a L2PcInstance that owns Karma
-			if (object.getActingPlayer().getKarma() > 0)
+			if (object.getActingPlayer().getReputation() < 0)
 			{
 				if (Config.DEBUG)
 				{

@@ -244,12 +244,6 @@ public abstract class L2Summon extends L2Playable
 	}
 	
 	@Override
-	public final int getKarma()
-	{
-		return getOwner() != null ? getOwner().getKarma() : 0;
-	}
-	
-	@Override
 	public final int getReputation()
 	{
 		return getOwner() != null ? getOwner().getReputation() : 0;

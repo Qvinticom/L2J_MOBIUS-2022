@@ -50,10 +50,6 @@ public class PcAppearance
 	/** The default title color is 0xECF9A2. */
 	private int _titleColor = DEFAULT_TITLE_COLOR;
 	
-	/** Karma and Reputation colors */
-	private final int _redColor = 255;
-	private final int _greenColor = 65280;
-	
 	public PcAppearance(byte face, byte hColor, byte hStyle, boolean sex)
 	{
 		_face = face;
@@ -177,13 +173,9 @@ public class PcAppearance
 	
 	public int getNameColor()
 	{
-		if (_owner.getKarma() > 0)
+		if (_owner.getReputation() != 0)
 		{
-			return _redColor;
-		}
-		if (_owner.getReputation() > 0)
-		{
-			return _greenColor;
+			return 0xFFFFFF; // Using 0xFFFFFF value in case _nameColor has changed.
 		}
 		return _nameColor;
 	}

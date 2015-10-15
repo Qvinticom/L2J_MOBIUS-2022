@@ -232,7 +232,7 @@ public abstract class L2Playable extends L2Character
 			return false; // Active player is null
 		}
 		
-		if (player.getKarma() != 0)
+		if (player.getReputation() < 0)
 		{
 			return false; // Active player has karma
 		}
@@ -247,7 +247,7 @@ public abstract class L2Playable extends L2Character
 		{
 			return false; // Target player is self
 		}
-		if (targetPlayer.getKarma() != 0)
+		if (targetPlayer.getReputation() < 0)
 		{
 			return false; // Target player has karma
 		}
@@ -345,8 +345,6 @@ public abstract class L2Playable extends L2Character
 	}
 	
 	public abstract void doPickupItem(L2Object object);
-	
-	public abstract int getKarma();
 	
 	public abstract int getReputation();
 	

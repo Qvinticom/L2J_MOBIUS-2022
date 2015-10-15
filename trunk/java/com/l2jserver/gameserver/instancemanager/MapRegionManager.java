@@ -266,7 +266,7 @@ public final class MapRegionManager implements IXmlReader
 						L2ClanHallZone zone = clanhall.getZone();
 						if ((zone != null) && !player.isFlyingMounted())
 						{
-							if (player.getKarma() > 0)
+							if (player.getReputation() < 0)
 							{
 								return zone.getChaoticSpawnLoc();
 							}
@@ -292,7 +292,7 @@ public final class MapRegionManager implements IXmlReader
 					
 					if ((castle != null) && (castle.getResidenceId() > 0))
 					{
-						if (player.getKarma() > 0)
+						if (player.getReputation() < 0)
 						{
 							return castle.getResidenceZone().getChaoticSpawnLoc();
 						}
@@ -317,7 +317,7 @@ public final class MapRegionManager implements IXmlReader
 					
 					if ((fort != null) && (fort.getResidenceId() > 0))
 					{
-						if (player.getKarma() > 0)
+						if (player.getReputation() < 0)
 						{
 							return fort.getResidenceZone().getChaoticSpawnLoc();
 						}
@@ -371,7 +371,7 @@ public final class MapRegionManager implements IXmlReader
 			}
 			
 			// Karma player land out of city
-			if (player.getKarma() > 0)
+			if (player.getReputation() < 0)
 			{
 				try
 				{

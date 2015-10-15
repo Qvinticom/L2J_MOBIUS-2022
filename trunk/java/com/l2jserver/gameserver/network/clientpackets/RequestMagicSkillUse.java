@@ -96,7 +96,7 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 		}
 		
 		// If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getKarma() > 0) && skill.hasEffectType(L2EffectType.TELEPORT))
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getReputation() < 0) && skill.hasEffectType(L2EffectType.TELEPORT))
 		{
 			return;
 		}

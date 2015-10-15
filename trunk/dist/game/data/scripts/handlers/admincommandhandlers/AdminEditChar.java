@@ -989,7 +989,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%z%", String.valueOf(player.getZ()));
 		adminReply.replace("%currenthp%", String.valueOf((int) player.getCurrentHp()));
 		adminReply.replace("%maxhp%", String.valueOf(player.getMaxHp()));
-		adminReply.replace("%karma%", String.valueOf(player.getKarma()));
+		adminReply.replace("%karma%", String.valueOf(player.getReputation()));
 		adminReply.replace("%currentmp%", String.valueOf((int) player.getCurrentMp()));
 		adminReply.replace("%maxmp%", String.valueOf(player.getMaxMp()));
 		adminReply.replace("%pvpflag%", String.valueOf(player.getPvpFlag()));
@@ -1033,31 +1033,19 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 		
-		if (newKarma >= 0)
+		// for display
+		int oldKarma = player.getReputation();
+		// update reputation
+		player.setReputation(newKarma);
+		// Common character information
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
+		sm.addInt(newKarma);
+		player.sendPacket(sm);
+		// Admin information
+		activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
+		if (Config.DEBUG)
 		{
-			// for display
-			int oldKarma = player.getKarma();
-			// update karma
-			player.setKarma(newKarma);
-			// Common character information
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
-			sm.addInt(newKarma);
-			player.sendPacket(sm);
-			// Admin information
-			activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
-			if (Config.DEBUG)
-			{
-				_log.fine("[SET KARMA] [GM]" + activeChar.getName() + " Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
-			}
-		}
-		else
-		{
-			// tell admin of mistake
-			activeChar.sendMessage("You must enter a value for karma greater than or equal to 0.");
-			if (Config.DEBUG)
-			{
-				_log.fine("[SET KARMA] ERROR: [GM]" + activeChar.getName() + " entered an incorrect value for new karma: " + newKarma + " for " + player.getName() + ".");
-			}
+			_log.fine("[SET KARMA] [GM]" + activeChar.getName() + " Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
 		}
 	}
 	
@@ -1447,7 +1435,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%ai%", target.hasAI() ? String.valueOf(target.getAI().getIntention().name()) : "NULL");
 		html.replace("%hp%", (int) target.getStatus().getCurrentHp() + "/" + target.getStat().getMaxHp());
 		html.replace("%mp%", (int) target.getStatus().getCurrentMp() + "/" + target.getStat().getMaxMp());
-		html.replace("%karma%", Integer.toString(target.getKarma()));
+		html.replace("%karma%", Integer.toString(target.getReputation()));
 		html.replace("%race%", target.getTemplate().getRace().toString());
 		if (target instanceof L2PetInstance)
 		{

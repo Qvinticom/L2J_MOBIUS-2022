@@ -184,7 +184,7 @@ public final class L2TeleporterInstance extends L2Npc
 					msg.setFile(player.getHtmlPrefix(), "html/teleporter/castleteleporter-busy.htm");
 					player.sendPacket(msg);
 				}
-				else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getKarma() != 0)) // TODO: Update me when Karma is replaced with Reputation system!
+				else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0))
 				{
 					player.sendMessage("Go away, you're not welcome here.");
 				}
@@ -516,7 +516,7 @@ public final class L2TeleporterInstance extends L2Npc
 				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
 				return;
 			}
-			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getKarma() > 0)) // karma
+			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0)) // karma
 			{
 				player.sendMessage("Go away, you're not welcome here.");
 				return;

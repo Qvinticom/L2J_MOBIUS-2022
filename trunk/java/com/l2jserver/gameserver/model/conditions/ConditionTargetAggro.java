@@ -51,7 +51,7 @@ public class ConditionTargetAggro extends Condition
 		}
 		if (effected instanceof L2PcInstance)
 		{
-			return ((L2PcInstance) effected).getKarma() > 0;
+			return ((L2PcInstance) effected).getReputation() < 0;
 		}
 		return false;
 	}

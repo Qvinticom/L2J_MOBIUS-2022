@@ -59,7 +59,7 @@ public class CharSelected extends L2GameServerPacket
 		writeQ(_activeChar.getSp());
 		writeQ(_activeChar.getExp());
 		writeD(_activeChar.getLevel());
-		writeD(_activeChar.getKarma()); // thx evill33t
+		writeD(_activeChar.getReputation());
 		writeD(_activeChar.getPkKills());
 		writeD(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
 		writeD(0x00);

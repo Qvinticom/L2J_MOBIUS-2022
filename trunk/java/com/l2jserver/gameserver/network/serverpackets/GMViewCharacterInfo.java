@@ -114,7 +114,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getMCriticalHit(null, null));
 		
 		writeD(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
-		writeD(_activeChar.getKarma());
+		writeD(_activeChar.getReputation());
 		
 		writeD(_runSpd);
 		writeD(_walkSpd);

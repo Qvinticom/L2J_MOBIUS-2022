@@ -118,7 +118,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 			writeD(0x00); // title color 0 = client default
 			
 			writeD(_trap.getPvpFlag());
-			writeD(_trap.getKarma());
+			writeD(_trap.getReputation());
 			
 			writeD(0); // was AVE and was adding stealth
 			writeD(0x00); // clan id

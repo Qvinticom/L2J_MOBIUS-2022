@@ -73,7 +73,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.sendMessage("You can't use the Community Board right now.");
 				return false;
 			}
-			if (Config.COMMUNITYBOARD_KARMA_DISABLED && (activeChar.getKarma() > 0))
+			if (Config.COMMUNITYBOARD_KARMA_DISABLED && (activeChar.getReputation() < 0))
 			{
 				activeChar.sendMessage("Players with Karma cannot use the Community Board.");
 				return false;

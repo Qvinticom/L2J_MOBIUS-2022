@@ -933,7 +933,7 @@ public class L2Npc extends L2Character
 			player.setTarget(player);
 			return;
 		}
-		if (player.getKarma() > 0)
+		if (player.getReputation() < 0)
 		{
 			if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof L2MerchantInstance))
 			{

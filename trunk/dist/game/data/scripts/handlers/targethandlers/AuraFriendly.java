@@ -101,7 +101,7 @@ public class AuraFriendly implements ITargetTypeHandler
 				return true;
 			}
 			
-			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getKarma() > 0))
+			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getReputation() < 0))
 			{
 				return false;
 			}

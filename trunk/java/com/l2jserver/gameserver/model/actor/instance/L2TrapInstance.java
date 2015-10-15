@@ -217,7 +217,7 @@ public final class L2TrapInstance extends L2Npc
 			}
 			
 			final L2PcInstance player = target.getActingPlayer();
-			if ((player == null) || ((player.getPvpFlag() == 0) && (player.getKarma() == 0)))
+			if ((player == null) || ((player.getPvpFlag() == 0) && (player.getReputation() >= 0)))
 			{
 				return false;
 			}
@@ -248,9 +248,9 @@ public final class L2TrapInstance extends L2Npc
 		return null;
 	}
 	
-	public int getKarma()
+	public int getReputation()
 	{
-		return _owner != null ? _owner.getKarma() : 0;
+		return _owner != null ? _owner.getReputation() : 0;
 	}
 	
 	@Override
@@ -373,7 +373,7 @@ public final class L2TrapInstance extends L2Npc
 			return;
 		}
 		
-		if ((_owner != null) && (_owner.getPvpFlag() == 0) && (_owner.getKarma() == 0))
+		if ((_owner != null) && (_owner.getPvpFlag() == 0) && (_owner.getReputation() >= 0))
 		{
 			return;
 		}

@@ -1245,7 +1245,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		if (requester.getKarma() > 0)
+		if (requester.getReputation() < 0)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
@@ -1334,7 +1334,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		if (partner.getKarma() > 0)
+		if (partner.getReputation() < 0)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);

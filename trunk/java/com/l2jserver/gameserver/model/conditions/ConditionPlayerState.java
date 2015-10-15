@@ -76,7 +76,7 @@ public class ConditionPlayerState extends Condition
 			case CHAOTIC:
 				if (player != null)
 				{
-					return ((player.getKarma() > 0) == _required);
+					return ((player.getReputation() < 0) == _required);
 				}
 				return !_required;
 			case OLYMPIAD:

@@ -237,7 +237,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				return GeoData.getInstance().canSeeTarget(me, player);
 			}
 			// Check if the L2PcInstance target has karma (=PK)
-			if ((player != null) && (player.getKarma() > 0))
+			if ((player != null) && (player.getReputation() < 0))
 			{
 				return GeoData.getInstance().canSeeTarget(me, player); // Los Check
 			}
@@ -258,7 +258,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Check if the L2PcInstance target has karma (=PK)
-			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getKarma() > 0))
+			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getReputation() < 0))
 			{
 				return GeoData.getInstance().canSeeTarget(me, target); // Los Check
 			}

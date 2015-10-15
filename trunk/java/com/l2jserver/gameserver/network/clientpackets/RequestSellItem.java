@@ -104,7 +104,7 @@ public final class RequestSellItem extends L2GameClientPacket
 		}
 		
 		// Alt game - Karma punishment
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getKarma() > 0))
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

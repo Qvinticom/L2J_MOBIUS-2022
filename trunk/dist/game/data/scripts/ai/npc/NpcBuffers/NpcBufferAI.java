@@ -201,7 +201,7 @@ public class NpcBufferAI implements Runnable
 					return true;
 				}
 				
-				if (targetPlayer.getKarma() != 0)
+				if (targetPlayer.getReputation() < 0)
 				{
 					return true;
 				}

@@ -48,7 +48,7 @@ public final class PlayerEventHolder
 	private final Location _loc;
 	private final int _pvpKills;
 	private final int _pkKills;
-	private final int _karma;
+	private final int _reputation;
 	
 	private final List<L2PcInstance> _kills = new CopyOnWriteArrayList<>();
 	private boolean _sitForced;
@@ -67,7 +67,7 @@ public final class PlayerEventHolder
 		_loc = new Location(player);
 		_pvpKills = player.getPvpKills();
 		_pkKills = player.getPkKills();
-		_karma = player.getKarma();
+		_reputation = player.getReputation();
 		
 		_sitForced = sitForced;
 	}
@@ -80,7 +80,7 @@ public final class PlayerEventHolder
 		_player.teleToLocation(_loc, true);
 		_player.setPvpKills(_pvpKills);
 		_player.setPkKills(_pkKills);
-		_player.setKarma(_karma);
+		_player.setReputation(_reputation);
 		
 	}
 	

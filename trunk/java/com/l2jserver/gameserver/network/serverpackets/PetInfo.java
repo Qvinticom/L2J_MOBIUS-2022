@@ -127,7 +127,7 @@ public class PetInfo extends L2GameServerPacket
 		writeS(_summon.getTitle()); // owner name
 		
 		writeC(_summon.getPvpFlag()); // confirmed
-		writeD(_summon.getKarma()); // confirmed
+		writeD(_summon.getReputation()); // confirmed
 		
 		writeD(_curFed); // how fed it is
 		writeD(_maxFed); // max fed it can be
