@@ -1036,7 +1036,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		// for display
 		int oldKarma = player.getReputation();
 		// update reputation
-		player.setReputation(newKarma);
+		player.setKarma(newKarma);
 		// Common character information
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
 		sm.addInt(newKarma);
