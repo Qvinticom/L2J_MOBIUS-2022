@@ -81,7 +81,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 				{
 					htmltext = getHtm(player.getHtmlPrefix(), "Olympiad.html");
 				}
-				else if (player.getKarma() > 0)
+				else if (player.getReputation() < 0)
 				{
 					htmltext = getHtm(player.getHtmlPrefix(), "Karma.html");
 				}
