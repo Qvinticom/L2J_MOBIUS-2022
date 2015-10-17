@@ -49,7 +49,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getX());
 		writeD(_activeChar.getY());
 		writeD(_activeChar.getZ());
-		writeD(_activeChar.getHeading());
+		writeD((_activeChar.getVehicle() != null) && (_activeChar.getInVehiclePosition() != null) ? _activeChar.getVehicle().getObjectId() : 0x00);
 		writeD(_activeChar.getObjectId());
 		writeS(_activeChar.getName());
 		writeD(_activeChar.getRace().ordinal());
@@ -89,14 +89,9 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		{
 			writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
 		}
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
 		
-		writeC(_activeChar.getInventory().getTalismanSlots()); // CT2.3
-		writeC(_activeChar.getInventory().canEquipCloak() ? 1 : 0); // CT2.3
-		writeD(0x00);
-		writeH(0x00);
+		writeD(_activeChar.getInventory().getTalismanSlots()); // CT2.3
+		writeD(_activeChar.getInventory().canEquipCloak() ? 1 : 0); // CT2.3
 		writeD((int) _activeChar.getPAtk(null));
 		writeD((int) _activeChar.getPAtkSpd());
 		writeD((int) _activeChar.getPDef(null));
@@ -109,10 +104,6 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD((int) _activeChar.getPAtkSpd());
 		
 		writeD((int) _activeChar.getMDef(null, null));
-		writeD(_activeChar.getMagicEvasionRate(null));
-		writeD(_activeChar.getMagicAccuracy());
-		writeD(_activeChar.getMCriticalHit(null, null));
-		
 		writeD(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
 		writeD(_activeChar.getReputation());
 		
@@ -171,7 +162,5 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		}
 		writeD(_activeChar.getFame());
 		writeD(_activeChar.getVitalityPoints());
-		writeD(0x00);
-		writeD(0x00);
 	}
 }
