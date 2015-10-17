@@ -144,32 +144,11 @@ public class PcKnownList extends PlayableKnownList
 		{
 			return 10000;
 		}
-		
-		// when knownlist grows, the distance to forget should be at least
-		// the same as the previous watch range, or it becomes possible that
-		// extra charinfo packets are being sent (watch-forget-watch-forget)
-		final int knownlistSize = getKnownObjects().size();
-		if (knownlistSize <= 25)
+		if (getKnownObjects().size() <= 70)
 		{
-			return 4000;
+			return 2700;
 		}
-		if (knownlistSize <= 35)
-		{
-			return 3500;
-		}
-		
-		// Old custom/wrong method.
-		// if (knownlistSize <= 70)
-		// {
-		// return 2910;
-		// }
-		// return 2310;
-		
-		if (knownlistSize > 300)
-		{
-			return 2100; // Siege, etc
-		}
-		return 3100;
+		return 1900; // Siege, etc
 	}
 	
 	@Override
@@ -179,28 +158,10 @@ public class PcKnownList extends PlayableKnownList
 		{
 			return 9000;
 		}
-		
-		final int knownlistSize = getKnownObjects().size();
-		if (knownlistSize <= 25)
+		if (getKnownObjects().size() <= 70)
 		{
-			return 3400; // empty field
+			return 2500; // Retail seems to have a larger value than this.
 		}
-		if (knownlistSize <= 35)
-		{
-			return 2900;
-		}
-		
-		// Old custom/wrong method.
-		// if (knownlistSize <= 70)
-		// {
-		// return 2300;
-		// }
-		// return 1700; // Siege, TOI, city
-		
-		if (knownlistSize > 300)
-		{
-			return 1700; // Siege, etc
-		}
-		return 2500; // Retail seems to have a larger value than this.
+		return 1700; // Siege, etc
 	}
 }
