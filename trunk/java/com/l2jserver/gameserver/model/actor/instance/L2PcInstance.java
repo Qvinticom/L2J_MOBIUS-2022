@@ -6219,10 +6219,10 @@ public final class L2PcInstance extends L2Playable
 	public void setClan(L2Clan clan)
 	{
 		_clan = clan;
-		setTitle("");
 		
 		if (clan == null)
 		{
+			setTitle("");
 			_clanId = 0;
 			_clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
 			_pledgeType = 0;
