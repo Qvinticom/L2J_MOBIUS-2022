@@ -27,12 +27,14 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -95,6 +97,8 @@ public final class CharEffectList
 	private final L2Character _owner;
 	/** Hidden buffs count, prevents iterations. */
 	private final AtomicInteger _hiddenBuffs = new AtomicInteger();
+	
+	private ScheduledFuture<?> _effectIconsUpdate;
 	
 	/**
 	 * Constructor for effect list.
@@ -1388,129 +1392,143 @@ public final class CharEffectList
 			return;
 		}
 		
-		AbnormalStatusUpdate asu = null;
-		PartySpelled ps = null;
-		PartySpelled psSummon = null;
-		ExOlympiadSpelledInfo os = null;
-		boolean isSummon = false;
-		
-		if (_owner.isPlayer())
+		// Check if the previous call hasnt finished, if so, don't send packets uselessly again.
+		if (_effectIconsUpdate != null)
 		{
-			if (_partyOnly)
+			if (!_effectIconsUpdate.isDone())
 			{
-				_partyOnly = false;
-			}
-			else
-			{
-				asu = new AbnormalStatusUpdate();
-			}
-			
-			if (_owner.isInParty())
-			{
-				ps = new PartySpelled(_owner);
-			}
-			
-			if (_owner.getActingPlayer().isInOlympiadMode() && _owner.getActingPlayer().isOlympiadStart())
-			{
-				os = new ExOlympiadSpelledInfo(_owner.getActingPlayer());
+				return;
 			}
 		}
-		else if (_owner.isSummon())
+		// Schedule the icon update packets 500miliseconds ahead, so it can gather-up most of the changes.
+		_effectIconsUpdate = ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
-			isSummon = true;
-			ps = new PartySpelled(_owner);
-			psSummon = new PartySpelled(_owner);
-		}
-		
-		// Buffs.
-		if (hasBuffs())
-		{
-			for (BuffInfo info : getBuffs())
+			AbnormalStatusUpdate asu = null;
+			PartySpelled ps = null;
+			PartySpelled psSummon = null;
+			ExOlympiadSpelledInfo os = null;
+			boolean isSummon = false;
+			
+			if (_owner.isPlayer())
 			{
-				if (info.getSkill().isHealingPotionSkill())
+				if (_partyOnly)
 				{
-					shortBuffStatusUpdate(info);
+					_partyOnly = false;
 				}
 				else
+				{
+					asu = new AbnormalStatusUpdate();
+				}
+				
+				if (_owner.isInParty())
+				{
+					ps = new PartySpelled(_owner);
+				}
+				
+				if (_owner.getActingPlayer().isInOlympiadMode() && _owner.getActingPlayer().isOlympiadStart())
+				{
+					os = new ExOlympiadSpelledInfo(_owner.getActingPlayer());
+				}
+			}
+			else if (_owner.isSummon())
+			{
+				isSummon = true;
+				ps = new PartySpelled(_owner);
+				psSummon = new PartySpelled(_owner);
+			}
+			
+			// Buffs.
+			if (hasBuffs())
+			{
+				for (BuffInfo info : getBuffs())
+				{
+					if (info.getSkill().isHealingPotionSkill())
+					{
+						shortBuffStatusUpdate(info);
+					}
+					else
+					{
+						addIcon(info, asu, ps, psSummon, os, isSummon);
+					}
+				}
+			}
+			
+			// Triggered buffs.
+			if (hasTriggered())
+			{
+				for (BuffInfo info : getTriggered())
 				{
 					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
 			}
-		}
-		
-		// Triggered buffs.
-		if (hasTriggered())
-		{
-			for (BuffInfo info : getTriggered())
+			
+			// Songs and dances.
+			if (hasDances())
 			{
-				addIcon(info, asu, ps, psSummon, os, isSummon);
-			}
-		}
-		
-		// Songs and dances.
-		if (hasDances())
-		{
-			for (BuffInfo info : getDances())
-			{
-				addIcon(info, asu, ps, psSummon, os, isSummon);
-			}
-		}
-		
-		// Songs and dances.
-		if (hasToggles())
-		{
-			for (BuffInfo info : getToggles())
-			{
-				addIcon(info, asu, ps, psSummon, os, isSummon);
-			}
-		}
-		
-		// Debuffs.
-		if (hasDebuffs())
-		{
-			for (BuffInfo info : getDebuffs())
-			{
-				addIcon(info, asu, ps, psSummon, os, isSummon);
-			}
-		}
-		
-		if (asu != null)
-		{
-			_owner.sendPacket(asu);
-		}
-		
-		if (ps != null)
-		{
-			if (_owner.isSummon())
-			{
-				final L2PcInstance summonOwner = ((L2Summon) _owner).getOwner();
-				if (summonOwner != null)
+				for (BuffInfo info : getDances())
 				{
-					if (summonOwner.isInParty())
-					{
-						summonOwner.getParty().broadcastToPartyMembers(summonOwner, psSummon); // send to all member except summonOwner
-						summonOwner.sendPacket(ps); // now send to summonOwner
-					}
-					else
-					{
-						summonOwner.sendPacket(ps);
-					}
+					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
 			}
-			else if (_owner.isPlayer() && _owner.isInParty())
+			
+			// Toggles.
+			if (hasToggles())
 			{
-				_owner.getParty().broadcastPacket(ps);
+				for (BuffInfo info : getToggles())
+				{
+					addIcon(info, asu, ps, psSummon, os, isSummon);
+				}
 			}
-		}
-		
-		if (os != null)
-		{
-			final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(_owner.getActingPlayer().getOlympiadGameId());
-			if ((game != null) && game.isBattleStarted())
+			
+			// Debuffs.
+			if (hasDebuffs())
 			{
-				game.getZone().broadcastPacketToObservers(os);
+				for (BuffInfo info : getDebuffs())
+				{
+					addIcon(info, asu, ps, psSummon, os, isSummon);
+				}
 			}
-		}
+			
+			if (asu != null)
+			{
+				_owner.sendPacket(asu);
+			}
+			
+			if (ps != null)
+			{
+				if (_owner.isSummon())
+				{
+					final L2PcInstance summonOwner = ((L2Summon) _owner).getOwner();
+					if (summonOwner != null)
+					{
+						if (summonOwner.isInParty())
+						{
+							summonOwner.getParty().broadcastToPartyMembers(summonOwner, psSummon); // send to all member except summonOwner
+							summonOwner.sendPacket(ps); // now send to summonOwner
+						}
+						else
+						{
+							summonOwner.sendPacket(ps);
+						}
+					}
+				}
+				else if (_owner.isPlayer() && _owner.isInParty())
+				{
+					_owner.getParty().broadcastPacket(ps);
+				}
+			}
+			
+			if (os != null)
+			{
+				final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(_owner.getActingPlayer().getOlympiadGameId());
+				if ((game != null) && game.isBattleStarted())
+				{
+					game.getZone().broadcastPacketToObservers(os);
+				}
+			}
+			
+			_effectIconsUpdate = null;
+		}, 500);
 	}
 	
 	private void addIcon(BuffInfo info, AbnormalStatusUpdate asu, PartySpelled ps, PartySpelled psSummon, ExOlympiadSpelledInfo os, boolean isSummon)
