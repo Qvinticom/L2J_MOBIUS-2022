@@ -9199,7 +9199,6 @@ public final class L2PcInstance extends L2Playable
 		
 		if (skill.isDebuff() || skill.hasEffectType(L2EffectType.STEAL_ABNORMAL) || skill.isBad())
 		{
-			
 			final L2PcInstance targetPlayer = target.getActingPlayer();
 			
 			if ((targetPlayer == null) || (this == target))
@@ -9207,9 +9206,25 @@ public final class L2PcInstance extends L2Playable
 				return false;
 			}
 			
-			final boolean isCtrlPressed = (getCurrentSkill() != null) && getCurrentSkill().isCtrlPressed();
+			// Duel
+			if (isInDuel() && targetPlayer.isInDuel())
+			{
+				if (getDuelId() == targetPlayer.getDuelId())
+				{
+					return true;
+				}
+			}
 			
-			// Pece Zone
+			// Olympiad
+			if (isInOlympiadMode() && targetPlayer.isInOlympiadMode())
+			{
+				if (getOlympiadGameId() == targetPlayer.getOlympiadGameId())
+				{
+					return true;
+				}
+			}
+			
+			// Peace Zone
 			if (target.isInsideZone(ZoneId.PEACE))
 			{
 				return false;
@@ -9231,14 +9246,7 @@ public final class L2PcInstance extends L2Playable
 				
 			}
 			
-			// Duel
-			if (isInDuel() && targetPlayer.isInDuel())
-			{
-				if (getDuelId() == targetPlayer.getDuelId())
-				{
-					return true;
-				}
-			}
+			final boolean isCtrlPressed = (getCurrentSkill() != null) && getCurrentSkill().isCtrlPressed();
 			
 			// Party
 			if (isInParty() && targetPlayer.isInParty())
@@ -9274,15 +9282,6 @@ public final class L2PcInstance extends L2Playable
 				return true;
 			}
 			
-			// Olympiad
-			if (isInOlympiadMode() && targetPlayer.isInOlympiadMode())
-			{
-				if (getOlympiadGameId() == targetPlayer.getOlympiadGameId())
-				{
-					return true;
-				}
-			}
-			
 			final L2Clan aClan = getClan();
 			final L2Clan tClan = targetPlayer.getClan();
 			
@@ -9291,11 +9290,7 @@ public final class L2PcInstance extends L2Playable
 				if (aClan.isAtWarWith(tClan.getId()) && tClan.isAtWarWith(aClan.getId()))
 				{
 					// Check if skill can do dmg
-					if ((skill.isAOE() && (skill.getEffectRange() > 0)) && isCtrlPressed && (getTarget() == target))
-					{
-						return true;
-					}
-					return isCtrlPressed;
+					return true; // Always return true at war.
 				}
 				else if ((getClanId() == targetPlayer.getClanId()) || ((getAllyId() > 0) && (getAllyId() == targetPlayer.getAllyId())))
 				{
