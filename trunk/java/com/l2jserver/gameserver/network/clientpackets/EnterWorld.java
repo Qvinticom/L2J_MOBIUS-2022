@@ -622,20 +622,17 @@ public class EnterWorld extends L2GameClientPacket
 		
 		L2ClassMasterInstance.showQuestionMark(activeChar);
 		
-		if (!Config.SERVER_CLASSIC_SUPPORT)
+		int birthday = activeChar.checkBirthDay();
+		if (birthday == 0)
 		{
-			int birthday = activeChar.checkBirthDay();
-			if (birthday == 0)
-			{
-				activeChar.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
-				// activeChar.sendPacket(new ExBirthdayPopup()); Removed in H5?
-			}
-			else if (birthday != -1)
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
-				sm.addString(Integer.toString(birthday));
-				activeChar.sendPacket(sm);
-			}
+			activeChar.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
+			// activeChar.sendPacket(new ExBirthdayPopup()); Removed in H5?
+		}
+		else if (birthday != -1)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
+			sm.addString(Integer.toString(birthday));
+			activeChar.sendPacket(sm);
 		}
 		
 		if (!activeChar.getPremiumItemList().isEmpty())
@@ -658,11 +655,8 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
 		}
 		
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
-			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
-		}
+		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 		
 		// Unstuck players that had client open when server crashed.
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);

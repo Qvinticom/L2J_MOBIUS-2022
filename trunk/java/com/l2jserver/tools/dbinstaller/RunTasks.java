@@ -32,15 +32,13 @@ import com.l2jserver.tools.dbinstaller.util.mysql.ScriptExecutor;
 public class RunTasks extends Thread
 {
 	DBOutputInterface _frame;
-	boolean _classicInstall;
 	String _db;
 	String _sqlDir;
 	
-	public RunTasks(DBOutputInterface frame, String db, String sqlDir, boolean classicInstall)
+	public RunTasks(DBOutputInterface frame, String db, String sqlDir)
 	{
 		_frame = frame;
 		_db = db;
-		_classicInstall = classicInstall;
 		_sqlDir = sqlDir;
 	}
 	
@@ -52,16 +50,6 @@ public class RunTasks extends Thread
 		
 		_frame.appendToProgressArea("Installing Database Content...");
 		exec.execSqlBatch(new File(_sqlDir));
-		
-		if (_classicInstall)
-		{
-			File cusDir = new File(_sqlDir, "classic");
-			if (cusDir.exists())
-			{
-				_frame.appendToProgressArea("Installing Classic Tables...");
-				exec.execSqlBatch(cusDir);
-			}
-		}
 		
 		_frame.appendToProgressArea("Database Installation Complete!");
 		

@@ -54,7 +54,7 @@ public class L2FishingZone extends L2ZoneType
 			character.setInsideZone(ZoneId.FISHING, true);
 		}
 		
-		if (character.isPlayer() && !Config.SERVER_CLASSIC_SUPPORT)
+		if (character.isPlayer())
 		{
 			final L2PcInstance plr = (L2PcInstance) character;
 			if (!_task.containsKey(plr.getObjectId()))

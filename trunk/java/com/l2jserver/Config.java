@@ -178,7 +178,6 @@ public final class Config
 	public static byte BASE_SUBCLASS_LEVEL;
 	public static byte BASE_DUALCLASS_LEVEL;
 	public static byte MAX_SUBCLASS_LEVEL;
-	public static byte MAX_CLASSIC_PLAYER_LEVEL;
 	public static int MAX_PVTSTORESELL_SLOTS_DWARF;
 	public static int MAX_PVTSTORESELL_SLOTS_OTHER;
 	public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
@@ -992,7 +991,6 @@ public final class Config
 	public static int SERVER_LIST_TYPE;
 	public static int SERVER_LIST_AGE;
 	public static boolean SERVER_LIST_BRACKET;
-	public static boolean SERVER_CLASSIC_SUPPORT = false;
 	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
 	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
 	
@@ -1233,7 +1231,7 @@ public final class Config
 			
 			try
 			{
-				DATAPACK_ROOT = new File(serverSettings.getString((SERVER_CLASSIC_SUPPORT ? "ClassicDatapackRoot" : "DatapackRoot"), ".").replaceAll("\\\\", "/")).getCanonicalFile();
+				DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
 			}
 			catch (IOException e)
 			{
@@ -1531,7 +1529,6 @@ public final class Config
 			BASE_SUBCLASS_LEVEL = character.getByte("BaseSubclassLevel", (byte) 40);
 			BASE_DUALCLASS_LEVEL = character.getByte("BaseDualclassLevel", (byte) 85);
 			MAX_SUBCLASS_LEVEL = character.getByte("MaxSubclassLevel", (byte) 80);
-			MAX_CLASSIC_PLAYER_LEVEL = character.getByte("MaxClassicPlayerLevel", (byte) 75);
 			MAX_PVTSTORESELL_SLOTS_DWARF = character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
 			MAX_PVTSTORESELL_SLOTS_OTHER = character.getInt("MaxPvtStoreSellSlotsOther", 3);
 			MAX_PVTSTOREBUY_SLOTS_DWARF = character.getInt("MaxPvtStoreBuySlotsDwarf", 5);
@@ -3897,7 +3894,6 @@ public final class Config
 					break;
 				case "classic":
 					serverType |= 0x400;
-					SERVER_CLASSIC_SUPPORT = true;
 					break;
 			}
 		}

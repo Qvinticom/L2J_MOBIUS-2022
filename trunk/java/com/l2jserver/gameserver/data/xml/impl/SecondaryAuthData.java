@@ -26,7 +26,6 @@ import java.util.logging.Level;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jserver.Config;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
@@ -103,10 +102,6 @@ public class SecondaryAuthData implements IXmlReader
 	
 	public boolean isEnabled()
 	{
-		if (Config.SERVER_CLASSIC_SUPPORT)
-		{
-			return false;
-		}
 		return _enabled;
 	}
 	

@@ -71,12 +71,12 @@ public class DBInstallerConsole implements DBOutputInterface
 				System.out.print("Do you really want to destroy your db (Y/N)?");
 				if (scn.next().equalsIgnoreCase("y"))
 				{
-					rt = new RunTasks(this, db, dir, true);
+					rt = new RunTasks(this, db, dir);
 				}
 			}
 			else if (resp.equalsIgnoreCase("u"))
 			{
-				rt = new RunTasks(this, db, dir, false);
+				rt = new RunTasks(this, db, dir);
 			}
 		}
 		
@@ -114,7 +114,7 @@ public class DBInstallerConsole implements DBOutputInterface
 		
 		if ((mode != null) && ("c".equalsIgnoreCase(mode) || "u".equalsIgnoreCase(mode)))
 		{
-			final RunTasks rt = new RunTasks(this, database, dir, "c".equalsIgnoreCase(mode));
+			final RunTasks rt = new RunTasks(this, database, dir);
 			rt.run();
 		}
 	}

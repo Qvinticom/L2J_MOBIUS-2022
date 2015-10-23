@@ -201,10 +201,13 @@ public final class GameServer
 		
 		printSection("Effects");
 		EffectHandler.getInstance().executeScript();
+		
 		printSection("Enchant Skill Groups");
 		EnchantSkillGroupsData.getInstance();
+		
 		printSection("Skill Trees");
 		SkillTreesData.getInstance();
+		
 		printSection("Skills");
 		SkillData.getInstance();
 		SummonSkillsTable.getInstance();
@@ -213,12 +216,9 @@ public final class GameServer
 		ItemTable.getInstance();
 		EnchantItemGroupsData.getInstance();
 		EnchantItemData.getInstance();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			EnchantItemOptionsData.getInstance();
-			ItemCrystalizationData.getInstance();
-			OptionData.getInstance();
-		}
+		EnchantItemOptionsData.getInstance();
+		ItemCrystalizationData.getInstance();
+		OptionData.getInstance();
 		EnchantItemHPBonusData.getInstance();
 		MerchantPriceConfigTable.getInstance().loadInstances();
 		BuyListData.getInstance();
@@ -226,15 +226,12 @@ public final class GameServer
 		RecipeData.getInstance();
 		ArmorSetsData.getInstance();
 		HennaData.getInstance();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			FishData.getInstance();
-			FishingMonstersData.getInstance();
-			FishingRodsData.getInstance();
-			CommissionManager.getInstance();
-			PrimeShopData.getInstance();
-			AppearanceItemData.getInstance();
-		}
+		FishData.getInstance();
+		FishingMonstersData.getInstance();
+		FishingRodsData.getInstance();
+		CommissionManager.getInstance();
+		PrimeShopData.getInstance();
+		AppearanceItemData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
@@ -249,11 +246,9 @@ public final class GameServer
 		BeautyShopData.getInstance();
 		AdminData.getInstance();
 		CharSummonTable.getInstance().init();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			PetDataTable.getInstance();
-			MentorManager.getInstance();
-		}
+		PetDataTable.getInstance();
+		MentorManager.getInstance();
+		
 		if (Config.FACTION_SYSTEM_ENABLED)
 		{
 			FactionManager.getInstance();
@@ -295,14 +290,12 @@ public final class GameServer
 		NpcBufferTable.getInstance();
 		GrandBossManager.getInstance().initZones();
 		EventDroplist.getInstance();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			printSection("Auction Manager");
-			ItemAuctionManager.getInstance();
-			
-			printSection("Olympiad");
-			Olympiad.getInstance();
-		}
+		
+		printSection("Auction Manager");
+		ItemAuctionManager.getInstance();
+		
+		printSection("Olympiad");
+		Olympiad.getInstance();
 		Hero.getInstance();
 		
 		// Call to load caches
@@ -315,10 +308,7 @@ public final class GameServer
 		PartyMatchWaitingList.getInstance();
 		PartyMatchRoomList.getInstance();
 		PetitionManager.getInstance();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			AugmentationData.getInstance();
-		}
+		AugmentationData.getInstance();
 		CursedWeaponsManager.getInstance();
 		TransformData.getInstance();
 		BotReportTable.getInstance();
@@ -326,13 +316,10 @@ public final class GameServer
 		printSection("Scripts");
 		QuestManager.getInstance();
 		BoatManager.getInstance();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			AirShipManager.getInstance();
-			ShuttleData.getInstance();
-			JumpManager.getInstance();
-			GraciaSeedsManager.getInstance();
-		}
+		AirShipManager.getInstance();
+		ShuttleData.getInstance();
+		JumpManager.getInstance();
+		GraciaSeedsManager.getInstance();
 		
 		try
 		{
@@ -350,20 +337,14 @@ public final class GameServer
 		SpawnTable.getInstance().load();
 		DayNightSpawnManager.getInstance().trim().notifyChangeMode();
 		RaidBossSpawnManager.getInstance();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			FourSepulchersManager.getInstance().init();
-		}
+		FourSepulchersManager.getInstance().init();
 		
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
 		CastleManager.getInstance().activateInstances();
-		if (!Config.SERVER_CLASSIC_SUPPORT)
-		{
-			FortManager.getInstance().loadInstances();
-			FortManager.getInstance().activateInstances();
-			FortSiegeManager.getInstance();
-		}
+		FortManager.getInstance().loadInstances();
+		FortManager.getInstance().activateInstances();
+		FortSiegeManager.getInstance();
 		SiegeScheduleData.getInstance();
 		
 		MerchantPriceConfigTable.getInstance().updateReferences();

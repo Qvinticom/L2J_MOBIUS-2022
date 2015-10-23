@@ -131,7 +131,6 @@ public class DBConfigGUI extends JFrame
 				_prop.put("dbUser_" + _db, _dbUser.getText());
 				_prop.put("dbDbse_" + _db, _dbDbse.getText());
 				
-				boolean classicInstall = false;
 				DBInstallerGUI dbi = new DBInstallerGUI(connector.getConnection());
 				setVisible(false);
 				
@@ -153,25 +152,19 @@ public class DBConfigGUI extends JFrame
 				{
 					Object[] options =
 					{
-						"Classic Install",
-						"Ertheia Install",
+						"Install Server",
 						"Exit"
 					};
-					int n = JOptionPane.showOptionDialog(null, "Select installation type.", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+					int n = JOptionPane.showOptionDialog(null, "Install game server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
 					
-					if ((n == 2) || (n == -1))
+					if ((n == 1) || (n == -1))
 					{
 						System.exit(0);
-					}
-					
-					if (n == 0)
-					{
-						classicInstall = true;
 					}
 				}
 				dbi.setVisible(true);
 				
-				RunTasks task = new RunTasks(dbi, _db, _dir, classicInstall);
+				RunTasks task = new RunTasks(dbi, _db, _dir);
 				task.setPriority(Thread.MAX_PRIORITY);
 				task.start();
 			}

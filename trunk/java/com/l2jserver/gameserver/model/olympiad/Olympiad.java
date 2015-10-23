@@ -480,7 +480,7 @@ public class Olympiad extends ListenersContainer
 		
 		_scheduledCompStart = ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
-			if (isOlympiadEnd() || Config.SERVER_CLASSIC_SUPPORT)
+			if (isOlympiadEnd())
 			{
 				return;
 			}
