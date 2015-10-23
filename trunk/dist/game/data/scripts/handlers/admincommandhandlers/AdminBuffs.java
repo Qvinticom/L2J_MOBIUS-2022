@@ -26,6 +26,7 @@ import java.util.StringTokenizer;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -160,47 +161,39 @@ public class AdminBuffs implements IAdminCommandHandler
 			StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
 			
-			L2PcInstance player = null;
+			L2Character creature = null;
 			if (st.hasMoreTokens())
 			{
-				String playername = st.nextToken();
-				
-				try
+				creature = L2World.getInstance().getPlayer(st.nextToken());
+				if (creature == null)
 				{
-					player = L2World.getInstance().getPlayer(playername);
-				}
-				catch (Exception e)
-				{
-				}
-				
-				if (player == null)
-				{
-					activeChar.sendMessage("The player " + playername + " is not online.");
+					activeChar.sendMessage("The player " + creature + " is not online.");
 					return false;
 				}
 			}
-			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
-			{
-				player = activeChar.getTarget().getActingPlayer();
-			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-				return false;
+				final L2Object target = activeChar.getTarget();
+				if ((target != null) && target.isCharacter())
+				{
+					creature = (L2Character) target;
+				}
+				
+				if (creature == null)
+				{
+					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+					return false;
+				}
 			}
 			
-			try
+			creature.resetTimeStamps();
+			creature.resetDisabledSkills();
+			if (creature.isPlayer())
 			{
-				player.resetTimeStamps();
-				player.resetDisabledSkills();
-				player.sendPacket(new SkillCoolTime(player));
-				activeChar.sendMessage("Skill reuse was removed from " + player.getName() + ".");
-				return true;
+				creature.sendPacket(new SkillCoolTime(creature.getActingPlayer()));
 			}
-			catch (NullPointerException e)
-			{
-				return false;
-			}
+			activeChar.sendMessage("Skill reuse was removed from " + creature.getName() + ".");
+			return true;
 		}
 		else if (command.startsWith("admin_switch_gm_buffs"))
 		{

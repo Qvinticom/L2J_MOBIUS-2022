@@ -331,9 +331,9 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 -- (29144,0,0,0,0,0,0,0,0), -- Lost Captain (78) (Spawned by Kamaloka's instance)
 -- (29147,0,0,0,0,0,0,0,0), -- Lost Captain (81) (Spawned by Kamaloka's instance)
 -- (29186,0,0,0,0,0,0,0,0), -- Balor (85) (stats to be done)
-(25725,152316,110439,-5520,36811,129600,86400,6165648,20499), -- Drake Lord (85)
-(25726,145734,120031,-3912,45303,129600,86400,6165648,20499), -- Behemoth Leader (85)
-(25727,148482,117859,-3712,36584,129600,86400,6165648,20499); -- Dragon Beast (85)
+(25725,152260,110394,-5552,0,129600,86400,6165648,20499), -- Drake Lord (85)
+(25726,145788,120118,-3912,32768,129600,86400,6165648,20499), -- Behemoth Leader (85)
+(25727,148241,117965,-3712,0,129600,86400,6165648,20499); -- Dragon Beast (85)
 
 -- Removed
 DELETE FROM `raidboss_spawnlist` WHERE (boss_id = 25118); -- Guilotine, Warden Of The Execution Grounds

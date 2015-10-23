@@ -78,9 +78,6 @@ public class L2MonsterInstance extends L2Attackable
 		return super.isAutoAttackable(attacker) && !isEventMob();
 	}
 	
-	/**
-	 * Return True if the L2MonsterInstance is Aggressive (aggroRange > 0).
-	 */
 	@Override
 	public boolean isAggressive()
 	{

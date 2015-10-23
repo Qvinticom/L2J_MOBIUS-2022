@@ -77,14 +77,17 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6913" levels="1" name="Challenge of Faith">
-		<!-- High Five Skill -->
+		<!-- Confirmed High Five -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="SUB_TRIGGER_DEFENCE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0985" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="45000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -125,21 +128,25 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6920" levels="1" name="Collector's Fortune">
-		<!-- High Five Skill -->
+		<!-- Confirmed High Five -->
 		<!-- Triggered Skill for Collector's Experience -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="MULTI_BUFF_A" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.skill0952" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" /> <!-- FIXME: value unconfirmed -->
-		<set name="reuseDelay" val="15000" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE" />
+		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.15" />
-				<mul stat="critRate" val="1.1" />
+				<mul stat="critRate" val="1.15" />
 				<mul stat="critDmg" val="1.1" />
 				<mul stat="pAtkSpd" val="1.03" />
 				<add stat="runSpd" val="5" />
@@ -147,15 +154,32 @@
 		</for>
 	</skill>
 	<skill id="6921" levels="1" name="Penetrating Attack">
-		<!-- P. Def. is decreased momentarily. -->
+		<!-- Confirmed High Five -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="CON" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-671" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0122" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="mpConsume" val="43" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6922" levels="3" name="Adventurer's Might">
 		<!-- AUTO GENERATED SKILL -->

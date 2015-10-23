@@ -28,8 +28,7 @@ import java.util.logging.Logger;
  */
 public abstract class AbstractConnectionFactory implements IConnectionFactory
 {
-	/** The logger. */
-	protected static final Logger LOG = Logger.getLogger(AbstractConnectionFactory.class.getName());
+	private static final Logger LOG = Logger.getLogger(AbstractConnectionFactory.class.getName());
 	
 	@Override
 	public Connection getConnection()

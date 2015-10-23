@@ -20,6 +20,7 @@ package com.l2jserver.commons.database.pool.impl;
 
 import java.beans.PropertyVetoException;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
@@ -36,6 +37,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  */
 final class C3P0ConnectionFactory extends AbstractConnectionFactory
 {
+	private static final Logger LOG = Logger.getLogger(C3P0ConnectionFactory.class.getName());
+	
 	private final ComboPooledDataSource _dataSource;
 	
 	public C3P0ConnectionFactory()

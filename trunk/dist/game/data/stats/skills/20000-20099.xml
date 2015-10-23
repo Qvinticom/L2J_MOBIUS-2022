@@ -73,8 +73,10 @@
 		</for>
 	</skill>
 	<skill id="20006" levels="1" name="Soul Roar">
-		<!-- High Five Skill -->
+		<!-- Confirmed High Five -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="MULTI_DEBUFF_G" />
 		<set name="effectPoint" val="611" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="BranchSys2.icon.skill20006" />

@@ -21,9 +21,9 @@ package com.l2jserver.gameserver.ai;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.MobGroup;
@@ -190,7 +190,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		}
 		
 		_actor.setTarget(target);
-		// as a response, we put the target in a forcedattack mode
+		// as a response, we put the target in a forced attack mode
 		L2ControllableMobInstance theTarget = (L2ControllableMobInstance) target;
 		L2ControllableMobAI ctrlAi = (L2ControllableMobAI) theTarget.getAI();
 		ctrlAi.forceAttack(_actor);
@@ -397,30 +397,31 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	
 	private boolean checkAutoAttackCondition(L2Character target)
 	{
-		if ((target == null) || !(_actor instanceof L2Attackable))
-		{
-			return false;
-		}
-		L2Attackable me = (L2Attackable) _actor;
-		
-		if ((target instanceof L2NpcInstance) || (target instanceof L2DoorInstance))
+		if ((target == null) || (target instanceof L2NpcInstance) || (target instanceof L2DoorInstance))
 		{
 			return false;
 		}
 		
-		if (target.isAlikeDead() || !me.isInsideRadius(target, me.getAggroRange(), false, false) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
+		// TODO(Zoey76)[#112]: This check must change if summon fall in L2Npc hierarchy.
+		if (target instanceof L2Npc)
 		{
 			return false;
 		}
 		
 		// Check if the target isn't invulnerable
-		if (target.isInvul())
+		if (target.isInvul() || target.isAlikeDead())
 		{
 			return false;
 		}
 		
 		// Spawn protection (only against mobs)
-		if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isSpawnProtected())
+		if (target.isPlayer() && ((L2PcInstance) target).isSpawnProtected())
+		{
+			return false;
+		}
+		
+		final L2Attackable me = getActiveChar();
+		if (!me.isInsideRadius(target, me.getAggroRange(), false, false) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
 		{
 			return false;
 		}
@@ -434,56 +435,17 @@ public final class L2ControllableMobAI extends L2AttackableAI
 				return false;
 			}
 		}
-		
-		if (target instanceof L2Npc)
-		{
-			return false;
-		}
-		
 		return me.isAggressive();
 	}
 	
 	private L2Character findNextRndTarget()
 	{
-		int aggroRange = ((L2Attackable) _actor).getAggroRange();
-		L2Attackable npc = (L2Attackable) _actor;
-		int npcX, npcY, targetX, targetY;
-		double dy, dx;
-		double dblAggroRange = aggroRange * aggroRange;
-		
-		final List<L2Character> potentialTarget = new ArrayList<>();
-		for (L2Character obj : npc.getKnownList().getKnownCharacters())
-		{
-			npcX = npc.getX();
-			npcY = npc.getY();
-			targetX = obj.getX();
-			targetY = obj.getY();
-			
-			dx = npcX - targetX;
-			dy = npcY - targetY;
-			
-			if (((dx * dx) + (dy * dy)) > dblAggroRange)
-			{
-				continue;
-			}
-			
-			L2Character target = obj;
-			if (checkAutoAttackCondition(target))
-			{
-				potentialTarget.add(target);
-			}
-		}
-		
+		final List<L2Character> potentialTarget = _actor.getKnownList().getKnownCharactersInRadius(getActiveChar().getAggroRange()).stream().filter(this::checkAutoAttackCondition).collect(Collectors.toList());
 		if (potentialTarget.isEmpty())
 		{
 			return null;
 		}
-		
-		// we choose a random target
-		int choice = Rnd.nextInt(potentialTarget.size());
-		L2Character target = potentialTarget.get(choice);
-		
-		return target;
+		return potentialTarget.get(Rnd.nextInt(potentialTarget.size()));
 	}
 	
 	private L2ControllableMobInstance findNextGroupTarget()

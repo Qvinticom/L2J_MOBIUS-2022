@@ -513,6 +513,7 @@
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -527,7 +528,7 @@
 		</cond>
 		<for>
 			<effect name="Teleport">
-				<param x="52195" y="218787" z="-3231" />
+				<param x="52201" y="218801" z="-3224" />
 			</effect>
 		</for>
 	</skill>
@@ -561,6 +562,7 @@
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -575,7 +577,7 @@
 		</cond>
 		<for>
 			<effect name="Teleport">
-				<param x="181378" y="-80915" z="-2731" />
+				<param x="181384" y="-80856" z="-2728" />
 			</effect>
 		</for>
 	</skill>
@@ -657,15 +659,15 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21252" levels="1" name="Hellblade">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Confirmed High Five -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
-				<param minDamage="1" chance="3" />
+				<param minDamage="1" chance="15" />
 				<param skillId="23319" skillLevel="1" /> <!-- Blood Seeker -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
@@ -673,15 +675,15 @@
 		</for>
 	</skill>
 	<skill id="21253" levels="1" name="Butcher Blades">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Confirmed High Five -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
-				<param minDamage="1" chance="3" />
+				<param minDamage="1" chance="15" />
 				<param skillId="23320" skillLevel="1" /> <!-- Greedy Throat -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
@@ -689,15 +691,15 @@
 		</for>
 	</skill>
 	<skill id="21254" levels="1" name="Claw of Destruction">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Confirmed High Five -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
-				<param minDamage="1" chance="3" />
+				<param minDamage="1" chance="15" />
 				<param skillId="23321" skillLevel="1" /> <!-- Draconic Evolver -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
@@ -705,47 +707,47 @@
 		</for>
 	</skill>
 	<skill id="21255" levels="1" name="Blades of Delusion">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Confirmed High Five -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
-				<param minDamage="1" chance="3" />
-				<param skillId="23322" skillLevel="10" /> <!-- Demonic Desire -->
+				<param minDamage="1" chance="15" />
+				<param skillId="23322" skillLevel="1" /> <!-- Demonic Desire -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="21256" levels="1" name="Blood Brother">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Confirmed High Five -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
-				<param minDamage="1" chance="3" />
-				<param skillId="23323" skillLevel="10" /> <!-- Fury of Darkness -->
+				<param minDamage="1" chance="15" />
+				<param skillId="23323" skillLevel="1" /> <!-- Fury of Darkness -->
 				<param targetType="ONE" />
 				<param allowWeapons="ALL" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="21257" levels="1" name="Mardil">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Confirmed High Five -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="1" />
-				<param chance="3" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
 				<param skillId="23324" skillLevel="1" /> <!-- Jet Black Typhoon -->
 				<param targetType="SELF" />
 			</effect>

@@ -556,34 +556,35 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6743" levels="1" name="Dark Wound">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
-		<set name="abnormalLvl" val="1" />
+		<!-- Confirmed High Five -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="basicProperty" val="CON" />
 		<set name="blockedInOlympiad" val="true" />
-		<set name="castRange" val="1500" />
+		<set name="castRange" val="400" />
+		<set name="coolTime" val="300" />
 		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="2000" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="30" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
-		<set name="mpConsume" val="25" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="83" />
+		<set name="mpConsume" val="34" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="5000" />
+		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="DamOverTime" ticks="1">
+			<effect name="DamOverTime" ticks="7">
 				<param power="200" />
-				<sub stat="darkRes" val="60" />
 			</effect>
 		</for>
 	</skill>

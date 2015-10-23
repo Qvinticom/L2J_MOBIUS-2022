@@ -191,23 +191,13 @@ public class L2Npc extends L2Character
 		return getTemplate().getSpiritShotChance();
 	}
 	
-	public int getMinSkillChance()
-	{
-		return getTemplate().getMinSkillChance();
-	}
-	
-	public int getMaxSkillChance()
-	{
-		return getTemplate().getMaxSkillChance();
-	}
-	
 	/**
 	 * Verifies if the NPC can cast a skill given the minimum and maximum skill chances.
 	 * @return {@code true} if the NPC has chances of casting a skill
 	 */
 	public boolean hasSkillChance()
 	{
-		return Rnd.get(100) < Rnd.get(getMinSkillChance(), getMaxSkillChance());
+		return Rnd.get(100) < Rnd.get(getTemplate().getMinSkillChance(), getTemplate().getMaxSkillChance());
 	}
 	
 	public boolean canMove()

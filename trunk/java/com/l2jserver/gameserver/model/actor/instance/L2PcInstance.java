@@ -7027,38 +7027,38 @@ public final class L2PcInstance extends L2Playable
 		{
 			// Retrieve the L2PcInstance from the characters table of the database
 			ps.setInt(1, objectId);
-			try (ResultSet rs = ps.executeQuery())
+			try (ResultSet rset = ps.executeQuery())
 			{
-				if (rs.next())
+				if (rset.next())
 				{
-					final int activeClassId = rs.getInt("classid");
-					final boolean female = rs.getInt("sex") != Sex.MALE.ordinal();
+					final int activeClassId = rset.getInt("classid");
+					final boolean female = rset.getInt("sex") != Sex.MALE.ordinal();
 					final L2PcTemplate template = PlayerTemplateData.getInstance().getTemplate(activeClassId);
-					PcAppearance app = new PcAppearance(rs.getByte("face"), rs.getByte("hairColor"), rs.getByte("hairStyle"), female);
+					PcAppearance app = new PcAppearance(rset.getByte("face"), rset.getByte("hairColor"), rset.getByte("hairStyle"), female);
 					
-					player = new L2PcInstance(objectId, template, rs.getString("account_name"), app);
-					player.setName(rs.getString("char_name"));
-					restorePremiumSystemData(player, rs.getString("account_name"));
-					player._lastAccess = rs.getLong("lastAccess");
+					player = new L2PcInstance(objectId, template, rset.getString("account_name"), app);
+					player.setName(rset.getString("char_name"));
+					restorePremiumSystemData(player, rset.getString("account_name"));
+					player._lastAccess = rset.getLong("lastAccess");
 					
-					player.getStat().setExp(rs.getLong("exp"));
-					player.setExpBeforeDeath(rs.getLong("expBeforeDeath"));
-					player.getStat().setLevel(rs.getByte("level"));
-					player.getStat().setSp(rs.getLong("sp"));
+					player.getStat().setExp(rset.getLong("exp"));
+					player.setExpBeforeDeath(rset.getLong("expBeforeDeath"));
+					player.getStat().setLevel(rset.getByte("level"));
+					player.getStat().setSp(rset.getLong("sp"));
 					
-					player.setWantsPeace(rs.getInt("wantspeace"));
+					player.setWantsPeace(rset.getInt("wantspeace"));
 					
-					player.setHeading(rs.getInt("heading"));
+					player.setHeading(rset.getInt("heading"));
 					
-					player.setReputation(rs.getInt("reputation"));
-					player.setFame(rs.getInt("fame"));
-					player.setRaidPoints(rs.getInt("raidpoints"));
-					player.setPvpKills(rs.getInt("pvpkills"));
-					player.setPkKills(rs.getInt("pkkills"));
-					player.setOnlineTime(rs.getLong("onlinetime"));
-					player.setNoble(rs.getInt("nobless") == 1);
+					player.setReputation(rset.getInt("reputation"));
+					player.setFame(rset.getInt("fame"));
+					player.setRaidPoints(rset.getInt("raidpoints"));
+					player.setPvpKills(rset.getInt("pvpkills"));
+					player.setPkKills(rset.getInt("pkkills"));
+					player.setOnlineTime(rset.getLong("onlinetime"));
+					player.setNoble(rset.getInt("nobless") == 1);
 					
-					final int factionId = rs.getInt("faction");
+					final int factionId = rset.getInt("faction");
 					if (factionId == 1)
 					{
 						player.setGood();
@@ -7068,25 +7068,100 @@ public final class L2PcInstance extends L2Playable
 						player.setEvil();
 					}
 					
-					player.setClanJoinExpiryTime(rs.getLong("clan_join_expiry_time"));
+					player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 					if (player.getClanJoinExpiryTime() < System.currentTimeMillis())
 					{
 						player.setClanJoinExpiryTime(0);
 					}
-					player.setClanCreateExpiryTime(rs.getLong("clan_create_expiry_time"));
+					player.setClanCreateExpiryTime(rset.getLong("clan_create_expiry_time"));
 					if (player.getClanCreateExpiryTime() < System.currentTimeMillis())
 					{
 						player.setClanCreateExpiryTime(0);
 					}
 					
-					int clanId = rs.getInt("clanid");
-					player.setPowerGrade(rs.getInt("power_grade"));
-					player.setPledgeType(rs.getInt("subpledge"));
+					player.setPowerGrade(rset.getInt("power_grade"));
+					player.setPledgeType(rset.getInt("subpledge"));
 					// player.setApprentice(rs.getInt("apprentice"));
+					
+					player.setDeleteTimer(rset.getLong("deletetime"));
+					player.setTitle(rset.getString("title"));
+					player.setAccessLevel(rset.getInt("accesslevel"), false);
+					int titleColor = rset.getInt("title_color");
+					if (titleColor != PcAppearance.DEFAULT_TITLE_COLOR)
+					{
+						player.getAppearance().setTitleColor(titleColor);
+					}
+					player.setFistsWeaponItem(player.findFistsWeaponItem(activeClassId));
+					player.setUptime(System.currentTimeMillis());
+					
+					currentHp = rset.getDouble("curHp");
+					currentCp = rset.getDouble("curCp");
+					currentMp = rset.getDouble("curMp");
+					
+					player._classIndex = 0;
+					try
+					{
+						player.setBaseClass(rset.getInt("base_class"));
+					}
+					catch (Exception e)
+					{
+						// TODO: Should this be logged?
+						player.setBaseClass(activeClassId);
+					}
+					
+					// Restore Subclass Data (cannot be done earlier in function)
+					if (restoreSubClassData(player))
+					{
+						if (activeClassId != player.getBaseClass())
+						{
+							for (SubClass subClass : player.getSubClasses().values())
+							{
+								if (subClass.getClassId() == activeClassId)
+								{
+									player._classIndex = subClass.getClassIndex();
+								}
+							}
+						}
+					}
+					if ((player.getClassIndex() == 0) && (activeClassId != player.getBaseClass()))
+					{
+						// Subclass in use but doesn't exist in DB -
+						// a possible restart-while-modifysubclass cheat has been attempted.
+						// Switching to use base class
+						player.setClassId(player.getBaseClass());
+						_log.warning("Player " + player.getName() + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
+					}
+					else
+					{
+						player._activeClass = activeClassId;
+					}
+					
+					player.setApprentice(rset.getInt("apprentice"));
+					player.setSponsor(rset.getInt("sponsor"));
+					player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
+					
+					CursedWeaponsManager.getInstance().checkPlayer(player);
+					
+					// Set the x,y,z position of the L2PcInstance and make it invisible
+					player.setXYZInvisible(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
+					
+					// Set Teleport Bookmark Slot
+					player.setBookMarkSlot(rset.getInt("BookmarkSlot"));
+					
+					player._vitalityPoints = rset.getInt("vitality_points");
+					
+					player.setPcBangPoints(rset.getInt("pccafe_points"));
+					
+					// character creation Time
+					player.getCreateDate().setTimeInMillis(rset.getTimestamp("createDate").getTime());
+					
+					// Language
+					player.setLang(rset.getString("language"));
 					
 					// Set Hero status if it applies
 					player.setHero(Hero.getInstance().isHero(objectId));
 					
+					int clanId = rset.getInt("clanid");
 					if (clanId > 0)
 					{
 						player.setClan(ClanTable.getInstance().getClan(clanId));
@@ -7123,81 +7198,6 @@ public final class L2PcInstance extends L2Playable
 						
 						player.getClanPrivileges().clear();
 					}
-					
-					player.setDeleteTimer(rs.getLong("deletetime"));
-					player.setTitle(rs.getString("title"));
-					player.setAccessLevel(rs.getInt("accesslevel"), false);
-					int titleColor = rs.getInt("title_color");
-					if (titleColor != PcAppearance.DEFAULT_TITLE_COLOR)
-					{
-						player.getAppearance().setTitleColor(titleColor);
-					}
-					player.setFistsWeaponItem(player.findFistsWeaponItem(activeClassId));
-					player.setUptime(System.currentTimeMillis());
-					
-					currentHp = rs.getDouble("curHp");
-					currentCp = rs.getDouble("curCp");
-					currentMp = rs.getDouble("curMp");
-					
-					player._classIndex = 0;
-					try
-					{
-						player.setBaseClass(rs.getInt("base_class"));
-					}
-					catch (Exception e)
-					{
-						// TODO: Should this be logged?
-						player.setBaseClass(activeClassId);
-					}
-					
-					// Restore Subclass Data (cannot be done earlier in function)
-					if (restoreSubClassData(player))
-					{
-						if (activeClassId != player.getBaseClass())
-						{
-							for (SubClass subClass : player.getSubClasses().values())
-							{
-								if (subClass.getClassId() == activeClassId)
-								{
-									player._classIndex = subClass.getClassIndex();
-								}
-							}
-						}
-					}
-					if ((player.getClassIndex() == 0) && (activeClassId != player.getBaseClass()))
-					{
-						// Subclass in use but doesn't exist in DB -
-						// a possible restart-while-modifysubclass cheat has been attempted.
-						// Switching to use base class
-						player.setClassId(player.getBaseClass());
-						_log.warning("Player " + player.getName() + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
-					}
-					else
-					{
-						player._activeClass = activeClassId;
-					}
-					
-					player.setApprentice(rs.getInt("apprentice"));
-					player.setSponsor(rs.getInt("sponsor"));
-					player.setLvlJoinedAcademy(rs.getInt("lvl_joined_academy"));
-					
-					CursedWeaponsManager.getInstance().checkPlayer(player);
-					
-					// Set the x,y,z position of the L2PcInstance and make it invisible
-					player.setXYZInvisible(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
-					
-					// Set Teleport Bookmark Slot
-					player.setBookMarkSlot(rs.getInt("BookmarkSlot"));
-					
-					player._vitalityPoints = rs.getInt("vitality_points");
-					
-					player.setPcBangPoints(rs.getInt("pccafe_points"));
-					
-					// character creation Time
-					player.getCreateDate().setTimeInMillis(rs.getTimestamp("createDate").getTime());
-					
-					// Language
-					player.setLang(rs.getString("language"));
 					
 					// Retrieve the name and ID of the other characters assigned to this account.
 					try (PreparedStatement stmt = con.prepareStatement("SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?"))
@@ -8939,17 +8939,12 @@ public final class L2PcInstance extends L2Playable
 		// Are the target and the player in the same duel?
 		if (isInDuel())
 		{
-			// Get L2PcInstance
-			if (target instanceof L2Playable)
+			final L2PcInstance cha = target.getActingPlayer();
+			if ((cha != null) && (cha.getDuelId() != getDuelId()))
 			{
-				// Get L2PcInstance
-				L2PcInstance cha = target.getActingPlayer();
-				if (cha.getDuelId() != getDuelId())
-				{
-					sendMessage("You cannot do this while duelling.");
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return false;
-				}
+				sendMessage("You cannot do this while duelling.");
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
 			}
 		}
 		
@@ -9119,13 +9114,13 @@ public final class L2PcInstance extends L2Playable
 			case SELF:
 				break;
 			default:
-				if (!checkPvpSkill(target, skill) && !getAccessLevel().allowPeaceAttack() && target.isPlayable())
+				// Verify that player can attack a player or summon
+				if (target.isPlayable() && !getAccessLevel().allowPeaceAttack() && !checkPvpSkill(target, skill))
 				{
-					
-					// Send a System Message to the L2PcInstance
+					// Send a System Message to the player
 					sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					
-					// Send a Server->Client packet ActionFailed to the L2PcInstance
+					// Send a Server->Client packet ActionFailed to the player
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return false;
 				}
@@ -9192,7 +9187,7 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		if (!(target instanceof L2Playable))
+		if (!target.isPlayable())
 		{
 			return true;
 		}
@@ -9243,7 +9238,6 @@ public final class L2PcInstance extends L2Playable
 						return false;
 					}
 				}
-				
 			}
 			
 			final boolean isCtrlPressed = (getCurrentSkill() != null) && getCurrentSkill().isCtrlPressed();
@@ -9289,18 +9283,19 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (aClan.isAtWarWith(tClan.getId()) && tClan.isAtWarWith(aClan.getId()))
 				{
-					// Check if skill can do dmg
-					return true; // Always return true at war.
+					// Check if skill can do damage
+					if ((skill.isAOE() && (skill.getEffectRange() > 0)) && isCtrlPressed && (getTarget() == target))
+					{
+						return true;
+					}
+					return isCtrlPressed;
 				}
 				else if ((getClanId() == targetPlayer.getClanId()) || ((getAllyId() > 0) && (getAllyId() == targetPlayer.getAllyId())))
 				{
-					// Check if skill can do dmg
-					if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target))
+					// Check if skill can do damage
+					if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage())
 					{
-						if (skill.isDamage())
-						{
-							return true;
-						}
+						return true;
 					}
 					return false;
 				}
@@ -9317,15 +9312,12 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// On retail, it is impossible to debuff a "peaceful" player.
-			if ((targetPlayer.getPvpFlag() == 0) && (targetPlayer.getReputation() >= 0))
+			if ((targetPlayer.getPvpFlag() == 0) && (targetPlayer.getReputation() > 0))
 			{
-				// Check if skill can do dmg
-				if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target))
+				// Check if skill can do damage
+				if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage())
 				{
-					if (skill.isDamage())
-					{
-						return true;
-					}
+					return true;
 				}
 				return false;
 			}

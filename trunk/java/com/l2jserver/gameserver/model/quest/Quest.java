@@ -1504,7 +1504,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			showHtmlFile(player, res, npc);
 		}
-		else if (res.startsWith("<html>"))
+		else if (res.startsWith("<html"))
 		{
 			final NpcHtmlMessage npcReply = new NpcHtmlMessage(npc != null ? npc.getObjectId() : 0, res);
 			npcReply.replace("%playername%", player.getName());

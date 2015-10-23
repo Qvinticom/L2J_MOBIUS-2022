@@ -1285,17 +1285,17 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				targetReconsider();
 			}
-			else if (getAttackTarget() != null)
+			else
 			{
-				if (getAttackTarget().isMoving())
+				final L2Character target = getAttackTarget();
+				if (target != null)
 				{
-					range -= 100;
+					if (target.isMoving())
+					{
+						range -= 100;
+					}
+					moveToPawn(target, Math.max(range, 5));
 				}
-				if (range < 5)
-				{
-					range = 5;
-				}
-				moveToPawn(getAttackTarget(), range);
 			}
 			return;
 		}

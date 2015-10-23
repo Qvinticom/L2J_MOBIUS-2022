@@ -18,6 +18,8 @@
  */
 package com.l2jserver.commons.database.pool.impl;
 
+import java.util.logging.Logger;
+
 import javax.sql.DataSource;
 
 import com.l2jserver.commons.database.pool.AbstractConnectionFactory;
@@ -31,6 +33,8 @@ import com.l2jserver.commons.database.pool.IConnectionFactory;
  */
 final class HikariCPConnectionFactory extends AbstractConnectionFactory
 {
+	private static final Logger LOG = Logger.getLogger(HikariCPConnectionFactory.class.getName());
+	
 	private final DataSource _dataSource = null;
 	
 	public HikariCPConnectionFactory()

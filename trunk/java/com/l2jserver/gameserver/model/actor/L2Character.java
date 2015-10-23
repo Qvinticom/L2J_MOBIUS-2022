@@ -1156,6 +1156,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					player.updatePvPStatus(target);
 				}
 			}
+			
 			// Check if hit isn't missed
 			if (!hitted)
 			{
@@ -1192,7 +1193,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			// Notify AI with EVT_READY_TO_ACT
-			ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk + reuse);
+			// Old method - use in case of bow reuse issues occur.
+			// ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk + reuse);
+			ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk);
 		}
 		finally
 		{
@@ -2636,6 +2639,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (_ai == null)
 				{
+					// Return the new AI within the synchronized block
+					// to avoid being nulled by other threads
 					return _ai = initAI();
 				}
 			}
@@ -2655,7 +2660,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void setAI(L2CharacterAI newAI)
 	{
-		L2CharacterAI oldAI = _ai;
+		final L2CharacterAI oldAI = _ai;
 		if ((oldAI != null) && (oldAI != newAI) && (oldAI instanceof L2AttackableAI))
 		{
 			oldAI.stopAITask();
@@ -5330,19 +5335,28 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public int calculateReuseTime(L2Character target, L2Weapon weapon)
 	{
-		if ((weapon == null) || isTransformed())
+		if (isTransformed())
+		{
+			switch (getAttackType())
+			{
+				case BOW:
+				case CROSSBOW:
+					return (int) ((517500 * getStat().getWeaponReuseModifier(null)) / getStat().getPAtkSpd());
+			}
+		}
+		if ((weapon == null))
 		{
 			return 0;
 		}
 		
 		int reuse = weapon.getReuseDelay();
+		
 		// only bows should continue for now
 		if (reuse == 0)
 		{
 			return 0;
 		}
-		
-		reuse *= getStat().getWeaponReuseModifier(target);
+		reuse *= getStat().getWeaponReuseModifier(null);
 		double atkSpd = getStat().getPAtkSpd();
 		switch (weapon.getItemType())
 		{
@@ -6818,7 +6832,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return {@code true} if current player can revive and shows 'To Village' button upon death, {@code false} otherwise.
 	 */
 	public boolean canRevive()
@@ -6827,7 +6841,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @param val
 	 */
 	public void setCanRevive(boolean val)
@@ -6835,7 +6849,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2Attackable}
+	 * Dummy method overridden in {@link L2Attackable}
 	 * @return {@code true} if there is a loot to sweep, {@code false} otherwise.
 	 */
 	public boolean isSweepActive()
@@ -6844,7 +6858,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return {@code true} if player is on event, {@code false} otherwise.
 	 */
 	public boolean isOnEvent()
@@ -6853,7 +6867,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return the clan id of current character.
 	 */
 	public int getClanId()
@@ -6862,7 +6876,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return the clan of current character.
 	 */
 	public L2Clan getClan()
@@ -6871,7 +6885,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return {@code true} if player is in academy, {@code false} otherwise.
 	 */
 	public boolean isAcademyMember()
@@ -6880,7 +6894,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return the pledge type of current character.
 	 */
 	public int getPledgeType()
@@ -6889,7 +6903,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Dummy method overriden in {@link L2PcInstance}
+	 * Dummy method overridden in {@link L2PcInstance}
 	 * @return the alliance id of current character.
 	 */
 	public int getAllyId()

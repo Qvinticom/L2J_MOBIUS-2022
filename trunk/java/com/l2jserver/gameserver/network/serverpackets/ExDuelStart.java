@@ -24,8 +24,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExDuelStart extends L2GameServerPacket
 {
-	public static final ExDuelReady PLAYER_DUEL = new ExDuelReady(false);
-	public static final ExDuelReady PARTY_DUEL = new ExDuelReady(true);
+	public static final ExDuelStart PLAYER_DUEL = new ExDuelStart(false);
+	public static final ExDuelStart PARTY_DUEL = new ExDuelStart(true);
 	
 	private final boolean _partyDuel;
 	

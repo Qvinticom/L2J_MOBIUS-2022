@@ -68,7 +68,7 @@ public final class MagicalAttackMp extends AbstractEffect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.MAGICAL_ATTACK;
+		return L2EffectType.MAGICAL_ATTACK_MP;
 	}
 	
 	@Override

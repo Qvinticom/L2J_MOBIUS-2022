@@ -60,6 +60,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jserver.gameserver.GameServer;
 import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2World;
@@ -4067,16 +4068,17 @@ public final class Config
 		@Override
 		public void load()
 		{
-			File f = new File(IP_CONFIG_FILE);
+			GameServer.printSection("Network Configuration");
+			final File f = new File(IP_CONFIG_FILE);
 			if (f.exists())
 			{
-				LOGGER.log(Level.INFO, "Network Config: ipconfig.xml exists using manual configuration...");
+				LOGGER.log(Level.INFO, "Using existing ipconfig.xml.");
 				parseFile(new File(IP_CONFIG_FILE));
 			}
 			else
 			// Auto configuration...
 			{
-				LOGGER.log(Level.INFO, "Network Config: ipconfig.xml doesn't exists using automatic configuration...");
+				LOGGER.log(Level.INFO, "Using automatic network configuration.");
 				autoIpConfig();
 			}
 		}
@@ -4132,7 +4134,7 @@ public final class Config
 			}
 			catch (IOException e)
 			{
-				LOGGER.log(Level.INFO, "Network Config: Failed to connect to api.externalip.net please check your internet connection using 127.0.0.1!");
+				LOGGER.log(Level.INFO, "Failed to connect to api.externalip.net please check your internet connection using 127.0.0.1!");
 				externalIp = "127.0.0.1";
 			}
 			
@@ -4172,7 +4174,7 @@ public final class Config
 						{
 							_subnets.add(subnet);
 							_hosts.add(hostAddress);
-							LOGGER.log(Level.INFO, "Network Config: Adding new subnet: " + subnet + " address: " + hostAddress);
+							LOGGER.log(Level.INFO, "Adding new subnet: " + subnet + " address: " + hostAddress);
 						}
 					}
 				}
@@ -4180,11 +4182,11 @@ public final class Config
 				// External host and subnet
 				_hosts.add(externalIp);
 				_subnets.add("0.0.0.0/0");
-				LOGGER.log(Level.INFO, "Network Config: Adding new subnet: 0.0.0.0/0 address: " + externalIp);
+				LOGGER.log(Level.INFO, "Adding new subnet: 0.0.0.0/0 address: " + externalIp);
 			}
 			catch (SocketException e)
 			{
-				LOGGER.log(Level.INFO, "Network Config: Configuration failed please configure manually using ipconfig.xml", e);
+				LOGGER.log(Level.INFO, "Configuration failed please manually configure ipconfig.xml", e);
 				System.exit(0);
 			}
 		}
