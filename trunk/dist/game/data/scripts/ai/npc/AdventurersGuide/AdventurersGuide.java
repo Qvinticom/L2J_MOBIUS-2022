@@ -27,15 +27,16 @@ import com.l2jserver.gameserver.model.skills.Skill;
 
 /**
  * Adventurers Guide AI.
- * @author St3eT
+ * @author St3eT, Updated by Stayway, Mobius
  */
 public final class AdventurersGuide extends AbstractNpcAI
 {
 	// NPCs
-	private static final int[] ADVENTURERS_GUIDE =
+	private static final int[] ADVENTURER_GUIDES =
 	{
 		32327,
 		33454, // Newbie Helper
+		33950, // Apprentice
 	};
 	// Skills
 	private static final SkillHolder BLESS_PROTECTION = new SkillHolder(5182, 1); // Blessing of Protection
@@ -58,9 +59,9 @@ public final class AdventurersGuide extends AbstractNpcAI
 	private AdventurersGuide()
 	{
 		super(AdventurersGuide.class.getSimpleName(), "ai/npc");
-		addStartNpc(ADVENTURERS_GUIDE);
-		addTalkId(ADVENTURERS_GUIDE);
-		addFirstTalkId(ADVENTURERS_GUIDE);
+		addStartNpc(ADVENTURER_GUIDES);
+		addTalkId(ADVENTURER_GUIDES);
+		addFirstTalkId(ADVENTURER_GUIDES);
 	}
 	
 	@Override
@@ -112,7 +113,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return "guide.html";
+		return npc.getId() + ".html";
 	}
 	
 	private String applyBuffs(L2Npc npc, L2PcInstance player, Skill skill)
