@@ -188,92 +188,227 @@
 	<item id="37026" name="Scroll of Escape: Outlaw Forest" additionalName="" type="EtcItem">
 		<!-- Teleports you to Outlaw Forest. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9968-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37027" name="Scroll of Escape: Sea of Spores" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Sea of Spores. -->
+		<!-- Teleports you to Sea of Spores. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9969-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37028" name="Scroll of Escape: Forsaken Plains" additionalName="" type="EtcItem">
 		<!-- Teleports you to Forsaken Plains. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9970-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37029" name="Scroll of Escape: Fields of Massacre" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Fields of Massacre. -->
+		<!-- Teleports you to Fields of Massacre. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9971-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37030" name="Scroll of Escape: Swamp of Screams" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Swamp of Screams. -->
+		<!-- Teleports you to Swamp of Screams. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9972-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37031" name="Scroll of Escape: Forest of the Dead" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Forest of the Dead. -->
+		<!-- Teleports you to Forest of Dead. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9973-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37032" name="Scroll of Escape: Wall of Argos" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Wall of Argos. -->
+		<!-- Teleports you to Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9974-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37033" name="Scroll of Escape: Wall of Argos" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Wall of Argos. -->
+		<!-- Teleports you to Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9974-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37034" name="Scroll of Escape: Varka Silenos Barracks" additionalName="" type="EtcItem">
 		<!-- Teleports you to Varka Silenos Barracks. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9975-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37035" name="Scroll of Escape: Ketra Orc Outpost" additionalName="" type="EtcItem">
 		<!-- Teleports you to Ketra Orc Outpost. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9976-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37036" name="Scroll of Escape: Den of Evil" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Den of Evil. -->
+		<!-- Teleports you to Den of Evil. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9977-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37037" name="Scroll of Escape: Sel Mahum Training Grounds" additionalName="" type="EtcItem">
 		<!-- Teleports you to Sel Mahum Training Grounds. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9978-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37038" name="Scroll of Escape: Plains of the Lizardmen" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Plains of the Lizardmen. -->
+		<!-- Teleports you to Plains of the Lizardmen. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9979-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37039" name="Scroll of Escape: Field of Silence" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Field of Silence. -->
+		<!-- Teleports you to Field of Silence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9980-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37040" name="Scroll of Escape: Field of Whispers" additionalName="" type="EtcItem">
-		<!-- Teleports you to the Field of Whispers. -->
+		<!-- Teleports you to Field of Whispers. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9981-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="37041" name="Divine Protection Elixir" additionalName="" type="EtcItem">
 		<set name="icon" val="icon.etc_evil_soul_core_i00" />

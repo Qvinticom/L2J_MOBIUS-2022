@@ -524,7 +524,7 @@
 	</skill>
 	<skill id="9967" levels="1" name="Scroll of Escape: Alligator Island">
 		<!-- Return to Alligator Island. -->
-		<set name="hitTime" val="20000" />
+		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="37025" />
@@ -542,116 +542,270 @@
 		</for>
 	</skill>
 	<skill id="9968" levels="1" name="Scroll of Escape: Outlaw Forest">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Outlaw Forest. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37026" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="91514" y="-12245" z="-2436" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9969" levels="1" name="Scroll of Escape: Sea of Spores">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Sea of Spores. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Sea of Spores. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37027" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="64111" y="-26572" z="-3770" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9970" levels="1" name="Scroll of Escape: Forsaken Plains">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Forsaken Plains. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Forsaken Plains. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37028" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="175017" y="-40214" z="-4156" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9971" levels="1" name="Scroll of Escape: Fields of Massacre">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Fields of Massacre. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Fields of Massacre. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37029" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="183402" y="-16113" z="-2713" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9972" levels="1" name="Scroll of Escape: Swamp of Screams">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Swamp of Screams. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Swamp of Screams. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37030" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="69340" y="-50203" z="-3309" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9973" levels="1" name="Scroll of Escape: Forest of the Dead">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Forest of the Dead. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Forest of Dead. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37031" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="52107" y="-54328" z="-3153" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9974" levels="1" name="Scroll of Escape: Wall of Argos">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Wall of Argos. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Wall of Argos. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37032" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="164653" y="-48104" z="-3549" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9975" levels="1" name="Scroll of Escape: Varka Silenos Barracks">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Varka Silenos Barracks. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Varka Sillenos Barracks. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37034" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="125673" y="-40864" z="-3745" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9976" levels="1" name="Scroll of Escape: Ketra Orc Outpost">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Ketra Orc Outpost. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Ketra Outpost. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37035" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="146985" y="-67299" z="-3656" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9977" levels="1" name="Scroll of Escape: Den of Evil">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Den of Evil. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Den of Evil. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37036" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="70090" y="-11611" z="-1763" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9978" levels="1" name="Scroll of Escape: Sel Mahum Training Grounds">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Sel Mahum Training Grounds. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Sel Mahum Training Grounds. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37037" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="87966" y="60729" z="-3635" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9979" levels="1" name="Scroll of Escape: Plains of the Lizardmen">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Plains of the Lizardmen. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Plain of the Lizardmen. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37038" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="86669" y="85842" z="-2913" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9980" levels="1" name="Scroll of Escape: Field of Silence">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Field of Silence. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Field of Silence. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37039" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="91088" y="182384" z="-3187" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9981" levels="1" name="Scroll of Escape: Field of Whispers">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Return to the Field of Whispers. -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Return to Field of Whispers. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37040" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="75017" y="207715" z="-3062" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9982" levels="1" name="Elixir: Divine Protection">
 		<set name="icon" val="icon.etc_evil_soul_core_i00" />
