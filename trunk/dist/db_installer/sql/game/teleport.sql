@@ -1092,6 +1092,9 @@ INSERT INTO `teleport` VALUES
 INSERT INTO `teleport` VALUES
 ('Windmill Hill -> Gludio', '3319009', '-14557', '123809', '-3104', '0', '0', '57');
 
+-- 3rd Floor Cruma Tower
+UPDATE `teleport` SET `Description`='Cruma Tower 2nd floor -> Cruma Tower 3rd floor',`loc_x`=17720,`loc_y`=114863,`loc_z`=-11710 WHERE id=24;
+
 -- Gracia
 INSERT INTO `teleport` VALUES ('HellfireTeleport1', 990001, -147856, 250651, -14024, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('HellfireTeleport2', 990002, -147728, 152787, -14048, 0, 0, 57);
