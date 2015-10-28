@@ -88,7 +88,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 		else if (command.startsWith("change_class"))
 		{
-			int val = Integer.parseInt(command.substring(13));
+			final int val = Integer.parseInt(command.substring(13));
 			
 			if (checkAndChangeClass(player, val))
 			{
