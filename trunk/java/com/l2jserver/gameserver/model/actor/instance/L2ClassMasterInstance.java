@@ -498,6 +498,11 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			return true;
 		}
 		
+		if (oldCID.equals(ClassId.FEMALE_SOUL_HOUND) && newCID.equals(ClassId.FEOH_SOUL_HOUND))
+		{
+			return true;
+		}
+		
 		if (Config.ALLOW_ENTIRE_TREE && newCID.childOf(oldCID))
 		{
 			return true;
