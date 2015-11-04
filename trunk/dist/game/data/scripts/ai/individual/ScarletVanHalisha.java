@@ -45,6 +45,8 @@ public class ScarletVanHalisha extends AbstractNpcAI
 {
 	private L2Character _target;
 	private Skill _skill;
+	private long _lastRangedSkillTime;
+	private final int _rangedSkillMinCoolTime = 60000; // 1 minute
 	
 	// NPCs
 	private static final int HALISHA2 = 29046;
@@ -74,7 +76,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			}
 			case "random_target":
 			{
-				_target = getRandomTarget(npc);
+				_target = getRandomTarget(npc, null);
 				break;
 			}
 		}
@@ -85,7 +87,6 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		getSkillAI(npc);
-		
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
@@ -94,7 +95,6 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	{
 		startQuestTimer("random_Target", 5000, npc, null, true);
 		startQuestTimer("attack", 500, npc, null, true);
-		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
@@ -103,7 +103,6 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	{
 		cancelQuestTimers("attack");
 		cancelQuestTimers("random_Target");
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -120,10 +119,6 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				else if (Rnd.get(100) < 10)
 				{
 					return SkillData.getInstance().getSkill(5015, 5);
-				}
-				else if (Rnd.get(100) < 10)
-				{
-					return SkillData.getInstance().getSkill(5018, 1);
 				}
 				else if (Rnd.get(100) < 2)
 				{
@@ -148,9 +143,13 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				{
 					return SkillData.getInstance().getSkill(5015, 2);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(5019, 1);
+				}
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
+				{
+					return SkillData.getInstance().getSkill(5018, 1);
 				}
 				else if (Rnd.get(100) < 2)
 				{
@@ -174,11 +173,8 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		}
 		if ((Rnd.get(100) < 30) || (_target == null) || _target.isDead())
 		{
-			_target = getRandomTarget(npc);
-			if (_target != null)
-			{
-				_skill = getRndSkills(npc);
-			}
+			_skill = getRndSkills(npc);
+			_target = getRandomTarget(npc, _skill);
 		}
 		L2Character target = _target;
 		Skill skill = _skill;
@@ -214,9 +210,9 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		}
 	}
 	
-	private L2Character getRandomTarget(L2Npc npc)
+	private L2Character getRandomTarget(L2Npc npc, Skill skill)
 	{
-		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
 		ArrayList<L2Character> result = new ArrayList<>();
 		{
 			for (L2Object obj : objs)
@@ -235,7 +231,36 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 				if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
+					int skillRange = 150;
+					if (skill != null)
+					{
+						switch (skill.getId())
+						{
+							case 5014:
+							{
+								skillRange = 150;
+								break;
+							}
+							case 5015:
+							{
+								skillRange = 400;
+								break;
+							}
+							case 5016:
+							{
+								skillRange = 200;
+								break;
+							}
+							case 5018:
+							case 5019:
+							{
+								_lastRangedSkillTime = System.currentTimeMillis();
+								skillRange = 550;
+								break;
+							}
+						}
+					}
+					if (Util.checkIfInRange(skillRange, npc, obj, true) && !((L2Character) obj).isDead())
 					{
 						result.add((L2Character) obj);
 					}
