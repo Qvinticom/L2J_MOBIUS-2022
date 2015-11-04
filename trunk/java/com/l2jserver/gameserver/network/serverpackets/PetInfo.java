@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class PetInfo extends L2GameServerPacket
 {
@@ -39,7 +38,6 @@ public class PetInfo extends L2GameServerPacket
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
 	private int _maxFed, _curFed;
-	private int _statusMask = 0;
 	
 	public PetInfo(L2Summon summon, int val)
 	{
@@ -63,19 +61,6 @@ public class PetInfo extends L2GameServerPacket
 			final L2ServitorInstance sum = (L2ServitorInstance) _summon;
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
-		}
-		
-		if (summon.isRunning())
-		{
-			_statusMask |= 0x04;
-		}
-		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(summon))
-		{
-			_statusMask |= 0x08;
-		}
-		if (summon.isDead())
-		{
-			_statusMask |= 0x10;
 		}
 	}
 	
@@ -185,6 +170,6 @@ public class PetInfo extends L2GameServerPacket
 			writeH(ave.getClientId()); // Confirmed
 		}
 		
-		writeC(_statusMask);
+		writeC(_summon.isMountable() ? 0x26 : 0x06); // c2 ride button
 	}
 }
