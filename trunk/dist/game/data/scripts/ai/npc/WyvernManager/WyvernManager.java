@@ -72,6 +72,7 @@ public final class WyvernManager extends AbstractNpcAI
 		MANAGERS.put(35364, ManagerType.CASTLE);
 		MANAGERS.put(35510, ManagerType.CASTLE);
 		MANAGERS.put(35536, ManagerType.CASTLE);
+		MANAGERS.put(35556, ManagerType.CASTLE);
 		MANAGERS.put(35419, ManagerType.CLAN_HALL);
 		MANAGERS.put(35638, ManagerType.CLAN_HALL);
 		MANAGERS.put(36457, ManagerType.FORT);
