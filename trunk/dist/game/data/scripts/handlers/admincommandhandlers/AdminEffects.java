@@ -112,12 +112,14 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.broadcastUserInfo();
 				activeChar.decayMe();
 				activeChar.spawnMe();
+				activeChar.startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 				activeChar.sendMessage("You are now invisible.");
 			}
 			else
 			{
 				activeChar.setInvisible(false);
 				activeChar.broadcastUserInfo();
+				activeChar.stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 				activeChar.sendMessage("You are now visible.");
 			}
 			
@@ -130,12 +132,14 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.broadcastUserInfo();
 			activeChar.decayMe();
 			activeChar.spawnMe();
+			activeChar.startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 			activeChar.sendMessage("You are now invisible.");
 		}
 		else if (command.startsWith("admin_vis"))
 		{
 			activeChar.setInvisible(false);
 			activeChar.broadcastUserInfo();
+			activeChar.stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 			activeChar.sendMessage("You are now visible.");
 		}
 		else if (command.startsWith("admin_setinvis"))
