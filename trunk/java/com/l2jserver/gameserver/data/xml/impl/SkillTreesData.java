@@ -1157,6 +1157,66 @@ public final class SkillTreesData implements IXmlReader
 	}
 	
 	/**
+	 * Crude method that returns SkillLearn without client skillType info.
+	 * @param id the skill Id
+	 * @param lvl the skill level
+	 * @param player the player learning the skill
+	 * @return the skill learn for the specified parameters
+	 */
+	public L2SkillLearn getSkillLearn(int id, int lvl, L2PcInstance player)
+	{
+		if (getClassSkill(id, lvl, player.getLearningClass()) != null)
+		{
+			return getClassSkill(id, lvl, player.getLearningClass());
+		}
+		else if (getTransformSkill(id, lvl) != null)
+		{
+			return getTransformSkill(id, lvl);
+		}
+		else if (getFishingSkill(id, lvl) != null)
+		{
+			return getFishingSkill(id, lvl);
+		}
+		else if (getPledgeSkill(id, lvl) != null)
+		{
+			return getPledgeSkill(id, lvl);
+		}
+		else if (getSubPledgeSkill(id, lvl) != null)
+		{
+			return getSubPledgeSkill(id, lvl);
+		}
+		else if (getTransferSkill(id, lvl, player.getClassId()) != null)
+		{
+			return getTransferSkill(id, lvl, player.getClassId());
+		}
+		else if (getSubClassSkill(id, lvl) != null)
+		{
+			return getSubClassSkill(id, lvl);
+		}
+		else if (getCollectSkill(id, lvl) != null)
+		{
+			return getCollectSkill(id, lvl);
+		}
+		else if (getRevelationSkill(SubclassType.BASECLASS, id, lvl) != null)
+		{
+			return getRevelationSkill(SubclassType.BASECLASS, id, lvl);
+		}
+		else if (getRevelationSkill(SubclassType.DUALCLASS, id, lvl) != null)
+		{
+			return getRevelationSkill(SubclassType.DUALCLASS, id, lvl);
+		}
+		else if (getAlchemySkill(id, lvl) != null)
+		{
+			return getAlchemySkill(id, lvl);
+		}
+		else if (getDualClassSkill(id, lvl) != null)
+		{
+			return getDualClassSkill(id, lvl);
+		}
+		return null;
+	}
+	
+	/**
 	 * Gets the transform skill.
 	 * @param id the transformation skill Id
 	 * @param lvl the transformation skill level

@@ -2619,7 +2619,7 @@ public final class L2PcInstance extends L2Playable
 	public int giveAvailableSkills(boolean includedByFs, boolean includeAutoGet)
 	{
 		int skillCounter = 0;
-		// Get available skills
+		// Get available skills.
 		Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getClassId(), includedByFs, includeAutoGet);
 		List<Skill> skillsForStore = new ArrayList<>();
 		
@@ -2635,7 +2635,7 @@ public final class L2PcInstance extends L2Playable
 				skillCounter++;
 			}
 			
-			// fix when learning toggle skills
+			// Fix when learning toggle skills.
 			if (sk.isToggle() && isAffectedBySkill(sk.getId()))
 			{
 				stopSkillEffects(true, sk.getId());
@@ -2645,6 +2645,24 @@ public final class L2PcInstance extends L2Playable
 			skillsForStore.add(sk);
 		}
 		storeSkills(skillsForStore, -1);
+		
+		// Remove skills if required.
+		for (Skill sk : getSkills().values())
+		{
+			final L2SkillLearn s = SkillTreesData.getInstance().getSkillLearn(sk.getId(), sk.getLevel(), this);
+			if ((s != null) && !s.getRemoveSkills().isEmpty())
+			{
+				s.getRemoveSkills().forEach(skillId ->
+				{
+					final Skill skillToRemove = getKnownSkill(skillId);
+					if (skillToRemove != null)
+					{
+						removeSkill(skillToRemove);
+					}
+				});
+			}
+		}
+		
 		if (Config.AUTO_LEARN_SKILLS && (skillCounter > 0))
 		{
 			sendMessage("You have learned " + skillCounter + " new skills.");
@@ -2657,7 +2675,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void giveAvailableAutoGetSkills()
 	{
-		// Get available skills
+		// Get available skills.
 		final List<L2SkillLearn> autoGetSkills = SkillTreesData.getInstance().getAvailableAutoGetSkills(this);
 		final SkillData st = SkillData.getInstance();
 		Skill skill;
