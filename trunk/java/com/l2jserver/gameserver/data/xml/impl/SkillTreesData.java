@@ -680,6 +680,12 @@ public final class SkillTreesData implements IXmlReader
 		{
 			final L2SkillLearn skill = entry.getValue();
 			
+			// Skill level doesn't exist.
+			if (SkillData.getInstance().getMaxLevel(skill.getSkillId()) < skill.getSkillLevel())
+			{
+				continue;
+			}
+			
 			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
 			{
 				continue;
